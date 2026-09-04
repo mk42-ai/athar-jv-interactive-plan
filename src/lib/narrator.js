@@ -63,7 +63,8 @@ export function createNarrator() {
       if (a.dataset.unlocked === '1') return;
       a.src = SILENT_WAV;
       const p = a.play();
-      if (p?.then) p.then(() => { a.dataset.unlocked = '1'; log('audio-unlocked', 'ok'); }).catch((e) => log('audio-unlock-rejected', `${e?.name}: ${e?.message}`));
+      a.dataset.unlocked = '1'; // activation happens at the play() call inside the gesture, even if a real clip interrupts this silent one
+      if (p?.then) p.then(() => log('audio-unlocked', 'ok')).catch((e) => log('audio-unlock', `${e?.name}: ${e?.message}`));
     } catch (e) {
       log('audio-unlock-error', e?.message);
     }

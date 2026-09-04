@@ -86,16 +86,28 @@ Chat API (same session as the typed chat) while the workflow is executed with th
 
 ## Guide Mode (AI-narrated walkthrough)
 
-Click **Guide me** in the presentation toolbar. A soft-spoken American voice narrates the deck moment by moment
+Click **Guide me** in the presentation toolbar. A calm, natural narrator walks through the deck moment by moment
 (21 narrated moments across the 2 slides — headline numbers, the six gates, anchors, commercials, delivery, roadmap rows),
 highlights the element being discussed on the rendered slide, and auto-advances the slide when narration completes.
 
-- Controls: play/pause (`Space`), back (`[`), skip (`]`), exit (`Esc` via the ✕). Manual page navigation still works and re-syncs the guide.
-- Voice (primary): **ElevenLabs** — voice `Adam` (premade, id `pNInz6obpgDQGcFmaJgB`), model `eleven_v3` (fallback `eleven_multilingual_v2`), soft-spoken settings stability 0.7 · similarity 0.8 · style 0 · speed 0.9 · speaker boost, plus a 750 ms breath between moments. The key lives ONLY in `ELEVENLABS_API_KEY` (server env). The brief's ranked library voices (Spuds Oxley, Michael C. Vincent, James, Peter) return HTTP 402 `paid_plan_required` on the free plan, so the first usable shortlist voice (Adam) is used; set `ELEVEN_VOICE_ID`/`ELEVEN_VOICE_NAME` to switch once the plan allows library voices.
-- Pre-baked narration: `npm run guide:prebake` synthesises all 21 moments into `public/guide-audio/` (+ `manifest.json`); `POST /api/guide/tts` serves those first (zero quota, identical voice for every visitor, works anonymously), synthesises live only for new text, and falls back to On Demand `gpt-4o-mini-tts`/`nova` (`ON_DEMAND_API_KEY`) when ElevenLabs is unavailable. Every request is logged server-side as `provider/model/voice/source`; `GET /api/guide/voice` reports the active provider, settings, pre-baked clip count, shortlist usability and remaining ElevenLabs quota.
-  Falls back to the browser Web Speech API (soft `en-US` voice, rate 0.92) when the API key is missing/unavailable, and to a
-  timed silent pace when no audio engine exists — so auto-advance always works. The active source is shown in the guide bar.
-- Script + highlight geometry: `src/lib/guide.js` (boxes are slide fractions measured from the PPTX shapes).
+- Controls: play/pause (`Space`), back (`[`), skip (`]`), exit (✕). Manual page navigation still works and re-syncs the guide.
+- **Voice: ElevenLabs `River` — "Relaxed, Neutral, Informative"** (premade US voice, id `SAz9YHcvj6GT2YYXdXww`), model `eleven_v3`,
+  voice settings stability 0.5 (Natural) · similarity 0.8 · style 0 · speed 0.92 · speaker boost, plus a 750 ms breath between moments.
+  Chosen 2026-09-04 from the voices this key's (free) tier can synthesise: the brief's library voices return HTTP 402
+  `paid_plan_required`; of the calm US narrators probed (Brian, Sarah, River) River returned the softest level.
+- **Playback = verified pre-baked clips only.** `npm run guide:prebake` (needs `ELEVENLABS_API_KEY`) synthesises all 21 moments into
+  `public/guide-audio/<moment>-<sha256:12>.mp3` and writes `manifest.json` (v2: per-clip SHA-256, text hash, voice/model/settings,
+  timestamps). The client fetches the manifest with `cache: no-store`, downloads the moment's clip, **re-hashes the bytes and refuses
+  to play anything that does not match**, then plays it from a blob URL on an audio element unlocked inside the user's click (iOS/Safari).
+  Every moment is logged to `window.__atharGuide.sources` and the console (`[guide-audio] <moment> ← prebaked <url> sha256 verified`).
+- **No silent fallbacks.** The Web Speech (robotic synthetic) and timed-silence fallbacks were removed: if a clip cannot be fetched,
+  verified or played, the guide bar shows the error with a Retry button and does not auto-advance. Live synthesis through
+  `POST /api/guide/tts` (ElevenLabs; On Demand `nova` only if ElevenLabs hard-fails) is used solely for a moment with no pre-baked clip.
+- **Root cause of the "old voice" regression (fixed 2026-09-04):** the proxy chose the voice provider from server env vars *before*
+  looking at the pre-baked clips, so any restart without `ELEVENLABS_API_KEY` (e.g. a snapshot restart that only had the On Demand key)
+  silently synthesised with On Demand `nova`, and autoplay rejections fell through to Web Speech/silence. Pre-baked clips are now served
+  first and independently of any key, clip filenames are content-hashed (a regenerated clip can never be served from a stale cache),
+  `manifest.json` is `Cache-Control: no-store`, clips are `immutable`.
 
 ## QA log — Guide Mode voice (ElevenLabs Adam / eleven_v3), 2026-09-04
 

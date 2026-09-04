@@ -15,7 +15,16 @@ const app = express();
 app.use(deckPdfMiddleware({ staticDir: 'dist' })); // deck PDF fallback when dist/deck/ (copied from public/ by vite build) is absent
 app.use(createApiApp());
 if (fs.existsSync(dist)) {
-  app.use(express.static(dist, { index: 'index.html', maxAge: '1h' }));
+  app.use(
+    express.static(dist, {
+      index: 'index.html',
+      maxAge: '1h',
+      setHeaders(res, filePath) {
+        if (/guide-audio[\\/]manifest\.json$/.test(filePath)) res.setHeader('Cache-Control', 'no-store, must-revalidate');
+        else if (/guide-audio[\\/].+\.mp3$/.test(filePath)) res.setHeader('Cache-Control', 'public, max-age=31536000, immutable');
+      },
+    }),
+  );
   app.get('*', (req, res) => res.sendFile(path.join(dist, 'index.html')));
 } else {
   app.get('*', (req, res) => res.status(503).send('Build missing — run `npm run build` first.'));

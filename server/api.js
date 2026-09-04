@@ -214,6 +214,14 @@ export function createApiApp() {
 
   const api = express.Router();
 
+  // Cache policy for narration assets: the manifest must never be cached (it names the current clips);
+  // clip files are content-hashed, so they can be cached forever — a regenerated clip gets a new name.
+  app.use('/guide-audio', (req, res, next) => {
+    if (/manifest\.json$/.test(req.path)) res.setHeader('Cache-Control', 'no-store, must-revalidate');
+    else if (/\.mp3$/.test(req.path)) res.setHeader('Cache-Control', 'public, max-age=31536000, immutable');
+    next();
+  });
+
 
   api.get('/health', (req, res) => {
     const plan = loadPlan();
