@@ -259,3 +259,48 @@ preview, with a CDP network trace. Every played moment fetched its content-hashe
 Provenance columns come from the ElevenLabs generation history (`npm run guide:provenance`, matched by generation time and
 exact character count). Free-tier quota after the bake: 9,909 / 10,000 credits (resets 2026-10-05) — a further re-bake needs
 a key with ≥ 4,300 credits.
+
+## QA log — audio-error fix + On Demand key, 2026-09-04 14:21–14:27 UTC
+
+Root cause reproduced first: with `public/guide-audio/*.mp3` removed (a code-snapshot redeploy) the dev server answered the
+clip URL with `index.html` (HTTP 200, `text/html`) and Guide Mode showed exactly *Audio element error (code 4) while playing
+s1-open-e54d4a80fd65.mp3*. After the fix the same scenario serves the clip from the embedded store (HTTP 200 `audio/mpeg`,
+SHA-256 = manifest, `X-Guide-Audio: embedded-base64`, Range → 206) — verified locally with a read-only asset directory and
+on the deployed sandbox with all binaries moved away. Fresh, cookie-less headless Chromium sessions (desktop full
+21-moment run with network trace, autoplay-refused session, mobile 390×844):
+
+| Check | Result | Time (UTC) | Screenshot |
+|---|---|---|---|
+| D1 Cold shared link, cookie-less session: deck PDF renders page 1 (static same-origin asset) | pass | 2026-09-04 14:21:30 | qa-d01-anon-deck-2026-09-04T142130Z-1440x900.png |
+| D2 Server: 21 pre-baked ElevenLabs River / eleven_v3 clips, key-independent playback | pass | 2026-09-04 14:21:30 | — |
+| D3 Manifest reachable anonymously; every clip carries ElevenLabs provenance (request-id / history-item-id) | pass | 2026-09-04 14:21:30 | — |
+| D3b On Demand API key present at runtime (server-side, masked) and functional — live probe created a chat session | pass | 2026-09-04 14:21:30 | — |
+| D3c All 21 clips servable (static or embedded store); On Demand fallback key loaded on the TTS proxy | pass | 2026-09-04 14:21:30 | — |
+| D4 Clip is real, audible audio: decodes in the browser, RMS well above silence, ≈unhurried pace | pass | 2026-09-04 14:21:30 | — |
+| D5 Guide starts: first moment plays the NEW River clip from a Blob of hash-verified bytes (badge shows ElevenLabs · River · eleven_v3) | pass | 2026-09-04 14:21:30 | qa-d05-guide-river-playing-2026-09-04T142130Z-1440x900.png |
+| D6 Pause during moment 2 (status=paused, audio element paused) | pass | 2026-09-04 14:21:53 | qa-d06-paused-2026-09-04T142153Z-1440x900.png |
+| D7 No advance while paused | pass | 2026-09-04 14:21:55 | — |
+| D8 Resume continues the same clip | pass | 2026-09-04 14:21:56 | — |
+| D9 Skip → next moment | pass | 2026-09-04 14:21:56 | — |
+| D10 Back → previous moment (restarts its River clip) | pass | 2026-09-04 14:21:57 | — |
+| D11 Milestone highlight (3 KPI tiles) rendered | pass | 2026-09-04 14:21:57 | qa-d11-milestone-highlight-2026-09-04T142157Z-1440x900.png |
+| D12 Gate highlight (G4 · 29 Jan 2027) spotlight + tag on the slide | pass | 2026-09-04 14:23:01 | qa-d12-gate4-highlight-2026-09-04T142301Z-1440x900.png |
+| D13 Slide auto-advanced to slide 2 in sync with the roadmap moment | pass | 2026-09-04 14:24:58 | qa-d13-auto-slide2-2026-09-04T142458Z-1440x900.png |
+| D14 All 21 moments auto-advanced to the end; each played its own River clip (file + SHA-256 = manifest, prebaked, verified) with ZERO audio element errors | pass | 2026-09-04 14:26:43 | qa-d14-tour-complete-2026-09-04T142643Z-1440x900.png |
+| D15 Breath gap between consecutive auto-advanced moments ≈ 0.75 s | pass | 2026-09-04 14:26:43 | — |
+| D16 Network trace: every played clip was fetched from /guide-audio/ with HTTP 200 + Content-Type audio/mpeg (audio/mpeg); ZERO requests to /api/guide/tts, /api/voice/audio or any old clip | pass | 2026-09-04 14:26:43 | — |
+| D17 Manual thumbnail navigation to slide 2 re-syncs the guide (s2-open) | pass | 2026-09-04 14:26:44 | qa-d17-manual-nav-resync-2026-09-04T142644Z-1440x900.png |
+| D18 Manual prev-page re-syncs to s1-open | pass | 2026-09-04 14:26:44 | — |
+| D19 Guide off: audio stopped, bar removed, manual navigation works | pass | 2026-09-04 14:26:45 | qa-d19-guide-off-2026-09-04T142645Z-1440x900.png |
+| D20 Zero console errors, zero page errors, zero failed requests (desktop, full run) | pass | 2026-09-04 14:26:45 | — |
+| D21 Network-trace proof captured (PNG + JSON) | pass | 2026-09-04 14:26:46 | — |
+| B1 Autoplay refused by the browser → visible 'Playback was blocked… Tap play' state with Retry, and NO fallback voice | pass | 2026-09-04 14:26:48 | qa-b1-blocked-state-retry-2026-09-04T142648Z-1440x900.png |
+| B2 Retry re-attempts playback of the same verified clip (no voice swap) | pass | 2026-09-04 14:26:49 | — |
+| M1 Mobile 390×844 cold session: deck renders anonymously, fits viewport, no horizontal overflow | pass | 2026-09-04 14:26:50 | qa-m01-mobile-deck-2026-09-04T142650Z-390x844.png |
+| M2 Mobile: Guide bar + controls on screen, highlight drawn, NEW River clip playing (hash-verified) | pass | 2026-09-04 14:26:51 | qa-m02-mobile-guide-river-2026-09-04T142651Z-390x844.png |
+| M3 Mobile: auto-advance to moment 2 after narration | pass | 2026-09-04 14:27:13 | qa-m03-mobile-auto-advanced-2026-09-04T142713Z-390x844.png |
+| M4 Mobile: pause works; milestone highlight (3 boxes) | pass | 2026-09-04 14:27:13 | qa-m04-mobile-paused-highlight-2026-09-04T142713Z-390x844.png |
+| M5 Mobile: resume, skip and back work | pass | 2026-09-04 14:27:14 | — |
+| M6 Mobile: manual navigation to slide 2 re-syncs the guide (roadmap highlight) | pass | 2026-09-04 14:27:15 | qa-m06-mobile-slide2-resync-2026-09-04T142715Z-390x844.png |
+| M7 Mobile network trace: clips fetched from /guide-audio/ only, zero proxy/fallback audio requests | pass | 2026-09-04 14:27:15 | — |
+| M8 Zero console errors, zero page errors, zero failed requests (mobile) | pass | 2026-09-04 14:27:15 | — |
