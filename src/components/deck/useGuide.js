@@ -15,6 +15,8 @@ export function useGuide({ onSlide }) {
   const [run, setRun] = useState(0); // bump to (re)start the current step
   const narrator = useMemo(() => createNarrator(), []);
   const runRef = useRef(0);
+  const idxRef = useRef(0); // always-current index so rapid skip/back clicks compose correctly
+  idxRef.current = idx;
   const onSlideRef = useRef(onSlide);
   onSlideRef.current = onSlide;
 
@@ -89,14 +91,15 @@ export function useGuide({ onSlide }) {
       const n = Math.max(0, Math.min(GUIDE_STEPS.length - 1, i));
       runRef.current++;
       narrator.stop();
+      idxRef.current = n;
       setIdx(n);
       setPlaying(true);
       setRun((r) => r + 1);
     },
     [narrator],
   );
-  const skip = useCallback(() => (idx + 1 < GUIDE_STEPS.length ? goto(idx + 1) : stop()), [idx, goto, stop]);
-  const back = useCallback(() => goto(idx - 1), [idx, goto]);
+  const skip = useCallback(() => (idxRef.current + 1 < GUIDE_STEPS.length ? goto(idxRef.current + 1) : stop()), [goto, stop]);
+  const back = useCallback(() => goto(idxRef.current - 1), [goto]);
   const playPause = useCallback(() => {
     if (status === 'ended') return goto(0);
     setPlaying((p) => !p);
@@ -105,13 +108,13 @@ export function useGuide({ onSlide }) {
   const syncSlide = useCallback(
     (n) => {
       if (!active) return;
-      const cur = GUIDE_STEPS[idx];
+      const cur = GUIDE_STEPS[idxRef.current];
       if (cur && cur.slide !== n) {
         const i = firstStepOfSlide(n);
         if (i >= 0) goto(i);
       }
     },
-    [active, idx, goto],
+    [active, goto],
   );
 
   return { active, playing, status, source, idx, step, total: GUIDE_STEPS.length, start, stop, toggle, skip, back, playPause, goto, syncSlide };

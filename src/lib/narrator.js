@@ -37,6 +37,13 @@ export function pickWebVoice() {
 const words = (t) => String(t).trim().split(/\s+/).filter(Boolean).length;
 export const estimateMs = (t) => Math.max(2200, Math.round((words(t) / 2.55) * 1000)); // ≈150 wpm, soft pace
 
+// Diagnostics for QA / support: window.__atharGuide = { events: [...] } (why a fallback happened, which source played).
+const diag = typeof window !== 'undefined' ? (window.__atharGuide = window.__atharGuide || { events: [] }) : { events: [] };
+const log = (type, detail) => {
+  diag.events.push({ t: Date.now(), type, detail: String(detail ?? '') });
+  if (diag.events.length > 200) diag.events.shift();
+};
+
 export function createNarrator({ preferApi = true } = {}) {
   const cache = new Map(); // text -> Promise<string|null> (same-origin mp3 URL)
   let apiDown = !preferApi;
@@ -58,10 +65,14 @@ export function createNarrator({ preferApi = true } = {}) {
               body: JSON.stringify({ text }),
             });
             if (r.status === 503) apiDown = true; // key missing — stop asking
-            if (!r.ok) return null;
+            if (!r.ok) {
+              log('tts-http', r.status);
+              return null;
+            }
             const j = await r.json();
             return j?.url || null;
-          } catch {
+          } catch (e) {
+            log('tts-fetch-error', e?.message);
             return null;
           }
         })(),
@@ -71,24 +82,51 @@ export function createNarrator({ preferApi = true } = {}) {
   }
 
   // ---- strategy 1: mp3 clip from the On Demand proxy -----------------------------------
-  function playClip(url) {
+  function playClip(url, text) {
     return new Promise((resolve, reject) => {
       const a = new Audio(url);
       a.preload = 'auto';
+      diag.audio = a;
       let settled = false;
+      let stallTimer = null;
       const done = (ok) => {
         if (settled) return;
         settled = true;
+        clearInterval(stallTimer);
         a.onended = a.onerror = null;
         resolve(ok);
       };
+      // Stall guard: if the media clock stops advancing while we are meant to be playing (no audio
+      // device, sink lost, muted-tab quirks), keep the tour moving on a timed pace for the remainder.
+      let lastT = -1;
+      let stuck = 0;
+      const startedAt = Date.now();
+      const watch = () => {
+        if (settled || paused || a.paused) return;
+        if (Math.abs(a.currentTime - lastT) < 0.15) stuck++;
+        else stuck = 0;
+        lastT = a.currentTime;
+        if (stuck >= 3) {
+          log('audio-stalled', `currentTime=${a.currentTime.toFixed(2)} after ${Date.now() - startedAt}ms`);
+          const remaining = Math.max(1500, estimateMs(text) - (Date.now() - startedAt));
+          settled = true;
+          clearInterval(stallTimer);
+          a.onended = a.onerror = null;
+          a.pause();
+          resolve(playTimed(text, remaining));
+        }
+      };
       a.onended = () => done(true);
-      a.onerror = () => (settled ? null : reject(new Error('audio error')));
+      a.onerror = () => {
+        log('audio-error', a.error?.code);
+        if (!settled) reject(new Error('audio error'));
+      };
       const pb = {
         source: 'ondemand',
         pause: () => a.pause(),
         resume: () => a.play().catch(() => {}),
         stop: () => {
+          clearTimeout(startGuard);
           a.pause();
           a.removeAttribute('src');
           a.load();
@@ -96,12 +134,31 @@ export function createNarrator({ preferApi = true } = {}) {
         },
       };
       current = pb;
+      // Start guard: a real browser begins playback within milliseconds; if play() is still pending
+      // after 4s (no audio output device / sink never initialises) fall back to timed pacing.
+      let began = false;
+      const startGuard = setTimeout(() => {
+        if (began || settled) return;
+        log('audio-start-timeout', 'play() pending > 4s — timed pacing');
+        settled = true;
+        a.onended = a.onerror = null;
+        a.pause();
+        resolve(playTimed(text));
+      }, 4000);
       a.play()
         .then(() => {
+          began = true;
+          clearTimeout(startGuard);
+          if (settled) return;
+          log('play', 'ondemand');
           emit({ type: 'start', source: 'ondemand' });
           if (paused) a.pause();
+          stallTimer = setInterval(watch, 1000);
         })
         .catch((e) => {
+          clearTimeout(startGuard);
+          if (settled) return;
+          log('audio-play-rejected', `${e?.name}: ${e?.message}`);
           if (!settled) {
             settled = true;
             reject(e);
@@ -115,7 +172,11 @@ export function createNarrator({ preferApi = true } = {}) {
     return new Promise((resolve, reject) => {
       if (typeof speechSynthesis === 'undefined' || typeof SpeechSynthesisUtterance === 'undefined') return reject(new Error('no speechSynthesis'));
       const voice = pickWebVoice();
-      if (!voice) return reject(new Error('no voices'));
+      if (!voice) {
+        log('web-speech', 'no voices available');
+        return reject(new Error('no voices'));
+      }
+      log('web-speech-voice', `${voice.name} (${voice.lang})`);
       // Chrome cuts long utterances — narrate sentence by sentence.
       const parts = String(text).match(/[^.!?]+[.!?]+["')\]]*|[^.!?]+$/g)?.map((s) => s.trim()).filter(Boolean) || [text];
       let i = 0;
@@ -174,9 +235,9 @@ export function createNarrator({ preferApi = true } = {}) {
   }
 
   // ---- strategy 3: timed (silent) ------------------------------------------------------
-  function playTimed(text) {
+  function playTimed(text, ms) {
     return new Promise((resolve) => {
-      let remaining = estimateMs(text);
+      let remaining = ms || estimateMs(text);
       let startedAt = Date.now();
       let timer = null;
       const arm = () => {
@@ -198,6 +259,7 @@ export function createNarrator({ preferApi = true } = {}) {
           resolve(false);
         },
       };
+      log('play', 'timed');
       emit({ type: 'start', source: 'timed' });
       if (!paused) arm();
     });
@@ -211,7 +273,7 @@ export function createNarrator({ preferApi = true } = {}) {
     if (speak.token !== token) return false;
     if (url) {
       try {
-        return await playClip(url);
+        return await playClip(url, text);
       } catch {
         if (speak.token !== token) return false;
       }
