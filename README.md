@@ -365,3 +365,54 @@ Deployed preview restarted WITHOUT any injected environment so the key had to co
 | M7 Mobile: manual navigation to slide 2 re-syncs the guide (roadmap highlight) | pass | 2026-09-04 16:31:31 | qa-m07-mobile-slide2-resync-2026-09-04T163131Z-390x844.png |
 | M8 Mobile network trace: clips fetched from /guide-audio/ only, zero proxy audio requests, zero audio element errors | pass | 2026-09-04 16:31:31 | — |
 | M9 Zero console errors, zero page errors, zero failed requests (mobile) | pass | 2026-09-04 16:31:31 | — |
+
+## QA log — docked Guide player, 2026-09-04 16:55–17:02 UTC
+
+Baseline first: the previous centred modal intersected the slide canvas on both 1440×900 and 390×844 (screenshots
+`before-1440x900`, `before-390x844`). After the redesign, fresh cookie-less headless Chromium sessions (desktop full
+21-moment run with a per-moment overlap check, autoplay-refused session, mobile 390×844, plus a desktop layout session
+with the viewer scrolled into view) — 41/41 passed:
+
+| Check | Result | Time (UTC) | Screenshot |
+|---|---|---|---|
+| D1 Cold shared link, cookie-less session: deck PDF renders page 1 (static same-origin asset) | pass | 2026-09-04 16:55:39 | qa-d01-anon-deck-2026-09-04T165539Z-1440x900.png |
+| D2 /api/health: keyInstalled=true and sessionCreated=true (iehV…Pp7M from .env; POST 201 + GET 200) | pass | 2026-09-04 16:55:39 | — |
+| D3 NEW LAYOUT (desktop): Guide player is a slim docked row BELOW the slide + thumbnails (in-flow, not fixed/absolute), ≤ 64 px tall, does not intersect the slide canvas | pass | 2026-09-04 16:55:39 | qa-d03-docked-player-narrating-2026-09-04T165539Z-1440x900.png |
+| D4 Narration plays the hash-verified River clip; badge shows ElevenLabs · River · eleven_v3; caption is compact (≤ 2 lines) | pass | 2026-09-04 16:55:40 | — |
+| D5 Expand chevron reveals the full narration text inline below the player row — still no overlap with the slide | pass | 2026-09-04 16:55:40 | qa-d05-caption-expanded-2026-09-04T165540Z-1440x900.png |
+| D6 Pause during moment 2 (status=paused, audio paused, player shows 'Paused') | pass | 2026-09-04 16:56:02 | qa-d06-paused-2026-09-04T165602Z-1440x900.png |
+| D7 No advance while paused | pass | 2026-09-04 16:56:05 | — |
+| D8 Resume continues the same clip | pass | 2026-09-04 16:56:06 | — |
+| D9 Skip → next moment | pass | 2026-09-04 16:56:06 | — |
+| D10 Back → previous moment | pass | 2026-09-04 16:56:06 | — |
+| D11 Milestone highlight (3 KPI tiles) rendered on the unobstructed slide (player below, no intersection with highlights) | pass | 2026-09-04 16:56:06 | qa-d11-milestone-highlight-2026-09-04T165606Z-1440x900.png |
+| D12 Gate highlight (G4 · 29 Jan 2027) spotlight + tag on the slide; player docked below, no overlap | pass | 2026-09-04 16:57:10 | qa-d12-gate4-highlight-2026-09-04T165710Z-1440x900.png |
+| D13 Slide auto-advanced to slide 2 in sync with the roadmap moment; player still below the (new) slide | pass | 2026-09-04 16:59:07 | qa-d13-auto-slide2-2026-09-04T165907Z-1440x900.png |
+| D14 All 21 moments auto-advanced to the end; each played its own River clip (file + SHA-256 = manifest, prebaked, verified) with ZERO audio element errors | pass | 2026-09-04 17:00:52 | qa-d14-tour-complete-2026-09-04T170052Z-1440x900.png |
+| D15 Player never intersected the slide canvas or a highlight at ANY of the 21 moments (checked at each moment start) | pass | 2026-09-04 17:00:53 | — |
+| D16 Breath gap between consecutive auto-advanced moments ≈ 0.75 s | pass | 2026-09-04 17:00:53 | — |
+| D17 Network trace: every played clip fetched from /guide-audio/ with HTTP 200 + audio/mpeg (audio/mpeg); zero proxy/fallback audio requests | pass | 2026-09-04 17:00:53 | — |
+| D18 Manual thumbnail navigation to slide 2 re-syncs the guide (s2-open) | pass | 2026-09-04 17:00:53 | qa-d18-manual-nav-resync-2026-09-04T170053Z-1440x900.png |
+| D19 Manual prev-page re-syncs to s1-open | pass | 2026-09-04 17:00:53 | — |
+| D20 Guide off: player removed, audio stopped, page flag cleared, manual navigation works | pass | 2026-09-04 17:00:54 | qa-d20-guide-off-2026-09-04T170054Z-1440x900.png |
+| D21 Zero console errors, zero page errors, zero failed requests (desktop, full run) | pass | 2026-09-04 17:00:54 | — |
+| D22 Overlap + network-trace proof captured (PNG + JSON) | pass | 2026-09-04 17:00:55 | — |
+| B1 Autoplay refused → docked player shows 'Playback was blocked… Tap play' + Retry (no fallback voice), still not overlapping the slide | pass | 2026-09-04 17:00:57 | qa-b1-blocked-state-retry-2026-09-04T170057Z-1440x900.png |
+| M1 Mobile 390×844 cold session: deck renders anonymously, fits viewport, no horizontal overflow | pass | 2026-09-04 17:00:59 | qa-m01-mobile-deck-2026-09-04T170059Z-390x844.png |
+| M2 Mobile: /api/health keyInstalled=true, sessionCreated=true | pass | 2026-09-04 17:00:59 | — |
+| M3 Mobile NEW LAYOUT: player is FIXED to the bottom edge of the screen (bottom = viewport height), within the viewport width, does not intersect the slide; assistants dock moved above it | pass | 2026-09-04 17:01:01 | qa-m03-mobile-docked-narrating-2026-09-04T170101Z-390x844.png |
+| M4 Mobile: controls present, highlight drawn on the slide, River clip playing (hash-verified) | pass | 2026-09-04 17:01:01 | — |
+| M5 Mobile: auto-advance to moment 2 after narration; player still docked below the slide | pass | 2026-09-04 17:01:21 | qa-m05-mobile-auto-advanced-2026-09-04T170121Z-390x844.png |
+| M6 Mobile: pause works; milestone highlight (3 boxes) visible above the docked player | pass | 2026-09-04 17:01:22 | qa-m06-mobile-paused-highlight-2026-09-04T170122Z-390x844.png |
+| M7 Mobile: resume, skip and back work | pass | 2026-09-04 17:01:23 | — |
+| M8 Mobile: Gate 4 highlight on the slide with the player docked below (no overlap) | pass | 2026-09-04 17:01:26 | qa-m08-mobile-gate4-highlight-2026-09-04T170126Z-390x844.png |
+| M9 Mobile: manual navigation to slide 2 re-syncs the guide; slide 2 fully visible above the player | pass | 2026-09-04 17:01:26 | qa-m09-mobile-slide2-resync-2026-09-04T170126Z-390x844.png |
+| M10 Mobile: expanded caption grows the docked player upward but still does not cover the slide | pass | 2026-09-04 17:01:26 | qa-m10-mobile-caption-expanded-2026-09-04T170126Z-390x844.png |
+| M11 Mobile network trace: clips from /guide-audio/ only, zero proxy audio requests, zero audio element errors | pass | 2026-09-04 17:01:27 | — |
+| M12 Zero console errors, zero page errors, zero failed requests (mobile) | pass | 2026-09-04 17:01:27 | — |
+| L1 Desktop 1440×900 with the viewer scrolled into view: whole slide AND the docked player visible together, player below the slide, no overlap | pass | 2026-09-04 17:02:14 | qa-l01-desktop-layout-narrating-2026-09-04T170214Z-1440x900.png |
+| L2 Desktop layout — paused state | pass | 2026-09-04 17:02:15 | qa-l02-desktop-layout-paused-2026-09-04T170215Z-1440x900.png |
+| L3 Desktop layout — Gate 4 highlight on the unobstructed slide with the player docked below | pass | 2026-09-04 17:02:19 | qa-l03-desktop-layout-gate4-2026-09-04T170219Z-1440x900.png |
+| L4 Desktop layout — caption expanded inline below the row (slide untouched) | pass | 2026-09-04 17:02:20 | qa-l04-desktop-layout-caption-expanded-2026-09-04T170220Z-1440x900.png |
+| L5 Desktop layout — slide 2 (roadmap) with the player docked below | pass | 2026-09-04 17:02:21 | qa-l05-desktop-layout-slide2-2026-09-04T170221Z-1440x900.png |
+| L6 Zero console/page errors during the layout session | pass | 2026-09-04 17:02:21 | — |
