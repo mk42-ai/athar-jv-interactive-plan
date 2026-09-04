@@ -1,0 +1,25 @@
+# dependencies / builds
+node_modules/
+dist/
+build/
+.vite/
+.vercel/
+coverage/
+*.tsbuildinfo
+
+# secrets & local config — never commit
+.env
+.env.*
+!.env.example
+
+# logs / OS / editor noise
+*.log
+npm-debug.log*
+.DS_Store
+Thumbs.db
+.idea/
+.vscode/
+
+# QA / proof artefacts
+.ui-proof/
+.pdf-proof/
