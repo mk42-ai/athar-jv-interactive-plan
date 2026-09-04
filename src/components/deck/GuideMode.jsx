@@ -15,7 +15,7 @@ const Icon = ({ name, size = 16 }) => (
   </svg>
 );
 
-const SOURCE_LABEL = { ondemand: 'On Demand voice · Nova', browser: 'Browser voice · en-US', timed: 'Silent · timed' };
+const SOURCE_LABEL = { elevenlabs: 'ElevenLabs voice', ondemand: 'On Demand voice', browser: 'Browser voice · en-US', timed: 'Silent · timed' };
 
 /** Toggle pill shown in the viewer toolbar. */
 export function GuideToggle({ guide, page }) {
@@ -51,7 +51,7 @@ export function GuideOverlay({ guide }) {
 
 /** Floating control bar: play/pause, back/skip, caption, voice source, progress. */
 export function GuideBar({ guide }) {
-  const { active, playing, status, source, step, idx, total } = guide;
+  const { active, playing, status, source, sourceLabel, step, idx, total } = guide;
   useEffect(() => {
     if (!active) return;
     const onKey = (e) => {
@@ -70,7 +70,7 @@ export function GuideBar({ guide }) {
       <div className="guide-bar-head">
         <span className="guide-live"><i className={status === 'speaking' ? 'pulse' : ''} /> Guide Mode</span>
         <span className="guide-pos" data-testid="guide-position">Slide {step.slide} · moment {step.stepInSlide}/{step.stepsInSlide} · {idx + 1}/{total}</span>
-        {source && <span className="guide-src" data-testid="guide-source" data-source={source}>{SOURCE_LABEL[source] || source}</span>}
+        {source && <span className="guide-src" data-testid="guide-source" data-source={source}>{sourceLabel || SOURCE_LABEL[source] || source}</span>}
         <button className="guide-x" onClick={guide.stop} aria-label="Exit Guide Mode" data-testid="guide-exit"><Icon name="close" size={14} /></button>
       </div>
       <p className="guide-caption" aria-live="polite" data-testid="guide-caption"><b>{step.label}.</b> {step.text}</p>

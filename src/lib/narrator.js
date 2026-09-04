@@ -70,7 +70,9 @@ export function createNarrator({ preferApi = true } = {}) {
               return null;
             }
             const j = await r.json();
-            return j?.url || null;
+            if (!j?.url) return null;
+            log('tts-clip', `${j.provider}/${j.model}/${j.voice} (${j.source})`);
+            return { url: j.url, provider: j.provider || 'ondemand', label: j.label || '', model: j.model, voice: j.voice, source: j.source };
           } catch (e) {
             log('tts-fetch-error', e?.message);
             return null;
@@ -82,8 +84,10 @@ export function createNarrator({ preferApi = true } = {}) {
   }
 
   // ---- strategy 1: mp3 clip from the On Demand proxy -----------------------------------
-  function playClip(url, text) {
+  function playClip(clip, text) {
     return new Promise((resolve, reject) => {
+      const url = typeof clip === 'string' ? clip : clip.url;
+      const meta = typeof clip === 'string' ? { provider: 'ondemand', label: '' } : clip;
       const a = new Audio(url);
       a.preload = 'auto';
       diag.audio = a;
@@ -122,7 +126,7 @@ export function createNarrator({ preferApi = true } = {}) {
         if (!settled) reject(new Error('audio error'));
       };
       const pb = {
-        source: 'ondemand',
+        source: meta.provider,
         pause: () => a.pause(),
         resume: () => a.play().catch(() => {}),
         stop: () => {
@@ -150,8 +154,8 @@ export function createNarrator({ preferApi = true } = {}) {
           began = true;
           clearTimeout(startGuard);
           if (settled) return;
-          log('play', 'ondemand');
-          emit({ type: 'start', source: 'ondemand' });
+          log('play', `${meta.provider}:${meta.label}`);
+          emit({ type: 'start', source: meta.provider, label: meta.label, meta });
           if (paused) a.pause();
           stallTimer = setInterval(watch, 1000);
         })
@@ -269,11 +273,11 @@ export function createNarrator({ preferApi = true } = {}) {
     stop();
     const token = {};
     speak.token = token;
-    const url = await fetchClip(text);
+    const clip = await fetchClip(text);
     if (speak.token !== token) return false;
-    if (url) {
+    if (clip) {
       try {
-        return await playClip(url, text);
+        return await playClip(clip, text);
       } catch {
         if (speak.token !== token) return false;
       }

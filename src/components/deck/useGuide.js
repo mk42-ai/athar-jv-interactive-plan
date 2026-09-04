@@ -14,6 +14,7 @@ export function useGuide({ onSlide }) {
   const [idx, setIdx] = useState(0);
   const [status, setStatus] = useState('idle');
   const [source, setSource] = useState(null);
+  const [sourceLabel, setSourceLabel] = useState('');
   const [run, setRun] = useState(0); // bump to (re)start the current step
   const narrator = useMemo(() => createNarrator(), []);
   const runRef = useRef(0);
@@ -24,7 +25,15 @@ export function useGuide({ onSlide }) {
 
   const step = active ? GUIDE_STEPS[idx] : null;
 
-  useEffect(() => narrator.subscribe((ev) => ev.type === 'start' && setSource(ev.source)), [narrator]);
+  useEffect(
+    () =>
+      narrator.subscribe((ev) => {
+        if (ev.type !== 'start') return;
+        setSource(ev.source);
+        setSourceLabel(ev.label || '');
+      }),
+    [narrator],
+  );
   useEffect(() => () => narrator.stop(), [narrator]);
 
   // Drive the slide to the step being narrated.
@@ -122,5 +131,5 @@ export function useGuide({ onSlide }) {
     [active, goto],
   );
 
-  return { active, playing, status, source, idx, step, total: GUIDE_STEPS.length, start, stop, toggle, skip, back, playPause, goto, syncSlide };
+  return { active, playing, status, source, sourceLabel, idx, step, total: GUIDE_STEPS.length, start, stop, toggle, skip, back, playPause, goto, syncSlide };
 }
