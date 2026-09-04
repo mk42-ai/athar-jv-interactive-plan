@@ -454,8 +454,8 @@ h1, h2, h3 { font-weight: 500; letter-spacing: -0.01em; }
 @keyframes guide-in { from { opacity: 0; transform: scale(0.97); } to { opacity: 1; transform: none; } }
 @keyframes guide-ring { 0% { opacity: 0.6; transform: scale(1); } 70% { opacity: 0; transform: scale(1.06); } 100% { opacity: 0; } }
 
-.guide-bar { position: absolute; left: 50%; bottom: 76px; transform: translateX(-50%); width: min(760px, calc(100% - 32px)); display: grid; gap: 8px; padding: 12px 16px 12px; border: 1px solid var(--hair); border-radius: 10px; background: rgba(255, 255, 255, 0.94); backdrop-filter: blur(10px); box-shadow: 0 12px 40px rgba(23, 24, 26, 0.14); z-index: 20; animation: guide-in 0.5s var(--ease) both; }
-.pdfv:fullscreen ~ .guide-bar, .pdfv.is-fullscreen ~ .guide-bar { position: fixed; bottom: 84px; z-index: 1001; }
+.guide-bar { position: absolute; left: 16px; right: 16px; bottom: 76px; margin: 0 auto; max-width: 760px; /* no transform centering — the guide-in animation would override it */ display: grid; gap: 8px; padding: 12px 16px 12px; border: 1px solid var(--hair); border-radius: 10px; background: rgba(255, 255, 255, 0.94); backdrop-filter: blur(10px); box-shadow: 0 12px 40px rgba(23, 24, 26, 0.14); z-index: 20; animation: guide-in 0.5s var(--ease) both; }
+.pdfv:fullscreen ~ .guide-bar, .pdfv.is-fullscreen ~ .guide-bar { position: fixed; left: 16px; right: 16px; bottom: 84px; z-index: 1001; }
 .guide-bar-head { display: flex; align-items: center; gap: 12px; font-size: 0.72rem; letter-spacing: 0.08em; text-transform: uppercase; color: var(--muted); }
 .guide-live { display: inline-flex; align-items: center; gap: 7px; color: var(--gold); font-weight: 600; }
 .guide-live i { width: 7px; height: 7px; border-radius: 50%; background: var(--gold); opacity: 0.55; }
