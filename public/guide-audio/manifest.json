@@ -33,7 +33,17 @@
     "use_speaker_boost": true
    },
    "approxSeconds": 21,
-   "generatedAt": "2026-09-04T13:38:17.766Z"
+   "generatedAt": "2026-09-04T13:38:17.766Z",
+   "provenance": {
+    "history-item-id": "sPyOXjjiWkrm5sajEy8X",
+    "request-id": "LHMpnGInQ4Kt7j9nX4jp",
+    "character-cost": 285,
+    "model_id": "eleven_v3",
+    "generatedAtUnix": 1788529098,
+    "generatedAtIso": "2026-09-04T13:38:18.000Z",
+    "source": "TTS",
+    "matchedBy": "generation time ±180 s + exact character count"
+   }
   },
   "s1-kpis": {
    "file": "s1-kpis-96ed430975f2.mp3",
@@ -54,7 +64,17 @@
     "use_speaker_boost": true
    },
    "approxSeconds": 17,
-   "generatedAt": "2026-09-04T13:38:33.979Z"
+   "generatedAt": "2026-09-04T13:38:33.979Z",
+   "provenance": {
+    "history-item-id": "WfUxoLikR3EEgzAUVGHk",
+    "request-id": "E8HSNEJcPqaBHIN3PToI",
+    "character-cost": 244,
+    "model_id": "eleven_v3",
+    "generatedAtUnix": 1788529114,
+    "generatedAtIso": "2026-09-04T13:38:34.000Z",
+    "source": "TTS",
+    "matchedBy": "generation time ±180 s + exact character count"
+   }
   },
   "s1-kpis-2": {
    "file": "s1-kpis-2-b1cd88f114af.mp3",
@@ -75,7 +95,17 @@
     "use_speaker_boost": true
    },
    "approxSeconds": 18,
-   "generatedAt": "2026-09-04T13:38:40.716Z"
+   "generatedAt": "2026-09-04T13:38:40.716Z",
+   "provenance": {
+    "history-item-id": "rgod2pCRAHs5NcCcFe0T",
+    "request-id": "hY9xhonOOXVktlYUuai8",
+    "character-cost": 300,
+    "model_id": "eleven_v3",
+    "generatedAtUnix": 1788529121,
+    "generatedAtIso": "2026-09-04T13:38:41.000Z",
+    "source": "TTS",
+    "matchedBy": "generation time ±180 s + exact character count"
+   }
   },
   "s1-g1": {
    "file": "s1-g1-fbd21e23242b.mp3",
@@ -96,7 +126,17 @@
     "use_speaker_boost": true
    },
    "approxSeconds": 11,
-   "generatedAt": "2026-09-04T13:38:45.024Z"
+   "generatedAt": "2026-09-04T13:38:45.024Z",
+   "provenance": {
+    "history-item-id": "kTDRhBypiDjyZGWFlGWE",
+    "request-id": "CCI5zpuuZzooikQz4dHL",
+    "character-cost": 162,
+    "model_id": "eleven_v3",
+    "generatedAtUnix": 1788529125,
+    "generatedAtIso": "2026-09-04T13:38:45.000Z",
+    "source": "TTS",
+    "matchedBy": "generation time ±180 s + exact character count"
+   }
   },
   "s1-g2": {
    "file": "s1-g2-74bb27933c89.mp3",
@@ -117,7 +157,17 @@
     "use_speaker_boost": true
    },
    "approxSeconds": 8,
-   "generatedAt": "2026-09-04T13:38:48.392Z"
+   "generatedAt": "2026-09-04T13:38:48.392Z",
+   "provenance": {
+    "history-item-id": "eSiVKfnKzIqS8pdWnGW4",
+    "request-id": "psQipdSdUD4tVLvCsLjS",
+    "character-cost": 124,
+    "model_id": "eleven_v3",
+    "generatedAtUnix": 1788529129,
+    "generatedAtIso": "2026-09-04T13:38:49.000Z",
+    "source": "TTS",
+    "matchedBy": "generation time ±180 s + exact character count"
+   }
   },
   "s1-g3": {
    "file": "s1-g3-341af54905ff.mp3",
@@ -138,7 +188,17 @@
     "use_speaker_boost": true
    },
    "approxSeconds": 8,
-   "generatedAt": "2026-09-04T13:38:51.522Z"
+   "generatedAt": "2026-09-04T13:38:51.522Z",
+   "provenance": {
+    "history-item-id": "C4gjB5kGgFiHilU0zgAD",
+    "request-id": "MtIRB3G75vpnj0hKt9Fo",
+    "character-cost": 114,
+    "model_id": "eleven_v3",
+    "generatedAtUnix": 1788529132,
+    "generatedAtIso": "2026-09-04T13:38:52.000Z",
+    "source": "TTS",
+    "matchedBy": "generation time ±180 s + exact character count"
+   }
   },
   "s1-g4": {
    "file": "s1-g4-1a8eef9b20df.mp3",
@@ -159,7 +219,17 @@
     "use_speaker_boost": true
    },
    "approxSeconds": 9,
-   "generatedAt": "2026-09-04T13:38:54.930Z"
+   "generatedAt": "2026-09-04T13:38:54.930Z",
+   "provenance": {
+    "history-item-id": "v9dIPFat5ZN6jxD1u8tS",
+    "request-id": "v9K6PLSUQRcCvpPHy5zT",
+    "character-cost": 127,
+    "model_id": "eleven_v3",
+    "generatedAtUnix": 1788529135,
+    "generatedAtIso": "2026-09-04T13:38:55.000Z",
+    "source": "TTS",
+    "matchedBy": "generation time ±180 s + exact character count"
+   }
   },
   "s1-g5": {
    "file": "s1-g5-8da68c041eeb.mp3",
@@ -180,7 +250,17 @@
     "use_speaker_boost": true
    },
    "approxSeconds": 6,
-   "generatedAt": "2026-09-04T13:38:57.768Z"
+   "generatedAt": "2026-09-04T13:38:57.768Z",
+   "provenance": {
+    "history-item-id": "nfNFq4znzkbe3Hf4ir1y",
+    "request-id": "qgqzAkeNmILRgpauwnMs",
+    "character-cost": 108,
+    "model_id": "eleven_v3",
+    "generatedAtUnix": 1788529138,
+    "generatedAtIso": "2026-09-04T13:38:58.000Z",
+    "source": "TTS",
+    "matchedBy": "generation time ±180 s + exact character count"
+   }
   },
   "s1-g6": {
    "file": "s1-g6-99c23979c3b4.mp3",
@@ -201,7 +281,17 @@
     "use_speaker_boost": true
    },
    "approxSeconds": 7,
-   "generatedAt": "2026-09-04T13:39:03.883Z"
+   "generatedAt": "2026-09-04T13:39:03.883Z",
+   "provenance": {
+    "history-item-id": "ftXe72eggDF1DMnNesZw",
+    "request-id": "4k3809mo4kQNS2BkDUqC",
+    "character-cost": 108,
+    "model_id": "eleven_v3",
+    "generatedAtUnix": 1788529144,
+    "generatedAtIso": "2026-09-04T13:39:04.000Z",
+    "source": "TTS",
+    "matchedBy": "generation time ±180 s + exact character count"
+   }
   },
   "s1-anchors": {
    "file": "s1-anchors-b2e54b1af8c3.mp3",
@@ -222,7 +312,17 @@
     "use_speaker_boost": true
    },
    "approxSeconds": 20,
-   "generatedAt": "2026-09-04T13:39:12.161Z"
+   "generatedAt": "2026-09-04T13:39:12.161Z",
+   "provenance": {
+    "history-item-id": "Ii6bjfWf7SGOWZf35AY7",
+    "request-id": "7Pfg40bVeTp2KtdZCHBs",
+    "character-cost": 273,
+    "model_id": "eleven_v3",
+    "generatedAtUnix": 1788529152,
+    "generatedAtIso": "2026-09-04T13:39:12.000Z",
+    "source": "TTS",
+    "matchedBy": "generation time ±180 s + exact character count"
+   }
   },
   "s1-commercials": {
    "file": "s1-commercials-68d5af140a3b.mp3",
@@ -243,7 +343,17 @@
     "use_speaker_boost": true
    },
    "approxSeconds": 29,
-   "generatedAt": "2026-09-04T13:39:23.344Z"
+   "generatedAt": "2026-09-04T13:39:23.344Z",
+   "provenance": {
+    "history-item-id": "RbEjhxGbWGoPD8oEMTZO",
+    "request-id": "wVP1fsm7NBQSpycbI0wc",
+    "character-cost": 427,
+    "model_id": "eleven_v3",
+    "generatedAtUnix": 1788529164,
+    "generatedAtIso": "2026-09-04T13:39:24.000Z",
+    "source": "TTS",
+    "matchedBy": "generation time ±180 s + exact character count"
+   }
   },
   "s1-delivery": {
    "file": "s1-delivery-81db41985ab1.mp3",
@@ -264,7 +374,17 @@
     "use_speaker_boost": true
    },
    "approxSeconds": 18,
-   "generatedAt": "2026-09-04T13:39:30.828Z"
+   "generatedAt": "2026-09-04T13:39:30.828Z",
+   "provenance": {
+    "history-item-id": "y7qAHRoo1WUoZIthEWLT",
+    "request-id": "Uxu1jGhTmUD5jbcvEMpt",
+    "character-cost": 264,
+    "model_id": "eleven_v3",
+    "generatedAtUnix": 1788529171,
+    "generatedAtIso": "2026-09-04T13:39:31.000Z",
+    "source": "TTS",
+    "matchedBy": "generation time ±180 s + exact character count"
+   }
   },
   "s1-product": {
    "file": "s1-product-eae93d4721f0.mp3",
@@ -285,7 +405,17 @@
     "use_speaker_boost": true
    },
    "approxSeconds": 21,
-   "generatedAt": "2026-09-04T13:39:38.427Z"
+   "generatedAt": "2026-09-04T13:39:38.427Z",
+   "provenance": {
+    "history-item-id": "FfEERbzG0BwMRf9axHlY",
+    "request-id": "gp3FRAToD5Wjg4rf1Uax",
+    "character-cost": 286,
+    "model_id": "eleven_v3",
+    "generatedAtUnix": 1788529179,
+    "generatedAtIso": "2026-09-04T13:39:39.000Z",
+    "source": "TTS",
+    "matchedBy": "generation time ±180 s + exact character count"
+   }
   },
   "s2-open": {
    "file": "s2-open-81bac71892f3.mp3",
@@ -306,7 +436,17 @@
     "use_speaker_boost": true
    },
    "approxSeconds": 15,
-   "generatedAt": "2026-09-04T13:39:44.094Z"
+   "generatedAt": "2026-09-04T13:39:44.094Z",
+   "provenance": {
+    "history-item-id": "5OBOOohfMw9jGiXmZpT1",
+    "request-id": "LiFMyiuh2jpdFasrflxI",
+    "character-cost": 226,
+    "model_id": "eleven_v3",
+    "generatedAtUnix": 1788529184,
+    "generatedAtIso": "2026-09-04T13:39:44.000Z",
+    "source": "TTS",
+    "matchedBy": "generation time ±180 s + exact character count"
+   }
   },
   "s2-g1": {
    "file": "s2-g1-dbeb472cbba3.mp3",
@@ -327,7 +467,17 @@
     "use_speaker_boost": true
    },
    "approxSeconds": 13,
-   "generatedAt": "2026-09-04T13:39:49.042Z"
+   "generatedAt": "2026-09-04T13:39:49.042Z",
+   "provenance": {
+    "history-item-id": "2sPZ94uoRkU5OdTqGyfq",
+    "request-id": "YwadenxHrpXLVLE2C6CM",
+    "character-cost": 170,
+    "model_id": "eleven_v3",
+    "generatedAtUnix": 1788529189,
+    "generatedAtIso": "2026-09-04T13:39:49.000Z",
+    "source": "TTS",
+    "matchedBy": "generation time ±180 s + exact character count"
+   }
   },
   "s2-g2": {
    "file": "s2-g2-6c21e61a6371.mp3",
@@ -348,7 +498,17 @@
     "use_speaker_boost": true
    },
    "approxSeconds": 11,
-   "generatedAt": "2026-09-04T13:39:53.901Z"
+   "generatedAt": "2026-09-04T13:39:53.901Z",
+   "provenance": {
+    "history-item-id": "IuOLaj3mEs5h1v1ruhxZ",
+    "request-id": "tx4X903nt5UdaNGmezja",
+    "character-cost": 181,
+    "model_id": "eleven_v3",
+    "generatedAtUnix": 1788529194,
+    "generatedAtIso": "2026-09-04T13:39:54.000Z",
+    "source": "TTS",
+    "matchedBy": "generation time ±180 s + exact character count"
+   }
   },
   "s2-g3": {
    "file": "s2-g3-0ea9ad84aa27.mp3",
@@ -369,7 +529,17 @@
     "use_speaker_boost": true
    },
    "approxSeconds": 12,
-   "generatedAt": "2026-09-04T13:39:58.960Z"
+   "generatedAt": "2026-09-04T13:39:58.960Z",
+   "provenance": {
+    "history-item-id": "rvUow9kx59VrJscNITWQ",
+    "request-id": "TZfAt4DsQff5KvPz5ML3",
+    "character-cost": 177,
+    "model_id": "eleven_v3",
+    "generatedAtUnix": 1788529199,
+    "generatedAtIso": "2026-09-04T13:39:59.000Z",
+    "source": "TTS",
+    "matchedBy": "generation time ±180 s + exact character count"
+   }
   },
   "s2-g4": {
    "file": "s2-g4-c02c99fd01b2.mp3",
@@ -390,7 +560,17 @@
     "use_speaker_boost": true
    },
    "approxSeconds": 12,
-   "generatedAt": "2026-09-04T13:40:04.823Z"
+   "generatedAt": "2026-09-04T13:40:04.823Z",
+   "provenance": {
+    "history-item-id": "N3KzHjskkb2eCiRkszWa",
+    "request-id": "D3kKlYBYmUmW4Yy3Ax1e",
+    "character-cost": 172,
+    "model_id": "eleven_v3",
+    "generatedAtUnix": 1788529205,
+    "generatedAtIso": "2026-09-04T13:40:05.000Z",
+    "source": "TTS",
+    "matchedBy": "generation time ±180 s + exact character count"
+   }
   },
   "s2-g5": {
    "file": "s2-g5-774552ee7127.mp3",
@@ -411,7 +591,17 @@
     "use_speaker_boost": true
    },
    "approxSeconds": 11,
-   "generatedAt": "2026-09-04T13:40:09.329Z"
+   "generatedAt": "2026-09-04T13:40:09.329Z",
+   "provenance": {
+    "history-item-id": "yf3692TJE0ps7x96RD3P",
+    "request-id": "VvtQdt328WHWoi4Y49e7",
+    "character-cost": 156,
+    "model_id": "eleven_v3",
+    "generatedAtUnix": 1788529209,
+    "generatedAtIso": "2026-09-04T13:40:09.000Z",
+    "source": "TTS",
+    "matchedBy": "generation time ±180 s + exact character count"
+   }
   },
   "s2-g6": {
    "file": "s2-g6-a7e5eb9d5092.mp3",
@@ -432,7 +622,17 @@
     "use_speaker_boost": true
    },
    "approxSeconds": 12,
-   "generatedAt": "2026-09-04T13:40:13.992Z"
+   "generatedAt": "2026-09-04T13:40:13.992Z",
+   "provenance": {
+    "history-item-id": "TWEzPcreGSk4UcwmymC9",
+    "request-id": "M6bg55Xc8KaT22oBFxkZ",
+    "character-cost": 164,
+    "model_id": "eleven_v3",
+    "generatedAtUnix": 1788529214,
+    "generatedAtIso": "2026-09-04T13:40:14.000Z",
+    "source": "TTS",
+    "matchedBy": "generation time ±180 s + exact character count"
+   }
   },
   "s2-close": {
    "file": "s2-close-df46405edea3.mp3",
@@ -453,7 +653,18 @@
     "use_speaker_boost": true
    },
    "approxSeconds": 14,
-   "generatedAt": "2026-09-04T13:40:20.854Z"
+   "generatedAt": "2026-09-04T13:40:20.854Z",
+   "provenance": {
+    "history-item-id": "NnK7pVH2RD8V38xCXr6M",
+    "request-id": "nxqd1ztpchdAXPlXMP3X",
+    "character-cost": 220,
+    "model_id": "eleven_v3",
+    "generatedAtUnix": 1788529221,
+    "generatedAtIso": "2026-09-04T13:40:21.000Z",
+    "source": "TTS",
+    "matchedBy": "generation time ±180 s + exact character count"
+   }
   }
- }
+ },
+ "provenanceAttachedAt": "2026-09-04T13:51:25.696Z"
 }

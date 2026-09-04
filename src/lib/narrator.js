@@ -185,7 +185,7 @@ export function createNarrator() {
         const entry = { t: Date.now(), moment: step.id, slide: step.slide, source: clip.source, provider: clip.provider, model: clip.model, voice: clip.voice, file: clip.file, url: clip.url, sha256: clip.sha256, expectedSha256: clip.expectedSha256, verified: clip.verified, httpStatus: clip.status, contentType: clip.contentType, bytes: clip.bytes, duration: a.duration };
         diag.sources.push(entry);
         log('play', `${step.id} ← ${clip.source} ${clip.file}${clip.verified ? ' (sha256 ✓)' : clip.verified === false ? ' (sha256 ✗)' : ''}`);
-        console.info(`[guide-audio] ${step.id} ← ${clip.source} ${clip.url} ${clip.verified ? 'sha256 verified' : ''}`.trim());
+        console.info(`[guide-audio] ${step.id} → ${clip.provider} / ${clip.model} / ${clip.voice} · ${clip.source} · ${clip.url} · sha256 ${clip.sha256 || 'n/a'}${clip.verified ? ' (verified)' : clip.verified === false ? ' (MISMATCH)' : ''}`);
         emit({ type: 'start', source: clip.source === 'live' ? 'live' : 'elevenlabs', label: clip.label, clip });
       };
       current = {
