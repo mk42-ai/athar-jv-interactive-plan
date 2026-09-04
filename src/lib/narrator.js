@@ -96,8 +96,10 @@ export function createNarrator() {
         if (res.ok) {
           const buf = await res.arrayBuffer();
           const type = res.headers.get('content-type') || '';
-          const sha = await sha256Hex(buf);
-          const verified = sha ? sha === entry.sha256 : null;
+          const looksAudio = /audio\/|octet-stream/i.test(type) && !/text\/html/i.test(type);
+          if (!looksAudio) log('prebaked-not-audio', `${step.id}: ${res.status} ${type || 'no content-type'} (${buf.byteLength} B) — static file missing? trying the embedded copy`);
+          const sha = looksAudio ? await sha256Hex(buf) : null;
+          const verified = sha ? sha === entry.sha256 : looksAudio ? null : false;
           if (verified !== false && buf.byteLength > 1000) {
             const blob = new Blob([buf], { type: type || 'audio/mpeg' });
             return {
@@ -125,6 +127,26 @@ export function createNarrator() {
       }
     } else {
       log('prebaked-missing', step.id);
+    }
+    // Embedded-store copy (survives redeploys that dropped the binary) — same bytes, same hash check.
+    if (entry) {
+      try {
+        const res2 = await fetch(`/api/guide-audio/${entry.file}`, { cache: 'force-cache' });
+        const type2 = res2.headers.get('content-type') || '';
+        if (res2.ok && /audio\//i.test(type2)) {
+          const buf2 = await res2.arrayBuffer();
+          const sha2 = await sha256Hex(buf2);
+          if ((sha2 ? sha2 === entry.sha256 : true) && buf2.byteLength > 1000) {
+            log('prebaked-embedded', `${step.id}: served from the embedded store (${res2.headers.get('x-guide-audio') || 'api'})`);
+            return { source: 'prebaked', provider: m.provider || 'elevenlabs', model: entry.model || m.model, voice: entry.voice || m.voice, voiceId: entry.voiceId || m.voiceId, file: entry.file, url: `/api/guide-audio/${entry.file}`, sha256: sha2, expectedSha256: entry.sha256, verified: sha2 ? true : null, status: res2.status, contentType: type2, bytes: buf2.byteLength, label: `ElevenLabs · ${entry.voice || m.voice} · ${entry.model || m.model}`, objectUrl: URL.createObjectURL(new Blob([buf2], { type: 'audio/mpeg' })) };
+          }
+          log('embedded-integrity-failed', `${step.id}: got ${sha2} expected ${entry.sha256}`);
+        } else {
+          log('embedded-http', `${step.id}: ${res2.status} ${type2}`);
+        }
+      } catch (e) {
+        log('embedded-error', `${step.id}: ${e?.message}`);
+      }
     }
     // Live synthesis through the server proxy (ElevenLabs; On Demand only if ElevenLabs hard-fails).
     const r = await fetch('/api/guide/tts', { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify({ text: step.text, id: step.id }) });
@@ -171,11 +193,22 @@ export function createNarrator() {
         resolve(ok);
       };
       a.onended = () => finish(true);
+      let triedDirect = false;
       a.onerror = () => {
         if (settled) return;
+        const code = a.error?.code;
+        if (!triedDirect && clip.objectUrl && clip.url) {
+          // Blob playback refused (some browsers/decoders) → retry once straight from the (hash-verified) URL.
+          triedDirect = true;
+          log('audio-error-retry', `${step.id}: MediaError ${code} on blob source — retrying with ${clip.url}`);
+          started = false;
+          a.src = clip.url;
+          const p2 = a.play();
+          if (p2?.then) p2.catch(() => {});
+          return;
+        }
         settled = true;
         cleanup();
-        const code = a.error?.code;
         log('audio-error', `${step.id}: MediaError ${code}`);
         reject(new NarrationError(`Audio element error (code ${code}) while playing ${clip.file}`, { step: step.id, stage: 'play', clip: clip.file }));
       };

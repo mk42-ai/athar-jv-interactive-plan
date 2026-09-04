@@ -6,12 +6,15 @@ import fs from 'node:fs';
 import { fileURLToPath } from 'node:url';
 import { createApiApp } from './api.js';
 import { deckPdfMiddleware } from './deck.js';
+import { guideAudioMiddleware, rehydrateGuideAudio } from './guideAudioStore.js';
 
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
 const dist = path.resolve(__dirname, '../dist');
 const port = Number(process.env.PORT || 5173);
 
 const app = express();
+rehydrateGuideAudio({ staticDir: 'dist' });
+app.use(guideAudioMiddleware({ staticDir: 'dist' }));
 app.use(deckPdfMiddleware({ staticDir: 'dist' })); // deck PDF fallback when dist/deck/ (copied from public/ by vite build) is absent
 app.use(createApiApp());
 if (fs.existsSync(dist)) {

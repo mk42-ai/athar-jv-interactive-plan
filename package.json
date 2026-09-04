@@ -10,7 +10,8 @@
     "preview": "vite preview --host 0.0.0.0 --port 5173",
     "start": "node server/index.js",
     "guide:prebake": "node scripts/prebake-guide-audio.mjs",
-    "guide:provenance": "node scripts/attach-guide-audio-provenance.mjs"
+    "guide:provenance": "node scripts/attach-guide-audio-provenance.mjs",
+    "guide:embed": "node scripts/embed-guide-audio.mjs"
   },
   "dependencies": {
     "express": "^4.21.2",

@@ -18,8 +18,11 @@ import {
   getExecution,
   getExecutionLogs,
   getExecutionTranscript,
+  probeOnDemand,
 } from './ondemand.js';
 import { buildFulfillmentPrompt, loadPlan } from './grounding.js';
+import { loadDotEnv, fingerprint } from './env.js';
+import { clipStatus, serveEmbedded, loadEmbeddedAudio } from './guideAudioStore.js';
 
 // ---- tiny in-memory media store (uploaded user audio + proxied TTS clips) ----
 const MEDIA_TTL_MS = 20 * 60 * 1000;
@@ -209,6 +212,15 @@ async function runVoiceTurn({ req, send, question, sessionId, externalUserId, si
 }
 
 export function createApiApp() {
+  // Secrets: process.env first, then the git-ignored .env (server-side only — never bundled for the client).
+  const env = loadDotEnv();
+  const odKey = process.env.ON_DEMAND_API_KEY;
+  console.log(`[ondemand] API key ${odKey ? `loaded ${fingerprint(odKey)} from ${env.applied.includes('ON_DEMAND_API_KEY') ? '.env' : 'process.env'}` : 'NOT set — chat/voice/TTS fallback disabled'}`);
+  console.log(`[elevenlabs] API key ${process.env.ELEVENLABS_API_KEY ? `loaded ${fingerprint(process.env.ELEVENLABS_API_KEY)}` : 'not set (pre-baked clips still play)'}`);
+  const store = loadEmbeddedAudio();
+  console.log(`[guide-audio] embedded store: ${store.files.size} clips${store.manifest ? ` (${store.manifest.voice} / ${store.manifest.model}, v${store.manifest.version})` : ''}`);
+  if (odKey) probeOnDemand().then((r) => console.log(`[ondemand] runtime probe ${r.ok ? `OK — session ${r.sessionId} created in ${r.ms} ms` : `FAILED — ${r.error}`}`)).catch(() => {});
+
   const app = express();
   app.disable('x-powered-by');
 
@@ -223,11 +235,14 @@ export function createApiApp() {
   });
 
 
-  api.get('/health', (req, res) => {
+  api.get('/health', async (req, res) => {
     const plan = loadPlan();
+    const probe = await probeOnDemand({ force: req.query.probe === '1' }).catch((e) => ({ ok: false, error: e.message }));
     res.json({
       ok: true,
       configured: isConfigured(),
+      ondemand: { keyLoaded: isConfigured(), keyFingerprint: fingerprint(process.env.ON_DEMAND_API_KEY), source: loadDotEnv().applied.includes('ON_DEMAND_API_KEY') ? '.env' : isConfigured() ? 'process.env' : null, role: 'chat + Advanced Voice Mode + Guide Mode TTS fallback', probe },
+      elevenlabs: { keyLoaded: isElevenConfigured(), keyFingerprint: fingerprint(process.env.ELEVENLABS_API_KEY) },
       endpointId: CONFIG.endpointId,
       avmWorkflowId: CONFIG.avmWorkflowId,
       ttsVoice: CONFIG.ttsVoice,
@@ -392,6 +407,23 @@ export function createApiApp() {
   const ondemandLabel = () => `On Demand voice · ${CONFIG.guideVoice[0].toUpperCase()}${CONFIG.guideVoice.slice(1)}`;
   let quotaCache = { t: 0, v: null };
 
+  // Serves a narration clip (or the manifest) from the static folder if present, else from the embedded
+  // base64 store — used by the Vercel rewrite for /guide-audio/* when the static file is absent.
+  api.get('/guide-audio/:file', (req, res) => {
+    const file = String(req.params.file || '');
+    if (!file || file.includes('/') || file.includes('..')) return res.status(400).json({ error: 'bad file' });
+    for (const dir of ['public', 'dist']) {
+      const p = path.join(process.cwd(), dir, 'guide-audio', file);
+      if (fs.existsSync(p)) {
+        res.setHeader('Cache-Control', file.endsWith('.mp3') ? 'public, max-age=31536000, immutable' : 'no-store, must-revalidate');
+        res.setHeader('X-Guide-Audio', 'static');
+        return res.sendFile(p, { headers: { 'Content-Type': file.endsWith('.mp3') ? 'audio/mpeg' : 'application/json' } });
+      }
+    }
+    if (serveEmbedded(req, res, file)) return;
+    res.status(404).json({ error: 'clip not found', file });
+  });
+
   api.get('/guide/voice', async (req, res) => {
     const manifest = loadPrebaked();
     let quota = null;
@@ -417,6 +449,8 @@ export function createApiApp() {
       prebakedClips: manifest ? Object.keys(manifest.clips || {}).length : 0,
       prebakedFor: manifest ? { version: manifest.version, provider: manifest.provider, model: manifest.model, voice: manifest.voice, voiceId: manifest.voiceId, settings: manifest.settings, generatedAt: manifest.generatedAt } : null,
       playback: manifest && Object.keys(manifest.clips || {}).length ? 'prebaked-verified-clips (key-independent)' : guideProvider() ? `live:${guideProvider()}` : 'none',
+      embeddedStore: { clips: loadEmbeddedAudio().files.size, servable: manifest ? Object.values(manifest.clips).filter((c) => clipStatus(c.file, { staticDir: fs.existsSync(path.join(process.cwd(), 'public', 'guide-audio')) ? 'public' : 'dist', expectedSha256: c.sha256 }).ok).length : 0 },
+      ondemandFallback: { keyLoaded: isConfigured(), keyFingerprint: fingerprint(process.env.ON_DEMAND_API_KEY), voice: CONFIG.guideVoice, model: CONFIG.guideModel },
       fallback: isElevenConfigured() ? { provider: isConfigured() ? 'ondemand' : null, voice: CONFIG.guideVoice, model: CONFIG.guideModel } : null,
       shortlist: RANKED_VOICES.map((v) => ({ name: v.name, usable: !v.library, reason: v.library ? 'library voice — HTTP 402 paid_plan_required on this plan' : 'premade — usable' })),
       quota,
@@ -440,10 +474,13 @@ export function createApiApp() {
       const manifest = loadPrebaked();
       const textSha = crypto.createHash('sha256').update(text).digest('hex');
       const pre = manifest?.clips?.[id] || Object.values(manifest?.clips || {}).find((c) => c.textSha256 === textSha);
-      if (pre && (!pre.textSha256 || pre.textSha256 === textSha)) {
-        return done({ url: `/guide-audio/${pre.file}`, file: pre.file, sha256: pre.sha256, provider: manifest.provider || 'elevenlabs', model: pre.model || manifest.model, voice: pre.voice || manifest.voice, voiceId: pre.voiceId || manifest.voiceId, label: `ElevenLabs · ${pre.voice || manifest.voice} · ${pre.model || manifest.model}`, source: 'prebaked', settings: pre.settings || manifest.settings });
+      const staticDir = fs.existsSync(path.join(process.cwd(), 'public', 'guide-audio')) ? 'public' : 'dist';
+      const status = pre ? clipStatus(pre.file, { staticDir, expectedSha256: pre.sha256 }) : null;
+      if (pre && (!pre.textSha256 || pre.textSha256 === textSha) && status?.ok) {
+        return done({ url: `${status.source === 'embedded' ? '/api/guide-audio/' : '/guide-audio/'}${pre.file}`, file: pre.file, sha256: pre.sha256, servedFrom: status.source, provider: manifest.provider || 'elevenlabs', model: pre.model || manifest.model, voice: pre.voice || manifest.voice, voiceId: pre.voiceId || manifest.voiceId, label: `ElevenLabs · ${pre.voice || manifest.voice} · ${pre.model || manifest.model}`, source: 'prebaked', settings: pre.settings || manifest.settings });
       }
 
+      if (pre && !status?.ok) console.warn(`[guide-tts] pre-baked clip ${pre.file} is not servable (static missing/corrupt and no embedded copy) — falling back to live synthesis`);
       const provider = guideProvider();
       if (!provider) return res.status(503).json({ error: 'not_configured', message: 'No pre-baked clip for this moment and no TTS key configured on the server' });
 
