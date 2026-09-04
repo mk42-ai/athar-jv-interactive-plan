@@ -11,6 +11,7 @@ export const CONFIG = {
   avmWorkflowId: process.env.AVM_WORKFLOW_ID || '6a97acf9b44c27163d2b211c', // "Sovereign Q&A Voice Assistant - Opus 5 (API-triggered)"
   ttsVoice: process.env.OD_TTS_VOICE || 'nova',
   ttsModel: process.env.OD_TTS_MODEL || 'tts-1',
+  guideVoice: process.env.OD_GUIDE_VOICE || 'shimmer', // Guide Mode narrator — soft-spoken American female (Services API text_to_speech)
 };
 
 export function isConfigured() {
