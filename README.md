@@ -171,6 +171,26 @@ captured for every audio request; `speechSynthesis.speak` was wrapped to count s
 | s2-g6 | `s2-g6-a7e5eb9d5092.mp3` | `a7e5eb9d5092065d…` | ✓ | ✓ | 200 audio/mpeg |
 | s2-close | `s2-close-df46405edea3.mp3` | `df46405edea3938d…` | ✓ | ✓ | 200 audio/mpeg |
 
+## Secrets & runtime checks
+
+- `ON_DEMAND_API_KEY` (chat, Advanced Voice Mode, Guide Mode TTS fallback) and `ELEVENLABS_API_KEY` (live narration synthesis)
+  are read from `process.env`, then from a git-ignored `.env` in the project root (`server/env.js`). Nothing is ever sent
+  to the browser. On Vercel set them as Environment Variables.
+- At start-up the server logs `[ondemand] API key loaded a4nK…WelI from .env` and runs a live probe (creates a throw-away chat
+  session); `GET /api/health` returns `ondemand.keyLoaded / keyFingerprint / probe {ok, sessionId, ms}` and
+  `GET /api/health?probe=1` forces a fresh probe. `GET /api/guide/voice` shows `embeddedStore.servable` (clips that can be
+  served right now) and `ondemandFallback.keyLoaded`.
+
+## Narration assets survive redeploys (fix for "Audio element error (code 4)")
+
+A redeploy built from a code snapshot can drop `public/guide-audio/*.mp3` while keeping `manifest.json`; the dev server then
+answers the clip URL with the SPA's `index.html` (HTTP 200, `text/html`) and the `<audio>` element fails with MediaError 4.
+The clips are therefore also embedded as base64 in `data/guide-audio.base64.json` (`npm run guide:embed`, after every bake):
+`server/guideAudioStore.js` restores missing files at start-up, serves `/guide-audio/<clip>.mp3` from the store with
+`audio/mpeg`, `Accept-Ranges`/206 and immutable caching when the file is still absent, answers a JSON 404 for unknown clips,
+and `/api/guide/tts` only hands out URLs of clips that are actually servable. The client additionally rejects non-audio
+responses, falls back to `/api/guide-audio/<clip>` and retries a blob decode error from the direct URL.
+
 ## QA log — narration audit & fix verification, 2026-09-04 13:54–14:00 UTC
 
 Fresh, cookie-less headless Chromium sessions (desktop 1440×900 full 21-moment run, mobile 390×844) against the redeployed

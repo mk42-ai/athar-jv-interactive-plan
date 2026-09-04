@@ -54,6 +54,25 @@ async function asJson(res, what) {
   return body;
 }
 
+// ---- Runtime key probe (health) ------------------------------------------
+// Confirms the server-side ON_DEMAND_API_KEY is loaded AND accepted by the platform by creating a
+// throw-away chat session (cheapest authenticated call). Never returns the key itself.
+let lastProbe = null;
+export async function probeOnDemand({ force = false } = {}) {
+  if (!isConfigured()) return { ok: false, keyLoaded: false, error: 'ON_DEMAND_API_KEY not set' };
+  if (!force && lastProbe && Date.now() - lastProbe.t < 5 * 60_000) return lastProbe.result;
+  const t0 = Date.now();
+  let result;
+  try {
+    const data = await createChatSession(`athar-health-probe-${Date.now()}`, []);
+    result = { ok: true, keyLoaded: true, at: new Date().toISOString(), ms: Date.now() - t0, sessionId: data.id, endpointId: CONFIG.endpointId };
+  } catch (e) {
+    result = { ok: false, keyLoaded: true, at: new Date().toISOString(), ms: Date.now() - t0, status: e.status || null, error: e.message };
+  }
+  lastProbe = { t: Date.now(), result };
+  return result;
+}
+
 // ---- Chat API -------------------------------------------------------------
 export async function createChatSession(externalUserId, pluginIds = []) {
   const res = await fetch(`${API}/chat/v1/sessions`, {
