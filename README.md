@@ -109,6 +109,17 @@ highlights the element being discussed on the rendered slide, and auto-advances 
   first and independently of any key, clip filenames are content-hashed (a regenerated clip can never be served from a stale cache),
   `manifest.json` is `Cache-Control: no-store`, clips are `immutable`.
 
+### Docked player (Sept 2026 redesign)
+
+The narration controls are a **slim docked player, not a modal**: a ~57 px row that is the last grid row of the presentation
+viewer (below the slide and the page thumbnails), so the whole slide stays visible while narrating. It holds — left to right —
+the Guide pulse, position (`n/21 · S<slide>`), back / play-pause / skip, a 2-line clamped caption with an expand chevron that
+reveals the full narration text inline, the status ("Narrating", "Paused", "Playback was blocked… Retry"), the provider badge
+(`ElevenLabs · River · eleven_v3`) and exit; a 2 px gold progress line runs along its top edge. On phones (≤ 720 px) the same
+player docks to the bottom edge of the screen (fixed, safe-area aware), the viewer scrolls to the top, the page area is capped
+so toolbar + slide fit above it, the floating Voice/Ask dock moves up, and the page reserves the player's height
+(`--guide-dock-h`). In fullscreen it remains a row of the fullscreen viewer, below the letterboxed slide.
+
 ## QA log — Guide Mode narration provenance, 2026-09-04 (voice fix)
 
 Fresh, cookie-less headless Chromium sessions (desktop 1440×900 and mobile 390×844) against the live sandbox preview.
