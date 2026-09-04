@@ -110,7 +110,7 @@ h1, h2, h3 { font-weight: 500; letter-spacing: -0.01em; }
 .deck-body { position: relative; display: grid; grid-template-columns: minmax(0, 1fr) var(--panel-w, 0px); gap: var(--panel-gap, 0px); align-items: start; transition: grid-template-columns 0.5s var(--ease), gap 0.5s var(--ease); }
 .deck.panel-open .deck-body { --panel-w: min(420px, 36vw); --panel-gap: 24px; }
 
-.pdfv { display: grid; grid-template-rows: auto 1fr auto; border: 1px solid var(--hair); border-radius: var(--r); background: var(--paper); min-width: 0; }
+.pdfv { display: grid; grid-template-rows: auto 1fr auto auto; border: 1px solid var(--hair); border-radius: var(--r); background: var(--paper); min-width: 0; }
 .pdfv-toolbar { display: flex; align-items: center; justify-content: space-between; gap: 8px; padding: 8px 10px; border-bottom: 1px solid var(--hair); }
 .tb-label { font-size: 0.82rem; }
 .pdfv-scroll { position: relative; overflow: auto; background: var(--paper-2); aspect-ratio: 16 / 9.6; max-height: 76vh; outline: none; cursor: default; }
@@ -126,7 +126,7 @@ h1, h2, h3 { font-weight: 500; letter-spacing: -0.01em; }
 .thumb:hover { border-color: var(--gold-2); }
 .thumb.active { border-color: var(--gold); }
 .thumb-n { position: absolute; left: 8px; bottom: 6px; font-family: var(--mono); font-size: 0.64rem; color: var(--gold); background: rgba(255, 255, 255, 0.9); padding: 0 4px; border-radius: 3px; }
-.pdfv:fullscreen, .pdfv.is-fullscreen { position: fixed; inset: 0; z-index: 1000; border: 0; border-radius: 0; grid-template-rows: auto 1fr auto; background: var(--paper); }
+.pdfv:fullscreen, .pdfv.is-fullscreen { position: fixed; inset: 0; z-index: 1000; border: 0; border-radius: 0; grid-template-rows: auto 1fr auto auto; background: var(--paper); }
 .pdfv:fullscreen .pdfv-scroll, .pdfv.is-fullscreen .pdfv-scroll { aspect-ratio: auto; max-height: none; height: 100%; }
 
 /* month strip */
@@ -454,31 +454,56 @@ h1, h2, h3 { font-weight: 500; letter-spacing: -0.01em; }
 @keyframes guide-in { from { opacity: 0; transform: scale(0.97); } to { opacity: 1; transform: none; } }
 @keyframes guide-ring { 0% { opacity: 0.6; transform: scale(1); } 70% { opacity: 0; transform: scale(1.06); } 100% { opacity: 0; } }
 
-.guide-bar { position: absolute; left: 16px; right: 16px; bottom: 76px; margin: 0 auto; max-width: 760px; /* no transform centering — the guide-in animation would override it */ display: grid; gap: 8px; padding: 12px 16px 12px; border: 1px solid var(--hair); border-radius: 10px; background: rgba(255, 255, 255, 0.94); backdrop-filter: blur(10px); box-shadow: 0 12px 40px rgba(23, 24, 26, 0.14); z-index: 20; animation: guide-in 0.5s var(--ease) both; }
-.pdfv:fullscreen ~ .guide-bar, .pdfv.is-fullscreen ~ .guide-bar { position: fixed; left: 16px; right: 16px; bottom: 84px; z-index: 1001; }
-.guide-bar-head { display: flex; align-items: center; gap: 12px; font-size: 0.72rem; letter-spacing: 0.08em; text-transform: uppercase; color: var(--muted); }
-.guide-live { display: inline-flex; align-items: center; gap: 7px; color: var(--gold); font-weight: 600; }
+/* ---- Docked player: a slim row BELOW the slide (part of the viewer grid — never an overlay) ------------- */
+.guide-dock { position: relative; z-index: 5; border-top: 1px solid var(--hair); background: var(--paper); animation: guide-in 0.35s var(--ease) both; }
+.guide-dock-progress { height: 2px; background: var(--hair); }
+.guide-dock-progress i { display: block; height: 100%; background: var(--gold); transition: width 0.6s var(--ease); }
+.guide-dock-row { display: grid; grid-template-columns: auto auto auto minmax(0, 1fr) auto auto auto; align-items: center; gap: 12px; min-height: 54px; padding: 7px 10px 7px 14px; }
+.guide-live { display: inline-flex; align-items: center; gap: 7px; color: var(--gold); font-size: 0.68rem; font-weight: 600; letter-spacing: 0.1em; text-transform: uppercase; white-space: nowrap; }
 .guide-live i { width: 7px; height: 7px; border-radius: 50%; background: var(--gold); opacity: 0.55; }
 .guide-live i.pulse { opacity: 1; animation: guide-pulse 1.4s ease-in-out infinite; }
 @keyframes guide-pulse { 0%, 100% { box-shadow: 0 0 0 0 rgba(182, 138, 53, 0.45); } 50% { box-shadow: 0 0 0 6px rgba(182, 138, 53, 0); } }
-.guide-pos { font-family: var(--mono); letter-spacing: 0; text-transform: none; }
-.guide-src { margin-left: auto; text-transform: none; letter-spacing: 0; font-size: 0.7rem; color: var(--muted); }
-.guide-x { display: inline-grid; place-items: center; width: 26px; height: 26px; border-radius: 50%; color: var(--muted); }
-.guide-x:hover { background: var(--paper-2); color: var(--ink); }
-.guide-caption { margin: 0; font-size: 0.93rem; line-height: 1.5; color: var(--ink); max-height: 4.6em; overflow: hidden; }
-.guide-caption b { font-weight: 600; color: var(--gold); }
-.guide-controls { display: flex; align-items: center; gap: 8px; }
-.guide-btn { display: inline-grid; place-items: center; width: 34px; height: 34px; border-radius: 50%; border: 1px solid var(--hair-2); color: var(--ink); background: var(--paper); transition: border-color 0.25s, background 0.25s, color 0.25s; }
+.guide-pos { font-family: var(--mono); font-size: 0.7rem; color: var(--muted); white-space: nowrap; }
+.guide-transport { display: inline-flex; align-items: center; gap: 6px; }
+.guide-btn { display: inline-grid; place-items: center; width: 30px; height: 30px; border-radius: 50%; border: 1px solid var(--hair-2); color: var(--ink); background: var(--paper); transition: border-color 0.25s, background 0.25s, color 0.25s; }
 .guide-btn:hover:not(:disabled) { border-color: var(--gold); color: var(--gold); }
 .guide-btn:disabled { opacity: 0.35; }
-.guide-btn.main { width: 42px; height: 42px; background: var(--ink); color: var(--paper); border-color: var(--ink); }
-.guide-btn.main:hover:not(:disabled) { background: var(--gold); border-color: var(--gold); color: var(--paper); }
-.guide-status { font-size: 0.78rem; color: var(--muted); min-width: 92px; }
-.guide-status.error { color: var(--bad); font-weight: 500; display: inline-flex; align-items: center; gap: 8px; min-width: 0; }
-.guide-retry { padding: 2px 9px; border: 1px solid var(--bad); border-radius: var(--r); color: var(--bad); font-size: 0.74rem; background: var(--paper); }
+.guide-btn.primary { width: 36px; height: 36px; background: var(--ink); color: var(--paper); border-color: var(--ink); }
+.guide-btn.primary:hover:not(:disabled) { background: var(--gold); border-color: var(--gold); color: var(--paper); }
+.guide-cap-wrap { display: flex; align-items: center; gap: 6px; min-width: 0; }
+.guide-caption { margin: 0; min-width: 0; font-size: 0.84rem; line-height: 1.35; color: var(--ink); display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden; }
+.guide-caption b { font-weight: 600; color: var(--gold); }
+.guide-expand { flex: none; display: inline-grid; place-items: center; width: 24px; height: 24px; border-radius: 50%; color: var(--muted); }
+.guide-expand:hover, .guide-expand[aria-expanded="true"] { color: var(--ink); background: var(--paper-2); }
+.guide-status { font-size: 0.74rem; color: var(--muted); white-space: nowrap; min-width: 68px; text-align: right; }
+.guide-status.error { color: var(--bad); font-weight: 500; display: inline-flex; align-items: center; gap: 8px; white-space: normal; max-width: 260px; text-align: left; }
+.guide-retry { padding: 2px 9px; border: 1px solid var(--bad); border-radius: var(--r); color: var(--bad); font-size: 0.72rem; background: var(--paper); }
 .guide-retry:hover { background: var(--bad); color: var(--paper); }
-.guide-bar.has-error { border-color: var(--bad); }
-.guide-progress { flex: 1; height: 3px; border-radius: 2px; background: var(--hair); overflow: hidden; }
-.guide-progress i { display: block; height: 100%; background: var(--gold); transition: width 0.6s var(--ease); }
+.guide-dock.has-error { border-top-color: var(--bad); }
+.guide-src { font-size: 0.68rem; color: var(--muted); white-space: nowrap; padding: 3px 8px; border: 1px solid var(--hair); border-radius: 999px; background: var(--paper-2); }
+.guide-x { display: inline-grid; place-items: center; width: 26px; height: 26px; border-radius: 50%; color: var(--muted); }
+.guide-x:hover { background: var(--paper-2); color: var(--ink); }
+.guide-caption-full { padding: 4px 14px 12px; border-top: 1px dashed var(--hair); font-size: 0.9rem; line-height: 1.55; color: var(--ink); max-height: 38vh; overflow: auto; }
+.guide-caption-full b { font-weight: 600; color: var(--gold); }
 .deck.guiding .strip { opacity: 0.55; transition: opacity 0.4s; }
-@media (max-width: 720px) { .guide-bar { bottom: 12px; padding: 10px 12px; } .guide-src, .guide-pos { display: none; } }
+@media (max-width: 1100px) { .guide-dock-row { grid-template-columns: auto auto auto minmax(0, 1fr) auto auto; } .guide-src { display: none; } }
+@media (max-width: 720px) {
+  /* Phones: dock to the bottom edge of the screen, above the safe area; the deck reserves the same height. */
+  .guide-dock { position: fixed; left: 0; right: 0; bottom: 0; z-index: 60; border: 1px solid var(--hair); border-bottom: 0; border-radius: 12px 12px 0 0; box-shadow: 0 -10px 30px rgba(23, 24, 26, 0.08); padding-bottom: env(safe-area-inset-bottom, 0px); }
+  .pdfv.is-fullscreen .guide-dock { border-radius: 0; }
+  .guide-dock-row { grid-template-columns: auto minmax(0, 1fr) auto; grid-template-areas: "live status x" "transport cap cap"; gap: 6px 10px; padding: 8px 8px 10px 12px; min-height: 0; }
+  .guide-live { grid-area: live; }
+  .guide-pos { display: none; }
+  .guide-transport { grid-area: transport; }
+  .guide-cap-wrap { grid-area: cap; }
+  .guide-status { grid-area: status; text-align: right; min-width: 0; }
+  .guide-status.error { max-width: none; }
+  .guide-x { grid-area: x; }
+  .guide-caption { font-size: 0.8rem; }
+  .guide-caption-full { max-height: 34vh; }
+  body[data-guiding="true"] .deck { padding-bottom: calc(var(--guide-dock-h, 110px) + 12px); }
+  /* keep the page area short enough that toolbar + slide always fit above the docked player (landscape too) */
+  body[data-guiding="true"] .pdfv:not(.is-fullscreen) .pdfv-scroll { max-height: calc(100vh - var(--guide-dock-h, 110px) - 64px); }
+  body[data-guiding="true"] .dock { bottom: calc(var(--guide-dock-h, 110px) + 12px); }
+  body[data-guiding="true"] .widget { bottom: calc(var(--guide-dock-h, 110px) + 68px); max-height: min(560px, calc(100vh - var(--guide-dock-h, 110px) - 90px)); }
+}

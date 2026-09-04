@@ -30,7 +30,7 @@ const Icon = ({ name }) => (
  * Crisp: renders at devicePixelRatio × zoom. Fit-width by default; zoom steps; page nav;
  * keyboard (← → + − 0 F); fullscreen (API with CSS fallback); thumbnails.
  */
-export default function PdfViewer({ src, title, onPageChange, requestedPage, overlay, toolbarExtra, onUserNavigate }) {
+export default function PdfViewer({ src, title, onPageChange, requestedPage, overlay, toolbarExtra, onUserNavigate, footer }) {
   const rootRef = useRef(null);
   const scrollRef = useRef(null);
   const canvasRef = useRef(null);
@@ -299,6 +299,7 @@ export default function PdfViewer({ src, title, onPageChange, requestedPage, ove
           ))}
         </div>
       )}
+      {footer}
     </div>
   );
 }
