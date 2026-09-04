@@ -96,3 +96,36 @@ highlights the element being discussed on the rendered slide, and auto-advances 
   Falls back to the browser Web Speech API (soft `en-US` voice, rate 0.92) when the API key is missing/unavailable, and to a
   timed silent pace when no audio engine exists — so auto-advance always works. The active source is shown in the guide bar.
 - Script + highlight geometry: `src/lib/guide.js` (boxes are slide fractions measured from the PPTX shapes).
+
+## QA log — Guide Mode voice (ElevenLabs Adam / eleven_v3), 2026-09-04
+
+End-to-end run in fresh, cookie-less headless Chromium sessions (desktop 1440×900 and mobile 390×844) against the live
+sandbox preview. Provider/model/voice are asserted from the `/api/guide/voice` response, the per-request proxy log and the
+clip URL actually loaded by the `<audio>` element; timestamped screenshots live in the run's `.ui-proof/` attachments.
+
+| Check | Result | Time (UTC) |
+|---|---|---|
+| D1 Anonymous cookie-less session: deck PDF renders page 1 from the raw link (static same-origin asset) | pass | 2026-09-04 12:49:41 UTC |
+| D2 Deck bytes match the bundled PDF (no signed/expiring URL in the load path) | pass | 2026-09-04 12:49:42 UTC |
+| D3 Server reports provider=elevenlabs, voice Adam, model eleven_v3, 21 pre-baked clips, live quota via the new token | pass | 2026-09-04 12:49:42 UTC |
+| D4 Guide Mode starts; narration plays the ElevenLabs Adam/eleven_v3 clip (badge + provider log + pre-baked clip URL) | pass | 2026-09-04 12:49:42 UTC |
+| D5 Pacing: opening moment is unhurried (≈120–160 wpm at speed 0.9) and the audio clock advances | pass | 2026-09-04 12:49:45 UTC |
+| D6 Auto-advances to the next moment after narration completes, with the 750 ms breath | pass | 2026-09-04 12:50:04 UTC |
+| D7 Milestone highlight (3 KPI tiles) rendered for the new moment | pass | 2026-09-04 12:50:04 UTC |
+| D8 Pause stops narration (status=paused, audio element paused) | pass | 2026-09-04 12:50:05 UTC |
+| D9 No advance while paused (3 s) | pass | 2026-09-04 12:50:08 UTC |
+| D10 Resume continues narration (status=speaking, audio playing) | pass | 2026-09-04 12:50:09 UTC |
+| D11 Skip → next moment | pass | 2026-09-04 12:50:09 UTC |
+| D12 Back → previous moment | pass | 2026-09-04 12:50:09 UTC |
+| D13 Gate highlight (G4 · 29 Jan 2027) spotlight + tag on the slide; gate clip is the pre-baked ElevenLabs one | pass | 2026-09-04 12:50:11 UTC |
+| D14 Slide auto-advances to slide 2 when the last slide-1 moment finishes (in sync with narration) | pass | 2026-09-04 12:50:55 UTC |
+| D15 Manual prev-page during Guide Mode re-syncs the guide (page 1 → s1-open) | pass | 2026-09-04 12:50:56 UTC |
+| D16 Thumbnail navigation to slide 2 re-syncs the guide (s2-open, roadmap highlight) | pass | 2026-09-04 12:50:56 UTC |
+| D17 Guide off: bar/highlights removed, audio stopped, manual navigation still works | pass | 2026-09-04 12:50:57 UTC |
+| D18 Live (non-pre-baked) synthesis through the proxy also uses the new token: ElevenLabs Adam | pass | 2026-09-04 12:50:58 UTC |
+| D19 Zero console/page errors and no failed requests (desktop) | pass | 2026-09-04 12:50:58 UTC |
+| M1 Mobile 390×844 fresh session: deck renders anonymously, fits viewport, no horizontal overflow | pass | 2026-09-04 12:50:59 UTC |
+| M2 Mobile: Guide bar + play/skip/back on screen, highlight drawn, ElevenLabs clip playing | pass | 2026-09-04 12:50:59 UTC |
+| M3 Mobile: skip + pause work; milestone highlight (3 boxes) rendered | pass | 2026-09-04 12:51:01 UTC |
+| M4 Mobile: manual navigation to slide 2 re-syncs the guide | pass | 2026-09-04 12:51:01 UTC |
+| M5 Zero console/page errors and no failed requests (mobile) | pass | 2026-09-04 12:51:01 UTC |
