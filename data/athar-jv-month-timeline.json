@@ -21,8 +21,8 @@
       "The v3 deck moves W1 (MoU signing week) from Mon 21 Sep 2026 to Mon 5 Oct 2026; every date in this file is therefore +14 days vs the previous version while all week numbers (W1–W26, gate weeks W1/W7/W12/W17/W20/W25) are unchanged.",
       "Activity week windows come from the prior deck's Gantt image (measured from bar pixels, ±0 weeks in all spot checks against legible labels); the v3 deck only shows the per-gate roll-up (4 / 12 / 14 / 7 / 6 / 10 = 53), which matches those rows exactly. Activity-level dates are therefore derived, not typed text.",
       "Values flagged 'derived' in financials are arithmetic on deck figures (seat blocks × seat rate) and are not stated in the deck.",
-      "Items the v3 deck no longer states — the Purpose paragraph, 'Outcomes by the Month-6 gate', 'Next 90 days', 'AED 420k fully loaded p.a.' secondment cost, the AED 1.5M ODA-funded PMO envelope, FDE pods from W13, 'sponsors named by W2', the ≈ USD 5.2M Year-1 equivalent — are carried forward from the prior deck, re-anchored and labelled as such; they are not contradicted by v3.",
-      "The financial-model footnote is reproduced with its placeholders exactly as printed: 'Figures per Athar JV consolidated financial model v[X.X], dated [3 Sep 2026] · UAE-only base case'.",
+      "Items the v3 deck no longer states — the Purpose paragraph, 'Outcomes by the Month-6 gate', 'Next 90 days', 'AED 420k fully loaded p.a.' secondment cost, the AED 1.5M ODA-funded PMO envelope, FDE pods from W13, 'sponsors named by W2', the ≈ USD 4.3M Year-1 equivalent — are carried forward from the prior deck, re-anchored and labelled as such; they are not contradicted by v3.",
+      "The financial-model footnote is reproduced with its placeholders exactly as printed: 'Figures per Athar JV consolidated financial model v13, dated [3 Sep 2026] · UAE-only base case'.",
       "March 2027 is covered to the end of the plan horizon (W26, Fri 2 Apr 2027); the two April working days of W26 are folded into March."
     ],
     "change_log_vs_prior_deck": {
@@ -38,23 +38,23 @@
       ],
       "headline_metrics": [
         "'~500 anchor seats · five entities · all contracted by G4 (Fri 15 Jan 2027)' → '~500 anchor seats · UAE-only base case'",
-        "'AED 19.1M Year-1 revenue (≈ USD 5.2M)' tile removed → new tile '5 UAE anchors · contracted by Gate 4'",
+        "'AED 15.78M Year-1 revenue (≈ USD 4.3M)' tile removed → new tile '5 UAE anchors · contracted by Gate 4'",
         "'AED 1,000 per seat per month (USD 272) · billing from launch (G5 · 5 Feb 2027)' → '1,000 AED per seat per month (USD 272)'",
         "'8 → 20 owner-signed products at go-live → end Year-1 (36 products / 12 depts)' → '8 → 20 products at go-live → end of Year 1'",
-        "'AED 70.2M Year-3 revenue · build AED 19.1M → 46.6M → 70.2M (Y1 → Y3)' → '70.2M AED Year-3 revenue (19.1M → 70.2M)'",
+        "'AED 40.04M Year-3 revenue · build AED 15.78M → 27.27M → 40.04M (Y1 → Y3)' → '40.04M AED Year-3 revenue (15.78M → 40.04M)'",
         "'6 gates · MoU signing window (24–26 Sep 26) → Month-6 decision (12 Mar 27)' → '6 gates · Oct 2026 → Mar 2027 · six gates'"
       ],
-      "figures_unchanged": "committed capital AED 19.78M (AED 9.89M per partner); ODA NPV @ 3.5% AED 153.24M; AIREV NPV @ 10% AED 96.98M; revenue AED 19.1M → 46.6M → 70.2M; seat rate AED 1,000 (USD 272); seat blocks ODA 100 · ADFD 100 · UAE Aid Agency 140 · Erth Zayed 90 · ERC 70 = ~500; 36 products · 12 departments · 16 hardened first · 8 → 20 owner-signed · ~1,275 agents · ~50 skills + 25+ data connectors; 3 ODA product owners + 5 AIREV engineers; SOC 2 Type 2 · ISO 27001:2022",
+      "figures_unchanged": "committed capital AED 20.4M (AED 10.2M per partner); ODA NPV @ 3.5% AED 60.2M; AIREV NPV @ 10% AED 30.1M; revenue AED 15.78M → 27.27M → 40.04M; seat rate AED 1,000 (USD 272); seat blocks ODA 100 · ADFD 100 · UAE Aid Agency 140 · Erth Zayed 90 · ERC 70 = ~500; 36 products · 12 departments · 16 hardened first · 8 → 20 owner-signed · ~1,275 agents · ~50 skills + 25+ data connectors; 3 ODA product owners + 5 AIREV engineers; SOC 2 Type 2 · ISO 27001:2022",
       "text_added": [
         "'UAE-only base case' qualifier on seats, anchors and commercials",
         "'UPSIDE — NOT IN BASE CASE: international seats, subject to the Expansion Schedule & Article 14.3(a)'",
-        "footnote 'Figures per Athar JV consolidated financial model v[X.X], dated [3 Sep 2026] · UAE-only base case'",
+        "footnote 'Figures per Athar JV consolidated financial model v13, dated [3 Sep 2026] · UAE-only base case'",
         "strap line '50/50 ODA × AIREV joint venture · sovereign agentic AI for the UAE Presidential Court development ecosystem · MoU to first anchor cohort live in six months'",
         "'Billing from Gate 5 · 19 Feb 2027'; 'First board 27 Nov 2026 · evidence packs Month 4 & 6'"
       ],
       "text_removed_or_reworded": [
         "PURPOSE paragraph, 'OUTCOMES BY THE MONTH-6 GATE' and 'NEXT 90 DAYS — WHAT GETS DONE' panels dropped from slide 1",
-        "'≈ USD 5.2M', 'AED 420k fully loaded p.a.', 'AED 1.5M ODA-funded envelope', 'GM + 3-person liaison & governance team', 'FDE pods … from W13 · Fri 18 Dec 2026', 'migrated by W8–W9 (9–20 Nov 2026)', 'sponsors named by W2 (Fri 2 Oct 2026)' no longer stated",
+        "'≈ USD 4.3M', 'AED 420k fully loaded p.a.', 'AED 1.5M ODA-funded envelope', 'GM + 3-person liaison & governance team', 'FDE pods … from W13 · Fri 18 Dec 2026', 'migrated by W8–W9 (9–20 Nov 2026)', 'sponsors named by W2 (Fri 2 Oct 2026)' no longer stated",
         "'first board Fri 13 Nov 2026 (W8)' → 'First board 27 Nov 2026' (still W8); 'evidence packs Fri 1 Jan 2027 (M4) & Fri 26 Feb 2027 (M6)' → 'evidence packs Month 4 & 6'",
         "'Zero Trust RBAC · Entra ID SAML SSO' → 'Zero Trust · role-based access · single sign-on'; 'Core42 sovereign capacity' → 'sovereign compute'; 'Dalberg PMO, adoption & training and M&E' → 'Dalberg programme office'"
       ],
@@ -88,8 +88,8 @@
         "label": "products at go-live → end of Year 1"
       },
       {
-        "value": "70.2M",
-        "label": "AED Year-3 revenue (19.1M → 70.2M)"
+        "value": "40.04M",
+        "label": "AED Year-3 revenue (15.78M → 40.04M)"
       },
       {
         "value": "6 gates",
@@ -161,7 +161,7 @@
       "~500 anchor seats across the five UAE anchors (UAE-only base case)",
       "8 owner-signed products live at go-live from the 16 hardened first → 20 by end Year 1",
       "Wave-2 product cohort in service (roadmap activities; not restated on the v3 slide)",
-      "Revenue AED 19.1M → 46.6M → 70.2M (Y1 → Y3), consolidated model base case — billing from Gate 5 · 19 Feb 2027",
+      "Revenue AED 15.78M → 27.27M → 40.04M (Y1 → Y3), consolidated model base case — billing from Gate 5 · 19 Feb 2027",
       "Month-6 review · owned-compute-cluster decision taken by the JV Board — G6 · Fri 26 Mar 2027"
     ],
     "outcomes_note": "The v3 deck no longer carries an 'Outcomes by the Month-6 gate' panel; this list is re-stated from the v3 gate titles, metrics and the carried-forward roadmap.",
@@ -220,7 +220,7 @@
       "base_case": "UAE-only base case",
       "upside": "UPSIDE — NOT IN BASE CASE: international seats, subject to the Expansion Schedule & Article 14.3(a)",
       "billing_start": "Billing from Gate 5 · Fri 19 Feb 2027",
-      "financial_model_note": "Figures per Athar JV consolidated financial model v[X.X], dated [3 Sep 2026] · UAE-only base case (version/date placeholders exactly as printed in the deck)"
+      "financial_model_note": "Figures per Athar JV consolidated financial model v13, dated [3 Sep 2026] · UAE-only base case (version/date placeholders exactly as printed in the deck)"
     },
     "product_and_compliance": {
       "catalogue": "36 products · 12 departments · 16 hardened first",
@@ -1538,7 +1538,7 @@
         "oda_funded_pmo_envelope_aed": 1500000,
         "secondment_cost_note": "3 ODA product owners + 5 AIREV engineers (AED 420k fully loaded p.a. — prior deck, not restated in v3)",
         "billing_status": "Pre-revenue — no billing until launch (G5 · Fri 19 Feb 2027)",
-        "capital_event": "JV formation on the table: committed capital AED 19.78M (equity AED 9.89M per partner), UAE-only base case; legal form & jurisdiction and the shareholders’ agreement start W2 (12 Oct)",
+        "capital_event": "JV formation on the table: committed capital AED 20.4M (equity AED 10.2M per partner), UAE-only base case; legal form & jurisdiction and the shareholders’ agreement start W2 (12 Oct)",
         "cost_events": [
           "Dalberg programme office stood up W1–W2 (prior deck: adoption & training and M&E inside the AED 1.5M ODA-funded envelope — not restated in v3)",
           "Secondments issued — 3 ODA product owners + 5 AIREV engineers"
@@ -1954,7 +1954,7 @@
         "oda_funded_pmo_envelope_aed": 1500000,
         "secondment_cost_note": "3 ODA product owners + 5 AIREV engineers (AED 420k fully loaded p.a. — prior deck, not restated in v3)",
         "billing_status": "Pre-revenue",
-        "capital_event": "Venture incorporated (trade licence, bank account, tax registration complete W7 · 20 Nov) — committed capital AED 19.78M (AED 9.89M per partner) formalised through the shareholders’ agreement (W2–W5)",
+        "capital_event": "Venture incorporated (trade licence, bank account, tax registration complete W7 · 20 Nov) — committed capital AED 20.4M (AED 10.2M per partner) formalised through the shareholders’ agreement (W2–W5)",
         "cost_events": [
           "Platform licence execution incl. expansion schedule (W4–W8, Fri 27 Nov)",
           "Wave-1 licensed data subscriptions procured (W5–W8)",
@@ -2546,7 +2546,7 @@
         "seats_live": 100,
         "seats_contracted": 500,
         "derived": [
-          "Contracted run-rate at G4: 500 seats × AED 1,000 = AED 500,000/month (AED 6.0M annualised) — derived; the AED 19.1M Year-1 base case implies seat/product expansion beyond the anchor block during Year 1"
+          "Contracted run-rate at G4: 500 seats × AED 1,000 = AED 500,000/month (AED 6.0M annualised) — derived; the AED 15.78M Year-1 base case implies seat/product expansion beyond the anchor block during Year 1"
         ]
       },
       "kpis": [
@@ -2766,7 +2766,7 @@
         "secondment_cost_note": "3 ODA product owners + 5 AIREV engineers (AED 420k fully loaded p.a. — prior deck, not restated in v3)",
         "billing_status": "BILLING STARTS at launch — G5 · Fri 19 Feb 2027 (W20); subscriptions begin at AED 1,000 / seat / month (USD 272)",
         "capital_event": null,
-        "revenue_basis": "Revenue AED 19.1M → 46.6M → 70.2M (Y1 → Y3), consolidated model base case (UAE-only), counted from launch; Year-1 ≈ USD 5.2M carried forward from the prior deck",
+        "revenue_basis": "Revenue AED 15.78M → 27.27M → 40.04M (Y1 → Y3), consolidated model base case (UAE-only), counted from launch; Year-1 ≈ USD 4.3M carried forward from the prior deck",
         "cost_events": [
           "Statutory readiness — auditor, insurance, policies (W19–W25)",
           "Core42 rented sovereign capacity (32× H200) running to W23 (12 Mar)"
@@ -2969,7 +2969,7 @@
         "secondment_cost_note": "3 ODA product owners + 5 AIREV engineers (AED 420k fully loaded p.a. — prior deck, not restated in v3)",
         "billing_status": "Billing live since G5 (19 Feb) — ~500 anchor seats at AED 1,000 / seat / month",
         "capital_event": "Owned-compute-cluster decision at G6 (Fri 26 Mar 2027) — the JV Board decides whether to move from Core42 rented sovereign capacity to an owned cluster",
-        "revenue_trajectory": "Revenue build AED 19.1M → 46.6M → 70.2M (Y1 → Y3), consolidated model base case (UAE-only)",
+        "revenue_trajectory": "Revenue build AED 15.78M → 27.27M → 40.04M (Y1 → Y3), consolidated model base case (UAE-only)",
         "cost_events": [
           "Core42 rented sovereign capacity window closes W23 (12 Mar) ahead of the owned-cluster decision",
           "Statutory readiness (auditor, insurance, policies) complete W25"
@@ -3016,7 +3016,7 @@
           "source": "prior deck (v4) slide 2 Gantt — 53 activity rows extracted by Tesseract OCR + bar-pixel analysis; carried forward with week windows unchanged and re-anchored to the v3 calendar (W1 = Mon 5 Oct 2026). v3 slide 2 'Implementation Roadmap — Six Gates' rolls these up as 4 / 12 / 14 / 7 / 6 / 10 activities per gate (= 53)."
         }
       ],
-      "details": "Decision month. The Wave-3 scope note (Foresight; Geopolitics & Policy) starts W22; the Core42 rented-capacity window and Wave-2 cohort hardening close W23 (12 Mar). Onboarding waves complete to ~500 active seats and statutory readiness closes at W25; the Month-6 evidence pack and owned-cluster decision paper go to the JV Board, which takes the Month-6 review and owned-compute-cluster decision at G6 on Fri 26 Mar (W25) — the EVALUATE & DECIDE gate. Outcomes by this gate: ~500 anchor seats across the five UAE anchors (UAE-only base case), 8 owner-signed products live from the 16 hardened first, the Wave-2 cohort in service, billing live since G5, and the revenue build tracking AED 19.1M → 46.6M → 70.2M (Y1 → Y3). W26 (29 Mar – 2 Apr) closes the plan horizon with the Wave-3 scope note and the public repository launch with paid-tier gating."
+      "details": "Decision month. The Wave-3 scope note (Foresight; Geopolitics & Policy) starts W22; the Core42 rented-capacity window and Wave-2 cohort hardening close W23 (12 Mar). Onboarding waves complete to ~500 active seats and statutory readiness closes at W25; the Month-6 evidence pack and owned-cluster decision paper go to the JV Board, which takes the Month-6 review and owned-compute-cluster decision at G6 on Fri 26 Mar (W25) — the EVALUATE & DECIDE gate. Outcomes by this gate: ~500 anchor seats across the five UAE anchors (UAE-only base case), 8 owner-signed products live from the 16 hardened first, the Wave-2 cohort in service, billing live since G5, and the revenue build tracking AED 15.78M → 27.27M → 40.04M (Y1 → Y3). W26 (29 Mar – 2 Apr) closes the plan horizon with the Wave-3 scope note and the public repository launch with paid-tier gating."
     }
   ]
 }
