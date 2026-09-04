@@ -11,6 +11,8 @@ coverage/
 .env
 .env.*
 !.env.example
+env.local
+*.local.env
 
 # logs / OS / editor noise
 *.log

@@ -5,6 +5,7 @@ import path from 'node:path';
 import fs from 'node:fs';
 import { fileURLToPath } from 'node:url';
 import { createApiApp } from './api.js';
+import { onDemandKey } from './env.js';
 import { deckPdfMiddleware } from './deck.js';
 import { guideAudioMiddleware, rehydrateGuideAudio } from './guideAudioStore.js';
 
@@ -33,5 +34,5 @@ if (fs.existsSync(dist)) {
   app.get('*', (req, res) => res.status(503).send('Build missing — run `npm run build` first.'));
 }
 app.listen(port, '0.0.0.0', () => {
-  console.log(`athar-jv app listening on http://0.0.0.0:${port} (apikey configured: ${Boolean(process.env.ON_DEMAND_API_KEY)})`);
+  console.log(`athar-jv app listening on http://0.0.0.0:${port} (On Demand key configured: ${Boolean(onDemandKey())})`);
 });

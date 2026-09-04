@@ -21,7 +21,7 @@ import {
   probeOnDemand,
 } from './ondemand.js';
 import { buildFulfillmentPrompt, loadPlan } from './grounding.js';
-import { loadDotEnv, fingerprint } from './env.js';
+import { loadDotEnv, fingerprint, onDemandKey, onDemandKeySource, ONDEMAND_KEY_NAMES, SECRET_FILES } from './env.js';
 import { clipStatus, serveEmbedded, loadEmbeddedAudio } from './guideAudioStore.js';
 
 // ---- tiny in-memory media store (uploaded user audio + proxied TTS clips) ----
@@ -214,12 +214,13 @@ async function runVoiceTurn({ req, send, question, sessionId, externalUserId, si
 export function createApiApp() {
   // Secrets: process.env first, then the git-ignored .env (server-side only — never bundled for the client).
   const env = loadDotEnv();
-  const odKey = process.env.ON_DEMAND_API_KEY;
-  console.log(`[ondemand] API key ${odKey ? `loaded ${fingerprint(odKey)} from ${env.applied.includes('ON_DEMAND_API_KEY') ? '.env' : 'process.env'}` : 'NOT set — chat/voice/TTS fallback disabled'}`);
+  const odKey = onDemandKey();
+  console.log(`[env] secret files present: ${env.files.length ? env.files.join(', ') : 'none'} (accepted key names: ${ONDEMAND_KEY_NAMES.join(' | ')})`);
+  console.log(`[ondemand] API key ${odKey ? `loaded ${fingerprint(odKey)} from ${onDemandKeySource()}` : `NOT set — create ${SECRET_FILES.join(' or ')} or set ${ONDEMAND_KEY_NAMES.join('/')}; chat/voice/TTS fallback disabled`}`);
   console.log(`[elevenlabs] API key ${process.env.ELEVENLABS_API_KEY ? `loaded ${fingerprint(process.env.ELEVENLABS_API_KEY)}` : 'not set (pre-baked clips still play)'}`);
   const store = loadEmbeddedAudio();
   console.log(`[guide-audio] embedded store: ${store.files.size} clips${store.manifest ? ` (${store.manifest.voice} / ${store.manifest.model}, v${store.manifest.version})` : ''}`);
-  if (odKey) probeOnDemand().then((r) => console.log(`[ondemand] runtime probe ${r.ok ? `OK — session ${r.sessionId} created in ${r.ms} ms` : `FAILED — ${r.error}`}`)).catch(() => {});
+  if (odKey) probeOnDemand().then((r) => console.log(`[ondemand] runtime probe ${r.ok ? `OK — session ${r.sessionId} created (HTTP ${r.httpStatus?.createSession}) and read back (HTTP ${r.httpStatus?.getSession}) in ${r.latencyMs} ms` : `FAILED — ${r.error}`}`)).catch(() => {});
 
   const app = express();
   app.disable('x-powered-by');
@@ -241,7 +242,19 @@ export function createApiApp() {
     res.json({
       ok: true,
       configured: isConfigured(),
-      ondemand: { keyLoaded: isConfigured(), keyFingerprint: fingerprint(process.env.ON_DEMAND_API_KEY), source: loadDotEnv().applied.includes('ON_DEMAND_API_KEY') ? '.env' : isConfigured() ? 'process.env' : null, role: 'chat + Advanced Voice Mode + Guide Mode TTS fallback', probe },
+      ondemand: {
+        keyInstalled: isConfigured(),
+        keyLoaded: isConfigured(),
+        keyFingerprint: fingerprint(onDemandKey()),
+        keySource: onDemandKeySource(),
+        acceptedNames: ONDEMAND_KEY_NAMES,
+        secretFiles: loadDotEnv().files,
+        sessionCreated: Boolean(probe?.sessionCreated),
+        checkedAt: probe?.checkedAt || new Date().toISOString(),
+        role: 'chat + Advanced Voice Mode + Guide Mode TTS fallback',
+        probe,
+      },
+      checkedAt: new Date().toISOString(),
       elevenlabs: { keyLoaded: isElevenConfigured(), keyFingerprint: fingerprint(process.env.ELEVENLABS_API_KEY) },
       endpointId: CONFIG.endpointId,
       avmWorkflowId: CONFIG.avmWorkflowId,
@@ -450,7 +463,7 @@ export function createApiApp() {
       prebakedFor: manifest ? { version: manifest.version, provider: manifest.provider, model: manifest.model, voice: manifest.voice, voiceId: manifest.voiceId, settings: manifest.settings, generatedAt: manifest.generatedAt } : null,
       playback: manifest && Object.keys(manifest.clips || {}).length ? 'prebaked-verified-clips (key-independent)' : guideProvider() ? `live:${guideProvider()}` : 'none',
       embeddedStore: { clips: loadEmbeddedAudio().files.size, servable: manifest ? Object.values(manifest.clips).filter((c) => clipStatus(c.file, { staticDir: fs.existsSync(path.join(process.cwd(), 'public', 'guide-audio')) ? 'public' : 'dist', expectedSha256: c.sha256 }).ok).length : 0 },
-      ondemandFallback: { keyLoaded: isConfigured(), keyFingerprint: fingerprint(process.env.ON_DEMAND_API_KEY), voice: CONFIG.guideVoice, model: CONFIG.guideModel },
+      ondemandFallback: { keyLoaded: isConfigured(), keyFingerprint: fingerprint(onDemandKey()), keySource: onDemandKeySource(), voice: CONFIG.guideVoice, model: CONFIG.guideModel },
       fallback: isElevenConfigured() ? { provider: isConfigured() ? 'ondemand' : null, voice: CONFIG.guideVoice, model: CONFIG.guideModel } : null,
       shortlist: RANKED_VOICES.map((v) => ({ name: v.name, usable: !v.library, reason: v.library ? 'library voice — HTTP 402 paid_plan_required on this plan' : 'premade — usable' })),
       quota,

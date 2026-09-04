@@ -173,13 +173,20 @@ captured for every audio request; `speechSynthesis.speak` was wrapped to count s
 
 ## Secrets & runtime checks
 
-- `ON_DEMAND_API_KEY` (chat, Advanced Voice Mode, Guide Mode TTS fallback) and `ELEVENLABS_API_KEY` (live narration synthesis)
-  are read from `process.env`, then from a git-ignored `.env` in the project root (`server/env.js`). Nothing is ever sent
-  to the browser. On Vercel set them as Environment Variables.
-- At start-up the server logs `[ondemand] API key loaded a4nK…WelI from .env` and runs a live probe (creates a throw-away chat
-  session); `GET /api/health` returns `ondemand.keyLoaded / keyFingerprint / probe {ok, sessionId, ms}` and
-  `GET /api/health?probe=1` forces a fresh probe. `GET /api/guide/voice` shows `embeddedStore.servable` (clips that can be
-  served right now) and `ondemandFallback.keyLoaded`.
+- The On Demand key is accepted under **either** name — `ON_DEMAND_API_KEY` (this app) or `ONDEMAND_API_KEY` (the platform's
+  naming) — and is read from `process.env`, then the git-ignored `.env`, then the git-ignored non-dot `env.local`
+  (`server/env.js`). Keep `.env` and `env.local` identical: a code-snapshot restart of the sandbox may drop dot-files, and the
+  non-dot copy keeps the key installed across redeploys. On Vercel set the variable in Project → Environment Variables.
+- Nothing is `VITE_`-prefixed, so no secret is ever bundled for the browser; logs and `/api/health` show a masked
+  fingerprint only (`iehV…Pp7M (32 chars)`).
+- Start-up logs `[env] secret files present: …`, `[ondemand] API key loaded <fingerprint> from <source>` and the result of a
+  live probe. `GET /api/health` (`?probe=1` forces a fresh probe) returns machine-readable
+  `ondemand.keyInstalled`, `keySource`, `sessionCreated`, `checkedAt` (ISO-8601) and `probe.httpStatus`
+  (`createSession: 201`, `getSession: 200`). `ELEVENLABS_API_KEY` is loaded the same way (live narration synthesis only —
+  the 21 pre-baked clips need no key).
+- Why a key can show as "not installed": the sandbox is ephemeral (90-minute TTL) and a restart does not inherit
+  `sandbox exec --env`; the key must therefore exist in `.env`/`env.local` inside the deployed tree (or in the host's
+  environment) and the process must be (re)started after the file changes.
 
 ## Narration assets survive redeploys (fix for "Audio element error (code 4)")
 
