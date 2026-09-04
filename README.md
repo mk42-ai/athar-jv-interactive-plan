@@ -109,35 +109,64 @@ highlights the element being discussed on the rendered slide, and auto-advances 
   first and independently of any key, clip filenames are content-hashed (a regenerated clip can never be served from a stale cache),
   `manifest.json` is `Cache-Control: no-store`, clips are `immutable`.
 
-## QA log — Guide Mode voice (ElevenLabs Adam / eleven_v3), 2026-09-04
+## QA log — Guide Mode narration provenance, 2026-09-04 (voice fix)
 
-End-to-end run in fresh, cookie-less headless Chromium sessions (desktop 1440×900 and mobile 390×844) against the live
-sandbox preview. Provider/model/voice are asserted from the `/api/guide/voice` response, the per-request proxy log and the
-clip URL actually loaded by the `<audio>` element; timestamped screenshots live in the run's `.ui-proof/` attachments.
+Fresh, cookie-less headless Chromium sessions (desktop 1440×900 and mobile 390×844) against the live sandbox preview.
+Per moment the client logged the source it actually played (`window.__atharGuide.sources`); the CDP network log was
+captured for every audio request; `speechSynthesis.speak` was wrapped to count synthetic-voice calls (0 in both sessions).
 
 | Check | Result | Time (UTC) |
 |---|---|---|
-| D1 Anonymous cookie-less session: deck PDF renders page 1 from the raw link (static same-origin asset) | pass | 2026-09-04 12:49:41 UTC |
-| D2 Deck bytes match the bundled PDF (no signed/expiring URL in the load path) | pass | 2026-09-04 12:49:42 UTC |
-| D3 Server reports provider=elevenlabs, voice Adam, model eleven_v3, 21 pre-baked clips, live quota via the new token | pass | 2026-09-04 12:49:42 UTC |
-| D4 Guide Mode starts; narration plays the ElevenLabs Adam/eleven_v3 clip (badge + provider log + pre-baked clip URL) | pass | 2026-09-04 12:49:42 UTC |
-| D5 Pacing: opening moment is unhurried (≈120–160 wpm at speed 0.9) and the audio clock advances | pass | 2026-09-04 12:49:45 UTC |
-| D6 Auto-advances to the next moment after narration completes, with the 750 ms breath | pass | 2026-09-04 12:50:04 UTC |
-| D7 Milestone highlight (3 KPI tiles) rendered for the new moment | pass | 2026-09-04 12:50:04 UTC |
-| D8 Pause stops narration (status=paused, audio element paused) | pass | 2026-09-04 12:50:05 UTC |
-| D9 No advance while paused (3 s) | pass | 2026-09-04 12:50:08 UTC |
-| D10 Resume continues narration (status=speaking, audio playing) | pass | 2026-09-04 12:50:09 UTC |
-| D11 Skip → next moment | pass | 2026-09-04 12:50:09 UTC |
-| D12 Back → previous moment | pass | 2026-09-04 12:50:09 UTC |
-| D13 Gate highlight (G4 · 29 Jan 2027) spotlight + tag on the slide; gate clip is the pre-baked ElevenLabs one | pass | 2026-09-04 12:50:11 UTC |
-| D14 Slide auto-advances to slide 2 when the last slide-1 moment finishes (in sync with narration) | pass | 2026-09-04 12:50:55 UTC |
-| D15 Manual prev-page during Guide Mode re-syncs the guide (page 1 → s1-open) | pass | 2026-09-04 12:50:56 UTC |
-| D16 Thumbnail navigation to slide 2 re-syncs the guide (s2-open, roadmap highlight) | pass | 2026-09-04 12:50:56 UTC |
-| D17 Guide off: bar/highlights removed, audio stopped, manual navigation still works | pass | 2026-09-04 12:50:57 UTC |
-| D18 Live (non-pre-baked) synthesis through the proxy also uses the new token: ElevenLabs Adam | pass | 2026-09-04 12:50:58 UTC |
-| D19 Zero console/page errors and no failed requests (desktop) | pass | 2026-09-04 12:50:58 UTC |
-| M1 Mobile 390×844 fresh session: deck renders anonymously, fits viewport, no horizontal overflow | pass | 2026-09-04 12:50:59 UTC |
-| M2 Mobile: Guide bar + play/skip/back on screen, highlight drawn, ElevenLabs clip playing | pass | 2026-09-04 12:50:59 UTC |
-| M3 Mobile: skip + pause work; milestone highlight (3 boxes) rendered | pass | 2026-09-04 12:51:01 UTC |
-| M4 Mobile: manual navigation to slide 2 re-syncs the guide | pass | 2026-09-04 12:51:01 UTC |
-| M5 Zero console/page errors and no failed requests (mobile) | pass | 2026-09-04 12:51:01 UTC |
+| D1 Anonymous cookie-less session: deck PDF renders page 1 from the raw link (static same-origin asset) | pass | 2026-09-04 13:46:10 UTC |
+| D2 Deck bytes match the bundled PDF (no signed/expiring URL) | pass | 2026-09-04 13:46:10 UTC |
+| D3 Deployed manifest v2: ElevenLabs River (SAz9YHcvj6GT2YYXdXww) / eleven_v3, 21 clips, generated 2026-09-04T13:38Z | pass | 2026-09-04 13:46:10 UTC |
+| D4 All 21 moments play the pre-baked ElevenLabs River clip: hashed filename == manifest, client SHA-256 verified, HTTP 200 audio/mpeg | pass | 2026-09-04 13:46:25 UTC |
+| D5 Zero Web Speech (speechSynthesis.speak) calls and zero live-TTS proxy requests during the 21-moment pass | pass | 2026-09-04 13:46:25 UTC |
+| D6 Network log: every played audio request hit /guide-audio/<moment>-<sha256:12>.mp3 with 200 + audio/mpeg (+ immutable cache header); no /api/voice/audio requests | pass | 2026-09-04 13:46:25 UTC |
+| D7 Pacing: opening moment unhurried, audio clock advancing | pass | 2026-09-04 13:46:31 UTC |
+| D8 Auto-advances to the next moment when the clip ends, with the 750 ms breath | pass | 2026-09-04 13:46:50 UTC |
+| D9 Milestone highlight (3 KPI tiles) rendered | pass | 2026-09-04 13:46:50 UTC |
+| D10 Pause stops narration | pass | 2026-09-04 13:46:51 UTC |
+| D11 No advance while paused (3 s) | pass | 2026-09-04 13:46:54 UTC |
+| D12 Resume continues narration | pass | 2026-09-04 13:46:55 UTC |
+| D13 Skip → next moment | pass | 2026-09-04 13:46:55 UTC |
+| D14 Back → previous moment | pass | 2026-09-04 13:46:55 UTC |
+| D15 Gate highlight (G4 · 29 Jan 2027) spotlight + tag; verified River clip | pass | 2026-09-04 13:46:58 UTC |
+| D16 Slide auto-advances to slide 2 when the last slide-1 moment finishes | pass | 2026-09-04 13:47:40 UTC |
+| D17 Manual prev-page during Guide Mode re-syncs the guide (page 1 → s1-open) | pass | 2026-09-04 13:47:41 UTC |
+| D18 Thumbnail navigation to slide 2 re-syncs the guide (s2-open) | pass | 2026-09-04 13:47:41 UTC |
+| D19 Guide off: bar/highlights removed, audio stopped, manual navigation still works | pass | 2026-09-04 13:47:42 UTC |
+| D20 Whole desktop session: 0 speechSynthesis calls, 0 live-TTS requests, every logged playback was a verified pre-baked clip | pass | 2026-09-04 13:47:42 UTC |
+| D21 Zero console/page errors and no failed requests (desktop) | pass | 2026-09-04 13:47:42 UTC |
+| M1 Mobile 390×844 fresh session: deck renders anonymously, fits viewport, no overflow | pass | 2026-09-04 13:47:44 UTC |
+| M2 Mobile: all 21 moments play verified pre-baked River clips; guide bar + controls on screen | pass | 2026-09-04 13:47:59 UTC |
+| M3 Mobile network log: 21 × /guide-audio hashed mp3, 200 audio/mpeg; 0 speech calls; 0 live-TTS requests | pass | 2026-09-04 13:47:59 UTC |
+| M4 Mobile: skip + pause work; milestone highlight (3 boxes) | pass | 2026-09-04 13:48:03 UTC |
+| M5 Mobile: manual navigation to slide 2 re-syncs the guide | pass | 2026-09-04 13:48:03 UTC |
+| M6 Zero console/page errors and no failed requests (mobile) | pass | 2026-09-04 13:48:04 UTC |
+
+### Clip provenance (served file == committed file == manifest)
+
+| Moment | File | SHA-256 | Manifest | Git HEAD | Served |
+|---|---|---|---|---|---|
+| s1-open | `s1-open-e54d4a80fd65.mp3` | `e54d4a80fd651100…` | ✓ | ✓ | 200 audio/mpeg |
+| s1-kpis | `s1-kpis-96ed430975f2.mp3` | `96ed430975f20ace…` | ✓ | ✓ | 200 audio/mpeg |
+| s1-kpis-2 | `s1-kpis-2-b1cd88f114af.mp3` | `b1cd88f114af7bcb…` | ✓ | ✓ | 200 audio/mpeg |
+| s1-g1 | `s1-g1-fbd21e23242b.mp3` | `fbd21e23242b1b6a…` | ✓ | ✓ | 200 audio/mpeg |
+| s1-g2 | `s1-g2-74bb27933c89.mp3` | `74bb27933c89e644…` | ✓ | ✓ | 200 audio/mpeg |
+| s1-g3 | `s1-g3-341af54905ff.mp3` | `341af54905ff2e4c…` | ✓ | ✓ | 200 audio/mpeg |
+| s1-g4 | `s1-g4-1a8eef9b20df.mp3` | `1a8eef9b20df9aaa…` | ✓ | ✓ | 200 audio/mpeg |
+| s1-g5 | `s1-g5-8da68c041eeb.mp3` | `8da68c041eeb4d98…` | ✓ | ✓ | 200 audio/mpeg |
+| s1-g6 | `s1-g6-99c23979c3b4.mp3` | `99c23979c3b424c9…` | ✓ | ✓ | 200 audio/mpeg |
+| s1-anchors | `s1-anchors-b2e54b1af8c3.mp3` | `b2e54b1af8c31e82…` | ✓ | ✓ | 200 audio/mpeg |
+| s1-commercials | `s1-commercials-68d5af140a3b.mp3` | `68d5af140a3b21d3…` | ✓ | ✓ | 200 audio/mpeg |
+| s1-delivery | `s1-delivery-81db41985ab1.mp3` | `81db41985ab1600f…` | ✓ | ✓ | 200 audio/mpeg |
+| s1-product | `s1-product-eae93d4721f0.mp3` | `eae93d4721f044ef…` | ✓ | ✓ | 200 audio/mpeg |
+| s2-open | `s2-open-81bac71892f3.mp3` | `81bac71892f3fc2a…` | ✓ | ✓ | 200 audio/mpeg |
+| s2-g1 | `s2-g1-dbeb472cbba3.mp3` | `dbeb472cbba3894e…` | ✓ | ✓ | 200 audio/mpeg |
+| s2-g2 | `s2-g2-6c21e61a6371.mp3` | `6c21e61a6371af14…` | ✓ | ✓ | 200 audio/mpeg |
+| s2-g3 | `s2-g3-0ea9ad84aa27.mp3` | `0ea9ad84aa274cd4…` | ✓ | ✓ | 200 audio/mpeg |
+| s2-g4 | `s2-g4-c02c99fd01b2.mp3` | `c02c99fd01b22158…` | ✓ | ✓ | 200 audio/mpeg |
+| s2-g5 | `s2-g5-774552ee7127.mp3` | `774552ee71272b19…` | ✓ | ✓ | 200 audio/mpeg |
+| s2-g6 | `s2-g6-a7e5eb9d5092.mp3` | `a7e5eb9d5092065d…` | ✓ | ✓ | 200 audio/mpeg |
+| s2-close | `s2-close-df46405edea3.mp3` | `df46405edea3938d…` | ✓ | ✓ | 200 audio/mpeg |
