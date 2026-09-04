@@ -29,7 +29,7 @@ const Icon = ({ name }) => (
  * Crisp: renders at devicePixelRatio × zoom. Fit-width by default; zoom steps; page nav;
  * keyboard (← → + − 0 F); fullscreen (API with CSS fallback); thumbnails.
  */
-export default function PdfViewer({ src, title, onPageChange }) {
+export default function PdfViewer({ src, title, onPageChange, requestedPage, overlay, toolbarExtra, onUserNavigate }) {
   const rootRef = useRef(null);
   const scrollRef = useRef(null);
   const canvasRef = useRef(null);
@@ -136,7 +136,15 @@ export default function PdfViewer({ src, title, onPageChange }) {
   }, [status, render]);
 
   // ---- controls ---------------------------------------------------------------------------
-  const go = (p) => setPage((cur) => clamp(p ?? cur, 1, numPages || 1));
+  const go = (p) => {
+    const n = clamp(p ?? page, 1, numPages || 1);
+    setPage(n);
+    if (n !== page) onUserNavigate?.(n);
+  };
+  // Guide Mode (or any parent) can drive the page: { n, t } — t changes force re-application.
+  useEffect(() => {
+    if (requestedPage?.n) setPage(clamp(requestedPage.n, 1, numPages || requestedPage.n));
+  }, [requestedPage?.n, requestedPage?.t, numPages]);
   const zoomBy = (dir) => {
     setZoom((z) => {
       const idx = ZOOM_STEPS.findIndex((s) => s >= z - 1e-6);
@@ -236,6 +244,7 @@ export default function PdfViewer({ src, title, onPageChange }) {
         <div className="tb-group">
           <a className="tb-btn" href={src} download aria-label="Download the PDF" title="Download PDF"><Icon name="download" /></a>
           <a className="tb-btn" href={src} target="_blank" rel="noreferrer" aria-label="Open the PDF in a new tab" title="Open in new tab"><Icon name="open" /></a>
+          {toolbarExtra}
           <button className="tb-btn accent" onClick={toggleFullscreen} aria-pressed={fullscreen} aria-label={fullscreen ? 'Exit fullscreen' : 'Fullscreen'} data-testid="fullscreen-toggle">
             <Icon name={fullscreen ? 'exit' : 'full'} /><span className="tb-label">{fullscreen ? 'Exit' : 'Fullscreen'}</span>
           </button>
@@ -263,7 +272,10 @@ export default function PdfViewer({ src, title, onPageChange }) {
           </div>
         ) : (
           <div className="pdfv-page">
-            <canvas ref={canvasRef} data-testid="pdf-canvas" aria-label={`Rendered page ${page}`} />
+            <div className="pdfv-canvas-wrap">
+              <canvas ref={canvasRef} data-testid="pdf-canvas" aria-label={`Rendered page ${page}`} />
+              {overlay}
+            </div>
           </div>
         )}
       </div>
