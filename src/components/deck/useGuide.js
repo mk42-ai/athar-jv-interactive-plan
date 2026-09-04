@@ -2,6 +2,8 @@ import { useCallback, useEffect, useMemo, useRef, useState } from 'react';
 import { GUIDE_STEPS, firstStepOfSlide } from '../../lib/guide.js';
 import { createNarrator } from '../../lib/narrator.js';
 
+const BREATH_MS = 750; // pause between narrated moments
+
 /**
  * Guide Mode engine: narrates GUIDE_STEPS in order, drives the slide (onSlide), auto-advances when
  * narration completes, and exposes toggle / play / pause / skip. status: idle | loading | speaking | paused | ended
@@ -41,6 +43,9 @@ export function useGuide({ onSlide }) {
       const completed = await narrator.speak(GUIDE_STEPS[idx].text);
       if (cancelled || my !== runRef.current) return;
       if (!completed) return; // stopped / skipped — the caller already moved on
+      // A short breath between moments so the tour feels spoken, not machine-gunned.
+      await new Promise((r) => setTimeout(r, BREATH_MS));
+      if (cancelled || my !== runRef.current) return;
       if (idx + 1 < GUIDE_STEPS.length) setIdx(idx + 1);
       else {
         setPlaying(false);

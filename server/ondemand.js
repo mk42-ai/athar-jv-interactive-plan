@@ -11,7 +11,15 @@ export const CONFIG = {
   avmWorkflowId: process.env.AVM_WORKFLOW_ID || '6a97acf9b44c27163d2b211c', // "Sovereign Q&A Voice Assistant - Opus 5 (API-triggered)"
   ttsVoice: process.env.OD_TTS_VOICE || 'nova',
   ttsModel: process.env.OD_TTS_MODEL || 'tts-1',
-  guideVoice: process.env.OD_GUIDE_VOICE || 'shimmer', // Guide Mode narrator — soft-spoken American female (Services API text_to_speech)
+  // Guide Mode narrator — natural, soft-spoken American female. gpt-4o-mini-tts honours delivery
+  // instructions (tone/pace); tts-1-hd + nova is the automatic fallback if that model is rejected.
+  guideVoice: process.env.OD_GUIDE_VOICE || 'nova',
+  guideModel: process.env.OD_GUIDE_MODEL || 'gpt-4o-mini-tts',
+  guideFallbackModel: process.env.OD_GUIDE_FALLBACK_MODEL || 'tts-1-hd',
+  guideSpeed: Number(process.env.OD_GUIDE_SPEED || 0.92),
+  guideInstructions:
+    process.env.OD_GUIDE_INSTRUCTIONS ||
+    'Soft-spoken, warm and calm American female presenter guiding an executive through a slide deck. Unhurried, human pace with gentle intonation; natural short pauses at commas and slightly longer pauses at full stops; emphasise numbers and dates clearly. Never robotic or salesy.',
 };
 
 export function isConfigured() {
@@ -152,11 +160,14 @@ export async function speechToText(audioUrl) {
   return body.data?.text ?? '';
 }
 
-export async function textToSpeech(input, { voice = CONFIG.ttsVoice, model = CONFIG.ttsModel } = {}) {
+export async function textToSpeech(input, { voice = CONFIG.ttsVoice, model = CONFIG.ttsModel, speed, instructions } = {}) {
+  const payload = { model, input, voice };
+  if (speed && speed !== 1) payload.speed = speed;
+  if (instructions && /^gpt-4o/.test(model)) payload.instructions = instructions;
   const res = await fetch(`${SERVICES}/execute/text_to_speech`, {
     method: 'POST',
     headers: headers(),
-    body: JSON.stringify({ model, input, voice }),
+    body: JSON.stringify(payload),
   });
   const body = await asJson(res, 'text_to_speech');
   return body.data?.audioUrl; // remote (Azure/Cloudinary) URL of an mp3

@@ -91,7 +91,7 @@ Click **Guide me** in the presentation toolbar. A soft-spoken American voice nar
 highlights the element being discussed on the rendered slide, and auto-advances the slide when narration completes.
 
 - Controls: play/pause (`Space`), back (`[`), skip (`]`), exit (`Esc` via the ✕). Manual page navigation still works and re-syncs the guide.
-- Voice: On Demand Services API `text_to_speech` (voice `shimmer`, proxied by `POST /api/guide/tts`, clips cached server-side).
+- Voice: On Demand Services API `text_to_speech` — model `gpt-4o-mini-tts`, voice `nova`, soft-spoken delivery instructions, speed 0.92, 750 ms breath between moments (fallback model `tts-1-hd`); proxied by `POST /api/guide/tts`, clips cached server-side.
   Falls back to the browser Web Speech API (soft `en-US` voice, rate 0.92) when the API key is missing/unavailable, and to a
   timed silent pace when no audio engine exists — so auto-advance always works. The active source is shown in the guide bar.
 - Script + highlight geometry: `src/lib/guide.js` (boxes are slide fractions measured from the PPTX shapes).

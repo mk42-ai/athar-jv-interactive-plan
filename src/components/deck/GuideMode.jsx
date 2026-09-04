@@ -15,7 +15,7 @@ const Icon = ({ name, size = 16 }) => (
   </svg>
 );
 
-const SOURCE_LABEL = { ondemand: 'On Demand voice · Shimmer', browser: 'Browser voice · en-US', timed: 'Silent · timed' };
+const SOURCE_LABEL = { ondemand: 'On Demand voice · Nova', browser: 'Browser voice · en-US', timed: 'Silent · timed' };
 
 /** Toggle pill shown in the viewer toolbar. */
 export function GuideToggle({ guide, page }) {

@@ -354,17 +354,26 @@ export function createApiApp() {
 
   // ---- Guide Mode narration: Services API text_to_speech, soft US voice, cached per text ----
   const guideClips = new Map(); // sha1(text) -> media id
-  api.get('/guide/voice', (req, res) => res.json({ configured: isConfigured(), voice: CONFIG.guideVoice, model: CONFIG.ttsModel }));
+  api.get('/guide/voice', (req, res) => res.json({ configured: isConfigured(), voice: CONFIG.guideVoice, model: CONFIG.guideModel, fallbackModel: CONFIG.guideFallbackModel, speed: CONFIG.guideSpeed, instructions: CONFIG.guideInstructions }));
   api.post('/guide/tts', express.json({ limit: '32kb' }), async (req, res) => {
     try {
       if (!isConfigured()) return res.status(503).json({ error: 'not_configured', message: 'ON_DEMAND_API_KEY missing — client falls back to the browser voice' });
       const text = String(req.body?.text || '').trim().slice(0, 1500);
       if (!text) return res.status(400).json({ error: 'text is required' });
-      const key = crypto.createHash('sha1').update(`${CONFIG.guideVoice}|${text}`).digest('hex');
+      const key = crypto.createHash('sha1').update(`${CONFIG.guideModel}|${CONFIG.guideVoice}|${CONFIG.guideSpeed}|${CONFIG.guideInstructions}|${text}`).digest('hex');
       let id = guideClips.get(key);
       const hit = Boolean(id && media.has(id));
       if (!hit) {
-        const remote = await textToSpeech(text, { voice: CONFIG.guideVoice });
+        const opts = { voice: CONFIG.guideVoice, speed: CONFIG.guideSpeed, instructions: CONFIG.guideInstructions };
+        let remote;
+        let model = CONFIG.guideModel;
+        try {
+          remote = await textToSpeech(text, { ...opts, model });
+        } catch (e) {
+          console.warn(`[guide-tts] ${model} failed (${e.message}) — falling back to ${CONFIG.guideFallbackModel}`);
+          model = CONFIG.guideFallbackModel;
+          remote = await textToSpeech(text, { ...opts, model });
+        }
         if (!remote) throw Object.assign(new Error('text_to_speech returned no audioUrl'), { status: 502 });
         const r = await fetch(remote, { signal: withTimeout(30000) });
         if (!r.ok) throw Object.assign(new Error(`audio fetch ${r.status}`), { status: 502 });
@@ -373,7 +382,7 @@ export function createApiApp() {
         media.get(id).ts = Date.now() + 6 * 3600 * 1000; // keep narration clips well beyond the default TTL
         guideClips.set(key, id);
       }
-      res.json({ url: `/api/voice/audio/${id}`, voice: CONFIG.guideVoice, cached: hit });
+      res.json({ url: `/api/voice/audio/${id}`, voice: CONFIG.guideVoice, model: CONFIG.guideModel, cached: hit });
     } catch (e) {
       res.status(e.status || 500).json(errPayload(e, 'guide-tts'));
     }
