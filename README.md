@@ -170,3 +170,72 @@ captured for every audio request; `speechSynthesis.speak` was wrapped to count s
 | s2-g5 | `s2-g5-774552ee7127.mp3` | `774552ee71272b19…` | ✓ | ✓ | 200 audio/mpeg |
 | s2-g6 | `s2-g6-a7e5eb9d5092.mp3` | `a7e5eb9d5092065d…` | ✓ | ✓ | 200 audio/mpeg |
 | s2-close | `s2-close-df46405edea3.mp3` | `df46405edea3938d…` | ✓ | ✓ | 200 audio/mpeg |
+
+## QA log — narration audit & fix verification, 2026-09-04 13:54–14:00 UTC
+
+Fresh, cookie-less headless Chromium sessions (desktop 1440×900 full 21-moment run, mobile 390×844) against the redeployed
+preview, with a CDP network trace. Every played moment fetched its content-hashed River clip from `/guide-audio/`
+(HTTP 200, `audio/mpeg`), the browser re-hashed the bytes and matched the manifest, and there were **zero** requests to
+`/api/guide/tts`, `/api/voice/audio` or any previous clip. Breath gaps between moments: 0.81–0.87 s.
+
+| Check | Result | Time (UTC) | Screenshot |
+|---|---|---|---|
+| D1 Cold shared link, cookie-less session: deck PDF renders page 1 (static same-origin asset) | pass | 2026-09-04 13:54:28 | qa-d01-anon-deck-2026-09-04T135428Z-1440x900.png |
+| D2 Server: 21 pre-baked ElevenLabs River / eleven_v3 clips, key-independent playback | pass | 2026-09-04 13:54:28 | — |
+| D3 Manifest reachable anonymously; every clip carries ElevenLabs provenance (request-id / history-item-id) | pass | 2026-09-04 13:54:28 | — |
+| D4 Clip is real, audible audio: decodes in the browser, RMS well above silence, ≈unhurried pace | pass | 2026-09-04 13:54:29 | — |
+| D5 Guide starts: first moment plays the NEW River clip from a Blob of hash-verified bytes (badge shows ElevenLabs · River · eleven_v3) | pass | 2026-09-04 13:54:29 | qa-d05-guide-river-playing-2026-09-04T135429Z-1440x900.png |
+| D6 Pause during moment 2 (status=paused, audio element paused) | pass | 2026-09-04 13:54:51 | qa-d06-paused-2026-09-04T135451Z-1440x900.png |
+| D7 No advance while paused | pass | 2026-09-04 13:54:54 | — |
+| D8 Resume continues the same clip | pass | 2026-09-04 13:54:55 | — |
+| D9 Skip → next moment | pass | 2026-09-04 13:54:55 | — |
+| D10 Back → previous moment (restarts its River clip) | pass | 2026-09-04 13:54:55 | — |
+| D11 Milestone highlight (3 KPI tiles) rendered | pass | 2026-09-04 13:54:55 | qa-d11-milestone-highlight-2026-09-04T135455Z-1440x900.png |
+| D12 Gate highlight (G4 · 29 Jan 2027) spotlight + tag on the slide | pass | 2026-09-04 13:55:59 | qa-d12-gate4-highlight-2026-09-04T135559Z-1440x900.png |
+| D13 Slide auto-advanced to slide 2 in sync with the roadmap moment | pass | 2026-09-04 13:57:56 | qa-d13-auto-slide2-2026-09-04T135756Z-1440x900.png |
+| D14 All 21 moments auto-advanced to the end; each played its own NEW River clip (file + SHA-256 = manifest, prebaked, verified) | pass | 2026-09-04 13:59:42 | qa-d14-tour-complete-2026-09-04T135942Z-1440x900.png |
+| D15 Breath gap between consecutive auto-advanced moments ≈ 0.75 s | pass | 2026-09-04 13:59:42 | — |
+| D16 Network trace: every played clip was fetched from /guide-audio/ (HTTP 200, audio/mpeg); ZERO requests to /api/guide/tts, /api/voice/audio or any old clip | pass | 2026-09-04 13:59:42 | — |
+| D17 Manual thumbnail navigation to slide 2 re-syncs the guide (s2-open) | pass | 2026-09-04 13:59:42 | qa-d17-manual-nav-resync-2026-09-04T135942Z-1440x900.png |
+| D18 Manual prev-page re-syncs to s1-open | pass | 2026-09-04 13:59:43 | — |
+| D19 Guide off: audio stopped, bar removed, manual navigation works | pass | 2026-09-04 13:59:43 | qa-d19-guide-off-2026-09-04T135943Z-1440x900.png |
+| D20 Zero console errors, zero page errors, zero failed requests (desktop, full run) | pass | 2026-09-04 13:59:43 | — |
+| D21 Network-trace proof captured (PNG + JSON) | pass | 2026-09-04 13:59:45 | — |
+| M1 Mobile 390×844 cold session: deck renders anonymously, fits viewport, no horizontal overflow | pass | 2026-09-04 13:59:46 | qa-m01-mobile-deck-2026-09-04T135946Z-390x844.png |
+| M2 Mobile: Guide bar + controls on screen, highlight drawn, NEW River clip playing (hash-verified) | pass | 2026-09-04 13:59:47 | qa-m02-mobile-guide-river-2026-09-04T135947Z-390x844.png |
+| M3 Mobile: auto-advance to moment 2 after narration | pass | 2026-09-04 14:00:09 | qa-m03-mobile-auto-advanced-2026-09-04T140009Z-390x844.png |
+| M4 Mobile: pause works; milestone highlight (3 boxes) | pass | 2026-09-04 14:00:09 | qa-m04-mobile-paused-highlight-2026-09-04T140009Z-390x844.png |
+| M5 Mobile: resume, skip and back work | pass | 2026-09-04 14:00:11 | — |
+| M6 Mobile: manual navigation to slide 2 re-syncs the guide (roadmap highlight) | pass | 2026-09-04 14:00:11 | qa-m06-mobile-slide2-resync-2026-09-04T140011Z-390x844.png |
+| M7 Mobile network trace: clips fetched from /guide-audio/ only, zero proxy/fallback audio requests | pass | 2026-09-04 14:00:11 | — |
+| M8 Zero console errors, zero page errors, zero failed requests (mobile) | pass | 2026-09-04 14:00:11 | — |
+
+### Per-clip SHA-256 — new River bake vs previous Adam bake (all 21 differ; disk == manifest == served)
+
+| # | Moment | New file | New SHA-256 (River, 13:38–13:40 UTC) | Old SHA-256 (Adam bake 12:44 UTC) | ElevenLabs request-id / history-item-id / cost |
+|---|---|---|---|---|---|
+| 1 | s1-open | `s1-open-e54d4a80fd65.mp3` | `e54d4a80fd651100…b6a9e5ba` | `1cac3b045c5de4ab…` | `LHMpnGInQ4Kt7j9nX4jp` / `sPyOXjjiWkrm5sajEy8X` / 285 |
+| 2 | s1-kpis | `s1-kpis-96ed430975f2.mp3` | `96ed430975f20ace…df449a94` | `65574c753f54a6d2…` | `E8HSNEJcPqaBHIN3PToI` / `WfUxoLikR3EEgzAUVGHk` / 244 |
+| 3 | s1-kpis-2 | `s1-kpis-2-b1cd88f114af.mp3` | `b1cd88f114af7bcb…3965c794` | `bc0777736d37e8ed…` | `hY9xhonOOXVktlYUuai8` / `rgod2pCRAHs5NcCcFe0T` / 300 |
+| 4 | s1-g1 | `s1-g1-fbd21e23242b.mp3` | `fbd21e23242b1b6a…0c0ec7e7` | `23e969ec2be292ae…` | `CCI5zpuuZzooikQz4dHL` / `kTDRhBypiDjyZGWFlGWE` / 162 |
+| 5 | s1-g2 | `s1-g2-74bb27933c89.mp3` | `74bb27933c89e644…584350c8` | `fbce956b2fd6a5ac…` | `psQipdSdUD4tVLvCsLjS` / `eSiVKfnKzIqS8pdWnGW4` / 124 |
+| 6 | s1-g3 | `s1-g3-341af54905ff.mp3` | `341af54905ff2e4c…d60059ca` | `a1944200130eb8b8…` | `MtIRB3G75vpnj0hKt9Fo` / `C4gjB5kGgFiHilU0zgAD` / 114 |
+| 7 | s1-g4 | `s1-g4-1a8eef9b20df.mp3` | `1a8eef9b20df9aaa…f8a96609` | `80a9e783ee077581…` | `v9K6PLSUQRcCvpPHy5zT` / `v9dIPFat5ZN6jxD1u8tS` / 127 |
+| 8 | s1-g5 | `s1-g5-8da68c041eeb.mp3` | `8da68c041eeb4d98…fbb1a290` | `d02b1628158a5241…` | `qgqzAkeNmILRgpauwnMs` / `nfNFq4znzkbe3Hf4ir1y` / 108 |
+| 9 | s1-g6 | `s1-g6-99c23979c3b4.mp3` | `99c23979c3b424c9…2bc82052` | `5964d2f95b1c2749…` | `4k3809mo4kQNS2BkDUqC` / `ftXe72eggDF1DMnNesZw` / 108 |
+| 10 | s1-anchors | `s1-anchors-b2e54b1af8c3.mp3` | `b2e54b1af8c31e82…ca38d78f` | `689782a7eeddf164…` | `7Pfg40bVeTp2KtdZCHBs` / `Ii6bjfWf7SGOWZf35AY7` / 273 |
+| 11 | s1-commercials | `s1-commercials-68d5af140a3b.mp3` | `68d5af140a3b21d3…d1a3468d` | `85df2b9ee212a314…` | `wVP1fsm7NBQSpycbI0wc` / `RbEjhxGbWGoPD8oEMTZO` / 427 |
+| 12 | s1-delivery | `s1-delivery-81db41985ab1.mp3` | `81db41985ab1600f…7bcd9d63` | `15ee22a0e6767478…` | `Uxu1jGhTmUD5jbcvEMpt` / `y7qAHRoo1WUoZIthEWLT` / 264 |
+| 13 | s1-product | `s1-product-eae93d4721f0.mp3` | `eae93d4721f044ef…a34b75e9` | `6cedf9f0cef1cfa6…` | `gp3FRAToD5Wjg4rf1Uax` / `FfEERbzG0BwMRf9axHlY` / 286 |
+| 14 | s2-open | `s2-open-81bac71892f3.mp3` | `81bac71892f3fc2a…7727329e` | `693baaaffc791721…` | `LiFMyiuh2jpdFasrflxI` / `5OBOOohfMw9jGiXmZpT1` / 226 |
+| 15 | s2-g1 | `s2-g1-dbeb472cbba3.mp3` | `dbeb472cbba3894e…cff1cfac` | `e92e50627c4c2d1b…` | `YwadenxHrpXLVLE2C6CM` / `2sPZ94uoRkU5OdTqGyfq` / 170 |
+| 16 | s2-g2 | `s2-g2-6c21e61a6371.mp3` | `6c21e61a6371af14…1ef2964a` | `b4bb112bebf3b321…` | `tx4X903nt5UdaNGmezja` / `IuOLaj3mEs5h1v1ruhxZ` / 181 |
+| 17 | s2-g3 | `s2-g3-0ea9ad84aa27.mp3` | `0ea9ad84aa274cd4…e2c3904f` | `ec82b556872de808…` | `TZfAt4DsQff5KvPz5ML3` / `rvUow9kx59VrJscNITWQ` / 177 |
+| 18 | s2-g4 | `s2-g4-c02c99fd01b2.mp3` | `c02c99fd01b22158…4db1b7c2` | `92ef6590e304b378…` | `D3kKlYBYmUmW4Yy3Ax1e` / `N3KzHjskkb2eCiRkszWa` / 172 |
+| 19 | s2-g5 | `s2-g5-774552ee7127.mp3` | `774552ee71272b19…e374be6d` | `755027f22b08b8ad…` | `VvtQdt328WHWoi4Y49e7` / `yf3692TJE0ps7x96RD3P` / 156 |
+| 20 | s2-g6 | `s2-g6-a7e5eb9d5092.mp3` | `a7e5eb9d5092065d…0938fe46` | `56600a56101b7f45…` | `M6bg55Xc8KaT22oBFxkZ` / `TWEzPcreGSk4UcwmymC9` / 164 |
+| 21 | s2-close | `s2-close-df46405edea3.mp3` | `df46405edea3938d…cbd292a7` | `da6aaafd8c67291d…` | `nxqd1ztpchdAXPlXMP3X` / `NnK7pVH2RD8V38xCXr6M` / 220 |
+
+Provenance columns come from the ElevenLabs generation history (`npm run guide:provenance`, matched by generation time and
+exact character count). Free-tier quota after the bake: 9,909 / 10,000 credits (resets 2026-10-05) — a further re-bake needs
+a key with ≥ 4,300 credits.
