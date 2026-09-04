@@ -18,17 +18,20 @@ export const RANKED_VOICES = [
 ];
 
 export const ELEVEN = {
-  voiceId: process.env.ELEVEN_VOICE_ID || 'pNInz6obpgDQGcFmaJgB', // Adam (premade) — first shortlist entry usable on this plan
-  voiceName: process.env.ELEVEN_VOICE_NAME || 'Adam',
+  // River — "Relaxed, Neutral, Informative" (premade, American). Chosen 2026-09-04 from the voices this
+  // key can actually synthesise: of the calm US narrators probed (Brian, Sarah, River) it returned the
+  // softest level (peak 0.69 / RMS 0.10) at an unhurried 12.5 chars/s. Library voices → HTTP 402 on this plan.
+  voiceId: process.env.ELEVEN_VOICE_ID || 'SAz9YHcvj6GT2YYXdXww',
+  voiceName: process.env.ELEVEN_VOICE_NAME || 'River',
   model: process.env.ELEVEN_MODEL || 'eleven_v3',
   fallbackModel: process.env.ELEVEN_FALLBACK_MODEL || 'eleven_multilingual_v2',
   outputFormat: process.env.ELEVEN_OUTPUT_FORMAT || 'mp3_44100_128',
-  // Soft-spoken presenter: high stability, style ≈ 0, slightly slower than natural.
+  // Calm, natural delivery: v3 "Natural" stability (0.5), high similarity, no style exaggeration, 0.92× speed.
   settings: {
-    stability: Number(process.env.ELEVEN_STABILITY || 0.7),
+    stability: Number(process.env.ELEVEN_STABILITY || 0.5),
     similarity_boost: Number(process.env.ELEVEN_SIMILARITY || 0.8),
     style: Number(process.env.ELEVEN_STYLE || 0.0),
-    speed: Number(process.env.ELEVEN_SPEED || 0.9),
+    speed: Number(process.env.ELEVEN_SPEED || 0.92),
     use_speaker_boost: true,
   },
 };
