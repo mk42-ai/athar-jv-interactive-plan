@@ -1,6 +1,7 @@
 import React, { useCallback, useEffect, useRef, useState } from 'react';
 import * as pdfjsLib from 'pdfjs-dist';
 import workerUrl from 'pdfjs-dist/build/pdf.worker.min.mjs?url';
+import { resolveDeckSource } from '../../lib/deckSource.js';
 
 pdfjsLib.GlobalWorkerOptions.workerSrc = workerUrl;
 
@@ -45,15 +46,23 @@ export default function PdfViewer({ src, title, onPageChange, requestedPage, ove
   const [thumbs, setThumbs] = useState([]);
   const [rendering, setRendering] = useState(false);
   const [containerW, setContainerW] = useState(0);
+  const [source, setSource] = useState(null); // 'static' | 'embedded'
   const dragRef = useRef(null);
 
   // ---- load document ------------------------------------------------------------------
   useEffect(() => {
     let cancelled = false;
+    let task = null;
     setStatus('loading');
-    const task = pdfjsLib.getDocument({ url: src, cMapPacked: true });
-    task.promise
+    resolveDeckSource(src)
+      .then(({ data, source: from }) => {
+        if (cancelled) return null;
+        setSource(from);
+        task = pdfjsLib.getDocument({ data, cMapPacked: true });
+        return task.promise;
+      })
       .then(async (pdf) => {
+        if (!pdf) return;
         if (cancelled) return;
         pdfRef.current = pdf;
         setNumPages(pdf.numPages);
@@ -80,7 +89,7 @@ export default function PdfViewer({ src, title, onPageChange, requestedPage, ove
       });
     return () => {
       cancelled = true;
-      task.destroy?.();
+      task?.destroy?.();
     };
   }, [src]);
 
@@ -228,7 +237,7 @@ export default function PdfViewer({ src, title, onPageChange, requestedPage, ove
   const pct = Math.round(zoom * 100);
 
   return (
-    <div className={`pdfv ${fullscreen ? 'is-fullscreen' : ''}`} ref={rootRef} data-testid="pdf-viewer" data-status={status}>
+    <div className={`pdfv ${fullscreen ? 'is-fullscreen' : ''}`} ref={rootRef} data-testid="pdf-viewer" data-status={status} data-source={source || ""}>
       <div className="pdfv-toolbar" role="toolbar" aria-label="Presentation controls">
         <div className="tb-group">
           <button className="tb-btn" onClick={() => go(page - 1)} disabled={page <= 1} aria-label="Previous page"><Icon name="prev" /></button>
