@@ -15,7 +15,7 @@ const Icon = ({ name, size = 16 }) => (
   </svg>
 );
 
-const SOURCE_LABEL = { elevenlabs: 'ElevenLabs voice', ondemand: 'On Demand voice', browser: 'Browser voice · en-US', timed: 'Silent · timed' };
+const SOURCE_LABEL = { elevenlabs: 'ElevenLabs voice', live: 'Live voice (proxy)' };
 
 /** Toggle pill shown in the viewer toolbar. */
 export function GuideToggle({ guide, page }) {
@@ -51,7 +51,7 @@ export function GuideOverlay({ guide }) {
 
 /** Floating control bar: play/pause, back/skip, caption, voice source, progress. */
 export function GuideBar({ guide }) {
-  const { active, playing, status, source, sourceLabel, step, idx, total } = guide;
+  const { active, playing, status, source, sourceLabel, clip, error, step, idx, total } = guide;
   useEffect(() => {
     if (!active) return;
     const onKey = (e) => {
@@ -66,21 +66,28 @@ export function GuideBar({ guide }) {
   if (!active || !step) return null;
   const ended = status === 'ended';
   return (
-    <div className="guide-bar" role="region" aria-label="Guide Mode" data-testid="guide-bar" data-status={status} data-step={step.id} data-slide={step.slide}>
+    <div className={`guide-bar ${status === 'error' ? 'has-error' : ''}`} role="region" aria-label="Guide Mode" data-testid="guide-bar" data-status={status} data-step={step.id} data-slide={step.slide}>
       <div className="guide-bar-head">
         <span className="guide-live"><i className={status === 'speaking' ? 'pulse' : ''} /> Guide Mode</span>
         <span className="guide-pos" data-testid="guide-position">Slide {step.slide} · moment {step.stepInSlide}/{step.stepsInSlide} · {idx + 1}/{total}</span>
-        {source && <span className="guide-src" data-testid="guide-source" data-source={source}>{sourceLabel || SOURCE_LABEL[source] || source}</span>}
+        {source && (
+          <span className="guide-src" data-testid="guide-source" data-source={source} data-clip-source={clip?.source || ''} data-clip-file={clip?.file || ''} data-clip-sha={clip?.sha256 || ''} data-verified={clip?.verified === true ? 'true' : clip?.verified === false ? 'false' : ''} title={clip ? `${clip.source} · ${clip.file}${clip.sha256 ? ` · sha256 ${clip.sha256.slice(0, 12)}…${clip.verified ? ' verified' : ''}` : ''}` : ''}>
+            {sourceLabel || SOURCE_LABEL[source] || source}
+          </span>
+        )}
         <button className="guide-x" onClick={guide.stop} aria-label="Exit Guide Mode" data-testid="guide-exit"><Icon name="close" size={14} /></button>
       </div>
       <p className="guide-caption" aria-live="polite" data-testid="guide-caption"><b>{step.label}.</b> {step.text}</p>
       <div className="guide-controls">
         <button className="guide-btn" onClick={guide.back} disabled={idx === 0} aria-label="Previous moment" data-testid="guide-back"><Icon name="prev" /></button>
         <button className="guide-btn main" onClick={guide.playPause} aria-label={ended ? 'Replay from start' : playing ? 'Pause narration' : 'Play narration'} data-testid="guide-playpause" data-playing={playing}>
-          <Icon name={ended ? 'replay' : playing ? 'pause' : 'play'} size={18} />
+          <Icon name={ended || status === 'error' ? 'replay' : playing ? 'pause' : 'play'} size={18} />
         </button>
         <button className="guide-btn" onClick={guide.skip} aria-label="Skip to next moment" data-testid="guide-skip"><Icon name="next" /></button>
-        <span className="guide-status" data-testid="guide-status">{ended ? 'Tour complete' : status === 'loading' ? 'Preparing voice…' : status === 'paused' ? 'Paused' : 'Narrating'}</span>
+        <span className={`guide-status ${status === 'error' ? 'error' : ''}`} data-testid="guide-status" role={status === 'error' ? 'alert' : undefined}>
+          {ended ? 'Tour complete' : status === 'error' ? error?.message || 'Narration failed' : status === 'loading' ? 'Preparing voice…' : status === 'paused' ? 'Paused' : 'Narrating'}
+          {status === 'error' && <button className="guide-retry" onClick={guide.retry} data-testid="guide-retry">Retry</button>}
+        </span>
         <div className="guide-progress" aria-hidden="true"><i style={{ width: `${((idx + (ended ? 1 : 0)) / total) * 100}%` }} /></div>
       </div>
     </div>

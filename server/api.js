@@ -214,6 +214,7 @@ export function createApiApp() {
 
   const api = express.Router();
 
+
   api.get('/health', (req, res) => {
     const plan = loadPlan();
     res.json({
@@ -406,7 +407,8 @@ export function createApiApp() {
       settings: isElevenConfigured() ? ELEVEN.settings : { speed: CONFIG.guideSpeed, instructions: CONFIG.guideInstructions },
       label: isElevenConfigured() ? elevenLabel() : ondemandLabel(),
       prebakedClips: manifest ? Object.keys(manifest.clips || {}).length : 0,
-      prebakedFor: manifest ? { provider: manifest.provider, model: manifest.model, voice: manifest.voice, generatedAt: manifest.generatedAt } : null,
+      prebakedFor: manifest ? { version: manifest.version, provider: manifest.provider, model: manifest.model, voice: manifest.voice, voiceId: manifest.voiceId, settings: manifest.settings, generatedAt: manifest.generatedAt } : null,
+      playback: manifest && Object.keys(manifest.clips || {}).length ? 'prebaked-verified-clips (key-independent)' : guideProvider() ? `live:${guideProvider()}` : 'none',
       fallback: isElevenConfigured() ? { provider: isConfigured() ? 'ondemand' : null, voice: CONFIG.guideVoice, model: CONFIG.guideModel } : null,
       shortlist: RANKED_VOICES.map((v) => ({ name: v.name, usable: !v.library, reason: v.library ? 'library voice — HTTP 402 paid_plan_required on this plan' : 'premade — usable' })),
       quota,
@@ -416,22 +418,30 @@ export function createApiApp() {
   api.post('/guide/tts', express.json({ limit: '32kb' }), async (req, res) => {
     const t0 = Date.now();
     try {
-      const provider = guideProvider();
-      if (!provider) return res.status(503).json({ error: 'not_configured', message: 'No TTS key configured — client falls back to the browser voice' });
       const text = String(req.body?.text || '').trim().slice(0, 1500);
+      const id = String(req.body?.id || '').slice(0, 64);
       if (!text) return res.status(400).json({ error: 'text is required' });
 
       const done = (payload) => {
-        console.log(`[guide-tts] provider=${payload.provider} model=${payload.model} voice=${payload.voice} source=${payload.source} chars=${text.length} ms=${Date.now() - t0}`);
+        console.log(`[guide-tts] ${new Date().toISOString()} moment=${id || '-'} provider=${payload.provider} model=${payload.model} voice=${payload.voice} source=${payload.source} file=${payload.file || '-'} chars=${text.length} ms=${Date.now() - t0}`);
         res.json(payload);
       };
 
-      // 1) ElevenLabs — pre-baked clip → memory cache → live (primary model, then fallback model)
+      // 0) Pre-baked, integrity-hashed ElevenLabs clip — served FIRST and INDEPENDENTLY of any API key,
+      //    so a restart without ELEVENLABS_API_KEY can never silently switch the voice.
+      const manifest = loadPrebaked();
+      const textSha = crypto.createHash('sha256').update(text).digest('hex');
+      const pre = manifest?.clips?.[id] || Object.values(manifest?.clips || {}).find((c) => c.textSha256 === textSha);
+      if (pre && (!pre.textSha256 || pre.textSha256 === textSha)) {
+        return done({ url: `/guide-audio/${pre.file}`, file: pre.file, sha256: pre.sha256, provider: manifest.provider || 'elevenlabs', model: pre.model || manifest.model, voice: pre.voice || manifest.voice, voiceId: pre.voiceId || manifest.voiceId, label: `ElevenLabs · ${pre.voice || manifest.voice} · ${pre.model || manifest.model}`, source: 'prebaked', settings: pre.settings || manifest.settings });
+      }
+
+      const provider = guideProvider();
+      if (!provider) return res.status(503).json({ error: 'not_configured', message: 'No pre-baked clip for this moment and no TTS key configured on the server' });
+
+      // 1) ElevenLabs live — memory cache → primary model → fallback model
       if (provider === 'elevenlabs') {
         const key = clipKey(crypto, text);
-        const manifest = loadPrebaked();
-        const pre = manifest?.clips?.[key];
-        if (pre) return done({ url: `/guide-audio/${pre.file}`, provider: 'elevenlabs', model: pre.model, voice: pre.voice, label: elevenLabel(pre.model), source: 'prebaked', settings: pre.settings });
         const cached = guideClips.get(key);
         if (cached && media.has(cached.id)) return done({ ...cached.meta, url: `/api/voice/audio/${cached.id}`, source: 'cache' });
         let buf = null;
@@ -449,20 +459,20 @@ export function createApiApp() {
           }
         }
         if (buf) {
-          const id = putMedia(buf, 'audio/mpeg', 'mp3');
-          media.get(id).ts = Date.now() + 6 * 3600 * 1000;
-          const meta = { provider: 'elevenlabs', model, voice: ELEVEN.voiceName, label: elevenLabel(model), settings: ELEVEN.settings };
-          guideClips.set(key, { id, meta });
-          return done({ ...meta, url: `/api/voice/audio/${id}`, source: 'live' });
+          const id2 = putMedia(buf, 'audio/mpeg', 'mp3');
+          media.get(id2).ts = Date.now() + 6 * 3600 * 1000;
+          const meta = { provider: 'elevenlabs', model, voice: ELEVEN.voiceName, voiceId: ELEVEN.voiceId, label: elevenLabel(model), settings: ELEVEN.settings, sha256: crypto.createHash('sha256').update(buf).digest('hex'), file: id2 };
+          guideClips.set(key, { id: id2, meta });
+          return done({ ...meta, url: `/api/voice/audio/${id2}`, source: 'live' });
         }
         if (!isConfigured()) throw lastErr || new Error('elevenlabs failed');
-        console.warn(`[guide-tts] falling back to On Demand (${CONFIG.guideVoice}) — ${lastErr?.message}`);
+        console.warn(`[guide-tts] ElevenLabs hard-failed (${lastErr?.message}) — falling back to On Demand (${CONFIG.guideVoice})`);
       }
 
       // 2) On Demand Services API (fallback, or primary when no ElevenLabs key is set)
-      const key = crypto.createHash('sha1').update(`ondemand|${CONFIG.guideModel}|${CONFIG.guideVoice}|${CONFIG.guideSpeed}|${CONFIG.guideInstructions}|${text}`).digest('hex');
-      const cached = guideClips.get(key);
-      if (cached && media.has(cached.id)) return done({ ...cached.meta, url: `/api/voice/audio/${cached.id}`, source: 'cache' });
+      const odKey = crypto.createHash('sha1').update(`ondemand|${CONFIG.guideModel}|${CONFIG.guideVoice}|${CONFIG.guideSpeed}|${CONFIG.guideInstructions}|${text}`).digest('hex');
+      const odCached = guideClips.get(odKey);
+      if (odCached && media.has(odCached.id)) return done({ ...odCached.meta, url: `/api/voice/audio/${odCached.id}`, source: 'cache' });
       const opts = { voice: CONFIG.guideVoice, speed: CONFIG.guideSpeed, instructions: CONFIG.guideInstructions };
       let remote;
       let model = CONFIG.guideModel;
@@ -477,11 +487,11 @@ export function createApiApp() {
       const r = await fetch(remote, { signal: withTimeout(30000) });
       if (!r.ok) throw Object.assign(new Error(`audio fetch ${r.status}`), { status: 502 });
       const buf = Buffer.from(await r.arrayBuffer());
-      const id = putMedia(buf, 'audio/mpeg', 'mp3');
-      media.get(id).ts = Date.now() + 6 * 3600 * 1000;
-      const meta = { provider: 'ondemand', model, voice: CONFIG.guideVoice, label: ondemandLabel(), settings: { speed: CONFIG.guideSpeed } };
-      guideClips.set(key, { id, meta });
-      return done({ ...meta, url: `/api/voice/audio/${id}`, source: 'live' });
+      const odId = putMedia(buf, 'audio/mpeg', 'mp3');
+      media.get(odId).ts = Date.now() + 6 * 3600 * 1000;
+      const meta = { provider: 'ondemand', model, voice: CONFIG.guideVoice, label: ondemandLabel(), settings: { speed: CONFIG.guideSpeed }, file: odId };
+      guideClips.set(odKey, { id: odId, meta });
+      return done({ ...meta, url: `/api/voice/audio/${odId}`, source: 'live' });
     } catch (e) {
       console.error(`[guide-tts] error: ${e.message}`);
       res.status(e.status || 500).json(errPayload(e, 'guide-tts'));

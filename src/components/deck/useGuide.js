@@ -15,6 +15,8 @@ export function useGuide({ onSlide }) {
   const [status, setStatus] = useState('idle');
   const [source, setSource] = useState(null);
   const [sourceLabel, setSourceLabel] = useState('');
+  const [clip, setClip] = useState(null); // provenance of the clip currently playing
+  const [error, setError] = useState(null);
   const [run, setRun] = useState(0); // bump to (re)start the current step
   const narrator = useMemo(() => createNarrator(), []);
   const runRef = useRef(0);
@@ -31,6 +33,8 @@ export function useGuide({ onSlide }) {
         if (ev.type !== 'start') return;
         setSource(ev.source);
         setSourceLabel(ev.label || '');
+        setClip(ev.clip || null);
+        setError(null);
       }),
     [narrator],
   );
@@ -41,15 +45,27 @@ export function useGuide({ onSlide }) {
     if (step) onSlideRef.current?.(step.slide);
   }, [step?.slide, active]); // eslint-disable-line react-hooks/exhaustive-deps
 
-  // Narrate the current step; when it completes, advance (or end).
+  // Narrate the current step; when it completes, advance (or end). A failure is surfaced, never hidden:
+  // status becomes 'error', playback stops and the tour does NOT auto-advance.
   useEffect(() => {
     if (!active) return;
     const my = ++runRef.current;
     setStatus('loading');
-    narrator.prefetch(GUIDE_STEPS[idx + 1]?.text);
+    setError(null);
+    narrator.prefetch(GUIDE_STEPS[idx + 1]);
     let cancelled = false;
     (async () => {
-      const completed = await narrator.speak(GUIDE_STEPS[idx].text);
+      let completed = false;
+      try {
+        completed = await narrator.speak(GUIDE_STEPS[idx]);
+      } catch (e) {
+        if (cancelled || my !== runRef.current) return;
+        console.error('[guide-audio] narration failed:', e);
+        setError({ message: e?.message || 'Narration failed', step: GUIDE_STEPS[idx].id, blocked: Boolean(e?.blocked) });
+        setStatus('error');
+        setPlaying(false);
+        return;
+      }
       if (cancelled || my !== runRef.current) return;
       if (!completed) return; // stopped / skipped — the caller already moved on
       // A short breath between moments so the tour feels spoken, not machine-gunned.
@@ -81,17 +97,18 @@ export function useGuide({ onSlide }) {
       setStatus((s) => (s === 'paused' ? 'speaking' : s));
     } else {
       narrator.pause();
-      setStatus((s) => (s === 'ended' ? s : 'paused'));
+      setStatus((s) => (s === 'ended' || s === 'error' ? s : 'paused'));
     }
   }, [playing, active, narrator]);
 
   const start = useCallback((fromSlide = 1) => {
+    narrator.unlock(); // inside the user's click: unlock the audio element for iOS/Safari
     const i = Math.max(0, firstStepOfSlide(fromSlide));
     setIdx(i);
     setPlaying(true);
     setActive(true);
     setRun((r) => r + 1);
-  }, []);
+  }, [narrator]);
   const stop = useCallback(() => {
     runRef.current++;
     narrator.stop();
@@ -103,6 +120,7 @@ export function useGuide({ onSlide }) {
   const goto = useCallback(
     (i) => {
       const n = Math.max(0, Math.min(GUIDE_STEPS.length - 1, i));
+      narrator.unlock();
       runRef.current++;
       narrator.stop();
       idxRef.current = n;
@@ -116,8 +134,10 @@ export function useGuide({ onSlide }) {
   const back = useCallback(() => goto(idxRef.current - 1), [goto]);
   const playPause = useCallback(() => {
     if (status === 'ended') return goto(0);
+    if (status === 'error') return goto(idxRef.current); // retry the failed moment (inside the click gesture)
     setPlaying((p) => !p);
   }, [status, goto]);
+  const retry = useCallback(() => goto(idxRef.current), [goto]);
   // Manual slide navigation while guiding → jump to that slide's first moment.
   const syncSlide = useCallback(
     (n) => {
@@ -131,5 +151,5 @@ export function useGuide({ onSlide }) {
     [active, goto],
   );
 
-  return { active, playing, status, source, sourceLabel, idx, step, total: GUIDE_STEPS.length, start, stop, toggle, skip, back, playPause, goto, syncSlide };
+  return { active, playing, status, source, sourceLabel, clip, error, retry, idx, step, total: GUIDE_STEPS.length, start, stop, toggle, skip, back, playPause, goto, syncSlide };
 }

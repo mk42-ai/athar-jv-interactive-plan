@@ -1,293 +1,223 @@
-// Guide Mode narrator — soft-spoken American voice with graceful fallback.
-//   1. On Demand Services API text_to_speech (server proxy /api/guide/tts, voice "shimmer" — soft US female)
-//   2. Browser Web Speech API — a soft US-English voice, slightly slower rate
-//   3. Timed silent narration (reading-speed estimate) so auto-advance still works when no audio is possible
-// speak(text) resolves when the step has finished (or was skipped); pause/resume/stop act on whatever is playing.
+// Guide Mode narrator — plays ONLY verified ElevenLabs clips.
+//
+// Playback path per moment (logged to window.__atharGuide.sources and the console):
+//   1. "prebaked"  — /guide-audio/manifest.json (fetched with cache: 'no-store') → the moment's clip file
+//                   (content-hashed name) → bytes fetched → SHA-256 verified against the manifest (and the
+//                   manifest's textSha256 verified against the current script text) → played from a blob URL.
+//   2. "live"      — POST /api/guide/tts (server-side ElevenLabs; On Demand only if ElevenLabs hard-fails).
+//                   Used only when a moment has no pre-baked clip or its integrity check fails.
+//   3. ERROR       — anything else surfaces as a visible error in the guide bar. There is deliberately NO
+//                   Web Speech (robotic synthetic voice) and NO silent timed fallback any more.
+//
+// One <audio> element is created and unlocked synchronously inside the user's click (narrator.unlock()) so
+// iOS/Safari autoplay rules do not reject the later, asynchronously-fetched clips.
 
-const WEB_VOICE_PREFS = [
-  'Samantha', // macOS / iOS — soft US female
-  'Microsoft Aria Online (Natural) - English (United States)',
-  'Microsoft Jenny Online (Natural) - English (United States)',
-  'Microsoft Ava Online (Natural) - English (United States)',
-  'Google US English',
-  'Microsoft Zira',
-  'Allison',
-  'Ava',
-  'Nicky',
-];
-const WEB_RATE = 0.92; // slightly slower than default
-const WEB_PITCH = 1.0;
-
-export function pickWebVoice() {
-  if (typeof speechSynthesis === 'undefined') return null;
-  const voices = speechSynthesis.getVoices() || [];
-  if (!voices.length) return null;
-  for (const p of WEB_VOICE_PREFS) {
-    const v = voices.find((x) => x.name === p) || voices.find((x) => x.name.startsWith(p));
-    if (v && /^en[-_]?US/i.test(v.lang || 'en-US')) return v;
-  }
-  return (
-    voices.find((v) => /^en[-_]US/i.test(v.lang) && /female|aria|jenny|ava|zira|allison|samantha|nicky|google us/i.test(v.name)) ||
-    voices.find((v) => /^en[-_]US/i.test(v.lang)) ||
-    voices.find((v) => /^en/i.test(v.lang)) ||
-    voices[0]
-  );
-}
-
-const words = (t) => String(t).trim().split(/\s+/).filter(Boolean).length;
-export const estimateMs = (t) => Math.max(2200, Math.round((words(t) / 2.55) * 1000)); // ≈150 wpm, soft pace
-
-// Diagnostics for QA / support: window.__atharGuide = { events: [...] } (why a fallback happened, which source played).
-const diag = typeof window !== 'undefined' ? (window.__atharGuide = window.__atharGuide || { events: [] }) : { events: [] };
+const diag = typeof window !== 'undefined' ? (window.__atharGuide = window.__atharGuide || { events: [], sources: [] }) : { events: [], sources: [] };
+diag.sources = diag.sources || [];
 const log = (type, detail) => {
   diag.events.push({ t: Date.now(), type, detail: String(detail ?? '') });
-  if (diag.events.length > 200) diag.events.shift();
+  if (diag.events.length > 300) diag.events.shift();
 };
 
-export function createNarrator({ preferApi = true } = {}) {
-  const cache = new Map(); // text -> Promise<string|null> (same-origin mp3 URL)
-  let apiDown = !preferApi;
-  let current = null; // active playback { pause, resume, stop, source }
-  let paused = false;
-  let listeners = new Set();
-  const emit = (ev) => listeners.forEach((l) => l(ev));
+const toHex = (buf) => [...new Uint8Array(buf)].map((b) => b.toString(16).padStart(2, '0')).join('');
+export async function sha256Hex(data) {
+  const bytes = typeof data === 'string' ? new TextEncoder().encode(data) : data;
+  if (!globalThis.crypto?.subtle) return null; // non-secure context: integrity cannot be verified (reported as such)
+  return toHex(await crypto.subtle.digest('SHA-256', bytes));
+}
 
-  async function fetchClip(text) {
-    if (apiDown) return null;
-    if (!cache.has(text)) {
-      cache.set(
-        text,
-        (async () => {
-          try {
-            const r = await fetch('/api/guide/tts', {
-              method: 'POST',
-              headers: { 'Content-Type': 'application/json' },
-              body: JSON.stringify({ text }),
-            });
-            if (r.status === 503) apiDown = true; // key missing — stop asking
-            if (!r.ok) {
-              log('tts-http', r.status);
-              return null;
-            }
-            const j = await r.json();
-            if (!j?.url) return null;
-            log('tts-clip', `${j.provider}/${j.model}/${j.voice} (${j.source})`);
-            return { url: j.url, provider: j.provider || 'ondemand', label: j.label || '', model: j.model, voice: j.voice, source: j.source };
-          } catch (e) {
-            log('tts-fetch-error', e?.message);
-            return null;
+// A 1-sample silent WAV used to unlock the audio element inside the click gesture.
+const SILENT_WAV = 'data:audio/wav;base64,UklGRiQAAABXQVZFZm10IBAAAAABAAEAQB8AAIA+AAACABAAZGF0YQAAAAA=';
+
+export class NarrationError extends Error {
+  constructor(message, info = {}) {
+    super(message);
+    this.name = 'NarrationError';
+    Object.assign(this, info);
+  }
+}
+
+export function createNarrator() {
+  let manifestPromise = null;
+  const clipCache = new Map(); // moment id -> Promise<clip>
+  let current = null; // { pause, resume, stop }
+  let paused = false;
+  const listeners = new Set();
+  const emit = (ev) => listeners.forEach((l) => l(ev));
+  let audio = null;
+
+  function element() {
+    if (!audio) {
+      audio = new Audio();
+      audio.preload = 'auto';
+      audio.setAttribute('data-testid', 'guide-audio');
+      diag.audio = audio;
+    }
+    return audio;
+  }
+
+  /** Call synchronously from the user's click so the element is allowed to play later (iOS/Safari). */
+  function unlock() {
+    try {
+      const a = element();
+      if (a.dataset.unlocked === '1') return;
+      a.src = SILENT_WAV;
+      const p = a.play();
+      if (p?.then) p.then(() => { a.dataset.unlocked = '1'; log('audio-unlocked', 'ok'); }).catch((e) => log('audio-unlock-rejected', `${e?.name}: ${e?.message}`));
+    } catch (e) {
+      log('audio-unlock-error', e?.message);
+    }
+  }
+
+  async function manifest() {
+    if (!manifestPromise) {
+      manifestPromise = fetch(`/guide-audio/manifest.json?t=${Date.now()}`, { cache: 'no-store' })
+        .then((r) => (r.ok ? r.json() : null))
+        .catch((e) => {
+          log('manifest-error', e?.message);
+          return null;
+        });
+    }
+    return manifestPromise;
+  }
+
+  /** Resolve a moment to a verified, playable clip. Throws NarrationError when nothing trustworthy is available. */
+  async function resolveClip(step) {
+    const m = await manifest();
+    const entry = m?.clips?.[step.id];
+    const textSha = await sha256Hex(step.text);
+    if (entry) {
+      if (textSha && entry.textSha256 && entry.textSha256 !== textSha) {
+        log('prebaked-stale', `${step.id}: script text changed since the clip was baked`);
+      } else {
+        const url = `/guide-audio/${entry.file}`;
+        const res = await fetch(url, { cache: 'force-cache' });
+        if (res.ok) {
+          const buf = await res.arrayBuffer();
+          const type = res.headers.get('content-type') || '';
+          const sha = await sha256Hex(buf);
+          const verified = sha ? sha === entry.sha256 : null;
+          if (verified !== false && buf.byteLength > 1000) {
+            const blob = new Blob([buf], { type: type || 'audio/mpeg' });
+            return {
+              source: 'prebaked',
+              provider: m.provider || 'elevenlabs',
+              model: entry.model || m.model,
+              voice: entry.voice || m.voice,
+              voiceId: entry.voiceId || m.voiceId,
+              file: entry.file,
+              url,
+              sha256: sha,
+              expectedSha256: entry.sha256,
+              verified,
+              status: res.status,
+              contentType: type,
+              bytes: buf.byteLength,
+              label: `ElevenLabs · ${entry.voice || m.voice} · ${entry.model || m.model}`,
+              objectUrl: URL.createObjectURL(blob),
+            };
           }
-        })(),
+          log('prebaked-integrity-failed', `${step.id}: got ${sha} expected ${entry.sha256}`);
+        } else {
+          log('prebaked-http', `${step.id}: ${res.status}`);
+        }
+      }
+    } else {
+      log('prebaked-missing', step.id);
+    }
+    // Live synthesis through the server proxy (ElevenLabs; On Demand only if ElevenLabs hard-fails).
+    const r = await fetch('/api/guide/tts', { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify({ text: step.text, id: step.id }) });
+    if (!r.ok) {
+      let msg = `HTTP ${r.status}`;
+      try {
+        const j = await r.json();
+        msg = j?.message || j?.error?.message || j?.error || msg;
+      } catch {
+        /* keep msg */
+      }
+      throw new NarrationError(`Narration unavailable — ${msg}`, { step: step.id, stage: 'live-tts', status: r.status });
+    }
+    const j = await r.json();
+    if (!j?.url) throw new NarrationError('Narration unavailable — proxy returned no audio', { step: step.id, stage: 'live-tts' });
+    return { source: j.source === 'prebaked' ? 'prebaked-proxy' : 'live', provider: j.provider, model: j.model, voice: j.voice, file: j.url.split('/').pop(), url: j.url, verified: null, label: j.label || `${j.provider} · ${j.voice}`, objectUrl: null };
+  }
+
+  function getClip(step) {
+    if (!clipCache.has(step.id)) {
+      clipCache.set(
+        step.id,
+        resolveClip(step).catch((e) => {
+          clipCache.delete(step.id); // allow a retry
+          throw e;
+        }),
       );
     }
-    return cache.get(text);
+    return clipCache.get(step.id);
   }
 
-  // ---- strategy 1: mp3 clip from the On Demand proxy -----------------------------------
-  function playClip(clip, text) {
+  function play(clip, step) {
     return new Promise((resolve, reject) => {
-      const url = typeof clip === 'string' ? clip : clip.url;
-      const meta = typeof clip === 'string' ? { provider: 'ondemand', label: '' } : clip;
-      const a = new Audio(url);
-      a.preload = 'auto';
-      diag.audio = a;
+      const a = element();
       let settled = false;
-      let stallTimer = null;
-      const done = (ok) => {
+      let started = false;
+      const cleanup = () => {
+        a.onended = a.onerror = a.onplaying = null;
+      };
+      const finish = (ok) => {
         if (settled) return;
         settled = true;
-        clearInterval(stallTimer);
-        a.onended = a.onerror = null;
+        cleanup();
         resolve(ok);
       };
-      // Stall guard: if the media clock stops advancing while we are meant to be playing (no audio
-      // device, sink lost, muted-tab quirks), keep the tour moving on a timed pace for the remainder.
-      let lastT = -1;
-      let stuck = 0;
-      const startedAt = Date.now();
-      const watch = () => {
-        if (settled || paused || a.paused) return;
-        if (Math.abs(a.currentTime - lastT) < 0.15) stuck++;
-        else stuck = 0;
-        lastT = a.currentTime;
-        if (stuck >= 3) {
-          log('audio-stalled', `currentTime=${a.currentTime.toFixed(2)} after ${Date.now() - startedAt}ms`);
-          const remaining = Math.max(1500, estimateMs(text) - (Date.now() - startedAt));
-          settled = true;
-          clearInterval(stallTimer);
-          a.onended = a.onerror = null;
-          a.pause();
-          resolve(playTimed(text, remaining));
-        }
-      };
-      a.onended = () => done(true);
+      a.onended = () => finish(true);
       a.onerror = () => {
-        log('audio-error', a.error?.code);
-        if (!settled) reject(new Error('audio error'));
-      };
-      const pb = {
-        source: meta.provider,
-        pause: () => a.pause(),
-        resume: () => a.play().catch(() => {}),
-        stop: () => {
-          clearTimeout(startGuard);
-          a.pause();
-          a.removeAttribute('src');
-          a.load();
-          done(false);
-        },
-      };
-      current = pb;
-      // Start guard: a real browser begins playback within milliseconds; if play() is still pending
-      // after 4s (no audio output device / sink never initialises) fall back to timed pacing.
-      let began = false;
-      const startGuard = setTimeout(() => {
-        if (began || settled) return;
-        log('audio-start-timeout', 'play() pending > 4s — timed pacing');
+        if (settled) return;
         settled = true;
-        a.onended = a.onerror = null;
-        a.pause();
-        resolve(playTimed(text));
-      }, 4000);
-      a.play()
-        .then(() => {
-          began = true;
-          clearTimeout(startGuard);
-          if (settled) return;
-          log('play', `${meta.provider}:${meta.label}`);
-          emit({ type: 'start', source: meta.provider, label: meta.label, meta });
-          if (paused) a.pause();
-          stallTimer = setInterval(watch, 1000);
-        })
-        .catch((e) => {
-          clearTimeout(startGuard);
-          if (settled) return;
-          log('audio-play-rejected', `${e?.name}: ${e?.message}`);
-          if (!settled) {
-            settled = true;
-            reject(e);
-          }
-        });
-    });
-  }
-
-  // ---- strategy 2: Web Speech API ------------------------------------------------------
-  function playWeb(text) {
-    return new Promise((resolve, reject) => {
-      if (typeof speechSynthesis === 'undefined' || typeof SpeechSynthesisUtterance === 'undefined') return reject(new Error('no speechSynthesis'));
-      const voice = pickWebVoice();
-      if (!voice) {
-        log('web-speech', 'no voices available');
-        return reject(new Error('no voices'));
-      }
-      log('web-speech-voice', `${voice.name} (${voice.lang})`);
-      // Chrome cuts long utterances — narrate sentence by sentence.
-      const parts = String(text).match(/[^.!?]+[.!?]+["')\]]*|[^.!?]+$/g)?.map((s) => s.trim()).filter(Boolean) || [text];
-      let i = 0;
-      let stopped = false;
-      let started = false;
-      let watchdog = null;
-      const finish = (ok) => {
-        clearTimeout(watchdog);
-        resolve(ok);
+        cleanup();
+        const code = a.error?.code;
+        log('audio-error', `${step.id}: MediaError ${code}`);
+        reject(new NarrationError(`Audio element error (code ${code}) while playing ${clip.file}`, { step: step.id, stage: 'play', clip: clip.file }));
       };
-      const next = () => {
-        if (stopped) return;
-        if (i >= parts.length) return finish(true);
-        const u = new SpeechSynthesisUtterance(parts[i++]);
-        u.voice = voice;
-        u.lang = voice.lang || 'en-US';
-        u.rate = WEB_RATE;
-        u.pitch = WEB_PITCH;
-        u.volume = 1;
-        u.onstart = () => {
-          if (!started) {
-            started = true;
-            emit({ type: 'start', source: 'browser' });
-          }
-        };
-        u.onend = () => next();
-        u.onerror = (e) => {
-          if (stopped || e.error === 'interrupted' || e.error === 'canceled') return;
-          if (!started) reject(new Error(e.error || 'speech error'));
-          else finish(true);
-        };
-        speechSynthesis.speak(u);
+      a.onplaying = () => {
+        if (started) return; // resume after pause — not a new source
+        started = true;
+        const entry = { t: Date.now(), moment: step.id, slide: step.slide, source: clip.source, provider: clip.provider, model: clip.model, voice: clip.voice, file: clip.file, url: clip.url, sha256: clip.sha256, expectedSha256: clip.expectedSha256, verified: clip.verified, httpStatus: clip.status, contentType: clip.contentType, bytes: clip.bytes, duration: a.duration };
+        diag.sources.push(entry);
+        log('play', `${step.id} ← ${clip.source} ${clip.file}${clip.verified ? ' (sha256 ✓)' : clip.verified === false ? ' (sha256 ✗)' : ''}`);
+        console.info(`[guide-audio] ${step.id} ← ${clip.source} ${clip.url} ${clip.verified ? 'sha256 verified' : ''}`.trim());
+        emit({ type: 'start', source: clip.source === 'live' ? 'live' : 'elevenlabs', label: clip.label, clip });
       };
       current = {
-        source: 'browser',
-        pause: () => speechSynthesis.pause(),
-        resume: () => speechSynthesis.resume(),
+        pause: () => a.pause(),
+        resume: () => a.play().catch((e) => log('resume-rejected', e?.message)),
         stop: () => {
-          stopped = true;
-          speechSynthesis.cancel();
+          a.pause();
           finish(false);
         },
       };
-      speechSynthesis.cancel();
-      // If nothing starts speaking within 4s (headless / muted engines), fall through to timed narration.
-      watchdog = setTimeout(() => {
-        if (!started && !stopped) {
-          stopped = true;
-          speechSynthesis.cancel();
-          reject(new Error('speech did not start'));
-        }
-      }, 4000);
-      next();
-      if (paused) speechSynthesis.pause();
+      a.src = clip.objectUrl || clip.url;
+      const p = a.play();
+      if (p?.then) {
+        p.catch((e) => {
+          if (settled) return;
+          settled = true;
+          cleanup();
+          log('audio-play-rejected', `${step.id}: ${e?.name}: ${e?.message}`);
+          reject(new NarrationError(`Playback was blocked by the browser (${e?.name}). Tap play to enable audio.`, { step: step.id, stage: 'play', blocked: true }));
+        });
+      }
+      if (paused) a.pause();
     });
   }
 
-  // ---- strategy 3: timed (silent) ------------------------------------------------------
-  function playTimed(text, ms) {
-    return new Promise((resolve) => {
-      let remaining = ms || estimateMs(text);
-      let startedAt = Date.now();
-      let timer = null;
-      const arm = () => {
-        startedAt = Date.now();
-        timer = setTimeout(() => resolve(true), remaining);
-      };
-      current = {
-        source: 'timed',
-        pause: () => {
-          if (!timer) return;
-          clearTimeout(timer);
-          timer = null;
-          remaining -= Date.now() - startedAt;
-        },
-        resume: () => !timer && arm(),
-        stop: () => {
-          clearTimeout(timer);
-          timer = null;
-          resolve(false);
-        },
-      };
-      log('play', 'timed');
-      emit({ type: 'start', source: 'timed' });
-      if (!paused) arm();
-    });
-  }
-
-  async function speak(text) {
+  /** Narrate a step. Resolves true when complete, false when stopped/skipped. Rejects with NarrationError. */
+  async function speak(step) {
     stop();
     const token = {};
     speak.token = token;
-    const clip = await fetchClip(text);
+    const clip = await getClip(step);
     if (speak.token !== token) return false;
-    if (clip) {
-      try {
-        return await playClip(clip, text);
-      } catch {
-        if (speak.token !== token) return false;
-      }
-    }
-    try {
-      return await playWeb(text);
-    } catch {
-      if (speak.token !== token) return false;
-    }
-    return playTimed(text);
+    return play(clip, step);
   }
   function stop() {
     speak.token = null;
@@ -302,12 +232,12 @@ export function createNarrator({ preferApi = true } = {}) {
     paused = false;
     current?.resume();
   }
-  function prefetch(text) {
-    if (text) fetchClip(text);
+  function prefetch(step) {
+    if (step) getClip(step).catch(() => {});
   }
   function subscribe(fn) {
     listeners.add(fn);
     return () => listeners.delete(fn);
   }
-  return { speak, stop, pause, resume, prefetch, subscribe, get source() { return current?.source || null; } };
+  return { speak, stop, pause, resume, prefetch, unlock, subscribe, manifest };
 }
