@@ -124,14 +124,18 @@ CSP header on every response and the absence of `X-Frame-Options`.
 
 ## Public presentation mode (5 Sept 2026)
 
-`ATHAR_PRIVATE_PRESENTATION` now selects one of two host-boundary modes (`server/privatePresentation.js`):
+`server/privatePresentation.js` owns the presentation access mode. It is decided at the host boundary only — by the
+environment or an explicit start-up flag — never by request headers, cookies or query parameters:
 
-| Mode | Value | Bundle + login shell | `/api/presentation`, `/api/guide*`, `/deck`, `/guide-audio` | Document-connected AI (`/api/documents`, `/api/citations`, `/api/sources`, `/api/chat`, `/api/voice`) |
+| Mode | How it is selected | Bundle + login shell | `/api/presentation`, `/api/guide*`, `/deck`, `/guide-audio` | Document-connected AI (`/api/documents`, `/api/citations`, `/api/sources`, `/api/chat`, `/api/voice`) |
 |---|---|---|---|---|
-| Public (default) | unset / `0` | served to everyone, no shell | public (`X-Presentation-Mode: public`, `no-store`) | reviewer session required (AccessGate inside the companion) |
-| Private | `1` | login shell, 401 elsewhere | reviewer session required | reviewer session required |
+| Public | `ATHAR_PRIVATE_PRESENTATION=0` (or `false`/`public`), or `node server/index.js --presentation-preview` (`npm run preview`) | served to everyone, no shell | public, GET/HEAD only (`X-Presentation-Mode: public`, `no-store`) | reviewer session required (AccessGate inside the companion) |
+| Private | `ATHAR_PRIVATE_PRESENTATION=1` | login shell, 401 elsewhere | reviewer session required | reviewer session required |
+| Gated (legacy) | variable unset | bundle served, no shell | reviewer session required | reviewer session required |
 
-`presentationAccess(access)` is the single guard used by `server/api.js` and `server/index.js` for the payload routes;
-`GET /api/health` reports `presentationMode`. Public mode means the deck, derived timeline and narration clips are
-readable by anyone who has the deployment URL — choose it deliberately. Original source documents, citations and
-the On Demand-backed answers stay behind the reviewer code in both modes. Tests: `tests/privatePresentation.test.mjs`.
+`presentationReadAccess(access, { presentationPreview })` (alias `presentationAccess`) is the single guard used by
+`server/api.js` and `server/index.js` for the payload routes; `GET /api/health` reports `presentationMode`. Public mode
+means the deck, derived timeline and narration clips are readable by anyone who has the deployment URL — choose it
+deliberately. Original source documents, citations and the On Demand-backed answers stay behind the reviewer code in
+every mode. Tests: `tests/privatePresentation.test.mjs` (environment switch) and `tests/presentationPreview.test.mjs`
+(start-up flag; headers/cookies/query strings cannot select the mode).

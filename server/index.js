@@ -5,7 +5,7 @@ import path from 'node:path';
 import fs from 'node:fs';
 import { fileURLToPath } from 'node:url';
 import { createApiApp } from './api.js';
-import { privatePresentation, presentationAccess } from './privatePresentation.js';
+import { privatePresentation } from './privatePresentation.js';
 import { onDemandKey } from './env.js';
 import { deckPdfMiddleware } from './deck.js';
 import { guideAudioMiddleware, rehydrateGuideAudio } from './guideAudioStore.js';
@@ -13,6 +13,9 @@ import { guideAudioMiddleware, rehydrateGuideAudio } from './guideAudioStore.js'
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
 const dist = path.resolve(__dirname, '../dist');
 const port = Number(process.env.PORT || 5173);
+// Public presentation: ATHAR_PRIVATE_PRESENTATION=0 in the environment, or the explicit --presentation-preview
+// start-up flag (npm run preview). npm start without either keeps the reviewer protections.
+const presentationPreview = process.argv.includes('--presentation-preview');
 
 const app = express();
 app.disable('x-powered-by');
@@ -22,10 +25,10 @@ app.use((req, res, next) => {
   }
   next();
 });
-const apiApp = createApiApp();
+const apiApp = createApiApp({ presentationPreview });
 app.use(apiApp);
-app.use(privatePresentation(apiApp.locals.reviewAccess));
-app.use(['/deck', '/guide-audio'], presentationAccess(apiApp.locals.reviewAccess)); // reviewer session only in private mode
+app.use(privatePresentation(apiApp.locals.reviewAccess, { presentationPreview }));
+app.use(['/deck', '/guide-audio'], apiApp.locals.presentationReadAccess);
 rehydrateGuideAudio({ staticDir: 'dist' });
 app.use(guideAudioMiddleware({ staticDir: 'dist' }));
 app.use(deckPdfMiddleware({ staticDir: 'dist' }));

@@ -1,25 +1,42 @@
-// Presentation access mode, decided at the host boundary by ATHAR_PRIVATE_PRESENTATION:
-//   "1"            → confidential mode: the login shell below gates the bundle, and every presentation payload
-//                    route (/api/presentation, /api/guide*, /deck, /guide-audio) requires the reviewer session.
-//   anything else  → PUBLIC presentation (default): the deck, timeline and narration load for anyone who has the
-//                    URL — no sign-in, top-level or embedded in an iframe. The document-connected AI (chat,
-//                    citations, original downloads, voice) STILL requires the reviewer code; it never opens up.
+// Presentation access mode — decided at the host boundary, never from request headers, cookies or query strings.
+//   ATHAR_PRIVATE_PRESENTATION=1            → confidential mode: the login shell below gates the bundle and every
+//                                             presentation payload route needs the reviewer session.
+//   ATHAR_PRIVATE_PRESENTATION=0|false|public → PUBLIC presentation: the deck, timeline and narration load for anyone
+//                                             with the URL — no sign-in, top-level or embedded in an iframe.
+//   unset                                   → legacy gated mode: bundle served, payload routes need the session.
+//   `node server/index.js --presentation-preview` (npm run preview) → the same public presentation, selected as an
+//                                             explicit start-up option instead of the environment.
+// In EVERY mode the document-connected AI (documents, citations, original downloads, chat, voice) requires the
+// reviewer code; publishing the presentation never authenticates anyone.
 // The login shell contains no business content, provider key, source metadata or access token.
 export const presentationIsPrivate = () => process.env.ATHAR_PRIVATE_PRESENTATION === '1';
-export const presentationMode = () => (presentationIsPrivate() ? 'private' : 'public');
+export const presentationPublicByEnv = () => /^(?:0|false|public|off)$/i.test(String(process.env.ATHAR_PRIVATE_PRESENTATION || '').trim());
+export const presentationIsPublic = ({ presentationPreview = false } = {}) => presentationPreview === true || presentationPublicByEnv();
+export const presentationMode = (options = {}) => (presentationIsPublic(options) ? 'public' : presentationIsPrivate() ? 'private' : 'gated');
 
-/** Guard for presentation payload routes: reviewer session in private mode, pass-through in public mode. */
-export function presentationAccess(access) {
+/** Guard for presentation payload routes (/api/presentation, /api/guide*, /deck, /guide-audio):
+ *  public read-only access in public mode, the reviewer session otherwise. Writes are never public. */
+export function presentationReadAccess(access, options = {}) {
   return (req, res, next) => {
-    if (presentationIsPrivate()) return access.requireAccess(req, res, next);
-    res.setHeader('Cache-Control', 'no-store');
-    res.setHeader('X-Presentation-Mode', 'public');
-    return next();
+    if (presentationIsPublic(options) && (req.method === 'GET' || req.method === 'HEAD')) {
+      res.setHeader('Cache-Control', 'private, no-store');
+      res.setHeader('X-Presentation-Mode', 'public');
+      return next();
+    }
+    return access.requireAccess(req, res, next);
   };
 }
+export const presentationAccess = presentationReadAccess;
 
-export function privatePresentation(access) {
+export function privatePresentation(access, options = {}) {
   return (req, res, next) => {
+    const pathname = req.path || String(req.url || '').split('?')[0];
+    // Public presentation: the bundle and the read-only deck/player assets pass regardless of the private shell.
+    if (presentationIsPublic(options) && (req.method === 'GET' || req.method === 'HEAD') &&
+        /^(?:\/|\/index\.html|\/favicon\.ico|\/(?:assets|deck|guide-audio)\/[^/]+)$/.test(pathname)) {
+      res.setHeader('Cache-Control', 'private, no-store');
+      return next();
+    }
     if (!presentationIsPrivate() || access.read(req)) {
       if (presentationIsPrivate()) {
         res.setHeader('Cache-Control', 'private, no-store');
