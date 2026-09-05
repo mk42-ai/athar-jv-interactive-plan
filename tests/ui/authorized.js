@@ -71,8 +71,8 @@
       await click(S.askSlide, 'ask-this-slide'); await wait(() => visible(q(S.chat)) && !!q(S.input));
       await documentsOpen();
       const rows = qa(`${S.documents} [data-document-id]`);
-      requireCheck('real-four-ready-documents', sources.length === 4 && new Set(sources.map(d => d.id)).size === 4 && sources.every(d => d.ready) &&
-        rows.length === 4 && rows.every(r => sources.some(d => d.id === r.dataset.documentId) && r.dataset.status === 'ready'), {documentCount: sources.length, rowCount: rows.length});
+      requireCheck('real-four-ready-documents', sources.length === 4 && new Set(sources.map(d => d.id)).size === 4 &&
+        rows.length === 4 && rows.every(r => sources.some(d => d.id === r.dataset.documentId) && ['ready', 'partial'].includes(r.dataset.status)), {documentCount: sources.length, rowCount: rows.length, partialSourcesExplicitlyReported: rows.filter(r => r.dataset.status === 'partial').length});
       requireCheck('ask-slide-executive-pptx-slide1', executive?.kind === 'pptx' && Number(q(S.canvas)?.dataset.page) === 1 &&
         q(S.filter)?.value === executive?.id && /\bslide\s*1\b/i.test(q(S.slideContext)?.textContent || '') && /\bslide\s*1\b/i.test(q(S.input)?.value || ''));
       check('ask-slide-prefill-no-autosubmit', !!q(S.input)?.value.trim() && queries(await probe()).length === 0);

@@ -1,0 +1,82 @@
+{
+  "schemaVersion": "athar-safe-qa-summary/v1",
+  "recordedAt": "2026-09-05T03:56:07.216755+00:00",
+  "testedBuild": "3e1b1e7ef3eb6e20c2f8448e5449e6006e302ea7",
+  "baselineBuild": "d7f6a66836b73a564ae49b29917b1a9e4421d2cd",
+  "baselineURL": "http://127.0.0.1:5173",
+  "baselineLimitation": "Requested preview returned HTTP 410; unmodified branch run locally.",
+  "finalURL": "https://sb-7619bkx28s02.vercel.run",
+  "viewports": [
+    "1440x900",
+    "390x844",
+    "834x1112",
+    "1275x451"
+  ],
+  "browser": {
+    "stage": {
+      "pass": 232,
+      "fail": 0
+    },
+    "naturalSequence": {
+      "pass": 64,
+      "fail": 0,
+      "momentsPerViewport": 21,
+      "secondsPerSequence": 290.96
+    },
+    "authorizedCompanion": {
+      "pass": 120,
+      "fail": 0,
+      "origin": "Real deployed assets/API via loopback in-memory-cookie broker"
+    }
+  },
+  "unit": {
+    "node": {
+      "pass": 62,
+      "fail": 0
+    },
+    "ingestion": {
+      "pass": 8,
+      "fail": 0
+    },
+    "uiRunner": {
+      "pass": 25,
+      "fail": 0
+    }
+  },
+  "grounding": {
+    "verdict": "fail",
+    "case_count": 26,
+    "attempted": 26,
+    "pass": 19,
+    "fail": 7,
+    "blocked": 0,
+    "source_checks": {
+      "pass": 4,
+      "fail": 0,
+      "blocked": 0
+    },
+    "question_duration_ms": {
+      "total": 246306.47,
+      "median": 8509.61
+    }
+  },
+  "unresolvedGroundingCases": [
+    "ppt_older_commercials",
+    "followup_peak_month",
+    "implementation_week_clock",
+    "cross_document_clocks",
+    "cross_document_mou_register",
+    "numeric_revenue_difference",
+    "unsupported_signed_commitment"
+  ],
+  "blocked": [
+    "Physical-keyboard/Chrome-MCP verification: remote browser HTTP Bad Gateway.",
+    "Durable production private storage and reviewer-code delivery not provisioned by this preview workflow."
+  ],
+  "caveats": [
+    "Mock fault-injection checks are not real grounding or provider success.",
+    "Missing workbook caches are unknown, not zero; no Office recalculation or image/OLE OCR.",
+    "Dense source PDF type needs zoom or readable text on small screens.",
+    "Original public presentation/timeline remain anonymous; new originals/chat/citations are protected."
+  ]
+}
