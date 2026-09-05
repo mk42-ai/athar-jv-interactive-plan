@@ -1,5 +1,8 @@
 import { readFile, stat } from 'node:fs/promises';
 import path from 'node:path';
+import { fileURLToPath } from 'node:url';
+
+const REPO = path.resolve(path.dirname(fileURLToPath(import.meta.url)), '..');
 
 /** No provider calls, routes, public assets, or original documents are accessed here. */
 export class RetrievalError extends Error {
@@ -146,10 +149,16 @@ export function validateCorpusIndex(input) {
 
 function signature(info) { return `${info.mtimeMs}:${info.ctimeMs}:${info.size}:${info.ino}`; }
 
+/** Bundled repo corpus by default; ATHAR_CORPUS_DIR overrides with a private operator store. */
+export function resolveCorpusDir(corpusDir) {
+  const configured = corpusDir ?? process.env.ATHAR_CORPUS_DIR;
+  if (configured) return path.resolve(configured);
+  return path.join(REPO, 'data/corpus');
+}
+
 /** One parse per stable file version; concurrent requests share reloads. Bad updates fail closed. */
-export async function loadCorpusIndex({ corpusDir = process.env.ATHAR_CORPUS_DIR, force = false } = {}) {
-  if (!corpusDir) throw new RetrievalError('corpus_unavailable', 'Private corpus directory is not configured.', 503);
-  const directory = path.resolve(corpusDir);
+export async function loadCorpusIndex({ corpusDir, force = false } = {}) {
+  const directory = resolveCorpusDir(corpusDir);
   if (directory.split(path.sep).includes('public')) throw new RetrievalError('corpus_unavailable', 'Corpus must not be read from public assets.', 503);
   const filename = path.join(directory, 'index.json');
   let entry = diskCache.get(filename);
@@ -372,7 +381,8 @@ export function retrieveEvidence(input, { question, documentId = 'all', slide = 
 }
 
 /** Create once at startup. In-memory tests are synchronous via retrieveEvidence; disk use reloads safely. */
-export function createRetriever({ index, corpusDir = process.env.ATHAR_CORPUS_DIR, ...defaults } = {}) {
+export function createRetriever({ index, corpusDir, ...defaults } = {}) {
+  const dir = resolveCorpusDir(corpusDir);
   const prepared = index ? validateCorpusIndex(index) : null;
   return Object.freeze({
     getIndex: async () => prepared || loadCorpusIndex({ corpusDir }),

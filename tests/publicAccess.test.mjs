@@ -113,7 +113,7 @@ test('every answer is a non-empty grounded reply: model text, empty model reply,
     const s = await (await noCorpus.request('/api/chat/session', { body: {} })).json();
     const r = await noCorpus.request('/api/chat/query', { body: { sessionId: s.sessionId, mode: 'sync', query: 'What is the budget?' } });
     assert.equal(r.status, 200); const body = await r.json();
-    assert.equal(body.grounding.status, 'unavailable'); assert.match(body.answer, /not provisioned/);
+    assert.equal(body.grounding.status, 'unavailable'); assert.match(body.answer, /corpus:bootstrap|not available/);
   } finally { await noCorpus.close(); }
 });
 

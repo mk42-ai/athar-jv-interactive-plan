@@ -256,7 +256,7 @@ export function createEvidenceRoutes({ access, corpusDir = process.env.ATHAR_COR
       try { corpus = await index(); }
       catch (error) {
         log.warn?.(`[chat] corpus unavailable: ${error.message}`);
-        const answer = 'The three review documents are not provisioned on this server yet (the protected corpus directory is missing), so I cannot answer from them. Ask the operator to run `npm run provision` (ATHAR_CORPUS_DIR) and try again.';
+        const answer = 'The review-document search index is not available on this server yet. Run `npm run corpus:bootstrap` (or `npm run provision` for full originals) and redeploy, then try again.';
         conv.history.push({ role: 'user', content: question, documentId: 'all', slide: null }, { role: 'assistant', content: answer });
         return { ...base, answer, citations: [], grounding: { status: 'unavailable', reason: 'corpus_unavailable', passages: 0 }, evidence: { passages: [] } };
       }
