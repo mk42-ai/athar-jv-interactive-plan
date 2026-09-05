@@ -1,4 +1,4 @@
-// Exact private PDF; never steps aside for a stale public/dist copy. Mount after reviewer access.
+// Exact deck PDF; never steps aside for a stale public/dist copy. Served publicly (no reviewer gate).
 import { getPresentationDeck, isPresentationFilename } from './presentationStore.js';
 import { sendPrivateBuffer, privateAssetError } from './guideAudioStore.js';
 

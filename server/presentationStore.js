@@ -1,5 +1,5 @@
-// Server-only presentation payload. Nothing is loaded until the environment has been configured.
-// HTTP callers MUST enforce reviewer access before calling these getters or serving their bytes.
+// Server-only presentation payload. Reads bundled repo assets by default (Vercel/static deploys).
+// Optional ATHAR_PRESENTATION_DIR overrides with a private operator store outside the repo.
 import fs from 'node:fs';
 import path from 'node:path';
 import crypto from 'node:crypto';
@@ -20,18 +20,27 @@ const freeze = (value) => {
 
 export class PresentationUnavailableError extends Error {
   constructor() {
-    super('The private presentation is unavailable. Restore the configured source and retry.');
+    super('The presentation bundle is unavailable. Restore the bundled assets and retry.');
     this.code = 'presentation_unavailable';
     this.status = 503;
   }
 }
 const unavailable = () => new PresentationUnavailableError();
 const privateMode = (stat) => (stat.mode & 0o077) === 0 && (!process.getuid || stat.uid === process.getuid());
+const usesPrivateStore = () => Boolean(String(process.env.ATHAR_PRESENTATION_DIR || '').trim());
+
+function segments(relative) {
+  if (typeof relative !== 'string' || !relative || relative.includes('\\') || relative.includes('\0') || path.isAbsolute(relative)) throw unavailable();
+  const parts = relative.split('/');
+  if (parts.some((p) => !p || p === '.' || p === '..')) throw unavailable();
+  return parts;
+}
 
 export function presentationDirectory() {
+  if (!usesPrivateStore()) return REPO;
   try {
     const value = process.env.ATHAR_PRESENTATION_DIR;
-    if (!value || !path.isAbsolute(value)) throw unavailable();
+    if (!path.isAbsolute(value)) throw unavailable();
     const root = path.resolve(value);
     if (root === REPO || root.startsWith(REPO + path.sep)) throw unavailable();
     let current = path.parse(root).root;
@@ -45,15 +54,9 @@ export function presentationDirectory() {
   } catch { throw unavailable(); }
 }
 
-function segments(relative) {
-  if (typeof relative !== 'string' || !relative || relative.includes('\\') || relative.includes('\0') || path.isAbsolute(relative)) throw unavailable();
-  const parts = relative.split('/');
-  if (parts.some((p) => !p || p === '.' || p === '..')) throw unavailable();
-  return parts;
-}
-
 // Also used by operator scripts: rejects traversal, symlinked parents and non-private files.
 export function presentationPath(relative, { createParents = false, optional = false } = {}) {
+  if (!usesPrivateStore()) throw unavailable();
   try {
     const parts = segments(relative);
     let current = presentationDirectory();
@@ -74,7 +77,29 @@ export function presentationPath(relative, { createParents = false, optional = f
   } catch { throw unavailable(); }
 }
 
-export function readPresentationFile(relative, { optional = false } = {}) {
+function readBundledFile(relative, { optional = false } = {}) {
+  try {
+    const target = path.join(REPO, ...segments(relative));
+    if (target !== REPO && !target.startsWith(REPO + path.sep)) throw unavailable();
+    let fd;
+    try {
+      fd = fs.openSync(target, fs.constants.O_RDONLY);
+    } catch (error) {
+      if (optional && error.code === 'ENOENT') return null;
+      throw error;
+    }
+    try {
+      const stat = fs.fstatSync(fd);
+      if (!stat.isFile()) throw unavailable();
+      const bytes = fs.readFileSync(fd);
+      const digest = hash(bytes);
+      if (!buffers.has(digest)) buffers.set(digest, bytes);
+      return Buffer.from(buffers.get(digest));
+    } finally { fs.closeSync(fd); }
+  } catch { throw unavailable(); }
+}
+
+function readPrivateFile(relative, { optional = false } = {}) {
   let fd;
   try {
     const target = presentationPath(relative, { optional });
@@ -90,7 +115,12 @@ export function readPresentationFile(relative, { optional = false } = {}) {
   finally { if (fd !== undefined) fs.closeSync(fd); }
 }
 
+export function readPresentationFile(relative, { optional = false } = {}) {
+  return usesPrivateStore() ? readPrivateFile(relative, { optional }) : readBundledFile(relative, { optional });
+}
+
 export function writePresentationFile(relative, bytes) {
+  if (!usesPrivateStore()) throw unavailable();
   let fd;
   try {
     const target = presentationPath(relative, { createParents: true });

@@ -1,5 +1,8 @@
 import { readFile, stat } from 'node:fs/promises';
 import path from 'node:path';
+import { fileURLToPath } from 'node:url';
+
+const REPO = path.resolve(path.dirname(fileURLToPath(import.meta.url)), '..');
 
 /** No provider calls, routes, public assets, or original documents are accessed here. */
 export class RetrievalError extends Error {
@@ -146,10 +149,16 @@ export function validateCorpusIndex(input) {
 
 function signature(info) { return `${info.mtimeMs}:${info.ctimeMs}:${info.size}:${info.ino}`; }
 
+/** Bundled repo corpus by default; ATHAR_CORPUS_DIR overrides with a private operator store. */
+export function resolveCorpusDir(corpusDir) {
+  const configured = corpusDir ?? process.env.ATHAR_CORPUS_DIR;
+  if (configured) return path.resolve(configured);
+  return path.join(REPO, 'data/corpus');
+}
+
 /** One parse per stable file version; concurrent requests share reloads. Bad updates fail closed. */
-export async function loadCorpusIndex({ corpusDir = process.env.ATHAR_CORPUS_DIR, force = false } = {}) {
-  if (!corpusDir) throw new RetrievalError('corpus_unavailable', 'Private corpus directory is not configured.', 503);
-  const directory = path.resolve(corpusDir);
+export async function loadCorpusIndex({ corpusDir, force = false } = {}) {
+  const directory = resolveCorpusDir(corpusDir);
   if (directory.split(path.sep).includes('public')) throw new RetrievalError('corpus_unavailable', 'Corpus must not be read from public assets.', 503);
   const filename = path.join(directory, 'index.json');
   let entry = diskCache.get(filename);
@@ -241,6 +250,9 @@ function limit(value, fallback, maximum) {
 }
 
 /** Synchronous deterministic retrieval over an already validated or in-memory JSON index. */
+/** The executive deck ingested from its exact PDF rendering (no PPTX provisioned): slide N == page N. */
+export const isPagedDeck = (doc) => Boolean(doc && doc.slug === 'executive-presentation' && doc.kind === 'pdf');
+
 export function retrieveEvidence(input, { question, documentId = 'all', slide = null, history = [], maxChunks = 12, maxChars = 45000, maxChunkChars = 12000 } = {}) {
   const index = validatedIndexes.has(input) ? input : validateCorpusIndex(input);
   if (typeof documentId !== 'string' || (documentId !== 'all' && !index.documentsById.has(documentId))) throw new RetrievalError('unknown_document', 'Unknown document filter.');
@@ -250,11 +262,17 @@ export function retrieveEvidence(input, { question, documentId = 'all', slide = 
   const context = buildRetrievalQuery({ question, documentId, history, slide });
   const scopeQuestion = context.contextualQuestion ? `${context.question} ${context.contextualQuestion}` : context.question;
   const pageMatch = selectedDoc?.kind === 'pdf' && /\b(?:page|p\.)\s*([1-9]\d*)\b/i.exec(scopeQuestion);
-  const pageFilter = pageMatch ? Number(pageMatch[1]) : null;
-  const slideMatch = selectedDoc?.kind === 'pptx' && /\bslide\s+([1-9]\d*)\b/i.exec(context.question);
+  let pageFilter = pageMatch ? Number(pageMatch[1]) : null;
+  // A deck provisioned as its exact PDF rendering keeps slide semantics: slide N is page N.
+  const pagedDeck = isPagedDeck(selectedDoc);
+  const slideMatch = (selectedDoc?.kind === 'pptx' || pagedDeck) && /\bslide\s+([1-9]\d*)\b/i.exec(context.question);
   if (slideMatch && slide != null && slide !== Number(slideMatch[1])) throw new RetrievalError('invalid_slide', 'The question and selected slide have different scopes.');
   if (slideMatch) slide = Number(slideMatch[1]);
-  if (slide != null && (!Number.isSafeInteger(slide) || slide < 1 || !selectedDoc || selectedDoc.kind !== 'pptx')) throw new RetrievalError('invalid_slide', 'A slide filter requires a selected PPTX document and a positive slide number.');
+  if (slide != null && (!Number.isSafeInteger(slide) || slide < 1 || !selectedDoc || (selectedDoc.kind !== 'pptx' && !pagedDeck))) throw new RetrievalError('invalid_slide', 'A slide filter requires the selected presentation document and a positive slide number.');
+  if (slide != null && pagedDeck) {
+    if (pageFilter != null && pageFilter !== slide) throw new RetrievalError('invalid_slide', 'The question and selected slide have different scopes.');
+    pageFilter = slide; slide = null;
+  }
   maxChunks = limit(maxChunks, 12, 12); maxChars = limit(maxChars, 45000, 45000); maxChunkChars = limit(maxChunkChars, 12000, 45000);
   const terms = queryTerms(context.query);
   const search = compile(index);
@@ -363,7 +381,8 @@ export function retrieveEvidence(input, { question, documentId = 'all', slide = 
 }
 
 /** Create once at startup. In-memory tests are synchronous via retrieveEvidence; disk use reloads safely. */
-export function createRetriever({ index, corpusDir = process.env.ATHAR_CORPUS_DIR, ...defaults } = {}) {
+export function createRetriever({ index, corpusDir, ...defaults } = {}) {
+  const dir = resolveCorpusDir(corpusDir);
   const prepared = index ? validateCorpusIndex(index) : null;
   return Object.freeze({
     getIndex: async () => prepared || loadCorpusIndex({ corpusDir }),

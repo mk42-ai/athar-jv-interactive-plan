@@ -17,7 +17,7 @@ const plan = { months: [], gates: [], overview: { title: 'Synthetic test' } };
 const script = [{ n: 1, title: 'Test slide', steps: [{ id: 'test', text, boxes: [{ x: 0, y: 0, w: 1, h: 1 }] }] }];
 const manifest = { version: 2, clips: { test: { file: clipName, sha256: hash(audio), textSha256: hash(text), bytes: audio.length } } };
 function fixture() {
-  const root = fs.mkdtempSync(path.join(os.tmpdir(), 'private-presentation-test-'));
+  const root = fs.mkdtempSync(path.join(os.homedir(), 'private-presentation-test-'));
   fs.chmodSync(root, 0o700);
   const previous = process.env.ATHAR_PRESENTATION_DIR;
   process.env.ATHAR_PRESENTATION_DIR = root;
@@ -41,16 +41,18 @@ function request(middleware, url, headers = {}, method = 'GET') {
   return res;
 }
 
-test('lazy store fails closed without an explicit private directory; rehydration never writes', () => {
+test('bundled repo assets load without ATHAR_PRESENTATION_DIR', { concurrency: false }, () => {
   const previous = process.env.ATHAR_PRESENTATION_DIR;
   delete process.env.ATHAR_PRESENTATION_DIR;
   try {
-    assert.throws(getPresentationData, PresentationUnavailableError);
-    assert.equal(loadEmbeddedAudio().missing, true);
+    const data = getPresentationData();
+    assert.ok(data.plan.months.length > 0);
+    assert.ok(data.guideScript.length > 0);
+    assert.equal(loadEmbeddedAudio().missing, false);
     assert.equal(rehydrateGuideAudio({ staticDir: 'public' }).restored, 0);
   } finally { if (previous !== undefined) process.env.ATHAR_PRESENTATION_DIR = previous; }
 });
-test('exact immutable payload; explicit initialized client modules preserve export contracts', async () => {
+test('exact immutable payload; explicit initialized client modules preserve export contracts', { concurrency: false }, async () => {
   const f = fixture();
   try {
     const data = getPresentationData();
@@ -78,14 +80,14 @@ test('exact immutable payload; explicit initialized client modules preserve expo
       await assert.rejects(resolveDeckSource('https://example.invalid/other.pdf'), /authorized presentation/);
       assert.equal(fetches, 1);
       globalThis.fetch = async () => new Response(null, { status: 401 });
-      await assert.rejects(resolveDeckSource(), /Reviewer access/);
+      await assert.rejects(resolveDeckSource(), /unavailable/); // no sign-in path exists: a non-200 is simply unavailable
       globalThis.fetch = async () => new Response('%PDF-corrupt', { headers: { 'Content-Type': 'application/pdf' } });
       await assert.rejects(resolveDeckSource(), /integrity/);
     } finally { globalThis.fetch = originalFetch; }
 
   } finally { f.close(); }
 });
-test('private original bytes and embedded-only fallback both verify; wrong expected hash fails', () => {
+test('private original bytes and embedded-only fallback both verify; wrong expected hash fails', { concurrency: false }, () => {
   const f = fixture();
   try {
     assert.deepEqual(getAudioClip(clipName), audio); assert.deepEqual(getPresentationDeck().buf, pdf);
@@ -100,7 +102,7 @@ test('private original bytes and embedded-only fallback both verify; wrong expec
     assert.equal(rehydrateGuideAudio().restored, 0); assert.equal(fs.existsSync(path.join(f.root, 'public')), false);
   } finally { f.close(); }
 });
-test('corrupt files fail closed even after a previous successful read', () => {
+test('corrupt files fail closed even after a previous successful read', { concurrency: false }, () => {
   const f = fixture();
   try {
     getAudioClip(clipName); getPresentationDeck();
@@ -112,7 +114,7 @@ test('corrupt files fail closed even after a previous successful read', () => {
     assert.equal(res.statusCode, 503); assert.doesNotMatch(res.body.toString(), /\/tmp|corrupt|private-presentation-test/);
   } finally { f.close(); }
 });
-test('traversal, symlinked files/directories/root, nonregular files and public permissions are refused', () => {
+test('traversal, symlinked files/directories/root, nonregular files and public permissions are refused', { concurrency: false }, () => {
   const f = fixture();
   try {
     assert.throws(() => readPresentationFile('../outside'), PresentationUnavailableError);
@@ -131,7 +133,7 @@ test('traversal, symlinked files/directories/root, nonregular files and public p
     finally { fs.unlinkSync(rootLink); process.env.ATHAR_PRESENTATION_DIR = f.root; }
   } finally { f.close(); }
 });
-test('audio and PDF middleware return exact bytes, Range/HEAD, no-store and JSON errors (never SPA)', () => {
+test('audio and PDF middleware return exact bytes, Range/HEAD, no-store and JSON errors (never SPA)', { concurrency: false }, () => {
   const f = fixture();
   try {
     const middleware = guideAudioMiddleware();

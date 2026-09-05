@@ -4,24 +4,23 @@ import { initializePresentation } from './lib/presentationState.js';
 import './styles.css';
 
 const root = createRoot(document.getElementById('root'));
-function status(message, { access = false, retry = false } = {}) {
-  root.render(<main role="main" aria-label="Private review"><p role="status">{message}</p>
-    {access && <a href="/">Sign in to private review</a>}
+function status(message, { retry = false } = {}) {
+  root.render(<main role="main" aria-label="Athar JV presentation"><p role="status">{message}</p>
     {retry && <button type="button" onClick={() => window.location.reload()}>Retry</button>}
   </main>);
 }
 async function bootstrap() {
-  status('Loading private review…');
+  status('Loading the presentation…');
   try {
+    // Public workspace: the presentation payload is served to every visitor — no sign-in step exists.
     const response = await fetch('/api/presentation', { credentials: 'same-origin', cache: 'no-store' });
-    if (response.status === 401) return status('Reviewer access is required to open this presentation.', { access: true });
-    if (!response.ok) return status('The private presentation is unavailable. Please retry.', { retry: true });
+    if (!response.ok) return status('The presentation is unavailable. Please retry.', { retry: true });
     initializePresentation(await response.json());
-    // App and its business-data consumers MUST NOT evaluate before the authorized state exists.
+    // App and its business-data consumers MUST NOT evaluate before the presentation data exists.
     const { default: App } = await import('./App.jsx');
     root.render(<React.StrictMode><App /></React.StrictMode>);
   } catch {
-    status('The private presentation could not be loaded. Please retry.', { retry: true });
+    status('The presentation could not be loaded. Please retry.', { retry: true });
   }
 }
 bootstrap();

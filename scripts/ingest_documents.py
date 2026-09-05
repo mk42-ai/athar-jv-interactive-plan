@@ -75,10 +75,20 @@ P = "http://schemas.openxmlformats.org/presentationml/2006/main"
 R = "http://schemas.openxmlformats.org/officeDocument/2006/relationships"
 DOCUMENTS = {
     "financial-summary": {"kind": "pdf", "title": "Athar JV — Financial Model Executive Summary"},
-    "executive-presentation": {"kind": "pptx", "title": "Athar JV — Executive Presentation"},
+    # The deck's preferred original is the PPTX. When only the exact PDF rendering of the deck is
+    # provisioned (the same 2-page file the presentation viewer shows), it is accepted as an
+    # alternate original: slide N is page N, and the limitation is recorded on the document.
+    "executive-presentation": {"kind": "pptx", "alternateKinds": ["pdf"], "title": "Athar JV — Executive Presentation"},
     "financial-model": {"kind": "xlsx", "title": "Athar JV — Financial Model"},
     "implementation-plan": {"kind": "xlsx", "title": "Athar JV — Implementation Plan"},
 }
+ALTERNATE_KIND_LIMITATION = {
+    ("executive-presentation", "pdf"): "Ingested from the exact PDF rendering of the executive-summary deck (the file the presentation viewer displays); the original PPTX was not provisioned. Slide N corresponds to page N; speaker notes and shape metadata are unavailable.",
+}
+
+
+def allowed_kinds(slug):
+    return [DOCUMENTS[slug]["kind"], *DOCUMENTS[slug].get("alternateKinds", [])]
 # Locators, NOT copied source data. Wider context retains adjacent labels/units.
 CRITICAL = {
     "financial-model": {
@@ -433,7 +443,7 @@ def detect_document(path, digest, manifest, aliases):
     if len(guesses) != 1:
         raise ValueError("Cannot identify one known document; supply an explicit manifest alias")
     slug = next(iter(guesses))
-    if DOCUMENTS[slug]["kind"] != ext:
+    if ext not in allowed_kinds(slug):
         raise ValueError("Manifest slug does not match document format")
     titles = {entry["title"] for entry in matching if entry.get("title")}
     if len(titles) > 1:
@@ -1221,7 +1231,7 @@ def ingest(input_dir, output_dir, manifest_path=None, summary_path=None):
              "documents": [], "chunks": []}
     for digest, entry in sorted(unique.items(), key=lambda item: (item[1]["slug"], item[0])):
         source, slug = entry["path"], entry["slug"]
-        kind = DOCUMENTS[slug]["kind"]
+        kind = source.suffix.lower().lstrip(".")  # validated against allowed_kinds(slug) in detect_document
         original_file = f"originals/{digest}.{kind}"
         raw_file = f"raw/{digest}.records.jsonl.gz"
         immutable_original(source, output_dir / original_file, digest)
@@ -1237,6 +1247,9 @@ def ingest(input_dir, output_dir, manifest_path=None, summary_path=None):
                 # content or parser diagnostics into the CLI's coverage-only log.
                 with contextlib.redirect_stdout(io.StringIO()), contextlib.redirect_stderr(io.StringIO()):
                     coverage, limitations, status = extract(output_dir / original_file, document, raw, chunks)
+                alternate = ALTERNATE_KIND_LIMITATION.get((slug, kind))
+                if alternate:
+                    limitations = [*limitations, alternate]
                 document.update(coverage=coverage, limitations=limitations, status=status)
                 document["rawRecords"] = {"total": raw.line, "byType": dict(sorted(raw.counts.items()))}
         document["rawBytes"] = (output_dir / raw_file).stat().st_size

@@ -4,12 +4,12 @@
 import express from 'express';
 import crypto from 'node:crypto';
 import { getGuideSteps, getPresentationData, getAudioManifest } from './presentationStore.js';
-import { createAccessControl } from './access.js';
-import { presentationReadAccess } from './privatePresentation.js';
+import { createPublicAccess } from './publicAccess.js';
 import { createEvidenceRoutes } from './evidenceRoutes.js';
 import {
   CONFIG,
   isConfigured,
+  probeOnDemand,
   speechToText,
   textToSpeech,
   executeAvmWorkflow,
@@ -17,6 +17,8 @@ import {
 } from './ondemand.js';
 import { loadDotEnv, onDemandKey } from './env.js';
 import { clipStatus, serveEmbedded, loadEmbeddedAudio } from './guideAudioStore.js';
+import { registrySummary } from './documentRegistry.js';
+import { loadCorpusIndex } from './retrieval.js';
 
 // ---- tiny in-memory media store (uploaded user audio + proxied TTS clips) ----
 const MEDIA_TTL_MS = 20 * 60 * 1000;
@@ -161,10 +163,9 @@ async function runVoiceTurn({ req, send, question, sessionId, externalUserId, si
   try {
     const result = await req.evidenceService.answerQuestion(req, { sessionId, query: question, documentId: 'all' }, signal);
     messageId = result.messageId;
-    // Speak only already-validated source facts; detailed citations remain in the text companion.
-    full = result.evidence.facts.slice(0, 4).map((fact) => fact.text).join(' ');
-    if (result.evidence.missing.length) full += ' ' + result.evidence.missing.join(' ');
-    if (!full.trim()) full = 'The selected evidence does not support an answer to this question.';
+    // Speak the grounded written answer (Markdown stripped); the same text is shown in the chat.
+    full = (req.evidenceService.stripMarkdown ? req.evidenceService.stripMarkdown(result.answer) : String(result.answer || '')).slice(0, 2400);
+    if (!full.trim()) full = 'The documents do not contain an answer to this question.';
     pending = full;
     send({ type: 'delta', text: full });
     const { sentences, rest } = takeSentences(pending);
@@ -188,7 +189,7 @@ async function runVoiceTurn({ req, send, question, sessionId, externalUserId, si
   return { ok: true, answer: full };
 }
 
-export function createApiApp({ presentationPreview = false } = {}) {
+export function createApiApp() {
   // Secrets: process.env first, then the git-ignored .env (server-side only — never bundled for the client).
   loadDotEnv();
   const odKey = onDemandKey();
@@ -201,14 +202,12 @@ export function createApiApp({ presentationPreview = false } = {}) {
   app.disable('x-powered-by');
 
   const api = express.Router();
-  const access = createAccessControl();
-  const readPresentation = presentationReadAccess(access, { presentationPreview });
+  const access = createPublicAccess(); // anonymous principal + CSRF + media capabilities; no login anywhere
   const evidence = createEvidenceRoutes({ access });
   // Frame policy. The review workspace is opened inside embedded preview panels (cross-origin iframes),
   // where the former `X-Frame-Options: SAMEORIGIN` made browsers render "refused to connect". X-Frame-Options
   // has no allow-list form, so the modern CSP `frame-ancestors` directive replaces it: `*` by default
   // (any embedder), or a space-separated allow-list via ATHAR_FRAME_ANCESTORS (e.g. "'self' https://app.example").
-  // Clickjacking exposure is bounded because every confidential route still requires the reviewer session.
   const frameAncestors = String(process.env.ATHAR_FRAME_ANCESTORS || '*').trim() || '*';
   app.use((req, res, next) => {
     res.setHeader('X-Content-Type-Options', 'nosniff');
@@ -217,30 +216,45 @@ export function createApiApp({ presentationPreview = false } = {}) {
     res.setHeader('Content-Security-Policy', `frame-ancestors ${frameAncestors}`);
     next();
   });
-  api.use('/access', access.router);
-  // Presentation payloads are no longer embedded in public Git/client bundles.
-  // Reviewer access is required except for the explicitly started read-only presentation preview.
-  api.get('/presentation', readPresentation, (req, res) => {
+  // Presentation payloads are served from the private store (never embedded in Git/client bundles) to anyone
+  // who has the deployment URL — the reviewer gate has been removed.
+  api.get('/presentation', (req, res) => {
     try { res.set('Cache-Control', 'private, no-store').json(getPresentationData()); }
-    catch { res.status(503).json({ code: 'presentation_unavailable', message: 'The protected presentation is unavailable. Ask the owner to restore the presentation store.' }); }
+    catch { res.status(503).json({ code: 'presentation_unavailable', message: 'The presentation bundle is unavailable. Ensure guide-script.json, presentation-config.json and data/* are deployed.' }); }
   });
-  api.use(['/guide', '/guide-audio'], readPresentation);
   api.use(evidence.router);
-  // Every user-generated voice/chat operation is authorized; the narrated public deck is unchanged.
+  // Voice: audio callbacks need the short-lived media capability; everything else gets the anonymous principal.
   api.use('/voice', (req, res, next) => {
     const id = req.path.startsWith('/audio/') ? req.path.slice(7) : null;
     if (req.method === 'GET' && id && access.validMediaCapability(id, req.query.expires, req.query.cap)) return next();
-    return access.requireAccess(req, res, next);
+    return access.attach(req, res, next);
   });
   api.use('/voice', (req, res, next) => ['GET', 'HEAD'].includes(req.method) ? next() : access.sameOrigin(req, res, next));
-  api.use('/voice', (req, res, next) => { req.evidenceService = evidence; req.reviewAccess = access; next(); });
+  api.use('/voice', (req, res, next) => { req.evidenceService = evidence; req.access = access; next(); });
 
-  api.get('/health', (req, res) => {
+  api.get('/health', async (req, res) => {
     res.setHeader('Cache-Control', 'no-store');
-    res.json({ ok: true, configured: isConfigured(), build: process.env.ATHAR_BUILD_SHA || 'workspace',
-      checkedAt: new Date().toISOString(), reviewAccessConfigured: access.configured,
+    // Corpus/presentation availability is part of health: a deployment without the provisioned stores is the
+    // first thing to check when the chat answers "not provisioned" or the presentation shows a retry state.
+    let corpus = { provisioned: false, documents: 0 };
+    try { const idx = await loadCorpusIndex({ corpusDir: process.env.ATHAR_CORPUS_DIR }); corpus = { provisioned: true, documents: idx.documents.length, chunks: idx.chunks.length, indexedAt: idx.generatedAt }; }
+    catch (error) { corpus = { provisioned: false, documents: 0, reason: error.code || 'corpus_unavailable' }; }
+    let presentation = { available: true };
+    try { getPresentationData(); } catch { presentation = { available: false, reason: 'presentation_unavailable' }; }
+    const body = { ok: true, configured: isConfigured(), build: process.env.ATHAR_BUILD_SHA || 'workspace',
+      checkedAt: new Date().toISOString(), access: 'public', presentationMode: 'public', corpus, presentation,
       // No key fragments, provider session identifiers, secret paths, or confidential metadata.
-      narration: { provider: 'elevenlabs', voice: 'River', playback: 'verified-prebaked' } });
+      narration: { provider: 'elevenlabs', voice: 'River', playback: 'verified-prebaked' },
+      chatApi: { host: 'https://api.on-demand.io', createSession: 'POST /chat/v1/sessions', submitQuery: 'POST /chat/v1/sessions/{sessionId}/query', responseMode: 'sync', endpointId: CONFIG.endpointId, authHeader: 'apikey', docsVerified: '2026-09-05' } };
+    // Live probe (cached upstream for 5 minutes): proves the server-side key is loaded AND accepted upstream
+    // (session create + read). Never returns the key or an upstream session identifier.
+    if (req.query.probe === '1') {
+      const { sessionId, ...probe } = await probeOnDemand();
+      body.keyProbe = probe;
+      try { body.documents = registrySummary((await loadCorpusIndex({ corpusDir: process.env.ATHAR_CORPUS_DIR })).documents); }
+      catch { body.documents = { ...registrySummary([]), corpus: 'unavailable' }; }
+    }
+    res.json(body);
   });
 
   // ---- Voice -----------------------------------------------------------------
@@ -382,12 +396,11 @@ export function createApiApp({ presentationPreview = false } = {}) {
   });
 
   // Legacy diagnostic endpoints accepted arbitrary upstream identifiers/URLs. They are not used by
-  // the turn pipeline; keep them closed rather than expose another reviewer's executions or media.
+  // the turn pipeline; keep them closed rather than expose another visitor's executions or media.
   api.all(['/voice/stt', '/voice/avm', '/voice/execution/:id'], (req, res) =>
     res.status(403).json({ code: 'diagnostic_disabled', message: 'Diagnostic access is restricted to the server operator.' }));
 
-  app.locals.reviewAccess = access;
-  app.locals.presentationReadAccess = readPresentation;
+  app.locals.access = access;
   app.use('/api', api);
   app.use('/api', (req, res) => res.status(404).json({ error: `No route ${req.method} /api${req.path}` }));
   return app;

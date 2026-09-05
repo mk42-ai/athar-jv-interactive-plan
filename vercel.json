@@ -6,6 +6,9 @@
     { "source": "/guide-audio/:file", "destination": "/api/guide-audio/:file" }
   ],
   "functions": {
-    "api/index.js": { "maxDuration": 60, "includeFiles": "data/**" }
+    "api/index.js": {
+      "maxDuration": 60,
+      "includeFiles": "{data/**,guide-script.json,presentation-config.json,public/deck/**,public/guide-audio/**}"
+    }
   }
 }
