@@ -221,5 +221,214 @@ class RunnerTests(unittest.TestCase):
             server.shutdown();server.server_close();thread.join(timeout=3)
 
 
+class AuthorizedTests(unittest.TestCase):
+    @contextmanager
+    def upstream(self):
+        """Private offline fixture only; no real passphrase/model/content involved."""
+        secret = secrets.token_urlsafe(32)
+        calls = []
+        source = {'id': 'doc-financial', 'slug': 'financial-summary', 'kind': 'pdf',
+                  'title': secret, 'status': {'state': 'ready'}}
+        answer = {'type': 'done', 'answer': secret, 'sessionId': secret,
+                  'citations': [{'id': 'cite-one', 'documentId': 'doc-financial',
+                                'label': secret, 'url': '/api/citations/cite-one'}],
+                  'grounding': {'retrievedIds': ['cite-one'], 'validated': True}}
+        stream = ('data: ' + json.dumps(answer) + '\n\n').encode()
+        bodies = {'/api/documents': json.dumps({'documents': [source]}).encode(),
+                  '/api/citations/cite-one': json.dumps({'id': 'cite-one', 'documentId': 'doc-financial',
+                      'excerpt': secret, 'originalUrl': '/api/sources/doc-financial'}).encode(),
+                  '/api/chat/query': stream, '/api/chat/session': json.dumps({'sessionId': secret}).encode(),
+                  '/api/documents/retry': json.dumps({'documents': [source]}).encode(),
+                  '/@vite/client': b'// REAL UPSTREAM MODULE, unchanged', '/assets/app.js': b'// app bytes',
+                  '/guide-audio/manifest.json?t=1777777777777': b'{"clips":{}}',
+                  '/api/guide-audio/offline.mp3': b'OFFLINE_AUDIO_BYTES',
+                  '/api/sources/doc-financial': b'PRIVATE OFFLINE FIXTURE ORIGINAL'}
+        class Upstream(BaseHTTPRequestHandler):
+            def log_message(self, *_): pass
+            def dispatch(self):
+                raw = self.rfile.read(int(self.headers.get('Content-Length', 0)))
+                calls.append({'path': self.path, 'method': self.command, 'body': raw,
+                              'origin': self.headers.get('Origin'), 'cookie': self.headers.get('Cookie')})
+                if self.path == '/api/access' and self.command == 'POST':
+                    if json.loads(raw).get('passphrase') != secret:
+                        self.send_error(401); return
+                    self.send_response(200)
+                    self.send_header('Set-Cookie', 'review=' + secret + '; HttpOnly; Path=/; SameSite=Strict')
+                    self.end_headers(); self.wfile.write(b'{"authenticated":true}'); return
+                if self.path == '/assets/redirect.js':
+                    self.send_response(302); self.send_header('Location', 'https://example.invalid/' + secret)
+                    self.end_headers(); return
+                status = 503 if self.path == '/api/citations/unavailable' else 200
+                data = bodies.get(self.path, b'{"error":"offline-failure"}')
+                self.send_response(status)
+                self.send_header('Set-Cookie', 'review=' + secret + '; HttpOnly; Path=/')
+                self.send_header('Content-Type', 'text/event-stream' if self.path == '/api/chat/query' else 'application/json')
+                self.send_header('Content-Length', str(len(data)))
+                self.send_header('X-Fixture-Header', 'unchanged')
+                self.end_headers()
+                if self.command != 'HEAD': self.wfile.write(data)
+            do_GET = do_HEAD = do_POST = dispatch
+        server = ThreadingHTTPServer(('127.0.0.1', 0), Upstream)
+        thread = threading.Thread(target=server.serve_forever, daemon=True); thread.start()
+        origin = f'http://127.0.0.1:{server.server_port}'
+        try:
+            yield origin, secret, calls, bodies
+        finally:
+            server.shutdown(); server.server_close(); thread.join(timeout=3)
+
+    def test_authorized_requires_auth_and_never_mock_case(self):
+        with patch('sys.stderr', io.StringIO()), self.assertRaises(SystemExit):
+            run.main(['--url', 'http://localhost:5173', '--stage', 'after', '--mode', 'authorized', '--dry-run'])
+        with self.assertRaises(ValueError), proxy.test_origin('http://localhost:1', fixture_config(), authorized=True):
+            pass
+        with self.assertRaises(ValueError), proxy.test_origin('http://localhost:1', fixture_config(), case='context', passphrase='fixture', authorized=True):
+            pass
+
+    def test_authorized_contract_requires_every_check_and_no_duplicates(self):
+        data = {'checks': [{'id': k, 'ok': True} for k in run.AUTHORIZED_CHECKS], 'endUTC': run.utc()}
+        self.assertEqual(run.contract_failures(data, 'authorized'), [])
+        data['checks'].pop()
+        self.assertIn('focused-resized-layout', run.contract_failures(data, 'authorized'))
+        data['checks'].append(data['checks'][0])
+        self.assertIn('exact-requested-viewport', run.contract_failures(data, 'authorized'))
+
+    def test_authorized_cli_uses_normal_validator_and_no_mock_or_secret(self):
+        args = run.parser().parse_args(['--url', 'https://sb-fixture.vercel.run', '--stage', 'after', '--mode', 'authorized', '--auth', 'env'])
+        secret = secrets.token_urlsafe(32)
+        with patch.dict(os.environ, {'ATHAR_REVIEW_PASSPHRASE': secret}):
+            cmd, timeout, source = run.build_command(args, fixture_config(), 'authorized', None, '390x844',
+                                                    'http://127.0.0.1:1234', Path('/fixture/ui_validate.py'), 'after-authorized')
+        self.assertEqual(source.name, 'authorized.js')
+        self.assertEqual(timeout, 300)
+        self.assertEqual(cmd.count('__atharPoll()'), 2300)
+        self.assertNotIn('--allow-console-errors', cmd)
+        self.assertNotIn('--out-dir', cmd)
+        self.assertNotIn(secret, json.dumps(cmd))
+        script = cmd[cmd.index('--eval')+1]
+        self.assertNotIn('"mock":', script)
+        self.assertNotIn('window.fetch =', script)
+        self.assertNotIn('innerHTML', script)
+        self.assertIn('100000', script)
+        self.assertIn('proof-clean-session', script)
+        for key in run.AUTHORIZED_CHECKS: self.assertIn(key, script)
+
+    def test_fixed_origin_paths_and_body_policy(self):
+        for origin in ('https://example.invalid', 'https://sb-x.vercel.run@evil.invalid', 'http://localhost/?token=x'):
+            with self.assertRaises(ValueError): proxy.real_origin(origin)
+        for path in ('//evil.invalid/', 'http://evil.invalid/', '/api/../access', '/api/%63hat/query',
+                     '/api/chat/query?target=evil', '/assets/../api/access', '/assets/a\\b', '/api/chat/query#x'):
+            self.assertIsNone(proxy.real_path(path))
+        self.assertEqual(proxy.real_path('/guide-audio/manifest.json?t=1777777777777'), '/guide-audio/manifest.json')
+        self.assertIsNone(proxy.real_path('/guide-audio/manifest.json?t=secret'))
+        self.assertIsNone(proxy.real_path('/guide-audio/manifest.json?t=1777777777777&url=evil'))
+        good = {'sessionId':'session-one','query':'offline question','documentId':'doc-financial','slide':None,'voice':False,'mode':'stream'}
+        self.assertEqual(proxy.real_body('/api/chat/query', json.dumps(good).encode()), good)
+        for change in ({'extra': 'bad'}, {'voice': True}, {'slide': True}, {'slide': 0}, {'query': 'x'*4001}, {'documentId': '../x'}, {'mode':'arbitrary'}):
+            self.assertIsNone(proxy.real_body('/api/chat/query', json.dumps({**good, **change}).encode()))
+        for raw in (b'[]', b'{', b'{"x":1,"x":2}', b'{"query":NaN}'):
+            self.assertIsNone(proxy.real_body('/api/chat/query', raw))
+        self.assertEqual(proxy.real_body('/api/chat/session', b'{}'), {})
+        self.assertEqual(proxy.real_body('/api/documents/retry', b''), {})
+        self.assertIsNone(proxy.real_body('/api/documents/retry', b'{"url":"arbitrary"}'))
+
+    def test_real_forwarding_keeps_bytes_status_cookie_private_and_metadata_only(self):
+        with self.upstream() as (origin, secret, calls, bodies):
+            config = fixture_config(); config['api']['access'] = '/api/should-not-be-used'
+            with proxy.test_origin(origin, config, passphrase=secret, authorized=True) as (url, state):
+                for path in ('/api/documents', '/@vite/client', '/assets/app.js', '/guide-audio/manifest.json?t=1777777777777', '/api/guide-audio/offline.mp3'):
+                    with urlopen(url+path) as response:
+                        self.assertEqual(response.read(), bodies[path])
+                        self.assertIsNone(response.headers.get('Set-Cookie'))
+                        self.assertEqual(response.headers['X-Fixture-Header'], 'unchanged')
+                payload = {'sessionId': 'session-one', 'documentId': 'doc-financial', 'query': secret, 'slide': None, 'voice': False, 'mode': 'stream'}
+                raw = json.dumps(payload, indent=1).encode()
+                with urlopen(Request(url+'/api/chat/query', data=raw, headers={'Origin':url,'Content-Type':'application/json','Cookie':'browser=untrusted'})) as response:
+                    self.assertEqual(response.read(), bodies['/api/chat/query'])
+                    self.assertIsNone(response.headers.get('Set-Cookie'))
+                with urlopen(url+'/api/citations/cite-one') as response: response.read()
+                with urlopen(Request(url+'/api/sources/doc-financial', method='HEAD')) as response:
+                    self.assertEqual(response.status, 200); self.assertEqual(response.read(), b'')
+                with urlopen(url+proxy.PREFIX+'/probe') as response: metadata=json.load(response)
+                self.assertNotIn(secret, json.dumps(metadata))
+                self.assertNotIn('browser=untrusted', json.dumps(metadata))
+                self.assertEqual(metadata['authMode'], 'in-memory-real-api-broker')
+                self.assertTrue(metadata['authFlags']['httpOnly'])
+                query = next(r for r in metadata['requests'] if r['kind']=='query')
+                self.assertTrue(query['answerNonempty']); self.assertEqual(query['citationCount'],1)
+                self.assertEqual(query['retrievedIds'], ['cite-one'])
+                citation = next(r for r in metadata['requests'] if r['kind']=='citation')
+                self.assertTrue(citation['excerptNonempty']); self.assertTrue(citation['originalSameOriginApi'])
+                forwarded = next(r for r in calls if r['path']=='/api/chat/query')
+                self.assertEqual(forwarded['body'],raw); self.assertEqual(forwarded['origin'],origin)
+                self.assertIn(secret,forwarded['cookie']); self.assertNotIn('browser=untrusted',forwarded['cookie'])
+                self.assertEqual(calls[0]['path'],'/api/access')
+
+    def test_real_post_routes_exact_origin_and_no_arbitrary_host(self):
+        with self.upstream() as (origin, secret, calls, _):
+            with proxy.test_origin(origin, fixture_config(), passphrase=secret, authorized=True) as (url, state):
+                requests = [Request(url+'/api/chat/session', data=b'{}', headers={'Content-Type':'application/json', **headers})
+                            for headers in ({}, {'Origin':'null'}, {'Origin':'https://example.invalid'},
+                                            {'Origin':url,'Host':'example.invalid'}, {'Origin':url,'Sec-Fetch-Site':'cross-site'})]
+                requests += [Request(url+route, data=b'{}', headers={'Origin':url,'Content-Type':'application/json'})
+                             for route in ('/api/access','/api/chat/query/','/api/voice/text','/__athar_ui__/control','/api/documents/retry?x=y')]
+                requests += [Request(url+'/api/chat/session', method='DELETE',headers={'Origin':url}),
+                             Request(url+'/api/unknown'), Request(url+'/api/chat/session',data=b'{"url":"bad"}',headers={'Origin':url,'Content-Type':'application/json'}),
+                             Request(url+'/api/chat/query',data=b'{}',headers={'Origin':url,'Content-Type':'text/plain'})]
+                count = len(calls)
+                for request in requests:
+                    with self.subTest(path='policy-rejected'), self.assertRaises(HTTPError) as raised: urlopen(request)
+                    self.assertIn(raised.exception.code, (400,403,405,415))
+                self.assertEqual(len(calls),count)
+                for path in ('/api/chat/session','/api/documents/retry'):
+                    with urlopen(Request(url+path,data=b'{}',headers={'Origin':url,'Content-Type':'application/json'})) as response:
+                        self.assertEqual(response.status,200); response.read()
+                self.assertEqual(len(calls),count+2)
+
+    def test_response_errors_redirects_and_sse_errors_never_masked(self):
+        with self.upstream() as (origin, secret, calls, _):
+            with proxy.test_origin(origin, fixture_config(), passphrase=secret, authorized=True) as (url, state):
+                for path, code in (('/api/citations/unavailable',503),('/assets/redirect.js',502)):
+                    with self.assertRaises(HTTPError) as raised: urlopen(url+path)
+                    self.assertEqual(raised.exception.code,code)
+                    self.assertNotIn(secret, raised.exception.read().decode())
+                self.assertEqual(len(calls),3)
+                metadata = state.summary()
+                self.assertEqual(metadata['requests'][0]['status'],503)
+                self.assertTrue(metadata['requests'][1]['redirectDenied'])
+                self.assertNotIn(secret,json.dumps(metadata))
+        state = proxy.RealState('http://localhost:1')
+        item = state.begin('POST','/api/chat/query',{'documentId':'all','slide':None,'query':'offline'})
+        state.observe(item,b'data: {"type":"error","message":"PRIVATE TEST ERROR"}\n\n','text/event-stream')
+        self.assertEqual(item['errorFrameCount'],1); self.assertFalse(item['answerNonempty'])
+        self.assertNotIn('PRIVATE TEST ERROR', json.dumps(state.summary()))
+        self.assertEqual(run.classify_console(['Failed to load resource: server responded with a status of 503'],None)['unexpectedConsoleErrorCount'],1)
+
+    def test_unsafe_source_url_is_never_retained(self):
+        for original in ('https://example.invalid/source?token=private', 'javascript:secret', '/api/sources/x?token=secret'):
+            state=proxy.RealState('https://sb-fixture.vercel.run'); item=state.begin('GET','/api/citations/cite-one',{})
+            state.observe(item,json.dumps({'id':'cite-one','excerpt':'PRIVATE','originalUrl':original}).encode(),'application/json')
+            self.assertFalse(item['originalSameOriginApi']); self.assertIsNone(item['originalPath'])
+            self.assertNotIn(original,json.dumps(state.summary())); self.assertNotIn('PRIVATE',json.dumps(state.summary()))
+
+    def test_unclean_authorized_screenshot_is_deleted_and_failure_preserved(self):
+        args=run.parser().parse_args(['--url','http://localhost:5173','--stage','after','--mode','authorized','--auth','env','--polls','1','--max-chunks','1000','--overwrite'])
+        evidence={'checks':[{'id':key,'ok':key != 'proof-clean-session'} for key in run.AUTHORIZED_CHECKS],'endUTC':run.utc()}
+        b64=base64.b64encode(json.dumps(evidence).encode()).decode(); parts=[b64[i:i+112] for i in range(0,len(b64),112)]
+        @contextmanager
+        def broker(*args, **kwargs): yield 'http://127.0.0.1:1234',proxy.RealState('http://localhost:5173')
+        with tempfile.TemporaryDirectory(prefix='ui-authorized-unit-') as temp:
+            root=Path(temp); proof=root/'.ui-proof';proof.mkdir();image=proof/'after-authorized-390x844.png'
+            image.write_bytes(b'PRIVATE OFFLINE SCREENSHOT PLACEHOLDER')
+            raw={'ok':False,'httpStatus':200,'screenshots':[str(image)],'consoleErrors':[],'pageErrors':[],
+                 'assertions':[{'ok':True,'target':f'window.__atharTransport({i},112)','detail':json.dumps({'chunk':part,'more':i<len(parts)-1})} for i,part in enumerate(parts)]}
+            result=subprocess.CompletedProcess([],1,json.dumps(raw),'')
+            with patch('proxy.test_origin',broker), patch('run.Path.cwd',return_value=root), patch('run.subprocess.run',return_value=result), patch.dict(os.environ,{'ATHAR_REVIEW_PASSPHRASE':'fixture-only-secret'}), patch('sys.stdout',io.StringIO()):
+                code=run.execute(args,fixture_config(),Path('/fixture/ui_validate.py'),'authorized',None,'390x844')
+            self.assertEqual(code,1);self.assertFalse(image.exists())
+            report=json.loads((proof/'after-authorized-390x844.json').read_text())
+            self.assertIn('proof-clean-session',report['failedCheckIds']);self.assertIn('validator-failed',report['failedCheckIds'])
+            self.assertEqual(report['runner']['authMode'],'in-memory-real-api-broker')
+
+
 if __name__ == '__main__':
     unittest.main()

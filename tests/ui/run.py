@@ -23,6 +23,15 @@ from urllib.parse import urlsplit
 HERE = Path(__file__).resolve().parent
 DEFAULT_VIEWPORTS = ('1440x900', '390x844', '834x1112', '1275x451')
 CASES = ('reader', 'context', 'citations', 'source-errors', 'source-loading', 'context-missing', 'auth-denied', 'audio-error', 'fetch-error')
+AUTHORIZED_CHECKS = (
+    'exact-requested-viewport', 'real-four-ready-documents', 'ask-slide-executive-pptx-slide1',
+    'ask-slide-prefill-no-autosubmit', 'financial-filter-clears-slide', 'real-query-completed',
+    'returned-citations-match-ui', 'citation-server-resolves-excerpt', 'source-original-same-origin-api',
+    'citation-close-restores-focus', 'document-filter-switch', 'ask-document-prefill-no-autosubmit',
+    'range-resize-value-and-layout', 'closed-chat-not-focusable', 'proof-clean-session',
+    'focused-composer-layout', 'focused-citation-layout', 'focused-resized-layout',
+)
+
 
 
 def utc():
@@ -105,7 +114,9 @@ def contract_failures(data, mode):
     for check in data.get('checks', []):
         indexed.setdefault(check['id'], []).append(check)
     expected = []
-    if mode != 'extended':
+    if mode == 'authorized':
+        expected += AUTHORIZED_CHECKS
+    elif mode != 'extended':
         expected += contract['perInteraction' if mode == 'stage' else 'perFullSequence']
         stages = contract['stages'] if mode == 'stage' else ['natural-completion']
         expected += [f'{stage}:{suffix}' for stage in stages for suffix in contract['perStage']]
@@ -181,10 +192,13 @@ def build_command(args, config, mode, case, size, target, validator, label):
     width, height = map(int, size.split('x'))
     run_config = {**config, 'mode': mode, 'case': case, 'stage': args.stage,
                   'buildSha': args.build_sha, 'viewport': {'width': width, 'height': height}}
-    source = HERE / ('extended.js' if mode == 'extended' else 'harness.js')
+    if mode == 'authorized':
+        # Mock settings are not passed into the real harness, even as unused config.
+        run_config = {k: v for k, v in run_config.items() if k != 'mock'}
+    source = HERE / ('authorized.js' if mode == 'authorized' else 'extended.js' if mode == 'extended' else 'harness.js')
     script = source.read_text().replace('__RUN_CONFIG__', json.dumps(run_config, separators=(',', ':')))
     # Short awaited polls avoid the validator transport's per-eval time budget.
-    polls = args.polls if args.polls is not None else (18500 if mode == 'sequence' else 1200)
+    polls = args.polls if args.polls is not None else (18500 if mode == 'sequence' else 2300 if mode == 'authorized' else 1200)
     timeout = args.timeout or (2100 if mode == 'sequence' else 300)
     cmd = [sys.executable, str(validator), '--url', target, '--label', label,
            '--viewport', size, '--viewport-only', '--wait-selector', config['selectors']['root'],
@@ -217,14 +231,21 @@ def execute(args, config, validator, mode, case, size):
         raise ValueError('--auth env requires ATHAR_REVIEW_PASSPHRASE in the environment')
     if mode == 'extended' and args.auth != 'none':
         raise ValueError('extended is isolated/mock only; do not mix it with real authorization')
-    broker = test_origin(args.url, config, case=case, passphrase=secret) if mode == 'extended' or secret else nullcontext((args.url, None))
+    if mode == 'authorized' and (args.auth != 'env' or not secret or case):
+        raise ValueError('authorized mode requires --auth env and no mock case')
+    broker = test_origin(args.url, config, case=case, passphrase=secret, authorized=mode == 'authorized') if mode == 'extended' or secret else nullcontext((args.url, None))
     with broker as (target, proxy):
         cmd, timeout, source = build_command(args, config, mode, case, size, target, validator, label)
         env = dict(os.environ)
         env.pop('ATHAR_REVIEW_PASSPHRASE', None)
         env['CHROMIUM_BIN'] = str(HERE / 'chromium-test')
-        result = subprocess.run(cmd, cwd=Path.cwd(), env=env, capture_output=True,
-                                text=True, timeout=timeout + 60)
+        try:
+            result = subprocess.run(cmd, cwd=Path.cwd(), env=env, capture_output=True,
+                                    text=True, timeout=timeout + 60)
+        except subprocess.TimeoutExpired:
+            if mode == 'authorized':
+                (proof / f'{name}.png').unlink(missing_ok=True)
+            raise
         raw = {}
         try:
             raw = json.loads(result.stdout)
@@ -237,10 +258,17 @@ def execute(args, config, validator, mode, case, size):
             failed = ['evidence-extraction-failed']
         width, height = map(int, size.split('x'))
         screenshots = []
+        clean_proof = mode != 'authorized' or any(c.get('id') == 'proof-clean-session' and c.get('ok') is True for c in data.get('checks', []))
+        if not clean_proof:
+            (proof / f'{name}.png').unlink(missing_ok=True)
+            failed.append('private-screenshot-discarded')
         for path in raw.get('screenshots', []):
             item = Path(path).resolve()
             if item.parent != proof.resolve():
                 failed.append('screenshot-outside-default-proof-directory')
+                continue
+            if not clean_proof:
+                item.unlink(missing_ok=True)
                 continue
             try:
                 dimensions = png_dimensions(item)
@@ -275,8 +303,9 @@ def execute(args, config, validator, mode, case, size):
             'pageErrorCount': len(raw.get('pageErrors', [])),
             'failedRequestCount': len(raw.get('failedRequests', [])),
             'validatorFailedAssertionCount': sum(not a.get('ok', False) for a in raw.get('assertions', [])),
-            'authMode': 'in-memory-cookie-broker' if secret else ('synthetic-mock' if case else 'anonymous'),
+            'authMode': 'in-memory-real-api-broker' if mode == 'authorized' else 'in-memory-cookie-broker' if secret else ('synthetic-mock' if case else 'anonymous'),
             'proxySummary': proxy_summary, 'consoleClassification': console,
+            'browserOriginLimitation': 'Actual deployed assets and API through a loopback URL; NOT deployed-origin cookie/SameSite/CSRF proof.' if mode == 'authorized' else None,
             'rawOutputPersisted': False,
         }
         if result.returncode or raw.get('ok') is not True:
@@ -295,7 +324,7 @@ def parser():
     p = argparse.ArgumentParser(description=__doc__, formatter_class=argparse.RawDescriptionHelpFormatter)
     p.add_argument('--url', required=True, type=safe_url)
     p.add_argument('--stage', choices=('before', 'after'), required=True)
-    p.add_argument('--mode', choices=('stage', 'sequence', 'extended'), default='stage')
+    p.add_argument('--mode', choices=('stage', 'sequence', 'extended', 'authorized'), default='stage')
     p.add_argument('--viewport', action='append', type=viewport, help='repeat; defaults to all four baseline sizes')
     p.add_argument('--case', choices=CASES, action='append', help='extended only; defaults to every isolated case')
     p.add_argument('--build-sha', type=sha, help='optional caller-supplied build revision, never queried with git')
@@ -304,7 +333,7 @@ def parser():
     p.add_argument('--auth', choices=('none', 'env'), default='none', help='env: in-memory cookie broker; no secret in JS/CLI')
     p.add_argument('--wait-ms', type=int, default=650)
     p.add_argument('--timeout', type=int, help='validator timeout seconds (300 or 2100 by default)')
-    p.add_argument('--polls', type=int, help='100ms bounded async polls; default 1200 or 18500 for sequence')
+    p.add_argument('--polls', type=int, help='100ms bounded polls; default stage/extended 1200, authorized 2300, sequence 18500')
     p.add_argument('--max-chunks', type=int, default=2200)
     p.add_argument('--chunk-size', type=int, default=112, help='small enough for truncated --eval result fields')
     p.add_argument('--overwrite', action='store_true', help='explicitly replace only this selected run, never glob/delete proofs')
@@ -316,6 +345,8 @@ def main(argv=None):
     os.umask(0o077)
     p = parser()
     args = p.parse_args(argv)
+    if args.mode == 'authorized' and args.auth != 'env':
+        p.error('authorized requires --auth env; no anonymous or mock fallback')
     if args.case and args.mode != 'extended':
         p.error('--case applies only to --mode extended')
     if args.auth == 'env' and args.mode == 'extended':

@@ -165,12 +165,12 @@ python3 athar-jv-interactive-plan/tests/ui/run.py --url http://127.0.0.1:5173 --
 1. The Python launcher alone reads `ATHAR_REVIEW_PASSPHRASE`.
 2. An in-memory `CookieJar` posts `{passphrase}` to real `POST /api/access`.
    It requires `authenticated:true` and a server-issued **HttpOnly** cookie.
-3. A short-lived, loopback, read-only same-origin broker forwards GET/HEAD using
+3. In stage/sequence, a short-lived, loopback, read-only same-origin broker forwards GET/HEAD using
    that cookie. Browser JS never sees the secret or the cookie; no cookie is
    injected into the harness, profile, CLI arguments, or a temporary file.
 4. The child validator environment has the passphrase removed. The broker
-   forwards no Set-Cookie or credentials back to the browser, denies all
-   protected POSTs, clears its cookie jar on shutdown, and writes no access log.
+   forwards no Set-Cookie or credentials back to the browser, denies protected
+   POSTs in stage/sequence (authorized mode is described below), clears its cookie jar on shutdown, and writes no access log.
 
 This exercises real access/status reads but **does not prove browser cookie /
 SameSite semantics, CSRF, cookie persistence, authorized AI, POST authorization,
@@ -198,3 +198,97 @@ The main agent owns any cleanup outside `tests/ui/**`. Do not bulk-delete proofs
 or confuse historical invalid artifacts with the completed four-size baseline.
 No commit, remote git operation, deployment or changed-app browser result was
 made by this subagent.
+
+## Authorized companion mode (opt-in; real AI, not the extended fixtures)
+
+`--mode authorized --auth env` is a separate real-API scenario. It is **not run
+by default**, never falls back to mocks, and may incur real model usage. Keep the
+existing `stage`, natural `sequence`, and mock-only `extended` modes separate.
+The passphrase must already be supplied through `ATHAR_REVIEW_PASSPHRASE` by the
+private environment/secrets manager; never paste it into a command or eval.
+
+From the workspace containing this repository, after loading `ui-validator`:
+
+```bash
+# Offline suite; no browser or remote connections:
+python3 -m unittest discover -s athar-jv-interactive-plan/tests/ui -p test_runner.py -v
+# Configuration only; does NOT log in, send questions, or launch Chromium:
+python3 athar-jv-interactive-plan/tests/ui/run.py --url https://sb-7619bkx28s02.vercel.run --stage after --mode authorized --auth env --build-sha 1743c96 --dry-run
+# ONLY after the owner authorizes a live run and the retrieval fix is deployed:
+python3 athar-jv-interactive-plan/tests/ui/run.py --url "$PREVIEW_URL" --stage after --mode authorized --auth env --build-sha "$DEPLOYED_SHA"
+```
+
+The last command defaults to **1440x900, 390x844, 834x1112, 1275x451**, one fresh
+in-memory login/session and one real question per viewport. Use `--viewport`
+for a focused run. The SHA is caller supplied, not remotely verified. Do not
+label the future retrieval fix as `1743c96`; supply its actual deployed SHA.
+No browser installation is needed or permitted. `run.py` invokes the normal
+installed `ui_validate.py` CLI, using short 100ms poll evals (default 2300) while
+the scenario bounds the real answer wait at **100 seconds**. The broker permits
+105 seconds for that upstream request; no retry invents or substitutes an answer.
+
+### Broker boundary and provenance
+
+The Python launcher performs real `POST /api/access` with `{passphrase}` and
+requires `authenticated:true` plus an HttpOnly cookie. The cookie stays only in
+Python's memory jar, is removed from child environments and browser responses,
+and is cleared when the loopback server closes. Authentication responses and
+private API bodies are not persisted. `--eval` contains no credential.
+
+Authorized mode binds **only 127.0.0.1**, validates exact Host and caller Origin,
+and permits POST only to `/api/chat/session`, `/api/chat/query`, and
+`/api/documents/retry`. POST requires the exact broker Origin; null, missing,
+foreign and duplicate origins are rejected. JSON keys/types/size are allowlisted
+(session/query/filter plus the client's explicit false voice/transport fields);
+unknown fields, duplicate JSON keys, transfer encoding and malformed lengths
+fail closed. The forwarded Origin is the fixed real upstream origin. The broker
+never forwards browser cookies, Authorization, arbitrary hosts or forwarding
+headers. It rejects redirects, encoded/traversal paths, query-string routes,
+unknown APIs, voice endpoints, logout and mutation verbs other than those POSTs.
+The sole query-string exception is the app’s `/guide-audio/manifest.json?t=`
+numeric timestamp (10–16 digits); it is forwarded unchanged and only the path is
+recorded. The fixed `/api/guide-audio/:file` GET audio fallback is also permitted.
+GET/HEAD are restricted to the app entry, known static asset directories,
+access/health/documents/guide config, citations, and `/api/sources/:id`.
+
+**Response bodies/statuses/assets are forwarded as received**, including SSE;
+there are no HMR stubs, response fixtures, injected scripts, fake citations, or
+rewritten answers in authorized mode. Only hop-by-hop/credential headers are
+stripped; transport framing is local. A broker-only `/__athar_ui__/probe` reports
+IDs, counts, booleans and request paths/statuses, never bodies. It observes a
+bounded copy without rewriting responses; it is not an application endpoint.
+
+Report `authMode` is **`in-memory-real-api-broker`**. The browser loads actual
+deployed assets, but its URL/origin is the **local broker**, not the deployed
+URL. This deliberately does **not** verify browser HttpOnly storage, cookie
+persistence, SameSite, deployed-origin CSRF, physical mouse/keyboard events, or
+independent semantic/numeric grounding. The server owns grounding validation;
+this test verifies actual response/citation transport and UI integration. All
+interactions are disclosed as synthetic DOM activation/value/input/change.
+
+### Scenario and private proof
+
+The scenario checks four actual ready sources; Ask this slide selects the
+executive PPTX with slide 1 prefilled and no submission. It selects
+`financial-summary`, clears slide context, and sends exactly:
+
+> Compare UAE-only Base Case and International Expansion Upside Year-5 revenue. Quote the source and keep scenarios distinct.
+
+It requires a real successful final-answer response, matching returned/retrieved
+citation IDs and UI links/buttons, a successfully resolved server excerpt, and a
+same-origin `/api/sources/:id` original (HEAD only; no original saved). It checks
+citation close/focus restoration, document switching, Ask document draft with
+no auto-submit, native range-value/input resizing with actual geometry change,
+caption/companion non-overlap in focused composer/citation/resized states, and
+closed companion controls refusing focus. A real paused guide keeps slide 1
+stable; no audio clock/source manipulation is used.
+
+There is **no fake application output or screenshot overlay**. Finally the test
+uses the real New session control to clear answers/excerpts and opens source
+status (titles/status/coverage counts only), with an empty composer. If that
+cleanup cannot be proven, the launcher discards this run's private screenshot
+and marks failure. Reports retain check IDs/counts, allowed source/citation IDs,
+request paths/statuses/byte counts; never answer/excerpt text, source records,
+credentials, cookies, sessions, raw validator stdout/stderr or protected URLs.
+No `--allow-console-errors` or fixture error budgets apply: failed API calls,
+missing citations, app errors, timeout and failed checks remain failures.

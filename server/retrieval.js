@@ -243,6 +243,10 @@ export function retrieveEvidence(input, { question, documentId = 'all', slide = 
   const index = validatedIndexes.has(input) ? input : validateCorpusIndex(input);
   if (typeof documentId !== 'string' || (documentId !== 'all' && !index.documentsById.has(documentId))) throw new RetrievalError('unknown_document', 'Unknown document filter.');
   const selectedDoc = index.documentsById.get(documentId);
+  // A named page within a selected PDF is a strict evidence scope, not just a search hint.
+  // Without this, a correct value quoted from p.1 can still violate a user's p.2-only request.
+  const pageMatch = selectedDoc?.kind === 'pdf' && /\bpage\s+([1-9]\d*)\b/i.exec(question);
+  const pageFilter = pageMatch ? Number(pageMatch[1]) : null;
   if (slide != null && (!Number.isSafeInteger(slide) || slide < 1 || !selectedDoc || selectedDoc.kind !== 'pptx')) throw new RetrievalError('invalid_slide', 'A slide filter requires a selected PPTX document and a positive slide number.');
   maxChunks = limit(maxChunks, 12, 12); maxChars = limit(maxChars, 45000, 45000); maxChunkChars = limit(maxChunkChars, 12000, 45000);
   const context = buildRetrievalQuery({ question, documentId, history });
@@ -257,6 +261,7 @@ export function retrieveEvidence(input, { question, documentId = 'all', slide = 
     const { chunk } = item;
     if (documentId !== 'all' && chunk.documentId !== documentId) continue;
     if (slide != null && chunk.location.slide !== slide) continue;
+    if (pageFilter != null && chunk.location.page !== pageFilter) continue;
     let score = 0;
     for (const [term, weight] of terms) {
       const tf = item.tf.get(term) || 0;
@@ -280,6 +285,12 @@ export function retrieveEvidence(input, { question, documentId = 'all', slide = 
     if (requestedSheet) score += 5;
     if (requestedCells.length && chunk.records?.some((record) => requestedCells.includes(record.cell) && (!record.sheet || record.sheet === chunk.location.sheet))) score += requestedSheet ? 24 : 8;
     if (chunk.kind === 'pdf' && chunk.extractionKind === 'pdf-page') score *= 1.35;
+    // Decision/approval questions need the labelled unresolved cells, not only their comments.
+    // The boost is evidence-driven: it applies to actual source text, not hard-coded answers.
+    if (/\b(mou|agreement|agreed|signed|committed|solvency)\b/i.test(context.query) && /to be agreed/i.test(chunk.text)) {
+      if (chunk.records?.some((record) => typeof record.value === 'string' && /^to be agreed$/i.test(record.value))) score += 12;
+      if (String(chunk.location.part || '').startsWith('comment')) score *= 0.6;
+    }
     if (chunk.kind === 'xlsx' && /\bdraws?\b/i.test(item.label) && !/\bdraws?\b/i.test(context.query)) {
       const words = tokens(chunk.text);
       const numericRatio = words.filter(word => /^[-+]?\d/.test(word)).length / (words.length || 1);

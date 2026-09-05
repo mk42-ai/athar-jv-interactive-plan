@@ -72,6 +72,14 @@ test('strict slide selection requires a selected PPTX and never returns another 
   assert.equal(retrieveEvidence(index, { question: 'funding', documentId: ids[1], slide: 99 }).chunks.length, 0);
 });
 
+test('explicit selected-PDF page stays a hard boundary even when another page scores higher', () => {
+  const input = fixture();
+  input.chunks.push({ ...input.chunks[0], id: 'src-pdf-other-page', location: { page: 2 }, text: 'Funding funding funding regional funding.' });
+  const found = retrieveEvidence(input, { question: 'Using only PDF page 7, describe regional funding.', documentId: ids[0] });
+  assert.deepEqual(found.chunks.map(chunk => chunk.id), ['src-pdf']);
+  assert.equal(retrieveEvidence(input, { question: 'Funding page 99', documentId: ids[0] }).chunks.length, 0);
+});
+
 test('followups append last user question only in identical explicit document scope', () => {
   const history = [
     { role: 'user', content: 'North region funding', documentId: ids[0] },
