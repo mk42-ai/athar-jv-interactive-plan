@@ -13,6 +13,8 @@ import { guideAudioMiddleware, rehydrateGuideAudio } from './guideAudioStore.js'
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
 const dist = path.resolve(__dirname, '../dist');
 const port = Number(process.env.PORT || 5173);
+// Deliberate startup mode for isolated previews; npm start keeps production protections.
+const presentationPreview = process.argv.includes('--presentation-preview');
 
 const app = express();
 app.disable('x-powered-by');
@@ -22,10 +24,10 @@ app.use((req, res, next) => {
   }
   next();
 });
-const apiApp = createApiApp();
+const apiApp = createApiApp({ presentationPreview });
 app.use(apiApp);
-app.use(privatePresentation(apiApp.locals.reviewAccess));
-app.use(['/deck', '/guide-audio'], apiApp.locals.reviewAccess.requireAccess);
+app.use(privatePresentation(apiApp.locals.reviewAccess, { presentationPreview }));
+app.use(['/deck', '/guide-audio'], apiApp.locals.presentationReadAccess);
 rehydrateGuideAudio({ staticDir: 'dist' });
 app.use(guideAudioMiddleware({ staticDir: 'dist' }));
 app.use(deckPdfMiddleware({ staticDir: 'dist' }));

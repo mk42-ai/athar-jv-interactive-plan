@@ -1,7 +1,26 @@
 // Protect the existing presentation, derived timeline and bundle at the host boundary.
 // The login shell contains no business content, provider key, source metadata or access token.
-export function privatePresentation(access) {
+// Explicit server-start option; never inferred from missing secrets or request headers.
+// This publishes presentation reads only and never authenticates a reviewer.
+export function presentationReadAccess(access, { presentationPreview = false } = {}) {
   return (req, res, next) => {
+    if (presentationPreview === true && (req.method === 'GET' || req.method === 'HEAD')) {
+      res.setHeader('Cache-Control', 'private, no-store');
+      return next();
+    }
+    return access.requireAccess(req, res, next);
+  };
+}
+
+export function privatePresentation(access, { presentationPreview = false } = {}) {
+  return (req, res, next) => {
+    const pathname = req.path || String(req.url || '').split('?')[0];
+    // Keep the preview exception confined to existing read-only deck/player assets.
+    if (presentationPreview === true && (req.method === 'GET' || req.method === 'HEAD') &&
+        /^(?:\/|\/index\.html|\/favicon\.ico|\/(?:assets|deck|guide-audio)\/[^/]+)$/.test(pathname)) {
+      res.setHeader('Cache-Control', 'private, no-store');
+      return next();
+    }
     if (process.env.ATHAR_PRIVATE_PRESENTATION !== '1' || access.read(req)) {
       if (process.env.ATHAR_PRIVATE_PRESENTATION === '1') {
         res.setHeader('Cache-Control', 'private, no-store');

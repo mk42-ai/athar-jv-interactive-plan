@@ -5,6 +5,7 @@ import express from 'express';
 import crypto from 'node:crypto';
 import { getGuideSteps, getPresentationData, getAudioManifest } from './presentationStore.js';
 import { createAccessControl } from './access.js';
+import { presentationReadAccess } from './privatePresentation.js';
 import { createEvidenceRoutes } from './evidenceRoutes.js';
 import {
   CONFIG,
@@ -187,7 +188,7 @@ async function runVoiceTurn({ req, send, question, sessionId, externalUserId, si
   return { ok: true, answer: full };
 }
 
-export function createApiApp() {
+export function createApiApp({ presentationPreview = false } = {}) {
   // Secrets: process.env first, then the git-ignored .env (server-side only — never bundled for the client).
   loadDotEnv();
   const odKey = onDemandKey();
@@ -201,6 +202,7 @@ export function createApiApp() {
 
   const api = express.Router();
   const access = createAccessControl();
+  const readPresentation = presentationReadAccess(access, { presentationPreview });
   const evidence = createEvidenceRoutes({ access });
   // Frame policy. The review workspace is opened inside embedded preview panels (cross-origin iframes),
   // where the former `X-Frame-Options: SAMEORIGIN` made browsers render "refused to connect". X-Frame-Options
@@ -217,12 +219,12 @@ export function createApiApp() {
   });
   api.use('/access', access.router);
   // Presentation payloads are no longer embedded in public Git/client bundles.
-  // They load only after the existing reviewer session is authenticated.
-  api.get('/presentation', access.requireAccess, (req, res) => {
+  // Reviewer access is required except for the explicitly started read-only presentation preview.
+  api.get('/presentation', readPresentation, (req, res) => {
     try { res.set('Cache-Control', 'private, no-store').json(getPresentationData()); }
     catch { res.status(503).json({ code: 'presentation_unavailable', message: 'The protected presentation is unavailable. Ask the owner to restore the presentation store.' }); }
   });
-  api.use(['/guide', '/guide-audio'], access.requireAccess);
+  api.use(['/guide', '/guide-audio'], readPresentation);
   api.use(evidence.router);
   // Every user-generated voice/chat operation is authorized; the narrated public deck is unchanged.
   api.use('/voice', (req, res, next) => {
@@ -385,6 +387,7 @@ export function createApiApp() {
     res.status(403).json({ code: 'diagnostic_disabled', message: 'Diagnostic access is restricted to the server operator.' }));
 
   app.locals.reviewAccess = access;
+  app.locals.presentationReadAccess = readPresentation;
   app.use('/api', api);
   app.use('/api', (req, res) => res.status(404).json({ error: `No route ${req.method} /api${req.path}` }));
   return app;
