@@ -1,0 +1,23 @@
+{
+  "suggestedQuestions": [
+    "What happens at each of the six gates, and when?",
+    "When does billing start and what is the seat rate?",
+    "Which anchors are contracted at G4 and how many seats each?",
+    "What must be finished in November 2026 before G2?",
+    "Summarise the financial baseline: capital, NPV and the Y1–Y3 revenue build.",
+    "What is decided at the Month-6 gate in March 2027?"
+  ],
+  "deck": {
+    "title": "Athar JV — Executive Summary (2-slide deck)",
+    "pages": [
+      {
+        "n": 1,
+        "title": "Athar JV — Executive Summary"
+      },
+      {
+        "n": 2,
+        "title": "Implementation Roadmap — Six Gates"
+      }
+    ]
+  }
+}

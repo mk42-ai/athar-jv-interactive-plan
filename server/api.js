@@ -220,7 +220,7 @@ export function createApiApp() {
   // who has the deployment URL — the reviewer gate has been removed.
   api.get('/presentation', (req, res) => {
     try { res.set('Cache-Control', 'private, no-store').json(getPresentationData()); }
-    catch { res.status(503).json({ code: 'presentation_unavailable', message: 'The protected presentation is unavailable. Ask the owner to restore the presentation store.' }); }
+    catch { res.status(503).json({ code: 'presentation_unavailable', message: 'The presentation bundle is unavailable. Ensure guide-script.json, presentation-config.json and data/* are deployed.' }); }
   });
   api.use(evidence.router);
   // Voice: audio callbacks need the short-lived media capability; everything else gets the anonymous principal.

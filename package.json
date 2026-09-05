@@ -17,7 +17,8 @@
     "test:ui-unit": "python3 -m unittest discover -s tests/ui -p 'test_*.py'",
     "test:grounding": "python3 tests/grounding_cases.py",
     "ingest": "python3 scripts/ingest_documents.py",
-    "provision": "python3 scripts/provision_sources.py"
+    "provision": "python3 scripts/provision_sources.py",
+    "provision:presentation": "node scripts/provision-presentation-store.mjs"
   },
   "dependencies": {
     "express": "^4.21.2",
