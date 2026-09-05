@@ -1,0 +1,426 @@
+{
+ "pr_url": "https://github.com/mk42-ai/athar-jv-interactive-plan/pull/2",
+ "pr_number": 2,
+ "pr_state": "merged",
+ "pr_head_sha": "9cddb0a4b7fdf582c08e3f31f4d73b53fb8392c1",
+ "expected_head_sha": "9cddb0a4b7fdf582c08e3f31f4d73b53fb8392c1",
+ "head_sha_matches": true,
+ "pr_head_ref": "feature/spatial-ui-document-ai",
+ "pr_base_ref": "feature/new-deck-guide-mode",
+ "merge_commit_sha": "6e2e0d09e3c8b26526fac93a7f9ae5952efc3a21",
+ "merge_utc_timestamp": "2026-09-05T16:42:48Z",
+ "merged_by": "mk42-ai",
+ "merge_action_this_run": "none \u2014 PR #2 was already merged before this verification run (GitHub: merged=true, GET /pulls/2/merge \u2192 204, merge commit parents 5c82f979 + 9cddb0a4); re-verified at 2026-09-05T22:14:10Z",
+ "verified_commit": "9cddb0a4b7fdf582c08e3f31f4d73b53fb8392c1",
+ "test_summary": {
+  "npm_test_without_presentation_store": {
+   "tests": 124,
+   "pass": 123,
+   "fail": 0,
+   "skipped": 1,
+   "cancelled": 0
+  },
+  "npm_test_with_presentation_store": {
+   "tests": 124,
+   "pass": 124,
+   "fail": 0,
+   "skipped": 0,
+   "cancelled": 0
+  },
+  "skipped_test": "tests/narrator.test.mjs \u2014 explicit private assets retain exact disk/embedded/audio/script hashes (skips when ATHAR_PRESENTATION_DIR is unset)",
+  "presentation_store_source": "restored from repo commit 8890053 (main; data/*.json, guide-script.json, presentation-config.json, public/deck, public/guide-audio) into a private 0700 directory",
+  "ingestion": {
+   "command": "npm run test:ingestion",
+   "pass": 8,
+   "fail": 0,
+   "total": 8
+  },
+  "ui_unit": {
+   "command": "npm run test:ui-unit",
+   "pass": 25,
+   "fail": 0,
+   "total": 25
+  },
+  "expected": "123 pass / 0 fail / 1 skipped; 124 pass / 0 fail / 0 skipped with presentation store; ingestion 8/8; ui-unit 25/25",
+  "matches_expected": true
+ },
+ "endpoint_checks": [
+  {
+   "method": "POST",
+   "path": "/chat/v1/sessions",
+   "host": "https://api.on-demand.io",
+   "http_status": 201,
+   "expected": 201,
+   "ok": true,
+   "request_utc": "2026-09-05T21:55:35.964Z",
+   "latency_ms": 175,
+   "set_cookie": null
+  },
+  {
+   "method": "POST",
+   "path": "/chat/v1/sessions/6a9c8fd8d3cf1ea63102e4fe/query",
+   "host": "https://api.on-demand.io",
+   "http_status": 200,
+   "expected": 200,
+   "ok": true,
+   "request_utc": "2026-09-05T21:55:36.139Z",
+   "latency_ms": 1628,
+   "set_cookie": null
+  },
+  {
+   "method": "GET",
+   "path": "/",
+   "host": "https://sb-74479mybp2ro.vercel.run",
+   "http_status": 200,
+   "expected": 200,
+   "ok": true,
+   "request_utc": "2026-09-05T21:55:37.768Z",
+   "latency_ms": 319,
+   "set_cookie": null
+  },
+  {
+   "method": "GET",
+   "path": "/api/health",
+   "host": "https://sb-74479mybp2ro.vercel.run",
+   "http_status": 200,
+   "expected": 200,
+   "ok": true,
+   "request_utc": "2026-09-05T21:55:38.088Z",
+   "latency_ms": 54,
+   "set_cookie": null
+  },
+  {
+   "method": "GET",
+   "path": "/api/health?probe=1",
+   "host": "https://sb-74479mybp2ro.vercel.run",
+   "http_status": 200,
+   "expected": 200,
+   "ok": true,
+   "request_utc": "2026-09-05T21:55:38.143Z",
+   "latency_ms": 593,
+   "set_cookie": null
+  },
+  {
+   "method": "POST",
+   "path": "/api/chat/session",
+   "host": "https://sb-74479mybp2ro.vercel.run",
+   "http_status": 200,
+   "expected": 200,
+   "ok": true,
+   "request_utc": "2026-09-05T21:55:38.736Z",
+   "latency_ms": 44,
+   "set_cookie": null
+  },
+  {
+   "method": "POST",
+   "path": "/api/chat/query",
+   "host": "https://sb-74479mybp2ro.vercel.run",
+   "http_status": 200,
+   "expected": 200,
+   "ok": true,
+   "request_utc": "2026-09-05T21:55:38.781Z",
+   "latency_ms": 2700,
+   "set_cookie": null
+  }
+ ],
+ "sandbox_key_probe": {
+  "ok": true,
+  "keyInstalled": true,
+  "keyLoaded": true,
+  "keySource": "process.env",
+  "sessionCreated": true,
+  "httpStatus": {
+   "createSession": 201,
+   "getSession": 200
+  },
+  "latencyMs": 401,
+  "checkedAt": "2026-09-05T21:55:38.333Z",
+  "endpointId": "predefined-openai-gpt4o"
+ },
+ "sandbox_health": {
+  "ok": true,
+  "access": "public",
+  "corpus": {
+   "provisioned": true,
+   "documents": 2,
+   "chunks": 271,
+   "indexedAt": "2026-09-05T21:52:04.089846Z"
+  },
+  "presentation": {
+   "available": true
+  },
+  "build": "9cddb0a4b7fdf582c08e3f31f4d73b53fb8392c1"
+ },
+ "preview_url": "https://sb-74479mybp2ro.vercel.run",
+ "sandbox": {
+  "id": "sbx_0qh9Hck35BnXy9pmx7LgB0ASABx5",
+  "port": 5173,
+  "created_utc": "2026-09-05T21:53:46Z",
+  "live_utc": "2026-09-05T21:54:30Z",
+  "runtime": "node22",
+  "ttl": "90m",
+  "deployed_commit": "9cddb0a4b7fdf582c08e3f31f4d73b53fb8392c1"
+ },
+ "corpus": {
+  "documents_indexed": 2,
+  "documents_expected": 3,
+  "chunks": 271,
+  "missing": [
+   "financial-model (athar-jv-model-v13 (1).xlsx \u2014 not present in the On Demand file directory)"
+  ],
+  "present": [
+   "financial-summary (Athar JV - Financial Model Executive Summary (3).pdf)",
+   "implementation-plan (ODA_X_AIREV_Athar_6_Month_Implementation_Plan_Oct2026_Mar2027_v1.xlsx)"
+  ]
+ },
+ "browser_verification": {
+  "desktop": {
+   "mode": "top-level",
+   "viewport": "1440x900",
+   "navigated_url": "https://sb-74479mybp2ro.vercel.run/#chat?q=In%20one%20sentence%3A%20when%20is%20gate%20G3%20%28ODA%20go-live%29%3F&q=In%20one%20sentence%3A%20what%20is%20the%20committed%20capital%20in%20the%20Executive%20Summary%3F",
+   "app_url": "https://sb-74479mybp2ro.vercel.run/#chat?q=In%20one%20sentence%3A%20when%20is%20gate%20G3%20%28ODA%20go-live%29%3F&q=In%20one%20sentence%3A%20what%20is%20the%20committed%20capital%20in%20the%20Executive%20Summary%3F",
+   "started_utc": "2026-09-05T22:10:59Z",
+   "finished_utc": "2026-09-05T22:11:11Z",
+   "questions": [
+    "In one sentence: when is gate G3 (ODA go-live)?",
+    "In one sentence: what is the committed capital in the Executive Summary?"
+   ],
+   "answered_messages_visible": 2,
+   "pending": 0,
+   "error_messages": 0,
+   "answers": [
+    {
+     "chars": 125,
+     "has_sources_line": true,
+     "on_screen_px": 87,
+     "height_px": 87,
+     "preview": "Gate G3 (ODA go-live) is scheduled for Week 12, Friday 25 December 2026.\n\nSources: Implementation plan \u00b7 G3 ODA go-live!"
+    },
+    {
+     "chars": 213,
+     "has_sources_line": true,
+     "on_screen_px": 134,
+     "height_px": 134,
+     "preview": "The Executive Summary shows committed capital of AED 20.40M for the UAE-only Base Case (open-source, no facility), while"
+    }
+   ],
+   "both_answers_on_screen": true,
+   "both_answers_fully_on_screen": true,
+   "chat_query_http": [
+    200,
+    200
+   ],
+   "chat_query_grounding": [
+    "grounded",
+    "grounded"
+   ],
+   "cookies": {
+    "cdp_storage_cookies": 0,
+    "cdp_network_cookies": 0,
+    "document_cookie": ""
+   },
+   "console_errors": 0,
+   "page_errors": 0,
+   "excluded_noise_entries": [
+    "[network] Failed to load resource: the server responded with a status of 404 () https://sb-74479mybp2ro.vercel.run/favicon.ico"
+   ],
+   "failed_requests": [
+    "404 https://sb-74479mybp2ro.vercel.run/favicon.ico"
+   ],
+   "iframe_session_attached": false,
+   "result": "PASS",
+   "screenshot_file": "after-desktop-1440x900.png"
+  },
+  "phone": {
+   "mode": "top-level",
+   "viewport": "390x844",
+   "navigated_url": "https://sb-74479mybp2ro.vercel.run/#chat?q=In%20one%20sentence%3A%20when%20is%20gate%20G3%20%28ODA%20go-live%29%3F&q=In%20one%20sentence%3A%20what%20is%20the%20committed%20capital%20in%20the%20Executive%20Summary%3F",
+   "app_url": "https://sb-74479mybp2ro.vercel.run/#chat?q=In%20one%20sentence%3A%20when%20is%20gate%20G3%20%28ODA%20go-live%29%3F&q=In%20one%20sentence%3A%20what%20is%20the%20committed%20capital%20in%20the%20Executive%20Summary%3F",
+   "started_utc": "2026-09-05T22:11:12Z",
+   "finished_utc": "2026-09-05T22:11:24Z",
+   "questions": [
+    "In one sentence: when is gate G3 (ODA go-live)?",
+    "In one sentence: what is the committed capital in the Executive Summary?"
+   ],
+   "answered_messages_visible": 2,
+   "pending": 0,
+   "error_messages": 0,
+   "answers": [
+    {
+     "chars": 125,
+     "has_sources_line": true,
+     "on_screen_px": 87,
+     "height_px": 87,
+     "preview": "Gate G3 (ODA go-live) is scheduled for Week 12, Friday 25 December 2026.\n\nSources: Implementation plan \u00b7 G3 ODA go-live!"
+    },
+    {
+     "chars": 180,
+     "has_sources_line": true,
+     "on_screen_px": 105,
+     "height_px": 111,
+     "preview": "Committed capital is AED 13.96M for the Proprietary cases and AED 20.40M for the Open-source cases, with or without a fa"
+    }
+   ],
+   "both_answers_on_screen": true,
+   "both_answers_fully_on_screen": false,
+   "chat_query_http": [
+    200,
+    200
+   ],
+   "chat_query_grounding": [
+    "grounded",
+    "grounded"
+   ],
+   "cookies": {
+    "cdp_storage_cookies": 0,
+    "cdp_network_cookies": 0,
+    "document_cookie": ""
+   },
+   "console_errors": 0,
+   "page_errors": 0,
+   "excluded_noise_entries": [
+    "[network] Failed to load resource: the server responded with a status of 404 () https://sb-74479mybp2ro.vercel.run/favicon.ico"
+   ],
+   "failed_requests": [
+    "404 https://sb-74479mybp2ro.vercel.run/favicon.ico"
+   ],
+   "iframe_session_attached": false,
+   "result": "PASS",
+   "screenshot_file": "after-phone-390x844.png"
+  },
+  "iframe_desktop": {
+   "mode": "iframe",
+   "viewport": "1440x900",
+   "navigated_url": "http://127.0.0.1:8099/embed.html",
+   "app_url": "https://sb-74479mybp2ro.vercel.run/#chat?q=In%20one%20sentence%3A%20when%20is%20gate%20G3%20%28ODA%20go-live%29%3F&q=In%20one%20sentence%3A%20what%20is%20the%20committed%20capital%20in%20the%20Executive%20Summary%3F",
+   "started_utc": "2026-09-05T22:11:38Z",
+   "finished_utc": "2026-09-05T22:11:49Z",
+   "questions": [
+    "In one sentence: when is gate G3 (ODA go-live)?",
+    "In one sentence: what is the committed capital in the Executive Summary?"
+   ],
+   "answered_messages_visible": 2,
+   "pending": 0,
+   "error_messages": 0,
+   "answers": [
+    {
+     "chars": 234,
+     "has_sources_line": true,
+     "on_screen_px": 152,
+     "height_px": 152,
+     "preview": "Gate G3 (ODA go-live) is scheduled for Friday 25 December 2026, in Week 12; all dates are indicative pending MoU signatu"
+    },
+    {
+     "chars": 231,
+     "has_sources_line": true,
+     "on_screen_px": 152,
+     "height_px": 152,
+     "preview": "Committed capital is AED 13.96M for either proprietary option and AED 20.40M for either open-source option in the UAE-on"
+    }
+   ],
+   "both_answers_on_screen": true,
+   "both_answers_fully_on_screen": true,
+   "chat_query_http": [
+    200,
+    200
+   ],
+   "chat_query_grounding": [
+    "unreadable-via-CDP-in-OOPIF",
+    "grounded"
+   ],
+   "cookies": {
+    "cdp_storage_cookies": 0,
+    "cdp_network_cookies": 0,
+    "document_cookie": ""
+   },
+   "console_errors": 0,
+   "page_errors": 0,
+   "excluded_noise_entries": [],
+   "failed_requests": [],
+   "iframe_session_attached": true,
+   "result": "PASS",
+   "screenshot_file": "after-iframe-desktop-1440x900.png"
+  },
+  "iframe_phone": {
+   "mode": "iframe",
+   "viewport": "390x844",
+   "navigated_url": "http://127.0.0.1:8098/embed.html",
+   "app_url": "https://sb-74479mybp2ro.vercel.run/#chat?q=In%20one%20sentence%3A%20when%20is%20gate%20G3%20%28ODA%20go-live%29%3F&q=In%20one%20sentence%3A%20what%20is%20the%20committed%20capital%20in%20the%20Executive%20Summary%3F",
+   "started_utc": "2026-09-05T22:11:50Z",
+   "finished_utc": "2026-09-05T22:12:02Z",
+   "questions": [
+    "In one sentence: when is gate G3 (ODA go-live)?",
+    "In one sentence: what is the committed capital in the Executive Summary?"
+   ],
+   "answered_messages_visible": 2,
+   "pending": 0,
+   "error_messages": 0,
+   "answers": [
+    {
+     "chars": 232,
+     "has_sources_line": true,
+     "on_screen_px": 100,
+     "height_px": 152,
+     "preview": "Gate G3 (ODA go-live) is scheduled for Week 12, Friday 25 December 2026, with all dates indicative pending MoU signature"
+    },
+    {
+     "chars": 190,
+     "has_sources_line": true,
+     "on_screen_px": 100,
+     "height_px": 134,
+     "preview": "Committed capital is AED 13.96M under either proprietary option and AED 20.40M under either open-source option in the UA"
+    }
+   ],
+   "both_answers_on_screen": true,
+   "both_answers_fully_on_screen": false,
+   "chat_query_http": [
+    200,
+    200
+   ],
+   "chat_query_grounding": [
+    "unreadable-via-CDP-in-OOPIF",
+    "grounded"
+   ],
+   "cookies": {
+    "cdp_storage_cookies": 0,
+    "cdp_network_cookies": 0,
+    "document_cookie": ""
+   },
+   "console_errors": 0,
+   "page_errors": 0,
+   "excluded_noise_entries": [],
+   "failed_requests": [],
+   "iframe_session_attached": true,
+   "result": "PASS",
+   "screenshot_file": "after-iframe-phone-390x844.png"
+  }
+ },
+ "server_log_tally_after_runs": {
+  "answered": 35,
+  "grounded": 35,
+  "degraded": 0,
+  "unavailable": 0,
+  "upstream_create_session_201": 18,
+  "upstream_query_200": 35,
+  "upstream_non_2xx": 0
+ },
+ "after_screenshot_urls": {
+  "desktop": "https://raw.githubusercontent.com/mk42-ai/athar-jv-interactive-plan/qa/pr-2-verification-2026-09-05/docs/qa/pr-2-verification-2026-09-05/after-desktop-1440x900.png",
+  "phone": "https://raw.githubusercontent.com/mk42-ai/athar-jv-interactive-plan/qa/pr-2-verification-2026-09-05/docs/qa/pr-2-verification-2026-09-05/after-phone-390x844.png",
+  "iframe_desktop": "https://raw.githubusercontent.com/mk42-ai/athar-jv-interactive-plan/qa/pr-2-verification-2026-09-05/docs/qa/pr-2-verification-2026-09-05/after-iframe-desktop-1440x900.png",
+  "iframe_phone": "https://raw.githubusercontent.com/mk42-ai/athar-jv-interactive-plan/qa/pr-2-verification-2026-09-05/docs/qa/pr-2-verification-2026-09-05/after-iframe-phone-390x844.png"
+ },
+ "after_screenshot_github_blob_urls": {
+  "desktop": "https://github.com/mk42-ai/athar-jv-interactive-plan/blob/qa/pr-2-verification-2026-09-05/docs/qa/pr-2-verification-2026-09-05/after-desktop-1440x900.png?raw=true",
+  "phone": "https://github.com/mk42-ai/athar-jv-interactive-plan/blob/qa/pr-2-verification-2026-09-05/docs/qa/pr-2-verification-2026-09-05/after-phone-390x844.png?raw=true",
+  "iframe_desktop": "https://github.com/mk42-ai/athar-jv-interactive-plan/blob/qa/pr-2-verification-2026-09-05/docs/qa/pr-2-verification-2026-09-05/after-iframe-desktop-1440x900.png?raw=true",
+  "iframe_phone": "https://github.com/mk42-ai/athar-jv-interactive-plan/blob/qa/pr-2-verification-2026-09-05/docs/qa/pr-2-verification-2026-09-05/after-iframe-phone-390x844.png?raw=true"
+ },
+ "caveats": [
+  "PR #2 was already merged (2026-09-05T16:42:48Z) before this run; the merge step could not be re-performed \u2014 this run re-verified the merged head and records the existing merge commit.",
+  "Corpus: 2 of the 3 documents were provisioned; the v13 financial-model workbook is not in the On Demand file directory, so the app reports it as \"missing\" (grounded answers come from the Executive Summary PDF and the Oct 2026\u2013Mar 2027 implementation plan workbook).",
+  "Console: the only browser console entry in the top-level runs is Chrome's automatic /favicon.ico 404 (the repo ships no favicon); it is excluded under the ui-validator's standard noise filter. App-originated console errors = 0 in all four runs.",
+  "Iframe runs: the first /api/chat/query response body per iframe could not be read back through CDP (OOPIF quirk: \"No resource with given identifier found\"); its grounded status is evidenced by the rendered Sources line and by the server log (35/35 answers status=grounded).",
+  "Security note: with a non-dot env.local file at the project root the Vite dev server serves it publicly (verified locally: GET /env.local returned the file); only .env is denied. env.local was therefore NOT shipped to the sandbox."
+ ]
+}
