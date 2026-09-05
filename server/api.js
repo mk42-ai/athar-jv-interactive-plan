@@ -240,7 +240,9 @@ export function createApiApp({ presentationPreview = false } = {}) {
     res.json({ ok: true, configured: isConfigured(), build: process.env.ATHAR_BUILD_SHA || 'workspace',
       checkedAt: new Date().toISOString(), reviewAccessConfigured: access.configured,
       // No key fragments, provider session identifiers, secret paths, or confidential metadata.
-      narration: { provider: 'elevenlabs', voice: 'River', playback: 'verified-prebaked' } });
+      // Reported from the installed clip manifest, never a hard-coded provider name.
+      narration: { provider: store.manifest?.provider || 'elevenlabs', voice: store.manifest?.voice || 'River',
+        model: store.manifest?.model || null, playback: 'verified-prebaked' } });
   });
 
   // ---- Voice -----------------------------------------------------------------

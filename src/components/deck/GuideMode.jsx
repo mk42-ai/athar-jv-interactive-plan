@@ -53,7 +53,7 @@ export function GuideOverlay({ guide }) {
 }
 
 /** A persistent, in-flow rail. No change to the 21-moment playback engine. */
-export function GuideBar({ guide, page = 1, visible = true }) {
+export function GuideBar({ guide, page = 1, visible = true, sectionLabel = '' }) {
   const { active, playing, status, source, sourceLabel, clip, error, step, idx, total } = guide;
   const [expanded, setExpanded] = useState(false);
   const [infoOpen, setInfoOpen] = useState(false);
@@ -95,7 +95,10 @@ export function GuideBar({ guide, page = 1, visible = true }) {
           <button className="guide-btn" onClick={guide.skip} disabled={!active} aria-label="Skip to next moment" data-testid="guide-skip"><Icon name="next" size={15} /></button>
         </div>
         <div className="guide-section">
-          <span className="guide-pos" data-testid="guide-position">{active ? `${current}/${total} · Slide ${step?.slide}` : `${total} moments · Guided walkthrough`}</span>
+          <span className="guide-section-label" data-testid="guide-section-label">
+            <b title={active && step ? step.slideTitle || `Slide ${step.slide}` : sectionLabel || 'Guided walkthrough'}>{active && step ? step.slideTitle || `Slide ${step.slide}` : sectionLabel || 'Guided walkthrough'}</b>
+            <span className="guide-pos" data-testid="guide-position">{active ? `${current}/${total} · Slide ${step?.slide}` : `${total} moments · Guided walkthrough`}</span>
+          </span>
           <p className="guide-caption" data-testid="guide-caption" title={active && step ? `${step.label}. ${step.text}` : undefined}>{active && step ? <><b>{step.label}.</b> {step.text}</> : 'Listen to the plan, at your pace.'}</p>
         </div>
         <button className="guide-expand" onClick={() => setExpanded((v) => !v)} aria-expanded={expanded} aria-controls="guide-caption-full" aria-label={expanded ? 'Collapse full transcript' : 'Show full transcript'} data-testid="guide-expand"><span>Transcript</span><Icon name={expanded ? 'up' : 'down'} size={14} /></button>

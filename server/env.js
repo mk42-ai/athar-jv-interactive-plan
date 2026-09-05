@@ -39,7 +39,9 @@ export function loadDotEnv() {
   loaded = { files: [], applied: [], source: {} }; // source[KEY] = 'process.env' | '.env' | 'env.local'
   for (const name of Object.keys(process.env)) if (process.env[name]) loaded.source[name] = 'process.env';
   const configuredFile = process.env.ATHAR_CONFIG_FILE;
-  const files = configuredFile ? [configuredFile, ...SECRET_FILES] : SECRET_FILES;
+  // ATHAR_SKIP_DOTENV=1 keeps the test suite hermetic: a developer's real .env (or env.local) must
+  // never leak host configuration into a synthetic fixture and silently change what a test observes.
+  const files = process.env.ATHAR_SKIP_DOTENV === '1' ? [] : configuredFile ? [configuredFile, ...SECRET_FILES] : SECRET_FILES;
   for (const file of files) {
     const p = path.isAbsolute(file) ? file : path.join(ROOT, file);
     try {
