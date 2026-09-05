@@ -22,13 +22,13 @@
   const rect = e => {if(!e)return null;const r=e.getBoundingClientRect();return {x:round(r.x),y:round(r.y),w:round(r.width),h:round(r.height),r:round(r.right),b:round(r.bottom)};};
   const inside = (a,b,t=1.1) => !!(a&&b&&a.x>=b.x-t&&a.y>=b.y-t&&a.r<=b.r+t&&a.b<=b.b+t);
   const area = (a,b) => a&&b ? round(Math.max(0,Math.min(a.r,b.r)-Math.max(a.x,b.x))*Math.max(0,Math.min(a.b,b.b)-Math.max(a.y,b.y))) : 0;
-  const visible = e => {if(!e||!e.getClientRects().length)return false;for(let n=e;n;n=n.parentElement){const c=getComputedStyle(n);if(c.display==='none'||c.visibility==='hidden'||parseFloat(c.opacity)===0||n.hidden)return false;if(n.tagName==='DETAILS'&&!n.open&&!n.querySelector(':scope > summary')?.contains(e))return false;}return true;};
-  const id = e => e ? e.dataset.testid || (e.id && /^[a-z-]+$/.test(e.id) ? '#'+e.id : '') || (e.tagName.toLowerCase()+'.'+[...e.classList].filter(x=>/^[a-z][a-z0-9-]{0,40}$/.test(x)).slice(0,3).join('.')) : null;
+  const visible = e => {if(!(e instanceof Element)||!e.getClientRects().length)return false;for(let n=e;n;n=n.parentElement){const c=getComputedStyle(n);if(c.display==='none'||c.visibility==='hidden'||parseFloat(c.opacity)===0||n.hidden)return false;if(n.tagName==='DETAILS'&&!n.open&&!n.querySelector(':scope > summary')?.contains(e))return false;}return true;};
+  const id = e => e instanceof Element ? e.dataset.testid || (e.id && /^[a-z-]+$/.test(e.id) ? '#'+e.id : '') || (e.tagName.toLowerCase()+'.'+[...e.classList].filter(x=>/^[a-z][a-z0-9-]{0,40}$/.test(x)).slice(0,3).join('.')) : null;
   const rgb = s => {const m=s.match(/[\d.]+/g);return m ? m.map(Number) : [0,0,0,0];};
   const composite = (f,b) => {const a=f.length>3?f[3]:1;return [0,1,2].map(i=>f[i]*a+b[i]*(1-a));};
   const lum = c => c.slice(0,3).map(x=>{x/=255;return x<=.04045?x/12.92:((x+.055)/1.055)**2.4;}).reduce((s,v,i)=>s+v*[.2126,.7152,.0722][i],0);
   const textStyle = e => {if(!e)return null;const c=getComputedStyle(e),chain=[];for(let n=e;n;n=n.parentElement)chain.push(n);let bg=[255,255,255];for(const n of chain.reverse())bg=composite(rgb(getComputedStyle(n).backgroundColor),bg);const fg=composite(rgb(c.color),bg),a=lum(fg),b=lum(bg);return {fontPx:parseFloat(c.fontSize),lineHeight:c.lineHeight,fontWeight:c.fontWeight,color:c.color,effectiveBackground:bg.map(round),basicContrast:round((Math.max(a,b)+.05)/(Math.min(a,b)+.05)),contrastCaveat:'CSS sRGB compositing; no raster glyph/image/opacity gradient validation',letterSpacing:c.letterSpacing,overflow:c.overflow,whiteSpace:c.whiteSpace,lineClamp:c.webkitLineClamp};};
-  const measure = e => {if(!e)return null;const r=rect(e),c=getComputedStyle(e),cx=r.x+r.w/2,cy=r.y+r.h/2;let clip={x:0,y:0,r:innerWidth,b:innerHeight},anc=[];for(let n=e.parentElement;n;n=n.parentElement){const cs=getComputedStyle(n);if(/hidden|clip|auto|scroll/.test(cs.overflowX+' '+cs.overflowY)){const nr=rect(n);anc.push({id:id(n),rect:nr,overflowX:cs.overflowX,overflowY:cs.overflowY});if(/hidden|clip|auto|scroll/.test(cs.overflowX)){clip.x=Math.max(clip.x,nr.x);clip.r=Math.min(clip.r,nr.r);}if(/hidden|clip|auto|scroll/.test(cs.overflowY)){clip.y=Math.max(clip.y,nr.y);clip.b=Math.min(clip.b,nr.b);}}}const hit=cx>=0&&cy>=0&&cx<innerWidth&&cy<innerHeight?document.elementFromPoint(cx,cy):null;return {id:id(e),bounds:r,visible:visible(e),tabIndex:e.tabIndex,disabled:!!e.disabled,position:c.position,pointerEvents:c.pointerEvents,clipped:!inside(r,clip),visibleAreaFraction:round(area(r,clip)/Math.max(1,r.w*r.h)),hitTarget:id(hit),centerHit:!!(hit&&(e===hit||e.contains(hit))),clipAncestors:anc,text:textStyle(e)};};
+  const measure = e => {if(!(e instanceof Element))return null;const r=rect(e),c=getComputedStyle(e),cx=r.x+r.w/2,cy=r.y+r.h/2;let clip={x:0,y:0,r:innerWidth,b:innerHeight},anc=[];for(let n=e.parentElement;n;n=n.parentElement){const cs=getComputedStyle(n);if(/hidden|clip|auto|scroll/.test(cs.overflowX+' '+cs.overflowY)){const nr=rect(n);anc.push({id:id(n),rect:nr,overflowX:cs.overflowX,overflowY:cs.overflowY});if(/hidden|clip|auto|scroll/.test(cs.overflowX)){clip.x=Math.max(clip.x,nr.x);clip.r=Math.min(clip.r,nr.r);}if(/hidden|clip|auto|scroll/.test(cs.overflowY)){clip.y=Math.max(clip.y,nr.y);clip.b=Math.min(clip.b,nr.b);}}}const hit=cx>=0&&cy>=0&&cx<innerWidth&&cy<innerHeight?document.elementFromPoint(cx,cy):null;return {id:id(e),bounds:r,visible:visible(e),tabIndex:e.tabIndex,disabled:!!e.disabled,position:c.position,pointerEvents:c.pointerEvents,clipped:!inside(r,clip),visibleAreaFraction:round(area(r,clip)/Math.max(1,r.w*r.h)),hitTarget:id(hit),centerHit:!!(hit&&(e===hit||e.contains(hit))),clipAncestors:anc,text:textStyle(e)};};
   const audio = () => window.__atharGuide?.audio;
   const state = () => {const a=audio(),bar=q(S.rail),src=q(S.source);return {step:bar?.dataset.step||null,slide:Number(bar?.dataset.slide)||null,status:bar?.dataset.status||null,canvasPage:Number(q(S.canvas)?.dataset.page)||null,audio:a?{currentTime:round(a.currentTime),duration:round(a.duration),paused:a.paused,ended:a.ended,muted:a.muted,rate:a.playbackRate,readyState:a.readyState,errorCode:a.error?.code||null}:null,source:src?{source:src.dataset.source,clipSource:src.dataset.clipSource,file:src.dataset.clipFile,verified:src.dataset.verified,sha256:src.dataset.clipSha}:null};};
   const click = async (name,selector,settle=450) => {const e=q(selector);record(name,{selector,before:state(),target:measure(e)});if(!e){check(name+'-target',false,{missing:true});return false;}e.click();await sleep(settle);record(name+'-settled',{after:state()});return true;};
@@ -112,6 +112,16 @@
       document.documentElement.scrollWidth<=innerWidth+1,
       {separateMobileViews:separate,canvasVisible:visible(c),chatVisible:visible(chat)});
   };
+  const STARTERS = Object.freeze([
+    'Compare the UAE base case with international expansion.',
+    'What capital decisions still need agreement?',
+    'Which implementation milestones depend on those decisions?'
+  ]);
+  const syntheticEscape = async node => {
+    must('escape-event-target-'+ev.actions.length,node instanceof Element);
+    node.dispatchEvent(new KeyboardEvent('keydown',{key:'Escape',code:'Escape',bubbles:true,cancelable:true}));
+    record('synthetic-escape',{synthetic:true,trustedKeyboardTest:false});await sleep(150);
+  };
   let injectedTrigger=null;
   const cleanProof = async () => {
     let clean=false;
@@ -121,7 +131,7 @@
       const stop=qa(`${S.chat} form button`).find(b=>b.type==='button'&&norm(b.textContent)==='Stop');
       if(stop){await activate(stop,'stop-before-proof');await wait(()=>!qa(`${S.chat} form button`).some(b=>norm(b.textContent)==='Stop'),15000);}
       const close=q(`${S.citationPanel} button[aria-label*="Close"]`);if(close)await activate(close,'close-source-before-proof');
-      const reset=q(`${S.chat} button[aria-label="Start a new session"]`);if(reset&&!reset.disabled)await activate(reset,'reset-real-session-before-proof');
+      const reset=q(`${S.chat} button[aria-label="Start a new session"]`);if(RUN.resumeMode==='live')must('live-real-session-reset',reset instanceof HTMLButtonElement&&!reset.disabled);if(reset&&!reset.disabled)await activate(reset,'reset-real-session-before-proof');
       if(q(S.input))setValue(q(S.input),'');
       await present();if(audio()&&!audio().paused)await activate(q(S.pause),'pause-before-proof');
       if(q(S.expand)?.getAttribute('aria-expanded')==='true')await activate(q(S.expand),'collapse-transcript-before-proof');
@@ -194,18 +204,143 @@
     injectedTrigger.remove();injectedTrigger=null;
     record('source-case-complete',{index,kind:ref.kind});
   };
-  const realQuery = async (scope,documentId) => {
-    await activate(q(`input[name="chat-answer-scope"][value="${scope}"]`),'select-scope-'+scope);
-    const prior=queryCalls(await ledger()).length;
-    setValue(q(S.input),scope==='all'?'What capital decisions still need agreement?':'Summarize this document with source citations.');
-    must('scope-'+scope+'-send-ready',await wait(()=>q(S.send)&&!q(S.send).disabled));
-    await activate(q(S.send),'send-real-'+scope);
+  const sourceLocation = (value,kind) => {
+    if(!value||typeof value!=='object')return null;
+    if(kind==='xlsx')return typeof value.sheet==='string'&&typeof value.range==='string'?{sheet:value.sheet,range:value.range}:null;
+    const key=kind==='pptx'?'slide':'page';return Number.isInteger(value[key])&&value[key]>0?{[key]:value[key]}:null;
+  };
+  const sameLocation = (a,b,kind) => {
+    const x=sourceLocation(a,kind),y=sourceLocation(b,kind);return !!x&&!!y&&JSON.stringify(x)===JSON.stringify(y);
+  };
+  const locationDisplayed = view => norm(q('[data-testid="source-location"]')?.textContent)===
+    (view.kind==='xlsx'?`${view.location.sheet}!${view.location.range}`:`${view.kind==='pptx'?'Slide':'Page'} ${view.location[view.kind==='pptx'?'slide':'page']}`);
+  const cellAddress = address => {
+    const m=/^([A-Z]{1,3})([1-9][0-9]*)$/.exec(address||'');
+    return m?{column:[...m[1]].reduce((v,c)=>v*26+c.charCodeAt(0)-64,0),row:Number(m[2])}:null;
+  };
+  const cellBounds = range => {
+    const parts=typeof range==='string'?range.split(':'):[],a=cellAddress(parts[0]),b=cellAddress(parts[1]||parts[0]);
+    return parts.length<=2&&a&&b&&a.row<=b.row&&a.column<=b.column?{first:a,last:b,count:(b.row-a.row+1)*(b.column-a.column+1)}:null;
+  };
+  const sourceReady = () => q('[data-testid="source-viewer"]')?.getAttribute('aria-busy')==='false'&&!q('[data-testid="source-viewer"] [role="alert"]');
+  const sourceCanvas = () => q('[data-testid="source-pdf-canvas"][data-page]');
+  const renderedSource = view => {
+    if(!sourceReady()||!locationDisplayed(view))return false;
+    if(view.kind==='xlsx')return visible(q('[data-testid="source-sheet"]'));
+    const c=sourceCanvas();return q('[data-testid="source-pdf"]')?.dataset.state==='ready'&&visible(c)&&
+      c instanceof HTMLCanvasElement&&c.width>0&&c.height>0&&Number(c.dataset.page)===view.previewPage;
+  };
+  let liveNavigationTested=false;
+  const actualCitation = async (citation,index,stem,message) => {
+    const prefix=`${stem}-citation-${index}`,citationId=citation.id;
+    const triggers=[...message.querySelectorAll('a.inline-citation,button.inline-citation,button[data-citation-id]')];
+    const trigger=triggers.find(node=>{
+      if(node instanceof HTMLAnchorElement){const url=new URL(node.href,location.href);return url.origin===location.origin&&url.pathname==='/api/citations/'+citationId&&!url.search&&!url.hash;}
+      return node instanceof HTMLButtonElement&&node.dataset.citationId===citationId;
+    });
+    must(prefix+'-actual-inline-trigger',trigger instanceof HTMLElement&&message.contains(trigger)&&trigger.isConnected);
+    // This is the anchor/button already rendered in the REAL answer, never a
+    // fixture or a fabricated answer. Click the app's existing onClick route.
+    trigger.scrollIntoView({block:'nearest'});
+    const original=await getJSON('/api/citations/'+citationId),base='/api/citations/'+citationId+'/view';
+    await activate(trigger,prefix+'-open');
+    must(prefix+'-viewer-open',await wait(()=>visible(q(S.citationPanel))&&sourceReady(),25000));
+    const view=await getJSON(base),originalDocumentId=original.documentId||original.document?.id;
+    must(prefix+'-original-identity-location',view.citationId===citationId&&
+      (original.id===citationId||original.citationId===citationId)&&view.documentId===originalDocumentId&&
+      ['pdf','pptx','xlsx'].includes(view.kind)&&!!view.originalSha256&&sameLocation(view.location,original.location,view.kind)&&
+      (!view.initialLocation||sameLocation(view.initialLocation,original.location,view.kind)),
+      {citationId,documentId:view.documentId,location:sourceLocation(view.location,view.kind)});
+    must(prefix+'-original-excerpt',!!norm(original.excerpt)&&norm(q(`${S.citationPanel} blockquote`)?.textContent)===norm(original.excerpt));
+    must(prefix+'-source-rendered',await wait(()=>renderedSource(view),25000),{citationId,location:sourceLocation(view.location,view.kind)});
+    must(prefix+'-exact-location-label',locationDisplayed(view));
+    if(view.kind==='xlsx'){
+      const rows=Array.isArray(view.rows)?view.rows:[],cells=rows.flatMap(row=>Array.isArray(row.cells)?row.cells:[]);
+      const grid=q('[data-testid="source-sheet"]'),bounds=cellBounds(original.location.range),nodes=grid?[...grid.querySelectorAll('[data-cell]')]:[];
+      const insideBounds=address=>{const c=cellAddress(address);return !!c&&!!bounds&&c.row>=bounds.first.row&&c.row<=bounds.last.row&&c.column>=bounds.first.column&&c.column<=bounds.last.column;};
+      const addresses=new Set(cells.map(c=>c.address));
+      must(prefix+'-xlsx-bounds-highlights',!!grid&&!!bounds&&bounds.count<=200&&cells.length>0&&addresses.size===cells.length&&
+        nodes.length===cells.length&&nodes.every(n=>addresses.has(n.dataset.cell))&&
+        view.requestedCellCount===bounds.count&&cells.filter(c=>insideBounds(c.address)).length===bounds.count&&
+        cells.every(c=>{const node=grid.querySelector(`[data-cell="${CSS.escape(c.address)}"]`);return !!node&&!!c.highlight===insideBounds(c.address)&&node.dataset.highlighted===String(insideBounds(c.address));}),
+        {citationId,location:sourceLocation(view.location,view.kind),cells:cells.length,requestedCells:bounds?.count||0,highlighted:cells.filter(c=>c.highlight).length});
+    }else{
+      must(prefix+'-pdf-preview-page',view.preview?.available===true&&view.preview.url===`/api/sources/${view.documentId}/preview`&&
+        view.previewPage===original.location[view.kind==='pptx'?'slide':'page']&&Number(sourceCanvas()?.dataset.page)===view.previewPage,{citationId,page:view.previewPage});
+      const probe=await ledger();
+      must(prefix+'-protected-preview-http',probe.requests.some(r=>r.kind==='source'&&r.path===view.preview.url&&r.method==='GET'&&r.status===200&&r.complete&&r.byteCount>5));
+    }
+    if(!liveNavigationTested){
+      const control=q(view.kind==='xlsx'?'[data-testid="source-range-input"]':'[data-testid="source-page-select"]');
+      must('live-source-navigation-control',control instanceof HTMLElement&&visible(control));
+      control.focus({preventScroll:true});must('live-source-navigation-initial-focus',document.activeElement===control);
+      let moved;
+      if(view.kind==='xlsx'){
+        const cells=view.rows.flatMap(row=>row.cells),cell=cells.find(c=>c.highlight&&`${c.address}:${c.address}`!==view.location.range)||cells.find(c=>c.highlight)||cells[0];
+        must('live-source-cell-navigation-available',!!cell&&!!cellAddress(cell.address));
+        const range=`${cell.address}:${cell.address}`;setValue(control,range);
+        must('live-source-range-form',control.form instanceof HTMLFormElement);
+        control.form.requestSubmit();record('live-source-range-submit',{synthetic:true});
+        moved=await getJSON(base+'?'+new URLSearchParams({sheet:view.location.sheet,range}));
+        must('live-source-navigated',moved.location.sheet===view.location.sheet&&moved.location.range===range&&moved.requestedCellCount===1&&await wait(()=>renderedSource(moved)&&
+          qa('[data-testid="source-sheet"] [data-highlighted="true"]').length===1&&
+          q(`[data-testid="source-sheet"] [data-cell="${CSS.escape(cell.address)}"]`)?.dataset.highlighted==='true',20000));
+      }else{
+        const key=view.kind==='pptx'?'slide':'page',max=view.availableLocations?.[key==='slide'?'slideCount':'pageCount'];
+        const next=view.location[key]<max?view.location[key]+1:view.location[key]-1;
+        must('live-source-page-navigation-available',max>1&&next>0);setValue(control,String(next));
+        moved=await getJSON(base+'?'+new URLSearchParams({[key]:next}));
+        must('live-source-navigated',moved.location[key]===next&&moved.previewPage===next&&await wait(()=>renderedSource(moved)&&Number(sourceCanvas()?.dataset.page)===next&&control.value===String(next),25000));
+      }
+      must('live-source-navigation-retains-focus',await wait(()=>control.isConnected&&document.activeElement===control&&
+        q(view.kind==='xlsx'?'[data-testid="source-range-input"]':'[data-testid="source-page-select"]')===control,3000),
+        {sameNode:control.isConnected,sameFocusedNode:document.activeElement===control,location:sourceLocation(moved.location,view.kind)});
+      await activate(q('[data-testid="source-return-citation"]'),'live-source-return');
+      must('live-source-return-exact-citation',await wait(()=>renderedSource(view),25000));
+      const chat=q(S.chat);control.focus({preventScroll:true});await syntheticEscape(control);
+      must('live-source-escape-retains-chat-and-trigger',await wait(()=>!q(S.citationPanel)&&q(S.chat)===chat&&visible(chat)&&document.activeElement===trigger,5000),
+        {sameChat:q(S.chat)===chat,exactTrigger:document.activeElement===trigger});
+      liveNavigationTested=true;
+    }else{
+      await activate(q(`${S.citationPanel} button[aria-label*="Close"]`),prefix+'-close');
+      must(prefix+'-close-focus',await wait(()=>!q(S.citationPanel)&&visible(q(S.chat))&&document.activeElement===trigger,5000));
+    }
+    must(prefix+'-verified',true,{citationId,documentId:view.documentId,location:sourceLocation(view.location,view.kind)});
+    record('live-citation-complete',{query:stem,index,citationId,modelReturnedCitation:true});
+    return citationId;
+  };
+  const realQuery = async (scope,documentId,question,stem) => {
+    await ask();await activate(q(`input[name="chat-answer-scope"][value="${scope}"]`),'select-'+stem);
+    if(scope==='this')must(stem+'-selected-executive',q(S.filter)?.value===documentId);
+    const prior=queryCalls(await ledger()).length,previousMessages=new Set(qa(`${S.chat} .msg.assistant`));
+    setValue(q(S.input),question);
+    must(stem+'-exact-question-draft',q(S.input)?.value===question);
+    must(stem+'-send-ready',await wait(()=>q(S.send)&&!q(S.send).disabled));
+    await activate(q(S.send),'send-real-'+stem);
     let calls=[];
-    must('scope-'+scope+'-request-completed',await wait(async()=>{calls=queryCalls(await ledger());return calls.length>prior&&(calls.at(-1).complete||calls.at(-1).transportFailed);},110000));
-    const r=calls.at(-1);await wait(()=>q('.msg.assistant.done')||q('.msg.assistant.error'),4000);
-    check('scope-'+scope+'-real-request',calls.length===prior+1&&r.documentId===documentId&&r.slide===null&&r.status===200&&r.complete&&!r.transportFailed&&r.answerNonempty&&r.doneFrameCount===1&&r.errorFrameCount===0&&!r.metadataInvalid&&!!q('.msg.assistant.done .md')&&!q('.msg.assistant.error'),{requests:calls.length-prior,status:r.status,documentMatches:r.documentId===documentId,slideCleared:r.slide===null});
-    const ids=r.citations||[];
-    check('scope-'+scope+'-citations-real',ids.length>0&&ids.every(c=>c.urlMatchesId&&r.retrievedIds.includes(c.id)&&qa('.msg.assistant.done a.inline-citation').some(a=>a.getAttribute('href')==='/api/citations/'+c.id)),{count:ids.length});
+    must(stem+'-request-completed',await wait(async()=>{calls=queryCalls(await ledger());return calls.length>prior&&(calls.at(-1).complete||calls.at(-1).transportFailed);},110000));
+    const r=calls.at(-1);must(stem+'-exact-question-request',r.questionContractId===stem);let message;
+    const finished=await wait(()=>{message=qa(`${S.chat} .msg.assistant`).find(n=>!previousMessages.has(n));return message?.classList.contains('done')||message?.classList.contains('error');},5000);
+    must(stem+'-real-request',finished&&calls.length===prior+1&&r.documentId===documentId&&r.slide===null&&r.status===200&&r.complete&&!r.transportFailed&&
+      r.answerNonempty&&r.doneFrameCount===1&&r.errorFrameCount===0&&!r.metadataInvalid&&message instanceof HTMLElement&&
+      message.classList.contains('done')&&!message.classList.contains('error')&&!!norm(message.querySelector('.md')?.textContent),
+      {requests:calls.length-prior,status:r.status,documentMatches:r.documentId===documentId,slideCleared:r.slide===null});
+    const ids=Array.isArray(r.citations)?r.citations:[],retrieved=Array.isArray(r.retrievedIds)?r.retrievedIds:[];
+    must(stem+'-citations-real',ids.length>0&&ids.every(c=>typeof c.id==='string'&&/^[A-Za-z0-9_-]{1,160}$/.test(c.id)&&c.urlMatchesId&&retrieved.includes(c.id)),{count:ids.length});
+    if(stem==='live-starter-2'){
+      must('dependency-followup-same-conversation',r.sameConversationAsPrevious===true&&r.previousQueryWasCapitalStarter===true);
+      must('dependency-grounding-metadata',typeof r.groundingDependencyEstablished==='boolean');
+      const absent=r.groundingDependencyEstablished===false,answer=norm(message.querySelector('.md')?.textContent);
+      // Inspect the REAL rendered answer only. No generated substitute, exact
+      // source quotes, answer strings or conversation tokens enter evidence.
+      const missing=/\b(?:not|no|missing|absent|insufficient|cannot|can't|does not|do not|isn't|aren't|unclear)\b[^.!?]{0,200}\b(?:establish\w*|record\w*|document\w*|depend\w*|evidence|mapping|link\w*|specif\w*|explicit\w*|confirm\w*)\b|\b(?:depend\w*|evidence|mapping|link\w*)\b[^.!?]{0,120}\b(?:not|missing|absent|unavailable|unclear)\b/i.test(answer);
+      must('dependency-missing-statement-when-absent',!absent||missing,{dependencyEstablished:r.groundingDependencyEstablished,absenceDisclosureRequired:absent,absenceDisclosureRendered:missing});
+    }
+    let opened=0;
+    for(let i=0;i<ids.length;i++){await actualCitation(ids[i],i,stem,message);opened++;}
+    must(stem+'-all-returned-citations-opened',opened===ids.length&&opened>0,{returnedCount:ids.length,openedCount:opened});
+    record('live-query-complete',{query:stem,citationCount:ids.length,allCitationsOpened:opened===ids.length});
+    return true;
   };
   const resumeChecks = async () => {
     must('resume-mode-allowed',['smoke','sources','live'].includes(RUN.resumeMode));
@@ -213,9 +348,32 @@
     const provenance=q(S.source);check('provider-hidden-by-default',!!provenance&&!visible(provenance));
     await activate(q('[data-testid="guide-info"]'),'show-guide-information');
     check('provider-information-disclosure',q(S.source)===provenance&&visible(provenance)&&q('[data-testid="guide-info"]')?.getAttribute('aria-expanded')==='true');
+    const infoTrigger=q('[data-testid="guide-info"]');
+    await syntheticEscape(document.activeElement);
+    must('guide-info-escape-and-focus',await wait(()=>q(S.source)===provenance&&!visible(provenance)&&
+      infoTrigger?.getAttribute('aria-expanded')==='false'&&document.activeElement===infoTrigger,3500));
+    await activate(infoTrigger,'reopen-guide-information');
     await activate(q('[data-testid="guide-info"]'),'hide-guide-information');
     check('provider-hidden-metadata-preserved',q(S.source)===provenance&&!visible(provenance)&&provenance.dataset.source==='elevenlabs'&&provenance.dataset.verified==='true');
     if(q(S.expand)?.getAttribute('aria-expanded')!=='true')await activate(q(S.expand),'show-full-transcript');
+    // Inline DOM-only accessibility probes: no unserved QA module import.
+    const transcript=q(S.expand),labelRanges=[];
+    if(transcript instanceof Element){
+      const walker=document.createTreeWalker(transcript,NodeFilter.SHOW_TEXT);
+      for(let node=walker.nextNode();node;node=walker.nextNode())if(/transcript/i.test(node.textContent||'')){
+        const range=document.createRange();range.selectNodeContents(node);
+        for(const r of range.getClientRects())labelRanges.push({x:r.x,y:r.y,r:r.right,b:r.bottom,w:r.width,h:r.height});
+      }
+    }
+    const transcriptMeasure=measure(transcript);
+    must('transcript-label-visible-and-bounded',visible(transcript)&&/\btranscript\b/i.test(norm(transcript.textContent))&&
+      labelRanges.length>0&&!transcriptMeasure.clipped&&labelRanges.every(r=>r.w>0&&r.h>0&&inside(r,rect(transcript))&&inside(r,{x:0,y:0,r:innerWidth,b:innerHeight})),
+      {textRectCount:labelRanges.length,clipped:transcriptMeasure?.clipped??true});
+    const smallText=qa(`${S.rail} *`).filter(e=>visible(e)&&[...e.childNodes].some(n=>n.nodeType===Node.TEXT_NODE&&norm(n.textContent)))
+      .map(e=>textStyle(e)).filter(c=>c&&c.fontPx<(Number(c.fontWeight)>=700?18.667:24));
+    const goldText=smallText.filter(c=>{const f=rgb(c.color);return f[0]>f[2]+20&&f[0]>=f[1]&&f[1]>f[2]+12;});
+    must('guide-small-gold-text-contrast',smallText.length>0&&goldText.length>0&&goldText.every(c=>c.basicContrast>=4.5),
+      {tested:goldText.length,smallTextCount:smallText.length,minimumContrast:goldText.length?Math.min(...goldText.map(c=>c.basicContrast)):0,threshold:4.5});
     const items=qa(`${S.expanded} ol > li`);
     const digests=await Promise.all(items.map(async e=>[...new Uint8Array(await crypto.subtle.digest('SHA-256',new TextEncoder().encode(norm(e.querySelector('p')?.textContent))))].map(b=>b.toString(16).padStart(2,'0')).join('')));
     check('transcript-exact-original-text',Array.isArray(RUN.transcriptDigests)&&RUN.transcriptDigests.length===21&&JSON.stringify(digests)===JSON.stringify(RUN.transcriptDigests),{count:digests.length,method:'SHA256 of normalized rendered labels and complete narration vs checked-out guide module; no text retained'});
@@ -227,7 +385,7 @@
     await ask();
     let p=await ledger();const beforeQueries=queryCalls(p).length;
     must('four-real-documents',p.sources.length===4&&new Set(p.sources.map(d=>d.id)).size===4,{count:p.sources.length});
-    const expected=['Compare the UAE base case with international expansion.','What capital decisions still need agreement?','Which implementation milestones depend on those decisions?'];
+    const expected=STARTERS;
     const chips=qa(`${S.chat} .chat-empty .chip`).filter(visible);
     check('exact-three-starters',chips.length===3&&JSON.stringify(chips.map(e=>norm(e.textContent)))===JSON.stringify(expected),{visibleCount:chips.length});
     for(let i=0;i<chips.length;i++){await activate(chips[i],'starter-'+i);check('starter-'+i+'-prefill-no-send',q(S.input)?.value===expected[i]&&queryCalls(await ledger()).length===beforeQueries);}
@@ -278,7 +436,14 @@
     await activate(q('input[name="chat-answer-scope"][value="this"]'),'scope-this-draft');
     check('this-scope-restores-document',q('input[name="chat-answer-scope"][value="this"]')?.checked&&q(S.filter)?.value===executive?.id&&!visible(q(S.slideContext)));
     check('scope-draft-changes-no-request',queryCalls(await ledger()).length===beforeQueries);
-    if(RUN.resumeMode==='live'){await realQuery('this',executive.id);await realQuery('all','all');}
+    if(RUN.resumeMode==='live'){
+      must('live-executive-selected',!!executive&&q(S.filter)?.value===executive.id);
+      await realQuery('this',executive.id,'Summarize this document with source citations.','scope-this');
+      // Capital and its dependency follow-up are adjacent in the SAME session.
+      const stems=['live-starter-0','scope-all','live-starter-2'];
+      for(let i=0;i<STARTERS.length;i++)must(`live-starter-${i}-sent-and-verified`,await realQuery('all','all',STARTERS[i],stems[i]));
+      must('all-live-queries-completed',ev.actions.filter(a=>a.name==='live-query-complete').length===4&&liveNavigationTested,{completed:ev.actions.filter(a=>a.name==='live-query-complete').length});
+    }
     if(RUN.resumeMode==='sources'||RUN.resumeMode==='live'){
       must('source-fixtures-dynamic-all-kinds',Array.isArray(RUN.sourceRefs)&&new Set(RUN.sourceRefs.map(r=>r.kind)).size===3&&RUN.sourceRefs.length===4&&RUN.sourceRefs.every(r=>p.sources.some(d=>d.id===r.documentId&&d.kind===r.kind)),{count:RUN.sourceRefs?.length||0});
       for(let i=0;i<RUN.sourceRefs.length;i++)await sourceCase(RUN.sourceRefs[i],i);
@@ -325,7 +490,7 @@
       check('actual-speed',ev.audioEvents.every(e=>e.audio?.rate===1)&&a.playbackRate===1);
       await resumeChecks();
     }
-  }catch(e){ev.errors.push({utc:now(),name:e.name,message:'Harness exception; raw message intentionally omitted'});check('harness-execution',false,{error:e.name,message:'Harness exception; raw message intentionally omitted'});}
+  }catch(e){const name=e instanceof TypeError?'TypeError':e instanceof Error?'Error':'NonErrorThrow';ev.errors.push({utc:now(),name,message:'Harness exception; raw message intentionally omitted'});check('harness-execution',false,{error:name,message:'Harness exception; raw message intentionally omitted'});}
   await cleanProof();
   const d=window.__atharGuide||{};
   ev.diagSources=(d.sources||[]).map(s=>({utc:s.t?new Date(s.t).toISOString():null,moment:s.moment,slide:s.slide,source:s.source,provider:s.provider,model:s.model,voice:s.voice,file:s.file,sha256:s.sha256,verified:s.verified,httpStatus:s.httpStatus,bytes:s.bytes,duration:round(s.duration)}));
