@@ -211,6 +211,7 @@ export function createApiApp() {
     next();
   });
   api.use('/access', access.router);
+  api.use(['/guide', '/guide-audio'], (req, res, next) => process.env.ATHAR_PRIVATE_PRESENTATION === '1' ? access.requireAccess(req, res, next) : next());
   api.use(evidence.router);
   // Every user-generated voice/chat operation is authorized; the narrated public deck is unchanged.
   api.use('/voice', (req, res, next) => {
@@ -414,6 +415,7 @@ export function createApiApp() {
   api.all(['/voice/stt', '/voice/avm', '/voice/execution/:id'], (req, res) =>
     res.status(403).json({ code: 'diagnostic_disabled', message: 'Diagnostic access is restricted to the server operator.' }));
 
+  app.locals.reviewAccess = access;
   app.use('/api', api);
   app.use('/api', (req, res) => res.status(404).json({ error: `No route ${req.method} /api${req.path}` }));
   return app;

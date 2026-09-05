@@ -713,7 +713,7 @@ def answer_content_matches(data: dict, corpus: Corpus) -> bool:
             sections.insert(0, "The selected evidence does not support an answer to this question. No factual answer has been substituted.")
         if citations:
             sections.append("### Sources\n" + "\n".join(f"{i + 1}. [{escape_markdown(corpus.chunks[c['id']]['label'])}](/api/citations/{c['id']})" for i, c in enumerate(citations)))
-        sections.append("_Validation checks source IDs, exact normalized quotes, lexical relevance and numerical consistency; derived arithmetic is computed by the server. This is not independent verification of source truth or full semantic entailment._")
+        sections.append("_Validation checks source IDs, scope and original quotations; extractive identity preserves the selected text, while legacy paraphrases receive lexical/numeric checks. Arithmetic uses source operands and is computed by the server. This is not independent verification of source truth, full semantic entailment or answer completeness._")
         answer = norm(data["answer"])
         # Server can include this fixed unsupported banner for a partial result.
         banner = "Some requested details remain unsupported by the selected evidence."

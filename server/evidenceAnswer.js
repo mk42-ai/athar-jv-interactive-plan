@@ -1,4 +1,7 @@
 import { buildRetrievalQuery, normalizeEvidenceText, validateSourceLocation } from './retrieval.js';
+import { buildEvidenceCatalog, prepareModelSelection } from './evidenceSelection.js';
+import { exactSourceSpan } from './sourceQuote.js';
+export { prepareModelSelection } from './evidenceSelection.js';
 
 export class EvidenceValidationError extends Error {
   constructor(code, message) {
@@ -38,6 +41,8 @@ function evidenceSet(retrieved) {
         || typeof chunk.documentId !== 'string' || typeof chunk.text !== 'string' || typeof chunk.label !== 'string') citationError('Invalid retrieved source record.');
     try { validateSourceLocation(chunk.kind, chunk.location); } catch { citationError('Invalid source locator.'); }
     if (retrieved?.documentId && retrieved.documentId !== 'all' && chunk.documentId !== retrieved.documentId) citationError('Evidence crosses the selected document boundary.');
+    if (retrieved?.slide != null && (chunk.kind !== 'pptx' || chunk.location.slide !== retrieved.slide)) citationError('Evidence crosses the selected slide boundary.');
+    if (retrieved?.page != null && (chunk.kind !== 'pdf' || chunk.location.page !== retrieved.page)) citationError('Evidence crosses the selected page boundary.');
     records.set(chunk.id, chunk);
   }
   const views = retrieved?.modelChunks || chunks;
@@ -55,7 +60,7 @@ function evidenceSet(retrieved) {
 export function buildEvidencePrompt({ question, retrieved, history = [], documentId = retrieved?.documentId ?? 'all' } = {}) {
   if (retrieved?.documentId && retrieved.documentId !== documentId) citationError('Prompt scope differs from retrieval scope.');
   const { records, visible } = evidenceSet(retrieved);
-  const context = buildRetrievalQuery({ question, history, documentId });
+  const context = buildRetrievalQuery({ question, history, documentId, slide: retrieved?.slide ?? null });
   let remaining = 45000;
   const evidence = [];
   for (const [id, text] of visible) {
@@ -68,8 +73,14 @@ export function buildEvidencePrompt({ question, retrieved, history = [], documen
     id: doc.id, title: String(doc.title).slice(0, 1000), kind: doc.kind, status: doc.status,
     limitations: (Array.isArray(doc.limitations) ? doc.limitations : []).map(value => String(value).slice(0, 500)).slice(0, 12),
   }));
-  return POLICY + JSON.stringify({ question: context.question, previousUserQuestion: context.contextualQuestion,
-    documentId, slide: retrieved?.slide ?? null, documents, evidence });
+  const catalog = buildEvidenceCatalog(retrieved);
+  // Original projections remain available for legacy answers; pointer IDs are request-local.
+  // All labels, titles, lines, and strings resembling prompt delimiters remain JSON data.
+  const pointerPolicy = `\nPREFERRED OUTPUT (replaces the legacy facts shape above): {"selections":[{"id":"provided psg-... ID"}],"calculations":[],"missing":[],"unsupported":false,"conflicts":[]}. Select relevant passages from selectionCatalog. NEVER retype source facts or quotations. Use only the id property in each selection. OMIT startLine/endLine entirely: select the whole provided passage, rather than counting rows. Explicit line ranges are supported only for legacy clients. The server reconstructs exact original source text and maps each passage to its original source ID and locator. Context-bearing passages are indivisible: the server retains the supplied header, units, scenario and adjacent qualifications even if you narrow the lines. Select the smallest complete supplied passage that answers all requested subjects. A short original page or slide is acceptable when it preserves table/scenario labels and covers the requested comparison; never omit requested rows just to be concise. Multiple relevant requested subjects require multiple selections; existence of a valid quotation is NOT proof of answer completeness. If the question names multiple worksheets, select evidence from EACH named worksheet rather than substituting one sheet's context for another. For how-many/count questions, select the exact titled source total for EACH requested subject (such as activities/tasks and gates), including its heading and count; select an additional passage if one quotation omits a count. If the catalog cannot establish a requested subject, declare it missing.\nFor arithmetic operands use {"value":0,"unit":"exact displayed unit","selection":{"id":"psg-..."}}. Values must be ORIGINAL finite displayed source numbers, not normalized/rounded equivalents; the server checks their exact value and computes the result. Never return a result.\nDEPENDENCY QUESTIONS: A milestone near a funding figure is not evidence of a capital dependency. Select an explicit source statement tying the named milestone/action to the relevant decision, approval or capital prerequisite. Chronological order, shared headings, and separate documents about capital and milestones do NOT prove causation. If no explicit link is supplied, quote only relevant source facts as context and state the requested dependency is not established; mark unsupported=true. Never say an agreement exists from a proposed amount or To be agreed. Different scenarios, geographies, periods or capital types are alternatives, NOT version conflicts. Only report a conflict for the SAME subject, unit, period and scenario, with both original statements; do not infer a version conflict from different values alone.\n`;
+  const marker = '\nEVIDENCE_DATA_JSON:\n';
+  return POLICY.slice(0, -marker.length) + pointerPolicy + marker + JSON.stringify({ question: context.question, previousUserQuestion: context.contextualQuestion,
+    documentId, slide: retrieved?.slide ?? null, page: retrieved?.page ?? null, documents, evidence,
+    selectionCatalog: catalog.map(({ sourceStart, sourceEnd, text, ...passage }) => passage) });
 }
 
 function textField(value, name, max = 1800) {
@@ -284,14 +295,12 @@ function subjectMatches(claim, source) {
 function validateQuote(reference, sources) {
   if (!plain(reference) || typeof reference.id !== 'string' || typeof reference.quote !== 'string') citationError('Each citation requires a source ID and an exact quote.');
   const source = sources.records.get(reference.id);
-  const normalizedQuote = normalizeEvidenceText(reference.quote);
-  const visibleText = layoutText(sources.visible.get(reference.id) || '');
-  const quoteStart = normalizeEvidenceText(visibleText).indexOf(normalizedQuote);
-  const quote = quoteStart < 0 ? normalizedQuote : visibleText.slice(quoteStart, quoteStart + normalizedQuote.length);
   if (!source || !sources.visible.has(reference.id)) citationError('Answer references an unavailable source ID.');
+  const span = exactSourceSpan(sources.visible.get(reference.id), reference.quote);
+  if (!span || !exactSourceSpan(source.text, span.quote)) citationError('Cited quote is not present in the retrieved source text.');
+  const quote = span.quote;
   if (instructionPattern.test(quote)) citationError('An embedded instruction is not factual evidence; quote only the supporting source statement.');
   if (quote.length < 6 || quote.length > 6000 || !contentWords(quote).length) citationError('A citation must quote actual subject-bearing evidence.');
-  if (!normalizeEvidenceText(source.text).includes(normalizedQuote) || quoteStart < 0) citationError('Cited quote is not present in the retrieved source text.');
   return { id: source.id, quote };
 }
 
@@ -324,8 +333,17 @@ function validateFact(item, sources, conflict = false) {
   // Exact extractive statements cannot substitute a scenario, number, or unit. This strong
   // identity proof avoids pretending a heuristic parser can prove all Office table entailment.
   // Citation validation above still rejects unprovided IDs, altered quotes and embedded instructions.
-  if (!conflict && evidence.length === 1 && normalizeEvidenceText(text) === normalizeEvidenceText(evidence[0].quote)) return { text, evidence, extractive: true };
+  if (!conflict && evidence.length === 1 && normalizeEvidenceText(text) === normalizeEvidenceText(evidence[0].quote)) return { text: evidence[0].quote, evidence, extractive: true };
   if (conflict && new Set(evidence.map(reference => reference.id)).size < 2) citationError('A source conflict must cite two distinct source records.');
+  if (conflict) {
+    const scenarioSets = evidence.map(reference => [...reference.quote.matchAll(SCENARIO_PATTERN)].map(match => match[1].toLowerCase()));
+    if (new Set(scenarioSets.flat()).size > 1) factError('Different scenarios are not evidence of a source/version conflict.');
+    const parsed = evidence.map(reference => numericTokens(reference.quote));
+    const distinctValues = parsed[0]?.numbers.some(one => parsed.slice(1).some(other => other.numbers.some(two =>
+      one.dimension === two.dimension && !exactNumber(one.value, two.value) && subjectMatches(one, two) && subjectMatches(two, one))));
+    const statedConflict = evidence.some(reference => /\b(?:conflict|contradict|supersed|inconsisten)\w*\b/i.test(reference.quote));
+    if (!distinctValues && !statedConflict) factError('A conflict requires incompatible statements about the same scoped source subject.');
+  }
   const claimWords = contentWords(text);
   if (!claimWords.length) factError('A factual claim must identify its subject.');
   const quoteWords = new Set(evidence.flatMap(reference => contentWords(reference.quote)));
@@ -353,11 +371,11 @@ function validateCalculation(item, sources) {
   if (!Array.isArray(item.operands) || item.operands.length < 2 || item.operands.length > 12
       || (['subtract', 'divide', 'percent-change'].includes(operation) && item.operands.length !== 2)) factError('Invalid arithmetic operands.');
   const operands = item.operands.map(operand => {
-    if (!plain(operand) || typeof operand.value !== 'number' || !Number.isFinite(operand.value)) factError('Arithmetic operands must be finite source numbers.');
+    if (!plain(operand) || typeof operand.value !== 'number' || !Number.isFinite(operand.value) || typeof operand.unit !== 'string' || !operand.unit.trim()) factError('Arithmetic operands must be finite source numbers.');
     const reference = validateQuote({ id: operand.sourceId, quote: operand.quote }, sources);
     const unit = unitInfo(operand.unit);
     const value = operand.value * unit.factor;
-    if (!numericTokens(reference.quote).numbers.some(number => number.dimension === unit.dimension && exactNumber(number.value, value))) factError('Calculation operand is not an exact quoted source number with compatible units.');
+    if (!numericTokens(reference.quote).numbers.some(number => number.dimension === unit.dimension && exactNumber(number.value, value) && number.rawValue === operand.value)) factError('Calculation operand is not an exact quoted source number with compatible units.');
     return { value: operand.value, sourceId: reference.id, quote: reference.quote, unit: operand.unit, baseValue: value, dimension: unit.dimension };
   });
   const outputUnit = unitInfo(item.unit);
@@ -393,6 +411,8 @@ function validateCalculation(item, sources) {
   if (!Number.isFinite(result)) factError('The arithmetic result is not finite.');
   const supportWords = new Set(operands.flatMap(operand => contentWords(operand.quote)));
   if (!contentWords(label).some(word => supportWords.has(word))) factError('The calculation label must identify a quoted source subject.');
+  const arithmeticWords = new Set(contentWords('plus less minus sum product ratio allocation percent percentage growth difference change relative baseline addition subtraction multiplication division'));
+  if (contentWords(label).some(word => !supportWords.has(word) && !arithmeticWords.has(word))) factError('A calculation label cannot introduce an unsupported factual assertion.');
   const evidence = operands.map(operand => ({ id: operand.sourceId, quote: operand.quote }));
   qualitativeGuards(label, evidence);
   const scenarios = ['base case', 'international expansion upside'].filter(scenario => evidence.some(item => item.quote.toLowerCase().includes(scenario)));
@@ -444,14 +464,14 @@ export function renderEvidenceAnswer(answer) {
   if (answer.grounding.status === 'unsupported') sections.unshift('The selected evidence does not support an answer to this question. No factual answer has been substituted.');
   else if (answer.unsupported) sections.push('Some requested details remain unsupported by the selected evidence.');
   if (answer.citations.length) sections.push(`### Sources\n${answer.citations.map((citation, i) => `${i + 1}. [${escapeMarkdown(citation.label)}](${citation.url})`).join('\n')}`);
-  sections.push('_Validation checks source IDs, exact normalized quotes, lexical relevance and numerical consistency; derived arithmetic is computed by the server. This is not independent verification of source truth or full semantic entailment._');
+  sections.push('_Validation checks source IDs, scope and original quotations; extractive identity preserves the selected text, while legacy paraphrases receive lexical/numeric checks. Arithmetic uses source operands and is computed by the server. This is not independent verification of source truth, full semantic entailment or answer completeness._');
   return sections.join('\n\n');
 }
 
 /** Fail closed before streaming; caller may attempt one model repair, not a canned success. */
 export function validateEvidenceAnswer(raw, { retrieved, question = '' } = {}) {
   const sources = evidenceSet(retrieved);
-  const data = parse(raw);
+  const data = parse((typeof raw === 'string' && /"selections"\s*:/.test(raw)) || (plain(raw) && raw.selections != null) ? prepareModelSelection(raw, retrieved) : raw);
   const facts = data.facts.map(item => validateFact(item, sources));
   const conflicts = data.conflicts.map(item => validateFact(item, sources, true));
   const calculations = data.calculations.map(item => validateCalculation(item, sources));
@@ -459,14 +479,34 @@ export function validateEvidenceAnswer(raw, { retrieved, question = '' } = {}) {
   const missing = data.missing.map(value => {
     const text = textField(value, 'missing-evidence description', 600);
     const numbers = numericTokens(text);
+    const gap = text.replace(/^Not established:\s*/i, '');
+    const negatedEvidence = /\bno\b[^;.!?]*\b(?:is|are|was|were)\s+(?:recorded|provided|available|stated|shown|supplied|specified|included|documented|established)\b/i;
+    if (/^Not established:/i.test(text) && !/^whether\b/i.test(gap) && !negatedEvidence.test(gap) && /\b(?:is|are|was|were|will|has|have)\s+(?!not\b|unknown\b|unresolved\b|unavailable\b)\w+/i.test(gap)) factError('Missing evidence must identify an unanswered topic, not assert an answer.');
     if (numbers.numbers.some(number => !questionNumbers.numbers.some(other => exactNumber(number.value, other.value)))
         || numbers.protectedItems.some(token => !questionNumbers.protectedItems.some(other => other.canonical === token.canonical))) factError('A missing-evidence description cannot introduce factual numbers or codes.');
     for (const sentence of text.split(/;|[.!?]\s+|\b(?:but|however)\b/i)) {
       const limitation = /\b(not (?:provided|stated|available|supported|established|shown|specified|agreed)|(?:does?|did) not (?:state|establish|specify|show|provide|confirm|say|indicate)(?: whether)?|no (?:evidence|source|support|data)|missing|unknown|unresolved|insufficient|cannot|unable|to be agreed|unavailable)\b/i.test(sentence);
-      if (!limitation && /\b(is|are|was|were|has|have|will|agreed|approved|guaranteed|confirmed|secured)\b/i.test(sentence)) factError('Missing evidence must describe a gap, not introduce a new claim.');
+      if (!limitation && !negatedEvidence.test(sentence) && /\b(is|are|was|were|has|have|will|agreed|approved|guaranteed|confirmed|secured)\b/i.test(sentence)) factError('Missing evidence must describe a gap, not introduce a new claim.');
     }
     return text;
   });
+  // Co-occurrence cannot establish a capital dependency. Abstention is not a source fact.
+  const resolvedQuestion = `${question} ${retrieved?.contextualQuestion || ''}`;
+  const asksDependency = /\b(?:depend\w*|prerequisites?|contingent|tied to|rely on)\b/i.test(question);
+  const asksCapital = /\b(?:capital|equity|funding|financing|investment|contribution|debt|decisions?)\b/i.test(resolvedQuestion);
+  let dependencyEstablished = null;
+  if (asksDependency && asksCapital) {
+    const causal = /\b(?:depend\w* on|subject to|conditional on|contingent on|requires?|prerequisites?|only (?:after|once|if)|cannot .{0,70}until|after .{0,55}(?:approv\w*|agree\w*|fund\w*))\b/i;
+    const capitalPrerequisite = /\b(?:requires?|subject to|conditional on|contingent on|depends? on|dependent on|only (?:after|once|if))\s+(?:(?:the|an?|prior|formal|final|separate|written|board|shareholder|shareholders|approval|approvals|agreement|of|for|and|on|signed|agreed|committed|secured|sufficient|minimum|available|initial|payment|commitment|receipt|allocation|decision|decisions)\s+){0,12}(?:capital|equity|funding|financing|investment|contribution|debt)\b/i;
+    const milestone = /\b(?:milestone|gate|launch|pilot|incorporat\w*|registration|start|commenc\w*|rollout|go.live|mobiliz\w*)\b/i;
+    dependencyEstablished = facts.some(fact => fact.evidence.some(reference => reference.quote.split(/(?<=[.!?;])\s+/).some(sentence =>
+      sentence.length <= 900 && causal.test(sentence) && capitalPrerequisite.test(normalizeEvidenceText(sentence)) && milestone.test(sentence)
+      && !/\b(?:does? not|not established|may depend|might depend|no dependency|unrelated)\b/i.test(sentence))));
+    if (!dependencyEstablished) {
+      data.unsupported = true;
+      if (!missing.some(text => /\b(?:depend\w*|link\w*|prerequisites?)\b/i.test(text))) missing.push('Not established: an explicit source-stated dependency linking the requested milestones to the capital decisions.');
+    }
+  }
   const citations = [];
   const seen = new Set();
   const references = [...facts, ...conflicts].flatMap(item => item.evidence).concat(calculations.flatMap(item => item.operands.map(operand => ({ id: operand.sourceId }))));
@@ -479,7 +519,12 @@ export function validateEvidenceAnswer(raw, { retrieved, question = '' } = {}) {
   const unsupported = data.unsupported || !hasSupportedContent;
   const grounding = {
     status: hasSupportedContent ? (unsupported || missing.length ? 'partial' : 'supported') : 'unsupported',
-    verificationLevels: ['schema', 'source-identity', 'normalized-exact-quote', 'lexical-relevance', 'numeric-consistency', ...(calculations.length ? ['server-arithmetic'] : [])],
+    verificationLevels: ['schema', 'source-identity', 'scope-boundary', 'original-source-span', 'normalized-exact-quote',
+      ...(facts.some(fact => !fact.extractive) || conflicts.length ? ['lexical-relevance', 'numeric-consistency'] : ['extractive-identity']),
+      ...(calculations.length ? ['original-numeric-operands', 'server-arithmetic'] : [])],
+    method: 'bounded-passage-selection-and-original-source-reconstruction',
+    completenessVerified: false,
+    ...(dependencyEstablished !== null ? { dependencyEstablished, dependencyCheck: 'conservative-explicit-wording-only; not semantic proof' } : {}),
     sourceTruthVerified: false, semanticEntailmentVerified: false,
     scope: retrieved?.documentId ?? 'all',
   };

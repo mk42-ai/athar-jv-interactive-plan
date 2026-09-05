@@ -120,3 +120,8 @@ export const lockAccess = () => privateJson('/api/access', { method: 'DELETE' })
 export const getDocuments = () => privateJson('/api/documents');
 export const retryDocuments = () => privateJson('/api/documents/retry', { method: 'POST' });
 export const getCitation = (id) => privateJson(`/api/citations/${encodeURIComponent(id)}`);
+
+export const getSourceLocation = (id, options = {}) => {
+  const params = new URLSearchParams(Object.entries(options).filter(([,v]) => v !== undefined && v !== null && v !== ''));
+  return privateJson(`/api/citations/${encodeURIComponent(id)}/view${params.size ? `?${params}` : ''}`);
+};

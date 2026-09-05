@@ -117,7 +117,7 @@ export function rehydrateGuideAudio({ staticDir = 'public' } = {}) {
 function sendBuffer(req, res, buf, { type, immutable = true, source = 'embedded-base64', etag }) {
   res.setHeader('Content-Type', type);
   res.setHeader('Accept-Ranges', 'bytes');
-  res.setHeader('Cache-Control', immutable ? 'public, max-age=31536000, immutable' : 'no-store, must-revalidate');
+  res.setHeader('Cache-Control', process.env.ATHAR_PRIVATE_PRESENTATION === '1' ? 'private, no-store' : immutable ? 'public, max-age=31536000, immutable' : 'no-store, must-revalidate');
   res.setHeader('X-Guide-Audio', source);
   if (etag) res.setHeader('ETag', `"${etag}"`);
   const range = /^bytes=(\d*)-(\d*)$/.exec(String(req.headers.range || ''));
@@ -179,7 +179,7 @@ export function guideAudioMiddleware({ staticDir = 'public' } = {}) {
     }
     if (!name.endsWith('.mp3')) return next();
     if (fs.existsSync(path.join(ROOT, staticDir, 'guide-audio', name))) {
-      res.setHeader('Cache-Control', 'public, max-age=31536000, immutable');
+      res.setHeader('Cache-Control', process.env.ATHAR_PRIVATE_PRESENTATION === '1' ? 'private, no-store' : 'public, max-age=31536000, immutable');
       res.setHeader('X-Guide-Audio', 'static');
       return next(); // static layer serves the file (audio/mpeg, Range-capable)
     }

@@ -5,6 +5,7 @@ import path from 'node:path';
 import fs from 'node:fs';
 import { fileURLToPath } from 'node:url';
 import { createApiApp } from './api.js';
+import { privatePresentation } from './privatePresentation.js';
 import { onDemandKey } from './env.js';
 import { deckPdfMiddleware } from './deck.js';
 import { guideAudioMiddleware, rehydrateGuideAudio } from './guideAudioStore.js';
@@ -21,16 +22,19 @@ app.use((req, res, next) => {
   }
   next();
 });
+const apiApp = createApiApp();
+app.use(apiApp);
+app.use(privatePresentation(apiApp.locals.reviewAccess));
 rehydrateGuideAudio({ staticDir: 'dist' });
 app.use(guideAudioMiddleware({ staticDir: 'dist' }));
-app.use(deckPdfMiddleware({ staticDir: 'dist' })); // deck PDF fallback when dist/deck/ (copied from public/ by vite build) is absent
-app.use(createApiApp());
+app.use(deckPdfMiddleware({ staticDir: 'dist' }));
 if (fs.existsSync(dist)) {
   app.use(
     express.static(dist, {
       index: 'index.html',
-      maxAge: '1h',
+      maxAge: process.env.ATHAR_PRIVATE_PRESENTATION === '1' ? 0 : '1h',
       setHeaders(res, filePath) {
+        if (process.env.ATHAR_PRIVATE_PRESENTATION === '1') { res.setHeader('Cache-Control', 'private, no-store'); return; }
         if (/guide-audio[\\/]manifest\.json$/.test(filePath)) res.setHeader('Cache-Control', 'no-store, must-revalidate');
         else if (/guide-audio[\\/].+\.mp3$/.test(filePath)) res.setHeader('Cache-Control', 'public, max-age=31536000, immutable');
       },

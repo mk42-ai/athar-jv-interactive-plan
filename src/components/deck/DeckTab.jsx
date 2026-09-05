@@ -7,10 +7,12 @@ import MonthPanel from './MonthPanel.jsx';
 import { PDF_SRC, PDF_TITLE, PDF_PAGES } from '../../lib/deck.js';
 import { MONTHS, OVERVIEW, monthKey } from '../../lib/plan.js';
 
-export default function DeckTab({ onAskSlide }) {
+export default function DeckTab({ onAskSlide, visible = true, onGuideStateChange }) {
   const [pageNo, setPageNo] = useState(1);
   const [requestedPage, setRequestedPage] = useState(null);
   const guide = useGuide({ onSlide: (n) => setRequestedPage({ n, t: Date.now() }) });
+  // Report transport state only; visibility never stops or recreates the narrator.
+  useEffect(() => { onGuideStateChange?.(guide); }, [guide.active, guide.playing, guide.status, guide.idx, onGuideStateChange]);
   const syncRef = useRef(guide.syncSlide);
   syncRef.current = guide.syncSlide;
   const onUserNavigate = useCallback((n) => syncRef.current(n), []);
@@ -56,7 +58,7 @@ export default function DeckTab({ onAskSlide }) {
 
       <div className="deck-body">
         <div className="pdfv-stage">
-          <PdfViewer src={PDF_SRC} title={PDF_TITLE} onPageChange={setPageNo} onUserNavigate={onUserNavigate} requestedPage={requestedPage} overlay={<GuideOverlay guide={guide} />} toolbarExtra={<GuideToggle guide={guide} page={pageNo} />} footer={<GuideBar guide={guide} />} />
+          <PdfViewer src={PDF_SRC} title={PDF_TITLE} onPageChange={setPageNo} onUserNavigate={onUserNavigate} requestedPage={requestedPage} overlay={<GuideOverlay guide={guide} />} toolbarExtra={<GuideToggle guide={guide} page={pageNo} />} footer={<GuideBar guide={guide} page={pageNo} visible={visible} />} />
         </div>
         <MonthPanel
           month={month}

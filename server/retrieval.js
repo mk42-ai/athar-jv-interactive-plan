@@ -18,7 +18,9 @@ const STOP = new Set('a an the and or of to in on at for from with is are was we
 const SYNONYMS = [
   ['geography', 'geographic', 'geographical', 'region', 'regions', 'country', 'countries', 'location', 'locations'],
   ['funding', 'financing'], ['assumption', 'assumptions'], ['output', 'outputs'],
-  ['risk', 'risks'], ['control', 'controls'], ['timeline', 'milestone', 'milestones'],
+  ['risk', 'risks'], ['control', 'controls'], ['timeline', 'milestone', 'milestones', 'gates'],
+  ['agreement', 'agree', 'agreed', 'decisions', 'decision', 'approval', 'pending'],
+  ['depend', 'depends', 'dependent', 'dependencies', 'prerequisite', 'requires'],
   ['revenue', 'revenues'], ['cost', 'costs'], ['expense', 'expenses'],
 ];
 const compiledIndexes = new WeakMap();
@@ -185,7 +187,7 @@ function tokens(text) {
 }
 
 /** Only the last user question may be carried forward, never an assistant answer or another scope. */
-export function buildRetrievalQuery({ question, history = [], documentId = 'all' } = {}) {
+export function buildRetrievalQuery({ question, history = [], documentId = 'all', slide = null } = {}) {
   if (typeof question !== 'string' || !question.trim() || question.length > 8000) throw new RetrievalError('invalid_question', 'Question must contain 1–8000 characters.');
   if (!Array.isArray(history)) throw new RetrievalError('invalid_history', 'History must be an array.');
   const current = question.trim();
@@ -194,7 +196,7 @@ export function buildRetrievalQuery({ question, history = [], documentId = 'all'
   const followup = /^(?:and\b|also\b|what about\b|how about\b|why\b|what (?:is|was|are) (?:it|that|those|the difference)\b|can you (?:explain|expand|clarify)\b)/i.test(current)
     || /\b(?:those|that figure|that amount|this number|same scenario|the former|the latter|it compare)\b/i.test(current)
     || current.split(/\s+/).length <= 5;
-  const contextualQuestion = followup && lastUser?.documentId === documentId && typeof previous === 'string' && previous.trim() !== current
+  const contextualQuestion = followup && lastUser?.documentId === documentId && (lastUser?.slide ?? null) === slide && typeof previous === 'string' && previous.trim() !== current
     ? previous.trim().slice(0, 2000) : null;
   return Object.freeze({ question: current, contextualQuestion, query: contextualQuestion ? `${current}\n${contextualQuestion}` : current });
 }
@@ -245,23 +247,34 @@ export function retrieveEvidence(input, { question, documentId = 'all', slide = 
   const selectedDoc = index.documentsById.get(documentId);
   // A named page within a selected PDF is a strict evidence scope, not just a search hint.
   // Without this, a correct value quoted from p.1 can still violate a user's p.2-only request.
-  const pageMatch = selectedDoc?.kind === 'pdf' && /\bpage\s+([1-9]\d*)\b/i.exec(question);
+  const context = buildRetrievalQuery({ question, documentId, history, slide });
+  const scopeQuestion = context.contextualQuestion ? `${context.question} ${context.contextualQuestion}` : context.question;
+  const pageMatch = selectedDoc?.kind === 'pdf' && /\b(?:page|p\.)\s*([1-9]\d*)\b/i.exec(scopeQuestion);
   const pageFilter = pageMatch ? Number(pageMatch[1]) : null;
+  const slideMatch = selectedDoc?.kind === 'pptx' && /\bslide\s+([1-9]\d*)\b/i.exec(context.question);
+  if (slideMatch && slide != null && slide !== Number(slideMatch[1])) throw new RetrievalError('invalid_slide', 'The question and selected slide have different scopes.');
+  if (slideMatch) slide = Number(slideMatch[1]);
   if (slide != null && (!Number.isSafeInteger(slide) || slide < 1 || !selectedDoc || selectedDoc.kind !== 'pptx')) throw new RetrievalError('invalid_slide', 'A slide filter requires a selected PPTX document and a positive slide number.');
   maxChunks = limit(maxChunks, 12, 12); maxChars = limit(maxChars, 45000, 45000); maxChunkChars = limit(maxChunkChars, 12000, 45000);
-  const context = buildRetrievalQuery({ question, documentId, history });
   const terms = queryTerms(context.query);
   const search = compile(index);
   const directTerms = [...terms].filter(([, weight]) => weight === 1).map(([term]) => term);
   const phrase = directTerms.join(' ');
   const comparative = /\b(compare|comparison|versus|vs|across|difference|differences|contrast|reconcile|both)\b/i.test(context.query);
-  const financialGeography = /\b(funding|financing|capital|geograph\w*|countr\w*|regions?|markets?)\b/i.test(context.query);
+  const financialGeography = /\b(funding|financing|capital|geograph\w*|countr\w*|regions?|markets?|base case|expansion|uae)\b/i.test(context.query);
+  const genericOverview = /^(?:summari[sz]e|explain|give(?: me)? (?:an? )?overview of)\s+(?:this|the selected|selected|all|the)\s+(?:source|document|presentation|slide)s?\b/i.test(context.question);
+  const requestedCells = [...context.query.matchAll(/(?<![\w$])\$?([A-Z]{1,3})\$?([1-9]\d{0,6})(?!\w)/g)].map(match => `${match[1]}${match[2]}`).filter(cell => validCell(cell) && (!/^[YW]\d+$/.test(cell) || /\b(?:cells?|ranges?)\b/i.test(context.query)));
+  const requestedSheets = [...new Set(index.chunks.filter(chunk => !selectedDoc || chunk.documentId === selectedDoc.id).map(chunk => chunk.location.sheet).filter(Boolean))]
+    .filter(sheet => new RegExp(`(?:^|[^\\p{L}\\p{N}])${sheet.replace(/[.*+?^${}()|[\]\\]/g, '\\$&')}(?:$|[^\\p{L}\\p{N}])`, 'iu').test(context.query));
   const ranked = [];
   for (const item of search.items) {
     const { chunk } = item;
     if (documentId !== 'all' && chunk.documentId !== documentId) continue;
     if (slide != null && chunk.location.slide !== slide) continue;
     if (pageFilter != null && chunk.location.page !== pageFilter) continue;
+    const requestedSheet = requestedSheets.includes(chunk.location.sheet);
+    const requestedCell = chunk.records?.some(record => requestedCells.includes(String(record.cell || '').replace(/\$/g, '')) && (!record.sheet || record.sheet === chunk.location.sheet));
+    if (selectedDoc?.kind === 'xlsx' && requestedCells.length && (!requestedCell || (requestedSheets.length && !requestedSheet))) continue;
     let score = 0;
     for (const [term, weight] of terms) {
       const tf = item.tf.get(term) || 0;
@@ -270,7 +283,8 @@ export function retrieveEvidence(input, { question, documentId = 'all', slide = 
       const idf = Math.log(1 + (search.items.length - df + 0.5) / (df + 0.5));
       score += weight * idf * tf * 2.2 / (tf + 1.2 * (0.25 + 0.75 * item.length / search.average));
     }
-    if (!score) continue;
+    if (!score && genericOverview) score = 1 / (1 + Math.max(0, Number(chunk.location.page || chunk.location.slide || /\d+/.exec(chunk.location.range || '')?.[0] || 1) - 1));
+    if (!score && !requestedCell && !(requestedSheet && requestedCells.length)) continue;
     if (directTerms.length > 1 && phrase && item.normalized.includes(phrase)) score += 2.5;
     for (let i = 0; i + 1 < directTerms.length; i++) {
       const pair = `${directTerms[i]} ${directTerms[i + 1]}`;
@@ -280,14 +294,13 @@ export function retrieveEvidence(input, { question, documentId = 'all', slide = 
     if (chunk.kind === 'xlsx' && /\b(control|controls|outputs?|risks?|assumptions?)\b/i.test(item.label)) score *= 1.45;
     // Honor explicit source locators: rare cell addresses should not lose to repeated
     // generic header terms in another sheet. Only real indexed cell records can earn this boost.
-    const requestedCells = [...context.query.matchAll(/\b([A-Z]{1,3}[1-9]\d{0,5})\b/g)].map((match) => match[1]);
-    const requestedSheet = chunk.location.sheet && context.query.toLowerCase().includes(chunk.location.sheet.toLowerCase());
     if (requestedSheet) score += 5;
-    if (requestedCells.length && chunk.records?.some((record) => requestedCells.includes(record.cell) && (!record.sheet || record.sheet === chunk.location.sheet))) score += requestedSheet ? 24 : 8;
+    if (/\b(how many|total|totals|count)\b/i.test(context.query) && requestedSheet && chunk.text.length < 1500 && /\b(?:\d+|six)\s+(?:tasks?|gates?|activities)\b/i.test(chunk.text)) score += 22;
+    if (requestedCell) score += requestedSheet ? 24 : 8;
     if (chunk.kind === 'pdf' && chunk.extractionKind === 'pdf-page') score *= 1.35;
     // Decision/approval questions need the labelled unresolved cells, not only their comments.
     // The boost is evidence-driven: it applies to actual source text, not hard-coded answers.
-    if (/\b(mou|agreement|agreed|signed|committed|solvency)\b/i.test(context.query) && /to be agreed/i.test(chunk.text)) {
+    if (/\b(mou|agreement|agree|agreed|decisions?|capital|signed|committed|solvency)\b/i.test(context.query) && /to be agreed/i.test(chunk.text)) {
       if (chunk.records?.some((record) => typeof record.value === 'string' && /^to be agreed$/i.test(record.value))) score += 12;
       if (String(chunk.location.part || '').startsWith('comment')) score *= 0.6;
     }
@@ -296,13 +309,17 @@ export function retrieveEvidence(input, { question, documentId = 'all', slide = 
       const numericRatio = words.filter(word => /^[-+]?\d/.test(word)).length / (words.length || 1);
       if (numericRatio > 0.4 || chunk.metadata?.rawBatch === true) score *= 0.5;
     }
-    if (financialGeography && chunk.kind === 'pdf') score *= 1.25;
+    if (financialGeography && chunk.kind === 'pdf') {
+      score *= 1.25;
+      // Rank actual comparative source text; no scenario figures or source answers are encoded.
+      if (comparative && /base case/i.test(chunk.text) && /expansion/i.test(chunk.text)) score += 5;
+    }
     ranked.push({ chunk, score });
   }
   ranked.sort((a, b) => b.score - a.score || a.chunk.id.localeCompare(b.chunk.id, 'en'));
   // All-document comparisons reserve a relevant hit from each document before filling the budget.
   const ordered = [];
-  if (documentId === 'all' && comparative) {
+  if (documentId === 'all') {
     const seenDocs = new Set();
     for (const item of ranked) if (!seenDocs.has(item.chunk.documentId)) { ordered.push(item); seenDocs.add(item.chunk.documentId); }
   }
@@ -330,10 +347,11 @@ export function retrieveEvidence(input, { question, documentId = 'all', slide = 
     scores[item.chunk.id] = Number(item.score.toFixed(10));
   }
   return Object.freeze({
-    ...context, documentId, slide, chunks: Object.freeze(chunks), modelChunks: Object.freeze(modelChunks),
+    ...context, documentId, slide, page: pageFilter, chunks: Object.freeze(chunks), modelChunks: Object.freeze(modelChunks),
     recordsById: immutableRecordsMap(chunks.map(chunk => [chunk.id, chunk])),
     documents: Object.freeze(index.documents.filter(doc => documentId === 'all' || doc.id === documentId)),
     charCount, scores: freeze(scores), totalMatches: ranked.length,
+    fullOriginal: Object.freeze({ retrievedCharacters: chunks.reduce((sum, chunk) => sum + chunk.text.length, 0), projectedCharacters: charCount, records: chunks.reduce((sum, chunk) => sum + (chunk.records?.length || 0), 0), originalsTruncated: false }),
     limits: Object.freeze({ maxChunks, maxChars, maxChunkChars }),
   });
 }

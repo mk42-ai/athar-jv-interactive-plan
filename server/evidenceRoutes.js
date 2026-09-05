@@ -4,8 +4,8 @@ import crypto from 'node:crypto';
 import fs from 'node:fs/promises';
 import path from 'node:path';
 import { loadCorpusIndex, retrieveEvidence } from './retrieval.js';
-import { buildEvidencePrompt, validateEvidenceAnswer } from './evidenceAnswer.js';
-import { resolveSourceQuote } from './sourceQuote.js';
+import { buildEvidencePrompt, validateEvidenceAnswer, prepareModelSelection } from './evidenceAnswer.js';
+import { createSourceView } from './sourceView.js';
 import { createChatSession, submitQuerySync, isConfigured } from './ondemand.js';
 
 const TTL = 6 * 3600_000;
@@ -26,6 +26,7 @@ export function createEvidenceRoutes({ access, corpusDir = process.env.ATHAR_COR
   const conversations = new Map();
   const usage = new Map();
   const index = (force = false) => loadCorpusIndex({ corpusDir, force });
+  const views = createSourceView({ corpusDir, loadIndex: index });
   function owned(req, id) {
     const value = conversations.get(id);
     if (!value || value.principal !== req.reviewer.principal || value.expiresAt <= clock()) throw fail('conversation_not_found', 'Source or conversation not found.', 404);
@@ -64,8 +65,16 @@ export function createEvidenceRoutes({ access, corpusDir = process.env.ATHAR_COR
       const doc = data.documentsById.get(source.documentId);
       res.json({ id: source.id, documentId: doc.id, title: doc.title, location: source.location, label: source.label,
         excerpt: source.text, records: source.records || [], metadata: source.metadata || {},
-        originalUrl: `/api/sources/${encodeURIComponent(doc.id)}`, limitations: doc.limitations });
+        originalUrl: `/api/sources/${encodeURIComponent(doc.id)}`, sourceViewUrl: `/api/citations/${encodeURIComponent(source.id)}/view`, limitations: doc.limitations });
     } catch (error) { safeError(res, error); }
+  });
+  router.get('/citations/:id/view', async (req, res) => {
+    try { res.json(await views.location(req.params.id, views.parseQuery(req.query))); }
+    catch (error) { safeError(res, error); }
+  });
+  router.get('/sources/:id/preview', async (req, res) => {
+    try { const result = await views.preview(req.params.id); res.set(result.headers).end(result.body); }
+    catch (error) { safeError(res, error); }
   });
   router.get('/sources/:id', async (req, res) => {
     try {
@@ -112,22 +121,10 @@ export function createEvidenceRoutes({ access, corpusDir = process.env.ATHAR_COR
       let lastValidation;
       for (let attempt = 0; attempt < 2; attempt++) {
         if (signal?.aborted) throw fail('cancelled', '', 400);
-        const repair = attempt ? `\nThe last response failed validation (${lastValidation?.code || 'unsupported_fact'}). Return ONLY the specified JSON. Use short EXACT quotations from the evidence, copy source facts conservatively with their units and qualifications, and mark unavailable information as missing. Do not invent a replacement answer.` : '';
+        const repair = attempt ? `\nThe previous response failed validation (${lastValidation?.code || 'unsupported_fact'}): ${lastValidation?.message || 'Invalid structured evidence'}. Select only PROVIDED selectionCatalog IDs, with no line numbers; do not retype quotations. Include all requested subjects and required qualifications. A different source label is not missing information: keep the exact selected source label and leave missing empty if the quantity is present. Missing entries may name an unknown topic, but may NOT add a factual correction, label, value or assertion. If a calculation cannot be supported, omit it and state only the missing topic. Return only the documented JSON object.` : '';
         const data = await provider.submitQuerySync(upstream.id, 'Answer the question contained in EVIDENCE_DATA_JSON. Return only the required grounded JSON object.', { fulfillmentPrompt: prompt + repair, temperature: 0, signal });
         try {
-          // The model selects evidence; the server, not the model, authors source-fact wording.
-          // Render each selected exact quotation rather than a potentially misleading paraphrase.
-          // The validator still checks every ID, quote, instruction guard, scope and calculation.
-          const structured = typeof data?.answer === 'string' ? JSON.parse(data.answer.trim().replace(/^```(?:json)?\s*/i, '').replace(/\s*```$/, '')) : data?.answer;
-          if (structured && Array.isArray(structured.facts)) structured.facts = structured.facts.flatMap((fact) =>
-            Array.isArray(fact.evidence) ? fact.evidence.map((reference) => {
-              const resolved = resolveSourceQuote(reference, retrieved);
-              return { text: resolved.quote, evidence: [resolved] };
-            }) : [fact]);
-          if (structured && Array.isArray(structured.calculations)) for (const calculation of structured.calculations) {
-            if (Array.isArray(calculation.operands)) calculation.operands = calculation.operands.map((operand) => ({ ...operand,
-              quote: resolveSourceQuote({ id: operand.sourceId, quote: operand.quote }, retrieved).quote }));
-          }
+          const structured = prepareModelSelection(data?.answer, retrieved);
           verified = validateEvidenceAnswer(structured, { retrieved, question: query }); break;
         } catch (error) { if (error instanceof SyntaxError) lastValidation = fail('unsupported_fact', 'Provider did not return the required JSON.', 422); else if (error.status === 422) lastValidation = error; else throw error; }
       }

@@ -1,6 +1,7 @@
 import React, { useCallback, useEffect, useRef, useState } from 'react';
 import { streamChat, getCitation } from '../../lib/api.js';
 import AccessGate from '../AccessGate.jsx';
+import SourceViewer from './SourceViewer.jsx';
 
 // Minimal, dependency-free Markdown rendering (bold, inline code, bullets, numbered lists, headings).
 function inline(text) {
@@ -63,9 +64,9 @@ let idc = 0;
 const uid = () => `${Date.now().toString(36)}-${idc++}`;
 
 const QUICK_QUESTIONS = [
-  { label: 'Summarize this source', question: 'Summarize the selected source and cite the relevant evidence.' },
-  { label: 'Find key decisions', question: 'What decisions or next steps are explicitly stated in the selected source? Cite the evidence.' },
-  { label: 'Check assumptions', question: 'Which assumptions and limitations are stated in the selected source? Cite the evidence and flag what is not specified.' },
+  'Compare the UAE base case with international expansion.',
+  'What capital decisions still need agreement?',
+  'Which implementation milestones depend on those decisions?',
 ];
 const describe = (value) => {
   if (value == null) return '';
@@ -81,21 +82,12 @@ const coverageSummary = (doc) => {
 };
 const documentStatus = (doc) => typeof doc.status === 'string' ? doc.status : doc.status?.state || doc.status?.status || 'Unknown';
 const isAuthError = (e) => e?.status === 401 || e?.code === 'unauthorized' || e?.code === 'access_required';
-// Original document links must stay on the authenticated app origin, never a data/JS URL.
-const authorizedOriginal = (value) => {
-  if (!value) return null;
-  try {
-    const url = new URL(value, window.location.origin);
-    if (url.origin !== window.location.origin || !/^https?:$/.test(url.protocol) || !url.pathname.startsWith('/api/')) return null;
-    return url.href;
-  } catch { return null; }
-};
-
 export default function ChatWidget({ open, onClose, ensureSession, session, resetSession, configured, serviceError, onRetryService, access, onUnlock, onRetryAccess, onAuthRequired, documents = [], documentsLoading, documentsError, onRefreshDocuments, onRetryDocuments, askRequest }) {
   const [messages, setMessages] = useState([]);
   const [input, setInput] = useState('');
   const [busy, setBusy] = useState(false);
   const [documentId, setDocumentId] = useState('all');
+  const [lastDocumentId, setLastDocumentId] = useState(null);
   const [documentSlug, setDocumentSlug] = useState(null);
   const [slide, setSlide] = useState(null);
   const [citationState, setCitationState] = useState(null);
@@ -112,7 +104,7 @@ export default function ChatWidget({ open, onClose, ensureSession, session, rese
   authenticatedRef.current = Boolean(access?.authenticated);
 
   useEffect(() => {
-    if (!open || !access?.authenticated) return;
+    if (!open || !access?.authenticated || window.matchMedia('(max-width: 640px)').matches) return;
     const timer = setTimeout(() => {
       inputRef.current?.focus({ preventScroll: true });
       if (window.matchMedia('(max-width: 1100px)').matches) inputRef.current?.scrollIntoView({ block: 'nearest', behavior: 'auto' });
@@ -132,7 +124,7 @@ export default function ChatWidget({ open, onClose, ensureSession, session, rese
     if (!open) return;
     const el = listRef.current;
     if (el) el.scrollTo({ top: el.scrollHeight, behavior: 'auto' });
-  }, [messages, open]);
+  }, [messages]); // Switching views must not discard the reader's conversation scroll.
 
   useEffect(() => {
     if (!askRequest || requestSeen.current === askRequest.id) return;
@@ -140,6 +132,7 @@ export default function ChatWidget({ open, onClose, ensureSession, session, rese
     const doc = documents.find((d) => d.slug === askRequest.documentSlug);
     setDocumentSlug(askRequest.documentSlug || null);
     setDocumentId(doc?.id || (askRequest.documentSlug ? null : 'all'));
+    if (doc?.id) setLastDocumentId(doc.id);
     setSlide(askRequest.slide ?? null);
     setInput(askRequest.prompt || '');
     setCitationState(null);
@@ -150,13 +143,14 @@ export default function ChatWidget({ open, onClose, ensureSession, session, rese
     if (!documentSlug) return;
     const doc = documents.find((d) => d.slug === documentSlug);
     setDocumentId(doc?.id || null); // never broaden a missing requested source to all documents
+    if (doc?.id) setLastDocumentId(doc.id);
   }, [documentSlug, documents]);
 
   useEffect(() => {
     if (!open || !citationState?.id) return;
     citationPanelRef.current?.focus({ preventScroll: true });
     citationPanelRef.current?.scrollIntoView({ block: 'nearest', behavior: 'auto' });
-  }, [citationState?.id, open]);
+  }, [citationState?.id]); // Restoring the Ask AI view must not jump to a previously opened citation.
 
   const selectedDocument = documents.find((d) => d.id === documentId);
   const sourceMissing = !documentId || (documentId !== 'all' && !selectedDocument);
@@ -168,6 +162,7 @@ export default function ChatWidget({ open, onClose, ensureSession, session, rese
   const chooseDocument = (id) => {
     setDocumentSlug(null);
     setDocumentId(id);
+    if (id && id !== 'all') setLastDocumentId(id);
     setSlide(null);
     setCitationState(null);
     citationVersion.current++;
@@ -241,7 +236,6 @@ export default function ChatWidget({ open, onClose, ensureSession, session, rese
   const onKeyDown = (e) => {
     if (e.key === 'Enter' && !e.shiftKey && !e.nativeEvent.isComposing) { e.preventDefault(); send(); }
   };
-  const originalUrl = authorizedOriginal(citationState?.data?.originalUrl);
   const newSession = () => {
     if (busyRef.current) return;
     resetSession(); setMessages([]); setCitationState(null); citationVersion.current++;
@@ -250,15 +244,22 @@ export default function ChatWidget({ open, onClose, ensureSession, session, rese
 
   return (
     <section ref={rootRef} className={`widget chat-widget ${open ? 'open' : ''}`} id="chat-widget" role="region" aria-labelledby="chat-widget-title" aria-hidden={!open} hidden={!open} inert={open ? undefined : ''} data-testid="chat-widget">
-      <header className="widget-head"><div><h2 id="chat-widget-title">Ask the plan</h2><p className="widget-sub">{access?.authenticated ? 'One conversation · answers with source evidence' : 'Your private document companion'}</p></div><div className="widget-actions">
+      <header className="widget-head"><div><h2 id="chat-widget-title">Ask AI</h2><p className="widget-sub">{access?.authenticated ? 'One conversation · answers with source evidence' : 'Your private document companion'}</p></div><div className="widget-actions">
         {access?.authenticated && session?.sessionId && <button className="icon-btn" onClick={newSession} disabled={busy} aria-label="Start a new session" title="New session">↻</button>}
         <button className="icon-btn" onClick={onClose} aria-label="Close chat" data-testid="chat-close"><svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" aria-hidden="true"><path d="M6 6l12 12M18 6L6 18" /></svg></button>
       </div></header>
       {!access?.authenticated ? (open && <AccessGate access={access} onUnlock={onUnlock} onRetry={onRetryAccess} />) : <>
         <div className="chat-context">
-          <label htmlFor="chat-document-filter">Answer from</label>
-          <select id="chat-document-filter" value={documentId || '__pending__'} onChange={(e) => chooseDocument(e.target.value)} data-testid="chat-document-filter" aria-describedby="chat-source-note">
-            <option value="all">All documents</option>
+          <fieldset className="chat-scope" data-testid="chat-scope-controls">
+            <legend>Answer scope</legend>
+            <div className="chat-scope-options">
+              <label><input type="radio" name="chat-answer-scope" value="this" checked={documentId !== 'all'} onChange={() => chooseDocument(documents.find((doc) => doc.id === lastDocumentId)?.id || documents.find((doc) => doc.slug === 'executive-presentation')?.id || documents[0]?.id || null)} /><span>This document</span></label>
+              <label><input type="radio" name="chat-answer-scope" value="all" checked={documentId === 'all'} onChange={() => chooseDocument('all')} /><span>All documents</span></label>
+            </div>
+          </fieldset>
+          <label htmlFor="chat-document-filter">Document</label>
+          <select id="chat-document-filter" value={documentId === 'all' ? '__choose__' : documentId || '__pending__'} onChange={(e) => chooseDocument(e.target.value)} data-testid="chat-document-filter" aria-describedby="chat-source-note">
+            <option value="__choose__" disabled>Choose a document…</option>
             {sourceMissing && <option value={documentId || '__pending__'} disabled>{documentSlug === 'executive-presentation' ? 'Waiting for presentation source…' : 'Selected source unavailable'}</option>}
             {documents.map((doc) => <option key={doc.id} value={doc.id}>{doc.title}</option>)}
           </select>
@@ -285,8 +286,14 @@ export default function ChatWidget({ open, onClose, ensureSession, session, rese
         {documentsLoading && !documents.length && <p className="companion-note" role="status">Loading the available sources…</p>}
         {!documentsLoading && !documentsError && !documents.length && <p className="companion-note" role="status">No sources are available yet. Open Documents &amp; ingestion status to retry.</p>}
         {configured == null && !serviceError && <p className="companion-note" role="status">Connecting to the assistant…</p>}
-        <div className="chat-list" ref={listRef} role="log" aria-live="polite" aria-relevant="additions text" aria-label="Conversation">
-          {messages.length === 0 && <div className="chat-empty"><p className="muted small">Choose a source, then ask a question. Suggested prompts are drafts — review before sending.</p><div className="chips">{QUICK_QUESTIONS.map((q) => <button key={q.label} className="chip" onClick={() => prefill(q.question)} disabled={busy}>{q.label}<span aria-hidden="true"> ↗</span></button>)}</div></div>}
+        <div className="chat-list" ref={listRef} onClick={(e) => {
+          const anchor = e.target.closest?.('a.inline-citation');
+          const match = anchor?.getAttribute('href')?.match(/^\/api\/citations\/([A-Za-z0-9_-]+)$/);
+          if (!match) return;
+          e.preventDefault();
+          openCitation({ id: match[1], label: anchor.textContent }, anchor);
+        }} role="log" aria-live="polite" aria-relevant="additions text" aria-label="Conversation">
+          {messages.length === 0 && <div className="chat-empty"><p className="muted small">Choose a source, then ask a question. Suggested prompts are drafts — review before sending.</p><div className="chips">{QUICK_QUESTIONS.map((question) => <button key={question} className="chip" onClick={() => prefill(question)} disabled={busy}>{question}</button>)}</div></div>}
           {messages.map((m) => <div key={m.id} className={`msg ${m.role} ${m.status || ''}`}><div className="bubble">
             {m.role === 'user' ? <p>{m.text}</p> : m.status === 'pending' ? <div className="typing" aria-label="Assistant is preparing an answer"><span /><span /><span /></div> : <>
               {m.text && <Markdown text={m.text} />}
@@ -298,11 +305,11 @@ export default function ChatWidget({ open, onClose, ensureSession, session, rese
             </>}
           </div></div>)}
         </div>
-        {citationState && <section ref={citationPanelRef} tabIndex={-1} className="citation-panel" id="chat-citation-panel" aria-busy={citationState.status === 'loading'} aria-labelledby="citation-panel-title" data-testid="citation-panel">
-          <header><h3 id="citation-panel-title">{citationState.data?.title || citationState.citation.label || 'Source evidence'}</h3><button className="icon-btn" onClick={closeCitation} aria-label="Close source excerpt">×</button></header>
-          {citationState.status === 'loading' && <p role="status">Loading cited evidence…</p>}
-          {citationState.status === 'error' && <div className="chat-service-error" role="alert">This excerpt could not be loaded.<button className="btn small" onClick={() => openCitation(citationState.citation)}>Retry excerpt</button></div>}
-          {citationState.status === 'ready' && <><p className="citation-location">{describe(citationState.data.location) || citationState.data.label}</p><blockquote>{citationState.data.excerpt || 'No text excerpt was returned for this citation.'}</blockquote>{citationState.data.records && <details><summary>Source records</summary><div className="citation-records">{describe(citationState.data.records)}</div></details>}{originalUrl && <a className="btn small" href={originalUrl} target="_blank" rel="noreferrer" data-testid="citation-original">Open original document</a>}</>}
+        {citationState && <section ref={citationPanelRef} tabIndex={-1} className="citation-panel" id="chat-citation-panel" aria-busy={citationState.status === 'loading'} aria-label="Cited source document" data-testid="citation-panel">
+          {citationState.status !== 'ready' && <header><h3>{citationState.citation.label || 'Source evidence'}</h3><button className="icon-btn" onClick={closeCitation} aria-label="Close source viewer">×</button></header>}
+          {citationState.status === 'loading' && <p role="status">Loading cited source…</p>}
+          {citationState.status === 'error' && <div className="chat-service-error" role="alert">This source could not be loaded.<button className="btn small" onClick={() => openCitation(citationState.citation)}>Retry source</button></div>}
+          {citationState.status === 'ready' && <SourceViewer source={citationState.data} citationId={citationState.id} onClose={closeCitation} onAuthRequired={onAuthRequired} />}
         </section>}
         <form className="chat-input" onSubmit={(e) => { e.preventDefault(); send(); }}>
           <textarea ref={inputRef} rows={2} value={input} onChange={(e) => setInput(e.target.value)} onKeyDown={onKeyDown} placeholder={sourceMissing ? 'Waiting for the selected source…' : slide != null ? `Ask about slide ${slide}…` : 'Ask about the selected documents…'} aria-label="Your question" aria-describedby="chat-source-note" />
