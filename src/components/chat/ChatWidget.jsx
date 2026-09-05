@@ -304,7 +304,7 @@ export default function ChatWidget({ open, onClose, ensureSession, session, rese
           {citationState.status !== 'ready' && <header><h3>{citationState.citation.label || 'Source evidence'}</h3><button className="icon-btn" onClick={closeCitation} aria-label="Close source viewer">×</button></header>}
           {citationState.status === 'loading' && <p role="status">Loading cited source…</p>}
           {citationState.status === 'error' && <div className="chat-service-error" role="alert">This source could not be loaded.<button className="btn small" onClick={() => openCitation(citationState.citation)}>Retry source</button></div>}
-          {citationState.status === 'ready' && <SourceViewer source={citationState.data} citationId={citationState.id} onClose={closeCitation}  />}
+          {citationState.status === 'ready' && <SourceViewer key={citationState.id} source={citationState.data} citationId={citationState.id} onClose={closeCitation}  />}
         </section>}
         <form className="chat-input" onSubmit={(e) => { e.preventDefault(); send(); }}>
           <textarea ref={inputRef} rows={2} value={input} onChange={(e) => setInput(e.target.value)} onKeyDown={onKeyDown} placeholder={sourceMissing ? 'Waiting for the selected source…' : slide != null ? `Ask about slide ${slide}…` : 'Ask about the selected documents…'} aria-label="Your question" aria-describedby="chat-source-note" />

@@ -69,7 +69,7 @@ export default function App() {
         <div className="reader-context"><span>Library <span aria-hidden="true">/</span> {selected ? shortTitle(selected) : 'Documents'}</span>{selected && <button className="btn small" onClick={askSelected} data-testid="ask-selected-document">Ask about this document ↗</button>}</div>
         {sourceError && <div role="alert" className="reader-error">{sourceError}<button className="btn small" onClick={() => selected && selectDocument(selected)}>Retry</button></div>}
         {sourceBusy && !source && <p role="status">Opening original source…</p>}
-        {source && <ErrorBoundary><SourceViewer source={source} citationId={source.id} libraryMode /></ErrorBoundary>}
+        {source && <ErrorBoundary><SourceViewer key={source.id} source={source} citationId={source.id} libraryMode /></ErrorBoundary>}
         {!source && !loading && !sourceBusy && !sourceError && <p>Select a document to begin reading.</p>}
       </main>
       <aside className="document-chat" aria-label="Document AI companion"><ErrorBoundary><ChatWidget open ensureSession={ensureSession} session={session} resetSession={resetSession} configured={health?.configured ?? null} serviceError={serviceError} onRetryService={refreshService} documents={documents} documentsLoading={loading} documentsError={documentsError} onRefreshDocuments={refresh} onRetryDocuments={refresh} askRequest={askRequest} onOpenSource={openSource} activeDocumentId={selectedId} /></ErrorBoundary></aside>
