@@ -130,6 +130,66 @@ player docks to the bottom edge of the screen (fixed, safe-area aware), the view
 so toolbar + slide fit above it, the floating Voice/Ask dock moves up, and the page reserves the player's height
 (`--guide-dock-h`). In fullscreen it remains a row of the fullscreen viewer, below the letterboxed slide.
 
+## Spatial shell overhaul (Sept 2026)
+
+Four changes to the review workspace; the deck, timeline, narration engine and evidence contract are unchanged.
+
+### A · Player bar below the slide
+
+Narration never overlays the canvas. `GuideBar` is the last grid row of the viewer (`position: relative`, in flow), holding
+compact back / play-pause / skip, the **current section label** (the slide title, with `n/total · Slide n` beneath it), a
+3 px progress line along the top edge, a **Transcript** disclosure that expands the full narrated script in flow, and a small
+**ⓘ information menu** that now owns every technical detail — playback status, voice source and clip provenance
+(`data-clip-sha`, `data-verified`), model, and the keyboard shortcuts. Measured on the deployed build at 1440×900:
+player top 701 px vs slide bottom 692 px (`position: relative`), i.e. the bar starts below the slide, never over it.
+
+### B · Spatial refinement
+
+`src/styles.css` gained a token layer (`SPATIAL SYSTEM`) applied over the existing white / charcoal / gold palette:
+
+| Concern | Tokens |
+|---|---|
+| Spacing | `--space-half:4px … --space-1:8px … --space-8:64px` — 8 px base with 4 px sub-steps |
+| Motion | `--dur-1:150ms`, `--dur-2:200ms`, `--dur-3:250ms`, all on `--ease`; nothing outside that band |
+| Depth | `--z-stage/raised/player/header/panel/overlay` + `--elev-1…4` soft charcoal-tinted shadows |
+| Glass | `--glass`, `--glass-strong`, `--glass-blur`, `--glass-border` (a **1 px high-contrast edge**, not neumorphism) |
+| Borders | `--hair-1: 1px` everywhere — panels, player, cards, tables |
+
+Slide changes get a gentle parallax (`slide-parallax-a/-b`, alternating so it re-fires on every page) over a soft stage
+gradient. `@media (prefers-reduced-motion: reduce)` disables the parallax and the hover lift.
+
+### C · AI panel that resizes, not overlays
+
+The workspace is a grid: `grid-template-columns: minmax(0,1fr) var(--companion-width)`. Opening the panel **narrows the
+presentation column** instead of covering it (measured: stage 1248 px → 940 px, panel left edge 1012 px ≥ stage right edge
+988 px). A rail above the panel collapses/expands it, and the open/closed state plus the last mode is persisted in
+`localStorage` under `athar.ai-panel.v1` — UI preference only, never a credential. Below 640 px the workspace splits into
+**Presentation** and **Ask AI** views with a frosted bottom tab switch (roving `tablist`, scroll position preserved per view).
+
+### D · Evidence you can tell apart
+
+The validated structure behind each answer (`facts`, `calculations`, `conflicts`, `missing`) is now rendered with distinct
+badges and left-border colours instead of only prose:
+
+| Badge | Meaning |
+|---|---|
+| **Stated in source** (green) | The value is printed in a document; the quotation is the evidence. |
+| **Derived calculation** (gold) | Computed *by the server* from quoted operands — the formula and operands are shown. |
+| **Conflicting values** (red) | The same subject stated differently by two sources; both are cited, neither is reconciled. |
+| **Not in the sources** (grey) | Explicitly unanswered, rather than guessed. |
+
+Every item carries an **Open source** action that deep-links to the exact page, slide or worksheet + cell range
+(e.g. `Outputs!B5:F12`), and the scope selector still switches between *This document* and *All documents* across the four
+sources. The full validated answer text stays available under a disclosure.
+
+### E · Provider configuration
+
+`ON_DEMAND_API_KEY` is read server-side only (`process.env` → `.env` → `env.local`), never `VITE_`-prefixed, and reaches On
+Demand's live public API as the `apikey` header: `POST /chat/v1/sessions` then `POST /chat/v1/sessions/{id}/query`
+(`responseMode: sync`, `fulfillmentOnly`). `.env.example` documents the placeholder; the real value belongs in the host
+environment or `.env` (git-ignored). `npm test` now runs with `ATHAR_SKIP_DOTENV=1` so a developer's real `.env` can never
+change what a synthetic fixture observes.
+
 ## QA log — Guide Mode narration provenance, 2026-09-04 (voice fix)
 
 Fresh, cookie-less headless Chromium sessions (desktop 1440×900 and mobile 390×844) against the live sandbox preview.

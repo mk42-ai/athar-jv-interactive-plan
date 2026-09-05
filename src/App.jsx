@@ -10,20 +10,39 @@ import { createSession, getHealth, getAccess, unlockAccess, getDocuments, retryD
 import { OVERVIEW } from './lib/plan.js';
 
 const newExternalUserId = () => `athar-web-${(globalThis.crypto?.randomUUID?.() || Math.random().toString(36).slice(2)).slice(0, 12)}`;
+
+// Desktop AI-panel preference. UI state only — no business payload, no credential, no identifier.
+const PANEL_KEY = 'athar.ai-panel.v1';
+const readPanelPreference = () => {
+  try {
+    const raw = globalThis.localStorage?.getItem(PANEL_KEY);
+    if (!raw) return null;
+    const saved = JSON.parse(raw);
+    const widget = saved?.open === true && (saved.widget === 'chat' || saved.widget === 'voice') ? saved.widget : null;
+    return { widget, last: saved?.widget === 'voice' ? 'voice' : 'chat' };
+  } catch { return null; }
+};
+const writePanelPreference = (widget, last) => {
+  try { globalThis.localStorage?.setItem(PANEL_KEY, JSON.stringify({ open: Boolean(widget), widget: widget || last || 'chat', v: 1 })); } catch {}
+};
 const ChatIcon = () => <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" strokeWidth="1.7" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true"><path d="M21 12a8 8 0 0 1-8 8H8l-5 3 1.5-4.5A8 8 0 1 1 21 12z" /></svg>;
 const MicIcon = () => <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" strokeWidth="1.7" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true"><path d="M12 3a3 3 0 0 0-3 3v6a3 3 0 0 0 6 0V6a3 3 0 0 0-3-3zM5 11a7 7 0 0 0 14 0M12 18v3" /></svg>;
 
 export default function App() {
-  const [{ initialTab, initialWidget, initialVoiceQuestion }] = useState(() => {
+  const [{ initialTab, initialWidget, initialVoiceQuestion, initialLastWidget }] = useState(() => {
     const [h, qs] = (location.hash || '').replace(/^#/, '').split('?');
+    const saved = readPanelPreference();
     return {
       initialTab: TABS.some((t) => t.id === h) ? h : 'deck',
-      initialWidget: h === 'chat' || h === 'voice' ? h : null,
+      // The address bar wins; otherwise the reader's last desktop panel state is restored.
+      initialWidget: h === 'chat' || h === 'voice' ? h : saved?.widget || null,
       initialVoiceQuestion: h === 'voice' && qs ? new URLSearchParams(qs).get('q') : null,
+      initialLastWidget: (h === 'chat' || h === 'voice' ? h : saved?.last) || 'chat',
     };
   });
   const [tab, setTab] = useState(initialTab);
   const [widget, setWidget] = useState(initialWidget);
+  const lastWidgetRef = useRef(initialLastWidget);
   const [health, setHealth] = useState(null);
   const [healthError, setHealthError] = useState(null);
   const [access, setAccess] = useState({ authenticated: false, configured: null, loading: true });
@@ -110,6 +129,11 @@ export default function App() {
     return () => { alive = false; };
   }, []);
   useEffect(() => { history.replaceState(null, '', `#${tab}`); }, [tab]);
+  // (C) Remember whether the desktop AI panel was open, and which mode it held.
+  useEffect(() => {
+    if (widget) lastWidgetRef.current = widget;
+    writePanelPreference(widget, lastWidgetRef.current);
+  }, [widget]);
   useEffect(() => {
     const el = workspaceRef.current;
     if (!el) return;
@@ -247,6 +271,7 @@ export default function App() {
             <section id="panel-timeline" role={isMobile ? 'region' : 'tabpanel'} aria-labelledby={isMobile ? 'mobile-section-timeline' : 'tab-timeline'} hidden={tab !== 'timeline'} inert={tab !== 'timeline' ? '' : undefined} className="tab-panel"><ErrorBoundary name="Timeline"><TimelineTab /></ErrorBoundary></section>
           </div>
           <aside id="mobile-panel-ask" role={isMobile ? 'tabpanel' : undefined} aria-labelledby={isMobile ? 'mobile-tab-ask' : undefined} hidden={isMobile && mobileView !== 'ask'} inert={isMobile && mobileView !== 'ask' ? '' : undefined} className={`workspace-companion ${widget ? 'is-open' : 'is-collapsed'}`} aria-label={isMobile ? undefined : 'Presentation companion'} data-testid="presentation-companion">
+            {!isMobile && <div className="ai-panel-rail" data-testid="ai-panel-rail"><p>AI companion</p><button type="button" className="ai-panel-toggle" data-testid="ai-panel-toggle" aria-expanded={Boolean(widget)} aria-controls={widget === 'voice' ? 'voice-widget' : 'chat-widget'} aria-label={widget ? 'Collapse the AI panel and widen the presentation' : 'Expand the AI panel'} onClick={(e) => (widget ? closeWidget() : openWidget(lastWidgetRef.current || 'chat', e))}><span aria-hidden="true">{widget ? '⟩' : '⟨'}</span><span>{widget ? 'Collapse' : 'Expand'}</span></button></div>}
             {isMobile && guideSummary?.active && <div className="mobile-guide-transport" role="group" aria-label="Presentation narration continues" data-testid="mobile-guide-transport"><span>Guide <b>{guideSummary.idx + 1}/{guideSummary.total}</b><small>{guideSummary.status === 'ended' ? 'Complete' : guideSummary.playing ? 'Playing' : 'Paused'}</small></span><button className="icon-btn" onClick={() => guideBridgeRef.current?.back()} disabled={guideSummary.idx === 0} aria-label="Previous guide moment">‹</button><button className="btn small" onClick={() => guideBridgeRef.current?.playPause()} aria-label={guideSummary.playing ? 'Pause presentation narration' : 'Play presentation narration'}>{guideSummary.playing ? 'Pause' : guideSummary.status === 'ended' ? 'Replay' : 'Play'}</button><button className="icon-btn" onClick={() => guideBridgeRef.current?.skip()} aria-label="Next guide moment">›</button></div>}
             {!widget && <div className="companion-teaser"><p>AI companion<small>{access.authenticated ? 'Ask a question, inspect a source, or continue by voice.' : 'Review access unlocks document questions and voice. The presentation stays open.'}</small></p><div className="companion-actions"><button className="dock-btn" onClick={(e) => openWidget('voice', e)} aria-expanded="false" aria-controls="voice-widget" aria-label="Advanced Voice Mode" data-testid="dock-voice"><MicIcon /><span>Voice</span></button><button className="dock-btn" onClick={(e) => openWidget('chat', e)} aria-expanded="false" aria-controls="chat-widget" aria-label="Ask the plan" data-testid="dock-chat"><ChatIcon /><span>Ask AI</span></button></div></div>}
             <div className="companion-shell" hidden={!widget} inert={!widget ? '' : undefined}>
