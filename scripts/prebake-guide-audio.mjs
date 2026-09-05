@@ -1,8 +1,8 @@
 #!/usr/bin/env node
-// Pre-bake Guide Mode narration with ElevenLabs into public/guide-audio/ so every visitor hears the same
-// verified voice with zero runtime quota use and no API key at runtime.
+// Operator-only generation into ATHAR_PRESENTATION_DIR/public/guide-audio (never the public repo).
+// Requires an explicitly configured private presentation directory and provider credentials in env.
 //
-//   ELEVENLABS_API_KEY=… node scripts/prebake-guide-audio.mjs [--keep]
+//   ATHAR_PRESENTATION_DIR=/absolute/private/presentation node scripts/prebake-guide-audio.mjs [--keep]
 //
 // Provenance & cache-busting (manifest v2):
 //   • every clip is written as <momentId>-<sha256(bytes)[0:12]>.mp3 — content-addressed, so a regenerated clip
@@ -13,7 +13,11 @@
 import crypto from 'node:crypto';
 import fs from 'node:fs';
 import path from 'node:path';
-import { GUIDE_STEPS } from '../src/lib/guide.js';
+import { getGuideSteps, presentationDirectory, presentationPath, readPresentationFile, writePresentationFile } from '../server/presentationStore.js';
+
+process.umask(0o077);
+presentationDirectory();
+const GUIDE_STEPS = getGuideSteps();
 import { ELEVEN, elevenStatus, elevenTts, isElevenConfigured } from '../server/elevenlabs.js';
 
 if (!isElevenConfigured()) {
@@ -21,15 +25,15 @@ if (!isElevenConfigured()) {
   process.exit(2);
 }
 const keep = process.argv.includes('--keep');
-const outDir = path.resolve('public/guide-audio');
-fs.mkdirSync(outDir, { recursive: true });
-const manifestPath = path.join(outDir, 'manifest.json');
+const manifestRelative = 'public/guide-audio/manifest.json';
+const manifestPath = presentationPath(manifestRelative, { createParents: true });
+const outDir = path.dirname(manifestPath);
 const sha256 = (b) => crypto.createHash('sha256').update(b).digest('hex');
 const iso = () => new Date().toISOString();
 
 if (!keep) {
-  for (const f of fs.readdirSync(outDir)) if (f.endsWith('.mp3')) fs.unlinkSync(path.join(outDir, f));
-  console.log(`${iso()} purged old clips from ${outDir}`);
+  for (const f of fs.readdirSync(outDir)) if (f.endsWith('.mp3')) fs.unlinkSync(presentationPath(`public/guide-audio/${f}`));
+  console.log(`${iso()} purged old private clips`);
 }
 const manifest = {
   version: 2,
@@ -64,8 +68,8 @@ for (const step of GUIDE_STEPS) {
   }
   const hash = sha256(buf);
   const file = `${step.id}-${hash.slice(0, 12)}.mp3`;
-  fs.writeFileSync(path.join(outDir, file), buf);
-  const back = sha256(fs.readFileSync(path.join(outDir, file)));
+  writePresentationFile(`public/guide-audio/${file}`, buf);
+  const back = sha256(readPresentationFile(`public/guide-audio/${file}`));
   if (back !== hash) throw new Error(`${step.id}: write verification failed`);
   manifest.clips[step.id] = {
     file,
@@ -84,8 +88,8 @@ for (const step of GUIDE_STEPS) {
   };
   chars += step.text.length;
   console.log(`${iso()} baked ${step.id.padEnd(14)} ${model} ${String(buf.length).padStart(7)} B sha256=${hash.slice(0, 16)}… (~${Math.round((buf.length * 8) / 128000)}s, ${Date.now() - t0} ms)`);
-  fs.writeFileSync(manifestPath, JSON.stringify(manifest, null, 1)); // checkpoint after every clip
+  writePresentationFile(manifestRelative, JSON.stringify(manifest, null, 1)); // checkpoint after every clip
 }
 const after = await elevenStatus().catch((e) => ({ error: e.message }));
-console.log(`${iso()} done: ${Object.keys(manifest.clips).length} clips, ${chars} characters → ${manifestPath}`);
+console.log(`${iso()} done: ${Object.keys(manifest.clips).length} clips, ${chars} characters saved privately`);
 console.log(`${iso()} quota after:`, JSON.stringify(after));

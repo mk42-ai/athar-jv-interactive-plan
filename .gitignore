@@ -36,3 +36,13 @@ originals/
 *review-credentials*
 .qa-raw/
 
+# Python/operator caches and private presentation source payloads
+__pycache__/
+*.pyc
+presentation-store/
+public/deck/
+public/guide-audio/
+data/athar-jv-month-timeline.json
+data/deck-pdf.base64.json
+data/guide-audio.base64.json
+

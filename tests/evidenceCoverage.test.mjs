@@ -17,3 +17,14 @@ test('count questions require each requested source-stated count, not one valid 
 test('year and week references are not turned into workbook cell requirements',()=>{
  assert.deepEqual(evidenceCoverageGaps('Compare Y5 and W20',{chunks:[]},answer([])),[]);
 });
+
+test('comparison starter requires both scenarios and conditional expansion qualification', () => {
+ const retrieved={chunks:[{kind:'pdf',id:'src-a',text:'UAE-only Base Case. International Expansion Upside is contingent on approval.'}]};
+ assert.ok(evidenceCoverageGaps('Compare the UAE base case with international expansion.',retrieved,answer(['Outputs heading'])).length >= 2);
+ assert.deepEqual(evidenceCoverageGaps('Compare the UAE base case with international expansion.',retrieved,answer(['UAE-only Base Case. International Expansion Upside is contingent on approval.'])),[]);
+});
+test('capital decisions starter cannot substitute headings for actual labelled unresolved rows', () => {
+ const retrieved={chunks:[{id:'src-test',documentId:'doc-a',kind:'xlsx',location:{sheet:'Control'},text:'Capital basis for the MoU. A1=Callable cash per party B1=To be agreed',records:[{cell:'A1',row:1,value:'Callable cash per party'},{cell:'B1',row:1,value:'To be agreed'}]}]};
+ assert.ok(evidenceCoverageGaps('What capital decisions still need agreement?',retrieved,answer(['Capital basis for the MoU'])).length > 0);
+ assert.deepEqual(evidenceCoverageGaps('What capital decisions still need agreement?',retrieved,answer(['Capital basis for the MoU. A1=Callable cash per party B1=To be agreed'])),[]);
+});

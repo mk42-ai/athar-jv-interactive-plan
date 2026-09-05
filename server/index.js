@@ -25,6 +25,7 @@ app.use((req, res, next) => {
 const apiApp = createApiApp();
 app.use(apiApp);
 app.use(privatePresentation(apiApp.locals.reviewAccess));
+app.use(['/deck', '/guide-audio'], apiApp.locals.reviewAccess.requireAccess);
 rehydrateGuideAudio({ staticDir: 'dist' });
 app.use(guideAudioMiddleware({ staticDir: 'dist' }));
 app.use(deckPdfMiddleware({ staticDir: 'dist' }));

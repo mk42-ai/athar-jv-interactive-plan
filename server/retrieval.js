@@ -272,7 +272,13 @@ export function retrieveEvidence(input, { question, documentId = 'all', slide = 
     if (documentId !== 'all' && chunk.documentId !== documentId) continue;
     if (slide != null && chunk.location.slide !== slide) continue;
     if (pageFilter != null && chunk.location.page !== pageFilter) continue;
+    // A request for an exact workbook cell cannot be answered from a PDF/PPTX
+    // that merely mentions similar figures. Preserve the selected document boundary.
+    if (selectedDoc && selectedDoc.kind !== 'xlsx' && /\b(?:cell|saved.*value|financial.model|worksheet|spreadsheet)\b/i.test(context.question)
+        && requestedCells.some(cell => /[A-Z]{1,3}\d+/.test(cell) && !/^[YWMG]\d+$/.test(cell))) continue;
     const requestedSheet = requestedSheets.includes(chunk.location.sheet);
+    const sheetOnlyScope = selectedDoc?.kind === 'xlsx' && requestedSheets.length && /\b(?:only|exclusively|just)\b/i.test(context.question);
+    if (sheetOnlyScope && !requestedSheet) continue;
     const requestedCell = chunk.records?.some(record => requestedCells.includes(String(record.cell || '').replace(/\$/g, '')) && (!record.sheet || record.sheet === chunk.location.sheet));
     if (selectedDoc?.kind === 'xlsx' && requestedCells.length && (!requestedCell || (requestedSheets.length && !requestedSheet))) continue;
     let score = 0;

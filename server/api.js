@@ -3,9 +3,7 @@
 // All On Demand calls happen here, server-side, with the apikey from process.env.
 import express from 'express';
 import crypto from 'node:crypto';
-import fs from 'node:fs';
-import path from 'node:path';
-import { GUIDE_STEPS } from '../src/lib/guide.js';
+import { getGuideSteps, getPresentationData, getAudioManifest } from './presentationStore.js';
 import { createAccessControl } from './access.js';
 import { createEvidenceRoutes } from './evidenceRoutes.js';
 import {
@@ -211,7 +209,13 @@ export function createApiApp() {
     next();
   });
   api.use('/access', access.router);
-  api.use(['/guide', '/guide-audio'], (req, res, next) => process.env.ATHAR_PRIVATE_PRESENTATION === '1' ? access.requireAccess(req, res, next) : next());
+  // Presentation payloads are no longer embedded in public Git/client bundles.
+  // They load only after the existing reviewer session is authenticated.
+  api.get('/presentation', access.requireAccess, (req, res) => {
+    try { res.set('Cache-Control', 'private, no-store').json(getPresentationData()); }
+    catch { res.status(503).json({ code: 'presentation_unavailable', message: 'The protected presentation is unavailable. Ask the owner to restore the presentation store.' }); }
+  });
+  api.use(['/guide', '/guide-audio'], access.requireAccess);
   api.use(evidence.router);
   // Every user-generated voice/chat operation is authorized; the narrated public deck is unchanged.
   api.use('/voice', (req, res, next) => {
@@ -221,15 +225,6 @@ export function createApiApp() {
   });
   api.use('/voice', (req, res, next) => ['GET', 'HEAD'].includes(req.method) ? next() : access.sameOrigin(req, res, next));
   api.use('/voice', (req, res, next) => { req.evidenceService = evidence; req.reviewAccess = access; next(); });
-
-  // Cache policy for narration assets: the manifest must never be cached (it names the current clips);
-  // clip files are content-hashed, so they can be cached forever — a regenerated clip gets a new name.
-  app.use('/guide-audio', (req, res, next) => {
-    if (/manifest\.json$/.test(req.path)) res.setHeader('Cache-Control', 'no-store, must-revalidate');
-    else if (/\.mp3$/.test(req.path)) res.setHeader('Cache-Control', 'public, max-age=31536000, immutable');
-    next();
-  });
-
 
   api.get('/health', (req, res) => {
     res.setHeader('Cache-Control', 'no-store');
@@ -328,49 +323,19 @@ export function createApiApp() {
     }
   });
 
-  // ---- Guide Mode narration -------------------------------------------------------------
-  // Provider order: ElevenLabs (ELEVENLABS_API_KEY, server-side only) → On Demand Services API
-  // (ON_DEMAND_API_KEY, fallback). Clips pre-baked into public/guide-audio/ (see
-  // scripts/prebake-guide-audio.mjs) are served first: zero quota use, identical voice for every
-  // visitor, works anonymously. Every request logs provider/model/voice/source on the server.
-  let prebaked; // manifest.json -> { clips: { key: { file, provider, model, voice, ... } } }
-  function loadPrebaked() {
-    if (prebaked !== undefined) return prebaked;
-    prebaked = null;
-    for (const dir of ['public', 'dist']) {
-      try {
-        const p = path.join(process.cwd(), dir, 'guide-audio', 'manifest.json');
-        if (fs.existsSync(p)) {
-          prebaked = JSON.parse(fs.readFileSync(p, 'utf8'));
-          break;
-        }
-      } catch (e) {
-        console.warn('[guide-tts] could not read prebaked manifest:', e.message);
-      }
-    }
-    return prebaked;
-  }
-
-  // Serves a narration clip (or the manifest) from the static folder if present, else from the embedded
-  // base64 store — used by the Vercel rewrite for /guide-audio/* when the static file is absent.
+  // Verified prerecorded audio comes only from the protected host store, never public files.
+  const loadPrebaked = () => { try { return getAudioManifest(); } catch { return null; } };
   api.get('/guide-audio/:file', (req, res) => {
     const file = String(req.params.file || '');
     if (!file || file.includes('/') || file.includes('..')) return res.status(400).json({ error: 'bad file' });
-    for (const dir of ['public', 'dist']) {
-      const p = path.join(process.cwd(), dir, 'guide-audio', file);
-      if (fs.existsSync(p)) {
-        res.setHeader('Cache-Control', file.endsWith('.mp3') ? 'public, max-age=31536000, immutable' : 'no-store, must-revalidate');
-        res.setHeader('X-Guide-Audio', 'static');
-        return res.sendFile(p, { headers: { 'Content-Type': file.endsWith('.mp3') ? 'audio/mpeg' : 'application/json' } });
-      }
-    }
     if (serveEmbedded(req, res, file)) return;
-    res.status(404).json({ error: 'clip not found', file });
+    res.status(404).json({ error: 'clip not found' });
   });
 
   api.get('/guide/config', (req, res) => {
     res.setHeader('Cache-Control', 'no-store');
-    res.json({ moments: GUIDE_STEPS.map(({ id, slide, boxes }) => ({ id, slide, boxes })) });
+    try { res.json({ moments: getGuideSteps().map(({ id, slide, boxes }) => ({ id, slide, boxes })) }); }
+    catch { res.status(503).json({ code: 'presentation_unavailable' }); }
   });
 
   api.get('/guide/voice', (req, res) => {
@@ -388,7 +353,6 @@ export function createApiApp() {
       if (!text) return res.status(400).json({ error: 'text is required' });
 
       const done = (payload) => {
-        console.log(`[guide-tts] ${new Date().toISOString()} moment=${id || '-'} provider=${payload.provider} model=${payload.model} voice=${payload.voice} source=${payload.source} file=${payload.file || '-'} chars=${text.length} ms=${Date.now() - t0}`);
         res.json(payload);
       };
 
@@ -397,15 +361,13 @@ export function createApiApp() {
       const manifest = loadPrebaked();
       const textSha = crypto.createHash('sha256').update(text).digest('hex');
       const pre = manifest?.clips?.[id] || Object.values(manifest?.clips || {}).find((c) => c.textSha256 === textSha);
-      const staticDir = fs.existsSync(path.join(process.cwd(), 'public', 'guide-audio')) ? 'public' : 'dist';
-      const status = pre ? clipStatus(pre.file, { staticDir, expectedSha256: pre.sha256 }) : null;
+      const status = pre ? clipStatus(pre.file, { expectedSha256: pre.sha256 }) : null;
       if (pre && (!pre.textSha256 || pre.textSha256 === textSha) && status?.ok) {
         return done({ url: `${status.source === 'embedded' ? '/api/guide-audio/' : '/guide-audio/'}${pre.file}`, file: pre.file, sha256: pre.sha256, servedFrom: status.source, provider: manifest.provider || 'elevenlabs', model: pre.model || manifest.model, voice: pre.voice || manifest.voice, voiceId: pre.voiceId || manifest.voiceId, label: `ElevenLabs · ${pre.voice || manifest.voice} · ${pre.model || manifest.model}`, source: 'prebaked', settings: pre.settings || manifest.settings });
       }
 
       return res.status(503).json({ code: 'verified_clip_unavailable', message: 'A verified narration clip is unavailable. Retry after the source has been restored.' });
     } catch (e) {
-      console.error(`[guide-tts] error: ${e.message}`);
       res.status(e.status || 500).json(errPayload(e, 'guide-tts'));
     }
   });

@@ -2,19 +2,8 @@
 // (modelConfigs.fulfillmentPrompt). It is a compact, lossless-enough rendering of
 // data/athar-jv-month-timeline.json — overview + all seven months (initiatives,
 // milestones, financials, KPIs, details). ~37 KB / ~9.5k tokens.
-import fs from 'node:fs';
-import path from 'node:path';
-import { fileURLToPath } from 'node:url';
-
-const __dirname = path.dirname(fileURLToPath(import.meta.url));
-const PLAN_PATH = path.resolve(__dirname, '../data/athar-jv-month-timeline.json');
-
-let cache = null;
-
-export function loadPlan() {
-  if (!cache) cache = JSON.parse(fs.readFileSync(PLAN_PATH, 'utf8'));
-  return cache;
-}
+import { getPresentationPlan } from './presentationStore.js';
+export function loadPlan() { return getPresentationPlan(); }
 
 function j(v) {
   return JSON.stringify(v);

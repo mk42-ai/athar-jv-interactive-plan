@@ -147,3 +147,12 @@ test('private disk loader parses once, shares reload, retries partial writes, an
     await assert.rejects(loadCorpusIndex({ corpusDir: publicDir }), error => error.code === 'corpus_unavailable');
   } finally { clearCorpusCache(); await rm(dir, { recursive: true, force: true }); }
 });
+
+test('worksheet-only scope without an explicit cell never broadens into other sheets', () => {
+ const result=retrieveEvidence(fixture(),{question:'Use only Control to summarize funding.',documentId:ids[2]});
+ assert.ok(result.chunks.length>0); assert.ok(result.chunks.every(c=>c.location.sheet==='Control'));
+});
+test('selected presentation does not answer a workbook-only exact cell by similar figures', () => {
+ const result=retrieveEvidence(fixture(),{question:'Using only the presentation, what is the financial-model Outputs C61 saved value?',documentId:ids[1]});
+ assert.equal(result.chunks.length,0);
+});

@@ -1,4 +1,6 @@
-import plan from '../../data/athar-jv-month-timeline.json';
+import { getPresentationData } from './presentationState.js';
+const presentation = getPresentationData();
+const plan = presentation.plan;
 
 export const PLAN = plan;
 export const MONTHS = plan.months;
@@ -47,11 +49,4 @@ export function countByStatus(month) {
   return c;
 }
 
-export const SUGGESTED_QUESTIONS = [
-  'What happens at each of the six gates, and when?',
-  'When does billing start and what is the seat rate?',
-  'Which anchors are contracted at G4 and how many seats each?',
-  'What must be finished in November 2026 before G2?',
-  'Summarise the financial baseline: capital, NPV and the Y1–Y3 revenue build.',
-  'What is decided at the Month-6 gate in March 2027?',
-];
+export const SUGGESTED_QUESTIONS = presentation.suggestedQuestions;

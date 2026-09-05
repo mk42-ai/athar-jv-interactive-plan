@@ -3,8 +3,9 @@ import express from 'express';
 import crypto from 'node:crypto';
 import fs from 'node:fs/promises';
 import path from 'node:path';
-import { loadCorpusIndex, retrieveEvidence } from './retrieval.js';
-import { buildEvidencePrompt, validateEvidenceAnswer, prepareModelSelection } from './evidenceAnswer.js';
+import { loadCorpusIndex, retrieveEvidence, immutableRecordsMap } from './retrieval.js';
+import { buildEvidencePrompt, validateEvidenceAnswer, prepareModelSelection, renderEvidenceAnswer } from './evidenceAnswer.js';
+import { augmentExactCellEvidence } from './rawCellEvidence.js';
 import { createSourceView } from './sourceView.js';
 import { evidenceCoverageGaps } from './evidenceCoverage.js';
 import { createChatSession, submitQuerySync, isConfigured } from './ondemand.js';
@@ -26,6 +27,9 @@ export function createEvidenceRoutes({ access, corpusDir = process.env.ATHAR_COR
   const router = express.Router();
   const conversations = new Map();
   const usage = new Map();
+  // Dense-cell evidence is a request-derived projection of an immutable raw record.
+  // Bind it to the reviewer; another reviewer cannot guess a source alias to read it.
+  const rawEvidence = new Map();
   const index = (force = false) => loadCorpusIndex({ corpusDir, force });
   const views = createSourceView({ corpusDir, loadIndex: index });
   function owned(req, id) {
@@ -34,6 +38,7 @@ export function createEvidenceRoutes({ access, corpusDir = process.env.ATHAR_COR
     return value;
   }
   const sweep = () => {
+    for (const [key, v] of rawEvidence) if (v.expiresAt <= clock()) rawEvidence.delete(key);
     for (const [key, v] of conversations) if (v.expiresAt <= clock()) conversations.delete(key);
     for (const [key, v] of usage) if (v.until <= clock()) usage.delete(key);
   };
@@ -61,6 +66,15 @@ export function createEvidenceRoutes({ access, corpusDir = process.env.ATHAR_COR
   router.get('/citations/:id', async (req, res) => {
     try {
       const data = await index();
+      if (req.params.id.startsWith('src-raw-')) {
+        const saved = rawEvidence.get(req.params.id);
+        if (!saved || saved.principal !== req.reviewer.principal || saved.expiresAt <= clock()) throw fail('source_not_found', '', 404);
+        const doc = data.documentsById.get(saved.chunk.documentId);
+        return res.json({ id: req.params.id, documentId: doc.id, title: doc.title, location: saved.exactLocation,
+          label: `${doc.title} · ${saved.exactLocation.sheet}!${saved.exactLocation.range}`, excerpt: saved.projectionText,
+          records: saved.records, metadata: { evidenceOrigin: 'raw-record-projection', parentId: saved.baseId, originalSha256: doc.sha256, rawSha256: saved.rawSha256, exactLocations: saved.exactLocations },
+          originalUrl: `/api/sources/${doc.id}`, sourceViewUrl: `/api/citations/${req.params.id}/view`, limitations: doc.limitations });
+      }
       const source = data.recordsById.get(req.params.id);
       if (!source) throw fail('source_not_found', '', 404);
       const doc = data.documentsById.get(source.documentId);
@@ -70,8 +84,21 @@ export function createEvidenceRoutes({ access, corpusDir = process.env.ATHAR_COR
     } catch (error) { safeError(res, error); }
   });
   router.get('/citations/:id/view', async (req, res) => {
-    try { res.json(await views.location(req.params.id, views.parseQuery(req.query))); }
-    catch (error) { safeError(res, error); }
+    try {
+      if (req.params.id.startsWith('src-raw-')) {
+        const saved = rawEvidence.get(req.params.id);
+        if (!saved || saved.principal !== req.reviewer.principal || saved.expiresAt <= clock()) throw fail('source_not_found', '', 404);
+        const target = Object.keys(req.query).length ? views.parseQuery(req.query) : saved.exactLocation;
+        const result = await views.location(saved.baseId, target);
+        const targetCell = saved.exactLocation.range;
+        const rows = (result.rows || []).map(row => ({ ...row, cells: row.cells.map(cell => ({ ...cell,
+          highlight: cell.sheet === saved.exactLocation.sheet && cell.address === targetCell })) }));
+        return res.json({ ...result, rows, citationId: req.params.id, initialLocation: saved.exactLocation, citationLocation: saved.exactLocation,
+          highlights: { type: 'range', sheet: saved.exactLocation.sheet, range: targetCell, visible: rows.some(row => row.cells.some(cell => cell.highlight)) },
+          evidenceOrigin: 'raw-record-projection', parentId: saved.baseId });
+      }
+      res.json(await views.location(req.params.id, views.parseQuery(req.query)));
+    } catch (error) { safeError(res, error); }
   });
   router.get('/sources/:id/preview', async (req, res) => {
     try { const result = await views.preview(req.params.id); res.set(result.headers).end(result.body); }
@@ -112,7 +139,28 @@ export function createEvidenceRoutes({ access, corpusDir = process.env.ATHAR_COR
     conversation.busy = true;
     try {
       const corpus = await index();
-      const retrieved = retrieveEvidence(corpus, { question: query, documentId, slide, history: conversation.history });
+      let retrieved = retrieveEvidence(corpus, { question: query, documentId, slide, history: conversation.history });
+      retrieved = await augmentExactCellEvidence(corpus, retrieved, { question: query, documentId, sourceViews: views });
+      const projections = retrieved.rawCellEvidence || [];
+      if (projections.length) {
+        const aliases = new Map();
+        for (const snapshot of projections) {
+          if (aliases.has(snapshot.baseId)) continue;
+          const matching = projections.filter(s => s.baseId === snapshot.baseId);
+          const alias = `src-raw-${crypto.createHash('sha256').update(`${req.reviewer.principal}\0${matching.map(s => s.rawProjectionHash).join(':')}`).digest('hex').slice(0, 40)}`;
+          aliases.set(snapshot.baseId, alias);
+          if (rawEvidence.size >= 1000) rawEvidence.delete(rawEvidence.keys().next().value);
+          rawEvidence.set(alias, { principal: req.reviewer.principal, expiresAt: clock() + TTL, baseId: snapshot.baseId,
+            chunk: retrieved.chunks.find(c => c.id === snapshot.baseId), exactLocation: snapshot.exactLocation,
+            exactLocations: matching.map(s => s.exactLocation), records: matching.flatMap(s => s.records),
+            projectionText: matching.map(s => s.text).join('\n'), rawSha256: snapshot.rawSha256 });
+        }
+        const remap = chunk => aliases.has(chunk.id) ? { ...chunk, id: aliases.get(chunk.id), parentId: chunk.id,
+          location: projections.find(s => s.baseId === chunk.id).exactLocation,
+          label: `${chunk.label} · exact protected raw-cell evidence` } : chunk;
+        const chunks = retrieved.chunks.map(remap), modelChunks = retrieved.modelChunks.map(remap);
+        retrieved = { ...retrieved, chunks, modelChunks, recordsById: immutableRecordsMap(chunks.map(c => [c.id, c])) };
+      }
       const prompt = buildEvidencePrompt({ question: query, retrieved, documentId, history: conversation.history });
       // A fresh upstream session per answer prevents provider-side memory leaking facts across document filters.
       // Locally retained previous USER questions only resolve follow-up wording; prior answers are never evidence.

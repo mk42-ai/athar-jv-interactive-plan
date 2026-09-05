@@ -1,24 +1,17 @@
-// Deck bytes resolver — the presentation must open for anyone with the raw link, with zero session
-// context. Order: (1) the static PDF bundled in public/deck/ (stable relative path, served by the app
-// itself — no signed or expiring URL anywhere); (2) the same bytes embedded as base64 in the client
-// bundle (data/deck-pdf.base64.json), decoded in the browser. Never a third-party or signed URL.
+// The original PDF is available only through the same-origin, reviewer-protected server route.
+// No static/bundled/base64 fallback, third-party URL or signed-link persistence.
+import { getPresentationData } from './presentationState.js';
 export async function resolveDeckSource(src) {
-  try {
-    const res = await fetch(src, { cache: 'force-cache' });
-    const type = res.headers.get('content-type') || '';
-    if (res.ok && /pdf|octet-stream/i.test(type)) {
-      const buf = new Uint8Array(await res.arrayBuffer());
-      if (buf.length > 1000 && buf[0] === 0x25 && buf[1] === 0x50) return { data: buf, source: 'static' }; // %PDF
-    }
-    throw new Error(`static deck unavailable (${res.status} ${type || 'no type'})`);
-  } catch (e) {
-    const mod = await import('../../data/deck-pdf.base64.json');
-    const meta = mod.default || mod;
-    const bin = atob(meta.base64);
-    const data = new Uint8Array(bin.length);
-    for (let i = 0; i < bin.length; i++) data[i] = bin.charCodeAt(i);
-    console.info('[deck] using embedded copy:', e?.message || e);
-    return { data, source: 'embedded' };
-  }
+  const meta = getPresentationData().deck;
+  const privatePath = `/deck/${encodeURIComponent(meta.filename)}`;
+  if (src && src !== privatePath) throw new Error('The requested deck is not part of the authorized presentation.');
+  const response = await fetch(privatePath, { credentials: 'same-origin', cache: 'no-store' });
+  if (response.status === 401) throw new Error('Reviewer access is required. Reload to sign in.');
+  if (!response.ok || !/pdf|octet-stream/i.test(response.headers.get('content-type') || '')) throw new Error('The private deck is unavailable. Please retry.');
+  const data = new Uint8Array(await response.arrayBuffer());
+  if (data.length < 5 || new TextDecoder().decode(data.subarray(0, 5)) !== '%PDF-' || !globalThis.crypto?.subtle) throw new Error('The private deck could not be verified.');
+  const digest = [...new Uint8Array(await crypto.subtle.digest('SHA-256', data))].map((b) => b.toString(16).padStart(2, '0')).join('');
+  if (digest !== meta.sha256) throw new Error('The private deck failed integrity verification.');
+  return { data, source: 'private' };
 }
-if (typeof window !== 'undefined') window.__atharResolveDeck = resolveDeckSource; // QA/support hook
+if (typeof window !== 'undefined') window.__atharResolveDeck = resolveDeckSource;

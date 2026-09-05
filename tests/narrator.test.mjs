@@ -1,24 +1,28 @@
 import test from 'node:test';
 import assert from 'node:assert/strict';
-import fs from 'node:fs';
 import crypto from 'node:crypto';
-import { GUIDE_STEPS, firstStepOfSlide } from '../src/lib/guide.js';
+import { getGuideSteps, getAudioManifest, getEmbeddedAudioData, readPresentationFile, getPresentationDeck, getPresentationData } from '../server/presentationStore.js';
 import { createNarrator, NarrationError } from '../src/lib/narrator.js';
 
-const manifest = JSON.parse(fs.readFileSync(new URL('../public/guide-audio/manifest.json', import.meta.url)));
-const store = JSON.parse(fs.readFileSync(new URL('../data/guide-audio.base64.json', import.meta.url)));
 const hash = (v) => crypto.createHash('sha256').update(v).digest('hex');
+// Synthetic unit-test data only; actual confidential files are never required or committed.
+const step = { id: 'test-moment', text: 'Synthetic narration test.', slide: 1, boxes: [{ x: 0, y: 0, w: 1, h: 1 }] };
+const bytes = Buffer.concat([Buffer.from('ID3'), Buffer.alloc(1200, 7)]);
+const entry = { file: `test-moment-${hash(bytes).slice(0, 12)}.mp3`, sha256: hash(bytes), bytes: bytes.length, textSha256: hash(step.text) };
+const manifest = { version: 2, provider: 'test', model: 'test', voice: 'test', clips: { [step.id]: entry } };
 
-test('every configured narration moment has identical static/embedded bytes and matching script hash', () => {
-  assert.equal(GUIDE_STEPS.length, Object.keys(manifest.clips).length);
-  assert.equal(firstStepOfSlide(2), GUIDE_STEPS.filter(s => s.slide === 1).length);
-  for (const step of GUIDE_STEPS) {
-    const clip = manifest.clips[step.id]; assert.ok(clip, step.id);
-    const bytes = fs.readFileSync(new URL('../public/guide-audio/' + clip.file, import.meta.url));
-    assert.equal(hash(bytes), clip.sha256); assert.equal(hash(step.text), clip.textSha256);
-    assert.equal(hash(Buffer.from(store.files[clip.file].base64, 'base64')), clip.sha256);
-    for (const box of step.boxes) { assert.ok(box.x >= 0 && box.y >= 0 && box.x + box.w <= 1 && box.y + box.h <= 1); }
+test('explicit private assets retain exact disk/embedded/audio/script hashes', { skip: process.env.ATHAR_PRESENTATION_DIR ? false : 'ATHAR_PRESENTATION_DIR is not set; private-asset checks intentionally skipped' }, () => {
+  const steps = getGuideSteps(), actual = getAudioManifest(), embedded = getEmbeddedAudioData();
+  assert.equal(steps.length, Object.keys(actual.clips).length);
+  for (const moment of steps) {
+    const clip = actual.clips[moment.id]; assert.ok(clip, moment.id);
+    assert.equal(hash(readPresentationFile(`public/guide-audio/${clip.file}`)), clip.sha256);
+    assert.equal(hash(moment.text), clip.textSha256);
+    assert.equal(hash(Buffer.from(embedded.files[clip.file].base64, 'base64')), clip.sha256);
+    for (const box of moment.boxes) assert.ok(box.x >= 0 && box.y >= 0 && box.x + box.w <= 1 && box.y + box.h <= 1);
   }
+  const deck = getPresentationDeck(); assert.equal(hash(deck.buf), deck.sha256);
+  assert.deepEqual(getPresentationData().guideScript.flatMap(s => s.steps).map(s => s.text), steps.map(s => s.text));
 });
 
 class TestAudio {
@@ -32,8 +36,6 @@ async function mocked(fn, handler) {
   globalThis.fetch = handler; globalThis.Audio = TestAudio;
   try { await fn(); } finally { globalThis.fetch = originalFetch; if (originalAudio) globalThis.Audio = originalAudio; else delete globalThis.Audio; }
 }
-const step = GUIDE_STEPS[0], entry = manifest.clips[step.id];
-const bytes = fs.readFileSync(new URL('../public/guide-audio/' + entry.file, import.meta.url));
 const json = v => new Response(JSON.stringify(v), { headers: { 'Content-Type': 'application/json' } });
 const audio = () => new Response(bytes, { headers: { 'Content-Type': 'audio/mpeg' } });
 

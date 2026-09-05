@@ -159,7 +159,7 @@ export function injectQuery(url){return url}
 ID = re.compile(r'[A-Za-z0-9_-]{1,160}\Z')
 REAL_POST = {'/api/chat/session', '/api/chat/query', '/api/documents/retry'}
 REAL_GET = {'/', '/favicon.ico', '/favicon.svg', '/@vite/client',
-            '/api/access', '/api/health', '/api/documents', '/api/guide/config'}
+            '/api/access', '/api/health', '/api/documents', '/api/guide/config', '/api/presentation'}
 REAL_DYNAMIC = re.compile(r'/api/(?:citations|sources)/[A-Za-z0-9_-]{1,160}\Z')
 PUBLIC_ASSETS = ('/assets/', '/deck/', '/guide-audio/', '/fonts/')
 
