@@ -1,8 +1,10 @@
 /* =====================================================================
-   Athar JV — minimalist white & gold
+   Athar JV — white, charcoal & gold · spatial refinement (Sept 2026)
    White ground, near-black ink, one restrained gold (#B68A35) for accents,
    hairline rules, generous whitespace. Cormorant Garamond for display,
-   Inter for everything else. No gradients, no glass, no orbs.
+   Inter for everything else. The final "SPATIAL LAYER" section adds the
+   2026 treatment on top of this base: frosted-glass panels (backdrop
+   blur), layered depth, Bento-ordered surfaces and restrained kinetics.
    ===================================================================== */
 :root {
   --paper: #ffffff;
@@ -852,4 +854,249 @@ h1, h2, h3 { font-weight: 500; letter-spacing: -0.01em; }
   .athar-workspace .pdfv .guide-dock-row { grid-template-columns: auto minmax(max-content, 1fr) 44px; }
   .athar-workspace .guide-dock-row .guide-section { grid-column: 1 / 3; }
   .athar-workspace .guide-dock-row .guide-x { grid-row: 2; grid-column: 3; }
+}
+
+
+/* =====================================================================
+   SPATIAL LAYER (Sept 2026) — Glassmorphism 2.0 / Liquid-Glass refinement.
+   Same palette (white · charcoal · gold). Translucent frosted panels with
+   backdrop blur, layered depth, a faint dynamic reflection, Bento-style
+   ordering (one radius, one gap, lighter borders) and restrained motion.
+   Everything stays in flow: the player is below the slide, the AI panel
+   is a grid column, nothing overlays the presentation.
+   ===================================================================== */
+.app.athar-workspace {
+  --glass: rgba(255, 255, 255, 0.66);
+  --glass-strong: rgba(255, 255, 255, 0.82);
+  --glass-soft: rgba(255, 255, 255, 0.5);
+  --glass-edge: rgba(255, 255, 255, 0.9);
+  --edge: rgba(28, 26, 22, 0.075);
+  --edge-2: rgba(28, 26, 22, 0.11);
+  --gold-glow: rgba(182, 138, 53, 0.18);
+  --elev-1: 0 1px 1px rgba(28, 26, 22, 0.03), 0 6px 18px -6px rgba(28, 26, 22, 0.08);
+  --elev-2: 0 1px 2px rgba(28, 26, 22, 0.04), 0 14px 34px -12px rgba(28, 26, 22, 0.14), 0 0 0 1px var(--edge);
+  --elev-3: 0 2px 4px rgba(28, 26, 22, 0.05), 0 28px 60px -18px rgba(28, 26, 22, 0.22), 0 0 0 1px var(--edge-2);
+  --radius: 14px;
+  --radius-s: 9px;
+  --gap: 16px;
+  --blur: 20px;
+  --t-fast: 160ms;
+  --t: 260ms;
+  --t-slow: 420ms;
+  --ease-out: cubic-bezier(0.22, 1, 0.36, 1);
+  --ease-spatial: cubic-bezier(0.32, 0.72, 0, 1);
+  --review-gold: #7f5b21;
+  --review-muted: #625e57;
+  position: relative;
+  isolation: isolate;
+  background: #f6f4ef;
+}
+/* Spatial ground: two very soft light washes for the glass to refract; fixed so panels feel layered above it. */
+.app.athar-workspace::before {
+  content: ""; position: fixed; inset: 0; z-index: -1; pointer-events: none;
+  background:
+    radial-gradient(1200px 620px at 8% -10%, rgba(255, 255, 255, 0.95), rgba(255, 255, 255, 0) 60%),
+    radial-gradient(900px 520px at 100% 0%, rgba(214, 185, 120, 0.16), rgba(214, 185, 120, 0) 62%),
+    radial-gradient(1000px 700px at 50% 120%, rgba(182, 138, 53, 0.07), rgba(182, 138, 53, 0) 60%),
+    linear-gradient(180deg, #faf9f6 0%, #f4f2ec 100%);
+}
+/* Shared glass surface. Fallback stays opaque white when backdrop-filter is unsupported. */
+.athar-workspace :is(.pdfv, .companion-shell, .companion-teaser, .month-panel-drawer, .mobile-guide-transport, .access-gate, .guide-information, .citation-panel, .pdfv-readable) {
+  background: var(--glass);
+  -webkit-backdrop-filter: blur(var(--blur)) saturate(1.35);
+  backdrop-filter: blur(var(--blur)) saturate(1.35);
+  border: 1px solid var(--glass-edge);
+  box-shadow: var(--elev-2);
+  border-radius: var(--radius);
+  position: relative;
+}
+/* Faint dynamic reflection along the top edge (a highlight that shifts with hover/focus-within). */
+.athar-workspace :is(.pdfv, .companion-shell, .companion-teaser, .month-panel-drawer)::after {
+  content: ""; position: absolute; inset: 0; border-radius: inherit; pointer-events: none; z-index: 0;
+  background: linear-gradient(115deg, rgba(255, 255, 255, 0.55) 0%, rgba(255, 255, 255, 0) 28%, rgba(255, 255, 255, 0) 70%, rgba(255, 255, 255, 0.25) 100%);
+  mask: linear-gradient(180deg, #000 0, rgba(0, 0, 0, 0.35) 22%, transparent 55%);
+  -webkit-mask: linear-gradient(180deg, #000 0, rgba(0, 0, 0, 0.35) 22%, transparent 55%);
+  opacity: 0.85; transition: opacity var(--t) var(--ease-out), transform var(--t-slow) var(--ease-spatial);
+}
+.athar-workspace :is(.pdfv, .companion-shell, .companion-teaser, .month-panel-drawer):is(:hover, :focus-within)::after { opacity: 1; transform: translateX(6px); }
+@supports not ((backdrop-filter: blur(1px)) or (-webkit-backdrop-filter: blur(1px))) {
+  .athar-workspace :is(.pdfv, .companion-shell, .companion-teaser, .month-panel-drawer, .mobile-guide-transport, .access-gate, .guide-information, .citation-panel, .pdfv-readable) { background: #fff; }
+}
+.athar-workspace .pdfv > *, .athar-workspace .companion-shell > * { position: relative; z-index: 1; }
+.athar-workspace .pdfv { overflow: visible; }
+.athar-workspace .pdfv-toolbar { background: transparent; border-bottom: 1px solid var(--edge); border-radius: var(--radius) var(--radius) 0 0; }
+.athar-workspace .pdfv-scroll { background: rgba(240, 237, 229, 0.75); }
+.athar-workspace .pdfv-page canvas { border-radius: 4px; box-shadow: 0 1px 2px rgba(28, 26, 22, 0.06), 0 12px 30px -14px rgba(28, 26, 22, 0.28); }
+.athar-workspace .pdfv-view-note { background: transparent; border-top: 1px solid var(--edge); }
+.athar-workspace .pdfv-thumbs { background: transparent; border-top: 1px solid var(--edge); border-radius: 0 0 var(--radius) var(--radius); }
+.athar-workspace .pdfv-readable { border-radius: 0; border-left: 0; border-right: 0; box-shadow: none; }
+.athar-workspace .thumb { border-color: var(--edge); border-radius: 6px; background: var(--glass-strong); }
+.athar-workspace .thumb.active { border-color: var(--gold); box-shadow: 0 0 0 3px var(--gold-glow); }
+.athar-workspace .pdfv-toolbar .tb-btn.on { background: var(--gold-soft); box-shadow: inset 0 0 0 1px rgba(182, 138, 53, 0.35); }
+
+/* Header: lighter rule, faint depth. */
+.athar-workspace > .top { background: var(--glass-strong); -webkit-backdrop-filter: blur(var(--blur)); backdrop-filter: blur(var(--blur)); border-bottom: 1px solid var(--edge); box-shadow: 0 8px 24px -18px rgba(28, 26, 22, 0.25); }
+.athar-workspace > .foot { background: transparent; border-top: 1px solid var(--edge); }
+@media (min-width: 721px) { .athar-workspace > .main { padding: var(--gap) 24px 28px; } }
+
+/* Bento ordering: one gap, one radius, lighter borders. */
+.athar-workspace .presentation-workspace { gap: var(--gap); }
+.athar-workspace .presentation-workspace.has-companion { transition: grid-template-columns var(--t) var(--ease-spatial); }
+.athar-workspace .presentation-workspace.is-resizing { transition: none; user-select: none; cursor: col-resize; }
+.athar-workspace .deck { gap: 10px; }
+.athar-workspace .deck-body { gap: var(--gap); }
+.athar-workspace .companion-shell { border-radius: var(--radius); overflow: hidden; }
+.athar-workspace .companion-teaser { border-radius: var(--radius); }
+.athar-workspace .companion-switcher { background: rgba(255, 255, 255, 0.35); border-bottom: 1px solid var(--edge); padding: 6px; gap: 4px; }
+.athar-workspace .companion-switcher .dock-btn.active { background: #fff; border-color: var(--edge-2); box-shadow: var(--elev-1); }
+.athar-workspace .companion-resize { background: transparent; border-bottom: 1px solid var(--edge); }
+.athar-workspace .month-panel-drawer { border-radius: var(--radius); }
+.athar-workspace .access-gate { border-radius: var(--radius-s); background: var(--glass-soft); }
+.athar-workspace .citation-panel { border-radius: 0; border-left: 0; border-right: 0; box-shadow: none; background: rgba(255, 255, 255, 0.45); }
+.athar-workspace .btn, .athar-workspace .chip, .athar-workspace .chat-context select, .athar-workspace .chat-input textarea, .athar-workspace .access-gate input { border-color: var(--edge-2); border-radius: var(--radius-s); background: rgba(255, 255, 255, 0.85); transition: border-color var(--t-fast), box-shadow var(--t-fast), background var(--t-fast), transform var(--t-fast) var(--ease-out); }
+.athar-workspace :is(.btn, .chip):hover:not(:disabled) { box-shadow: var(--elev-1); border-color: rgba(182, 138, 53, 0.55); }
+.athar-workspace :is(.btn, .chip):active:not(:disabled) { transform: translateY(1px); }
+.athar-workspace .chat-input textarea:focus, .athar-workspace .access-gate input:focus, .athar-workspace .chat-context select:focus { border-color: var(--gold); box-shadow: 0 0 0 3px var(--gold-glow); outline: none; }
+.athar-workspace .msg.assistant .bubble { background: rgba(255, 255, 255, 0.7); border-color: var(--edge); border-left: 2px solid var(--gold); border-radius: var(--radius-s); box-shadow: var(--elev-1); }
+.athar-workspace .msg.user .bubble { border-radius: var(--radius-s); border-bottom-right-radius: 4px; box-shadow: 0 10px 24px -14px rgba(23, 24, 26, 0.5); }
+.athar-workspace .chat-scope-options { background: rgba(255, 255, 255, 0.4); border-color: var(--edge); border-radius: var(--radius-s); }
+.athar-workspace .chat-scope-options input:checked + span { box-shadow: var(--elev-1); }
+
+/* ---- Collapsible AI panel (desktop): a grid column that resizes the presentation, never an overlay. ---- */
+.athar-workspace .companion-splitter { position: absolute; top: 0; bottom: 0; left: calc(-1 * (var(--gap) / 2) - 6px); width: 12px; cursor: col-resize; z-index: 4; display: grid; place-items: center; touch-action: none; border-radius: 6px; }
+.athar-workspace .companion-splitter i { display: block; width: 2px; height: 56px; border-radius: 2px; background: var(--edge-2); transition: background var(--t-fast), height var(--t) var(--ease-out), box-shadow var(--t-fast); }
+.athar-workspace .companion-splitter:is(:hover, :focus-visible, .is-dragging) i { background: var(--gold); height: 96px; box-shadow: 0 0 0 4px var(--gold-glow); }
+.athar-workspace .companion-splitter:focus-visible { outline: none; }
+.athar-workspace .companion-collapse, .athar-workspace .companion-expand { display: inline-grid; place-items: center; flex: none; width: 44px; height: 44px; border-radius: var(--radius-s); color: var(--review-muted); transition: color var(--t-fast), background var(--t-fast), transform var(--t) var(--ease-out); }
+.athar-workspace :is(.companion-collapse, .companion-expand):hover { color: var(--ink); background: rgba(255, 255, 255, 0.9); }
+.athar-workspace .companion-collapse:hover svg { transform: translateX(2px); }
+.athar-workspace .companion-expand:hover svg { transform: translateX(-2px); }
+.athar-workspace :is(.companion-collapse, .companion-expand) svg { transition: transform var(--t) var(--ease-out); }
+@media (min-width: 1101px) { .athar-workspace .companion-teaser { position: sticky; top: var(--gap); } }
+@media (min-width: 1101px) {
+  .athar-workspace .presentation-workspace:not(.is-stacked).companion-collapsed { grid-template-columns: minmax(0, 1fr) 76px; }
+  .athar-workspace .presentation-workspace:not(.is-stacked) .is-collapsed .companion-teaser { flex-direction: column; align-items: stretch; padding: 6px; gap: 6px; }
+  .athar-workspace .presentation-workspace:not(.is-stacked) .is-collapsed .companion-expand { width: 100%; height: 44px; }
+  .athar-workspace .presentation-workspace:not(.is-stacked) .is-collapsed .companion-actions { flex-direction: column; gap: 6px; }
+  .athar-workspace .presentation-workspace:not(.is-stacked) .is-collapsed .dock-btn { flex-direction: column; gap: 4px; height: auto; min-height: 58px; padding: 6px; width: 100%; font-size: .64rem; border-color: transparent; background: transparent; }
+  .athar-workspace .presentation-workspace:not(.is-stacked) .is-collapsed .dock-btn:hover { background: rgba(255, 255, 255, 0.9); border-color: var(--edge); }
+  .athar-workspace .workspace-companion.is-open { animation: companion-in var(--t-slow) var(--ease-spatial) both; }
+}
+@media (max-width: 1100px) { .athar-workspace .companion-expand { display: none; } }
+@keyframes companion-in { from { opacity: 0; transform: translateX(12px) scale(0.985); } to { opacity: 1; transform: none; } }
+
+/* ---- Slim docked player (below the slide) ---- */
+.athar-workspace .guide-dock { background: var(--glass-strong); border: 0; border-top: 1px solid var(--edge); box-shadow: 0 -10px 24px -22px rgba(28, 26, 22, 0.35); }
+.athar-workspace .guide-dock.is-idle { background: rgba(255, 255, 255, 0.55); }
+.athar-workspace .guide-dock-progress { height: 2px; background: rgba(28, 26, 22, 0.06); }
+.athar-workspace .guide-dock-progress i { background: linear-gradient(90deg, var(--gold-2), var(--gold)); box-shadow: 0 0 10px rgba(182, 138, 53, 0.45); transition: width var(--t-slow) var(--ease-spatial); }
+.athar-workspace .pdfv .guide-dock-row { display: grid; grid-template-columns: auto minmax(0, 1fr) auto auto auto; align-items: center; gap: 0 8px; min-height: 56px; padding: 4px 8px 4px 6px; }
+.athar-workspace .guide-dock.is-idle .guide-dock-row { grid-template-columns: auto minmax(0, 1fr) auto auto; }
+.athar-workspace .guide-transport { display: inline-flex; align-items: center; gap: 0; padding: 2px; border-radius: 999px; background: rgba(255, 255, 255, 0.55); box-shadow: inset 0 0 0 1px var(--edge); }
+.athar-workspace :is(.guide-btn, .guide-btn.primary, .guide-x, .guide-info-toggle) { border-radius: 50%; transition: color var(--t-fast), transform var(--t-fast) var(--ease-out); }
+.athar-workspace :is(.guide-btn, .guide-x, .guide-info-toggle)::before { inset: 7px; transition: background var(--t-fast), box-shadow var(--t-fast), transform var(--t-fast) var(--ease-out); }
+.athar-workspace .guide-btn.primary::before { inset: 4px; background: var(--ink); box-shadow: 0 8px 18px -8px rgba(23, 24, 26, 0.7); }
+.athar-workspace .guide-btn.primary:hover:not(:disabled)::before { background: var(--review-gold); box-shadow: 0 8px 18px -8px rgba(127, 91, 33, 0.8), 0 0 0 4px var(--gold-glow); }
+.athar-workspace .guide-btn.primary:active:not(:disabled)::before { transform: scale(0.94); }
+.athar-workspace .guide-btn:disabled { opacity: 0.32; }
+.athar-workspace .guide-section { display: grid; gap: 1px; min-width: 0; padding: 2px 4px; }
+.athar-workspace .guide-pos { display: flex; align-items: center; flex-wrap: wrap; gap: 0 6px; font-size: .68rem; letter-spacing: 0.02em; color: var(--review-muted); line-height: 1.4; }
+.athar-workspace .guide-pos-count { font-family: var(--mono); font-size: .7rem; font-weight: 500; color: var(--ink); letter-spacing: 0; }
+.athar-workspace .guide-pos-count span { opacity: .45; padding: 0 1px; }
+.athar-workspace .guide-pos-sep { opacity: .5; }
+.athar-workspace .guide-state { display: inline-flex; align-items: center; gap: 5px; margin-left: 2px; padding: 1px 8px; border-radius: 999px; background: rgba(255, 255, 255, 0.7); box-shadow: inset 0 0 0 1px var(--edge); font-size: .62rem; letter-spacing: .04em; text-transform: uppercase; color: var(--review-muted); }
+.athar-workspace .guide-state.live { color: var(--review-gold); box-shadow: inset 0 0 0 1px rgba(182, 138, 53, 0.35); }
+.athar-workspace .guide-state.error { color: #8f342a; box-shadow: inset 0 0 0 1px rgba(143, 52, 42, 0.35); }
+.athar-workspace .guide-pulse { width: 6px; height: 6px; border-radius: 50%; background: var(--gold); box-shadow: 0 0 0 0 var(--gold-glow); animation: guide-pulse 1.8s var(--ease-out) infinite; }
+@keyframes guide-pulse { 0% { box-shadow: 0 0 0 0 rgba(182, 138, 53, 0.45); } 70% { box-shadow: 0 0 0 6px rgba(182, 138, 53, 0); } 100% { box-shadow: 0 0 0 0 rgba(182, 138, 53, 0); } }
+.athar-workspace .guide-caption { font-size: .8rem; line-height: 1.45; -webkit-line-clamp: 1; color: var(--ink); }
+.athar-workspace .guide-caption b { font-weight: 600; color: var(--review-gold); }
+.athar-workspace .guide-expand { border-radius: 999px; padding: 0 12px; font-size: .7rem; letter-spacing: .02em; color: var(--review-muted); background: rgba(255, 255, 255, 0.55); box-shadow: inset 0 0 0 1px var(--edge); transition: color var(--t-fast), background var(--t-fast), box-shadow var(--t-fast); }
+.athar-workspace .guide-expand:hover, .athar-workspace .guide-expand[aria-expanded="true"] { color: var(--ink); background: #fff; box-shadow: inset 0 0 0 1px var(--edge-2), var(--elev-1); }
+.athar-workspace .guide-expand svg { transition: transform var(--t) var(--ease-out); }
+.athar-workspace .guide-status { padding: 0 12px 8px 14px; }
+.athar-workspace .guide-status.error { display: flex; align-items: center; justify-content: space-between; gap: 10px; margin: 0 10px 8px; padding: 8px 12px; border-radius: var(--radius-s); background: rgba(251, 235, 232, 0.8); box-shadow: inset 0 0 0 1px rgba(143, 52, 42, 0.25); font-size: .74rem; }
+.athar-workspace .guide-retry { padding: 0 12px; border-radius: 999px; background: #fff; box-shadow: inset 0 0 0 1px rgba(143, 52, 42, 0.4); color: #8f342a; font-weight: 600; font-size: .72rem; }
+/* Information menu: anchored to the (i) button, opens BELOW the player — never over the slide. */
+.athar-workspace .guide-info-anchor { position: relative; display: inline-grid; }
+.athar-workspace .guide-information { position: absolute; right: 0; top: calc(100% + 6px); z-index: 40; width: min(340px, calc(100vw - 32px)); padding: 14px 16px; border-radius: var(--radius); background: var(--glass-strong); box-shadow: var(--elev-3); animation: menu-in var(--t) var(--ease-spatial) both; transform-origin: top right; font-size: .78rem; color: var(--review-muted); }
+.athar-workspace .guide-information[hidden] { display: none; }
+.athar-workspace .guide-information h3 { margin: 0 0 10px; font-family: var(--serif); font-size: 1.15rem; color: var(--ink); }
+.athar-workspace .guide-information dl { display: grid; gap: 7px; margin: 0; }
+.athar-workspace .guide-information dl > div { grid-template-columns: 76px minmax(0, 1fr); gap: 8px; }
+.athar-workspace .guide-information dt { font-size: .66rem; letter-spacing: .08em; text-transform: uppercase; color: var(--review-muted); font-weight: 600; padding-top: 2px; }
+.athar-workspace .guide-information dd { color: var(--ink-2); }
+.athar-workspace .guide-information kbd { font-family: var(--mono); font-size: .68rem; padding: 1px 5px; border-radius: 4px; background: #fff; box-shadow: inset 0 0 0 1px var(--edge-2), 0 1px 0 var(--edge-2); }
+.athar-workspace .guide-information .guide-keyboard-note { margin: 10px 0 0; font-size: .7rem; }
+@keyframes menu-in { from { opacity: 0; transform: translateY(-4px) scale(0.98); } to { opacity: 1; transform: none; } }
+/* Transcript: an in-flow glass sheet under the player; the current moment carries a gold rail. */
+.athar-workspace .guide-caption-full { background: rgba(255, 255, 255, 0.5); border-top: 1px solid var(--edge); padding: 14px 16px 16px; animation: fade var(--t) var(--ease-out) both; }
+.athar-workspace .guide-caption-full h3 { font-size: .95rem; margin-bottom: 10px; }
+.athar-workspace .guide-transcript li { border-top: 1px solid var(--edge); padding: 0; border-left: 2px solid transparent; transition: background var(--t-fast), border-color var(--t-fast); }
+.athar-workspace .guide-transcript li[aria-current="step"] { border-left-color: var(--gold); background: rgba(255, 255, 255, 0.75); box-shadow: inset 0 0 0 1px rgba(182, 138, 53, 0.12); }
+.athar-workspace .guide-transcript-jump { display: block; width: 100%; text-align: left; padding: 10px 12px; border-radius: 6px; color: inherit; font: inherit; line-height: inherit; }
+.athar-workspace .guide-transcript-jump:hover { background: rgba(255, 255, 255, 0.85); }
+.athar-workspace .guide-transcript-jump p { margin: 3px 0 0; max-width: 84ch; font-size: .86rem; line-height: 1.6; }
+.athar-workspace .guide-transcript-jump .guide-transcript-meta { font-family: var(--mono); font-size: .66rem; }
+
+/* ---- Document-connected AI: evidence labelling, citations as 'Open source' actions, document registry rows ---- */
+.athar-workspace .md .md-h { display: flex; align-items: center; gap: 8px; margin: 12px 0 6px; font-size: .78rem; letter-spacing: .04em; text-transform: uppercase; color: var(--review-muted); font-weight: 600; }
+.athar-workspace .md .md-h:first-child { margin-top: 0; }
+.athar-workspace .evidence-tag { display: inline-flex; align-items: center; gap: 5px; padding: 2px 8px; border-radius: 999px; font-size: .62rem; letter-spacing: .04em; text-transform: uppercase; font-weight: 600; background: rgba(255, 255, 255, 0.8); box-shadow: inset 0 0 0 1px var(--edge-2); color: var(--review-muted); }
+.athar-workspace .evidence-tag::before { content: ""; width: 6px; height: 6px; border-radius: 50%; background: currentColor; }
+.athar-workspace .evidence-tag.stated { color: #2f6a4a; box-shadow: inset 0 0 0 1px rgba(47, 106, 74, 0.35); }
+.athar-workspace .evidence-tag.derived { color: #4a5a8a; box-shadow: inset 0 0 0 1px rgba(74, 90, 138, 0.35); }
+.athar-workspace .evidence-tag.conflict { color: #8f342a; box-shadow: inset 0 0 0 1px rgba(143, 52, 42, 0.35); }
+.athar-workspace .evidence-tag.missing { color: #8a6a1f; box-shadow: inset 0 0 0 1px rgba(138, 106, 31, 0.4); }
+.athar-workspace .evidence-tag.sources, .athar-workspace .evidence-tag.coverage { color: var(--review-gold); box-shadow: inset 0 0 0 1px rgba(182, 138, 53, 0.4); }
+.athar-workspace .md-h-conflict + ul li { border-left: 2px solid rgba(143, 52, 42, 0.45); padding-left: 8px; }
+.athar-workspace .md-h-missing + ul li { color: var(--review-muted); }
+.athar-workspace .md-h-derived + ul li { font-variant-numeric: tabular-nums; }
+.athar-workspace .chat-citations { display: grid; gap: 6px; margin-top: 12px; }
+.athar-workspace .chat-citation-button { display: grid; grid-template-columns: auto minmax(0, 1fr) auto; align-items: center; gap: 10px; width: 100%; padding: 7px 10px; border-radius: var(--radius-s); border: 1px solid var(--edge); background: rgba(255, 255, 255, 0.7); color: var(--ink); font-size: .76rem; text-align: left; transition: border-color var(--t-fast), box-shadow var(--t-fast), background var(--t-fast); }
+.athar-workspace .chat-citation-button:hover, .athar-workspace .chat-citation-button[aria-expanded="true"] { border-color: rgba(182, 138, 53, 0.55); background: #fff; box-shadow: var(--elev-1); }
+.athar-workspace .cite-n { display: inline-grid; place-items: center; width: 20px; height: 20px; border-radius: 50%; background: var(--ink); color: #fff; font-family: var(--mono); font-size: .62rem; }
+.athar-workspace .cite-label { min-width: 0; overflow-wrap: anywhere; }
+.athar-workspace .cite-action { white-space: nowrap; font-size: .68rem; letter-spacing: .04em; text-transform: uppercase; color: var(--review-gold); font-weight: 600; }
+.athar-workspace .inline-citation { display: inline-grid; place-items: center; min-width: 18px; height: 18px; padding: 0 5px; margin: 0 1px; border-radius: 999px; background: rgba(182, 138, 53, 0.12); color: var(--review-gold); font-family: var(--mono); font-size: .66rem; vertical-align: 2px; box-shadow: inset 0 0 0 1px rgba(182, 138, 53, 0.3); }
+.athar-workspace .chat-coverage { margin: 2px 0 0; font-size: .72rem; color: var(--review-muted); }
+.athar-workspace .chat-coverage b { color: var(--ink); font-weight: 600; }
+.athar-workspace .chat-document h3 { display: flex; align-items: baseline; gap: 8px; }
+.athar-workspace .document-order { display: inline-grid; place-items: center; flex: none; width: 18px; height: 18px; border-radius: 50%; background: rgba(182, 138, 53, 0.14); color: var(--review-gold); font-family: var(--mono); font-size: .62rem; }
+.athar-workspace .document-role { color: var(--ink-2) !important; }
+.athar-workspace .chat-document[data-status="missing"] .document-status { color: #8a5a10; background: #fdf3df; box-shadow: inset 0 0 0 1px rgba(138, 106, 31, 0.3); }
+.athar-workspace .chat-document[data-status="ready"] .document-status { color: #2f6a4a; background: #e9f4ee; }
+.athar-workspace .document-missing-note { font-size: .74rem; color: var(--review-muted); font-style: italic; }
+.athar-workspace .chat-empty .chip { background: rgba(255, 255, 255, 0.75); }
+.athar-workspace .chat-empty .chip::before { content: "→ "; color: var(--review-gold); }
+
+/* Phone: in-flow information sheet (no floating menu), Bento spacing kept. */
+@media (max-width: 720px) {
+  .athar-workspace .guide-info-anchor { position: static; }
+  .athar-workspace .guide-information { position: static; width: auto; margin: 0 8px 8px; box-shadow: var(--elev-1); animation: fade var(--t) var(--ease-out) both; }
+  .athar-workspace .pdfv .guide-dock-row { grid-template-columns: auto minmax(0, 1fr) 44px 44px; gap: 0 6px; padding: 4px 6px; }
+  .athar-workspace .guide-dock.is-idle .guide-dock-row { grid-template-columns: auto minmax(0, 1fr) 44px; }
+  .athar-workspace .guide-dock-row .guide-transport { grid-row: 1; grid-column: 1; }
+  .athar-workspace .guide-dock-row .guide-section { grid-row: 1; grid-column: 2; }
+  .athar-workspace .guide-dock-row .guide-info-anchor { grid-row: 1; grid-column: 3; }
+  .athar-workspace .guide-dock-row .guide-x { grid-row: 1; grid-column: 4; }
+  .athar-workspace .guide-dock-row .guide-expand { grid-row: 2; grid-column: 1 / -1; justify-self: start; margin: 2px 0 2px 4px; }
+  .athar-workspace .guide-state { display: none; }
+  .athar-workspace .guide-dock.is-active .guide-state { display: inline-flex; }
+}
+@media (max-width: 640px) {
+  .athar-workspace .pdfv .guide-dock-row { grid-template-columns: auto minmax(0, 1fr) 44px 44px; }
+  .athar-workspace .guide-dock-row .guide-section { grid-row: 1; grid-column: 2; padding: 0 2px; }
+  .athar-workspace .guide-dock-row .guide-expand { grid-row: 2; grid-column: 1 / -1; padding: 0 10px; }
+  .athar-workspace .mobile-view-tabs { background: transparent; }
+  .athar-workspace .mobile-view-tabs button[aria-selected="true"] { border-bottom-color: var(--gold); }
+  .athar-workspace .mobile-guide-transport { border-radius: var(--radius-s); }
+}
+@media (max-width: 340px) {
+  .athar-workspace .pdfv .guide-dock-row { grid-template-columns: auto minmax(0, 1fr) 44px; }
+  .athar-workspace .guide-dock-row .guide-x { grid-row: 2; grid-column: 3; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .athar-workspace .guide-pulse, .athar-workspace .workspace-companion.is-open, .athar-workspace .guide-information, .athar-workspace .guide-caption-full { animation: none !important; }
+  .athar-workspace :is(.pdfv, .companion-shell, .companion-teaser, .month-panel-drawer)::after { transition: none; }
 }

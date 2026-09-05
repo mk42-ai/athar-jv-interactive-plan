@@ -9,6 +9,7 @@ import { createEvidenceRoutes } from './evidenceRoutes.js';
 import {
   CONFIG,
   isConfigured,
+  probeOnDemand,
   speechToText,
   textToSpeech,
   executeAvmWorkflow,
@@ -16,6 +17,8 @@ import {
 } from './ondemand.js';
 import { loadDotEnv, onDemandKey } from './env.js';
 import { clipStatus, serveEmbedded, loadEmbeddedAudio } from './guideAudioStore.js';
+import { registrySummary } from './documentRegistry.js';
+import { loadCorpusIndex } from './retrieval.js';
 
 // ---- tiny in-memory media store (uploaded user audio + proxied TTS clips) ----
 const MEDIA_TTL_MS = 20 * 60 * 1000;
@@ -226,12 +229,22 @@ export function createApiApp() {
   api.use('/voice', (req, res, next) => ['GET', 'HEAD'].includes(req.method) ? next() : access.sameOrigin(req, res, next));
   api.use('/voice', (req, res, next) => { req.evidenceService = evidence; req.reviewAccess = access; next(); });
 
-  api.get('/health', (req, res) => {
+  api.get('/health', async (req, res) => {
     res.setHeader('Cache-Control', 'no-store');
-    res.json({ ok: true, configured: isConfigured(), build: process.env.ATHAR_BUILD_SHA || 'workspace',
+    const body = { ok: true, configured: isConfigured(), build: process.env.ATHAR_BUILD_SHA || 'workspace',
       checkedAt: new Date().toISOString(), reviewAccessConfigured: access.configured,
       // No key fragments, provider session identifiers, secret paths, or confidential metadata.
-      narration: { provider: 'elevenlabs', voice: 'River', playback: 'verified-prebaked' } });
+      narration: { provider: 'elevenlabs', voice: 'River', playback: 'verified-prebaked' },
+      chatApi: { host: 'https://api.on-demand.io', createSession: 'POST /chat/v1/sessions', submitQuery: 'POST /chat/v1/sessions/{sessionId}/query', responseMode: 'sync', endpointId: CONFIG.endpointId, authHeader: 'apikey', docsVerified: '2026-09-05' } };
+    // Reviewer-only live probe: proves the server-side key is loaded AND accepted upstream
+    // (session create + read). Never returns the key or an upstream session identifier.
+    if (req.query.probe === '1' && access.read(req)) {
+      const { sessionId, ...probe } = await probeOnDemand({ force: req.query.force === '1' });
+      body.keyProbe = probe;
+      try { body.documents = registrySummary((await loadCorpusIndex({ corpusDir: process.env.ATHAR_CORPUS_DIR })).documents); }
+      catch { body.documents = { ...registrySummary([]), corpus: 'unavailable' }; }
+    }
+    res.json(body);
   });
 
   // ---- Voice -----------------------------------------------------------------

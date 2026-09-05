@@ -21,6 +21,11 @@ function inline(text) {
   return parts;
 }
 
+// Answer sections rendered by the server (see server/evidenceAnswer.js renderEvidenceAnswer):
+// stated source facts vs derived (server-computed) calculations vs conflicts vs missing evidence.
+const SECTION_KIND = { 'source facts': 'stated', 'derived calculations': 'derived', 'source conflicts': 'conflict', 'not established by the selected evidence': 'missing', 'sources': 'sources', 'coverage': 'coverage' };
+const SECTION_TAG = { stated: 'Stated in source', derived: 'Derived · server-computed', conflict: 'Conflict', missing: 'Missing', sources: 'Open source', coverage: 'Coverage' };
+
 export function Markdown({ text }) {
   const lines = (text || '').split('\n');
   const out = [];
@@ -48,7 +53,8 @@ export function Markdown({ text }) {
       list.items.push(m[1]);
     } else if ((m = /^\s*#{1,6}\s+(.*)$/.exec(line))) {
       flush();
-      out.push(<p key={`h${out.length}`} className="md-h">{inline(m[1])}</p>);
+      const kind = SECTION_KIND[m[1].trim().toLowerCase()] || '';
+      out.push(<p key={`h${out.length}`} className={`md-h ${kind ? `md-h-${kind}` : ''}`} data-section={kind || undefined}>{kind && <span className={`evidence-tag ${kind}`} aria-hidden="true">{SECTION_TAG[kind]}</span>}{inline(m[1])}</p>);
     } else if (line.trim() === '') {
       flush();
     } else {
@@ -81,6 +87,10 @@ const coverageSummary = (doc) => {
   return `${Array.isArray(c.sheets) ? c.sheets.length : 0} sheets · ${(c.cellCount || 0).toLocaleString()} cells · ${(c.formulaCount || 0).toLocaleString()} formulas${c.missingFormulaCaches ? ` · ${c.missingFormulaCaches} missing saved results` : ''}`;
 };
 const documentStatus = (doc) => typeof doc.status === 'string' ? doc.status : doc.status?.state || doc.status?.status || 'Unknown';
+const UNAVAILABLE = /^(error|failed|pending|queued|processing|ingesting|indexing|loading|unavailable|missing)$/i;
+const isMissing = (doc) => /^missing$/i.test(documentStatus(doc));
+const kindLabel = { pdf: 'PDF', pptx: 'PowerPoint', xlsx: 'Workbook (XLSX)', docx: 'Word' };
+const statusLabel = (doc) => isMissing(doc) ? 'Missing — not provisioned' : documentStatus(doc) === 'ready' ? 'Indexed' : documentStatus(doc);
 const isAuthError = (e) => e?.status === 401 || e?.code === 'unauthorized' || e?.code === 'access_required';
 export default function ChatWidget({ open, onClose, ensureSession, session, resetSession, configured, serviceError, onRetryService, access, onUnlock, onRetryAccess, onAuthRequired, documents = [], documentsLoading, documentsError, onRefreshDocuments, onRetryDocuments, askRequest }) {
   const [messages, setMessages] = useState([]);
@@ -154,8 +164,10 @@ export default function ChatWidget({ open, onClose, ensureSession, session, rese
 
   const selectedDocument = documents.find((d) => d.id === documentId);
   const sourceMissing = !documentId || (documentId !== 'all' && !selectedDocument);
-  const sourceUnavailable = selectedDocument && /^(error|failed|pending|queued|processing|ingesting|indexing|loading|unavailable)$/i.test(documentStatus(selectedDocument));
-  const allUnavailable = documentId === 'all' && documents.length > 0 && documents.every((d) => /^(error|failed|pending|queued|processing|ingesting|indexing|loading|unavailable)$/i.test(documentStatus(d)));
+  const sourceUnavailable = selectedDocument && UNAVAILABLE.test(documentStatus(selectedDocument));
+  const allUnavailable = documentId === 'all' && documents.length > 0 && documents.every((d) => UNAVAILABLE.test(documentStatus(d)));
+  const indexedDocuments = documents.filter((d) => !UNAVAILABLE.test(documentStatus(d)));
+  const missingDocuments = documents.filter(isMissing);
   const disabled = !access?.authenticated || configured !== true || sourceMissing || sourceUnavailable || allUnavailable || documents.length === 0;
   const patch = (id, fn) => setMessages((prev) => prev.map((m) => m.id === id ? { ...m, ...fn(m) } : m));
   const prefill = (text) => { setInput(text); inputRef.current?.focus({ preventScroll: true }); };
@@ -253,7 +265,7 @@ export default function ChatWidget({ open, onClose, ensureSession, session, rese
           <fieldset className="chat-scope" data-testid="chat-scope-controls">
             <legend>Answer scope</legend>
             <div className="chat-scope-options">
-              <label><input type="radio" name="chat-answer-scope" value="this" checked={documentId !== 'all'} onChange={() => chooseDocument(documents.find((doc) => doc.id === lastDocumentId)?.id || documents.find((doc) => doc.slug === 'executive-presentation')?.id || documents[0]?.id || null)} /><span>This document</span></label>
+              <label><input type="radio" name="chat-answer-scope" value="this" checked={documentId !== 'all'} onChange={() => chooseDocument(indexedDocuments.find((doc) => doc.id === lastDocumentId)?.id || indexedDocuments.find((doc) => doc.slug === 'executive-presentation')?.id || indexedDocuments[0]?.id || null)} /><span>This document</span></label>
               <label><input type="radio" name="chat-answer-scope" value="all" checked={documentId === 'all'} onChange={() => chooseDocument('all')} /><span>All documents</span></label>
             </div>
           </fieldset>
@@ -261,9 +273,10 @@ export default function ChatWidget({ open, onClose, ensureSession, session, rese
           <select id="chat-document-filter" value={documentId === 'all' ? '__choose__' : documentId || '__pending__'} onChange={(e) => chooseDocument(e.target.value)} data-testid="chat-document-filter" aria-describedby="chat-source-note">
             <option value="__choose__" disabled>Choose a document…</option>
             {sourceMissing && <option value={documentId || '__pending__'} disabled>{documentSlug === 'executive-presentation' ? 'Waiting for presentation source…' : 'Selected source unavailable'}</option>}
-            {documents.map((doc) => <option key={doc.id} value={doc.id}>{doc.title}</option>)}
+            {documents.map((doc) => <option key={doc.id} value={doc.id} disabled={isMissing(doc)}>{isMissing(doc) ? `${doc.title} — missing` : doc.title}</option>)}
           </select>
           {slide != null && <div className="chat-slide-context" data-testid="chat-slide-context"><span>Slide {slide}{sourceMissing ? ' · source pending' : ' · presentation'}</span><button onClick={() => setSlide(null)} aria-label="Clear slide context">Clear slide</button></div>}
+          {documents.length > 0 && <p className="chat-coverage" data-testid="chat-coverage" role="status"><b>{indexedDocuments.length} of {documents.length}</b> documents indexed{missingDocuments.length ? <> · missing: {missingDocuments.map((d) => d.title).join(', ')}</> : ''}</p>}
           {sourceMissing && <p className="companion-note" role="status">This question is waiting for its exact source. It will not be sent against other documents.</p>}
           {sourceUnavailable && <p className="companion-note" role="status">This source is not ready for questions. Check its status below.</p>}
         </div>
@@ -271,13 +284,15 @@ export default function ChatWidget({ open, onClose, ensureSession, session, rese
           {documentsLoading && <p role="status">Checking sources…</p>}
           {documentsError && <div className="chat-service-error" role="alert">{documentsError}<button className="btn small" onClick={onRefreshDocuments} disabled={documentsLoading}>Retry source status</button></div>}
           {!documentsLoading && !documentsError && !documents.length && <p role="status">No sources are available yet.</p>}
-          <ul>{documents.map((doc) => <li className="chat-document" key={doc.id} data-status={documentStatus(doc).toLowerCase()} data-document-id={doc.id}>
-            <h3>{doc.title}</h3><span className="document-status">{documentStatus(doc)}</span>
-            {doc.kind && <p>{doc.kind}</p>}
+          <ul>{documents.map((doc) => <li className="chat-document" key={doc.id} data-status={documentStatus(doc).toLowerCase()} data-document-id={doc.id} data-slug={doc.slug}>
+            <h3>{doc.order ? <span className="document-order" aria-hidden="true">{doc.order}</span> : null}{doc.title}</h3><span className="document-status">{statusLabel(doc)}</span>
+            {doc.role && <p className="document-role">{doc.role}</p>}
+            <p>{kindLabel[doc.kind] || doc.kind}{doc.alternateOriginal ? ` · indexed from its ${kindLabel[doc.alternateOriginal.indexedKind] || doc.alternateOriginal.indexedKind} rendering (${kindLabel[doc.alternateOriginal.expectedKind] || doc.alternateOriginal.expectedKind} original not provisioned)` : ''}</p>
             {doc.coverage && <p><b>Coverage:</b> {coverageSummary(doc)}</p>}
-            {doc.limitations && describe(doc.limitations) && <p><b>Limitations:</b> {describe(doc.limitations)}</p>}
+            {doc.provisioning?.signedUrl?.configured && <p><b>Source link:</b> configured on the server{doc.provisioning.signedUrl.expiresAt ? ` · expires ${new Date(doc.provisioning.signedUrl.expiresAt).toLocaleString('en-GB', { timeZone: 'UTC', dateStyle: 'medium', timeStyle: 'short' })} UTC` : ''}{doc.provisioning.signedUrl.expired ? ' · expired' : ''}</p>}
+            {doc.limitations && describe(doc.limitations) && <p><b>{isMissing(doc) ? 'Why it is missing:' : 'Limitations:'}</b> {describe(doc.limitations)}</p>}
             {doc.status?.error && <p role="alert">{describe(doc.status.error)}</p>}
-            <div className="document-actions"><button className="btn small" onClick={() => askDocument(doc)} data-testid={`ask-document-${doc.slug}`}>Ask this document</button>{/error|failed|unavailable/i.test(documentStatus(doc)) && <button className="btn small" onClick={onRetryDocuments} disabled={documentsLoading}>Retry ingestion</button>}</div>
+            <div className="document-actions">{isMissing(doc) ? <span className="document-missing-note">Not askable until the original is provisioned.</span> : <button className="btn small" onClick={() => askDocument(doc)} data-testid={`ask-document-${doc.slug}`}>Ask this document</button>}{/error|failed|unavailable/i.test(documentStatus(doc)) && <button className="btn small" onClick={onRetryDocuments} disabled={documentsLoading}>Retry ingestion</button>}</div>
           </li>)}</ul>
           <div className="document-actions"><button className="btn small" onClick={onRefreshDocuments} disabled={documentsLoading}>Refresh status</button><button className="btn small" onClick={onRetryDocuments} disabled={documentsLoading} data-testid="retry-documents">Retry documents</button></div>
         </details>
@@ -293,15 +308,15 @@ export default function ChatWidget({ open, onClose, ensureSession, session, rese
           e.preventDefault();
           openCitation({ id: match[1], label: anchor.textContent }, anchor);
         }} role="log" aria-live="polite" aria-relevant="additions text" aria-label="Conversation">
-          {messages.length === 0 && <div className="chat-empty"><p className="muted small">Choose a source, then ask a question. Suggested prompts are drafts — review before sending.</p><div className="chips">{QUICK_QUESTIONS.map((question) => <button key={question} className="chip" onClick={() => prefill(question)} disabled={busy}>{question}</button>)}</div></div>}
+          {messages.length === 0 && <div className="chat-empty"><p className="muted small">Answers quote the original page, slide or worksheet cells and open the source on request. Stated figures, server-derived calculations, version conflicts and missing evidence are labelled separately.</p><div className="chips" data-testid="starter-questions">{QUICK_QUESTIONS.map((question) => <button key={question} className="chip" onClick={() => prefill(question)} disabled={busy} data-testid="starter-question">{question}</button>)}</div></div>}
           {messages.map((m) => <div key={m.id} className={`msg ${m.role} ${m.status || ''}`}><div className="bubble">
             {m.role === 'user' ? <p>{m.text}</p> : m.status === 'pending' ? <div className="typing" aria-label="Assistant is preparing an answer"><span /><span /><span /></div> : <>
               {m.text && <Markdown text={m.text} />}
               {m.status === 'streaming' && <span className="caret" aria-hidden="true" />}
               {m.status === 'error' && <div className="msg-error" role="alert"><span>{m.error}</span><button className="btn small" onClick={() => send(m.query)} disabled={disabled || busy}>Retry</button></div>}
               {m.status === 'stopped' && <div className="msg-meta">Response stopped · partial answer</div>}
-              {m.citations?.length > 0 && <div className="chat-citations" aria-label="Cited evidence">{m.citations.map((c, i) => <button key={`${c.id}-${i}`} className="chat-citation-button" onClick={(e) => openCitation(c, e.currentTarget)} aria-expanded={citationState?.id === c.id} aria-controls="chat-citation-panel" data-testid="chat-citation"><span aria-hidden="true">↗</span>{c.label || describe(c.location) || `Source ${i + 1}`}</button>)}</div>}
-              {m.status === 'done' && <div className="msg-meta">{m.citations?.length ? `${m.citations.length} source reference${m.citations.length === 1 ? '' : 's'}` : 'No source citations returned'}{m.metrics?.fulfillmentTimeSec != null ? ` · ${m.metrics.fulfillmentTimeSec}s` : ''}</div>}
+              {m.citations?.length > 0 && <div className="chat-citations" role="list" aria-label="Cited evidence">{m.citations.map((c, i) => <button key={`${c.id}-${i}`} role="listitem" className="chat-citation-button" onClick={(e) => openCitation(c, e.currentTarget)} aria-expanded={citationState?.id === c.id} aria-controls="chat-citation-panel" aria-label={`Open source ${i + 1}: ${c.label || describe(c.location) || 'source'}`} data-testid="chat-citation" data-kind={c.kind || undefined}><span className="cite-n" aria-hidden="true">{i + 1}</span><span className="cite-label">{c.label || describe(c.location) || `Source ${i + 1}`}</span><span className="cite-action" aria-hidden="true">Open source ↗</span></button>)}</div>}
+              {m.status === 'done' && <div className="msg-meta">{m.citations?.length ? `${m.citations.length} source reference${m.citations.length === 1 ? '' : 's'}` : 'No source citations returned'}{m.grounding?.status ? ` · grounding ${m.grounding.status}` : ''}{m.grounding?.scope ? ` · scope ${m.grounding.scope === 'all' ? 'all documents' : 'this document'}` : ''}{m.metrics?.fulfillmentTimeSec != null ? ` · ${m.metrics.fulfillmentTimeSec}s` : ''}</div>}
             </>}
           </div></div>)}
         </div>

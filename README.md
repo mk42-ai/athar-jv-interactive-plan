@@ -1,6 +1,46 @@
 # Athar JV — Executive Summary · PDF presentation · Timeline · Grounded chat · Advanced Voice Mode
 
-> Current implementation: [Presentation workspace and protected original-source review](docs/review-workspace.md). This runbook supersedes older public-chat, secret-copy and live-narration-fallback instructions below. Historical QA logs are retained for history only; consult the current run's machine-readable QA evidence for verified results.
+> Current implementation: [Presentation workspace and protected original-source review](docs/review-workspace.md).
+
+## Spatial UI, collapsible AI panel and document-connected AI (5 Sept 2026)
+
+Refinement of the existing workspace — same white · charcoal · gold palette, same playback engine, same evidence pipeline.
+
+- **Slim docked player below the slide.** The Guide Mode player is the last row of the viewer grid, never an overlay:
+  previous / play-pause / next, a current-section indicator (`3/21 · Slide 1 · Narrating` + the moment's caption), a 2 px gold
+  progress line along its top edge, an in-flow expandable **Transcript** (click any moment to jump), and an **information menu**
+  (ⓘ) holding the technical voice/model/integrity details and keyboard shortcuts. The menu opens below the player, so it never
+  covers slide content; on phones it is an in-flow sheet.
+- **Spatial layer (Glassmorphism 2.0 / Liquid Glass).** Frosted translucent panels (`backdrop-filter: blur`) with layered
+  depth, a faint reflection along each panel's top edge, Bento-style ordering (one radius, one gap, lighter borders) and
+  restrained kinetics (160–420 ms, reduced-motion aware). Everything is in `src/styles.css` under "SPATIAL LAYER"; a
+  `@supports` fallback keeps panels opaque white where blur is unsupported.
+- **Collapsible right-hand AI panel (desktop).** The companion is a grid column that *resizes the presentation* — collapse it to a
+  76 px rail (‹ / ›), reopen it, drag the splitter on its left edge (`role="separator"`, arrow keys) or use the labelled range
+  control. Phones keep separate **Presentation** and **Ask AI** views; both stay mounted so narration, page and conversation persist.
+- **Document-connected AI.** `server/documentRegistry.js` declares the four review documents — (1) executive-summary slide deck,
+  (2) financial-model executive-summary PDF, (3) financial model v13 workbook, (4) six-month implementation-plan workbook — and
+  `/api/documents` always lists all four: indexed ones with their exact corpus record, missing ones with status **`missing`** and
+  provisioning guidance. Answers keep the evidence contract: **Source facts** (stated), **Derived calculations** (server-computed
+  from quoted operands), **Source conflicts**, **Not established by the selected evidence**, plus a **Coverage** section that names
+  any document that could not be consulted. Each citation is an **Open source** action labelled with the document and its page /
+  slide / worksheet!range (`Executive-summary deck · Slide 2`, `Implementation plan · Open Items!D31:G46`). Scopes: **This
+  document** / **All documents**. Starter questions: *Compare the UAE base case with international expansion.* · *What capital
+  decisions still need agreement?* · *Which implementation milestones depend on those decisions?*
+- **Provisioning from signed URLs.** `npm run provision` (`scripts/provision_sources.py`) keeps originals already present under
+  `ATHAR_SOURCE_INPUT_DIR`, downloads any missing original from `ATHAR_SOURCE_URL_<SLUG>` (HTTPS, content-type and file-signature
+  checked; URLs are time-limited credentials read from the host environment / git-ignored `.env`, never committed — this repository
+  is public), writes a slug-pinned manifest and runs the offline ingestion into `ATHAR_CORPUS_DIR`. The executive deck may be
+  provisioned as its exact 2-page PDF rendering when the PPTX is unavailable (`slide N = page N`; recorded as a limitation and
+  shown as an alternate original in the AI panel).
+- **On Demand integration verified against the live public API docs (5 Sept 2026).** `POST https://api.on-demand.io/chat/v1/sessions`
+  (`apikey` header, `{externalUserId, pluginIds}` → `data.id`) and `POST /chat/v1/sessions/{sessionId}/query`
+  (`{query, endpointId, responseMode: "sync", fulfillmentOnly, modelConfigs: {fulfillmentPrompt, temperature}}` → `data.answer`,
+  `data.messageId`, `data.status`) match `server/ondemand.js` field for field. `GET /api/health?probe=1` (reviewer session only)
+  proves the server-side key is loaded *and accepted* upstream (session create 201 + read 200) without exposing the key, and
+  reports the document registry summary. The key is `ON_DEMAND_API_KEY` / `ONDEMAND_API_KEY` in the host environment or the
+  git-ignored `.env` — never in the tree.
+ This runbook supersedes older public-chat, secret-copy and live-narration-fallback instructions below. Historical QA logs are retained for history only; consult the current run's machine-readable QA evidence for verified results.
 
 React + Vite client with a server-side **On Demand API proxy** (`server/api.js`) that runs
 inside the Vite dev server (`vite.config.js`) or standalone (`server/index.js`).

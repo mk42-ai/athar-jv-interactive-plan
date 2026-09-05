@@ -82,3 +82,23 @@ Exact selected worksheet constraints are now enforced even without a named cell.
 Comparison and capital-decision starter questions receive substantive completeness checks, in addition to original quote/source-ID validation. Broad unresolved-item coverage does not improperly apply to a narrowly scoped follow-up about one threshold. No inferred capital-to-milestone dependency is promoted to a source-stated fact. Updated source-view UI retains focused navigation while loading and consumes Escape at the nearest disclosure before closing the companion.
 
 `docs/resume-progress.jsonl` is a sanitized append-only checkpoint log for this execution. Exact input transport signatures, credentials, confidential excerpts and detailed answer traces are never recorded there. Use the private session evidence attachments for detailed current-run QA; historical QA counts elsewhere are not current proof.
+
+## Spatial refinement, collapsible companion and document registry (5 Sept 2026)
+
+The player remains the last in-flow row of the viewer (`GuideBar`), now reduced to transport · section indicator · Transcript ·
+information menu · exit, with the progress line on its top edge. Technical narration details (provider, model, clip SHA-256
+verification, shortcuts) moved into the ⓘ menu (`role="dialog"`, light-dismiss, Escape returns focus). The transcript is a jump
+list. On desktop the companion column is collapsible (76 px rail) and resizable by splitter or range control; the presentation
+column always takes the remaining width. Phone views are unchanged (Presentation / Ask AI tabs, persistent mounts).
+
+`server/documentRegistry.js` is the source of truth for the four expected documents. `/api/documents` merges it with the
+corpus index, so a document that was never provisioned appears with status `missing`, a reason, and the environment variable
+that would provision it — never a silently smaller corpus. Answers append a `Coverage` section naming any document that could
+not be consulted, and the same sentence is added to `evidence.missing` (voice reads it too). Citation labels now carry the
+document and location (`<document> · Slide n | Page n | Sheet!Range`); a deck provisioned as its exact PDF rendering keeps slide
+semantics end to end (retrieval maps `slide N` to page N; `evidenceAnswer.describeLocation` labels it `Slide N`).
+
+`scripts/provision_sources.py` (`npm run provision`) downloads missing originals from `ATHAR_SOURCE_URL_<SLUG>` into the
+protected input directory, pins slugs in a manifest and runs `ingest_documents.py`. Signed URLs stay in the host environment.
+`GET /api/health?probe=1` (reviewer session) runs the live key probe (create + read session) and returns booleans/status codes
+only. Tests: `tests/documentRegistry.test.mjs` covers registry merging, URL redaction, paged-deck slide scoping and labels.

@@ -16,7 +16,8 @@
     "test:ingestion": "python3 tests/ingestion.test.py",
     "test:ui-unit": "python3 -m unittest discover -s tests/ui -p 'test_*.py'",
     "test:grounding": "python3 tests/grounding_cases.py",
-    "ingest": "python3 scripts/ingest_documents.py"
+    "ingest": "python3 scripts/ingest_documents.py",
+    "provision": "python3 scripts/provision_sources.py"
   },
   "dependencies": {
     "express": "^4.21.2",

@@ -9,6 +9,7 @@ import { augmentExactCellEvidence } from './rawCellEvidence.js';
 import { createSourceView } from './sourceView.js';
 import { evidenceCoverageGaps } from './evidenceCoverage.js';
 import { createChatSession, submitQuerySync, isConfigured } from './ondemand.js';
+import { mergeExpectedDocuments } from './documentRegistry.js';
 
 const TTL = 6 * 3600_000;
 const fail = (code, message, status = 400) => Object.assign(new Error(message), { code, status });
@@ -50,17 +51,24 @@ export function createEvidenceRoutes({ access, corpusDir = process.env.ATHAR_COR
   }
   router.use(['/documents', '/citations', '/sources', '/chat'], access.requireAccess);
   router.use(['/documents', '/chat'], (req, res, next) => ['GET', 'HEAD', 'OPTIONS'].includes(req.method) ? next() : access.sameOrigin(req, res, next));
+  // The four expected review documents are always listed: indexed ones with their exact corpus
+  // record, missing ones explicitly as status "missing" with provisioning guidance (no URLs).
+  const publicDocuments = (data) => mergeExpectedDocuments(data.documents.map(({ id, slug, title, kind, status, coverage, limitations }) => ({ id, slug, title, kind, status, coverage, limitations })));
   router.get('/documents', async (req, res) => {
     try {
       const data = await index();
-      res.json({ schemaVersion: data.schemaVersion, indexedAt: data.generatedAt, documents: data.documents.map(({ id, slug, title, kind, status, coverage, limitations }) => ({ id, slug, title, kind, status, coverage, limitations })) });
-    } catch (error) { safeError(res, error); }
+      res.json({ schemaVersion: data.schemaVersion, indexedAt: data.generatedAt, documents: publicDocuments(data) });
+    } catch (error) {
+      // A missing/invalid corpus still reports the expected documents so the gap is visible, not blank.
+      if (error?.status === 503) return res.status(503).json({ code: error.code || 'corpus_unavailable', message: 'The protected corpus is not ready.', documents: mergeExpectedDocuments([]) });
+      safeError(res, error);
+    }
   });
   router.post('/documents/retry', async (req, res) => {
     try {
       rate(req);
       const data = await index(true);
-      res.json({ indexedAt: data.generatedAt, documents: data.documents.map(({ id, slug, title, kind, status, coverage, limitations }) => ({ id, slug, title, kind, status, coverage, limitations })) });
+      res.json({ indexedAt: data.generatedAt, documents: publicDocuments(data) });
     } catch (error) { safeError(res, error); }
   });
   router.get('/citations/:id', async (req, res) => {
@@ -70,7 +78,7 @@ export function createEvidenceRoutes({ access, corpusDir = process.env.ATHAR_COR
         const saved = rawEvidence.get(req.params.id);
         if (!saved || saved.principal !== req.reviewer.principal || saved.expiresAt <= clock()) throw fail('source_not_found', '', 404);
         const doc = data.documentsById.get(saved.chunk.documentId);
-        return res.json({ id: req.params.id, documentId: doc.id, title: doc.title, location: saved.exactLocation,
+        return res.json({ id: req.params.id, documentId: doc.id, documentSlug: doc.slug, kind: doc.kind, title: doc.title, location: saved.exactLocation,
           label: `${doc.title} · ${saved.exactLocation.sheet}!${saved.exactLocation.range}`, excerpt: saved.projectionText,
           records: saved.records, metadata: { evidenceOrigin: 'raw-record-projection', parentId: saved.baseId, originalSha256: doc.sha256, rawSha256: saved.rawSha256, exactLocations: saved.exactLocations },
           originalUrl: `/api/sources/${doc.id}`, sourceViewUrl: `/api/citations/${req.params.id}/view`, limitations: doc.limitations });
@@ -78,7 +86,7 @@ export function createEvidenceRoutes({ access, corpusDir = process.env.ATHAR_COR
       const source = data.recordsById.get(req.params.id);
       if (!source) throw fail('source_not_found', '', 404);
       const doc = data.documentsById.get(source.documentId);
-      res.json({ id: source.id, documentId: doc.id, title: doc.title, location: source.location, label: source.label,
+      res.json({ id: source.id, documentId: doc.id, documentSlug: doc.slug, kind: doc.kind, title: doc.title, location: source.location, label: source.label,
         excerpt: source.text, records: source.records || [], metadata: source.metadata || {},
         originalUrl: `/api/sources/${encodeURIComponent(doc.id)}`, sourceViewUrl: `/api/citations/${encodeURIComponent(source.id)}/view`, limitations: doc.limitations });
     } catch (error) { safeError(res, error); }
@@ -183,10 +191,20 @@ export function createEvidenceRoutes({ access, corpusDir = process.env.ATHAR_COR
       if (!verified) throw lastValidation || fail('provider_unavailable', '', 502);
       conversation.history.push({ role: 'user', content: query, documentId, slide });
       conversation.history = conversation.history.slice(-12);
-      return { answer: verified.answer, citations: verified.citations, grounding: { ...verified.grounding,
-        retrievedIds: retrieved.chunks.map((chunk) => chunk.id), indexVersion: corpus.extractorVersion },
+      // Server-known coverage: which of the four expected documents this answer could draw on. A missing
+      // original is stated explicitly (it is a workspace fact, not a model claim) rather than left implicit.
+      const registry = mergeExpectedDocuments(corpus.documents);
+      const inScope = registry.filter((doc) => documentId === 'all' || doc.id === documentId);
+      const missingDocs = documentId === 'all' ? registry.filter((doc) => doc.status === 'missing') : [];
+      const coverage = { scope: documentId === 'all' ? 'all-documents' : 'this-document',
+        consulted: inScope.filter((doc) => doc.status !== 'missing').map((doc) => ({ id: doc.id, slug: doc.slug, title: doc.title })),
+        notProvisioned: missingDocs.map((doc) => ({ slug: doc.slug, title: doc.title })) };
+      const coverageNote = missingDocs.map((doc) => `Not established: ${doc.title} is not provisioned in this workspace, so its figures could not be consulted or checked.`);
+      const answer = coverageNote.length ? `${verified.answer}\n\n### Coverage\n${coverageNote.map((line) => `- ${line}`).join('\n')}` : verified.answer;
+      return { answer, citations: verified.citations, grounding: { ...verified.grounding,
+        retrievedIds: retrieved.chunks.map((chunk) => chunk.id), indexVersion: corpus.extractorVersion }, coverage,
         // Exact quotes/operands are returned only to this authenticated review session, never logged.
-        evidence: { facts: verified.facts, calculations: verified.calculations, conflicts: verified.conflicts, missing: verified.missing },
+        evidence: { facts: verified.facts, calculations: verified.calculations, conflicts: verified.conflicts, missing: [...verified.missing, ...coverageNote] },
         messageId: crypto.randomUUID(), status: 'done' };
     } finally { conversation.busy = false; }
   }

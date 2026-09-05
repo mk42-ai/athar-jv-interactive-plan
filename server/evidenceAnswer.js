@@ -448,6 +448,24 @@ function escapeMarkdown(text) {
 function formatNumber(number) { return new Intl.NumberFormat('en-US', { maximumFractionDigits: 8 }).format(number); }
 
 /** Pure renderer for the already-validated answer. Only relative server citation links are emitted. */
+/** Human-readable original location: "Slide 2", "Page 1", "Open Items!D31:G46". A deck ingested as its exact PDF keeps slide numbering. */
+export function describeLocation(source, document) {
+  const location = source?.location || {};
+  if (location.sheet && location.range) return `${location.sheet}!${location.range}`;
+  if (location.slide != null) return `Slide ${location.slide}`;
+  if (location.page != null) {
+    const pagedDeck = (source?.documentSlug || document?.slug) === 'executive-presentation' && source?.kind === 'pdf';
+    return `${pagedDeck ? 'Slide' : 'Page'} ${location.page}`;
+  }
+  return source?.label || 'Source';
+}
+const SHORT_TITLES = { 'executive-presentation': 'Executive-summary deck', 'financial-summary': 'Financial-model executive summary', 'financial-model': 'Financial model v13', 'implementation-plan': 'Implementation plan' };
+export function citationLabel(source, document, locationLabel = describeLocation(source, document)) {
+  const slug = source?.documentSlug || document?.slug;
+  const title = SHORT_TITLES[slug] || (document?.title ? String(document.title).slice(0, 60) : null);
+  return title ? `${title} · ${locationLabel}` : locationLabel;
+}
+
 export function renderEvidenceAnswer(answer) {
   const numbers = new Map(answer.citations.map((citation, i) => [citation.id, i + 1]));
   const links = ids => [...new Set(ids)].map(id => `[${numbers.get(id)}](/api/citations/${encodeURIComponent(id)})`).join(' ');
@@ -510,10 +528,15 @@ export function validateEvidenceAnswer(raw, { retrieved, question = '' } = {}) {
   const citations = [];
   const seen = new Set();
   const references = [...facts, ...conflicts].flatMap(item => item.evidence).concat(calculations.flatMap(item => item.operands.map(operand => ({ id: operand.sourceId }))));
+  const documentsById = new Map((Array.isArray(retrieved?.documents) ? retrieved.documents : []).map(doc => [doc.id, doc]));
   for (const reference of references) if (!seen.has(reference.id)) {
     seen.add(reference.id);
     const source = sources.records.get(reference.id);
-    citations.push({ id: source.id, documentId: source.documentId, label: source.label, location: { ...source.location }, url: `/api/citations/${encodeURIComponent(source.id)}` });
+    const document = documentsById.get(source.documentId);
+    const locationLabel = describeLocation(source, document);
+    citations.push({ id: source.id, documentId: source.documentId, label: citationLabel(source, document, locationLabel), sourceLabel: source.label,
+      documentTitle: document?.title || null, documentSlug: source.documentSlug || document?.slug || null, kind: source.kind, locationLabel,
+      location: { ...source.location }, url: `/api/citations/${encodeURIComponent(source.id)}` });
   }
   const hasSupportedContent = Boolean(facts.length || conflicts.length || calculations.length);
   const unsupported = data.unsupported || !hasSupportedContent;
