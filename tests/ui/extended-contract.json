@@ -1,0 +1,79 @@
+{
+  "reader": [
+    "fit-page-explicit-control",
+    "fit-page-both-dimensions",
+    "synthetic-reader-next-page",
+    "synthetic-reader-previous-page",
+    "readable-zoom-enlarges-source",
+    "readable-zoom-pan-surface",
+    "reflow-reader-visible-and-labelled",
+    "reflow-reader-readable-type",
+    "reflow-reader-wrap-no-horizontal-overflow",
+    "reflow-reader-no-added-summary-claim",
+    "reflow-reader-follows-active-page",
+    "reader-controls-focus-and-target-size"
+  ],
+  "context": [
+    "ask-slide-opens-scoped-composer",
+    "ask-slide-prefills-without-submitting",
+    "slide-query-preserves-document-and-page",
+    "document-filter-clears-slide-context",
+    "ask-document-prefills-without-submitting",
+    "document-query-preserves-filter",
+    "pending-source-does-not-broaden-scope",
+    "synthetic-companion-resize",
+    "companion-focusable-targets-44",
+    "companion-outside-canvas",
+    "synthetic-escape-closes-companion",
+    "closed-companion-inert-and-unfocusable",
+    "companion-restores-trigger-focus"
+  ],
+  "citations": [
+    "citation-opens-labelled-source-panel",
+    "citation-original-is-same-origin-protected-path",
+    "citation-panel-receives-focus",
+    "citation-close-restores-focus",
+    "citation-fetch-failure-no-invented-excerpt",
+    "citation-401-clears-protected-content",
+    "citation-rejects-external-original",
+    "citation-rejects-javascript-original",
+    "citation-rejects-data-original"
+  ],
+  "source-errors": [
+    "source-load-error-visible",
+    "source-load-error-disables-query",
+    "source-load-retry-recovers-fixture-list",
+    "chat-fetch-error-visible-no-fallback-answer",
+    "chat-fetch-error-preserves-filter"
+  ],
+  "source-loading": [
+    "source-processing-status-visible",
+    "source-processing-disables-query",
+    "source-processing-no-answer-or-citation",
+    "source-processing-poll-recovers-fixture-list"
+  ],
+  "context-missing": [
+    "missing-slide-source-does-not-broaden-filter",
+    "missing-slide-source-disables-query",
+    "missing-slide-source-explains-unavailability"
+  ],
+  "auth-denied": [
+    "unauthorized-ui-shows-password-gate",
+    "unauthorized-ui-blocks-query",
+    "access-contract-authenticated-and-enabled",
+    "unauthorized-ui-no-protected-fetch",
+    "mock-protected-citation-and-original-denied",
+    "unauthorized-no-citation-or-original-links"
+  ],
+  "audio-error": [
+    "audio-play-rejection-error-visible",
+    "audio-play-rejection-clock-stopped",
+    "audio-retry-original-playback-recovers"
+  ],
+  "fetch-error": [
+    "wrapped-fetch-error-visible",
+    "wrapped-fetch-no-browser-tts-fallback",
+    "wrapped-fetch-no-false-playback-success",
+    "fetch-retry-original-playback-recovers"
+  ]
+}

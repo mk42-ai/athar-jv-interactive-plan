@@ -3,27 +3,27 @@
 // All On Demand calls happen here, server-side, with the apikey from process.env.
 import express from 'express';
 import crypto from 'node:crypto';
+import { getGuideSteps, getPresentationData, getAudioManifest } from './presentationStore.js';
+import { createAccessControl } from './access.js';
+import { presentationReadAccess } from './privatePresentation.js';
+import { createEvidenceRoutes } from './evidenceRoutes.js';
 import {
   CONFIG,
   isConfigured,
-  createChatSession,
-  submitQuerySync,
-  submitQueryStream,
   speechToText,
   textToSpeech,
   executeAvmWorkflow,
   getExecution,
-  getExecutionLogs,
-  getExecutionTranscript,
 } from './ondemand.js';
-import { buildFulfillmentPrompt, loadPlan } from './grounding.js';
+import { loadDotEnv, onDemandKey } from './env.js';
+import { clipStatus, serveEmbedded, loadEmbeddedAudio } from './guideAudioStore.js';
 
 // ---- tiny in-memory media store (uploaded user audio + proxied TTS clips) ----
 const MEDIA_TTL_MS = 20 * 60 * 1000;
 const media = new Map(); // id -> { buf, type, ts }
-function putMedia(buf, type, ext) {
+function putMedia(buf, type, ext, owner = null) {
   const id = `${crypto.randomUUID()}.${ext}`;
-  media.set(id, { buf, type, ts: Date.now() });
+  media.set(id, { buf, type, ts: Date.now(), owner });
   if (media.size > 400) {
     for (const [k, v] of media) if (Date.now() - v.ts > MEDIA_TTL_MS) media.delete(k);
   }
@@ -61,13 +61,8 @@ function sse(res) {
 }
 
 function errPayload(e, stage) {
-  return {
-    type: 'error',
-    stage,
-    code: e.code || (e.status === 503 ? 'not_configured' : 'upstream_error'),
-    status: e.status || 500,
-    message: e.message || 'Unexpected error',
-  };
+  return { type: 'error', stage, code: e.status === 503 ? 'not_configured' : 'service_error',
+    status: e.status || 502, message: 'The service could not complete this request. Please retry.' };
 }
 
 const withTimeout = (ms) => (typeof AbortSignal !== 'undefined' && AbortSignal.timeout ? AbortSignal.timeout(ms) : undefined);
@@ -104,7 +99,7 @@ function takeSentences(pending, { minChars = 40, hardMax = 260 } = {}) {
 // transcript → (AVM workflow execute, in parallel) → grounded Chat API stream →
 // sentence-chunked TTS → same-origin audio URLs the browser can visualise.
 async function runVoiceTurn({ req, send, question, sessionId, externalUserId, signal, meta = {} }) {
-  const base = publicBase(req);
+  req.evidenceService.owned(req, sessionId);
   const t0 = Date.now();
 
   // 1) Register the turn on the Advanced Voice Mode workflow (does not block the answer).
@@ -134,7 +129,7 @@ async function runVoiceTurn({ req, send, question, sessionId, externalUserId, si
       }
       send({ type: 'avm-status', executionId, status: status || 'executing', timedOut: true });
     } catch (e) {
-      send({ type: 'avm-error', message: e.message, status: e.status || 500 });
+      send({ type: 'avm-error', message: 'Voice workflow unavailable.', status: e.status || 500 });
     }
   })();
 
@@ -152,45 +147,33 @@ async function runVoiceTurn({ req, send, question, sessionId, externalUserId, si
         const r = await fetch(remote, { signal: withTimeout(30000) });
         if (!r.ok) throw new Error(`audio fetch ${r.status}`);
         const buf = Buffer.from(await r.arrayBuffer());
-        const id = putMedia(buf, 'audio/mpeg', 'mp3');
+        const id = putMedia(buf, 'audio/mpeg', 'mp3', req.reviewer?.principal);
         send({ type: 'audio', index: idx, url: `/api/voice/audio/${id}`, text, bytes: buf.length, ms: Date.now() - t0 });
       } catch (e) {
-        send({ type: 'tts-error', index: idx, text, message: e.message });
+        send({ type: 'tts-error', index: idx, message: 'Speech generation unavailable.' });
       }
     });
     return ttsChain;
   };
 
   send({ type: 'stage', stage: 'thinking', ms: Date.now() - t0 });
-  const fulfillmentPrompt = buildFulfillmentPrompt({ voice: true });
   let messageId = null;
   try {
-    for await (const ev of submitQueryStream(sessionId, question, { fulfillmentPrompt, signal })) {
-      if (ev.type === 'delta') {
-        full += ev.text;
-        pending += ev.text;
-        send({ type: 'delta', text: ev.text });
-        const { sentences, rest } = takeSentences(pending);
-        pending = rest;
-        for (const s of sentences) speak(s);
-      } else if (ev.type === 'done') {
-        messageId = ev.messageId;
-        if (ev.answer && ev.answer.length > full.length) {
-          // upstream sent a fuller final answer than the deltas we saw
-          const extra = ev.answer.slice(full.length);
-          full = ev.answer;
-          pending += extra;
-          send({ type: 'delta', text: extra });
-        }
-      }
-    }
-  } catch (e) {
-    if (!full) {
-      send(errPayload(e, 'chat'));
-      await avmPromise.catch(() => {});
-      return { ok: false };
-    }
-    send({ type: 'warning', stage: 'chat', message: e.message });
+    const result = await req.evidenceService.answerQuestion(req, { sessionId, query: question, documentId: 'all' }, signal);
+    messageId = result.messageId;
+    // Speak only already-validated source facts; detailed citations remain in the text companion.
+    full = result.evidence.facts.slice(0, 4).map((fact) => fact.text).join(' ');
+    if (result.evidence.missing.length) full += ' ' + result.evidence.missing.join(' ');
+    if (!full.trim()) full = 'The selected evidence does not support an answer to this question.';
+    pending = full;
+    send({ type: 'delta', text: full });
+    const { sentences, rest } = takeSentences(pending);
+    pending = rest;
+    for (const sentence of sentences) speak(sentence);
+  } catch (error) {
+    send({ type: 'error', stage: 'chat', code: error.code || 'provider_unavailable', message: 'The evidence-grounded answer could not be prepared. No substitute was generated.' });
+    await avmPromise.catch(() => {});
+    return { ok: false };
   }
   const tail = pending.trim();
   if (tail) speak(tail);
@@ -205,63 +188,59 @@ async function runVoiceTurn({ req, send, question, sessionId, externalUserId, si
   return { ok: true, answer: full };
 }
 
-export function createApiApp() {
+export function createApiApp({ presentationPreview = false } = {}) {
+  // Secrets: process.env first, then the git-ignored .env (server-side only — never bundled for the client).
+  loadDotEnv();
+  const odKey = onDemandKey();
+  console.log(`[services] AI configured: ${Boolean(odKey)}; pre-baked narration is key-independent`);
+  const store = loadEmbeddedAudio();
+  console.log(`[guide-audio] embedded store: ${store.files.size} clips${store.manifest ? ` (${store.manifest.voice} / ${store.manifest.model}, v${store.manifest.version})` : ''}`);
+
+
   const app = express();
   app.disable('x-powered-by');
 
   const api = express.Router();
+  const access = createAccessControl();
+  const readPresentation = presentationReadAccess(access, { presentationPreview });
+  const evidence = createEvidenceRoutes({ access });
+  // Frame policy. The review workspace is opened inside embedded preview panels (cross-origin iframes),
+  // where the former `X-Frame-Options: SAMEORIGIN` made browsers render "refused to connect". X-Frame-Options
+  // has no allow-list form, so the modern CSP `frame-ancestors` directive replaces it: `*` by default
+  // (any embedder), or a space-separated allow-list via ATHAR_FRAME_ANCESTORS (e.g. "'self' https://app.example").
+  // Clickjacking exposure is bounded because every confidential route still requires the reviewer session.
+  const frameAncestors = String(process.env.ATHAR_FRAME_ANCESTORS || '*').trim() || '*';
+  app.use((req, res, next) => {
+    res.setHeader('X-Content-Type-Options', 'nosniff');
+    res.setHeader('Referrer-Policy', 'no-referrer');
+    res.removeHeader('X-Frame-Options');
+    res.setHeader('Content-Security-Policy', `frame-ancestors ${frameAncestors}`);
+    next();
+  });
+  api.use('/access', access.router);
+  // Presentation payloads are no longer embedded in public Git/client bundles.
+  // Reviewer access is required except for the explicitly started read-only presentation preview.
+  api.get('/presentation', readPresentation, (req, res) => {
+    try { res.set('Cache-Control', 'private, no-store').json(getPresentationData()); }
+    catch { res.status(503).json({ code: 'presentation_unavailable', message: 'The protected presentation is unavailable. Ask the owner to restore the presentation store.' }); }
+  });
+  api.use(['/guide', '/guide-audio'], readPresentation);
+  api.use(evidence.router);
+  // Every user-generated voice/chat operation is authorized; the narrated public deck is unchanged.
+  api.use('/voice', (req, res, next) => {
+    const id = req.path.startsWith('/audio/') ? req.path.slice(7) : null;
+    if (req.method === 'GET' && id && access.validMediaCapability(id, req.query.expires, req.query.cap)) return next();
+    return access.requireAccess(req, res, next);
+  });
+  api.use('/voice', (req, res, next) => ['GET', 'HEAD'].includes(req.method) ? next() : access.sameOrigin(req, res, next));
+  api.use('/voice', (req, res, next) => { req.evidenceService = evidence; req.reviewAccess = access; next(); });
 
   api.get('/health', (req, res) => {
-    const plan = loadPlan();
-    res.json({
-      ok: true,
-      configured: isConfigured(),
-      endpointId: CONFIG.endpointId,
-      avmWorkflowId: CONFIG.avmWorkflowId,
-      ttsVoice: CONFIG.ttsVoice,
-      publicBase: publicBase(req),
-      plan: { months: plan.months.length, activities: plan.activities.length, source: plan.meta.source_file },
-      time: new Date().toISOString(),
-    });
-  });
-
-  // ---- Chat ----------------------------------------------------------------
-  api.post('/chat/session', express.json(), async (req, res) => {
-    try {
-      const externalUserId = String(req.body?.externalUserId || `athar-web-${crypto.randomUUID()}`).slice(0, 120);
-      const data = await createChatSession(externalUserId, []);
-      res.json({ sessionId: data.id, externalUserId: data.externalUserId, createdAt: data.createdAt });
-    } catch (e) {
-      res.status(e.status || 500).json(errPayload(e, 'session'));
-    }
-  });
-
-  api.post('/chat/query', express.json({ limit: '64kb' }), async (req, res) => {
-    const { sessionId, query, mode = 'stream', voice = false } = req.body || {};
-    if (!sessionId || !query || typeof query !== 'string') {
-      return res.status(400).json({ type: 'error', code: 'bad_request', message: 'sessionId and query are required' });
-    }
-    const fulfillmentPrompt = buildFulfillmentPrompt({ voice: Boolean(voice) });
-    if (mode === 'sync') {
-      try {
-        const data = await submitQuerySync(sessionId, query.slice(0, 4000), { fulfillmentPrompt });
-        return res.json({ answer: data.answer, messageId: data.messageId, status: data.status });
-      } catch (e) {
-        return res.status(e.status || 500).json(errPayload(e, 'chat'));
-      }
-    }
-    const { send, end } = sse(res);
-    const ac = new AbortController();
-    res.on('close', () => { if (!res.writableEnded) ac.abort(); });
-    try {
-      for await (const ev of submitQueryStream(sessionId, query.slice(0, 4000), { fulfillmentPrompt, signal: ac.signal })) {
-        send(ev);
-      }
-    } catch (e) {
-      send(errPayload(e, 'chat'));
-    } finally {
-      end();
-    }
+    res.setHeader('Cache-Control', 'no-store');
+    res.json({ ok: true, configured: isConfigured(), build: process.env.ATHAR_BUILD_SHA || 'workspace',
+      checkedAt: new Date().toISOString(), reviewAccessConfigured: access.configured,
+      // No key fragments, provider session identifiers, secret paths, or confidential metadata.
+      narration: { provider: 'elevenlabs', voice: 'River', playback: 'verified-prebaked' } });
   });
 
   // ---- Voice -----------------------------------------------------------------
@@ -269,7 +248,7 @@ export function createApiApp() {
   // proxied TTS clips (same-origin so the browser can visualise playback).
   api.get('/voice/audio/:id', (req, res) => {
     const item = media.get(req.params.id);
-    if (!item) return res.status(404).json({ error: 'not found' });
+    if (!item || (req.reviewer && item.owner && item.owner !== req.reviewer.principal)) return res.status(404).json({ error: 'not found' });
     res.setHeader('Content-Type', item.type);
     res.setHeader('Content-Length', item.buf.length);
     res.setHeader('Cache-Control', 'private, max-age=600');
@@ -294,9 +273,10 @@ export function createApiApp() {
         if (buf.length < 800) throw Object.assign(new Error('No audio received — the recording was empty.'), { status: 400, code: 'empty_audio' });
         const ctype = String(req.headers['content-type'] || 'audio/wav').split(';')[0];
         const ext = ctype.includes('wav') ? 'wav' : ctype.includes('mp4') || ctype.includes('m4a') ? 'm4a' : ctype.includes('mpeg') ? 'mp3' : ctype.includes('ogg') ? 'ogg' : 'webm';
-        const id = putMedia(buf, ctype, ext);
-        const audioUrl = `${publicBase(req)}/api/voice/audio/${id}`;
-        send({ type: 'stage', stage: 'transcribing', bytes: buf.length, audioUrl, ms: Date.now() - t0 });
+        const id = putMedia(buf, ctype, ext, req.reviewer?.principal);
+        const capability = access.mediaCapability(id);
+        const audioUrl = `${publicBase(req)}/api/voice/audio/${id}?${new URLSearchParams(capability)}`;
+        send({ type: 'stage', stage: 'transcribing', bytes: buf.length, ms: Date.now() - t0 });
         let text = '';
         try {
           text = (await speechToText(audioUrl)).trim();
@@ -309,7 +289,7 @@ export function createApiApp() {
           send({ type: 'error', stage: 'stt', code: 'empty_transcript', message: "I didn't catch that — please try speaking again." });
           return end();
         }
-        await runVoiceTurn({ req, send, question: text, sessionId, externalUserId, signal: ac.signal, meta: { input: 'audio', audioUrl } });
+        await runVoiceTurn({ req, send, question: text, sessionId, externalUserId, signal: ac.signal, meta: { input: 'audio' } });
       } catch (e) {
         send(errPayload(e, 'turn'));
       } finally {
@@ -345,47 +325,69 @@ export function createApiApp() {
       const remote = await textToSpeech(text, { voice: req.body?.voice });
       const r = await fetch(remote, { signal: withTimeout(30000) });
       const buf = Buffer.from(await r.arrayBuffer());
-      const id = putMedia(buf, 'audio/mpeg', 'mp3');
+      const id = putMedia(buf, 'audio/mpeg', 'mp3', req.reviewer?.principal);
       res.json({ url: `/api/voice/audio/${id}`, bytes: buf.length });
     } catch (e) {
       res.status(e.status || 500).json(errPayload(e, 'tts'));
     }
   });
 
-  api.post('/voice/stt', express.json({ limit: '8kb' }), async (req, res) => {
+  // Verified prerecorded audio comes only from the protected host store, never public files.
+  const loadPrebaked = () => { try { return getAudioManifest(); } catch { return null; } };
+  api.get('/guide-audio/:file', (req, res) => {
+    const file = String(req.params.file || '');
+    if (!file || file.includes('/') || file.includes('..')) return res.status(400).json({ error: 'bad file' });
+    if (serveEmbedded(req, res, file)) return;
+    res.status(404).json({ error: 'clip not found' });
+  });
+
+  api.get('/guide/config', (req, res) => {
+    res.setHeader('Cache-Control', 'no-store');
+    try { res.json({ moments: getGuideSteps().map(({ id, slide, boxes }) => ({ id, slide, boxes })) }); }
+    catch { res.status(503).json({ code: 'presentation_unavailable' }); }
+  });
+
+  api.get('/guide/voice', (req, res) => {
+    const manifest = loadPrebaked();
+    res.json({ provider: manifest?.provider || 'elevenlabs', voice: manifest?.voice || 'River',
+      model: manifest?.model, playback: 'verified-prebaked', configured: Boolean(manifest),
+      prebakedClips: Object.keys(manifest?.clips || {}).length });
+  });
+
+  api.post('/guide/tts', express.json({ limit: '32kb' }), async (req, res) => {
+    const t0 = Date.now();
     try {
-      const audioUrl = String(req.body?.audioUrl || '');
-      if (!/^https?:\/\//.test(audioUrl)) return res.status(400).json({ error: 'audioUrl is required' });
-      res.json({ text: await speechToText(audioUrl) });
+      const text = String(req.body?.text || '').trim().slice(0, 1500);
+      const id = String(req.body?.id || '').slice(0, 64);
+      if (!text) return res.status(400).json({ error: 'text is required' });
+
+      const done = (payload) => {
+        res.json(payload);
+      };
+
+      // 0) Pre-baked, integrity-hashed ElevenLabs clip — served FIRST and INDEPENDENTLY of any API key,
+      //    so a restart without ELEVENLABS_API_KEY can never silently switch the voice.
+      const manifest = loadPrebaked();
+      const textSha = crypto.createHash('sha256').update(text).digest('hex');
+      const pre = manifest?.clips?.[id] || Object.values(manifest?.clips || {}).find((c) => c.textSha256 === textSha);
+      const status = pre ? clipStatus(pre.file, { expectedSha256: pre.sha256 }) : null;
+      if (pre && (!pre.textSha256 || pre.textSha256 === textSha) && status?.ok) {
+        return done({ url: `${status.source === 'embedded' ? '/api/guide-audio/' : '/guide-audio/'}${pre.file}`, file: pre.file, sha256: pre.sha256, servedFrom: status.source, provider: manifest.provider || 'elevenlabs', model: pre.model || manifest.model, voice: pre.voice || manifest.voice, voiceId: pre.voiceId || manifest.voiceId, label: `ElevenLabs · ${pre.voice || manifest.voice} · ${pre.model || manifest.model}`, source: 'prebaked', settings: pre.settings || manifest.settings });
+      }
+
+      return res.status(503).json({ code: 'verified_clip_unavailable', message: 'A verified narration clip is unavailable. Retry after the source has been restored.' });
     } catch (e) {
-      res.status(e.status || 500).json(errPayload(e, 'stt'));
+      res.status(e.status || 500).json(errPayload(e, 'guide-tts'));
     }
   });
 
-  api.post('/voice/avm', express.json({ limit: '32kb' }), async (req, res) => {
-    try {
-      const payload = req.body?.payload && typeof req.body.payload === 'object' ? req.body.payload : {};
-      const executionId = await executeAvmWorkflow({ source: 'athar-jv-web-avm', ts: new Date().toISOString(), ...payload });
-      res.json({ executionId, workflowId: CONFIG.avmWorkflowId });
-    } catch (e) {
-      res.status(e.status || 500).json(errPayload(e, 'avm'));
-    }
-  });
+  // Legacy diagnostic endpoints accepted arbitrary upstream identifiers/URLs. They are not used by
+  // the turn pipeline; keep them closed rather than expose another reviewer's executions or media.
+  api.all(['/voice/stt', '/voice/avm', '/voice/execution/:id'], (req, res) =>
+    res.status(403).json({ code: 'diagnostic_disabled', message: 'Diagnostic access is restricted to the server operator.' }));
 
-  api.get('/voice/execution/:id', async (req, res) => {
-    try {
-      const id = req.params.id;
-      const [execution, logs, transcript] = await Promise.all([
-        getExecution(id),
-        req.query.logs === '1' ? getExecutionLogs(id).catch(() => []) : Promise.resolve(undefined),
-        req.query.transcript === '1' ? getExecutionTranscript(id).catch(() => null) : Promise.resolve(undefined),
-      ]);
-      res.json({ execution, logs, transcript });
-    } catch (e) {
-      res.status(e.status || 500).json(errPayload(e, 'execution'));
-    }
-  });
-
+  app.locals.reviewAccess = access;
+  app.locals.presentationReadAccess = readPresentation;
   app.use('/api', api);
   app.use('/api', (req, res) => res.status(404).json({ error: `No route ${req.method} /api${req.path}` }));
   return app;

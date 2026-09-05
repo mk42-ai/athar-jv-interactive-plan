@@ -1,0 +1,65 @@
+{
+  "version": 1,
+  "sameAssertionsForAfter": true,
+  "createdUTC": "2026-09-05T02:14:01.334460+00:00",
+  "stages": [
+    "playing-collapsed",
+    "paused",
+    "manual-page-2",
+    "caption-expanded",
+    "chat-open-expanded",
+    "closed-chat-expanded"
+  ],
+  "perStage": [
+    "canvas-contained-in-holder",
+    "rail-outside-canvas",
+    "chat-outside-canvas",
+    "keyboard-focusable-targets-44",
+    "tiny-fit-limitation-recognized",
+    "no-horizontal-overflow",
+    "highlight-registration"
+  ],
+  "perInteraction": [
+    "exact-requested-viewport",
+    "configured-21-moments",
+    "guide-started",
+    "back-disabled-at-first",
+    "pause-freezes-clock",
+    "resume-advances-clock",
+    "skip-next-moment",
+    "back-previous-moment",
+    "manual-nav-sync-page2",
+    "manual-nav-sync-page1",
+    "caption-expanded",
+    "chat-opens",
+    "chat-resize-available",
+    "chat-closes",
+    "closed-chat-not-focusable",
+    "actual-speed"
+  ],
+  "perFullSequence": [
+    "exact-requested-viewport",
+    "configured-21-moments",
+    "guide-started",
+    "full-sequence-21-natural-ended",
+    "full-sequence-trusted-ended",
+    "full-sequence-rate-one-no-seek",
+    "full-sequence-source-provenance",
+    "full-sequence-page-sync",
+    "full-sequence-tour-complete"
+  ],
+  "viewportList": [
+    "1440x900",
+    "390x844",
+    "834x1112",
+    "1275x451"
+  ],
+  "thresholds": {
+    "targetCssPx": 44,
+    "canvasContainmentTolerancePx": 1.1,
+    "overlapMaxPx2": 1,
+    "tinyTextCssPx": 12,
+    "highlightTolerancePx": 2
+  },
+  "harnessHash": "096acdae0066796a6fb9b843759658fee4d5e31172bfe58ececea84e50afbe5d"
+}

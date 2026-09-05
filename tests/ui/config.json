@@ -1,0 +1,71 @@
+{
+  "guideModule": "/api/guide/config",
+  "settleMs": 3000,
+  "selectors": {
+    "root": "[data-testid=\"pdf-canvas\"][data-page]",
+    "viewer": "[data-testid=\"pdf-viewer\"]",
+    "canvas": "[data-testid=\"pdf-canvas\"]",
+    "holder": ".pdfv-scroll",
+    "rail": "[data-testid=\"guide-bar\"]",
+    "toggle": "[data-testid=\"guide-toggle\"]",
+    "pause": "[data-testid=\"guide-playpause\"]",
+    "exit": "[data-testid=\"guide-exit\"]",
+    "retry": "[data-testid=\"guide-retry\"]",
+    "overlay": "[data-testid=\"guide-overlay\"]",
+    "source": "[data-testid=\"guide-source\"]",
+    "chat": "[data-testid=\"chat-widget\"]",
+    "chatOpen": "[data-testid=\"dock-chat\"]",
+    "chatClose": "[data-testid=\"chat-close\"]",
+    "companion": ".workspace-companion",
+    "companionResize": "#companion-size,[data-testid*=\"resize\"],[role=\"separator\"],[aria-label*=\"resize\" i],.resize-handle",
+    "fit": "[data-testid=\"pdf-fit-page\"]",
+    "readableZoom": "[data-testid=\"pdf-readable-zoom\"]",
+    "textToggle": "[data-testid=\"pdf-text-toggle\"]",
+    "reader": "[data-testid=\"pdf-readable-text\"]",
+    "sourceText": "[data-testid=\"pdf-source-text\"]",
+    "readerClose": "[aria-label=\"Close readable text\"]",
+    "next": "[aria-label=\"Next page\"]",
+    "previous": "[aria-label=\"Previous page\"]",
+    "askSlide": "[data-testid=\"ask-this-slide\"]",
+    "filter": "[data-testid=\"chat-document-filter\"]",
+    "slideContext": "[data-testid=\"chat-slide-context\"]",
+    "documents": "[data-testid=\"chat-documents\"]",
+    "askDocument": "[data-testid=\"ask-document-ui-fixture-b\"]",
+    "input": "[data-testid=\"chat-widget\"] textarea",
+    "send": "[data-testid=\"chat-send\"], [data-testid=\"chat-widget\"] button[aria-label=\"Send\"], [data-testid=\"chat-widget\"] button[aria-label=\"Send message\"], [data-testid=\"chat-widget\"] form button[type=\"submit\"]",
+    "citation": "[data-testid=\"chat-citation\"]",
+    "citationPanel": "[data-testid=\"citation-panel\"]",
+    "citationClose": "[aria-label=\"Close citation\"], [aria-label=\"Close source citation\"], [data-testid=\"citation-panel\"] button[aria-label*=\"Close\"]",
+    "original": "[data-testid=\"citation-original\"]",
+    "gate": "[data-testid=\"access-gate\"]",
+    "passphrase": "[data-testid=\"review-access-code\"]",
+    "documentsRetry": "[data-testid=\"retry-documents\"], button[aria-label=\"Retry sources\"]",
+    "alert": "[role=\"alert\"]",
+    "guideFetchPattern": "/guide-audio/|^/api/"
+  },
+  "api": {
+    "access": "/api/access",
+    "health": "/api/health",
+    "documents": "/api/documents",
+    "retryDocuments": "/api/documents/retry",
+    "session": "/api/chat/session",
+    "query": "/api/chat/query",
+    "citationPattern": "^/api/citations?/[^/]+$",
+    "originalPattern": "^/api/documents/[^/]+/(?:original|file)$"
+  },
+  "mock": {
+    "documentField": "documentId",
+    "slideField": "slide",
+    "health": {
+      "configured": true,
+      "ok": true
+    },
+    "citationOriginal": "/api/documents/ui-fixture-a/original"
+  },
+  "thresholds": {
+    "targetPx": 44,
+    "readerFontPx": 16,
+    "readerLineHeight": 1.4,
+    "layoutTolerancePx": 1.1
+  }
+}

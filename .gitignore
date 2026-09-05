@@ -11,6 +11,8 @@ coverage/
 .env
 .env.*
 !.env.example
+env.local
+*.local.env
 
 # logs / OS / editor noise
 *.log
@@ -23,3 +25,24 @@ Thumbs.db
 # QA / proof artefacts
 .ui-proof/
 .pdf-proof/
+
+# Confidential ingestion and host-only access material — never distribute
+.private/
+protected/
+corpus/
+originals/
+*.records.jsonl.gz
+*private-corpus*
+*review-credentials*
+.qa-raw/
+
+# Python/operator caches and private presentation source payloads
+__pycache__/
+*.pyc
+presentation-store/
+public/deck/
+public/guide-audio/
+data/athar-jv-month-timeline.json
+data/deck-pdf.base64.json
+data/guide-audio.base64.json
+

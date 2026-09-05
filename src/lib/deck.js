@@ -2,12 +2,11 @@
 // (meta.week_calendar — v3 deck: W1 = Mon 5 Oct 2026 … W26 = Fri 2 Apr 2027).
 import { MONTHS, GATES, PLAN, monthKey } from './plan.js';
 
-export const PDF_SRC = '/deck/athar-jv-executive-summary-sep2026-mar2027-2-slide-deck.pdf';
-export const PDF_TITLE = 'Athar JV — Executive Summary (2-slide deck)';
-export const PDF_PAGES = [
-  { n: 1, title: 'Athar JV — Executive Summary' },
-  { n: 2, title: 'Implementation Roadmap — Six Gates' },
-];
+import { getPresentationData } from './presentationState.js';
+const deck = getPresentationData().deck;
+export const PDF_SRC = `/deck/${encodeURIComponent(deck.filename)}`;
+export const PDF_TITLE = deck.title;
+export const PDF_PAGES = deck.pageTitles;
 
 const DAY = 86400000;
 const dateUTC = (iso) => {
