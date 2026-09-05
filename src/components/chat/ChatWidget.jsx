@@ -63,6 +63,70 @@ export function Markdown({ text }) {
 let idc = 0;
 const uid = () => `${Date.now().toString(36)}-${idc++}`;
 
+// ---- (D) Evidence rendering ------------------------------------------------
+// The server returns the validated structure behind the answer:
+//   facts        — values STATED in a source document (exact quotations)
+//   calculations — values DERIVED by the server from quoted source operands
+//   conflicts    — the same subject stated differently by two sources
+//   missing      — what the selected evidence does not establish
+// Each is rendered with its own badge and border colour so a reader can never
+// mistake a derived number for one printed in a document.
+const OPERATION_SYMBOL = { subtract: '−', add: '+', multiply: '×', divide: '÷' };
+const formatNumber = (value) => (typeof value === 'number' && Number.isFinite(value) ? new Intl.NumberFormat('en-US', { maximumFractionDigits: 4 }).format(value) : String(value ?? ''));
+const calculationFormula = (calculation) => {
+  const values = (calculation.operands || []).map((operand) => `${formatNumber(operand.value)} ${operand.unit || ''}`.trim());
+  if (calculation.operation === 'percent-change') return `(${values[1]} − ${values[0]}) ÷ ${values[0]} × 100`;
+  return values.map((value) => `(${value})`).join(` ${OPERATION_SYMBOL[calculation.operation] || '·'} `);
+};
+
+function EvidenceRefs({ ids = [], citations = [], onOpen }) {
+  const unique = [...new Set(ids.filter(Boolean))];
+  if (!unique.length) return null;
+  return (
+    <div className="evidence-refs">
+      {unique.map((id) => {
+        const citation = citations.find((c) => c.id === id);
+        return <button key={id} type="button" onClick={(e) => onOpen({ id, label: citation?.label }, e.currentTarget)} data-testid="evidence-open-source" title={citation?.label ? `Open source — ${citation.label}` : 'Open source'}><span aria-hidden="true">↗</span>Open source{citation?.label ? ` · ${citation.label}` : ''}</button>;
+      })}
+    </div>
+  );
+}
+
+export function EvidenceAnswer({ evidence, citations = [], onOpen, scopeLabel }) {
+  if (!evidence) return null;
+  const { facts = [], calculations = [], conflicts = [], missing = [] } = evidence;
+  if (!facts.length && !calculations.length && !conflicts.length && !missing.length) return null;
+  return (
+    <div className="evidence-panel" data-testid="evidence-panel">
+      {scopeLabel && <p className="evidence-scope" data-testid="evidence-scope">Answered from <b>{scopeLabel}</b></p>}
+      {facts.length > 0 && <div className="evidence-group" data-testid="evidence-stated">{facts.map((fact, i) => (
+        <div className="evidence-item stated" key={`f${i}`}>
+          <span className="evidence-badge">Stated in source</span>
+          <p>{fact.text}</p>
+          <EvidenceRefs ids={(fact.evidence || []).map((e) => e.id)} citations={citations} onOpen={onOpen} />
+        </div>))}</div>}
+      {calculations.length > 0 && <div className="evidence-group" data-testid="evidence-derived">{calculations.map((calculation, i) => (
+        <div className="evidence-item derived" key={`c${i}`}>
+          <span className="evidence-badge">Derived calculation</span>
+          <p><b>{calculation.label}:</b> {formatNumber(calculation.result)} {calculation.unit}</p>
+          <p className="evidence-formula">{calculationFormula(calculation)} · computed from quoted source values, not printed in any document</p>
+          <EvidenceRefs ids={(calculation.operands || []).map((o) => o.sourceId)} citations={citations} onOpen={onOpen} />
+        </div>))}</div>}
+      {conflicts.length > 0 && <div className="evidence-group" data-testid="evidence-conflicts">{conflicts.map((conflict, i) => (
+        <div className="evidence-item conflict" key={`x${i}`}>
+          <span className="evidence-badge">Conflicting values</span>
+          <p>{conflict.text}</p>
+          <EvidenceRefs ids={(conflict.evidence || []).map((e) => e.id)} citations={citations} onOpen={onOpen} />
+        </div>))}</div>}
+      {missing.length > 0 && <div className="evidence-group" data-testid="evidence-missing">{missing.map((item, i) => (
+        <div className="evidence-item missing" key={`m${i}`}>
+          <span className="evidence-badge">Not in the sources</span>
+          <p>{item}</p>
+        </div>))}</div>}
+    </div>
+  );
+}
+
 const QUICK_QUESTIONS = [
   'Compare the UAE base case with international expansion.',
   'What capital decisions still need agreement?',
@@ -197,7 +261,7 @@ export default function ChatWidget({ open, onClose, ensureSession, session, rese
         onEvent: (ev) => {
           if (ac.signal.aborted || !authenticatedRef.current) return;
           if (ev.type === 'delta') patch(botId, (m) => ({ text: m.text + (ev.text || ''), status: 'streaming' }));
-          else if (ev.type === 'done') patch(botId, (m) => ({ text: typeof ev.answer === 'string' ? ev.answer : m.text, status: 'done', messageId: ev.messageId, citations: Array.isArray(ev.citations) ? ev.citations : [], grounding: ev.grounding || null }));
+          else if (ev.type === 'done') patch(botId, (m) => ({ text: typeof ev.answer === 'string' ? ev.answer : m.text, status: 'done', messageId: ev.messageId, citations: Array.isArray(ev.citations) ? ev.citations : [], grounding: ev.grounding || null, evidence: ev.evidence || null }));
           else if (ev.type === 'metrics') patch(botId, () => ({ metrics: ev.metrics }));
           else if (ev.type === 'error') {
             if (isAuthError(ev)) onAuthRequired?.();
@@ -296,7 +360,10 @@ export default function ChatWidget({ open, onClose, ensureSession, session, rese
           {messages.length === 0 && <div className="chat-empty"><p className="muted small">Choose a source, then ask a question. Suggested prompts are drafts — review before sending.</p><div className="chips">{QUICK_QUESTIONS.map((question) => <button key={question} className="chip" onClick={() => prefill(question)} disabled={busy}>{question}</button>)}</div></div>}
           {messages.map((m) => <div key={m.id} className={`msg ${m.role} ${m.status || ''}`}><div className="bubble">
             {m.role === 'user' ? <p>{m.text}</p> : m.status === 'pending' ? <div className="typing" aria-label="Assistant is preparing an answer"><span /><span /><span /></div> : <>
-              {m.text && <Markdown text={m.text} />}
+              {m.evidence ? <>
+                <EvidenceAnswer evidence={m.evidence} citations={m.citations} onOpen={openCitation} scopeLabel={m.context?.documentId === 'all' ? `all ${documents.length || 4} documents` : documents.find((d) => d.id === m.context?.documentId)?.title || 'the selected document'} />
+                {m.text && <details className="evidence-raw"><summary>Full validated answer text</summary><Markdown text={m.text} /></details>}
+              </> : m.text && <Markdown text={m.text} />}
               {m.status === 'streaming' && <span className="caret" aria-hidden="true" />}
               {m.status === 'error' && <div className="msg-error" role="alert"><span>{m.error}</span><button className="btn small" onClick={() => send(m.query)} disabled={disabled || busy}>Retry</button></div>}
               {m.status === 'stopped' && <div className="msg-meta">Response stopped · partial answer</div>}

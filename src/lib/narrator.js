@@ -102,7 +102,7 @@ export function createNarrator() {
           return { source: 'prebaked', provider: m.provider || 'elevenlabs', model: entry.model || m.model,
             voice: entry.voice || m.voice, voiceId: entry.voiceId || m.voiceId, file: entry.file, url,
             sha256: sha, expectedSha256: entry.sha256, verified: true, status: res.status, contentType: type,
-            bytes: buf.byteLength, label: `ElevenLabs · ${entry.voice || m.voice} · ${entry.model || m.model}`,
+            bytes: buf.byteLength, label: `${m.provider || 'ElevenLabs'} · ${entry.voice || m.voice} · ${entry.model || m.model}`,
             objectUrl: URL.createObjectURL(new Blob([buf], { type })) };
         }
         log('prebaked-integrity-failed', step.id);
@@ -118,7 +118,7 @@ export function createNarrator() {
           const sha2 = await sha256Hex(buf2);
           if (sha2 === entry.sha256 && buf2.byteLength > 1000) {
             log('prebaked-embedded', `${step.id}: served from the embedded store (${res2.headers.get('x-guide-audio') || 'api'})`);
-            return { source: 'prebaked', provider: m.provider || 'elevenlabs', model: entry.model || m.model, voice: entry.voice || m.voice, voiceId: entry.voiceId || m.voiceId, file: entry.file, url: `/api/guide-audio/${entry.file}`, sha256: sha2, expectedSha256: entry.sha256, verified: sha2 ? true : null, status: res2.status, contentType: type2, bytes: buf2.byteLength, label: `ElevenLabs · ${entry.voice || m.voice} · ${entry.model || m.model}`, objectUrl: URL.createObjectURL(new Blob([buf2], { type: 'audio/mpeg' })) };
+            return { source: 'prebaked', provider: m.provider || 'elevenlabs', model: entry.model || m.model, voice: entry.voice || m.voice, voiceId: entry.voiceId || m.voiceId, file: entry.file, url: `/api/guide-audio/${entry.file}`, sha256: sha2, expectedSha256: entry.sha256, verified: sha2 ? true : null, status: res2.status, contentType: type2, bytes: buf2.byteLength, label: `${m.provider || 'ElevenLabs'} · ${entry.voice || m.voice} · ${entry.model || m.model}`, objectUrl: URL.createObjectURL(new Blob([buf2], { type: 'audio/mpeg' })) };
           }
           log('embedded-integrity-failed', `${step.id}: got ${sha2} expected ${entry.sha256}`);
         } else {

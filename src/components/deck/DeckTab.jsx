@@ -58,7 +58,7 @@ export default function DeckTab({ onAskSlide, visible = true, onGuideStateChange
 
       <div className="deck-body">
         <div className="pdfv-stage">
-          <PdfViewer src={PDF_SRC} title={PDF_TITLE} onPageChange={setPageNo} onUserNavigate={onUserNavigate} requestedPage={requestedPage} overlay={<GuideOverlay guide={guide} />} toolbarExtra={<GuideToggle guide={guide} page={pageNo} />} footer={<GuideBar guide={guide} page={pageNo} visible={visible} />} />
+          <PdfViewer src={PDF_SRC} title={PDF_TITLE} onPageChange={setPageNo} onUserNavigate={onUserNavigate} requestedPage={requestedPage} overlay={<GuideOverlay guide={guide} />} toolbarExtra={<GuideToggle guide={guide} page={pageNo} />} footer={<GuideBar guide={guide} page={pageNo} visible={visible} sectionLabel={pageMeta.title} />} />
         </div>
         <MonthPanel
           month={month}
