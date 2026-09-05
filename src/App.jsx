@@ -34,6 +34,7 @@ export default function App() {
   const [askRequest, setAskRequest] = useState(null);
   const [companionWidth, setCompanionWidth] = useState(380);
   const [isMobile, setIsMobile] = useState(() => window.matchMedia('(max-width: 640px)').matches);
+  const [isShortViewport, setIsShortViewport] = useState(() => window.matchMedia('(max-height: 540px) and (min-width: 721px)').matches);
   const [mobileView, setMobileView] = useState(initialWidget ? 'ask' : 'presentation');
   const [guideSummary, setGuideSummary] = useState(null);
   const guideBridgeRef = useRef(null);
@@ -50,9 +51,11 @@ export default function App() {
   }, [isMobile, mobileView]);
   useEffect(() => {
     const query = window.matchMedia('(max-width: 640px)');
-    const update = () => setIsMobile(query.matches);
+    const shortQuery = window.matchMedia('(max-height: 540px) and (min-width: 721px)');
+    const update = () => { setIsMobile(query.matches); setIsShortViewport(shortQuery.matches); };
     query.addEventListener('change', update);
-    return () => query.removeEventListener('change', update);
+    shortQuery.addEventListener('change', update);
+    return () => { query.removeEventListener('change', update); shortQuery.removeEventListener('change', update); };
   }, []);
   useEffect(() => {
     if (!isMobile) return;
@@ -203,7 +206,7 @@ export default function App() {
   }, [widget, isMobile, switchMobileView]);
   useEffect(() => {
     const onKey = (e) => {
-      if (e.key === 'Escape' && widget && !document.fullscreenElement && e.target?.closest?.('.workspace-companion')) {
+      if (!e.defaultPrevented && e.key === 'Escape' && widget && !document.fullscreenElement && e.target?.closest?.('.workspace-companion')) {
         e.preventDefault(); closeWidget();
       }
     };
@@ -221,7 +224,7 @@ export default function App() {
     setWidget('chat');
     switchMobileView('ask');
   }, [switchMobileView]);
-  const stacked = workspaceWidth > 0 ? workspaceWidth < 1060 : window.matchMedia('(max-width: 1100px)').matches;
+  const stacked = isShortViewport || (workspaceWidth > 0 ? workspaceWidth < 1060 : window.matchMedia('(max-width: 1100px)').matches);
   const maxCompanionWidth = Math.min(420, Math.max(300, Math.floor(workspaceWidth - 738)));
   const effectiveWidth = Math.min(companionWidth, maxCompanionWidth);
   const configured = health ? health.configured : null;

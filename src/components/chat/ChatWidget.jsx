@@ -305,7 +305,10 @@ export default function ChatWidget({ open, onClose, ensureSession, session, rese
             </>}
           </div></div>)}
         </div>
-        {citationState && <section ref={citationPanelRef} tabIndex={-1} className="citation-panel" id="chat-citation-panel" aria-busy={citationState.status === 'loading'} aria-label="Cited source document" data-testid="citation-panel">
+        {citationState && <section ref={citationPanelRef} tabIndex={-1} className="citation-panel" id="chat-citation-panel" aria-busy={citationState.status === 'loading'} aria-label="Cited source document" data-testid="citation-panel" onKeyDown={(e) => {
+          if (e.key !== 'Escape' || e.defaultPrevented) return;
+          e.preventDefault(); e.stopPropagation(); closeCitation();
+        }}>
           {citationState.status !== 'ready' && <header><h3>{citationState.citation.label || 'Source evidence'}</h3><button className="icon-btn" onClick={closeCitation} aria-label="Close source viewer">×</button></header>}
           {citationState.status === 'loading' && <p role="status">Loading cited source…</p>}
           {citationState.status === 'error' && <div className="chat-service-error" role="alert">This source could not be loaded.<button className="btn small" onClick={() => openCitation(citationState.citation)}>Retry source</button></div>}

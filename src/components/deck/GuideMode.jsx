@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import React, { useEffect, useRef, useState } from 'react';
 import { GUIDE_STEPS } from '../../lib/guide.js';
 
 const I = {
@@ -57,6 +57,14 @@ export function GuideBar({ guide, page = 1, visible = true }) {
   const { active, playing, status, source, sourceLabel, clip, error, step, idx, total } = guide;
   const [expanded, setExpanded] = useState(false);
   const [infoOpen, setInfoOpen] = useState(false);
+  const infoToggleRef = useRef(null);
+  const onDisclosureKeyDown = (e) => {
+    if (!infoOpen || e.key !== 'Escape' || e.defaultPrevented) return;
+    e.preventDefault();
+    e.stopPropagation();
+    setInfoOpen(false);
+    infoToggleRef.current?.focus({ preventScroll: true });
+  };
   useEffect(() => {
     if (!active || !visible) return;
     const onKey = (e) => {
@@ -78,7 +86,7 @@ export function GuideBar({ guide, page = 1, visible = true }) {
   const current = active ? idx + 1 : 0;
   const statusText = !active ? 'Ready when you are' : ended ? 'Tour complete' : status === 'error' ? error?.message || 'Narration failed' : status === 'loading' ? 'Preparing voice…' : status === 'paused' ? 'Paused' : status === 'breathing' ? 'Next moment…' : 'Narrating';
   return (
-    <div className={`guide-dock ${status === 'error' ? 'has-error' : ''} ${expanded ? 'expanded' : ''}`} role="region" aria-label="Guide Mode player" data-testid="guide-bar" data-docked="true" data-active={active} data-status={status} data-step={active ? step?.id : undefined} data-slide={active ? step?.slide : page}>
+    <div className={`guide-dock ${status === 'error' ? 'has-error' : ''} ${expanded ? 'expanded' : ''}`} onKeyDown={onDisclosureKeyDown} role="region" aria-label="Guide Mode player" data-testid="guide-bar" data-docked="true" data-active={active} data-status={status} data-step={active ? step?.id : undefined} data-slide={active ? step?.slide : page}>
       <div className="guide-dock-progress" role="progressbar" aria-label="Narrated moments completed" aria-valuemin={0} aria-valuemax={total} aria-valuenow={active ? idx + (ended ? 1 : 0) : 0}><i style={{ width: `${(active ? (idx + (ended ? 1 : 0)) / total : 0) * 100}%` }} /></div>
       <div className="guide-dock-row">
         <div className="guide-transport">
@@ -91,7 +99,7 @@ export function GuideBar({ guide, page = 1, visible = true }) {
           <p className="guide-caption" data-testid="guide-caption" title={active && step ? `${step.label}. ${step.text}` : undefined}>{active && step ? <><b>{step.label}.</b> {step.text}</> : 'Listen to the plan, at your pace.'}</p>
         </div>
         <button className="guide-expand" onClick={() => setExpanded((v) => !v)} aria-expanded={expanded} aria-controls="guide-caption-full" aria-label={expanded ? 'Collapse full transcript' : 'Show full transcript'} data-testid="guide-expand"><span>Transcript</span><Icon name={expanded ? 'up' : 'down'} size={14} /></button>
-        <button className="guide-info-toggle" onClick={() => setInfoOpen((v) => !v)} aria-expanded={infoOpen} aria-controls="guide-information" aria-label="Guide information" data-testid="guide-info"><Icon name="info" /></button>
+        <button ref={infoToggleRef} className="guide-info-toggle" onClick={() => setInfoOpen((v) => !v)} aria-expanded={infoOpen} aria-controls="guide-information" aria-label="Guide information" data-testid="guide-info"><Icon name="info" /></button>
         {active && <button className="guide-x" onClick={guide.stop} aria-label="Exit Guide Mode" data-testid="guide-exit"><Icon name="close" size={13} /></button>}
       </div>
       <div className="guide-information" id="guide-information" hidden={!infoOpen} role="region" aria-label="Guide details">
