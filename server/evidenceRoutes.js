@@ -45,11 +45,12 @@ export function createEvidenceRoutes({ access, corpusDir = process.env.ATHAR_COR
   };
   function rate(req) {
     sweep();
-    const entry = usage.get(req.reviewer.principal) || { count: 0, until: clock() + 60000 };
+    const key = req.reviewer.rateKey || req.reviewer.principal;
+    const entry = usage.get(key) || { count: 0, until: clock() + 60000 };
     if (++entry.count > 20 || conversations.size > 2000) throw fail('rate_limited', 'Too many requests.', 429);
-    usage.set(req.reviewer.principal, entry);
+    usage.set(key, entry);
   }
-  router.use(['/documents', '/citations', '/sources', '/chat'], access.requireAccess);
+  router.use(['/documents', '/citations', '/sources', '/chat'], access.attach); // anonymous principal, no login
   router.use(['/documents', '/chat'], (req, res, next) => ['GET', 'HEAD', 'OPTIONS'].includes(req.method) ? next() : access.sameOrigin(req, res, next));
   // The four expected review documents are always listed: indexed ones with their exact corpus
   // record, missing ones explicitly as status "missing" with provisioning guidance (no URLs).

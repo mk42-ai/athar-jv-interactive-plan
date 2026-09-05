@@ -5,7 +5,6 @@ import path from 'node:path';
 import fs from 'node:fs';
 import { fileURLToPath } from 'node:url';
 import { createApiApp } from './api.js';
-import { privatePresentation } from './privatePresentation.js';
 import { onDemandKey } from './env.js';
 import { deckPdfMiddleware } from './deck.js';
 import { guideAudioMiddleware, rehydrateGuideAudio } from './guideAudioStore.js';
@@ -13,9 +12,6 @@ import { guideAudioMiddleware, rehydrateGuideAudio } from './guideAudioStore.js'
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
 const dist = path.resolve(__dirname, '../dist');
 const port = Number(process.env.PORT || 5173);
-// Public presentation: ATHAR_PRIVATE_PRESENTATION=0 in the environment, or the explicit --presentation-preview
-// start-up flag (npm run preview). npm start without either keeps the reviewer protections.
-const presentationPreview = process.argv.includes('--presentation-preview');
 
 const app = express();
 app.disable('x-powered-by');
@@ -25,10 +21,9 @@ app.use((req, res, next) => {
   }
   next();
 });
-const apiApp = createApiApp({ presentationPreview });
+const apiApp = createApiApp();
 app.use(apiApp);
-app.use(privatePresentation(apiApp.locals.reviewAccess, { presentationPreview }));
-app.use(['/deck', '/guide-audio'], apiApp.locals.presentationReadAccess);
+// The presentation, its deck PDF and narration clips are public (no reviewer gate).
 rehydrateGuideAudio({ staticDir: 'dist' });
 app.use(guideAudioMiddleware({ staticDir: 'dist' }));
 app.use(deckPdfMiddleware({ staticDir: 'dist' }));
@@ -36,9 +31,8 @@ if (fs.existsSync(dist)) {
   app.use(
     express.static(dist, {
       index: 'index.html',
-      maxAge: process.env.ATHAR_PRIVATE_PRESENTATION === '1' ? 0 : '1h',
+      maxAge: '1h',
       setHeaders(res, filePath) {
-        if (process.env.ATHAR_PRIVATE_PRESENTATION === '1') { res.setHeader('Cache-Control', 'private, no-store'); return; }
         if (/guide-audio[\\/]manifest\.json$/.test(filePath)) res.setHeader('Cache-Control', 'no-store, must-revalidate');
         else if (/guide-audio[\\/].+\.mp3$/.test(filePath)) res.setHeader('Cache-Control', 'public, max-age=31536000, immutable');
       },

@@ -2,6 +2,13 @@
 
 > Current implementation: [Presentation workspace and protected original-source review](docs/review-workspace.md).
 
+> **5 Sept 2026 — public workspace.** The reviewer-code gate has been removed entirely (no login, no session cookie, no
+> bearer token): presentation, narration and the document-connected AI are open to anyone with the deployment URL, and
+> the app embeds in any iframe (`Content-Security-Policy: frame-ancestors *`, no `X-Frame-Options`). The AI corpus is
+> exactly three documents — the Financial Model Executive Summary (3) PDF, the financial model v13 workbook and the
+> 6-month implementation plan Oct 2026 – Mar 2027 (v1); see `docs/review-workspace.md` → "Public workspace". Sections
+> below that mention a review code, private mode or a missing v13 workbook are historical.
+
 ## Spatial UI, collapsible AI panel and document-connected AI (5 Sept 2026)
 
 Refinement of the existing workspace — same white · charcoal · gold palette, same playback engine, same evidence pipeline.

@@ -9,32 +9,36 @@ const SHA = (n) => n.toString(16).padStart(64, '0');
 const indexedDoc = (slug, kind, n) => ({ id: SHA(n), slug, title: `${slug} title`, kind, status: 'ready', coverage: { pages: 2 }, limitations: [] });
 const SIGNED = 'https://airevprod.blob.core.windows.net/container/path/Athar_JV_-_Financial_Model_Executive_Summary_(1)_k69j.pdf?se=2099-09-12T10%3A39%3A48Z&sig=SECRETSIGNATURE%3D&sp=r&sr=b';
 
-test('registry always lists the four expected documents in order; missing ones are explicit and carry no URL', () => {
+test('registry always lists exactly the three expected documents in order; missing ones are explicit and carry no URL', () => {
   loadDotEnv(); // the loader runs once; after this the test controls the variables it asserts on
   const prev = { ...process.env };
   for (const key of Object.keys(process.env)) if (key.startsWith('ATHAR_SOURCE_URL_')) delete process.env[key];
   process.env.ATHAR_SOURCE_URL_FINANCIAL_SUMMARY = SIGNED;
   try {
-    const merged = mergeExpectedDocuments([indexedDoc('financial-summary', 'pdf', 2), indexedDoc('executive-presentation', 'pdf', 1), indexedDoc('implementation-plan', 'xlsx', 4)]);
+    assert.deepEqual(EXPECTED_DOCUMENTS.map((d) => d.slug), ['financial-summary', 'financial-model', 'implementation-plan']);
+    assert.equal(EXPECTED_DOCUMENTS.some((d) => d.slug === 'executive-presentation'), false, 'the deck is no longer a corpus document');
+    const merged = mergeExpectedDocuments([indexedDoc('financial-summary', 'pdf', 2), indexedDoc('implementation-plan', 'xlsx', 4)]);
     assert.deepEqual(merged.map((d) => d.slug), EXPECTED_DOCUMENTS.map((d) => d.slug));
-    assert.deepEqual(merged.map((d) => d.status), ['ready', 'ready', 'missing', 'ready']);
+    assert.deepEqual(merged.map((d) => d.status), ['ready', 'missing', 'ready']);
     const missing = merged.find((d) => d.slug === 'financial-model');
     assert.equal(missing.id, 'missing-financial-model');
     assert.equal(missing.coverage, null);
     assert.match(missing.limitations[0], /not provisioned/i);
     assert.match(missing.limitations[1], /ATHAR_SOURCE_URL_FINANCIAL_MODEL/);
+    // With all three indexed nothing is missing and nothing is flagged.
+    const full = mergeExpectedDocuments([indexedDoc('financial-summary', 'pdf', 2), indexedDoc('financial-model', 'xlsx', 3), indexedDoc('implementation-plan', 'xlsx', 4)]);
+    assert.deepEqual(full.map((d) => d.status), ['ready', 'ready', 'ready']);
+    assert.equal(full.length, 3);
     const summary = merged.find((d) => d.slug === 'financial-summary');
     assert.equal(summary.id, SHA(2));
     assert.equal(summary.provisioning.signedUrl.configured, true);
     assert.equal(summary.provisioning.signedUrl.expired, false);
     assert.equal(summary.provisioning.signedUrl.fileName, 'Athar_JV_-_Financial_Model_Executive_Summary_(1)_k69j.pdf');
-    // The exact PDF rendering of the deck is flagged as an alternate original, never silently equated with the PPTX.
-    assert.deepEqual(merged.find((d) => d.slug === 'executive-presentation').alternateOriginal, { indexedKind: 'pdf', expectedKind: 'pptx' });
     const serialized = JSON.stringify(merged);
     assert.equal(serialized.includes('SECRETSIGNATURE'), false, 'signed URL signature must never reach the client');
     assert.equal(serialized.includes('sig='), false);
     const health = registrySummary(merged.filter((d) => d.status !== 'missing'));
-    assert.deepEqual(health, { expected: 4, indexed: 3, missing: ['financial-model'], signedUrlsConfigured: ['financial-summary'] });
+    assert.deepEqual(health, { expected: 3, indexed: 2, missing: ['financial-model'], signedUrlsConfigured: ['financial-summary'] });
   } finally {
     for (const key of Object.keys(process.env)) if (!(key in prev)) delete process.env[key];
     Object.assign(process.env, prev);

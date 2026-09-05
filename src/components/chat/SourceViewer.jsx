@@ -1,7 +1,7 @@
 import React, { useEffect, useRef, useState } from 'react';
 import * as pdfjsLib from 'pdfjs-dist';
 import workerUrl from 'pdfjs-dist/build/pdf.worker.min.mjs?url';
-import { getSourceLocation, authorizedFetch } from '../../lib/api.js';
+import { getSourceLocation } from '../../lib/api.js';
 import './source-viewer.css';
 
 pdfjsLib.GlobalWorkerOptions.workerSrc = workerUrl;
@@ -10,7 +10,7 @@ const formulaText = (formula) => typeof formula === 'string' ? formula : formula
 const displayCell = (cell) => cell.availability === 'missing-formula-cache' ? 'Saved result unavailable' : cell.value == null ? 'Blank / not recorded' : printable(cell.value);
 const columnName = (n) => { let s=''; for (;n>0;n=Math.floor((n-1)/26)) s=String.fromCharCode(65+(n-1)%26)+s; return s; };
 
-function SourcePdf({ view, onUnauthorized }) {
+function SourcePdf({ view }) {
   const canvas = useRef(null), holder = useRef(null), version = useRef(0);
   const [width, setWidth] = useState(0), [state, setState] = useState('loading'), [bounds, setBounds] = useState(null);
   useEffect(() => { const el=holder.current; if(!el)return; const ro=new ResizeObserver(()=>setWidth(el.clientWidth));ro.observe(el);setWidth(el.clientWidth);return()=>ro.disconnect(); }, []);
@@ -21,8 +21,7 @@ function SourcePdf({ view, onUnauthorized }) {
     const controller = new AbortController();
     (async()=>{
       try {
-        const res=await authorizedFetch(view.preview.url,{cache:'no-store',signal:controller.signal});
-        if(res.status===401){onUnauthorized?.();throw new Error('Access expired');}
+        const res=await fetch(view.preview.url,{credentials:'same-origin',cache:'no-store',signal:controller.signal});
         if(!res.ok||!res.headers.get('content-type')?.includes('application/pdf'))throw new Error('Preview unavailable');
         const bytes=new Uint8Array(await res.arrayBuffer());
         if(crypto.subtle&&view.preview.sha256){const hash=[...new Uint8Array(await crypto.subtle.digest('SHA-256',bytes))].map(n=>n.toString(16).padStart(2,'0')).join('');if(hash!==view.preview.sha256)throw new Error('Preview integrity mismatch');}
@@ -37,7 +36,7 @@ function SourcePdf({ view, onUnauthorized }) {
       } catch(error){if(!cancelled&&error.name!=='AbortError'&&error.name!=='RenderingCancelledException')setState('error');}
     })();
     return()=>{cancelled=true;controller.abort();renderTask?.cancel?.();documentTask?.destroy?.();};
-  },[view.preview?.url,view.preview?.sha256,view.previewPage,width,onUnauthorized]);
+  },[view.preview?.url,view.preview?.sha256,view.previewPage,width]);
   return <div className="source-pdf" ref={holder} data-testid="source-pdf" data-state={view.preview?.available ? state : 'unavailable'}>
     {!view.preview?.available ? <p role="status">This source preview is unavailable. The original and extracted source records remain accessible; no substitute slide is displayed.</p> : <>
       {state==='loading'&&<p role="status">Opening the cited {view.kind==='pptx'?'slide':'page'}…</p>}
@@ -67,17 +66,15 @@ function Worksheet({ view }) {
   </>;
 }
 
-export default function SourceViewer({source,citationId,onClose,onAuthRequired}) {
+export default function SourceViewer({source,citationId,onClose}) {
   const [view,setView]=useState(null),[busy,setBusy]=useState(true),[error,setError]=useState(''),[target,setTarget]=useState({}),[retry,setRetry]=useState(0);
   const [sheet,setSheet]=useState(''),[range,setRange]=useState('');
-  const authRef=useRef(onAuthRequired);authRef.current=onAuthRequired;
-  const unauthorized=useRef(()=>authRef.current?.()).current;
   useEffect(()=>{setTarget({});setView(null);},[citationId]);
   useEffect(()=>{
     let alive=true;setBusy(true);setError('');
-    getSourceLocation(citationId,target).then(data=>{if(!alive)return;setView(data);setSheet(data.location.sheet||'');setRange(data.location.range||'');}).catch(e=>{if(!alive)return;if(e.status===401)unauthorized();setError(e.status===400?'That location is outside the source or too large. Choose up to 200 cells.':'The protected source could not be opened. Retry without changing the source.');}).finally(()=>alive&&setBusy(false));
+    getSourceLocation(citationId,target).then(data=>{if(!alive)return;setView(data);setSheet(data.location.sheet||'');setRange(data.location.range||'');}).catch(e=>{if(!alive)return;setError(e.status===400?'That location is outside the source or too large. Choose up to 200 cells.':'The protected source could not be opened. Retry without changing the source.');}).finally(()=>alive&&setBusy(false));
     return()=>{alive=false;};
-  },[citationId,target,retry,unauthorized]);
+  },[citationId,target,retry]);
   const originalUrl = typeof source.originalUrl === 'string' && /^\/api\/sources\/[a-f0-9]{64}$/.test(source.originalUrl) ? source.originalUrl : null;
   // The executive deck may be provisioned as its exact PDF rendering: its pages ARE the slides.
   const pagedDeck=source?.documentSlug==='executive-presentation'&&(view?.kind==='pdf'||source?.kind==='pdf');
@@ -94,7 +91,7 @@ export default function SourceViewer({source,citationId,onClose,onAuthRequired})
     {view&&<>
       {view.kind==='xlsx'?<form className="source-nav" onSubmit={e=>{e.preventDefault();navigate({sheet,range});}}><label>Worksheet<select value={sheet} aria-disabled={busy} onChange={e=>{if(!busy){setSheet(e.target.value);navigate({sheet:e.target.value});}}} data-testid="source-sheet-select">{view.availableLocations.sheets.map(s=><option key={s.name} value={s.name}>{s.name}{s.state==='hidden'?' (hidden in original)':''}</option>)}</select></label><label>Cell range<input value={range} aria-disabled={busy} onChange={e=>{if(!busy)setRange(e.target.value);}} aria-label="Source cell range" data-testid="source-range-input" /></label><button className="btn small" type="submit" aria-disabled={busy}>Go to cells</button><button className="btn small" type="button" onClick={()=>moveRows(-1)} aria-disabled={!canMoveRows(-1)} aria-label="Previous source rows">↑</button><button className="btn small" type="button" onClick={()=>moveRows(1)} aria-disabled={!canMoveRows(1)} aria-label="Next source rows">↓</button></form>:<div className="source-nav" role="group" aria-label="Source page navigation"><button className="btn small" aria-disabled={busy||current<=1} onClick={()=>{if(current>1)navigate({[key]:current-1});}} aria-label={`Previous source ${key}`}>←</button><label>{key==='slide'||pagedDeck?'Slide':'Page'}<select aria-label={`Source ${key}`} value={busy ? target[key]||current : current} aria-disabled={busy} onChange={e=>navigate({[key]:Number(e.target.value)})} data-testid="source-page-select">{Array.from({length:max},(_,i)=><option key={i} value={i+1}>{i+1} of {max}</option>)}</select></label><button className="btn small" aria-disabled={busy||current>=max} onClick={()=>{if(current<max)navigate({[key]:current+1});}} aria-label={`Next source ${key}`}>→</button></div>}
       <button className="btn small source-return" onClick={()=>navigate({})} aria-disabled={busy} data-testid="source-return-citation">Return to cited location</button>
-      {view.renderer==='workbook'?<Worksheet view={view}/>:<SourcePdf view={view} onUnauthorized={unauthorized}/>}
+      {view.renderer==='workbook'?<Worksheet view={view}/>:<SourcePdf view={view}/>}
       <details open={view.kind!=='xlsx'} className="source-excerpt"><summary>Exact cited excerpt · {source.label}</summary><blockquote>{source.excerpt}</blockquote></details>
       {!!view.limitations?.length&&<details><summary>Source extraction notes</summary><ul>{view.limitations.map((text,i)=><li key={i}>{text}</li>)}</ul></details>}
     </>}

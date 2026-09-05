@@ -152,3 +152,26 @@ iframe's session storage **only if** a follow-up cookie-only `GET /api/access` s
 policy unchanged), expires with the six-hour server session, is revoked by `DELETE /api/access`, and is dropped by the
 client on the first 401. Top-level tabs never receive or store a token. The "Download original" link is a plain
 navigation and still relies on the cookie, so in a cookie-blocking embedded browser open it in a new tab.
+
+## Public workspace — the reviewer gate is gone (5 Sept 2026)
+
+Everything above that describes a reviewer code, `POST /api/access`, a signed HttpOnly session, private/public/gated
+presentation modes, `--presentation-preview` or a bearer-token fallback is historical. The gate was removed in full:
+`server/access.js`, `server/privatePresentation.js`, `src/components/AccessGate.jsx`, the `/api/access` routes, the
+`ATHAR_REVIEW_PASSPHRASE` / `ATHAR_SESSION_SECRET` / `ATHAR_PRIVATE_PRESENTATION` / `ATHAR_COOKIE_SAMESITE` settings
+and the embedded bearer transport no longer exist. The presentation, narration, documents, citations, original
+downloads, chat and voice are open to anyone who has the deployment URL — treat the URL as private as the content.
+
+What replaced it (`server/publicAccess.js`, not authentication):
+- an anonymous per-client principal (`X-Athar-Client`, a random id the browser keeps in local storage; client IP +
+  user agent when absent) that keeps a conversation and its private source projections attached to the browser that
+  created them;
+- per-IP throttling on the evidence routes; same-origin `Origin`/`Sec-Fetch-Site` checks on every mutating route;
+- 120-second signed capabilities so the On Demand speech service can fetch only the audio it was just given.
+No cookie is set anywhere. `Content-Security-Policy: frame-ancestors *` (configurable) is still sent on every response
+and `X-Frame-Options` is never sent, so the workspace embeds in any iframe. The On Demand API key remains server-side
+only (`ON_DEMAND_API_KEY` in the host environment or the git-ignored `.env`).
+
+Corpus: exactly three documents — the Financial Model Executive Summary (3) PDF, the financial model v13 workbook and
+the 6-month implementation plan Oct 2026 – Mar 2027 (v1). The executive deck is presented, but it is no longer a
+corpus document: "Ask this slide" searches all three documents with the slide number in the question.

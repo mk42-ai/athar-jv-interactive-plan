@@ -5,8 +5,7 @@ import DeckTab from './components/deck/DeckTab.jsx';
 import TimelineTab from './components/timeline/TimelineTab.jsx';
 import ChatWidget from './components/chat/ChatWidget.jsx';
 import VoiceWidget from './components/voice/VoiceWidget.jsx';
-import AccessGate from './components/AccessGate.jsx';
-import { createSession, getHealth, getAccess, unlockAccess, getDocuments, retryDocuments } from './lib/api.js';
+import { createSession, getHealth, getDocuments, retryDocuments } from './lib/api.js';
 import { OVERVIEW } from './lib/plan.js';
 
 const newExternalUserId = () => `athar-web-${(globalThis.crypto?.randomUUID?.() || Math.random().toString(36).slice(2)).slice(0, 12)}`;
@@ -27,8 +26,8 @@ export default function App() {
   const [widget, setWidget] = useState(initialWidget);
   const [health, setHealth] = useState(null);
   const [healthError, setHealthError] = useState(null);
-  const [access, setAccess] = useState({ authenticated: false, configured: null, loading: true });
-  const [session, setSession] = useState(null); // server-owned session; never persist an access credential
+  // Public workspace: the reviewer-code gate has been removed — presentation and AI companion are open to every visitor.
+  const [session, setSession] = useState(null); // server-owned chat session id only; no credential is ever stored
   const [documents, setDocuments] = useState([]);
   const [documentsLoading, setDocumentsLoading] = useState(false);
   const [documentsError, setDocumentsError] = useState('');
@@ -94,19 +93,14 @@ export default function App() {
   const sessionRef = useRef(null);
   const sessionPromise = useRef(null);
   const sessionGeneration = useRef(0);
-  const accessPromise = useRef(null);
   const healthPromise = useRef(null);
-  const accessStateRef = useRef(access);
-  accessStateRef.current = access;
   const documentPromise = useRef(null);
   const requestCounter = useRef(0);
 
   useEffect(() => {
     let alive = true;
-    // Refs also avoid duplicate access/health requests under React StrictMode.
-    accessPromise.current ||= getAccess();
+    // The ref avoids duplicate health requests under React StrictMode.
     healthPromise.current ||= getHealth();
-    accessPromise.current.then((a) => { if (alive) setAccess({ ...a, loading: false }); }).catch(() => { if (alive) setAccess({ authenticated: false, configured: null, loading: false, error: 'Access could not be checked. Please retry.' }); });
     healthPromise.current.then((h) => { if (alive) setHealth(h); }).catch(() => { if (alive) setHealthError('Assistant service unavailable'); });
     return () => { alive = false; };
   }, []);
@@ -121,56 +115,32 @@ export default function App() {
     return () => ro.disconnect();
   }, []);
 
-  const retryAccess = useCallback(async () => {
-    setAccess((a) => ({ ...a, loading: true, error: null }));
-    try { const a = await getAccess(); setAccess({ ...a, loading: false }); }
-    catch { setAccess({ authenticated: false, configured: null, loading: false, error: 'Access could not be checked. Please retry.' }); }
-  }, []);
   const retryService = useCallback(async () => {
     setHealthError(null);
     setHealth(null);
     try { setHealth(await getHealth()); }
     catch { setHealthError('Assistant service unavailable'); }
   }, []);
-  const onUnlock = useCallback(async (passphrase) => {
-    // Password POST -> HttpOnly server session; no API key or query-string credential.
-    const a = await unlockAccess(passphrase);
-    if (!a?.authenticated) throw new Error('The review access code was not accepted.');
-    setAccess({ ...a, loading: false });
-    return a;
-  }, []);
-  const onAuthRequired = useCallback(() => {
-    sessionGeneration.current++;
-    sessionRef.current = null;
-    sessionPromise.current = null;
-    setSession(null);
-    setDocuments([]);
-    setDocumentsError('');
-    setAccess((a) => ({ ...a, authenticated: false, loading: false, error: null }));
-  }, []);
   const loadDocuments = useCallback(async (retry = false) => {
-    if (!access.authenticated) return;
     setDocumentsLoading(true);
     setDocumentsError('');
     try {
       documentPromise.current ||= (retry ? retryDocuments() : getDocuments());
       const data = await documentPromise.current;
-      if (accessStateRef.current.authenticated) setDocuments(Array.isArray(data?.documents) ? data.documents : []);
-    } catch (e) {
-      if (e?.status === 401 || e?.code === 'unauthorized') onAuthRequired();
-      else setDocumentsError('Sources could not be loaded. Retry to check their status.');
+      setDocuments(Array.isArray(data?.documents) ? data.documents : []);
+    } catch {
+      setDocumentsError('Sources could not be loaded. Retry to check their status.');
     } finally { documentPromise.current = null; setDocumentsLoading(false); }
-  }, [access.authenticated, onAuthRequired]);
-  useEffect(() => { if (access.authenticated) loadDocuments(); }, [access.authenticated, loadDocuments]);
+  }, []);
+  useEffect(() => { loadDocuments(); }, [loadDocuments]);
   useEffect(() => {
-    if (!access.authenticated || !widget || documentsLoading || documentsError) return;
+    if (!widget || documentsLoading || documentsError) return;
     if (!documents.some((d) => /^(queued|pending|processing|ingesting|indexing|loading|retrying)$/i.test(typeof d.status === 'string' ? d.status : d.status?.state || ''))) return;
     const timer = setTimeout(() => loadDocuments(), 5000);
     return () => clearTimeout(timer);
-  }, [access.authenticated, widget, documents, documentsLoading, documentsError, loadDocuments]);
+  }, [widget, documents, documentsLoading, documentsError, loadDocuments]);
 
   const ensureSession = useCallback(async () => {
-    if (!access.authenticated) throw new Error('Sign in with your review access code first.');
     if (sessionRef.current?.sessionId) return sessionRef.current;
     if (!sessionPromise.current) {
       const generation = sessionGeneration.current;
@@ -184,7 +154,7 @@ export default function App() {
       sessionPromise.current = promise;
     }
     return sessionPromise.current;
-  }, [access.authenticated]);
+  }, []);
   const resetSession = useCallback(() => {
     sessionGeneration.current++;
     sessionRef.current = null;
@@ -261,7 +231,7 @@ export default function App() {
         <nav className="mobile-view-tabs" role="tablist" aria-label="Workspace view" data-testid="mobile-view-tabs" hidden={!isMobile} onKeyDown={onMobileTabKey}>
           {[{ id: 'presentation', label: 'Presentation' }, { id: 'ask', label: 'Ask AI' }].map((view, index) => <button key={view.id} ref={(el) => { mobileTabRefs.current[index] = el; }} id={`mobile-tab-${view.id}`} role="tab" aria-selected={mobileView === view.id} aria-controls={`mobile-panel-${view.id}`} tabIndex={mobileView === view.id ? 0 : -1} onClick={() => selectMobileView(view.id)} data-testid={`mobile-tab-${view.id}`}>{view.label}</button>)}
         </nav>
-        <div className="top-status" aria-live="polite"><span className={`status ${access.authenticated ? 'ok' : ''}`}><i />{access.authenticated ? 'Review access' : 'Presentation'}</span></div>
+        <div className="top-status" aria-live="polite"><span className={`status ${configured === true ? 'ok' : configured === false ? 'warn' : ''}`}><i />{configured === true ? 'AI companion online' : configured === false ? 'AI companion offline' : 'Public preview'}</span></div>
       </header>
       <main className="main">
         <div ref={workspaceRef} className={`presentation-workspace ${widget ? 'has-companion' : 'companion-collapsed'} ${stacked ? 'is-stacked' : ''} ${isMobile ? 'is-mobile' : ''} ${dragging ? 'is-resizing' : ''}`}  style={{ '--companion-width': `${effectiveWidth}px`, '--companion-log-height': `${companionHeight}px` }} data-testid="presentation-workspace" data-layout={isMobile ? 'mobile-views' : stacked ? 'stacked' : 'columns'} data-mobile-view={mobileView} data-companion={widget ? 'open' : 'collapsed'}>
@@ -272,7 +242,7 @@ export default function App() {
           </div>
           <aside id="mobile-panel-ask" role={isMobile ? 'tabpanel' : undefined} aria-labelledby={isMobile ? 'mobile-tab-ask' : undefined} hidden={isMobile && mobileView !== 'ask'} inert={isMobile && mobileView !== 'ask' ? '' : undefined} className={`workspace-companion ${widget ? 'is-open' : 'is-collapsed'}`} aria-label={isMobile ? undefined : 'Presentation companion'} data-testid="presentation-companion">
             {isMobile && guideSummary?.active && <div className="mobile-guide-transport" role="group" aria-label="Presentation narration continues" data-testid="mobile-guide-transport"><span>Guide <b>{guideSummary.idx + 1}/{guideSummary.total}</b><small>{guideSummary.status === 'ended' ? 'Complete' : guideSummary.playing ? 'Playing' : 'Paused'}</small></span><button className="icon-btn" onClick={() => guideBridgeRef.current?.back()} disabled={guideSummary.idx === 0} aria-label="Previous guide moment">‹</button><button className="btn small" onClick={() => guideBridgeRef.current?.playPause()} aria-label={guideSummary.playing ? 'Pause presentation narration' : 'Play presentation narration'}>{guideSummary.playing ? 'Pause' : guideSummary.status === 'ended' ? 'Replay' : 'Play'}</button><button className="icon-btn" onClick={() => guideBridgeRef.current?.skip()} aria-label="Next guide moment">›</button></div>}
-            {!widget && <div className="companion-teaser" data-testid="companion-teaser"><button className="companion-expand" onClick={(e) => openWidget('chat', e)} aria-expanded="false" aria-controls="chat-widget" aria-label="Expand the AI panel" title="Expand the AI panel" data-testid="companion-expand"><ChevronIcon dir="left" /></button><p>AI companion<small>{access.authenticated ? 'Ask a question, inspect a source, or continue by voice.' : 'Review access unlocks document questions and voice. The presentation stays open.'}</small></p><div className="companion-actions"><button className="dock-btn" onClick={(e) => openWidget('voice', e)} aria-expanded="false" aria-controls="voice-widget" aria-label="Advanced Voice Mode" data-testid="dock-voice"><MicIcon /><span>Voice</span></button><button className="dock-btn" onClick={(e) => openWidget('chat', e)} aria-expanded="false" aria-controls="chat-widget" aria-label="Ask the plan" data-testid="dock-chat"><ChatIcon /><span>Ask AI</span></button></div></div>}
+            {!widget && <div className="companion-teaser" data-testid="companion-teaser"><button className="companion-expand" onClick={(e) => openWidget('chat', e)} aria-expanded="false" aria-controls="chat-widget" aria-label="Expand the AI panel" title="Expand the AI panel" data-testid="companion-expand"><ChevronIcon dir="left" /></button><p>AI companion<small>Ask a question, inspect a cited source, or continue by voice — no sign-in needed.</small></p><div className="companion-actions"><button className="dock-btn" onClick={(e) => openWidget('voice', e)} aria-expanded="false" aria-controls="voice-widget" aria-label="Advanced Voice Mode" data-testid="dock-voice"><MicIcon /><span>Voice</span></button><button className="dock-btn" onClick={(e) => openWidget('chat', e)} aria-expanded="false" aria-controls="chat-widget" aria-label="Ask the plan" data-testid="dock-chat"><ChatIcon /><span>Ask AI</span></button></div></div>}
             {widget && !isMobile && !stacked && <div className={`companion-splitter ${dragging ? 'is-dragging' : ''}`} role="separator" aria-orientation="vertical" aria-label="Resize the AI panel" aria-valuemin={300} aria-valuemax={maxCompanionWidth} aria-valuenow={effectiveWidth} tabIndex={0} onPointerDown={onSplitterPointerDown} onKeyDown={onSplitterKey} data-testid="companion-splitter"><i /></div>}
             <div className="companion-shell" hidden={!widget} inert={!widget ? '' : undefined}>
               <div className="companion-switcher" role="group" aria-label="Companion mode">
@@ -281,9 +251,9 @@ export default function App() {
                 <button className={`dock-btn ${widget === 'voice' ? 'active' : ''}`} onClick={(e) => openWidget('voice', e)} aria-expanded={widget === 'voice'} aria-controls="voice-widget" aria-label="Advanced Voice Mode" data-testid={widget ? 'dock-voice' : undefined}><MicIcon /><span>Voice</span></button>
               </div>
               {widget && <div className="companion-resize"><label htmlFor="companion-size">{stacked ? 'Reading height' : 'Panel width'}</label><input id="companion-size" type="range" min={stacked ? 220 : 300} max={stacked ? 640 : maxCompanionWidth} step={stacked ? 20 : 10} value={stacked ? companionHeight : effectiveWidth} onChange={(e) => stacked ? setCompanionHeight(Number(e.target.value)) : setCompanionWidth(Number(e.target.value))} aria-label={stacked ? 'Companion reading height' : 'Companion width'} aria-valuetext={`${stacked ? companionHeight : effectiveWidth} pixels`} /><output htmlFor="companion-size">{stacked ? companionHeight : effectiveWidth}px</output></div>}
-              <ErrorBoundary name="Chat"><ChatWidget open={widget === 'chat' && (!isMobile || mobileView === 'ask')} onClose={closeWidget} ensureSession={ensureSession} session={session} resetSession={resetSession} configured={configured} serviceError={healthError} onRetryService={retryService} access={access} onUnlock={onUnlock} onRetryAccess={retryAccess} onAuthRequired={onAuthRequired} documents={documents} documentsLoading={documentsLoading} documentsError={documentsError} onRefreshDocuments={() => loadDocuments()} onRetryDocuments={() => loadDocuments(true)} askRequest={askRequest} /></ErrorBoundary>
+              <ErrorBoundary name="Chat"><ChatWidget open={widget === 'chat' && (!isMobile || mobileView === 'ask')} onClose={closeWidget} ensureSession={ensureSession} session={session} resetSession={resetSession} configured={configured} serviceError={healthError} onRetryService={retryService} documents={documents} documentsLoading={documentsLoading} documentsError={documentsError} onRefreshDocuments={() => loadDocuments()} onRetryDocuments={() => loadDocuments(true)} askRequest={askRequest} /></ErrorBoundary>
               <div hidden={widget !== 'voice'} inert={widget !== 'voice' ? '' : undefined}>
-                {!access.authenticated ? <section className="widget voice-widget open" id="voice-widget" aria-labelledby="voice-widget-title" data-testid="voice-widget"><header className="widget-head"><div><h2 id="voice-widget-title">Advanced Voice Mode</h2><p className="widget-sub">Sign in first to use the existing voice companion.</p></div><button className="icon-btn" onClick={closeWidget} aria-label="Close voice mode" data-testid="voice-close">×</button></header><AccessGate access={access} onUnlock={onUnlock} onRetry={retryAccess} context="voice" active={widget === 'voice' && (!isMobile || mobileView === 'ask')} /></section> : <ErrorBoundary name="Advanced Voice Mode"><VoiceWidget open={widget === 'voice' && (!isMobile || mobileView === 'ask')} onClose={closeWidget} ensureSession={ensureSession} session={session} configured={configured === true} health={health} initialQuestion={initialVoiceQuestion} /></ErrorBoundary>}
+                <ErrorBoundary name="Advanced Voice Mode"><VoiceWidget open={widget === 'voice' && (!isMobile || mobileView === 'ask')} onClose={closeWidget} ensureSession={ensureSession} session={session} configured={configured === true} health={health} initialQuestion={initialVoiceQuestion} /></ErrorBoundary>
               </div>
             </div>
           </aside>

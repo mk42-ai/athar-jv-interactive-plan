@@ -4,9 +4,9 @@ import { initializePresentation } from './lib/presentationState.js';
 import './styles.css';
 
 const root = createRoot(document.getElementById('root'));
-function status(message, { access = false, retry = false } = {}) {
+function status(message, { retry = false } = {}) {
   root.render(<main role="main" aria-label="Private review"><p role="status">{message}</p>
-    {access && <a href="/">Sign in to private review</a>}
+    
     {retry && <button type="button" onClick={() => window.location.reload()}>Retry</button>}
   </main>);
 }
@@ -14,7 +14,6 @@ async function bootstrap() {
   status('Loading private review…');
   try {
     const response = await fetch('/api/presentation', { credentials: 'same-origin', cache: 'no-store' });
-    if (response.status === 401) return status('This deployment runs in private mode: reviewer access is required to open the presentation.', { access: true });
     if (!response.ok) return status('The private presentation is unavailable. Please retry.', { retry: true });
     initializePresentation(await response.json());
     // App and its business-data consumers MUST NOT evaluate before the authorized state exists.

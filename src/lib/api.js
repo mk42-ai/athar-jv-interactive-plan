@@ -10,24 +10,25 @@ async function readJson(res) {
   }
 }
 
-// Embedded fallback: when the workspace runs inside a cross-site iframe and the browser blocks third-party
-// cookies, the reviewer session is carried as `Authorization: Bearer` from the iframe's own session storage
-// (partitioned per embedding site, cleared when the frame's session ends). Top-level tabs keep the HttpOnly cookie.
-const TOKEN_KEY = 'athar_review_token';
-const storage = () => { try { return window.sessionStorage; } catch { return null; } };
-let sessionToken = storage()?.getItem(TOKEN_KEY) || null;
-export const isEmbedded = () => { try { return window.top !== window.self; } catch { return true; } };
-export const authHeaders = () => (sessionToken ? { Authorization: `Bearer ${sessionToken}` } : {});
-function setSessionToken(token) {
-  sessionToken = token || null;
-  const store = storage();
-  if (!store) return;
-  if (token) store.setItem(TOKEN_KEY, token); else store.removeItem(TOKEN_KEY);
+// Anonymous conversation affinity — NOT a credential. The reviewer-code gate has been removed; the server keeps a
+// conversation and its private source projections attached to the browser that created them via this random id
+// (falls back to the client IP + user agent when the header is absent). Nothing secret is stored client-side.
+const CLIENT_KEY = 'athar_client_id';
+function clientId() {
+  try {
+    const store = window.localStorage;
+    let id = store.getItem(CLIENT_KEY);
+    if (!/^[A-Za-z0-9_-]{8,64}$/.test(id || '')) { id = (crypto.randomUUID ? crypto.randomUUID() : `c${Date.now().toString(36)}${Math.random().toString(36).slice(2)}`).replace(/[^A-Za-z0-9_-]/g, ''); store.setItem(CLIENT_KEY, id); }
+    return id;
+  } catch { return null; }
 }
-/** fetch() with the same-origin cookie AND, when present, the embedded-session bearer header. */
-export function authorizedFetch(url, options = {}) {
-  const headers = { ...authHeaders(), ...(options.headers || {}) };
-  return fetch(url, { credentials: 'same-origin', ...options, headers });
+export function apiHeaders(extra = {}) {
+  const id = clientId();
+  return { ...(id ? { 'X-Athar-Client': id } : {}), ...extra };
+}
+/** fetch() for this origin's API: same-origin credentials plus the anonymous client id. */
+export function apiFetch(url, options = {}) {
+  return fetch(url, { credentials: 'same-origin', ...options, headers: apiHeaders(options.headers || {}) });
 }
 
 export async function getHealth() {
@@ -37,7 +38,7 @@ export async function getHealth() {
 }
 
 export async function createSession(externalUserId) {
-  const res = await authorizedFetch('/api/chat/session', {
+  const res = await apiFetch('/api/chat/session', {
     method: 'POST',
     headers: { 'Content-Type': 'application/json' },
     body: JSON.stringify({ externalUserId }),
@@ -89,7 +90,7 @@ async function ensureStream(res) {
 }
 
 export async function streamChat({ sessionId, query, voice = false, documentId = 'all', slide = null, signal, onEvent }) {
-  const res = await authorizedFetch('/api/chat/query', {
+  const res = await apiFetch('/api/chat/query', {
     method: 'POST',
     headers: { 'Content-Type': 'application/json', Accept: 'text/event-stream' },
     body: JSON.stringify({ sessionId, query, voice, documentId, slide, mode: 'stream' }),
@@ -101,7 +102,7 @@ export async function streamChat({ sessionId, query, voice = false, documentId =
 
 export async function voiceTurn({ sessionId, externalUserId, blob, signal, onEvent }) {
   const qs = new URLSearchParams({ sessionId, externalUserId: externalUserId || 'athar-web-voice' });
-  const res = await authorizedFetch(`/api/voice/turn?${qs}`, {
+  const res = await apiFetch(`/api/voice/turn?${qs}`, {
     method: 'POST',
     headers: { 'Content-Type': blob.type || 'audio/wav', Accept: 'text/event-stream' },
     body: blob,
@@ -112,7 +113,7 @@ export async function voiceTurn({ sessionId, externalUserId, blob, signal, onEve
 }
 
 export async function voiceTextTurn({ sessionId, externalUserId, text, signal, onEvent }) {
-  const res = await authorizedFetch('/api/voice/text-turn', {
+  const res = await apiFetch('/api/voice/text-turn', {
     method: 'POST',
     headers: { 'Content-Type': 'application/json', Accept: 'text/event-stream' },
     body: JSON.stringify({ sessionId, externalUserId, text }),
@@ -123,36 +124,16 @@ export async function voiceTextTurn({ sessionId, externalUserId, text, signal, o
 }
 
 export async function getExecution(id) {
-  const res = await authorizedFetch(`/api/voice/execution/${encodeURIComponent(id)}?logs=1`);
+  const res = await apiFetch(`/api/voice/execution/${encodeURIComponent(id)}?logs=1`);
   return readJson(res);
 }
 
-// Review access is an HttpOnly same-origin session (plus the embedded bearer fallback above); the API key
-// and the review code are never saved to web storage.
+// Protected-JSON helper (no authentication involved — the routes are public; errors carry the server code/status).
 async function privateJson(url, options = {}) {
-  const res = await authorizedFetch(url, { cache: 'no-store', ...options });
+  const res = await apiFetch(url, { cache: 'no-store', ...options });
   const body = await readJson(res);
-  if (!res.ok) {
-    if (res.status === 401 && sessionToken) setSessionToken(null); // stale embedded token: fall back to the gate
-    throw Object.assign(new Error(body.message || 'Protected request failed.'), { code: body.code, status: res.status });
-  }
+  if (!res.ok) throw Object.assign(new Error(body.message || 'Request failed.'), { code: body.code, status: res.status });
   return body;
-}
-export const getAccess = () => privateJson('/api/access');
-export async function unlockAccess(passphrase) {
-  const embedded = isEmbedded();
-  const result = await privateJson('/api/access', { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify({ passphrase, embedded }) });
-  if (result?.authenticated && result.token) {
-    // Prefer the HttpOnly cookie; keep the bearer token only when the browser did not persist the cookie.
-    const cookieWorks = await fetch('/api/access', { credentials: 'same-origin', cache: 'no-store' }).then((r) => r.json()).then((a) => a?.authenticated === true).catch(() => false);
-    setSessionToken(cookieWorks ? null : result.token);
-    return { ...result, token: undefined, sessionTransport: cookieWorks ? 'cookie' : 'bearer' };
-  }
-  return result;
-}
-export async function lockAccess() {
-  try { return await privateJson('/api/access', { method: 'DELETE' }); }
-  finally { setSessionToken(null); }
 }
 export const getDocuments = () => privateJson('/api/documents');
 export const retryDocuments = () => privateJson('/api/documents/retry', { method: 'POST' });

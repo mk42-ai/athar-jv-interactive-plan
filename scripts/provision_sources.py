@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Provision the four review documents for the document-connected AI, then run the offline ingestion.
+"""Provision the three review documents for the document-connected AI, then run the offline ingestion.
 
     python3 scripts/provision_sources.py --input-dir /protected/originals --output-dir /protected/athar-corpus
     npm run provision   (same, reading the two directories from ATHAR_SOURCE_INPUT_DIR / ATHAR_CORPUS_DIR)
@@ -30,16 +30,14 @@ from urllib.parse import unquote, urlsplit
 
 ROOT = Path(__file__).resolve().parent.parent
 EXPECTED = [
-    {"slug": "executive-presentation", "env": "ATHAR_SOURCE_URL_EXECUTIVE_PRESENTATION", "kinds": ["pptx", "pdf"],
-     "title": "Athar JV — Executive Summary deck", "match": re.compile(r"executive[-_ ]summary.*(deck|slide)|slide[-_ ]deck", re.I)},
     {"slug": "financial-summary", "env": "ATHAR_SOURCE_URL_FINANCIAL_SUMMARY", "kinds": ["pdf"],
-     "title": "Athar JV — Financial Model Executive Summary", "match": re.compile(r"financial[-_ ]model[-_ ]executive[-_ ]summary", re.I)},
+     "title": "Athar JV — Financial Model Executive Summary (3)", "match": re.compile(r"financial[-_ ]model[-_ ]executive[-_ ]summary", re.I)},
     {"slug": "financial-model", "env": "ATHAR_SOURCE_URL_FINANCIAL_MODEL", "kinds": ["xlsx"],
-     "title": "Athar JV — Financial Model v13", "match": re.compile(r"financial[-_ ]model(?!.*summary).*v?13|v13.*financial", re.I)},
+     "title": "Athar JV — Financial Model v13", "match": re.compile(r"(?:athar[-_ ]jv[-_ ]model|financial[-_ ]model)(?!.*summary).*v?13|model[-_ ]v13", re.I)},
     {"slug": "implementation-plan", "env": "ATHAR_SOURCE_URL_IMPLEMENTATION_PLAN", "kinds": ["xlsx"],
-     "title": "ODA × AIREV Athar — 6-Month Implementation Plan", "match": re.compile(r"implementation[-_ ]plan", re.I)},
+     "title": "ODA × AIREV Athar — 6-Month Implementation Plan (Oct 2026 – Mar 2027, v1)", "match": re.compile(r"implementation[-_ ]plan", re.I)},
 ]
-COMPANIONS = [{"slug": "implementation-plan-pdf", "env": "ATHAR_SOURCE_URL_IMPLEMENTATION_PLAN_PDF", "kinds": ["pdf"], "title": "Implementation plan — PDF export (reference copy, not ingested)"}]
+COMPANIONS = []
 SIGNATURES = {"pdf": b"%PDF-", "xlsx": b"PK\x03\x04", "pptx": b"PK\x03\x04"}
 CONTENT_TYPES = {"pdf": ("application/pdf", "application/octet-stream"), "xlsx": ("application/vnd.openxmlformats-officedocument.spreadsheetml.sheet", "application/octet-stream"),
                  "pptx": ("application/vnd.openxmlformats-officedocument.presentationml.presentation", "application/octet-stream")}

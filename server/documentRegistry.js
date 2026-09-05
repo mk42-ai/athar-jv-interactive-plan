@@ -1,4 +1,4 @@
-// Registry of the four review documents the document-connected AI is expected to cover.
+// Registry of the THREE review documents the document-connected AI covers (5 Sept 2026 set).
 //
 // The protected corpus (ATHAR_CORPUS_DIR) only knows about originals that were actually ingested.
 // This registry lets the API tell the reviewer, explicitly, which of the four expected documents
@@ -13,33 +13,25 @@ import { loadDotEnv } from './env.js';
 
 export const EXPECTED_DOCUMENTS = Object.freeze([
   Object.freeze({
-    slug: 'executive-presentation', order: 1, kind: 'pptx', alternateKinds: Object.freeze(['pdf']),
-    title: 'Executive-summary slide deck',
-    role: 'The 2-slide executive summary presented in this workspace (v3 deck).',
-    envUrl: 'ATHAR_SOURCE_URL_EXECUTIVE_PRESENTATION',
-    note: 'Preferred original: the v3 PPTX. Alternate accepted original: the exact 2-page PDF rendering shown by the presentation viewer (slide N = page N).',
-  }),
-  Object.freeze({
-    slug: 'financial-summary', order: 2, kind: 'pdf', alternateKinds: Object.freeze([]),
-    title: 'Financial-model executive-summary PDF',
-    role: 'Two-page executive summary of the consolidated financial model (status 31 Aug 2026).',
+    slug: 'financial-summary', order: 1, kind: 'pdf', alternateKinds: Object.freeze([]),
+    title: 'Financial-model executive summary (PDF)',
+    role: 'Athar JV — Financial Model Executive Summary (3): two pages, model basis financial model v13, dated 3 September 2026.',
     envUrl: 'ATHAR_SOURCE_URL_FINANCIAL_SUMMARY',
-    note: 'Derived from the consolidated model; figures here are stated values, not the model workbook itself.',
+    note: 'Stated figures for the UAE-only base case and the international expansion upside; the workbook below is the model itself.',
   }),
   Object.freeze({
-    slug: 'financial-model', order: 3, kind: 'xlsx', alternateKinds: Object.freeze([]),
-    title: 'Financial model v13 workbook',
-    role: 'Consolidated financial model (Outputs, Control, Assumptions, Risk, Draws sheets).',
+    slug: 'financial-model', order: 2, kind: 'xlsx', alternateKinds: Object.freeze([]),
+    title: 'Financial model v13 workbook (XLSX)',
+    role: 'athar-jv-model-v13: Cover, Control, Assumptions, Demand, Compute, Engine, Monthly, Outputs, Risk and Draws worksheets.',
     envUrl: 'ATHAR_SOURCE_URL_FINANCIAL_MODEL',
-    note: 'No signed URL was supplied for this workbook and the platform file directory holds no v13 copy; cell-level questions about the model cannot be answered until it is provisioned.',
+    note: 'Cell-level source for the consolidated model; formula results are the stored values, not recalculated.',
   }),
   Object.freeze({
-    slug: 'implementation-plan', order: 4, kind: 'xlsx', alternateKinds: Object.freeze([]),
-    title: 'Six-month implementation-plan workbook',
-    role: 'ODA × AIREV Athar 6-month implementation plan, Aug 2026 – Jan 2027 (v1).',
+    slug: 'implementation-plan', order: 3, kind: 'xlsx', alternateKinds: Object.freeze([]),
+    title: 'Six-month implementation-plan workbook (XLSX)',
+    role: 'ODA × AIREV Athar 6-Month Implementation Plan, Oct 2026 – Mar 2027 (v1): gates G1–G6, master task list, milestones, resourcing, open items.',
     envUrl: 'ATHAR_SOURCE_URL_IMPLEMENTATION_PLAN',
-    companionEnvUrl: 'ATHAR_SOURCE_URL_IMPLEMENTATION_PLAN_PDF',
-    note: 'A PDF export of the same workbook is configured as a companion reference; the workbook is the cited original.',
+    note: 'The workbook is the cited original for gates, milestones, weekly activities and open items.',
   }),
 ]);
 
