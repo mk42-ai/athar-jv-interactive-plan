@@ -6,6 +6,7 @@ import path from 'node:path';
 import { loadCorpusIndex, retrieveEvidence } from './retrieval.js';
 import { buildEvidencePrompt, validateEvidenceAnswer, prepareModelSelection } from './evidenceAnswer.js';
 import { createSourceView } from './sourceView.js';
+import { evidenceCoverageGaps } from './evidenceCoverage.js';
 import { createChatSession, submitQuerySync, isConfigured } from './ondemand.js';
 
 const TTL = 6 * 3600_000;
@@ -125,7 +126,10 @@ export function createEvidenceRoutes({ access, corpusDir = process.env.ATHAR_COR
         const data = await provider.submitQuerySync(upstream.id, 'Answer the question contained in EVIDENCE_DATA_JSON. Return only the required grounded JSON object.', { fulfillmentPrompt: prompt + repair, temperature: 0, signal });
         try {
           const structured = prepareModelSelection(data?.answer, retrieved);
-          verified = validateEvidenceAnswer(structured, { retrieved, question: query }); break;
+          const checked = validateEvidenceAnswer(structured, { retrieved, question: query });
+          const gaps = evidenceCoverageGaps(query, retrieved, checked);
+          if (gaps.length) throw fail('incomplete_evidence', `Missing requested evidence: ${gaps.join('; ')}. Select additional supplied passages rather than substituting a general comment.`, 422);
+          verified = checked; break;
         } catch (error) { if (error instanceof SyntaxError) lastValidation = fail('unsupported_fact', 'Provider did not return the required JSON.', 422); else if (error.status === 422) lastValidation = error; else throw error; }
       }
       if (!verified) throw lastValidation || fail('provider_unavailable', '', 502);

@@ -233,7 +233,7 @@ def execute(args, config, validator, mode, case, size):
         raise ValueError('extended is isolated/mock only; do not mix it with real authorization')
     if mode == 'authorized' and (args.auth != 'env' or not secret or case):
         raise ValueError('authorized mode requires --auth env and no mock case')
-    broker = test_origin(args.url, config, case=case, passphrase=secret, authorized=mode == 'authorized') if mode == 'extended' or secret else nullcontext((args.url, None))
+    broker = test_origin(args.url, config, case=case, passphrase=secret, authorized=mode == 'authorized' or bool(secret) and mode in ('stage', 'sequence')) if mode == 'extended' or secret else nullcontext((args.url, None))
     with broker as (target, proxy):
         cmd, timeout, source = build_command(args, config, mode, case, size, target, validator, label)
         env = dict(os.environ)

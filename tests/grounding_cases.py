@@ -425,7 +425,7 @@ def build_cases(corpus: Corpus) -> list[Case]:
     if corpus.raw[PPT].note_parts != 0:
         raise Blocked("presentation_negative_notes_case_no_longer_valid")
     tasks = req("original_task_total", [cell(IMPL, "Master Task List", "A1"), Locator(IMPL, sheet="Master Task List")], rf"\b{len(raw_impl.task_ids)}\b", r"tasks?")
-    gates = req("original_gate_total", cell(IMPL, "Dashboard", "A3"), rf"\b(?:{len(raw_impl.gate_sheets)}|six)\b", r"gates?")
+    gates = req("original_gate_total", [cell(IMPL, "Dashboard", "A3"), cell(IMPL, "Dashboard", "D13")], rf"\b(?:{len(raw_impl.gate_sheets)}|six)\b", r"gates?")
     caches = [cell_req("missing_cache_not_zero_d5", IMPL, "Weekly Activities", "D5"), cell_req("missing_cache_not_zero_e5", IMPL, "Weekly Activities", "E5")]
     cases = [
         Case("pdf_geography", "original/pdf", "In the financial-summary PDF page 2, which geography belongs to the UAE-only Base Case, and how does International Expansion Upside differ? Keep the scenarios distinct.", PDF, requirements=geography),
