@@ -11,7 +11,12 @@
     "start": "node server/index.js",
     "guide:prebake": "node scripts/prebake-guide-audio.mjs",
     "guide:provenance": "node scripts/attach-guide-audio-provenance.mjs",
-    "guide:embed": "node scripts/embed-guide-audio.mjs"
+    "guide:embed": "node scripts/embed-guide-audio.mjs",
+    "test": "node --test tests/*.test.mjs",
+    "test:ingestion": "python3 tests/ingestion.test.py",
+    "test:ui-unit": "python3 -m unittest discover -s tests/ui -p 'test_*.py'",
+    "test:grounding": "python3 tests/grounding_cases.py",
+    "ingest": "python3 scripts/ingest_documents.py"
   },
   "dependencies": {
     "express": "^4.21.2",

@@ -5,31 +5,26 @@ import express from 'express';
 import crypto from 'node:crypto';
 import fs from 'node:fs';
 import path from 'node:path';
-import { ELEVEN, RANKED_VOICES, clipKey, elevenStatus, elevenTts, isElevenConfigured } from './elevenlabs.js';
+import { GUIDE_STEPS } from '../src/lib/guide.js';
+import { createAccessControl } from './access.js';
+import { createEvidenceRoutes } from './evidenceRoutes.js';
 import {
   CONFIG,
   isConfigured,
-  createChatSession,
-  submitQuerySync,
-  submitQueryStream,
   speechToText,
   textToSpeech,
   executeAvmWorkflow,
   getExecution,
-  getExecutionLogs,
-  getExecutionTranscript,
-  probeOnDemand,
 } from './ondemand.js';
-import { buildFulfillmentPrompt, loadPlan } from './grounding.js';
-import { loadDotEnv, fingerprint, onDemandKey, onDemandKeySource, ONDEMAND_KEY_NAMES, SECRET_FILES } from './env.js';
+import { loadDotEnv, onDemandKey } from './env.js';
 import { clipStatus, serveEmbedded, loadEmbeddedAudio } from './guideAudioStore.js';
 
 // ---- tiny in-memory media store (uploaded user audio + proxied TTS clips) ----
 const MEDIA_TTL_MS = 20 * 60 * 1000;
 const media = new Map(); // id -> { buf, type, ts }
-function putMedia(buf, type, ext) {
+function putMedia(buf, type, ext, owner = null) {
   const id = `${crypto.randomUUID()}.${ext}`;
-  media.set(id, { buf, type, ts: Date.now() });
+  media.set(id, { buf, type, ts: Date.now(), owner });
   if (media.size > 400) {
     for (const [k, v] of media) if (Date.now() - v.ts > MEDIA_TTL_MS) media.delete(k);
   }
@@ -67,13 +62,8 @@ function sse(res) {
 }
 
 function errPayload(e, stage) {
-  return {
-    type: 'error',
-    stage,
-    code: e.code || (e.status === 503 ? 'not_configured' : 'upstream_error'),
-    status: e.status || 500,
-    message: e.message || 'Unexpected error',
-  };
+  return { type: 'error', stage, code: e.status === 503 ? 'not_configured' : 'service_error',
+    status: e.status || 502, message: 'The service could not complete this request. Please retry.' };
 }
 
 const withTimeout = (ms) => (typeof AbortSignal !== 'undefined' && AbortSignal.timeout ? AbortSignal.timeout(ms) : undefined);
@@ -110,7 +100,7 @@ function takeSentences(pending, { minChars = 40, hardMax = 260 } = {}) {
 // transcript → (AVM workflow execute, in parallel) → grounded Chat API stream →
 // sentence-chunked TTS → same-origin audio URLs the browser can visualise.
 async function runVoiceTurn({ req, send, question, sessionId, externalUserId, signal, meta = {} }) {
-  const base = publicBase(req);
+  req.evidenceService.owned(req, sessionId);
   const t0 = Date.now();
 
   // 1) Register the turn on the Advanced Voice Mode workflow (does not block the answer).
@@ -140,7 +130,7 @@ async function runVoiceTurn({ req, send, question, sessionId, externalUserId, si
       }
       send({ type: 'avm-status', executionId, status: status || 'executing', timedOut: true });
     } catch (e) {
-      send({ type: 'avm-error', message: e.message, status: e.status || 500 });
+      send({ type: 'avm-error', message: 'Voice workflow unavailable.', status: e.status || 500 });
     }
   })();
 
@@ -158,45 +148,33 @@ async function runVoiceTurn({ req, send, question, sessionId, externalUserId, si
         const r = await fetch(remote, { signal: withTimeout(30000) });
         if (!r.ok) throw new Error(`audio fetch ${r.status}`);
         const buf = Buffer.from(await r.arrayBuffer());
-        const id = putMedia(buf, 'audio/mpeg', 'mp3');
+        const id = putMedia(buf, 'audio/mpeg', 'mp3', req.reviewer?.principal);
         send({ type: 'audio', index: idx, url: `/api/voice/audio/${id}`, text, bytes: buf.length, ms: Date.now() - t0 });
       } catch (e) {
-        send({ type: 'tts-error', index: idx, text, message: e.message });
+        send({ type: 'tts-error', index: idx, message: 'Speech generation unavailable.' });
       }
     });
     return ttsChain;
   };
 
   send({ type: 'stage', stage: 'thinking', ms: Date.now() - t0 });
-  const fulfillmentPrompt = buildFulfillmentPrompt({ voice: true });
   let messageId = null;
   try {
-    for await (const ev of submitQueryStream(sessionId, question, { fulfillmentPrompt, signal })) {
-      if (ev.type === 'delta') {
-        full += ev.text;
-        pending += ev.text;
-        send({ type: 'delta', text: ev.text });
-        const { sentences, rest } = takeSentences(pending);
-        pending = rest;
-        for (const s of sentences) speak(s);
-      } else if (ev.type === 'done') {
-        messageId = ev.messageId;
-        if (ev.answer && ev.answer.length > full.length) {
-          // upstream sent a fuller final answer than the deltas we saw
-          const extra = ev.answer.slice(full.length);
-          full = ev.answer;
-          pending += extra;
-          send({ type: 'delta', text: extra });
-        }
-      }
-    }
-  } catch (e) {
-    if (!full) {
-      send(errPayload(e, 'chat'));
-      await avmPromise.catch(() => {});
-      return { ok: false };
-    }
-    send({ type: 'warning', stage: 'chat', message: e.message });
+    const result = await req.evidenceService.answerQuestion(req, { sessionId, query: question, documentId: 'all' }, signal);
+    messageId = result.messageId;
+    // Speak only already-validated source facts; detailed citations remain in the text companion.
+    full = result.evidence.facts.slice(0, 4).map((fact) => fact.text).join(' ');
+    if (result.evidence.missing.length) full += ' ' + result.evidence.missing.join(' ');
+    if (!full.trim()) full = 'The selected evidence does not support an answer to this question.';
+    pending = full;
+    send({ type: 'delta', text: full });
+    const { sentences, rest } = takeSentences(pending);
+    pending = rest;
+    for (const sentence of sentences) speak(sentence);
+  } catch (error) {
+    send({ type: 'error', stage: 'chat', code: error.code || 'provider_unavailable', message: 'The evidence-grounded answer could not be prepared. No substitute was generated.' });
+    await avmPromise.catch(() => {});
+    return { ok: false };
   }
   const tail = pending.trim();
   if (tail) speak(tail);
@@ -213,19 +191,35 @@ async function runVoiceTurn({ req, send, question, sessionId, externalUserId, si
 
 export function createApiApp() {
   // Secrets: process.env first, then the git-ignored .env (server-side only — never bundled for the client).
-  const env = loadDotEnv();
+  loadDotEnv();
   const odKey = onDemandKey();
-  console.log(`[env] secret files present: ${env.files.length ? env.files.join(', ') : 'none'} (accepted key names: ${ONDEMAND_KEY_NAMES.join(' | ')})`);
-  console.log(`[ondemand] API key ${odKey ? `loaded ${fingerprint(odKey)} from ${onDemandKeySource()}` : `NOT set — create ${SECRET_FILES.join(' or ')} or set ${ONDEMAND_KEY_NAMES.join('/')}; chat/voice/TTS fallback disabled`}`);
-  console.log(`[elevenlabs] API key ${process.env.ELEVENLABS_API_KEY ? `loaded ${fingerprint(process.env.ELEVENLABS_API_KEY)}` : 'not set (pre-baked clips still play)'}`);
+  console.log(`[services] AI configured: ${Boolean(odKey)}; pre-baked narration is key-independent`);
   const store = loadEmbeddedAudio();
   console.log(`[guide-audio] embedded store: ${store.files.size} clips${store.manifest ? ` (${store.manifest.voice} / ${store.manifest.model}, v${store.manifest.version})` : ''}`);
-  if (odKey) probeOnDemand().then((r) => console.log(`[ondemand] runtime probe ${r.ok ? `OK — session ${r.sessionId} created (HTTP ${r.httpStatus?.createSession}) and read back (HTTP ${r.httpStatus?.getSession}) in ${r.latencyMs} ms` : `FAILED — ${r.error}`}`)).catch(() => {});
+
 
   const app = express();
   app.disable('x-powered-by');
 
   const api = express.Router();
+  const access = createAccessControl();
+  const evidence = createEvidenceRoutes({ access });
+  app.use((req, res, next) => {
+    res.setHeader('X-Content-Type-Options', 'nosniff');
+    res.setHeader('Referrer-Policy', 'no-referrer');
+    res.setHeader('X-Frame-Options', 'SAMEORIGIN');
+    next();
+  });
+  api.use('/access', access.router);
+  api.use(evidence.router);
+  // Every user-generated voice/chat operation is authorized; the narrated public deck is unchanged.
+  api.use('/voice', (req, res, next) => {
+    const id = req.path.startsWith('/audio/') ? req.path.slice(7) : null;
+    if (req.method === 'GET' && id && access.validMediaCapability(id, req.query.expires, req.query.cap)) return next();
+    return access.requireAccess(req, res, next);
+  });
+  api.use('/voice', (req, res, next) => ['GET', 'HEAD'].includes(req.method) ? next() : access.sameOrigin(req, res, next));
+  api.use('/voice', (req, res, next) => { req.evidenceService = evidence; req.reviewAccess = access; next(); });
 
   // Cache policy for narration assets: the manifest must never be cached (it names the current clips);
   // clip files are content-hashed, so they can be cached forever — a regenerated clip gets a new name.
@@ -236,72 +230,12 @@ export function createApiApp() {
   });
 
 
-  api.get('/health', async (req, res) => {
-    const plan = loadPlan();
-    const probe = await probeOnDemand({ force: req.query.probe === '1' }).catch((e) => ({ ok: false, error: e.message }));
-    res.json({
-      ok: true,
-      configured: isConfigured(),
-      ondemand: {
-        keyInstalled: isConfigured(),
-        keyLoaded: isConfigured(),
-        keyFingerprint: fingerprint(onDemandKey()),
-        keySource: onDemandKeySource(),
-        acceptedNames: ONDEMAND_KEY_NAMES,
-        secretFiles: loadDotEnv().files,
-        sessionCreated: Boolean(probe?.sessionCreated),
-        checkedAt: probe?.checkedAt || new Date().toISOString(),
-        role: 'chat + Advanced Voice Mode + Guide Mode TTS fallback',
-        probe,
-      },
-      checkedAt: new Date().toISOString(),
-      elevenlabs: { keyLoaded: isElevenConfigured(), keyFingerprint: fingerprint(process.env.ELEVENLABS_API_KEY) },
-      endpointId: CONFIG.endpointId,
-      avmWorkflowId: CONFIG.avmWorkflowId,
-      ttsVoice: CONFIG.ttsVoice,
-      publicBase: publicBase(req),
-      plan: { months: plan.months.length, activities: plan.activities.length, source: plan.meta.source_file },
-      time: new Date().toISOString(),
-    });
-  });
-
-  // ---- Chat ----------------------------------------------------------------
-  api.post('/chat/session', express.json(), async (req, res) => {
-    try {
-      const externalUserId = String(req.body?.externalUserId || `athar-web-${crypto.randomUUID()}`).slice(0, 120);
-      const data = await createChatSession(externalUserId, []);
-      res.json({ sessionId: data.id, externalUserId: data.externalUserId, createdAt: data.createdAt });
-    } catch (e) {
-      res.status(e.status || 500).json(errPayload(e, 'session'));
-    }
-  });
-
-  api.post('/chat/query', express.json({ limit: '64kb' }), async (req, res) => {
-    const { sessionId, query, mode = 'stream', voice = false } = req.body || {};
-    if (!sessionId || !query || typeof query !== 'string') {
-      return res.status(400).json({ type: 'error', code: 'bad_request', message: 'sessionId and query are required' });
-    }
-    const fulfillmentPrompt = buildFulfillmentPrompt({ voice: Boolean(voice) });
-    if (mode === 'sync') {
-      try {
-        const data = await submitQuerySync(sessionId, query.slice(0, 4000), { fulfillmentPrompt });
-        return res.json({ answer: data.answer, messageId: data.messageId, status: data.status });
-      } catch (e) {
-        return res.status(e.status || 500).json(errPayload(e, 'chat'));
-      }
-    }
-    const { send, end } = sse(res);
-    const ac = new AbortController();
-    res.on('close', () => { if (!res.writableEnded) ac.abort(); });
-    try {
-      for await (const ev of submitQueryStream(sessionId, query.slice(0, 4000), { fulfillmentPrompt, signal: ac.signal })) {
-        send(ev);
-      }
-    } catch (e) {
-      send(errPayload(e, 'chat'));
-    } finally {
-      end();
-    }
+  api.get('/health', (req, res) => {
+    res.setHeader('Cache-Control', 'no-store');
+    res.json({ ok: true, configured: isConfigured(), build: process.env.ATHAR_BUILD_SHA || 'workspace',
+      checkedAt: new Date().toISOString(), reviewAccessConfigured: access.configured,
+      // No key fragments, provider session identifiers, secret paths, or confidential metadata.
+      narration: { provider: 'elevenlabs', voice: 'River', playback: 'verified-prebaked' } });
   });
 
   // ---- Voice -----------------------------------------------------------------
@@ -309,7 +243,7 @@ export function createApiApp() {
   // proxied TTS clips (same-origin so the browser can visualise playback).
   api.get('/voice/audio/:id', (req, res) => {
     const item = media.get(req.params.id);
-    if (!item) return res.status(404).json({ error: 'not found' });
+    if (!item || (req.reviewer && item.owner && item.owner !== req.reviewer.principal)) return res.status(404).json({ error: 'not found' });
     res.setHeader('Content-Type', item.type);
     res.setHeader('Content-Length', item.buf.length);
     res.setHeader('Cache-Control', 'private, max-age=600');
@@ -334,9 +268,10 @@ export function createApiApp() {
         if (buf.length < 800) throw Object.assign(new Error('No audio received — the recording was empty.'), { status: 400, code: 'empty_audio' });
         const ctype = String(req.headers['content-type'] || 'audio/wav').split(';')[0];
         const ext = ctype.includes('wav') ? 'wav' : ctype.includes('mp4') || ctype.includes('m4a') ? 'm4a' : ctype.includes('mpeg') ? 'mp3' : ctype.includes('ogg') ? 'ogg' : 'webm';
-        const id = putMedia(buf, ctype, ext);
-        const audioUrl = `${publicBase(req)}/api/voice/audio/${id}`;
-        send({ type: 'stage', stage: 'transcribing', bytes: buf.length, audioUrl, ms: Date.now() - t0 });
+        const id = putMedia(buf, ctype, ext, req.reviewer?.principal);
+        const capability = access.mediaCapability(id);
+        const audioUrl = `${publicBase(req)}/api/voice/audio/${id}?${new URLSearchParams(capability)}`;
+        send({ type: 'stage', stage: 'transcribing', bytes: buf.length, ms: Date.now() - t0 });
         let text = '';
         try {
           text = (await speechToText(audioUrl)).trim();
@@ -349,7 +284,7 @@ export function createApiApp() {
           send({ type: 'error', stage: 'stt', code: 'empty_transcript', message: "I didn't catch that — please try speaking again." });
           return end();
         }
-        await runVoiceTurn({ req, send, question: text, sessionId, externalUserId, signal: ac.signal, meta: { input: 'audio', audioUrl } });
+        await runVoiceTurn({ req, send, question: text, sessionId, externalUserId, signal: ac.signal, meta: { input: 'audio' } });
       } catch (e) {
         send(errPayload(e, 'turn'));
       } finally {
@@ -385,7 +320,7 @@ export function createApiApp() {
       const remote = await textToSpeech(text, { voice: req.body?.voice });
       const r = await fetch(remote, { signal: withTimeout(30000) });
       const buf = Buffer.from(await r.arrayBuffer());
-      const id = putMedia(buf, 'audio/mpeg', 'mp3');
+      const id = putMedia(buf, 'audio/mpeg', 'mp3', req.reviewer?.principal);
       res.json({ url: `/api/voice/audio/${id}`, bytes: buf.length });
     } catch (e) {
       res.status(e.status || 500).json(errPayload(e, 'tts'));
@@ -397,7 +332,6 @@ export function createApiApp() {
   // (ON_DEMAND_API_KEY, fallback). Clips pre-baked into public/guide-audio/ (see
   // scripts/prebake-guide-audio.mjs) are served first: zero quota use, identical voice for every
   // visitor, works anonymously. Every request logs provider/model/voice/source on the server.
-  const guideClips = new Map(); // clip key -> { id, meta }
   let prebaked; // manifest.json -> { clips: { key: { file, provider, model, voice, ... } } }
   function loadPrebaked() {
     if (prebaked !== undefined) return prebaked;
@@ -415,10 +349,6 @@ export function createApiApp() {
     }
     return prebaked;
   }
-  const guideProvider = () => (isElevenConfigured() ? 'elevenlabs' : isConfigured() ? 'ondemand' : null);
-  const elevenLabel = (model = ELEVEN.model) => `ElevenLabs · ${ELEVEN.voiceName} · ${model}`;
-  const ondemandLabel = () => `On Demand voice · ${CONFIG.guideVoice[0].toUpperCase()}${CONFIG.guideVoice.slice(1)}`;
-  let quotaCache = { t: 0, v: null };
 
   // Serves a narration clip (or the manifest) from the static folder if present, else from the embedded
   // base64 store — used by the Vercel rewrite for /guide-audio/* when the static file is absent.
@@ -437,37 +367,16 @@ export function createApiApp() {
     res.status(404).json({ error: 'clip not found', file });
   });
 
-  api.get('/guide/voice', async (req, res) => {
+  api.get('/guide/config', (req, res) => {
+    res.setHeader('Cache-Control', 'no-store');
+    res.json({ moments: GUIDE_STEPS.map(({ id, slide, boxes }) => ({ id, slide, boxes })) });
+  });
+
+  api.get('/guide/voice', (req, res) => {
     const manifest = loadPrebaked();
-    let quota = null;
-    if (isElevenConfigured()) {
-      if (Date.now() - quotaCache.t > 60_000) {
-        try {
-          quotaCache = { t: Date.now(), v: await elevenStatus() };
-        } catch (e) {
-          quotaCache = { t: Date.now(), v: { error: e.message } };
-        }
-      }
-      quota = quotaCache.v;
-    }
-    res.json({
-      provider: guideProvider(),
-      configured: Boolean(guideProvider()),
-      voice: isElevenConfigured() ? ELEVEN.voiceName : CONFIG.guideVoice,
-      voiceId: isElevenConfigured() ? ELEVEN.voiceId : undefined,
-      model: isElevenConfigured() ? ELEVEN.model : CONFIG.guideModel,
-      fallbackModel: isElevenConfigured() ? ELEVEN.fallbackModel : CONFIG.guideFallbackModel,
-      settings: isElevenConfigured() ? ELEVEN.settings : { speed: CONFIG.guideSpeed, instructions: CONFIG.guideInstructions },
-      label: isElevenConfigured() ? elevenLabel() : ondemandLabel(),
-      prebakedClips: manifest ? Object.keys(manifest.clips || {}).length : 0,
-      prebakedFor: manifest ? { version: manifest.version, provider: manifest.provider, model: manifest.model, voice: manifest.voice, voiceId: manifest.voiceId, settings: manifest.settings, generatedAt: manifest.generatedAt } : null,
-      playback: manifest && Object.keys(manifest.clips || {}).length ? 'prebaked-verified-clips (key-independent)' : guideProvider() ? `live:${guideProvider()}` : 'none',
-      embeddedStore: { clips: loadEmbeddedAudio().files.size, servable: manifest ? Object.values(manifest.clips).filter((c) => clipStatus(c.file, { staticDir: fs.existsSync(path.join(process.cwd(), 'public', 'guide-audio')) ? 'public' : 'dist', expectedSha256: c.sha256 }).ok).length : 0 },
-      ondemandFallback: { keyLoaded: isConfigured(), keyFingerprint: fingerprint(onDemandKey()), keySource: onDemandKeySource(), voice: CONFIG.guideVoice, model: CONFIG.guideModel },
-      fallback: isElevenConfigured() ? { provider: isConfigured() ? 'ondemand' : null, voice: CONFIG.guideVoice, model: CONFIG.guideModel } : null,
-      shortlist: RANKED_VOICES.map((v) => ({ name: v.name, usable: !v.library, reason: v.library ? 'library voice — HTTP 402 paid_plan_required on this plan' : 'premade — usable' })),
-      quota,
-    });
+    res.json({ provider: manifest?.provider || 'elevenlabs', voice: manifest?.voice || 'River',
+      model: manifest?.model, playback: 'verified-prebaked', configured: Boolean(manifest),
+      prebakedClips: Object.keys(manifest?.clips || {}).length });
   });
 
   api.post('/guide/tts', express.json({ limit: '32kb' }), async (req, res) => {
@@ -493,102 +402,17 @@ export function createApiApp() {
         return done({ url: `${status.source === 'embedded' ? '/api/guide-audio/' : '/guide-audio/'}${pre.file}`, file: pre.file, sha256: pre.sha256, servedFrom: status.source, provider: manifest.provider || 'elevenlabs', model: pre.model || manifest.model, voice: pre.voice || manifest.voice, voiceId: pre.voiceId || manifest.voiceId, label: `ElevenLabs · ${pre.voice || manifest.voice} · ${pre.model || manifest.model}`, source: 'prebaked', settings: pre.settings || manifest.settings });
       }
 
-      if (pre && !status?.ok) console.warn(`[guide-tts] pre-baked clip ${pre.file} is not servable (static missing/corrupt and no embedded copy) — falling back to live synthesis`);
-      const provider = guideProvider();
-      if (!provider) return res.status(503).json({ error: 'not_configured', message: 'No pre-baked clip for this moment and no TTS key configured on the server' });
-
-      // 1) ElevenLabs live — memory cache → primary model → fallback model
-      if (provider === 'elevenlabs') {
-        const key = clipKey(crypto, text);
-        const cached = guideClips.get(key);
-        if (cached && media.has(cached.id)) return done({ ...cached.meta, url: `/api/voice/audio/${cached.id}`, source: 'cache' });
-        let buf = null;
-        let model = ELEVEN.model;
-        let lastErr = null;
-        for (const m of [ELEVEN.model, ELEVEN.fallbackModel]) {
-          try {
-            buf = await elevenTts(text, { model: m });
-            model = m;
-            break;
-          } catch (e) {
-            lastErr = e;
-            console.warn(`[guide-tts] elevenlabs ${m} failed: ${e.message}`);
-            if (['quota_exceeded', 'paid_plan_required', 'invalid_api_key', 'unauthorized'].includes(e.code) || e.status === 401) break; // no point retrying another model
-          }
-        }
-        if (buf) {
-          const id2 = putMedia(buf, 'audio/mpeg', 'mp3');
-          media.get(id2).ts = Date.now() + 6 * 3600 * 1000;
-          const meta = { provider: 'elevenlabs', model, voice: ELEVEN.voiceName, voiceId: ELEVEN.voiceId, label: elevenLabel(model), settings: ELEVEN.settings, sha256: crypto.createHash('sha256').update(buf).digest('hex'), file: id2 };
-          guideClips.set(key, { id: id2, meta });
-          return done({ ...meta, url: `/api/voice/audio/${id2}`, source: 'live' });
-        }
-        if (!isConfigured()) throw lastErr || new Error('elevenlabs failed');
-        console.warn(`[guide-tts] ElevenLabs hard-failed (${lastErr?.message}) — falling back to On Demand (${CONFIG.guideVoice})`);
-      }
-
-      // 2) On Demand Services API (fallback, or primary when no ElevenLabs key is set)
-      const odKey = crypto.createHash('sha1').update(`ondemand|${CONFIG.guideModel}|${CONFIG.guideVoice}|${CONFIG.guideSpeed}|${CONFIG.guideInstructions}|${text}`).digest('hex');
-      const odCached = guideClips.get(odKey);
-      if (odCached && media.has(odCached.id)) return done({ ...odCached.meta, url: `/api/voice/audio/${odCached.id}`, source: 'cache' });
-      const opts = { voice: CONFIG.guideVoice, speed: CONFIG.guideSpeed, instructions: CONFIG.guideInstructions };
-      let remote;
-      let model = CONFIG.guideModel;
-      try {
-        remote = await textToSpeech(text, { ...opts, model });
-      } catch (e) {
-        console.warn(`[guide-tts] ${model} failed (${e.message}) — falling back to ${CONFIG.guideFallbackModel}`);
-        model = CONFIG.guideFallbackModel;
-        remote = await textToSpeech(text, { ...opts, model });
-      }
-      if (!remote) throw Object.assign(new Error('text_to_speech returned no audioUrl'), { status: 502 });
-      const r = await fetch(remote, { signal: withTimeout(30000) });
-      if (!r.ok) throw Object.assign(new Error(`audio fetch ${r.status}`), { status: 502 });
-      const buf = Buffer.from(await r.arrayBuffer());
-      const odId = putMedia(buf, 'audio/mpeg', 'mp3');
-      media.get(odId).ts = Date.now() + 6 * 3600 * 1000;
-      const meta = { provider: 'ondemand', model, voice: CONFIG.guideVoice, label: ondemandLabel(), settings: { speed: CONFIG.guideSpeed }, file: odId };
-      guideClips.set(odKey, { id: odId, meta });
-      return done({ ...meta, url: `/api/voice/audio/${odId}`, source: 'live' });
+      return res.status(503).json({ code: 'verified_clip_unavailable', message: 'A verified narration clip is unavailable. Retry after the source has been restored.' });
     } catch (e) {
       console.error(`[guide-tts] error: ${e.message}`);
       res.status(e.status || 500).json(errPayload(e, 'guide-tts'));
     }
   });
 
-  api.post('/voice/stt', express.json({ limit: '8kb' }), async (req, res) => {
-    try {
-      const audioUrl = String(req.body?.audioUrl || '');
-      if (!/^https?:\/\//.test(audioUrl)) return res.status(400).json({ error: 'audioUrl is required' });
-      res.json({ text: await speechToText(audioUrl) });
-    } catch (e) {
-      res.status(e.status || 500).json(errPayload(e, 'stt'));
-    }
-  });
-
-  api.post('/voice/avm', express.json({ limit: '32kb' }), async (req, res) => {
-    try {
-      const payload = req.body?.payload && typeof req.body.payload === 'object' ? req.body.payload : {};
-      const executionId = await executeAvmWorkflow({ source: 'athar-jv-web-avm', ts: new Date().toISOString(), ...payload });
-      res.json({ executionId, workflowId: CONFIG.avmWorkflowId });
-    } catch (e) {
-      res.status(e.status || 500).json(errPayload(e, 'avm'));
-    }
-  });
-
-  api.get('/voice/execution/:id', async (req, res) => {
-    try {
-      const id = req.params.id;
-      const [execution, logs, transcript] = await Promise.all([
-        getExecution(id),
-        req.query.logs === '1' ? getExecutionLogs(id).catch(() => []) : Promise.resolve(undefined),
-        req.query.transcript === '1' ? getExecutionTranscript(id).catch(() => null) : Promise.resolve(undefined),
-      ]);
-      res.json({ execution, logs, transcript });
-    } catch (e) {
-      res.status(e.status || 500).json(errPayload(e, 'execution'));
-    }
-  });
+  // Legacy diagnostic endpoints accepted arbitrary upstream identifiers/URLs. They are not used by
+  // the turn pipeline; keep them closed rather than expose another reviewer's executions or media.
+  api.all(['/voice/stt', '/voice/avm', '/voice/execution/:id'], (req, res) =>
+    res.status(403).json({ code: 'diagnostic_disabled', message: 'Diagnostic access is restricted to the server operator.' }));
 
   app.use('/api', api);
   app.use('/api', (req, res) => res.status(404).json({ error: `No route ${req.method} /api${req.path}` }));

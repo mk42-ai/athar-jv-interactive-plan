@@ -15,7 +15,7 @@ function Disclosure({ id, title, count, open, onToggle, children, tone }) {
           </span>
         </button>
       </h3>
-      <div id={`${id}-body`} role="region" aria-labelledby={`${id}-btn`} className="disc-panel" aria-hidden={!open}>
+      <div id={`${id}-body`} role="region" aria-labelledby={`${id}-btn`} className="disc-panel" aria-hidden={!open} inert={open ? undefined : ''}>
         <div className="disc-inner">{children}</div>
       </div>
     </section>
@@ -59,7 +59,7 @@ export default function MonthPanel({ month, open, onClose, onPrev, onNext, hasPr
   const toggle = (k) => setOpenSections((s) => ({ ...s, [k]: !s[k] }));
   const toggleGroup = (k) => setOpenGroups((s) => ({ ...s, [k]: !s[k] }));
 
-  if (!month) return <aside id="month-panel" ref={panelRef} className="month-panel-drawer" aria-hidden="true" />;
+  if (!month) return <aside id="month-panel" ref={panelRef} className="month-panel-drawer" aria-hidden="true" hidden inert="" />;
 
   const counts = countByStatus(month);
   const gates = month.milestones.filter((m) => m.type === 'gate');
@@ -76,6 +76,8 @@ export default function MonthPanel({ month, open, onClose, onPrev, onNext, hasPr
       role="region"
       aria-labelledby="month-panel-title"
       aria-hidden={!open}
+      hidden={!open}
+      inert={open ? undefined : ''}
       data-testid="month-panel"
     >
       <div className="mp-head">
@@ -128,7 +130,7 @@ export default function MonthPanel({ month, open, onClose, onPrev, onNext, hasPr
                 <i aria-hidden="true" /> {STATUS_META[s].label} <span className="disc-count">{grouped[s].length}</span>
                 <span className="disc-chevron" aria-hidden="true"><svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><polyline points="6 9 12 15 18 9" /></svg></span>
               </button>
-              <div id={`mp-${key}-${s}`} className={`disc-panel ${openGroups[s] ? 'open' : ''}`} aria-hidden={!openGroups[s]}>
+              <div id={`mp-${key}-${s}`} className={`disc-panel ${openGroups[s] ? 'open' : ''}`} aria-hidden={!openGroups[s]} inert={openGroups[s] ? undefined : ''}>
                 <ul className="mp-acts disc-inner">
                   {grouped[s].map((i) => (
                     <li key={i.id} className="mp-act">

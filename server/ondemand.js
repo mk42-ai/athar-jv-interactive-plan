@@ -95,7 +95,8 @@ export async function createChatSession(externalUserId, pluginIds = []) {
   return body.data;
 }
 
-export async function submitQuerySync(sessionId, query, { fulfillmentPrompt, temperature = 0.2 } = {}) {
+export async function submitQuerySync(sessionId, query, { fulfillmentPrompt, temperature = 0.2, signal } = {}) {
+  const timeout = AbortSignal.timeout(90000);
   const res = await fetch(`${API}/chat/v1/sessions/${encodeURIComponent(sessionId)}/query`, {
     method: 'POST',
     headers: headers(),
@@ -103,8 +104,10 @@ export async function submitQuerySync(sessionId, query, { fulfillmentPrompt, tem
       query,
       endpointId: CONFIG.endpointId,
       responseMode: 'sync',
+      fulfillmentOnly: true,
       modelConfigs: { fulfillmentPrompt, temperature },
     }),
+    signal: signal && AbortSignal.any ? AbortSignal.any([signal, timeout]) : timeout,
   });
   const body = await asJson(res, 'submitQuery');
   return body.data; // { sessionId, messageId, answer, status }

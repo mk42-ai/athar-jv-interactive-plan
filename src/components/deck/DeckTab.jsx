@@ -7,7 +7,7 @@ import MonthPanel from './MonthPanel.jsx';
 import { PDF_SRC, PDF_TITLE, PDF_PAGES } from '../../lib/deck.js';
 import { MONTHS, OVERVIEW, monthKey } from '../../lib/plan.js';
 
-export default function DeckTab() {
+export default function DeckTab({ onAskSlide }) {
   const [pageNo, setPageNo] = useState(1);
   const [requestedPage, setRequestedPage] = useState(null);
   const guide = useGuide({ onSlide: (n) => setRequestedPage({ n, t: Date.now() }) });
@@ -43,9 +43,15 @@ export default function DeckTab() {
   return (
     <section className={`deck ${panelOpen ? 'panel-open' : ''} ${guide.active ? 'guiding' : ''}`} aria-labelledby="deck-title" data-guide-active={guide.active}>
       <header className="deck-head">
-        <p className="eyebrow">{OVERVIEW.subtitle}</p>
-        <h1 id="deck-title" className="deck-title">{pageMeta.title}</h1>
-        <p className="deck-caption">{OVERVIEW.period} · exact presentation PDF, served from this app · {PDF_PAGES.length} pages · <button className="link-btn" onClick={() => guide.toggle(pageNo)} data-testid="guide-link">{guide.active ? 'exit Guide Mode' : `Guide Mode: ${guideStepCount} narrated moments`}</button></p>
+        <div className="deck-heading">
+          <p className="eyebrow">{OVERVIEW.subtitle}</p>
+          <h1 id="deck-title" className="deck-title">{pageMeta.title}</h1>
+        </div>
+        <p className="deck-caption"><span>{OVERVIEW.period} · Original presentation · {PDF_PAGES.length} slides</span></p>
+        <div className="deck-head-actions">
+          <button className="link-btn" onClick={() => guide.toggle(pageNo)} data-testid="guide-link">{guide.active ? 'exit Guide Mode' : `Guide Mode: ${guideStepCount} narrated moments`}</button>
+          <button className="btn deck-ask-slide" onClick={() => onAskSlide?.(pageNo)} data-testid="ask-this-slide">Ask this slide <span aria-hidden="true">↗</span></button>
+        </div>
       </header>
 
       <div className="deck-body">

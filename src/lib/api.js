@@ -68,11 +68,11 @@ async function ensureStream(res) {
   return res;
 }
 
-export async function streamChat({ sessionId, query, voice = false, signal, onEvent }) {
+export async function streamChat({ sessionId, query, voice = false, documentId = 'all', slide = null, signal, onEvent }) {
   const res = await fetch('/api/chat/query', {
     method: 'POST',
     headers: { 'Content-Type': 'application/json', Accept: 'text/event-stream' },
-    body: JSON.stringify({ sessionId, query, voice, mode: 'stream' }),
+    body: JSON.stringify({ sessionId, query, voice, documentId, slide, mode: 'stream' }),
     signal,
   });
   await ensureStream(res);
@@ -106,3 +106,17 @@ export async function getExecution(id) {
   const res = await fetch(`/api/voice/execution/${encodeURIComponent(id)}?logs=1`);
   return readJson(res);
 }
+
+// Review access is an HttpOnly same-origin session; secrets are never saved to web storage.
+async function privateJson(url, options = {}) {
+  const res = await fetch(url, { credentials: 'same-origin', cache: 'no-store', ...options });
+  const body = await readJson(res);
+  if (!res.ok) throw Object.assign(new Error(body.message || 'Protected request failed.'), { code: body.code, status: res.status });
+  return body;
+}
+export const getAccess = () => privateJson('/api/access');
+export const unlockAccess = (passphrase) => privateJson('/api/access', { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify({ passphrase }) });
+export const lockAccess = () => privateJson('/api/access', { method: 'DELETE' });
+export const getDocuments = () => privateJson('/api/documents');
+export const retryDocuments = () => privateJson('/api/documents/retry', { method: 'POST' });
+export const getCitation = (id) => privateJson(`/api/citations/${encodeURIComponent(id)}`);

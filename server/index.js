@@ -14,6 +14,13 @@ const dist = path.resolve(__dirname, '../dist');
 const port = Number(process.env.PORT || 5173);
 
 const app = express();
+app.disable('x-powered-by');
+app.use((req, res, next) => {
+  if (/^\/(?:\.env|env\.local|\.private|\.git|\.creds|originals|raw|protected|corpus|server|scripts|tests|src|data)(?:[/.]|$)/i.test(req.path)) {
+    return res.status(404).set('Cache-Control', 'no-store').json({ code: 'not_found' });
+  }
+  next();
+});
 rehydrateGuideAudio({ staticDir: 'dist' });
 app.use(guideAudioMiddleware({ staticDir: 'dist' }));
 app.use(deckPdfMiddleware({ staticDir: 'dist' })); // deck PDF fallback when dist/deck/ (copied from public/ by vite build) is absent

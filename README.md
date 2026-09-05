@@ -1,5 +1,7 @@
 # Athar JV — Executive Summary · PDF presentation · Timeline · Grounded chat · Advanced Voice Mode
 
+> Current implementation: [Presentation workspace and protected original-source review](docs/review-workspace.md). This runbook supersedes older public-chat, secret-copy and live-narration-fallback instructions below. Historical QA logs are retained for history only; consult the current run's machine-readable QA evidence for verified results.
+
 React + Vite client with a server-side **On Demand API proxy** (`server/api.js`) that runs
 inside the Vite dev server (`vite.config.js`) or standalone (`server/index.js`).
 The On Demand `apikey` is read from `process.env.ON_DEMAND_API_KEY` on the server only.

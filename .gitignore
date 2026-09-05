@@ -25,3 +25,14 @@ Thumbs.db
 # QA / proof artefacts
 .ui-proof/
 .pdf-proof/
+
+# Confidential ingestion and host-only access material — never distribute
+.private/
+protected/
+corpus/
+originals/
+*.records.jsonl.gz
+*private-corpus*
+*review-credentials*
+.qa-raw/
+

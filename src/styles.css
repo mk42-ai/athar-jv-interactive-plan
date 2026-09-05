@@ -440,13 +440,13 @@ h1, h2, h3 { font-weight: 500; letter-spacing: -0.01em; }
 
 .guide-overlay { position: absolute; inset: 0; pointer-events: none; z-index: 3; }
 .guide-hl { position: absolute; border: 1.5px solid var(--gold); border-radius: 6px; box-sizing: border-box; animation: guide-in 0.6s var(--ease) both; }
-.guide-overlay.spot .guide-hl { box-shadow: 0 0 0 9999px rgba(23, 24, 26, 0.22), 0 0 0 4px rgba(182, 138, 53, 0.22), 0 0 28px rgba(182, 138, 53, 0.35); }
+.guide-overlay.spot .guide-hl { box-shadow: 0 0 0 4px rgba(182, 138, 53, 0.22), 0 0 28px rgba(182, 138, 53, 0.35); }
 .guide-overlay.multi .guide-hl { box-shadow: 0 0 0 4px rgba(182, 138, 53, 0.18), 0 0 22px rgba(182, 138, 53, 0.35); background: rgba(182, 138, 53, 0.06); }
 .guide-overlay.multi .guide-hl:nth-child(2) { animation-delay: 0.12s; }
 .guide-overlay.multi .guide-hl:nth-child(3) { animation-delay: 0.24s; }
 .guide-overlay.kind-gate .guide-hl { border-color: var(--gold); }
 .guide-overlay.kind-milestone .guide-hl { border-color: #2f7f6b; }
-.guide-overlay.kind-milestone.spot .guide-hl { box-shadow: 0 0 0 9999px rgba(23, 24, 26, 0.22), 0 0 0 4px rgba(47, 127, 107, 0.2), 0 0 28px rgba(47, 127, 107, 0.35); }
+.guide-overlay.kind-milestone.spot .guide-hl { box-shadow: 0 0 0 4px rgba(47, 127, 107, 0.2), 0 0 28px rgba(47, 127, 107, 0.35); }
 .guide-overlay.kind-milestone.multi .guide-hl { box-shadow: 0 0 0 4px rgba(47, 127, 107, 0.16), 0 0 22px rgba(47, 127, 107, 0.3); background: rgba(47, 127, 107, 0.05); }
 .guide-hl::after { content: ""; position: absolute; inset: -1.5px; border-radius: inherit; border: 1.5px solid currentColor; color: inherit; opacity: 0; animation: guide-ring 2.6s var(--ease) 0.5s infinite; border-color: inherit; }
 .guide-tag { position: absolute; left: -1.5px; top: -22px; padding: 2px 8px; border-radius: 4px 4px 4px 0; background: var(--ink); color: var(--paper); font-family: var(--sans); font-size: 11px; line-height: 16px; letter-spacing: 0.04em; white-space: nowrap; font-weight: 500; }
@@ -511,3 +511,230 @@ h1, h2, h3 { font-weight: 500; letter-spacing: -0.01em; }
   body[data-guiding="true"] .dock { bottom: calc(var(--guide-dock-h, 110px) + 12px); }
   body[data-guiding="true"] .widget { bottom: calc(var(--guide-dock-h, 110px) + 68px); max-height: min(560px, calc(100vh - var(--guide-dock-h, 110px) - 90px)); }
 }
+
+/* =====================================================================
+   PRESENTATION WORKSPACE — component-scoped, in-flow companion layout.
+   The existing deck, timeline and voice pipeline remain the source of truth.
+   ===================================================================== */
+.app.athar-workspace { --review-gold: #856020; --review-muted: #655f56; background: #faf9f6; }
+.athar-workspace > .top { position: relative; z-index: 10; grid-template-columns: minmax(0, 1fr) auto minmax(100px, 1fr); gap: 20px; padding: 10px 24px; min-height: 64px; background: #fff; }
+.athar-workspace .brand-title { font-size: 1.45rem; }
+.athar-workspace .brand-sub { font-size: 0.65rem; }
+.athar-workspace .tabs { gap: 24px; }
+.athar-workspace .tab { min-height: 44px; min-width: 44px; font-size: 0.77rem; }
+.athar-workspace .top-status { font-size: 0.75rem; display: flex; }
+.athar-workspace > .main { flex: 1; width: 100%; max-width: none; margin: 0; padding: 16px 24px 24px; }
+.athar-workspace > .foot { padding: 16px 24px; color: var(--review-muted); font-size: 0.64rem; letter-spacing: 0.04em; background: #fff; }
+.athar-workspace .presentation-workspace { display: grid; grid-template-columns: minmax(0, 1fr); gap: 18px; align-items: start; width: 100%; min-width: 0; }
+.athar-workspace .presentation-workspace.has-companion { grid-template-columns: minmax(0, 1fr) var(--companion-width, 340px); }
+.athar-workspace .presentation-workspace.is-stacked { grid-template-columns: minmax(0, 1fr); }
+.athar-workspace .workspace-primary, .athar-workspace .workspace-companion, .athar-workspace .tab-panel { min-width: 0; }
+.athar-workspace .workspace-companion { position: relative; width: 100%; align-self: start; }
+.athar-workspace .companion-teaser { display: flex; align-items: center; justify-content: space-between; gap: 12px; flex-wrap: wrap; padding: 12px 16px; border: 1px solid var(--hair-2); border-radius: 8px; background: #fff; }
+.athar-workspace .companion-teaser p { margin: 0; font-size: 0.87rem; }
+.athar-workspace .companion-teaser small { display: block; color: var(--review-muted); }
+.athar-workspace .companion-actions { display: flex; gap: 8px; flex-wrap: wrap; }
+.athar-workspace .dock-btn { position: static; height: 44px; min-width: 44px; width: auto; padding: 0 14px; box-shadow: none; border-radius: 6px; font-size: 0.8rem; }
+.athar-workspace .dock-btn span { display: inline; }
+.athar-workspace .companion-shell { border: 1px solid var(--hair-2); border-radius: 10px; background: #fff; box-shadow: 0 4px 18px rgba(33, 28, 18, 0.045); min-width: 0; overflow: hidden; }
+.athar-workspace .companion-switcher { display: flex; align-items: center; padding: 6px; gap: 5px; border-bottom: 1px solid var(--hair); background: var(--paper-2); }
+.athar-workspace .companion-switcher .dock-btn { flex: 1; justify-content: center; }
+.athar-workspace .companion-resize { display: grid; grid-template-columns: auto minmax(70px, 1fr) auto; align-items: center; gap: 8px; padding: 0 12px; color: var(--review-muted); font-size: 0.73rem; border-bottom: 1px solid var(--hair); }
+.athar-workspace .companion-resize label { display: inline-flex; align-items: center; min-height: 44px; }
+.athar-workspace .companion-resize input { width: 100%; min-width: 0; height: 44px; margin: 0; accent-color: var(--review-gold); }
+.athar-workspace .companion-resize output { font-family: var(--mono); }
+.athar-workspace .companion-note { padding: 10px 14px; margin: 0; font-size: 0.8rem; color: var(--review-muted); }
+.athar-workspace [hidden], .athar-workspace .widget[aria-hidden="true"] { display: none !important; }
+.athar-workspace .workspace-companion .widget { position: static; inset: auto; z-index: auto; width: 100%; max-width: 100%; max-height: none; height: auto; border: 0; border-radius: 0; box-shadow: none; opacity: 1; transform: none; pointer-events: auto; transition: none; overflow: visible; }
+.athar-workspace .workspace-companion .chat-widget { display: flex; flex-direction: column; }
+.athar-workspace .workspace-companion .widget-head { padding: 14px; align-items: flex-start; }
+.athar-workspace .workspace-companion .widget-head h2 { font-size: 1.5rem; line-height: 1.15; margin-bottom: 5px; }
+.athar-workspace .workspace-companion .widget-sub { font-size: 0.76rem; line-height: 1.45; letter-spacing: 0; color: var(--review-muted); }
+.athar-workspace .workspace-companion .widget-actions { flex-shrink: 0; }
+.athar-workspace .workspace-companion :is(button, select, summary, input:not([type="checkbox"]), textarea, .btn, .tb-btn) { min-height: 44px; }
+.athar-workspace .workspace-companion :is(.icon-btn, .tb-btn) { width: auto; min-width: 44px; height: 44px; }
+.athar-workspace .workspace-companion button { overflow-wrap: anywhere; }
+.athar-workspace .workspace-companion .voice-widget { grid-template-rows: none; }
+.athar-workspace .workspace-companion .voice-widget .transcript { height: var(--companion-log-height, 360px); max-height: 640px; min-height: 180px; overscroll-behavior: contain; }
+.athar-workspace .workspace-companion .voice-toggles { flex-wrap: wrap; gap: 6px 18px; padding-bottom: 10px; }
+.athar-workspace .workspace-companion .switch { min-height: 44px; align-items: center; }
+.athar-workspace .workspace-companion .voice-typed { grid-template-columns: minmax(0, 1fr) auto; }
+.athar-workspace .workspace-companion .voice-typed input { min-width: 0; font-size: 16px; }
+.athar-workspace .workspace-companion .voice-state { grid-template-columns: auto minmax(0, 1fr) auto; gap: 10px; padding: 12px; }
+
+/* Deck gets the width; companion details never take a second slice out of it. */
+/* A compact metadata line, not a second hero above the presentation. */
+.athar-workspace .deck { gap: 8px; padding-bottom: 0 !important; }
+.athar-workspace .deck-head { position: relative; max-width: none; display: flex; flex-wrap: wrap; gap: 4px 16px; align-items: center; }
+.athar-workspace .deck-heading { flex: 1 1 220px; min-width: 0; }
+.athar-workspace .deck-heading > .eyebrow { color: var(--review-gold); font-size: 0.6rem; letter-spacing: 0.1em; line-height: 1.4; margin: 0 0 2px; }
+.athar-workspace .deck-title { font-size: clamp(1.25rem, 1.6vw, 1.55rem); line-height: 1.1; margin: 0; overflow-wrap: anywhere; }
+.athar-workspace .deck-caption { flex: 0 1 auto; color: var(--review-muted); font-size: 0.72rem; line-height: 1.5; margin: 0; }
+.athar-workspace .deck-head-actions { display: flex; flex-wrap: wrap; align-items: center; gap: 4px 12px; }
+.athar-workspace .deck-head-actions .link-btn { color: var(--review-gold); min-height: 44px; min-width: 44px; display: inline-flex; align-items: center; font-size: 0.75rem; }
+.athar-workspace .deck-ask-slide { min-height: 44px; padding: 8px 12px; font-size: 0.8rem; background: #fff; white-space: nowrap; }
+.athar-workspace .deck-body, .athar-workspace .deck.panel-open .deck-body { grid-template-columns: minmax(0, 1fr); gap: 14px; transition: none; }
+.athar-workspace .pdfv { display: flex; flex-direction: column; min-width: 0; overflow: visible; border-color: var(--hair-2); border-radius: 8px; box-shadow: 0 3px 16px rgba(33, 28, 18, 0.035); }
+.athar-workspace .pdfv-toolbar { flex: none; flex-wrap: wrap; justify-content: space-between; gap: 4px 8px; padding: 2px 8px; background: #fff; border-radius: 8px 8px 0 0; }
+.athar-workspace .pdfv-toolbar .tb-group { gap: 2px; flex-wrap: wrap; }
+.athar-workspace .pdfv-toolbar :is(.tb-btn, .tb-zoom, summary) { min-height: 44px; height: auto; min-width: 44px; font-size: 0.77rem; }
+.athar-workspace .pdfv-toolbar .tb-btn.on { color: var(--review-gold); background: var(--gold-soft); }
+.athar-workspace .pdfv-toolbar .tb-counter { font-size: 0.77rem; padding: 0 5px; white-space: nowrap; }
+.athar-workspace .pdfv-toolbar .tb-label { display: inline; font-size: 0.77rem; }
+.athar-workspace .pdfv-tools summary { display: flex; align-items: center; justify-content: center; padding: 0 8px; cursor: pointer; border-radius: 5px; color: var(--review-muted); }
+.athar-workspace .pdfv-tools summary:hover { background: var(--paper-2); }
+.athar-workspace .pdfv-tools[open] { flex-basis: 100%; }
+.athar-workspace .pdfv-tools-items { display: flex; flex-wrap: wrap; gap: 2px; padding: 4px; border: 1px solid var(--hair); border-radius: 6px; }
+.athar-workspace .pdfv-scroll { height: var(--pdf-holder-height, auto); min-height: 0; max-height: none !important; overflow-anchor: none; aspect-ratio: var(--pdf-aspect-ratio, 16 / 9); flex: none; width: 100%; overflow: auto; border: 0; border-radius: 0; background: #f2efe8; touch-action: pan-x pan-y; }
+.athar-workspace .pdfv-page { width: max-content; min-width: 100%; min-height: 100%; display: flex; align-items: center; justify-content: center; padding: 8px; }
+.athar-workspace .pdfv-canvas-wrap { display: block; flex: none; }
+.athar-workspace .pdfv-page canvas { max-width: none; border: 0; box-shadow: 0 1px 6px rgba(26, 24, 20, 0.08); }
+.athar-workspace .pdfv-view-note { padding: 7px 12px; font-size: 0.72rem; color: var(--review-muted); background: #fff; border-top: 1px solid var(--hair); }
+.athar-workspace .pdfv-thumbs { gap: 8px; padding: 8px 10px; background: #fff; border-radius: 0 0 8px 8px; }
+.athar-workspace .pdfv-thumbs .thumb { min-width: 72px; min-height: 44px; }
+.athar-workspace .pdfv-thumbs .thumb img, .athar-workspace .pdfv-thumbs .thumb-ph { width: 92px; }
+.athar-workspace .pdfv-readable { padding: 16px 20px; background: #fff; border-top: 1px solid var(--hair-2); min-width: 0; }
+.athar-workspace .pdfv-readable header { display: flex; align-items: center; justify-content: space-between; gap: 12px; }
+.athar-workspace .pdfv-readable h2 { font-family: var(--serif); font-size: 1.55rem; margin: 0; }
+.athar-workspace .pdfv-readable :is(button, a) { min-height: 44px; }
+.athar-workspace .pdfv-readable-note { color: var(--review-muted); font-size: 0.8rem; line-height: 1.6; margin: 6px 0 18px; max-width: 80ch; }
+.athar-workspace .pdfv-source-text { font-size: 16px; line-height: 1.8; max-width: 85ch; color: #252321; overflow-wrap: anywhere; }
+.athar-workspace .pdfv-source-text p { margin: 0 0 0.85em; white-space: pre-wrap; }
+.athar-workspace .pdfv:fullscreen, .athar-workspace .pdfv.is-fullscreen { position: fixed; inset: 0; z-index: 1000; height: 100dvh; overflow: auto; border-radius: 0; }
+.athar-workspace .pdfv:fullscreen .pdfv-scroll, .athar-workspace .pdfv.is-fullscreen .pdfv-scroll { height: var(--pdf-holder-height, auto); }
+
+/* Player and captions stay below the canvas at every width and height. */
+.athar-workspace .guide-overlay { overflow: hidden; }
+.athar-workspace .pdfv .guide-overlay .guide-hl { box-shadow: none; background: transparent; border-width: 2px; border-radius: 2px; animation: none; }
+.athar-workspace .guide-hl::after { display: none; }
+.athar-workspace .guide-dock { position: relative; inset: auto; z-index: auto; border: 0; border-top: 1px solid var(--hair); border-radius: 0; box-shadow: none; padding-bottom: 0; flex: none; background: #fff; }
+.athar-workspace .guide-dock-row { display: flex; flex-wrap: wrap; align-items: center; gap: 6px 10px; padding: 8px 10px; min-height: 60px; }
+.athar-workspace .guide-dock-row > * { grid-area: auto; }
+.athar-workspace .guide-live { color: var(--review-gold); }
+.athar-workspace .guide-pos { display: inline; font-size: 0.73rem; }
+.athar-workspace .guide-transport { gap: 4px; }
+.athar-workspace :is(.guide-btn, .guide-btn.primary, .guide-expand, .guide-x) { min-width: 44px; width: 44px; min-height: 44px; height: 44px; }
+.athar-workspace .guide-caption { font-size: 0.86rem; line-height: 1.5; }
+.athar-workspace .guide-caption b, .athar-workspace .guide-caption-full b { color: var(--review-gold); }
+.athar-workspace .guide-cap-wrap { flex: 1 1 220px; }
+.athar-workspace .guide-status { max-width: 100%; color: var(--review-muted); white-space: normal; text-align: left; font-size: 0.75rem; }
+.athar-workspace .guide-src { display: inline-flex; white-space: normal; font-size: 0.66rem; color: var(--review-muted); }
+.athar-workspace .guide-retry { min-width: 44px; min-height: 44px; }
+.athar-workspace .guide-x { margin-left: auto; }
+.athar-workspace .guide-caption-full { max-height: none; overflow: visible; padding: 14px 16px; font-size: 16px; line-height: 1.75; }
+.athar-workspace .deck.guiding .strip { opacity: 1; }
+.athar-workspace .strip-head { gap: 10px; margin-bottom: 18px; }
+.athar-workspace .strip .eyebrow { color: var(--review-gold); }
+.athar-workspace .strip-hint { color: var(--review-muted); }
+.athar-workspace .strip-track { overflow-x: auto; overflow-y: hidden; height: 104px; }
+.athar-workspace .strip-months { min-width: 336px; height: 48px; }
+.athar-workspace .strip-month { min-width: 44px; min-height: 44px; }
+.athar-workspace .strip-gates { top: 61px; }
+.athar-workspace .month-panel-drawer { position: relative; inset: auto; z-index: auto; width: 100%; max-width: 100%; max-height: none; min-height: 0; transform: none; transition: none; box-shadow: none; border-radius: 8px; justify-self: stretch; }
+.athar-workspace .month-panel-drawer .mp-scroll { overflow: visible; }
+.athar-workspace .month-panel-drawer :is(.tb-btn, .disc-btn, .mp-group-btn) { min-width: 44px; min-height: 44px; height: auto; }
+.athar-workspace .month-panel-drawer .disc-panel[inert] { visibility: hidden; }
+
+/* Auth + source-grounded conversation, scoped to the existing companion. */
+.athar-workspace .access-gate { display: grid; gap: 12px; margin: 14px; padding: 18px 16px; background: var(--paper-2); border: 1px solid var(--hair); border-radius: 8px; }
+.athar-workspace .access-gate h3 { margin: 0; font-family: var(--serif); font-size: 1.6rem; line-height: 1.2; }
+.athar-workspace .access-gate p { font-size: 0.84rem; line-height: 1.6; margin: 0; color: var(--review-muted); }
+.athar-workspace .access-gate label { font-weight: 600; font-size: 0.8rem; }
+.athar-workspace .access-gate input { width: 100%; min-width: 0; padding: 10px 12px; border: 1px solid var(--hair-2); border-radius: 5px; background: #fff; font-size: 16px; }
+.athar-workspace .access-gate .access-error { color: var(--bad); }
+.athar-workspace .chat-context { display: grid; gap: 8px; padding: 12px 14px; border-bottom: 1px solid var(--hair); }
+.athar-workspace .chat-context label { font-size: 0.73rem; font-weight: 600; color: var(--review-muted); }
+.athar-workspace .chat-context select { width: 100%; min-width: 0; padding: 8px; border-radius: 6px; border: 1px solid var(--hair-2); background: #fff; font-size: 0.83rem; color: var(--ink); }
+.athar-workspace .chat-slide-context { display: flex; align-items: center; justify-content: space-between; gap: 8px; padding: 0 9px; background: var(--gold-soft); border-radius: 6px; font-size: 0.78rem; }
+.athar-workspace .chat-slide-context button { font-size: 0.73rem; text-decoration: underline; text-underline-offset: 3px; }
+.athar-workspace .chat-documents { padding: 0 14px 8px; border-bottom: 1px solid var(--hair); }
+.athar-workspace .chat-documents > summary { display: flex; align-items: center; gap: 6px; font-size: 0.79rem; font-weight: 600; cursor: pointer; }
+.athar-workspace .chat-documents > summary::before { content: '+'; color: var(--review-gold); }
+.athar-workspace .chat-documents[open] > summary::before { content: '−'; }
+.athar-workspace .chat-documents ul { list-style: none; margin: 0; padding: 0; }
+.athar-workspace .chat-document { padding: 12px 0; border-top: 1px solid var(--hair); }
+.athar-workspace .chat-document h3 { font-family: var(--sans); font-size: 0.86rem; line-height: 1.45; margin: 0 0 5px; }
+.athar-workspace .chat-document p { font-size: 0.76rem; line-height: 1.5; margin: 6px 0; color: var(--review-muted); }
+.athar-workspace .chat-document .document-status { display: inline-block; color: var(--review-gold); background: var(--gold-soft); border-radius: 4px; padding: 2px 6px; font-size: 0.7rem; text-transform: capitalize; }
+.athar-workspace .chat-document[data-status="error"] .document-status, .athar-workspace .chat-document[data-status="failed"] .document-status { color: #8f342a; background: #fbebe8; }
+.athar-workspace .document-actions { display: flex; gap: 8px; flex-wrap: wrap; margin-top: 8px; }
+.athar-workspace .chat-service-error { display: grid; gap: 8px; padding: 12px 14px; color: #8f342a; font-size: 0.83rem; }
+.athar-workspace .chat-widget .chat-list { padding: 14px; height: var(--companion-log-height, 360px); min-height: 220px; max-height: 640px; overflow-y: auto; overscroll-behavior: contain; }
+.athar-workspace .chat-empty { gap: 12px; }
+.athar-workspace .chat-empty .chips { display: grid; gap: 8px; }
+.athar-workspace .chat-empty .chip { border-radius: 6px; padding: 10px 12px; min-height: 44px; font-size: 0.82rem; }
+.athar-workspace .chat-widget .bubble { max-width: 100%; font-size: 0.9rem; line-height: 1.65; }
+.athar-workspace .chat-widget .msg-meta { color: var(--review-muted); text-transform: none; font-size: 0.72rem; letter-spacing: 0; }
+.athar-workspace .chat-citations { display: flex; gap: 6px; flex-wrap: wrap; margin-top: 10px; }
+.athar-workspace .chat-citation-button { display: inline-flex; align-items: center; padding: 6px 9px; gap: 4px; border: 1px solid var(--hair-2); background: var(--paper-2); color: var(--review-gold); border-radius: 5px; text-align: left; font-size: 0.75rem; }
+.athar-workspace .chat-citation-button[aria-expanded="true"] { border-color: var(--review-gold); background: var(--gold-soft); }
+.athar-workspace .citation-panel { border-top: 1px solid var(--hair-2); border-bottom: 1px solid var(--hair-2); padding: 14px; background: var(--paper-2); min-width: 0; overflow-wrap: anywhere; }
+.athar-workspace .citation-panel header { display: flex; justify-content: space-between; align-items: flex-start; gap: 8px; }
+.athar-workspace .citation-panel h3 { margin: 0; font-size: 0.98rem; }
+.athar-workspace .citation-panel .citation-location { font-size: 0.78rem; color: var(--review-muted); }
+.athar-workspace .citation-panel blockquote { margin: 12px 0; border-left: 2px solid var(--review-gold); padding-left: 12px; font-size: 16px; line-height: 1.7; white-space: pre-wrap; }
+.athar-workspace .citation-records { font-size: 0.8rem; white-space: pre-wrap; overflow-wrap: anywhere; }
+.athar-workspace .chat-widget .chat-input { grid-template-columns: minmax(0, 1fr) auto; padding: 12px 14px; align-items: end; }
+.athar-workspace .chat-input textarea { min-width: 0; min-height: 60px; max-height: 180px; font-size: 16px; resize: vertical; }
+.athar-workspace .chat-context-note { margin: 0; padding: 0 14px 12px; font-size: 0.7rem; color: var(--review-muted); }
+
+@media (max-width: 1100px) {
+  .athar-workspace .presentation-workspace.has-companion { grid-template-columns: minmax(0, 1fr); }
+  .athar-workspace .guide-cap-wrap { flex-basis: 250px; }
+}
+@media (max-width: 720px) {
+  .athar-workspace > .top { grid-template-columns: minmax(0, 1fr) auto; gap: 8px 14px; padding: 8px 12px; min-height: 60px; }
+  .athar-workspace .top-status { display: none; }
+  .athar-workspace .brand-sub { display: none; }
+  .athar-workspace .tabs { gap: 14px; }
+  .athar-workspace .tab { font-size: 0.7rem; letter-spacing: 0.02em; }
+  .athar-workspace > .main { padding: 12px; }
+  .athar-workspace > .foot { padding: 14px 12px; }
+  .athar-workspace .presentation-workspace { gap: 16px; }
+  .athar-workspace .deck { gap: 10px; }
+  .athar-workspace .deck-head { gap: 4px 10px; }
+  .athar-workspace .deck-heading { flex-basis: 100%; }
+  .athar-workspace .deck-title { font-size: 1.5rem; }
+  .athar-workspace .deck-caption { flex-basis: 100%; font-size: 0.68rem; }
+  .athar-workspace .deck-head-actions { width: 100%; justify-content: space-between; gap: 4px 8px; }
+  .athar-workspace .deck-head-actions .link-btn { font-size: 0.72rem; }
+  .athar-workspace .deck-ask-slide { padding: 8px; font-size: 0.75rem; }
+  .athar-workspace .pdfv-toolbar { padding: 4px; gap: 0 4px; }
+  .athar-workspace .pdfv-view-actions { order: 3; width: 100%; justify-content: space-between; border-top: 1px solid var(--hair); }
+  .athar-workspace .pdfv-utility-actions { justify-content: flex-end; }
+  .athar-workspace .pdfv-utility-actions .tb-label { display: none; }
+  .athar-workspace .pdfv-page { padding: 5px; }
+  .athar-workspace .pdfv-readable { padding: 14px; }
+  .athar-workspace .guide-dock-row { gap: 6px; }
+  .athar-workspace .guide-live-label { display: none; }
+  .athar-workspace .guide-pos { order: 0; }
+  .athar-workspace .guide-transport { order: 1; }
+  .athar-workspace .guide-x { order: 2; }
+  .athar-workspace .guide-cap-wrap { order: 5; flex-basis: 100%; }
+  .athar-workspace .guide-status { order: 3; }
+  .athar-workspace .guide-src { order: 4; margin-left: auto; }
+  .athar-workspace .guide-caption { -webkit-line-clamp: 2; }
+  .athar-workspace .companion-teaser { padding: 12px; }
+  .athar-workspace .workspace-companion .chat-list { max-height: var(--companion-log-height, 360px); }
+}
+/* Short windows prioritize the complete slide; companion/full text scroll below. */
+@media (max-height: 540px) and (min-width: 721px) {
+  .athar-workspace > .top { padding: 3px 24px; min-height: 50px; }
+  .athar-workspace .brand { flex-direction: row; align-items: baseline; gap: 10px; }
+  .athar-workspace .brand-sub { font-size: 0.6rem; }
+  .athar-workspace > .main { padding-top: 8px; }
+  .athar-workspace .deck { gap: 4px; }
+  .athar-workspace .deck-head { gap: 2px 12px; }
+  .athar-workspace .deck-title { font-size: 1.3rem; }
+  .athar-workspace .deck-caption { font-size: 0.68rem; }
+  .athar-workspace .pdfv-toolbar { padding-top: 0; padding-bottom: 0; }
+  .athar-workspace .pdfv-page { padding: 2px; }
+  .athar-workspace .pdfv .guide-dock-row { padding: 1px 8px; gap: 2px 8px; min-height: 46px; }
+  .athar-workspace .pdfv-view-note { padding-top: 4px; padding-bottom: 4px; }
+
+}
+@media (prefers-reduced-motion: reduce) {
+  .athar-workspace *, .athar-workspace *::before, .athar-workspace *::after { scroll-behavior: auto !important; animation-duration: 0.01ms !important; transition-duration: 0.01ms !important; }
+}
+
+.athar-workspace #panel-timeline :is(button, select, summary) { min-height: 44px; min-width: 44px; }

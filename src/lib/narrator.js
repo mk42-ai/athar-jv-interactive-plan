@@ -4,8 +4,7 @@
 //   1. "prebaked"  — /guide-audio/manifest.json (fetched with cache: 'no-store') → the moment's clip file
 //                   (content-hashed name) → bytes fetched → SHA-256 verified against the manifest (and the
 //                   manifest's textSha256 verified against the current script text) → played from a blob URL.
-//   2. "live"      — POST /api/guide/tts (server-side ElevenLabs; On Demand only if ElevenLabs hard-fails).
-//                   Used only when a moment has no pre-baked clip or its integrity check fails.
+//   2. "prebaked"  — the same bytes from the protected API embedded-store fallback, with the same hashes.
 //   3. ERROR       — anything else surfaces as a visible error in the guide bar. There is deliberately NO
 //                   Web Speech (robotic synthetic voice) and NO silent timed fallback any more.
 //
@@ -73,9 +72,10 @@ export function createNarrator() {
   async function manifest() {
     if (!manifestPromise) {
       manifestPromise = fetch(`/guide-audio/manifest.json?t=${Date.now()}`, { cache: 'no-store' })
-        .then((r) => (r.ok ? r.json() : null))
+        .then((r) => { if (!r.ok) throw new Error('Manifest unavailable'); return r.json(); })
         .catch((e) => {
-          log('manifest-error', e?.message);
+          log('manifest-error', e?.name);
+          manifestPromise = null; // Retry must re-fetch after a transient source/network failure.
           return null;
         });
     }
@@ -87,47 +87,27 @@ export function createNarrator() {
     const m = await manifest();
     const entry = m?.clips?.[step.id];
     const textSha = await sha256Hex(step.text);
-    if (entry) {
-      if (textSha && entry.textSha256 && entry.textSha256 !== textSha) {
-        log('prebaked-stale', `${step.id}: script text changed since the clip was baked`);
-      } else {
-        const url = `/guide-audio/${entry.file}`;
-        const res = await fetch(url, { cache: 'force-cache' });
-        if (res.ok) {
-          const buf = await res.arrayBuffer();
-          const type = res.headers.get('content-type') || '';
-          const looksAudio = /audio\/|octet-stream/i.test(type) && !/text\/html/i.test(type);
-          if (!looksAudio) log('prebaked-not-audio', `${step.id}: ${res.status} ${type || 'no content-type'} (${buf.byteLength} B) — static file missing? trying the embedded copy`);
-          const sha = looksAudio ? await sha256Hex(buf) : null;
-          const verified = sha ? sha === entry.sha256 : looksAudio ? null : false;
-          if (verified !== false && buf.byteLength > 1000) {
-            const blob = new Blob([buf], { type: type || 'audio/mpeg' });
-            return {
-              source: 'prebaked',
-              provider: m.provider || 'elevenlabs',
-              model: entry.model || m.model,
-              voice: entry.voice || m.voice,
-              voiceId: entry.voiceId || m.voiceId,
-              file: entry.file,
-              url,
-              sha256: sha,
-              expectedSha256: entry.sha256,
-              verified,
-              status: res.status,
-              contentType: type,
-              bytes: buf.byteLength,
-              label: `ElevenLabs · ${entry.voice || m.voice} · ${entry.model || m.model}`,
-              objectUrl: URL.createObjectURL(blob),
-            };
-          }
-          log('prebaked-integrity-failed', `${step.id}: got ${sha} expected ${entry.sha256}`);
-        } else {
-          log('prebaked-http', `${step.id}: ${res.status}`);
-        }
-      }
-    } else {
-      log('prebaked-missing', step.id);
+    if (!globalThis.crypto?.subtle || !textSha) throw new NarrationError('Secure integrity verification is required for narration.', { step: step.id, stage: 'integrity' });
+    if (!entry || !entry.sha256 || !entry.textSha256 || entry.textSha256 !== textSha) {
+      throw new NarrationError('The verified narration for this moment is missing or out of date.', { step: step.id, stage: 'manifest' });
     }
+    try {
+      const url = `/guide-audio/${entry.file}`;
+      const res = await fetch(url, { cache: 'force-cache' });
+      const type = res.headers.get('content-type') || '';
+      if (res.ok && /audio\//i.test(type)) {
+        const buf = await res.arrayBuffer();
+        const sha = await sha256Hex(buf);
+        if (sha === entry.sha256 && buf.byteLength > 1000) {
+          return { source: 'prebaked', provider: m.provider || 'elevenlabs', model: entry.model || m.model,
+            voice: entry.voice || m.voice, voiceId: entry.voiceId || m.voiceId, file: entry.file, url,
+            sha256: sha, expectedSha256: entry.sha256, verified: true, status: res.status, contentType: type,
+            bytes: buf.byteLength, label: `ElevenLabs · ${entry.voice || m.voice} · ${entry.model || m.model}`,
+            objectUrl: URL.createObjectURL(new Blob([buf], { type })) };
+        }
+        log('prebaked-integrity-failed', step.id);
+      } else log('prebaked-http', `${step.id}: ${res.status}`);
+    } catch (error) { log('prebaked-unavailable', `${step.id}: ${error?.name || 'fetch error'}`); }
     // Embedded-store copy (survives redeploys that dropped the binary) — same bytes, same hash check.
     if (entry) {
       try {
@@ -136,7 +116,7 @@ export function createNarrator() {
         if (res2.ok && /audio\//i.test(type2)) {
           const buf2 = await res2.arrayBuffer();
           const sha2 = await sha256Hex(buf2);
-          if ((sha2 ? sha2 === entry.sha256 : true) && buf2.byteLength > 1000) {
+          if (sha2 === entry.sha256 && buf2.byteLength > 1000) {
             log('prebaked-embedded', `${step.id}: served from the embedded store (${res2.headers.get('x-guide-audio') || 'api'})`);
             return { source: 'prebaked', provider: m.provider || 'elevenlabs', model: entry.model || m.model, voice: entry.voice || m.voice, voiceId: entry.voiceId || m.voiceId, file: entry.file, url: `/api/guide-audio/${entry.file}`, sha256: sha2, expectedSha256: entry.sha256, verified: sha2 ? true : null, status: res2.status, contentType: type2, bytes: buf2.byteLength, label: `ElevenLabs · ${entry.voice || m.voice} · ${entry.model || m.model}`, objectUrl: URL.createObjectURL(new Blob([buf2], { type: 'audio/mpeg' })) };
           }
@@ -148,21 +128,8 @@ export function createNarrator() {
         log('embedded-error', `${step.id}: ${e?.message}`);
       }
     }
-    // Live synthesis through the server proxy (ElevenLabs; On Demand only if ElevenLabs hard-fails).
-    const r = await fetch('/api/guide/tts', { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify({ text: step.text, id: step.id }) });
-    if (!r.ok) {
-      let msg = `HTTP ${r.status}`;
-      try {
-        const j = await r.json();
-        msg = j?.message || j?.error?.message || j?.error || msg;
-      } catch {
-        /* keep msg */
-      }
-      throw new NarrationError(`Narration unavailable — ${msg}`, { step: step.id, stage: 'live-tts', status: r.status });
-    }
-    const j = await r.json();
-    if (!j?.url) throw new NarrationError('Narration unavailable — proxy returned no audio', { step: step.id, stage: 'live-tts' });
-    return { source: j.source === 'prebaked' ? 'prebaked-proxy' : 'live', provider: j.provider, model: j.model, voice: j.voice, file: j.url.split('/').pop(), url: j.url, verified: null, label: j.label || `${j.provider} · ${j.voice}`, objectUrl: null };
+    // Fail visibly instead of changing the provider or using unverified/silent fallbacks.
+    throw new NarrationError('Verified narration is unavailable. Restore the source clip and retry.', { step: step.id, stage: 'integrity' });
   }
 
   function getClip(step) {
@@ -223,7 +190,7 @@ export function createNarrator() {
       };
       current = {
         pause: () => a.pause(),
-        resume: () => a.play().catch((e) => log('resume-rejected', e?.message)),
+        resume: () => { if (settled || a.ended) return; a.play().catch((e) => { if (settled) return; settled = true; cleanup(); reject(new NarrationError('Playback was blocked. Tap Retry to resume.', { step: step.id, stage: 'resume', blocked: true })); }); },
         stop: () => {
           a.pause();
           finish(false);

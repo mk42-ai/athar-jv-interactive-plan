@@ -44,7 +44,6 @@ export function GuideOverlay({ guide }) {
     <div className={`guide-overlay ${spotlight ? 'spot' : 'multi'} kind-${step.kind}`} data-testid="guide-overlay" data-step={step.id} aria-hidden="true">
       {step.boxes.map((b, i) => (
         <div key={`${step.id}-${i}`} className="guide-hl" style={{ left: `${b.x * 100}%`, top: `${b.y * 100}%`, width: `${b.w * 100}%`, height: `${b.h * 100}%` }}>
-          {i === 0 && <span className="guide-tag">{step.label}</span>}
         </div>
       ))}
     </div>
@@ -53,7 +52,7 @@ export function GuideOverlay({ guide }) {
 
 /**
  * Docked player — a slim bar that lives BELOW the slide (a grid row of the viewer, never an overlay), so the
- * whole slide stays visible while narrating. On phones it docks to the bottom edge of the screen. Keeps every
+ * whole slide stays visible while narrating. It remains in document flow on every screen. Keeps every
  * control and test hook of the previous bar: back / play-pause / skip, status, provider badge, exit, retry.
  */
 export function GuideBar({ guide }) {
@@ -63,7 +62,8 @@ export function GuideBar({ guide }) {
   useEffect(() => {
     if (!active) return;
     const onKey = (e) => {
-      if (e.target && /input|textarea/i.test(e.target.tagName)) return;
+      if (e.defaultPrevented || e.altKey || e.ctrlKey || e.metaKey || e.repeat) return;
+      if (e.target?.closest?.('button, a, input, textarea, select, summary, [contenteditable]:not([contenteditable="false"]), [role="button"], [role="slider"], [role="tab"], [role="combobox"]')) return;
       if (e.key === ' ' || e.key === 'k') { e.preventDefault(); guide.playPause(); }
       else if (e.key === 'n' || e.key === ']') { e.preventDefault(); guide.skip(); }
       else if (e.key === 'p' || e.key === '[') { e.preventDefault(); guide.back(); }
@@ -71,31 +71,16 @@ export function GuideBar({ guide }) {
     window.addEventListener('keydown', onKey);
     return () => window.removeEventListener('keydown', onKey);
   }, [active, guide]);
-  // Tell the rest of the page that a docked player is present (mobile: the floating assistants dock moves
-  // up, the deck reserves space) and publish the player's live height as a CSS variable.
+  // Preserve the existing guide-state hook, but reserve no fixed dock space.
   useEffect(() => {
     if (!active) return;
     document.body.dataset.guiding = 'true';
-    const el = rootRef.current;
-    // Phones: the player is fixed to the bottom edge, so bring the viewer to the top of the screen — the
-    // slide then sits well above the player and the reserved page padding keeps it that way.
-    if (typeof window.matchMedia === 'function' && window.matchMedia('(max-width: 720px)').matches) {
-      el?.closest('.pdfv')?.scrollIntoView({ block: 'start', behavior: 'smooth' });
-    }
-    const setH = () => document.documentElement.style.setProperty('--guide-dock-h', `${el ? Math.ceil(el.getBoundingClientRect().height) : 0}px`);
-    setH();
-    const ro = el && typeof ResizeObserver !== 'undefined' ? new ResizeObserver(setH) : null;
-    if (ro && el) ro.observe(el);
-    return () => {
-      ro?.disconnect();
-      delete document.body.dataset.guiding;
-      document.documentElement.style.removeProperty('--guide-dock-h');
-    };
+    return () => { delete document.body.dataset.guiding; };
   }, [active]);
   useEffect(() => setExpanded(false), [step?.id]); // a new moment always starts collapsed
   if (!active || !step) return null;
   const ended = status === 'ended';
-  const statusText = ended ? 'Tour complete' : status === 'error' ? error?.message || 'Narration failed' : status === 'loading' ? 'Preparing voice…' : status === 'paused' ? 'Paused' : 'Narrating';
+  const statusText = ended ? 'Tour complete' : status === 'error' ? error?.message || 'Narration failed' : status === 'loading' ? 'Preparing voice…' : status === 'paused' ? 'Paused' : status === 'breathing' ? 'Next moment…' : 'Narrating';
   return (
     <div
       ref={rootRef}
@@ -121,7 +106,7 @@ export function GuideBar({ guide }) {
         </div>
         <div className="guide-cap-wrap">
           <p className="guide-caption" aria-live="polite" data-testid="guide-caption" title={`${step.label}. ${step.text}`}><b>{step.label}.</b> {step.text}</p>
-          <button className="guide-expand" onClick={() => setExpanded((v) => !v)} aria-expanded={expanded} aria-label={expanded ? 'Collapse narration text' : 'Show full narration text'} data-testid="guide-expand"><Icon name={expanded ? 'up' : 'down'} size={14} /></button>
+          <button className="guide-expand" onClick={() => setExpanded((v) => !v)} aria-expanded={expanded} aria-controls="guide-caption-full" aria-label={expanded ? 'Collapse narration text' : 'Show full narration text'} data-testid="guide-expand"><Icon name={expanded ? 'up' : 'down'} size={14} /></button>
         </div>
         <span className={`guide-status ${status === 'error' ? 'error' : ''}`} data-testid="guide-status" role={status === 'error' ? 'alert' : undefined}>
           {statusText}
@@ -135,7 +120,7 @@ export function GuideBar({ guide }) {
         <button className="guide-x" onClick={guide.stop} aria-label="Exit Guide Mode" data-testid="guide-exit"><Icon name="close" size={13} /></button>
       </div>
       {expanded && (
-        <div className="guide-caption-full" data-testid="guide-caption-full">
+        <div id="guide-caption-full" className="guide-caption-full" data-testid="guide-caption-full">
           <b>{step.label}.</b> {step.text}
         </div>
       )}

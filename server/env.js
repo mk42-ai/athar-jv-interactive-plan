@@ -38,8 +38,10 @@ export function loadDotEnv() {
   if (loaded) return loaded;
   loaded = { files: [], applied: [], source: {} }; // source[KEY] = 'process.env' | '.env' | 'env.local'
   for (const name of Object.keys(process.env)) if (process.env[name]) loaded.source[name] = 'process.env';
-  for (const file of SECRET_FILES) {
-    const p = path.join(ROOT, file);
+  const configuredFile = process.env.ATHAR_CONFIG_FILE;
+  const files = configuredFile ? [configuredFile, ...SECRET_FILES] : SECRET_FILES;
+  for (const file of files) {
+    const p = path.isAbsolute(file) ? file : path.join(ROOT, file);
     try {
       if (!fs.existsSync(p)) continue;
       loaded.files.push(file);
