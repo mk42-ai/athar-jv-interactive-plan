@@ -9,6 +9,45 @@
 > 6-month implementation plan Oct 2026 – Mar 2027 (v1); see `docs/review-workspace.md` → "Public workspace". Sections
 > below that mention a review code, private mode or a missing v13 workbook are historical.
 
+## Chat fix — "zero output" root causes and the plain chat (5 Sept 2026, PR #2)
+
+**What was wrong (reproduced with the dev server and a 12-question battery, upstream calls logged):**
+1. A conversation was bound to an anonymous *client principal* (`X-Athar-Client` from `localStorage`, else IP + user
+   agent). Inside cross-site iframes (storage partitioned/blocked) and behind proxies (changing forwarded IP) the second
+   request carried a different principal → `404 conversation_not_found` → no answer.
+2. Mutating routes enforced a same-origin `Origin`/`Sec-Fetch-Site` check although no cookie existed → a missing or
+   rewritten `Origin` (embedding hosts, proxies) → `403 origin_forbidden` → no answer.
+3. The model had to return a JSON *passage-selection* object that was validated fail-closed (exact quotes, coverage
+   gaps, one repair) → `422 unsupported_fact` or `grounding: unsupported` with zero facts for conversational or loosely
+   phrased questions ("Hello, what can you tell me about this project?"), and the answers that did pass were raw page
+   dumps of thousands of characters, not answers.
+4. A deployment without the provisioned stores (`ATHAR_CORPUS_DIR` / `ATHAR_PRESENTATION_DIR`) returned 503s: the chat
+   was disabled ("No sources are available yet") and the presentation showed a retry state.
+5. A 20-requests-per-minute throttle per IP also counted session creation (shared IPs hit 429).
+
+**What changed (`server/evidenceRoutes.js`, `server/ondemand.js`, `src/components/chat/ChatWidget.jsx`, `src/App.jsx`):**
+- Conversations are keyed by their random id only; an unknown/expired id starts a new one (never 404). No Origin gate
+  (no cookie → no CSRF surface). Throttle: 40 requests/minute per IP.
+- Every question retrieves the most relevant passages from the three documents (`retrieveEvidence`, all documents;
+  overview passages when a question has no lexical match, e.g. greetings; exact saved cells when a cell address is
+  named) and asks On Demand for a concise Markdown answer grounded ONLY in those passages, with a `Sources: [n]` line
+  that becomes structured `citations`. An empty model reply is retried once; if it is still empty, or the AI service
+  fails, the reply is a deterministic digest of the retrieved passages (`grounding.status = "degraded"`); a missing
+  corpus returns an explicit explanation (`"unavailable"`). **An empty answer is never returned.**
+- `GET /api/health` now reports `corpus.provisioned/documents/chunks` and `presentation.available`; every upstream
+  call logs `[ondemand] POST /chat/v1/sessions → HTTP 201 (ms)` / `… /query → HTTP 200 (ms) answerChars=n`, and
+  `ATHAR_DEBUG_UPSTREAM=1` adds the raw bodies (truncated) — never the key.
+- The AI panel is a **plain chat**: a scrollable thread and a text input with a Send button. Scope toggles, starter
+  cards, the document list, the citation side panel, the collapsible rail/splitter/width control and the voice tab are
+  gone (`src/components/voice/*`, `SourceViewer.jsx` and `src/lib/audio.js` deleted; the `/api/voice/*` routes stay
+  server-side). Deep link: `#chat` opens the Ask AI view on phones; `#chat?q=…&q=…` also sends up to three questions on
+  open. Still iframe-embeddable: `Content-Security-Policy: frame-ancestors *`, no `X-Frame-Options`, no cookies.
+- Tests: `tests/publicAccess.test.mjs` pins the new contract (no Origin/client binding, unknown id → new conversation,
+  non-empty answers for model text / empty reply / upstream failure / missing corpus, 40/min throttle).
+- Not changed: the presentation, timeline and narrated guide; the private-store provisioning (`npm run provision`,
+  `ATHAR_PRESENTATION_DIR`). The strict extractive validators (`server/evidenceAnswer.js`, `evidenceSelection.js`,
+  `evidenceCoverage.js`, `sourceQuote.js`) are no longer on the chat path and stay only for their tests/labels.
+
 ## Spatial UI, collapsible AI panel and document-connected AI (5 Sept 2026)
 
 Refinement of the existing workspace — same white · charcoal · gold palette, same playback engine, same evidence pipeline.

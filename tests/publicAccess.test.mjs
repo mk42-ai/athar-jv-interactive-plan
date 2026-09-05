@@ -10,8 +10,9 @@ import path from 'node:path';
 import crypto from 'node:crypto';
 
 // Public workspace: no reviewer code, no login, no session cookie. These tests pin what replaced the gate —
-// open evidence routes, an anonymous per-client conversation principal, same-origin CSRF on mutations,
-// per-IP throttling and single-use media capabilities. Synthetic fixtures only.
+// open evidence routes, conversations identified by their random id only (no client/IP/Origin binding — those
+// produced 404/403 "zero output" inside iframes and behind proxies), a per-IP throttle, single-use media
+// capabilities, and the non-empty grounded answer contract. Synthetic fixtures only; no live model calls.
 async function fixture({ provider } = {}) {
   let now = Date.now();
   const access = createPublicAccess({ signingKey: 'unit-test-signing-value-not-a-real-secret-123456789', clock: () => now });
@@ -50,41 +51,87 @@ test('documents, citations and originals are readable with no sign-in of any kin
   } finally { await f.close(); }
 });
 
-test('mutations still require a same-origin request (CSRF), and no cookie or token is ever issued', async () => {
+test('chat works without an Origin header or client id, and no cookie or token is ever issued', async () => {
   const f = await fixture(); try {
-    for (const origin of ['https://untrusted.invalid', null]) assert.equal((await f.request('/api/chat/session', { origin, body: {} })).status, 403);
+    // No cookie exists, so there is no CSRF surface: a missing or foreign Origin must not block the chat (proxies and
+    // embedded frames rewrite or drop it — that was one of the "no answer" paths).
+    for (const origin of ['https://untrusted.invalid', null]) assert.equal((await f.request('/api/chat/session', { origin, body: {} })).status, 200);
     const ok = await f.request('/api/chat/session', { body: { externalUserId: 'public' } });
     assert.equal(ok.status, 200); assert.equal(ok.headers.get('set-cookie'), null);
     const text = await ok.text(); assert.ok(!/token|passphrase|apikey/i.test(text));
+    assert.match(JSON.parse(text).sessionId, /^[0-9a-f-]{36}$/);
   } finally { await f.close(); }
 });
 
-test('conversations stay attached to the anonymous client that created them', async () => {
-  const f = await fixture({ provider: { isConfigured: () => true, createChatSession: async () => ({ id: 'synthetic-upstream' }), submitQuerySync: async () => ({ answer: '{"selections":[],"calculations":[],"missing":["Not established: nothing"],"unsupported":true,"conflicts":[]}' }) } }); try {
+const plainProvider = (answer = 'The programme budget is **USD 12 million**; approval remains To be agreed. Sources: [1]') => ({
+  isConfigured: () => true, createChatSession: async () => ({ id: 'synthetic-upstream' }), submitQuerySync: async () => ({ answer }),
+});
+
+test('a conversation is identified by its id only: any client, any origin, and an unknown id starts fresh instead of 404', async () => {
+  const f = await fixture({ provider: plainProvider() }); try {
     const created = await (await f.request('/api/chat/session', { client: 'browser-aaaaaaaa', body: {} })).json();
-    const other = await f.request('/api/chat/query', { client: 'browser-bbbbbbbb', body: { sessionId: created.sessionId, mode: 'sync', query: 'budget?' } });
-    assert.equal(other.status, 404, 'another client cannot use this conversation id');
-    const own = await f.request('/api/chat/query', { client: 'browser-aaaaaaaa', body: { sessionId: created.sessionId, mode: 'sync', query: 'budget?' } });
-    assert.ok([200, 422, 502].includes(own.status), `owner reaches the pipeline (status ${own.status})`);
-    // Without the header the principal falls back to client IP + user agent, so a plain browser still works.
-    const plain = await (await f.request('/api/chat/session', { body: {} })).json();
-    assert.ok(plain.sessionId);
+    const other = await f.request('/api/chat/query', { client: 'browser-bbbbbbbb', origin: null, body: { sessionId: created.sessionId, mode: 'sync', query: 'budget?' } });
+    assert.equal(other.status, 200, 'the same conversation id keeps working when the client id / origin changes');
+    const unknown = await f.request('/api/chat/query', { body: { sessionId: crypto.randomUUID(), mode: 'sync', query: 'budget?' } });
+    assert.equal(unknown.status, 200, 'an unknown (e.g. pre-restart) id is accepted as a new conversation');
+    assert.equal((await f.request('/api/chat/query', { body: { sessionId: 'not a session id!', mode: 'sync', query: 'budget?' } })).status, 400);
   } finally { await f.close(); }
 });
 
-test('missing AI provider yields an explicit blocked state, not a canned answer', async () => {
+test('every answer is a non-empty grounded reply: model text, empty model reply, upstream failure and missing corpus', async () => {
+  const f = await fixture({ provider: plainProvider() }); try {
+    const s = await (await f.request('/api/chat/session', { body: {} })).json();
+    const ok = await (await f.request('/api/chat/query', { body: { sessionId: s.sessionId, mode: 'sync', query: 'What is the budget?' } })).json();
+    assert.equal(ok.status, 'done'); assert.match(ok.answer, /USD 12 million/); assert.doesNotMatch(ok.answer, /Sources:/, 'the Sources line becomes structured citations');
+    assert.equal(ok.grounding.status, 'grounded'); assert.equal(ok.citations.length, 1); assert.equal(ok.citations[0].id, 'src-synthetic');
+    assert.match(ok.citations[0].label, /Page 1/);
+    // Streaming clients receive the same result as a single done frame.
+    const stream = await f.request('/api/chat/query', { body: { sessionId: s.sessionId, mode: 'stream', query: 'And the approval?' } });
+    assert.match(stream.headers.get('content-type'), /text\/event-stream/);
+    const frames = (await stream.text()).split('\n\n').filter(Boolean).map((line) => JSON.parse(line.replace(/^data: /, '')));
+    assert.equal(frames[0].type, 'done'); assert.match(frames[0].answer, /USD 12 million/);
+  } finally { await f.close(); }
+  // Empty upstream reply → one retry, then a deterministic digest of the retrieved passages (never blank).
+  let calls = 0;
+  const empty = await fixture({ provider: { ...plainProvider(), submitQuerySync: async () => { calls++; return { answer: '' }; } } }); try {
+    const s = await (await empty.request('/api/chat/session', { body: {} })).json();
+    const r = await empty.request('/api/chat/query', { body: { sessionId: s.sessionId, mode: 'sync', query: 'What is the budget?' } });
+    assert.equal(r.status, 200); const body = await r.json();
+    assert.equal(calls, 2); assert.equal(body.grounding.status, 'degraded'); assert.equal(body.grounding.reason, 'empty_upstream_answer');
+    assert.ok(body.answer.length > 40); assert.match(body.answer, /USD 12 million/, 'the digest carries the retrieved evidence text');
+  } finally { await empty.close(); }
+  // Upstream failure (e.g. HTTP 500 from the AI service) → degraded digest, still HTTP 200 and non-empty.
+  const failing = await fixture({ provider: { ...plainProvider(), submitQuerySync: async () => { throw Object.assign(new Error('upstream 500'), { status: 500 }); } } }); try {
+    const s = await (await failing.request('/api/chat/session', { body: {} })).json();
+    const r = await failing.request('/api/chat/query', { body: { sessionId: s.sessionId, mode: 'sync', query: 'What is the budget?' } });
+    assert.equal(r.status, 200); const body = await r.json();
+    assert.equal(body.grounding.status, 'degraded'); assert.equal(body.grounding.reason, 'upstream_500'); assert.match(body.answer, /USD 12 million/);
+  } finally { await failing.close(); }
+  // Missing corpus → an explicit, non-empty explanation (status "unavailable"), not a 503 blank.
+  const noCorpus = await fixture({ provider: plainProvider() }); try {
+    await fs.rm(path.join(noCorpus.dir, 'index.json'));
+    const s = await (await noCorpus.request('/api/chat/session', { body: {} })).json();
+    const r = await noCorpus.request('/api/chat/query', { body: { sessionId: s.sessionId, mode: 'sync', query: 'What is the budget?' } });
+    assert.equal(r.status, 200); const body = await r.json();
+    assert.equal(body.grounding.status, 'unavailable'); assert.match(body.answer, /not provisioned/);
+  } finally { await noCorpus.close(); }
+});
+
+test('missing AI provider yields an explicit 503 with a human-readable message, not a canned answer', async () => {
   const f = await fixture(); try {
     const s = await (await f.request('/api/chat/session', { body: {} })).json();
     const r = await f.request('/api/chat/query', { body: { sessionId: s.sessionId, mode: 'sync', query: 'What is the budget?' } });
-    assert.equal(r.status, 503); assert.ok(!(await r.text()).includes('USD 12'));
+    assert.equal(r.status, 503); const text = await r.text(); assert.ok(!text.includes('USD 12')); assert.match(text, /ON_DEMAND_API_KEY/);
   } finally { await f.close(); }
 });
 
-test('per-IP throttle protects the evidence routes', async () => {
+test('per-IP throttle protects the evidence routes (40 requests per minute)', async () => {
   const f = await fixture(); try {
-    let limited = false;
-    for (let i = 0; i < 30; i++) { const r = await f.request('/api/chat/session', { body: {} }); if (r.status === 429) { limited = true; break; } }
-    assert.ok(limited, 'rate limit engages within 30 requests in one minute');
+    let limited = null;
+    for (let i = 1; i <= 60; i++) { const r = await f.request('/api/chat/session', { body: {} }); if (r.status === 429) { limited = i; break; } }
+    assert.equal(limited, 41, 'the 41st request within a minute is throttled');
+    f.tick(61_000);
+    assert.equal((await f.request('/api/chat/session', { body: {} })).status, 200, 'the window resets after a minute');
   } finally { await f.close(); }
 });
 

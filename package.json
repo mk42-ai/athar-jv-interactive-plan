@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "private": true,
   "type": "module",
-  "description": "Athar JV \u2014 exact 2-slide presentation (PDF.js), month timeline, compact grounded chat and Advanced Voice Mode; React/Vite client with a server-side On Demand API proxy (apikey never reaches the browser).",
+  "description": "Athar JV — exact 2-slide presentation (PDF.js), month timeline and a plain document-grounded chat; React/Vite client with a server-side On Demand API proxy (apikey never reaches the browser).",
   "scripts": {
     "dev": "vite --host 0.0.0.0 --port 5173",
     "build": "vite build",

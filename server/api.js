@@ -163,10 +163,9 @@ async function runVoiceTurn({ req, send, question, sessionId, externalUserId, si
   try {
     const result = await req.evidenceService.answerQuestion(req, { sessionId, query: question, documentId: 'all' }, signal);
     messageId = result.messageId;
-    // Speak only already-validated source facts; detailed citations remain in the text companion.
-    full = result.evidence.facts.slice(0, 4).map((fact) => fact.text).join(' ');
-    if (result.evidence.missing.length) full += ' ' + result.evidence.missing.join(' ');
-    if (!full.trim()) full = 'The selected evidence does not support an answer to this question.';
+    // Speak the grounded written answer (Markdown stripped); the same text is shown in the chat.
+    full = (req.evidenceService.stripMarkdown ? req.evidenceService.stripMarkdown(result.answer) : String(result.answer || '')).slice(0, 2400);
+    if (!full.trim()) full = 'The documents do not contain an answer to this question.';
     pending = full;
     send({ type: 'delta', text: full });
     const { sentences, rest } = takeSentences(pending);
@@ -235,8 +234,15 @@ export function createApiApp() {
 
   api.get('/health', async (req, res) => {
     res.setHeader('Cache-Control', 'no-store');
+    // Corpus/presentation availability is part of health: a deployment without the provisioned stores is the
+    // first thing to check when the chat answers "not provisioned" or the presentation shows a retry state.
+    let corpus = { provisioned: false, documents: 0 };
+    try { const idx = await loadCorpusIndex({ corpusDir: process.env.ATHAR_CORPUS_DIR }); corpus = { provisioned: true, documents: idx.documents.length, chunks: idx.chunks.length, indexedAt: idx.generatedAt }; }
+    catch (error) { corpus = { provisioned: false, documents: 0, reason: error.code || 'corpus_unavailable' }; }
+    let presentation = { available: true };
+    try { getPresentationData(); } catch { presentation = { available: false, reason: 'presentation_unavailable' }; }
     const body = { ok: true, configured: isConfigured(), build: process.env.ATHAR_BUILD_SHA || 'workspace',
-      checkedAt: new Date().toISOString(), access: 'public', presentationMode: 'public',
+      checkedAt: new Date().toISOString(), access: 'public', presentationMode: 'public', corpus, presentation,
       // No key fragments, provider session identifiers, secret paths, or confidential metadata.
       narration: { provider: 'elevenlabs', voice: 'River', playback: 'verified-prebaked' },
       chatApi: { host: 'https://api.on-demand.io', createSession: 'POST /chat/v1/sessions', submitQuery: 'POST /chat/v1/sessions/{sessionId}/query', responseMode: 'sync', endpointId: CONFIG.endpointId, authHeader: 'apikey', docsVerified: '2026-09-05' } };

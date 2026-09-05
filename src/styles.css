@@ -637,42 +637,16 @@ h1, h2, h3 { font-weight: 500; letter-spacing: -0.01em; }
 .athar-workspace .month-panel-drawer :is(.tb-btn, .disc-btn, .mp-group-btn) { min-width: 44px; min-height: 44px; height: auto; }
 .athar-workspace .month-panel-drawer .disc-panel[inert] { visibility: hidden; }
 
-/* Source-grounded conversation, scoped to the existing companion (the review-access gate has been removed). */
-.athar-workspace .chat-context { display: grid; gap: 8px; padding: 12px 14px; border-bottom: 1px solid var(--hair); }
-.athar-workspace .chat-context label { font-size: 0.73rem; font-weight: 600; color: var(--review-muted); }
-.athar-workspace .chat-context select { width: 100%; min-width: 0; padding: 8px; border-radius: 6px; border: 1px solid var(--hair-2); background: #fff; font-size: 0.83rem; color: var(--ink); }
-.athar-workspace .chat-slide-context { display: flex; align-items: center; justify-content: space-between; gap: 8px; padding: 0 9px; background: var(--gold-soft); border-radius: 6px; font-size: 0.78rem; }
-.athar-workspace .chat-slide-context button { font-size: 0.73rem; text-decoration: underline; text-underline-offset: 3px; }
-.athar-workspace .chat-documents { padding: 0 14px 8px; border-bottom: 1px solid var(--hair); }
-.athar-workspace .chat-documents > summary { display: flex; align-items: center; gap: 6px; font-size: 0.79rem; font-weight: 600; cursor: pointer; }
-.athar-workspace .chat-documents > summary::before { content: '+'; color: var(--review-gold); }
-.athar-workspace .chat-documents[open] > summary::before { content: '−'; }
-.athar-workspace .chat-documents ul { list-style: none; margin: 0; padding: 0; }
-.athar-workspace .chat-document { padding: 12px 0; border-top: 1px solid var(--hair); }
-.athar-workspace .chat-document h3 { font-family: var(--sans); font-size: 0.86rem; line-height: 1.45; margin: 0 0 5px; }
-.athar-workspace .chat-document p { font-size: 0.76rem; line-height: 1.5; margin: 6px 0; color: var(--review-muted); }
-.athar-workspace .chat-document .document-status { display: inline-block; color: var(--review-gold); background: var(--gold-soft); border-radius: 4px; padding: 2px 6px; font-size: 0.7rem; text-transform: capitalize; }
-.athar-workspace .chat-document[data-status="error"] .document-status, .athar-workspace .chat-document[data-status="failed"] .document-status { color: #8f342a; background: #fbebe8; }
-.athar-workspace .document-actions { display: flex; gap: 8px; flex-wrap: wrap; margin-top: 8px; }
-.athar-workspace .chat-service-error { display: grid; gap: 8px; padding: 12px 14px; color: #8f342a; font-size: 0.83rem; }
-.athar-workspace .chat-widget .chat-list { padding: 14px; height: var(--companion-log-height, 360px); min-height: 220px; max-height: 640px; overflow-y: auto; overscroll-behavior: contain; }
-.athar-workspace .chat-empty { gap: 12px; }
-.athar-workspace .chat-empty .chips { display: grid; gap: 8px; }
-.athar-workspace .chat-empty .chip { border-radius: 6px; padding: 10px 12px; min-height: 44px; font-size: 0.82rem; }
+/* Plain chat panel: a scrollable thread and a text input with a Send button — nothing else. */
+.athar-workspace .chat-widget .chat-list { padding: 14px; height: clamp(320px, calc(100vh - 300px), 760px); min-height: 260px; overflow-y: auto; overscroll-behavior: contain; }
+.athar-workspace .chat-empty { margin: 0; color: var(--review-muted); font-size: 0.86rem; line-height: 1.6; }
 .athar-workspace .chat-widget .bubble { max-width: 100%; font-size: 0.9rem; line-height: 1.65; }
-.athar-workspace .chat-widget .msg-meta { color: var(--review-muted); text-transform: none; font-size: 0.72rem; letter-spacing: 0; }
-.athar-workspace .chat-citations { display: flex; gap: 6px; flex-wrap: wrap; margin-top: 10px; }
-.athar-workspace .chat-citation-button { display: inline-flex; align-items: center; padding: 6px 9px; gap: 4px; border: 1px solid var(--hair-2); background: var(--paper-2); color: var(--review-gold); border-radius: 5px; text-align: left; font-size: 0.75rem; }
-.athar-workspace .chat-citation-button[aria-expanded="true"] { border-color: var(--review-gold); background: var(--gold-soft); }
-.athar-workspace .citation-panel { border-top: 1px solid var(--hair-2); border-bottom: 1px solid var(--hair-2); padding: 14px; background: var(--paper-2); min-width: 0; overflow-wrap: anywhere; }
-.athar-workspace .citation-panel header { display: flex; justify-content: space-between; align-items: flex-start; gap: 8px; }
-.athar-workspace .citation-panel h3 { margin: 0; font-size: 0.98rem; }
-.athar-workspace .citation-panel .citation-location { font-size: 0.78rem; color: var(--review-muted); }
-.athar-workspace .citation-panel blockquote { margin: 12px 0; border-left: 2px solid var(--review-gold); padding-left: 12px; font-size: 16px; line-height: 1.7; white-space: pre-wrap; }
-.athar-workspace .citation-records { font-size: 0.8rem; white-space: pre-wrap; overflow-wrap: anywhere; }
+.athar-workspace .chat-widget .msg.user .bubble { max-width: 92%; }
+.athar-workspace .chat-widget .md-h { font-weight: 600; margin: 8px 0 4px; }
+.athar-workspace .chat-widget .msg-meta { color: var(--review-muted); text-transform: none; font-size: 0.72rem; letter-spacing: 0; line-height: 1.5; }
+.athar-workspace .chat-widget .msg-error { margin-top: 8px; padding: 0; border: 0; background: transparent; justify-content: flex-start; }
 .athar-workspace .chat-widget .chat-input { grid-template-columns: minmax(0, 1fr) auto; padding: 12px 14px; align-items: end; }
 .athar-workspace .chat-input textarea { min-width: 0; min-height: 60px; max-height: 180px; font-size: 16px; resize: vertical; }
-.athar-workspace .chat-context-note { margin: 0; padding: 0 14px 12px; font-size: 0.7rem; color: var(--review-muted); }
 
 @media (max-width: 1100px) {
   .athar-workspace .presentation-workspace.has-companion { grid-template-columns: minmax(0, 1fr); }
@@ -819,7 +793,6 @@ h1, h2, h3 { font-weight: 500; letter-spacing: -0.01em; }
   .athar-workspace .guide-status { padding-left: 12px; font-size: .65rem; }
   .athar-workspace .pdfv-thumbs { display: none; }
   .athar-workspace .workspace-companion .chat-list { height: clamp(220px, 36dvh, 380px); max-height: none; }
-  .athar-workspace .chat-context select { font-size: 16px; }
   .athar-workspace .workspace-companion .widget-head h2 { font-size: 1.4rem; }
   .athar-workspace .tab-panel { animation: none; }
 }
@@ -832,9 +805,6 @@ h1, h2, h3 { font-weight: 500; letter-spacing: -0.01em; }
 .athar-workspace .chat-scope-options span { display: flex; justify-content: center; align-items: center; width: 100%; min-height: 44px; border: 1px solid transparent; border-radius: 4px; font-size: .74rem; cursor: pointer; }
 .athar-workspace .chat-scope-options input:checked + span { background: #fff; color: var(--ink); border-color: var(--hair-2); box-shadow: 0 1px 3px rgba(28, 26, 22, .03); }
 .athar-workspace .chat-scope-options input:focus-visible + span { outline: 2px solid var(--review-gold); outline-offset: 2px; }
-.athar-workspace .chat-empty .chip { text-align: left; line-height: 1.5; color: var(--ink-2); background: #fff; border-color: var(--hair-2); }
-.athar-workspace .chat-empty .chip:hover { background: #fcfaf5; border-color: var(--review-gold); }
-.athar-workspace .citation-panel { position: relative; inset: auto; overflow: visible; max-width: 100%; }
 
 /* Readable gold text and text-bearing hover surfaces; decorative gold stays unchanged. */
 .athar-workspace :is(.eyebrow, .tb-zoom, .thumb-n, .gate-mark b, .badge.done, .disc-title, .gate-week, .month-ordinal, .section-title, .stat.done b, .stat.gate b, .link-btn, .tb-btn.on) { color: var(--review-gold); }
@@ -945,11 +915,10 @@ h1, h2, h3 { font-weight: 500; letter-spacing: -0.01em; }
 .athar-workspace .companion-switcher .dock-btn.active { background: #fff; border-color: var(--edge-2); box-shadow: var(--elev-1); }
 .athar-workspace .companion-resize { background: transparent; border-bottom: 1px solid var(--edge); }
 .athar-workspace .month-panel-drawer { border-radius: var(--radius); }
-.athar-workspace .citation-panel { border-radius: 0; border-left: 0; border-right: 0; box-shadow: none; background: rgba(255, 255, 255, 0.45); }
-.athar-workspace .btn, .athar-workspace .chip, .athar-workspace .chat-context select, .athar-workspace .chat-input textarea { border-color: var(--edge-2); border-radius: var(--radius-s); background: rgba(255, 255, 255, 0.85); transition: border-color var(--t-fast), box-shadow var(--t-fast), background var(--t-fast), transform var(--t-fast) var(--ease-out); }
+.athar-workspace .btn, .athar-workspace .chip, .athar-workspace .chat-input textarea { border-color: var(--edge-2); border-radius: var(--radius-s); background: rgba(255, 255, 255, 0.85); transition: border-color var(--t-fast), box-shadow var(--t-fast), background var(--t-fast), transform var(--t-fast) var(--ease-out); }
 .athar-workspace :is(.btn, .chip):hover:not(:disabled) { box-shadow: var(--elev-1); border-color: rgba(182, 138, 53, 0.55); }
 .athar-workspace :is(.btn, .chip):active:not(:disabled) { transform: translateY(1px); }
-.athar-workspace .chat-input textarea:focus, .athar-workspace .chat-context select:focus { border-color: var(--gold); box-shadow: 0 0 0 3px var(--gold-glow); outline: none; }
+.athar-workspace .chat-input textarea:focus { border-color: var(--gold); box-shadow: 0 0 0 3px var(--gold-glow); outline: none; }
 .athar-workspace .msg.assistant .bubble { background: rgba(255, 255, 255, 0.7); border-color: var(--edge); border-left: 2px solid var(--gold); border-radius: var(--radius-s); box-shadow: var(--elev-1); }
 .athar-workspace .msg.user .bubble { border-radius: var(--radius-s); border-bottom-right-radius: 4px; box-shadow: 0 10px 24px -14px rgba(23, 24, 26, 0.5); }
 .athar-workspace .chat-scope-options { background: rgba(255, 255, 255, 0.4); border-color: var(--edge); border-radius: var(--radius-s); }
@@ -1045,9 +1014,6 @@ h1, h2, h3 { font-weight: 500; letter-spacing: -0.01em; }
 .athar-workspace .md-h-conflict + ul li { border-left: 2px solid rgba(143, 52, 42, 0.45); padding-left: 8px; }
 .athar-workspace .md-h-missing + ul li { color: var(--review-muted); }
 .athar-workspace .md-h-derived + ul li { font-variant-numeric: tabular-nums; }
-.athar-workspace .chat-citations { display: grid; gap: 6px; margin-top: 12px; }
-.athar-workspace .chat-citation-button { display: grid; grid-template-columns: auto minmax(0, 1fr) auto; align-items: center; gap: 10px; width: 100%; padding: 7px 10px; border-radius: var(--radius-s); border: 1px solid var(--edge); background: rgba(255, 255, 255, 0.7); color: var(--ink); font-size: .76rem; text-align: left; transition: border-color var(--t-fast), box-shadow var(--t-fast), background var(--t-fast); }
-.athar-workspace .chat-citation-button:hover, .athar-workspace .chat-citation-button[aria-expanded="true"] { border-color: rgba(182, 138, 53, 0.55); background: #fff; box-shadow: var(--elev-1); }
 .athar-workspace .cite-n { display: inline-grid; place-items: center; width: 20px; height: 20px; border-radius: 50%; background: var(--ink); color: #fff; font-family: var(--mono); font-size: .62rem; }
 .athar-workspace .cite-label { min-width: 0; overflow-wrap: anywhere; }
 .athar-workspace .cite-action { white-space: nowrap; font-size: .68rem; letter-spacing: .04em; text-transform: uppercase; color: var(--review-gold); font-weight: 600; }
@@ -1060,8 +1026,6 @@ h1, h2, h3 { font-weight: 500; letter-spacing: -0.01em; }
 .athar-workspace .chat-document[data-status="missing"] .document-status { color: #8a5a10; background: #fdf3df; box-shadow: inset 0 0 0 1px rgba(138, 106, 31, 0.3); }
 .athar-workspace .chat-document[data-status="ready"] .document-status { color: #2f6a4a; background: #e9f4ee; }
 .athar-workspace .document-missing-note { font-size: .74rem; color: var(--review-muted); font-style: italic; }
-.athar-workspace .chat-empty .chip { background: rgba(255, 255, 255, 0.75); }
-.athar-workspace .chat-empty .chip::before { content: "→ "; color: var(--review-gold); }
 
 /* Phone: in-flow information sheet (no floating menu), Bento spacing kept. */
 @media (max-width: 720px) {

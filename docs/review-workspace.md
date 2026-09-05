@@ -174,3 +174,15 @@ only (`ON_DEMAND_API_KEY` in the host environment or the git-ignored `.env`).
 Corpus: exactly three documents — the Financial Model Executive Summary (3) PDF, the financial model v13 workbook and
 the 6-month implementation plan Oct 2026 – Mar 2027 (v1). The executive deck is presented, but it is no longer a
 corpus document: "Ask this slide" searches all three documents with the slide number in the question.
+
+## Plain chat and the grounded-answer contract (5 Sept 2026)
+
+The companion is now a single plain chat (thread + input + Send). `POST /api/chat/session` mints a random conversation
+id; `POST /api/chat/query {sessionId, query, mode:"sync"}` returns `{answer, citations[], grounding, messageId}` where
+`answer` is always non-empty: a concise Markdown answer grounded in retrieved passages of the three documents
+(`grounding.status = "grounded"`), a digest of the retrieved passages when the model returned nothing or the AI service
+failed (`"degraded"`, with `reason`), or an explicit explanation when the corpus is not provisioned (`"unavailable"`).
+Conversations are not bound to a client, IP, cookie or Origin — an unknown id starts a new conversation — because those
+bindings were the "no answer" paths inside embedded frames and behind proxies. Upstream status codes and latency are
+logged for every On Demand call; `ATHAR_DEBUG_UPSTREAM=1` also logs raw bodies. The voice widget and the citation
+source viewer are removed from the UI; `/api/voice/*`, `/api/citations/*` and `/api/sources/*` remain as API routes.

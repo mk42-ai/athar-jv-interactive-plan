@@ -39,8 +39,22 @@ function headers(extra = {}) {
   return { apikey: key, 'Content-Type': 'application/json', ...extra };
 }
 
-async function asJson(res, what) {
+// ---- Upstream call log -------------------------------------------------------
+// Every On Demand call logs its HTTP status, latency and answer length so a "zero output" report can be
+// traced to the exact upstream reply. ATHAR_DEBUG_UPSTREAM=1 additionally logs the RAW response body
+// (truncated) — never the apikey, which is a request header and is never echoed by these lines.
+const DEBUG_UPSTREAM = () => /^(1|true|yes)$/i.test(String(process.env.ATHAR_DEBUG_UPSTREAM || ''));
+export function logUpstream(what, res, text, startedAt) {
+  const ms = startedAt ? Date.now() - startedAt : null;
+  let answerChars = null;
+  try { const parsed = JSON.parse(text); if (typeof parsed?.data?.answer === 'string') answerChars = parsed.data.answer.length; } catch {}
+  console.log(`[ondemand] ${what} → HTTP ${res.status}${ms != null ? ` (${ms} ms)` : ''}${answerChars != null ? ` answerChars=${answerChars}` : ''}${res.ok ? '' : ' ← UPSTREAM ERROR'}`);
+  if (DEBUG_UPSTREAM() || !res.ok) console.log(`[ondemand] ${what} raw body: ${String(text || '').slice(0, 4000)}${text && text.length > 4000 ? ` …(${text.length} chars)` : ''}`);
+}
+
+async function asJson(res, what, startedAt = null) {
   const text = await res.text();
+  logUpstream(what, res, text, startedAt);
   let body;
   try {
     body = text ? JSON.parse(text) : {};
@@ -86,17 +100,19 @@ export async function probeOnDemand({ force = false } = {}) {
 
 // ---- Chat API -------------------------------------------------------------
 export async function createChatSession(externalUserId, pluginIds = []) {
+  const t0 = Date.now();
   const res = await fetch(`${API}/chat/v1/sessions`, {
     method: 'POST',
     headers: headers(),
     body: JSON.stringify({ externalUserId, pluginIds }),
   });
-  const body = await asJson(res, 'createChatSession'); // 200/201 → { message, data: { id, ... } }
+  const body = await asJson(res, 'POST /chat/v1/sessions', t0); // 201 → { message, data: { id, ... } }
   return body.data;
 }
 
 export async function submitQuerySync(sessionId, query, { fulfillmentPrompt, temperature = 0.2, signal } = {}) {
   const timeout = AbortSignal.timeout(90000);
+  const t0 = Date.now();
   const res = await fetch(`${API}/chat/v1/sessions/${encodeURIComponent(sessionId)}/query`, {
     method: 'POST',
     headers: headers(),
@@ -109,7 +125,7 @@ export async function submitQuerySync(sessionId, query, { fulfillmentPrompt, tem
     }),
     signal: signal && AbortSignal.any ? AbortSignal.any([signal, timeout]) : timeout,
   });
-  const body = await asJson(res, 'submitQuery');
+  const body = await asJson(res, 'POST /chat/v1/sessions/{id}/query', t0);
   return body.data; // { sessionId, messageId, answer, status }
 }
 
