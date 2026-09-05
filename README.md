@@ -33,6 +33,10 @@ Refinement of the existing workspace — same white · charcoal · gold palette,
   is public), writes a slug-pinned manifest and runs the offline ingestion into `ATHAR_CORPUS_DIR`. The executive deck may be
   provisioned as its exact 2-page PDF rendering when the PPTX is unavailable (`slide N = page N`; recorded as a limitation and
   shown as an alternate original in the AI panel).
+- **Embeddable in preview panels.** Responses send `Content-Security-Policy: frame-ancestors *` (configurable via
+  `ATHAR_FRAME_ANCESTORS`) instead of `X-Frame-Options: SAMEORIGIN`, and the reviewer cookie is `SameSite=None; Secure`
+  on HTTPS (`ATHAR_COOKIE_SAMESITE` to pin `lax`/`strict`), so the workspace loads and signs in inside an embedded
+  iframe as well as in a top-level tab. Mutating routes keep their same-origin CSRF check.
 - **On Demand integration verified against the live public API docs (5 Sept 2026).** `POST https://api.on-demand.io/chat/v1/sessions`
   (`apikey` header, `{externalUserId, pluginIds}` → `data.id`) and `POST /chat/v1/sessions/{sessionId}/query`
   (`{query, endpointId, responseMode: "sync", fulfillmentOnly, modelConfigs: {fulfillmentPrompt, temperature}}` → `data.answer`,

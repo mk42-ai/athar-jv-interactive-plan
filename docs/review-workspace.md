@@ -33,7 +33,7 @@ The extractor deduplicates by whole-file SHA256, preserves immutable originals, 
 
 ## Access boundary
 
-`POST /api/access` requires the separate reviewer code and a same-origin request, sets a signed HttpOnly SameSite=Strict cookie (Secure over HTTPS), and retains a bounded six-hour server session. Eight failed attempts trigger throttling. `DELETE /api/access` revokes it. No provider credential enters the client.
+`POST /api/access` requires the separate reviewer code and a same-origin request, sets a signed HttpOnly cookie — `SameSite=None; Secure` over HTTPS so the session also works when the workspace is embedded in a preview panel (iframe); `Lax` on a plain-HTTP dev host; `ATHAR_COOKIE_SAMESITE` can pin `lax`/`strict` — and retains a bounded six-hour server session. Eight failed attempts trigger throttling. `DELETE /api/access` revokes it. No provider credential enters the client.
 
 Document status, chat sessions/questions, citations and originals require review access. Conversation IDs belong to their authenticated principal. Missing, expired or forged access is rejected; mutation routes enforce same-origin/CSRF checks. Original download routes resolve only allowlisted immutable source IDs and rehash the original bytes. Source/citation responses are private/no-store. Voice calls share the same authorization and evidence answer path; audio callbacks use short-lived, single-media signed capabilities. Legacy arbitrary upstream execution/STT diagnostic entrypoints are closed.
 
@@ -102,3 +102,22 @@ semantics end to end (retrieval maps `slide N` to page N; `evidenceAnswer.descri
 protected input directory, pins slugs in a manifest and runs `ingest_documents.py`. Signed URLs stay in the host environment.
 `GET /api/health?probe=1` (reviewer session) runs the live key probe (create + read session) and returns booleans/status codes
 only. Tests: `tests/documentRegistry.test.mjs` covers registry merging, URL redaction, paged-deck slide scoping and labels.
+
+## Embedding in preview panels (5 Sept 2026)
+
+The deployed preview was reported as "refused to connect". Top-level navigation always worked; the failure was the
+platform's *embedded* preview: every response carried `X-Frame-Options: SAMEORIGIN`, which makes Chromium render
+"refused to connect" for any cross-origin `<iframe>`, and the reviewer cookie was `SameSite=Strict`, which a browser
+never sends from a third-party frame. Both are now configurable at the host boundary (no client code involved):
+
+- `Content-Security-Policy: frame-ancestors <ATHAR_FRAME_ANCESTORS | *>` replaces `X-Frame-Options` (removed on every
+  response). Default `*` allows any embedder; set a CSP source list to restrict.
+- The session cookie is `SameSite=None; Secure` on HTTPS (or `X-Forwarded-Proto: https`), `Lax` on plain HTTP, or the
+  value pinned by `ATHAR_COOKIE_SAMESITE`. CSRF protection remains the same-origin `Origin`/`Sec-Fetch-Site` check on
+  every mutating route, so the relaxed SameSite does not weaken it.
+- The login shell detects a framed context and offers "open the workspace in a new tab"; after a successful sign-in it
+  re-checks `GET /api/access` and says so explicitly when the browser dropped the cookie (Safari/ITP and browsers with
+  third-party cookies disabled still block cookies inside cross-site frames — the new-tab link is the fallback there).
+
+Tests: `tests/access.test.mjs` covers the SameSite matrix (HTTPS → `None; Secure`, HTTP → `Lax`, pinned modes), the
+CSP header on every response and the absence of `X-Frame-Options`.

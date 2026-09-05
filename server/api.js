@@ -205,10 +205,17 @@ export function createApiApp() {
   const api = express.Router();
   const access = createAccessControl();
   const evidence = createEvidenceRoutes({ access });
+  // Frame policy. The review workspace is opened inside embedded preview panels (cross-origin iframes),
+  // where the former `X-Frame-Options: SAMEORIGIN` made browsers render "refused to connect". X-Frame-Options
+  // has no allow-list form, so the modern CSP `frame-ancestors` directive replaces it: `*` by default
+  // (any embedder), or a space-separated allow-list via ATHAR_FRAME_ANCESTORS (e.g. "'self' https://app.example").
+  // Clickjacking exposure is bounded because every confidential route still requires the reviewer session.
+  const frameAncestors = String(process.env.ATHAR_FRAME_ANCESTORS || '*').trim() || '*';
   app.use((req, res, next) => {
     res.setHeader('X-Content-Type-Options', 'nosniff');
     res.setHeader('Referrer-Policy', 'no-referrer');
-    res.setHeader('X-Frame-Options', 'SAMEORIGIN');
+    res.removeHeader('X-Frame-Options');
+    res.setHeader('Content-Security-Policy', `frame-ancestors ${frameAncestors}`);
     next();
   });
   api.use('/access', access.router);
