@@ -1,52 +1,22 @@
-// Standalone production server: serves the Vite build from ./dist and mounts the
-// same On Demand API proxy used by the dev server. `npm run build && npm start`.
+// Standalone supported runtime: compiled React app + the same server-side API as Vite.
 import express from 'express';
 import path from 'node:path';
 import fs from 'node:fs';
 import { fileURLToPath } from 'node:url';
 import { createApiApp } from './api.js';
-import { privatePresentation } from './privatePresentation.js';
-import { onDemandKey } from './env.js';
-import { deckPdfMiddleware } from './deck.js';
-import { guideAudioMiddleware, rehydrateGuideAudio } from './guideAudioStore.js';
-
-const __dirname = path.dirname(fileURLToPath(import.meta.url));
-const dist = path.resolve(__dirname, '../dist');
+const dist = path.resolve(path.dirname(fileURLToPath(import.meta.url)), '../dist');
 const port = Number(process.env.PORT || 5173);
-// Deliberate startup mode for isolated previews; npm start keeps production protections.
-const presentationPreview = process.argv.includes('--presentation-preview');
-
 const app = express();
 app.disable('x-powered-by');
-app.use((req, res, next) => {
-  if (/^\/(?:\.env|env\.local|\.private|\.git|\.creds|originals|raw|protected|corpus|server|scripts|tests|src|data)(?:[/.]|$)/i.test(req.path)) {
-    return res.status(404).set('Cache-Control', 'no-store').json({ code: 'not_found' });
-  }
-  next();
+app.use(createApiApp());
+// Explicit build asset allowlist. Never expose the project/workspace or old public folders.
+const assets = path.join(dist, 'assets');
+const allowedAssets = new Set(fs.existsSync(assets) ? fs.readdirSync(assets).filter(name => /^[A-Za-z0-9_.-]+$/.test(name) && fs.lstatSync(path.join(assets, name)).isFile() && !fs.lstatSync(path.join(assets, name)).isSymbolicLink()) : []);
+app.get('/assets/:name', (req, res) => {
+  if (!allowedAssets.has(req.params.name)) return res.status(404).json({ code: 'not_found' });
+  res.set('Cache-Control', 'public, max-age=31536000, immutable').sendFile(path.join(assets, req.params.name));
 });
-const apiApp = createApiApp({ presentationPreview });
-app.use(apiApp);
-app.use(privatePresentation(apiApp.locals.reviewAccess, { presentationPreview }));
-app.use(['/deck', '/guide-audio'], apiApp.locals.presentationReadAccess);
-rehydrateGuideAudio({ staticDir: 'dist' });
-app.use(guideAudioMiddleware({ staticDir: 'dist' }));
-app.use(deckPdfMiddleware({ staticDir: 'dist' }));
-if (fs.existsSync(dist)) {
-  app.use(
-    express.static(dist, {
-      index: 'index.html',
-      maxAge: process.env.ATHAR_PRIVATE_PRESENTATION === '1' ? 0 : '1h',
-      setHeaders(res, filePath) {
-        if (process.env.ATHAR_PRIVATE_PRESENTATION === '1') { res.setHeader('Cache-Control', 'private, no-store'); return; }
-        if (/guide-audio[\\/]manifest\.json$/.test(filePath)) res.setHeader('Cache-Control', 'no-store, must-revalidate');
-        else if (/guide-audio[\\/].+\.mp3$/.test(filePath)) res.setHeader('Cache-Control', 'public, max-age=31536000, immutable');
-      },
-    }),
-  );
-  app.get('*', (req, res) => res.sendFile(path.join(dist, 'index.html')));
-} else {
-  app.get('*', (req, res) => res.status(503).send('Build missing — run `npm run build` first.'));
-}
-app.listen(port, '0.0.0.0', () => {
-  console.log(`athar-jv app listening on http://0.0.0.0:${port} (On Demand key configured: ${Boolean(onDemandKey())})`);
-});
+app.get(['/', '/index.html'], (req, res) => fs.existsSync(path.join(dist, 'index.html')) ? res.set('Cache-Control', 'no-store').sendFile(path.join(dist, 'index.html')) : res.status(503).send('Build unavailable.'));
+app.get('/favicon.ico', (req,res) => res.status(204).end());
+app.use((req, res) => res.status(404).json({ code: 'not_found', message: 'Resource not found.' }));
+app.listen(port, '0.0.0.0', () => console.log('Athar document workspace listening on port ' + port));

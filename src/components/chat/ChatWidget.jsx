@@ -1,6 +1,5 @@
 import React, { useCallback, useEffect, useRef, useState } from 'react';
 import { streamChat, getCitation } from '../../lib/api.js';
-import AccessGate from '../AccessGate.jsx';
 import SourceViewer from './SourceViewer.jsx';
 
 // Minimal, dependency-free Markdown rendering (bold, inline code, bullets, numbered lists, headings).
@@ -81,8 +80,7 @@ const coverageSummary = (doc) => {
   return `${Array.isArray(c.sheets) ? c.sheets.length : 0} sheets · ${(c.cellCount || 0).toLocaleString()} cells · ${(c.formulaCount || 0).toLocaleString()} formulas${c.missingFormulaCaches ? ` · ${c.missingFormulaCaches} missing saved results` : ''}`;
 };
 const documentStatus = (doc) => typeof doc.status === 'string' ? doc.status : doc.status?.state || doc.status?.status || 'Unknown';
-const isAuthError = (e) => e?.status === 401 || e?.code === 'unauthorized' || e?.code === 'access_required';
-export default function ChatWidget({ open, onClose, ensureSession, session, resetSession, configured, serviceError, onRetryService, access, onUnlock, onRetryAccess, onAuthRequired, documents = [], documentsLoading, documentsError, onRefreshDocuments, onRetryDocuments, askRequest }) {
+export default function ChatWidget({ open, onClose, ensureSession, session, resetSession, configured, serviceError, onRetryService, onOpenSource, activeDocumentId, documents = [], documentsLoading, documentsError, onRefreshDocuments, onRetryDocuments, askRequest }) {
   const [messages, setMessages] = useState([]);
   const [input, setInput] = useState('');
   const [busy, setBusy] = useState(false);
@@ -100,25 +98,15 @@ export default function ChatWidget({ open, onClose, ensureSession, session, rese
   const requestSeen = useRef(null);
   const focusCitationRef = useRef(null);
   const citationVersion = useRef(0);
-  const authenticatedRef = useRef(Boolean(access?.authenticated));
-  authenticatedRef.current = Boolean(access?.authenticated);
 
   useEffect(() => {
-    if (!open || !access?.authenticated || window.matchMedia('(max-width: 640px)').matches) return;
+    if (!open || window.matchMedia('(max-width: 640px)').matches) return;
     const timer = setTimeout(() => {
       inputRef.current?.focus({ preventScroll: true });
       if (window.matchMedia('(max-width: 1100px)').matches) inputRef.current?.scrollIntoView({ block: 'nearest', behavior: 'auto' });
     }, 0);
     return () => clearTimeout(timer);
-  }, [open, access?.authenticated]);
-  useEffect(() => {
-    if (!access?.authenticated) {
-      abortRef.current?.abort();
-      setMessages([]);
-      setCitationState(null);
-      citationVersion.current++;
-    }
-  }, [access?.authenticated]);
+  }, [open]);
   useEffect(() => () => { abortRef.current?.abort(); citationVersion.current++; }, []);
   useEffect(() => {
     if (!open) return;
@@ -152,11 +140,17 @@ export default function ChatWidget({ open, onClose, ensureSession, session, rese
     citationPanelRef.current?.scrollIntoView({ block: 'nearest', behavior: 'auto' });
   }, [citationState?.id]); // Restoring the Ask AI view must not jump to a previously opened citation.
 
+  useEffect(() => {
+    if (documentId !== 'all' && activeDocumentId && documents.some(d => d.id === activeDocumentId)) {
+      setDocumentId(activeDocumentId); setDocumentSlug(null); setLastDocumentId(activeDocumentId); setSlide(null);
+    }
+  }, [activeDocumentId]);
+
   const selectedDocument = documents.find((d) => d.id === documentId);
   const sourceMissing = !documentId || (documentId !== 'all' && !selectedDocument);
   const sourceUnavailable = selectedDocument && /^(error|failed|pending|queued|processing|ingesting|indexing|loading|unavailable)$/i.test(documentStatus(selectedDocument));
   const allUnavailable = documentId === 'all' && documents.length > 0 && documents.every((d) => /^(error|failed|pending|queued|processing|ingesting|indexing|loading|unavailable)$/i.test(documentStatus(d)));
-  const disabled = !access?.authenticated || configured !== true || sourceMissing || sourceUnavailable || allUnavailable || documents.length === 0;
+  const disabled = configured !== true || sourceMissing || sourceUnavailable || allUnavailable || documents.length === 0;
   const patch = (id, fn) => setMessages((prev) => prev.map((m) => m.id === id ? { ...m, ...fn(m) } : m));
   const prefill = (text) => { setInput(text); inputRef.current?.focus({ preventScroll: true }); };
   const chooseDocument = (id) => {
@@ -195,19 +189,17 @@ export default function ChatWidget({ open, onClose, ensureSession, session, rese
       await streamChat({
         sessionId: s.sessionId, query, voice: false, documentId: context.documentId, slide: context.slide, signal: ac.signal,
         onEvent: (ev) => {
-          if (ac.signal.aborted || !authenticatedRef.current) return;
+          if (ac.signal.aborted) return;
           if (ev.type === 'delta') patch(botId, (m) => ({ text: m.text + (ev.text || ''), status: 'streaming' }));
           else if (ev.type === 'done') patch(botId, (m) => ({ text: typeof ev.answer === 'string' ? ev.answer : m.text, status: 'done', messageId: ev.messageId, citations: Array.isArray(ev.citations) ? ev.citations : [], grounding: ev.grounding || null }));
           else if (ev.type === 'metrics') patch(botId, () => ({ metrics: ev.metrics }));
           else if (ev.type === 'error') {
-            if (isAuthError(ev)) onAuthRequired?.();
             patch(botId, () => ({ status: 'error', error: ev.message || 'The request could not be completed.' }));
           }
         },
       });
       patch(botId, (m) => m.status === 'error' ? {} : m.text ? { status: 'done' } : { status: 'error', error: 'The assistant returned an empty answer. Please retry.' });
     } catch (e) {
-      if (isAuthError(e)) onAuthRequired?.();
       if (e.name === 'AbortError') patch(botId, (m) => ({ status: m.text ? 'stopped' : 'error', error: m.text ? undefined : 'Response stopped. You can send the question again.' }));
       else patch(botId, () => ({ status: 'error', error: e.message || 'Network error. Please retry.' }));
     } finally {
@@ -215,9 +207,10 @@ export default function ChatWidget({ open, onClose, ensureSession, session, rese
       setBusy(false);
       abortRef.current = null;
     }
-  }, [input, disabled, ensureSession, documentId, slide, onAuthRequired]);
+  }, [input, disabled, ensureSession, documentId, slide]);
 
   const openCitation = async (citation, trigger) => {
+    if (onOpenSource) { await onOpenSource(citation); return; }
     if (citationState?.id === citation.id && citationState?.status !== 'error') {
       setCitationState(null); citationVersion.current++; return;
     }
@@ -226,10 +219,9 @@ export default function ChatWidget({ open, onClose, ensureSession, session, rese
     setCitationState({ id: citation.id, status: 'loading', citation });
     try {
       const data = await getCitation(citation.id);
-      if (version === citationVersion.current && authenticatedRef.current) setCitationState({ id: citation.id, status: 'ready', citation, data });
+      if (version === citationVersion.current) setCitationState({ id: citation.id, status: 'ready', citation, data });
     } catch (e) {
-      if (isAuthError(e)) onAuthRequired?.();
-      else if (version === citationVersion.current) setCitationState({ id: citation.id, status: 'error', citation });
+      if (version === citationVersion.current) setCitationState({ id: citation.id, status: 'error', citation });
     }
   };
   const closeCitation = () => { citationVersion.current++; setCitationState(null); focusCitationRef.current?.focus?.({ preventScroll: true }); };
@@ -244,16 +236,16 @@ export default function ChatWidget({ open, onClose, ensureSession, session, rese
 
   return (
     <section ref={rootRef} className={`widget chat-widget ${open ? 'open' : ''}`} id="chat-widget" role="region" aria-labelledby="chat-widget-title" aria-hidden={!open} hidden={!open} inert={open ? undefined : ''} data-testid="chat-widget">
-      <header className="widget-head"><div><h2 id="chat-widget-title">Ask AI</h2><p className="widget-sub">{access?.authenticated ? 'One conversation · answers with source evidence' : 'Your private document companion'}</p></div><div className="widget-actions">
-        {access?.authenticated && session?.sessionId && <button className="icon-btn" onClick={newSession} disabled={busy} aria-label="Start a new session" title="New session">↻</button>}
-        <button className="icon-btn" onClick={onClose} aria-label="Close chat" data-testid="chat-close"><svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" aria-hidden="true"><path d="M6 6l12 12M18 6L6 18" /></svg></button>
+      <header className="widget-head"><div><h2 id="chat-widget-title">Ask AI</h2><p className="widget-sub">Answers grounded in the displayed originals</p></div><div className="widget-actions">
+        {session?.sessionId && <button className="icon-btn" onClick={newSession} disabled={busy} aria-label="Start a new session" title="New session">↻</button>}
+        {onClose && <button className="icon-btn" onClick={onClose} aria-label="Close chat" data-testid="chat-close"><svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" aria-hidden="true"><path d="M6 6l12 12M18 6L6 18" /></svg></button>}
       </div></header>
-      {!access?.authenticated ? (open && <AccessGate access={access} onUnlock={onUnlock} onRetry={onRetryAccess} />) : <>
+      <>
         <div className="chat-context">
           <fieldset className="chat-scope" data-testid="chat-scope-controls">
             <legend>Answer scope</legend>
             <div className="chat-scope-options">
-              <label><input type="radio" name="chat-answer-scope" value="this" checked={documentId !== 'all'} onChange={() => chooseDocument(documents.find((doc) => doc.id === lastDocumentId)?.id || documents.find((doc) => doc.slug === 'executive-presentation')?.id || documents[0]?.id || null)} /><span>This document</span></label>
+              <label><input type="radio" name="chat-answer-scope" value="this" checked={documentId !== 'all'} onChange={() => chooseDocument(documents.find((doc) => doc.id === activeDocumentId)?.id || documents.find((doc) => doc.id === lastDocumentId)?.id || documents.find((doc) => doc.slug === 'executive-presentation')?.id || documents[0]?.id || null)} /><span>This document</span></label>
               <label><input type="radio" name="chat-answer-scope" value="all" checked={documentId === 'all'} onChange={() => chooseDocument('all')} /><span>All documents</span></label>
             </div>
           </fieldset>
@@ -261,7 +253,7 @@ export default function ChatWidget({ open, onClose, ensureSession, session, rese
           <select id="chat-document-filter" value={documentId === 'all' ? '__choose__' : documentId || '__pending__'} onChange={(e) => chooseDocument(e.target.value)} data-testid="chat-document-filter" aria-describedby="chat-source-note">
             <option value="__choose__" disabled>Choose a document…</option>
             {sourceMissing && <option value={documentId || '__pending__'} disabled>{documentSlug === 'executive-presentation' ? 'Waiting for presentation source…' : 'Selected source unavailable'}</option>}
-            {documents.map((doc) => <option key={doc.id} value={doc.id}>{doc.title}</option>)}
+            {documents.map((doc) => <option key={doc.id} value={doc.id}>{doc.title} · {doc.versionLabel || doc.id.slice(0, 10)}</option>)}
           </select>
           {slide != null && <div className="chat-slide-context" data-testid="chat-slide-context"><span>Slide {slide}{sourceMissing ? ' · source pending' : ' · presentation'}</span><button onClick={() => setSlide(null)} aria-label="Clear slide context">Clear slide</button></div>}
           {sourceMissing && <p className="companion-note" role="status">This question is waiting for its exact source. It will not be sent against other documents.</p>}
@@ -282,7 +274,7 @@ export default function ChatWidget({ open, onClose, ensureSession, session, rese
           <div className="document-actions"><button className="btn small" onClick={onRefreshDocuments} disabled={documentsLoading}>Refresh status</button><button className="btn small" onClick={onRetryDocuments} disabled={documentsLoading} data-testid="retry-documents">Retry documents</button></div>
         </details>
         {documentsError && <div className="chat-service-error" role="alert">{documentsError}<button className="btn small" onClick={onRefreshDocuments} disabled={documentsLoading}>Retry</button></div>}
-        {(configured === false || serviceError) && <div className="chat-service-error" role="status">The assistant service is unavailable. Your source selection is retained; the presentation remains usable.<button className="btn small" onClick={onRetryService}>Retry connection</button></div>}
+        {(configured === false || serviceError) && <div className="chat-service-error" role="status">The assistant service is unavailable. Your source selection is retained; the documents remain usable. No substitute answer is generated.<button className="btn small" onClick={onRetryService}>Retry connection</button></div>}
         {documentsLoading && !documents.length && <p className="companion-note" role="status">Loading the available sources…</p>}
         {!documentsLoading && !documentsError && !documents.length && <p className="companion-note" role="status">No sources are available yet. Open Documents &amp; ingestion status to retry.</p>}
         {configured == null && !serviceError && <p className="companion-note" role="status">Connecting to the assistant…</p>}
@@ -312,14 +304,14 @@ export default function ChatWidget({ open, onClose, ensureSession, session, rese
           {citationState.status !== 'ready' && <header><h3>{citationState.citation.label || 'Source evidence'}</h3><button className="icon-btn" onClick={closeCitation} aria-label="Close source viewer">×</button></header>}
           {citationState.status === 'loading' && <p role="status">Loading cited source…</p>}
           {citationState.status === 'error' && <div className="chat-service-error" role="alert">This source could not be loaded.<button className="btn small" onClick={() => openCitation(citationState.citation)}>Retry source</button></div>}
-          {citationState.status === 'ready' && <SourceViewer source={citationState.data} citationId={citationState.id} onClose={closeCitation} onAuthRequired={onAuthRequired} />}
+          {citationState.status === 'ready' && <SourceViewer source={citationState.data} citationId={citationState.id} onClose={closeCitation}  />}
         </section>}
         <form className="chat-input" onSubmit={(e) => { e.preventDefault(); send(); }}>
           <textarea ref={inputRef} rows={2} value={input} onChange={(e) => setInput(e.target.value)} onKeyDown={onKeyDown} placeholder={sourceMissing ? 'Waiting for the selected source…' : slide != null ? `Ask about slide ${slide}…` : 'Ask about the selected documents…'} aria-label="Your question" aria-describedby="chat-source-note" />
           {busy ? <button type="button" className="btn small" onClick={() => abortRef.current?.abort()}>Stop</button> : <button type="submit" className="btn small accent" disabled={disabled || !input.trim()} aria-label="Send">Send</button>}
         </form>
         <p className="chat-context-note" id="chat-source-note">Changing the source keeps this conversation. Each new question retrieves only from the current selection. Shift + Enter adds a line.</p>
-      </>}
+      </>
     </section>
   );
 }

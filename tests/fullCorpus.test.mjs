@@ -1,0 +1,32 @@
+import test from 'node:test';
+import assert from 'node:assert/strict';
+import fs from 'node:fs';
+import os from 'node:os';
+import path from 'node:path';
+import {createHash} from 'node:crypto';
+import {DatabaseSync} from 'node:sqlite';
+import {createFullCorpus} from '../server/fullCorpus.js';
+import {validateCorpusIndex} from '../server/retrieval.js';
+const hash = bytes => createHash('sha256').update(bytes).digest('hex');
+function fixture(t) {
+ const root=fs.mkdtempSync(path.join(os.tmpdir(),'athar-full-index-'));t.after(()=>fs.rmSync(root,{recursive:true,force:true}));
+ const id=hash('Synthetic workbook'),doc={id,sha256:id,slug:'financial-model',title:'Synthetic workbook',kind:'xlsx',status:'ready',originalFile:'originals/'+id+'.xlsx',limitations:[],coverage:{cellCount:3,sheets:[{name:'Draws',dimension:'A1:C9000',cellCount:3}]}};
+ const record=(cell,row,col,value,extra={})=>({documentId:id,sheet:'Draws',recordType:'cell',cell,row,columnIndex:col,value,rawValue:value==null?null:String(value),formula:null,cache:{state:'not-applicable',lexeme:null},numberFormat:{code:'General',id:0},...extra});
+ const rows=[record('A1',1,1,'Synthetic origin'),record('B9000',9000,2,'unique violet tail sentinel'),record('C9000',9000,3,null,{formula:{text:'B9000*2'},cache:{state:'empty',lexeme:null}})];
+ const legacy={id:'src-head',documentId:id,documentSlug:doc.slug,kind:'xlsx',label:'Draws!A1',location:{sheet:'Draws',range:'A1'},text:'A1: Synthetic origin',records:[rows[0]]};
+ const tail={id:'src-full-tail',documentId:id,documentSlug:doc.slug,kind:'xlsx',label:'Draws!B9000:C9000',location:{sheet:'Draws',range:'B9000:C9000'},text:'Draws!B9000: unique violet tail sentinel\nC9000: Saved formula result unavailable',records:rows.slice(1)};
+ const filename=path.join(root,'corpus.sqlite'),db=new DatabaseSync(filename);
+ db.exec('CREATE TABLE documents(id TEXT);CREATE TABLE cells(document_id TEXT,sheet TEXT,row INTEGER,col INTEGER,address TEXT,json TEXT);CREATE TABLE chunks(rowid INTEGER PRIMARY KEY,id TEXT,document_id TEXT,sheet TEXT,page INTEGER,slide INTEGER,text TEXT,json TEXT);CREATE VIRTUAL TABLE chunks_fts USING fts5(text,content=chunks,content_rowid=rowid);');
+ db.prepare('INSERT INTO documents VALUES(?)').run(id);
+ for(const row of rows)db.prepare('INSERT INTO cells VALUES(?,?,?,?,?,?)').run(id,row.sheet,row.row,row.columnIndex,row.cell,JSON.stringify(row));
+ db.prepare('INSERT INTO chunks(id,document_id,sheet,text,json) VALUES(?,?,?,?,?)').run(tail.id,id,'Draws',tail.text,JSON.stringify(tail));db.exec("INSERT INTO chunks_fts(chunks_fts) VALUES('rebuild')");db.close();
+ const data={schemaVersion:'athar-corpus/v1',extractorVersion:'synthetic-full-index/1',generatedAt:'2026-09-05T00:00:00Z',documents:[doc],chunks:[legacy],fullIndex:{sha256:hash(fs.readFileSync(filename)),complete:true}};
+ const index=validateCorpusIndex(data),full=createFullCorpus({corpusDir:root,loadIndex:async()=>index});return {root,filename,doc,index,full,rows};
+}
+test('full FTS discovers late content absent from rich legacy chunks',async t=>{const f=fixture(t),result=await f.full.retrieve(f.index,{question:'unique violet tail sentinel',documentId:f.doc.id});assert.equal(result.fullIndex,true);assert.ok(result.chunks.some(c=>c.id==='src-full-tail'));assert.ok(result.chunks.every(c=>c.documentId===f.doc.id));});
+test('exact tail cell resolves through stable citation without auth state',async t=>{const f=fixture(t),r=await f.full.retrieve(f.index,{question:'Draws cell B9000',documentId:f.doc.id});assert.equal(r.chunks.length,1);assert.equal(r.chunks[0].records[0].value,'unique violet tail sentinel');const c=await f.full.getChunk(r.chunks[0].id,f.index);assert.deepEqual(c.location,{sheet:'Draws',range:'B9000'});});
+test('complete cell read preserves missing formula cache instead of zero',async t=>{const f=fixture(t),rows=await f.full.readCells(f.doc,'Draws',{minRow:9000,maxRow:9000,minColumn:2,maxColumn:3});assert.equal(rows.length,2);assert.equal(rows[1].value,null);assert.equal(rows[1].cache.state,'empty');assert.equal(rows[1].formula.text,'B9000*2');});
+test('small exact ranges include interior cells and excessive ranges are explicit errors',async t=>{const f=fixture(t),r=await f.full.retrieve(f.index,{question:'Draws cells B9000:C9000',documentId:f.doc.id});assert.equal(r.chunks.length,2);await assert.rejects(f.full.retrieve(f.index,{question:'Draws cells A1:C9000',documentId:f.doc.id}),e=>e.code==='too_many_cells'&&e.status===400);});
+test('database digest prevents substituted index data',async t=>{const f=fixture(t);fs.appendFileSync(f.filename,'changed');await assert.rejects(f.full.retrieve(f.index,{question:'violet',documentId:f.doc.id}),e=>e.code==='source_integrity_failed');});
+test('database cannot introduce documents outside selected hash set',async t=>{const f=fixture(t),db=new DatabaseSync(f.filename);db.prepare('INSERT INTO documents VALUES(?)').run(hash('unrelated'));db.close();const index=validateCorpusIndex({...f.index,fullIndex:{sha256:hash(fs.readFileSync(f.filename))}}),full=createFullCorpus({corpusDir:f.root,loadIndex:async()=>index});await assert.rejects(full.retrieve(index,{question:'violet',documentId:f.doc.id}),e=>e.code==='source_integrity_failed');});
+test('oversized cell windows and fabricated citations are rejected',async t=>{const f=fixture(t);await assert.rejects(f.full.readCells(f.doc,'Draws',{minRow:1,maxRow:9000,minColumn:1,maxColumn:3}),e=>e.status===400);assert.equal(await f.full.getChunk('../../.env',f.index),null);assert.equal(await f.full.getChunk('src-unknown',f.index),null);});

@@ -79,49 +79,17 @@ export async function streamChat({ sessionId, query, voice = false, documentId =
   await readSSE(res, onEvent, signal);
 }
 
-export async function voiceTurn({ sessionId, externalUserId, blob, signal, onEvent }) {
-  const qs = new URLSearchParams({ sessionId, externalUserId: externalUserId || 'athar-web-voice' });
-  const res = await fetch(`/api/voice/turn?${qs}`, {
-    method: 'POST',
-    headers: { 'Content-Type': blob.type || 'audio/wav', Accept: 'text/event-stream' },
-    body: blob,
-    signal,
-  });
-  await ensureStream(res);
-  await readSSE(res, onEvent, signal);
-}
-
-export async function voiceTextTurn({ sessionId, externalUserId, text, signal, onEvent }) {
-  const res = await fetch('/api/voice/text-turn', {
-    method: 'POST',
-    headers: { 'Content-Type': 'application/json', Accept: 'text/event-stream' },
-    body: JSON.stringify({ sessionId, externalUserId, text }),
-    signal,
-  });
-  await ensureStream(res);
-  await readSSE(res, onEvent, signal);
-}
-
-export async function getExecution(id) {
-  const res = await fetch(`/api/voice/execution/${encodeURIComponent(id)}?logs=1`);
-  return readJson(res);
-}
-
-// Review access is an HttpOnly same-origin session; secrets are never saved to web storage.
-async function privateJson(url, options = {}) {
+async function sourceJson(url, options = {}) {
   const res = await fetch(url, { credentials: 'same-origin', cache: 'no-store', ...options });
   const body = await readJson(res);
-  if (!res.ok) throw Object.assign(new Error(body.message || 'Protected request failed.'), { code: body.code, status: res.status });
+  if (!res.ok) throw Object.assign(new Error(body.message || 'Document request failed.'), { code: body.code, status: res.status });
   return body;
 }
-export const getAccess = () => privateJson('/api/access');
-export const unlockAccess = (passphrase) => privateJson('/api/access', { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify({ passphrase }) });
-export const lockAccess = () => privateJson('/api/access', { method: 'DELETE' });
-export const getDocuments = () => privateJson('/api/documents');
-export const retryDocuments = () => privateJson('/api/documents/retry', { method: 'POST' });
-export const getCitation = (id) => privateJson(`/api/citations/${encodeURIComponent(id)}`);
+export const getDocuments = () => sourceJson('/api/documents');
+export const retryDocuments = () => sourceJson('/api/documents/retry', { method: 'POST' });
+export const getCitation = (id) => sourceJson(`/api/citations/${encodeURIComponent(id)}`);
 
 export const getSourceLocation = (id, options = {}) => {
   const params = new URLSearchParams(Object.entries(options).filter(([,v]) => v !== undefined && v !== null && v !== ''));
-  return privateJson(`/api/citations/${encodeURIComponent(id)}/view${params.size ? `?${params}` : ''}`);
+  return sourceJson(`/api/citations/${encodeURIComponent(id)}/view${params.size ? `?${params}` : ''}`);
 };

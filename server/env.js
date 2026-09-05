@@ -9,7 +9,7 @@
 // Both spellings of the On Demand key are accepted and mirrored onto each other, so a key set as
 // ONDEMAND_API_KEY (the platform's own naming) is picked up exactly like ON_DEMAND_API_KEY (this app's name).
 // Nothing here is prefixed VITE_, so Vite never bundles a secret into the browser code; logs and /api/health
-// only ever show a masked fingerprint.
+// only report whether the service is configured; no key fragments are exposed.
 import fs from 'node:fs';
 import path from 'node:path';
 import { fileURLToPath } from 'node:url';
@@ -53,7 +53,7 @@ export function loadDotEnv() {
         }
       }
     } catch (e) {
-      console.warn(`[env] could not read ${file}:`, e.message);
+      console.warn('[env] Optional server configuration could not be read; existing environment is retained.');
     }
   }
   // Mirror the On Demand key across both accepted names.

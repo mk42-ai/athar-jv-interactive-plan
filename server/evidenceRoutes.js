@@ -1,11 +1,12 @@
-// Confidential evidence routes. Originals/index never enter Vite's root or a response without review access.
+// Anonymous document routes. Only the selected corpus is exposed; server configuration is never served.
 import express from 'express';
 import crypto from 'node:crypto';
 import fs from 'node:fs/promises';
 import path from 'node:path';
 import { loadCorpusIndex, retrieveEvidence, immutableRecordsMap } from './retrieval.js';
 import { buildEvidencePrompt, validateEvidenceAnswer, prepareModelSelection, renderEvidenceAnswer } from './evidenceAnswer.js';
-import { augmentExactCellEvidence } from './rawCellEvidence.js';
+import { createFullCorpus } from './fullCorpus.js';
+import { anonymousRequest, sameOrigin } from './requestSecurity.js';
 import { createSourceView } from './sourceView.js';
 import { evidenceCoverageGaps } from './evidenceCoverage.js';
 import { createChatSession, submitQuerySync, isConfigured } from './ondemand.js';
@@ -15,88 +16,64 @@ const fail = (code, message, status = 400) => Object.assign(new Error(message), 
 const safeError = (res, error) => res.status([400, 401, 403, 404, 409, 422, 429, 503].includes(error.status) ? error.status : 502).json({
   code: error.code || 'provider_unavailable',
   message: error.status === 422 ? 'The provider response could not be grounded in the retrieved evidence. Please retry or narrow the question.' :
-    error.status === 503 ? 'The protected evidence or AI service is not ready. Please retry.' :
+    error.status === 503 ? (error.code === 'provider_not_configured' ? 'The AI provider credentials are missing on the server. Documents remain available; no substitute reply was generated.' : 'The selected evidence or AI service is unavailable. No substitute reply was generated.') :
       error.status === 404 ? 'Source or conversation not found.' :
         error.status === 409 ? 'A response is already being prepared for this conversation.' :
           error.status === 429 ? 'Too many requests. Please wait before retrying.' :
-            error.status === 400 ? error.message : 'The AI service could not complete this request. No substitute answer was generated.',
+            error.status === 400 ? (['too_many_cells','ambiguous_cells'].includes(error.code) ? 'Request at most 12 exact cells and specify a worksheet. All cells remain searchable and available in the document viewer.' : error.message) : 'The AI service could not complete this request. No substitute answer was generated.',
 });
 
-export function createEvidenceRoutes({ access, corpusDir = process.env.ATHAR_CORPUS_DIR,
+export function createEvidenceRoutes({ corpusDir = process.env.ATHAR_CORPUS_DIR,
   provider = { createChatSession, submitQuerySync, isConfigured }, clock = Date.now } = {}) {
   const router = express.Router();
   const conversations = new Map();
   const usage = new Map();
-  // Dense-cell evidence is a request-derived projection of an immutable raw record.
-  // Bind it to the reviewer; another reviewer cannot guess a source alias to read it.
-  const rawEvidence = new Map();
   const index = (force = false) => loadCorpusIndex({ corpusDir, force });
-  const views = createSourceView({ corpusDir, loadIndex: index });
+  const full = createFullCorpus({ corpusDir, loadIndex: index });
+  const views = createSourceView({ corpusDir, loadIndex: index, getChunk: full.getChunk, readCells: full.readCells });
   function owned(req, id) {
     const value = conversations.get(id);
-    if (!value || value.principal !== req.reviewer.principal || value.expiresAt <= clock()) throw fail('conversation_not_found', 'Source or conversation not found.', 404);
+    if (!value || value.principal !== req.clientKey || value.expiresAt <= clock()) throw fail('conversation_not_found', 'Source or conversation not found.', 404);
     return value;
   }
   const sweep = () => {
-    for (const [key, v] of rawEvidence) if (v.expiresAt <= clock()) rawEvidence.delete(key);
     for (const [key, v] of conversations) if (v.expiresAt <= clock()) conversations.delete(key);
     for (const [key, v] of usage) if (v.until <= clock()) usage.delete(key);
   };
   function rate(req) {
     sweep();
-    const entry = usage.get(req.reviewer.principal) || { count: 0, until: clock() + 60000 };
+    const entry = usage.get(req.clientKey) || { count: 0, until: clock() + 60000 };
     if (++entry.count > 20 || conversations.size > 2000) throw fail('rate_limited', 'Too many requests.', 429);
-    usage.set(req.reviewer.principal, entry);
+    usage.set(req.clientKey, entry);
   }
-  router.use(['/documents', '/citations', '/sources', '/chat'], access.requireAccess);
-  router.use(['/documents', '/chat'], (req, res, next) => ['GET', 'HEAD', 'OPTIONS'].includes(req.method) ? next() : access.sameOrigin(req, res, next));
+  router.use(['/documents', '/citations', '/sources', '/chat'], anonymousRequest);
+  router.use(['/documents', '/chat'], (req, res, next) => ['GET', 'HEAD', 'OPTIONS'].includes(req.method) ? next() : sameOrigin(req, res, next));
+  const documentList = data => data.documents.map(doc => {
+    const first = data.chunks.find(c => c.documentId === doc.id && (doc.kind === 'pdf' ? c.location.page === 1 && c.extractionKind === 'pdf-page' : doc.kind === 'pptx' ? c.location.slide === 1 : c.location.sheet === doc.coverage.sheets?.[0]?.name)) || data.chunks.find(c => c.documentId === doc.id);
+    return { id: doc.id, sha256: doc.sha256, slug: doc.slug, title: doc.title, kind: doc.kind, status: doc.status, coverage: doc.coverage, limitations: doc.limitations,
+      aliases: doc.aliases || [], versionLabel: doc.versionLabel || 'SHA ' + doc.sha256.slice(0, 10), defaultCitationId: first?.id || null, originalUrl: '/api/sources/' + doc.id };
+  });
   router.get('/documents', async (req, res) => {
-    try {
-      const data = await index();
-      res.json({ schemaVersion: data.schemaVersion, indexedAt: data.generatedAt, documents: data.documents.map(({ id, slug, title, kind, status, coverage, limitations }) => ({ id, slug, title, kind, status, coverage, limitations })) });
-    } catch (error) { safeError(res, error); }
+    try { const data = await index(); res.json({ schemaVersion: data.schemaVersion, indexedAt: data.generatedAt, fullIndex: Boolean(data.fullIndex), documents: documentList(data) }); }
+    catch (error) { safeError(res, error); }
   });
   router.post('/documents/retry', async (req, res) => {
-    try {
-      rate(req);
-      const data = await index(true);
-      res.json({ indexedAt: data.generatedAt, documents: data.documents.map(({ id, slug, title, kind, status, coverage, limitations }) => ({ id, slug, title, kind, status, coverage, limitations })) });
-    } catch (error) { safeError(res, error); }
+    try { rate(req); const data = await index(true); res.json({ indexedAt: data.generatedAt, documents: documentList(data) }); }
+    catch (error) { safeError(res, error); }
   });
   router.get('/citations/:id', async (req, res) => {
     try {
       const data = await index();
-      if (req.params.id.startsWith('src-raw-')) {
-        const saved = rawEvidence.get(req.params.id);
-        if (!saved || saved.principal !== req.reviewer.principal || saved.expiresAt <= clock()) throw fail('source_not_found', '', 404);
-        const doc = data.documentsById.get(saved.chunk.documentId);
-        return res.json({ id: req.params.id, documentId: doc.id, title: doc.title, location: saved.exactLocation,
-          label: `${doc.title} · ${saved.exactLocation.sheet}!${saved.exactLocation.range}`, excerpt: saved.projectionText,
-          records: saved.records, metadata: { evidenceOrigin: 'raw-record-projection', parentId: saved.baseId, originalSha256: doc.sha256, rawSha256: saved.rawSha256, exactLocations: saved.exactLocations },
-          originalUrl: `/api/sources/${doc.id}`, sourceViewUrl: `/api/citations/${req.params.id}/view`, limitations: doc.limitations });
-      }
-      const source = data.recordsById.get(req.params.id);
+      const source = data.recordsById.get(req.params.id) || await full.getChunk(req.params.id, data);
       if (!source) throw fail('source_not_found', '', 404);
       const doc = data.documentsById.get(source.documentId);
-      res.json({ id: source.id, documentId: doc.id, title: doc.title, location: source.location, label: source.label,
+      res.json({ id: source.id, documentId: doc.id, title: doc.title, kind: doc.kind, sha256: doc.sha256, versionLabel: doc.versionLabel || doc.sha256.slice(0, 10), aliases: doc.aliases || [], location: source.location, label: source.label,
         excerpt: source.text, records: source.records || [], metadata: source.metadata || {},
         originalUrl: `/api/sources/${encodeURIComponent(doc.id)}`, sourceViewUrl: `/api/citations/${encodeURIComponent(source.id)}/view`, limitations: doc.limitations });
     } catch (error) { safeError(res, error); }
   });
   router.get('/citations/:id/view', async (req, res) => {
     try {
-      if (req.params.id.startsWith('src-raw-')) {
-        const saved = rawEvidence.get(req.params.id);
-        if (!saved || saved.principal !== req.reviewer.principal || saved.expiresAt <= clock()) throw fail('source_not_found', '', 404);
-        const target = Object.keys(req.query).length ? views.parseQuery(req.query) : saved.exactLocation;
-        const result = await views.location(saved.baseId, target);
-        const targetCell = saved.exactLocation.range;
-        const rows = (result.rows || []).map(row => ({ ...row, cells: row.cells.map(cell => ({ ...cell,
-          highlight: cell.sheet === saved.exactLocation.sheet && cell.address === targetCell })) }));
-        return res.json({ ...result, rows, citationId: req.params.id, initialLocation: saved.exactLocation, citationLocation: saved.exactLocation,
-          highlights: { type: 'range', sheet: saved.exactLocation.sheet, range: targetCell, visible: rows.some(row => row.cells.some(cell => cell.highlight)) },
-          evidenceOrigin: 'raw-record-projection', parentId: saved.baseId });
-      }
       res.json(await views.location(req.params.id, views.parseQuery(req.query)));
     } catch (error) { safeError(res, error); }
   });
@@ -109,8 +86,12 @@ export function createEvidenceRoutes({ access, corpusDir = process.env.ATHAR_COR
       const data = await index();
       const doc = data.documentsById.get(req.params.id);
       if (!doc) throw fail('source_not_found', '', 404);
+      if ((await fs.lstat(corpusDir)).isSymbolicLink()) throw fail('source_not_found', '', 404);
       const root = await fs.realpath(corpusDir);
-      const file = await fs.realpath(path.resolve(root, doc.originalFile));
+      if (!/^originals\/[a-f0-9]{64}\.(?:pdf|xlsx|pptx)$/.test(doc.originalFile)) throw fail('source_not_found', '', 404);
+      const candidate = path.resolve(root, doc.originalFile);
+      if ((await fs.lstat(root)).isSymbolicLink() || (await fs.lstat(path.join(root, 'originals'))).isSymbolicLink() || (await fs.lstat(candidate)).isSymbolicLink() || !(await fs.lstat(candidate)).isFile()) throw fail('source_not_found', '', 404);
+      const file = await fs.realpath(candidate);
       if (!file.startsWith(root + path.sep)) throw fail('source_not_found', '', 404);
       const bytes = await fs.readFile(file);
       if (crypto.createHash('sha256').update(bytes).digest('hex') !== doc.sha256) throw fail('source_integrity_failed', '', 503);
@@ -118,6 +99,8 @@ export function createEvidenceRoutes({ access, corpusDir = process.env.ATHAR_COR
       res.setHeader('Content-Type', types[doc.kind] || 'application/octet-stream');
       res.setHeader('Content-Disposition', `attachment; filename="${doc.slug}.${doc.kind}"`);
       res.setHeader('Content-Length', bytes.length);
+      res.setHeader('X-Source-SHA256', doc.sha256);
+      res.setHeader('Cross-Origin-Resource-Policy', 'same-origin');
       res.setHeader('X-Content-Type-Options', 'nosniff');
       res.end(bytes);
     } catch (error) { safeError(res, error); }
@@ -126,7 +109,7 @@ export function createEvidenceRoutes({ access, corpusDir = process.env.ATHAR_COR
     try {
       rate(req);
       const id = crypto.randomUUID();
-      conversations.set(id, { id, principal: req.reviewer.principal, expiresAt: clock() + TTL, history: [], busy: false, upstream: null });
+      conversations.set(id, { id, principal: req.clientKey, expiresAt: clock() + TTL, history: [], busy: false, upstream: null });
       res.json({ sessionId: id, createdAt: new Date(clock()).toISOString() });
     } catch (error) { safeError(res, error); }
   });
@@ -135,32 +118,11 @@ export function createEvidenceRoutes({ access, corpusDir = process.env.ATHAR_COR
     const conversation = owned(req, sessionId);
     if (conversation.busy) throw fail('conversation_busy', '', 409);
     if (typeof query !== 'string' || !query.trim() || query.length > 4000) throw fail('invalid_question', 'Ask a question of up to 4,000 characters.');
-    if (!provider.isConfigured()) throw fail('provider_unavailable', '', 503);
+    if (!provider.isConfigured()) throw fail('provider_not_configured', 'The AI provider credentials are not configured on this server.', 503);
     conversation.busy = true;
     try {
       const corpus = await index();
-      let retrieved = retrieveEvidence(corpus, { question: query, documentId, slide, history: conversation.history });
-      retrieved = await augmentExactCellEvidence(corpus, retrieved, { question: query, documentId, sourceViews: views });
-      const projections = retrieved.rawCellEvidence || [];
-      if (projections.length) {
-        const aliases = new Map();
-        for (const snapshot of projections) {
-          if (aliases.has(snapshot.baseId)) continue;
-          const matching = projections.filter(s => s.baseId === snapshot.baseId);
-          const alias = `src-raw-${crypto.createHash('sha256').update(`${req.reviewer.principal}\0${matching.map(s => s.rawProjectionHash).join(':')}`).digest('hex').slice(0, 40)}`;
-          aliases.set(snapshot.baseId, alias);
-          if (rawEvidence.size >= 1000) rawEvidence.delete(rawEvidence.keys().next().value);
-          rawEvidence.set(alias, { principal: req.reviewer.principal, expiresAt: clock() + TTL, baseId: snapshot.baseId,
-            chunk: retrieved.chunks.find(c => c.id === snapshot.baseId), exactLocation: snapshot.exactLocation,
-            exactLocations: matching.map(s => s.exactLocation), records: matching.flatMap(s => s.records),
-            projectionText: matching.map(s => s.text).join('\n'), rawSha256: snapshot.rawSha256 });
-        }
-        const remap = chunk => aliases.has(chunk.id) ? { ...chunk, id: aliases.get(chunk.id), parentId: chunk.id,
-          location: projections.find(s => s.baseId === chunk.id).exactLocation,
-          label: `${chunk.label} · exact protected raw-cell evidence` } : chunk;
-        const chunks = retrieved.chunks.map(remap), modelChunks = retrieved.modelChunks.map(remap);
-        retrieved = { ...retrieved, chunks, modelChunks, recordsById: immutableRecordsMap(chunks.map(c => [c.id, c])) };
-      }
+      const retrieved = await full.retrieve(corpus, { question: query, documentId, slide, history: conversation.history });
       const prompt = buildEvidencePrompt({ question: query, retrieved, documentId, history: conversation.history });
       // A fresh upstream session per answer prevents provider-side memory leaking facts across document filters.
       // Locally retained previous USER questions only resolve follow-up wording; prior answers are never evidence.
@@ -185,7 +147,7 @@ export function createEvidenceRoutes({ access, corpusDir = process.env.ATHAR_COR
       conversation.history = conversation.history.slice(-12);
       return { answer: verified.answer, citations: verified.citations, grounding: { ...verified.grounding,
         retrievedIds: retrieved.chunks.map((chunk) => chunk.id), indexVersion: corpus.extractorVersion },
-        // Exact quotes/operands are returned only to this authenticated review session, never logged.
+        // Exact evidence is returned to the requesting conversation, not written to provider diagnostics.
         evidence: { facts: verified.facts, calculations: verified.calculations, conflicts: verified.conflicts, missing: verified.missing },
         messageId: crypto.randomUUID(), status: 'done' };
     } finally { conversation.busy = false; }

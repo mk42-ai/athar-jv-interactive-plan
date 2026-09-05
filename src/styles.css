@@ -636,12 +636,6 @@ h1, h2, h3 { font-weight: 500; letter-spacing: -0.01em; }
 .athar-workspace .month-panel-drawer .disc-panel[inert] { visibility: hidden; }
 
 /* Auth + source-grounded conversation, scoped to the existing companion. */
-.athar-workspace .access-gate { display: grid; gap: 12px; margin: 14px; padding: 18px 16px; background: var(--paper-2); border: 1px solid var(--hair); border-radius: 8px; }
-.athar-workspace .access-gate h3 { margin: 0; font-family: var(--serif); font-size: 1.6rem; line-height: 1.2; }
-.athar-workspace .access-gate p { font-size: 0.84rem; line-height: 1.6; margin: 0; color: var(--review-muted); }
-.athar-workspace .access-gate label { font-weight: 600; font-size: 0.8rem; }
-.athar-workspace .access-gate input { width: 100%; min-width: 0; padding: 10px 12px; border: 1px solid var(--hair-2); border-radius: 5px; background: #fff; font-size: 16px; }
-.athar-workspace .access-gate .access-error { color: var(--bad); }
 .athar-workspace .chat-context { display: grid; gap: 8px; padding: 12px 14px; border-bottom: 1px solid var(--hair); }
 .athar-workspace .chat-context label { font-size: 0.73rem; font-weight: 600; color: var(--review-muted); }
 .athar-workspace .chat-context select { width: 100%; min-width: 0; padding: 8px; border-radius: 6px; border: 1px solid var(--hair-2); background: #fff; font-size: 0.83rem; color: var(--ink); }
