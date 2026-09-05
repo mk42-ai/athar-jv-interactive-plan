@@ -1,5 +1,5 @@
-/** Allowlisted original-source view service. No conversions or network calls at runtime.
- * Documents and derivatives are served only by validated corpus identity.
+/** Protected source-view service. No routes, conversions, network calls or import-time I/O.
+ * Mount BOTH methods behind the same reviewer access boundary as original downloads.
  * Treat returned strings as source data: render text, never HTML. Internal filenames never
  * leave this module. Workbook JSONL is grouped by sheet, then row, by corpus/v1 ingestion.
  */
@@ -27,7 +27,7 @@ export class SourceViewError extends Error {
   }
 }
 const bad = message => { throw new SourceViewError('invalid_location', message); };
-const unavailable = (code = 'source_integrity_failed') => { throw new SourceViewError(code, 'The source view is unavailable.', 503); };
+const unavailable = (code = 'source_integrity_failed') => { throw new SourceViewError(code, 'The protected source view is unavailable.', 503); };
 const notFound = () => { throw new SourceViewError('source_not_found', 'Source not found.', 404); };
 
 /** HTTP query adapter: no parseInt truncation, coercion of arrays, exponent notation or unknown keys.
@@ -156,7 +156,7 @@ function textRecords(records, highlighted) {
 }
 
 export function createSourceView({ corpusDir = process.env.ATHAR_CORPUS_DIR,
-  loadIndex = () => loadCorpusIndex({ corpusDir }), getChunk = null, readCells = null } = {}) {
+  loadIndex = () => loadCorpusIndex({ corpusDir }) } = {}) {
   const verified = new Map();
   const signature = s => [s.dev, s.ino, s.size, s.mtimeNs, s.ctimeNs].join(':');
 
@@ -309,14 +309,6 @@ export function createSourceView({ corpusDir = process.env.ATHAR_CORPUS_DIR,
     const context = contextCells(index, doc, chunk, name, target, sheet.bounds);
     const endRow = Math.max(target.maxRow, ...[...context.wanted.values()].map(p => p.row));
     const cells = new Map(), headers = new Map();
-    if (readCells && index.fullIndex) {
-      const records = await readCells(doc, name, target, [...context.wanted.keys()]);
-      for (const record of records) {
-        const p = point(record.cell ?? record.address);
-        if (contains(target, p)) cells.set(p.address, cellRecord(record, name, name === citedSheet.name && contains(cited, p)));
-        else if (context.wanted.has(p.address)) headers.set(p.address, { ...cellRecord(record, name, false), role: context.wanted.get(p.address).role });
-      }
-    } else {
     let entered = false, previousRow = 0;
     for await (const record of rawRecords(doc)) {
       if (record.sheet != null && record.sheet !== name) { if (entered) break; continue; }
@@ -332,7 +324,6 @@ export function createSourceView({ corpusDir = process.env.ATHAR_CORPUS_DIR,
       } else if (context.wanted.has(p.address)) {
         headers.set(p.address, { ...cellRecord(record, name, false), role: context.wanted.get(p.address).role });
       }
-    }
     }
     const rows = [];
     for (const cell of [...cells.values()].sort((a, b) => a.row - b.row || a.columnIndex - b.columnIndex)) {
@@ -393,19 +384,7 @@ export function createSourceView({ corpusDir = process.env.ATHAR_CORPUS_DIR,
   }
   async function location(citationId, options = {}) {
     if (!plain(options) || Object.keys(options).some(k => !OPTIONS.includes(k))) bad('Unsupported source-view parameter.');
-    const index = await loadIndex();
-    const chunk = index.chunks.find(c => c.id === citationId) || (getChunk ? await getChunk(citationId, index) : getCitation(index, citationId));
-    if (!chunk) notFound();
-    const doc = getDocument(index, chunk.documentId);
-    const metadataOnly = !chunk.location.sheet && !chunk.location.page && !chunk.location.slide && chunk.location.part;
-    if (metadataOnly) {
-      if (Object.keys(options).length) bad('This source is a workbook/package metadata record, not a page or cell range.');
-      await original(doc);
-      return { schemaVersion: VIEW_SCHEMA, citationId: chunk.id, documentId: doc.id, title: doc.title, kind: doc.kind, renderer: 'text',
-        originalSha256: doc.id, sha256: doc.id, version: doc.id, location: chunk.location, initialLocation: chunk.location,
-        citationLocation: chunk.location, label: chunk.label, citationText: chunk.text, preview: null,
-        availableLocations: { pageCount: 0, slideCount: 0, sheets: [] }, limitations: copy(doc.limitations || []), metadata: copy(chunk.metadata || {}) };
-    }
+    const index = await loadIndex(), chunk = getCitation(index, citationId), doc = getDocument(index, chunk.documentId);
     const allowed = doc.kind === 'xlsx' ? ['sheet', 'range'] : [doc.kind === 'pdf' ? 'page' : 'slide'];
     if (Object.keys(options).some(k => !allowed.includes(k))) bad('Location parameter does not apply to this source type.');
     // Validate locator types and bounds before reading source bytes.
@@ -417,7 +396,7 @@ export function createSourceView({ corpusDir = process.env.ATHAR_CORPUS_DIR,
     const body = doc.kind === 'xlsx' ? await workbook(index, doc, chunk, options) : await paged(doc, chunk, options);
     return { schemaVersion: VIEW_SCHEMA, citationId: chunk.id, documentId: doc.id, title: doc.title, kind: doc.kind,
       extractionKind: chunk.extractionKind || chunk.kind, originalSha256: doc.sha256, sha256: doc.sha256,
-      version: doc.sha256, versionLabel: doc.versionLabel || doc.sha256.slice(0, 10), aliases: doc.aliases || [], extractorVersion: index.extractorVersion, indexedAt: index.generatedAt,
+      version: doc.sha256, extractorVersion: index.extractorVersion, indexedAt: index.generatedAt,
       label: chunk.label, limitations: copy(doc.limitations || []), maxCells: MAX_SOURCE_VIEW_CELLS, ...body };
   }
   /** Returns bytes, NOT a filesystem path. res.set(result.headers).end(result.body).

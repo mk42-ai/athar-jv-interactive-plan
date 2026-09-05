@@ -1,21 +1,3 @@
-# Current document workspace
-
-The existing Athar application now opens **without an access code or login**. The active UI is only the selected-document library, original-source viewer and existing server-side OnDemand chat. Older sections below are historical implementation notes, not current access or narration requirements.
-
-- Run npm ci, npm run build, then npm start (Node 22.13+; SQLite builtin).
-- npm run preview starts the same Express server, not a gated preview mode.
-- Inject the existing OnDemand credential and ATHAR_CORPUS_DIR through the host secret store. Optional .env/env.local files are never browser imports and are not needed to open the app. There are **no gate environment variables**.
-- Build the selected corpus with scripts/build_complete_corpus.py --input-dir <selected-inputs> --output-dir <host-only-corpus> --manifest <identity-manifest>. Originals remain outside Git/static assets; the server serves only hash-allowlisted originals/derivatives.
-- index.json is the rich passage catalog. corpus.sqlite indexes every nonempty cell/formula and all native pages/slides plus supplemental OCR, and stores every explicit cell (including blanks). Runtime requires index.fullIndex with the database SHA-256. Activation metadata binds the deployed database, selected input aliases and retained hashes. Never deploy the sampled legacy catalog alone.
-- Original PDFs and LibreOffice slide derivatives render locally in PDF.js, without third-party viewer authentication. Workbooks expose bounded 200-cell windows, all sheets, direct A1-range entry, row/column movement and first/last rows. Missing formula caches remain unavailable, never zero or recomputed.
-- Chat uses real provider requests, bounded retrieval from the full disk index, exact-source quotation validation, version/hash citations and explicit unsupported results. No live browser credentials, auth cookies or canned fallback replies are used.
-- Abuse controls: same-origin mutation checks, conservative socket-based rate limits, bounded requests/maps, unguessable transient conversation IDs, one request at a time, source hash/path/symlink checks. Anonymous IP+UA ownership is not authentication; no sensitive user account information belongs in these ephemeral conversations.
-- npm test covers anonymous access and protections. tests/completeCorpusIngest.test.py checks dense-tail retrieval, exact-byte dedup, formulas/caches, complete pages/slides and long-cell continuation.
-- The active server serves only /, /index.html, explicitly enumerated built assets and the document API allowlist. Legacy guide, audio, access and presentation endpoints are not mounted. No workspace, backup, raw index or secret files are served.
-
----
-## Historical implementation notes (superseded where inconsistent)
-
 # Athar JV — Executive Summary · PDF presentation · Timeline · Grounded chat · Advanced Voice Mode
 
 > Current implementation: [Presentation workspace and protected original-source review](docs/review-workspace.md).

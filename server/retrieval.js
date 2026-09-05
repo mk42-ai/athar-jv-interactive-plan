@@ -73,8 +73,6 @@ export function validateSourceLocation(kind, location) {
   for (const key of ['page', 'slide']) {
     if (location[key] != null && (!Number.isSafeInteger(location[key]) || location[key] < 1)) invalid(`Invalid ${key} locator.`);
   }
-  const metadataOnly = location.page == null && location.slide == null && location.sheet == null && location.range == null && typeof location.part === 'string' && /^(?:raw-[0-9]+-name-|ocr-)/.test(location.part);
-  if (metadataOnly && ['pptx', 'xlsx'].includes(kind)) { requiredString(location.part, 'metadata locator', 500); return location; }
   if (kind === 'pdf' && !Number.isSafeInteger(location.page)) invalid('PDF source requires a page.');
   if (kind === 'pptx' && !Number.isSafeInteger(location.slide)) invalid('PPTX source requires a slide.');
   if (kind !== 'pdf' && location.page != null) invalid('Page locator is only valid for PDF.');
@@ -109,7 +107,7 @@ export function validateCorpusIndex(input) {
     requiredString(doc.id, 'document ID', 128);
     if (!/^[a-f0-9]{64}$/i.test(doc.id) || doc.id !== doc.sha256) invalid('Document ID must equal its SHA-256.');
     if (docs.has(doc.id) || slugs.has(doc.slug)) invalid('Duplicate document ID or slug.');
-    if (!(SLUGS.has(doc.slug) || /^(?:financial-summary|executive-presentation|financial-model|implementation-plan)-[a-f0-9]{8,64}$/.test(doc.slug)) || !KINDS.has(doc.kind)) invalid('Invalid document slug or kind.');
+    if (!SLUGS.has(doc.slug) || !KINDS.has(doc.kind)) invalid('Invalid document slug or kind.');
     requiredString(doc.title, 'document title', 1000);
     requiredString(doc.status, 'document status', 200);
     if (!Object.hasOwn(doc, 'coverage') || !Array.isArray(doc.limitations)) invalid('Document coverage and limitations are required.');
