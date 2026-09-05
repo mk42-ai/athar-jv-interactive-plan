@@ -241,6 +241,9 @@ function limit(value, fallback, maximum) {
 }
 
 /** Synchronous deterministic retrieval over an already validated or in-memory JSON index. */
+/** The executive deck ingested from its exact PDF rendering (no PPTX provisioned): slide N == page N. */
+export const isPagedDeck = (doc) => Boolean(doc && doc.slug === 'executive-presentation' && doc.kind === 'pdf');
+
 export function retrieveEvidence(input, { question, documentId = 'all', slide = null, history = [], maxChunks = 12, maxChars = 45000, maxChunkChars = 12000 } = {}) {
   const index = validatedIndexes.has(input) ? input : validateCorpusIndex(input);
   if (typeof documentId !== 'string' || (documentId !== 'all' && !index.documentsById.has(documentId))) throw new RetrievalError('unknown_document', 'Unknown document filter.');
@@ -250,11 +253,17 @@ export function retrieveEvidence(input, { question, documentId = 'all', slide = 
   const context = buildRetrievalQuery({ question, documentId, history, slide });
   const scopeQuestion = context.contextualQuestion ? `${context.question} ${context.contextualQuestion}` : context.question;
   const pageMatch = selectedDoc?.kind === 'pdf' && /\b(?:page|p\.)\s*([1-9]\d*)\b/i.exec(scopeQuestion);
-  const pageFilter = pageMatch ? Number(pageMatch[1]) : null;
-  const slideMatch = selectedDoc?.kind === 'pptx' && /\bslide\s+([1-9]\d*)\b/i.exec(context.question);
+  let pageFilter = pageMatch ? Number(pageMatch[1]) : null;
+  // A deck provisioned as its exact PDF rendering keeps slide semantics: slide N is page N.
+  const pagedDeck = isPagedDeck(selectedDoc);
+  const slideMatch = (selectedDoc?.kind === 'pptx' || pagedDeck) && /\bslide\s+([1-9]\d*)\b/i.exec(context.question);
   if (slideMatch && slide != null && slide !== Number(slideMatch[1])) throw new RetrievalError('invalid_slide', 'The question and selected slide have different scopes.');
   if (slideMatch) slide = Number(slideMatch[1]);
-  if (slide != null && (!Number.isSafeInteger(slide) || slide < 1 || !selectedDoc || selectedDoc.kind !== 'pptx')) throw new RetrievalError('invalid_slide', 'A slide filter requires a selected PPTX document and a positive slide number.');
+  if (slide != null && (!Number.isSafeInteger(slide) || slide < 1 || !selectedDoc || (selectedDoc.kind !== 'pptx' && !pagedDeck))) throw new RetrievalError('invalid_slide', 'A slide filter requires the selected presentation document and a positive slide number.');
+  if (slide != null && pagedDeck) {
+    if (pageFilter != null && pageFilter !== slide) throw new RetrievalError('invalid_slide', 'The question and selected slide have different scopes.');
+    pageFilter = slide; slide = null;
+  }
   maxChunks = limit(maxChunks, 12, 12); maxChars = limit(maxChars, 45000, 45000); maxChunkChars = limit(maxChunkChars, 12000, 45000);
   const terms = queryTerms(context.query);
   const search = compile(index);

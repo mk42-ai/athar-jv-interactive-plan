@@ -2,12 +2,101 @@
 
 > Current implementation: [Presentation workspace and protected original-source review](docs/review-workspace.md).
 
-## Embeddable in preview panels (5 Sept 2026)
+> **5 Sept 2026 — public workspace.** The reviewer-code gate has been removed entirely (no login, no session cookie, no
+> bearer token): presentation, narration and the document-connected AI are open to anyone with the deployment URL, and
+> the app embeds in any iframe (`Content-Security-Policy: frame-ancestors *`, no `X-Frame-Options`). The AI corpus is
+> exactly three documents — the Financial Model Executive Summary (3) PDF, the financial model v13 workbook and the
+> 6-month implementation plan Oct 2026 – Mar 2027 (v1); see `docs/review-workspace.md` → "Public workspace". Sections
+> below that mention a review code, private mode or a missing v13 workbook are historical.
 
-Responses send `Content-Security-Policy: frame-ancestors *` (configurable via `ATHAR_FRAME_ANCESTORS`) instead of
-`X-Frame-Options: SAMEORIGIN`, and the reviewer cookie is `SameSite=None; Secure` on HTTPS (`ATHAR_COOKIE_SAMESITE` to
-pin `lax`/`strict`), so the workspace loads and signs in inside an embedded iframe as well as in a top-level tab.
-Mutating routes keep their same-origin CSRF check. Details: `docs/review-workspace.md` → "Embedding in preview panels".
+## Chat fix — "zero output" root causes and the plain chat (5 Sept 2026, PR #2)
+
+**What was wrong (reproduced with the dev server and a 12-question battery, upstream calls logged):**
+1. A conversation was bound to an anonymous *client principal* (`X-Athar-Client` from `localStorage`, else IP + user
+   agent). Inside cross-site iframes (storage partitioned/blocked) and behind proxies (changing forwarded IP) the second
+   request carried a different principal → `404 conversation_not_found` → no answer.
+2. Mutating routes enforced a same-origin `Origin`/`Sec-Fetch-Site` check although no cookie existed → a missing or
+   rewritten `Origin` (embedding hosts, proxies) → `403 origin_forbidden` → no answer.
+3. The model had to return a JSON *passage-selection* object that was validated fail-closed (exact quotes, coverage
+   gaps, one repair) → `422 unsupported_fact` or `grounding: unsupported` with zero facts for conversational or loosely
+   phrased questions ("Hello, what can you tell me about this project?"), and the answers that did pass were raw page
+   dumps of thousands of characters, not answers.
+4. A deployment without the provisioned stores (`ATHAR_CORPUS_DIR` / `ATHAR_PRESENTATION_DIR`) returned 503s: the chat
+   was disabled ("No sources are available yet") and the presentation showed a retry state.
+5. A 20-requests-per-minute throttle per IP also counted session creation (shared IPs hit 429).
+
+**What changed (`server/evidenceRoutes.js`, `server/ondemand.js`, `src/components/chat/ChatWidget.jsx`, `src/App.jsx`):**
+- Conversations are keyed by their random id only; an unknown/expired id starts a new one (never 404). No Origin gate
+  (no cookie → no CSRF surface). Throttle: 40 requests/minute per IP.
+- Every question retrieves the most relevant passages from the three documents (`retrieveEvidence`, all documents;
+  overview passages when a question has no lexical match, e.g. greetings; exact saved cells when a cell address is
+  named) and asks On Demand for a concise Markdown answer grounded ONLY in those passages, with a `Sources: [n]` line
+  that becomes structured `citations`. An empty model reply is retried once; if it is still empty, or the AI service
+  fails, the reply is a deterministic digest of the retrieved passages (`grounding.status = "degraded"`); a missing
+  corpus returns an explicit explanation (`"unavailable"`). **An empty answer is never returned.**
+- `GET /api/health` now reports `corpus.provisioned/documents/chunks` and `presentation.available`; every upstream
+  call logs `[ondemand] POST /chat/v1/sessions → HTTP 201 (ms)` / `… /query → HTTP 200 (ms) answerChars=n`, and
+  `ATHAR_DEBUG_UPSTREAM=1` adds the raw bodies (truncated) — never the key.
+- The AI panel is a **plain chat**: a scrollable thread and a text input with a Send button. Scope toggles, starter
+  cards, the document list, the citation side panel, the collapsible rail/splitter/width control and the voice tab are
+  gone (`src/components/voice/*`, `SourceViewer.jsx` and `src/lib/audio.js` deleted; the `/api/voice/*` routes stay
+  server-side). Deep link: `#chat` opens the Ask AI view on phones; `#chat?q=…&q=…` also sends up to three questions on
+  open. Still iframe-embeddable: `Content-Security-Policy: frame-ancestors *`, no `X-Frame-Options`, no cookies.
+- Tests: `tests/publicAccess.test.mjs` pins the new contract (no Origin/client binding, unknown id → new conversation,
+  non-empty answers for model text / empty reply / upstream failure / missing corpus, 40/min throttle).
+- Not changed: the presentation, timeline and narrated guide; the private-store provisioning (`npm run provision`,
+  `ATHAR_PRESENTATION_DIR`). The strict extractive validators (`server/evidenceAnswer.js`, `evidenceSelection.js`,
+  `evidenceCoverage.js`, `sourceQuote.js`) are no longer on the chat path and stay only for their tests/labels.
+
+## Spatial UI, collapsible AI panel and document-connected AI (5 Sept 2026)
+
+Refinement of the existing workspace — same white · charcoal · gold palette, same playback engine, same evidence pipeline.
+
+- **Slim docked player below the slide.** The Guide Mode player is the last row of the viewer grid, never an overlay:
+  previous / play-pause / next, a current-section indicator (`3/21 · Slide 1 · Narrating` + the moment's caption), a 2 px gold
+  progress line along its top edge, an in-flow expandable **Transcript** (click any moment to jump), and an **information menu**
+  (ⓘ) holding the technical voice/model/integrity details and keyboard shortcuts. The menu opens below the player, so it never
+  covers slide content; on phones it is an in-flow sheet.
+- **Spatial layer (Glassmorphism 2.0 / Liquid Glass).** Frosted translucent panels (`backdrop-filter: blur`) with layered
+  depth, a faint reflection along each panel's top edge, Bento-style ordering (one radius, one gap, lighter borders) and
+  restrained kinetics (160–420 ms, reduced-motion aware). Everything is in `src/styles.css` under "SPATIAL LAYER"; a
+  `@supports` fallback keeps panels opaque white where blur is unsupported.
+- **Collapsible right-hand AI panel (desktop).** The companion is a grid column that *resizes the presentation* — collapse it to a
+  76 px rail (‹ / ›), reopen it, drag the splitter on its left edge (`role="separator"`, arrow keys) or use the labelled range
+  control. Phones keep separate **Presentation** and **Ask AI** views; both stay mounted so narration, page and conversation persist.
+- **Document-connected AI.** `server/documentRegistry.js` declares the four review documents — (1) executive-summary slide deck,
+  (2) financial-model executive-summary PDF, (3) financial model v13 workbook, (4) six-month implementation-plan workbook — and
+  `/api/documents` always lists all four: indexed ones with their exact corpus record, missing ones with status **`missing`** and
+  provisioning guidance. Answers keep the evidence contract: **Source facts** (stated), **Derived calculations** (server-computed
+  from quoted operands), **Source conflicts**, **Not established by the selected evidence**, plus a **Coverage** section that names
+  any document that could not be consulted. Each citation is an **Open source** action labelled with the document and its page /
+  slide / worksheet!range (`Executive-summary deck · Slide 2`, `Implementation plan · Open Items!D31:G46`). Scopes: **This
+  document** / **All documents**. Starter questions: *Compare the UAE base case with international expansion.* · *What capital
+  decisions still need agreement?* · *Which implementation milestones depend on those decisions?*
+- **Provisioning from signed URLs.** `npm run provision` (`scripts/provision_sources.py`) keeps originals already present under
+  `ATHAR_SOURCE_INPUT_DIR`, downloads any missing original from `ATHAR_SOURCE_URL_<SLUG>` (HTTPS, content-type and file-signature
+  checked; URLs are time-limited credentials read from the host environment / git-ignored `.env`, never committed — this repository
+  is public), writes a slug-pinned manifest and runs the offline ingestion into `ATHAR_CORPUS_DIR`. The executive deck may be
+  provisioned as its exact 2-page PDF rendering when the PPTX is unavailable (`slide N = page N`; recorded as a limitation and
+  shown as an alternate original in the AI panel).
+- **Public workspace — no review-access gate.** The former "Private review access" / "Review access code" card, the
+  `/api/access` routes, the signed session cookie, the embedded bearer-token fallback and the
+  `ATHAR_REVIEW_PASSPHRASE` / `ATHAR_SESSION_SECRET` / `ATHAR_PRIVATE_PRESENTATION` / `ATHAR_COOKIE_SAMESITE` settings are
+  gone. The deck, timeline, narration AND the document-connected AI (chat, citations, original downloads, voice) are served
+  to anyone with the deployment URL, top-level or inside an iframe, with no sign-in step anywhere. `GET /api/health`
+  reports `access: "public"`. What remains in `server/publicAccess.js` is not authentication: an anonymous per-client
+  conversation affinity (`X-Athar-Client`), per-IP throttling, the same-origin CSRF check on mutating routes and the
+  120-second media capabilities for the speech callback. The On Demand key never leaves the server.
+- **Embeddable in preview panels.** Responses send `Content-Security-Policy: frame-ancestors *` (configurable via
+  `ATHAR_FRAME_ANCESTORS`) and never `X-Frame-Options`, so the workspace — including the AI panel — loads inside a
+  cross-origin iframe as well as in a top-level tab. No cookie is set, so third-party-cookie policies cannot break it.
+- **On Demand integration verified against the live public API docs (5 Sept 2026).** `POST https://api.on-demand.io/chat/v1/sessions`
+  (`apikey` header, `{externalUserId, pluginIds}` → `data.id`) and `POST /chat/v1/sessions/{sessionId}/query`
+  (`{query, endpointId, responseMode: "sync", fulfillmentOnly, modelConfigs: {fulfillmentPrompt, temperature}}` → `data.answer`,
+  `data.messageId`, `data.status`) match `server/ondemand.js` field for field. `GET /api/health?probe=1` (public, upstream result cached 5 min)
+  proves the server-side key is loaded *and accepted* upstream (session create 201 + read 200) without exposing the key, and
+  reports the document registry summary. The key is `ON_DEMAND_API_KEY` / `ONDEMAND_API_KEY` in the host environment or the
+  git-ignored `.env` — never in the tree.
  This runbook supersedes older public-chat, secret-copy and live-narration-fallback instructions below. Historical QA logs are retained for history only; consult the current run's machine-readable QA evidence for verified results.
 
 React + Vite client with a server-side **On Demand API proxy** (`server/api.js`) that runs

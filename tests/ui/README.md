@@ -1,5 +1,11 @@
 # UI regression contract
 
+> **5 Sept 2026 — the review-access gate was removed from the app.** The mock `auth-denied` case, the
+> `citation-401-clears-protected-content` check, the `gate` / `passphrase` selectors and the `--auth env`
+> (`ATHAR_REVIEW_PASSPHRASE`) broker mode below describe the former `AccessGate` and `/api/access` flow, which no
+> longer exist: run them only against the mock proxy's own fixtures, never expect them to pass against the live app.
+> Retiring them from this harness is tracked as a follow-up; nothing in it affects the shipped application.
+
 Tests only. Uses the **installed `ui-validator` CLI** as the sole Chromium/CDP
 driver; Python standard library; no Playwright/Puppeteer, no new browser stack,
 no app/server/package edits. Load the `github` and `ui-validator` skills before

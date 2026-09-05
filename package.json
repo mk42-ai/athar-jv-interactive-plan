@@ -3,11 +3,11 @@
   "version": "1.0.0",
   "private": true,
   "type": "module",
-  "description": "Athar JV \u2014 exact 2-slide presentation (PDF.js), month timeline, compact grounded chat and Advanced Voice Mode; React/Vite client with a server-side On Demand API proxy (apikey never reaches the browser).",
+  "description": "Athar JV — exact 2-slide presentation (PDF.js), month timeline and a plain document-grounded chat; React/Vite client with a server-side On Demand API proxy (apikey never reaches the browser).",
   "scripts": {
     "dev": "vite --host 0.0.0.0 --port 5173",
     "build": "vite build",
-    "preview": "node server/index.js --presentation-preview",
+    "preview": "node server/index.js",
     "start": "node server/index.js",
     "guide:prebake": "node scripts/prebake-guide-audio.mjs",
     "guide:provenance": "node scripts/attach-guide-audio-provenance.mjs",
@@ -16,7 +16,8 @@
     "test:ingestion": "python3 tests/ingestion.test.py",
     "test:ui-unit": "python3 -m unittest discover -s tests/ui -p 'test_*.py'",
     "test:grounding": "python3 tests/grounding_cases.py",
-    "ingest": "python3 scripts/ingest_documents.py"
+    "ingest": "python3 scripts/ingest_documents.py",
+    "provision": "python3 scripts/provision_sources.py"
   },
   "dependencies": {
     "express": "^4.21.2",

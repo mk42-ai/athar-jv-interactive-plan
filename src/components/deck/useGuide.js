@@ -146,6 +146,17 @@ export function useGuide({ onSlide }) {
     }
   }, [playing, active, narrator, pauseBreath, resumeBreath]);
 
+  const startAt = useCallback((index) => {
+    narrator.unlock(); // inside the user's click: unlock the audio element for iOS/Safari
+    const i = Math.max(0, Math.min(GUIDE_STEPS.length - 1, index));
+    cancelBreath();
+    idxRef.current = i;
+    setIdx(i);
+    playingRef.current = true;
+    setPlaying(true);
+    setActive(true);
+    setRun((r) => r + 1);
+  }, [narrator, cancelBreath]);
   const start = useCallback((fromSlide = 1) => {
     narrator.unlock(); // inside the user's click: unlock the audio element for iOS/Safari
     const i = Math.max(0, firstStepOfSlide(fromSlide));
@@ -206,5 +217,5 @@ export function useGuide({ onSlide }) {
     [active, goto],
   );
 
-  return { active, playing, status, source, sourceLabel, clip, error, retry, idx, step, total: GUIDE_STEPS.length, start, stop, toggle, skip, back, playPause, goto, syncSlide };
+  return { active, playing, status, source, sourceLabel, clip, error, retry, idx, step, total: GUIDE_STEPS.length, start, startAt, stop, toggle, skip, back, playPause, goto, syncSlide };
 }
