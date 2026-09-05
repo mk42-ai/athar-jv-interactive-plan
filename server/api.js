@@ -18,6 +18,7 @@ import {
 import { loadDotEnv, onDemandKey } from './env.js';
 import { clipStatus, serveEmbedded, loadEmbeddedAudio } from './guideAudioStore.js';
 import { registrySummary } from './documentRegistry.js';
+import { presentationAccess, presentationMode } from './privatePresentation.js';
 import { loadCorpusIndex } from './retrieval.js';
 
 // ---- tiny in-memory media store (uploaded user audio + proxied TTS clips) ----
@@ -219,13 +220,13 @@ export function createApiApp() {
     next();
   });
   api.use('/access', access.router);
-  // Presentation payloads are no longer embedded in public Git/client bundles.
-  // They load only after the existing reviewer session is authenticated.
-  api.get('/presentation', access.requireAccess, (req, res) => {
+  // Presentation payloads are not embedded in Git/client bundles; they are served from the private store.
+  // Public mode (default) serves them to anyone with the URL; private mode requires the reviewer session.
+  api.get('/presentation', presentationAccess(access), (req, res) => {
     try { res.set('Cache-Control', 'private, no-store').json(getPresentationData()); }
     catch { res.status(503).json({ code: 'presentation_unavailable', message: 'The protected presentation is unavailable. Ask the owner to restore the presentation store.' }); }
   });
-  api.use(['/guide', '/guide-audio'], access.requireAccess);
+  api.use(['/guide', '/guide-audio'], presentationAccess(access));
   api.use(evidence.router);
   // Every user-generated voice/chat operation is authorized; the narrated public deck is unchanged.
   api.use('/voice', (req, res, next) => {
@@ -239,7 +240,7 @@ export function createApiApp() {
   api.get('/health', async (req, res) => {
     res.setHeader('Cache-Control', 'no-store');
     const body = { ok: true, configured: isConfigured(), build: process.env.ATHAR_BUILD_SHA || 'workspace',
-      checkedAt: new Date().toISOString(), reviewAccessConfigured: access.configured,
+      checkedAt: new Date().toISOString(), reviewAccessConfigured: access.configured, presentationMode: presentationMode(),
       // No key fragments, provider session identifiers, secret paths, or confidential metadata.
       narration: { provider: 'elevenlabs', voice: 'River', playback: 'verified-prebaked' },
       chatApi: { host: 'https://api.on-demand.io', createSession: 'POST /chat/v1/sessions', submitQuery: 'POST /chat/v1/sessions/{sessionId}/query', responseMode: 'sync', endpointId: CONFIG.endpointId, authHeader: 'apikey', docsVerified: '2026-09-05' } };

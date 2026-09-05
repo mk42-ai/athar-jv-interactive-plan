@@ -14,7 +14,7 @@ async function bootstrap() {
   status('Loading private review…');
   try {
     const response = await fetch('/api/presentation', { credentials: 'same-origin', cache: 'no-store' });
-    if (response.status === 401) return status('Reviewer access is required to open this presentation.', { access: true });
+    if (response.status === 401) return status('This deployment runs in private mode: reviewer access is required to open the presentation.', { access: true });
     if (!response.ok) return status('The private presentation is unavailable. Please retry.', { retry: true });
     initializePresentation(await response.json());
     // App and its business-data consumers MUST NOT evaluate before the authorized state exists.

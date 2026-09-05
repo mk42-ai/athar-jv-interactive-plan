@@ -121,3 +121,17 @@ never sends from a third-party frame. Both are now configurable at the host boun
 
 Tests: `tests/access.test.mjs` covers the SameSite matrix (HTTPS → `None; Secure`, HTTP → `Lax`, pinned modes), the
 CSP header on every response and the absence of `X-Frame-Options`.
+
+## Public presentation mode (5 Sept 2026)
+
+`ATHAR_PRIVATE_PRESENTATION` now selects one of two host-boundary modes (`server/privatePresentation.js`):
+
+| Mode | Value | Bundle + login shell | `/api/presentation`, `/api/guide*`, `/deck`, `/guide-audio` | Document-connected AI (`/api/documents`, `/api/citations`, `/api/sources`, `/api/chat`, `/api/voice`) |
+|---|---|---|---|---|
+| Public (default) | unset / `0` | served to everyone, no shell | public (`X-Presentation-Mode: public`, `no-store`) | reviewer session required (AccessGate inside the companion) |
+| Private | `1` | login shell, 401 elsewhere | reviewer session required | reviewer session required |
+
+`presentationAccess(access)` is the single guard used by `server/api.js` and `server/index.js` for the payload routes;
+`GET /api/health` reports `presentationMode`. Public mode means the deck, derived timeline and narration clips are
+readable by anyone who has the deployment URL — choose it deliberately. Original source documents, citations and
+the On Demand-backed answers stay behind the reviewer code in both modes. Tests: `tests/privatePresentation.test.mjs`.

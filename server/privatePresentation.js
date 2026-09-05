@@ -1,9 +1,27 @@
-// Protect the existing presentation, derived timeline and bundle at the host boundary.
+// Presentation access mode, decided at the host boundary by ATHAR_PRIVATE_PRESENTATION:
+//   "1"            → confidential mode: the login shell below gates the bundle, and every presentation payload
+//                    route (/api/presentation, /api/guide*, /deck, /guide-audio) requires the reviewer session.
+//   anything else  → PUBLIC presentation (default): the deck, timeline and narration load for anyone who has the
+//                    URL — no sign-in, top-level or embedded in an iframe. The document-connected AI (chat,
+//                    citations, original downloads, voice) STILL requires the reviewer code; it never opens up.
 // The login shell contains no business content, provider key, source metadata or access token.
+export const presentationIsPrivate = () => process.env.ATHAR_PRIVATE_PRESENTATION === '1';
+export const presentationMode = () => (presentationIsPrivate() ? 'private' : 'public');
+
+/** Guard for presentation payload routes: reviewer session in private mode, pass-through in public mode. */
+export function presentationAccess(access) {
+  return (req, res, next) => {
+    if (presentationIsPrivate()) return access.requireAccess(req, res, next);
+    res.setHeader('Cache-Control', 'no-store');
+    res.setHeader('X-Presentation-Mode', 'public');
+    return next();
+  };
+}
+
 export function privatePresentation(access) {
   return (req, res, next) => {
-    if (process.env.ATHAR_PRIVATE_PRESENTATION !== '1' || access.read(req)) {
-      if (process.env.ATHAR_PRIVATE_PRESENTATION === '1') {
+    if (!presentationIsPrivate() || access.read(req)) {
+      if (presentationIsPrivate()) {
         res.setHeader('Cache-Control', 'private, no-store');
         res.setHeader('Vary', 'Cookie');
       }

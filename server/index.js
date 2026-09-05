@@ -5,7 +5,7 @@ import path from 'node:path';
 import fs from 'node:fs';
 import { fileURLToPath } from 'node:url';
 import { createApiApp } from './api.js';
-import { privatePresentation } from './privatePresentation.js';
+import { privatePresentation, presentationAccess } from './privatePresentation.js';
 import { onDemandKey } from './env.js';
 import { deckPdfMiddleware } from './deck.js';
 import { guideAudioMiddleware, rehydrateGuideAudio } from './guideAudioStore.js';
@@ -25,7 +25,7 @@ app.use((req, res, next) => {
 const apiApp = createApiApp();
 app.use(apiApp);
 app.use(privatePresentation(apiApp.locals.reviewAccess));
-app.use(['/deck', '/guide-audio'], apiApp.locals.reviewAccess.requireAccess);
+app.use(['/deck', '/guide-audio'], presentationAccess(apiApp.locals.reviewAccess)); // reviewer session only in private mode
 rehydrateGuideAudio({ staticDir: 'dist' });
 app.use(guideAudioMiddleware({ staticDir: 'dist' }));
 app.use(deckPdfMiddleware({ staticDir: 'dist' }));

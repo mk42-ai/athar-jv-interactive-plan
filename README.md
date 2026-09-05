@@ -33,6 +33,10 @@ Refinement of the existing workspace — same white · charcoal · gold palette,
   is public), writes a slug-pinned manifest and runs the offline ingestion into `ATHAR_CORPUS_DIR`. The executive deck may be
   provisioned as its exact 2-page PDF rendering when the PPTX is unavailable (`slide N = page N`; recorded as a limitation and
   shown as an alternate original in the AI panel).
+- **Public presentation mode (default).** With `ATHAR_PRIVATE_PRESENTATION` unset or `0` the deck, timeline and
+  narration open for anyone with the URL — no reviewer code, top-level or inside an iframe. Set `1` for the
+  confidential login-shell mode. The document-connected AI (chat, citations, original downloads, voice) requires
+  the reviewer code in both modes. `GET /api/health` reports `presentationMode`.
 - **Embeddable in preview panels.** Responses send `Content-Security-Policy: frame-ancestors *` (configurable via
   `ATHAR_FRAME_ANCESTORS`) instead of `X-Frame-Options: SAMEORIGIN`, and the reviewer cookie is `SameSite=None; Secure`
   on HTTPS (`ATHAR_COOKIE_SAMESITE` to pin `lax`/`strict`), so the workspace loads and signs in inside an embedded
