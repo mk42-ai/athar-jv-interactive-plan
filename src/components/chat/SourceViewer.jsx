@@ -10,6 +10,29 @@ const formulaText = (formula) => typeof formula === 'string' ? formula : formula
 const displayCell = (cell) => cell.availability === 'missing-formula-cache' ? 'Saved result unavailable' : cell.value == null ? 'Blank / not recorded' : printable(cell.value);
 const columnName = (n) => { let s=''; for (;n>0;n=Math.floor((n-1)/26)) s=String.fromCharCode(65+(n-1)%26)+s; return s; };
 
+// Cache verified immutable preview bytes, not credentials or access state.
+// Resizing/zooming must not cancel and re-download the same original.
+const previewBytes = new Map();
+function verifiedPreview(preview) {
+  if (!/^\/api\/sources\/[a-f0-9]{64}\/preview$/.test(preview.url || '')) return Promise.reject(new Error('Invalid preview URL'));
+  const key = preview.url + ':' + preview.sha256;
+  if (!previewBytes.has(key)) {
+    if (previewBytes.size >= 8) previewBytes.delete(previewBytes.keys().next().value);
+    const pending = (async () => {
+      const res = await fetch(preview.url, { credentials: 'omit', cache: 'no-store' });
+      if (!res.ok || !res.headers.get('content-type')?.includes('application/pdf')) throw new Error('Preview unavailable');
+      const bytes = new Uint8Array(await res.arrayBuffer());
+      if (crypto.subtle && preview.sha256) {
+        const hash = [...new Uint8Array(await crypto.subtle.digest('SHA-256', bytes))].map(n => n.toString(16).padStart(2, '0')).join('');
+        if (hash !== preview.sha256) throw new Error('Preview integrity mismatch');
+      }
+      return bytes;
+    })().catch(error => { previewBytes.delete(key); throw error; });
+    previewBytes.set(key, pending);
+  }
+  return previewBytes.get(key);
+}
+
 function SourcePdf({ view }) {
   const canvas = useRef(null), holder = useRef(null), version = useRef(0);
   const [width, setWidth] = useState(0), [state, setState] = useState('loading'), [bounds, setBounds] = useState(null), [zoom,setZoom]=useState(1), [pageText,setPageText]=useState('');
@@ -18,13 +41,9 @@ function SourcePdf({ view }) {
     if (!view.preview?.available || !width) return;
     let cancelled=false, documentTask, renderTask;
     const revision=++version.current;setState('loading');setBounds(null);
-    const controller = new AbortController();
     (async()=>{
       try {
-        const res=await fetch(view.preview.url,{credentials:'same-origin',cache:'no-store',signal:controller.signal});
-        if(!res.ok||!res.headers.get('content-type')?.includes('application/pdf'))throw new Error('Preview unavailable');
-        const bytes=new Uint8Array(await res.arrayBuffer());
-        if(crypto.subtle&&view.preview.sha256){const hash=[...new Uint8Array(await crypto.subtle.digest('SHA-256',bytes))].map(n=>n.toString(16).padStart(2,'0')).join('');if(hash!==view.preview.sha256)throw new Error('Preview integrity mismatch');}
+        const bytes = (await verifiedPreview(view.preview)).slice();
         if(cancelled)return;
         documentTask=pdfjsLib.getDocument({data:bytes});const pdf=await documentTask.promise;
         const page=await pdf.getPage(view.previewPage);const original=page.getViewport({scale:1});const scale=Math.max(0.1,(width-2)/original.width)*zoom;const viewport=page.getViewport({scale});
@@ -35,7 +54,7 @@ function SourcePdf({ view }) {
         const content=await page.getTextContent();setPageText(content.items.map(item=>item.str+(item.hasEOL?'\n':' ')).join(''));el.dataset.page=String(view.previewPage);setBounds({width:original.width,height:original.height});setState('ready');
       } catch(error){if(!cancelled&&error.name!=='AbortError'&&error.name!=='RenderingCancelledException')setState('error');}
     })();
-    return()=>{cancelled=true;controller.abort();renderTask?.cancel?.();documentTask?.destroy?.();};
+    return()=>{cancelled=true;renderTask?.cancel?.();documentTask?.destroy?.();};
   },[view.preview?.url,view.preview?.sha256,view.previewPage,width,zoom]);
   return <div className="source-pdf" ref={holder} data-testid="source-pdf" data-state={view.preview?.available ? state : 'unavailable'}>
     {!view.preview?.available ? <p role="status">This source preview is unavailable. The original and extracted source records remain accessible; no substitute slide is displayed.</p> : <>
@@ -70,7 +89,6 @@ function Worksheet({ view }) {
 export default function SourceViewer({source,citationId,onClose,libraryMode=false}) {
   const [view,setView]=useState(null),[busy,setBusy]=useState(true),[error,setError]=useState(''),[target,setTarget]=useState({}),[retry,setRetry]=useState(0);
   const [sheet,setSheet]=useState(''),[range,setRange]=useState('');
-  useEffect(()=>{setTarget({});setView(null);},[citationId]);
   useEffect(()=>{
     let alive=true;setBusy(true);setError('');
     getSourceLocation(citationId,target).then(data=>{if(!alive)return;setView(data);setSheet(data.location.sheet||'');setRange(data.location.range||'');}).catch(e=>{if(!alive)return;setError(e.status===400?'That location is outside the source or too large. Choose up to 200 cells.':'The source could not be opened. Retry without changing the source.');}).finally(()=>alive&&setBusy(false));
@@ -84,7 +102,7 @@ export default function SourceViewer({source,citationId,onClose,libraryMode=fals
   const moveRows=(direction)=>{if(!canMoveRows(direction))return;const b=view.bounds;const delta=(b.maxRow-b.minRow+1)*direction;const sheetInfo=view.availableLocations.sheets.find(s=>s.name===sheet);const top=Math.max(sheetInfo.bounds.minRow,Math.min(sheetInfo.bounds.maxRow-(b.maxRow-b.minRow),b.minRow+delta));setTarget({sheet,range:`${columnName(b.minColumn)}${top}:${columnName(b.maxColumn)}${top+b.maxRow-b.minRow}`});};
   const moveColumns=(direction)=>{if(busy||!view?.bounds)return;const b=view.bounds,s=view.availableLocations.sheets.find(s=>s.name===sheet);const width=b.maxColumn-b.minColumn+1;const left=Math.max(s.bounds.minColumn,Math.min(s.bounds.maxColumn-width+1,b.minColumn+direction*width));navigate({sheet,range:columnName(left)+b.minRow+':'+columnName(left+width-1)+b.maxRow});};
   const moveEdge=(end)=>{if(busy||!view?.bounds)return;const b=view.bounds,s=view.availableLocations.sheets.find(s=>s.name===sheet);const height=b.maxRow-b.minRow+1;const top=end?Math.max(s.bounds.minRow,s.bounds.maxRow-height+1):s.bounds.minRow;navigate({sheet,range:columnName(b.minColumn)+top+':'+columnName(b.maxColumn)+(top+height-1)});};
-  return <div className="source-viewer" data-testid="source-viewer" data-kind={view?.kind||''} data-location={locationLabel} aria-busy={busy}>
+  return <div className="source-viewer" data-testid="source-viewer" data-document-id={source.documentId} data-citation-id={citationId} data-kind={view?.kind||''} data-location={locationLabel} aria-busy={busy}>
     <header><div><p className="source-kicker">{source.kind?.toUpperCase() || view?.kind?.toUpperCase()} · ORIGINAL SOURCE · SHA {source.documentId?.slice(0,10)}</p><h3 id="citation-panel-title">{source.title}</h3><p data-testid="source-location">{locationLabel||source.label}</p></div>{onClose && <button className="icon-btn" onClick={onClose} aria-label="Close source excerpt">×</button>}</header>
     {busy&&<p role="status">Loading the source location…</p>}
     {error&&<p role="alert">{error}</p>}
