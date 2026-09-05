@@ -1,6 +1,14 @@
 # Athar JV — Executive Summary · PDF presentation · Timeline · Grounded chat · Advanced Voice Mode
 
-> Current implementation: [Presentation workspace and protected original-source review](docs/review-workspace.md). This runbook supersedes older public-chat, secret-copy and live-narration-fallback instructions below. Historical QA logs are retained for history only; consult the current run's machine-readable QA evidence for verified results.
+> Current implementation: [Presentation workspace and protected original-source review](docs/review-workspace.md).
+
+## Embeddable in preview panels (5 Sept 2026)
+
+Responses send `Content-Security-Policy: frame-ancestors *` (configurable via `ATHAR_FRAME_ANCESTORS`) instead of
+`X-Frame-Options: SAMEORIGIN`, and the reviewer cookie is `SameSite=None; Secure` on HTTPS (`ATHAR_COOKIE_SAMESITE` to
+pin `lax`/`strict`), so the workspace loads and signs in inside an embedded iframe as well as in a top-level tab.
+Mutating routes keep their same-origin CSRF check. Details: `docs/review-workspace.md` → "Embedding in preview panels".
+ This runbook supersedes older public-chat, secret-copy and live-narration-fallback instructions below. Historical QA logs are retained for history only; consult the current run's machine-readable QA evidence for verified results.
 
 React + Vite client with a server-side **On Demand API proxy** (`server/api.js`) that runs
 inside the Vite dev server (`vite.config.js`) or standalone (`server/index.js`).

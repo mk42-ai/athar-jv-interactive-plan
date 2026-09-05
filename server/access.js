@@ -8,6 +8,19 @@ const SESSION_MS = 6 * 60 * 60 * 1000;
 const sha = (v) => crypto.createHash('sha256').update(String(v)).digest();
 const equal = (a, b) => crypto.timingSafeEqual(sha(a), sha(b));
 
+// Cookie SameSite policy. The workspace is opened inside embedded preview panels (cross-origin iframes),
+// where a `SameSite=Strict` session cookie is never sent — sign-in appears to "not stick". `None` (the
+// default) keeps the reviewer session working in iframes AND top-level tabs; browsers require `Secure`
+// with it, so `None` is only emitted on HTTPS (or `X-Forwarded-Proto: https`), and a plain-HTTP dev host
+// falls back to `Lax`. Operators can pin `Lax`/`Strict` via ATHAR_COOKIE_SAMESITE. CSRF protection does not
+// rely on SameSite: every mutating route also enforces the same-origin Origin/Sec-Fetch-Site check below.
+export function cookieSameSite(secure, preference = process.env.ATHAR_COOKIE_SAMESITE) {
+  const wanted = /^(none|lax|strict)$/i.test(String(preference || '')) ? preference.toLowerCase() : 'none';
+  const mode = wanted === 'none' && !secure ? 'lax' : wanted;
+  return { mode: mode === 'none' ? 'None' : mode === 'lax' ? 'Lax' : 'Strict', attributes: `SameSite=${mode === 'none' ? 'None' : mode === 'lax' ? 'Lax' : 'Strict'}${secure ? '; Secure' : ''}` };
+}
+export const requestIsSecure = (req) => Boolean(req.secure) || String(req.headers['x-forwarded-proto'] || '').split(',')[0].trim() === 'https';
+
 export function createAccessControl({ passphrase = process.env.ATHAR_REVIEW_PASSPHRASE,
   signingKey = process.env.ATHAR_SESSION_SECRET, clock = Date.now } = {}) {
   const sessions = new Map();
@@ -68,13 +81,14 @@ export function createAccessControl({ passphrase = process.env.ATHAR_REVIEW_PASS
     const id = crypto.randomBytes(32).toString('base64url');
     const session = { id, principal: crypto.randomUUID(), createdAt: clock(), expiresAt: clock() + SESSION_MS };
     sessions.set(id, session);
-    const secure = req.secure || String(req.headers['x-forwarded-proto'] || '').split(',')[0].trim() === 'https';
-    res.setHeader('Set-Cookie', `${COOKIE}=${id}.${sign(id)}; HttpOnly; SameSite=Strict; Path=/; Max-Age=${SESSION_MS / 1000}${secure ? '; Secure' : ''}`);
-    return res.json({ authenticated: true, expiresAt: new Date(session.expiresAt).toISOString() });
+    const secure = requestIsSecure(req);
+    const sameSite = cookieSameSite(secure);
+    res.setHeader('Set-Cookie', `${COOKIE}=${id}.${sign(id)}; HttpOnly; ${sameSite.attributes}; Path=/; Max-Age=${SESSION_MS / 1000}`);
+    return res.json({ authenticated: true, expiresAt: new Date(session.expiresAt).toISOString(), cookieSameSite: sameSite.mode });
   });
   router.delete('/', sameOrigin, (req, res) => {
     const current = read(req); if (current) sessions.delete(current.id);
-    res.setHeader('Set-Cookie', `${COOKIE}=; HttpOnly; SameSite=Strict; Secure; Path=/; Max-Age=0`);
+    res.setHeader('Set-Cookie', `${COOKIE}=; HttpOnly; ${cookieSameSite(requestIsSecure(req)).attributes}; Path=/; Max-Age=0`);
     return res.json({ authenticated: false });
   });
   // A short-lived, scoped capability permits the AI service to fetch only its uploaded audio.

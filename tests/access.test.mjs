@@ -32,7 +32,7 @@ async function fixture({ configured = true, provider } = {}) {
     body: body === undefined ? undefined : JSON.stringify(body), ...rest,
   });
   const unlock = async () => { const r = await request('/api/access', { body: { passphrase: testPassphrase } }); assert.equal(r.status, 200); return r.headers.get('set-cookie').split(';')[0]; };
-  return { request, unlock, access, sha, dir, expire: () => { now += 7 * 3600_000; }, close: async () => { server.closeAllConnections(); await new Promise(r => server.close(r)); await fs.rm(dir, { recursive: true, force: true }); } };
+  return { request, unlock, access, sha, dir, base, expire: () => { now += 7 * 3600_000; }, close: async () => { server.closeAllConnections(); await new Promise(r => server.close(r)); await fs.rm(dir, { recursive: true, force: true }); } };
 }
 
 test('anonymous chat, document, citation, original, and retry routes fail closed', async () => {
@@ -46,7 +46,8 @@ test('anonymous chat, document, citation, original, and retry routes fail closed
 test('configured access uses HttpOnly SameSite, returns no credential, and gates authenticated original bytes', async () => {
   const f = await fixture(); try {
     const r = await f.request('/api/access', { body: { passphrase: testPassphrase } });
-    assert.match(r.headers.get('set-cookie'), /HttpOnly/); assert.match(r.headers.get('set-cookie'), /SameSite=Strict/);
+    // Plain-HTTP fixture: SameSite=None needs Secure, so the cookie falls back to Lax without Secure.
+    assert.match(r.headers.get('set-cookie'), /HttpOnly/); assert.match(r.headers.get('set-cookie'), /SameSite=Lax/); assert.doesNotMatch(r.headers.get('set-cookie'), /Secure/);
     const cookie = r.headers.get('set-cookie').split(';')[0]; assert.ok(!(await r.text()).includes(testPassphrase));
     const docs = await f.request('/api/documents', { cookie }); assert.equal(docs.status, 200); assert.match(docs.headers.get('cache-control'), /no-store/);
     const cite = await f.request('/api/citations/src-synthetic', { cookie }); assert.equal(cite.status, 200);
@@ -109,4 +110,43 @@ test('audio capabilities are scoped and expire; never authenticate the reviewer'
     const c = f.access.mediaCapability('clip-a'); assert.ok(f.access.validMediaCapability('clip-a', c.expires, c.cap));
     assert.ok(!f.access.validMediaCapability('clip-b', c.expires, c.cap)); f.expire(); assert.ok(!f.access.validMediaCapability('clip-a', c.expires, c.cap));
   } finally { await f.close(); }
+});
+
+test('HTTPS sessions use SameSite=None; Secure so sign-in works inside embedded frames; operators can pin Lax/Strict', async () => {
+  const { cookieSameSite } = await import('../server/access.js');
+  assert.deepEqual(cookieSameSite(true, undefined), { mode: 'None', attributes: 'SameSite=None; Secure' });
+  assert.deepEqual(cookieSameSite(false, undefined), { mode: 'Lax', attributes: 'SameSite=Lax' });
+  assert.deepEqual(cookieSameSite(true, 'strict'), { mode: 'Strict', attributes: 'SameSite=Strict; Secure' });
+  assert.deepEqual(cookieSameSite(true, 'Lax'), { mode: 'Lax', attributes: 'SameSite=Lax; Secure' });
+  assert.deepEqual(cookieSameSite(true, 'bogus'), { mode: 'None', attributes: 'SameSite=None; Secure' });
+  const f = await fixture(); try {
+    // Behind a TLS-terminating proxy the app sees X-Forwarded-Proto: https → SameSite=None; Secure.
+    const r = await fetch(`${f.base}/api/access`, { method: 'POST', headers: { Origin: f.base, 'Content-Type': 'application/json', 'X-Forwarded-Proto': 'https' }, body: JSON.stringify({ passphrase: testPassphrase }) });
+    assert.equal(r.status, 200);
+    assert.match(r.headers.get('set-cookie'), /SameSite=None; Secure/);
+    assert.match(r.headers.get('set-cookie'), /HttpOnly/);
+    assert.equal((await r.json()).cookieSameSite, 'None');
+    const cookie = r.headers.get('set-cookie').split(';')[0];
+    assert.equal((await f.request('/api/documents', { cookie })).status, 200);
+    const out = await fetch(`${f.base}/api/access`, { method: 'DELETE', headers: { Origin: f.base, Cookie: cookie, 'X-Forwarded-Proto': 'https' } });
+    assert.match(out.headers.get('set-cookie'), /SameSite=None; Secure; Path=\/; Max-Age=0/);
+  } finally { await f.close(); }
+});
+
+test('responses carry CSP frame-ancestors (default *) and never X-Frame-Options; ATHAR_FRAME_ANCESTORS restricts the embedders', async () => {
+  const { createApiApp } = await import('../server/api.js');
+  const previous = process.env.ATHAR_FRAME_ANCESTORS;
+  for (const [setting, expected] of [[undefined, 'frame-ancestors *'], ["'self' https://embed.example", "frame-ancestors 'self' https://embed.example"]]) {
+    if (setting === undefined) delete process.env.ATHAR_FRAME_ANCESTORS; else process.env.ATHAR_FRAME_ANCESTORS = setting;
+    const app = createApiApp();
+    const server = app.listen(0, '127.0.0.1'); await once(server, 'listening');
+    try {
+      const res = await fetch(`http://127.0.0.1:${server.address().port}/api/health`);
+      assert.equal(res.status, 200);
+      assert.equal(res.headers.get('x-frame-options'), null, 'X-Frame-Options must not be sent');
+      assert.equal(res.headers.get('content-security-policy'), expected);
+      assert.equal(res.headers.get('x-content-type-options'), 'nosniff');
+    } finally { server.closeAllConnections(); await new Promise(r => server.close(r)); }
+  }
+  if (previous === undefined) delete process.env.ATHAR_FRAME_ANCESTORS; else process.env.ATHAR_FRAME_ANCESTORS = previous;
 });
