@@ -4,7 +4,7 @@
 .document-workspace .brand-title{font-size:30px;letter-spacing:.065em}.brand-dot{color:#b68a35}.document-workspace .brand-sub{font-size:10px;margin-top:4px;letter-spacing:.12em}
 .workspace-heading{border-left:1px solid #e4e0d7;padding-left:28px}.workspace-heading .eyebrow{font-size:9px;letter-spacing:.15em;margin:0}.workspace-heading h1{margin:1px 0 0;font-size:17px;line-height:1.5;font-weight:500}
 .chat-jump{margin-left:auto;font-size:12px;border-bottom:1px solid #b68a35;padding:10px 0;white-space:nowrap}.chat-jump span{margin-left:20px;color:#805c22}
-.document-layout{display:grid;grid-template-columns:234px minmax(0,1fr) minmax(320px,365px);min-height:calc(100dvh - 106px);max-width:1920px;margin:auto;align-items:start}
+.document-layout{width:100%;min-width:0;display:grid;grid-template-columns:234px minmax(0,1fr) minmax(320px,365px);min-height:calc(100dvh - 106px);max-width:1920px;margin:auto;align-items:start}
 .document-library{min-width:0;padding:26px 14px;position:sticky;top:0;max-height:100dvh;overflow:auto}
 .library-heading{display:flex;align-items:center;justify-content:space-between;padding:0 10px}.library-heading h2{font-size:12px;letter-spacing:.11em;text-transform:uppercase;margin:0}.library-heading>span{font-size:11px;color:#805c22;border:1px solid #e0d5bb;border-radius:4px;padding:1px 6px}
 .library-note{font-size:11px;color:#746c61;margin:8px 10px 24px}.document-card{display:flex;align-items:flex-start;position:relative;gap:10px;width:100%;min-width:0;padding:16px 9px;text-align:left;border:1px solid transparent;border-radius:6px;margin:5px 0;color:#534e46}.document-card:hover{background:#f2efe7}.document-card[aria-current=page]{border-color:#d4c299;background:#fff;box-shadow:0 2px 6px #30240008}
