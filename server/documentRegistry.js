@@ -1,7 +1,7 @@
 // Registry of the THREE review documents the document-connected AI covers (5 Sept 2026 set).
 //
 // The protected corpus (ATHAR_CORPUS_DIR) only knows about originals that were actually ingested.
-// This registry lets the API tell the reviewer, explicitly, which of the four expected documents
+// This registry lets the API tell the visitor, explicitly, which of the expected documents
 // are indexed and which are MISSING — and how a missing original can be provisioned — instead of
 // silently answering from a subset.
 //

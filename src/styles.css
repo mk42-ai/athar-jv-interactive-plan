@@ -637,13 +637,7 @@ h1, h2, h3 { font-weight: 500; letter-spacing: -0.01em; }
 .athar-workspace .month-panel-drawer :is(.tb-btn, .disc-btn, .mp-group-btn) { min-width: 44px; min-height: 44px; height: auto; }
 .athar-workspace .month-panel-drawer .disc-panel[inert] { visibility: hidden; }
 
-/* Auth + source-grounded conversation, scoped to the existing companion. */
-.athar-workspace .access-gate { display: grid; gap: 12px; margin: 14px; padding: 18px 16px; background: var(--paper-2); border: 1px solid var(--hair); border-radius: 8px; }
-.athar-workspace .access-gate h3 { margin: 0; font-family: var(--serif); font-size: 1.6rem; line-height: 1.2; }
-.athar-workspace .access-gate p { font-size: 0.84rem; line-height: 1.6; margin: 0; color: var(--review-muted); }
-.athar-workspace .access-gate label { font-weight: 600; font-size: 0.8rem; }
-.athar-workspace .access-gate input { width: 100%; min-width: 0; padding: 10px 12px; border: 1px solid var(--hair-2); border-radius: 5px; background: #fff; font-size: 16px; }
-.athar-workspace .access-gate .access-error { color: var(--bad); }
+/* Source-grounded conversation, scoped to the existing companion (the review-access gate has been removed). */
 .athar-workspace .chat-context { display: grid; gap: 8px; padding: 12px 14px; border-bottom: 1px solid var(--hair); }
 .athar-workspace .chat-context label { font-size: 0.73rem; font-weight: 600; color: var(--review-muted); }
 .athar-workspace .chat-context select { width: 100%; min-width: 0; padding: 8px; border-radius: 6px; border: 1px solid var(--hair-2); background: #fff; font-size: 0.83rem; color: var(--ink); }
@@ -901,7 +895,7 @@ h1, h2, h3 { font-weight: 500; letter-spacing: -0.01em; }
     linear-gradient(180deg, #faf9f6 0%, #f4f2ec 100%);
 }
 /* Shared glass surface. Fallback stays opaque white when backdrop-filter is unsupported. */
-.athar-workspace :is(.pdfv, .companion-shell, .companion-teaser, .month-panel-drawer, .mobile-guide-transport, .access-gate, .guide-information, .citation-panel, .pdfv-readable) {
+.athar-workspace :is(.pdfv, .companion-shell, .companion-teaser, .month-panel-drawer, .mobile-guide-transport, .guide-information, .citation-panel, .pdfv-readable) {
   background: var(--glass);
   -webkit-backdrop-filter: blur(var(--blur)) saturate(1.35);
   backdrop-filter: blur(var(--blur)) saturate(1.35);
@@ -920,7 +914,7 @@ h1, h2, h3 { font-weight: 500; letter-spacing: -0.01em; }
 }
 .athar-workspace :is(.pdfv, .companion-shell, .companion-teaser, .month-panel-drawer):is(:hover, :focus-within)::after { opacity: 1; transform: translateX(6px); }
 @supports not ((backdrop-filter: blur(1px)) or (-webkit-backdrop-filter: blur(1px))) {
-  .athar-workspace :is(.pdfv, .companion-shell, .companion-teaser, .month-panel-drawer, .mobile-guide-transport, .access-gate, .guide-information, .citation-panel, .pdfv-readable) { background: #fff; }
+  .athar-workspace :is(.pdfv, .companion-shell, .companion-teaser, .month-panel-drawer, .mobile-guide-transport, .guide-information, .citation-panel, .pdfv-readable) { background: #fff; }
 }
 .athar-workspace .pdfv > *, .athar-workspace .companion-shell > * { position: relative; z-index: 1; }
 .athar-workspace .pdfv { overflow: visible; }
@@ -951,12 +945,11 @@ h1, h2, h3 { font-weight: 500; letter-spacing: -0.01em; }
 .athar-workspace .companion-switcher .dock-btn.active { background: #fff; border-color: var(--edge-2); box-shadow: var(--elev-1); }
 .athar-workspace .companion-resize { background: transparent; border-bottom: 1px solid var(--edge); }
 .athar-workspace .month-panel-drawer { border-radius: var(--radius); }
-.athar-workspace .access-gate { border-radius: var(--radius-s); background: var(--glass-soft); }
 .athar-workspace .citation-panel { border-radius: 0; border-left: 0; border-right: 0; box-shadow: none; background: rgba(255, 255, 255, 0.45); }
-.athar-workspace .btn, .athar-workspace .chip, .athar-workspace .chat-context select, .athar-workspace .chat-input textarea, .athar-workspace .access-gate input { border-color: var(--edge-2); border-radius: var(--radius-s); background: rgba(255, 255, 255, 0.85); transition: border-color var(--t-fast), box-shadow var(--t-fast), background var(--t-fast), transform var(--t-fast) var(--ease-out); }
+.athar-workspace .btn, .athar-workspace .chip, .athar-workspace .chat-context select, .athar-workspace .chat-input textarea { border-color: var(--edge-2); border-radius: var(--radius-s); background: rgba(255, 255, 255, 0.85); transition: border-color var(--t-fast), box-shadow var(--t-fast), background var(--t-fast), transform var(--t-fast) var(--ease-out); }
 .athar-workspace :is(.btn, .chip):hover:not(:disabled) { box-shadow: var(--elev-1); border-color: rgba(182, 138, 53, 0.55); }
 .athar-workspace :is(.btn, .chip):active:not(:disabled) { transform: translateY(1px); }
-.athar-workspace .chat-input textarea:focus, .athar-workspace .access-gate input:focus, .athar-workspace .chat-context select:focus { border-color: var(--gold); box-shadow: 0 0 0 3px var(--gold-glow); outline: none; }
+.athar-workspace .chat-input textarea:focus, .athar-workspace .chat-context select:focus { border-color: var(--gold); box-shadow: 0 0 0 3px var(--gold-glow); outline: none; }
 .athar-workspace .msg.assistant .bubble { background: rgba(255, 255, 255, 0.7); border-color: var(--edge); border-left: 2px solid var(--gold); border-radius: var(--radius-s); box-shadow: var(--elev-1); }
 .athar-workspace .msg.user .bubble { border-radius: var(--radius-s); border-bottom-right-radius: 4px; box-shadow: 0 10px 24px -14px rgba(23, 24, 26, 0.5); }
 .athar-workspace .chat-scope-options { background: rgba(255, 255, 255, 0.4); border-color: var(--edge); border-radius: var(--radius-s); }

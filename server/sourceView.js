@@ -1,5 +1,5 @@
 /** Protected source-view service. No routes, conversions, network calls or import-time I/O.
- * Mount BOTH methods behind the same reviewer access boundary as original downloads.
+ * Both methods are public, like original downloads (the reviewer gate has been removed).
  * Treat returned strings as source data: render text, never HTML. Internal filenames never
  * leave this module. Workbook JSONL is grouped by sheet, then row, by corpus/v1 ingestion.
  */

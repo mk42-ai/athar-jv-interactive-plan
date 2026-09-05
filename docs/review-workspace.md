@@ -15,8 +15,7 @@ Narration uses only the existing verified static/embedded MP3s. Both audio and n
 Provision **outside the project root**, via encrypted host environment or an owner-only file selected by `ATHAR_CONFIG_FILE`:
 
 - `ON_DEMAND_API_KEY` (or `ONDEMAND_API_KEY`): existing provider credential; never a browser key.
-- `ATHAR_REVIEW_PASSPHRASE`: a separate reviewer access code; never the provider key.
-- `ATHAR_SESSION_SECRET`: independently random, at least 32 characters.
+- (Removed 5 Sept 2026: `ATHAR_REVIEW_PASSPHRASE` and `ATHAR_SESSION_SECRET` — there is no reviewer code or session any more.)
 - `ATHAR_CORPUS_DIR`: absolute protected ingestion directory.
 
 Do not put actual secrets in the template, repository, ZIP, public assets, URLs, logs or screenshots. The old redundant non-dot `env.local` delivery pattern is no longer recommended. Public health reports availability booleans/build identity, not key fragments, session IDs or private paths.
@@ -31,13 +30,13 @@ The extractor deduplicates by whole-file SHA256, preserves immutable originals, 
 
 `POST /api/documents/retry` reopens and validates an already-provisioned index; it does not pretend to recalculate workbooks or download missing files. Re-run the operator ingestion CLI when the original file or extractor changes.
 
-## Access boundary
+## Access boundary (public workspace, 5 Sept 2026)
 
-`POST /api/access` requires the separate reviewer code and a same-origin request, sets a signed HttpOnly cookie — `SameSite=None; Secure` over HTTPS so the session also works when the workspace is embedded in a preview panel (iframe); `Lax` on a plain-HTTP dev host; `ATHAR_COOKIE_SAMESITE` can pin `lax`/`strict` — and retains a bounded six-hour server session. Eight failed attempts trigger throttling. `DELETE /api/access` revokes it. No provider credential enters the client.
+There is no reviewer code, login, session cookie or bearer token: `POST /api/access` no longer exists (it answers 404) and the "Private review access" card is gone from the companion. Document status, chat sessions/questions, citations, originals, source views and voice are served to anyone who has the deployment URL, top-level or inside a cross-origin iframe. No provider credential enters the client.
 
-Document status, chat sessions/questions, citations and originals require review access. Conversation IDs belong to their authenticated principal. Missing, expired or forged access is rejected; mutation routes enforce same-origin/CSRF checks. Original download routes resolve only allowlisted immutable source IDs and rehash the original bytes. Source/citation responses are private/no-store. Voice calls share the same authorization and evidence answer path; audio callbacks use short-lived, single-media signed capabilities. Legacy arbitrary upstream execution/STT diagnostic entrypoints are closed.
+What remains is not authentication (`server/publicAccess.js`): conversation IDs and raw-cell source projections stay attached to the anonymous client that created them (`X-Athar-Client`, or client IP + user agent); evidence routes are throttled per IP; mutation routes enforce same-origin/CSRF checks; original download routes resolve only allowlisted immutable source IDs and rehash the original bytes; source/citation responses are no-store; audio callbacks use short-lived, single-media signed capabilities. Legacy arbitrary upstream execution/STT diagnostic entrypoints are closed.
 
-This is a shared project reviewer role, not enterprise identity/RBAC. For multi-tenant production, replace the review-code gate with the host identity provider, durable session store, user/document ACLs and distributed rate limiting.
+For a confidential deployment, put the host's own access control (identity provider, private network, or an authenticating reverse proxy) in front of the whole app — the application itself no longer gates anything.
 
 ## Retrieval and answer contract
 
@@ -52,7 +51,7 @@ An exact quote is not proof of source truth or complete semantic interpretation.
 - `npm test`: native Node tests for retrieval, exact quotes, units, arithmetic, locator validity, access controls, ownership, negative provider behavior, narrator assets/failures and Python verifier regressions.
 - `npm run test:ingestion`: synthetic complete-format/dedup/cache/path-injection tests.
 - `npm run test:ui-unit`: runner/proxy/redaction fixtures.
-- `python3 tests/grounding_cases.py --url <origin> --corpus /protected/athar-corpus --output /private/qa.json`: opt-in **real** AI suite. Supply reviewer code in environment only. Re-extracts complete originals and verifies returned IDs, locations, quotations, concepts, values and arithmetic independently. No raw answers or credentials in its report.
+- `python3 tests/grounding_cases.py --url <origin> --corpus /protected/athar-corpus --output /private/qa.json`: opt-in **real** AI suite (no credential needed — the workspace is public). Re-extracts complete originals and verifies returned IDs, locations, quotations, concepts, values and arithmetic independently. No raw answers or credentials in its report.
 - `tests/ui/run.py`: documented ui-validator/installed Chromium driver, four real asserted inner dimensions and matching screenshots. Stage/sequence are real DOM and native audio; extended cases are explicitly mock fault injection. DOM focus/key dispatch is not physical keyboard certification. Full sequence proof requires all configured native ended events at playback rate 1 without seeks.
 
 The current machine-readable QA manifest records build/origin/time and separates baseline defects, normal live behavior, fault injection, source-oracle corrections, unit assertions, grounding failures and external limitations. Do not substitute an earlier QA count or a successful HTTP response for grounded/browser success.
@@ -100,10 +99,10 @@ semantics end to end (retrieval maps `slide N` to page N; `evidenceAnswer.descri
 
 `scripts/provision_sources.py` (`npm run provision`) downloads missing originals from `ATHAR_SOURCE_URL_<SLUG>` into the
 protected input directory, pins slugs in a manifest and runs `ingest_documents.py`. Signed URLs stay in the host environment.
-`GET /api/health?probe=1` (reviewer session) runs the live key probe (create + read session) and returns booleans/status codes
+`GET /api/health?probe=1` (public; upstream result cached for five minutes) runs the live key probe (create + read session) and returns booleans/status codes
 only. Tests: `tests/documentRegistry.test.mjs` covers registry merging, URL redaction, paged-deck slide scoping and labels.
 
-## Embedding in preview panels (5 Sept 2026)
+## Embedding in preview panels (5 Sept 2026) — session/cookie details below are historical
 
 The deployed preview was reported as "refused to connect". Top-level navigation always worked; the failure was the
 platform's *embedded* preview: every response carried `X-Frame-Options: SAMEORIGIN`, which makes Chromium render
@@ -140,7 +139,7 @@ deliberately. Original source documents, citations and the On Demand-backed answ
 every mode. Tests: `tests/privatePresentation.test.mjs` (environment switch) and `tests/presentationPreview.test.mjs`
 (start-up flag; headers/cookies/query strings cannot select the mode).
 
-### Reviewer session inside an embedded frame
+### Reviewer session inside an embedded frame (historical — removed with the gate on 5 Sept 2026)
 
 `SameSite=None; Secure` lets browsers that *allow* third-party cookies keep the reviewer session inside a cross-site
 iframe. Browsers that block them (Safari, Firefox strict mode, Chrome incognito or "block third-party cookies", and the

@@ -1,5 +1,5 @@
 // Compatibility API for private, hash-verified, key-independent narration. No public rehydration.
-// Mount only AFTER reviewer authorization, including both /guide-audio and /api/guide-audio aliases.
+// Serves both the /guide-audio and /api/guide-audio aliases publicly (the reviewer gate has been removed).
 import crypto from 'node:crypto';
 import { getAudioManifest, getAudioClip, getEmbeddedAudioData, isPresentationFilename } from './presentationStore.js';
 

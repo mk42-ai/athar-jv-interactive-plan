@@ -1,5 +1,5 @@
 // Server-only presentation payload. Nothing is loaded until the environment has been configured.
-// HTTP callers MUST enforce reviewer access before calling these getters or serving their bytes.
+// The presentation is public: HTTP callers serve these verified bytes to anyone with the deployment URL.
 import fs from 'node:fs';
 import path from 'node:path';
 import crypto from 'node:crypto';

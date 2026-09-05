@@ -40,21 +40,21 @@ Refinement of the existing workspace — same white · charcoal · gold palette,
   is public), writes a slug-pinned manifest and runs the offline ingestion into `ATHAR_CORPUS_DIR`. The executive deck may be
   provisioned as its exact 2-page PDF rendering when the PPTX is unavailable (`slide N = page N`; recorded as a limitation and
   shown as an alternate original in the AI panel).
-- **Public presentation mode.** `ATHAR_PRIVATE_PRESENTATION=0` (or `false`/`public`), or starting the server with
-  `--presentation-preview` (`npm run preview`), serves the deck, timeline and narration to anyone with the URL — no
-  reviewer code, top-level or inside an iframe. `1` is the confidential login-shell mode; unset keeps the legacy
-  gated mode (bundle served, payload routes need the session). The document-connected AI (chat, citations,
-  original downloads, voice) requires the reviewer code in every mode. `GET /api/health` reports `presentationMode`.
-  Inside a cross-site iframe whose browser blocks third-party cookies, the companion's sign-in falls back to a bearer
-  token held in the iframe's session storage (`docs/review-workspace.md` → "Reviewer session inside an embedded frame").
+- **Public workspace — no review-access gate.** The former "Private review access" / "Review access code" card, the
+  `/api/access` routes, the signed session cookie, the embedded bearer-token fallback and the
+  `ATHAR_REVIEW_PASSPHRASE` / `ATHAR_SESSION_SECRET` / `ATHAR_PRIVATE_PRESENTATION` / `ATHAR_COOKIE_SAMESITE` settings are
+  gone. The deck, timeline, narration AND the document-connected AI (chat, citations, original downloads, voice) are served
+  to anyone with the deployment URL, top-level or inside an iframe, with no sign-in step anywhere. `GET /api/health`
+  reports `access: "public"`. What remains in `server/publicAccess.js` is not authentication: an anonymous per-client
+  conversation affinity (`X-Athar-Client`), per-IP throttling, the same-origin CSRF check on mutating routes and the
+  120-second media capabilities for the speech callback. The On Demand key never leaves the server.
 - **Embeddable in preview panels.** Responses send `Content-Security-Policy: frame-ancestors *` (configurable via
-  `ATHAR_FRAME_ANCESTORS`) instead of `X-Frame-Options: SAMEORIGIN`, and the reviewer cookie is `SameSite=None; Secure`
-  on HTTPS (`ATHAR_COOKIE_SAMESITE` to pin `lax`/`strict`), so the workspace loads and signs in inside an embedded
-  iframe as well as in a top-level tab. Mutating routes keep their same-origin CSRF check.
+  `ATHAR_FRAME_ANCESTORS`) and never `X-Frame-Options`, so the workspace — including the AI panel — loads inside a
+  cross-origin iframe as well as in a top-level tab. No cookie is set, so third-party-cookie policies cannot break it.
 - **On Demand integration verified against the live public API docs (5 Sept 2026).** `POST https://api.on-demand.io/chat/v1/sessions`
   (`apikey` header, `{externalUserId, pluginIds}` → `data.id`) and `POST /chat/v1/sessions/{sessionId}/query`
   (`{query, endpointId, responseMode: "sync", fulfillmentOnly, modelConfigs: {fulfillmentPrompt, temperature}}` → `data.answer`,
-  `data.messageId`, `data.status`) match `server/ondemand.js` field for field. `GET /api/health?probe=1` (reviewer session only)
+  `data.messageId`, `data.status`) match `server/ondemand.js` field for field. `GET /api/health?probe=1` (public, upstream result cached 5 min)
   proves the server-side key is loaded *and accepted* upstream (session create 201 + read 200) without exposing the key, and
   reports the document registry summary. The key is `ON_DEMAND_API_KEY` / `ONDEMAND_API_KEY` in the host environment or the
   git-ignored `.env` — never in the tree.

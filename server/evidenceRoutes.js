@@ -1,4 +1,4 @@
-// Confidential evidence routes. Originals/index never enter Vite's root or a response without review access.
+// Evidence routes (public — no reviewer gate). Originals/index never enter Vite's root; every read re-verifies the bytes.
 import express from 'express';
 import crypto from 'node:crypto';
 import fs from 'node:fs/promises';
@@ -29,7 +29,7 @@ export function createEvidenceRoutes({ access, corpusDir = process.env.ATHAR_COR
   const conversations = new Map();
   const usage = new Map();
   // Dense-cell evidence is a request-derived projection of an immutable raw record.
-  // Bind it to the reviewer; another reviewer cannot guess a source alias to read it.
+  // Bind it to the anonymous client that asked; another client cannot guess a source alias to read it.
   const rawEvidence = new Map();
   const index = (force = false) => loadCorpusIndex({ corpusDir, force });
   const views = createSourceView({ corpusDir, loadIndex: index });

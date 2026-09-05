@@ -78,7 +78,7 @@ test('exact immutable payload; explicit initialized client modules preserve expo
       await assert.rejects(resolveDeckSource('https://example.invalid/other.pdf'), /authorized presentation/);
       assert.equal(fetches, 1);
       globalThis.fetch = async () => new Response(null, { status: 401 });
-      await assert.rejects(resolveDeckSource(), /Reviewer access/);
+      await assert.rejects(resolveDeckSource(), /unavailable/); // no sign-in path exists: a non-200 is simply unavailable
       globalThis.fetch = async () => new Response('%PDF-corrupt', { headers: { 'Content-Type': 'application/pdf' } });
       await assert.rejects(resolveDeckSource(), /integrity/);
     } finally { globalThis.fetch = originalFetch; }

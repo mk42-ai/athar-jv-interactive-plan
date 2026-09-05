@@ -390,7 +390,7 @@ export function createApiApp() {
   });
 
   // Legacy diagnostic endpoints accepted arbitrary upstream identifiers/URLs. They are not used by
-  // the turn pipeline; keep them closed rather than expose another reviewer's executions or media.
+  // the turn pipeline; keep them closed rather than expose another visitor's executions or media.
   api.all(['/voice/stt', '/voice/avm', '/voice/execution/:id'], (req, res) =>
     res.status(403).json({ code: 'diagnostic_disabled', message: 'Diagnostic access is restricted to the server operator.' }));
 
