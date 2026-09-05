@@ -1,7 +1,7 @@
 import React, { useEffect, useRef, useState } from 'react';
 import * as pdfjsLib from 'pdfjs-dist';
 import workerUrl from 'pdfjs-dist/build/pdf.worker.min.mjs?url';
-import { getSourceLocation } from '../../lib/api.js';
+import { getSourceLocation, authorizedFetch } from '../../lib/api.js';
 import './source-viewer.css';
 
 pdfjsLib.GlobalWorkerOptions.workerSrc = workerUrl;
@@ -21,7 +21,7 @@ function SourcePdf({ view, onUnauthorized }) {
     const controller = new AbortController();
     (async()=>{
       try {
-        const res=await fetch(view.preview.url,{credentials:'same-origin',cache:'no-store',signal:controller.signal});
+        const res=await authorizedFetch(view.preview.url,{cache:'no-store',signal:controller.signal});
         if(res.status===401){onUnauthorized?.();throw new Error('Access expired');}
         if(!res.ok||!res.headers.get('content-type')?.includes('application/pdf'))throw new Error('Preview unavailable');
         const bytes=new Uint8Array(await res.arrayBuffer());

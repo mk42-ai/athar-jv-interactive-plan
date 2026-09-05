@@ -139,3 +139,16 @@ means the deck, derived timeline and narration clips are readable by anyone who 
 deliberately. Original source documents, citations and the On Demand-backed answers stay behind the reviewer code in
 every mode. Tests: `tests/privatePresentation.test.mjs` (environment switch) and `tests/presentationPreview.test.mjs`
 (start-up flag; headers/cookies/query strings cannot select the mode).
+
+### Reviewer session inside an embedded frame
+
+`SameSite=None; Secure` lets browsers that *allow* third-party cookies keep the reviewer session inside a cross-site
+iframe. Browsers that block them (Safari, Firefox strict mode, Chrome incognito or "block third-party cookies", and the
+Chromium 151 headless build used for verification) silently drop the cookie, so the companion would sign in and fall
+straight back to the gate. The client therefore declares itself embedded (`{ passphrase, embedded: true }`); the server
+then also returns the same signed credential in the JSON body, and the client keeps it as `Authorization: Bearer` in the
+iframe's session storage **only if** a follow-up cookie-only `GET /api/access` shows the cookie was not persisted.
+`access.read()` accepts either transport; the bearer form still needs a same-origin request for every mutation (CSRF
+policy unchanged), expires with the six-hour server session, is revoked by `DELETE /api/access`, and is dropped by the
+client on the first 401. Top-level tabs never receive or store a token. The "Download original" link is a plain
+navigation and still relies on the cookie, so in a cookie-blocking embedded browser open it in a new tab.

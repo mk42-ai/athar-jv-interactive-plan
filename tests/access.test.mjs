@@ -150,3 +150,25 @@ test('responses carry CSP frame-ancestors (default *) and never X-Frame-Options;
   }
   if (previous === undefined) delete process.env.ATHAR_FRAME_ANCESTORS; else process.env.ATHAR_FRAME_ANCESTORS = previous;
 });
+
+test('embedded clients may carry the session as Authorization: Bearer; top-level clients never receive a token', async () => {
+  const f = await fixture(); try {
+    const plain = await f.request('/api/access', { body: { passphrase: testPassphrase } });
+    assert.equal(plain.status, 200); assert.equal((await plain.json()).token, undefined, 'no token unless the client declares itself embedded');
+    const r = await f.request('/api/access', { body: { passphrase: testPassphrase, embedded: true } });
+    assert.equal(r.status, 200);
+    const body = await r.json();
+    assert.match(body.token, /^[A-Za-z0-9_-]+\.[A-Za-z0-9_-]+$/); /* base64url id + base64url HMAC */ assert.equal(body.tokenTransport, 'authorization-bearer');
+    assert.equal(r.headers.get('set-cookie').split(';')[0], `athar_review=${body.token}`, 'same credential as the HttpOnly cookie');
+    const auth = { Authorization: `Bearer ${body.token}` };
+    const docs = await fetch(`${f.base}/api/documents`, { headers: auth }); assert.equal(docs.status, 200);
+    assert.match(docs.headers.get('cache-control'), /no-store/);
+    const state = await fetch(`${f.base}/api/access`, { headers: auth }); assert.equal((await state.json()).authenticated, true);
+    assert.equal((await fetch(`${f.base}/api/documents`, { headers: { Authorization: `Bearer ${body.token.slice(0, -1)}0` } })).status, 401, 'tampered token');
+    assert.equal((await fetch(`${f.base}/api/documents`, { headers: { Authorization: 'Bearer not-a-token' } })).status, 401);
+    // Bearer sessions still need a same-origin request for mutations (CSRF policy unchanged).
+    assert.equal((await fetch(`${f.base}/api/chat/session`, { method: 'POST', headers: { ...auth, Origin: 'https://foreign.invalid', 'Content-Type': 'application/json' }, body: '{}' })).status, 403);
+    const out = await fetch(`${f.base}/api/access`, { method: 'DELETE', headers: { ...auth, Origin: f.base } }); assert.equal(out.status, 200);
+    assert.equal((await fetch(`${f.base}/api/documents`, { headers: auth })).status, 401, 'revoked');
+  } finally { await f.close(); }
+});

@@ -38,6 +38,8 @@ Refinement of the existing workspace — same white · charcoal · gold palette,
   reviewer code, top-level or inside an iframe. `1` is the confidential login-shell mode; unset keeps the legacy
   gated mode (bundle served, payload routes need the session). The document-connected AI (chat, citations,
   original downloads, voice) requires the reviewer code in every mode. `GET /api/health` reports `presentationMode`.
+  Inside a cross-site iframe whose browser blocks third-party cookies, the companion's sign-in falls back to a bearer
+  token held in the iframe's session storage (`docs/review-workspace.md` → "Reviewer session inside an embedded frame").
 - **Embeddable in preview panels.** Responses send `Content-Security-Policy: frame-ancestors *` (configurable via
   `ATHAR_FRAME_ANCESTORS`) instead of `X-Frame-Options: SAMEORIGIN`, and the reviewer cookie is `SameSite=None; Secure`
   on HTTPS (`ATHAR_COOKIE_SAMESITE` to pin `lax`/`strict`), so the workspace loads and signs in inside an embedded

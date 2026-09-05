@@ -32,9 +32,18 @@ export function createAccessControl({ passphrase = process.env.ATHAR_REVIEW_PASS
     for (const [id, session] of sessions) if (session.expiresAt <= now) sessions.delete(id);
     for (const [ip, attempt] of attempts) if (attempt.until <= now) attempts.delete(ip);
   };
+  // The session credential is normally the HttpOnly cookie. Embedded contexts where the browser blocks
+  // third-party cookies (Safari, Firefox strict, Chrome incognito/"block third-party cookies") may present the
+  // same signed value as `Authorization: Bearer <token>` instead; it is issued only when the client declares
+  // itself embedded, lives in the iframe's session storage, and expires with the server session.
+  function credential(req) {
+    const header = /^Bearer\s+(\S+)$/i.exec(String(req.headers.authorization || ''))?.[1];
+    if (header) return header;
+    return String(req.headers.cookie || '').split(';').map((p) => p.trim()).find((p) => p.startsWith(`${COOKIE}=`))?.slice(COOKIE.length + 1);
+  }
   function read(req) {
     if (!configured) return null;
-    const token = String(req.headers.cookie || '').split(';').map((p) => p.trim()).find((p) => p.startsWith(`${COOKIE}=`))?.slice(COOKIE.length + 1);
+    const token = credential(req);
     if (!token || token.length > 256) return null;
     const [id, signature, extra] = token.split('.');
     if (extra || !id || !signature || !equal(signature, sign(id))) return null;
@@ -62,7 +71,7 @@ export function createAccessControl({ passphrase = process.env.ATHAR_REVIEW_PASS
     return next();
   }
   const router = express.Router();
-  router.use((req, res, next) => { res.setHeader('Cache-Control', 'private, no-store'); res.setHeader('Vary', 'Cookie'); next(); });
+  router.use((req, res, next) => { res.setHeader('Cache-Control', 'private, no-store'); res.setHeader('Vary', 'Cookie, Authorization'); next(); });
   router.get('/', (req, res) => res.json({ authenticated: Boolean(read(req)), configured }));
   router.post('/', sameOrigin, express.json({ limit: '2kb' }), (req, res) => {
     sweep();
@@ -84,7 +93,10 @@ export function createAccessControl({ passphrase = process.env.ATHAR_REVIEW_PASS
     const secure = requestIsSecure(req);
     const sameSite = cookieSameSite(secure);
     res.setHeader('Set-Cookie', `${COOKIE}=${id}.${sign(id)}; HttpOnly; ${sameSite.attributes}; Path=/; Max-Age=${SESSION_MS / 1000}`);
-    return res.json({ authenticated: true, expiresAt: new Date(session.expiresAt).toISOString(), cookieSameSite: sameSite.mode });
+    // Embedded clients (iframe) also receive the credential in the body so they can present it as a bearer
+    // token when the browser refuses third-party cookies. Top-level clients keep the HttpOnly cookie only.
+    const embedded = req.body?.embedded === true;
+    return res.json({ authenticated: true, expiresAt: new Date(session.expiresAt).toISOString(), cookieSameSite: sameSite.mode, ...(embedded ? { token: `${id}.${sign(id)}`, tokenTransport: 'authorization-bearer' } : {}) });
   });
   router.delete('/', sameOrigin, (req, res) => {
     const current = read(req); if (current) sessions.delete(current.id);
