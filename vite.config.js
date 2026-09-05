@@ -1,7 +1,6 @@
 import { defineConfig } from 'vite';
 import react from '@vitejs/plugin-react';
 import { createApiApp } from './server/api.js';
-import { privatePresentation } from './server/privatePresentation.js';
 import { deckPdfMiddleware } from './server/deck.js';
 import { guideAudioMiddleware, rehydrateGuideAudio } from './server/guideAudioStore.js';
 
@@ -14,7 +13,6 @@ function onDemandApiPlugin() {
     configureServer(server) {
       const apiApp = createApiApp();
       server.middlewares.use(apiApp);
-      server.middlewares.use(privatePresentation(apiApp.locals.reviewAccess));
       server.middlewares.use((req, res, next) => /^\/(?:deck|guide-audio)\//.test(req.url || '') ? apiApp.locals.reviewAccess.requireAccess(req, res, next) : next());
       rehydrateGuideAudio({ staticDir: 'public' }); // restore narration clips lost by a code-snapshot redeploy
       server.middlewares.use(guideAudioMiddleware({ staticDir: 'public' })); // clips from the embedded store when public/guide-audio/*.mp3 is absent; JSON 404 instead of SPA HTML
