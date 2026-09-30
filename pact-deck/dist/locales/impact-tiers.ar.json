@@ -1,0 +1,1294 @@
+{
+ "chapter": "07",
+ "kicker": "الأثر والتمويل",
+ "srcNote": "المصدر: ورقة أثر — الذكاء الاصطناعي الوكيلي للجميع: ثلاث فئات أثر لتمويل المؤسسات (27 سبتمبر 2026) — الأرقام أهداف استرشادية (ص 3).",
+ "ui": {
+  "render": "تصوّر مفاهيمي",
+  "renderTag": "تصوّر مفاهيمي · CONCEPT RENDER",
+  "imagery": "صورة رسمية من هوية أثر",
+  "photoNote": "مؤكَّد من المصدر: 1,000,000 مواطن (ذا ناشيونال، 25 سبتمبر 2026). ويبقى رقم 18,000 خبير هدفًا استرشاديًا في الورقة.",
+  "openSource": "افتح المقال المصدر (ذا ناشيونال)",
+  "opensNew": "(يفتح في تبويب جديد)",
+  "flaggedNote": "تعذّر الوصول إلى خادم الناشر من مضيف البناء وقت الفحص (HTTP 0)؛ أُبقي رابط المقال الأصلي.",
+  "wbShort": "المصدر: مؤشرات التنمية العالمية للبنك الدولي (2026-07-13)",
+  "tm2": "Intel وIntel Core وQualcomm وDragonwing وSnapdragon علامات تجارية لمالكيها؛ تُعرض علامات الشركاء للإشارة فقط ولا تعني أي تأييد.",
+  "delivered": "ما يُنجَز",
+  "outcomes": "النتائج المقيسة",
+  "partnersLabel": "علامات شركاء التقنية — للإشارة فقط، ولا تعني أي تأييد",
+  "news": "في الأخبار",
+  "direct": "إعلان رسمي",
+  "related": "تغطية ذات صلة",
+  "pending": "العلامة الرسمية بانتظار التحقق",
+  "agreement": "ما تحمله كل اتفاقية",
+  "wbSource": "المصدر: مؤشرات التنمية العالمية للبنك الدولي (2026-07-13)",
+  "tm": "Intel وشعار Intel وIntel Core علامات تجارية لشركة Intel Corporation أو شركاتها التابعة. Qualcomm وDragonwing وSnapdragon علامات تجارية أو مسجّلة لشركة Qualcomm Incorporated. علامات الناشرين والشركاء علامات تجارية لمالكيها — تُعرض للإشارة فقط ولا تعني أي تأييد.",
+  "reviewBadge": "للمراجعة الداخلية فقط · INTERNAL REVIEW ONLY",
+  "reviewText": " — علامات الشركاء المرشّحين بانتظار تحقق خطي من كل جهة؛ ليست للتوزيع الخارجي. مؤسسة ماستركارد: الالتزام بدليل الهوية وموافقة المؤسسة قيد الانتظار. مؤسسة روكفلر: الموافقة الخطية المسبقة قيد الانتظار. مؤسسة باتريك ج. ماكغفرن: لم يُعثر على دليل هوية عام — الموافقة قيد الانتظار. المصدر: أثر — الذكاء الاصطناعي الوكيلي للجميع: ثلاث فئات أثر لتمويل المؤسسات (27 سبتمبر 2026)؛ الأرقام أهداف استرشادية من الورقة (ص 3)."
+ },
+ "slides": [
+  {
+   "id": "it-outcomes",
+   "icon": "impact",
+   "title": "النتائج هي المنتج",
+   "sub": "يحوّل الميثاق الاتفاقيات إلى قدرات وسبل عيش وقيادة — أثرٌ يبقى.",
+   "bullets": [
+    [
+     "يُعرَّف كل برنامج بنتيجته: أشخاص معتمدون، ومكاسب تعلّم، ودخل للمزارعين، وقدرة سيادية تبقى بعد انتهاء البرنامج.",
+     "ص 1"
+    ],
+    [
+     "الأدوات موجودة أصلًا: 38 اتفاقية شراكة اقتصادية شاملة، وبرنامج «مليون خبير لبناني في الذكاء الاصطناعي» ضمن برنامج تبادل الخبرات الحكومية، ومبادرة «الذكاء الاصطناعي من أجل التنمية» بقيمة مليار دولار لأفريقيا.",
+     "ص 1"
+    ],
+    [
+     "يرعى المموّل برنامجًا مسمّى لفئة محددة من المستفيدين، بخدمة مضمونة ونتائج تقيسها جهة مستقلة؛ والمموّل هو صاحب الرسالة والعنوان.",
+     "ص 5"
+    ],
+    [
+     "أثر هو ما يبقى بعد إنجاز العمل. اترك أثًرا يدوم.",
+     "دليل هوية أثر v2 § 1.3 / § 4.4"
+    ]
+   ],
+   "note": "الشرائح التالية لا تحمل إلا أرقامًا وردت في ورقة تمويل أثر (سبتمبر 2026)؛ وهي أهداف استرشادية لا التزامات."
+  },
+  {
+   "id": "it-tiers",
+   "icon": "community",
+   "title": "ثلاث فئات أثر، نموذج تنفيذ واحد",
+   "sub": "الوصول ← التملّك ← الإرث: يمكن للممول أن يبدأ من أي فئة ثم يرتقي.",
+   "tiers": [
+    {
+     "key": "t1",
+     "kicker": "الفئة 1",
+     "name": "التراخيص",
+     "chip": "الوصول",
+     "place": "لبنان · الوصول",
+     "amount": "10 ملايين دولار",
+     "flagship": "البرنامج الرائد: مليون خبير لبناني في الذكاء الاصطناعي",
+     "visual": "t1-licences",
+     "visualAlt": "الفئة 1 — التراخيص: مشهد خدمة حكومية من صور هوية أثر الرسمية (حزمة أصول العلامة v3)",
+     "delivered": "اعتماد مليون مواطن في الذكاء الاصطناعي التوليدي؛ 18,000 في الاستخدام المهني اليومي في الوزارات والمدارس والعيادات والأعمال الصغيرة.",
+     "outcomes": "الشهادات الصادرة · المستخدمون النشطون يوميًا · مسارات العمل الحكومية المفعّلة",
+     "wb": {
+      "country": "لبنان",
+      "tags": [
+       "السكان 5.85 مليون (2025)",
+       "مستخدمو الإنترنت 80.6٪ (2024)"
+      ]
+     },
+     "src": "ص 1، 3–5"
+    },
+    {
+     "key": "t2",
+     "kicker": "الفئة 2",
+     "name": "أجهزة الذكاء الاصطناعي: حواسيب AI PC ومكتبية",
+     "chip": "التملّك",
+     "place": "الهند · التملّك",
+     "amount": "13.7 مليون دولار",
+     "flagship": "البرنامج الرائد: فصل للذكاء الاصطناعي في اتفاقية الشراكة الاقتصادية الشاملة بين الإمارات والهند",
+     "visual": "t2-ai-pc-composited",
+     "visualAlt": "الفئة 2 — حواسيب الذكاء الاصطناعي وأجهزة سطح المكتب: مشهد أعمال صغيرة من صور هوية أثر الرسمية (حزمة أصول العلامة v3)",
+     "delivered": "تدريس بالذكاء الاصطناعي على الجهاز في 100 مدرسة حكومية بالهندية ولغة الولاية؛ 10,000 حاسوب ذكاء اصطناعي؛ تدريب المعلمين؛ فريق من 8 أشخاص داخل البلد.",
+     "partners": [
+      {
+       "key": "intel",
+       "logo": "logo-intel",
+       "name": "Intel",
+       "alt": "شعار Intel — علامة شريك تقني، للإشارة فقط"
+      },
+      {
+       "key": "qualcomm",
+       "logo": "logo-qualcomm",
+       "name": "Qualcomm",
+       "alt": "شارة Qualcomm Snapdragon X Elite — علامة شريك تقني، للإشارة فقط"
+      }
+     ],
+     "outcomes": "مكاسب التعلّم مقارنة بخط الأساس · وقت المعلم الموفَّر · جاهزية الأجهزة",
+     "wb": {
+      "country": "الهند",
+      "tags": [
+       "الالتحاق الابتدائي 111.0٪ إجمالي (2025)",
+       "الالتحاق الثانوي 79.6٪ إجمالي (2025)",
+       "مستخدمو الإنترنت 70.0٪ (2025)"
+      ]
+     },
+     "src": "ص 1، 4–5"
+    },
+    {
+     "key": "t3",
+     "kicker": "الفئة 3",
+     "name": "عُقد مراكز البيانات السيادية",
+     "chip": "الإرث",
+     "place": "كينيا · الإرث",
+     "amount": "~33 مليون دولار",
+     "flagship": "البرنامج الرائد: عقدة ذكاء اصطناعي سيادية تخدم المزارعين",
+     "visual": "t3-data-centre-composited",
+     "visualAlt": "الفئة 3 — عقد مراكز البيانات السيادية: صورة رئيسية داكنة من صور هوية أثر الرسمية (حزمة أصول العلامة v3)",
+     "delivered": "مركز بيانات معياري من AIREV مملوك كينيًا على حوسبة سيادية؛ إرشاد صوتي بالسواحلية لصغار المزارعين؛ العيادات والمدارس على العقدة نفسها.",
+     "outcomes": "المزارعون المخدومون · تغيّر الغلّة والدخل · المشغّلون المحليون المعتمدون · نقل الأصل",
+     "wb": {
+      "country": "كينيا",
+      "tags": [
+       "الزراعة 45.8٪ من العمالة (2025)",
+       "الزراعة 23.2٪ من الناتج المحلي الإجمالي (2025)",
+       "مستخدمو الإنترنت 35.0٪ (2024)"
+      ]
+     },
+     "src": "ص 1، 4–5"
+    }
+   ],
+   "ownership": {
+    "label": "التملّك",
+    "lead": "التملّك:",
+    "text": "يُنقل الأصل إلى جهة وطنية بعد 5–7 سنوات؛ ويُدرَّب مشغّلون محليون شباب ويُعتمدون لتشغيله.",
+    "src": "ص 4، 9",
+    "visuals": [
+     {
+      "img": "own-handover-composited",
+      "wide": true,
+      "alt": "تسليم الملكية — صك العقدة يُسلَّم إلى جهة وطنية (تصوّر مفاهيمي)"
+     },
+     {
+      "img": "own-noc-operators-composited",
+      "alt": "مشغّلون محليون معتمدون يديرون العقدة (تصوّر مفاهيمي)"
+     },
+     {
+      "img": "own-farmer-composited",
+      "alt": "أثر على المزارعين — إرشاد صوتي بالسواحلية يصل إلى صغار المزارعين (تصوّر مفاهيمي)"
+     }
+    ]
+   },
+   "bullets": [
+    [
+     "برنامج مقاعد في الفئة الأولى يصبح قاعدة الأدلة لأجهزة الفئة الثانية؛ ومجموعة من نشرات الفئة الثانية تخلق الطلب على عقدة وطنية من الفئة الثالثة.",
+     "ص 6"
+    ]
+   ]
+  },
+  {
+   "id": "it-metrics",
+   "icon": "impact",
+   "title": "ما ننجزه، بالقياس",
+   "sub": "مؤشرات النتائج لكل فئة — يُبلَّغ عنها مقارنة بخط أساس عبر مقيّم مستقل.",
+   "cards": [
+    {
+     "icon": "/brand/icons/pack/impact.png",
+     "tier": "الوصول · لبنان",
+     "items": [
+      "1,000,000 مواطن معتمد في الذكاء الاصطناعي التوليدي",
+      "18,000 خبير في الاستخدام اليومي عبر الوزارات والمدارس والعيادات والأعمال الصغيرة",
+      "تقارير فصلية مقارنة بهدف المليون"
+     ],
+     "src": "ص 1، 3",
+     "photo": {
+      "jpg": "/assets/img/lebanon-one-million-ai-experts-20260925.jpg",
+      "webp": "/assets/img/lebanon-one-million-ai-experts-20260925.webp",
+      "w": 1600,
+      "h": 1067,
+      "alt": "الشيخ عبدالله بن زايد ورئيس الوزراء اللبناني نواف سلام خلال إطلاق مبادرة «مليون خبير لبناني في الذكاء الاصطناعي»، الجمعية العامة للأمم المتحدة، نيويورك، 25 سبتمبر 2026",
+      "caption": "الصورة: إطلاق مبادرة «مليون خبير لبناني في الذكاء الاصطناعي» بين الإمارات ولبنان، الجمعية العامة للأمم المتحدة – نيويورك، 25 سبتمبر 2026 — ذا ناشيونال / ذا غلف أوبزرفر",
+      "href": "https://www.thenationalnews.com/news/mena/2026/09/25/uae-and-lebanon-launch-ai-training-initiative/"
+     }
+    },
+    {
+     "icon": "/brand/icons/pack/education.png",
+     "tier": "التملّك · الهند",
+     "items": [
+      "100 مدرسة حكومية بتدريس بالذكاء الاصطناعي على الجهاز",
+      "10,000 حاسوب ذكاء اصطناعي، وتدريب المعلمين، وفريق من 8 أشخاص داخل البلد",
+      "مكاسب التعلّم مقارنة بخط أساس عبر مقيّم مستقل"
+     ],
+     "src": "ص 4"
+    },
+    {
+     "icon": "/assets/growth-impact-ByIEEdLi.png",
+     "tier": "الإرث · كينيا",
+     "items": [
+      "عقدة ذكاء اصطناعي سيادية واحدة مملوكة كينيًا تخدم المزارعين أولًا",
+      "إرشاد صوتي بالسواحلية عن المحاصيل والآفات والطقس والأسعار؛ العيادات والمدارس على العقدة نفسها",
+      "شباب كينيون يُدرَّبون على تشغيلها؛ وتنتقل الملكية بعد 5–7 سنوات"
+     ],
+     "src": "ص 4–5"
+    }
+   ],
+   "agreement": "فئات مستفيدين مسمّاة وأهداف تفعيل · خط أساس وتقييم مستقل · تقارير نتائج فصلية · تكاليف مفتوحة الدفاتر مع إعادة الأموال غير المنفقة · فصول قُطرية ومشغّلون محليون مدرَّبون.",
+   "agreementSrc": "ص 5",
+   "newsGroups": [
+    {
+     "tier": "lebanon",
+     "title": "الوصول · لبنان",
+     "chip": "لبنان"
+    },
+    {
+     "tier": "india",
+     "title": "التملّك · الهند",
+     "chip": "الهند"
+    },
+    {
+     "tier": "kenya",
+     "title": "الإرث · كينيا",
+     "chip": "كينيا"
+    },
+    {
+     "tier": "tech",
+     "title": "شركاء التقنية",
+     "chip": "شركاء التقنية"
+    }
+   ]
+  },
+  {
+   "id": "it-sustain",
+   "icon": "trust-safety",
+   "title": "كيف يستدام المجتمع",
+   "sub": "تنفيذ متدرّج مطابق للممولين — مستدام وعادل بحكم التصميم.",
+   "bullets": [
+    [
+     "المشاركة أولًا: المقاعد المرعية مسمّاة ومحددة المدة وقابلة للقياس — نموذج خطة المجتمع ممتدًا صعودًا في سلّم التملّك.",
+     "ص 5–6"
+    ],
+    [
+     "فئات مطابقة للممولين: الوصول ترسيه الإمارات عبر برنامجها لتبادل الخبرات الحكومية، مع مؤسسة ماكغفرن ممولًا مشاركًا مرشّحًا؛ التملّك بتمويل مشترك من مؤسسة غيتس إلى جانب شركاء التعليم العام في الهند؛ الإرث مع «الذكاء الاصطناعي من أجل التنمية» ومؤسسة روكفلر ومؤسسة غيتس ومؤسسة ماستركارد.",
+     "ص 5"
+    ],
+    [
+     "تقارير مفتوحة: خط أساس، وتقييم مستقل مخصص له نحو 3٪، وتقارير نتائج فصلية، ودفعات تُصرف عند بلوغ المعالم.",
+     "ص 5، 7، 9"
+    ],
+    [
+     "مشغّلون محليون مدرَّبون ووظائف تُستحدث: فرق داخل البلد، وشباب يُدرَّبون ضمن البرنامج، ونموذج بناء–تشغيل–نقل تؤول به الأصول إلى جهة وطنية.",
+     "ص 4، 9"
+    ],
+    [
+     "ما تكسبه الإمارات: تتعمّق اتفاقيات الشراكة من السلع إلى الخدمات الرقمية، ويحصل برنامج تبادل الخبرات الحكومية الإماراتي على برنامج رائد بحجم وطني، وتُصدَّر بنية تحتية للذكاء الاصطناعي مبنية في الإمارات، وتتعزز ممرات الغذاء.",
+     "ص 1، 5"
+    ]
+   ]
+  },
+  {
+   "id": "it-partners",
+   "icon": "community",
+   "title": "نُنجز مع",
+   "sub": "الجهات الفاعلة في الميثاق والممولون المذكورون في ورقة تمويل أثر.",
+   "wall": true,
+   "groups": {
+    "actors": "الجهات الفاعلة في الميثاق",
+    "funders": "ممولون مذكورون في الورقة (ص 3–5)"
+   }
+  },
+  {
+   "id": "it-join",
+   "icon": "community",
+   "title": "انضمّ إلى الميثاق",
+   "sub": "أحضر برنامجًا أو فئة مستفيدين أو فصلًا قُطريًا.",
+   "bullets": [
+    [
+     "ارعَ نتيجةً لا منتجًا: سمِّ الفئة المستفيدة والنتيجة والمقيّم.",
+     "ص 5"
+    ],
+    [
+     "ابدأ من أي فئة؛ فالأدلة من فئة تفتح الفئة التالية.",
+     "ص 6"
+    ],
+    [
+     "كل شيء يُبلَّغ عنه في العلن — خط الأساس، والنتائج الفصلية، والتكاليف.",
+     "ص 5"
+    ]
+   ],
+   "endorse": {
+    "ar": "أثٌر يبقى",
+    "en": "Impact that stays."
+   }
+  }
+ ],
+ "counter": "الشريحة {n} من {total}",
+ "version": "1.5.2",
+ "source": "Athar — Agentic AI for All: Three Impact Tiers for Foundation Funding (27 Sep 2026)",
+ "news": [
+  {
+   "id": "lb-mofa",
+   "tier": "lebanon",
+   "tag": "direct",
+   "date": "2026-09-25",
+   "publisher": "وزارة الخارجية الإماراتية (وام)",
+   "headline": "عبدالله بن زايد يلتقي رئيس وزراء لبنان في نيويورك؛ إطلاق مبادرة «مليون خبير لبناني في الذكاء الاصطناعي»",
+   "url": "https://www.mofa.gov.ae/en/MediaHub/News/2026/9/25/UAE-Lebanon",
+   "alternate": null,
+   "flagged": false,
+   "secondary": null,
+   "mark": "/assets/news/marks/publisher-mofa.png",
+   "markKind": "publisher",
+   "markName": "UAE Ministry of Foreign Affairs (WAM)"
+  },
+  {
+   "id": "lb-national",
+   "tier": "lebanon",
+   "tag": "related",
+   "date": "2026-09-25",
+   "publisher": "ذا ناشيونال",
+   "headline": "الإمارات ولبنان تطلقان مبادرة للتدريب على الذكاء الاصطناعي",
+   "url": "https://www.thenationalnews.com/news/mena/2026/09/25/uae-and-lebanon-launch-ai-training-initiative/",
+   "alternate": null,
+   "flagged": false,
+   "secondary": null,
+   "mark": null,
+   "markKind": "publisher",
+   "markName": "The National"
+  },
+  {
+   "id": "lb-gulfnews",
+   "tier": "lebanon",
+   "tag": "related",
+   "date": "سبتمبر 2026",
+   "publisher": "غلف نيوز",
+   "headline": "الإمارات تزوّد مليون لبناني بمهارات الذكاء الاصطناعي التوليدي",
+   "url": "https://gulfnews.com/uae/uae-to-equip-one-million-lebanese-with-generative-ai-skills-1.500687605",
+   "alternate": null,
+   "flagged": false,
+   "secondary": null,
+   "mark": "/assets/news/marks/publisher-gulf-news.png",
+   "markKind": "publisher",
+   "markName": "Gulf News"
+  },
+  {
+   "id": "lb-meain",
+   "tier": "lebanon",
+   "tag": "related",
+   "date": "2026-09-25",
+   "publisher": "ميدل إيست إيه آي نيوز",
+   "headline": "الإمارات ولبنان تتفقان على تدريب مليون خبير في الذكاء الاصطناعي",
+   "url": "https://www.middleeastainews.com/p/uae-lebanon-agree-to-train-one-million",
+   "alternate": null,
+   "flagged": false,
+   "secondary": null,
+   "mark": "/assets/news/marks/publisher-middle-east-ai-news.png",
+   "markKind": "publisher",
+   "markName": "Middle East AI News"
+  },
+  {
+   "id": "in-wam-mou",
+   "tier": "india",
+   "tag": "direct",
+   "date": "2024-02-14",
+   "publisher": "وام (وكالة أنباء الإمارات)",
+   "headline": "الإمارات والهند توقّعان مذكرة تفاهم لتسريع نمو الاقتصاد الرقمي",
+   "url": "https://www.wam.ae/en/article/b1ns93x-uae-india-sign-mou-accelerate-growth-digital",
+   "alternate": null,
+   "flagged": false,
+   "secondary": null,
+   "mark": "/assets/news/marks/publisher-wam.png",
+   "markKind": "publisher",
+   "markName": "WAM (Emirates News Agency)"
+  },
+  {
+   "id": "in-pib",
+   "tier": "india",
+   "tag": "direct",
+   "date": "2026-08-05",
+   "publisher": "مكتب الإعلام الصحفي (حكومة الهند)",
+   "headline": "الذكاء الاصطناعي والتعليم الرقمي في المدارس الحكومية",
+   "url": "https://www.pib.gov.in/PressReleasePage.aspx?PRID=2295050&lang=1&reg=6",
+   "alternate": null,
+   "flagged": false,
+   "secondary": null,
+   "mark": null,
+   "markKind": "publisher",
+   "markName": "PIB"
+  },
+  {
+   "id": "in-bizforum",
+   "tier": "india",
+   "tag": "related",
+   "date": "2024-09-10",
+   "publisher": "وام (وكالة أنباء الإمارات)",
+   "headline": "انطلاق منتدى الأعمال الإماراتي–الهندي في مومباي — ما بعد اتفاقية الشراكة الاقتصادية الشاملة",
+   "url": "https://www.wam.ae/en/article/1440s83-uae-india-business-forum-kicks-off-mumbai",
+   "alternate": "https://www.bignewsnetwork.com/news/274575970/uae-india-business-forum-kicks-off-in-mumbai",
+   "flagged": false,
+   "secondary": null,
+   "mark": "/assets/news/marks/publisher-wam.png",
+   "markKind": "publisher",
+   "markName": "WAM"
+  },
+  {
+   "id": "ke-wam-mou",
+   "tier": "kenya",
+   "tag": "direct",
+   "date": "2024-03-29",
+   "publisher": "وام (وكالة أنباء الإمارات)",
+   "headline": "الإمارات وكينيا توقّعان مذكرة استثمار لتطوير البنية التحتية الرقمية ومبادرات الذكاء الاصطناعي (مراكز بيانات حتى 1,000 ميغاواط)",
+   "url": "https://www.wam.ae/en/article/b2dzbq3-uae-kenya-sign-investment-memorandum-advance",
+   "alternate": null,
+   "flagged": false,
+   "secondary": null,
+   "mark": "/assets/news/marks/publisher-wam.png",
+   "markKind": "publisher",
+   "markName": "WAM (Emirates News Agency)"
+  },
+  {
+   "id": "ke-ict",
+   "tier": "kenya",
+   "tag": "related",
+   "date": "2025-09-12",
+   "publisher": "وزارة تقنية المعلومات والاقتصاد الرقمي الكينية",
+   "headline": "مستقبل كينيا الرقمي يزداد إشراقًا مع بدء إنشاء أكبر مركز بيانات في شرق أفريقيا",
+   "url": "https://ict.go.ke/kenyas-digital-future-brightens-construction-east-africas-largest-data-centre-starts",
+   "alternate": "https://ict.go.ke/node/797",
+   "flagged": true,
+   "secondary": null,
+   "mark": "/assets/news/marks/publisher-kenya-ict.png",
+   "markKind": "publisher",
+   "markName": "Kenya Ministry of ICT & Digital Economy"
+  },
+  {
+   "id": "ke-adex",
+   "tier": "kenya",
+   "tag": "related",
+   "date": "2025-12-08",
+   "publisher": "ذا ناشيونال (محتوى شركاء)",
+   "headline": "أديكس تقود مبادرة إماراتية–أفريقية مشتركة تسخّر الذكاء الاصطناعي لدفع التنمية (مليار دولار — Ai.(d))",
+   "url": "https://www.thenationalnews.com/business/partner-content/2025/12/08/adex-leads-joint-uae-africa-initiative-leveraging-ai-to-advance-development-and-improve-lives/",
+   "alternate": null,
+   "flagged": false,
+   "secondary": null,
+   "mark": null,
+   "markKind": "publisher",
+   "markName": "The National"
+  },
+  {
+   "id": "tp-intel-dec25",
+   "tier": "tech",
+   "tag": "direct",
+   "date": "2025-12-18",
+   "publisher": "غلف نيوز",
+   "headline": "AIREV وIntel تتشاركان لإطلاق وكلاء ذكاء اصطناعي يعملون بالكامل على حاسوبك",
+   "url": "https://gulfnews.com/business/corporate-news/airev-and-intel-partner-to-launch-ai-agents-that-run-entirely-on-your-pc-1.500383475",
+   "alternate": null,
+   "flagged": false,
+   "secondary": null,
+   "mark": "/assets/news/marks/logo-intel.png",
+   "markKind": "partner",
+   "markName": "Intel"
+  },
+  {
+   "id": "tp-intel-oct25",
+   "tier": "tech",
+   "tag": "direct",
+   "date": "2025-10-14",
+   "publisher": "غلف نيوز",
+   "headline": "Intel وAIREV تتشاركان لدفع ابتكار الذكاء الاصطناعي في الشرق الأوسط وعالميًا",
+   "url": "https://gulfnews.com/business/corporate-news/intel-and-airev-partner-to-propel-ai-innovation-across-middle-east-and-globally-1.500306686",
+   "alternate": null,
+   "flagged": false,
+   "secondary": null,
+   "mark": "/assets/news/marks/logo-intel.png",
+   "markKind": "partner",
+   "markName": "Intel"
+  },
+  {
+   "id": "tp-qualcomm",
+   "tier": "tech",
+   "tag": "direct",
+   "date": "2026-08-13",
+   "publisher": "وكالة أنباء الإمارات (وام)",
+   "headline": "AIREV وQualcomm تتعاونان لدفع الذكاء الاصطناعي المستقل عبر بيئات المؤسسات والحكومات",
+   "url": "https://www.wam.ae/en/article/c1pp81t-airev-qualcomm-advance-autonomous-across",
+   "alternate": null,
+   "flagged": false,
+   "secondary": "https://www.zawya.com/en/press-release/companies-news/airev-and-qualcomm-to-advance-autonomous-ai-across-enterprise-and-government-environments-455903",
+   "mark": "/assets/news/marks/logo-qualcomm.svg",
+   "markKind": "partner",
+   "markName": "Qualcomm"
+  },
+  {
+   "id": "tp-redington",
+   "tier": "tech",
+   "tag": "direct",
+   "date": "2026-07-22",
+   "publisher": "غلف نيوز",
+   "headline": "Redington توزّع منصة AIREV OnDemand للذكاء الاصطناعي الوكيلي المبنية في الإمارات عبر الشرق الأوسط وأفريقيا",
+   "url": "https://gulfnews.com/business/corporate-news/redington-to-distribute-uae-built-airev-ondemand-agentic-ai-platform-across-mea-1.500616526",
+   "alternate": null,
+   "flagged": false,
+   "secondary": null,
+   "mark": "/assets/news/marks/logo-redington.png",
+   "markKind": "partner",
+   "markName": "Redington"
+  }
+ ],
+ "tierImages": {
+  "t1-licences": {
+   "dir": "impact/v133",
+   "base": "t1-licences",
+   "ext": "png",
+   "pos": "50% 45%",
+   "official": true,
+   "credit": "Athar Brand Asset Pack v3 — 04_Imagery/athar_imagery_illustration_scene1_government_v2.jpg (official brand imagery, cover-cropped 1200×800, v1.4.7)"
+  },
+  "t2-ai-pc-composited": {
+   "dir": "impact/v133",
+   "base": "t2-ai-pc-composited",
+   "ext": "png",
+   "pos": "50% 42%",
+   "official": true,
+   "credit": "Athar Brand Asset Pack v3 — 04_Imagery/athar_imagery_illustration_scene2_sme_v2.jpg (official brand imagery, cover-cropped 1200×800, v1.4.7; the v1.3.3 concept render was unrecoverable)"
+  },
+  "t3-data-centre-composited": {
+   "dir": "impact/v133",
+   "base": "t3-data-centre-composited",
+   "ext": "png",
+   "pos": "50% 50%",
+   "official": true,
+   "credit": "Athar Brand Asset Pack v3 — 04_Imagery/athar_imagery_keyvisual_dark_v2.jpg (official brand key visual, cover-cropped 1200×800, v1.4.7; the v1.3.3 concept render was unrecoverable)"
+  },
+  "own-handover-composited": {
+   "dir": "impact/v133",
+   "base": "own-handover-composited",
+   "ext": "png",
+   "pos": "50% 60%",
+   "credit": "Concept render — ownership handover; official Athar logo composited on the deed cover (perspective warp, multiply blend)"
+  },
+  "own-noc-operators-composited": {
+   "dir": "impact/v133",
+   "base": "own-noc-operators-composited",
+   "ext": "png",
+   "pos": "50% 45%",
+   "credit": "Concept render — NOC operators certified; official Athar reversed logo composited on the blank screen (perspective warp, screen blend)"
+  },
+  "own-farmer-composited": {
+   "dir": "impact/v133",
+   "base": "own-farmer-composited",
+   "ext": "png",
+   "pos": "50% 30%",
+   "credit": "Concept render — farmer impact; official Athar monogram composited on the relay panel (perspective warp, multiply blend)"
+  },
+  "logo-intel": {
+   "dir": "tiers",
+   "file": "logo-intel.png",
+   "credit": "Intel logo — Intel Newsroom press hub logo pack (2021-Intel-logos.zip → Intel-logo-nobox.png); reference only, no endorsement implied"
+  },
+  "logo-qualcomm": {
+   "dir": "tiers",
+   "file": "logo-qualcomm.svg",
+   "credit": "Snapdragon X Elite Platform badge — Qualcomm press kit (Snapdragon Summit 2026, Day 1), www.qualcomm.com; reference only, no endorsement implied"
+  }
+ },
+ "marks": {
+  "oda": {
+   "src": "/partners/review/oda__athar_partner_oda_logo_bw_v1.png",
+   "w": 3980,
+   "h": 1222,
+   "name": "ODA",
+   "nameAr": "مكتب الشؤون التنموية (ODA)"
+  },
+  "undp": {
+   "src": "/partners/review/undp__undp-logo-blue.svg",
+   "w": 60,
+   "h": 122,
+   "name": "UNDP",
+   "nameAr": "برنامج الأمم المتحدة الإنمائي"
+  },
+  "unicef": {
+   "src": "/partners/review/unicef__English-Inverse_39.png.webp",
+   "w": 1159,
+   "h": 150,
+   "name": "UNICEF",
+   "nameAr": "اليونيسف",
+   "dark": true
+  },
+  "ifrc": {
+   "src": "/partners/review/ifrc__Logo-Horizontal-RGB-300ppi.png",
+   "w": 3509,
+   "h": 1585,
+   "name": "IFRC",
+   "nameAr": "الاتحاد الدولي لجمعيات الصليب الأحمر والهلال الأحمر"
+  },
+  "wfp": {
+   "src": "/partners/review/wfp__wfp-logo-standard-blue-en.svg",
+   "w": 132,
+   "h": 58,
+   "name": "WFP",
+   "nameAr": "برنامج الأغذية العالمي"
+  },
+  "unhcr": {
+   "src": "/partners/review/unhcr__logo.svg",
+   "w": 175,
+   "h": 43,
+   "name": "UNHCR",
+   "nameAr": "المفوضية السامية للأمم المتحدة لشؤون اللاجئين"
+  },
+  "discord": {
+   "src": "/partners/review/discord__Discord-Logo-Blurple.svg",
+   "w": 635,
+   "h": 96,
+   "name": "Discord",
+   "nameAr": "ديسكورد"
+  },
+  "uae": {
+   "src": "/partners/review/uae__u-ae-home_logo.svg",
+   "w": 2733,
+   "h": 1050,
+   "name": "United Arab Emirates",
+   "nameAr": "دولة الإمارات العربية المتحدة"
+  },
+  "gates": {
+   "src": "/partners/review/gates-foundation__gf-primary-weathered-slate-logo_4by1-ratio-fixed.svg",
+   "w": 800,
+   "h": 200,
+   "name": "Gates Foundation",
+   "nameAr": "مؤسسة غيتس"
+  },
+  "rockefeller": {
+   "src": "/partners/review/rockefeller-foundation__RF_logo_screen_green.png",
+   "w": 1600,
+   "h": 591,
+   "name": "The Rockefeller Foundation",
+   "nameAr": "مؤسسة روكفلر"
+  },
+  "mcgovern": {
+   "src": "/partners/review/mcgovern-foundation__mf-logo.svg",
+   "w": 267,
+   "h": 69,
+   "name": "Patrick J. McGovern Foundation",
+   "nameAr": "مؤسسة باتريك ج. ماكغفرن"
+  },
+  "mastercard": {
+   "name": "Mastercard Foundation",
+   "nameAr": "مؤسسة ماستركارد"
+  }
+ },
+ "wall": [
+  {
+   "group": "actors",
+   "mark": "oda"
+  },
+  {
+   "group": "actors",
+   "mark": "uae"
+  },
+  {
+   "group": "actors",
+   "mark": "undp"
+  },
+  {
+   "group": "actors",
+   "mark": "unicef"
+  },
+  {
+   "group": "actors",
+   "mark": "ifrc"
+  },
+  {
+   "group": "actors",
+   "mark": "wfp"
+  },
+  {
+   "group": "actors",
+   "mark": "unhcr"
+  },
+  {
+   "group": "actors",
+   "mark": "discord"
+  },
+  {
+   "group": "funders",
+   "mark": "gates",
+   "src": "p. 4–5",
+   "sub": "Co-funder — education (India) and farmer layer (Kenya)",
+   "subAr": "ممول مشارك — التعليم (الهند) وطبقة المزارعين (كينيا)"
+  },
+  {
+   "group": "funders",
+   "mark": "rockefeller",
+   "src": "p. 4–5",
+   "sub": "Farmer layer, Legacy",
+   "subAr": "طبقة المزارعين — الإرث"
+  },
+  {
+   "group": "funders",
+   "mark": "mcgovern",
+   "src": "p. 4–5",
+   "sub": "Candidate co-funder, Access",
+   "subAr": "ممول مشارك مرشّح — الوصول"
+  },
+  {
+   "group": "funders",
+   "mark": "mastercard",
+   "src": "p. 4–5",
+   "sub": "Youth operators and builders, Legacy",
+   "subAr": "المشغّلون والبناة الشباب — الإرث"
+  }
+ ],
+ "total": 39,
+ "atharOS": {
+  "chapter": "08",
+  "kicker": "أثر OS",
+  "tag": "تصوّر مفاهيمي",
+  "tagCaps": "تصوّر مفاهيمي · CONCEPT RENDER",
+  "target": "هدف",
+  "done": "منجز",
+  "inprogress": "قيد التنفيذ",
+  "s1": {
+   "title": "أثر OS — منظومة وكيلة تُمكِّن الأمم",
+   "sub": "منظومة واحدة: الأمم والمؤسسات والبناة والوكلاء والمهارات والإضافات والتراخيص والحوسبة السيادية — تحكمها أحكام الميثاق.",
+   "heroAlt": "غرفة عمليات حكومية رقمية وطنية تعمل بأثر OS — تصوّر مفاهيمي مع شعار أثر الرسمي مركّبًا على الجدار",
+   "diagramLabel": "منظومة الطبقات — اختر طبقة لتوسيعها",
+   "where": "موقعها في العرض",
+   "hint": "Enter / مسافة للتوسيع · ↑↓ للتنقل بين الطبقات",
+   "layers": [
+    {
+     "k": "nation",
+     "t": "الأمة",
+     "s": "توقّع الدولة الميثاق وتستضيف فصلًا وطنيًا",
+     "b": [
+      "الفصول القُطرية تجسّد الميثاق محليًا: مؤسسة مضيفة، وقائد قُطري، وقائد أكاديمية، ومنسّق حماية.",
+      "تُقاس النتائج مقابل بيانات أساس عبر مقيّم مستقل، وتُرفع التقارير ربع سنويًا.",
+      "يُنقل الأصل إلى جهة وطنية بعد 5–7 سنوات؛ ويُدرَّب مشغّلون محليون شباب ويُعتمدون لتشغيله."
+     ],
+     "j": "#/07",
+     "jt": "الشريحة 7 · الفصول القُطرية"
+    },
+    {
+     "k": "institutions",
+     "t": "المؤسسات",
+     "s": "الوزارات والمدارس والعيادات والمنظمات تنشر عبر مالك خاضع للمساءلة",
+     "b": [
+      "بقيادة المؤسسات: لكل نشر راعٍ مسمّى ومالك خاضع للمساءلة.",
+      "مفتوح حيثما أمكن، محكوم حيثما يلزم — تبقى بيانات المؤسسات ومساحات العمل الخاصة وسجلات التدقيق محكومة.",
+      "ثلاث طرق للنشر: برمجيات فقط على بنية المؤسسة، أو استضافة ذاتية في سحابتها، أو استضافة سحابية تديرها AIREV."
+     ],
+     "j": "#/15",
+     "jt": "الشريحة 15 · مفتوح حيثما أمكن، محكوم حيثما يلزم"
+    },
+    {
+     "k": "builders",
+     "t": "بناة المجتمع",
+     "s": "مجتمع مفتوح يتعلّم ويبني ويتحقق وينشر",
+     "b": [
+      "مسار البناء: تعلّم ← نموذج أولي ← تقييم ← تحقّق ← نشر ← إصدار عام.",
+      "ساعات دعم أسبوعية وتحديات ربع سنوية وعروض شهرية والقمة السنوية.",
+      "مسارات الأكاديمية تعتمد الممارسين والبنّائين والمسؤولين والمدربين."
+     ],
+     "j": "#/11",
+     "jt": "الشريحة 11 · مسار البناء وسوق العوامل"
+    },
+    {
+     "k": "agents",
+     "t": "الوكلاء",
+     "s": "وكلاء مُتحقق منهم لكلٍّ منهم مسؤول صيانة مسمّى واستخدام معلن",
+     "b": [
+      "لكل عامل منشور مسؤول صيانة مسمّى وسجل إصدارات وبيان استخدام واضح.",
+      "تفصح العوامل عن مصادر بياناتها وأدواتها واعتمادها على النماذج وحدودها.",
+      "العوامل عالية الخطورة تحتاج موافقة مؤسسية واختبارًا إضافيًا قبل النشر."
+     ],
+     "j": "#/11",
+     "jt": "الشريحة 11 · قواعد سوق العوامل"
+    },
+    {
+     "k": "skills",
+     "t": "المهارات",
+     "s": "قدرات قابلة لإعادة الاستخدام تُبنى مرة واحدة وتُشارك",
+     "b": [
+      "تحزم المهارة قدرة معينة ليحمّلها أي عامل مُتحقق منه ويعيد استخدامها.",
+      "تمر المهارات بالمسار ذاته: نموذج أولي، ثم تقييم، ثم تحقّق.",
+      "مسارات بلا برمجة للممارسين؛ ومسارات برمجية متقدمة للمطورين."
+     ],
+     "j": "#/14",
+     "jt": "الشريحة 14 · مهارات قابلة لإعادة الاستخدام"
+    },
+    {
+     "k": "plugins",
+     "t": "الإضافات",
+     "s": "النسيج الرابط: معيار إضافات موحّد",
+     "b": [
+      "لا يصل العامل إلى الأدوات والموصلات والبيانات والخدمات إلا عبر الإضافات.",
+      "كل إضافة منشورة ومرقَّمة بإصدار ويمكن اكتشافها، مع استخدام معلن ومالك مسمّى ولغات مدعومة.",
+      "تنتقل الإضافات بين النماذج — تغيير المزوّد لا يعني إعادة بناء أدوات المؤسسة."
+     ],
+     "j": "#/13",
+     "jt": "الشريحة 13 · الإضافات هي النسيج الرابط"
+    },
+    {
+     "k": "licences",
+     "t": "تراخيص الواجهات الشاملة",
+     "s": "يشتريها أثر ويديرها لصالح المجتمع كله",
+     "b": [
+      "يشتري أثر تراخيص ومفاتيح واجهات البرمجة التي يحتاجها المجتمع ويديرها؛ ويستدعيها الأعضاء من وكلائهم.",
+      "مجمعات المقاعد مسمّاة ومحددة زمنيًا ولا يمكن نقلها خارج البرنامج.",
+      "كبار بناة الواجهات في الشريحة 17؛ وسلّم المقاعد في الملحق."
+     ],
+     "j": "#/17",
+     "jt": "الشريحة 17 · تراخيص واجهات برمجية شاملة يديرها أثر"
+    },
+    {
+     "k": "compute",
+     "t": "الحوسبة السيادية",
+     "s": "البيانات والنماذج والوكلاء ومستوى التحكم والمفاتيح تعمل حيث تقرر الدولة",
+     "b": [
+      "الخيارات أ/ب/ج: بنية المؤسسة، أو سحابة المؤسسة، أو إدارة AIREV — المنظومة نفسها باختلاف الحيازة.",
+      "إقامة البيانات وحيازة المفاتيح وسجلات التدقيق والتكاليف المفتوحة بنود تعاقدية لا مزايا.",
+      "كينيا: عقدة معيارية مملوكة كينيًا؛ مشغّلون محليون معتمدون؛ نقل بعد 5–7 سنوات."
+     ],
+     "j": "#/27/new-2",
+     "jt": "الشريحة 29 · عقد مراكز البيانات السيادية"
+    }
+   ]
+  },
+  "s2": {
+   "title": "جولة في المنتج — المنظومة أثناء العمل",
+   "sub": "شاشات أثر الفعلية من Athar_Package.zip وAthar_Wireframes_and_Screens_v1 — النظرة العامة، السوق، الملعب (فارغ، محادثة) ومنشئ تدفقات الوكلاء — بدقة 1440×900 الأصلية، فاتحة وداكنة، بالعربية والإنجليزية.",
+   "tabs": [
+    {
+     "k": "overview",
+     "t": "النظرة العامة"
+    },
+    {
+     "k": "marketplace",
+     "t": "السوق"
+    },
+    {
+     "k": "playground-empty",
+     "t": "الملعب — فارغ"
+    },
+    {
+     "k": "playground-conversation",
+     "t": "الملعب — محادثة"
+    },
+    {
+     "k": "flow",
+     "t": "منشئ تدفقات الوكلاء"
+    }
+   ],
+   "heroAlt": "بناة المجتمع يؤلّفون تدفق وكيل على لوحة لمس — تصوّر مفاهيمي",
+   "langToggle": "English",
+   "langToggleAria": "تبديل الجولة إلى الإنجليزية",
+   "themeLight": "فاتح",
+   "themeDark": "داكن",
+   "themeAria": "تبديل السمة الفاتحة / الداكنة",
+   "loading": "جارٍ التحميل…",
+   "tourNote": "شاشات المنتج الحقيقية — Athar_Package.zip (05 Web & Product/UI_Screens، 2880×1800) وAthar_Wireframes_and_Screens_v1.pdf (27 سبتمبر 2026)؛ تحمل النقاط المرقّمة تعليقات الحزمة نفسها. لا شيء في هذه الشريحة نموذج تجريبي."
+  },
+  "s3": {
+   "title": "خارطة الطريق — الآن، التالي، لاحقًا",
+   "sub": "خمسة مسارات من الميثاق ونموذج المجتمع وفئات الأثر الثلاث؛ البنود بلا مصدر في العرض موسومة «هدف».",
+   "periods": [
+    {
+     "k": "now",
+     "t": "الآن",
+     "s": "الربع الرابع 2026"
+    },
+    {
+     "k": "next",
+     "t": "التالي",
+     "s": "2027"
+    },
+    {
+     "k": "later",
+     "t": "لاحقًا",
+     "s": "2028"
+    }
+   ],
+   "tracks": [
+    {
+     "k": "platform",
+     "t": "المنصة"
+    },
+    {
+     "k": "community",
+     "t": "المجتمع والمهارات"
+    },
+    {
+     "k": "plugins",
+     "t": "الإضافات والواجهات الشاملة"
+    },
+    {
+     "k": "sovereign",
+     "t": "النشر السيادي"
+    },
+    {
+     "k": "impact",
+     "t": "الأثر والتقييم"
+    }
+   ],
+   "all": "كل المسارات",
+   "filterLabel": "تصفية حسب المسار",
+   "detailEmpty": "اختر معلمًا لعرض ماذا ولماذا والمصدر والحالة.",
+   "what": "ماذا",
+   "why": "لماذا",
+   "source": "المصدر",
+   "status": {
+    "done": "منجز",
+    "progress": "قيد التنفيذ",
+    "target": "هدف"
+   },
+   "milestones": [
+    {
+     "id": "p1",
+     "track": "platform",
+     "period": "now",
+     "t": "خط المهارات: نموذج أولي ← تقييم ← تحقّق",
+     "what": "تمر المهارات بمسار البناء ذاته الذي يمر به الوكلاء.",
+     "why": "القدرة التي تُبنى مرة واحدة يعيد استخدامها كل عامل مُتحقق منه.",
+     "src": "الشريحة 14 · الركائز الست",
+     "j": "#/14",
+     "st": "progress"
+    },
+    {
+     "id": "p2",
+     "track": "platform",
+     "period": "now",
+     "t": "معيار الإضافات v1 — منشور ومرقَّم وقابل للاكتشاف",
+     "what": "معيار إضافات موحّد للأدوات والموصلات ومصادر البيانات والخدمات.",
+     "why": "لا يصل العامل إلى العالم الخارجي إلا عبر الإضافات.",
+     "src": "الشريحة 13 · الركائز الست",
+     "j": "#/13",
+     "st": "progress"
+    },
+    {
+     "id": "p3",
+     "track": "platform",
+     "period": "next",
+     "t": "انتقال الإضافات بين النماذج",
+     "what": "يمكن لأي نموذج استدعاء إضافات نموذج آخر عبر المعيار المشترك.",
+     "why": "لا مؤسسة مقيَّدة بمزوّد واحد.",
+     "src": "الشريحة 16 · الركائز الست",
+     "j": "#/16",
+     "st": "target"
+    },
+    {
+     "id": "p4",
+     "track": "platform",
+     "period": "next",
+     "t": "إتاحة الملعب ومنشئ تدفقات الوكلاء عامًا",
+     "what": "تصبح شاشات المنتج الأربع في الجولة متاحة عامًا.",
+     "why": "يؤلّف البناة تدفقات متعددة الوكلاء على لوحة.",
+     "src": "المخططات v1 (27 سبتمبر 2026)",
+     "j": "#/27/new-8",
+     "st": "target"
+    },
+    {
+     "id": "p5",
+     "track": "platform",
+     "period": "later",
+     "t": "أثر OS للعقد الوطنية",
+     "what": "المنظومة الكاملة محزومة للحوسبة السيادية.",
+     "why": "منظومة واحدة من الحاسوب المحمول إلى العقدة الوطنية.",
+     "src": "هدف",
+     "j": "#/27/new-10",
+     "st": "target"
+    },
+    {
+     "id": "c1",
+     "track": "community",
+     "period": "now",
+     "t": "فصول الموجة الأولى + مسار الأساسيات",
+     "what": "الإمارات كقاعدة مع دولتين؛ نشر أساسيات الذكاء الوكيلي.",
+     "why": "ملكية محلية ضمن نموذج مشترك.",
+     "src": "الشريحتان 7 و27 · نموذج المجتمع",
+     "j": "#/07",
+     "st": "progress"
+    },
+    {
+     "id": "c2",
+     "track": "community",
+     "period": "now",
+     "t": "الدفعة المؤسِّسة · ساعات دعم أسبوعية للبنّائين",
+     "what": "الأيام 31–60: فتح الدفعة المؤسِّسة وبدء ساعات الدعم والندوات.",
+     "why": "يحصل البناة على دعم تقني أسبوعي.",
+     "src": "الشريحة 27 · خارطة الطريق",
+     "j": "#/27",
+     "st": "progress"
+    },
+    {
+     "id": "c3",
+     "track": "community",
+     "period": "next",
+     "t": "10,000 متعلم · 2,500 شهادة · 100 ميسّر",
+     "what": "أهداف الأكاديمية للسنة الأولى.",
+     "why": "يتحوّل الاهتمام إلى قدرة معتمَدة تطبيقيًا.",
+     "src": "الشريحة 18 · الركائز الست",
+     "j": "#/18",
+     "st": "target"
+    },
+    {
+     "id": "c4",
+     "track": "community",
+     "period": "next",
+     "t": "عشرة فصول · القمة العالمية · التقرير السنوي",
+     "what": "الأشهر 10–12 من خارطة طريق التنفيذ.",
+     "why": "مراجعة النتائج وتكريم البنّائين وتحديد الأجندة.",
+     "src": "الشريحة 27 · خارطة الطريق",
+     "j": "#/27",
+     "st": "target"
+    },
+    {
+     "id": "c5",
+     "track": "community",
+     "period": "later",
+     "t": "مليون خبير لبناني في الذكاء الاصطناعي — 18,000 في الاستخدام اليومي",
+     "what": "البرنامج الرائد لفئة الوصول: مليون مواطن معتمَد في الذكاء الاصطناعي التوليدي.",
+     "why": "الشهادات الصادرة والمستخدمون النشطون يوميًا وسير العمل الوزاري المُفعَّل.",
+     "src": "الشريحة 29 · فئات الأثر الثلاث (10 ملايين دولار)",
+     "j": "#/27/new-2",
+     "st": "target"
+    },
+    {
+     "id": "a1",
+     "track": "plugins",
+     "period": "now",
+     "t": "تراخيص واجهات شاملة يديرها أثر",
+     "what": "يشتري أثر تراخيص ومفاتيح الواجهات التي يحتاجها المجتمع ويديرها.",
+     "why": "يستدعيها الأعضاء من وكلائهم؛ لا أحد يتفاوض وحده.",
+     "src": "الشريحة 17 · الركائز الست",
+     "j": "#/17",
+     "st": "progress"
+    },
+    {
+     "id": "a2",
+     "track": "plugins",
+     "period": "next",
+     "t": "مراجعة السوق · مقاسمة العوائد للعوامل المتخصصة",
+     "what": "عوامل مُتحقق منها تُنشر مع مسؤول صيانة مسمّى؛ قد تُقاسَم عوائد العوامل المتخصصة المدفوعة.",
+     "why": "تبقى عوامل الصالح العام مجانية؛ وتُعلَّق العوامل غير الآمنة.",
+     "src": "الشريحة 11 · نموذج المجتمع",
+     "j": "#/11",
+     "st": "target"
+    },
+    {
+     "id": "a3",
+     "track": "plugins",
+     "period": "later",
+     "t": "سجل إضافات مفتوح عبر المؤسسات والدول والنماذج",
+     "what": "معيار الإضافات ذاته في كل مكان.",
+     "why": "ابنِ مرة واحدة. شغّل في كل مكان.",
+     "src": "الشريحة 13 · الركائز الست",
+     "j": "#/13",
+     "st": "target"
+    },
+    {
+     "id": "s1",
+     "track": "sovereign",
+     "period": "now",
+     "t": "تجارب 30 يومًا و32 مقعدًا · الخيارات أ/ب/ج",
+     "what": "تثبت المؤسسة القيمة قبل الترخيص الكامل؛ وتنشر برمجيات فقط أو باستضافة ذاتية أو سحابية.",
+     "why": "السيادة خيار نشر لا تنازل.",
+     "src": "الشريحة 17 · الملحق",
+     "j": "#/17",
+     "st": "progress"
+    },
+    {
+     "id": "s2",
+     "track": "sovereign",
+     "period": "next",
+     "t": "الهند: 100 مدرسة حكومية · 10,000 حاسوب ذكاء اصطناعي",
+     "what": "تعليم بالذكاء الاصطناعي على الجهاز بالهندية ولغة الولاية؛ تدريب المعلمين؛ فريق محلي من 8 أشخاص (13.7 مليون دولار).",
+     "why": "فئة التملّك — تكتسب اتفاقية الشراكة الإماراتية–الهندية فصلًا للذكاء الاصطناعي.",
+     "src": "الشريحة 29 · فئات الأثر الثلاث",
+     "j": "#/27/new-2",
+     "st": "target"
+    },
+    {
+     "id": "s3",
+     "track": "sovereign",
+     "period": "later",
+     "t": "كينيا: عقدة سيادية مملوكة كينيًا · النقل بعد 5–7 سنوات",
+     "what": "مركز بيانات معياري على حوسبة سيادية (~33 مليون دولار)؛ إرشاد صوتي بالسواحلية للمزارعين؛ العيادات والمدارس على العقدة نفسها.",
+     "why": "فئة الإرث — يبقى الأصل.",
+     "src": "الشريحة 29 · فئات الأثر الثلاث",
+     "j": "#/27/new-2",
+     "st": "target"
+    },
+    {
+     "id": "i0",
+     "track": "impact",
+     "period": "now",
+     "t": "مقترح الميثاق (24 سبتمبر) · ورقة فئات الأثر (27 سبتمبر 2026)",
+     "what": "المقترح المجتمعي وورقة التمويل اللذان يستند إليهما هذا العرض.",
+     "why": "لكل رقم في الشرائح 28–33 مرجع صفحة.",
+     "src": "الشريحة 28 · النتائج هي المنتج",
+     "j": "#/27/new-1",
+     "st": "done"
+    },
+    {
+     "id": "i1",
+     "track": "impact",
+     "period": "now",
+     "t": "بنود التمكين: مجال الترخيص · رسوم مفتوحة · مقيّم مستقل",
+     "what": "توسيع مجال ترخيص أثر؛ سياسة رسوم مفتوحة الدفاتر مع إعادة الأموال غير المنفقة؛ تسمية مقيّم مستقل.",
+     "why": "ما يشترطه تمويل المؤسسات قبل أن يتدفق.",
+     "src": "الشريحة 31 · بنود تمكين تمويل المؤسسات",
+     "j": "#/27/new-4",
+     "st": "progress"
+    },
+    {
+     "id": "i2",
+     "track": "impact",
+     "period": "next",
+     "t": "تقارير نتائج ربع سنوية · أول تقرير نتائج وثقة",
+     "what": "بيانات أساس وقياس مستمر ودراسات حالة وتقارير ربع سنوية.",
+     "why": "النجاح هو الوقت الموفَّر والجودة والأثر — لا عدد العوامل.",
+     "src": "الشريحتان 27 و30",
+     "j": "#/27/new-3",
+     "st": "target"
+    },
+    {
+     "id": "i3",
+     "track": "impact",
+     "period": "later",
+     "t": "الإبلاغ عن مكاسب التعلّم ودخل المزارعين ونقل الأصل",
+     "what": "مقاييس النتائج لكل فئة مقابل بيانات أساس عبر مقيّم مستقل.",
+     "why": "أثر يبقى.",
+     "src": "الشريحة 30 · ما نقدّمه بشكل قابل للقياس",
+     "j": "#/27/new-3",
+     "st": "target"
+    }
+   ]
+  },
+  "s4": {
+   "title": "انشر في أي مكان، وامتلكه",
+   "sub": "ثلاث طرق لتشغيل المنظومة نفسها — الفرق في الحيازة لا في القدرة.",
+   "options": [
+    {
+     "k": "A",
+     "t": "أ · برمجيات فقط (BYOH)",
+     "s": "تستضيف المؤسسة أثر على بنيتها التحتية الخاصة."
+    },
+    {
+     "k": "B",
+     "t": "ب · استضافة ذاتية (BYOC)",
+     "s": "برمجيات يديرها أثر تعمل في سحابة المؤسسة."
+    },
+    {
+     "k": "C",
+     "t": "ج · استضافة سحابية",
+     "s": "إدارة كاملة من طرف إلى طرف من AIREV."
+    }
+   ],
+   "cols": [
+    "المؤسسة",
+    "سحابة المؤسسة",
+    "AIREV"
+   ],
+   "layers": [
+    "البيانات",
+    "النماذج",
+    "الوكلاء",
+    "مستوى التحكم",
+    "المفاتيح"
+   ],
+   "diagramLabel": "ما الذي يعمل وأين",
+   "controlsTitle": "ضوابط السيادة",
+   "controls": [
+    "إقامة البيانات — تبقى البيانات في الدولة وفي الحيّز الذي تختاره المؤسسة",
+    "حيازة المفاتيح — المؤسسة تحتفظ بالمفاتيح؛ أثر يشغّل ولا يملك",
+    "سجلات التدقيق — كل إجراء لوكيل مسجَّل وقابل للفحص من المالك",
+    "تكاليف مفتوحة الدفاتر — رسوم معلنة بندًا بندًا وإعادة الأموال غير المنفقة"
+   ],
+   "stepperTitle": "مسار نقل الملكية (5–7 سنوات)",
+   "steps": [
+    {
+     "t": "النشر",
+     "s": "تعمل العقدة أو الأسطول تحت مالك مؤسسي مسمّى."
+    },
+    {
+     "t": "تدريب المشغّلين المحليين",
+     "s": "يتعلّم مشغّلون محليون شباب تشغيلها — فريق محلي منذ اليوم الأول."
+    },
+    {
+     "t": "الاعتماد",
+     "s": "يُعتمد المشغّلون عبر مسارات الأكاديمية (مسؤول، مدرّب)."
+    },
+    {
+     "t": "نقل الأصل إلى جهة وطنية",
+     "s": "تنتقل الملكية إلى جهة وطنية بعد 5–7 سنوات."
+    }
+   ],
+   "pilot": "ابدأ صغيرًا: تجربة لمدة 30 يومًا و32 مقعدًا تتيح للمؤسسة إثبات القيمة قبل توقيع ترخيص كامل.",
+   "plateAlt": "حاسوب ذكاء اصطناعي بجانب حاوية حوسبة سيادية معيارية — تصوّر مفاهيمي",
+   "plate6Alt": "حقل ذرة كيني مع سارية طرفية وعقدة سيادية بعيدة — تصوّر مفاهيمي",
+   "custody": "الحيازة"
+  },
+  "s5": {
+   "title": "أمم مُمكَّنة",
+   "sub": "ثلاث دول وثلاث فئات — اختر دولة لعرض برنامجها الرائد وبيانات أساسها ومرحلتها.",
+   "countries": [
+    {
+     "k": "lb",
+     "t": "لبنان",
+     "tier": "الوصول",
+     "tierK": "access",
+     "flagship": "مليون خبير لبناني في الذكاء الاصطناعي",
+     "delivered": "مليون مواطن معتمَد في الذكاء الاصطناعي التوليدي؛ 18,000 في الاستخدام المهني اليومي في الوزارات والمدارس والعيادات والشركات الصغيرة.",
+     "outcomes": "الشهادات الصادرة · المستخدمون النشطون يوميًا · سير العمل الوزاري المُفعَّل",
+     "wdi": [
+      "السكان 5.85 مليون (2025)",
+      "مستخدمو الإنترنت 80.6٪ (2024)"
+     ],
+     "phase": "now",
+     "amount": "10 ملايين دولار",
+     "plate": "plate4-lebanon",
+     "plateAlt": "فريق وزاري لبناني يعمل مع وكلاء أثر — تصوّر مفاهيمي"
+    },
+    {
+     "k": "in",
+     "t": "الهند",
+     "tier": "التملّك",
+     "tierK": "ownership",
+     "flagship": "اتفاقية الشراكة الإماراتية–الهندية تكتسب فصلًا للذكاء الاصطناعي",
+     "delivered": "تعليم بالذكاء الاصطناعي على الجهاز في 100 مدرسة حكومية بالهندية ولغة الولاية؛ 10,000 حاسوب ذكاء اصطناعي؛ تدريب المعلمين؛ فريق محلي من 8 أشخاص.",
+     "outcomes": "مكاسب التعلّم مقابل الأساس · وقت المعلم الموفَّر · جاهزية الأجهزة",
+     "wdi": [
+      "الالتحاق الابتدائي 111.0٪ إجمالي (2025)",
+      "الالتحاق الثانوي 79.6٪ إجمالي (2025)",
+      "مستخدمو الإنترنت 70.0٪ (2025)"
+     ],
+     "phase": "next",
+     "amount": "13.7 مليون دولار",
+     "plate": "plate4-india",
+     "plateAlt": "فصل دراسي في مدرسة حكومية هندية مع حواسيب ذكاء اصطناعي — تصوّر مفاهيمي"
+    },
+    {
+     "k": "ke",
+     "t": "كينيا",
+     "tier": "الإرث",
+     "tierK": "legacy",
+     "flagship": "عقدة ذكاء اصطناعي سيادية تُطعم المزارعين",
+     "delivered": "مركز بيانات معياري من AIREV مملوك كينيًا على حوسبة سيادية؛ إرشاد صوتي بالسواحلية لصغار المزارعين؛ العيادات والمدارس على العقدة نفسها.",
+     "outcomes": "المزارعون المخدومون · تغيّر الغلّة والدخل · المشغّلون المحليون المعتمدون · نقل الأصل",
+     "wdi": [
+      "الزراعة 45.8٪ من العمالة (2025)",
+      "الزراعة 23.2٪ من الناتج المحلي الإجمالي (2025)",
+      "مستخدمو الإنترنت 35.0٪ (2024)"
+     ],
+     "phase": "later",
+     "amount": "~33 مليون دولار",
+     "plate": "plate6-kenya-maize",
+     "plateAlt": "حقل ذرة كيني وسارية طرفية وعقدة سيادية بعيدة — تصوّر مفاهيمي"
+    }
+   ],
+   "tierLabel": "الفئة",
+   "flagshipLabel": "البرنامج الرائد",
+   "deliveredLabel": "ما الذي يُقدَّم",
+   "outcomesLabel": "النتائج المقيسة",
+   "baselineLabel": "أساس البنك الدولي (WDI)",
+   "wdiSrc": "المصدر: مؤشرات التنمية العالمية للبنك الدولي (2026-07-13)",
+   "phaseLabel": "مرحلة خارطة الطريق",
+   "phases": [
+    {
+     "k": "now",
+     "t": "الآن · الربع الرابع 2026"
+    },
+    {
+     "k": "next",
+     "t": "التالي · 2027"
+    },
+    {
+     "k": "later",
+     "t": "لاحقًا · 2028"
+    }
+   ],
+   "cta": "انضم إلى الميثاق",
+   "ctaAria": "انضم إلى الميثاق — الانتقال إلى التعهد والتوقيع (الشريحة 19)",
+   "srcNote": "الأرقام: أثر — الذكاء الاصطناعي الوكيلي للجميع: ثلاث فئات أثر لتمويل المؤسسات (27 سبتمبر 2026)، أهداف توضيحية (ص 3)."
+  }
+ }
+}

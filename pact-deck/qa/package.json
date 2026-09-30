@@ -1,0 +1,1 @@
+{ "name": "athar-deck-qa", "private": true, "type": "module", "description": "Headless QA gate for the Athar deck (npm install here, then: node qa-gate.mjs http://127.0.0.1:3000 out --shots)", "devDependencies": { "playwright-core": "1.55.0", "sharp": "0.34.3" } }

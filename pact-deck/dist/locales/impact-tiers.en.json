@@ -1,0 +1,1294 @@
+{
+ "chapter": "07",
+ "kicker": "Impact & funding",
+ "srcNote": "Source: Athar — Agentic AI for All: Three Impact Tiers for Foundation Funding (27 Sep 2026) — figures are the paper’s illustrative targets (p. 3).",
+ "ui": {
+  "render": "Concept render",
+  "renderTag": "CONCEPT RENDER",
+  "imagery": "Official brand imagery",
+  "photoNote": "Verified by the source: 1,000,000 citizens (The National, 25 Sep 2026). The 18,000-experts figure remains the paper’s illustrative target.",
+  "openSource": "Open the source article (The National)",
+  "opensNew": "(opens in new tab)",
+  "flaggedNote": "Publisher origin unreachable from the build host at check time (HTTP 0); canonical article URL kept.",
+  "wbShort": "Source: World Bank WDI (2026-07-13)",
+  "tm2": "Intel, Intel Core, Qualcomm, Dragonwing and Snapdragon are trademarks of their respective owners; partner marks shown for reference only, no endorsement implied.",
+  "delivered": "What is delivered",
+  "outcomes": "Outcomes measured",
+  "partnersLabel": "Technology-partner marks — reference only, no endorsement implied",
+  "news": "In the news",
+  "direct": "Direct announcement",
+  "related": "Related coverage",
+  "pending": "official mark pending verification",
+  "agreement": "What every agreement carries",
+  "wbSource": "Source: World Bank WDI (2026-07-13)",
+  "tm": "Intel, the Intel logo, and Intel Core are trademarks of Intel Corporation or its subsidiaries. Qualcomm, Dragonwing and Snapdragon are trademarks or registered trademarks of Qualcomm Incorporated. Publisher and partner marks are trademarks of their respective owners — shown for reference only, no endorsement implied.",
+  "reviewBadge": "INTERNAL REVIEW ONLY",
+  "reviewText": " — candidate partner marks pending written verification from each organisation; not for external distribution. Mastercard Foundation: guideline compliance and Foundation approval pending. The Rockefeller Foundation: prior written approval pending. Patrick J. McGovern Foundation: no public brand guideline located — approval pending. Source: Athar — Agentic AI for All: Three Impact Tiers for Foundation Funding (27 Sep 2026); figures are the paper’s illustrative targets (p. 3)."
+ },
+ "slides": [
+  {
+   "id": "it-outcomes",
+   "icon": "impact",
+   "title": "Outcomes are the product",
+   "sub": "The Pact turns agreements into capacity, livelihoods and leadership — impact that stays.",
+   "bullets": [
+    [
+     "Every programme is defined as a result: people certified, learning gains, farmer income, sovereign capacity left behind.",
+     "p. 1"
+    ],
+    [
+     "The instruments already exist — 38 CEPAs, the One Million Lebanese AI Experts programme under the UAE’s government-to-government capability programme, and the $1B AI for Development initiative for Africa.",
+     "p. 1"
+    ],
+    [
+     "A funder sponsors a named programme for a defined population, with guaranteed service and independently measured results; the funder owns the mission and the headline.",
+     "p. 5"
+    ],
+    [
+     "Athar — أثر — is the trace that remains after the work is done. Leave a trace that lasts.",
+     "Athar Brand Guidelines v2 § 1.3 / § 4.4"
+    ]
+   ],
+   "note": "The next slides carry only figures from the Athar funding paper (Sep 2026); they are illustrative targets, not commitments."
+  },
+  {
+   "id": "it-tiers",
+   "icon": "community",
+   "title": "Three impact tiers, one delivery model",
+   "sub": "Access → Ownership → Legacy: a funder can enter at any tier and climb.",
+   "tiers": [
+    {
+     "key": "t1",
+     "kicker": "Tier 1",
+     "name": "Licences",
+     "chip": "Access",
+     "place": "Lebanon · Access",
+     "amount": "$10M",
+     "flagship": "Flagship: One Million Lebanese AI Experts",
+     "visual": "t1-licences",
+     "visualAlt": "Tier 1 — licences: government-service scene from the official Athar brand imagery (Brand Asset Pack v3)",
+     "delivered": "1M citizens certified in generative AI; 18,000 in daily professional use in ministries, schools, clinics and small businesses.",
+     "outcomes": "certificates issued · daily active users · ministry workflows live",
+     "wb": {
+      "country": "Lebanon",
+      "tags": [
+       "population 5.85M (2025)",
+       "internet users 80.6% (2024)"
+      ]
+     },
+     "src": "p. 1, 3–5"
+    },
+    {
+     "key": "t2",
+     "kicker": "Tier 2",
+     "name": "Appliance AI PCs & desktops",
+     "chip": "Ownership",
+     "place": "India · Ownership",
+     "amount": "$13.7M",
+     "flagship": "Flagship: the UAE–India CEPA gains an AI chapter",
+     "visual": "t2-ai-pc-composited",
+     "visualAlt": "Tier 2 — appliance AI PCs and desktops: small-business scene from the official Athar brand imagery (Brand Asset Pack v3)",
+     "delivered": "on-device AI tutoring in 100 government schools in Hindi and the state language; 10,000 AI PCs; teacher training; 8-person in-country team.",
+     "partners": [
+      {
+       "key": "intel",
+       "logo": "logo-intel",
+       "name": "Intel",
+       "alt": "Intel logo — technology-partner mark, reference only"
+      },
+      {
+       "key": "qualcomm",
+       "logo": "logo-qualcomm",
+       "name": "Qualcomm",
+       "alt": "Qualcomm Snapdragon X Elite badge — technology-partner mark, reference only"
+      }
+     ],
+     "outcomes": "learning gains vs baseline · teacher time saved · device uptime",
+     "wb": {
+      "country": "India",
+      "tags": [
+       "primary enrolment 111.0% gross (2025)",
+       "secondary enrolment 79.6% gross (2025)",
+       "internet users 70.0% (2025)"
+      ]
+     },
+     "src": "p. 1, 4–5"
+    },
+    {
+     "key": "t3",
+     "kicker": "Tier 3",
+     "name": "Sovereign data-centre nodes",
+     "chip": "Legacy",
+     "place": "Kenya · Legacy",
+     "amount": "~$33M",
+     "flagship": "Flagship: a sovereign AI node that feeds farmers",
+     "visual": "t3-data-centre-composited",
+     "visualAlt": "Tier 3 — sovereign data-centre nodes: dark key visual from the official Athar brand imagery (Brand Asset Pack v3)",
+     "delivered": "a Kenyan-owned AIREV modular data centre on sovereign compute; Swahili voice advice for smallholder farmers; clinics and schools on the same node.",
+     "outcomes": "farmers served · yield and income change · local operators certified · asset transferred",
+     "wb": {
+      "country": "Kenya",
+      "tags": [
+       "agriculture 45.8% of employment (2025)",
+       "agriculture 23.2% of GDP (2025)",
+       "internet users 35.0% (2024)"
+      ]
+     },
+     "src": "p. 1, 4–5"
+    }
+   ],
+   "ownership": {
+    "label": "Ownership",
+    "lead": "Ownership:",
+    "text": "the asset is transferred to a national entity after 5–7 years; young local operators are trained and certified to run it.",
+    "src": "p. 4, 9",
+    "visuals": [
+     {
+      "img": "own-handover-composited",
+      "wide": true,
+      "alt": "Ownership handover — the deed of the node passed to a national entity (concept render)"
+     },
+     {
+      "img": "own-noc-operators-composited",
+      "alt": "Certified local NOC operators running the node (concept render)"
+     },
+     {
+      "img": "own-farmer-composited",
+      "alt": "Farmer impact — Swahili voice advice reaching smallholder farmers (concept render)"
+     }
+    ]
+   },
+   "bullets": [
+    [
+     "A Tier 1 seat programme becomes the evidence base for Tier 2 devices; a cluster of Tier 2 deployments creates the demand for a Tier 3 national node.",
+     "p. 6"
+    ]
+   ]
+  },
+  {
+   "id": "it-metrics",
+   "icon": "impact",
+   "title": "What we deliver, measurably",
+   "sub": "Outcome metrics per tier — each reported against a baseline by an independent evaluator.",
+   "cards": [
+    {
+     "icon": "/brand/icons/pack/impact.png",
+     "tier": "Access · Lebanon",
+     "items": [
+      "1,000,000 citizens certified in generative AI",
+      "18,000 experts in daily use across ministries, schools, clinics and small businesses",
+      "Quarterly reporting against the one-million target"
+     ],
+     "src": "p. 1, 3",
+     "photo": {
+      "jpg": "/assets/img/lebanon-one-million-ai-experts-20260925.jpg",
+      "webp": "/assets/img/lebanon-one-million-ai-experts-20260925.webp",
+      "w": 1600,
+      "h": 1067,
+      "alt": "Sheikh Abdullah bin Zayed and Lebanese Prime Minister Nawaf Salam at the launch of the “One Million Lebanese AI Experts” initiative, UNGA, New York, 25 September 2026",
+      "caption": "Photo: UAE–Lebanon “One Million Lebanese AI Experts” launch, UNGA New York, 25 Sep 2026 — The National / The Gulf Observer",
+      "href": "https://www.thenationalnews.com/news/mena/2026/09/25/uae-and-lebanon-launch-ai-training-initiative/"
+     }
+    },
+    {
+     "icon": "/brand/icons/pack/education.png",
+     "tier": "Ownership · India",
+     "items": [
+      "100 government schools with on-device AI tutoring",
+      "10,000 AI PCs, teacher training, an 8-person in-country team",
+      "Learning gains reported against a baseline by an independent evaluator"
+     ],
+     "src": "p. 4"
+    },
+    {
+     "icon": "/assets/growth-impact-ByIEEdLi.png",
+     "tier": "Legacy · Kenya",
+     "items": [
+      "One Kenyan-owned sovereign AI node serving farmers first",
+      "Swahili voice advice on crops, pests, weather and prices; clinics and schools on the same node",
+      "Young Kenyans trained to operate it; ownership transferred after 5–7 years"
+     ],
+     "src": "p. 4–5"
+    }
+   ],
+   "agreement": "named cohorts and activation targets · baseline and independent evaluation · quarterly outcome reports · open-book costs with unspent funds returned · country chapters and trained local operators.",
+   "agreementSrc": "p. 5",
+   "newsGroups": [
+    {
+     "tier": "lebanon",
+     "title": "Lebanon · Access",
+     "chip": "Lebanon"
+    },
+    {
+     "tier": "india",
+     "title": "India · Ownership",
+     "chip": "India"
+    },
+    {
+     "tier": "kenya",
+     "title": "Kenya · Legacy",
+     "chip": "Kenya"
+    },
+    {
+     "tier": "tech",
+     "title": "Technology partners",
+     "chip": "Technology partners"
+    }
+   ]
+  },
+  {
+   "id": "it-sustain",
+   "icon": "trust-safety",
+   "title": "How the community sustains itself",
+   "sub": "Tiered, funder-matched delivery — sustainable and equitable by design.",
+   "bullets": [
+    [
+     "Participation first: sponsored seats are named, time-bound and measurable — the Community Plan model, extended up the ownership ladder.",
+     "p. 5–6"
+    ],
+    [
+     "Funder-matched tiers: Access anchored by the UAE through its government-to-government capability programme, with the McGovern Foundation as candidate co-funder; Ownership co-funded by the Gates Foundation alongside public education partners in India; Legacy with AI for Development, the Rockefeller Foundation, the Gates Foundation and the Mastercard Foundation.",
+     "p. 5"
+    ],
+    [
+     "Open reporting: baseline, independent evaluation ring-fenced at ~3 %, quarterly outcome reports, tranches released on milestones.",
+     "p. 5, 7, 9"
+    ],
+    [
+     "Local operators trained, jobs created: in-country teams, young operators trained under the programme, build-operate-transfer — assets pass to a national entity.",
+     "p. 4, 9"
+    ],
+    [
+     "What the UAE gains: CEPAs deepen from goods into digital services, the UAE’s government-to-government capability programme gets a national-scale flagship, UAE-built AI infrastructure is exported and food corridors strengthen.",
+     "p. 1, 5"
+    ]
+   ]
+  },
+  {
+   "id": "it-partners",
+   "icon": "community",
+   "title": "Delivered with",
+   "sub": "The actors of the Pact and the funders named in the Athar funding paper.",
+   "wall": true,
+   "groups": {
+    "actors": "Pact actors",
+    "funders": "Funders named in the paper (pp. 3–5)"
+   }
+  },
+  {
+   "id": "it-join",
+   "icon": "community",
+   "title": "Join the Pact",
+   "sub": "Bring a programme, a cohort or a country chapter.",
+   "bullets": [
+    [
+     "Sponsor an outcome, not a product: name the population, the result and the evaluator.",
+     "p. 5"
+    ],
+    [
+     "Start at any tier; the evidence from one tier opens the next.",
+     "p. 6"
+    ],
+    [
+     "Everything is reported in the open — baseline, quarterly outcomes, costs.",
+     "p. 5"
+    ]
+   ],
+   "endorse": {
+    "ar": "أثٌر يبقى",
+    "en": "Impact that stays."
+   }
+  }
+ ],
+ "counter": "Slide {n} of {total}",
+ "version": "1.5.2",
+ "source": "Athar — Agentic AI for All: Three Impact Tiers for Foundation Funding (27 Sep 2026)",
+ "news": [
+  {
+   "id": "lb-mofa",
+   "tier": "lebanon",
+   "tag": "direct",
+   "date": "2026-09-25",
+   "publisher": "UAE Ministry of Foreign Affairs (WAM)",
+   "headline": "Abdullah bin Zayed meets Lebanese PM in New York; One Million Lebanese AI Experts initiative launched",
+   "url": "https://www.mofa.gov.ae/en/MediaHub/News/2026/9/25/UAE-Lebanon",
+   "alternate": null,
+   "flagged": false,
+   "secondary": null,
+   "mark": "/assets/news/marks/publisher-mofa.png",
+   "markKind": "publisher",
+   "markName": "UAE Ministry of Foreign Affairs (WAM)"
+  },
+  {
+   "id": "lb-national",
+   "tier": "lebanon",
+   "tag": "related",
+   "date": "2026-09-25",
+   "publisher": "The National",
+   "headline": "UAE and Lebanon launch AI training initiative",
+   "url": "https://www.thenationalnews.com/news/mena/2026/09/25/uae-and-lebanon-launch-ai-training-initiative/",
+   "alternate": null,
+   "flagged": false,
+   "secondary": null,
+   "mark": null,
+   "markKind": "publisher",
+   "markName": "The National"
+  },
+  {
+   "id": "lb-gulfnews",
+   "tier": "lebanon",
+   "tag": "related",
+   "date": "Sep 2026",
+   "publisher": "Gulf News",
+   "headline": "UAE to equip one million Lebanese with generative AI skills",
+   "url": "https://gulfnews.com/uae/uae-to-equip-one-million-lebanese-with-generative-ai-skills-1.500687605",
+   "alternate": null,
+   "flagged": false,
+   "secondary": null,
+   "mark": "/assets/news/marks/publisher-gulf-news.png",
+   "markKind": "publisher",
+   "markName": "Gulf News"
+  },
+  {
+   "id": "lb-meain",
+   "tier": "lebanon",
+   "tag": "related",
+   "date": "2026-09-25",
+   "publisher": "Middle East AI News",
+   "headline": "UAE, Lebanon agree to train one million AI experts",
+   "url": "https://www.middleeastainews.com/p/uae-lebanon-agree-to-train-one-million",
+   "alternate": null,
+   "flagged": false,
+   "secondary": null,
+   "mark": "/assets/news/marks/publisher-middle-east-ai-news.png",
+   "markKind": "publisher",
+   "markName": "Middle East AI News"
+  },
+  {
+   "id": "in-wam-mou",
+   "tier": "india",
+   "tag": "direct",
+   "date": "2024-02-14",
+   "publisher": "WAM (Emirates News Agency)",
+   "headline": "UAE, India sign MoU to accelerate growth of digital economy",
+   "url": "https://www.wam.ae/en/article/b1ns93x-uae-india-sign-mou-accelerate-growth-digital",
+   "alternate": null,
+   "flagged": false,
+   "secondary": null,
+   "mark": "/assets/news/marks/publisher-wam.png",
+   "markKind": "publisher",
+   "markName": "WAM (Emirates News Agency)"
+  },
+  {
+   "id": "in-pib",
+   "tier": "india",
+   "tag": "direct",
+   "date": "2026-08-05",
+   "publisher": "Press Information Bureau (Government of India)",
+   "headline": "Artificial Intelligence (AI) and Digital Education in Government Schools",
+   "url": "https://www.pib.gov.in/PressReleasePage.aspx?PRID=2295050&lang=1&reg=6",
+   "alternate": null,
+   "flagged": false,
+   "secondary": null,
+   "mark": null,
+   "markKind": "publisher",
+   "markName": "PIB"
+  },
+  {
+   "id": "in-bizforum",
+   "tier": "india",
+   "tag": "related",
+   "date": "2024-09-10",
+   "publisher": "WAM (Emirates News Agency)",
+   "headline": "UAE-India Business Forum kicks off in Mumbai — Beyond CEPA",
+   "url": "https://www.wam.ae/en/article/1440s83-uae-india-business-forum-kicks-off-mumbai",
+   "alternate": "https://www.bignewsnetwork.com/news/274575970/uae-india-business-forum-kicks-off-in-mumbai",
+   "flagged": false,
+   "secondary": null,
+   "mark": "/assets/news/marks/publisher-wam.png",
+   "markKind": "publisher",
+   "markName": "WAM"
+  },
+  {
+   "id": "ke-wam-mou",
+   "tier": "kenya",
+   "tag": "direct",
+   "date": "2024-03-29",
+   "publisher": "WAM (Emirates News Agency)",
+   "headline": "UAE, Kenya sign Investment Memorandum to advance digital infrastructure, AI initiatives (data centres up to 1,000 MW)",
+   "url": "https://www.wam.ae/en/article/b2dzbq3-uae-kenya-sign-investment-memorandum-advance",
+   "alternate": null,
+   "flagged": false,
+   "secondary": null,
+   "mark": "/assets/news/marks/publisher-wam.png",
+   "markKind": "publisher",
+   "markName": "WAM (Emirates News Agency)"
+  },
+  {
+   "id": "ke-ict",
+   "tier": "kenya",
+   "tag": "related",
+   "date": "2025-09-12",
+   "publisher": "Kenya Ministry of ICT & Digital Economy",
+   "headline": "Kenya’s Digital Future Brightens as Construction of East Africa’s Largest Data Centre Starts",
+   "url": "https://ict.go.ke/kenyas-digital-future-brightens-construction-east-africas-largest-data-centre-starts",
+   "alternate": "https://ict.go.ke/node/797",
+   "flagged": true,
+   "secondary": null,
+   "mark": "/assets/news/marks/publisher-kenya-ict.png",
+   "markKind": "publisher",
+   "markName": "Kenya Ministry of ICT & Digital Economy"
+  },
+  {
+   "id": "ke-adex",
+   "tier": "kenya",
+   "tag": "related",
+   "date": "2025-12-08",
+   "publisher": "The National (partner content)",
+   "headline": "Adex leads joint UAE-Africa initiative leveraging AI to advance development (US$1bn Ai.(d))",
+   "url": "https://www.thenationalnews.com/business/partner-content/2025/12/08/adex-leads-joint-uae-africa-initiative-leveraging-ai-to-advance-development-and-improve-lives/",
+   "alternate": null,
+   "flagged": false,
+   "secondary": null,
+   "mark": null,
+   "markKind": "publisher",
+   "markName": "The National"
+  },
+  {
+   "id": "tp-intel-dec25",
+   "tier": "tech",
+   "tag": "direct",
+   "date": "2025-12-18",
+   "publisher": "Gulf News",
+   "headline": "AIREV and Intel partner to launch AI agents that run entirely on your PC",
+   "url": "https://gulfnews.com/business/corporate-news/airev-and-intel-partner-to-launch-ai-agents-that-run-entirely-on-your-pc-1.500383475",
+   "alternate": null,
+   "flagged": false,
+   "secondary": null,
+   "mark": "/assets/news/marks/logo-intel.png",
+   "markKind": "partner",
+   "markName": "Intel"
+  },
+  {
+   "id": "tp-intel-oct25",
+   "tier": "tech",
+   "tag": "direct",
+   "date": "2025-10-14",
+   "publisher": "Gulf News",
+   "headline": "Intel and AIREV partner to propel AI innovation across Middle East and globally",
+   "url": "https://gulfnews.com/business/corporate-news/intel-and-airev-partner-to-propel-ai-innovation-across-middle-east-and-globally-1.500306686",
+   "alternate": null,
+   "flagged": false,
+   "secondary": null,
+   "mark": "/assets/news/marks/logo-intel.png",
+   "markKind": "partner",
+   "markName": "Intel"
+  },
+  {
+   "id": "tp-qualcomm",
+   "tier": "tech",
+   "tag": "direct",
+   "date": "2026-08-13",
+   "publisher": "Emirates News Agency (WAM)",
+   "headline": "AIREV, Qualcomm to advance autonomous AI across enterprise, government environments",
+   "url": "https://www.wam.ae/en/article/c1pp81t-airev-qualcomm-advance-autonomous-across",
+   "alternate": null,
+   "flagged": false,
+   "secondary": "https://www.zawya.com/en/press-release/companies-news/airev-and-qualcomm-to-advance-autonomous-ai-across-enterprise-and-government-environments-455903",
+   "mark": "/assets/news/marks/logo-qualcomm.svg",
+   "markKind": "partner",
+   "markName": "Qualcomm"
+  },
+  {
+   "id": "tp-redington",
+   "tier": "tech",
+   "tag": "direct",
+   "date": "2026-07-22",
+   "publisher": "Gulf News",
+   "headline": "Redington to distribute UAE-built AIREV OnDemand agentic AI platform across MEA",
+   "url": "https://gulfnews.com/business/corporate-news/redington-to-distribute-uae-built-airev-ondemand-agentic-ai-platform-across-mea-1.500616526",
+   "alternate": null,
+   "flagged": false,
+   "secondary": null,
+   "mark": "/assets/news/marks/logo-redington.png",
+   "markKind": "partner",
+   "markName": "Redington"
+  }
+ ],
+ "tierImages": {
+  "t1-licences": {
+   "dir": "impact/v133",
+   "base": "t1-licences",
+   "ext": "png",
+   "pos": "50% 45%",
+   "official": true,
+   "credit": "Athar Brand Asset Pack v3 — 04_Imagery/athar_imagery_illustration_scene1_government_v2.jpg (official brand imagery, cover-cropped 1200×800, v1.4.7)"
+  },
+  "t2-ai-pc-composited": {
+   "dir": "impact/v133",
+   "base": "t2-ai-pc-composited",
+   "ext": "png",
+   "pos": "50% 42%",
+   "official": true,
+   "credit": "Athar Brand Asset Pack v3 — 04_Imagery/athar_imagery_illustration_scene2_sme_v2.jpg (official brand imagery, cover-cropped 1200×800, v1.4.7; the v1.3.3 concept render was unrecoverable)"
+  },
+  "t3-data-centre-composited": {
+   "dir": "impact/v133",
+   "base": "t3-data-centre-composited",
+   "ext": "png",
+   "pos": "50% 50%",
+   "official": true,
+   "credit": "Athar Brand Asset Pack v3 — 04_Imagery/athar_imagery_keyvisual_dark_v2.jpg (official brand key visual, cover-cropped 1200×800, v1.4.7; the v1.3.3 concept render was unrecoverable)"
+  },
+  "own-handover-composited": {
+   "dir": "impact/v133",
+   "base": "own-handover-composited",
+   "ext": "png",
+   "pos": "50% 60%",
+   "credit": "Concept render — ownership handover; official Athar logo composited on the deed cover (perspective warp, multiply blend)"
+  },
+  "own-noc-operators-composited": {
+   "dir": "impact/v133",
+   "base": "own-noc-operators-composited",
+   "ext": "png",
+   "pos": "50% 45%",
+   "credit": "Concept render — NOC operators certified; official Athar reversed logo composited on the blank screen (perspective warp, screen blend)"
+  },
+  "own-farmer-composited": {
+   "dir": "impact/v133",
+   "base": "own-farmer-composited",
+   "ext": "png",
+   "pos": "50% 30%",
+   "credit": "Concept render — farmer impact; official Athar monogram composited on the relay panel (perspective warp, multiply blend)"
+  },
+  "logo-intel": {
+   "dir": "tiers",
+   "file": "logo-intel.png",
+   "credit": "Intel logo — Intel Newsroom press hub logo pack (2021-Intel-logos.zip → Intel-logo-nobox.png); reference only, no endorsement implied"
+  },
+  "logo-qualcomm": {
+   "dir": "tiers",
+   "file": "logo-qualcomm.svg",
+   "credit": "Snapdragon X Elite Platform badge — Qualcomm press kit (Snapdragon Summit 2026, Day 1), www.qualcomm.com; reference only, no endorsement implied"
+  }
+ },
+ "marks": {
+  "oda": {
+   "src": "/partners/review/oda__athar_partner_oda_logo_bw_v1.png",
+   "w": 3980,
+   "h": 1222,
+   "name": "ODA",
+   "nameAr": "مكتب الشؤون التنموية (ODA)"
+  },
+  "undp": {
+   "src": "/partners/review/undp__undp-logo-blue.svg",
+   "w": 60,
+   "h": 122,
+   "name": "UNDP",
+   "nameAr": "برنامج الأمم المتحدة الإنمائي"
+  },
+  "unicef": {
+   "src": "/partners/review/unicef__English-Inverse_39.png.webp",
+   "w": 1159,
+   "h": 150,
+   "name": "UNICEF",
+   "nameAr": "اليونيسف",
+   "dark": true
+  },
+  "ifrc": {
+   "src": "/partners/review/ifrc__Logo-Horizontal-RGB-300ppi.png",
+   "w": 3509,
+   "h": 1585,
+   "name": "IFRC",
+   "nameAr": "الاتحاد الدولي لجمعيات الصليب الأحمر والهلال الأحمر"
+  },
+  "wfp": {
+   "src": "/partners/review/wfp__wfp-logo-standard-blue-en.svg",
+   "w": 132,
+   "h": 58,
+   "name": "WFP",
+   "nameAr": "برنامج الأغذية العالمي"
+  },
+  "unhcr": {
+   "src": "/partners/review/unhcr__logo.svg",
+   "w": 175,
+   "h": 43,
+   "name": "UNHCR",
+   "nameAr": "المفوضية السامية للأمم المتحدة لشؤون اللاجئين"
+  },
+  "discord": {
+   "src": "/partners/review/discord__Discord-Logo-Blurple.svg",
+   "w": 635,
+   "h": 96,
+   "name": "Discord",
+   "nameAr": "ديسكورد"
+  },
+  "uae": {
+   "src": "/partners/review/uae__u-ae-home_logo.svg",
+   "w": 2733,
+   "h": 1050,
+   "name": "United Arab Emirates",
+   "nameAr": "دولة الإمارات العربية المتحدة"
+  },
+  "gates": {
+   "src": "/partners/review/gates-foundation__gf-primary-weathered-slate-logo_4by1-ratio-fixed.svg",
+   "w": 800,
+   "h": 200,
+   "name": "Gates Foundation",
+   "nameAr": "مؤسسة غيتس"
+  },
+  "rockefeller": {
+   "src": "/partners/review/rockefeller-foundation__RF_logo_screen_green.png",
+   "w": 1600,
+   "h": 591,
+   "name": "The Rockefeller Foundation",
+   "nameAr": "مؤسسة روكفلر"
+  },
+  "mcgovern": {
+   "src": "/partners/review/mcgovern-foundation__mf-logo.svg",
+   "w": 267,
+   "h": 69,
+   "name": "Patrick J. McGovern Foundation",
+   "nameAr": "مؤسسة باتريك ج. ماكغفرن"
+  },
+  "mastercard": {
+   "name": "Mastercard Foundation",
+   "nameAr": "مؤسسة ماستركارد"
+  }
+ },
+ "wall": [
+  {
+   "group": "actors",
+   "mark": "oda"
+  },
+  {
+   "group": "actors",
+   "mark": "uae"
+  },
+  {
+   "group": "actors",
+   "mark": "undp"
+  },
+  {
+   "group": "actors",
+   "mark": "unicef"
+  },
+  {
+   "group": "actors",
+   "mark": "ifrc"
+  },
+  {
+   "group": "actors",
+   "mark": "wfp"
+  },
+  {
+   "group": "actors",
+   "mark": "unhcr"
+  },
+  {
+   "group": "actors",
+   "mark": "discord"
+  },
+  {
+   "group": "funders",
+   "mark": "gates",
+   "src": "p. 4–5",
+   "sub": "Co-funder — education (India) and farmer layer (Kenya)",
+   "subAr": "ممول مشارك — التعليم (الهند) وطبقة المزارعين (كينيا)"
+  },
+  {
+   "group": "funders",
+   "mark": "rockefeller",
+   "src": "p. 4–5",
+   "sub": "Farmer layer, Legacy",
+   "subAr": "طبقة المزارعين — الإرث"
+  },
+  {
+   "group": "funders",
+   "mark": "mcgovern",
+   "src": "p. 4–5",
+   "sub": "Candidate co-funder, Access",
+   "subAr": "ممول مشارك مرشّح — الوصول"
+  },
+  {
+   "group": "funders",
+   "mark": "mastercard",
+   "src": "p. 4–5",
+   "sub": "Youth operators and builders, Legacy",
+   "subAr": "المشغّلون والبناة الشباب — الإرث"
+  }
+ ],
+ "total": 39,
+ "atharOS": {
+  "chapter": "08",
+  "kicker": "Athar OS",
+  "tag": "Concept render",
+  "tagCaps": "CONCEPT RENDER",
+  "target": "target",
+  "done": "done",
+  "inprogress": "in progress",
+  "s1": {
+   "title": "Athar OS — an agentic harness that empowers nations",
+   "sub": "One harness: nations, institutions, builders, agents, skills, plugins, licences and sovereign compute — governed by the pact.",
+   "heroAlt": "National digital-government operations room running Athar OS — concept render with the official Athar monogram composited on the wall",
+   "diagramLabel": "Layered harness — select a layer to expand it",
+   "where": "Where in the deck",
+   "hint": "Enter / Space to expand · ↑↓ to move between layers",
+   "layers": [
+    {
+     "k": "nation",
+     "t": "Nation",
+     "s": "A country signs the pact and hosts a national chapter",
+     "b": [
+      "Country chapters bring the pact to life locally: a host institution, a country lead, an academy lead and a safeguarding focal point.",
+      "Outcomes are measured against a baseline by an independent evaluator, reported quarterly.",
+      "The asset is transferred to a national entity after 5–7 years; young local operators are trained and certified to run it."
+     ],
+     "j": "#/07",
+     "jt": "Slide 7 · Country chapters"
+    },
+    {
+     "k": "institutions",
+     "t": "Institutions",
+     "s": "Ministries, schools, clinics and NGOs deploy through an accountable owner",
+     "b": [
+      "Institution-led: every deployment has a named sponsor and an accountable owner.",
+      "Open where possible, governed where necessary — institutional data, private workspaces and audit logs stay controlled.",
+      "Three ways to deploy: software-only on the institution’s infrastructure, self-hosted in its cloud, or cloud-hosted by AIREV."
+     ],
+     "j": "#/15",
+     "jt": "Slide 15 · Open where possible, governed where necessary"
+    },
+    {
+     "k": "builders",
+     "t": "Community builders",
+     "s": "An open community that learns, builds, validates and publishes",
+     "b": [
+      "The builder journey: learn → prototype → evaluate → validate → deploy → publish.",
+      "Weekly office hours, quarterly challenges, monthly showcases and the annual summit.",
+      "Academy pathways certify practitioners, builders, administrators and trainers."
+     ],
+     "j": "#/11",
+     "jt": "Slide 11 · The builder journey and the agent marketplace"
+    },
+    {
+     "k": "agents",
+     "t": "Agents",
+     "s": "Validated agents with a named maintainer and a stated intended use",
+     "b": [
+      "Every published agent has a named maintainer, version history and a stated intended use.",
+      "Agents disclose data sources, tools, model dependencies and known limitations.",
+      "High-risk agents need institutional approval and extra testing before deployment."
+     ],
+     "j": "#/11",
+     "jt": "Slide 11 · Agent marketplace rules"
+    },
+    {
+     "k": "skills",
+     "t": "Skills",
+     "s": "Reusable capabilities, built once and shared",
+     "b": [
+      "A skill packages a capability so any validated agent can load and reuse it.",
+      "Skills pass through the same journey: prototype, evaluate, validate.",
+      "No-code pathways for practitioners; pro-code pathways for developers."
+     ],
+     "j": "#/14",
+     "jt": "Slide 14 · Reusable skills"
+    },
+    {
+     "k": "plugins",
+     "t": "Plugins",
+     "s": "The connective tissue: one shared plugin standard",
+     "b": [
+      "Agents reach tools, connectors, data sources and services only through plugins.",
+      "Every plugin is published, versioned and discoverable, with a disclosed intended use, owner and languages.",
+      "Plugins travel across models — switching providers never means rebuilding an institution’s toolset."
+     ],
+     "j": "#/13",
+     "jt": "Slide 13 · Plugins are the connective tissue"
+    },
+    {
+     "k": "licences",
+     "t": "Universal API licences",
+     "s": "Procured and managed by Athar for the whole community",
+     "b": [
+      "Athar procures and manages the API licences and keys the community needs; members call them from their agents.",
+      "Seat pools are named, time-bound and cannot transfer outside the programme.",
+      "The major API builders are on slide 17; the seat ladder lives in the appendix."
+     ],
+     "j": "#/17",
+     "jt": "Slide 17 · Universal API licences managed by Athar"
+    },
+    {
+     "k": "compute",
+     "t": "Sovereign compute",
+     "s": "Data, models, agents, control plane and keys run where the nation decides",
+     "b": [
+      "Option A/B/C: institution infrastructure, institution cloud, or AIREV-managed — same harness, different custody.",
+      "Data residency, key custody, audit logs and open-book costs are contract terms, not features.",
+      "Kenya: a Kenyan-owned modular node; certified local operators; transfer after 5–7 years."
+     ],
+     "j": "#/27/new-2",
+     "jt": "Slide 29 · Sovereign data-centre nodes"
+    }
+   ]
+  },
+  "s2": {
+   "title": "Product tour — the harness at work",
+   "sub": "The actual Athar screens from Athar_Package.zip and Athar_Wireframes_and_Screens_v1 — Overview, Marketplace, Playground (empty, conversation) and Agent Flow Builder — at native 1440×900, light and dark, English and Arabic.",
+   "tabs": [
+    {
+     "k": "overview",
+     "t": "Overview"
+    },
+    {
+     "k": "marketplace",
+     "t": "Marketplace"
+    },
+    {
+     "k": "playground-empty",
+     "t": "Playground — empty"
+    },
+    {
+     "k": "playground-conversation",
+     "t": "Playground — conversation"
+    },
+    {
+     "k": "flow",
+     "t": "Agent Flow Builder"
+    }
+   ],
+   "heroAlt": "Community builders composing an agent flow on a touch canvas — concept render",
+   "langToggle": "العربية",
+   "langToggleAria": "Switch the tour to Arabic",
+   "themeLight": "Light",
+   "themeDark": "Dark",
+   "themeAria": "Toggle light / dark theme",
+   "loading": "Loading…",
+   "tourNote": "Real product screens — Athar_Package.zip (05 Web & Product/UI_Screens, 2880×1800) and Athar_Wireframes_and_Screens_v1.pdf (27 September 2026); numbered hotspots carry the pack’s own captions. Nothing on this slide is a mockup."
+  },
+  "s3": {
+   "title": "Roadmap — Now, Next, Later",
+   "sub": "Five tracks from the pact, the community model and the three impact tiers; items without a deck source are marked “target”.",
+   "periods": [
+    {
+     "k": "now",
+     "t": "Now",
+     "s": "Q4 2026"
+    },
+    {
+     "k": "next",
+     "t": "Next",
+     "s": "2027"
+    },
+    {
+     "k": "later",
+     "t": "Later",
+     "s": "2028"
+    }
+   ],
+   "tracks": [
+    {
+     "k": "platform",
+     "t": "Platform"
+    },
+    {
+     "k": "community",
+     "t": "Community & skills"
+    },
+    {
+     "k": "plugins",
+     "t": "Plugins & universal APIs"
+    },
+    {
+     "k": "sovereign",
+     "t": "Sovereign deployment"
+    },
+    {
+     "k": "impact",
+     "t": "Impact & evaluation"
+    }
+   ],
+   "all": "All tracks",
+   "filterLabel": "Filter by track",
+   "detailEmpty": "Select a milestone to see what, why, source and status.",
+   "what": "What",
+   "why": "Why",
+   "source": "Source",
+   "status": {
+    "done": "done",
+    "progress": "in progress",
+    "target": "target"
+   },
+   "milestones": [
+    {
+     "id": "p1",
+     "track": "platform",
+     "period": "now",
+     "t": "Skills pipeline: prototype → evaluate → validate",
+     "what": "Skills pass through the same builder journey as agents.",
+     "why": "A capability built once is reusable by every validated agent.",
+     "src": "Slide 14 · Six pillars",
+     "j": "#/14",
+     "st": "progress"
+    },
+    {
+     "id": "p2",
+     "track": "platform",
+     "period": "now",
+     "t": "Plugin standard v1 — published, versioned, discoverable",
+     "what": "One shared plugin standard for tools, connectors, data sources and services.",
+     "why": "Agents reach the outside world only through plugins.",
+     "src": "Slide 13 · Six pillars",
+     "j": "#/13",
+     "st": "progress"
+    },
+    {
+     "id": "p3",
+     "track": "platform",
+     "period": "next",
+     "t": "Cross-model plugin portability",
+     "what": "Any model can call any other model’s plugins through the shared standard.",
+     "why": "No institution is locked to one provider.",
+     "src": "Slide 16 · Six pillars",
+     "j": "#/16",
+     "st": "target"
+    },
+    {
+     "id": "p4",
+     "track": "platform",
+     "period": "next",
+     "t": "Playground + Agent Flow Builder GA",
+     "what": "The four product screens of the tour become generally available.",
+     "why": "Builders compose multi-agent flows on a canvas.",
+     "src": "Wireframes v1 (27 Sep 2026)",
+     "j": "#/27/new-8",
+     "st": "target"
+    },
+    {
+     "id": "p5",
+     "track": "platform",
+     "period": "later",
+     "t": "Athar OS for national nodes",
+     "what": "The full harness packaged for sovereign compute.",
+     "why": "One harness from a laptop to a national node.",
+     "src": "target",
+     "j": "#/27/new-10",
+     "st": "target"
+    },
+    {
+     "id": "c1",
+     "track": "community",
+     "period": "now",
+     "t": "Wave 1 chapters + Foundations pathway",
+     "what": "UAE base plus two countries; Agentic AI Foundations published.",
+     "why": "Local ownership within a shared model.",
+     "src": "Slides 7 and 27 · Community model",
+     "j": "#/07",
+     "st": "progress"
+    },
+    {
+     "id": "c2",
+     "track": "community",
+     "period": "now",
+     "t": "Founding cohort · weekly builder office hours",
+     "what": "Days 31–60: open the founding cohort; start office hours and webinars.",
+     "why": "Builders get weekly technical help.",
+     "src": "Slide 27 · Roadmap",
+     "j": "#/27",
+     "st": "progress"
+    },
+    {
+     "id": "c3",
+     "track": "community",
+     "period": "next",
+     "t": "10,000 learners · 2,500 certified · 100 facilitators",
+     "what": "Year-one Academy targets.",
+     "why": "Interest becomes certified, applied capability.",
+     "src": "Slide 18 · Six pillars",
+     "j": "#/18",
+     "st": "target"
+    },
+    {
+     "id": "c4",
+     "track": "community",
+     "period": "next",
+     "t": "Ten chapters · Global Summit · annual report",
+     "what": "Months 10–12 of the implementation roadmap.",
+     "why": "Review outcomes, recognise builders, set the agenda.",
+     "src": "Slide 27 · Roadmap",
+     "j": "#/27",
+     "st": "target"
+    },
+    {
+     "id": "c5",
+     "track": "community",
+     "period": "later",
+     "t": "One Million Lebanese AI Experts — 18,000 in daily use",
+     "what": "Access tier flagship: 1M citizens certified in generative AI.",
+     "why": "Certificates issued, daily active users, ministry workflows live.",
+     "src": "Slide 29 · Three impact tiers ($10M)",
+     "j": "#/27/new-2",
+     "st": "target"
+    },
+    {
+     "id": "a1",
+     "track": "plugins",
+     "period": "now",
+     "t": "Universal API licences managed by Athar",
+     "what": "Athar procures and manages the API licences and keys the community needs.",
+     "why": "Members call them from their agents; nobody negotiates alone.",
+     "src": "Slide 17 · Six pillars",
+     "j": "#/17",
+     "st": "progress"
+    },
+    {
+     "id": "a2",
+     "track": "plugins",
+     "period": "next",
+     "t": "Marketplace review · revenue share for specialist agents",
+     "what": "Validated agents published with a named maintainer; paid specialist agents may share revenue.",
+     "why": "Public-good agents stay free; unsafe agents are suspended.",
+     "src": "Slide 11 · Community model",
+     "j": "#/11",
+     "st": "target"
+    },
+    {
+     "id": "a3",
+     "track": "plugins",
+     "period": "later",
+     "t": "Open plugin registry across institutions, countries and models",
+     "what": "The same plugin standard everywhere.",
+     "why": "Build once. Run everywhere.",
+     "src": "Slide 13 · Six pillars",
+     "j": "#/13",
+     "st": "target"
+    },
+    {
+     "id": "s1",
+     "track": "sovereign",
+     "period": "now",
+     "t": "30-day, 32-seat pilots · Option A/B/C",
+     "what": "An institution proves value before a full licence; deploys software-only, self-hosted or cloud-hosted.",
+     "why": "Sovereignty is a deployment choice, not a trade-off.",
+     "src": "Slide 17 · appendix",
+     "j": "#/17",
+     "st": "progress"
+    },
+    {
+     "id": "s2",
+     "track": "sovereign",
+     "period": "next",
+     "t": "India: 100 government schools · 10,000 AI PCs",
+     "what": "On-device AI tutoring in Hindi and the state language; teacher training; 8-person in-country team ($13.7M).",
+     "why": "Ownership tier — the UAE–India CEPA gains an AI chapter.",
+     "src": "Slide 29 · Three impact tiers",
+     "j": "#/27/new-2",
+     "st": "target"
+    },
+    {
+     "id": "s3",
+     "track": "sovereign",
+     "period": "later",
+     "t": "Kenya: Kenyan-owned sovereign node · transfer after 5–7 years",
+     "what": "A modular data centre on sovereign compute (~$33M); Swahili voice advice for farmers; clinics and schools on the same node.",
+     "why": "Legacy tier — the asset stays.",
+     "src": "Slide 29 · Three impact tiers",
+     "j": "#/27/new-2",
+     "st": "target"
+    },
+    {
+     "id": "i0",
+     "track": "impact",
+     "period": "now",
+     "t": "Pact proposal (24 Sep) · impact-tiers paper (27 Sep 2026)",
+     "what": "The community proposal and the funding paper this deck draws on.",
+     "why": "Every figure on slides 28–33 has a page reference.",
+     "src": "Slide 28 · Outcomes are the product",
+     "j": "#/27/new-1",
+     "st": "done"
+    },
+    {
+     "id": "i1",
+     "track": "impact",
+     "period": "now",
+     "t": "Gating items: licence field · open-book fees · independent evaluator",
+     "what": "Extend Athar’s licence field; open-book fee policy with unspent funds returned; name an independent evaluator.",
+     "why": "What foundation funding requires before it flows.",
+     "src": "Slide 31 · Foundation-funding gating items",
+     "j": "#/27/new-4",
+     "st": "progress"
+    },
+    {
+     "id": "i2",
+     "track": "impact",
+     "period": "next",
+     "t": "Quarterly outcome reports · first outcome & trust report",
+     "what": "Baselines, telemetry, case studies and quarterly reporting.",
+     "why": "Success is time saved, quality and reach — not agent counts.",
+     "src": "Slides 27 and 30",
+     "j": "#/27/new-3",
+     "st": "target"
+    },
+    {
+     "id": "i3",
+     "track": "impact",
+     "period": "later",
+     "t": "Learning gains, farmer income and asset transfer reported",
+     "what": "Outcome metrics per tier against a baseline by an independent evaluator.",
+     "why": "Impact that stays.",
+     "src": "Slide 30 · What we deliver, measurably",
+     "j": "#/27/new-3",
+     "st": "target"
+    }
+   ]
+  },
+  "s4": {
+   "title": "Deploy anywhere, own it",
+   "sub": "Three ways to run the same harness — the difference is custody, not capability.",
+   "options": [
+    {
+     "k": "A",
+     "t": "A · Software-only (BYOH)",
+     "s": "The institution hosts Athar on its own infrastructure."
+    },
+    {
+     "k": "B",
+     "t": "B · Self-hosted (BYOC)",
+     "s": "Athar-managed software running in the institution’s cloud."
+    },
+    {
+     "k": "C",
+     "t": "C · Cloud-hosted",
+     "s": "Fully managed end-to-end by AIREV."
+    }
+   ],
+   "cols": [
+    "Institution",
+    "Institution cloud",
+    "AIREV"
+   ],
+   "layers": [
+    "Data",
+    "Models",
+    "Agents",
+    "Control plane",
+    "Keys"
+   ],
+   "diagramLabel": "What runs where",
+   "controlsTitle": "Sovereignty controls",
+   "controls": [
+    "Data residency — data stays in the country and the tenancy the institution chooses",
+    "Key custody — the institution holds the keys; Athar operates, it does not own",
+    "Audit logs — every agent action is logged and inspectable by the owner",
+    "Open-book costs — fees disclosed line by line, unspent funds returned"
+   ],
+   "stepperTitle": "Ownership-transfer path (5–7 years)",
+   "steps": [
+    {
+     "t": "Deploy",
+     "s": "Node or fleet goes live under a named institutional owner."
+    },
+    {
+     "t": "Train local operators",
+     "s": "Young local operators learn to run it — in-country team from day one."
+    },
+    {
+     "t": "Certify",
+     "s": "Operators certified through the Academy pathways (Administrator, Trainer)."
+    },
+    {
+     "t": "Transfer asset to national entity",
+     "s": "Ownership passes to a national entity after 5–7 years."
+    }
+   ],
+   "pilot": "Start small: a 30-day, 32-seat pilot lets an institution prove value before signing a full licence.",
+   "plateAlt": "Appliance AI PC beside a modular sovereign compute container — concept render",
+   "plate6Alt": "Kenyan maize field with an edge mast and a distant sovereign node — concept render",
+   "custody": "custody"
+  },
+  "s5": {
+   "title": "Nations empowered",
+   "sub": "Three countries, three tiers — select a country to see its flagship, baseline and phase.",
+   "countries": [
+    {
+     "k": "lb",
+     "t": "Lebanon",
+     "tier": "Access",
+     "tierK": "access",
+     "flagship": "One Million Lebanese AI Experts",
+     "delivered": "1M citizens certified in generative AI; 18,000 in daily professional use in ministries, schools, clinics and small businesses.",
+     "outcomes": "certificates issued · daily active users · ministry workflows live",
+     "wdi": [
+      "population 5.85M (2025)",
+      "internet users 80.6% (2024)"
+     ],
+     "phase": "now",
+     "amount": "$10M",
+     "plate": "plate4-lebanon",
+     "plateAlt": "Lebanese ministry team working with Athar agents — concept render"
+    },
+    {
+     "k": "in",
+     "t": "India",
+     "tier": "Ownership",
+     "tierK": "ownership",
+     "flagship": "The UAE–India CEPA gains an AI chapter",
+     "delivered": "On-device AI tutoring in 100 government schools in Hindi and the state language; 10,000 AI PCs; teacher training; 8-person in-country team.",
+     "outcomes": "learning gains vs baseline · teacher time saved · device uptime",
+     "wdi": [
+      "primary enrolment 111.0% gross (2025)",
+      "secondary enrolment 79.6% gross (2025)",
+      "internet users 70.0% (2025)"
+     ],
+     "phase": "next",
+     "amount": "$13.7M",
+     "plate": "plate4-india",
+     "plateAlt": "Indian government-school classroom with appliance AI PCs — concept render"
+    },
+    {
+     "k": "ke",
+     "t": "Kenya",
+     "tier": "Legacy",
+     "tierK": "legacy",
+     "flagship": "A sovereign AI node that feeds farmers",
+     "delivered": "A Kenyan-owned AIREV modular data centre on sovereign compute; Swahili voice advice for smallholder farmers; clinics and schools on the same node.",
+     "outcomes": "farmers served · yield and income change · local operators certified · asset transferred",
+     "wdi": [
+      "agriculture 45.8% of employment (2025)",
+      "agriculture 23.2% of GDP (2025)",
+      "internet users 35.0% (2024)"
+     ],
+     "phase": "later",
+     "amount": "~$33M",
+     "plate": "plate6-kenya-maize",
+     "plateAlt": "Kenyan maize field, edge mast and a distant sovereign node — concept render"
+    }
+   ],
+   "tierLabel": "Tier",
+   "flagshipLabel": "Flagship",
+   "deliveredLabel": "What is delivered",
+   "outcomesLabel": "Outcomes measured",
+   "baselineLabel": "World Bank WDI baseline",
+   "wdiSrc": "Source: World Bank WDI (2026-07-13)",
+   "phaseLabel": "Roadmap phase",
+   "phases": [
+    {
+     "k": "now",
+     "t": "Now · Q4 2026"
+    },
+    {
+     "k": "next",
+     "t": "Next · 2027"
+    },
+    {
+     "k": "later",
+     "t": "Later · 2028"
+    }
+   ],
+   "cta": "Join the pact",
+   "ctaAria": "Join the pact — go to Pledge & signing (slide 19)",
+   "srcNote": "Figures: Athar — Agentic AI for All: Three Impact Tiers for Foundation Funding (27 Sep 2026), illustrative targets (p. 3)."
+  }
+ }
+}

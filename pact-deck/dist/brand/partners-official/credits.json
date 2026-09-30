@@ -1,0 +1,17 @@
+{
+ "generated_utc": "2026-09-30T05:47:08Z",
+ "airev": {
+  "file": "airev-logo-official.svg",
+  "source_url": "https://www.airev.ae/assets/AIREV-logo-ca9cd9ef.svg",
+  "source_page": "https://www.airev.ae/ (site header, referenced from /assets/index-63886aec.js)",
+  "retrieved_utc": "2026-09-30T05:35Z",
+  "http_status": 200,
+  "bytes": 1506,
+  "sha256": "ca9cd9ef38b7f9b98b9033a5d2e2383ae35ace699269d694e2f14429e209a718",
+  "note": "Unaltered official file (light-grey #DBDBDB wordmark + purple #8537D0 accent, drawn for dark grounds). On light grounds the deck renders the same file through a CSS luminance filter; nothing redrawn or retyped. Companion black lockup darkLogo-4c945542.svg kept in assets/refs/. Use pending AIREV written brand approval \u2014 INTERNAL REVIEW ONLY."
+ },
+ "ondemand": {
+  "file": "/partners/ondemand-by-airev-mark.png (existing deck slot)",
+  "official_source": "ondemand_logo_v2.png (assets/refs/) and https://www.airev.ae/assets/ondemand-logo-d7e09353.svg"
+ }
+}

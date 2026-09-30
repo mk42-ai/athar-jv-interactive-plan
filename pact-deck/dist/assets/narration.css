@@ -1,0 +1,36 @@
+/* Athar deck v1.5.2 — narrated guide player (bottom-right, above the footer) */
+.nar{position:fixed;inset-inline-end:20px;inset-block-end:calc(var(--footer-h,56px) + 12px);z-index:96;inline-size:min(360px,calc(100vw - 40px));background:var(--white,#fff);border:1px solid var(--stone,#D9D4C7);border-radius:12px;box-shadow:0 8px 24px rgba(6,39,57,.12);font-family:var(--font-sans);color:var(--athar-navy,#062739);display:flex;flex-direction:column;overflow:hidden}
+.nar[dir=rtl]{font-family:var(--font-arabic,var(--font-sans))}
+.nar-bar{display:flex;align-items:center;gap:6px;padding:8px 10px}
+.nar-btn{appearance:none;border:1px solid var(--stone,#D9D4C7);background:var(--manuscript,#F7F3EA);color:var(--athar-navy,#062739);border-radius:8px;min-inline-size:32px;block-size:32px;display:inline-flex;align-items:center;justify-content:center;cursor:pointer;padding:0 6px;font:inherit;font-size:.68rem;font-weight:600;letter-spacing:.04em}
+.nar-btn:hover{border-color:var(--legacy-gold,#B8975A)}
+.nar-btn:focus-visible{outline:2px solid var(--falaj-teal,#0E8A7D);outline-offset:1px}
+.nar-btn[disabled]{opacity:.45;cursor:not-allowed}
+.nar-play{background:var(--athar-navy,#062739);color:var(--white,#fff);border-color:var(--athar-navy,#062739);min-inline-size:36px;block-size:36px;border-radius:50%}
+.nar-toggle[aria-pressed=true]{background:var(--athar-navy,#062739);color:var(--white,#fff);border-color:var(--athar-navy,#062739)}
+.nar-meta{display:flex;flex-direction:column;min-inline-size:0;flex:1 1 auto;line-height:1.2}
+.nar-title{font-size:.78rem;font-weight:600}
+.nar-sub{font-size:.66rem;color:var(--slate,#6B7280);white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.nar-time{font-size:.66rem;color:var(--graphite,#2B3238);font-variant-numeric:tabular-nums;white-space:nowrap}
+.nar-vol{inline-size:56px;accent-color:var(--legacy-gold,#B8975A)}
+.nar-seek{position:relative;block-size:8px;margin:0 10px 8px;background:var(--parchment,#F1EDE4);border-radius:4px;cursor:pointer;overflow:hidden}
+.nar-seek-fill{position:absolute;inset-block:0;inset-inline-start:0;inline-size:0;background:var(--legacy-gold,#B8975A);border-radius:4px;transition:inline-size .15s linear}
+.nar-drawer{border-block-start:1px solid var(--stone,#D9D4C7);padding:8px 12px 6px;max-block-size:min(30vh,220px);overflow:auto;background:var(--manuscript,#F7F3EA)}
+.nar-text{margin:0 0 6px;font-size:.74rem;line-height:1.5;color:var(--athar-navy,#062739)}
+.nar-text--ar{font-family:var(--font-arabic,var(--font-sans));font-size:.8rem;line-height:1.65}
+.nar-text[hidden]{display:none}
+.nar-status{margin:0;font-size:.62rem;color:var(--slate,#6B7280);letter-spacing:.02em}
+.nar-hint{font-size:.58rem;color:var(--slate,#6B7280);padding:0 12px 6px;letter-spacing:.04em}
+.nar.is-playing .nar-play{background:var(--falaj-teal,#0E8A7D);border-color:var(--falaj-teal,#0E8A7D)}
+/* title-slide button next to the CTA */
+.nar-listen{appearance:none;margin-inline-start:12px;padding:10px 16px;border-radius:999px;border:1px solid var(--athar-navy,#062739);background:transparent;color:var(--athar-navy,#062739);font:inherit;font-size:.9rem;font-weight:500;cursor:pointer;vertical-align:middle}
+.nar-listen:hover,.nar-listen:focus-visible{background:var(--athar-navy,#062739);color:var(--white,#fff);outline:none}
+@media (max-width:1180px){.nar{inline-size:min(300px,calc(100vw - 32px))}.nar-vol{display:none}}
+@media (max-height:760px){.nar-drawer{max-block-size:22vh}.nar-hint{display:none}}
+@media print{.nar{display:none}}
+/* v1.5.2 close-out — visible Guide toggle + 'Narrating' state */
+.nar-guide{font-size:.72rem;font-weight:600;letter-spacing:.02em;padding:0 10px;border-radius:999px;text-transform:uppercase}
+.nar-guide[aria-pressed=true]{background:var(--falaj-teal,#0E8A7D);color:var(--white,#fff);border-color:var(--falaj-teal,#0E8A7D)}
+.nar[data-narrating=true] .nar-sub{color:var(--falaj-teal,#0E8A7D);font-weight:600}
+.nar[data-narrating=true] .nar-seek-fill{background:var(--falaj-teal,#0E8A7D)}
+@media (max-width:1180px){.nar-guide{padding:0 8px}}

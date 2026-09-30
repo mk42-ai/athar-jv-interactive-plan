@@ -1,0 +1,3 @@
+# The prebuilt deck IS the shipped artefact: re-include dist/ here (the repository root ignores dist/).
+!dist/
+!dist/**

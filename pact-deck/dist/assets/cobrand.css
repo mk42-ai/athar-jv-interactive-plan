@@ -1,0 +1,74 @@
+/* Athar deck v1.5.2 — co-branding (ODA × AIREV parent tier, official AIREV logo, slide-4 block/cards) */
+.v152-tier{display:inline-flex;align-items:center;gap:.55em;font-size:16px;line-height:1;direction:ltr;flex:0 0 auto}
+.v152-tier img{display:block;block-size:1em;inline-size:auto;flex:0 0 auto}
+.v152-tier .v152-x{color:var(--slate,#6B7280);font-weight:500;font-size:.9em}
+/* clear space ≥ x-height of the logo on all sides: padding = .55em (logo height = 1em) */
+.v152-tier{padding:.55em .55em}
+.v152-tier--light .v152-airev{filter:brightness(.18) saturate(1.4)}      /* official file rendered dark on light grounds — no redraw */
+.v152-tier--dark .v152-airev{filter:none}
+.v152-tier--dark .v152-oda{filter:invert(1) brightness(1.6)}             /* bw ODA mark inverted for dark grounds */
+/* footer: beside "ODA × AIREV | 24 September 2026" */
+.pagefooter .v152-cobrand{font-size:18px;padding:0 .4em;margin-inline-start:.4em;border-inline-start:1px solid var(--stone,#D9D4C7)}
+@media (max-width:1366px){.pagefooter .v152-cobrand{font-size:15px}}
+@media (max-width:1180px){.pagefooter .v152-cobrand{font-size:13px}}
+.pagefooter .footer-left{gap:10px}
+/* title / closing: parent tier ABOVE the lead lock-up — the tier row is a grid item placed in the lock-up column, one row above it
+   (the bundle's two-column grid is kept; nothing is moved in the React tree) */
+.v152-tier--lead{font-size:clamp(22px,2.4vh,34px)}
+#s-cover .cover-grid.v152-stage-host{grid-template-rows:auto auto;align-content:center;row-gap:clamp(6px,1vh,14px)}
+#s-cover .cover-grid.v152-stage-host > .cover-copy{grid-column:1;grid-row:1 / span 2;align-self:center}
+#s-cover .cover-grid.v152-stage-host > .v152-tier--lead{grid-column:2;grid-row:1;justify-self:center;align-self:end}
+#s-cover .cover-grid.v152-stage-host > .logo-stage{grid-column:2;grid-row:2;align-self:start;margin-block-start:0}
+#s-closing .closing-grid.v152-stage-host{grid-template-rows:auto auto;align-content:center;row-gap:clamp(6px,1vh,14px)}
+#s-closing .closing-grid.v152-stage-host > .closing-copy{grid-column:1;grid-row:1 / span 2;align-self:center}
+#s-closing .closing-grid.v152-stage-host > .v152-tier--lead{grid-column:2;grid-row:1;justify-self:center;align-self:end}
+#s-closing .closing-grid.v152-stage-host > .closing-lockup{grid-column:2;grid-row:2;align-self:start}
+@media (max-width:1180px){#s-cover .cover-grid.v152-stage-host,#s-closing .closing-grid.v152-stage-host{grid-template-columns:1fr;grid-template-rows:auto auto auto}
+  #s-cover .cover-grid.v152-stage-host > .cover-copy,#s-closing .closing-grid.v152-stage-host > .closing-copy{grid-column:1;grid-row:1}
+  #s-cover .cover-grid.v152-stage-host > .v152-tier--lead,#s-closing .closing-grid.v152-stage-host > .v152-tier--lead{grid-column:1;grid-row:2}
+  #s-cover .cover-grid.v152-stage-host > .logo-stage,#s-closing .closing-grid.v152-stage-host > .closing-lockup{grid-column:1;grid-row:3}}
+/* partner rows on 1 / 39: ODA + AIREV pmarks hidden here (carried by the parent tier above the lock-up), OnDemand mark kept */
+.v152-hidden-dup{display:none!important}
+.pmark--airev img.v152-airev-inline{block-size:26px;filter:brightness(.18) saturate(1.4)}
+/* slide 4 partner block: tier row before the Athar box, marks row removed */
+.athar-partner-strip.v152-strip{align-items:center}
+.athar-partner-strip .v152-tier--block{font-size:clamp(16px,1.9vh,26px);background:var(--white,#fff);border:1px solid var(--stone,#D9D4C7);border-radius:8px}
+/* slide 4 cards: equal heights + evidence line fill the block (was ~40 % empty below the cards) */
+#s-four-outcomes .cards.v152-cards{align-items:stretch;grid-auto-rows:1fr;gap:var(--space-5,20px)}
+#s-four-outcomes .cards.v152-cards > .card{display:flex;flex-direction:column;gap:10px;min-block-size:clamp(190px,33vh,360px);padding:clamp(14px,2vh,22px) clamp(16px,1.4vw,24px)}
+#s-four-outcomes .cards.v152-cards > .card p{margin:0}
+#s-four-outcomes .cards.v152-cards > .card .v152-evidence{margin-block-start:auto;padding-block-start:8px;border-block-start:1px solid var(--stone,#D9D4C7);font-size:clamp(11px,.8vw,13.5px);line-height:1.4;color:var(--graphite,#2B3238)}
+#s-four-outcomes .cards.v152-cards > .card .v152-evidence strong{color:var(--gulf-blue,#1E3A5F);font-weight:600}
+@media (max-height:760px){#s-four-outcomes .cards.v152-cards > .card{min-block-size:clamp(130px,22vh,220px)}}
+
+/* ===== v1.5.2 layout balance — content-light slides: the block between the gold trace rule and the footer is centred
+   (auto margins), so no blank region exceeds 35 % of the slide; type, copy and order untouched ===== */
+#s-who-signs > .s-body > .s-head,#s-who-governs > .s-body > .s-head,#s-who-builds > .s-body > .s-head,#s-who-learns > .s-body > .s-head,
+#s-challenges-showcases > .s-body > .s-head,#s-how-to-sign > .s-body > .s-head,#s-managed-programme > .s-body > .s-head,#s-discord-home > .s-body > .s-head,
+#s-country-chapters > .s-body > .s-head,#s-office-hours > .s-body > .s-head,#s-agent-marketplace > .s-body > .s-head,#s-decision-table > .s-body > .s-head,
+#s-it-join > .s-body > .s-head,#s-it-outcomes > .s-body > .s-head,#s-it-sustain > .s-body > .s-head{margin-block-start:auto}
+#s-who-signs > .s-body > :last-child,#s-who-governs > .s-body > :last-child,#s-who-builds > .s-body > :last-child,#s-who-learns > .s-body > :last-child,
+#s-challenges-showcases > .s-body > :last-child,#s-how-to-sign > .s-body > :last-child,#s-managed-programme > .s-body > :last-child,#s-discord-home > .s-body > :last-child,
+#s-country-chapters > .s-body > :last-child,#s-office-hours > .s-body > :last-child,#s-agent-marketplace > .s-body > :last-child,#s-decision-table > .s-body > :last-child,
+#s-it-join > .s-body > :last-child,#s-it-outcomes > .s-body > :last-child,#s-it-sustain > .s-body > :last-child{margin-block-end:auto}
+#s-hero .s-grid{align-items:center}
+/* roles slides: the two short columns read larger */
+.slide.roles .two-col{font-size:1.08em}
+/* slide 30 at 720p: keep the news grid + footnotes inside the slide */
+@media (max-height:760px){
+  .it-card-photo img{max-block-size:64px}
+  .it-news-grid .it-news-head{-webkit-line-clamp:2}
+  .it-news-cols.it-news-grid{gap:6px}
+  .it-slide--it-metrics .it-footnote{font-size:8.5px;line-height:1.2;margin:0}
+  .it-slide--it-metrics .s-body{gap:5px}
+}
+.it-news-pubname{white-space:normal;overflow:visible;text-overflow:clip;line-height:1.15}
+/* closing slide: the lead lock-up never runs under the footer */
+#s-closing .closing-lockup{max-block-size:min(48vh,520px)}
+#s-closing .athar-lockup-full{max-block-size:min(44vh,480px);inline-size:auto;max-inline-size:100%;object-fit:contain}
+
+/* v1.5.2 close-out (2026-09-30) — slide 21 'The actors of the pact': the trademark disclaimer sits on its own strip below the wall
+   (thin rule + clearance, z-index above the tiles) and the wall scrolls inside its box when it cannot fit, so the line can never
+   collide with a lockup or partner mark at any viewport. The version string is carried by the global footer (v1.5.2). */
+#s-actors-wall > .s-body > .wall.grow{min-block-size:0;overflow:auto;overscroll-behavior:contain}
+#s-actors-wall > .s-body > p.muted.small{position:relative;z-index:3;flex:0 0 auto;margin-block-start:clamp(8px,1.4vh,14px);padding-block-start:clamp(6px,1vh,10px);border-block-start:1px solid rgba(6,39,57,.16);background:transparent}

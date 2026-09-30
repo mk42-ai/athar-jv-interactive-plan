@@ -1,0 +1,240 @@
+{
+ "plugins": {
+  "hub": {
+   "x": 192,
+   "y": 64,
+   "w": 176,
+   "h": 96
+  },
+  "labelPadding": [
+   {
+    "text": "one shared",
+    "left": 55.9,
+    "right": 55.9,
+    "top": 47.2,
+    "bottom": 32.6
+   },
+   {
+    "text": "plugin standard",
+    "left": 42.5,
+    "right": 42.5,
+    "top": 63.2,
+    "bottom": 16.6
+   }
+  ],
+  "minPad": 16.6,
+  "tealStrokes": 9,
+  "tealWidths": [
+   "2"
+  ],
+  "svgInsideSlide": true,
+  "svgBox": [
+   658,
+   719
+  ],
+  "subMaxWidth": "768px",
+  "bulletsMaxWidth": "768.002px",
+  "subWidth": 768,
+  "bulletsWidth": 768
+ },
+ "slide30": {
+  "cardHeights": [
+   450,
+   450,
+   450
+  ],
+  "photo": {
+   "renderedW": 275,
+   "renderedH": 184,
+   "ratio": 1.499,
+   "nativeRatio": 1.5,
+   "objectFit": "contain",
+   "natural": [
+    1600,
+    1067
+   ],
+   "caption": "Photo: UAE–Lebanon “One Million Lebanese AI Experts” launch, UNGA New York, 25 Sep 2026 — The National / The Gulf Observer"
+  },
+  "news": {
+   "cards": 8,
+   "rows": 2,
+   "cols": 4,
+   "gridOverflow": "visible",
+   "scrollable": false,
+   "ids": [
+    "lb-wam",
+    "lb-national",
+    "in-wam-mou",
+    "in-pib",
+    "ke-wam-mou",
+    "ke-ict",
+    "tp-intel-dec25",
+    "tp-intel-oct25"
+   ]
+  },
+  "agreementBand": true,
+  "bodyScroll": 0
+ },
+ "slide38": {
+  "lb": {
+   "country": "lb",
+   "tier": "access",
+   "title": "Lebanon — One Million Lebanese AI Experts",
+   "amount": "$10M",
+   "wdi": [
+    "population 5.85M (2025)",
+    "internet users 80.6% (2024)"
+   ],
+   "src": "Source: World Bank WDI (2026-07-13)",
+   "evidence": [
+    "https://www.wam.ae/en/article/17fxhet-abdullah-bin-zayed-meets-lebanese-new-york-%E2%80%98one",
+    "https://www.thenationalnews.com/news/mena/2026/09/25/uae-and-lebanon-launch-ai-training-initiative/"
+   ],
+   "banner": true,
+   "activePhase": "Now · Q4 2026",
+   "insetWidthPct": 30,
+   "insetRatio": 1.77,
+   "dlItems": 2,
+   "cta": true
+  },
+  "in": {
+   "country": "in",
+   "tier": "ownership",
+   "title": "India — The UAE–India CEPA gains an AI chapter",
+   "amount": "$13.7M",
+   "wdi": [
+    "primary enrolment 111.0% gross (2025)",
+    "secondary enrolment 79.6% gross (2025)",
+    "internet users 70.0% (2025)"
+   ],
+   "src": "Source: World Bank WDI (2026-07-13)",
+   "evidence": [
+    "https://www.pib.gov.in/PressReleasePage.aspx?PRID=2295050&lang=1&reg=6",
+    "https://www.wam.ae/en/article/b1ns93x-uae-india-sign-mou-accelerate-growth-digital"
+   ],
+   "banner": true,
+   "activePhase": "Next · 2027",
+   "insetWidthPct": 30,
+   "insetRatio": 1.77,
+   "dlItems": 2,
+   "cta": true
+  },
+  "ke": {
+   "country": "ke",
+   "tier": "legacy",
+   "title": "Kenya — A sovereign AI node that feeds farmers",
+   "amount": "~$33M",
+   "wdi": [
+    "agriculture 45.8% of employment (2025)",
+    "agriculture 23.2% of GDP (2025)",
+    "internet users 35.0% (2024)"
+   ],
+   "src": "Source: World Bank WDI (2026-07-13)",
+   "evidence": [
+    "https://www.wam.ae/en/article/b2dzbq3-uae-kenya-sign-investment-memorandum-advance",
+    "https://ict.go.ke/node/797"
+   ],
+   "banner": true,
+   "activePhase": "Later · 2028",
+   "insetWidthPct": 30,
+   "insetRatio": 1.77,
+   "dlItems": 2,
+   "cta": true
+  }
+ },
+ "slide36": {
+  "statusPair": "Status: In progress",
+  "allPairs": [
+   "What: Skills pass through the same builder journey as agents.",
+   "Why: A capability built once is reusable by every validated agent.",
+   "Source: Slide 14 · Six pillars",
+   "Status: In progress"
+  ],
+  "filmstrip": false,
+  "labelsClamp": "2",
+  "truncated": 0
+ },
+ "slide29": [
+  {
+   "h": 563,
+   "justify": "flex-start"
+  },
+  {
+   "h": 563,
+   "justify": "flex-start"
+  },
+  {
+   "h": 563,
+   "justify": "flex-start"
+  }
+ ],
+ "slide4": {
+  "cardHeights": [
+   356,
+   356,
+   356,
+   356
+  ],
+  "evidenceLines": 4,
+  "duplicateMarksRowHidden": true,
+  "tierRow": true,
+  "tierAirevLoaded": true,
+  "reviewTag": "INTERNAL REVIEW ONLY",
+  "cardsBottomPct": 53.5
+ },
+ "cover": {
+  "tierAboveLockup": true,
+  "tierBox": [
+   1444,
+   183,
+   238,
+   54
+  ],
+  "stageTop": 248,
+  "partnerRowAirevSrc": "/brand/partners-official/airev-logo-official.svg",
+  "footer": {
+   "text": "Athar Open Agentic Pact | Community proposal | ODA × AIREV | 24 September 2026",
+   "airev": [
+    137,
+    18
+   ],
+   "oda": true,
+   "version": "v1.5.2",
+   "counter": "Slide 1 of 39",
+   "reviewTag": true
+  },
+  "listenBtn": true,
+  "player": true
+ },
+ "narration": {
+  "present": true,
+  "segment": "intro",
+  "status": "recovered",
+  "drawerOpen": true,
+  "transcript": "Three years in the making, built by AIREV in the UAE. Introd",
+  "segments": 40,
+  "withAudio": 1,
+  "playing": true,
+  "prefsKey": true,
+  "seekRole": "slider",
+  "buttons": [
+   "nar-play",
+   "nar-mute",
+   "nar-autoplay",
+   "nar-captions"
+  ],
+  "afterNkey_paused": true
+ },
+ "slide17": {
+  "byoh": true,
+  "byoc": true,
+  "license_spelling": 0
+ },
+ "closing": {
+  "tierAboveLockup": true,
+  "lockupAboveFooter": true,
+  "imgBottom": 806,
+  "footerTop": 1024
+ },
+ "consoleErrors": []
+}

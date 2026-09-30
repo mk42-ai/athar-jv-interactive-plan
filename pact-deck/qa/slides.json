@@ -1,0 +1,275 @@
+[
+ {
+  "n": 1,
+  "route": "#/1",
+  "slideId": "s-cover",
+  "title": "Athar Open Agentic Pact",
+  "kind": "bundle"
+ },
+ {
+  "n": 2,
+  "route": "#/2",
+  "slideId": "s-hero",
+  "title": "One open pact for agentic AI that serves people",
+  "kind": "bundle"
+ },
+ {
+  "n": 3,
+  "route": "#/3",
+  "slideId": "s-why-pact",
+  "title": "Why a pact, not just a product launch",
+  "kind": "bundle"
+ },
+ {
+  "n": 4,
+  "route": "#/4",
+  "slideId": "s-four-outcomes",
+  "title": "Four outcomes for every participant",
+  "kind": "bundle"
+ },
+ {
+  "n": 5,
+  "route": "#/5",
+  "slideId": "s-managed-programme",
+  "title": "A managed global programme, not a social channel",
+  "kind": "bundle"
+ },
+ {
+  "n": 6,
+  "route": "#/6",
+  "slideId": "s-discord-home",
+  "title": "Discord: the always-on home of the community",
+  "kind": "bundle"
+ },
+ {
+  "n": 7,
+  "route": "#/7",
+  "slideId": "s-country-chapters",
+  "title": "Country chapters bring the pact to life locally",
+  "kind": "bundle"
+ },
+ {
+  "n": 8,
+  "route": "#/8",
+  "slideId": "s-learning-formats",
+  "title": "Webinars, bootcamps and institutional academies",
+  "kind": "bundle"
+ },
+ {
+  "n": 9,
+  "route": "#/9",
+  "slideId": "s-challenges-showcases",
+  "title": "Challenges, showcases and the annual summit",
+  "kind": "bundle"
+ },
+ {
+  "n": 10,
+  "route": "#/10",
+  "slideId": "s-office-hours",
+  "title": "Weekly office hours and tiered support",
+  "kind": "bundle"
+ },
+ {
+  "n": 11,
+  "route": "#/11",
+  "slideId": "s-agent-marketplace",
+  "title": "The builder journey and the agent marketplace",
+  "kind": "bundle"
+ },
+ {
+  "n": 12,
+  "route": "#/12",
+  "slideId": "s-decision-table",
+  "title": "The decision in one page",
+  "kind": "bundle"
+ },
+ {
+  "n": 13,
+  "route": "#/13",
+  "slideId": "s-pillar-plugins",
+  "title": "Plugins are the connective tissue",
+  "kind": "bundle"
+ },
+ {
+  "n": 14,
+  "route": "#/14",
+  "slideId": "s-pillar-skills",
+  "title": "Reusable skills, built once and shared",
+  "kind": "bundle"
+ },
+ {
+  "n": 15,
+  "route": "#/15",
+  "slideId": "s-pillar-open-ecosystem",
+  "title": "Open where possible, governed where necessary",
+  "kind": "bundle"
+ },
+ {
+  "n": 16,
+  "route": "#/16",
+  "slideId": "s-pillar-cross-model",
+  "title": "Cross-model interoperability by design",
+  "kind": "bundle"
+ },
+ {
+  "n": 17,
+  "route": "#/17",
+  "slideId": "s-pillar-universal-licence",
+  "title": "Universal API licences managed by Athar",
+  "kind": "bundle"
+ },
+ {
+  "n": 18,
+  "route": "#/18",
+  "slideId": "s-pillar-upskilling",
+  "title": "Agentic AI for all, not for a few",
+  "kind": "bundle"
+ },
+ {
+  "n": 19,
+  "route": "#/19",
+  "slideId": "s-pact-principles",
+  "title": "Six pledges behind the Athar Pact",
+  "kind": "bundle"
+ },
+ {
+  "n": 20,
+  "route": "#/20",
+  "slideId": "s-how-to-sign",
+  "title": "How a member signs the pact",
+  "kind": "bundle"
+ },
+ {
+  "n": 21,
+  "route": "#/21",
+  "slideId": "s-actors-wall",
+  "title": "The actors of the pact",
+  "kind": "bundle"
+ },
+ {
+  "n": 22,
+  "route": "#/22",
+  "slideId": "s-who-signs",
+  "title": "Who signs the pact",
+  "kind": "bundle"
+ },
+ {
+  "n": 23,
+  "route": "#/23",
+  "slideId": "s-who-governs",
+  "title": "Who governs the pact",
+  "kind": "bundle"
+ },
+ {
+  "n": 24,
+  "route": "#/24",
+  "slideId": "s-who-builds",
+  "title": "Who builds on the pact",
+  "kind": "bundle"
+ },
+ {
+  "n": 25,
+  "route": "#/25",
+  "slideId": "s-who-learns",
+  "title": "Who learns through the pact",
+  "kind": "bundle"
+ },
+ {
+  "n": 26,
+  "route": "#/26",
+  "slideId": "s-governance-licence",
+  "title": "Governance bodies and licence management",
+  "kind": "bundle"
+ },
+ {
+  "n": 27,
+  "route": "#/27",
+  "slideId": "s-roadmap",
+  "title": "The twelve-month implementation roadmap",
+  "kind": "bundle"
+ },
+ {
+  "n": 28,
+  "route": "#/27/new-1",
+  "slideId": "it-outcomes",
+  "title": "Outcomes are the product",
+  "kind": "virtual"
+ },
+ {
+  "n": 29,
+  "route": "#/27/new-2",
+  "slideId": "it-tiers",
+  "title": "Three impact tiers, one delivery model",
+  "kind": "virtual"
+ },
+ {
+  "n": 30,
+  "route": "#/27/new-3",
+  "slideId": "it-metrics",
+  "title": "What we deliver, measurably",
+  "kind": "virtual"
+ },
+ {
+  "n": 31,
+  "route": "#/27/new-4",
+  "slideId": "it-sustain",
+  "title": "How the community sustains itself",
+  "kind": "virtual"
+ },
+ {
+  "n": 32,
+  "route": "#/27/new-5",
+  "slideId": "it-partners",
+  "title": "Delivered with",
+  "kind": "virtual"
+ },
+ {
+  "n": 33,
+  "route": "#/27/new-6",
+  "slideId": "it-join",
+  "title": "Join the Pact",
+  "kind": "virtual"
+ },
+ {
+  "n": 34,
+  "route": "#/27/new-7",
+  "slideId": "aos-overview",
+  "title": "Athar OS — an agentic harness that empowers nations",
+  "kind": "virtual"
+ },
+ {
+  "n": 35,
+  "route": "#/27/new-8",
+  "slideId": "aos-tour",
+  "title": "Product tour (real screens)",
+  "kind": "virtual"
+ },
+ {
+  "n": 36,
+  "route": "#/27/new-9",
+  "slideId": "aos-roadmap",
+  "title": "Roadmap — Now, Next, Later",
+  "kind": "virtual"
+ },
+ {
+  "n": 37,
+  "route": "#/27/new-10",
+  "slideId": "aos-deploy",
+  "title": "Deploy anywhere, own it",
+  "kind": "virtual"
+ },
+ {
+  "n": 38,
+  "route": "#/27/new-11",
+  "slideId": "aos-nations",
+  "title": "Nations empowered",
+  "kind": "virtual"
+ },
+ {
+  "n": 39,
+  "route": "#/28",
+  "slideId": "s-closing",
+  "title": "Sign the Athar Open Agentic Pact",
+  "kind": "bundle"
+ }
+]
