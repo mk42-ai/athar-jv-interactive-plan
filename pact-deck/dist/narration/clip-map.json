@@ -1,7 +1,7 @@
 {
  "schema": "athar.narration.clip-map/1",
- "version": "v1.5.2",
- "generated_utc": "2026-09-30T06:51:46Z",
+ "version": "v1.5.4",
+ "generated_utc": "2026-10-01T06:54:58Z",
  "voiceId": "JBFqnCBsd6RMkjVDRZzb",
  "voice": "George - Warm, Captivating Storyteller",
  "modelId": "eleven_multilingual_v2",
@@ -31,7 +31,10 @@
    "asrRaw": null,
    "durationSecOld": 17.14,
    "measuredBy": "music-metadata MPEG 1 Layer 3 44100Hz",
-   "measuredUtc": "2026-10-01T03:03:18Z"
+   "measuredUtc": "2026-10-01T03:03:18Z",
+   "perSlideChildren": [
+    "NAR-s01"
+   ]
   },
   {
    "clipId": "NAR-01",
@@ -58,7 +61,11 @@
    "asrRaw": "Section 1, the PACT. The ATHAR Open Agentec PACT is an open commitment between institutions, partners and platforms to learn, build and deploy agentec AI for public benefit. It is a community proposal from ODA and AI Rev, designed as a community, not a product. Signatories agree on shared standards, an open plug-in approach and measurable real-world outcomes.",
    "durationSecOld": 24.98,
    "measuredBy": "music-metadata MPEG 1 Layer 3 44100Hz",
-   "measuredUtc": "2026-10-01T03:03:18Z"
+   "measuredUtc": "2026-10-01T03:03:18Z",
+   "perSlideChildren": [
+    "NAR-s02",
+    "NAR-s03"
+   ]
   },
   {
    "clipId": "NAR-02",
@@ -92,7 +99,10 @@
    "asrRaw": "Section 2, the Community Model. Every webinar, chapter event and challenge should lead somewhere real, so the model is built around four outcomes for every participant. Learn Agentec AI, build a useful agent through the Builder Journey and Marketplace, deploy it through a named Accountable Institution, and measure a real-world benefit with baseline evidence of time saved, better service, or wider reach.",
    "durationSecOld": 26.66,
    "measuredBy": "music-metadata MPEG 1 Layer 3 44100Hz",
-   "measuredUtc": "2026-10-01T03:03:18Z"
+   "measuredUtc": "2026-10-01T03:03:18Z",
+   "perSlideChildren": [
+    "NAR-s04"
+   ]
   },
   {
    "clipId": "NAR-03",
@@ -123,7 +133,12 @@
    "asrRaw": null,
    "durationSecOld": 19.37,
    "measuredBy": "music-metadata MPEG 1 Layer 3 44100Hz",
-   "measuredUtc": "2026-10-01T03:03:18Z"
+   "measuredUtc": "2026-10-01T03:03:18Z",
+   "perSlideChildren": [
+    "NAR-s13",
+    "NAR-s14",
+    "NAR-s17"
+   ]
   },
   {
    "clipId": "NAR-04",
@@ -150,7 +165,11 @@
    "asrRaw": "Section 4, Pledge and Signing. Joining the Pact is a simple public commitment. A signatory chooses its roles, sign, govern, build or learn, and pledges to contribute to at least one of the four participant outcomes. Signing brings access to the learning pathway, the builder journey, and the plugin standard, together with a commitment to report outcomes through the shared impact tiers.",
    "durationSecOld": 24.52,
    "measuredBy": "music-metadata MPEG 1 Layer 3 44100Hz",
-   "measuredUtc": "2026-10-01T03:03:18Z"
+   "measuredUtc": "2026-10-01T03:03:18Z",
+   "perSlideChildren": [
+    "NAR-s19",
+    "NAR-s20"
+   ]
   },
   {
    "clipId": "NAR-05",
@@ -180,7 +199,11 @@
    "asrRaw": "Section 5, Actors and Roles, institutions, partners and platforms building the Aether ecosystem together, ODA and Arev sign and govern, with Arev, on-demand, E and AI and and Discord building, UNDP, UNICEF, IFRC, WFP and UNHCR sign and learn. The UAE Ministry of Foreign Trade signs and governs and the United Arab Emirates governs. Every actor has a clear role, sign, govern, build or learn.",
    "durationSecOld": 31.49,
    "measuredBy": "music-metadata MPEG 1 Layer 3 44100Hz",
-   "measuredUtc": "2026-10-01T03:03:18Z"
+   "measuredUtc": "2026-10-01T03:03:18Z",
+   "perSlideChildren": [
+    "NAR-s21",
+    "NAR-s23"
+   ]
   },
   {
    "clipId": "NAR-06",
@@ -207,7 +230,11 @@
    "asrRaw": null,
    "durationSecOld": 15.7,
    "measuredBy": "music-metadata MPEG 1 Layer 3 44100Hz",
-   "measuredUtc": "2026-10-01T03:03:18Z"
+   "measuredUtc": "2026-10-01T03:03:18Z",
+   "perSlideChildren": [
+    "NAR-s26",
+    "NAR-s27"
+   ]
   },
   {
    "clipId": "NAR-07",
@@ -238,7 +265,13 @@
    "asrRaw": "Section 7, Impact and Funding. Three impact tiers, one delivery model, access, ownership, legacy. A funder can enter at any tier and climb. Every agreement includes named cohorts and activation targets, independent evaluator baselines, quarterly outcome reports, and open book costs with unspent funds returned. Universal API licenses, marketplace revenue share and sovereign pilot options fund the model so each partner can choose what fits.",
    "durationSecOld": 30.28,
    "measuredBy": "music-metadata MPEG 1 Layer 3 44100Hz",
-   "measuredUtc": "2026-10-01T03:03:18Z"
+   "measuredUtc": "2026-10-01T03:03:18Z",
+   "perSlideChildren": [
+    "NAR-s28",
+    "NAR-s29",
+    "NAR-s30",
+    "NAR-s31"
+   ]
   },
   {
    "clipId": "NAR-08",
@@ -268,7 +301,12 @@
    "asrRaw": "Section 8, A Thar OS. The roadmap runs now in Q4, 2026, next in 2027 and later in 2028. Nations empowered. Lebanon, Access, 1 million Lebanese AI experts at $10 million. India, ownership, 100 government schools and 10,000 AI PCs at 13.7 million. Kenya, Legacy, a Kenyan-owned sovereign node at around 33 million transferred to a national entity after five to seven years.",
    "durationSecOld": 32.97,
    "measuredBy": "music-metadata MPEG 1 Layer 3 44100Hz",
-   "measuredUtc": "2026-10-01T03:03:18Z"
+   "measuredUtc": "2026-10-01T03:03:18Z",
+   "perSlideChildren": [
+    "NAR-s34",
+    "NAR-s36",
+    "NAR-s38"
+   ]
   },
   {
    "clipId": "NAR-09",
@@ -294,7 +332,14 @@
    "asrRaw": "Join the PACT. You have seen the agreement, the community model, the six pillars, the actors, the road map, the impact tiers and a Thar OS. Now the invitation is yours. Choose your role, sign, govern, build or learn. Commit to one real outcome. The founding cohort starts this quarter. Open the pledge, add your name and help us build a Gentick AI that leaves a lasting trace. Join us.",
    "durationSecOld": 26.52,
    "measuredBy": "music-metadata MPEG 1 Layer 3 44100Hz",
-   "measuredUtc": "2026-10-01T03:03:18Z"
+   "measuredUtc": "2026-10-01T03:03:18Z",
+   "perSlideChildren": [
+    "NAR-s39"
+   ]
   }
- ]
+ ],
+ "perSlide": {
+  "table": "/narration/slide-narration.json",
+  "note": "v1.5.4: Guide Mode plays one clip per slide (NAR-s01…NAR-s39) keyed by data-slide-id. These ten section clips are the untouched George parents of the 21 cut clips (byte ranges, no re-encoding); 18 slides the parents never narrate carry George TTS renders of their existing script text. See slide-narration.json → source."
+ }
 }

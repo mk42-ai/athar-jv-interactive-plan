@@ -1,0 +1,7847 @@
+{
+ "marks": [
+  {
+   "t": "2026-10-01T06:14:58.700Z",
+   "scenario": "S10-sweep-desktop",
+   "step": "slide 1",
+   "expect": 1,
+   "vis": {
+    "n": 1,
+    "id": "s-cover",
+    "slideId": null
+   },
+   "audio": {
+    "src": "guide-00-welcome-lhbIUXFwLO.mp3",
+    "clip": "NAR-00",
+    "t": 1.42,
+    "muted": false
+   },
+   "cc": "Welcome to the Athar Open Agentic Pact, a community proposal from ODA and AIREV.",
+   "guide": {
+    "state": "playing",
+    "clip": "NAR-00",
+    "slideId": null,
+    "blocked": "false",
+    "status": "Narrating slide 1 of 39 · Welcome",
+    "tap": false
+   }
+  },
+  {
+   "t": "2026-10-01T06:15:00.040Z",
+   "scenario": "S10-sweep-desktop",
+   "step": "slide 2",
+   "expect": 2,
+   "vis": {
+    "n": 2,
+    "id": "s-hero",
+    "slideId": null
+   },
+   "audio": {
+    "src": "guide-01-the-pact-df1pHtGsVr.mp3",
+    "clip": "NAR-01",
+    "t": 1.18,
+    "muted": false
+   },
+   "cc": "Section one, the Pact.",
+   "guide": {
+    "state": "playing",
+    "clip": "NAR-01",
+    "slideId": null,
+    "blocked": "false",
+    "status": "Narrating slide 2 of 39 · 01 The pact",
+    "tap": false
+   }
+  },
+  {
+   "t": "2026-10-01T06:15:01.380Z",
+   "scenario": "S10-sweep-desktop",
+   "step": "slide 3",
+   "expect": 3,
+   "vis": {
+    "n": 3,
+    "id": "s-why-pact",
+    "slideId": null
+   },
+   "audio": {
+    "src": "guide-01-the-pact-df1pHtGsVr.mp3",
+    "clip": "NAR-01",
+    "t": 13.33,
+    "muted": false
+   },
+   "cc": "It is a community proposal from ODA and AI Rev, designed as a community, not a product.",
+   "guide": {
+    "state": "playing",
+    "clip": "NAR-01",
+    "slideId": null,
+    "blocked": "false",
+    "status": "Narrating slide 3 of 39 · 01 The pact",
+    "tap": false
+   }
+  },
+  {
+   "t": "2026-10-01T06:15:02.723Z",
+   "scenario": "S10-sweep-desktop",
+   "step": "slide 4",
+   "expect": 4,
+   "vis": {
+    "n": 4,
+    "id": "s-four-outcomes",
+    "slideId": null
+   },
+   "audio": {
+    "src": "guide-02-community-model-9gUnFBtxrM.mp3",
+    "clip": "NAR-02",
+    "t": 1.19,
+    "muted": false
+   },
+   "cc": "Section two, the Community Model.",
+   "guide": {
+    "state": "playing",
+    "clip": "NAR-02",
+    "slideId": null,
+    "blocked": "false",
+    "status": "Narrating slide 4 of 39 · 02 Community model",
+    "tap": false
+   }
+  },
+  {
+   "t": "2026-10-01T06:15:04.059Z",
+   "scenario": "S10-sweep-desktop",
+   "step": "slide 5",
+   "expect": 5,
+   "vis": {
+    "n": 7,
+    "id": "s-country-chapters",
+    "slideId": null
+   },
+   "audio": {
+    "src": "guide-02-community-model-9gUnFBtxrM.mp3",
+    "clip": "NAR-02",
+    "t": 2.53,
+    "muted": false
+   },
+   "cc": "Every webinar, chapter event and challenge should lead somewhere real, so the model is built around four outcomes for every participant.",
+   "guide": {
+    "state": "playing",
+    "clip": "NAR-02",
+    "slideId": null,
+    "blocked": "false",
+    "status": "Narrating slide 7 of 39 · 02 Community model",
+    "tap": false
+   }
+  },
+  {
+   "t": "2026-10-01T06:15:05.393Z",
+   "scenario": "S10-sweep-desktop",
+   "step": "slide 6",
+   "expect": 6,
+   "vis": {
+    "n": 8,
+    "id": "s-learning-formats",
+    "slideId": null
+   },
+   "audio": {
+    "src": "guide-02-community-model-9gUnFBtxrM.mp3",
+    "clip": "NAR-02",
+    "t": 3.86,
+    "muted": false
+   },
+   "cc": "Every webinar, chapter event and challenge should lead somewhere real, so the model is built around four outcomes for every participant.",
+   "guide": {
+    "state": "playing",
+    "clip": "NAR-02",
+    "slideId": null,
+    "blocked": "false",
+    "status": "Narrating slide 8 of 39 · 02 Community model",
+    "tap": false
+   }
+  },
+  {
+   "t": "2026-10-01T06:15:06.731Z",
+   "scenario": "S10-sweep-desktop",
+   "step": "slide 7",
+   "expect": 7,
+   "vis": {
+    "n": 9,
+    "id": "s-challenges-showcases",
+    "slideId": null
+   },
+   "audio": {
+    "src": "guide-02-community-model-9gUnFBtxrM.mp3",
+    "clip": "NAR-02",
+    "t": 5.2,
+    "muted": false
+   },
+   "cc": "Every webinar, chapter event and challenge should lead somewhere real, so the model is built around four outcomes for every participant.",
+   "guide": {
+    "state": "playing",
+    "clip": "NAR-02",
+    "slideId": null,
+    "blocked": "false",
+    "status": "Narrating slide 9 of 39 · 02 Community model",
+    "tap": false
+   }
+  },
+  {
+   "t": "2026-10-01T06:15:08.074Z",
+   "scenario": "S10-sweep-desktop",
+   "step": "slide 8",
+   "expect": 8,
+   "vis": {
+    "n": 10,
+    "id": "s-office-hours",
+    "slideId": null
+   },
+   "audio": {
+    "src": "guide-02-community-model-9gUnFBtxrM.mp3",
+    "clip": "NAR-02",
+    "t": 6.54,
+    "muted": false
+   },
+   "cc": "Every webinar, chapter event and challenge should lead somewhere real, so the model is built around four outcomes for every participant.",
+   "guide": {
+    "state": "playing",
+    "clip": "NAR-02",
+    "slideId": null,
+    "blocked": "false",
+    "status": "Narrating slide 10 of 39 · 02 Community model",
+    "tap": false
+   }
+  },
+  {
+   "t": "2026-10-01T06:15:09.417Z",
+   "scenario": "S10-sweep-desktop",
+   "step": "slide 9",
+   "expect": 9,
+   "vis": {
+    "n": 11,
+    "id": "s-agent-marketplace",
+    "slideId": null
+   },
+   "audio": {
+    "src": "guide-02-community-model-9gUnFBtxrM.mp3",
+    "clip": "NAR-02",
+    "t": 12.33,
+    "muted": false
+   },
+   "cc": "Learn agentic AI, build a useful agent through the Builder Journey and Marketplace, deploy it through a named Accountable Institution, and measure a real-world benefit with baseline evidence of time saved, better service, or wider reach.",
+   "guide": {
+    "state": "playing",
+    "clip": "NAR-02",
+    "slideId": null,
+    "blocked": "false",
+    "status": "Narrating slide 11 of 39 · 02 Community model",
+    "tap": false
+   }
+  },
+  {
+   "t": "2026-10-01T06:15:10.752Z",
+   "scenario": "S10-sweep-desktop",
+   "step": "slide 10",
+   "expect": 10,
+   "vis": {
+    "n": 12,
+    "id": "s-decision-table",
+    "slideId": null
+   },
+   "audio": {
+    "src": "guide-02-community-model-9gUnFBtxrM.mp3",
+    "clip": "NAR-02",
+    "t": 13.66,
+    "muted": false
+   },
+   "cc": "Learn agentic AI, build a useful agent through the Builder Journey and Marketplace, deploy it through a named Accountable Institution, and measure a real-world benefit with baseline evidence of time saved, better service, or wider reach.",
+   "guide": {
+    "state": "playing",
+    "clip": "NAR-02",
+    "slideId": null,
+    "blocked": "false",
+    "status": "Narrating slide 12 of 39 · 02 Community model",
+    "tap": false
+   }
+  },
+  {
+   "t": "2026-10-01T06:15:12.086Z",
+   "scenario": "S10-sweep-desktop",
+   "step": "slide 11",
+   "expect": 11,
+   "vis": {
+    "n": 13,
+    "id": "s-pillar-plugins",
+    "slideId": null
+   },
+   "audio": {
+    "src": "guide-03-six-pillars-yxVqZJ2k1a.mp3",
+    "clip": "NAR-03",
+    "t": 1.17,
+    "muted": false
+   },
+   "cc": "Section three, six pillars.",
+   "guide": {
+    "state": "playing",
+    "clip": "NAR-03",
+    "slideId": null,
+    "blocked": "false",
+    "status": "Narrating slide 13 of 39 · 03 Six pillars",
+    "tap": false
+   }
+  },
+  {
+   "t": "2026-10-01T06:15:13.420Z",
+   "scenario": "S10-sweep-desktop",
+   "step": "slide 12",
+   "expect": 12,
+   "vis": {
+    "n": 14,
+    "id": "s-pillar-skills",
+    "slideId": null
+   },
+   "audio": {
+    "src": "guide-03-six-pillars-yxVqZJ2k1a.mp3",
+    "clip": "NAR-03",
+    "t": 9.79,
+    "muted": false
+   },
+   "cc": "Reusable skills are built once and shared across the community.",
+   "guide": {
+    "state": "playing",
+    "clip": "NAR-03",
+    "slideId": null,
+    "blocked": "false",
+    "status": "Narrating slide 14 of 39 · 03 Six pillars",
+    "tap": false
+   }
+  },
+  {
+   "t": "2026-10-01T06:15:14.756Z",
+   "scenario": "S10-sweep-desktop",
+   "step": "slide 13",
+   "expect": 13,
+   "vis": {
+    "n": 15,
+    "id": "s-pillar-open-ecosystem",
+    "slideId": null
+   },
+   "audio": {
+    "src": "guide-03-six-pillars-yxVqZJ2k1a.mp3",
+    "clip": "NAR-03",
+    "t": 11.13,
+    "muted": false
+   },
+   "cc": "Reusable skills are built once and shared across the community.",
+   "guide": {
+    "state": "playing",
+    "clip": "NAR-03",
+    "slideId": null,
+    "blocked": "false",
+    "status": "Narrating slide 15 of 39 · 03 Six pillars",
+    "tap": false
+   }
+  },
+  {
+   "t": "2026-10-01T06:15:16.096Z",
+   "scenario": "S10-sweep-desktop",
+   "step": "slide 14",
+   "expect": 14,
+   "vis": {
+    "n": 16,
+    "id": "s-pillar-cross-model",
+    "slideId": null
+   },
+   "audio": {
+    "src": "guide-03-six-pillars-yxVqZJ2k1a.mp3",
+    "clip": "NAR-03",
+    "t": 12.46,
+    "muted": false
+   },
+   "cc": "Reusable skills are built once and shared across the community.",
+   "guide": {
+    "state": "playing",
+    "clip": "NAR-03",
+    "slideId": null,
+    "blocked": "false",
+    "status": "Narrating slide 16 of 39 · 03 Six pillars",
+    "tap": false
+   }
+  },
+  {
+   "t": "2026-10-01T06:15:17.438Z",
+   "scenario": "S10-sweep-desktop",
+   "step": "slide 15",
+   "expect": 15,
+   "vis": {
+    "n": 17,
+    "id": "s-pillar-universal-licence",
+    "slideId": null
+   },
+   "audio": {
+    "src": "guide-03-six-pillars-yxVqZJ2k1a.mp3",
+    "clip": "NAR-03",
+    "t": 14.02,
+    "muted": false
+   },
+   "cc": "Universal API licences are managed by Athar, giving members access without duplicated procurement.",
+   "guide": {
+    "state": "playing",
+    "clip": "NAR-03",
+    "slideId": null,
+    "blocked": "false",
+    "status": "Narrating slide 17 of 39 · 03 Six pillars",
+    "tap": false
+   }
+  },
+  {
+   "t": "2026-10-01T06:15:18.773Z",
+   "scenario": "S10-sweep-desktop",
+   "step": "slide 16",
+   "expect": 16,
+   "vis": {
+    "n": 18,
+    "id": "s-pillar-upskilling",
+    "slideId": null
+   },
+   "audio": {
+    "src": "guide-03-six-pillars-yxVqZJ2k1a.mp3",
+    "clip": "NAR-03",
+    "t": 15.36,
+    "muted": false
+   },
+   "cc": "Universal API licences are managed by Athar, giving members access without duplicated procurement.",
+   "guide": {
+    "state": "playing",
+    "clip": "NAR-03",
+    "slideId": null,
+    "blocked": "false",
+    "status": "Narrating slide 18 of 39 · 03 Six pillars",
+    "tap": false
+   }
+  },
+  {
+   "t": "2026-10-01T06:15:20.112Z",
+   "scenario": "S10-sweep-desktop",
+   "step": "slide 17",
+   "expect": 17,
+   "vis": {
+    "n": 19,
+    "id": "s-pact-principles",
+    "slideId": null
+   },
+   "audio": {
+    "src": "guide-04-pledge-and-signing-PWeXZj1Rgc.mp3",
+    "clip": "NAR-04",
+    "t": 1.19,
+    "muted": false
+   },
+   "cc": "Section four, Pledge and Signing.",
+   "guide": {
+    "state": "playing",
+    "clip": "NAR-04",
+    "slideId": null,
+    "blocked": "false",
+    "status": "Narrating slide 19 of 39 · 04 Pledge & signing",
+    "tap": false
+   }
+  },
+  {
+   "t": "2026-10-01T06:15:21.448Z",
+   "scenario": "S10-sweep-desktop",
+   "step": "slide 18",
+   "expect": 18,
+   "vis": {
+    "n": 20,
+    "id": "s-how-to-sign",
+    "slideId": null
+   },
+   "audio": {
+    "src": "guide-04-pledge-and-signing-PWeXZj1Rgc.mp3",
+    "clip": "NAR-04",
+    "t": 6.29,
+    "muted": false
+   },
+   "cc": "A signatory chooses its roles, sign, govern, build or learn, and pledges to contribute to at least one of the four participant outcomes.",
+   "guide": {
+    "state": "playing",
+    "clip": "NAR-04",
+    "slideId": null,
+    "blocked": "false",
+    "status": "Narrating slide 20 of 39 · 04 Pledge & signing",
+    "tap": false
+   }
+  },
+  {
+   "t": "2026-10-01T06:15:22.783Z",
+   "scenario": "S10-sweep-desktop",
+   "step": "slide 19",
+   "expect": 19,
+   "vis": {
+    "n": 21,
+    "id": "s-actors-wall",
+    "slideId": null
+   },
+   "audio": {
+    "src": "guide-05-actors-and-roles-0PbyoFNYNV.mp3",
+    "clip": "NAR-05",
+    "t": 1.17,
+    "muted": false
+   },
+   "cc": "Section five, Actors and Roles, institutions, partners and platforms building the Athar ecosystem together, ODA and AIREV sign and govern, with AIREV, OnDemand, e& and ai& and Discord building, UNDP, UNICEF, IFRC, WFP and UNHCR sign and learn.",
+   "guide": {
+    "state": "playing",
+    "clip": "NAR-05",
+    "slideId": null,
+    "blocked": "false",
+    "status": "Narrating slide 21 of 39 · 05 Actors & roles",
+    "tap": false
+   }
+  },
+  {
+   "t": "2026-10-01T06:15:24.123Z",
+   "scenario": "S10-sweep-desktop",
+   "step": "slide 20",
+   "expect": 20,
+   "vis": {
+    "n": 22,
+    "id": "s-who-signs",
+    "slideId": null
+   },
+   "audio": {
+    "src": "guide-05-actors-and-roles-0PbyoFNYNV.mp3",
+    "clip": "NAR-05",
+    "t": 2.51,
+    "muted": false
+   },
+   "cc": "Section five, Actors and Roles, institutions, partners and platforms building the Athar ecosystem together, ODA and AIREV sign and govern, with AIREV, OnDemand, e& and ai& and Discord building, UNDP, UNICEF, IFRC, WFP and UNHCR sign and learn.",
+   "guide": {
+    "state": "playing",
+    "clip": "NAR-05",
+    "slideId": null,
+    "blocked": "false",
+    "status": "Narrating slide 22 of 39 · 05 Actors & roles",
+    "tap": false
+   }
+  },
+  {
+   "t": "2026-10-01T06:15:25.460Z",
+   "scenario": "S10-sweep-desktop",
+   "step": "slide 21",
+   "expect": 21,
+   "vis": {
+    "n": 23,
+    "id": "s-who-governs",
+    "slideId": null
+   },
+   "audio": {
+    "src": "guide-05-actors-and-roles-0PbyoFNYNV.mp3",
+    "clip": "NAR-05",
+    "t": 20.77,
+    "muted": false
+   },
+   "cc": "The UAE Ministry of Foreign Trade signs and governs and the United Arab Emirates governs.",
+   "guide": {
+    "state": "playing",
+    "clip": "NAR-05",
+    "slideId": null,
+    "blocked": "false",
+    "status": "Narrating slide 23 of 39 · 05 Actors & roles",
+    "tap": false
+   }
+  },
+  {
+   "t": "2026-10-01T06:15:26.801Z",
+   "scenario": "S10-sweep-desktop",
+   "step": "slide 22",
+   "expect": 22,
+   "vis": {
+    "n": 24,
+    "id": "s-who-builds",
+    "slideId": null
+   },
+   "audio": {
+    "src": "guide-05-actors-and-roles-0PbyoFNYNV.mp3",
+    "clip": "NAR-05",
+    "t": 22.11,
+    "muted": false
+   },
+   "cc": "The UAE Ministry of Foreign Trade signs and governs and the United Arab Emirates governs.",
+   "guide": {
+    "state": "playing",
+    "clip": "NAR-05",
+    "slideId": null,
+    "blocked": "false",
+    "status": "Narrating slide 24 of 39 · 05 Actors & roles",
+    "tap": false
+   }
+  },
+  {
+   "t": "2026-10-01T06:15:28.137Z",
+   "scenario": "S10-sweep-desktop",
+   "step": "slide 23",
+   "expect": 23,
+   "vis": {
+    "n": 25,
+    "id": "s-who-learns",
+    "slideId": null
+   },
+   "audio": {
+    "src": "guide-05-actors-and-roles-0PbyoFNYNV.mp3",
+    "clip": "NAR-05",
+    "t": 23.45,
+    "muted": false
+   },
+   "cc": "The UAE Ministry of Foreign Trade signs and governs and the United Arab Emirates governs.",
+   "guide": {
+    "state": "playing",
+    "clip": "NAR-05",
+    "slideId": null,
+    "blocked": "false",
+    "status": "Narrating slide 25 of 39 · 05 Actors & roles",
+    "tap": false
+   }
+  },
+  {
+   "t": "2026-10-01T06:15:29.476Z",
+   "scenario": "S10-sweep-desktop",
+   "step": "slide 24",
+   "expect": 24,
+   "vis": {
+    "n": 26,
+    "id": "s-governance-licence",
+    "slideId": null
+   },
+   "audio": {
+    "src": "guide-06-governance-and-roadmap-kyzmCSHcw8.mp3",
+    "clip": "NAR-06",
+    "t": 1.19,
+    "muted": false
+   },
+   "cc": "Section six, governance and roadmap.",
+   "guide": {
+    "state": "playing",
+    "clip": "NAR-06",
+    "slideId": null,
+    "blocked": "false",
+    "status": "Narrating slide 26 of 39 · 06 Governance & roadmap",
+    "tap": false
+   }
+  },
+  {
+   "t": "2026-10-01T06:15:30.814Z",
+   "scenario": "S10-sweep-desktop",
+   "step": "slide 25",
+   "expect": 25,
+   "vis": {
+    "n": 27,
+    "id": "s-roadmap",
+    "slideId": null
+   },
+   "audio": {
+    "src": "guide-06-governance-and-roadmap-kyzmCSHcw8.mp3",
+    "clip": "NAR-06",
+    "t": 8.33,
+    "muted": false
+   },
+   "cc": "Decisions, releases, and outcome reports are published, so every member can see how priorities are set and how the platform evolves over time.",
+   "guide": {
+    "state": "playing",
+    "clip": "NAR-06",
+    "slideId": null,
+    "blocked": "false",
+    "status": "Narrating slide 27 of 39 · 06 Governance & roadmap",
+    "tap": false
+   }
+  },
+  {
+   "t": "2026-10-01T06:15:32.152Z",
+   "scenario": "S10-sweep-desktop",
+   "step": "slide 26",
+   "expect": 26,
+   "vis": {
+    "n": 28,
+    "id": "s-it-outcomes",
+    "slideId": null
+   },
+   "audio": {
+    "src": "guide-07-impact-and-funding-vWkiINp1IS.mp3",
+    "clip": "NAR-07",
+    "t": 1.18,
+    "muted": false
+   },
+   "cc": "Section seven, Impact and Funding.",
+   "guide": {
+    "state": "playing",
+    "clip": "NAR-07",
+    "slideId": null,
+    "blocked": "false",
+    "status": "Narrating slide 28 of 39 · 07 Impact & funding",
+    "tap": false
+   }
+  },
+  {
+   "t": "2026-10-01T06:15:33.487Z",
+   "scenario": "S10-sweep-desktop",
+   "step": "slide 27",
+   "expect": 27,
+   "vis": {
+    "n": 29,
+    "id": "s-it-tiers",
+    "slideId": null
+   },
+   "audio": {
+    "src": "guide-07-impact-and-funding-vWkiINp1IS.mp3",
+    "clip": "NAR-07",
+    "t": 3.53,
+    "muted": false
+   },
+   "cc": "Three impact tiers, one delivery model, access, ownership, legacy.",
+   "guide": {
+    "state": "playing",
+    "clip": "NAR-07",
+    "slideId": null,
+    "blocked": "false",
+    "status": "Narrating slide 29 of 39 · 07 Impact & funding",
+    "tap": false
+   }
+  },
+  {
+   "t": "2026-10-01T06:15:34.829Z",
+   "scenario": "S10-sweep-desktop",
+   "step": "slide 28",
+   "expect": 28,
+   "vis": {
+    "n": 30,
+    "id": "s-it-metrics",
+    "slideId": null
+   },
+   "audio": {
+    "src": "guide-07-impact-and-funding-vWkiINp1IS.mp3",
+    "clip": "NAR-07",
+    "t": 10.9,
+    "muted": false
+   },
+   "cc": "Every agreement includes named cohorts and activation targets, independent evaluator baselines, quarterly outcome reports, and open book costs with unspent funds returned.",
+   "guide": {
+    "state": "playing",
+    "clip": "NAR-07",
+    "slideId": null,
+    "blocked": "false",
+    "status": "Narrating slide 30 of 39 · 07 Impact & funding",
+    "tap": false
+   }
+  },
+  {
+   "t": "2026-10-01T06:15:36.167Z",
+   "scenario": "S10-sweep-desktop",
+   "step": "slide 29",
+   "expect": 29,
+   "vis": {
+    "n": 31,
+    "id": "s-it-sustain",
+    "slideId": null
+   },
+   "audio": {
+    "src": "guide-07-impact-and-funding-vWkiINp1IS.mp3",
+    "clip": "NAR-07",
+    "t": 22.62,
+    "muted": false
+   },
+   "cc": "Universal API licenses, marketplace revenue share and sovereign pilot options fund the model so each partner can choose what fits.",
+   "guide": {
+    "state": "playing",
+    "clip": "NAR-07",
+    "slideId": null,
+    "blocked": "false",
+    "status": "Narrating slide 31 of 39 · 07 Impact & funding",
+    "tap": false
+   }
+  },
+  {
+   "t": "2026-10-01T06:15:37.503Z",
+   "scenario": "S10-sweep-desktop",
+   "step": "slide 30",
+   "expect": 30,
+   "vis": {
+    "n": 32,
+    "id": "s-it-partners",
+    "slideId": null
+   },
+   "audio": {
+    "src": "guide-07-impact-and-funding-vWkiINp1IS.mp3",
+    "clip": "NAR-07",
+    "t": 23.95,
+    "muted": false
+   },
+   "cc": "Universal API licenses, marketplace revenue share and sovereign pilot options fund the model so each partner can choose what fits.",
+   "guide": {
+    "state": "playing",
+    "clip": "NAR-07",
+    "slideId": null,
+    "blocked": "false",
+    "status": "Narrating slide 32 of 39 · 07 Impact & funding",
+    "tap": false
+   }
+  },
+  {
+   "t": "2026-10-01T06:15:38.842Z",
+   "scenario": "S10-sweep-desktop",
+   "step": "slide 31",
+   "expect": 31,
+   "vis": {
+    "n": 33,
+    "id": "s-it-join",
+    "slideId": null
+   },
+   "audio": {
+    "src": "guide-07-impact-and-funding-vWkiINp1IS.mp3",
+    "clip": "NAR-07",
+    "t": 25.29,
+    "muted": false
+   },
+   "cc": "Universal API licenses, marketplace revenue share and sovereign pilot options fund the model so each partner can choose what fits.",
+   "guide": {
+    "state": "playing",
+    "clip": "NAR-07",
+    "slideId": null,
+    "blocked": "false",
+    "status": "Narrating slide 33 of 39 · 07 Impact & funding",
+    "tap": false
+   }
+  },
+  {
+   "t": "2026-10-01T06:15:40.181Z",
+   "scenario": "S10-sweep-desktop",
+   "step": "slide 32",
+   "expect": 32,
+   "vis": {
+    "n": 34,
+    "id": "s-aos-overview",
+    "slideId": null
+   },
+   "audio": {
+    "src": "guide-08-athar-os-Ib4oKe91OD.mp3",
+    "clip": "NAR-08",
+    "t": 1.17,
+    "muted": false
+   },
+   "cc": "Section eight, Athar OS.",
+   "guide": {
+    "state": "playing",
+    "clip": "NAR-08",
+    "slideId": null,
+    "blocked": "false",
+    "status": "Narrating slide 34 of 39 · 08 Athar OS",
+    "tap": false
+   }
+  },
+  {
+   "t": "2026-10-01T06:15:41.637Z",
+   "scenario": "S10-sweep-desktop",
+   "step": "slide 33",
+   "expect": 33,
+   "vis": {
+    "n": 36,
+    "id": "s-aos-roadmap",
+    "slideId": null
+   },
+   "audio": {
+    "src": "guide-08-athar-os-Ib4oKe91OD.mp3",
+    "clip": "NAR-08",
+    "t": 2.63,
+    "muted": false
+   },
+   "cc": "The roadmap runs now in Q4, 2026, next in 2027 and later in 2028.",
+   "guide": {
+    "state": "playing",
+    "clip": "NAR-08",
+    "slideId": null,
+    "blocked": "false",
+    "status": "Narrating slide 36 of 39 · 08 Athar OS",
+    "tap": false
+   }
+  },
+  {
+   "t": "2026-10-01T06:15:42.974Z",
+   "scenario": "S10-sweep-desktop",
+   "step": "slide 34",
+   "expect": 34,
+   "vis": {
+    "n": 37,
+    "id": "s-aos-deploy",
+    "slideId": null
+   },
+   "audio": {
+    "src": "guide-08-athar-os-Ib4oKe91OD.mp3",
+    "clip": "NAR-08",
+    "t": 3.96,
+    "muted": false
+   },
+   "cc": "The roadmap runs now in Q4, 2026, next in 2027 and later in 2028.",
+   "guide": {
+    "state": "playing",
+    "clip": "NAR-08",
+    "slideId": null,
+    "blocked": "false",
+    "status": "Narrating slide 37 of 39 · 08 Athar OS",
+    "tap": false
+   }
+  },
+  {
+   "t": "2026-10-01T06:15:44.316Z",
+   "scenario": "S10-sweep-desktop",
+   "step": "slide 35",
+   "expect": 35,
+   "vis": {
+    "n": 38,
+    "id": "s-aos-nations",
+    "slideId": null
+   },
+   "audio": {
+    "src": "guide-08-athar-os-Ib4oKe91OD.mp3",
+    "clip": "NAR-08",
+    "t": 9.14,
+    "muted": false
+   },
+   "cc": "Nations empowered.",
+   "guide": {
+    "state": "playing",
+    "clip": "NAR-08",
+    "slideId": null,
+    "blocked": "false",
+    "status": "Narrating slide 38 of 39 · 08 Athar OS",
+    "tap": false
+   }
+  },
+  {
+   "t": "2026-10-01T06:15:45.656Z",
+   "scenario": "S10-sweep-desktop",
+   "step": "slide 36",
+   "expect": 36,
+   "vis": {
+    "n": 39,
+    "id": "s-closing",
+    "slideId": null
+   },
+   "audio": {
+    "src": "guide-09-join-the-pact-Hx4Ywy843S.mp3",
+    "clip": "NAR-09",
+    "t": 1.19,
+    "muted": false
+   },
+   "cc": "Join the Pact.",
+   "guide": {
+    "state": "playing",
+    "clip": "NAR-09",
+    "slideId": null,
+    "blocked": "false",
+    "status": "Narrating slide 39 of 39 · Join the pact",
+    "tap": false
+   }
+  },
+  {
+   "t": "2026-10-01T06:15:46.961Z",
+   "scenario": "S10-sweep-desktop",
+   "step": "slide 37",
+   "expect": 37,
+   "vis": {
+    "n": 39,
+    "id": "s-closing",
+    "slideId": null
+   },
+   "audio": {
+    "src": "guide-09-join-the-pact-Hx4Ywy843S.mp3",
+    "clip": "NAR-09",
+    "t": 2.49,
+    "muted": false
+   },
+   "cc": "You have seen the agreement, the community model, the six pillars, the actors, the roadmap, the impact tiers and Athar OS.",
+   "guide": {
+    "state": "playing",
+    "clip": "NAR-09",
+    "slideId": null,
+    "blocked": "false",
+    "status": "Narrating slide 39 of 39 · Join the pact",
+    "tap": false
+   }
+  },
+  {
+   "t": "2026-10-01T06:15:48.271Z",
+   "scenario": "S10-sweep-desktop",
+   "step": "slide 38",
+   "expect": 38,
+   "vis": {
+    "n": 39,
+    "id": "s-closing",
+    "slideId": null
+   },
+   "audio": {
+    "src": "guide-09-join-the-pact-Hx4Ywy843S.mp3",
+    "clip": "NAR-09",
+    "t": 3.8,
+    "muted": false
+   },
+   "cc": "You have seen the agreement, the community model, the six pillars, the actors, the roadmap, the impact tiers and Athar OS.",
+   "guide": {
+    "state": "playing",
+    "clip": "NAR-09",
+    "slideId": null,
+    "blocked": "false",
+    "status": "Narrating slide 39 of 39 · Join the pact",
+    "tap": false
+   }
+  },
+  {
+   "t": "2026-10-01T06:15:49.578Z",
+   "scenario": "S10-sweep-desktop",
+   "step": "slide 39",
+   "expect": 39,
+   "vis": {
+    "n": 39,
+    "id": "s-closing",
+    "slideId": null
+   },
+   "audio": {
+    "src": "guide-09-join-the-pact-Hx4Ywy843S.mp3",
+    "clip": "NAR-09",
+    "t": 5.11,
+    "muted": false
+   },
+   "cc": "You have seen the agreement, the community model, the six pillars, the actors, the roadmap, the impact tiers and Athar OS.",
+   "guide": {
+    "state": "playing",
+    "clip": "NAR-09",
+    "slideId": null,
+    "blocked": "false",
+    "status": "Narrating slide 39 of 39 · Join the pact",
+    "tap": false
+   }
+  }
+ ],
+ "events": [
+  {
+   "scenario": "S10-sweep-desktop",
+   "t": "2026-10-01T06:14:56.157Z",
+   "ms": 733,
+   "type": "sample",
+   "vis": {
+    "n": 1,
+    "id": "s-cover",
+    "slideId": null
+   },
+   "audio": null,
+   "cc": null,
+   "guide": null,
+   "hash": "#/01"
+  },
+  {
+   "scenario": "S10-sweep-desktop",
+   "t": "2026-10-01T06:14:56.437Z",
+   "ms": 1013,
+   "type": "sample",
+   "vis": {
+    "n": 1,
+    "id": "s-cover",
+    "slideId": null
+   },
+   "audio": null,
+   "cc": "Welcome to the Athar Open Agentic Pact, a community proposal from ODA and AIREV.",
+   "guide": {
+    "state": "loading",
+    "clip": "NAR-00",
+    "slideId": null,
+    "gen": null,
+    "status": "Guide ready · slide 1 of 39 · Welcome"
+   },
+   "hash": "#/01"
+  },
+  {
+   "scenario": "S10-sweep-desktop",
+   "t": "2026-10-01T06:14:56.442Z",
+   "ms": 1018,
+   "type": "media:emptied",
+   "vis": {
+    "n": 1,
+    "id": "s-cover",
+    "slideId": null
+   },
+   "audio": null,
+   "cc": "Welcome to the Athar Open Agentic Pact, a community proposal from ODA and AIREV.",
+   "guide": {
+    "state": "loading",
+    "clip": "NAR-00",
+    "slideId": null,
+    "gen": null,
+    "status": "Guide ready · slide 1 of 39 · Welcome"
+   },
+   "hash": "#/01",
+   "el": "guide-00-welcome-lhbIUXFwLO.mp3",
+   "ct": 0
+  },
+  {
+   "scenario": "S10-sweep-desktop",
+   "t": "2026-10-01T06:14:56.452Z",
+   "ms": 1028,
+   "type": "media:loadstart",
+   "vis": {
+    "n": 1,
+    "id": "s-cover",
+    "slideId": null
+   },
+   "audio": null,
+   "cc": "Welcome to the Athar Open Agentic Pact, a community proposal from ODA and AIREV.",
+   "guide": {
+    "state": "loading",
+    "clip": "NAR-00",
+    "slideId": null,
+    "gen": null,
+    "status": "Guide ready · slide 1 of 39 · Welcome"
+   },
+   "hash": "#/01",
+   "el": "guide-00-welcome-lhbIUXFwLO.mp3",
+   "ct": 0
+  },
+  {
+   "scenario": "S10-sweep-desktop",
+   "t": "2026-10-01T06:14:56.452Z",
+   "ms": 1028,
+   "type": "media:loadstart",
+   "vis": {
+    "n": 1,
+    "id": "s-cover",
+    "slideId": null
+   },
+   "audio": null,
+   "cc": "Welcome to the Athar Open Agentic Pact, a community proposal from ODA and AIREV.",
+   "guide": {
+    "state": "loading",
+    "clip": "NAR-00",
+    "slideId": null,
+    "gen": null,
+    "status": "Guide ready · slide 1 of 39 · Welcome"
+   },
+   "hash": "#/01",
+   "el": "guide-01-the-pact-df1pHtGsVr.mp3",
+   "ct": 0
+  },
+  {
+   "scenario": "S10-sweep-desktop",
+   "t": "2026-10-01T06:14:56.515Z",
+   "ms": 1091,
+   "type": "media:canplay",
+   "vis": {
+    "n": 1,
+    "id": "s-cover",
+    "slideId": null
+   },
+   "audio": null,
+   "cc": "Welcome to the Athar Open Agentic Pact, a community proposal from ODA and AIREV.",
+   "guide": {
+    "state": "loading",
+    "clip": "NAR-00",
+    "slideId": null,
+    "gen": null,
+    "status": "Guide ready · slide 1 of 39 · Welcome"
+   },
+   "hash": "#/01",
+   "el": "guide-01-the-pact-df1pHtGsVr.mp3",
+   "ct": 0
+  },
+  {
+   "scenario": "S10-sweep-desktop",
+   "t": "2026-10-01T06:14:56.516Z",
+   "ms": 1092,
+   "type": "media:canplay",
+   "vis": {
+    "n": 1,
+    "id": "s-cover",
+    "slideId": null
+   },
+   "audio": null,
+   "cc": "Welcome to the Athar Open Agentic Pact, a community proposal from ODA and AIREV.",
+   "guide": {
+    "state": "paused",
+    "clip": "NAR-00",
+    "slideId": null,
+    "gen": null,
+    "status": "Guide ready · slide 1 of 39 · Welcome"
+   },
+   "hash": "#/01",
+   "el": "guide-00-welcome-lhbIUXFwLO.mp3",
+   "ct": 0
+  },
+  {
+   "scenario": "S10-sweep-desktop",
+   "t": "2026-10-01T06:14:56.524Z",
+   "ms": 1101,
+   "type": "sample",
+   "vis": {
+    "n": 1,
+    "id": "s-cover",
+    "slideId": null
+   },
+   "audio": null,
+   "cc": "Welcome to the Athar Open Agentic Pact, a community proposal from ODA and AIREV.",
+   "guide": {
+    "state": "paused",
+    "clip": "NAR-00",
+    "slideId": null,
+    "gen": null,
+    "status": "Guide ready · slide 1 of 39 · Welcome"
+   },
+   "hash": "#/01"
+  },
+  {
+   "scenario": "S10-sweep-desktop",
+   "t": "2026-10-01T06:14:57.148Z",
+   "ms": 1724,
+   "type": "click",
+   "vis": {
+    "n": 1,
+    "id": "s-cover",
+    "slideId": null
+   },
+   "audio": null,
+   "cc": "Welcome to the Athar Open Agentic Pact, a community proposal from ODA and AIREV.",
+   "guide": {
+    "state": "paused",
+    "clip": "NAR-00",
+    "slideId": null,
+    "gen": null,
+    "status": "Guide ready · slide 1 of 39 · Welcome"
+   },
+   "hash": "#/01",
+   "target": "nar-autoplay"
+  },
+  {
+   "scenario": "S10-sweep-desktop",
+   "t": "2026-10-01T06:14:57.193Z",
+   "ms": 1769,
+   "type": "click",
+   "vis": {
+    "n": 1,
+    "id": "s-cover",
+    "slideId": null
+   },
+   "audio": null,
+   "cc": "Welcome to the Athar Open Agentic Pact, a community proposal from ODA and AIREV.",
+   "guide": {
+    "state": "paused",
+    "clip": "NAR-00",
+    "slideId": null,
+    "gen": null,
+    "status": "Guide ready · slide 1 of 39 · Welcome"
+   },
+   "hash": "#/01",
+   "target": "guide-toggle"
+  },
+  {
+   "scenario": "S10-sweep-desktop",
+   "t": "2026-10-01T06:14:57.194Z",
+   "ms": 1770,
+   "type": "play()",
+   "vis": {
+    "n": 1,
+    "id": "s-cover",
+    "slideId": null
+   },
+   "audio": {
+    "src": "guide-00-welcome-lhbIUXFwLO.mp3",
+    "clip": "NAR-00",
+    "t": 0,
+    "muted": false
+   },
+   "cc": "Welcome to the Athar Open Agentic Pact, a community proposal from ODA and AIREV.",
+   "guide": {
+    "state": "paused",
+    "clip": "NAR-00",
+    "slideId": null,
+    "gen": null,
+    "status": "Guide ready · slide 1 of 39 · Welcome"
+   },
+   "hash": "#/01",
+   "el": "guide-00-welcome-lhbIUXFwLO.mp3",
+   "ct": 0
+  },
+  {
+   "scenario": "S10-sweep-desktop",
+   "t": "2026-10-01T06:14:57.215Z",
+   "ms": 1791,
+   "type": "media:playing",
+   "vis": {
+    "n": 1,
+    "id": "s-cover",
+    "slideId": null
+   },
+   "audio": {
+    "src": "guide-00-welcome-lhbIUXFwLO.mp3",
+    "clip": "NAR-00",
+    "t": 0,
+    "muted": false
+   },
+   "cc": "Welcome to the Athar Open Agentic Pact, a community proposal from ODA and AIREV.",
+   "guide": {
+    "state": "playing",
+    "clip": "NAR-00",
+    "slideId": null,
+    "gen": null,
+    "status": "Narrating slide 1 of 39 · Welcome"
+   },
+   "hash": "#/01",
+   "el": "guide-00-welcome-lhbIUXFwLO.mp3",
+   "ct": 0
+  },
+  {
+   "scenario": "S10-sweep-desktop",
+   "t": "2026-10-01T06:14:57.215Z",
+   "ms": 1791,
+   "type": "play():resolved",
+   "vis": {
+    "n": 1,
+    "id": "s-cover",
+    "slideId": null
+   },
+   "audio": {
+    "src": "guide-00-welcome-lhbIUXFwLO.mp3",
+    "clip": "NAR-00",
+    "t": 0,
+    "muted": false
+   },
+   "cc": "Welcome to the Athar Open Agentic Pact, a community proposal from ODA and AIREV.",
+   "guide": {
+    "state": "playing",
+    "clip": "NAR-00",
+    "slideId": null,
+    "gen": null,
+    "status": "Narrating slide 1 of 39 · Welcome"
+   },
+   "hash": "#/01",
+   "el": "guide-00-welcome-lhbIUXFwLO.mp3"
+  },
+  {
+   "scenario": "S10-sweep-desktop",
+   "t": "2026-10-01T06:14:57.225Z",
+   "ms": 1801,
+   "type": "sample",
+   "vis": {
+    "n": 1,
+    "id": "s-cover",
+    "slideId": null
+   },
+   "audio": {
+    "src": "guide-00-welcome-lhbIUXFwLO.mp3",
+    "clip": "NAR-00",
+    "t": 0.01,
+    "muted": false
+   },
+   "cc": "Welcome to the Athar Open Agentic Pact, a community proposal from ODA and AIREV.",
+   "guide": {
+    "state": "playing",
+    "clip": "NAR-00",
+    "slideId": null,
+    "gen": null,
+    "status": "Narrating slide 1 of 39 · Welcome"
+   },
+   "hash": "#/01"
+  },
+  {
+   "scenario": "S10-sweep-desktop",
+   "t": "2026-10-01T06:14:58.701Z",
+   "ms": 3277,
+   "type": "check",
+   "vis": {
+    "n": 1,
+    "id": "s-cover",
+    "slideId": null
+   },
+   "audio": {
+    "src": "guide-00-welcome-lhbIUXFwLO.mp3",
+    "clip": "NAR-00",
+    "t": 1.42,
+    "muted": false
+   },
+   "cc": "Welcome to the Athar Open Agentic Pact, a community proposal from ODA and AIREV.",
+   "guide": {
+    "state": "playing",
+    "clip": "NAR-00",
+    "slideId": null,
+    "gen": null,
+    "status": "Narrating slide 1 of 39 · Welcome"
+   },
+   "hash": "#/01",
+   "step": "slide 1",
+   "expect": 1
+  },
+  {
+   "scenario": "S10-sweep-desktop",
+   "t": "2026-10-01T06:14:58.703Z",
+   "ms": 3279,
+   "type": "key",
+   "vis": {
+    "n": 1,
+    "id": "s-cover",
+    "slideId": null
+   },
+   "audio": {
+    "src": "guide-00-welcome-lhbIUXFwLO.mp3",
+    "clip": "NAR-00",
+    "t": 1.42,
+    "muted": false
+   },
+   "cc": "Welcome to the Athar Open Agentic Pact, a community proposal from ODA and AIREV.",
+   "guide": {
+    "state": "playing",
+    "clip": "NAR-00",
+    "slideId": null,
+    "gen": null,
+    "status": "Narrating slide 1 of 39 · Welcome"
+   },
+   "hash": "#/01",
+   "key": "ArrowRight"
+  },
+  {
+   "scenario": "S10-sweep-desktop",
+   "t": "2026-10-01T06:14:58.725Z",
+   "ms": 3301,
+   "type": "sample",
+   "vis": {
+    "n": 2,
+    "id": "s-hero",
+    "slideId": null
+   },
+   "audio": {
+    "src": "guide-00-welcome-lhbIUXFwLO.mp3",
+    "clip": "NAR-00",
+    "t": 1.44,
+    "muted": false
+   },
+   "cc": "Welcome to the Athar Open Agentic Pact, a community proposal from ODA and AIREV.",
+   "guide": {
+    "state": "playing",
+    "clip": "NAR-00",
+    "slideId": null,
+    "gen": null,
+    "status": "Narrating slide 1 of 39 · Welcome"
+   },
+   "hash": "#/02"
+  },
+  {
+   "scenario": "S10-sweep-desktop",
+   "t": "2026-10-01T06:14:58.772Z",
+   "ms": 3348,
+   "type": "play()",
+   "vis": {
+    "n": 2,
+    "id": "s-hero",
+    "slideId": null
+   },
+   "audio": {
+    "src": "guide-00-welcome-lhbIUXFwLO.mp3",
+    "clip": "NAR-00",
+    "t": 0,
+    "muted": false
+   },
+   "cc": "Welcome to the Athar Open Agentic Pact, a community proposal from ODA and AIREV.",
+   "guide": {
+    "state": "playing",
+    "clip": "NAR-00",
+    "slideId": null,
+    "gen": null,
+    "status": "Narrating slide 1 of 39 · Welcome"
+   },
+   "hash": "#/02",
+   "el": "guide-00-welcome-lhbIUXFwLO.mp3",
+   "ct": 0
+  },
+  {
+   "scenario": "S10-sweep-desktop",
+   "t": "2026-10-01T06:14:58.773Z",
+   "ms": 3350,
+   "type": "media:emptied",
+   "vis": {
+    "n": 2,
+    "id": "s-hero",
+    "slideId": null
+   },
+   "audio": {
+    "src": "guide-00-welcome-lhbIUXFwLO.mp3",
+    "clip": "NAR-00",
+    "t": 0,
+    "muted": false
+   },
+   "cc": "Section one, the Pact.",
+   "guide": {
+    "state": "starting",
+    "clip": "NAR-01",
+    "slideId": null,
+    "gen": null,
+    "status": "Narrating slide 2 of 39 · 01 The pact"
+   },
+   "hash": "#/02",
+   "el": "guide-00-welcome-lhbIUXFwLO.mp3",
+   "ct": 0
+  },
+  {
+   "scenario": "S10-sweep-desktop",
+   "t": "2026-10-01T06:14:58.775Z",
+   "ms": 3352,
+   "type": "media:loadstart",
+   "vis": {
+    "n": 2,
+    "id": "s-hero",
+    "slideId": null
+   },
+   "audio": {
+    "src": "guide-01-the-pact-df1pHtGsVr.mp3",
+    "clip": "NAR-01",
+    "t": 0,
+    "muted": false
+   },
+   "cc": "Section one, the Pact.",
+   "guide": {
+    "state": "buffering",
+    "clip": "NAR-01",
+    "slideId": null,
+    "gen": null,
+    "status": "Narrating slide 2 of 39 · 01 The pact"
+   },
+   "hash": "#/02",
+   "el": "guide-01-the-pact-df1pHtGsVr.mp3",
+   "ct": 0
+  },
+  {
+   "scenario": "S10-sweep-desktop",
+   "t": "2026-10-01T06:14:58.776Z",
+   "ms": 3352,
+   "type": "media:loadstart",
+   "vis": {
+    "n": 2,
+    "id": "s-hero",
+    "slideId": null
+   },
+   "audio": {
+    "src": "guide-01-the-pact-df1pHtGsVr.mp3",
+    "clip": "NAR-01",
+    "t": 0,
+    "muted": false
+   },
+   "cc": "Section one, the Pact.",
+   "guide": {
+    "state": "buffering",
+    "clip": "NAR-01",
+    "slideId": null,
+    "gen": null,
+    "status": "Narrating slide 2 of 39 · 01 The pact"
+   },
+   "hash": "#/02",
+   "el": "guide-02-community-model-9gUnFBtxrM.mp3",
+   "ct": 0
+  },
+  {
+   "scenario": "S10-sweep-desktop",
+   "t": "2026-10-01T06:14:58.778Z",
+   "ms": 3354,
+   "type": "media:canplay",
+   "vis": {
+    "n": 2,
+    "id": "s-hero",
+    "slideId": null
+   },
+   "audio": {
+    "src": "guide-01-the-pact-df1pHtGsVr.mp3",
+    "clip": "NAR-01",
+    "t": 0,
+    "muted": false
+   },
+   "cc": "Section one, the Pact.",
+   "guide": {
+    "state": "buffering",
+    "clip": "NAR-01",
+    "slideId": null,
+    "gen": null,
+    "status": "Narrating slide 2 of 39 · 01 The pact"
+   },
+   "hash": "#/02",
+   "el": "guide-01-the-pact-df1pHtGsVr.mp3",
+   "ct": 0
+  },
+  {
+   "scenario": "S10-sweep-desktop",
+   "t": "2026-10-01T06:14:58.778Z",
+   "ms": 3355,
+   "type": "media:playing",
+   "vis": {
+    "n": 2,
+    "id": "s-hero",
+    "slideId": null
+   },
+   "audio": {
+    "src": "guide-01-the-pact-df1pHtGsVr.mp3",
+    "clip": "NAR-01",
+    "t": 0,
+    "muted": false
+   },
+   "cc": "Section one, the Pact.",
+   "guide": {
+    "state": "playing",
+    "clip": "NAR-01",
+    "slideId": null,
+    "gen": null,
+    "status": "Narrating slide 2 of 39 · 01 The pact"
+   },
+   "hash": "#/02",
+   "el": "guide-01-the-pact-df1pHtGsVr.mp3",
+   "ct": 0
+  },
+  {
+   "scenario": "S10-sweep-desktop",
+   "t": "2026-10-01T06:14:58.779Z",
+   "ms": 3355,
+   "type": "play():resolved",
+   "vis": {
+    "n": 2,
+    "id": "s-hero",
+    "slideId": null
+   },
+   "audio": {
+    "src": "guide-01-the-pact-df1pHtGsVr.mp3",
+    "clip": "NAR-01",
+    "t": 0,
+    "muted": false
+   },
+   "cc": "Section one, the Pact.",
+   "guide": {
+    "state": "playing",
+    "clip": "NAR-01",
+    "slideId": null,
+    "gen": null,
+    "status": "Narrating slide 2 of 39 · 01 The pact"
+   },
+   "hash": "#/02",
+   "el": "guide-00-welcome-lhbIUXFwLO.mp3"
+  },
+  {
+   "scenario": "S10-sweep-desktop",
+   "t": "2026-10-01T06:14:58.781Z",
+   "ms": 3357,
+   "type": "media:canplay",
+   "vis": {
+    "n": 2,
+    "id": "s-hero",
+    "slideId": null
+   },
+   "audio": {
+    "src": "guide-01-the-pact-df1pHtGsVr.mp3",
+    "clip": "NAR-01",
+    "t": 0,
+    "muted": false
+   },
+   "cc": "Section one, the Pact.",
+   "guide": {
+    "state": "playing",
+    "clip": "NAR-01",
+    "slideId": null,
+    "gen": null,
+    "status": "Narrating slide 2 of 39 · 01 The pact"
+   },
+   "hash": "#/02",
+   "el": "guide-02-community-model-9gUnFBtxrM.mp3",
+   "ct": 0
+  },
+  {
+   "scenario": "S10-sweep-desktop",
+   "t": "2026-10-01T06:14:58.825Z",
+   "ms": 3401,
+   "type": "sample",
+   "vis": {
+    "n": 2,
+    "id": "s-hero",
+    "slideId": null
+   },
+   "audio": {
+    "src": "guide-01-the-pact-df1pHtGsVr.mp3",
+    "clip": "NAR-01",
+    "t": 0.01,
+    "muted": false
+   },
+   "cc": "Section one, the Pact.",
+   "guide": {
+    "state": "playing",
+    "clip": "NAR-01",
+    "slideId": null,
+    "gen": null,
+    "status": "Narrating slide 2 of 39 · 01 The pact"
+   },
+   "hash": "#/02"
+  },
+  {
+   "scenario": "S10-sweep-desktop",
+   "t": "2026-10-01T06:15:00.042Z",
+   "ms": 4618,
+   "type": "check",
+   "vis": {
+    "n": 2,
+    "id": "s-hero",
+    "slideId": null
+   },
+   "audio": {
+    "src": "guide-01-the-pact-df1pHtGsVr.mp3",
+    "clip": "NAR-01",
+    "t": 1.18,
+    "muted": false
+   },
+   "cc": "Section one, the Pact.",
+   "guide": {
+    "state": "playing",
+    "clip": "NAR-01",
+    "slideId": null,
+    "gen": null,
+    "status": "Narrating slide 2 of 39 · 01 The pact"
+   },
+   "hash": "#/02",
+   "step": "slide 2",
+   "expect": 2
+  },
+  {
+   "scenario": "S10-sweep-desktop",
+   "t": "2026-10-01T06:15:00.043Z",
+   "ms": 4619,
+   "type": "key",
+   "vis": {
+    "n": 2,
+    "id": "s-hero",
+    "slideId": null
+   },
+   "audio": {
+    "src": "guide-01-the-pact-df1pHtGsVr.mp3",
+    "clip": "NAR-01",
+    "t": 1.18,
+    "muted": false
+   },
+   "cc": "Section one, the Pact.",
+   "guide": {
+    "state": "playing",
+    "clip": "NAR-01",
+    "slideId": null,
+    "gen": null,
+    "status": "Narrating slide 2 of 39 · 01 The pact"
+   },
+   "hash": "#/02",
+   "key": "ArrowRight"
+  },
+  {
+   "scenario": "S10-sweep-desktop",
+   "t": "2026-10-01T06:15:00.102Z",
+   "ms": 4678,
+   "type": "media:seeked",
+   "vis": {
+    "n": 3,
+    "id": "s-why-pact",
+    "slideId": null
+   },
+   "audio": {
+    "src": "guide-01-the-pact-df1pHtGsVr.mp3",
+    "clip": "NAR-01",
+    "t": 12.14,
+    "muted": false
+   },
+   "cc": "It is a community proposal from ODA and AI Rev, designed as a community, not a product.",
+   "guide": {
+    "state": "buffering",
+    "clip": "NAR-01",
+    "slideId": null,
+    "gen": null,
+    "status": "Narrating slide 3 of 39 · 01 The pact"
+   },
+   "hash": "#/03",
+   "el": "guide-01-the-pact-df1pHtGsVr.mp3",
+   "ct": 12.14
+  },
+  {
+   "scenario": "S10-sweep-desktop",
+   "t": "2026-10-01T06:15:00.102Z",
+   "ms": 4678,
+   "type": "media:canplay",
+   "vis": {
+    "n": 3,
+    "id": "s-why-pact",
+    "slideId": null
+   },
+   "audio": {
+    "src": "guide-01-the-pact-df1pHtGsVr.mp3",
+    "clip": "NAR-01",
+    "t": 12.14,
+    "muted": false
+   },
+   "cc": "It is a community proposal from ODA and AI Rev, designed as a community, not a product.",
+   "guide": {
+    "state": "buffering",
+    "clip": "NAR-01",
+    "slideId": null,
+    "gen": null,
+    "status": "Narrating slide 3 of 39 · 01 The pact"
+   },
+   "hash": "#/03",
+   "el": "guide-01-the-pact-df1pHtGsVr.mp3",
+   "ct": 12.14
+  },
+  {
+   "scenario": "S10-sweep-desktop",
+   "t": "2026-10-01T06:15:00.103Z",
+   "ms": 4679,
+   "type": "media:playing",
+   "vis": {
+    "n": 3,
+    "id": "s-why-pact",
+    "slideId": null
+   },
+   "audio": {
+    "src": "guide-01-the-pact-df1pHtGsVr.mp3",
+    "clip": "NAR-01",
+    "t": 12.14,
+    "muted": false
+   },
+   "cc": "It is a community proposal from ODA and AI Rev, designed as a community, not a product.",
+   "guide": {
+    "state": "playing",
+    "clip": "NAR-01",
+    "slideId": null,
+    "gen": null,
+    "status": "Narrating slide 3 of 39 · 01 The pact"
+   },
+   "hash": "#/03",
+   "el": "guide-01-the-pact-df1pHtGsVr.mp3",
+   "ct": 12.14
+  },
+  {
+   "scenario": "S10-sweep-desktop",
+   "t": "2026-10-01T06:15:00.125Z",
+   "ms": 4701,
+   "type": "sample",
+   "vis": {
+    "n": 3,
+    "id": "s-why-pact",
+    "slideId": null
+   },
+   "audio": {
+    "src": "guide-01-the-pact-df1pHtGsVr.mp3",
+    "clip": "NAR-01",
+    "t": 12.15,
+    "muted": false
+   },
+   "cc": "It is a community proposal from ODA and AI Rev, designed as a community, not a product.",
+   "guide": {
+    "state": "playing",
+    "clip": "NAR-01",
+    "slideId": null,
+    "gen": null,
+    "status": "Narrating slide 3 of 39 · 01 The pact"
+   },
+   "hash": "#/03"
+  },
+  {
+   "scenario": "S10-sweep-desktop",
+   "t": "2026-10-01T06:15:01.381Z",
+   "ms": 5957,
+   "type": "check",
+   "vis": {
+    "n": 3,
+    "id": "s-why-pact",
+    "slideId": null
+   },
+   "audio": {
+    "src": "guide-01-the-pact-df1pHtGsVr.mp3",
+    "clip": "NAR-01",
+    "t": 13.34,
+    "muted": false
+   },
+   "cc": "It is a community proposal from ODA and AI Rev, designed as a community, not a product.",
+   "guide": {
+    "state": "playing",
+    "clip": "NAR-01",
+    "slideId": null,
+    "gen": null,
+    "status": "Narrating slide 3 of 39 · 01 The pact"
+   },
+   "hash": "#/03",
+   "step": "slide 3",
+   "expect": 3
+  },
+  {
+   "scenario": "S10-sweep-desktop",
+   "t": "2026-10-01T06:15:01.383Z",
+   "ms": 5959,
+   "type": "key",
+   "vis": {
+    "n": 3,
+    "id": "s-why-pact",
+    "slideId": null
+   },
+   "audio": {
+    "src": "guide-01-the-pact-df1pHtGsVr.mp3",
+    "clip": "NAR-01",
+    "t": 13.34,
+    "muted": false
+   },
+   "cc": "It is a community proposal from ODA and AI Rev, designed as a community, not a product.",
+   "guide": {
+    "state": "playing",
+    "clip": "NAR-01",
+    "slideId": null,
+    "gen": null,
+    "status": "Narrating slide 3 of 39 · 01 The pact"
+   },
+   "hash": "#/03",
+   "key": "ArrowRight"
+  },
+  {
+   "scenario": "S10-sweep-desktop",
+   "t": "2026-10-01T06:15:01.433Z",
+   "ms": 6009,
+   "type": "sample",
+   "vis": {
+    "n": 4,
+    "id": "s-four-outcomes",
+    "slideId": null
+   },
+   "audio": {
+    "src": "guide-01-the-pact-df1pHtGsVr.mp3",
+    "clip": "NAR-01",
+    "t": 13.39,
+    "muted": false
+   },
+   "cc": "It is a community proposal from ODA and AI Rev, designed as a community, not a product.",
+   "guide": {
+    "state": "playing",
+    "clip": "NAR-01",
+    "slideId": null,
+    "gen": null,
+    "status": "Narrating slide 3 of 39 · 01 The pact"
+   },
+   "hash": "#/04"
+  },
+  {
+   "scenario": "S10-sweep-desktop",
+   "t": "2026-10-01T06:15:01.451Z",
+   "ms": 6027,
+   "type": "play()",
+   "vis": {
+    "n": 4,
+    "id": "s-four-outcomes",
+    "slideId": null
+   },
+   "audio": {
+    "src": "guide-01-the-pact-df1pHtGsVr.mp3",
+    "clip": "NAR-01",
+    "t": 0,
+    "muted": false
+   },
+   "cc": "It is a community proposal from ODA and AI Rev, designed as a community, not a product.",
+   "guide": {
+    "state": "playing",
+    "clip": "NAR-01",
+    "slideId": null,
+    "gen": null,
+    "status": "Narrating slide 3 of 39 · 01 The pact"
+   },
+   "hash": "#/04",
+   "el": "guide-01-the-pact-df1pHtGsVr.mp3",
+   "ct": 0
+  },
+  {
+   "scenario": "S10-sweep-desktop",
+   "t": "2026-10-01T06:15:01.451Z",
+   "ms": 6027,
+   "type": "media:emptied",
+   "vis": {
+    "n": 4,
+    "id": "s-four-outcomes",
+    "slideId": null
+   },
+   "audio": {
+    "src": "guide-01-the-pact-df1pHtGsVr.mp3",
+    "clip": "NAR-01",
+    "t": 0,
+    "muted": false
+   },
+   "cc": "Section two, the Community Model.",
+   "guide": {
+    "state": "starting",
+    "clip": "NAR-02",
+    "slideId": null,
+    "gen": null,
+    "status": "Narrating slide 4 of 39 · 02 Community model"
+   },
+   "hash": "#/04",
+   "el": "guide-01-the-pact-df1pHtGsVr.mp3",
+   "ct": 0
+  },
+  {
+   "scenario": "S10-sweep-desktop",
+   "t": "2026-10-01T06:15:01.453Z",
+   "ms": 6029,
+   "type": "media:loadstart",
+   "vis": {
+    "n": 4,
+    "id": "s-four-outcomes",
+    "slideId": null
+   },
+   "audio": {
+    "src": "guide-02-community-model-9gUnFBtxrM.mp3",
+    "clip": "NAR-02",
+    "t": 0,
+    "muted": false
+   },
+   "cc": "Section two, the Community Model.",
+   "guide": {
+    "state": "buffering",
+    "clip": "NAR-02",
+    "slideId": null,
+    "gen": null,
+    "status": "Narrating slide 4 of 39 · 02 Community model"
+   },
+   "hash": "#/04",
+   "el": "guide-02-community-model-9gUnFBtxrM.mp3",
+   "ct": 0
+  },
+  {
+   "scenario": "S10-sweep-desktop",
+   "t": "2026-10-01T06:15:01.453Z",
+   "ms": 6029,
+   "type": "media:loadstart",
+   "vis": {
+    "n": 4,
+    "id": "s-four-outcomes",
+    "slideId": null
+   },
+   "audio": {
+    "src": "guide-02-community-model-9gUnFBtxrM.mp3",
+    "clip": "NAR-02",
+    "t": 0,
+    "muted": false
+   },
+   "cc": "Section two, the Community Model.",
+   "guide": {
+    "state": "buffering",
+    "clip": "NAR-02",
+    "slideId": null,
+    "gen": null,
+    "status": "Narrating slide 4 of 39 · 02 Community model"
+   },
+   "hash": "#/04",
+   "el": "guide-03-six-pillars-yxVqZJ2k1a.mp3",
+   "ct": 0
+  },
+  {
+   "scenario": "S10-sweep-desktop",
+   "t": "2026-10-01T06:15:01.457Z",
+   "ms": 6033,
+   "type": "media:canplay",
+   "vis": {
+    "n": 4,
+    "id": "s-four-outcomes",
+    "slideId": null
+   },
+   "audio": {
+    "src": "guide-02-community-model-9gUnFBtxrM.mp3",
+    "clip": "NAR-02",
+    "t": 0,
+    "muted": false
+   },
+   "cc": "Section two, the Community Model.",
+   "guide": {
+    "state": "buffering",
+    "clip": "NAR-02",
+    "slideId": null,
+    "gen": null,
+    "status": "Narrating slide 4 of 39 · 02 Community model"
+   },
+   "hash": "#/04",
+   "el": "guide-02-community-model-9gUnFBtxrM.mp3",
+   "ct": 0
+  },
+  {
+   "scenario": "S10-sweep-desktop",
+   "t": "2026-10-01T06:15:01.457Z",
+   "ms": 6034,
+   "type": "media:playing",
+   "vis": {
+    "n": 4,
+    "id": "s-four-outcomes",
+    "slideId": null
+   },
+   "audio": {
+    "src": "guide-02-community-model-9gUnFBtxrM.mp3",
+    "clip": "NAR-02",
+    "t": 0,
+    "muted": false
+   },
+   "cc": "Section two, the Community Model.",
+   "guide": {
+    "state": "playing",
+    "clip": "NAR-02",
+    "slideId": null,
+    "gen": null,
+    "status": "Narrating slide 4 of 39 · 02 Community model"
+   },
+   "hash": "#/04",
+   "el": "guide-02-community-model-9gUnFBtxrM.mp3",
+   "ct": 0
+  },
+  {
+   "scenario": "S10-sweep-desktop",
+   "t": "2026-10-01T06:15:01.458Z",
+   "ms": 6034,
+   "type": "play():resolved",
+   "vis": {
+    "n": 4,
+    "id": "s-four-outcomes",
+    "slideId": null
+   },
+   "audio": {
+    "src": "guide-02-community-model-9gUnFBtxrM.mp3",
+    "clip": "NAR-02",
+    "t": 0,
+    "muted": false
+   },
+   "cc": "Section two, the Community Model.",
+   "guide": {
+    "state": "playing",
+    "clip": "NAR-02",
+    "slideId": null,
+    "gen": null,
+    "status": "Narrating slide 4 of 39 · 02 Community model"
+   },
+   "hash": "#/04",
+   "el": "guide-01-the-pact-df1pHtGsVr.mp3"
+  },
+  {
+   "scenario": "S10-sweep-desktop",
+   "t": "2026-10-01T06:15:01.460Z",
+   "ms": 6036,
+   "type": "media:canplay",
+   "vis": {
+    "n": 4,
+    "id": "s-four-outcomes",
+    "slideId": null
+   },
+   "audio": {
+    "src": "guide-02-community-model-9gUnFBtxrM.mp3",
+    "clip": "NAR-02",
+    "t": 0,
+    "muted": false
+   },
+   "cc": "Section two, the Community Model.",
+   "guide": {
+    "state": "playing",
+    "clip": "NAR-02",
+    "slideId": null,
+    "gen": null,
+    "status": "Narrating slide 4 of 39 · 02 Community model"
+   },
+   "hash": "#/04",
+   "el": "guide-03-six-pillars-yxVqZJ2k1a.mp3",
+   "ct": 0
+  },
+  {
+   "scenario": "S10-sweep-desktop",
+   "t": "2026-10-01T06:15:01.525Z",
+   "ms": 6101,
+   "type": "sample",
+   "vis": {
+    "n": 4,
+    "id": "s-four-outcomes",
+    "slideId": null
+   },
+   "audio": {
+    "src": "guide-02-community-model-9gUnFBtxrM.mp3",
+    "clip": "NAR-02",
+    "t": 0.02,
+    "muted": false
+   },
+   "cc": "Section two, the Community Model.",
+   "guide": {
+    "state": "playing",
+    "clip": "NAR-02",
+    "slideId": null,
+    "gen": null,
+    "status": "Narrating slide 4 of 39 · 02 Community model"
+   },
+   "hash": "#/04"
+  },
+  {
+   "scenario": "S10-sweep-desktop",
+   "t": "2026-10-01T06:15:02.724Z",
+   "ms": 7300,
+   "type": "check",
+   "vis": {
+    "n": 4,
+    "id": "s-four-outcomes",
+    "slideId": null
+   },
+   "audio": {
+    "src": "guide-02-community-model-9gUnFBtxrM.mp3",
+    "clip": "NAR-02",
+    "t": 1.19,
+    "muted": false
+   },
+   "cc": "Section two, the Community Model.",
+   "guide": {
+    "state": "playing",
+    "clip": "NAR-02",
+    "slideId": null,
+    "gen": null,
+    "status": "Narrating slide 4 of 39 · 02 Community model"
+   },
+   "hash": "#/04",
+   "step": "slide 4",
+   "expect": 4
+  },
+  {
+   "scenario": "S10-sweep-desktop",
+   "t": "2026-10-01T06:15:02.725Z",
+   "ms": 7301,
+   "type": "key",
+   "vis": {
+    "n": 4,
+    "id": "s-four-outcomes",
+    "slideId": null
+   },
+   "audio": {
+    "src": "guide-02-community-model-9gUnFBtxrM.mp3",
+    "clip": "NAR-02",
+    "t": 1.19,
+    "muted": false
+   },
+   "cc": "Section two, the Community Model.",
+   "guide": {
+    "state": "playing",
+    "clip": "NAR-02",
+    "slideId": null,
+    "gen": null,
+    "status": "Narrating slide 4 of 39 · 02 Community model"
+   },
+   "hash": "#/04",
+   "key": "ArrowRight"
+  },
+  {
+   "scenario": "S10-sweep-desktop",
+   "t": "2026-10-01T06:15:02.825Z",
+   "ms": 7401,
+   "type": "sample",
+   "vis": {
+    "n": 5,
+    "id": "s-managed-programme",
+    "slideId": null
+   },
+   "audio": {
+    "src": "guide-02-community-model-9gUnFBtxrM.mp3",
+    "clip": "NAR-02",
+    "t": 1.29,
+    "muted": false
+   },
+   "cc": "Section two, the Community Model.",
+   "guide": {
+    "state": "playing",
+    "clip": "NAR-02",
+    "slideId": null,
+    "gen": null,
+    "status": "Narrating slide 5 of 39 · 02 Community model"
+   },
+   "hash": "#/05"
+  },
+  {
+   "scenario": "S10-sweep-desktop",
+   "t": "2026-10-01T06:15:03.842Z",
+   "ms": 8418,
+   "type": "hashchange",
+   "vis": {
+    "n": 5,
+    "id": "s-managed-programme",
+    "slideId": null
+   },
+   "audio": {
+    "src": "guide-02-community-model-9gUnFBtxrM.mp3",
+    "clip": "NAR-02",
+    "t": 2.31,
+    "muted": false
+   },
+   "cc": "Every webinar, chapter event and challenge should lead somewhere real, so the model is built around four outcomes for every participant.",
+   "guide": {
+    "state": "playing",
+    "clip": "NAR-02",
+    "slideId": null,
+    "gen": null,
+    "status": "Narrating slide 5 of 39 · 02 Community model"
+   },
+   "hash": "#/7"
+  },
+  {
+   "scenario": "S10-sweep-desktop",
+   "t": "2026-10-01T06:15:03.925Z",
+   "ms": 8501,
+   "type": "sample",
+   "vis": {
+    "n": 7,
+    "id": "s-country-chapters",
+    "slideId": null
+   },
+   "audio": {
+    "src": "guide-02-community-model-9gUnFBtxrM.mp3",
+    "clip": "NAR-02",
+    "t": 2.39,
+    "muted": false
+   },
+   "cc": "Every webinar, chapter event and challenge should lead somewhere real, so the model is built around four outcomes for every participant.",
+   "guide": {
+    "state": "playing",
+    "clip": "NAR-02",
+    "slideId": null,
+    "gen": null,
+    "status": "Narrating slide 7 of 39 · 02 Community model"
+   },
+   "hash": "#/07"
+  },
+  {
+   "scenario": "S10-sweep-desktop",
+   "t": "2026-10-01T06:15:04.060Z",
+   "ms": 8636,
+   "type": "check",
+   "vis": {
+    "n": 7,
+    "id": "s-country-chapters",
+    "slideId": null
+   },
+   "audio": {
+    "src": "guide-02-community-model-9gUnFBtxrM.mp3",
+    "clip": "NAR-02",
+    "t": 2.53,
+    "muted": false
+   },
+   "cc": "Every webinar, chapter event and challenge should lead somewhere real, so the model is built around four outcomes for every participant.",
+   "guide": {
+    "state": "playing",
+    "clip": "NAR-02",
+    "slideId": null,
+    "gen": null,
+    "status": "Narrating slide 7 of 39 · 02 Community model"
+   },
+   "hash": "#/07",
+   "step": "slide 5",
+   "expect": 5
+  },
+  {
+   "scenario": "S10-sweep-desktop",
+   "t": "2026-10-01T06:15:04.061Z",
+   "ms": 8637,
+   "type": "key",
+   "vis": {
+    "n": 7,
+    "id": "s-country-chapters",
+    "slideId": null
+   },
+   "audio": {
+    "src": "guide-02-community-model-9gUnFBtxrM.mp3",
+    "clip": "NAR-02",
+    "t": 2.53,
+    "muted": false
+   },
+   "cc": "Every webinar, chapter event and challenge should lead somewhere real, so the model is built around four outcomes for every participant.",
+   "guide": {
+    "state": "playing",
+    "clip": "NAR-02",
+    "slideId": null,
+    "gen": null,
+    "status": "Narrating slide 7 of 39 · 02 Community model"
+   },
+   "hash": "#/07",
+   "key": "ArrowRight"
+  },
+  {
+   "scenario": "S10-sweep-desktop",
+   "t": "2026-10-01T06:15:04.125Z",
+   "ms": 8701,
+   "type": "sample",
+   "vis": {
+    "n": 8,
+    "id": "s-learning-formats",
+    "slideId": null
+   },
+   "audio": {
+    "src": "guide-02-community-model-9gUnFBtxrM.mp3",
+    "clip": "NAR-02",
+    "t": 2.59,
+    "muted": false
+   },
+   "cc": "Every webinar, chapter event and challenge should lead somewhere real, so the model is built around four outcomes for every participant.",
+   "guide": {
+    "state": "playing",
+    "clip": "NAR-02",
+    "slideId": null,
+    "gen": null,
+    "status": "Narrating slide 7 of 39 · 02 Community model"
+   },
+   "hash": "#/08"
+  },
+  {
+   "scenario": "S10-sweep-desktop",
+   "t": "2026-10-01T06:15:05.395Z",
+   "ms": 9971,
+   "type": "check",
+   "vis": {
+    "n": 8,
+    "id": "s-learning-formats",
+    "slideId": null
+   },
+   "audio": {
+    "src": "guide-02-community-model-9gUnFBtxrM.mp3",
+    "clip": "NAR-02",
+    "t": 3.86,
+    "muted": false
+   },
+   "cc": "Every webinar, chapter event and challenge should lead somewhere real, so the model is built around four outcomes for every participant.",
+   "guide": {
+    "state": "playing",
+    "clip": "NAR-02",
+    "slideId": null,
+    "gen": null,
+    "status": "Narrating slide 8 of 39 · 02 Community model"
+   },
+   "hash": "#/08",
+   "step": "slide 6",
+   "expect": 6
+  },
+  {
+   "scenario": "S10-sweep-desktop",
+   "t": "2026-10-01T06:15:05.396Z",
+   "ms": 9972,
+   "type": "key",
+   "vis": {
+    "n": 8,
+    "id": "s-learning-formats",
+    "slideId": null
+   },
+   "audio": {
+    "src": "guide-02-community-model-9gUnFBtxrM.mp3",
+    "clip": "NAR-02",
+    "t": 3.86,
+    "muted": false
+   },
+   "cc": "Every webinar, chapter event and challenge should lead somewhere real, so the model is built around four outcomes for every participant.",
+   "guide": {
+    "state": "playing",
+    "clip": "NAR-02",
+    "slideId": null,
+    "gen": null,
+    "status": "Narrating slide 8 of 39 · 02 Community model"
+   },
+   "hash": "#/08",
+   "key": "ArrowRight"
+  },
+  {
+   "scenario": "S10-sweep-desktop",
+   "t": "2026-10-01T06:15:05.425Z",
+   "ms": 10001,
+   "type": "sample",
+   "vis": {
+    "n": 9,
+    "id": "s-challenges-showcases",
+    "slideId": null
+   },
+   "audio": {
+    "src": "guide-02-community-model-9gUnFBtxrM.mp3",
+    "clip": "NAR-02",
+    "t": 3.89,
+    "muted": false
+   },
+   "cc": "Every webinar, chapter event and challenge should lead somewhere real, so the model is built around four outcomes for every participant.",
+   "guide": {
+    "state": "playing",
+    "clip": "NAR-02",
+    "slideId": null,
+    "gen": null,
+    "status": "Narrating slide 8 of 39 · 02 Community model"
+   },
+   "hash": "#/09"
+  },
+  {
+   "scenario": "S10-sweep-desktop",
+   "t": "2026-10-01T06:15:06.732Z",
+   "ms": 11308,
+   "type": "check",
+   "vis": {
+    "n": 9,
+    "id": "s-challenges-showcases",
+    "slideId": null
+   },
+   "audio": {
+    "src": "guide-02-community-model-9gUnFBtxrM.mp3",
+    "clip": "NAR-02",
+    "t": 5.2,
+    "muted": false
+   },
+   "cc": "Every webinar, chapter event and challenge should lead somewhere real, so the model is built around four outcomes for every participant.",
+   "guide": {
+    "state": "playing",
+    "clip": "NAR-02",
+    "slideId": null,
+    "gen": null,
+    "status": "Narrating slide 9 of 39 · 02 Community model"
+   },
+   "hash": "#/09",
+   "step": "slide 7",
+   "expect": 7
+  },
+  {
+   "scenario": "S10-sweep-desktop",
+   "t": "2026-10-01T06:15:06.734Z",
+   "ms": 11310,
+   "type": "key",
+   "vis": {
+    "n": 9,
+    "id": "s-challenges-showcases",
+    "slideId": null
+   },
+   "audio": {
+    "src": "guide-02-community-model-9gUnFBtxrM.mp3",
+    "clip": "NAR-02",
+    "t": 5.2,
+    "muted": false
+   },
+   "cc": "Every webinar, chapter event and challenge should lead somewhere real, so the model is built around four outcomes for every participant.",
+   "guide": {
+    "state": "playing",
+    "clip": "NAR-02",
+    "slideId": null,
+    "gen": null,
+    "status": "Narrating slide 9 of 39 · 02 Community model"
+   },
+   "hash": "#/09",
+   "key": "ArrowRight"
+  },
+  {
+   "scenario": "S10-sweep-desktop",
+   "t": "2026-10-01T06:15:06.825Z",
+   "ms": 11401,
+   "type": "sample",
+   "vis": {
+    "n": 10,
+    "id": "s-office-hours",
+    "slideId": null
+   },
+   "audio": {
+    "src": "guide-02-community-model-9gUnFBtxrM.mp3",
+    "clip": "NAR-02",
+    "t": 5.29,
+    "muted": false
+   },
+   "cc": "Every webinar, chapter event and challenge should lead somewhere real, so the model is built around four outcomes for every participant.",
+   "guide": {
+    "state": "playing",
+    "clip": "NAR-02",
+    "slideId": null,
+    "gen": null,
+    "status": "Narrating slide 10 of 39 · 02 Community model"
+   },
+   "hash": "#/10"
+  },
+  {
+   "scenario": "S10-sweep-desktop",
+   "t": "2026-10-01T06:15:08.075Z",
+   "ms": 12651,
+   "type": "check",
+   "vis": {
+    "n": 10,
+    "id": "s-office-hours",
+    "slideId": null
+   },
+   "audio": {
+    "src": "guide-02-community-model-9gUnFBtxrM.mp3",
+    "clip": "NAR-02",
+    "t": 6.54,
+    "muted": false
+   },
+   "cc": "Every webinar, chapter event and challenge should lead somewhere real, so the model is built around four outcomes for every participant.",
+   "guide": {
+    "state": "playing",
+    "clip": "NAR-02",
+    "slideId": null,
+    "gen": null,
+    "status": "Narrating slide 10 of 39 · 02 Community model"
+   },
+   "hash": "#/10",
+   "step": "slide 8",
+   "expect": 8
+  },
+  {
+   "scenario": "S10-sweep-desktop",
+   "t": "2026-10-01T06:15:08.077Z",
+   "ms": 12653,
+   "type": "key",
+   "vis": {
+    "n": 10,
+    "id": "s-office-hours",
+    "slideId": null
+   },
+   "audio": {
+    "src": "guide-02-community-model-9gUnFBtxrM.mp3",
+    "clip": "NAR-02",
+    "t": 6.54,
+    "muted": false
+   },
+   "cc": "Every webinar, chapter event and challenge should lead somewhere real, so the model is built around four outcomes for every participant.",
+   "guide": {
+    "state": "playing",
+    "clip": "NAR-02",
+    "slideId": null,
+    "gen": null,
+    "status": "Narrating slide 10 of 39 · 02 Community model"
+   },
+   "hash": "#/10",
+   "key": "ArrowRight"
+  },
+  {
+   "scenario": "S10-sweep-desktop",
+   "t": "2026-10-01T06:15:08.126Z",
+   "ms": 12702,
+   "type": "sample",
+   "vis": {
+    "n": 11,
+    "id": "s-agent-marketplace",
+    "slideId": null
+   },
+   "audio": {
+    "src": "guide-02-community-model-9gUnFBtxrM.mp3",
+    "clip": "NAR-02",
+    "t": 6.59,
+    "muted": false
+   },
+   "cc": "Every webinar, chapter event and challenge should lead somewhere real, so the model is built around four outcomes for every participant.",
+   "guide": {
+    "state": "playing",
+    "clip": "NAR-02",
+    "slideId": null,
+    "gen": null,
+    "status": "Narrating slide 10 of 39 · 02 Community model"
+   },
+   "hash": "#/11"
+  },
+  {
+   "scenario": "S10-sweep-desktop",
+   "t": "2026-10-01T06:15:08.145Z",
+   "ms": 12721,
+   "type": "media:seeked",
+   "vis": {
+    "n": 11,
+    "id": "s-agent-marketplace",
+    "slideId": null
+   },
+   "audio": {
+    "src": "guide-02-community-model-9gUnFBtxrM.mp3",
+    "clip": "NAR-02",
+    "t": 11.13,
+    "muted": false
+   },
+   "cc": "Learn agentic AI, build a useful agent through the Builder Journey and Marketplace, deploy it through a named Accountable Institution, and measure a real-world benefit with baseline evidence of time saved, better service, or wider reach.",
+   "guide": {
+    "state": "buffering",
+    "clip": "NAR-02",
+    "slideId": null,
+    "gen": null,
+    "status": "Narrating slide 11 of 39 · 02 Community model"
+   },
+   "hash": "#/11",
+   "el": "guide-02-community-model-9gUnFBtxrM.mp3",
+   "ct": 11.13
+  },
+  {
+   "scenario": "S10-sweep-desktop",
+   "t": "2026-10-01T06:15:08.145Z",
+   "ms": 12721,
+   "type": "media:canplay",
+   "vis": {
+    "n": 11,
+    "id": "s-agent-marketplace",
+    "slideId": null
+   },
+   "audio": {
+    "src": "guide-02-community-model-9gUnFBtxrM.mp3",
+    "clip": "NAR-02",
+    "t": 11.13,
+    "muted": false
+   },
+   "cc": "Learn agentic AI, build a useful agent through the Builder Journey and Marketplace, deploy it through a named Accountable Institution, and measure a real-world benefit with baseline evidence of time saved, better service, or wider reach.",
+   "guide": {
+    "state": "buffering",
+    "clip": "NAR-02",
+    "slideId": null,
+    "gen": null,
+    "status": "Narrating slide 11 of 39 · 02 Community model"
+   },
+   "hash": "#/11",
+   "el": "guide-02-community-model-9gUnFBtxrM.mp3",
+   "ct": 11.13
+  },
+  {
+   "scenario": "S10-sweep-desktop",
+   "t": "2026-10-01T06:15:08.145Z",
+   "ms": 12721,
+   "type": "media:playing",
+   "vis": {
+    "n": 11,
+    "id": "s-agent-marketplace",
+    "slideId": null
+   },
+   "audio": {
+    "src": "guide-02-community-model-9gUnFBtxrM.mp3",
+    "clip": "NAR-02",
+    "t": 11.13,
+    "muted": false
+   },
+   "cc": "Learn agentic AI, build a useful agent through the Builder Journey and Marketplace, deploy it through a named Accountable Institution, and measure a real-world benefit with baseline evidence of time saved, better service, or wider reach.",
+   "guide": {
+    "state": "playing",
+    "clip": "NAR-02",
+    "slideId": null,
+    "gen": null,
+    "status": "Narrating slide 11 of 39 · 02 Community model"
+   },
+   "hash": "#/11",
+   "el": "guide-02-community-model-9gUnFBtxrM.mp3",
+   "ct": 11.13
+  },
+  {
+   "scenario": "S10-sweep-desktop",
+   "t": "2026-10-01T06:15:08.225Z",
+   "ms": 12801,
+   "type": "sample",
+   "vis": {
+    "n": 11,
+    "id": "s-agent-marketplace",
+    "slideId": null
+   },
+   "audio": {
+    "src": "guide-02-community-model-9gUnFBtxrM.mp3",
+    "clip": "NAR-02",
+    "t": 11.15,
+    "muted": false
+   },
+   "cc": "Learn agentic AI, build a useful agent through the Builder Journey and Marketplace, deploy it through a named Accountable Institution, and measure a real-world benefit with baseline evidence of time saved, better service, or wider reach.",
+   "guide": {
+    "state": "playing",
+    "clip": "NAR-02",
+    "slideId": null,
+    "gen": null,
+    "status": "Narrating slide 11 of 39 · 02 Community model"
+   },
+   "hash": "#/11"
+  },
+  {
+   "scenario": "S10-sweep-desktop",
+   "t": "2026-10-01T06:15:09.417Z",
+   "ms": 13993,
+   "type": "check",
+   "vis": {
+    "n": 11,
+    "id": "s-agent-marketplace",
+    "slideId": null
+   },
+   "audio": {
+    "src": "guide-02-community-model-9gUnFBtxrM.mp3",
+    "clip": "NAR-02",
+    "t": 12.33,
+    "muted": false
+   },
+   "cc": "Learn agentic AI, build a useful agent through the Builder Journey and Marketplace, deploy it through a named Accountable Institution, and measure a real-world benefit with baseline evidence of time saved, better service, or wider reach.",
+   "guide": {
+    "state": "playing",
+    "clip": "NAR-02",
+    "slideId": null,
+    "gen": null,
+    "status": "Narrating slide 11 of 39 · 02 Community model"
+   },
+   "hash": "#/11",
+   "step": "slide 9",
+   "expect": 9
+  },
+  {
+   "scenario": "S10-sweep-desktop",
+   "t": "2026-10-01T06:15:09.419Z",
+   "ms": 13995,
+   "type": "key",
+   "vis": {
+    "n": 11,
+    "id": "s-agent-marketplace",
+    "slideId": null
+   },
+   "audio": {
+    "src": "guide-02-community-model-9gUnFBtxrM.mp3",
+    "clip": "NAR-02",
+    "t": 12.33,
+    "muted": false
+   },
+   "cc": "Learn agentic AI, build a useful agent through the Builder Journey and Marketplace, deploy it through a named Accountable Institution, and measure a real-world benefit with baseline evidence of time saved, better service, or wider reach.",
+   "guide": {
+    "state": "playing",
+    "clip": "NAR-02",
+    "slideId": null,
+    "gen": null,
+    "status": "Narrating slide 11 of 39 · 02 Community model"
+   },
+   "hash": "#/11",
+   "key": "ArrowRight"
+  },
+  {
+   "scenario": "S10-sweep-desktop",
+   "t": "2026-10-01T06:15:09.432Z",
+   "ms": 14008,
+   "type": "sample",
+   "vis": {
+    "n": 12,
+    "id": "s-decision-table",
+    "slideId": null
+   },
+   "audio": {
+    "src": "guide-02-community-model-9gUnFBtxrM.mp3",
+    "clip": "NAR-02",
+    "t": 12.34,
+    "muted": false
+   },
+   "cc": "Learn agentic AI, build a useful agent through the Builder Journey and Marketplace, deploy it through a named Accountable Institution, and measure a real-world benefit with baseline evidence of time saved, better service, or wider reach.",
+   "guide": {
+    "state": "playing",
+    "clip": "NAR-02",
+    "slideId": null,
+    "gen": null,
+    "status": "Narrating slide 11 of 39 · 02 Community model"
+   },
+   "hash": "#/12"
+  },
+  {
+   "scenario": "S10-sweep-desktop",
+   "t": "2026-10-01T06:15:10.753Z",
+   "ms": 15329,
+   "type": "check",
+   "vis": {
+    "n": 12,
+    "id": "s-decision-table",
+    "slideId": null
+   },
+   "audio": {
+    "src": "guide-02-community-model-9gUnFBtxrM.mp3",
+    "clip": "NAR-02",
+    "t": 13.66,
+    "muted": false
+   },
+   "cc": "Learn agentic AI, build a useful agent through the Builder Journey and Marketplace, deploy it through a named Accountable Institution, and measure a real-world benefit with baseline evidence of time saved, better service, or wider reach.",
+   "guide": {
+    "state": "playing",
+    "clip": "NAR-02",
+    "slideId": null,
+    "gen": null,
+    "status": "Narrating slide 12 of 39 · 02 Community model"
+   },
+   "hash": "#/12",
+   "step": "slide 10",
+   "expect": 10
+  },
+  {
+   "scenario": "S10-sweep-desktop",
+   "t": "2026-10-01T06:15:10.754Z",
+   "ms": 15330,
+   "type": "key",
+   "vis": {
+    "n": 12,
+    "id": "s-decision-table",
+    "slideId": null
+   },
+   "audio": {
+    "src": "guide-02-community-model-9gUnFBtxrM.mp3",
+    "clip": "NAR-02",
+    "t": 13.66,
+    "muted": false
+   },
+   "cc": "Learn agentic AI, build a useful agent through the Builder Journey and Marketplace, deploy it through a named Accountable Institution, and measure a real-world benefit with baseline evidence of time saved, better service, or wider reach.",
+   "guide": {
+    "state": "playing",
+    "clip": "NAR-02",
+    "slideId": null,
+    "gen": null,
+    "status": "Narrating slide 12 of 39 · 02 Community model"
+   },
+   "hash": "#/12",
+   "key": "ArrowRight"
+  },
+  {
+   "scenario": "S10-sweep-desktop",
+   "t": "2026-10-01T06:15:10.816Z",
+   "ms": 15392,
+   "type": "play()",
+   "vis": {
+    "n": 13,
+    "id": "s-pillar-plugins",
+    "slideId": null
+   },
+   "audio": {
+    "src": "guide-02-community-model-9gUnFBtxrM.mp3",
+    "clip": "NAR-02",
+    "t": 0,
+    "muted": false
+   },
+   "cc": "Learn agentic AI, build a useful agent through the Builder Journey and Marketplace, deploy it through a named Accountable Institution, and measure a real-world benefit with baseline evidence of time saved, better service, or wider reach.",
+   "guide": {
+    "state": "playing",
+    "clip": "NAR-02",
+    "slideId": null,
+    "gen": null,
+    "status": "Narrating slide 12 of 39 · 02 Community model"
+   },
+   "hash": "#/13",
+   "el": "guide-02-community-model-9gUnFBtxrM.mp3",
+   "ct": 0
+  },
+  {
+   "scenario": "S10-sweep-desktop",
+   "t": "2026-10-01T06:15:10.817Z",
+   "ms": 15393,
+   "type": "media:emptied",
+   "vis": {
+    "n": 13,
+    "id": "s-pillar-plugins",
+    "slideId": null
+   },
+   "audio": {
+    "src": "guide-02-community-model-9gUnFBtxrM.mp3",
+    "clip": "NAR-02",
+    "t": 0,
+    "muted": false
+   },
+   "cc": "Section three, six pillars.",
+   "guide": {
+    "state": "starting",
+    "clip": "NAR-03",
+    "slideId": null,
+    "gen": null,
+    "status": "Narrating slide 13 of 39 · 03 Six pillars"
+   },
+   "hash": "#/13",
+   "el": "guide-02-community-model-9gUnFBtxrM.mp3",
+   "ct": 0
+  },
+  {
+   "scenario": "S10-sweep-desktop",
+   "t": "2026-10-01T06:15:10.818Z",
+   "ms": 15394,
+   "type": "media:loadstart",
+   "vis": {
+    "n": 13,
+    "id": "s-pillar-plugins",
+    "slideId": null
+   },
+   "audio": {
+    "src": "guide-03-six-pillars-yxVqZJ2k1a.mp3",
+    "clip": "NAR-03",
+    "t": 0,
+    "muted": false
+   },
+   "cc": "Section three, six pillars.",
+   "guide": {
+    "state": "buffering",
+    "clip": "NAR-03",
+    "slideId": null,
+    "gen": null,
+    "status": "Narrating slide 13 of 39 · 03 Six pillars"
+   },
+   "hash": "#/13",
+   "el": "guide-03-six-pillars-yxVqZJ2k1a.mp3",
+   "ct": 0
+  },
+  {
+   "scenario": "S10-sweep-desktop",
+   "t": "2026-10-01T06:15:10.818Z",
+   "ms": 15394,
+   "type": "media:loadstart",
+   "vis": {
+    "n": 13,
+    "id": "s-pillar-plugins",
+    "slideId": null
+   },
+   "audio": {
+    "src": "guide-03-six-pillars-yxVqZJ2k1a.mp3",
+    "clip": "NAR-03",
+    "t": 0,
+    "muted": false
+   },
+   "cc": "Section three, six pillars.",
+   "guide": {
+    "state": "buffering",
+    "clip": "NAR-03",
+    "slideId": null,
+    "gen": null,
+    "status": "Narrating slide 13 of 39 · 03 Six pillars"
+   },
+   "hash": "#/13",
+   "el": "guide-04-pledge-and-signing-PWeXZj1Rgc.mp3",
+   "ct": 0
+  },
+  {
+   "scenario": "S10-sweep-desktop",
+   "t": "2026-10-01T06:15:10.821Z",
+   "ms": 15397,
+   "type": "media:canplay",
+   "vis": {
+    "n": 13,
+    "id": "s-pillar-plugins",
+    "slideId": null
+   },
+   "audio": {
+    "src": "guide-03-six-pillars-yxVqZJ2k1a.mp3",
+    "clip": "NAR-03",
+    "t": 0,
+    "muted": false
+   },
+   "cc": "Section three, six pillars.",
+   "guide": {
+    "state": "buffering",
+    "clip": "NAR-03",
+    "slideId": null,
+    "gen": null,
+    "status": "Narrating slide 13 of 39 · 03 Six pillars"
+   },
+   "hash": "#/13",
+   "el": "guide-03-six-pillars-yxVqZJ2k1a.mp3",
+   "ct": 0
+  },
+  {
+   "scenario": "S10-sweep-desktop",
+   "t": "2026-10-01T06:15:10.821Z",
+   "ms": 15397,
+   "type": "media:playing",
+   "vis": {
+    "n": 13,
+    "id": "s-pillar-plugins",
+    "slideId": null
+   },
+   "audio": {
+    "src": "guide-03-six-pillars-yxVqZJ2k1a.mp3",
+    "clip": "NAR-03",
+    "t": 0,
+    "muted": false
+   },
+   "cc": "Section three, six pillars.",
+   "guide": {
+    "state": "playing",
+    "clip": "NAR-03",
+    "slideId": null,
+    "gen": null,
+    "status": "Narrating slide 13 of 39 · 03 Six pillars"
+   },
+   "hash": "#/13",
+   "el": "guide-03-six-pillars-yxVqZJ2k1a.mp3",
+   "ct": 0
+  },
+  {
+   "scenario": "S10-sweep-desktop",
+   "t": "2026-10-01T06:15:10.821Z",
+   "ms": 15397,
+   "type": "play():resolved",
+   "vis": {
+    "n": 13,
+    "id": "s-pillar-plugins",
+    "slideId": null
+   },
+   "audio": {
+    "src": "guide-03-six-pillars-yxVqZJ2k1a.mp3",
+    "clip": "NAR-03",
+    "t": 0,
+    "muted": false
+   },
+   "cc": "Section three, six pillars.",
+   "guide": {
+    "state": "playing",
+    "clip": "NAR-03",
+    "slideId": null,
+    "gen": null,
+    "status": "Narrating slide 13 of 39 · 03 Six pillars"
+   },
+   "hash": "#/13",
+   "el": "guide-02-community-model-9gUnFBtxrM.mp3"
+  },
+  {
+   "scenario": "S10-sweep-desktop",
+   "t": "2026-10-01T06:15:10.829Z",
+   "ms": 15405,
+   "type": "sample",
+   "vis": {
+    "n": 13,
+    "id": "s-pillar-plugins",
+    "slideId": null
+   },
+   "audio": {
+    "src": "guide-03-six-pillars-yxVqZJ2k1a.mp3",
+    "clip": "NAR-03",
+    "t": 0,
+    "muted": false
+   },
+   "cc": "Section three, six pillars.",
+   "guide": {
+    "state": "playing",
+    "clip": "NAR-03",
+    "slideId": null,
+    "gen": null,
+    "status": "Narrating slide 13 of 39 · 03 Six pillars"
+   },
+   "hash": "#/13"
+  },
+  {
+   "scenario": "S10-sweep-desktop",
+   "t": "2026-10-01T06:15:10.829Z",
+   "ms": 15405,
+   "type": "media:canplay",
+   "vis": {
+    "n": 13,
+    "id": "s-pillar-plugins",
+    "slideId": null
+   },
+   "audio": {
+    "src": "guide-03-six-pillars-yxVqZJ2k1a.mp3",
+    "clip": "NAR-03",
+    "t": 0,
+    "muted": false
+   },
+   "cc": "Section three, six pillars.",
+   "guide": {
+    "state": "playing",
+    "clip": "NAR-03",
+    "slideId": null,
+    "gen": null,
+    "status": "Narrating slide 13 of 39 · 03 Six pillars"
+   },
+   "hash": "#/13",
+   "el": "guide-04-pledge-and-signing-PWeXZj1Rgc.mp3",
+   "ct": 0
+  },
+  {
+   "scenario": "S10-sweep-desktop",
+   "t": "2026-10-01T06:15:12.087Z",
+   "ms": 16663,
+   "type": "check",
+   "vis": {
+    "n": 13,
+    "id": "s-pillar-plugins",
+    "slideId": null
+   },
+   "audio": {
+    "src": "guide-03-six-pillars-yxVqZJ2k1a.mp3",
+    "clip": "NAR-03",
+    "t": 1.17,
+    "muted": false
+   },
+   "cc": "Section three, six pillars.",
+   "guide": {
+    "state": "playing",
+    "clip": "NAR-03",
+    "slideId": null,
+    "gen": null,
+    "status": "Narrating slide 13 of 39 · 03 Six pillars"
+   },
+   "hash": "#/13",
+   "step": "slide 11",
+   "expect": 11
+  },
+  {
+   "scenario": "S10-sweep-desktop",
+   "t": "2026-10-01T06:15:12.088Z",
+   "ms": 16664,
+   "type": "key",
+   "vis": {
+    "n": 13,
+    "id": "s-pillar-plugins",
+    "slideId": null
+   },
+   "audio": {
+    "src": "guide-03-six-pillars-yxVqZJ2k1a.mp3",
+    "clip": "NAR-03",
+    "t": 1.18,
+    "muted": false
+   },
+   "cc": "Section three, six pillars.",
+   "guide": {
+    "state": "playing",
+    "clip": "NAR-03",
+    "slideId": null,
+    "gen": null,
+    "status": "Narrating slide 13 of 39 · 03 Six pillars"
+   },
+   "hash": "#/13",
+   "key": "ArrowRight"
+  },
+  {
+   "scenario": "S10-sweep-desktop",
+   "t": "2026-10-01T06:15:12.133Z",
+   "ms": 16709,
+   "type": "sample",
+   "vis": {
+    "n": 14,
+    "id": "s-pillar-skills",
+    "slideId": null
+   },
+   "audio": {
+    "src": "guide-03-six-pillars-yxVqZJ2k1a.mp3",
+    "clip": "NAR-03",
+    "t": 1.22,
+    "muted": false
+   },
+   "cc": "Section three, six pillars.",
+   "guide": {
+    "state": "playing",
+    "clip": "NAR-03",
+    "slideId": null,
+    "gen": null,
+    "status": "Narrating slide 13 of 39 · 03 Six pillars"
+   },
+   "hash": "#/14"
+  },
+  {
+   "scenario": "S10-sweep-desktop",
+   "t": "2026-10-01T06:15:12.157Z",
+   "ms": 16733,
+   "type": "media:seeked",
+   "vis": {
+    "n": 14,
+    "id": "s-pillar-skills",
+    "slideId": null
+   },
+   "audio": {
+    "src": "guide-03-six-pillars-yxVqZJ2k1a.mp3",
+    "clip": "NAR-03",
+    "t": 8.61,
+    "muted": false
+   },
+   "cc": "Reusable skills are built once and shared across the community.",
+   "guide": {
+    "state": "buffering",
+    "clip": "NAR-03",
+    "slideId": null,
+    "gen": null,
+    "status": "Narrating slide 14 of 39 · 03 Six pillars"
+   },
+   "hash": "#/14",
+   "el": "guide-03-six-pillars-yxVqZJ2k1a.mp3",
+   "ct": 8.61
+  },
+  {
+   "scenario": "S10-sweep-desktop",
+   "t": "2026-10-01T06:15:12.157Z",
+   "ms": 16733,
+   "type": "media:canplay",
+   "vis": {
+    "n": 14,
+    "id": "s-pillar-skills",
+    "slideId": null
+   },
+   "audio": {
+    "src": "guide-03-six-pillars-yxVqZJ2k1a.mp3",
+    "clip": "NAR-03",
+    "t": 8.61,
+    "muted": false
+   },
+   "cc": "Reusable skills are built once and shared across the community.",
+   "guide": {
+    "state": "buffering",
+    "clip": "NAR-03",
+    "slideId": null,
+    "gen": null,
+    "status": "Narrating slide 14 of 39 · 03 Six pillars"
+   },
+   "hash": "#/14",
+   "el": "guide-03-six-pillars-yxVqZJ2k1a.mp3",
+   "ct": 8.61
+  },
+  {
+   "scenario": "S10-sweep-desktop",
+   "t": "2026-10-01T06:15:12.157Z",
+   "ms": 16733,
+   "type": "media:playing",
+   "vis": {
+    "n": 14,
+    "id": "s-pillar-skills",
+    "slideId": null
+   },
+   "audio": {
+    "src": "guide-03-six-pillars-yxVqZJ2k1a.mp3",
+    "clip": "NAR-03",
+    "t": 8.61,
+    "muted": false
+   },
+   "cc": "Reusable skills are built once and shared across the community.",
+   "guide": {
+    "state": "playing",
+    "clip": "NAR-03",
+    "slideId": null,
+    "gen": null,
+    "status": "Narrating slide 14 of 39 · 03 Six pillars"
+   },
+   "hash": "#/14",
+   "el": "guide-03-six-pillars-yxVqZJ2k1a.mp3",
+   "ct": 8.61
+  },
+  {
+   "scenario": "S10-sweep-desktop",
+   "t": "2026-10-01T06:15:12.225Z",
+   "ms": 16801,
+   "type": "sample",
+   "vis": {
+    "n": 14,
+    "id": "s-pillar-skills",
+    "slideId": null
+   },
+   "audio": {
+    "src": "guide-03-six-pillars-yxVqZJ2k1a.mp3",
+    "clip": "NAR-03",
+    "t": 8.62,
+    "muted": false
+   },
+   "cc": "Reusable skills are built once and shared across the community.",
+   "guide": {
+    "state": "playing",
+    "clip": "NAR-03",
+    "slideId": null,
+    "gen": null,
+    "status": "Narrating slide 14 of 39 · 03 Six pillars"
+   },
+   "hash": "#/14"
+  },
+  {
+   "scenario": "S10-sweep-desktop",
+   "t": "2026-10-01T06:15:13.421Z",
+   "ms": 17997,
+   "type": "check",
+   "vis": {
+    "n": 14,
+    "id": "s-pillar-skills",
+    "slideId": null
+   },
+   "audio": {
+    "src": "guide-03-six-pillars-yxVqZJ2k1a.mp3",
+    "clip": "NAR-03",
+    "t": 9.79,
+    "muted": false
+   },
+   "cc": "Reusable skills are built once and shared across the community.",
+   "guide": {
+    "state": "playing",
+    "clip": "NAR-03",
+    "slideId": null,
+    "gen": null,
+    "status": "Narrating slide 14 of 39 · 03 Six pillars"
+   },
+   "hash": "#/14",
+   "step": "slide 12",
+   "expect": 12
+  },
+  {
+   "scenario": "S10-sweep-desktop",
+   "t": "2026-10-01T06:15:13.422Z",
+   "ms": 17998,
+   "type": "key",
+   "vis": {
+    "n": 14,
+    "id": "s-pillar-skills",
+    "slideId": null
+   },
+   "audio": {
+    "src": "guide-03-six-pillars-yxVqZJ2k1a.mp3",
+    "clip": "NAR-03",
+    "t": 9.8,
+    "muted": false
+   },
+   "cc": "Reusable skills are built once and shared across the community.",
+   "guide": {
+    "state": "playing",
+    "clip": "NAR-03",
+    "slideId": null,
+    "gen": null,
+    "status": "Narrating slide 14 of 39 · 03 Six pillars"
+   },
+   "hash": "#/14",
+   "key": "ArrowRight"
+  },
+  {
+   "scenario": "S10-sweep-desktop",
+   "t": "2026-10-01T06:15:13.432Z",
+   "ms": 18008,
+   "type": "sample",
+   "vis": {
+    "n": 15,
+    "id": "s-pillar-open-ecosystem",
+    "slideId": null
+   },
+   "audio": {
+    "src": "guide-03-six-pillars-yxVqZJ2k1a.mp3",
+    "clip": "NAR-03",
+    "t": 9.81,
+    "muted": false
+   },
+   "cc": "Reusable skills are built once and shared across the community.",
+   "guide": {
+    "state": "playing",
+    "clip": "NAR-03",
+    "slideId": null,
+    "gen": null,
+    "status": "Narrating slide 14 of 39 · 03 Six pillars"
+   },
+   "hash": "#/15"
+  },
+  {
+   "scenario": "S10-sweep-desktop",
+   "t": "2026-10-01T06:15:14.757Z",
+   "ms": 19333,
+   "type": "check",
+   "vis": {
+    "n": 15,
+    "id": "s-pillar-open-ecosystem",
+    "slideId": null
+   },
+   "audio": {
+    "src": "guide-03-six-pillars-yxVqZJ2k1a.mp3",
+    "clip": "NAR-03",
+    "t": 11.13,
+    "muted": false
+   },
+   "cc": "Reusable skills are built once and shared across the community.",
+   "guide": {
+    "state": "playing",
+    "clip": "NAR-03",
+    "slideId": null,
+    "gen": null,
+    "status": "Narrating slide 15 of 39 · 03 Six pillars"
+   },
+   "hash": "#/15",
+   "step": "slide 13",
+   "expect": 13
+  },
+  {
+   "scenario": "S10-sweep-desktop",
+   "t": "2026-10-01T06:15:14.759Z",
+   "ms": 19335,
+   "type": "key",
+   "vis": {
+    "n": 15,
+    "id": "s-pillar-open-ecosystem",
+    "slideId": null
+   },
+   "audio": {
+    "src": "guide-03-six-pillars-yxVqZJ2k1a.mp3",
+    "clip": "NAR-03",
+    "t": 11.13,
+    "muted": false
+   },
+   "cc": "Reusable skills are built once and shared across the community.",
+   "guide": {
+    "state": "playing",
+    "clip": "NAR-03",
+    "slideId": null,
+    "gen": null,
+    "status": "Narrating slide 15 of 39 · 03 Six pillars"
+   },
+   "hash": "#/15",
+   "key": "ArrowRight"
+  },
+  {
+   "scenario": "S10-sweep-desktop",
+   "t": "2026-10-01T06:15:14.825Z",
+   "ms": 19401,
+   "type": "sample",
+   "vis": {
+    "n": 16,
+    "id": "s-pillar-cross-model",
+    "slideId": null
+   },
+   "audio": {
+    "src": "guide-03-six-pillars-yxVqZJ2k1a.mp3",
+    "clip": "NAR-03",
+    "t": 11.2,
+    "muted": false
+   },
+   "cc": "Reusable skills are built once and shared across the community.",
+   "guide": {
+    "state": "playing",
+    "clip": "NAR-03",
+    "slideId": null,
+    "gen": null,
+    "status": "Narrating slide 16 of 39 · 03 Six pillars"
+   },
+   "hash": "#/16"
+  },
+  {
+   "scenario": "S10-sweep-desktop",
+   "t": "2026-10-01T06:15:16.098Z",
+   "ms": 20674,
+   "type": "check",
+   "vis": {
+    "n": 16,
+    "id": "s-pillar-cross-model",
+    "slideId": null
+   },
+   "audio": {
+    "src": "guide-03-six-pillars-yxVqZJ2k1a.mp3",
+    "clip": "NAR-03",
+    "t": 12.47,
+    "muted": false
+   },
+   "cc": "Reusable skills are built once and shared across the community.",
+   "guide": {
+    "state": "playing",
+    "clip": "NAR-03",
+    "slideId": null,
+    "gen": null,
+    "status": "Narrating slide 16 of 39 · 03 Six pillars"
+   },
+   "hash": "#/16",
+   "step": "slide 14",
+   "expect": 14
+  },
+  {
+   "scenario": "S10-sweep-desktop",
+   "t": "2026-10-01T06:15:16.100Z",
+   "ms": 20676,
+   "type": "key",
+   "vis": {
+    "n": 16,
+    "id": "s-pillar-cross-model",
+    "slideId": null
+   },
+   "audio": {
+    "src": "guide-03-six-pillars-yxVqZJ2k1a.mp3",
+    "clip": "NAR-03",
+    "t": 12.47,
+    "muted": false
+   },
+   "cc": "Reusable skills are built once and shared across the community.",
+   "guide": {
+    "state": "playing",
+    "clip": "NAR-03",
+    "slideId": null,
+    "gen": null,
+    "status": "Narrating slide 16 of 39 · 03 Six pillars"
+   },
+   "hash": "#/16",
+   "key": "ArrowRight"
+  },
+  {
+   "scenario": "S10-sweep-desktop",
+   "t": "2026-10-01T06:15:16.125Z",
+   "ms": 20701,
+   "type": "sample",
+   "vis": {
+    "n": 17,
+    "id": "s-pillar-universal-licence",
+    "slideId": null
+   },
+   "audio": {
+    "src": "guide-03-six-pillars-yxVqZJ2k1a.mp3",
+    "clip": "NAR-03",
+    "t": 12.5,
+    "muted": false
+   },
+   "cc": "Reusable skills are built once and shared across the community.",
+   "guide": {
+    "state": "playing",
+    "clip": "NAR-03",
+    "slideId": null,
+    "gen": null,
+    "status": "Narrating slide 16 of 39 · 03 Six pillars"
+   },
+   "hash": "#/17"
+  },
+  {
+   "scenario": "S10-sweep-desktop",
+   "t": "2026-10-01T06:15:16.166Z",
+   "ms": 20742,
+   "type": "media:seeked",
+   "vis": {
+    "n": 17,
+    "id": "s-pillar-universal-licence",
+    "slideId": null
+   },
+   "audio": {
+    "src": "guide-03-six-pillars-yxVqZJ2k1a.mp3",
+    "clip": "NAR-03",
+    "t": 12.84,
+    "muted": false
+   },
+   "cc": "Universal API licences are managed by Athar, giving members access without duplicated procurement.",
+   "guide": {
+    "state": "buffering",
+    "clip": "NAR-03",
+    "slideId": null,
+    "gen": null,
+    "status": "Narrating slide 17 of 39 · 03 Six pillars"
+   },
+   "hash": "#/17",
+   "el": "guide-03-six-pillars-yxVqZJ2k1a.mp3",
+   "ct": 12.84
+  },
+  {
+   "scenario": "S10-sweep-desktop",
+   "t": "2026-10-01T06:15:16.166Z",
+   "ms": 20742,
+   "type": "media:canplay",
+   "vis": {
+    "n": 17,
+    "id": "s-pillar-universal-licence",
+    "slideId": null
+   },
+   "audio": {
+    "src": "guide-03-six-pillars-yxVqZJ2k1a.mp3",
+    "clip": "NAR-03",
+    "t": 12.84,
+    "muted": false
+   },
+   "cc": "Universal API licences are managed by Athar, giving members access without duplicated procurement.",
+   "guide": {
+    "state": "buffering",
+    "clip": "NAR-03",
+    "slideId": null,
+    "gen": null,
+    "status": "Narrating slide 17 of 39 · 03 Six pillars"
+   },
+   "hash": "#/17",
+   "el": "guide-03-six-pillars-yxVqZJ2k1a.mp3",
+   "ct": 12.84
+  },
+  {
+   "scenario": "S10-sweep-desktop",
+   "t": "2026-10-01T06:15:16.166Z",
+   "ms": 20742,
+   "type": "media:playing",
+   "vis": {
+    "n": 17,
+    "id": "s-pillar-universal-licence",
+    "slideId": null
+   },
+   "audio": {
+    "src": "guide-03-six-pillars-yxVqZJ2k1a.mp3",
+    "clip": "NAR-03",
+    "t": 12.84,
+    "muted": false
+   },
+   "cc": "Universal API licences are managed by Athar, giving members access without duplicated procurement.",
+   "guide": {
+    "state": "playing",
+    "clip": "NAR-03",
+    "slideId": null,
+    "gen": null,
+    "status": "Narrating slide 17 of 39 · 03 Six pillars"
+   },
+   "hash": "#/17",
+   "el": "guide-03-six-pillars-yxVqZJ2k1a.mp3",
+   "ct": 12.84
+  },
+  {
+   "scenario": "S10-sweep-desktop",
+   "t": "2026-10-01T06:15:16.226Z",
+   "ms": 20802,
+   "type": "sample",
+   "vis": {
+    "n": 17,
+    "id": "s-pillar-universal-licence",
+    "slideId": null
+   },
+   "audio": {
+    "src": "guide-03-six-pillars-yxVqZJ2k1a.mp3",
+    "clip": "NAR-03",
+    "t": 12.86,
+    "muted": false
+   },
+   "cc": "Universal API licences are managed by Athar, giving members access without duplicated procurement.",
+   "guide": {
+    "state": "playing",
+    "clip": "NAR-03",
+    "slideId": null,
+    "gen": null,
+    "status": "Narrating slide 17 of 39 · 03 Six pillars"
+   },
+   "hash": "#/17"
+  },
+  {
+   "scenario": "S10-sweep-desktop",
+   "t": "2026-10-01T06:15:17.439Z",
+   "ms": 22015,
+   "type": "check",
+   "vis": {
+    "n": 17,
+    "id": "s-pillar-universal-licence",
+    "slideId": null
+   },
+   "audio": {
+    "src": "guide-03-six-pillars-yxVqZJ2k1a.mp3",
+    "clip": "NAR-03",
+    "t": 14.03,
+    "muted": false
+   },
+   "cc": "Universal API licences are managed by Athar, giving members access without duplicated procurement.",
+   "guide": {
+    "state": "playing",
+    "clip": "NAR-03",
+    "slideId": null,
+    "gen": null,
+    "status": "Narrating slide 17 of 39 · 03 Six pillars"
+   },
+   "hash": "#/17",
+   "step": "slide 15",
+   "expect": 15
+  },
+  {
+   "scenario": "S10-sweep-desktop",
+   "t": "2026-10-01T06:15:17.441Z",
+   "ms": 22017,
+   "type": "key",
+   "vis": {
+    "n": 17,
+    "id": "s-pillar-universal-licence",
+    "slideId": null
+   },
+   "audio": {
+    "src": "guide-03-six-pillars-yxVqZJ2k1a.mp3",
+    "clip": "NAR-03",
+    "t": 14.03,
+    "muted": false
+   },
+   "cc": "Universal API licences are managed by Athar, giving members access without duplicated procurement.",
+   "guide": {
+    "state": "playing",
+    "clip": "NAR-03",
+    "slideId": null,
+    "gen": null,
+    "status": "Narrating slide 17 of 39 · 03 Six pillars"
+   },
+   "hash": "#/17",
+   "key": "ArrowRight"
+  },
+  {
+   "scenario": "S10-sweep-desktop",
+   "t": "2026-10-01T06:15:17.525Z",
+   "ms": 22101,
+   "type": "sample",
+   "vis": {
+    "n": 18,
+    "id": "s-pillar-upskilling",
+    "slideId": null
+   },
+   "audio": {
+    "src": "guide-03-six-pillars-yxVqZJ2k1a.mp3",
+    "clip": "NAR-03",
+    "t": 14.11,
+    "muted": false
+   },
+   "cc": "Universal API licences are managed by Athar, giving members access without duplicated procurement.",
+   "guide": {
+    "state": "playing",
+    "clip": "NAR-03",
+    "slideId": null,
+    "gen": null,
+    "status": "Narrating slide 18 of 39 · 03 Six pillars"
+   },
+   "hash": "#/18"
+  },
+  {
+   "scenario": "S10-sweep-desktop",
+   "t": "2026-10-01T06:15:18.775Z",
+   "ms": 23351,
+   "type": "check",
+   "vis": {
+    "n": 18,
+    "id": "s-pillar-upskilling",
+    "slideId": null
+   },
+   "audio": {
+    "src": "guide-03-six-pillars-yxVqZJ2k1a.mp3",
+    "clip": "NAR-03",
+    "t": 15.36,
+    "muted": false
+   },
+   "cc": "Universal API licences are managed by Athar, giving members access without duplicated procurement.",
+   "guide": {
+    "state": "playing",
+    "clip": "NAR-03",
+    "slideId": null,
+    "gen": null,
+    "status": "Narrating slide 18 of 39 · 03 Six pillars"
+   },
+   "hash": "#/18",
+   "step": "slide 16",
+   "expect": 16
+  },
+  {
+   "scenario": "S10-sweep-desktop",
+   "t": "2026-10-01T06:15:18.778Z",
+   "ms": 23354,
+   "type": "key",
+   "vis": {
+    "n": 18,
+    "id": "s-pillar-upskilling",
+    "slideId": null
+   },
+   "audio": {
+    "src": "guide-03-six-pillars-yxVqZJ2k1a.mp3",
+    "clip": "NAR-03",
+    "t": 15.36,
+    "muted": false
+   },
+   "cc": "Universal API licences are managed by Athar, giving members access without duplicated procurement.",
+   "guide": {
+    "state": "playing",
+    "clip": "NAR-03",
+    "slideId": null,
+    "gen": null,
+    "status": "Narrating slide 18 of 39 · 03 Six pillars"
+   },
+   "hash": "#/18",
+   "key": "ArrowRight"
+  },
+  {
+   "scenario": "S10-sweep-desktop",
+   "t": "2026-10-01T06:15:18.826Z",
+   "ms": 23403,
+   "type": "sample",
+   "vis": {
+    "n": 19,
+    "id": "s-pact-principles",
+    "slideId": null
+   },
+   "audio": {
+    "src": "guide-03-six-pillars-yxVqZJ2k1a.mp3",
+    "clip": "NAR-03",
+    "t": 15.41,
+    "muted": false
+   },
+   "cc": "Universal API licences are managed by Athar, giving members access without duplicated procurement.",
+   "guide": {
+    "state": "playing",
+    "clip": "NAR-03",
+    "slideId": null,
+    "gen": null,
+    "status": "Narrating slide 18 of 39 · 03 Six pillars"
+   },
+   "hash": "#/19"
+  },
+  {
+   "scenario": "S10-sweep-desktop",
+   "t": "2026-10-01T06:15:18.848Z",
+   "ms": 23424,
+   "type": "play()",
+   "vis": {
+    "n": 19,
+    "id": "s-pact-principles",
+    "slideId": null
+   },
+   "audio": {
+    "src": "guide-03-six-pillars-yxVqZJ2k1a.mp3",
+    "clip": "NAR-03",
+    "t": 0,
+    "muted": false
+   },
+   "cc": "Universal API licences are managed by Athar, giving members access without duplicated procurement.",
+   "guide": {
+    "state": "playing",
+    "clip": "NAR-03",
+    "slideId": null,
+    "gen": null,
+    "status": "Narrating slide 18 of 39 · 03 Six pillars"
+   },
+   "hash": "#/19",
+   "el": "guide-03-six-pillars-yxVqZJ2k1a.mp3",
+   "ct": 0
+  },
+  {
+   "scenario": "S10-sweep-desktop",
+   "t": "2026-10-01T06:15:18.848Z",
+   "ms": 23424,
+   "type": "media:emptied",
+   "vis": {
+    "n": 19,
+    "id": "s-pact-principles",
+    "slideId": null
+   },
+   "audio": {
+    "src": "guide-03-six-pillars-yxVqZJ2k1a.mp3",
+    "clip": "NAR-03",
+    "t": 0,
+    "muted": false
+   },
+   "cc": "Section four, Pledge and Signing.",
+   "guide": {
+    "state": "starting",
+    "clip": "NAR-04",
+    "slideId": null,
+    "gen": null,
+    "status": "Narrating slide 19 of 39 · 04 Pledge & signing"
+   },
+   "hash": "#/19",
+   "el": "guide-03-six-pillars-yxVqZJ2k1a.mp3",
+   "ct": 0
+  },
+  {
+   "scenario": "S10-sweep-desktop",
+   "t": "2026-10-01T06:15:18.851Z",
+   "ms": 23427,
+   "type": "media:loadstart",
+   "vis": {
+    "n": 19,
+    "id": "s-pact-principles",
+    "slideId": null
+   },
+   "audio": {
+    "src": "guide-04-pledge-and-signing-PWeXZj1Rgc.mp3",
+    "clip": "NAR-04",
+    "t": 0,
+    "muted": false
+   },
+   "cc": "Section four, Pledge and Signing.",
+   "guide": {
+    "state": "buffering",
+    "clip": "NAR-04",
+    "slideId": null,
+    "gen": null,
+    "status": "Narrating slide 19 of 39 · 04 Pledge & signing"
+   },
+   "hash": "#/19",
+   "el": "guide-04-pledge-and-signing-PWeXZj1Rgc.mp3",
+   "ct": 0
+  },
+  {
+   "scenario": "S10-sweep-desktop",
+   "t": "2026-10-01T06:15:18.851Z",
+   "ms": 23427,
+   "type": "media:loadstart",
+   "vis": {
+    "n": 19,
+    "id": "s-pact-principles",
+    "slideId": null
+   },
+   "audio": {
+    "src": "guide-04-pledge-and-signing-PWeXZj1Rgc.mp3",
+    "clip": "NAR-04",
+    "t": 0,
+    "muted": false
+   },
+   "cc": "Section four, Pledge and Signing.",
+   "guide": {
+    "state": "buffering",
+    "clip": "NAR-04",
+    "slideId": null,
+    "gen": null,
+    "status": "Narrating slide 19 of 39 · 04 Pledge & signing"
+   },
+   "hash": "#/19",
+   "el": "guide-05-actors-and-roles-0PbyoFNYNV.mp3",
+   "ct": 0
+  },
+  {
+   "scenario": "S10-sweep-desktop",
+   "t": "2026-10-01T06:15:18.856Z",
+   "ms": 23432,
+   "type": "media:canplay",
+   "vis": {
+    "n": 19,
+    "id": "s-pact-principles",
+    "slideId": null
+   },
+   "audio": {
+    "src": "guide-04-pledge-and-signing-PWeXZj1Rgc.mp3",
+    "clip": "NAR-04",
+    "t": 0,
+    "muted": false
+   },
+   "cc": "Section four, Pledge and Signing.",
+   "guide": {
+    "state": "buffering",
+    "clip": "NAR-04",
+    "slideId": null,
+    "gen": null,
+    "status": "Narrating slide 19 of 39 · 04 Pledge & signing"
+   },
+   "hash": "#/19",
+   "el": "guide-04-pledge-and-signing-PWeXZj1Rgc.mp3",
+   "ct": 0
+  },
+  {
+   "scenario": "S10-sweep-desktop",
+   "t": "2026-10-01T06:15:18.857Z",
+   "ms": 23433,
+   "type": "media:playing",
+   "vis": {
+    "n": 19,
+    "id": "s-pact-principles",
+    "slideId": null
+   },
+   "audio": {
+    "src": "guide-04-pledge-and-signing-PWeXZj1Rgc.mp3",
+    "clip": "NAR-04",
+    "t": 0,
+    "muted": false
+   },
+   "cc": "Section four, Pledge and Signing.",
+   "guide": {
+    "state": "playing",
+    "clip": "NAR-04",
+    "slideId": null,
+    "gen": null,
+    "status": "Narrating slide 19 of 39 · 04 Pledge & signing"
+   },
+   "hash": "#/19",
+   "el": "guide-04-pledge-and-signing-PWeXZj1Rgc.mp3",
+   "ct": 0
+  },
+  {
+   "scenario": "S10-sweep-desktop",
+   "t": "2026-10-01T06:15:18.857Z",
+   "ms": 23433,
+   "type": "play():resolved",
+   "vis": {
+    "n": 19,
+    "id": "s-pact-principles",
+    "slideId": null
+   },
+   "audio": {
+    "src": "guide-04-pledge-and-signing-PWeXZj1Rgc.mp3",
+    "clip": "NAR-04",
+    "t": 0,
+    "muted": false
+   },
+   "cc": "Section four, Pledge and Signing.",
+   "guide": {
+    "state": "playing",
+    "clip": "NAR-04",
+    "slideId": null,
+    "gen": null,
+    "status": "Narrating slide 19 of 39 · 04 Pledge & signing"
+   },
+   "hash": "#/19",
+   "el": "guide-03-six-pillars-yxVqZJ2k1a.mp3"
+  },
+  {
+   "scenario": "S10-sweep-desktop",
+   "t": "2026-10-01T06:15:18.857Z",
+   "ms": 23433,
+   "type": "media:canplay",
+   "vis": {
+    "n": 19,
+    "id": "s-pact-principles",
+    "slideId": null
+   },
+   "audio": {
+    "src": "guide-04-pledge-and-signing-PWeXZj1Rgc.mp3",
+    "clip": "NAR-04",
+    "t": 0,
+    "muted": false
+   },
+   "cc": "Section four, Pledge and Signing.",
+   "guide": {
+    "state": "playing",
+    "clip": "NAR-04",
+    "slideId": null,
+    "gen": null,
+    "status": "Narrating slide 19 of 39 · 04 Pledge & signing"
+   },
+   "hash": "#/19",
+   "el": "guide-05-actors-and-roles-0PbyoFNYNV.mp3",
+   "ct": 0
+  },
+  {
+   "scenario": "S10-sweep-desktop",
+   "t": "2026-10-01T06:15:18.925Z",
+   "ms": 23501,
+   "type": "sample",
+   "vis": {
+    "n": 19,
+    "id": "s-pact-principles",
+    "slideId": null
+   },
+   "audio": {
+    "src": "guide-04-pledge-and-signing-PWeXZj1Rgc.mp3",
+    "clip": "NAR-04",
+    "t": 0.02,
+    "muted": false
+   },
+   "cc": "Section four, Pledge and Signing.",
+   "guide": {
+    "state": "playing",
+    "clip": "NAR-04",
+    "slideId": null,
+    "gen": null,
+    "status": "Narrating slide 19 of 39 · 04 Pledge & signing"
+   },
+   "hash": "#/19"
+  },
+  {
+   "scenario": "S10-sweep-desktop",
+   "t": "2026-10-01T06:15:20.113Z",
+   "ms": 24689,
+   "type": "check",
+   "vis": {
+    "n": 19,
+    "id": "s-pact-principles",
+    "slideId": null
+   },
+   "audio": {
+    "src": "guide-04-pledge-and-signing-PWeXZj1Rgc.mp3",
+    "clip": "NAR-04",
+    "t": 1.19,
+    "muted": false
+   },
+   "cc": "Section four, Pledge and Signing.",
+   "guide": {
+    "state": "playing",
+    "clip": "NAR-04",
+    "slideId": null,
+    "gen": null,
+    "status": "Narrating slide 19 of 39 · 04 Pledge & signing"
+   },
+   "hash": "#/19",
+   "step": "slide 17",
+   "expect": 17
+  },
+  {
+   "scenario": "S10-sweep-desktop",
+   "t": "2026-10-01T06:15:20.114Z",
+   "ms": 24690,
+   "type": "key",
+   "vis": {
+    "n": 19,
+    "id": "s-pact-principles",
+    "slideId": null
+   },
+   "audio": {
+    "src": "guide-04-pledge-and-signing-PWeXZj1Rgc.mp3",
+    "clip": "NAR-04",
+    "t": 1.19,
+    "muted": false
+   },
+   "cc": "Section four, Pledge and Signing.",
+   "guide": {
+    "state": "playing",
+    "clip": "NAR-04",
+    "slideId": null,
+    "gen": null,
+    "status": "Narrating slide 19 of 39 · 04 Pledge & signing"
+   },
+   "hash": "#/19",
+   "key": "ArrowRight"
+  },
+  {
+   "scenario": "S10-sweep-desktop",
+   "t": "2026-10-01T06:15:20.125Z",
+   "ms": 24701,
+   "type": "sample",
+   "vis": {
+    "n": 20,
+    "id": "s-how-to-sign",
+    "slideId": null
+   },
+   "audio": {
+    "src": "guide-04-pledge-and-signing-PWeXZj1Rgc.mp3",
+    "clip": "NAR-04",
+    "t": 1.2,
+    "muted": false
+   },
+   "cc": "Section four, Pledge and Signing.",
+   "guide": {
+    "state": "playing",
+    "clip": "NAR-04",
+    "slideId": null,
+    "gen": null,
+    "status": "Narrating slide 19 of 39 · 04 Pledge & signing"
+   },
+   "hash": "#/20"
+  },
+  {
+   "scenario": "S10-sweep-desktop",
+   "t": "2026-10-01T06:15:20.171Z",
+   "ms": 24747,
+   "type": "media:seeked",
+   "vis": {
+    "n": 20,
+    "id": "s-how-to-sign",
+    "slideId": null
+   },
+   "audio": {
+    "src": "guide-04-pledge-and-signing-PWeXZj1Rgc.mp3",
+    "clip": "NAR-04",
+    "t": 5.09,
+    "muted": false
+   },
+   "cc": "A signatory chooses its roles, sign, govern, build or learn, and pledges to contribute to at least one of the four participant outcomes.",
+   "guide": {
+    "state": "buffering",
+    "clip": "NAR-04",
+    "slideId": null,
+    "gen": null,
+    "status": "Narrating slide 20 of 39 · 04 Pledge & signing"
+   },
+   "hash": "#/20",
+   "el": "guide-04-pledge-and-signing-PWeXZj1Rgc.mp3",
+   "ct": 5.09
+  },
+  {
+   "scenario": "S10-sweep-desktop",
+   "t": "2026-10-01T06:15:20.171Z",
+   "ms": 24747,
+   "type": "media:canplay",
+   "vis": {
+    "n": 20,
+    "id": "s-how-to-sign",
+    "slideId": null
+   },
+   "audio": {
+    "src": "guide-04-pledge-and-signing-PWeXZj1Rgc.mp3",
+    "clip": "NAR-04",
+    "t": 5.09,
+    "muted": false
+   },
+   "cc": "A signatory chooses its roles, sign, govern, build or learn, and pledges to contribute to at least one of the four participant outcomes.",
+   "guide": {
+    "state": "buffering",
+    "clip": "NAR-04",
+    "slideId": null,
+    "gen": null,
+    "status": "Narrating slide 20 of 39 · 04 Pledge & signing"
+   },
+   "hash": "#/20",
+   "el": "guide-04-pledge-and-signing-PWeXZj1Rgc.mp3",
+   "ct": 5.09
+  },
+  {
+   "scenario": "S10-sweep-desktop",
+   "t": "2026-10-01T06:15:20.172Z",
+   "ms": 24748,
+   "type": "media:playing",
+   "vis": {
+    "n": 20,
+    "id": "s-how-to-sign",
+    "slideId": null
+   },
+   "audio": {
+    "src": "guide-04-pledge-and-signing-PWeXZj1Rgc.mp3",
+    "clip": "NAR-04",
+    "t": 5.09,
+    "muted": false
+   },
+   "cc": "A signatory chooses its roles, sign, govern, build or learn, and pledges to contribute to at least one of the four participant outcomes.",
+   "guide": {
+    "state": "playing",
+    "clip": "NAR-04",
+    "slideId": null,
+    "gen": null,
+    "status": "Narrating slide 20 of 39 · 04 Pledge & signing"
+   },
+   "hash": "#/20",
+   "el": "guide-04-pledge-and-signing-PWeXZj1Rgc.mp3",
+   "ct": 5.09
+  },
+  {
+   "scenario": "S10-sweep-desktop",
+   "t": "2026-10-01T06:15:20.225Z",
+   "ms": 24801,
+   "type": "sample",
+   "vis": {
+    "n": 20,
+    "id": "s-how-to-sign",
+    "slideId": null
+   },
+   "audio": {
+    "src": "guide-04-pledge-and-signing-PWeXZj1Rgc.mp3",
+    "clip": "NAR-04",
+    "t": 5.09,
+    "muted": false
+   },
+   "cc": "A signatory chooses its roles, sign, govern, build or learn, and pledges to contribute to at least one of the four participant outcomes.",
+   "guide": {
+    "state": "playing",
+    "clip": "NAR-04",
+    "slideId": null,
+    "gen": null,
+    "status": "Narrating slide 20 of 39 · 04 Pledge & signing"
+   },
+   "hash": "#/20"
+  },
+  {
+   "scenario": "S10-sweep-desktop",
+   "t": "2026-10-01T06:15:21.449Z",
+   "ms": 26025,
+   "type": "check",
+   "vis": {
+    "n": 20,
+    "id": "s-how-to-sign",
+    "slideId": null
+   },
+   "audio": {
+    "src": "guide-04-pledge-and-signing-PWeXZj1Rgc.mp3",
+    "clip": "NAR-04",
+    "t": 6.29,
+    "muted": false
+   },
+   "cc": "A signatory chooses its roles, sign, govern, build or learn, and pledges to contribute to at least one of the four participant outcomes.",
+   "guide": {
+    "state": "playing",
+    "clip": "NAR-04",
+    "slideId": null,
+    "gen": null,
+    "status": "Narrating slide 20 of 39 · 04 Pledge & signing"
+   },
+   "hash": "#/20",
+   "step": "slide 18",
+   "expect": 18
+  },
+  {
+   "scenario": "S10-sweep-desktop",
+   "t": "2026-10-01T06:15:21.450Z",
+   "ms": 26026,
+   "type": "key",
+   "vis": {
+    "n": 20,
+    "id": "s-how-to-sign",
+    "slideId": null
+   },
+   "audio": {
+    "src": "guide-04-pledge-and-signing-PWeXZj1Rgc.mp3",
+    "clip": "NAR-04",
+    "t": 6.29,
+    "muted": false
+   },
+   "cc": "A signatory chooses its roles, sign, govern, build or learn, and pledges to contribute to at least one of the four participant outcomes.",
+   "guide": {
+    "state": "playing",
+    "clip": "NAR-04",
+    "slideId": null,
+    "gen": null,
+    "status": "Narrating slide 20 of 39 · 04 Pledge & signing"
+   },
+   "hash": "#/20",
+   "key": "ArrowRight"
+  },
+  {
+   "scenario": "S10-sweep-desktop",
+   "t": "2026-10-01T06:15:21.541Z",
+   "ms": 26117,
+   "type": "sample",
+   "vis": {
+    "n": 21,
+    "id": "s-actors-wall",
+    "slideId": null
+   },
+   "audio": {
+    "src": "guide-04-pledge-and-signing-PWeXZj1Rgc.mp3",
+    "clip": "NAR-04",
+    "t": 6.38,
+    "muted": false
+   },
+   "cc": "A signatory chooses its roles, sign, govern, build or learn, and pledges to contribute to at least one of the four participant outcomes.",
+   "guide": {
+    "state": "playing",
+    "clip": "NAR-04",
+    "slideId": null,
+    "gen": null,
+    "status": "Narrating slide 20 of 39 · 04 Pledge & signing"
+   },
+   "hash": "#/21"
+  },
+  {
+   "scenario": "S10-sweep-desktop",
+   "t": "2026-10-01T06:15:21.542Z",
+   "ms": 26118,
+   "type": "play()",
+   "vis": {
+    "n": 21,
+    "id": "s-actors-wall",
+    "slideId": null
+   },
+   "audio": {
+    "src": "guide-04-pledge-and-signing-PWeXZj1Rgc.mp3",
+    "clip": "NAR-04",
+    "t": 0,
+    "muted": false
+   },
+   "cc": "A signatory chooses its roles, sign, govern, build or learn, and pledges to contribute to at least one of the four participant outcomes.",
+   "guide": {
+    "state": "playing",
+    "clip": "NAR-04",
+    "slideId": null,
+    "gen": null,
+    "status": "Narrating slide 20 of 39 · 04 Pledge & signing"
+   },
+   "hash": "#/21",
+   "el": "guide-04-pledge-and-signing-PWeXZj1Rgc.mp3",
+   "ct": 0
+  },
+  {
+   "scenario": "S10-sweep-desktop",
+   "t": "2026-10-01T06:15:21.543Z",
+   "ms": 26119,
+   "type": "media:emptied",
+   "vis": {
+    "n": 21,
+    "id": "s-actors-wall",
+    "slideId": null
+   },
+   "audio": {
+    "src": "guide-04-pledge-and-signing-PWeXZj1Rgc.mp3",
+    "clip": "NAR-04",
+    "t": 0,
+    "muted": false
+   },
+   "cc": "Section five, Actors and Roles, institutions, partners and platforms building the Athar ecosystem together, ODA and AIREV sign and govern, with AIREV, OnDemand, e& and ai& and Discord building, UNDP, UNICEF, IFRC, WFP and UNHCR sign and learn.",
+   "guide": {
+    "state": "starting",
+    "clip": "NAR-05",
+    "slideId": null,
+    "gen": null,
+    "status": "Narrating slide 21 of 39 · 05 Actors & roles"
+   },
+   "hash": "#/21",
+   "el": "guide-04-pledge-and-signing-PWeXZj1Rgc.mp3",
+   "ct": 0
+  },
+  {
+   "scenario": "S10-sweep-desktop",
+   "t": "2026-10-01T06:15:21.544Z",
+   "ms": 26120,
+   "type": "media:loadstart",
+   "vis": {
+    "n": 21,
+    "id": "s-actors-wall",
+    "slideId": null
+   },
+   "audio": {
+    "src": "guide-05-actors-and-roles-0PbyoFNYNV.mp3",
+    "clip": "NAR-05",
+    "t": 0,
+    "muted": false
+   },
+   "cc": "Section five, Actors and Roles, institutions, partners and platforms building the Athar ecosystem together, ODA and AIREV sign and govern, with AIREV, OnDemand, e& and ai& and Discord building, UNDP, UNICEF, IFRC, WFP and UNHCR sign and learn.",
+   "guide": {
+    "state": "buffering",
+    "clip": "NAR-05",
+    "slideId": null,
+    "gen": null,
+    "status": "Narrating slide 21 of 39 · 05 Actors & roles"
+   },
+   "hash": "#/21",
+   "el": "guide-05-actors-and-roles-0PbyoFNYNV.mp3",
+   "ct": 0
+  },
+  {
+   "scenario": "S10-sweep-desktop",
+   "t": "2026-10-01T06:15:21.544Z",
+   "ms": 26120,
+   "type": "media:loadstart",
+   "vis": {
+    "n": 21,
+    "id": "s-actors-wall",
+    "slideId": null
+   },
+   "audio": {
+    "src": "guide-05-actors-and-roles-0PbyoFNYNV.mp3",
+    "clip": "NAR-05",
+    "t": 0,
+    "muted": false
+   },
+   "cc": "Section five, Actors and Roles, institutions, partners and platforms building the Athar ecosystem together, ODA and AIREV sign and govern, with AIREV, OnDemand, e& and ai& and Discord building, UNDP, UNICEF, IFRC, WFP and UNHCR sign and learn.",
+   "guide": {
+    "state": "buffering",
+    "clip": "NAR-05",
+    "slideId": null,
+    "gen": null,
+    "status": "Narrating slide 21 of 39 · 05 Actors & roles"
+   },
+   "hash": "#/21",
+   "el": "guide-06-governance-and-roadmap-kyzmCSHcw8.mp3",
+   "ct": 0
+  },
+  {
+   "scenario": "S10-sweep-desktop",
+   "t": "2026-10-01T06:15:21.548Z",
+   "ms": 26124,
+   "type": "media:canplay",
+   "vis": {
+    "n": 21,
+    "id": "s-actors-wall",
+    "slideId": null
+   },
+   "audio": {
+    "src": "guide-05-actors-and-roles-0PbyoFNYNV.mp3",
+    "clip": "NAR-05",
+    "t": 0,
+    "muted": false
+   },
+   "cc": "Section five, Actors and Roles, institutions, partners and platforms building the Athar ecosystem together, ODA and AIREV sign and govern, with AIREV, OnDemand, e& and ai& and Discord building, UNDP, UNICEF, IFRC, WFP and UNHCR sign and learn.",
+   "guide": {
+    "state": "buffering",
+    "clip": "NAR-05",
+    "slideId": null,
+    "gen": null,
+    "status": "Narrating slide 21 of 39 · 05 Actors & roles"
+   },
+   "hash": "#/21",
+   "el": "guide-05-actors-and-roles-0PbyoFNYNV.mp3",
+   "ct": 0
+  },
+  {
+   "scenario": "S10-sweep-desktop",
+   "t": "2026-10-01T06:15:21.549Z",
+   "ms": 26125,
+   "type": "media:playing",
+   "vis": {
+    "n": 21,
+    "id": "s-actors-wall",
+    "slideId": null
+   },
+   "audio": {
+    "src": "guide-05-actors-and-roles-0PbyoFNYNV.mp3",
+    "clip": "NAR-05",
+    "t": 0,
+    "muted": false
+   },
+   "cc": "Section five, Actors and Roles, institutions, partners and platforms building the Athar ecosystem together, ODA and AIREV sign and govern, with AIREV, OnDemand, e& and ai& and Discord building, UNDP, UNICEF, IFRC, WFP and UNHCR sign and learn.",
+   "guide": {
+    "state": "playing",
+    "clip": "NAR-05",
+    "slideId": null,
+    "gen": null,
+    "status": "Narrating slide 21 of 39 · 05 Actors & roles"
+   },
+   "hash": "#/21",
+   "el": "guide-05-actors-and-roles-0PbyoFNYNV.mp3",
+   "ct": 0
+  },
+  {
+   "scenario": "S10-sweep-desktop",
+   "t": "2026-10-01T06:15:21.549Z",
+   "ms": 26125,
+   "type": "play():resolved",
+   "vis": {
+    "n": 21,
+    "id": "s-actors-wall",
+    "slideId": null
+   },
+   "audio": {
+    "src": "guide-05-actors-and-roles-0PbyoFNYNV.mp3",
+    "clip": "NAR-05",
+    "t": 0,
+    "muted": false
+   },
+   "cc": "Section five, Actors and Roles, institutions, partners and platforms building the Athar ecosystem together, ODA and AIREV sign and govern, with AIREV, OnDemand, e& and ai& and Discord building, UNDP, UNICEF, IFRC, WFP and UNHCR sign and learn.",
+   "guide": {
+    "state": "playing",
+    "clip": "NAR-05",
+    "slideId": null,
+    "gen": null,
+    "status": "Narrating slide 21 of 39 · 05 Actors & roles"
+   },
+   "hash": "#/21",
+   "el": "guide-04-pledge-and-signing-PWeXZj1Rgc.mp3"
+  },
+  {
+   "scenario": "S10-sweep-desktop",
+   "t": "2026-10-01T06:15:21.551Z",
+   "ms": 26127,
+   "type": "media:canplay",
+   "vis": {
+    "n": 21,
+    "id": "s-actors-wall",
+    "slideId": null
+   },
+   "audio": {
+    "src": "guide-05-actors-and-roles-0PbyoFNYNV.mp3",
+    "clip": "NAR-05",
+    "t": 0,
+    "muted": false
+   },
+   "cc": "Section five, Actors and Roles, institutions, partners and platforms building the Athar ecosystem together, ODA and AIREV sign and govern, with AIREV, OnDemand, e& and ai& and Discord building, UNDP, UNICEF, IFRC, WFP and UNHCR sign and learn.",
+   "guide": {
+    "state": "playing",
+    "clip": "NAR-05",
+    "slideId": null,
+    "gen": null,
+    "status": "Narrating slide 21 of 39 · 05 Actors & roles"
+   },
+   "hash": "#/21",
+   "el": "guide-06-governance-and-roadmap-kyzmCSHcw8.mp3",
+   "ct": 0
+  },
+  {
+   "scenario": "S10-sweep-desktop",
+   "t": "2026-10-01T06:15:21.625Z",
+   "ms": 26201,
+   "type": "sample",
+   "vis": {
+    "n": 21,
+    "id": "s-actors-wall",
+    "slideId": null
+   },
+   "audio": {
+    "src": "guide-05-actors-and-roles-0PbyoFNYNV.mp3",
+    "clip": "NAR-05",
+    "t": 0.01,
+    "muted": false
+   },
+   "cc": "Section five, Actors and Roles, institutions, partners and platforms building the Athar ecosystem together, ODA and AIREV sign and govern, with AIREV, OnDemand, e& and ai& and Discord building, UNDP, UNICEF, IFRC, WFP and UNHCR sign and learn.",
+   "guide": {
+    "state": "playing",
+    "clip": "NAR-05",
+    "slideId": null,
+    "gen": null,
+    "status": "Narrating slide 21 of 39 · 05 Actors & roles"
+   },
+   "hash": "#/21"
+  },
+  {
+   "scenario": "S10-sweep-desktop",
+   "t": "2026-10-01T06:15:22.784Z",
+   "ms": 27360,
+   "type": "check",
+   "vis": {
+    "n": 21,
+    "id": "s-actors-wall",
+    "slideId": null
+   },
+   "audio": {
+    "src": "guide-05-actors-and-roles-0PbyoFNYNV.mp3",
+    "clip": "NAR-05",
+    "t": 1.17,
+    "muted": false
+   },
+   "cc": "Section five, Actors and Roles, institutions, partners and platforms building the Athar ecosystem together, ODA and AIREV sign and govern, with AIREV, OnDemand, e& and ai& and Discord building, UNDP, UNICEF, IFRC, WFP and UNHCR sign and learn.",
+   "guide": {
+    "state": "playing",
+    "clip": "NAR-05",
+    "slideId": null,
+    "gen": null,
+    "status": "Narrating slide 21 of 39 · 05 Actors & roles"
+   },
+   "hash": "#/21",
+   "step": "slide 19",
+   "expect": 19
+  },
+  {
+   "scenario": "S10-sweep-desktop",
+   "t": "2026-10-01T06:15:22.786Z",
+   "ms": 27362,
+   "type": "key",
+   "vis": {
+    "n": 21,
+    "id": "s-actors-wall",
+    "slideId": null
+   },
+   "audio": {
+    "src": "guide-05-actors-and-roles-0PbyoFNYNV.mp3",
+    "clip": "NAR-05",
+    "t": 1.17,
+    "muted": false
+   },
+   "cc": "Section five, Actors and Roles, institutions, partners and platforms building the Athar ecosystem together, ODA and AIREV sign and govern, with AIREV, OnDemand, e& and ai& and Discord building, UNDP, UNICEF, IFRC, WFP and UNHCR sign and learn.",
+   "guide": {
+    "state": "playing",
+    "clip": "NAR-05",
+    "slideId": null,
+    "gen": null,
+    "status": "Narrating slide 21 of 39 · 05 Actors & roles"
+   },
+   "hash": "#/21",
+   "key": "ArrowRight"
+  },
+  {
+   "scenario": "S10-sweep-desktop",
+   "t": "2026-10-01T06:15:22.842Z",
+   "ms": 27418,
+   "type": "sample",
+   "vis": {
+    "n": 22,
+    "id": "s-who-signs",
+    "slideId": null
+   },
+   "audio": {
+    "src": "guide-05-actors-and-roles-0PbyoFNYNV.mp3",
+    "clip": "NAR-05",
+    "t": 1.22,
+    "muted": false
+   },
+   "cc": "Section five, Actors and Roles, institutions, partners and platforms building the Athar ecosystem together, ODA and AIREV sign and govern, with AIREV, OnDemand, e& and ai& and Discord building, UNDP, UNICEF, IFRC, WFP and UNHCR sign and learn.",
+   "guide": {
+    "state": "playing",
+    "clip": "NAR-05",
+    "slideId": null,
+    "gen": null,
+    "status": "Narrating slide 21 of 39 · 05 Actors & roles"
+   },
+   "hash": "#/22"
+  },
+  {
+   "scenario": "S10-sweep-desktop",
+   "t": "2026-10-01T06:15:24.125Z",
+   "ms": 28701,
+   "type": "check",
+   "vis": {
+    "n": 22,
+    "id": "s-who-signs",
+    "slideId": null
+   },
+   "audio": {
+    "src": "guide-05-actors-and-roles-0PbyoFNYNV.mp3",
+    "clip": "NAR-05",
+    "t": 2.51,
+    "muted": false
+   },
+   "cc": "Section five, Actors and Roles, institutions, partners and platforms building the Athar ecosystem together, ODA and AIREV sign and govern, with AIREV, OnDemand, e& and ai& and Discord building, UNDP, UNICEF, IFRC, WFP and UNHCR sign and learn.",
+   "guide": {
+    "state": "playing",
+    "clip": "NAR-05",
+    "slideId": null,
+    "gen": null,
+    "status": "Narrating slide 22 of 39 · 05 Actors & roles"
+   },
+   "hash": "#/22",
+   "step": "slide 20",
+   "expect": 20
+  },
+  {
+   "scenario": "S10-sweep-desktop",
+   "t": "2026-10-01T06:15:24.127Z",
+   "ms": 28704,
+   "type": "key",
+   "vis": {
+    "n": 22,
+    "id": "s-who-signs",
+    "slideId": null
+   },
+   "audio": {
+    "src": "guide-05-actors-and-roles-0PbyoFNYNV.mp3",
+    "clip": "NAR-05",
+    "t": 2.51,
+    "muted": false
+   },
+   "cc": "Section five, Actors and Roles, institutions, partners and platforms building the Athar ecosystem together, ODA and AIREV sign and govern, with AIREV, OnDemand, e& and ai& and Discord building, UNDP, UNICEF, IFRC, WFP and UNHCR sign and learn.",
+   "guide": {
+    "state": "playing",
+    "clip": "NAR-05",
+    "slideId": null,
+    "gen": null,
+    "status": "Narrating slide 22 of 39 · 05 Actors & roles"
+   },
+   "hash": "#/22",
+   "key": "ArrowRight"
+  },
+  {
+   "scenario": "S10-sweep-desktop",
+   "t": "2026-10-01T06:15:24.197Z",
+   "ms": 28773,
+   "type": "media:seeked",
+   "vis": {
+    "n": 23,
+    "id": "s-who-governs",
+    "slideId": null
+   },
+   "audio": {
+    "src": "guide-05-actors-and-roles-0PbyoFNYNV.mp3",
+    "clip": "NAR-05",
+    "t": 19.6,
+    "muted": false
+   },
+   "cc": "The UAE Ministry of Foreign Trade signs and governs and the United Arab Emirates governs.",
+   "guide": {
+    "state": "buffering",
+    "clip": "NAR-05",
+    "slideId": null,
+    "gen": null,
+    "status": "Narrating slide 23 of 39 · 05 Actors & roles"
+   },
+   "hash": "#/23",
+   "el": "guide-05-actors-and-roles-0PbyoFNYNV.mp3",
+   "ct": 19.6
+  },
+  {
+   "scenario": "S10-sweep-desktop",
+   "t": "2026-10-01T06:15:24.197Z",
+   "ms": 28773,
+   "type": "media:canplay",
+   "vis": {
+    "n": 23,
+    "id": "s-who-governs",
+    "slideId": null
+   },
+   "audio": {
+    "src": "guide-05-actors-and-roles-0PbyoFNYNV.mp3",
+    "clip": "NAR-05",
+    "t": 19.6,
+    "muted": false
+   },
+   "cc": "The UAE Ministry of Foreign Trade signs and governs and the United Arab Emirates governs.",
+   "guide": {
+    "state": "buffering",
+    "clip": "NAR-05",
+    "slideId": null,
+    "gen": null,
+    "status": "Narrating slide 23 of 39 · 05 Actors & roles"
+   },
+   "hash": "#/23",
+   "el": "guide-05-actors-and-roles-0PbyoFNYNV.mp3",
+   "ct": 19.6
+  },
+  {
+   "scenario": "S10-sweep-desktop",
+   "t": "2026-10-01T06:15:24.198Z",
+   "ms": 28774,
+   "type": "media:playing",
+   "vis": {
+    "n": 23,
+    "id": "s-who-governs",
+    "slideId": null
+   },
+   "audio": {
+    "src": "guide-05-actors-and-roles-0PbyoFNYNV.mp3",
+    "clip": "NAR-05",
+    "t": 19.6,
+    "muted": false
+   },
+   "cc": "The UAE Ministry of Foreign Trade signs and governs and the United Arab Emirates governs.",
+   "guide": {
+    "state": "playing",
+    "clip": "NAR-05",
+    "slideId": null,
+    "gen": null,
+    "status": "Narrating slide 23 of 39 · 05 Actors & roles"
+   },
+   "hash": "#/23",
+   "el": "guide-05-actors-and-roles-0PbyoFNYNV.mp3",
+   "ct": 19.6
+  },
+  {
+   "scenario": "S10-sweep-desktop",
+   "t": "2026-10-01T06:15:24.225Z",
+   "ms": 28801,
+   "type": "sample",
+   "vis": {
+    "n": 23,
+    "id": "s-who-governs",
+    "slideId": null
+   },
+   "audio": {
+    "src": "guide-05-actors-and-roles-0PbyoFNYNV.mp3",
+    "clip": "NAR-05",
+    "t": 19.61,
+    "muted": false
+   },
+   "cc": "The UAE Ministry of Foreign Trade signs and governs and the United Arab Emirates governs.",
+   "guide": {
+    "state": "playing",
+    "clip": "NAR-05",
+    "slideId": null,
+    "gen": null,
+    "status": "Narrating slide 23 of 39 · 05 Actors & roles"
+   },
+   "hash": "#/23"
+  },
+  {
+   "scenario": "S10-sweep-desktop",
+   "t": "2026-10-01T06:15:25.463Z",
+   "ms": 30039,
+   "type": "check",
+   "vis": {
+    "n": 23,
+    "id": "s-who-governs",
+    "slideId": null
+   },
+   "audio": {
+    "src": "guide-05-actors-and-roles-0PbyoFNYNV.mp3",
+    "clip": "NAR-05",
+    "t": 20.78,
+    "muted": false
+   },
+   "cc": "The UAE Ministry of Foreign Trade signs and governs and the United Arab Emirates governs.",
+   "guide": {
+    "state": "playing",
+    "clip": "NAR-05",
+    "slideId": null,
+    "gen": null,
+    "status": "Narrating slide 23 of 39 · 05 Actors & roles"
+   },
+   "hash": "#/23",
+   "step": "slide 21",
+   "expect": 21
+  },
+  {
+   "scenario": "S10-sweep-desktop",
+   "t": "2026-10-01T06:15:25.464Z",
+   "ms": 30040,
+   "type": "key",
+   "vis": {
+    "n": 23,
+    "id": "s-who-governs",
+    "slideId": null
+   },
+   "audio": {
+    "src": "guide-05-actors-and-roles-0PbyoFNYNV.mp3",
+    "clip": "NAR-05",
+    "t": 20.78,
+    "muted": false
+   },
+   "cc": "The UAE Ministry of Foreign Trade signs and governs and the United Arab Emirates governs.",
+   "guide": {
+    "state": "playing",
+    "clip": "NAR-05",
+    "slideId": null,
+    "gen": null,
+    "status": "Narrating slide 23 of 39 · 05 Actors & roles"
+   },
+   "hash": "#/23",
+   "key": "ArrowRight"
+  },
+  {
+   "scenario": "S10-sweep-desktop",
+   "t": "2026-10-01T06:15:25.525Z",
+   "ms": 30101,
+   "type": "sample",
+   "vis": {
+    "n": 24,
+    "id": "s-who-builds",
+    "slideId": null
+   },
+   "audio": {
+    "src": "guide-05-actors-and-roles-0PbyoFNYNV.mp3",
+    "clip": "NAR-05",
+    "t": 20.84,
+    "muted": false
+   },
+   "cc": "The UAE Ministry of Foreign Trade signs and governs and the United Arab Emirates governs.",
+   "guide": {
+    "state": "playing",
+    "clip": "NAR-05",
+    "slideId": null,
+    "gen": null,
+    "status": "Narrating slide 23 of 39 · 05 Actors & roles"
+   },
+   "hash": "#/24"
+  },
+  {
+   "scenario": "S10-sweep-desktop",
+   "t": "2026-10-01T06:15:25.625Z",
+   "ms": 30201,
+   "type": "sample",
+   "vis": {
+    "n": 24,
+    "id": "s-who-builds",
+    "slideId": null
+   },
+   "audio": {
+    "src": "guide-05-actors-and-roles-0PbyoFNYNV.mp3",
+    "clip": "NAR-05",
+    "t": 20.94,
+    "muted": false
+   },
+   "cc": "Every actor has a clear role, sign, govern, build or learn.",
+   "guide": {
+    "state": "playing",
+    "clip": "NAR-05",
+    "slideId": null,
+    "gen": null,
+    "status": "Narrating slide 24 of 39 · 05 Actors & roles"
+   },
+   "hash": "#/24"
+  },
+  {
+   "scenario": "S10-sweep-desktop",
+   "t": "2026-10-01T06:15:25.825Z",
+   "ms": 30401,
+   "type": "sample",
+   "vis": {
+    "n": 24,
+    "id": "s-who-builds",
+    "slideId": null
+   },
+   "audio": {
+    "src": "guide-05-actors-and-roles-0PbyoFNYNV.mp3",
+    "clip": "NAR-05",
+    "t": 21.14,
+    "muted": false
+   },
+   "cc": "The UAE Ministry of Foreign Trade signs and governs and the United Arab Emirates governs.",
+   "guide": {
+    "state": "playing",
+    "clip": "NAR-05",
+    "slideId": null,
+    "gen": null,
+    "status": "Narrating slide 24 of 39 · 05 Actors & roles"
+   },
+   "hash": "#/24"
+  },
+  {
+   "scenario": "S10-sweep-desktop",
+   "t": "2026-10-01T06:15:26.802Z",
+   "ms": 31378,
+   "type": "check",
+   "vis": {
+    "n": 24,
+    "id": "s-who-builds",
+    "slideId": null
+   },
+   "audio": {
+    "src": "guide-05-actors-and-roles-0PbyoFNYNV.mp3",
+    "clip": "NAR-05",
+    "t": 22.11,
+    "muted": false
+   },
+   "cc": "The UAE Ministry of Foreign Trade signs and governs and the United Arab Emirates governs.",
+   "guide": {
+    "state": "playing",
+    "clip": "NAR-05",
+    "slideId": null,
+    "gen": null,
+    "status": "Narrating slide 24 of 39 · 05 Actors & roles"
+   },
+   "hash": "#/24",
+   "step": "slide 22",
+   "expect": 22
+  },
+  {
+   "scenario": "S10-sweep-desktop",
+   "t": "2026-10-01T06:15:26.803Z",
+   "ms": 31379,
+   "type": "key",
+   "vis": {
+    "n": 24,
+    "id": "s-who-builds",
+    "slideId": null
+   },
+   "audio": {
+    "src": "guide-05-actors-and-roles-0PbyoFNYNV.mp3",
+    "clip": "NAR-05",
+    "t": 22.12,
+    "muted": false
+   },
+   "cc": "The UAE Ministry of Foreign Trade signs and governs and the United Arab Emirates governs.",
+   "guide": {
+    "state": "playing",
+    "clip": "NAR-05",
+    "slideId": null,
+    "gen": null,
+    "status": "Narrating slide 24 of 39 · 05 Actors & roles"
+   },
+   "hash": "#/24",
+   "key": "ArrowRight"
+  },
+  {
+   "scenario": "S10-sweep-desktop",
+   "t": "2026-10-01T06:15:26.825Z",
+   "ms": 31401,
+   "type": "sample",
+   "vis": {
+    "n": 25,
+    "id": "s-who-learns",
+    "slideId": null
+   },
+   "audio": {
+    "src": "guide-05-actors-and-roles-0PbyoFNYNV.mp3",
+    "clip": "NAR-05",
+    "t": 22.14,
+    "muted": false
+   },
+   "cc": "The UAE Ministry of Foreign Trade signs and governs and the United Arab Emirates governs.",
+   "guide": {
+    "state": "playing",
+    "clip": "NAR-05",
+    "slideId": null,
+    "gen": null,
+    "status": "Narrating slide 24 of 39 · 05 Actors & roles"
+   },
+   "hash": "#/25"
+  },
+  {
+   "scenario": "S10-sweep-desktop",
+   "t": "2026-10-01T06:15:26.926Z",
+   "ms": 31502,
+   "type": "sample",
+   "vis": {
+    "n": 25,
+    "id": "s-who-learns",
+    "slideId": null
+   },
+   "audio": {
+    "src": "guide-05-actors-and-roles-0PbyoFNYNV.mp3",
+    "clip": "NAR-05",
+    "t": 22.24,
+    "muted": false
+   },
+   "cc": "Every actor has a clear role, sign, govern, build or learn.",
+   "guide": {
+    "state": "playing",
+    "clip": "NAR-05",
+    "slideId": null,
+    "gen": null,
+    "status": "Narrating slide 25 of 39 · 05 Actors & roles"
+   },
+   "hash": "#/25"
+  },
+  {
+   "scenario": "S10-sweep-desktop",
+   "t": "2026-10-01T06:15:27.125Z",
+   "ms": 31701,
+   "type": "sample",
+   "vis": {
+    "n": 25,
+    "id": "s-who-learns",
+    "slideId": null
+   },
+   "audio": {
+    "src": "guide-05-actors-and-roles-0PbyoFNYNV.mp3",
+    "clip": "NAR-05",
+    "t": 22.44,
+    "muted": false
+   },
+   "cc": "The UAE Ministry of Foreign Trade signs and governs and the United Arab Emirates governs.",
+   "guide": {
+    "state": "playing",
+    "clip": "NAR-05",
+    "slideId": null,
+    "gen": null,
+    "status": "Narrating slide 25 of 39 · 05 Actors & roles"
+   },
+   "hash": "#/25"
+  },
+  {
+   "scenario": "S10-sweep-desktop",
+   "t": "2026-10-01T06:15:28.138Z",
+   "ms": 32714,
+   "type": "check",
+   "vis": {
+    "n": 25,
+    "id": "s-who-learns",
+    "slideId": null
+   },
+   "audio": {
+    "src": "guide-05-actors-and-roles-0PbyoFNYNV.mp3",
+    "clip": "NAR-05",
+    "t": 23.45,
+    "muted": false
+   },
+   "cc": "The UAE Ministry of Foreign Trade signs and governs and the United Arab Emirates governs.",
+   "guide": {
+    "state": "playing",
+    "clip": "NAR-05",
+    "slideId": null,
+    "gen": null,
+    "status": "Narrating slide 25 of 39 · 05 Actors & roles"
+   },
+   "hash": "#/25",
+   "step": "slide 23",
+   "expect": 23
+  },
+  {
+   "scenario": "S10-sweep-desktop",
+   "t": "2026-10-01T06:15:28.140Z",
+   "ms": 32716,
+   "type": "key",
+   "vis": {
+    "n": 25,
+    "id": "s-who-learns",
+    "slideId": null
+   },
+   "audio": {
+    "src": "guide-05-actors-and-roles-0PbyoFNYNV.mp3",
+    "clip": "NAR-05",
+    "t": 23.45,
+    "muted": false
+   },
+   "cc": "The UAE Ministry of Foreign Trade signs and governs and the United Arab Emirates governs.",
+   "guide": {
+    "state": "playing",
+    "clip": "NAR-05",
+    "slideId": null,
+    "gen": null,
+    "status": "Narrating slide 25 of 39 · 05 Actors & roles"
+   },
+   "hash": "#/25",
+   "key": "ArrowRight"
+  },
+  {
+   "scenario": "S10-sweep-desktop",
+   "t": "2026-10-01T06:15:28.198Z",
+   "ms": 32774,
+   "type": "play()",
+   "vis": {
+    "n": 26,
+    "id": "s-governance-licence",
+    "slideId": null
+   },
+   "audio": {
+    "src": "guide-05-actors-and-roles-0PbyoFNYNV.mp3",
+    "clip": "NAR-05",
+    "t": 0,
+    "muted": false
+   },
+   "cc": "The UAE Ministry of Foreign Trade signs and governs and the United Arab Emirates governs.",
+   "guide": {
+    "state": "playing",
+    "clip": "NAR-05",
+    "slideId": null,
+    "gen": null,
+    "status": "Narrating slide 25 of 39 · 05 Actors & roles"
+   },
+   "hash": "#/26",
+   "el": "guide-05-actors-and-roles-0PbyoFNYNV.mp3",
+   "ct": 0
+  },
+  {
+   "scenario": "S10-sweep-desktop",
+   "t": "2026-10-01T06:15:28.199Z",
+   "ms": 32775,
+   "type": "media:emptied",
+   "vis": {
+    "n": 26,
+    "id": "s-governance-licence",
+    "slideId": null
+   },
+   "audio": {
+    "src": "guide-05-actors-and-roles-0PbyoFNYNV.mp3",
+    "clip": "NAR-05",
+    "t": 0,
+    "muted": false
+   },
+   "cc": "Section six, governance and roadmap.",
+   "guide": {
+    "state": "starting",
+    "clip": "NAR-06",
+    "slideId": null,
+    "gen": null,
+    "status": "Narrating slide 26 of 39 · 06 Governance & roadmap"
+   },
+   "hash": "#/26",
+   "el": "guide-05-actors-and-roles-0PbyoFNYNV.mp3",
+   "ct": 0
+  },
+  {
+   "scenario": "S10-sweep-desktop",
+   "t": "2026-10-01T06:15:28.200Z",
+   "ms": 32776,
+   "type": "media:loadstart",
+   "vis": {
+    "n": 26,
+    "id": "s-governance-licence",
+    "slideId": null
+   },
+   "audio": {
+    "src": "guide-06-governance-and-roadmap-kyzmCSHcw8.mp3",
+    "clip": "NAR-06",
+    "t": 0,
+    "muted": false
+   },
+   "cc": "Section six, governance and roadmap.",
+   "guide": {
+    "state": "buffering",
+    "clip": "NAR-06",
+    "slideId": null,
+    "gen": null,
+    "status": "Narrating slide 26 of 39 · 06 Governance & roadmap"
+   },
+   "hash": "#/26",
+   "el": "guide-06-governance-and-roadmap-kyzmCSHcw8.mp3",
+   "ct": 0
+  },
+  {
+   "scenario": "S10-sweep-desktop",
+   "t": "2026-10-01T06:15:28.200Z",
+   "ms": 32776,
+   "type": "media:loadstart",
+   "vis": {
+    "n": 26,
+    "id": "s-governance-licence",
+    "slideId": null
+   },
+   "audio": {
+    "src": "guide-06-governance-and-roadmap-kyzmCSHcw8.mp3",
+    "clip": "NAR-06",
+    "t": 0,
+    "muted": false
+   },
+   "cc": "Section six, governance and roadmap.",
+   "guide": {
+    "state": "buffering",
+    "clip": "NAR-06",
+    "slideId": null,
+    "gen": null,
+    "status": "Narrating slide 26 of 39 · 06 Governance & roadmap"
+   },
+   "hash": "#/26",
+   "el": "guide-07-impact-and-funding-vWkiINp1IS.mp3",
+   "ct": 0
+  },
+  {
+   "scenario": "S10-sweep-desktop",
+   "t": "2026-10-01T06:15:28.208Z",
+   "ms": 32784,
+   "type": "media:canplay",
+   "vis": {
+    "n": 26,
+    "id": "s-governance-licence",
+    "slideId": null
+   },
+   "audio": {
+    "src": "guide-06-governance-and-roadmap-kyzmCSHcw8.mp3",
+    "clip": "NAR-06",
+    "t": 0,
+    "muted": false
+   },
+   "cc": "Section six, governance and roadmap.",
+   "guide": {
+    "state": "buffering",
+    "clip": "NAR-06",
+    "slideId": null,
+    "gen": null,
+    "status": "Narrating slide 26 of 39 · 06 Governance & roadmap"
+   },
+   "hash": "#/26",
+   "el": "guide-06-governance-and-roadmap-kyzmCSHcw8.mp3",
+   "ct": 0
+  },
+  {
+   "scenario": "S10-sweep-desktop",
+   "t": "2026-10-01T06:15:28.208Z",
+   "ms": 32784,
+   "type": "media:playing",
+   "vis": {
+    "n": 26,
+    "id": "s-governance-licence",
+    "slideId": null
+   },
+   "audio": {
+    "src": "guide-06-governance-and-roadmap-kyzmCSHcw8.mp3",
+    "clip": "NAR-06",
+    "t": 0,
+    "muted": false
+   },
+   "cc": "Section six, governance and roadmap.",
+   "guide": {
+    "state": "playing",
+    "clip": "NAR-06",
+    "slideId": null,
+    "gen": null,
+    "status": "Narrating slide 26 of 39 · 06 Governance & roadmap"
+   },
+   "hash": "#/26",
+   "el": "guide-06-governance-and-roadmap-kyzmCSHcw8.mp3",
+   "ct": 0
+  },
+  {
+   "scenario": "S10-sweep-desktop",
+   "t": "2026-10-01T06:15:28.208Z",
+   "ms": 32784,
+   "type": "play():resolved",
+   "vis": {
+    "n": 26,
+    "id": "s-governance-licence",
+    "slideId": null
+   },
+   "audio": {
+    "src": "guide-06-governance-and-roadmap-kyzmCSHcw8.mp3",
+    "clip": "NAR-06",
+    "t": 0,
+    "muted": false
+   },
+   "cc": "Section six, governance and roadmap.",
+   "guide": {
+    "state": "playing",
+    "clip": "NAR-06",
+    "slideId": null,
+    "gen": null,
+    "status": "Narrating slide 26 of 39 · 06 Governance & roadmap"
+   },
+   "hash": "#/26",
+   "el": "guide-05-actors-and-roles-0PbyoFNYNV.mp3"
+  },
+  {
+   "scenario": "S10-sweep-desktop",
+   "t": "2026-10-01T06:15:28.210Z",
+   "ms": 32786,
+   "type": "media:canplay",
+   "vis": {
+    "n": 26,
+    "id": "s-governance-licence",
+    "slideId": null
+   },
+   "audio": {
+    "src": "guide-06-governance-and-roadmap-kyzmCSHcw8.mp3",
+    "clip": "NAR-06",
+    "t": 0,
+    "muted": false
+   },
+   "cc": "Section six, governance and roadmap.",
+   "guide": {
+    "state": "playing",
+    "clip": "NAR-06",
+    "slideId": null,
+    "gen": null,
+    "status": "Narrating slide 26 of 39 · 06 Governance & roadmap"
+   },
+   "hash": "#/26",
+   "el": "guide-07-impact-and-funding-vWkiINp1IS.mp3",
+   "ct": 0
+  },
+  {
+   "scenario": "S10-sweep-desktop",
+   "t": "2026-10-01T06:15:28.224Z",
+   "ms": 32801,
+   "type": "sample",
+   "vis": {
+    "n": 26,
+    "id": "s-governance-licence",
+    "slideId": null
+   },
+   "audio": {
+    "src": "guide-06-governance-and-roadmap-kyzmCSHcw8.mp3",
+    "clip": "NAR-06",
+    "t": 0.01,
+    "muted": false
+   },
+   "cc": "Section six, governance and roadmap.",
+   "guide": {
+    "state": "playing",
+    "clip": "NAR-06",
+    "slideId": null,
+    "gen": null,
+    "status": "Narrating slide 26 of 39 · 06 Governance & roadmap"
+   },
+   "hash": "#/26"
+  },
+  {
+   "scenario": "S10-sweep-desktop",
+   "t": "2026-10-01T06:15:29.477Z",
+   "ms": 34053,
+   "type": "check",
+   "vis": {
+    "n": 26,
+    "id": "s-governance-licence",
+    "slideId": null
+   },
+   "audio": {
+    "src": "guide-06-governance-and-roadmap-kyzmCSHcw8.mp3",
+    "clip": "NAR-06",
+    "t": 1.2,
+    "muted": false
+   },
+   "cc": "Section six, governance and roadmap.",
+   "guide": {
+    "state": "playing",
+    "clip": "NAR-06",
+    "slideId": null,
+    "gen": null,
+    "status": "Narrating slide 26 of 39 · 06 Governance & roadmap"
+   },
+   "hash": "#/26",
+   "step": "slide 24",
+   "expect": 24
+  },
+  {
+   "scenario": "S10-sweep-desktop",
+   "t": "2026-10-01T06:15:29.478Z",
+   "ms": 34054,
+   "type": "key",
+   "vis": {
+    "n": 26,
+    "id": "s-governance-licence",
+    "slideId": null
+   },
+   "audio": {
+    "src": "guide-06-governance-and-roadmap-kyzmCSHcw8.mp3",
+    "clip": "NAR-06",
+    "t": 1.2,
+    "muted": false
+   },
+   "cc": "Section six, governance and roadmap.",
+   "guide": {
+    "state": "playing",
+    "clip": "NAR-06",
+    "slideId": null,
+    "gen": null,
+    "status": "Narrating slide 26 of 39 · 06 Governance & roadmap"
+   },
+   "hash": "#/26",
+   "key": "ArrowRight"
+  },
+  {
+   "scenario": "S10-sweep-desktop",
+   "t": "2026-10-01T06:15:29.525Z",
+   "ms": 34101,
+   "type": "sample",
+   "vis": {
+    "n": 27,
+    "id": "s-roadmap",
+    "slideId": null
+   },
+   "audio": {
+    "src": "guide-06-governance-and-roadmap-kyzmCSHcw8.mp3",
+    "clip": "NAR-06",
+    "t": 1.24,
+    "muted": false
+   },
+   "cc": "Section six, governance and roadmap.",
+   "guide": {
+    "state": "playing",
+    "clip": "NAR-06",
+    "slideId": null,
+    "gen": null,
+    "status": "Narrating slide 26 of 39 · 06 Governance & roadmap"
+   },
+   "hash": "#/27"
+  },
+  {
+   "scenario": "S10-sweep-desktop",
+   "t": "2026-10-01T06:15:29.541Z",
+   "ms": 34117,
+   "type": "media:seeked",
+   "vis": {
+    "n": 27,
+    "id": "s-roadmap",
+    "slideId": null
+   },
+   "audio": {
+    "src": "guide-06-governance-and-roadmap-kyzmCSHcw8.mp3",
+    "clip": "NAR-06",
+    "t": 7.15,
+    "muted": false
+   },
+   "cc": "Decisions, releases, and outcome reports are published, so every member can see how priorities are set and how the platform evolves over time.",
+   "guide": {
+    "state": "buffering",
+    "clip": "NAR-06",
+    "slideId": null,
+    "gen": null,
+    "status": "Narrating slide 27 of 39 · 06 Governance & roadmap"
+   },
+   "hash": "#/27",
+   "el": "guide-06-governance-and-roadmap-kyzmCSHcw8.mp3",
+   "ct": 7.15
+  },
+  {
+   "scenario": "S10-sweep-desktop",
+   "t": "2026-10-01T06:15:29.541Z",
+   "ms": 34117,
+   "type": "media:canplay",
+   "vis": {
+    "n": 27,
+    "id": "s-roadmap",
+    "slideId": null
+   },
+   "audio": {
+    "src": "guide-06-governance-and-roadmap-kyzmCSHcw8.mp3",
+    "clip": "NAR-06",
+    "t": 7.15,
+    "muted": false
+   },
+   "cc": "Decisions, releases, and outcome reports are published, so every member can see how priorities are set and how the platform evolves over time.",
+   "guide": {
+    "state": "buffering",
+    "clip": "NAR-06",
+    "slideId": null,
+    "gen": null,
+    "status": "Narrating slide 27 of 39 · 06 Governance & roadmap"
+   },
+   "hash": "#/27",
+   "el": "guide-06-governance-and-roadmap-kyzmCSHcw8.mp3",
+   "ct": 7.15
+  },
+  {
+   "scenario": "S10-sweep-desktop",
+   "t": "2026-10-01T06:15:29.541Z",
+   "ms": 34117,
+   "type": "media:playing",
+   "vis": {
+    "n": 27,
+    "id": "s-roadmap",
+    "slideId": null
+   },
+   "audio": {
+    "src": "guide-06-governance-and-roadmap-kyzmCSHcw8.mp3",
+    "clip": "NAR-06",
+    "t": 7.15,
+    "muted": false
+   },
+   "cc": "Decisions, releases, and outcome reports are published, so every member can see how priorities are set and how the platform evolves over time.",
+   "guide": {
+    "state": "playing",
+    "clip": "NAR-06",
+    "slideId": null,
+    "gen": null,
+    "status": "Narrating slide 27 of 39 · 06 Governance & roadmap"
+   },
+   "hash": "#/27",
+   "el": "guide-06-governance-and-roadmap-kyzmCSHcw8.mp3",
+   "ct": 7.15
+  },
+  {
+   "scenario": "S10-sweep-desktop",
+   "t": "2026-10-01T06:15:29.625Z",
+   "ms": 34201,
+   "type": "sample",
+   "vis": {
+    "n": 27,
+    "id": "s-roadmap",
+    "slideId": null
+   },
+   "audio": {
+    "src": "guide-06-governance-and-roadmap-kyzmCSHcw8.mp3",
+    "clip": "NAR-06",
+    "t": 7.17,
+    "muted": false
+   },
+   "cc": "Decisions, releases, and outcome reports are published, so every member can see how priorities are set and how the platform evolves over time.",
+   "guide": {
+    "state": "playing",
+    "clip": "NAR-06",
+    "slideId": null,
+    "gen": null,
+    "status": "Narrating slide 27 of 39 · 06 Governance & roadmap"
+   },
+   "hash": "#/27"
+  },
+  {
+   "scenario": "S10-sweep-desktop",
+   "t": "2026-10-01T06:15:30.815Z",
+   "ms": 35391,
+   "type": "check",
+   "vis": {
+    "n": 27,
+    "id": "s-roadmap",
+    "slideId": null
+   },
+   "audio": {
+    "src": "guide-06-governance-and-roadmap-kyzmCSHcw8.mp3",
+    "clip": "NAR-06",
+    "t": 8.34,
+    "muted": false
+   },
+   "cc": "Decisions, releases, and outcome reports are published, so every member can see how priorities are set and how the platform evolves over time.",
+   "guide": {
+    "state": "playing",
+    "clip": "NAR-06",
+    "slideId": null,
+    "gen": null,
+    "status": "Narrating slide 27 of 39 · 06 Governance & roadmap"
+   },
+   "hash": "#/27",
+   "step": "slide 25",
+   "expect": 25
+  },
+  {
+   "scenario": "S10-sweep-desktop",
+   "t": "2026-10-01T06:15:30.816Z",
+   "ms": 35392,
+   "type": "key",
+   "vis": {
+    "n": 27,
+    "id": "s-roadmap",
+    "slideId": null
+   },
+   "audio": {
+    "src": "guide-06-governance-and-roadmap-kyzmCSHcw8.mp3",
+    "clip": "NAR-06",
+    "t": 8.34,
+    "muted": false
+   },
+   "cc": "Decisions, releases, and outcome reports are published, so every member can see how priorities are set and how the platform evolves over time.",
+   "guide": {
+    "state": "playing",
+    "clip": "NAR-06",
+    "slideId": null,
+    "gen": null,
+    "status": "Narrating slide 27 of 39 · 06 Governance & roadmap"
+   },
+   "hash": "#/27",
+   "key": "ArrowRight"
+  },
+  {
+   "scenario": "S10-sweep-desktop",
+   "t": "2026-10-01T06:15:30.837Z",
+   "ms": 35413,
+   "type": "sample",
+   "vis": {
+    "n": 28,
+    "id": "s-it-outcomes",
+    "slideId": null
+   },
+   "audio": {
+    "src": "guide-06-governance-and-roadmap-kyzmCSHcw8.mp3",
+    "clip": "NAR-06",
+    "t": 8.36,
+    "muted": false
+   },
+   "cc": "Decisions, releases, and outcome reports are published, so every member can see how priorities are set and how the platform evolves over time.",
+   "guide": {
+    "state": "playing",
+    "clip": "NAR-06",
+    "slideId": null,
+    "gen": null,
+    "status": "Narrating slide 27 of 39 · 06 Governance & roadmap"
+   },
+   "hash": "#/27/new-1"
+  },
+  {
+   "scenario": "S10-sweep-desktop",
+   "t": "2026-10-01T06:15:30.887Z",
+   "ms": 35463,
+   "type": "play()",
+   "vis": {
+    "n": 28,
+    "id": "s-it-outcomes",
+    "slideId": null
+   },
+   "audio": {
+    "src": "guide-06-governance-and-roadmap-kyzmCSHcw8.mp3",
+    "clip": "NAR-06",
+    "t": 0,
+    "muted": false
+   },
+   "cc": "Decisions, releases, and outcome reports are published, so every member can see how priorities are set and how the platform evolves over time.",
+   "guide": {
+    "state": "playing",
+    "clip": "NAR-06",
+    "slideId": null,
+    "gen": null,
+    "status": "Narrating slide 27 of 39 · 06 Governance & roadmap"
+   },
+   "hash": "#/27/new-1",
+   "el": "guide-06-governance-and-roadmap-kyzmCSHcw8.mp3",
+   "ct": 0
+  },
+  {
+   "scenario": "S10-sweep-desktop",
+   "t": "2026-10-01T06:15:30.888Z",
+   "ms": 35464,
+   "type": "media:emptied",
+   "vis": {
+    "n": 28,
+    "id": "s-it-outcomes",
+    "slideId": null
+   },
+   "audio": {
+    "src": "guide-06-governance-and-roadmap-kyzmCSHcw8.mp3",
+    "clip": "NAR-06",
+    "t": 0,
+    "muted": false
+   },
+   "cc": "Section seven, Impact and Funding.",
+   "guide": {
+    "state": "starting",
+    "clip": "NAR-07",
+    "slideId": null,
+    "gen": null,
+    "status": "Narrating slide 28 of 39 · 07 Impact & funding"
+   },
+   "hash": "#/27/new-1",
+   "el": "guide-06-governance-and-roadmap-kyzmCSHcw8.mp3",
+   "ct": 0
+  },
+  {
+   "scenario": "S10-sweep-desktop",
+   "t": "2026-10-01T06:15:30.890Z",
+   "ms": 35466,
+   "type": "media:loadstart",
+   "vis": {
+    "n": 28,
+    "id": "s-it-outcomes",
+    "slideId": null
+   },
+   "audio": {
+    "src": "guide-07-impact-and-funding-vWkiINp1IS.mp3",
+    "clip": "NAR-07",
+    "t": 0,
+    "muted": false
+   },
+   "cc": "Section seven, Impact and Funding.",
+   "guide": {
+    "state": "buffering",
+    "clip": "NAR-07",
+    "slideId": null,
+    "gen": null,
+    "status": "Narrating slide 28 of 39 · 07 Impact & funding"
+   },
+   "hash": "#/27/new-1",
+   "el": "guide-07-impact-and-funding-vWkiINp1IS.mp3",
+   "ct": 0
+  },
+  {
+   "scenario": "S10-sweep-desktop",
+   "t": "2026-10-01T06:15:30.890Z",
+   "ms": 35466,
+   "type": "media:loadstart",
+   "vis": {
+    "n": 28,
+    "id": "s-it-outcomes",
+    "slideId": null
+   },
+   "audio": {
+    "src": "guide-07-impact-and-funding-vWkiINp1IS.mp3",
+    "clip": "NAR-07",
+    "t": 0,
+    "muted": false
+   },
+   "cc": "Section seven, Impact and Funding.",
+   "guide": {
+    "state": "buffering",
+    "clip": "NAR-07",
+    "slideId": null,
+    "gen": null,
+    "status": "Narrating slide 28 of 39 · 07 Impact & funding"
+   },
+   "hash": "#/27/new-1",
+   "el": "guide-08-athar-os-Ib4oKe91OD.mp3",
+   "ct": 0
+  },
+  {
+   "scenario": "S10-sweep-desktop",
+   "t": "2026-10-01T06:15:30.893Z",
+   "ms": 35469,
+   "type": "media:canplay",
+   "vis": {
+    "n": 28,
+    "id": "s-it-outcomes",
+    "slideId": null
+   },
+   "audio": {
+    "src": "guide-07-impact-and-funding-vWkiINp1IS.mp3",
+    "clip": "NAR-07",
+    "t": 0,
+    "muted": false
+   },
+   "cc": "Section seven, Impact and Funding.",
+   "guide": {
+    "state": "buffering",
+    "clip": "NAR-07",
+    "slideId": null,
+    "gen": null,
+    "status": "Narrating slide 28 of 39 · 07 Impact & funding"
+   },
+   "hash": "#/27/new-1",
+   "el": "guide-07-impact-and-funding-vWkiINp1IS.mp3",
+   "ct": 0
+  },
+  {
+   "scenario": "S10-sweep-desktop",
+   "t": "2026-10-01T06:15:30.893Z",
+   "ms": 35469,
+   "type": "media:playing",
+   "vis": {
+    "n": 28,
+    "id": "s-it-outcomes",
+    "slideId": null
+   },
+   "audio": {
+    "src": "guide-07-impact-and-funding-vWkiINp1IS.mp3",
+    "clip": "NAR-07",
+    "t": 0,
+    "muted": false
+   },
+   "cc": "Section seven, Impact and Funding.",
+   "guide": {
+    "state": "playing",
+    "clip": "NAR-07",
+    "slideId": null,
+    "gen": null,
+    "status": "Narrating slide 28 of 39 · 07 Impact & funding"
+   },
+   "hash": "#/27/new-1",
+   "el": "guide-07-impact-and-funding-vWkiINp1IS.mp3",
+   "ct": 0
+  },
+  {
+   "scenario": "S10-sweep-desktop",
+   "t": "2026-10-01T06:15:30.893Z",
+   "ms": 35469,
+   "type": "play():resolved",
+   "vis": {
+    "n": 28,
+    "id": "s-it-outcomes",
+    "slideId": null
+   },
+   "audio": {
+    "src": "guide-07-impact-and-funding-vWkiINp1IS.mp3",
+    "clip": "NAR-07",
+    "t": 0,
+    "muted": false
+   },
+   "cc": "Section seven, Impact and Funding.",
+   "guide": {
+    "state": "playing",
+    "clip": "NAR-07",
+    "slideId": null,
+    "gen": null,
+    "status": "Narrating slide 28 of 39 · 07 Impact & funding"
+   },
+   "hash": "#/27/new-1",
+   "el": "guide-06-governance-and-roadmap-kyzmCSHcw8.mp3"
+  },
+  {
+   "scenario": "S10-sweep-desktop",
+   "t": "2026-10-01T06:15:30.897Z",
+   "ms": 35473,
+   "type": "media:canplay",
+   "vis": {
+    "n": 28,
+    "id": "s-it-outcomes",
+    "slideId": null
+   },
+   "audio": {
+    "src": "guide-07-impact-and-funding-vWkiINp1IS.mp3",
+    "clip": "NAR-07",
+    "t": 0,
+    "muted": false
+   },
+   "cc": "Section seven, Impact and Funding.",
+   "guide": {
+    "state": "playing",
+    "clip": "NAR-07",
+    "slideId": null,
+    "gen": null,
+    "status": "Narrating slide 28 of 39 · 07 Impact & funding"
+   },
+   "hash": "#/27/new-1",
+   "el": "guide-08-athar-os-Ib4oKe91OD.mp3",
+   "ct": 0
+  },
+  {
+   "scenario": "S10-sweep-desktop",
+   "t": "2026-10-01T06:15:30.925Z",
+   "ms": 35501,
+   "type": "sample",
+   "vis": {
+    "n": 28,
+    "id": "s-it-outcomes",
+    "slideId": null
+   },
+   "audio": {
+    "src": "guide-07-impact-and-funding-vWkiINp1IS.mp3",
+    "clip": "NAR-07",
+    "t": 0.02,
+    "muted": false
+   },
+   "cc": "Section seven, Impact and Funding.",
+   "guide": {
+    "state": "playing",
+    "clip": "NAR-07",
+    "slideId": null,
+    "gen": null,
+    "status": "Narrating slide 28 of 39 · 07 Impact & funding"
+   },
+   "hash": "#/27/new-1"
+  },
+  {
+   "scenario": "S10-sweep-desktop",
+   "t": "2026-10-01T06:15:32.153Z",
+   "ms": 36729,
+   "type": "check",
+   "vis": {
+    "n": 28,
+    "id": "s-it-outcomes",
+    "slideId": null
+   },
+   "audio": {
+    "src": "guide-07-impact-and-funding-vWkiINp1IS.mp3",
+    "clip": "NAR-07",
+    "t": 1.18,
+    "muted": false
+   },
+   "cc": "Section seven, Impact and Funding.",
+   "guide": {
+    "state": "playing",
+    "clip": "NAR-07",
+    "slideId": null,
+    "gen": null,
+    "status": "Narrating slide 28 of 39 · 07 Impact & funding"
+   },
+   "hash": "#/27/new-1",
+   "step": "slide 26",
+   "expect": 26
+  },
+  {
+   "scenario": "S10-sweep-desktop",
+   "t": "2026-10-01T06:15:32.154Z",
+   "ms": 36730,
+   "type": "key",
+   "vis": {
+    "n": 28,
+    "id": "s-it-outcomes",
+    "slideId": null
+   },
+   "audio": {
+    "src": "guide-07-impact-and-funding-vWkiINp1IS.mp3",
+    "clip": "NAR-07",
+    "t": 1.18,
+    "muted": false
+   },
+   "cc": "Section seven, Impact and Funding.",
+   "guide": {
+    "state": "playing",
+    "clip": "NAR-07",
+    "slideId": null,
+    "gen": null,
+    "status": "Narrating slide 28 of 39 · 07 Impact & funding"
+   },
+   "hash": "#/27/new-1",
+   "key": "ArrowRight"
+  },
+  {
+   "scenario": "S10-sweep-desktop",
+   "t": "2026-10-01T06:15:32.215Z",
+   "ms": 36791,
+   "type": "media:seeked",
+   "vis": {
+    "n": 29,
+    "id": "s-it-tiers",
+    "slideId": null
+   },
+   "audio": {
+    "src": "guide-07-impact-and-funding-vWkiINp1IS.mp3",
+    "clip": "NAR-07",
+    "t": 2.34,
+    "muted": false
+   },
+   "cc": "Three impact tiers, one delivery model, access, ownership, legacy.",
+   "guide": {
+    "state": "buffering",
+    "clip": "NAR-07",
+    "slideId": null,
+    "gen": null,
+    "status": "Narrating slide 29 of 39 · 07 Impact & funding"
+   },
+   "hash": "#/27/new-2",
+   "el": "guide-07-impact-and-funding-vWkiINp1IS.mp3",
+   "ct": 2.34
+  },
+  {
+   "scenario": "S10-sweep-desktop",
+   "t": "2026-10-01T06:15:32.215Z",
+   "ms": 36791,
+   "type": "media:canplay",
+   "vis": {
+    "n": 29,
+    "id": "s-it-tiers",
+    "slideId": null
+   },
+   "audio": {
+    "src": "guide-07-impact-and-funding-vWkiINp1IS.mp3",
+    "clip": "NAR-07",
+    "t": 2.34,
+    "muted": false
+   },
+   "cc": "Three impact tiers, one delivery model, access, ownership, legacy.",
+   "guide": {
+    "state": "buffering",
+    "clip": "NAR-07",
+    "slideId": null,
+    "gen": null,
+    "status": "Narrating slide 29 of 39 · 07 Impact & funding"
+   },
+   "hash": "#/27/new-2",
+   "el": "guide-07-impact-and-funding-vWkiINp1IS.mp3",
+   "ct": 2.34
+  },
+  {
+   "scenario": "S10-sweep-desktop",
+   "t": "2026-10-01T06:15:32.216Z",
+   "ms": 36792,
+   "type": "media:playing",
+   "vis": {
+    "n": 29,
+    "id": "s-it-tiers",
+    "slideId": null
+   },
+   "audio": {
+    "src": "guide-07-impact-and-funding-vWkiINp1IS.mp3",
+    "clip": "NAR-07",
+    "t": 2.34,
+    "muted": false
+   },
+   "cc": "Three impact tiers, one delivery model, access, ownership, legacy.",
+   "guide": {
+    "state": "playing",
+    "clip": "NAR-07",
+    "slideId": null,
+    "gen": null,
+    "status": "Narrating slide 29 of 39 · 07 Impact & funding"
+   },
+   "hash": "#/27/new-2",
+   "el": "guide-07-impact-and-funding-vWkiINp1IS.mp3",
+   "ct": 2.34
+  },
+  {
+   "scenario": "S10-sweep-desktop",
+   "t": "2026-10-01T06:15:32.225Z",
+   "ms": 36801,
+   "type": "sample",
+   "vis": {
+    "n": 29,
+    "id": "s-it-tiers",
+    "slideId": null
+   },
+   "audio": {
+    "src": "guide-07-impact-and-funding-vWkiINp1IS.mp3",
+    "clip": "NAR-07",
+    "t": 2.34,
+    "muted": false
+   },
+   "cc": "Three impact tiers, one delivery model, access, ownership, legacy.",
+   "guide": {
+    "state": "playing",
+    "clip": "NAR-07",
+    "slideId": null,
+    "gen": null,
+    "status": "Narrating slide 29 of 39 · 07 Impact & funding"
+   },
+   "hash": "#/27/new-2"
+  },
+  {
+   "scenario": "S10-sweep-desktop",
+   "t": "2026-10-01T06:15:33.488Z",
+   "ms": 38064,
+   "type": "check",
+   "vis": {
+    "n": 29,
+    "id": "s-it-tiers",
+    "slideId": null
+   },
+   "audio": {
+    "src": "guide-07-impact-and-funding-vWkiINp1IS.mp3",
+    "clip": "NAR-07",
+    "t": 3.53,
+    "muted": false
+   },
+   "cc": "Three impact tiers, one delivery model, access, ownership, legacy.",
+   "guide": {
+    "state": "playing",
+    "clip": "NAR-07",
+    "slideId": null,
+    "gen": null,
+    "status": "Narrating slide 29 of 39 · 07 Impact & funding"
+   },
+   "hash": "#/27/new-2",
+   "step": "slide 27",
+   "expect": 27
+  },
+  {
+   "scenario": "S10-sweep-desktop",
+   "t": "2026-10-01T06:15:33.489Z",
+   "ms": 38066,
+   "type": "key",
+   "vis": {
+    "n": 29,
+    "id": "s-it-tiers",
+    "slideId": null
+   },
+   "audio": {
+    "src": "guide-07-impact-and-funding-vWkiINp1IS.mp3",
+    "clip": "NAR-07",
+    "t": 3.53,
+    "muted": false
+   },
+   "cc": "Three impact tiers, one delivery model, access, ownership, legacy.",
+   "guide": {
+    "state": "playing",
+    "clip": "NAR-07",
+    "slideId": null,
+    "gen": null,
+    "status": "Narrating slide 29 of 39 · 07 Impact & funding"
+   },
+   "hash": "#/27/new-2",
+   "key": "ArrowRight"
+  },
+  {
+   "scenario": "S10-sweep-desktop",
+   "t": "2026-10-01T06:15:33.541Z",
+   "ms": 38117,
+   "type": "sample",
+   "vis": {
+    "n": 30,
+    "id": "s-it-metrics",
+    "slideId": null
+   },
+   "audio": {
+    "src": "guide-07-impact-and-funding-vWkiINp1IS.mp3",
+    "clip": "NAR-07",
+    "t": 3.58,
+    "muted": false
+   },
+   "cc": "Three impact tiers, one delivery model, access, ownership, legacy.",
+   "guide": {
+    "state": "playing",
+    "clip": "NAR-07",
+    "slideId": null,
+    "gen": null,
+    "status": "Narrating slide 29 of 39 · 07 Impact & funding"
+   },
+   "hash": "#/27/new-3"
+  },
+  {
+   "scenario": "S10-sweep-desktop",
+   "t": "2026-10-01T06:15:33.551Z",
+   "ms": 38127,
+   "type": "media:seeked",
+   "vis": {
+    "n": 30,
+    "id": "s-it-metrics",
+    "slideId": null
+   },
+   "audio": {
+    "src": "guide-07-impact-and-funding-vWkiINp1IS.mp3",
+    "clip": "NAR-07",
+    "t": 9.69,
+    "muted": false
+   },
+   "cc": "Every agreement includes named cohorts and activation targets, independent evaluator baselines, quarterly outcome reports, and open book costs with unspent funds returned.",
+   "guide": {
+    "state": "buffering",
+    "clip": "NAR-07",
+    "slideId": null,
+    "gen": null,
+    "status": "Narrating slide 30 of 39 · 07 Impact & funding"
+   },
+   "hash": "#/27/new-3",
+   "el": "guide-07-impact-and-funding-vWkiINp1IS.mp3",
+   "ct": 9.69
+  },
+  {
+   "scenario": "S10-sweep-desktop",
+   "t": "2026-10-01T06:15:33.551Z",
+   "ms": 38127,
+   "type": "media:canplay",
+   "vis": {
+    "n": 30,
+    "id": "s-it-metrics",
+    "slideId": null
+   },
+   "audio": {
+    "src": "guide-07-impact-and-funding-vWkiINp1IS.mp3",
+    "clip": "NAR-07",
+    "t": 9.69,
+    "muted": false
+   },
+   "cc": "Every agreement includes named cohorts and activation targets, independent evaluator baselines, quarterly outcome reports, and open book costs with unspent funds returned.",
+   "guide": {
+    "state": "buffering",
+    "clip": "NAR-07",
+    "slideId": null,
+    "gen": null,
+    "status": "Narrating slide 30 of 39 · 07 Impact & funding"
+   },
+   "hash": "#/27/new-3",
+   "el": "guide-07-impact-and-funding-vWkiINp1IS.mp3",
+   "ct": 9.69
+  },
+  {
+   "scenario": "S10-sweep-desktop",
+   "t": "2026-10-01T06:15:33.551Z",
+   "ms": 38127,
+   "type": "media:playing",
+   "vis": {
+    "n": 30,
+    "id": "s-it-metrics",
+    "slideId": null
+   },
+   "audio": {
+    "src": "guide-07-impact-and-funding-vWkiINp1IS.mp3",
+    "clip": "NAR-07",
+    "t": 9.69,
+    "muted": false
+   },
+   "cc": "Every agreement includes named cohorts and activation targets, independent evaluator baselines, quarterly outcome reports, and open book costs with unspent funds returned.",
+   "guide": {
+    "state": "playing",
+    "clip": "NAR-07",
+    "slideId": null,
+    "gen": null,
+    "status": "Narrating slide 30 of 39 · 07 Impact & funding"
+   },
+   "hash": "#/27/new-3",
+   "el": "guide-07-impact-and-funding-vWkiINp1IS.mp3",
+   "ct": 9.69
+  },
+  {
+   "scenario": "S10-sweep-desktop",
+   "t": "2026-10-01T06:15:33.625Z",
+   "ms": 38201,
+   "type": "sample",
+   "vis": {
+    "n": 30,
+    "id": "s-it-metrics",
+    "slideId": null
+   },
+   "audio": {
+    "src": "guide-07-impact-and-funding-vWkiINp1IS.mp3",
+    "clip": "NAR-07",
+    "t": 9.71,
+    "muted": false
+   },
+   "cc": "Every agreement includes named cohorts and activation targets, independent evaluator baselines, quarterly outcome reports, and open book costs with unspent funds returned.",
+   "guide": {
+    "state": "playing",
+    "clip": "NAR-07",
+    "slideId": null,
+    "gen": null,
+    "status": "Narrating slide 30 of 39 · 07 Impact & funding"
+   },
+   "hash": "#/27/new-3"
+  },
+  {
+   "scenario": "S10-sweep-desktop",
+   "t": "2026-10-01T06:15:34.830Z",
+   "ms": 39406,
+   "type": "check",
+   "vis": {
+    "n": 30,
+    "id": "s-it-metrics",
+    "slideId": null
+   },
+   "audio": {
+    "src": "guide-07-impact-and-funding-vWkiINp1IS.mp3",
+    "clip": "NAR-07",
+    "t": 10.9,
+    "muted": false
+   },
+   "cc": "Every agreement includes named cohorts and activation targets, independent evaluator baselines, quarterly outcome reports, and open book costs with unspent funds returned.",
+   "guide": {
+    "state": "playing",
+    "clip": "NAR-07",
+    "slideId": null,
+    "gen": null,
+    "status": "Narrating slide 30 of 39 · 07 Impact & funding"
+   },
+   "hash": "#/27/new-3",
+   "step": "slide 28",
+   "expect": 28
+  },
+  {
+   "scenario": "S10-sweep-desktop",
+   "t": "2026-10-01T06:15:34.832Z",
+   "ms": 39408,
+   "type": "key",
+   "vis": {
+    "n": 30,
+    "id": "s-it-metrics",
+    "slideId": null
+   },
+   "audio": {
+    "src": "guide-07-impact-and-funding-vWkiINp1IS.mp3",
+    "clip": "NAR-07",
+    "t": 10.9,
+    "muted": false
+   },
+   "cc": "Every agreement includes named cohorts and activation targets, independent evaluator baselines, quarterly outcome reports, and open book costs with unspent funds returned.",
+   "guide": {
+    "state": "playing",
+    "clip": "NAR-07",
+    "slideId": null,
+    "gen": null,
+    "status": "Narrating slide 30 of 39 · 07 Impact & funding"
+   },
+   "hash": "#/27/new-3",
+   "key": "ArrowRight"
+  },
+  {
+   "scenario": "S10-sweep-desktop",
+   "t": "2026-10-01T06:15:34.898Z",
+   "ms": 39474,
+   "type": "media:seeked",
+   "vis": {
+    "n": 31,
+    "id": "s-it-sustain",
+    "slideId": null
+   },
+   "audio": {
+    "src": "guide-07-impact-and-funding-vWkiINp1IS.mp3",
+    "clip": "NAR-07",
+    "t": 21.42,
+    "muted": false
+   },
+   "cc": "Universal API licenses, marketplace revenue share and sovereign pilot options fund the model so each partner can choose what fits.",
+   "guide": {
+    "state": "buffering",
+    "clip": "NAR-07",
+    "slideId": null,
+    "gen": null,
+    "status": "Narrating slide 31 of 39 · 07 Impact & funding"
+   },
+   "hash": "#/27/new-4",
+   "el": "guide-07-impact-and-funding-vWkiINp1IS.mp3",
+   "ct": 21.42
+  },
+  {
+   "scenario": "S10-sweep-desktop",
+   "t": "2026-10-01T06:15:34.898Z",
+   "ms": 39474,
+   "type": "media:canplay",
+   "vis": {
+    "n": 31,
+    "id": "s-it-sustain",
+    "slideId": null
+   },
+   "audio": {
+    "src": "guide-07-impact-and-funding-vWkiINp1IS.mp3",
+    "clip": "NAR-07",
+    "t": 21.42,
+    "muted": false
+   },
+   "cc": "Universal API licenses, marketplace revenue share and sovereign pilot options fund the model so each partner can choose what fits.",
+   "guide": {
+    "state": "buffering",
+    "clip": "NAR-07",
+    "slideId": null,
+    "gen": null,
+    "status": "Narrating slide 31 of 39 · 07 Impact & funding"
+   },
+   "hash": "#/27/new-4",
+   "el": "guide-07-impact-and-funding-vWkiINp1IS.mp3",
+   "ct": 21.42
+  },
+  {
+   "scenario": "S10-sweep-desktop",
+   "t": "2026-10-01T06:15:34.898Z",
+   "ms": 39474,
+   "type": "media:playing",
+   "vis": {
+    "n": 31,
+    "id": "s-it-sustain",
+    "slideId": null
+   },
+   "audio": {
+    "src": "guide-07-impact-and-funding-vWkiINp1IS.mp3",
+    "clip": "NAR-07",
+    "t": 21.42,
+    "muted": false
+   },
+   "cc": "Universal API licenses, marketplace revenue share and sovereign pilot options fund the model so each partner can choose what fits.",
+   "guide": {
+    "state": "playing",
+    "clip": "NAR-07",
+    "slideId": null,
+    "gen": null,
+    "status": "Narrating slide 31 of 39 · 07 Impact & funding"
+   },
+   "hash": "#/27/new-4",
+   "el": "guide-07-impact-and-funding-vWkiINp1IS.mp3",
+   "ct": 21.42
+  },
+  {
+   "scenario": "S10-sweep-desktop",
+   "t": "2026-10-01T06:15:34.926Z",
+   "ms": 39502,
+   "type": "sample",
+   "vis": {
+    "n": 31,
+    "id": "s-it-sustain",
+    "slideId": null
+   },
+   "audio": {
+    "src": "guide-07-impact-and-funding-vWkiINp1IS.mp3",
+    "clip": "NAR-07",
+    "t": 21.42,
+    "muted": false
+   },
+   "cc": "Universal API licenses, marketplace revenue share and sovereign pilot options fund the model so each partner can choose what fits.",
+   "guide": {
+    "state": "playing",
+    "clip": "NAR-07",
+    "slideId": null,
+    "gen": null,
+    "status": "Narrating slide 31 of 39 · 07 Impact & funding"
+   },
+   "hash": "#/27/new-4"
+  },
+  {
+   "scenario": "S10-sweep-desktop",
+   "t": "2026-10-01T06:15:36.168Z",
+   "ms": 40745,
+   "type": "check",
+   "vis": {
+    "n": 31,
+    "id": "s-it-sustain",
+    "slideId": null
+   },
+   "audio": {
+    "src": "guide-07-impact-and-funding-vWkiINp1IS.mp3",
+    "clip": "NAR-07",
+    "t": 22.62,
+    "muted": false
+   },
+   "cc": "Universal API licenses, marketplace revenue share and sovereign pilot options fund the model so each partner can choose what fits.",
+   "guide": {
+    "state": "playing",
+    "clip": "NAR-07",
+    "slideId": null,
+    "gen": null,
+    "status": "Narrating slide 31 of 39 · 07 Impact & funding"
+   },
+   "hash": "#/27/new-4",
+   "step": "slide 29",
+   "expect": 29
+  },
+  {
+   "scenario": "S10-sweep-desktop",
+   "t": "2026-10-01T06:15:36.170Z",
+   "ms": 40746,
+   "type": "key",
+   "vis": {
+    "n": 31,
+    "id": "s-it-sustain",
+    "slideId": null
+   },
+   "audio": {
+    "src": "guide-07-impact-and-funding-vWkiINp1IS.mp3",
+    "clip": "NAR-07",
+    "t": 22.62,
+    "muted": false
+   },
+   "cc": "Universal API licenses, marketplace revenue share and sovereign pilot options fund the model so each partner can choose what fits.",
+   "guide": {
+    "state": "playing",
+    "clip": "NAR-07",
+    "slideId": null,
+    "gen": null,
+    "status": "Narrating slide 31 of 39 · 07 Impact & funding"
+   },
+   "hash": "#/27/new-4",
+   "key": "ArrowRight"
+  },
+  {
+   "scenario": "S10-sweep-desktop",
+   "t": "2026-10-01T06:15:36.225Z",
+   "ms": 40801,
+   "type": "sample",
+   "vis": {
+    "n": 32,
+    "id": "s-it-partners",
+    "slideId": null
+   },
+   "audio": {
+    "src": "guide-07-impact-and-funding-vWkiINp1IS.mp3",
+    "clip": "NAR-07",
+    "t": 22.68,
+    "muted": false
+   },
+   "cc": "Universal API licenses, marketplace revenue share and sovereign pilot options fund the model so each partner can choose what fits.",
+   "guide": {
+    "state": "playing",
+    "clip": "NAR-07",
+    "slideId": null,
+    "gen": null,
+    "status": "Narrating slide 31 of 39 · 07 Impact & funding"
+   },
+   "hash": "#/27/new-5"
+  },
+  {
+   "scenario": "S10-sweep-desktop",
+   "t": "2026-10-01T06:15:37.504Z",
+   "ms": 42081,
+   "type": "check",
+   "vis": {
+    "n": 32,
+    "id": "s-it-partners",
+    "slideId": null
+   },
+   "audio": {
+    "src": "guide-07-impact-and-funding-vWkiINp1IS.mp3",
+    "clip": "NAR-07",
+    "t": 23.96,
+    "muted": false
+   },
+   "cc": "Universal API licenses, marketplace revenue share and sovereign pilot options fund the model so each partner can choose what fits.",
+   "guide": {
+    "state": "playing",
+    "clip": "NAR-07",
+    "slideId": null,
+    "gen": null,
+    "status": "Narrating slide 32 of 39 · 07 Impact & funding"
+   },
+   "hash": "#/27/new-5",
+   "step": "slide 30",
+   "expect": 30
+  },
+  {
+   "scenario": "S10-sweep-desktop",
+   "t": "2026-10-01T06:15:37.506Z",
+   "ms": 42082,
+   "type": "key",
+   "vis": {
+    "n": 32,
+    "id": "s-it-partners",
+    "slideId": null
+   },
+   "audio": {
+    "src": "guide-07-impact-and-funding-vWkiINp1IS.mp3",
+    "clip": "NAR-07",
+    "t": 23.96,
+    "muted": false
+   },
+   "cc": "Universal API licenses, marketplace revenue share and sovereign pilot options fund the model so each partner can choose what fits.",
+   "guide": {
+    "state": "playing",
+    "clip": "NAR-07",
+    "slideId": null,
+    "gen": null,
+    "status": "Narrating slide 32 of 39 · 07 Impact & funding"
+   },
+   "hash": "#/27/new-5",
+   "key": "ArrowRight"
+  },
+  {
+   "scenario": "S10-sweep-desktop",
+   "t": "2026-10-01T06:15:37.525Z",
+   "ms": 42101,
+   "type": "sample",
+   "vis": {
+    "n": 33,
+    "id": "s-it-join",
+    "slideId": null
+   },
+   "audio": {
+    "src": "guide-07-impact-and-funding-vWkiINp1IS.mp3",
+    "clip": "NAR-07",
+    "t": 23.98,
+    "muted": false
+   },
+   "cc": "Universal API licenses, marketplace revenue share and sovereign pilot options fund the model so each partner can choose what fits.",
+   "guide": {
+    "state": "playing",
+    "clip": "NAR-07",
+    "slideId": null,
+    "gen": null,
+    "status": "Narrating slide 32 of 39 · 07 Impact & funding"
+   },
+   "hash": "#/27/new-6"
+  },
+  {
+   "scenario": "S10-sweep-desktop",
+   "t": "2026-10-01T06:15:38.845Z",
+   "ms": 43421,
+   "type": "check",
+   "vis": {
+    "n": 33,
+    "id": "s-it-join",
+    "slideId": null
+   },
+   "audio": {
+    "src": "guide-07-impact-and-funding-vWkiINp1IS.mp3",
+    "clip": "NAR-07",
+    "t": 25.3,
+    "muted": false
+   },
+   "cc": "Universal API licenses, marketplace revenue share and sovereign pilot options fund the model so each partner can choose what fits.",
+   "guide": {
+    "state": "playing",
+    "clip": "NAR-07",
+    "slideId": null,
+    "gen": null,
+    "status": "Narrating slide 33 of 39 · 07 Impact & funding"
+   },
+   "hash": "#/27/new-6",
+   "step": "slide 31",
+   "expect": 31
+  },
+  {
+   "scenario": "S10-sweep-desktop",
+   "t": "2026-10-01T06:15:38.846Z",
+   "ms": 43422,
+   "type": "key",
+   "vis": {
+    "n": 33,
+    "id": "s-it-join",
+    "slideId": null
+   },
+   "audio": {
+    "src": "guide-07-impact-and-funding-vWkiINp1IS.mp3",
+    "clip": "NAR-07",
+    "t": 25.3,
+    "muted": false
+   },
+   "cc": "Universal API licenses, marketplace revenue share and sovereign pilot options fund the model so each partner can choose what fits.",
+   "guide": {
+    "state": "playing",
+    "clip": "NAR-07",
+    "slideId": null,
+    "gen": null,
+    "status": "Narrating slide 33 of 39 · 07 Impact & funding"
+   },
+   "hash": "#/27/new-6",
+   "key": "ArrowRight"
+  },
+  {
+   "scenario": "S10-sweep-desktop",
+   "t": "2026-10-01T06:15:38.923Z",
+   "ms": 43499,
+   "type": "play()",
+   "vis": {
+    "n": 34,
+    "id": "s-aos-overview",
+    "slideId": null
+   },
+   "audio": {
+    "src": "guide-07-impact-and-funding-vWkiINp1IS.mp3",
+    "clip": "NAR-07",
+    "t": 0,
+    "muted": false
+   },
+   "cc": "Universal API licenses, marketplace revenue share and sovereign pilot options fund the model so each partner can choose what fits.",
+   "guide": {
+    "state": "playing",
+    "clip": "NAR-07",
+    "slideId": null,
+    "gen": null,
+    "status": "Narrating slide 33 of 39 · 07 Impact & funding"
+   },
+   "hash": "#/27/new-7",
+   "el": "guide-07-impact-and-funding-vWkiINp1IS.mp3",
+   "ct": 0
+  },
+  {
+   "scenario": "S10-sweep-desktop",
+   "t": "2026-10-01T06:15:38.925Z",
+   "ms": 43501,
+   "type": "media:emptied",
+   "vis": {
+    "n": 34,
+    "id": "s-aos-overview",
+    "slideId": null
+   },
+   "audio": {
+    "src": "guide-07-impact-and-funding-vWkiINp1IS.mp3",
+    "clip": "NAR-07",
+    "t": 0,
+    "muted": false
+   },
+   "cc": "Section eight, Athar OS.",
+   "guide": {
+    "state": "starting",
+    "clip": "NAR-08",
+    "slideId": null,
+    "gen": null,
+    "status": "Narrating slide 34 of 39 · 08 Athar OS"
+   },
+   "hash": "#/27/new-7",
+   "el": "guide-07-impact-and-funding-vWkiINp1IS.mp3",
+   "ct": 0
+  },
+  {
+   "scenario": "S10-sweep-desktop",
+   "t": "2026-10-01T06:15:38.927Z",
+   "ms": 43503,
+   "type": "sample",
+   "vis": {
+    "n": 34,
+    "id": "s-aos-overview",
+    "slideId": null
+   },
+   "audio": {
+    "src": "guide-08-athar-os-Ib4oKe91OD.mp3",
+    "clip": "NAR-08",
+    "t": 0,
+    "muted": false
+   },
+   "cc": "Section eight, Athar OS.",
+   "guide": {
+    "state": "buffering",
+    "clip": "NAR-08",
+    "slideId": null,
+    "gen": null,
+    "status": "Narrating slide 34 of 39 · 08 Athar OS"
+   },
+   "hash": "#/27/new-7"
+  },
+  {
+   "scenario": "S10-sweep-desktop",
+   "t": "2026-10-01T06:15:38.929Z",
+   "ms": 43505,
+   "type": "media:loadstart",
+   "vis": {
+    "n": 34,
+    "id": "s-aos-overview",
+    "slideId": null
+   },
+   "audio": {
+    "src": "guide-08-athar-os-Ib4oKe91OD.mp3",
+    "clip": "NAR-08",
+    "t": 0,
+    "muted": false
+   },
+   "cc": "Section eight, Athar OS.",
+   "guide": {
+    "state": "buffering",
+    "clip": "NAR-08",
+    "slideId": null,
+    "gen": null,
+    "status": "Narrating slide 34 of 39 · 08 Athar OS"
+   },
+   "hash": "#/27/new-7",
+   "el": "guide-08-athar-os-Ib4oKe91OD.mp3",
+   "ct": 0
+  },
+  {
+   "scenario": "S10-sweep-desktop",
+   "t": "2026-10-01T06:15:38.929Z",
+   "ms": 43505,
+   "type": "media:loadstart",
+   "vis": {
+    "n": 34,
+    "id": "s-aos-overview",
+    "slideId": null
+   },
+   "audio": {
+    "src": "guide-08-athar-os-Ib4oKe91OD.mp3",
+    "clip": "NAR-08",
+    "t": 0,
+    "muted": false
+   },
+   "cc": "Section eight, Athar OS.",
+   "guide": {
+    "state": "buffering",
+    "clip": "NAR-08",
+    "slideId": null,
+    "gen": null,
+    "status": "Narrating slide 34 of 39 · 08 Athar OS"
+   },
+   "hash": "#/27/new-7",
+   "el": "guide-09-join-the-pact-Hx4Ywy843S.mp3",
+   "ct": 0
+  },
+  {
+   "scenario": "S10-sweep-desktop",
+   "t": "2026-10-01T06:15:38.934Z",
+   "ms": 43510,
+   "type": "media:canplay",
+   "vis": {
+    "n": 34,
+    "id": "s-aos-overview",
+    "slideId": null
+   },
+   "audio": {
+    "src": "guide-08-athar-os-Ib4oKe91OD.mp3",
+    "clip": "NAR-08",
+    "t": 0,
+    "muted": false
+   },
+   "cc": "Section eight, Athar OS.",
+   "guide": {
+    "state": "buffering",
+    "clip": "NAR-08",
+    "slideId": null,
+    "gen": null,
+    "status": "Narrating slide 34 of 39 · 08 Athar OS"
+   },
+   "hash": "#/27/new-7",
+   "el": "guide-08-athar-os-Ib4oKe91OD.mp3",
+   "ct": 0
+  },
+  {
+   "scenario": "S10-sweep-desktop",
+   "t": "2026-10-01T06:15:38.935Z",
+   "ms": 43511,
+   "type": "media:playing",
+   "vis": {
+    "n": 34,
+    "id": "s-aos-overview",
+    "slideId": null
+   },
+   "audio": {
+    "src": "guide-08-athar-os-Ib4oKe91OD.mp3",
+    "clip": "NAR-08",
+    "t": 0,
+    "muted": false
+   },
+   "cc": "Section eight, Athar OS.",
+   "guide": {
+    "state": "playing",
+    "clip": "NAR-08",
+    "slideId": null,
+    "gen": null,
+    "status": "Narrating slide 34 of 39 · 08 Athar OS"
+   },
+   "hash": "#/27/new-7",
+   "el": "guide-08-athar-os-Ib4oKe91OD.mp3",
+   "ct": 0
+  },
+  {
+   "scenario": "S10-sweep-desktop",
+   "t": "2026-10-01T06:15:38.935Z",
+   "ms": 43511,
+   "type": "play():resolved",
+   "vis": {
+    "n": 34,
+    "id": "s-aos-overview",
+    "slideId": null
+   },
+   "audio": {
+    "src": "guide-08-athar-os-Ib4oKe91OD.mp3",
+    "clip": "NAR-08",
+    "t": 0,
+    "muted": false
+   },
+   "cc": "Section eight, Athar OS.",
+   "guide": {
+    "state": "playing",
+    "clip": "NAR-08",
+    "slideId": null,
+    "gen": null,
+    "status": "Narrating slide 34 of 39 · 08 Athar OS"
+   },
+   "hash": "#/27/new-7",
+   "el": "guide-07-impact-and-funding-vWkiINp1IS.mp3"
+  },
+  {
+   "scenario": "S10-sweep-desktop",
+   "t": "2026-10-01T06:15:38.938Z",
+   "ms": 43514,
+   "type": "media:canplay",
+   "vis": {
+    "n": 34,
+    "id": "s-aos-overview",
+    "slideId": null
+   },
+   "audio": {
+    "src": "guide-08-athar-os-Ib4oKe91OD.mp3",
+    "clip": "NAR-08",
+    "t": 0,
+    "muted": false
+   },
+   "cc": "Section eight, Athar OS.",
+   "guide": {
+    "state": "playing",
+    "clip": "NAR-08",
+    "slideId": null,
+    "gen": null,
+    "status": "Narrating slide 34 of 39 · 08 Athar OS"
+   },
+   "hash": "#/27/new-7",
+   "el": "guide-09-join-the-pact-Hx4Ywy843S.mp3",
+   "ct": 0
+  },
+  {
+   "scenario": "S10-sweep-desktop",
+   "t": "2026-10-01T06:15:39.025Z",
+   "ms": 43601,
+   "type": "sample",
+   "vis": {
+    "n": 34,
+    "id": "s-aos-overview",
+    "slideId": null
+   },
+   "audio": {
+    "src": "guide-08-athar-os-Ib4oKe91OD.mp3",
+    "clip": "NAR-08",
+    "t": 0.02,
+    "muted": false
+   },
+   "cc": "Section eight, Athar OS.",
+   "guide": {
+    "state": "playing",
+    "clip": "NAR-08",
+    "slideId": null,
+    "gen": null,
+    "status": "Narrating slide 34 of 39 · 08 Athar OS"
+   },
+   "hash": "#/27/new-7"
+  },
+  {
+   "scenario": "S10-sweep-desktop",
+   "t": "2026-10-01T06:15:40.182Z",
+   "ms": 44758,
+   "type": "check",
+   "vis": {
+    "n": 34,
+    "id": "s-aos-overview",
+    "slideId": null
+   },
+   "audio": {
+    "src": "guide-08-athar-os-Ib4oKe91OD.mp3",
+    "clip": "NAR-08",
+    "t": 1.17,
+    "muted": false
+   },
+   "cc": "Section eight, Athar OS.",
+   "guide": {
+    "state": "playing",
+    "clip": "NAR-08",
+    "slideId": null,
+    "gen": null,
+    "status": "Narrating slide 34 of 39 · 08 Athar OS"
+   },
+   "hash": "#/27/new-7",
+   "step": "slide 32",
+   "expect": 32
+  },
+  {
+   "scenario": "S10-sweep-desktop",
+   "t": "2026-10-01T06:15:40.183Z",
+   "ms": 44759,
+   "type": "key",
+   "vis": {
+    "n": 34,
+    "id": "s-aos-overview",
+    "slideId": null
+   },
+   "audio": {
+    "src": "guide-08-athar-os-Ib4oKe91OD.mp3",
+    "clip": "NAR-08",
+    "t": 1.17,
+    "muted": false
+   },
+   "cc": "Section eight, Athar OS.",
+   "guide": {
+    "state": "playing",
+    "clip": "NAR-08",
+    "slideId": null,
+    "gen": null,
+    "status": "Narrating slide 34 of 39 · 08 Athar OS"
+   },
+   "hash": "#/27/new-7",
+   "key": "ArrowRight"
+  },
+  {
+   "scenario": "S10-sweep-desktop",
+   "t": "2026-10-01T06:15:40.343Z",
+   "ms": 44919,
+   "type": "sample",
+   "vis": {
+    "n": 35,
+    "id": "s-aos-tour",
+    "slideId": null
+   },
+   "audio": {
+    "src": "guide-08-athar-os-Ib4oKe91OD.mp3",
+    "clip": "NAR-08",
+    "t": 1.33,
+    "muted": false
+   },
+   "cc": "Section eight, Athar OS.",
+   "guide": {
+    "state": "playing",
+    "clip": "NAR-08",
+    "slideId": null,
+    "gen": null,
+    "status": "Narrating slide 34 of 39 · 08 Athar OS"
+   },
+   "hash": "#/27/new-8"
+  },
+  {
+   "scenario": "S10-sweep-desktop",
+   "t": "2026-10-01T06:15:41.404Z",
+   "ms": 45980,
+   "type": "hashchange",
+   "vis": {
+    "n": 35,
+    "id": "s-aos-tour",
+    "slideId": null
+   },
+   "audio": {
+    "src": "guide-08-athar-os-Ib4oKe91OD.mp3",
+    "clip": "NAR-08",
+    "t": 2.4,
+    "muted": false
+   },
+   "cc": "The roadmap runs now in Q4, 2026, next in 2027 and later in 2028.",
+   "guide": {
+    "state": "playing",
+    "clip": "NAR-08",
+    "slideId": null,
+    "gen": null,
+    "status": "Narrating slide 35 of 39 · 08 Athar OS"
+   },
+   "hash": "#/27/new-9"
+  },
+  {
+   "scenario": "S10-sweep-desktop",
+   "t": "2026-10-01T06:15:41.432Z",
+   "ms": 46008,
+   "type": "sample",
+   "vis": {
+    "n": 36,
+    "id": "s-aos-roadmap",
+    "slideId": null
+   },
+   "audio": {
+    "src": "guide-08-athar-os-Ib4oKe91OD.mp3",
+    "clip": "NAR-08",
+    "t": 2.42,
+    "muted": false
+   },
+   "cc": "The roadmap runs now in Q4, 2026, next in 2027 and later in 2028.",
+   "guide": {
+    "state": "playing",
+    "clip": "NAR-08",
+    "slideId": null,
+    "gen": null,
+    "status": "Narrating slide 36 of 39 · 08 Athar OS"
+   },
+   "hash": "#/27/new-9"
+  },
+  {
+   "scenario": "S10-sweep-desktop",
+   "t": "2026-10-01T06:15:41.638Z",
+   "ms": 46214,
+   "type": "check",
+   "vis": {
+    "n": 36,
+    "id": "s-aos-roadmap",
+    "slideId": null
+   },
+   "audio": {
+    "src": "guide-08-athar-os-Ib4oKe91OD.mp3",
+    "clip": "NAR-08",
+    "t": 2.63,
+    "muted": false
+   },
+   "cc": "The roadmap runs now in Q4, 2026, next in 2027 and later in 2028.",
+   "guide": {
+    "state": "playing",
+    "clip": "NAR-08",
+    "slideId": null,
+    "gen": null,
+    "status": "Narrating slide 36 of 39 · 08 Athar OS"
+   },
+   "hash": "#/27/new-9",
+   "step": "slide 33",
+   "expect": 33
+  },
+  {
+   "scenario": "S10-sweep-desktop",
+   "t": "2026-10-01T06:15:41.639Z",
+   "ms": 46215,
+   "type": "key",
+   "vis": {
+    "n": 36,
+    "id": "s-aos-roadmap",
+    "slideId": null
+   },
+   "audio": {
+    "src": "guide-08-athar-os-Ib4oKe91OD.mp3",
+    "clip": "NAR-08",
+    "t": 2.63,
+    "muted": false
+   },
+   "cc": "The roadmap runs now in Q4, 2026, next in 2027 and later in 2028.",
+   "guide": {
+    "state": "playing",
+    "clip": "NAR-08",
+    "slideId": null,
+    "gen": null,
+    "status": "Narrating slide 36 of 39 · 08 Athar OS"
+   },
+   "hash": "#/27/new-9",
+   "key": "ArrowRight"
+  },
+  {
+   "scenario": "S10-sweep-desktop",
+   "t": "2026-10-01T06:15:41.725Z",
+   "ms": 46301,
+   "type": "sample",
+   "vis": {
+    "n": 37,
+    "id": "s-aos-deploy",
+    "slideId": null
+   },
+   "audio": {
+    "src": "guide-08-athar-os-Ib4oKe91OD.mp3",
+    "clip": "NAR-08",
+    "t": 2.72,
+    "muted": false
+   },
+   "cc": "The roadmap runs now in Q4, 2026, next in 2027 and later in 2028.",
+   "guide": {
+    "state": "playing",
+    "clip": "NAR-08",
+    "slideId": null,
+    "gen": null,
+    "status": "Narrating slide 37 of 39 · 08 Athar OS"
+   },
+   "hash": "#/27/new-10"
+  },
+  {
+   "scenario": "S10-sweep-desktop",
+   "t": "2026-10-01T06:15:42.978Z",
+   "ms": 47554,
+   "type": "check",
+   "vis": {
+    "n": 37,
+    "id": "s-aos-deploy",
+    "slideId": null
+   },
+   "audio": {
+    "src": "guide-08-athar-os-Ib4oKe91OD.mp3",
+    "clip": "NAR-08",
+    "t": 3.97,
+    "muted": false
+   },
+   "cc": "The roadmap runs now in Q4, 2026, next in 2027 and later in 2028.",
+   "guide": {
+    "state": "playing",
+    "clip": "NAR-08",
+    "slideId": null,
+    "gen": null,
+    "status": "Narrating slide 37 of 39 · 08 Athar OS"
+   },
+   "hash": "#/27/new-10",
+   "step": "slide 34",
+   "expect": 34
+  },
+  {
+   "scenario": "S10-sweep-desktop",
+   "t": "2026-10-01T06:15:42.980Z",
+   "ms": 47556,
+   "type": "key",
+   "vis": {
+    "n": 37,
+    "id": "s-aos-deploy",
+    "slideId": null
+   },
+   "audio": {
+    "src": "guide-08-athar-os-Ib4oKe91OD.mp3",
+    "clip": "NAR-08",
+    "t": 3.97,
+    "muted": false
+   },
+   "cc": "The roadmap runs now in Q4, 2026, next in 2027 and later in 2028.",
+   "guide": {
+    "state": "playing",
+    "clip": "NAR-08",
+    "slideId": null,
+    "gen": null,
+    "status": "Narrating slide 37 of 39 · 08 Athar OS"
+   },
+   "hash": "#/27/new-10",
+   "key": "ArrowRight"
+  },
+  {
+   "scenario": "S10-sweep-desktop",
+   "t": "2026-10-01T06:15:43.026Z",
+   "ms": 47602,
+   "type": "sample",
+   "vis": {
+    "n": 38,
+    "id": "s-aos-nations",
+    "slideId": null
+   },
+   "audio": {
+    "src": "guide-08-athar-os-Ib4oKe91OD.mp3",
+    "clip": "NAR-08",
+    "t": 4.02,
+    "muted": false
+   },
+   "cc": "The roadmap runs now in Q4, 2026, next in 2027 and later in 2028.",
+   "guide": {
+    "state": "playing",
+    "clip": "NAR-08",
+    "slideId": null,
+    "gen": null,
+    "status": "Narrating slide 37 of 39 · 08 Athar OS"
+   },
+   "hash": "#/27/new-11"
+  },
+  {
+   "scenario": "S10-sweep-desktop",
+   "t": "2026-10-01T06:15:43.051Z",
+   "ms": 47627,
+   "type": "media:seeked",
+   "vis": {
+    "n": 38,
+    "id": "s-aos-nations",
+    "slideId": null
+   },
+   "audio": {
+    "src": "guide-08-athar-os-Ib4oKe91OD.mp3",
+    "clip": "NAR-08",
+    "t": 7.97,
+    "muted": false
+   },
+   "cc": "Nations empowered.",
+   "guide": {
+    "state": "buffering",
+    "clip": "NAR-08",
+    "slideId": null,
+    "gen": null,
+    "status": "Narrating slide 38 of 39 · 08 Athar OS"
+   },
+   "hash": "#/27/new-11",
+   "el": "guide-08-athar-os-Ib4oKe91OD.mp3",
+   "ct": 7.97
+  },
+  {
+   "scenario": "S10-sweep-desktop",
+   "t": "2026-10-01T06:15:43.051Z",
+   "ms": 47627,
+   "type": "media:canplay",
+   "vis": {
+    "n": 38,
+    "id": "s-aos-nations",
+    "slideId": null
+   },
+   "audio": {
+    "src": "guide-08-athar-os-Ib4oKe91OD.mp3",
+    "clip": "NAR-08",
+    "t": 7.97,
+    "muted": false
+   },
+   "cc": "Nations empowered.",
+   "guide": {
+    "state": "buffering",
+    "clip": "NAR-08",
+    "slideId": null,
+    "gen": null,
+    "status": "Narrating slide 38 of 39 · 08 Athar OS"
+   },
+   "hash": "#/27/new-11",
+   "el": "guide-08-athar-os-Ib4oKe91OD.mp3",
+   "ct": 7.97
+  },
+  {
+   "scenario": "S10-sweep-desktop",
+   "t": "2026-10-01T06:15:43.051Z",
+   "ms": 47627,
+   "type": "media:playing",
+   "vis": {
+    "n": 38,
+    "id": "s-aos-nations",
+    "slideId": null
+   },
+   "audio": {
+    "src": "guide-08-athar-os-Ib4oKe91OD.mp3",
+    "clip": "NAR-08",
+    "t": 7.97,
+    "muted": false
+   },
+   "cc": "Nations empowered.",
+   "guide": {
+    "state": "playing",
+    "clip": "NAR-08",
+    "slideId": null,
+    "gen": null,
+    "status": "Narrating slide 38 of 39 · 08 Athar OS"
+   },
+   "hash": "#/27/new-11",
+   "el": "guide-08-athar-os-Ib4oKe91OD.mp3",
+   "ct": 7.97
+  },
+  {
+   "scenario": "S10-sweep-desktop",
+   "t": "2026-10-01T06:15:43.125Z",
+   "ms": 47701,
+   "type": "sample",
+   "vis": {
+    "n": 38,
+    "id": "s-aos-nations",
+    "slideId": null
+   },
+   "audio": {
+    "src": "guide-08-athar-os-Ib4oKe91OD.mp3",
+    "clip": "NAR-08",
+    "t": 7.99,
+    "muted": false
+   },
+   "cc": "Nations empowered.",
+   "guide": {
+    "state": "playing",
+    "clip": "NAR-08",
+    "slideId": null,
+    "gen": null,
+    "status": "Narrating slide 38 of 39 · 08 Athar OS"
+   },
+   "hash": "#/27/new-11"
+  },
+  {
+   "scenario": "S10-sweep-desktop",
+   "t": "2026-10-01T06:15:44.317Z",
+   "ms": 48893,
+   "type": "check",
+   "vis": {
+    "n": 38,
+    "id": "s-aos-nations",
+    "slideId": null
+   },
+   "audio": {
+    "src": "guide-08-athar-os-Ib4oKe91OD.mp3",
+    "clip": "NAR-08",
+    "t": 9.14,
+    "muted": false
+   },
+   "cc": "Nations empowered.",
+   "guide": {
+    "state": "playing",
+    "clip": "NAR-08",
+    "slideId": null,
+    "gen": null,
+    "status": "Narrating slide 38 of 39 · 08 Athar OS"
+   },
+   "hash": "#/27/new-11",
+   "step": "slide 35",
+   "expect": 35
+  },
+  {
+   "scenario": "S10-sweep-desktop",
+   "t": "2026-10-01T06:15:44.318Z",
+   "ms": 48894,
+   "type": "key",
+   "vis": {
+    "n": 38,
+    "id": "s-aos-nations",
+    "slideId": null
+   },
+   "audio": {
+    "src": "guide-08-athar-os-Ib4oKe91OD.mp3",
+    "clip": "NAR-08",
+    "t": 9.15,
+    "muted": false
+   },
+   "cc": "Nations empowered.",
+   "guide": {
+    "state": "playing",
+    "clip": "NAR-08",
+    "slideId": null,
+    "gen": null,
+    "status": "Narrating slide 38 of 39 · 08 Athar OS"
+   },
+   "hash": "#/27/new-11",
+   "key": "ArrowRight"
+  },
+  {
+   "scenario": "S10-sweep-desktop",
+   "t": "2026-10-01T06:15:44.332Z",
+   "ms": 48908,
+   "type": "sample",
+   "vis": {
+    "n": 39,
+    "id": "s-closing",
+    "slideId": null
+   },
+   "audio": {
+    "src": "guide-08-athar-os-Ib4oKe91OD.mp3",
+    "clip": "NAR-08",
+    "t": 9.16,
+    "muted": false
+   },
+   "cc": "Nations empowered.",
+   "guide": {
+    "state": "playing",
+    "clip": "NAR-08",
+    "slideId": null,
+    "gen": null,
+    "status": "Narrating slide 38 of 39 · 08 Athar OS"
+   },
+   "hash": "#/28"
+  },
+  {
+   "scenario": "S10-sweep-desktop",
+   "t": "2026-10-01T06:15:44.380Z",
+   "ms": 48956,
+   "type": "play()",
+   "vis": {
+    "n": 39,
+    "id": "s-closing",
+    "slideId": null
+   },
+   "audio": {
+    "src": "guide-08-athar-os-Ib4oKe91OD.mp3",
+    "clip": "NAR-08",
+    "t": 0,
+    "muted": false
+   },
+   "cc": "Nations empowered.",
+   "guide": {
+    "state": "playing",
+    "clip": "NAR-08",
+    "slideId": null,
+    "gen": null,
+    "status": "Narrating slide 38 of 39 · 08 Athar OS"
+   },
+   "hash": "#/28",
+   "el": "guide-08-athar-os-Ib4oKe91OD.mp3",
+   "ct": 0
+  },
+  {
+   "scenario": "S10-sweep-desktop",
+   "t": "2026-10-01T06:15:44.380Z",
+   "ms": 48956,
+   "type": "media:emptied",
+   "vis": {
+    "n": 39,
+    "id": "s-closing",
+    "slideId": null
+   },
+   "audio": {
+    "src": "guide-08-athar-os-Ib4oKe91OD.mp3",
+    "clip": "NAR-08",
+    "t": 0,
+    "muted": false
+   },
+   "cc": "Join the Pact.",
+   "guide": {
+    "state": "starting",
+    "clip": "NAR-09",
+    "slideId": null,
+    "gen": null,
+    "status": "Narrating slide 39 of 39 · Join the pact"
+   },
+   "hash": "#/28",
+   "el": "guide-08-athar-os-Ib4oKe91OD.mp3",
+   "ct": 0
+  },
+  {
+   "scenario": "S10-sweep-desktop",
+   "t": "2026-10-01T06:15:44.382Z",
+   "ms": 48958,
+   "type": "media:loadstart",
+   "vis": {
+    "n": 39,
+    "id": "s-closing",
+    "slideId": null
+   },
+   "audio": {
+    "src": "guide-09-join-the-pact-Hx4Ywy843S.mp3",
+    "clip": "NAR-09",
+    "t": 0,
+    "muted": false
+   },
+   "cc": "Join the Pact.",
+   "guide": {
+    "state": "buffering",
+    "clip": "NAR-09",
+    "slideId": null,
+    "gen": null,
+    "status": "Narrating slide 39 of 39 · Join the pact"
+   },
+   "hash": "#/28",
+   "el": "guide-09-join-the-pact-Hx4Ywy843S.mp3",
+   "ct": 0
+  },
+  {
+   "scenario": "S10-sweep-desktop",
+   "t": "2026-10-01T06:15:44.389Z",
+   "ms": 48965,
+   "type": "media:canplay",
+   "vis": {
+    "n": 39,
+    "id": "s-closing",
+    "slideId": null
+   },
+   "audio": {
+    "src": "guide-09-join-the-pact-Hx4Ywy843S.mp3",
+    "clip": "NAR-09",
+    "t": 0,
+    "muted": false
+   },
+   "cc": "Join the Pact.",
+   "guide": {
+    "state": "buffering",
+    "clip": "NAR-09",
+    "slideId": null,
+    "gen": null,
+    "status": "Narrating slide 39 of 39 · Join the pact"
+   },
+   "hash": "#/28",
+   "el": "guide-09-join-the-pact-Hx4Ywy843S.mp3",
+   "ct": 0
+  },
+  {
+   "scenario": "S10-sweep-desktop",
+   "t": "2026-10-01T06:15:44.390Z",
+   "ms": 48966,
+   "type": "media:playing",
+   "vis": {
+    "n": 39,
+    "id": "s-closing",
+    "slideId": null
+   },
+   "audio": {
+    "src": "guide-09-join-the-pact-Hx4Ywy843S.mp3",
+    "clip": "NAR-09",
+    "t": 0,
+    "muted": false
+   },
+   "cc": "Join the Pact.",
+   "guide": {
+    "state": "playing",
+    "clip": "NAR-09",
+    "slideId": null,
+    "gen": null,
+    "status": "Narrating slide 39 of 39 · Join the pact"
+   },
+   "hash": "#/28",
+   "el": "guide-09-join-the-pact-Hx4Ywy843S.mp3",
+   "ct": 0
+  },
+  {
+   "scenario": "S10-sweep-desktop",
+   "t": "2026-10-01T06:15:44.390Z",
+   "ms": 48966,
+   "type": "play():resolved",
+   "vis": {
+    "n": 39,
+    "id": "s-closing",
+    "slideId": null
+   },
+   "audio": {
+    "src": "guide-09-join-the-pact-Hx4Ywy843S.mp3",
+    "clip": "NAR-09",
+    "t": 0,
+    "muted": false
+   },
+   "cc": "Join the Pact.",
+   "guide": {
+    "state": "playing",
+    "clip": "NAR-09",
+    "slideId": null,
+    "gen": null,
+    "status": "Narrating slide 39 of 39 · Join the pact"
+   },
+   "hash": "#/28",
+   "el": "guide-08-athar-os-Ib4oKe91OD.mp3"
+  },
+  {
+   "scenario": "S10-sweep-desktop",
+   "t": "2026-10-01T06:15:44.425Z",
+   "ms": 49001,
+   "type": "sample",
+   "vis": {
+    "n": 39,
+    "id": "s-closing",
+    "slideId": null
+   },
+   "audio": {
+    "src": "guide-09-join-the-pact-Hx4Ywy843S.mp3",
+    "clip": "NAR-09",
+    "t": 0.01,
+    "muted": false
+   },
+   "cc": "Join the Pact.",
+   "guide": {
+    "state": "playing",
+    "clip": "NAR-09",
+    "slideId": null,
+    "gen": null,
+    "status": "Narrating slide 39 of 39 · Join the pact"
+   },
+   "hash": "#/28"
+  },
+  {
+   "scenario": "S10-sweep-desktop",
+   "t": "2026-10-01T06:15:45.658Z",
+   "ms": 50234,
+   "type": "check",
+   "vis": {
+    "n": 39,
+    "id": "s-closing",
+    "slideId": null
+   },
+   "audio": {
+    "src": "guide-09-join-the-pact-Hx4Ywy843S.mp3",
+    "clip": "NAR-09",
+    "t": 1.19,
+    "muted": false
+   },
+   "cc": "Join the Pact.",
+   "guide": {
+    "state": "playing",
+    "clip": "NAR-09",
+    "slideId": null,
+    "gen": null,
+    "status": "Narrating slide 39 of 39 · Join the pact"
+   },
+   "hash": "#/28",
+   "step": "slide 36",
+   "expect": 36
+  },
+  {
+   "scenario": "S10-sweep-desktop",
+   "t": "2026-10-01T06:15:45.659Z",
+   "ms": 50235,
+   "type": "key",
+   "vis": {
+    "n": 39,
+    "id": "s-closing",
+    "slideId": null
+   },
+   "audio": {
+    "src": "guide-09-join-the-pact-Hx4Ywy843S.mp3",
+    "clip": "NAR-09",
+    "t": 1.19,
+    "muted": false
+   },
+   "cc": "Join the Pact.",
+   "guide": {
+    "state": "playing",
+    "clip": "NAR-09",
+    "slideId": null,
+    "gen": null,
+    "status": "Narrating slide 39 of 39 · Join the pact"
+   },
+   "hash": "#/28",
+   "key": "ArrowRight"
+  },
+  {
+   "scenario": "S10-sweep-desktop",
+   "t": "2026-10-01T06:15:45.726Z",
+   "ms": 50302,
+   "type": "sample",
+   "vis": {
+    "n": 39,
+    "id": "s-closing",
+    "slideId": null
+   },
+   "audio": {
+    "src": "guide-09-join-the-pact-Hx4Ywy843S.mp3",
+    "clip": "NAR-09",
+    "t": 1.26,
+    "muted": false
+   },
+   "cc": "You have seen the agreement, the community model, the six pillars, the actors, the roadmap, the impact tiers and Athar OS.",
+   "guide": {
+    "state": "playing",
+    "clip": "NAR-09",
+    "slideId": null,
+    "gen": null,
+    "status": "Narrating slide 39 of 39 · Join the pact"
+   },
+   "hash": "#/28"
+  },
+  {
+   "scenario": "S10-sweep-desktop",
+   "t": "2026-10-01T06:15:46.966Z",
+   "ms": 51542,
+   "type": "check",
+   "vis": {
+    "n": 39,
+    "id": "s-closing",
+    "slideId": null
+   },
+   "audio": {
+    "src": "guide-09-join-the-pact-Hx4Ywy843S.mp3",
+    "clip": "NAR-09",
+    "t": 2.5,
+    "muted": false
+   },
+   "cc": "You have seen the agreement, the community model, the six pillars, the actors, the roadmap, the impact tiers and Athar OS.",
+   "guide": {
+    "state": "playing",
+    "clip": "NAR-09",
+    "slideId": null,
+    "gen": null,
+    "status": "Narrating slide 39 of 39 · Join the pact"
+   },
+   "hash": "#/28",
+   "step": "slide 37",
+   "expect": 37
+  },
+  {
+   "scenario": "S10-sweep-desktop",
+   "t": "2026-10-01T06:15:46.967Z",
+   "ms": 51543,
+   "type": "key",
+   "vis": {
+    "n": 39,
+    "id": "s-closing",
+    "slideId": null
+   },
+   "audio": {
+    "src": "guide-09-join-the-pact-Hx4Ywy843S.mp3",
+    "clip": "NAR-09",
+    "t": 2.5,
+    "muted": false
+   },
+   "cc": "You have seen the agreement, the community model, the six pillars, the actors, the roadmap, the impact tiers and Athar OS.",
+   "guide": {
+    "state": "playing",
+    "clip": "NAR-09",
+    "slideId": null,
+    "gen": null,
+    "status": "Narrating slide 39 of 39 · Join the pact"
+   },
+   "hash": "#/28",
+   "key": "ArrowRight"
+  },
+  {
+   "scenario": "S10-sweep-desktop",
+   "t": "2026-10-01T06:15:48.273Z",
+   "ms": 52849,
+   "type": "check",
+   "vis": {
+    "n": 39,
+    "id": "s-closing",
+    "slideId": null
+   },
+   "audio": {
+    "src": "guide-09-join-the-pact-Hx4Ywy843S.mp3",
+    "clip": "NAR-09",
+    "t": 3.81,
+    "muted": false
+   },
+   "cc": "You have seen the agreement, the community model, the six pillars, the actors, the roadmap, the impact tiers and Athar OS.",
+   "guide": {
+    "state": "playing",
+    "clip": "NAR-09",
+    "slideId": null,
+    "gen": null,
+    "status": "Narrating slide 39 of 39 · Join the pact"
+   },
+   "hash": "#/28",
+   "step": "slide 38",
+   "expect": 38
+  },
+  {
+   "scenario": "S10-sweep-desktop",
+   "t": "2026-10-01T06:15:48.274Z",
+   "ms": 52850,
+   "type": "key",
+   "vis": {
+    "n": 39,
+    "id": "s-closing",
+    "slideId": null
+   },
+   "audio": {
+    "src": "guide-09-join-the-pact-Hx4Ywy843S.mp3",
+    "clip": "NAR-09",
+    "t": 3.81,
+    "muted": false
+   },
+   "cc": "You have seen the agreement, the community model, the six pillars, the actors, the roadmap, the impact tiers and Athar OS.",
+   "guide": {
+    "state": "playing",
+    "clip": "NAR-09",
+    "slideId": null,
+    "gen": null,
+    "status": "Narrating slide 39 of 39 · Join the pact"
+   },
+   "hash": "#/28",
+   "key": "ArrowRight"
+  },
+  {
+   "scenario": "S10-sweep-desktop",
+   "t": "2026-10-01T06:15:49.579Z",
+   "ms": 54155,
+   "type": "check",
+   "vis": {
+    "n": 39,
+    "id": "s-closing",
+    "slideId": null
+   },
+   "audio": {
+    "src": "guide-09-join-the-pact-Hx4Ywy843S.mp3",
+    "clip": "NAR-09",
+    "t": 5.11,
+    "muted": false
+   },
+   "cc": "You have seen the agreement, the community model, the six pillars, the actors, the roadmap, the impact tiers and Athar OS.",
+   "guide": {
+    "state": "playing",
+    "clip": "NAR-09",
+    "slideId": null,
+    "gen": null,
+    "status": "Narrating slide 39 of 39 · Join the pact"
+   },
+   "hash": "#/28",
+   "step": "slide 39",
+   "expect": 39
+  }
+ ],
+ "console": []
+}

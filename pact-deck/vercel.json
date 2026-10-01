@@ -133,7 +133,7 @@
   "trailingSlash": false,
   "$schema": "https://openapi.vercel.sh/vercel.json",
   "framework": null,
-  "installCommand": "echo \"static deck \u2014 no dependencies\"",
-  "buildCommand": "node -e \"console.log('Athar deck v1.5.2: dist/ is prebuilt, nothing to build')\"",
+  "installCommand": "echo \"static deck — no dependencies\"",
+  "buildCommand": "node -e \"console.log('Athar deck v1.5.4: dist/ is prebuilt, nothing to build')\"",
   "outputDirectory": "dist"
 }

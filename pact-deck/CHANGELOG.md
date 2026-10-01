@@ -357,3 +357,56 @@ Reques` — recorded, no substitute file used.
 **Not done in this run (blocked, reported truthfully)** — no GitHub credentials are available in this environment (the platform token endpoint answered `path not allowed by security policy`), so the branch was **not pushed**; a ready-to-push git bundle of branch `deck/pact-v1.5.2-close-out` is delivered instead. This environment can only create ephemeral Vercel sandboxes (`sb-*.vercel.run`); a production deployment/promotion of `athar-jv-interactive-plan` was not performed — and should not be performed blindly: that project's production deployment `dpl_CQ3noK6myfKsAgWz9rjHrTdEuwNJ` (READY 2026-09-05T18:05:26Z, commit `f10fec62` "Merge pull request #6 … feature/public-access") is the **Athar JV interactive executive plan app** (2-slide PDF deck + timeline + grounded chat/voice), not a v1.5.1 build of this deck.
 
 *Entry written 2026-09-30T07:03:05Z.*
+
+## v1.5.4 — 2026-10-01 (Guide narration sync release: audible clip == visible slide)
+
+Started 2026-10-01T05:48:24Z from the restored v1.5.3 workspace (branch `deck/pact-v1.5.2-close-out`; `ddaee1a8` was never pushed, so the
+restored working tree — v1.5.3 plus the in-place edits of the timed-out step-5 run — is committed first as the v1.5.3 base). Progress
+checkpoints: `docs/resume-progress.jsonl` (repo root). No slide copy, figure, label, layout or slide order changed (DOM text diff below).
+
+**Reproduced (Playwright + Chromium 153, `qa/v154/repro.mjs`, 12 scenarios, 1728×872 + 390×844, every event logged with ISO time, visible
+slide id, audible src/clip and CC text — `qa/v154/before/`)** — 120 checkpoints, **48 PASS / 72 FAIL**: 41 × the deck jumped away from the
+slide the user went to (e.g. 06:13:20Z ArrowRight 4→5 landed on 7; 06:13:24Z ArrowLeft 4→3 was yanked forward to 7; 06:14:13Z `#slide-07`
+ended on 36), 26 × the audible sentence narrated a different slide (06:16:03Z phone slide 8 spoke slide 4's "Every webinar…"),
+4 × AUTO off still moved the deck (06:14:36Z 26→27), 1 × audio started with no user gesture (06:16:45Z, phone first load).
+
+**Root causes** — (1) the cue engine drove navigation: whenever the section clip crossed into the next sentence, `applyCue()` called
+`goToSlide(q.slide)`, with AUTO on *or off*, fighting every arrow / overview / deep-link the user made; (2) ten section-long clips were
+shared by 39 slides and slides without a sentence "borrowed" the previous slide's sentence (`covers()`), so 16 slides always narrated another
+page and moving between them re-seeked the clip; (3) the v1.5.3 cue table was estimated (proportional-by-characters): Scribe shows 18 slides'
+cues 0.4–2.5 s off the audio and 3 sentences assigned to the wrong slide (NAR-02 #2/#3 narrate slide 4, not 7/11; NAR-05 #2 narrates slide 21,
+not 23); (4) slide changes were inferred with index arithmetic, a 50 ms debounce and a 1.5 s pending-nav timer; stale `timeupdate` handlers
+were not token-guarded and `play()` was issued before the pending seek landed; (5) a 12 s watchdog switched to a timer-driven "audio
+unavailable" mode that advanced slides silently; (6) a persisted "guide on" could autoplay (phone context) without any user gesture.
+
+**Clip mapping (ElevenLabs Scribe `speechToText`, model `scribe_v1`, `en`, word timestamps — `qa/v154/scribe/`, `qa/v154/mapping-before.json`)**
+— all 10 George section clips verified against their ElevenLabs history text (ratio 0.945–1.000; durations within 26–49 ms of the files).
+The fix keys narration by stable slide id: `dist/narration/slide-narration.json` maps each of the 39 `data-slide-id`s to ONE clip
+`NAR-s01…NAR-s39`: 21 are frame-exact byte ranges of the George section clips cut in the silence between sentences (no re-encoding, audio
+unchanged); the 18 slides the George audio never narrates (5–12, 15, 16, 18, 22, 24, 25, 32, 33, 35, 37 — 16 missing + slides 7 and 11
+whose cues pointed at slide-4 audio) were rendered with `textToSpeech` (voice George `JBFqnCBsd6RMkjVDRZzb`, `eleven_multilingual_v2`,
+`mp3_44100_128`) from their **identical existing script text** in `narration-script.json`; ElevenLabs history confirms voice, model and
+exact text for all 18. Every one of the 39 per-slide clips was transcribed again with Scribe: 39/39 OK (ratio 0.927–1.000). CC sentence
+times now come from the Scribe word timestamps of each clip (`cues.json` schema 2). `clip-map.json` keeps the ten parents (+ children).
+
+**Guide player rewritten (`dist/js/narration.js`, `dist/assets/narration.css`)** — narration keyed by the visible slide's `data-slide-id`
+(tagged on every slide section); one finite state machine `idle · loading · playing · paused · blocked · ended` (`#athar-narration[data-state]`);
+every navigation path → generation token +1, `AbortController.abort()` on the pending clip fetch, old audio paused and rewound, every cue /
+settle / progress timer cleared, then the visible slide's clip loads and plays after a 140 ms settle (bursts never start intermediate
+slides); stale `fetch` / `play()` / `playing` / `pause` / `ended` / `timeupdate` continuations are discarded by generation; `play()`
+NotAllowedError (or a restored "guide on" before any gesture) → **blocked** with a visible, labelled, 44 px "Tap to play" control;
+AUTO advances only on the current clip's `ended` event with a matching generation — narration never moves the deck otherwise; CC and
+transcript always show the visible slide's sentence; slide-38 tabs seek inside the slide-38 clip (same clip id, no desync) and follow the
+narration unless the user chose a tab in the last 6 s. Language switch keeps the clip running (same slide id). Public test API
+`window.AtharGuide`. Resync button and the timer fallback removed (no longer needed).
+
+**Tests** — `qa/v154/guide-sync.spec.mjs` (Playwright Test, `qa/v154/playwright.config.mjs`, projects desktop 1728×872 + phone 390×844):
+audible clip id (resolved at the network layer: blob URL → fetched MP3 → clip → slide) == visible slide id for all 39 slides by arrow keys
+and by deep link, ≥5-key bursts < 300 ms + random jumps, Esc-overview jumps, AUTO on (every hop preceded by `ended`), AUTO off, slide-38
+tabs, first-load tap-to-play, NotAllowedError recovery, slow-network staleness, paused navigation, language switch — 24/24 PASS locally.
+Re-run of the reproduction harness on v1.5.4: **120/120 PASS** (`qa/v154/after/`).
+
+**Copy** — normalised visible text of all 39 slides in EN and AR (`qa/v154/dom-diff-v153-v154.json`): 78/78 identical to the v1.5.3 base.
+
+**Version stamps** — `data-deck-version`, footer, runtime `VERSION` constants, locales, `package.json`, `clip-map.json`, manifest, cues,
+`vercel.json` build message: v1.5.4. `SHA256SUMS.txt` regenerated by the build gate.

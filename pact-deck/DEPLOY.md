@@ -1,4 +1,4 @@
-# Athar Open Agentic Pact deck — v1.5.2 close-out (2026-09-30)
+# Athar Open Agentic Pact deck — v1.5.4 Guide sync release (2026-10-01; v1.5.2 close-out notes below)
 
 `pact-deck/dist/` is the prebuilt, bilingual 39-slide deck (no build step; `vercel.json` in this folder declares
 `framework: null`, a no-op build and `outputDirectory: dist`).

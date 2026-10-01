@@ -1,0 +1,609 @@
+{
+ "marks": [
+  {
+   "t": "2026-10-01T06:40:02.526Z",
+   "scenario": "S08-auto-off",
+   "step": "guide started on 26 (AUTO off, 4×)",
+   "expect": 26,
+   "vis": {
+    "n": 26,
+    "id": "s-governance-licence",
+    "slideId": "s-governance-licence"
+   },
+   "audio": {
+    "src": "NAR-s26-s-governance-licence.mp3",
+    "clip": "NAR-s26",
+    "t": 5.09,
+    "muted": false
+   },
+   "cc": "An open steering council sets the shared plugin standard and approves the roadmap.",
+   "guide": {
+    "state": "playing",
+    "clip": "NAR-s26",
+    "slideId": "s-governance-licence",
+    "blocked": "false",
+    "status": "Narrating slide 26 of 39 · 06 Governance & roadmap",
+    "tap": false
+   }
+  },
+  {
+   "t": "2026-10-01T06:40:04.530Z",
+   "scenario": "S08-auto-off",
+   "step": "AUTO off +2 s",
+   "expect": 26,
+   "vis": {
+    "n": 26,
+    "id": "s-governance-licence",
+    "slideId": "s-governance-licence"
+   },
+   "audio": null,
+   "cc": "An open steering council sets the shared plugin standard and approves the roadmap.",
+   "guide": {
+    "state": "ended",
+    "clip": "NAR-s26",
+    "slideId": "s-governance-licence",
+    "blocked": "false",
+    "status": "Narration finished · slide 26 of 39 · 06 Governance & roadmap",
+    "tap": false
+   }
+  },
+  {
+   "t": "2026-10-01T06:40:06.536Z",
+   "scenario": "S08-auto-off",
+   "step": "AUTO off +4 s",
+   "expect": 26,
+   "vis": {
+    "n": 26,
+    "id": "s-governance-licence",
+    "slideId": "s-governance-licence"
+   },
+   "audio": null,
+   "cc": "An open steering council sets the shared plugin standard and approves the roadmap.",
+   "guide": {
+    "state": "ended",
+    "clip": "NAR-s26",
+    "slideId": "s-governance-licence",
+    "blocked": "false",
+    "status": "Narration finished · slide 26 of 39 · 06 Governance & roadmap",
+    "tap": false
+   }
+  },
+  {
+   "t": "2026-10-01T06:40:08.541Z",
+   "scenario": "S08-auto-off",
+   "step": "AUTO off +6 s",
+   "expect": 26,
+   "vis": {
+    "n": 26,
+    "id": "s-governance-licence",
+    "slideId": "s-governance-licence"
+   },
+   "audio": null,
+   "cc": "An open steering council sets the shared plugin standard and approves the roadmap.",
+   "guide": {
+    "state": "ended",
+    "clip": "NAR-s26",
+    "slideId": "s-governance-licence",
+    "blocked": "false",
+    "status": "Narration finished · slide 26 of 39 · 06 Governance & roadmap",
+    "tap": false
+   }
+  },
+  {
+   "t": "2026-10-01T06:40:10.547Z",
+   "scenario": "S08-auto-off",
+   "step": "AUTO off +8 s",
+   "expect": 26,
+   "vis": {
+    "n": 26,
+    "id": "s-governance-licence",
+    "slideId": "s-governance-licence"
+   },
+   "audio": null,
+   "cc": "An open steering council sets the shared plugin standard and approves the roadmap.",
+   "guide": {
+    "state": "ended",
+    "clip": "NAR-s26",
+    "slideId": "s-governance-licence",
+    "blocked": "false",
+    "status": "Narration finished · slide 26 of 39 · 06 Governance & roadmap",
+    "tap": false
+   }
+  }
+ ],
+ "events": [
+  {
+   "scenario": "S08-auto-off",
+   "t": "2026-10-01T06:40:00.117Z",
+   "ms": 754,
+   "type": "sample",
+   "vis": {
+    "n": 26,
+    "id": "s-governance-licence",
+    "slideId": null
+   },
+   "audio": null,
+   "cc": null,
+   "guide": null,
+   "hash": "#/26"
+  },
+  {
+   "scenario": "S08-auto-off",
+   "t": "2026-10-01T06:40:00.256Z",
+   "ms": 894,
+   "type": "sample",
+   "vis": {
+    "n": 26,
+    "id": "s-governance-licence",
+    "slideId": "s-governance-licence"
+   },
+   "audio": null,
+   "cc": "Section six, governance and roadmap.",
+   "guide": {
+    "state": "idle",
+    "clip": "NAR-s26",
+    "slideId": "s-governance-licence",
+    "gen": "0",
+    "status": "Guide ready · slide 26 of 39 · 06 Governance & roadmap"
+   },
+   "hash": "#/26"
+  },
+  {
+   "scenario": "S08-auto-off",
+   "t": "2026-10-01T06:40:00.973Z",
+   "ms": 1610,
+   "type": "click",
+   "vis": {
+    "n": 26,
+    "id": "s-governance-licence",
+    "slideId": "s-governance-licence"
+   },
+   "audio": null,
+   "cc": "Section six, governance and roadmap.",
+   "guide": {
+    "state": "idle",
+    "clip": "NAR-s26",
+    "slideId": "s-governance-licence",
+    "gen": "0",
+    "status": "Guide ready · slide 26 of 39 · 06 Governance & roadmap"
+   },
+   "hash": "#/26",
+   "target": "nar-autoplay"
+  },
+  {
+   "scenario": "S08-auto-off",
+   "t": "2026-10-01T06:40:01.017Z",
+   "ms": 1654,
+   "type": "click",
+   "vis": {
+    "n": 26,
+    "id": "s-governance-licence",
+    "slideId": "s-governance-licence"
+   },
+   "audio": null,
+   "cc": "Section six, governance and roadmap.",
+   "guide": {
+    "state": "idle",
+    "clip": "NAR-s26",
+    "slideId": "s-governance-licence",
+    "gen": "0",
+    "status": "Guide ready · slide 26 of 39 · 06 Governance & roadmap"
+   },
+   "hash": "#/26",
+   "target": "guide-toggle"
+  },
+  {
+   "scenario": "S08-auto-off",
+   "t": "2026-10-01T06:40:01.024Z",
+   "ms": 1662,
+   "type": "media:emptied",
+   "vis": {
+    "n": 26,
+    "id": "s-governance-licence",
+    "slideId": "s-governance-licence"
+   },
+   "audio": null,
+   "cc": "Section six, governance and roadmap.",
+   "guide": {
+    "state": "loading",
+    "clip": "NAR-s26",
+    "slideId": "s-governance-licence",
+    "gen": "1",
+    "status": "Loading narration · slide 26 of 39 · 06 Governance & roadmap"
+   },
+   "hash": "#/26",
+   "el": "NAR-s26-s-governance-licence.mp3",
+   "ct": 0
+  },
+  {
+   "scenario": "S08-auto-off",
+   "t": "2026-10-01T06:40:01.025Z",
+   "ms": 1663,
+   "type": "media:loadstart",
+   "vis": {
+    "n": 26,
+    "id": "s-governance-licence",
+    "slideId": "s-governance-licence"
+   },
+   "audio": null,
+   "cc": "Section six, governance and roadmap.",
+   "guide": {
+    "state": "loading",
+    "clip": "NAR-s26",
+    "slideId": "s-governance-licence",
+    "gen": "1",
+    "status": "Loading narration · slide 26 of 39 · 06 Governance & roadmap"
+   },
+   "hash": "#/26",
+   "el": "NAR-s26-s-governance-licence.mp3",
+   "ct": 0
+  },
+  {
+   "scenario": "S08-auto-off",
+   "t": "2026-10-01T06:40:01.063Z",
+   "ms": 1701,
+   "type": "sample",
+   "vis": {
+    "n": 26,
+    "id": "s-governance-licence",
+    "slideId": "s-governance-licence"
+   },
+   "audio": null,
+   "cc": "Section six, governance and roadmap.",
+   "guide": {
+    "state": "loading",
+    "clip": "NAR-s26",
+    "slideId": "s-governance-licence",
+    "gen": "1",
+    "status": "Loading narration · slide 26 of 39 · 06 Governance & roadmap"
+   },
+   "hash": "#/26"
+  },
+  {
+   "scenario": "S08-auto-off",
+   "t": "2026-10-01T06:40:01.078Z",
+   "ms": 1716,
+   "type": "media:canplay",
+   "vis": {
+    "n": 26,
+    "id": "s-governance-licence",
+    "slideId": "s-governance-licence"
+   },
+   "audio": null,
+   "cc": "Section six, governance and roadmap.",
+   "guide": {
+    "state": "loading",
+    "clip": "NAR-s26",
+    "slideId": "s-governance-licence",
+    "gen": "1",
+    "status": "Loading narration · slide 26 of 39 · 06 Governance & roadmap"
+   },
+   "hash": "#/26",
+   "el": "NAR-s26-s-governance-licence.mp3",
+   "ct": 0
+  },
+  {
+   "scenario": "S08-auto-off",
+   "t": "2026-10-01T06:40:01.165Z",
+   "ms": 1802,
+   "type": "play()",
+   "vis": {
+    "n": 26,
+    "id": "s-governance-licence",
+    "slideId": "s-governance-licence"
+   },
+   "audio": {
+    "src": "NAR-s26-s-governance-licence.mp3",
+    "clip": "NAR-s26",
+    "t": 0,
+    "muted": false
+   },
+   "cc": "Section six, governance and roadmap.",
+   "guide": {
+    "state": "loading",
+    "clip": "NAR-s26",
+    "slideId": "s-governance-licence",
+    "gen": "1",
+    "status": "Loading narration · slide 26 of 39 · 06 Governance & roadmap"
+   },
+   "hash": "#/26",
+   "el": "NAR-s26-s-governance-licence.mp3",
+   "ct": 0
+  },
+  {
+   "scenario": "S08-auto-off",
+   "t": "2026-10-01T06:40:01.166Z",
+   "ms": 1804,
+   "type": "media:playing",
+   "vis": {
+    "n": 26,
+    "id": "s-governance-licence",
+    "slideId": "s-governance-licence"
+   },
+   "audio": {
+    "src": "NAR-s26-s-governance-licence.mp3",
+    "clip": "NAR-s26",
+    "t": 0,
+    "muted": false
+   },
+   "cc": "Section six, governance and roadmap.",
+   "guide": {
+    "state": "playing",
+    "clip": "NAR-s26",
+    "slideId": "s-governance-licence",
+    "gen": "1",
+    "status": "Narrating slide 26 of 39 · 06 Governance & roadmap"
+   },
+   "hash": "#/26",
+   "el": "NAR-s26-s-governance-licence.mp3",
+   "ct": 0
+  },
+  {
+   "scenario": "S08-auto-off",
+   "t": "2026-10-01T06:40:01.166Z",
+   "ms": 1804,
+   "type": "play():resolved",
+   "vis": {
+    "n": 26,
+    "id": "s-governance-licence",
+    "slideId": "s-governance-licence"
+   },
+   "audio": {
+    "src": "NAR-s26-s-governance-licence.mp3",
+    "clip": "NAR-s26",
+    "t": 0,
+    "muted": false
+   },
+   "cc": "Section six, governance and roadmap.",
+   "guide": {
+    "state": "playing",
+    "clip": "NAR-s26",
+    "slideId": "s-governance-licence",
+    "gen": "1",
+    "status": "Narrating slide 26 of 39 · 06 Governance & roadmap"
+   },
+   "hash": "#/26",
+   "el": "NAR-s26-s-governance-licence.mp3"
+  },
+  {
+   "scenario": "S08-auto-off",
+   "t": "2026-10-01T06:40:01.263Z",
+   "ms": 1901,
+   "type": "sample",
+   "vis": {
+    "n": 26,
+    "id": "s-governance-licence",
+    "slideId": "s-governance-licence"
+   },
+   "audio": {
+    "src": "NAR-s26-s-governance-licence.mp3",
+    "clip": "NAR-s26",
+    "t": 0.09,
+    "muted": false
+   },
+   "cc": "Section six, governance and roadmap.",
+   "guide": {
+    "state": "playing",
+    "clip": "NAR-s26",
+    "slideId": "s-governance-licence",
+    "gen": "1",
+    "status": "Narrating slide 26 of 39 · 06 Governance & roadmap"
+   },
+   "hash": "#/26"
+  },
+  {
+   "scenario": "S08-auto-off",
+   "t": "2026-10-01T06:40:01.963Z",
+   "ms": 2601,
+   "type": "sample",
+   "vis": {
+    "n": 26,
+    "id": "s-governance-licence",
+    "slideId": "s-governance-licence"
+   },
+   "audio": {
+    "src": "NAR-s26-s-governance-licence.mp3",
+    "clip": "NAR-s26",
+    "t": 2.84,
+    "muted": false
+   },
+   "cc": "An open steering council sets the shared plugin standard and approves the roadmap.",
+   "guide": {
+    "state": "playing",
+    "clip": "NAR-s26",
+    "slideId": "s-governance-licence",
+    "gen": "1",
+    "status": "Narrating slide 26 of 39 · 06 Governance & roadmap"
+   },
+   "hash": "#/26"
+  },
+  {
+   "scenario": "S08-auto-off",
+   "t": "2026-10-01T06:40:02.527Z",
+   "ms": 3165,
+   "type": "check",
+   "vis": {
+    "n": 26,
+    "id": "s-governance-licence",
+    "slideId": "s-governance-licence"
+   },
+   "audio": {
+    "src": "NAR-s26-s-governance-licence.mp3",
+    "clip": "NAR-s26",
+    "t": 5.1,
+    "muted": false
+   },
+   "cc": "An open steering council sets the shared plugin standard and approves the roadmap.",
+   "guide": {
+    "state": "playing",
+    "clip": "NAR-s26",
+    "slideId": "s-governance-licence",
+    "gen": "1",
+    "status": "Narrating slide 26 of 39 · 06 Governance & roadmap"
+   },
+   "hash": "#/26",
+   "step": "guide started on 26 (AUTO off, 4×)",
+   "expect": 26
+  },
+  {
+   "scenario": "S08-auto-off",
+   "t": "2026-10-01T06:40:03.101Z",
+   "ms": 3739,
+   "type": "media:pause",
+   "vis": {
+    "n": 26,
+    "id": "s-governance-licence",
+    "slideId": "s-governance-licence"
+   },
+   "audio": null,
+   "cc": "An open steering council sets the shared plugin standard and approves the roadmap.",
+   "guide": {
+    "state": "playing",
+    "clip": "NAR-s26",
+    "slideId": "s-governance-licence",
+    "gen": "1",
+    "status": "Narrating slide 26 of 39 · 06 Governance & roadmap"
+   },
+   "hash": "#/26",
+   "el": "NAR-s26-s-governance-licence.mp3",
+   "ct": 7.39
+  },
+  {
+   "scenario": "S08-auto-off",
+   "t": "2026-10-01T06:40:03.102Z",
+   "ms": 3740,
+   "type": "media:ended",
+   "vis": {
+    "n": 26,
+    "id": "s-governance-licence",
+    "slideId": "s-governance-licence"
+   },
+   "audio": null,
+   "cc": "An open steering council sets the shared plugin standard and approves the roadmap.",
+   "guide": {
+    "state": "ended",
+    "clip": "NAR-s26",
+    "slideId": "s-governance-licence",
+    "gen": "1",
+    "status": "Narration finished · slide 26 of 39 · 06 Governance & roadmap"
+   },
+   "hash": "#/26",
+   "el": "NAR-s26-s-governance-licence.mp3",
+   "ct": 7.39
+  },
+  {
+   "scenario": "S08-auto-off",
+   "t": "2026-10-01T06:40:03.163Z",
+   "ms": 3800,
+   "type": "sample",
+   "vis": {
+    "n": 26,
+    "id": "s-governance-licence",
+    "slideId": "s-governance-licence"
+   },
+   "audio": null,
+   "cc": "An open steering council sets the shared plugin standard and approves the roadmap.",
+   "guide": {
+    "state": "ended",
+    "clip": "NAR-s26",
+    "slideId": "s-governance-licence",
+    "gen": "1",
+    "status": "Narration finished · slide 26 of 39 · 06 Governance & roadmap"
+   },
+   "hash": "#/26"
+  },
+  {
+   "scenario": "S08-auto-off",
+   "t": "2026-10-01T06:40:04.531Z",
+   "ms": 5169,
+   "type": "check",
+   "vis": {
+    "n": 26,
+    "id": "s-governance-licence",
+    "slideId": "s-governance-licence"
+   },
+   "audio": null,
+   "cc": "An open steering council sets the shared plugin standard and approves the roadmap.",
+   "guide": {
+    "state": "ended",
+    "clip": "NAR-s26",
+    "slideId": "s-governance-licence",
+    "gen": "1",
+    "status": "Narration finished · slide 26 of 39 · 06 Governance & roadmap"
+   },
+   "hash": "#/26",
+   "step": "AUTO off +2 s",
+   "expect": 26
+  },
+  {
+   "scenario": "S08-auto-off",
+   "t": "2026-10-01T06:40:06.537Z",
+   "ms": 7174,
+   "type": "check",
+   "vis": {
+    "n": 26,
+    "id": "s-governance-licence",
+    "slideId": "s-governance-licence"
+   },
+   "audio": null,
+   "cc": "An open steering council sets the shared plugin standard and approves the roadmap.",
+   "guide": {
+    "state": "ended",
+    "clip": "NAR-s26",
+    "slideId": "s-governance-licence",
+    "gen": "1",
+    "status": "Narration finished · slide 26 of 39 · 06 Governance & roadmap"
+   },
+   "hash": "#/26",
+   "step": "AUTO off +4 s",
+   "expect": 26
+  },
+  {
+   "scenario": "S08-auto-off",
+   "t": "2026-10-01T06:40:08.542Z",
+   "ms": 9180,
+   "type": "check",
+   "vis": {
+    "n": 26,
+    "id": "s-governance-licence",
+    "slideId": "s-governance-licence"
+   },
+   "audio": null,
+   "cc": "An open steering council sets the shared plugin standard and approves the roadmap.",
+   "guide": {
+    "state": "ended",
+    "clip": "NAR-s26",
+    "slideId": "s-governance-licence",
+    "gen": "1",
+    "status": "Narration finished · slide 26 of 39 · 06 Governance & roadmap"
+   },
+   "hash": "#/26",
+   "step": "AUTO off +6 s",
+   "expect": 26
+  },
+  {
+   "scenario": "S08-auto-off",
+   "t": "2026-10-01T06:40:10.548Z",
+   "ms": 11185,
+   "type": "check",
+   "vis": {
+    "n": 26,
+    "id": "s-governance-licence",
+    "slideId": "s-governance-licence"
+   },
+   "audio": null,
+   "cc": "An open steering council sets the shared plugin standard and approves the roadmap.",
+   "guide": {
+    "state": "ended",
+    "clip": "NAR-s26",
+    "slideId": "s-governance-licence",
+    "gen": "1",
+    "status": "Narration finished · slide 26 of 39 · 06 Governance & roadmap"
+   },
+   "hash": "#/26",
+   "step": "AUTO off +8 s",
+   "expect": 26
+  }
+ ],
+ "console": []
+}

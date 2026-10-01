@@ -69,3 +69,13 @@
 @media (max-width:600px){:root{--guide-h:56px}.gbar{padding-inline:8px}.gbar-row{gap:6px}.gbar-guide{padding:0 12px;font-size:.66rem}.gbar-btn{min-inline-size:44px;padding:0 8px;font-size:.7rem}.gbar-toggle{padding:0 8px}.gbar-status{display:none}.gbar-drawer{max-block-size:min(46vh,360px)}.gbar-play,.gbar-cc,.gbar-mute{display:none}.gbar-guide{margin-inline-end:auto}.nar-intro p{font-size:.78rem}.nar-intro-ar{font-size:.86rem}}
 @media (prefers-reduced-motion:reduce){.gbar-fill,.gbar-sent,.gbar-cue-active,.gbar-resync svg{transition:none}.gbar.is-blocked .gbar-guide{animation:none}}
 @media print{.gbar{display:none}}
+/* v1.5.4 — single-FSM guide: visible, accessible "Tap to play" control for the blocked state (autoplay policy / load error).
+   Shown only when #athar-narration[data-state=blocked]; Legacy-Gold-text ground (7.4:1 white on #7A6130), 44 px target, pulses unless reduced motion. */
+.gbar-tap{gap:6px;padding:0 14px;border-radius:22px;background:var(--legacy-gold-text,#7A6130);border-color:var(--legacy-gold-text,#7A6130);color:var(--white,#fff);font-weight:600;font-size:.74rem;white-space:nowrap;animation:gbar-pulse 1.6s ease-in-out infinite}
+.gbar-tap[hidden]{display:none}
+.gbar-tap svg{flex:0 0 auto}
+.gbar-tap:hover{background:#5f4b25;border-color:#5f4b25}
+.gbar.is-reduced .gbar-tap{animation:none}
+.gbar.is-blocked .gbar-guide{animation:none}
+@media (max-width:600px){.gbar.is-blocked .gbar-guide{display:none}.gbar-tap{padding:0 10px;font-size:.68rem;margin-inline-end:auto}}
+@media (prefers-reduced-motion:reduce){.gbar-tap{animation:none}}

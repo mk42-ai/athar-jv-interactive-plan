@@ -1,0 +1,1798 @@
+{
+ "marks": [
+  {
+   "t": "2026-10-01T06:13:14.174Z",
+   "scenario": "S02-arrows-auto-off",
+   "step": "guide started on 1",
+   "expect": 1,
+   "vis": {
+    "n": 1,
+    "id": "s-cover",
+    "slideId": null
+   },
+   "audio": {
+    "src": "guide-00-welcome-lhbIUXFwLO.mp3",
+    "clip": "NAR-00",
+    "t": 1.92,
+    "muted": false
+   },
+   "cc": "Welcome to the Athar Open Agentic Pact, a community proposal from ODA and AIREV.",
+   "guide": {
+    "state": "playing",
+    "clip": "NAR-00",
+    "slideId": null,
+    "blocked": "false",
+    "status": "Narrating slide 1 of 39 · Welcome",
+    "tap": false
+   }
+  },
+  {
+   "t": "2026-10-01T06:13:15.815Z",
+   "scenario": "S02-arrows-auto-off",
+   "step": "ArrowRight → 2",
+   "expect": 2,
+   "vis": {
+    "n": 2,
+    "id": "s-hero",
+    "slideId": null
+   },
+   "audio": {
+    "src": "guide-01-the-pact-df1pHtGsVr.mp3",
+    "clip": "NAR-01",
+    "t": 1.47,
+    "muted": false
+   },
+   "cc": "Section one, the Pact.",
+   "guide": {
+    "state": "playing",
+    "clip": "NAR-01",
+    "slideId": null,
+    "blocked": "false",
+    "status": "Narrating slide 2 of 39 · 01 The pact",
+    "tap": false
+   }
+  },
+  {
+   "t": "2026-10-01T06:13:17.455Z",
+   "scenario": "S02-arrows-auto-off",
+   "step": "ArrowRight → 3",
+   "expect": 3,
+   "vis": {
+    "n": 3,
+    "id": "s-why-pact",
+    "slideId": null
+   },
+   "audio": {
+    "src": "guide-01-the-pact-df1pHtGsVr.mp3",
+    "clip": "NAR-01",
+    "t": 13.63,
+    "muted": false
+   },
+   "cc": "It is a community proposal from ODA and AI Rev, designed as a community, not a product.",
+   "guide": {
+    "state": "playing",
+    "clip": "NAR-01",
+    "slideId": null,
+    "blocked": "false",
+    "status": "Narrating slide 3 of 39 · 01 The pact",
+    "tap": false
+   }
+  },
+  {
+   "t": "2026-10-01T06:13:19.099Z",
+   "scenario": "S02-arrows-auto-off",
+   "step": "ArrowRight → 4",
+   "expect": 4,
+   "vis": {
+    "n": 4,
+    "id": "s-four-outcomes",
+    "slideId": null
+   },
+   "audio": {
+    "src": "guide-02-community-model-9gUnFBtxrM.mp3",
+    "clip": "NAR-02",
+    "t": 1.48,
+    "muted": false
+   },
+   "cc": "Section two, the Community Model.",
+   "guide": {
+    "state": "playing",
+    "clip": "NAR-02",
+    "slideId": null,
+    "blocked": "false",
+    "status": "Narrating slide 4 of 39 · 02 Community model",
+    "tap": false
+   }
+  },
+  {
+   "t": "2026-10-01T06:13:20.735Z",
+   "scenario": "S02-arrows-auto-off",
+   "step": "ArrowRight → 5",
+   "expect": 5,
+   "vis": {
+    "n": 7,
+    "id": "s-country-chapters",
+    "slideId": null
+   },
+   "audio": {
+    "src": "guide-02-community-model-9gUnFBtxrM.mp3",
+    "clip": "NAR-02",
+    "t": 3.12,
+    "muted": false
+   },
+   "cc": "Every webinar, chapter event and challenge should lead somewhere real, so the model is built around four outcomes for every participant.",
+   "guide": {
+    "state": "playing",
+    "clip": "NAR-02",
+    "slideId": null,
+    "blocked": "false",
+    "status": "Narrating slide 7 of 39 · 02 Community model",
+    "tap": false
+   }
+  },
+  {
+   "t": "2026-10-01T06:13:22.376Z",
+   "scenario": "S02-arrows-auto-off",
+   "step": "ArrowLeft → 4",
+   "expect": 4,
+   "vis": {
+    "n": 6,
+    "id": "s-discord-home",
+    "slideId": null
+   },
+   "audio": {
+    "src": "guide-02-community-model-9gUnFBtxrM.mp3",
+    "clip": "NAR-02",
+    "t": 1.5,
+    "muted": false
+   },
+   "cc": "Section two, the Community Model.",
+   "guide": {
+    "state": "playing",
+    "clip": "NAR-02",
+    "slideId": null,
+    "blocked": "false",
+    "status": "Narrating slide 6 of 39 · 02 Community model",
+    "tap": false
+   }
+  },
+  {
+   "t": "2026-10-01T06:13:24.012Z",
+   "scenario": "S02-arrows-auto-off",
+   "step": "ArrowLeft → 3",
+   "expect": 3,
+   "vis": {
+    "n": 7,
+    "id": "s-country-chapters",
+    "slideId": null
+   },
+   "audio": {
+    "src": "guide-02-community-model-9gUnFBtxrM.mp3",
+    "clip": "NAR-02",
+    "t": 3.13,
+    "muted": false
+   },
+   "cc": "Every webinar, chapter event and challenge should lead somewhere real, so the model is built around four outcomes for every participant.",
+   "guide": {
+    "state": "playing",
+    "clip": "NAR-02",
+    "slideId": null,
+    "blocked": "false",
+    "status": "Narrating slide 7 of 39 · 02 Community model",
+    "tap": false
+   }
+  }
+ ],
+ "events": [
+  {
+   "scenario": "S02-arrows-auto-off",
+   "t": "2026-10-01T06:13:10.918Z",
+   "ms": 514,
+   "type": "sample",
+   "vis": {
+    "n": 1,
+    "id": "s-cover",
+    "slideId": null
+   },
+   "audio": null,
+   "cc": null,
+   "guide": null,
+   "hash": "#/01"
+  },
+  {
+   "scenario": "S02-arrows-auto-off",
+   "t": "2026-10-01T06:13:11.266Z",
+   "ms": 861,
+   "type": "sample",
+   "vis": {
+    "n": 1,
+    "id": "s-cover",
+    "slideId": null
+   },
+   "audio": null,
+   "cc": "",
+   "guide": {
+    "state": "idle",
+    "clip": null,
+    "slideId": null,
+    "gen": null,
+    "status": "No narration for this slide"
+   },
+   "hash": "#/01"
+  },
+  {
+   "scenario": "S02-arrows-auto-off",
+   "t": "2026-10-01T06:13:11.329Z",
+   "ms": 924,
+   "type": "media:emptied",
+   "vis": {
+    "n": 1,
+    "id": "s-cover",
+    "slideId": null
+   },
+   "audio": null,
+   "cc": "Welcome to the Athar Open Agentic Pact, a community proposal from ODA and AIREV.",
+   "guide": {
+    "state": "loading",
+    "clip": "NAR-00",
+    "slideId": null,
+    "gen": null,
+    "status": "Guide ready · slide 1 of 39 · Welcome"
+   },
+   "hash": "#/01",
+   "el": "guide-00-welcome-lhbIUXFwLO.mp3",
+   "ct": 0
+  },
+  {
+   "scenario": "S02-arrows-auto-off",
+   "t": "2026-10-01T06:13:11.335Z",
+   "ms": 930,
+   "type": "media:loadstart",
+   "vis": {
+    "n": 1,
+    "id": "s-cover",
+    "slideId": null
+   },
+   "audio": null,
+   "cc": "Welcome to the Athar Open Agentic Pact, a community proposal from ODA and AIREV.",
+   "guide": {
+    "state": "loading",
+    "clip": "NAR-00",
+    "slideId": null,
+    "gen": null,
+    "status": "Guide ready · slide 1 of 39 · Welcome"
+   },
+   "hash": "#/01",
+   "el": "guide-00-welcome-lhbIUXFwLO.mp3",
+   "ct": 0
+  },
+  {
+   "scenario": "S02-arrows-auto-off",
+   "t": "2026-10-01T06:13:11.337Z",
+   "ms": 932,
+   "type": "media:loadstart",
+   "vis": {
+    "n": 1,
+    "id": "s-cover",
+    "slideId": null
+   },
+   "audio": null,
+   "cc": "Welcome to the Athar Open Agentic Pact, a community proposal from ODA and AIREV.",
+   "guide": {
+    "state": "loading",
+    "clip": "NAR-00",
+    "slideId": null,
+    "gen": null,
+    "status": "Guide ready · slide 1 of 39 · Welcome"
+   },
+   "hash": "#/01",
+   "el": "guide-01-the-pact-df1pHtGsVr.mp3",
+   "ct": 0
+  },
+  {
+   "scenario": "S02-arrows-auto-off",
+   "t": "2026-10-01T06:13:11.391Z",
+   "ms": 987,
+   "type": "media:canplay",
+   "vis": {
+    "n": 1,
+    "id": "s-cover",
+    "slideId": null
+   },
+   "audio": null,
+   "cc": "Welcome to the Athar Open Agentic Pact, a community proposal from ODA and AIREV.",
+   "guide": {
+    "state": "paused",
+    "clip": "NAR-00",
+    "slideId": null,
+    "gen": null,
+    "status": "Guide ready · slide 1 of 39 · Welcome"
+   },
+   "hash": "#/01",
+   "el": "guide-00-welcome-lhbIUXFwLO.mp3",
+   "ct": 0
+  },
+  {
+   "scenario": "S02-arrows-auto-off",
+   "t": "2026-10-01T06:13:11.392Z",
+   "ms": 987,
+   "type": "media:canplay",
+   "vis": {
+    "n": 1,
+    "id": "s-cover",
+    "slideId": null
+   },
+   "audio": null,
+   "cc": "Welcome to the Athar Open Agentic Pact, a community proposal from ODA and AIREV.",
+   "guide": {
+    "state": "paused",
+    "clip": "NAR-00",
+    "slideId": null,
+    "gen": null,
+    "status": "Guide ready · slide 1 of 39 · Welcome"
+   },
+   "hash": "#/01",
+   "el": "guide-01-the-pact-df1pHtGsVr.mp3",
+   "ct": 0
+  },
+  {
+   "scenario": "S02-arrows-auto-off",
+   "t": "2026-10-01T06:13:11.414Z",
+   "ms": 1010,
+   "type": "sample",
+   "vis": {
+    "n": 1,
+    "id": "s-cover",
+    "slideId": null
+   },
+   "audio": null,
+   "cc": "Welcome to the Athar Open Agentic Pact, a community proposal from ODA and AIREV.",
+   "guide": {
+    "state": "paused",
+    "clip": "NAR-00",
+    "slideId": null,
+    "gen": null,
+    "status": "Guide ready · slide 1 of 39 · Welcome"
+   },
+   "hash": "#/01"
+  },
+  {
+   "scenario": "S02-arrows-auto-off",
+   "t": "2026-10-01T06:13:12.123Z",
+   "ms": 1719,
+   "type": "click",
+   "vis": {
+    "n": 1,
+    "id": "s-cover",
+    "slideId": null
+   },
+   "audio": null,
+   "cc": "Welcome to the Athar Open Agentic Pact, a community proposal from ODA and AIREV.",
+   "guide": {
+    "state": "paused",
+    "clip": "NAR-00",
+    "slideId": null,
+    "gen": null,
+    "status": "Guide ready · slide 1 of 39 · Welcome"
+   },
+   "hash": "#/01",
+   "target": "nar-autoplay"
+  },
+  {
+   "scenario": "S02-arrows-auto-off",
+   "t": "2026-10-01T06:13:12.166Z",
+   "ms": 1762,
+   "type": "click",
+   "vis": {
+    "n": 1,
+    "id": "s-cover",
+    "slideId": null
+   },
+   "audio": null,
+   "cc": "Welcome to the Athar Open Agentic Pact, a community proposal from ODA and AIREV.",
+   "guide": {
+    "state": "paused",
+    "clip": "NAR-00",
+    "slideId": null,
+    "gen": null,
+    "status": "Guide ready · slide 1 of 39 · Welcome"
+   },
+   "hash": "#/01",
+   "target": "guide-toggle"
+  },
+  {
+   "scenario": "S02-arrows-auto-off",
+   "t": "2026-10-01T06:13:12.167Z",
+   "ms": 1763,
+   "type": "play()",
+   "vis": {
+    "n": 1,
+    "id": "s-cover",
+    "slideId": null
+   },
+   "audio": {
+    "src": "guide-00-welcome-lhbIUXFwLO.mp3",
+    "clip": "NAR-00",
+    "t": 0,
+    "muted": false
+   },
+   "cc": "Welcome to the Athar Open Agentic Pact, a community proposal from ODA and AIREV.",
+   "guide": {
+    "state": "paused",
+    "clip": "NAR-00",
+    "slideId": null,
+    "gen": null,
+    "status": "Guide ready · slide 1 of 39 · Welcome"
+   },
+   "hash": "#/01",
+   "el": "guide-00-welcome-lhbIUXFwLO.mp3",
+   "ct": 0
+  },
+  {
+   "scenario": "S02-arrows-auto-off",
+   "t": "2026-10-01T06:13:12.189Z",
+   "ms": 1784,
+   "type": "media:playing",
+   "vis": {
+    "n": 1,
+    "id": "s-cover",
+    "slideId": null
+   },
+   "audio": {
+    "src": "guide-00-welcome-lhbIUXFwLO.mp3",
+    "clip": "NAR-00",
+    "t": 0.01,
+    "muted": false
+   },
+   "cc": "Welcome to the Athar Open Agentic Pact, a community proposal from ODA and AIREV.",
+   "guide": {
+    "state": "playing",
+    "clip": "NAR-00",
+    "slideId": null,
+    "gen": null,
+    "status": "Narrating slide 1 of 39 · Welcome"
+   },
+   "hash": "#/01",
+   "el": "guide-00-welcome-lhbIUXFwLO.mp3",
+   "ct": 0.01
+  },
+  {
+   "scenario": "S02-arrows-auto-off",
+   "t": "2026-10-01T06:13:12.190Z",
+   "ms": 1785,
+   "type": "play():resolved",
+   "vis": {
+    "n": 1,
+    "id": "s-cover",
+    "slideId": null
+   },
+   "audio": {
+    "src": "guide-00-welcome-lhbIUXFwLO.mp3",
+    "clip": "NAR-00",
+    "t": 0.01,
+    "muted": false
+   },
+   "cc": "Welcome to the Athar Open Agentic Pact, a community proposal from ODA and AIREV.",
+   "guide": {
+    "state": "playing",
+    "clip": "NAR-00",
+    "slideId": null,
+    "gen": null,
+    "status": "Narrating slide 1 of 39 · Welcome"
+   },
+   "hash": "#/01",
+   "el": "guide-00-welcome-lhbIUXFwLO.mp3"
+  },
+  {
+   "scenario": "S02-arrows-auto-off",
+   "t": "2026-10-01T06:13:12.205Z",
+   "ms": 1800,
+   "type": "sample",
+   "vis": {
+    "n": 1,
+    "id": "s-cover",
+    "slideId": null
+   },
+   "audio": {
+    "src": "guide-00-welcome-lhbIUXFwLO.mp3",
+    "clip": "NAR-00",
+    "t": 0.02,
+    "muted": false
+   },
+   "cc": "Welcome to the Athar Open Agentic Pact, a community proposal from ODA and AIREV.",
+   "guide": {
+    "state": "playing",
+    "clip": "NAR-00",
+    "slideId": null,
+    "gen": null,
+    "status": "Narrating slide 1 of 39 · Welcome"
+   },
+   "hash": "#/01"
+  },
+  {
+   "scenario": "S02-arrows-auto-off",
+   "t": "2026-10-01T06:13:14.175Z",
+   "ms": 3771,
+   "type": "check",
+   "vis": {
+    "n": 1,
+    "id": "s-cover",
+    "slideId": null
+   },
+   "audio": {
+    "src": "guide-00-welcome-lhbIUXFwLO.mp3",
+    "clip": "NAR-00",
+    "t": 1.92,
+    "muted": false
+   },
+   "cc": "Welcome to the Athar Open Agentic Pact, a community proposal from ODA and AIREV.",
+   "guide": {
+    "state": "playing",
+    "clip": "NAR-00",
+    "slideId": null,
+    "gen": null,
+    "status": "Narrating slide 1 of 39 · Welcome"
+   },
+   "hash": "#/01",
+   "step": "guide started on 1",
+   "expect": 1
+  },
+  {
+   "scenario": "S02-arrows-auto-off",
+   "t": "2026-10-01T06:13:14.178Z",
+   "ms": 3773,
+   "type": "key",
+   "vis": {
+    "n": 1,
+    "id": "s-cover",
+    "slideId": null
+   },
+   "audio": {
+    "src": "guide-00-welcome-lhbIUXFwLO.mp3",
+    "clip": "NAR-00",
+    "t": 1.93,
+    "muted": false
+   },
+   "cc": "Welcome to the Athar Open Agentic Pact, a community proposal from ODA and AIREV.",
+   "guide": {
+    "state": "playing",
+    "clip": "NAR-00",
+    "slideId": null,
+    "gen": null,
+    "status": "Narrating slide 1 of 39 · Welcome"
+   },
+   "hash": "#/01",
+   "key": "ArrowRight"
+  },
+  {
+   "scenario": "S02-arrows-auto-off",
+   "t": "2026-10-01T06:13:14.205Z",
+   "ms": 3801,
+   "type": "sample",
+   "vis": {
+    "n": 2,
+    "id": "s-hero",
+    "slideId": null
+   },
+   "audio": {
+    "src": "guide-00-welcome-lhbIUXFwLO.mp3",
+    "clip": "NAR-00",
+    "t": 1.95,
+    "muted": false
+   },
+   "cc": "Welcome to the Athar Open Agentic Pact, a community proposal from ODA and AIREV.",
+   "guide": {
+    "state": "playing",
+    "clip": "NAR-00",
+    "slideId": null,
+    "gen": null,
+    "status": "Narrating slide 1 of 39 · Welcome"
+   },
+   "hash": "#/02"
+  },
+  {
+   "scenario": "S02-arrows-auto-off",
+   "t": "2026-10-01T06:13:14.243Z",
+   "ms": 3839,
+   "type": "play()",
+   "vis": {
+    "n": 2,
+    "id": "s-hero",
+    "slideId": null
+   },
+   "audio": {
+    "src": "guide-00-welcome-lhbIUXFwLO.mp3",
+    "clip": "NAR-00",
+    "t": 0,
+    "muted": false
+   },
+   "cc": "Welcome to the Athar Open Agentic Pact, a community proposal from ODA and AIREV.",
+   "guide": {
+    "state": "playing",
+    "clip": "NAR-00",
+    "slideId": null,
+    "gen": null,
+    "status": "Narrating slide 1 of 39 · Welcome"
+   },
+   "hash": "#/02",
+   "el": "guide-00-welcome-lhbIUXFwLO.mp3",
+   "ct": 0
+  },
+  {
+   "scenario": "S02-arrows-auto-off",
+   "t": "2026-10-01T06:13:14.244Z",
+   "ms": 3839,
+   "type": "media:emptied",
+   "vis": {
+    "n": 2,
+    "id": "s-hero",
+    "slideId": null
+   },
+   "audio": {
+    "src": "guide-00-welcome-lhbIUXFwLO.mp3",
+    "clip": "NAR-00",
+    "t": 0,
+    "muted": false
+   },
+   "cc": "Section one, the Pact.",
+   "guide": {
+    "state": "starting",
+    "clip": "NAR-01",
+    "slideId": null,
+    "gen": null,
+    "status": "Narrating slide 2 of 39 · 01 The pact"
+   },
+   "hash": "#/02",
+   "el": "guide-00-welcome-lhbIUXFwLO.mp3",
+   "ct": 0
+  },
+  {
+   "scenario": "S02-arrows-auto-off",
+   "t": "2026-10-01T06:13:14.246Z",
+   "ms": 3841,
+   "type": "media:loadstart",
+   "vis": {
+    "n": 2,
+    "id": "s-hero",
+    "slideId": null
+   },
+   "audio": {
+    "src": "guide-01-the-pact-df1pHtGsVr.mp3",
+    "clip": "NAR-01",
+    "t": 0,
+    "muted": false
+   },
+   "cc": "Section one, the Pact.",
+   "guide": {
+    "state": "buffering",
+    "clip": "NAR-01",
+    "slideId": null,
+    "gen": null,
+    "status": "Narrating slide 2 of 39 · 01 The pact"
+   },
+   "hash": "#/02",
+   "el": "guide-01-the-pact-df1pHtGsVr.mp3",
+   "ct": 0
+  },
+  {
+   "scenario": "S02-arrows-auto-off",
+   "t": "2026-10-01T06:13:14.246Z",
+   "ms": 3842,
+   "type": "media:loadstart",
+   "vis": {
+    "n": 2,
+    "id": "s-hero",
+    "slideId": null
+   },
+   "audio": {
+    "src": "guide-01-the-pact-df1pHtGsVr.mp3",
+    "clip": "NAR-01",
+    "t": 0,
+    "muted": false
+   },
+   "cc": "Section one, the Pact.",
+   "guide": {
+    "state": "buffering",
+    "clip": "NAR-01",
+    "slideId": null,
+    "gen": null,
+    "status": "Narrating slide 2 of 39 · 01 The pact"
+   },
+   "hash": "#/02",
+   "el": "guide-02-community-model-9gUnFBtxrM.mp3",
+   "ct": 0
+  },
+  {
+   "scenario": "S02-arrows-auto-off",
+   "t": "2026-10-01T06:13:14.251Z",
+   "ms": 3846,
+   "type": "media:canplay",
+   "vis": {
+    "n": 2,
+    "id": "s-hero",
+    "slideId": null
+   },
+   "audio": {
+    "src": "guide-01-the-pact-df1pHtGsVr.mp3",
+    "clip": "NAR-01",
+    "t": 0,
+    "muted": false
+   },
+   "cc": "Section one, the Pact.",
+   "guide": {
+    "state": "buffering",
+    "clip": "NAR-01",
+    "slideId": null,
+    "gen": null,
+    "status": "Narrating slide 2 of 39 · 01 The pact"
+   },
+   "hash": "#/02",
+   "el": "guide-01-the-pact-df1pHtGsVr.mp3",
+   "ct": 0
+  },
+  {
+   "scenario": "S02-arrows-auto-off",
+   "t": "2026-10-01T06:13:14.251Z",
+   "ms": 3846,
+   "type": "media:playing",
+   "vis": {
+    "n": 2,
+    "id": "s-hero",
+    "slideId": null
+   },
+   "audio": {
+    "src": "guide-01-the-pact-df1pHtGsVr.mp3",
+    "clip": "NAR-01",
+    "t": 0,
+    "muted": false
+   },
+   "cc": "Section one, the Pact.",
+   "guide": {
+    "state": "playing",
+    "clip": "NAR-01",
+    "slideId": null,
+    "gen": null,
+    "status": "Narrating slide 2 of 39 · 01 The pact"
+   },
+   "hash": "#/02",
+   "el": "guide-01-the-pact-df1pHtGsVr.mp3",
+   "ct": 0
+  },
+  {
+   "scenario": "S02-arrows-auto-off",
+   "t": "2026-10-01T06:13:14.251Z",
+   "ms": 3847,
+   "type": "play():resolved",
+   "vis": {
+    "n": 2,
+    "id": "s-hero",
+    "slideId": null
+   },
+   "audio": {
+    "src": "guide-01-the-pact-df1pHtGsVr.mp3",
+    "clip": "NAR-01",
+    "t": 0,
+    "muted": false
+   },
+   "cc": "Section one, the Pact.",
+   "guide": {
+    "state": "playing",
+    "clip": "NAR-01",
+    "slideId": null,
+    "gen": null,
+    "status": "Narrating slide 2 of 39 · 01 The pact"
+   },
+   "hash": "#/02",
+   "el": "guide-00-welcome-lhbIUXFwLO.mp3"
+  },
+  {
+   "scenario": "S02-arrows-auto-off",
+   "t": "2026-10-01T06:13:14.252Z",
+   "ms": 3847,
+   "type": "media:canplay",
+   "vis": {
+    "n": 2,
+    "id": "s-hero",
+    "slideId": null
+   },
+   "audio": {
+    "src": "guide-01-the-pact-df1pHtGsVr.mp3",
+    "clip": "NAR-01",
+    "t": 0,
+    "muted": false
+   },
+   "cc": "Section one, the Pact.",
+   "guide": {
+    "state": "playing",
+    "clip": "NAR-01",
+    "slideId": null,
+    "gen": null,
+    "status": "Narrating slide 2 of 39 · 01 The pact"
+   },
+   "hash": "#/02",
+   "el": "guide-02-community-model-9gUnFBtxrM.mp3",
+   "ct": 0
+  },
+  {
+   "scenario": "S02-arrows-auto-off",
+   "t": "2026-10-01T06:13:14.305Z",
+   "ms": 3901,
+   "type": "sample",
+   "vis": {
+    "n": 2,
+    "id": "s-hero",
+    "slideId": null
+   },
+   "audio": {
+    "src": "guide-01-the-pact-df1pHtGsVr.mp3",
+    "clip": "NAR-01",
+    "t": 0.01,
+    "muted": false
+   },
+   "cc": "Section one, the Pact.",
+   "guide": {
+    "state": "playing",
+    "clip": "NAR-01",
+    "slideId": null,
+    "gen": null,
+    "status": "Narrating slide 2 of 39 · 01 The pact"
+   },
+   "hash": "#/02"
+  },
+  {
+   "scenario": "S02-arrows-auto-off",
+   "t": "2026-10-01T06:13:15.817Z",
+   "ms": 5413,
+   "type": "check",
+   "vis": {
+    "n": 2,
+    "id": "s-hero",
+    "slideId": null
+   },
+   "audio": {
+    "src": "guide-01-the-pact-df1pHtGsVr.mp3",
+    "clip": "NAR-01",
+    "t": 1.48,
+    "muted": false
+   },
+   "cc": "Section one, the Pact.",
+   "guide": {
+    "state": "playing",
+    "clip": "NAR-01",
+    "slideId": null,
+    "gen": null,
+    "status": "Narrating slide 2 of 39 · 01 The pact"
+   },
+   "hash": "#/02",
+   "step": "ArrowRight → 2",
+   "expect": 2
+  },
+  {
+   "scenario": "S02-arrows-auto-off",
+   "t": "2026-10-01T06:13:15.819Z",
+   "ms": 5414,
+   "type": "key",
+   "vis": {
+    "n": 2,
+    "id": "s-hero",
+    "slideId": null
+   },
+   "audio": {
+    "src": "guide-01-the-pact-df1pHtGsVr.mp3",
+    "clip": "NAR-01",
+    "t": 1.48,
+    "muted": false
+   },
+   "cc": "Section one, the Pact.",
+   "guide": {
+    "state": "playing",
+    "clip": "NAR-01",
+    "slideId": null,
+    "gen": null,
+    "status": "Narrating slide 2 of 39 · 01 The pact"
+   },
+   "hash": "#/02",
+   "key": "ArrowRight"
+  },
+  {
+   "scenario": "S02-arrows-auto-off",
+   "t": "2026-10-01T06:13:15.886Z",
+   "ms": 5481,
+   "type": "media:seeked",
+   "vis": {
+    "n": 3,
+    "id": "s-why-pact",
+    "slideId": null
+   },
+   "audio": {
+    "src": "guide-01-the-pact-df1pHtGsVr.mp3",
+    "clip": "NAR-01",
+    "t": 12.14,
+    "muted": false
+   },
+   "cc": "It is a community proposal from ODA and AI Rev, designed as a community, not a product.",
+   "guide": {
+    "state": "buffering",
+    "clip": "NAR-01",
+    "slideId": null,
+    "gen": null,
+    "status": "Narrating slide 3 of 39 · 01 The pact"
+   },
+   "hash": "#/03",
+   "el": "guide-01-the-pact-df1pHtGsVr.mp3",
+   "ct": 12.14
+  },
+  {
+   "scenario": "S02-arrows-auto-off",
+   "t": "2026-10-01T06:13:15.886Z",
+   "ms": 5481,
+   "type": "media:canplay",
+   "vis": {
+    "n": 3,
+    "id": "s-why-pact",
+    "slideId": null
+   },
+   "audio": {
+    "src": "guide-01-the-pact-df1pHtGsVr.mp3",
+    "clip": "NAR-01",
+    "t": 12.14,
+    "muted": false
+   },
+   "cc": "It is a community proposal from ODA and AI Rev, designed as a community, not a product.",
+   "guide": {
+    "state": "buffering",
+    "clip": "NAR-01",
+    "slideId": null,
+    "gen": null,
+    "status": "Narrating slide 3 of 39 · 01 The pact"
+   },
+   "hash": "#/03",
+   "el": "guide-01-the-pact-df1pHtGsVr.mp3",
+   "ct": 12.14
+  },
+  {
+   "scenario": "S02-arrows-auto-off",
+   "t": "2026-10-01T06:13:15.886Z",
+   "ms": 5481,
+   "type": "media:playing",
+   "vis": {
+    "n": 3,
+    "id": "s-why-pact",
+    "slideId": null
+   },
+   "audio": {
+    "src": "guide-01-the-pact-df1pHtGsVr.mp3",
+    "clip": "NAR-01",
+    "t": 12.14,
+    "muted": false
+   },
+   "cc": "It is a community proposal from ODA and AI Rev, designed as a community, not a product.",
+   "guide": {
+    "state": "playing",
+    "clip": "NAR-01",
+    "slideId": null,
+    "gen": null,
+    "status": "Narrating slide 3 of 39 · 01 The pact"
+   },
+   "hash": "#/03",
+   "el": "guide-01-the-pact-df1pHtGsVr.mp3",
+   "ct": 12.14
+  },
+  {
+   "scenario": "S02-arrows-auto-off",
+   "t": "2026-10-01T06:13:15.905Z",
+   "ms": 5500,
+   "type": "sample",
+   "vis": {
+    "n": 3,
+    "id": "s-why-pact",
+    "slideId": null
+   },
+   "audio": {
+    "src": "guide-01-the-pact-df1pHtGsVr.mp3",
+    "clip": "NAR-01",
+    "t": 12.15,
+    "muted": false
+   },
+   "cc": "It is a community proposal from ODA and AI Rev, designed as a community, not a product.",
+   "guide": {
+    "state": "playing",
+    "clip": "NAR-01",
+    "slideId": null,
+    "gen": null,
+    "status": "Narrating slide 3 of 39 · 01 The pact"
+   },
+   "hash": "#/03"
+  },
+  {
+   "scenario": "S02-arrows-auto-off",
+   "t": "2026-10-01T06:13:17.456Z",
+   "ms": 7051,
+   "type": "check",
+   "vis": {
+    "n": 3,
+    "id": "s-why-pact",
+    "slideId": null
+   },
+   "audio": {
+    "src": "guide-01-the-pact-df1pHtGsVr.mp3",
+    "clip": "NAR-01",
+    "t": 13.63,
+    "muted": false
+   },
+   "cc": "It is a community proposal from ODA and AI Rev, designed as a community, not a product.",
+   "guide": {
+    "state": "playing",
+    "clip": "NAR-01",
+    "slideId": null,
+    "gen": null,
+    "status": "Narrating slide 3 of 39 · 01 The pact"
+   },
+   "hash": "#/03",
+   "step": "ArrowRight → 3",
+   "expect": 3
+  },
+  {
+   "scenario": "S02-arrows-auto-off",
+   "t": "2026-10-01T06:13:17.459Z",
+   "ms": 7055,
+   "type": "key",
+   "vis": {
+    "n": 3,
+    "id": "s-why-pact",
+    "slideId": null
+   },
+   "audio": {
+    "src": "guide-01-the-pact-df1pHtGsVr.mp3",
+    "clip": "NAR-01",
+    "t": 13.63,
+    "muted": false
+   },
+   "cc": "It is a community proposal from ODA and AI Rev, designed as a community, not a product.",
+   "guide": {
+    "state": "playing",
+    "clip": "NAR-01",
+    "slideId": null,
+    "gen": null,
+    "status": "Narrating slide 3 of 39 · 01 The pact"
+   },
+   "hash": "#/03",
+   "key": "ArrowRight"
+  },
+  {
+   "scenario": "S02-arrows-auto-off",
+   "t": "2026-10-01T06:13:17.509Z",
+   "ms": 7104,
+   "type": "sample",
+   "vis": {
+    "n": 4,
+    "id": "s-four-outcomes",
+    "slideId": null
+   },
+   "audio": {
+    "src": "guide-01-the-pact-df1pHtGsVr.mp3",
+    "clip": "NAR-01",
+    "t": 13.68,
+    "muted": false
+   },
+   "cc": "It is a community proposal from ODA and AI Rev, designed as a community, not a product.",
+   "guide": {
+    "state": "playing",
+    "clip": "NAR-01",
+    "slideId": null,
+    "gen": null,
+    "status": "Narrating slide 3 of 39 · 01 The pact"
+   },
+   "hash": "#/04"
+  },
+  {
+   "scenario": "S02-arrows-auto-off",
+   "t": "2026-10-01T06:13:17.530Z",
+   "ms": 7126,
+   "type": "play()",
+   "vis": {
+    "n": 4,
+    "id": "s-four-outcomes",
+    "slideId": null
+   },
+   "audio": {
+    "src": "guide-01-the-pact-df1pHtGsVr.mp3",
+    "clip": "NAR-01",
+    "t": 0,
+    "muted": false
+   },
+   "cc": "It is a community proposal from ODA and AI Rev, designed as a community, not a product.",
+   "guide": {
+    "state": "playing",
+    "clip": "NAR-01",
+    "slideId": null,
+    "gen": null,
+    "status": "Narrating slide 3 of 39 · 01 The pact"
+   },
+   "hash": "#/04",
+   "el": "guide-01-the-pact-df1pHtGsVr.mp3",
+   "ct": 0
+  },
+  {
+   "scenario": "S02-arrows-auto-off",
+   "t": "2026-10-01T06:13:17.531Z",
+   "ms": 7127,
+   "type": "media:emptied",
+   "vis": {
+    "n": 4,
+    "id": "s-four-outcomes",
+    "slideId": null
+   },
+   "audio": {
+    "src": "guide-01-the-pact-df1pHtGsVr.mp3",
+    "clip": "NAR-01",
+    "t": 0,
+    "muted": false
+   },
+   "cc": "Section two, the Community Model.",
+   "guide": {
+    "state": "starting",
+    "clip": "NAR-02",
+    "slideId": null,
+    "gen": null,
+    "status": "Narrating slide 4 of 39 · 02 Community model"
+   },
+   "hash": "#/04",
+   "el": "guide-01-the-pact-df1pHtGsVr.mp3",
+   "ct": 0
+  },
+  {
+   "scenario": "S02-arrows-auto-off",
+   "t": "2026-10-01T06:13:17.533Z",
+   "ms": 7128,
+   "type": "media:loadstart",
+   "vis": {
+    "n": 4,
+    "id": "s-four-outcomes",
+    "slideId": null
+   },
+   "audio": {
+    "src": "guide-02-community-model-9gUnFBtxrM.mp3",
+    "clip": "NAR-02",
+    "t": 0,
+    "muted": false
+   },
+   "cc": "Section two, the Community Model.",
+   "guide": {
+    "state": "buffering",
+    "clip": "NAR-02",
+    "slideId": null,
+    "gen": null,
+    "status": "Narrating slide 4 of 39 · 02 Community model"
+   },
+   "hash": "#/04",
+   "el": "guide-02-community-model-9gUnFBtxrM.mp3",
+   "ct": 0
+  },
+  {
+   "scenario": "S02-arrows-auto-off",
+   "t": "2026-10-01T06:13:17.537Z",
+   "ms": 7132,
+   "type": "media:loadstart",
+   "vis": {
+    "n": 4,
+    "id": "s-four-outcomes",
+    "slideId": null
+   },
+   "audio": {
+    "src": "guide-02-community-model-9gUnFBtxrM.mp3",
+    "clip": "NAR-02",
+    "t": 0,
+    "muted": false
+   },
+   "cc": "Section two, the Community Model.",
+   "guide": {
+    "state": "buffering",
+    "clip": "NAR-02",
+    "slideId": null,
+    "gen": null,
+    "status": "Narrating slide 4 of 39 · 02 Community model"
+   },
+   "hash": "#/04",
+   "el": "guide-03-six-pillars-yxVqZJ2k1a.mp3",
+   "ct": 0
+  },
+  {
+   "scenario": "S02-arrows-auto-off",
+   "t": "2026-10-01T06:13:17.541Z",
+   "ms": 7136,
+   "type": "media:canplay",
+   "vis": {
+    "n": 4,
+    "id": "s-four-outcomes",
+    "slideId": null
+   },
+   "audio": {
+    "src": "guide-02-community-model-9gUnFBtxrM.mp3",
+    "clip": "NAR-02",
+    "t": 0,
+    "muted": false
+   },
+   "cc": "Section two, the Community Model.",
+   "guide": {
+    "state": "buffering",
+    "clip": "NAR-02",
+    "slideId": null,
+    "gen": null,
+    "status": "Narrating slide 4 of 39 · 02 Community model"
+   },
+   "hash": "#/04",
+   "el": "guide-02-community-model-9gUnFBtxrM.mp3",
+   "ct": 0
+  },
+  {
+   "scenario": "S02-arrows-auto-off",
+   "t": "2026-10-01T06:13:17.542Z",
+   "ms": 7137,
+   "type": "media:playing",
+   "vis": {
+    "n": 4,
+    "id": "s-four-outcomes",
+    "slideId": null
+   },
+   "audio": {
+    "src": "guide-02-community-model-9gUnFBtxrM.mp3",
+    "clip": "NAR-02",
+    "t": 0,
+    "muted": false
+   },
+   "cc": "Section two, the Community Model.",
+   "guide": {
+    "state": "playing",
+    "clip": "NAR-02",
+    "slideId": null,
+    "gen": null,
+    "status": "Narrating slide 4 of 39 · 02 Community model"
+   },
+   "hash": "#/04",
+   "el": "guide-02-community-model-9gUnFBtxrM.mp3",
+   "ct": 0
+  },
+  {
+   "scenario": "S02-arrows-auto-off",
+   "t": "2026-10-01T06:13:17.542Z",
+   "ms": 7137,
+   "type": "play():resolved",
+   "vis": {
+    "n": 4,
+    "id": "s-four-outcomes",
+    "slideId": null
+   },
+   "audio": {
+    "src": "guide-02-community-model-9gUnFBtxrM.mp3",
+    "clip": "NAR-02",
+    "t": 0,
+    "muted": false
+   },
+   "cc": "Section two, the Community Model.",
+   "guide": {
+    "state": "playing",
+    "clip": "NAR-02",
+    "slideId": null,
+    "gen": null,
+    "status": "Narrating slide 4 of 39 · 02 Community model"
+   },
+   "hash": "#/04",
+   "el": "guide-01-the-pact-df1pHtGsVr.mp3"
+  },
+  {
+   "scenario": "S02-arrows-auto-off",
+   "t": "2026-10-01T06:13:17.542Z",
+   "ms": 7138,
+   "type": "media:canplay",
+   "vis": {
+    "n": 4,
+    "id": "s-four-outcomes",
+    "slideId": null
+   },
+   "audio": {
+    "src": "guide-02-community-model-9gUnFBtxrM.mp3",
+    "clip": "NAR-02",
+    "t": 0,
+    "muted": false
+   },
+   "cc": "Section two, the Community Model.",
+   "guide": {
+    "state": "playing",
+    "clip": "NAR-02",
+    "slideId": null,
+    "gen": null,
+    "status": "Narrating slide 4 of 39 · 02 Community model"
+   },
+   "hash": "#/04",
+   "el": "guide-03-six-pillars-yxVqZJ2k1a.mp3",
+   "ct": 0
+  },
+  {
+   "scenario": "S02-arrows-auto-off",
+   "t": "2026-10-01T06:13:17.605Z",
+   "ms": 7201,
+   "type": "sample",
+   "vis": {
+    "n": 4,
+    "id": "s-four-outcomes",
+    "slideId": null
+   },
+   "audio": {
+    "src": "guide-02-community-model-9gUnFBtxrM.mp3",
+    "clip": "NAR-02",
+    "t": 0.01,
+    "muted": false
+   },
+   "cc": "Section two, the Community Model.",
+   "guide": {
+    "state": "playing",
+    "clip": "NAR-02",
+    "slideId": null,
+    "gen": null,
+    "status": "Narrating slide 4 of 39 · 02 Community model"
+   },
+   "hash": "#/04"
+  },
+  {
+   "scenario": "S02-arrows-auto-off",
+   "t": "2026-10-01T06:13:19.100Z",
+   "ms": 8696,
+   "type": "check",
+   "vis": {
+    "n": 4,
+    "id": "s-four-outcomes",
+    "slideId": null
+   },
+   "audio": {
+    "src": "guide-02-community-model-9gUnFBtxrM.mp3",
+    "clip": "NAR-02",
+    "t": 1.48,
+    "muted": false
+   },
+   "cc": "Section two, the Community Model.",
+   "guide": {
+    "state": "playing",
+    "clip": "NAR-02",
+    "slideId": null,
+    "gen": null,
+    "status": "Narrating slide 4 of 39 · 02 Community model"
+   },
+   "hash": "#/04",
+   "step": "ArrowRight → 4",
+   "expect": 4
+  },
+  {
+   "scenario": "S02-arrows-auto-off",
+   "t": "2026-10-01T06:13:19.101Z",
+   "ms": 8697,
+   "type": "key",
+   "vis": {
+    "n": 4,
+    "id": "s-four-outcomes",
+    "slideId": null
+   },
+   "audio": {
+    "src": "guide-02-community-model-9gUnFBtxrM.mp3",
+    "clip": "NAR-02",
+    "t": 1.49,
+    "muted": false
+   },
+   "cc": "Section two, the Community Model.",
+   "guide": {
+    "state": "playing",
+    "clip": "NAR-02",
+    "slideId": null,
+    "gen": null,
+    "status": "Narrating slide 4 of 39 · 02 Community model"
+   },
+   "hash": "#/04",
+   "key": "ArrowRight"
+  },
+  {
+   "scenario": "S02-arrows-auto-off",
+   "t": "2026-10-01T06:13:19.119Z",
+   "ms": 8715,
+   "type": "sample",
+   "vis": {
+    "n": 5,
+    "id": "s-managed-programme",
+    "slideId": null
+   },
+   "audio": {
+    "src": "guide-02-community-model-9gUnFBtxrM.mp3",
+    "clip": "NAR-02",
+    "t": 1.5,
+    "muted": false
+   },
+   "cc": "Section two, the Community Model.",
+   "guide": {
+    "state": "playing",
+    "clip": "NAR-02",
+    "slideId": null,
+    "gen": null,
+    "status": "Narrating slide 4 of 39 · 02 Community model"
+   },
+   "hash": "#/05"
+  },
+  {
+   "scenario": "S02-arrows-auto-off",
+   "t": "2026-10-01T06:13:19.921Z",
+   "ms": 9516,
+   "type": "hashchange",
+   "vis": {
+    "n": 5,
+    "id": "s-managed-programme",
+    "slideId": null
+   },
+   "audio": {
+    "src": "guide-02-community-model-9gUnFBtxrM.mp3",
+    "clip": "NAR-02",
+    "t": 2.3,
+    "muted": false
+   },
+   "cc": "Every webinar, chapter event and challenge should lead somewhere real, so the model is built around four outcomes for every participant.",
+   "guide": {
+    "state": "playing",
+    "clip": "NAR-02",
+    "slideId": null,
+    "gen": null,
+    "status": "Narrating slide 5 of 39 · 02 Community model"
+   },
+   "hash": "#/7"
+  },
+  {
+   "scenario": "S02-arrows-auto-off",
+   "t": "2026-10-01T06:13:20.005Z",
+   "ms": 9601,
+   "type": "sample",
+   "vis": {
+    "n": 7,
+    "id": "s-country-chapters",
+    "slideId": null
+   },
+   "audio": {
+    "src": "guide-02-community-model-9gUnFBtxrM.mp3",
+    "clip": "NAR-02",
+    "t": 2.39,
+    "muted": false
+   },
+   "cc": "Every webinar, chapter event and challenge should lead somewhere real, so the model is built around four outcomes for every participant.",
+   "guide": {
+    "state": "playing",
+    "clip": "NAR-02",
+    "slideId": null,
+    "gen": null,
+    "status": "Narrating slide 7 of 39 · 02 Community model"
+   },
+   "hash": "#/07"
+  },
+  {
+   "scenario": "S02-arrows-auto-off",
+   "t": "2026-10-01T06:13:20.736Z",
+   "ms": 10331,
+   "type": "check",
+   "vis": {
+    "n": 7,
+    "id": "s-country-chapters",
+    "slideId": null
+   },
+   "audio": {
+    "src": "guide-02-community-model-9gUnFBtxrM.mp3",
+    "clip": "NAR-02",
+    "t": 3.12,
+    "muted": false
+   },
+   "cc": "Every webinar, chapter event and challenge should lead somewhere real, so the model is built around four outcomes for every participant.",
+   "guide": {
+    "state": "playing",
+    "clip": "NAR-02",
+    "slideId": null,
+    "gen": null,
+    "status": "Narrating slide 7 of 39 · 02 Community model"
+   },
+   "hash": "#/07",
+   "step": "ArrowRight → 5",
+   "expect": 5
+  },
+  {
+   "scenario": "S02-arrows-auto-off",
+   "t": "2026-10-01T06:13:20.737Z",
+   "ms": 10333,
+   "type": "key",
+   "vis": {
+    "n": 7,
+    "id": "s-country-chapters",
+    "slideId": null
+   },
+   "audio": {
+    "src": "guide-02-community-model-9gUnFBtxrM.mp3",
+    "clip": "NAR-02",
+    "t": 3.12,
+    "muted": false
+   },
+   "cc": "Every webinar, chapter event and challenge should lead somewhere real, so the model is built around four outcomes for every participant.",
+   "guide": {
+    "state": "playing",
+    "clip": "NAR-02",
+    "slideId": null,
+    "gen": null,
+    "status": "Narrating slide 7 of 39 · 02 Community model"
+   },
+   "hash": "#/07",
+   "key": "ArrowLeft"
+  },
+  {
+   "scenario": "S02-arrows-auto-off",
+   "t": "2026-10-01T06:13:20.801Z",
+   "ms": 10397,
+   "type": "media:seeked",
+   "vis": {
+    "n": 6,
+    "id": "s-discord-home",
+    "slideId": null
+   },
+   "audio": {
+    "src": "guide-02-community-model-9gUnFBtxrM.mp3",
+    "clip": "NAR-02",
+    "t": 0.01,
+    "muted": false
+   },
+   "cc": "Section two, the Community Model.",
+   "guide": {
+    "state": "buffering",
+    "clip": "NAR-02",
+    "slideId": null,
+    "gen": null,
+    "status": "Narrating slide 6 of 39 · 02 Community model"
+   },
+   "hash": "#/06",
+   "el": "guide-02-community-model-9gUnFBtxrM.mp3",
+   "ct": 0.01
+  },
+  {
+   "scenario": "S02-arrows-auto-off",
+   "t": "2026-10-01T06:13:20.802Z",
+   "ms": 10397,
+   "type": "media:canplay",
+   "vis": {
+    "n": 6,
+    "id": "s-discord-home",
+    "slideId": null
+   },
+   "audio": {
+    "src": "guide-02-community-model-9gUnFBtxrM.mp3",
+    "clip": "NAR-02",
+    "t": 0.01,
+    "muted": false
+   },
+   "cc": "Section two, the Community Model.",
+   "guide": {
+    "state": "buffering",
+    "clip": "NAR-02",
+    "slideId": null,
+    "gen": null,
+    "status": "Narrating slide 6 of 39 · 02 Community model"
+   },
+   "hash": "#/06",
+   "el": "guide-02-community-model-9gUnFBtxrM.mp3",
+   "ct": 0.01
+  },
+  {
+   "scenario": "S02-arrows-auto-off",
+   "t": "2026-10-01T06:13:20.802Z",
+   "ms": 10397,
+   "type": "media:playing",
+   "vis": {
+    "n": 6,
+    "id": "s-discord-home",
+    "slideId": null
+   },
+   "audio": {
+    "src": "guide-02-community-model-9gUnFBtxrM.mp3",
+    "clip": "NAR-02",
+    "t": 0.01,
+    "muted": false
+   },
+   "cc": "Section two, the Community Model.",
+   "guide": {
+    "state": "playing",
+    "clip": "NAR-02",
+    "slideId": null,
+    "gen": null,
+    "status": "Narrating slide 6 of 39 · 02 Community model"
+   },
+   "hash": "#/06",
+   "el": "guide-02-community-model-9gUnFBtxrM.mp3",
+   "ct": 0.01
+  },
+  {
+   "scenario": "S02-arrows-auto-off",
+   "t": "2026-10-01T06:13:20.805Z",
+   "ms": 10400,
+   "type": "sample",
+   "vis": {
+    "n": 6,
+    "id": "s-discord-home",
+    "slideId": null
+   },
+   "audio": {
+    "src": "guide-02-community-model-9gUnFBtxrM.mp3",
+    "clip": "NAR-02",
+    "t": 0.01,
+    "muted": false
+   },
+   "cc": "Section two, the Community Model.",
+   "guide": {
+    "state": "playing",
+    "clip": "NAR-02",
+    "slideId": null,
+    "gen": null,
+    "status": "Narrating slide 6 of 39 · 02 Community model"
+   },
+   "hash": "#/06"
+  },
+  {
+   "scenario": "S02-arrows-auto-off",
+   "t": "2026-10-01T06:13:22.377Z",
+   "ms": 11972,
+   "type": "check",
+   "vis": {
+    "n": 6,
+    "id": "s-discord-home",
+    "slideId": null
+   },
+   "audio": {
+    "src": "guide-02-community-model-9gUnFBtxrM.mp3",
+    "clip": "NAR-02",
+    "t": 1.5,
+    "muted": false
+   },
+   "cc": "Section two, the Community Model.",
+   "guide": {
+    "state": "playing",
+    "clip": "NAR-02",
+    "slideId": null,
+    "gen": null,
+    "status": "Narrating slide 6 of 39 · 02 Community model"
+   },
+   "hash": "#/06",
+   "step": "ArrowLeft → 4",
+   "expect": 4
+  },
+  {
+   "scenario": "S02-arrows-auto-off",
+   "t": "2026-10-01T06:13:22.379Z",
+   "ms": 11974,
+   "type": "key",
+   "vis": {
+    "n": 6,
+    "id": "s-discord-home",
+    "slideId": null
+   },
+   "audio": {
+    "src": "guide-02-community-model-9gUnFBtxrM.mp3",
+    "clip": "NAR-02",
+    "t": 1.5,
+    "muted": false
+   },
+   "cc": "Section two, the Community Model.",
+   "guide": {
+    "state": "playing",
+    "clip": "NAR-02",
+    "slideId": null,
+    "gen": null,
+    "status": "Narrating slide 6 of 39 · 02 Community model"
+   },
+   "hash": "#/06",
+   "key": "ArrowLeft"
+  },
+  {
+   "scenario": "S02-arrows-auto-off",
+   "t": "2026-10-01T06:13:22.405Z",
+   "ms": 12001,
+   "type": "sample",
+   "vis": {
+    "n": 5,
+    "id": "s-managed-programme",
+    "slideId": null
+   },
+   "audio": {
+    "src": "guide-02-community-model-9gUnFBtxrM.mp3",
+    "clip": "NAR-02",
+    "t": 1.53,
+    "muted": false
+   },
+   "cc": "Section two, the Community Model.",
+   "guide": {
+    "state": "playing",
+    "clip": "NAR-02",
+    "slideId": null,
+    "gen": null,
+    "status": "Narrating slide 6 of 39 · 02 Community model"
+   },
+   "hash": "#/05"
+  },
+  {
+   "scenario": "S02-arrows-auto-off",
+   "t": "2026-10-01T06:13:23.185Z",
+   "ms": 12781,
+   "type": "hashchange",
+   "vis": {
+    "n": 5,
+    "id": "s-managed-programme",
+    "slideId": null
+   },
+   "audio": {
+    "src": "guide-02-community-model-9gUnFBtxrM.mp3",
+    "clip": "NAR-02",
+    "t": 2.31,
+    "muted": false
+   },
+   "cc": "Every webinar, chapter event and challenge should lead somewhere real, so the model is built around four outcomes for every participant.",
+   "guide": {
+    "state": "playing",
+    "clip": "NAR-02",
+    "slideId": null,
+    "gen": null,
+    "status": "Narrating slide 5 of 39 · 02 Community model"
+   },
+   "hash": "#/7"
+  },
+  {
+   "scenario": "S02-arrows-auto-off",
+   "t": "2026-10-01T06:13:23.209Z",
+   "ms": 12804,
+   "type": "sample",
+   "vis": {
+    "n": 7,
+    "id": "s-country-chapters",
+    "slideId": null
+   },
+   "audio": {
+    "src": "guide-02-community-model-9gUnFBtxrM.mp3",
+    "clip": "NAR-02",
+    "t": 2.33,
+    "muted": false
+   },
+   "cc": "Every webinar, chapter event and challenge should lead somewhere real, so the model is built around four outcomes for every participant.",
+   "guide": {
+    "state": "playing",
+    "clip": "NAR-02",
+    "slideId": null,
+    "gen": null,
+    "status": "Narrating slide 7 of 39 · 02 Community model"
+   },
+   "hash": "#/07"
+  },
+  {
+   "scenario": "S02-arrows-auto-off",
+   "t": "2026-10-01T06:13:24.013Z",
+   "ms": 13608,
+   "type": "check",
+   "vis": {
+    "n": 7,
+    "id": "s-country-chapters",
+    "slideId": null
+   },
+   "audio": {
+    "src": "guide-02-community-model-9gUnFBtxrM.mp3",
+    "clip": "NAR-02",
+    "t": 3.13,
+    "muted": false
+   },
+   "cc": "Every webinar, chapter event and challenge should lead somewhere real, so the model is built around four outcomes for every participant.",
+   "guide": {
+    "state": "playing",
+    "clip": "NAR-02",
+    "slideId": null,
+    "gen": null,
+    "status": "Narrating slide 7 of 39 · 02 Community model"
+   },
+   "hash": "#/07",
+   "step": "ArrowLeft → 3",
+   "expect": 3
+  }
+ ],
+ "console": []
+}

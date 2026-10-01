@@ -1,0 +1,3107 @@
+{
+ "label": "after",
+ "base": "http://127.0.0.1:4302",
+ "finished": "2026-10-01T06:43:05.054Z",
+ "scenarios": [
+  "S01-first-load-blocked",
+  "S02-arrows-auto-off",
+  "S03-rapid-and-random",
+  "S04-esc-overview",
+  "S05-home-end",
+  "S06-deep-links",
+  "S07-auto-on",
+  "S08-auto-off",
+  "S09-slide38-tabs",
+  "S10-sweep-desktop",
+  "S11-sweep-phone",
+  "S12-phone-rapid-blocked"
+ ],
+ "marks": [
+  {
+   "t": "2026-10-01T06:38:41.544Z",
+   "scenario": "S01-first-load-blocked",
+   "step": "no gesture: 3 s after load",
+   "expect": 5,
+   "vis": {
+    "n": 5,
+    "id": "s-managed-programme",
+    "slideId": "s-managed-programme"
+   },
+   "audio": null,
+   "cc": "This is a managed global programme, not a social channel.",
+   "guide": {
+    "state": "blocked",
+    "clip": "NAR-s05",
+    "slideId": "s-managed-programme",
+    "blocked": "true",
+    "status": "Narration blocked by the browser — tap to play · slide 5 of 39 · 02 Community model",
+    "tap": true
+   }
+  },
+  {
+   "t": "2026-10-01T06:38:44.156Z",
+   "scenario": "S01-first-load-blocked",
+   "step": "first click on the slide",
+   "expect": 5,
+   "vis": {
+    "n": 5,
+    "id": "s-managed-programme",
+    "slideId": "s-managed-programme"
+   },
+   "audio": {
+    "src": "NAR-s05-s-managed-programme.mp3",
+    "clip": "NAR-s05",
+    "t": 2.41,
+    "muted": false
+   },
+   "cc": "This is a managed global programme, not a social channel.",
+   "guide": {
+    "state": "playing",
+    "clip": "NAR-s05",
+    "slideId": "s-managed-programme",
+    "blocked": "false",
+    "status": "Narrating slide 5 of 39 · 02 Community model",
+    "tap": false
+   }
+  },
+  {
+   "t": "2026-10-01T06:38:49.053Z",
+   "scenario": "S02-arrows-auto-off",
+   "step": "guide started on 1",
+   "expect": 1,
+   "vis": {
+    "n": 1,
+    "id": "s-cover",
+    "slideId": "s-cover"
+   },
+   "audio": {
+    "src": "NAR-s01-s-cover.mp3",
+    "clip": "NAR-s01",
+    "t": 1.76,
+    "muted": false
+   },
+   "cc": "Welcome to the Athar Open Agentic Pact, a community proposal from ODA and AIREV.",
+   "guide": {
+    "state": "playing",
+    "clip": "NAR-s01",
+    "slideId": "s-cover",
+    "blocked": "false",
+    "status": "Narrating slide 1 of 39 · Welcome",
+    "tap": false
+   }
+  },
+  {
+   "t": "2026-10-01T06:38:50.692Z",
+   "scenario": "S02-arrows-auto-off",
+   "step": "ArrowRight → 2",
+   "expect": 2,
+   "vis": {
+    "n": 2,
+    "id": "s-hero",
+    "slideId": "s-hero"
+   },
+   "audio": {
+    "src": "NAR-s02-s-hero.mp3",
+    "clip": "NAR-s02",
+    "t": 1.41,
+    "muted": false
+   },
+   "cc": "Section one, the Pact.",
+   "guide": {
+    "state": "playing",
+    "clip": "NAR-s02",
+    "slideId": "s-hero",
+    "blocked": "false",
+    "status": "Narrating slide 2 of 39 · 01 The pact",
+    "tap": false
+   }
+  },
+  {
+   "t": "2026-10-01T06:38:52.334Z",
+   "scenario": "S02-arrows-auto-off",
+   "step": "ArrowRight → 3",
+   "expect": 3,
+   "vis": {
+    "n": 3,
+    "id": "s-why-pact",
+    "slideId": "s-why-pact"
+   },
+   "audio": {
+    "src": "NAR-s03-s-why-pact.mp3",
+    "clip": "NAR-s03",
+    "t": 1.42,
+    "muted": false
+   },
+   "cc": "It is a community proposal from ODA and AI Rev, designed as a community, not a product.",
+   "guide": {
+    "state": "playing",
+    "clip": "NAR-s03",
+    "slideId": "s-why-pact",
+    "blocked": "false",
+    "status": "Narrating slide 3 of 39 · 01 The pact",
+    "tap": false
+   }
+  },
+  {
+   "t": "2026-10-01T06:38:53.972Z",
+   "scenario": "S02-arrows-auto-off",
+   "step": "ArrowRight → 4",
+   "expect": 4,
+   "vis": {
+    "n": 4,
+    "id": "s-four-outcomes",
+    "slideId": "s-four-outcomes"
+   },
+   "audio": {
+    "src": "NAR-s04-s-four-outcomes.mp3",
+    "clip": "NAR-s04",
+    "t": 1.41,
+    "muted": false
+   },
+   "cc": "Section two, the Community Model.",
+   "guide": {
+    "state": "playing",
+    "clip": "NAR-s04",
+    "slideId": "s-four-outcomes",
+    "blocked": "false",
+    "status": "Narrating slide 4 of 39 · 02 Community model",
+    "tap": false
+   }
+  },
+  {
+   "t": "2026-10-01T06:38:55.617Z",
+   "scenario": "S02-arrows-auto-off",
+   "step": "ArrowRight → 5",
+   "expect": 5,
+   "vis": {
+    "n": 5,
+    "id": "s-managed-programme",
+    "slideId": "s-managed-programme"
+   },
+   "audio": {
+    "src": "NAR-s05-s-managed-programme.mp3",
+    "clip": "NAR-s05",
+    "t": 1.41,
+    "muted": false
+   },
+   "cc": "This is a managed global programme, not a social channel.",
+   "guide": {
+    "state": "playing",
+    "clip": "NAR-s05",
+    "slideId": "s-managed-programme",
+    "blocked": "false",
+    "status": "Narrating slide 5 of 39 · 02 Community model",
+    "tap": false
+   }
+  },
+  {
+   "t": "2026-10-01T06:38:57.258Z",
+   "scenario": "S02-arrows-auto-off",
+   "step": "ArrowLeft → 4",
+   "expect": 4,
+   "vis": {
+    "n": 4,
+    "id": "s-four-outcomes",
+    "slideId": "s-four-outcomes"
+   },
+   "audio": {
+    "src": "NAR-s04-s-four-outcomes.mp3",
+    "clip": "NAR-s04",
+    "t": 1.41,
+    "muted": false
+   },
+   "cc": "Section two, the Community Model.",
+   "guide": {
+    "state": "playing",
+    "clip": "NAR-s04",
+    "slideId": "s-four-outcomes",
+    "blocked": "false",
+    "status": "Narrating slide 4 of 39 · 02 Community model",
+    "tap": false
+   }
+  },
+  {
+   "t": "2026-10-01T06:38:58.895Z",
+   "scenario": "S02-arrows-auto-off",
+   "step": "ArrowLeft → 3",
+   "expect": 3,
+   "vis": {
+    "n": 3,
+    "id": "s-why-pact",
+    "slideId": "s-why-pact"
+   },
+   "audio": {
+    "src": "NAR-s03-s-why-pact.mp3",
+    "clip": "NAR-s03",
+    "t": 1.4,
+    "muted": false
+   },
+   "cc": "It is a community proposal from ODA and AI Rev, designed as a community, not a product.",
+   "guide": {
+    "state": "playing",
+    "clip": "NAR-s03",
+    "slideId": "s-why-pact",
+    "blocked": "false",
+    "status": "Narrating slide 3 of 39 · 01 The pact",
+    "tap": false
+   }
+  },
+  {
+   "t": "2026-10-01T06:39:03.506Z",
+   "scenario": "S03-rapid-and-random",
+   "step": "guide started on 2",
+   "expect": 2,
+   "vis": {
+    "n": 2,
+    "id": "s-hero",
+    "slideId": "s-hero"
+   },
+   "audio": {
+    "src": "NAR-s02-s-hero.mp3",
+    "clip": "NAR-s02",
+    "t": 1.28,
+    "muted": false
+   },
+   "cc": "Section one, the Pact.",
+   "guide": {
+    "state": "playing",
+    "clip": "NAR-s02",
+    "slideId": "s-hero",
+    "blocked": "false",
+    "status": "Narrating slide 2 of 39 · 01 The pact",
+    "tap": false
+   }
+  },
+  {
+   "t": "2026-10-01T06:39:07.262Z",
+   "scenario": "S03-rapid-and-random",
+   "step": "6× ArrowRight in 245 ms → 8",
+   "expect": 8,
+   "vis": {
+    "n": 8,
+    "id": "s-learning-formats",
+    "slideId": "s-learning-formats"
+   },
+   "audio": {
+    "src": "NAR-s08-s-learning-formats.mp3",
+    "clip": "NAR-s08",
+    "t": 3.28,
+    "muted": false
+   },
+   "cc": "Webinars, bootcamps and institutional academies form the learning ladder.",
+   "guide": {
+    "state": "playing",
+    "clip": "NAR-s08",
+    "slideId": "s-learning-formats",
+    "blocked": "false",
+    "status": "Narrating slide 8 of 39 · 02 Community model",
+    "tap": false
+   }
+  },
+  {
+   "t": "2026-10-01T06:39:11.446Z",
+   "scenario": "S03-rapid-and-random",
+   "step": "random jumps 13→30→21→39→17",
+   "expect": 17,
+   "vis": {
+    "n": 17,
+    "id": "s-pillar-universal-licence",
+    "slideId": "s-pillar-universal-licence"
+   },
+   "audio": {
+    "src": "NAR-s17-s-pillar-universal-licence.mp3",
+    "clip": "NAR-s17",
+    "t": 3.28,
+    "muted": false
+   },
+   "cc": "Universal API licences are managed by Athar, giving members access without duplicated procurement.",
+   "guide": {
+    "state": "playing",
+    "clip": "NAR-s17",
+    "slideId": "s-pillar-universal-licence",
+    "blocked": "false",
+    "status": "Narrating slide 17 of 39 · 03 Six pillars",
+    "tap": false
+   }
+  },
+  {
+   "t": "2026-10-01T06:39:15.544Z",
+   "scenario": "S03-rapid-and-random",
+   "step": "random jumps 34→9→38→1→26",
+   "expect": 26,
+   "vis": {
+    "n": 26,
+    "id": "s-governance-licence",
+    "slideId": "s-governance-licence"
+   },
+   "audio": {
+    "src": "NAR-s26-s-governance-licence.mp3",
+    "clip": "NAR-s26",
+    "t": 3.34,
+    "muted": false
+   },
+   "cc": "An open steering council sets the shared plugin standard and approves the roadmap.",
+   "guide": {
+    "state": "playing",
+    "clip": "NAR-s26",
+    "slideId": "s-governance-licence",
+    "blocked": "false",
+    "status": "Narrating slide 26 of 39 · 06 Governance & roadmap",
+    "tap": false
+   }
+  },
+  {
+   "t": "2026-10-01T06:42:56.765Z",
+   "scenario": "S04-esc-overview",
+   "step": "guide started on 3",
+   "expect": 3,
+   "vis": {
+    "n": 3,
+    "id": "s-why-pact",
+    "slideId": "s-why-pact"
+   },
+   "audio": {
+    "src": "NAR-s03-s-why-pact.mp3",
+    "clip": "NAR-s03",
+    "t": 1.27,
+    "muted": false
+   },
+   "cc": "It is a community proposal from ODA and AI Rev, designed as a community, not a product.",
+   "guide": {
+    "state": "playing",
+    "clip": "NAR-s03",
+    "slideId": "s-why-pact",
+    "blocked": "false",
+    "status": "Narrating slide 3 of 39 · 01 The pact",
+    "tap": false
+   }
+  },
+  {
+   "t": "2026-10-01T06:42:59.332Z",
+   "scenario": "S04-esc-overview",
+   "step": "Esc → tile 21",
+   "expect": 21,
+   "vis": {
+    "n": 21,
+    "id": "s-actors-wall",
+    "slideId": "s-actors-wall"
+   },
+   "audio": {
+    "src": "NAR-s21-s-actors-wall.mp3",
+    "clip": "NAR-s21",
+    "t": 2.28,
+    "muted": false
+   },
+   "cc": "Section five, Actors and Roles, institutions, partners and platforms building the Athar ecosystem together, ODA and AIREV sign and govern, with AIREV, OnDemand, e& and ai& and Discord building, UNDP, UNICEF, IFRC, WFP and UNHCR sign and learn.",
+   "guide": {
+    "state": "playing",
+    "clip": "NAR-s21",
+    "slideId": "s-actors-wall",
+    "blocked": "false",
+    "status": "Narrating slide 21 of 39 · 05 Actors & roles",
+    "tap": false
+   }
+  },
+  {
+   "t": "2026-10-01T06:43:01.898Z",
+   "scenario": "S04-esc-overview",
+   "step": "Esc → tile 36",
+   "expect": 36,
+   "vis": {
+    "n": 36,
+    "id": "s-aos-roadmap",
+    "slideId": "s-aos-roadmap"
+   },
+   "audio": {
+    "src": "NAR-s36-s-aos-roadmap.mp3",
+    "clip": "NAR-s36",
+    "t": 2.25,
+    "muted": false
+   },
+   "cc": "The roadmap runs now in Q4, 2026, next in 2027 and later in 2028.",
+   "guide": {
+    "state": "playing",
+    "clip": "NAR-s36",
+    "slideId": "s-aos-roadmap",
+    "blocked": "false",
+    "status": "Narrating slide 36 of 39 · 08 Athar OS",
+    "tap": false
+   }
+  },
+  {
+   "t": "2026-10-01T06:43:04.544Z",
+   "scenario": "S04-esc-overview",
+   "step": "Esc → tile 12",
+   "expect": 12,
+   "vis": {
+    "n": 12,
+    "id": "s-decision-table",
+    "slideId": "s-decision-table"
+   },
+   "audio": {
+    "src": "NAR-s12-s-decision-table.mp3",
+    "clip": "NAR-s12",
+    "t": 2.26,
+    "muted": false
+   },
+   "cc": "Approve the two-engine model — institutions and community — appoint the Community Director, select the first anchor institutions, and fund the founding cohort.",
+   "guide": {
+    "state": "playing",
+    "clip": "NAR-s12",
+    "slideId": "s-decision-table",
+    "blocked": "false",
+    "status": "Narrating slide 12 of 39 · 02 Community model",
+    "tap": false
+   }
+  },
+  {
+   "t": "2026-10-01T06:39:26.600Z",
+   "scenario": "S05-home-end",
+   "step": "guide started on 10",
+   "expect": 10,
+   "vis": {
+    "n": 10,
+    "id": "s-office-hours",
+    "slideId": "s-office-hours"
+   },
+   "audio": {
+    "src": "NAR-s10-s-office-hours.mp3",
+    "clip": "NAR-s10",
+    "t": 1.27,
+    "muted": false
+   },
+   "cc": "Weekly office hours and tiered support keep builders unblocked.",
+   "guide": {
+    "state": "playing",
+    "clip": "NAR-s10",
+    "slideId": "s-office-hours",
+    "blocked": "false",
+    "status": "Narrating slide 10 of 39 · 02 Community model",
+    "tap": false
+   }
+  },
+  {
+   "t": "2026-10-01T06:39:29.148Z",
+   "scenario": "S05-home-end",
+   "step": "End → 39",
+   "expect": 39,
+   "vis": {
+    "n": 39,
+    "id": "s-closing",
+    "slideId": "s-closing"
+   },
+   "audio": {
+    "src": "NAR-s39-s-closing.mp3",
+    "clip": "NAR-s39",
+    "t": 2.24,
+    "muted": false
+   },
+   "cc": "You have seen the agreement, the community model, the six pillars, the actors, the roadmap, the impact tiers and Athar OS.",
+   "guide": {
+    "state": "playing",
+    "clip": "NAR-s39",
+    "slideId": "s-closing",
+    "blocked": "false",
+    "status": "Narrating slide 39 of 39 · Join the pact",
+    "tap": false
+   }
+  },
+  {
+   "t": "2026-10-01T06:39:31.687Z",
+   "scenario": "S05-home-end",
+   "step": "Home → 1",
+   "expect": 1,
+   "vis": {
+    "n": 1,
+    "id": "s-cover",
+    "slideId": "s-cover"
+   },
+   "audio": {
+    "src": "NAR-s01-s-cover.mp3",
+    "clip": "NAR-s01",
+    "t": 2.26,
+    "muted": false
+   },
+   "cc": "Welcome to the Athar Open Agentic Pact, a community proposal from ODA and AIREV.",
+   "guide": {
+    "state": "playing",
+    "clip": "NAR-s01",
+    "slideId": "s-cover",
+    "blocked": "false",
+    "status": "Narrating slide 1 of 39 · Welcome",
+    "tap": false
+   }
+  },
+  {
+   "t": "2026-10-01T06:39:36.767Z",
+   "scenario": "S06-deep-links",
+   "step": "loaded #/23 + guide",
+   "expect": 23,
+   "vis": {
+    "n": 23,
+    "id": "s-who-governs",
+    "slideId": "s-who-governs"
+   },
+   "audio": {
+    "src": "NAR-s23-s-who-governs.mp3",
+    "clip": "NAR-s23",
+    "t": 2.28,
+    "muted": false
+   },
+   "cc": "Every actor has a clear role, sign, govern, build or learn.",
+   "guide": {
+    "state": "playing",
+    "clip": "NAR-s23",
+    "slideId": "s-who-governs",
+    "blocked": "false",
+    "status": "Narrating slide 23 of 39 · 05 Actors & roles",
+    "tap": false
+   }
+  },
+  {
+   "t": "2026-10-01T06:39:39.305Z",
+   "scenario": "S06-deep-links",
+   "step": "hash #/27/new-8 → 35",
+   "expect": 35,
+   "vis": {
+    "n": 35,
+    "id": "s-aos-tour",
+    "slideId": "s-aos-tour"
+   },
+   "audio": {
+    "src": "NAR-s35-s-aos-tour.mp3",
+    "clip": "NAR-s35",
+    "t": 2.13,
+    "muted": false
+   },
+   "cc": "The product tour shows the real screens: the marketplace, the playground, the agent flow builder and the tools and deployment views, captured from the Athar OS wireframes and the launch film.",
+   "guide": {
+    "state": "playing",
+    "clip": "NAR-s35",
+    "slideId": "s-aos-tour",
+    "blocked": "false",
+    "status": "Narrating slide 35 of 39 · 08 Athar OS",
+    "tap": false
+   }
+  },
+  {
+   "t": "2026-10-01T06:39:41.841Z",
+   "scenario": "S06-deep-links",
+   "step": "hash #slide-07 → 7",
+   "expect": 7,
+   "vis": {
+    "n": 7,
+    "id": "s-country-chapters",
+    "slideId": "s-country-chapters"
+   },
+   "audio": {
+    "src": "NAR-s07-s-country-chapters.mp3",
+    "clip": "NAR-s07",
+    "t": 2.23,
+    "muted": false
+   },
+   "cc": "Country chapters bring the pact to life locally.",
+   "guide": {
+    "state": "playing",
+    "clip": "NAR-s07",
+    "slideId": "s-country-chapters",
+    "blocked": "false",
+    "status": "Narrating slide 7 of 39 · 02 Community model",
+    "tap": false
+   }
+  },
+  {
+   "t": "2026-10-01T06:39:45.981Z",
+   "scenario": "S07-auto-on",
+   "step": "guide started on 26 (AUTO on, 4×)",
+   "expect": 26,
+   "vis": {
+    "n": 26,
+    "id": "s-governance-licence",
+    "slideId": "s-governance-licence"
+   },
+   "audio": {
+    "src": "NAR-s26-s-governance-licence.mp3",
+    "clip": "NAR-s26",
+    "t": 5.05,
+    "muted": false
+   },
+   "cc": "An open steering council sets the shared plugin standard and approves the roadmap.",
+   "guide": {
+    "state": "playing",
+    "clip": "NAR-s26",
+    "slideId": "s-governance-licence",
+    "blocked": "false",
+    "status": "Narrating slide 26 of 39 · 06 Governance & roadmap",
+    "tap": false
+   }
+  },
+  {
+   "t": "2026-10-01T06:39:47.985Z",
+   "scenario": "S07-auto-on",
+   "step": "AUTO +2 s",
+   "expect": null,
+   "vis": {
+    "n": 27,
+    "id": "s-roadmap",
+    "slideId": "s-roadmap"
+   },
+   "audio": {
+    "src": "NAR-s27-s-roadmap.mp3",
+    "clip": "NAR-s27",
+    "t": 4.71,
+    "muted": false
+   },
+   "cc": "Decisions, releases, and outcome reports are published, so every member can see how priorities are set and how the platform evolves over time.",
+   "guide": {
+    "state": "playing",
+    "clip": "NAR-s27",
+    "slideId": "s-roadmap",
+    "blocked": "false",
+    "status": "Narrating slide 27 of 39 · 06 Governance & roadmap",
+    "tap": false
+   }
+  },
+  {
+   "t": "2026-10-01T06:39:49.989Z",
+   "scenario": "S07-auto-on",
+   "step": "AUTO +4 s",
+   "expect": null,
+   "vis": {
+    "n": 29,
+    "id": "s-it-tiers",
+    "slideId": "s-it-tiers"
+   },
+   "audio": {
+    "src": "NAR-s29-s-it-tiers.mp3",
+    "clip": "NAR-s29",
+    "t": 0.21,
+    "muted": false
+   },
+   "cc": "Three impact tiers, one delivery model, access, ownership, legacy.",
+   "guide": {
+    "state": "playing",
+    "clip": "NAR-s29",
+    "slideId": "s-it-tiers",
+    "blocked": "false",
+    "status": "Narrating slide 29 of 39 · 07 Impact & funding",
+    "tap": false
+   }
+  },
+  {
+   "t": "2026-10-01T06:39:51.993Z",
+   "scenario": "S07-auto-on",
+   "step": "AUTO +6 s",
+   "expect": null,
+   "vis": {
+    "n": 30,
+    "id": "s-it-metrics",
+    "slideId": "s-it-metrics"
+   },
+   "audio": null,
+   "cc": "Every agreement includes named cohorts and activation targets, independent evaluator baselines, quarterly outcome reports, and open book costs with unspent funds returned.",
+   "guide": {
+    "state": "loading",
+    "clip": "NAR-s30",
+    "slideId": "s-it-metrics",
+    "blocked": "false",
+    "status": "Loading narration · slide 30 of 39 · 07 Impact & funding",
+    "tap": false
+   }
+  },
+  {
+   "t": "2026-10-01T06:39:54.003Z",
+   "scenario": "S07-auto-on",
+   "step": "AUTO +8 s",
+   "expect": null,
+   "vis": {
+    "n": 30,
+    "id": "s-it-metrics",
+    "slideId": "s-it-metrics"
+   },
+   "audio": {
+    "src": "NAR-s30-s-it-metrics.mp3",
+    "clip": "NAR-s30",
+    "t": 7.38,
+    "muted": false
+   },
+   "cc": "Every agreement includes named cohorts and activation targets, independent evaluator baselines, quarterly outcome reports, and open book costs with unspent funds returned.",
+   "guide": {
+    "state": "playing",
+    "clip": "NAR-s30",
+    "slideId": "s-it-metrics",
+    "blocked": "false",
+    "status": "Narrating slide 30 of 39 · 07 Impact & funding",
+    "tap": false
+   }
+  },
+  {
+   "t": "2026-10-01T06:39:56.008Z",
+   "scenario": "S07-auto-on",
+   "step": "AUTO +10 s",
+   "expect": null,
+   "vis": {
+    "n": 31,
+    "id": "s-it-sustain",
+    "slideId": "s-it-sustain"
+   },
+   "audio": {
+    "src": "NAR-s31-s-it-sustain.mp3",
+    "clip": "NAR-s31",
+    "t": 3.27,
+    "muted": false
+   },
+   "cc": "Universal API licenses, marketplace revenue share and sovereign pilot options fund the model so each partner can choose what fits.",
+   "guide": {
+    "state": "playing",
+    "clip": "NAR-s31",
+    "slideId": "s-it-sustain",
+    "blocked": "false",
+    "status": "Narrating slide 31 of 39 · 07 Impact & funding",
+    "tap": false
+   }
+  },
+  {
+   "t": "2026-10-01T06:39:58.014Z",
+   "scenario": "S07-auto-on",
+   "step": "AUTO +12 s",
+   "expect": null,
+   "vis": {
+    "n": 32,
+    "id": "s-it-partners",
+    "slideId": "s-it-partners"
+   },
+   "audio": {
+    "src": "NAR-s32-s-it-partners.mp3",
+    "clip": "NAR-s32",
+    "t": 1.62,
+    "muted": false
+   },
+   "cc": "Delivered with candidate partners across the humanitarian, development and technology sectors, shown here for internal review only pending written authorisation.",
+   "guide": {
+    "state": "playing",
+    "clip": "NAR-s32",
+    "slideId": "s-it-partners",
+    "blocked": "false",
+    "status": "Narrating slide 32 of 39 · 07 Impact & funding",
+    "tap": false
+   }
+  },
+  {
+   "t": "2026-10-01T06:40:02.526Z",
+   "scenario": "S08-auto-off",
+   "step": "guide started on 26 (AUTO off, 4×)",
+   "expect": 26,
+   "vis": {
+    "n": 26,
+    "id": "s-governance-licence",
+    "slideId": "s-governance-licence"
+   },
+   "audio": {
+    "src": "NAR-s26-s-governance-licence.mp3",
+    "clip": "NAR-s26",
+    "t": 5.09,
+    "muted": false
+   },
+   "cc": "An open steering council sets the shared plugin standard and approves the roadmap.",
+   "guide": {
+    "state": "playing",
+    "clip": "NAR-s26",
+    "slideId": "s-governance-licence",
+    "blocked": "false",
+    "status": "Narrating slide 26 of 39 · 06 Governance & roadmap",
+    "tap": false
+   }
+  },
+  {
+   "t": "2026-10-01T06:40:04.530Z",
+   "scenario": "S08-auto-off",
+   "step": "AUTO off +2 s",
+   "expect": 26,
+   "vis": {
+    "n": 26,
+    "id": "s-governance-licence",
+    "slideId": "s-governance-licence"
+   },
+   "audio": null,
+   "cc": "An open steering council sets the shared plugin standard and approves the roadmap.",
+   "guide": {
+    "state": "ended",
+    "clip": "NAR-s26",
+    "slideId": "s-governance-licence",
+    "blocked": "false",
+    "status": "Narration finished · slide 26 of 39 · 06 Governance & roadmap",
+    "tap": false
+   }
+  },
+  {
+   "t": "2026-10-01T06:40:06.536Z",
+   "scenario": "S08-auto-off",
+   "step": "AUTO off +4 s",
+   "expect": 26,
+   "vis": {
+    "n": 26,
+    "id": "s-governance-licence",
+    "slideId": "s-governance-licence"
+   },
+   "audio": null,
+   "cc": "An open steering council sets the shared plugin standard and approves the roadmap.",
+   "guide": {
+    "state": "ended",
+    "clip": "NAR-s26",
+    "slideId": "s-governance-licence",
+    "blocked": "false",
+    "status": "Narration finished · slide 26 of 39 · 06 Governance & roadmap",
+    "tap": false
+   }
+  },
+  {
+   "t": "2026-10-01T06:40:08.541Z",
+   "scenario": "S08-auto-off",
+   "step": "AUTO off +6 s",
+   "expect": 26,
+   "vis": {
+    "n": 26,
+    "id": "s-governance-licence",
+    "slideId": "s-governance-licence"
+   },
+   "audio": null,
+   "cc": "An open steering council sets the shared plugin standard and approves the roadmap.",
+   "guide": {
+    "state": "ended",
+    "clip": "NAR-s26",
+    "slideId": "s-governance-licence",
+    "blocked": "false",
+    "status": "Narration finished · slide 26 of 39 · 06 Governance & roadmap",
+    "tap": false
+   }
+  },
+  {
+   "t": "2026-10-01T06:40:10.547Z",
+   "scenario": "S08-auto-off",
+   "step": "AUTO off +8 s",
+   "expect": 26,
+   "vis": {
+    "n": 26,
+    "id": "s-governance-licence",
+    "slideId": "s-governance-licence"
+   },
+   "audio": null,
+   "cc": "An open steering council sets the shared plugin standard and approves the roadmap.",
+   "guide": {
+    "state": "ended",
+    "clip": "NAR-s26",
+    "slideId": "s-governance-licence",
+    "blocked": "false",
+    "status": "Narration finished · slide 26 of 39 · 06 Governance & roadmap",
+    "tap": false
+   }
+  },
+  {
+   "t": "2026-10-01T06:40:14.610Z",
+   "scenario": "S09-slide38-tabs",
+   "step": "guide started on 38",
+   "expect": 38,
+   "vis": {
+    "n": 38,
+    "id": "s-aos-nations",
+    "slideId": "s-aos-nations"
+   },
+   "audio": {
+    "src": "NAR-s38-s-aos-nations.mp3",
+    "clip": "NAR-s38",
+    "t": 1.28,
+    "muted": false
+   },
+   "cc": "Nations empowered.",
+   "guide": {
+    "state": "playing",
+    "clip": "NAR-s38",
+    "slideId": "s-aos-nations",
+    "blocked": "false",
+    "status": "Narrating slide 38 of 39 · 08 Athar OS",
+    "tap": false
+   }
+  },
+  {
+   "t": "2026-10-01T06:40:15.864Z",
+   "scenario": "S09-slide38-tabs",
+   "step": "tab India",
+   "expect": 38,
+   "vis": {
+    "n": 38,
+    "id": "s-aos-nations",
+    "slideId": "s-aos-nations"
+   },
+   "audio": {
+    "src": "NAR-s38-s-aos-nations.mp3",
+    "clip": "NAR-s38",
+    "t": 8.09,
+    "muted": false
+   },
+   "cc": "India, ownership, 100 government schools and 10,000 AI PCs at 13.7 million.",
+   "guide": {
+    "state": "playing",
+    "clip": "NAR-s38",
+    "slideId": "s-aos-nations",
+    "blocked": "false",
+    "status": "Narrating slide 38 of 39 · 08 Athar OS",
+    "tap": false
+   }
+  },
+  {
+   "t": "2026-10-01T06:40:19.591Z",
+   "scenario": "S09-slide38-tabs",
+   "step": "tabs Kenya→Lebanon→India (300 ms)",
+   "expect": 38,
+   "vis": {
+    "n": 38,
+    "id": "s-aos-nations",
+    "slideId": "s-aos-nations"
+   },
+   "audio": {
+    "src": "NAR-s38-s-aos-nations.mp3",
+    "clip": "NAR-s38",
+    "t": 9.89,
+    "muted": false
+   },
+   "cc": "India, ownership, 100 government schools and 10,000 AI PCs at 13.7 million.",
+   "guide": {
+    "state": "playing",
+    "clip": "NAR-s38",
+    "slideId": "s-aos-nations",
+    "blocked": "false",
+    "status": "Narrating slide 38 of 39 · 08 Athar OS",
+    "tap": false
+   }
+  },
+  {
+   "t": "2026-10-01T06:40:22.271Z",
+   "scenario": "S09-slide38-tabs",
+   "step": "blur tab, ArrowRight → 39",
+   "expect": 39,
+   "vis": {
+    "n": 39,
+    "id": "s-closing",
+    "slideId": "s-closing"
+   },
+   "audio": {
+    "src": "NAR-s39-s-closing.mp3",
+    "clip": "NAR-s39",
+    "t": 2.31,
+    "muted": false
+   },
+   "cc": "You have seen the agreement, the community model, the six pillars, the actors, the roadmap, the impact tiers and Athar OS.",
+   "guide": {
+    "state": "playing",
+    "clip": "NAR-s39",
+    "slideId": "s-closing",
+    "blocked": "false",
+    "status": "Narrating slide 39 of 39 · Join the pact",
+    "tap": false
+   }
+  },
+  {
+   "t": "2026-10-01T06:40:26.692Z",
+   "scenario": "S10-sweep-desktop",
+   "step": "slide 1",
+   "expect": 1,
+   "vis": {
+    "n": 1,
+    "id": "s-cover",
+    "slideId": "s-cover"
+   },
+   "audio": {
+    "src": "NAR-s01-s-cover.mp3",
+    "clip": "NAR-s01",
+    "t": 1.27,
+    "muted": false
+   },
+   "cc": "Welcome to the Athar Open Agentic Pact, a community proposal from ODA and AIREV.",
+   "guide": {
+    "state": "playing",
+    "clip": "NAR-s01",
+    "slideId": "s-cover",
+    "blocked": "false",
+    "status": "Narrating slide 1 of 39 · Welcome",
+    "tap": false
+   }
+  },
+  {
+   "t": "2026-10-01T06:40:28.029Z",
+   "scenario": "S10-sweep-desktop",
+   "step": "slide 2",
+   "expect": 2,
+   "vis": {
+    "n": 2,
+    "id": "s-hero",
+    "slideId": "s-hero"
+   },
+   "audio": {
+    "src": "NAR-s02-s-hero.mp3",
+    "clip": "NAR-s02",
+    "t": 1.09,
+    "muted": false
+   },
+   "cc": "Section one, the Pact.",
+   "guide": {
+    "state": "playing",
+    "clip": "NAR-s02",
+    "slideId": "s-hero",
+    "blocked": "false",
+    "status": "Narrating slide 2 of 39 · 01 The pact",
+    "tap": false
+   }
+  },
+  {
+   "t": "2026-10-01T06:40:29.373Z",
+   "scenario": "S10-sweep-desktop",
+   "step": "slide 3",
+   "expect": 3,
+   "vis": {
+    "n": 3,
+    "id": "s-why-pact",
+    "slideId": "s-why-pact"
+   },
+   "audio": {
+    "src": "NAR-s03-s-why-pact.mp3",
+    "clip": "NAR-s03",
+    "t": 1.11,
+    "muted": false
+   },
+   "cc": "It is a community proposal from ODA and AI Rev, designed as a community, not a product.",
+   "guide": {
+    "state": "playing",
+    "clip": "NAR-s03",
+    "slideId": "s-why-pact",
+    "blocked": "false",
+    "status": "Narrating slide 3 of 39 · 01 The pact",
+    "tap": false
+   }
+  },
+  {
+   "t": "2026-10-01T06:40:30.711Z",
+   "scenario": "S10-sweep-desktop",
+   "step": "slide 4",
+   "expect": 4,
+   "vis": {
+    "n": 4,
+    "id": "s-four-outcomes",
+    "slideId": "s-four-outcomes"
+   },
+   "audio": {
+    "src": "NAR-s04-s-four-outcomes.mp3",
+    "clip": "NAR-s04",
+    "t": 1.11,
+    "muted": false
+   },
+   "cc": "Section two, the Community Model.",
+   "guide": {
+    "state": "playing",
+    "clip": "NAR-s04",
+    "slideId": "s-four-outcomes",
+    "blocked": "false",
+    "status": "Narrating slide 4 of 39 · 02 Community model",
+    "tap": false
+   }
+  },
+  {
+   "t": "2026-10-01T06:40:32.049Z",
+   "scenario": "S10-sweep-desktop",
+   "step": "slide 5",
+   "expect": 5,
+   "vis": {
+    "n": 5,
+    "id": "s-managed-programme",
+    "slideId": "s-managed-programme"
+   },
+   "audio": {
+    "src": "NAR-s05-s-managed-programme.mp3",
+    "clip": "NAR-s05",
+    "t": 1.1,
+    "muted": false
+   },
+   "cc": "This is a managed global programme, not a social channel.",
+   "guide": {
+    "state": "playing",
+    "clip": "NAR-s05",
+    "slideId": "s-managed-programme",
+    "blocked": "false",
+    "status": "Narrating slide 5 of 39 · 02 Community model",
+    "tap": false
+   }
+  },
+  {
+   "t": "2026-10-01T06:40:33.393Z",
+   "scenario": "S10-sweep-desktop",
+   "step": "slide 6",
+   "expect": 6,
+   "vis": {
+    "n": 6,
+    "id": "s-discord-home",
+    "slideId": "s-discord-home"
+   },
+   "audio": {
+    "src": "NAR-s06-s-discord-home.mp3",
+    "clip": "NAR-s06",
+    "t": 1.12,
+    "muted": false
+   },
+   "cc": "Discord is the always-on home of the community.",
+   "guide": {
+    "state": "playing",
+    "clip": "NAR-s06",
+    "slideId": "s-discord-home",
+    "blocked": "false",
+    "status": "Narrating slide 6 of 39 · 02 Community model",
+    "tap": false
+   }
+  },
+  {
+   "t": "2026-10-01T06:40:34.740Z",
+   "scenario": "S10-sweep-desktop",
+   "step": "slide 7",
+   "expect": 7,
+   "vis": {
+    "n": 7,
+    "id": "s-country-chapters",
+    "slideId": "s-country-chapters"
+   },
+   "audio": {
+    "src": "NAR-s07-s-country-chapters.mp3",
+    "clip": "NAR-s07",
+    "t": 1.11,
+    "muted": false
+   },
+   "cc": "Country chapters bring the pact to life locally.",
+   "guide": {
+    "state": "playing",
+    "clip": "NAR-s07",
+    "slideId": "s-country-chapters",
+    "blocked": "false",
+    "status": "Narrating slide 7 of 39 · 02 Community model",
+    "tap": false
+   }
+  },
+  {
+   "t": "2026-10-01T06:40:36.076Z",
+   "scenario": "S10-sweep-desktop",
+   "step": "slide 8",
+   "expect": 8,
+   "vis": {
+    "n": 8,
+    "id": "s-learning-formats",
+    "slideId": "s-learning-formats"
+   },
+   "audio": {
+    "src": "NAR-s08-s-learning-formats.mp3",
+    "clip": "NAR-s08",
+    "t": 1.11,
+    "muted": false
+   },
+   "cc": "Webinars, bootcamps and institutional academies form the learning ladder.",
+   "guide": {
+    "state": "playing",
+    "clip": "NAR-s08",
+    "slideId": "s-learning-formats",
+    "blocked": "false",
+    "status": "Narrating slide 8 of 39 · 02 Community model",
+    "tap": false
+   }
+  },
+  {
+   "t": "2026-10-01T06:40:37.416Z",
+   "scenario": "S10-sweep-desktop",
+   "step": "slide 9",
+   "expect": 9,
+   "vis": {
+    "n": 9,
+    "id": "s-challenges-showcases",
+    "slideId": "s-challenges-showcases"
+   },
+   "audio": {
+    "src": "NAR-s09-s-challenges-showcases.mp3",
+    "clip": "NAR-s09",
+    "t": 1.12,
+    "muted": false
+   },
+   "cc": "Challenges, showcases and the annual summit turn learning into visible results.",
+   "guide": {
+    "state": "playing",
+    "clip": "NAR-s09",
+    "slideId": "s-challenges-showcases",
+    "blocked": "false",
+    "status": "Narrating slide 9 of 39 · 02 Community model",
+    "tap": false
+   }
+  },
+  {
+   "t": "2026-10-01T06:40:38.751Z",
+   "scenario": "S10-sweep-desktop",
+   "step": "slide 10",
+   "expect": 10,
+   "vis": {
+    "n": 10,
+    "id": "s-office-hours",
+    "slideId": "s-office-hours"
+   },
+   "audio": {
+    "src": "NAR-s10-s-office-hours.mp3",
+    "clip": "NAR-s10",
+    "t": 1.09,
+    "muted": false
+   },
+   "cc": "Weekly office hours and tiered support keep builders unblocked.",
+   "guide": {
+    "state": "playing",
+    "clip": "NAR-s10",
+    "slideId": "s-office-hours",
+    "blocked": "false",
+    "status": "Narrating slide 10 of 39 · 02 Community model",
+    "tap": false
+   }
+  },
+  {
+   "t": "2026-10-01T06:40:40.092Z",
+   "scenario": "S10-sweep-desktop",
+   "step": "slide 11",
+   "expect": 11,
+   "vis": {
+    "n": 11,
+    "id": "s-agent-marketplace",
+    "slideId": "s-agent-marketplace"
+   },
+   "audio": {
+    "src": "NAR-s11-s-agent-marketplace.mp3",
+    "clip": "NAR-s11",
+    "t": 1.11,
+    "muted": false
+   },
+   "cc": "The builder journey runs from an idea to a validated agent.",
+   "guide": {
+    "state": "playing",
+    "clip": "NAR-s11",
+    "slideId": "s-agent-marketplace",
+    "blocked": "false",
+    "status": "Narrating slide 11 of 39 · 02 Community model",
+    "tap": false
+   }
+  },
+  {
+   "t": "2026-10-01T06:40:41.426Z",
+   "scenario": "S10-sweep-desktop",
+   "step": "slide 12",
+   "expect": 12,
+   "vis": {
+    "n": 12,
+    "id": "s-decision-table",
+    "slideId": "s-decision-table"
+   },
+   "audio": {
+    "src": "NAR-s12-s-decision-table.mp3",
+    "clip": "NAR-s12",
+    "t": 1.11,
+    "muted": false
+   },
+   "cc": "The decision in one page.",
+   "guide": {
+    "state": "playing",
+    "clip": "NAR-s12",
+    "slideId": "s-decision-table",
+    "blocked": "false",
+    "status": "Narrating slide 12 of 39 · 02 Community model",
+    "tap": false
+   }
+  },
+  {
+   "t": "2026-10-01T06:40:42.768Z",
+   "scenario": "S10-sweep-desktop",
+   "step": "slide 13",
+   "expect": 13,
+   "vis": {
+    "n": 13,
+    "id": "s-pillar-plugins",
+    "slideId": "s-pillar-plugins"
+   },
+   "audio": {
+    "src": "NAR-s13-s-pillar-plugins.mp3",
+    "clip": "NAR-s13",
+    "t": 1.11,
+    "muted": false
+   },
+   "cc": "Section three, six pillars.",
+   "guide": {
+    "state": "playing",
+    "clip": "NAR-s13",
+    "slideId": "s-pillar-plugins",
+    "blocked": "false",
+    "status": "Narrating slide 13 of 39 · 03 Six pillars",
+    "tap": false
+   }
+  },
+  {
+   "t": "2026-10-01T06:40:44.104Z",
+   "scenario": "S10-sweep-desktop",
+   "step": "slide 14",
+   "expect": 14,
+   "vis": {
+    "n": 14,
+    "id": "s-pillar-skills",
+    "slideId": "s-pillar-skills"
+   },
+   "audio": {
+    "src": "NAR-s14-s-pillar-skills.mp3",
+    "clip": "NAR-s14",
+    "t": 1.11,
+    "muted": false
+   },
+   "cc": "Reusable skills are built once and shared across the community.",
+   "guide": {
+    "state": "playing",
+    "clip": "NAR-s14",
+    "slideId": "s-pillar-skills",
+    "blocked": "false",
+    "status": "Narrating slide 14 of 39 · 03 Six pillars",
+    "tap": false
+   }
+  },
+  {
+   "t": "2026-10-01T06:40:45.437Z",
+   "scenario": "S10-sweep-desktop",
+   "step": "slide 15",
+   "expect": 15,
+   "vis": {
+    "n": 15,
+    "id": "s-pillar-open-ecosystem",
+    "slideId": "s-pillar-open-ecosystem"
+   },
+   "audio": {
+    "src": "NAR-s15-s-pillar-open-ecosystem.mp3",
+    "clip": "NAR-s15",
+    "t": 1.09,
+    "muted": false
+   },
+   "cc": "Open where possible, governed where necessary.",
+   "guide": {
+    "state": "playing",
+    "clip": "NAR-s15",
+    "slideId": "s-pillar-open-ecosystem",
+    "blocked": "false",
+    "status": "Narrating slide 15 of 39 · 03 Six pillars",
+    "tap": false
+   }
+  },
+  {
+   "t": "2026-10-01T06:40:46.773Z",
+   "scenario": "S10-sweep-desktop",
+   "step": "slide 16",
+   "expect": 16,
+   "vis": {
+    "n": 16,
+    "id": "s-pillar-cross-model",
+    "slideId": "s-pillar-cross-model"
+   },
+   "audio": {
+    "src": "NAR-s16-s-pillar-cross-model.mp3",
+    "clip": "NAR-s16",
+    "t": 1.1,
+    "muted": false
+   },
+   "cc": "Cross-model interoperability by design.",
+   "guide": {
+    "state": "playing",
+    "clip": "NAR-s16",
+    "slideId": "s-pillar-cross-model",
+    "blocked": "false",
+    "status": "Narrating slide 16 of 39 · 03 Six pillars",
+    "tap": false
+   }
+  },
+  {
+   "t": "2026-10-01T06:40:48.109Z",
+   "scenario": "S10-sweep-desktop",
+   "step": "slide 17",
+   "expect": 17,
+   "vis": {
+    "n": 17,
+    "id": "s-pillar-universal-licence",
+    "slideId": "s-pillar-universal-licence"
+   },
+   "audio": {
+    "src": "NAR-s17-s-pillar-universal-licence.mp3",
+    "clip": "NAR-s17",
+    "t": 1.12,
+    "muted": false
+   },
+   "cc": "Universal API licences are managed by Athar, giving members access without duplicated procurement.",
+   "guide": {
+    "state": "playing",
+    "clip": "NAR-s17",
+    "slideId": "s-pillar-universal-licence",
+    "blocked": "false",
+    "status": "Narrating slide 17 of 39 · 03 Six pillars",
+    "tap": false
+   }
+  },
+  {
+   "t": "2026-10-01T06:40:49.445Z",
+   "scenario": "S10-sweep-desktop",
+   "step": "slide 18",
+   "expect": 18,
+   "vis": {
+    "n": 18,
+    "id": "s-pillar-upskilling",
+    "slideId": "s-pillar-upskilling"
+   },
+   "audio": {
+    "src": "NAR-s18-s-pillar-upskilling.mp3",
+    "clip": "NAR-s18",
+    "t": 1.12,
+    "muted": false
+   },
+   "cc": "Agentic AI for all, not for a few.",
+   "guide": {
+    "state": "playing",
+    "clip": "NAR-s18",
+    "slideId": "s-pillar-upskilling",
+    "blocked": "false",
+    "status": "Narrating slide 18 of 39 · 03 Six pillars",
+    "tap": false
+   }
+  },
+  {
+   "t": "2026-10-01T06:40:50.783Z",
+   "scenario": "S10-sweep-desktop",
+   "step": "slide 19",
+   "expect": 19,
+   "vis": {
+    "n": 19,
+    "id": "s-pact-principles",
+    "slideId": "s-pact-principles"
+   },
+   "audio": {
+    "src": "NAR-s19-s-pact-principles.mp3",
+    "clip": "NAR-s19",
+    "t": 1.1,
+    "muted": false
+   },
+   "cc": "Section four, Pledge and Signing.",
+   "guide": {
+    "state": "playing",
+    "clip": "NAR-s19",
+    "slideId": "s-pact-principles",
+    "blocked": "false",
+    "status": "Narrating slide 19 of 39 · 04 Pledge & signing",
+    "tap": false
+   }
+  },
+  {
+   "t": "2026-10-01T06:40:52.121Z",
+   "scenario": "S10-sweep-desktop",
+   "step": "slide 20",
+   "expect": 20,
+   "vis": {
+    "n": 20,
+    "id": "s-how-to-sign",
+    "slideId": "s-how-to-sign"
+   },
+   "audio": {
+    "src": "NAR-s20-s-how-to-sign.mp3",
+    "clip": "NAR-s20",
+    "t": 1.1,
+    "muted": false
+   },
+   "cc": "A signatory chooses its roles, sign, govern, build or learn, and pledges to contribute to at least one of the four participant outcomes.",
+   "guide": {
+    "state": "playing",
+    "clip": "NAR-s20",
+    "slideId": "s-how-to-sign",
+    "blocked": "false",
+    "status": "Narrating slide 20 of 39 · 04 Pledge & signing",
+    "tap": false
+   }
+  },
+  {
+   "t": "2026-10-01T06:40:53.460Z",
+   "scenario": "S10-sweep-desktop",
+   "step": "slide 21",
+   "expect": 21,
+   "vis": {
+    "n": 21,
+    "id": "s-actors-wall",
+    "slideId": "s-actors-wall"
+   },
+   "audio": {
+    "src": "NAR-s21-s-actors-wall.mp3",
+    "clip": "NAR-s21",
+    "t": 1.11,
+    "muted": false
+   },
+   "cc": "Section five, Actors and Roles, institutions, partners and platforms building the Athar ecosystem together, ODA and AIREV sign and govern, with AIREV, OnDemand, e& and ai& and Discord building, UNDP, UNICEF, IFRC, WFP and UNHCR sign and learn.",
+   "guide": {
+    "state": "playing",
+    "clip": "NAR-s21",
+    "slideId": "s-actors-wall",
+    "blocked": "false",
+    "status": "Narrating slide 21 of 39 · 05 Actors & roles",
+    "tap": false
+   }
+  },
+  {
+   "t": "2026-10-01T06:40:54.793Z",
+   "scenario": "S10-sweep-desktop",
+   "step": "slide 22",
+   "expect": 22,
+   "vis": {
+    "n": 22,
+    "id": "s-who-signs",
+    "slideId": "s-who-signs"
+   },
+   "audio": {
+    "src": "NAR-s22-s-who-signs.mp3",
+    "clip": "NAR-s22",
+    "t": 1.1,
+    "muted": false
+   },
+   "cc": "Who signs the pact.",
+   "guide": {
+    "state": "playing",
+    "clip": "NAR-s22",
+    "slideId": "s-who-signs",
+    "blocked": "false",
+    "status": "Narrating slide 22 of 39 · 05 Actors & roles",
+    "tap": false
+   }
+  },
+  {
+   "t": "2026-10-01T06:40:56.126Z",
+   "scenario": "S10-sweep-desktop",
+   "step": "slide 23",
+   "expect": 23,
+   "vis": {
+    "n": 23,
+    "id": "s-who-governs",
+    "slideId": "s-who-governs"
+   },
+   "audio": {
+    "src": "NAR-s23-s-who-governs.mp3",
+    "clip": "NAR-s23",
+    "t": 1.11,
+    "muted": false
+   },
+   "cc": "Every actor has a clear role, sign, govern, build or learn.",
+   "guide": {
+    "state": "playing",
+    "clip": "NAR-s23",
+    "slideId": "s-who-governs",
+    "blocked": "false",
+    "status": "Narrating slide 23 of 39 · 05 Actors & roles",
+    "tap": false
+   }
+  },
+  {
+   "t": "2026-10-01T06:40:57.464Z",
+   "scenario": "S10-sweep-desktop",
+   "step": "slide 24",
+   "expect": 24,
+   "vis": {
+    "n": 24,
+    "id": "s-who-builds",
+    "slideId": "s-who-builds"
+   },
+   "audio": {
+    "src": "NAR-s24-s-who-builds.mp3",
+    "clip": "NAR-s24",
+    "t": 1.11,
+    "muted": false
+   },
+   "cc": "Who builds on the pact.",
+   "guide": {
+    "state": "playing",
+    "clip": "NAR-s24",
+    "slideId": "s-who-builds",
+    "blocked": "false",
+    "status": "Narrating slide 24 of 39 · 05 Actors & roles",
+    "tap": false
+   }
+  },
+  {
+   "t": "2026-10-01T06:40:58.800Z",
+   "scenario": "S10-sweep-desktop",
+   "step": "slide 25",
+   "expect": 25,
+   "vis": {
+    "n": 25,
+    "id": "s-who-learns",
+    "slideId": "s-who-learns"
+   },
+   "audio": {
+    "src": "NAR-s25-s-who-learns.mp3",
+    "clip": "NAR-s25",
+    "t": 1.1,
+    "muted": false
+   },
+   "cc": "Who learns through the pact.",
+   "guide": {
+    "state": "playing",
+    "clip": "NAR-s25",
+    "slideId": "s-who-learns",
+    "blocked": "false",
+    "status": "Narrating slide 25 of 39 · 05 Actors & roles",
+    "tap": false
+   }
+  },
+  {
+   "t": "2026-10-01T06:41:00.133Z",
+   "scenario": "S10-sweep-desktop",
+   "step": "slide 26",
+   "expect": 26,
+   "vis": {
+    "n": 26,
+    "id": "s-governance-licence",
+    "slideId": "s-governance-licence"
+   },
+   "audio": {
+    "src": "NAR-s26-s-governance-licence.mp3",
+    "clip": "NAR-s26",
+    "t": 1.1,
+    "muted": false
+   },
+   "cc": "Section six, governance and roadmap.",
+   "guide": {
+    "state": "playing",
+    "clip": "NAR-s26",
+    "slideId": "s-governance-licence",
+    "blocked": "false",
+    "status": "Narrating slide 26 of 39 · 06 Governance & roadmap",
+    "tap": false
+   }
+  },
+  {
+   "t": "2026-10-01T06:41:01.467Z",
+   "scenario": "S10-sweep-desktop",
+   "step": "slide 27",
+   "expect": 27,
+   "vis": {
+    "n": 27,
+    "id": "s-roadmap",
+    "slideId": "s-roadmap"
+   },
+   "audio": {
+    "src": "NAR-s27-s-roadmap.mp3",
+    "clip": "NAR-s27",
+    "t": 1.1,
+    "muted": false
+   },
+   "cc": "Decisions, releases, and outcome reports are published, so every member can see how priorities are set and how the platform evolves over time.",
+   "guide": {
+    "state": "playing",
+    "clip": "NAR-s27",
+    "slideId": "s-roadmap",
+    "blocked": "false",
+    "status": "Narrating slide 27 of 39 · 06 Governance & roadmap",
+    "tap": false
+   }
+  },
+  {
+   "t": "2026-10-01T06:41:02.804Z",
+   "scenario": "S10-sweep-desktop",
+   "step": "slide 28",
+   "expect": 28,
+   "vis": {
+    "n": 28,
+    "id": "s-it-outcomes",
+    "slideId": "s-it-outcomes"
+   },
+   "audio": {
+    "src": "NAR-s28-s-it-outcomes.mp3",
+    "clip": "NAR-s28",
+    "t": 1.1,
+    "muted": false
+   },
+   "cc": "Section seven, Impact and Funding.",
+   "guide": {
+    "state": "playing",
+    "clip": "NAR-s28",
+    "slideId": "s-it-outcomes",
+    "blocked": "false",
+    "status": "Narrating slide 28 of 39 · 07 Impact & funding",
+    "tap": false
+   }
+  },
+  {
+   "t": "2026-10-01T06:41:04.151Z",
+   "scenario": "S10-sweep-desktop",
+   "step": "slide 29",
+   "expect": 29,
+   "vis": {
+    "n": 29,
+    "id": "s-it-tiers",
+    "slideId": "s-it-tiers"
+   },
+   "audio": {
+    "src": "NAR-s29-s-it-tiers.mp3",
+    "clip": "NAR-s29",
+    "t": 1.11,
+    "muted": false
+   },
+   "cc": "Three impact tiers, one delivery model, access, ownership, legacy.",
+   "guide": {
+    "state": "playing",
+    "clip": "NAR-s29",
+    "slideId": "s-it-tiers",
+    "blocked": "false",
+    "status": "Narrating slide 29 of 39 · 07 Impact & funding",
+    "tap": false
+   }
+  },
+  {
+   "t": "2026-10-01T06:41:05.493Z",
+   "scenario": "S10-sweep-desktop",
+   "step": "slide 30",
+   "expect": 30,
+   "vis": {
+    "n": 30,
+    "id": "s-it-metrics",
+    "slideId": "s-it-metrics"
+   },
+   "audio": {
+    "src": "NAR-s30-s-it-metrics.mp3",
+    "clip": "NAR-s30",
+    "t": 1.11,
+    "muted": false
+   },
+   "cc": "Every agreement includes named cohorts and activation targets, independent evaluator baselines, quarterly outcome reports, and open book costs with unspent funds returned.",
+   "guide": {
+    "state": "playing",
+    "clip": "NAR-s30",
+    "slideId": "s-it-metrics",
+    "blocked": "false",
+    "status": "Narrating slide 30 of 39 · 07 Impact & funding",
+    "tap": false
+   }
+  },
+  {
+   "t": "2026-10-01T06:41:06.829Z",
+   "scenario": "S10-sweep-desktop",
+   "step": "slide 31",
+   "expect": 31,
+   "vis": {
+    "n": 31,
+    "id": "s-it-sustain",
+    "slideId": "s-it-sustain"
+   },
+   "audio": {
+    "src": "NAR-s31-s-it-sustain.mp3",
+    "clip": "NAR-s31",
+    "t": 1.1,
+    "muted": false
+   },
+   "cc": "Universal API licenses, marketplace revenue share and sovereign pilot options fund the model so each partner can choose what fits.",
+   "guide": {
+    "state": "playing",
+    "clip": "NAR-s31",
+    "slideId": "s-it-sustain",
+    "blocked": "false",
+    "status": "Narrating slide 31 of 39 · 07 Impact & funding",
+    "tap": false
+   }
+  },
+  {
+   "t": "2026-10-01T06:41:08.170Z",
+   "scenario": "S10-sweep-desktop",
+   "step": "slide 32",
+   "expect": 32,
+   "vis": {
+    "n": 32,
+    "id": "s-it-partners",
+    "slideId": "s-it-partners"
+   },
+   "audio": {
+    "src": "NAR-s32-s-it-partners.mp3",
+    "clip": "NAR-s32",
+    "t": 1.1,
+    "muted": false
+   },
+   "cc": "Delivered with candidate partners across the humanitarian, development and technology sectors, shown here for internal review only pending written authorisation.",
+   "guide": {
+    "state": "playing",
+    "clip": "NAR-s32",
+    "slideId": "s-it-partners",
+    "blocked": "false",
+    "status": "Narrating slide 32 of 39 · 07 Impact & funding",
+    "tap": false
+   }
+  },
+  {
+   "t": "2026-10-01T06:41:09.505Z",
+   "scenario": "S10-sweep-desktop",
+   "step": "slide 33",
+   "expect": 33,
+   "vis": {
+    "n": 33,
+    "id": "s-it-join",
+    "slideId": "s-it-join"
+   },
+   "audio": {
+    "src": "NAR-s33-s-it-join.mp3",
+    "clip": "NAR-s33",
+    "t": 1.1,
+    "muted": false
+   },
+   "cc": "Join the pact.",
+   "guide": {
+    "state": "playing",
+    "clip": "NAR-s33",
+    "slideId": "s-it-join",
+    "blocked": "false",
+    "status": "Narrating slide 33 of 39 · 07 Impact & funding",
+    "tap": false
+   }
+  },
+  {
+   "t": "2026-10-01T06:41:10.847Z",
+   "scenario": "S10-sweep-desktop",
+   "step": "slide 34",
+   "expect": 34,
+   "vis": {
+    "n": 34,
+    "id": "s-aos-overview",
+    "slideId": "s-aos-overview"
+   },
+   "audio": {
+    "src": "NAR-s34-s-aos-overview.mp3",
+    "clip": "NAR-s34",
+    "t": 1.11,
+    "muted": false
+   },
+   "cc": "Section eight, Athar OS.",
+   "guide": {
+    "state": "playing",
+    "clip": "NAR-s34",
+    "slideId": "s-aos-overview",
+    "blocked": "false",
+    "status": "Narrating slide 34 of 39 · 08 Athar OS",
+    "tap": false
+   }
+  },
+  {
+   "t": "2026-10-01T06:41:12.190Z",
+   "scenario": "S10-sweep-desktop",
+   "step": "slide 35",
+   "expect": 35,
+   "vis": {
+    "n": 35,
+    "id": "s-aos-tour",
+    "slideId": "s-aos-tour"
+   },
+   "audio": {
+    "src": "NAR-s35-s-aos-tour.mp3",
+    "clip": "NAR-s35",
+    "t": 1.1,
+    "muted": false
+   },
+   "cc": "The product tour shows the real screens: the marketplace, the playground, the agent flow builder and the tools and deployment views, captured from the Athar OS wireframes and the launch film.",
+   "guide": {
+    "state": "playing",
+    "clip": "NAR-s35",
+    "slideId": "s-aos-tour",
+    "blocked": "false",
+    "status": "Narrating slide 35 of 39 · 08 Athar OS",
+    "tap": false
+   }
+  },
+  {
+   "t": "2026-10-01T06:41:13.537Z",
+   "scenario": "S10-sweep-desktop",
+   "step": "slide 36",
+   "expect": 36,
+   "vis": {
+    "n": 36,
+    "id": "s-aos-roadmap",
+    "slideId": "s-aos-roadmap"
+   },
+   "audio": {
+    "src": "NAR-s36-s-aos-roadmap.mp3",
+    "clip": "NAR-s36",
+    "t": 1.11,
+    "muted": false
+   },
+   "cc": "The roadmap runs now in Q4, 2026, next in 2027 and later in 2028.",
+   "guide": {
+    "state": "playing",
+    "clip": "NAR-s36",
+    "slideId": "s-aos-roadmap",
+    "blocked": "false",
+    "status": "Narrating slide 36 of 39 · 08 Athar OS",
+    "tap": false
+   }
+  },
+  {
+   "t": "2026-10-01T06:41:14.876Z",
+   "scenario": "S10-sweep-desktop",
+   "step": "slide 37",
+   "expect": 37,
+   "vis": {
+    "n": 37,
+    "id": "s-aos-deploy",
+    "slideId": "s-aos-deploy"
+   },
+   "audio": {
+    "src": "NAR-s37-s-aos-deploy.mp3",
+    "clip": "NAR-s37",
+    "t": 1.11,
+    "muted": false
+   },
+   "cc": "Deploy anywhere, own it.",
+   "guide": {
+    "state": "playing",
+    "clip": "NAR-s37",
+    "slideId": "s-aos-deploy",
+    "blocked": "false",
+    "status": "Narrating slide 37 of 39 · 08 Athar OS",
+    "tap": false
+   }
+  },
+  {
+   "t": "2026-10-01T06:41:16.215Z",
+   "scenario": "S10-sweep-desktop",
+   "step": "slide 38",
+   "expect": 38,
+   "vis": {
+    "n": 38,
+    "id": "s-aos-nations",
+    "slideId": "s-aos-nations"
+   },
+   "audio": {
+    "src": "NAR-s38-s-aos-nations.mp3",
+    "clip": "NAR-s38",
+    "t": 1.12,
+    "muted": false
+   },
+   "cc": "Nations empowered.",
+   "guide": {
+    "state": "playing",
+    "clip": "NAR-s38",
+    "slideId": "s-aos-nations",
+    "blocked": "false",
+    "status": "Narrating slide 38 of 39 · 08 Athar OS",
+    "tap": false
+   }
+  },
+  {
+   "t": "2026-10-01T06:41:17.557Z",
+   "scenario": "S10-sweep-desktop",
+   "step": "slide 39",
+   "expect": 39,
+   "vis": {
+    "n": 39,
+    "id": "s-closing",
+    "slideId": "s-closing"
+   },
+   "audio": {
+    "src": "NAR-s39-s-closing.mp3",
+    "clip": "NAR-s39",
+    "t": 1.1,
+    "muted": false
+   },
+   "cc": "Join the Pact.",
+   "guide": {
+    "state": "playing",
+    "clip": "NAR-s39",
+    "slideId": "s-closing",
+    "blocked": "false",
+    "status": "Narrating slide 39 of 39 · Join the pact",
+    "tap": false
+   }
+  },
+  {
+   "t": "2026-10-01T06:41:23.041Z",
+   "scenario": "S11-sweep-phone",
+   "step": "slide 1",
+   "expect": 1,
+   "vis": {
+    "n": 1,
+    "id": "s-cover",
+    "slideId": "s-cover"
+   },
+   "audio": {
+    "src": "NAR-s01-s-cover.mp3",
+    "clip": "NAR-s01",
+    "t": 1.27,
+    "muted": false
+   },
+   "cc": "Welcome to the Athar Open Agentic Pact, a community proposal from ODA and AIREV.",
+   "guide": {
+    "state": "playing",
+    "clip": "NAR-s01",
+    "slideId": "s-cover",
+    "blocked": "false",
+    "status": "Narrating slide 1 of 39 · Welcome",
+    "tap": false
+   }
+  },
+  {
+   "t": "2026-10-01T06:41:24.179Z",
+   "scenario": "S11-sweep-phone",
+   "step": "slide 2",
+   "expect": 2,
+   "vis": {
+    "n": 2,
+    "id": "s-hero",
+    "slideId": "s-hero"
+   },
+   "audio": {
+    "src": "NAR-s02-s-hero.mp3",
+    "clip": "NAR-s02",
+    "t": 0.9,
+    "muted": false
+   },
+   "cc": "Section one, the Pact.",
+   "guide": {
+    "state": "playing",
+    "clip": "NAR-s02",
+    "slideId": "s-hero",
+    "blocked": "false",
+    "status": "Narrating slide 2 of 39 · 01 The pact",
+    "tap": false
+   }
+  },
+  {
+   "t": "2026-10-01T06:41:25.320Z",
+   "scenario": "S11-sweep-phone",
+   "step": "slide 3",
+   "expect": 3,
+   "vis": {
+    "n": 3,
+    "id": "s-why-pact",
+    "slideId": "s-why-pact"
+   },
+   "audio": {
+    "src": "NAR-s03-s-why-pact.mp3",
+    "clip": "NAR-s03",
+    "t": 0.92,
+    "muted": false
+   },
+   "cc": "It is a community proposal from ODA and AI Rev, designed as a community, not a product.",
+   "guide": {
+    "state": "playing",
+    "clip": "NAR-s03",
+    "slideId": "s-why-pact",
+    "blocked": "false",
+    "status": "Narrating slide 3 of 39 · 01 The pact",
+    "tap": false
+   }
+  },
+  {
+   "t": "2026-10-01T06:41:26.457Z",
+   "scenario": "S11-sweep-phone",
+   "step": "slide 4",
+   "expect": 4,
+   "vis": {
+    "n": 4,
+    "id": "s-four-outcomes",
+    "slideId": "s-four-outcomes"
+   },
+   "audio": {
+    "src": "NAR-s04-s-four-outcomes.mp3",
+    "clip": "NAR-s04",
+    "t": 0.9,
+    "muted": false
+   },
+   "cc": "Section two, the Community Model.",
+   "guide": {
+    "state": "playing",
+    "clip": "NAR-s04",
+    "slideId": "s-four-outcomes",
+    "blocked": "false",
+    "status": "Narrating slide 4 of 39 · 02 Community model",
+    "tap": false
+   }
+  },
+  {
+   "t": "2026-10-01T06:41:27.591Z",
+   "scenario": "S11-sweep-phone",
+   "step": "slide 5",
+   "expect": 5,
+   "vis": {
+    "n": 5,
+    "id": "s-managed-programme",
+    "slideId": "s-managed-programme"
+   },
+   "audio": {
+    "src": "NAR-s05-s-managed-programme.mp3",
+    "clip": "NAR-s05",
+    "t": 0.9,
+    "muted": false
+   },
+   "cc": "This is a managed global programme, not a social channel.",
+   "guide": {
+    "state": "playing",
+    "clip": "NAR-s05",
+    "slideId": "s-managed-programme",
+    "blocked": "false",
+    "status": "Narrating slide 5 of 39 · 02 Community model",
+    "tap": false
+   }
+  },
+  {
+   "t": "2026-10-01T06:41:28.734Z",
+   "scenario": "S11-sweep-phone",
+   "step": "slide 6",
+   "expect": 6,
+   "vis": {
+    "n": 6,
+    "id": "s-discord-home",
+    "slideId": "s-discord-home"
+   },
+   "audio": {
+    "src": "NAR-s06-s-discord-home.mp3",
+    "clip": "NAR-s06",
+    "t": 0.91,
+    "muted": false
+   },
+   "cc": "Discord is the always-on home of the community.",
+   "guide": {
+    "state": "playing",
+    "clip": "NAR-s06",
+    "slideId": "s-discord-home",
+    "blocked": "false",
+    "status": "Narrating slide 6 of 39 · 02 Community model",
+    "tap": false
+   }
+  },
+  {
+   "t": "2026-10-01T06:41:29.872Z",
+   "scenario": "S11-sweep-phone",
+   "step": "slide 7",
+   "expect": 7,
+   "vis": {
+    "n": 7,
+    "id": "s-country-chapters",
+    "slideId": "s-country-chapters"
+   },
+   "audio": {
+    "src": "NAR-s07-s-country-chapters.mp3",
+    "clip": "NAR-s07",
+    "t": 0.92,
+    "muted": false
+   },
+   "cc": "Country chapters bring the pact to life locally.",
+   "guide": {
+    "state": "playing",
+    "clip": "NAR-s07",
+    "slideId": "s-country-chapters",
+    "blocked": "false",
+    "status": "Narrating slide 7 of 39 · 02 Community model",
+    "tap": false
+   }
+  },
+  {
+   "t": "2026-10-01T06:41:31.007Z",
+   "scenario": "S11-sweep-phone",
+   "step": "slide 8",
+   "expect": 8,
+   "vis": {
+    "n": 8,
+    "id": "s-learning-formats",
+    "slideId": "s-learning-formats"
+   },
+   "audio": {
+    "src": "NAR-s08-s-learning-formats.mp3",
+    "clip": "NAR-s08",
+    "t": 0.9,
+    "muted": false
+   },
+   "cc": "Webinars, bootcamps and institutional academies form the learning ladder.",
+   "guide": {
+    "state": "playing",
+    "clip": "NAR-s08",
+    "slideId": "s-learning-formats",
+    "blocked": "false",
+    "status": "Narrating slide 8 of 39 · 02 Community model",
+    "tap": false
+   }
+  },
+  {
+   "t": "2026-10-01T06:41:32.144Z",
+   "scenario": "S11-sweep-phone",
+   "step": "slide 9",
+   "expect": 9,
+   "vis": {
+    "n": 9,
+    "id": "s-challenges-showcases",
+    "slideId": "s-challenges-showcases"
+   },
+   "audio": {
+    "src": "NAR-s09-s-challenges-showcases.mp3",
+    "clip": "NAR-s09",
+    "t": 0.9,
+    "muted": false
+   },
+   "cc": "Challenges, showcases and the annual summit turn learning into visible results.",
+   "guide": {
+    "state": "playing",
+    "clip": "NAR-s09",
+    "slideId": "s-challenges-showcases",
+    "blocked": "false",
+    "status": "Narrating slide 9 of 39 · 02 Community model",
+    "tap": false
+   }
+  },
+  {
+   "t": "2026-10-01T06:41:33.282Z",
+   "scenario": "S11-sweep-phone",
+   "step": "slide 10",
+   "expect": 10,
+   "vis": {
+    "n": 10,
+    "id": "s-office-hours",
+    "slideId": "s-office-hours"
+   },
+   "audio": {
+    "src": "NAR-s10-s-office-hours.mp3",
+    "clip": "NAR-s10",
+    "t": 0.9,
+    "muted": false
+   },
+   "cc": "Weekly office hours and tiered support keep builders unblocked.",
+   "guide": {
+    "state": "playing",
+    "clip": "NAR-s10",
+    "slideId": "s-office-hours",
+    "blocked": "false",
+    "status": "Narrating slide 10 of 39 · 02 Community model",
+    "tap": false
+   }
+  },
+  {
+   "t": "2026-10-01T06:41:34.416Z",
+   "scenario": "S11-sweep-phone",
+   "step": "slide 11",
+   "expect": 11,
+   "vis": {
+    "n": 11,
+    "id": "s-agent-marketplace",
+    "slideId": "s-agent-marketplace"
+   },
+   "audio": {
+    "src": "NAR-s11-s-agent-marketplace.mp3",
+    "clip": "NAR-s11",
+    "t": 0.91,
+    "muted": false
+   },
+   "cc": "The builder journey runs from an idea to a validated agent.",
+   "guide": {
+    "state": "playing",
+    "clip": "NAR-s11",
+    "slideId": "s-agent-marketplace",
+    "blocked": "false",
+    "status": "Narrating slide 11 of 39 · 02 Community model",
+    "tap": false
+   }
+  },
+  {
+   "t": "2026-10-01T06:41:35.555Z",
+   "scenario": "S11-sweep-phone",
+   "step": "slide 12",
+   "expect": 12,
+   "vis": {
+    "n": 12,
+    "id": "s-decision-table",
+    "slideId": "s-decision-table"
+   },
+   "audio": {
+    "src": "NAR-s12-s-decision-table.mp3",
+    "clip": "NAR-s12",
+    "t": 0.92,
+    "muted": false
+   },
+   "cc": "The decision in one page.",
+   "guide": {
+    "state": "playing",
+    "clip": "NAR-s12",
+    "slideId": "s-decision-table",
+    "blocked": "false",
+    "status": "Narrating slide 12 of 39 · 02 Community model",
+    "tap": false
+   }
+  },
+  {
+   "t": "2026-10-01T06:41:36.691Z",
+   "scenario": "S11-sweep-phone",
+   "step": "slide 13",
+   "expect": 13,
+   "vis": {
+    "n": 13,
+    "id": "s-pillar-plugins",
+    "slideId": "s-pillar-plugins"
+   },
+   "audio": {
+    "src": "NAR-s13-s-pillar-plugins.mp3",
+    "clip": "NAR-s13",
+    "t": 0.9,
+    "muted": false
+   },
+   "cc": "Section three, six pillars.",
+   "guide": {
+    "state": "playing",
+    "clip": "NAR-s13",
+    "slideId": "s-pillar-plugins",
+    "blocked": "false",
+    "status": "Narrating slide 13 of 39 · 03 Six pillars",
+    "tap": false
+   }
+  },
+  {
+   "t": "2026-10-01T06:41:37.879Z",
+   "scenario": "S11-sweep-phone",
+   "step": "slide 14",
+   "expect": 14,
+   "vis": {
+    "n": 14,
+    "id": "s-pillar-skills",
+    "slideId": "s-pillar-skills"
+   },
+   "audio": {
+    "src": "NAR-s14-s-pillar-skills.mp3",
+    "clip": "NAR-s14",
+    "t": 0.9,
+    "muted": false
+   },
+   "cc": "Reusable skills are built once and shared across the community.",
+   "guide": {
+    "state": "playing",
+    "clip": "NAR-s14",
+    "slideId": "s-pillar-skills",
+    "blocked": "false",
+    "status": "Narrating slide 14 of 39 · 03 Six pillars",
+    "tap": false
+   }
+  },
+  {
+   "t": "2026-10-01T06:41:39.015Z",
+   "scenario": "S11-sweep-phone",
+   "step": "slide 15",
+   "expect": 15,
+   "vis": {
+    "n": 15,
+    "id": "s-pillar-open-ecosystem",
+    "slideId": "s-pillar-open-ecosystem"
+   },
+   "audio": {
+    "src": "NAR-s15-s-pillar-open-ecosystem.mp3",
+    "clip": "NAR-s15",
+    "t": 0.91,
+    "muted": false
+   },
+   "cc": "Open where possible, governed where necessary.",
+   "guide": {
+    "state": "playing",
+    "clip": "NAR-s15",
+    "slideId": "s-pillar-open-ecosystem",
+    "blocked": "false",
+    "status": "Narrating slide 15 of 39 · 03 Six pillars",
+    "tap": false
+   }
+  },
+  {
+   "t": "2026-10-01T06:41:40.154Z",
+   "scenario": "S11-sweep-phone",
+   "step": "slide 16",
+   "expect": 16,
+   "vis": {
+    "n": 16,
+    "id": "s-pillar-cross-model",
+    "slideId": "s-pillar-cross-model"
+   },
+   "audio": {
+    "src": "NAR-s16-s-pillar-cross-model.mp3",
+    "clip": "NAR-s16",
+    "t": 0.92,
+    "muted": false
+   },
+   "cc": "Cross-model interoperability by design.",
+   "guide": {
+    "state": "playing",
+    "clip": "NAR-s16",
+    "slideId": "s-pillar-cross-model",
+    "blocked": "false",
+    "status": "Narrating slide 16 of 39 · 03 Six pillars",
+    "tap": false
+   }
+  },
+  {
+   "t": "2026-10-01T06:41:41.292Z",
+   "scenario": "S11-sweep-phone",
+   "step": "slide 17",
+   "expect": 17,
+   "vis": {
+    "n": 17,
+    "id": "s-pillar-universal-licence",
+    "slideId": "s-pillar-universal-licence"
+   },
+   "audio": {
+    "src": "NAR-s17-s-pillar-universal-licence.mp3",
+    "clip": "NAR-s17",
+    "t": 0.9,
+    "muted": false
+   },
+   "cc": "Universal API licences are managed by Athar, giving members access without duplicated procurement.",
+   "guide": {
+    "state": "playing",
+    "clip": "NAR-s17",
+    "slideId": "s-pillar-universal-licence",
+    "blocked": "false",
+    "status": "Narrating slide 17 of 39 · 03 Six pillars",
+    "tap": false
+   }
+  },
+  {
+   "t": "2026-10-01T06:41:42.427Z",
+   "scenario": "S11-sweep-phone",
+   "step": "slide 18",
+   "expect": 18,
+   "vis": {
+    "n": 18,
+    "id": "s-pillar-upskilling",
+    "slideId": "s-pillar-upskilling"
+   },
+   "audio": {
+    "src": "NAR-s18-s-pillar-upskilling.mp3",
+    "clip": "NAR-s18",
+    "t": 0.9,
+    "muted": false
+   },
+   "cc": "Agentic AI for all, not for a few.",
+   "guide": {
+    "state": "playing",
+    "clip": "NAR-s18",
+    "slideId": "s-pillar-upskilling",
+    "blocked": "false",
+    "status": "Narrating slide 18 of 39 · 03 Six pillars",
+    "tap": false
+   }
+  },
+  {
+   "t": "2026-10-01T06:41:43.562Z",
+   "scenario": "S11-sweep-phone",
+   "step": "slide 19",
+   "expect": 19,
+   "vis": {
+    "n": 19,
+    "id": "s-pact-principles",
+    "slideId": "s-pact-principles"
+   },
+   "audio": {
+    "src": "NAR-s19-s-pact-principles.mp3",
+    "clip": "NAR-s19",
+    "t": 0.9,
+    "muted": false
+   },
+   "cc": "Section four, Pledge and Signing.",
+   "guide": {
+    "state": "playing",
+    "clip": "NAR-s19",
+    "slideId": "s-pact-principles",
+    "blocked": "false",
+    "status": "Narrating slide 19 of 39 · 04 Pledge & signing",
+    "tap": false
+   }
+  },
+  {
+   "t": "2026-10-01T06:41:44.698Z",
+   "scenario": "S11-sweep-phone",
+   "step": "slide 20",
+   "expect": 20,
+   "vis": {
+    "n": 20,
+    "id": "s-how-to-sign",
+    "slideId": "s-how-to-sign"
+   },
+   "audio": {
+    "src": "NAR-s20-s-how-to-sign.mp3",
+    "clip": "NAR-s20",
+    "t": 0.91,
+    "muted": false
+   },
+   "cc": "A signatory chooses its roles, sign, govern, build or learn, and pledges to contribute to at least one of the four participant outcomes.",
+   "guide": {
+    "state": "playing",
+    "clip": "NAR-s20",
+    "slideId": "s-how-to-sign",
+    "blocked": "false",
+    "status": "Narrating slide 20 of 39 · 04 Pledge & signing",
+    "tap": false
+   }
+  },
+  {
+   "t": "2026-10-01T06:41:45.835Z",
+   "scenario": "S11-sweep-phone",
+   "step": "slide 21",
+   "expect": 21,
+   "vis": {
+    "n": 21,
+    "id": "s-actors-wall",
+    "slideId": "s-actors-wall"
+   },
+   "audio": {
+    "src": "NAR-s21-s-actors-wall.mp3",
+    "clip": "NAR-s21",
+    "t": 0.91,
+    "muted": false
+   },
+   "cc": "Section five, Actors and Roles, institutions, partners and platforms building the Athar ecosystem together, ODA and AIREV sign and govern, with AIREV, OnDemand, e& and ai& and Discord building, UNDP, UNICEF, IFRC, WFP and UNHCR sign and learn.",
+   "guide": {
+    "state": "playing",
+    "clip": "NAR-s21",
+    "slideId": "s-actors-wall",
+    "blocked": "false",
+    "status": "Narrating slide 21 of 39 · 05 Actors & roles",
+    "tap": false
+   }
+  },
+  {
+   "t": "2026-10-01T06:41:46.971Z",
+   "scenario": "S11-sweep-phone",
+   "step": "slide 22",
+   "expect": 22,
+   "vis": {
+    "n": 22,
+    "id": "s-who-signs",
+    "slideId": "s-who-signs"
+   },
+   "audio": {
+    "src": "NAR-s22-s-who-signs.mp3",
+    "clip": "NAR-s22",
+    "t": 0.9,
+    "muted": false
+   },
+   "cc": "Who signs the pact.",
+   "guide": {
+    "state": "playing",
+    "clip": "NAR-s22",
+    "slideId": "s-who-signs",
+    "blocked": "false",
+    "status": "Narrating slide 22 of 39 · 05 Actors & roles",
+    "tap": false
+   }
+  },
+  {
+   "t": "2026-10-01T06:41:48.104Z",
+   "scenario": "S11-sweep-phone",
+   "step": "slide 23",
+   "expect": 23,
+   "vis": {
+    "n": 23,
+    "id": "s-who-governs",
+    "slideId": "s-who-governs"
+   },
+   "audio": {
+    "src": "NAR-s23-s-who-governs.mp3",
+    "clip": "NAR-s23",
+    "t": 0.9,
+    "muted": false
+   },
+   "cc": "Every actor has a clear role, sign, govern, build or learn.",
+   "guide": {
+    "state": "playing",
+    "clip": "NAR-s23",
+    "slideId": "s-who-governs",
+    "blocked": "false",
+    "status": "Narrating slide 23 of 39 · 05 Actors & roles",
+    "tap": false
+   }
+  },
+  {
+   "t": "2026-10-01T06:41:49.238Z",
+   "scenario": "S11-sweep-phone",
+   "step": "slide 24",
+   "expect": 24,
+   "vis": {
+    "n": 24,
+    "id": "s-who-builds",
+    "slideId": "s-who-builds"
+   },
+   "audio": {
+    "src": "NAR-s24-s-who-builds.mp3",
+    "clip": "NAR-s24",
+    "t": 0.9,
+    "muted": false
+   },
+   "cc": "Who builds on the pact.",
+   "guide": {
+    "state": "playing",
+    "clip": "NAR-s24",
+    "slideId": "s-who-builds",
+    "blocked": "false",
+    "status": "Narrating slide 24 of 39 · 05 Actors & roles",
+    "tap": false
+   }
+  },
+  {
+   "t": "2026-10-01T06:41:50.371Z",
+   "scenario": "S11-sweep-phone",
+   "step": "slide 25",
+   "expect": 25,
+   "vis": {
+    "n": 25,
+    "id": "s-who-learns",
+    "slideId": "s-who-learns"
+   },
+   "audio": {
+    "src": "NAR-s25-s-who-learns.mp3",
+    "clip": "NAR-s25",
+    "t": 0.9,
+    "muted": false
+   },
+   "cc": "Who learns through the pact.",
+   "guide": {
+    "state": "playing",
+    "clip": "NAR-s25",
+    "slideId": "s-who-learns",
+    "blocked": "false",
+    "status": "Narrating slide 25 of 39 · 05 Actors & roles",
+    "tap": false
+   }
+  },
+  {
+   "t": "2026-10-01T06:41:51.506Z",
+   "scenario": "S11-sweep-phone",
+   "step": "slide 26",
+   "expect": 26,
+   "vis": {
+    "n": 26,
+    "id": "s-governance-licence",
+    "slideId": "s-governance-licence"
+   },
+   "audio": {
+    "src": "NAR-s26-s-governance-licence.mp3",
+    "clip": "NAR-s26",
+    "t": 0.9,
+    "muted": false
+   },
+   "cc": "Section six, governance and roadmap.",
+   "guide": {
+    "state": "playing",
+    "clip": "NAR-s26",
+    "slideId": "s-governance-licence",
+    "blocked": "false",
+    "status": "Narrating slide 26 of 39 · 06 Governance & roadmap",
+    "tap": false
+   }
+  },
+  {
+   "t": "2026-10-01T06:41:52.642Z",
+   "scenario": "S11-sweep-phone",
+   "step": "slide 27",
+   "expect": 27,
+   "vis": {
+    "n": 27,
+    "id": "s-roadmap",
+    "slideId": "s-roadmap"
+   },
+   "audio": {
+    "src": "NAR-s27-s-roadmap.mp3",
+    "clip": "NAR-s27",
+    "t": 0.92,
+    "muted": false
+   },
+   "cc": "Decisions, releases, and outcome reports are published, so every member can see how priorities are set and how the platform evolves over time.",
+   "guide": {
+    "state": "playing",
+    "clip": "NAR-s27",
+    "slideId": "s-roadmap",
+    "blocked": "false",
+    "status": "Narrating slide 27 of 39 · 06 Governance & roadmap",
+    "tap": false
+   }
+  },
+  {
+   "t": "2026-10-01T06:41:53.775Z",
+   "scenario": "S11-sweep-phone",
+   "step": "slide 28",
+   "expect": 28,
+   "vis": {
+    "n": 28,
+    "id": "s-it-outcomes",
+    "slideId": "s-it-outcomes"
+   },
+   "audio": {
+    "src": "NAR-s28-s-it-outcomes.mp3",
+    "clip": "NAR-s28",
+    "t": 0.9,
+    "muted": false
+   },
+   "cc": "Section seven, Impact and Funding.",
+   "guide": {
+    "state": "playing",
+    "clip": "NAR-s28",
+    "slideId": "s-it-outcomes",
+    "blocked": "false",
+    "status": "Narrating slide 28 of 39 · 07 Impact & funding",
+    "tap": false
+   }
+  },
+  {
+   "t": "2026-10-01T06:41:54.910Z",
+   "scenario": "S11-sweep-phone",
+   "step": "slide 29",
+   "expect": 29,
+   "vis": {
+    "n": 29,
+    "id": "s-it-tiers",
+    "slideId": "s-it-tiers"
+   },
+   "audio": {
+    "src": "NAR-s29-s-it-tiers.mp3",
+    "clip": "NAR-s29",
+    "t": 0.9,
+    "muted": false
+   },
+   "cc": "Three impact tiers, one delivery model, access, ownership, legacy.",
+   "guide": {
+    "state": "playing",
+    "clip": "NAR-s29",
+    "slideId": "s-it-tiers",
+    "blocked": "false",
+    "status": "Narrating slide 29 of 39 · 07 Impact & funding",
+    "tap": false
+   }
+  },
+  {
+   "t": "2026-10-01T06:41:56.045Z",
+   "scenario": "S11-sweep-phone",
+   "step": "slide 30",
+   "expect": 30,
+   "vis": {
+    "n": 30,
+    "id": "s-it-metrics",
+    "slideId": "s-it-metrics"
+   },
+   "audio": {
+    "src": "NAR-s30-s-it-metrics.mp3",
+    "clip": "NAR-s30",
+    "t": 0.9,
+    "muted": false
+   },
+   "cc": "Every agreement includes named cohorts and activation targets, independent evaluator baselines, quarterly outcome reports, and open book costs with unspent funds returned.",
+   "guide": {
+    "state": "playing",
+    "clip": "NAR-s30",
+    "slideId": "s-it-metrics",
+    "blocked": "false",
+    "status": "Narrating slide 30 of 39 · 07 Impact & funding",
+    "tap": false
+   }
+  },
+  {
+   "t": "2026-10-01T06:41:57.180Z",
+   "scenario": "S11-sweep-phone",
+   "step": "slide 31",
+   "expect": 31,
+   "vis": {
+    "n": 31,
+    "id": "s-it-sustain",
+    "slideId": "s-it-sustain"
+   },
+   "audio": {
+    "src": "NAR-s31-s-it-sustain.mp3",
+    "clip": "NAR-s31",
+    "t": 0.91,
+    "muted": false
+   },
+   "cc": "Universal API licenses, marketplace revenue share and sovereign pilot options fund the model so each partner can choose what fits.",
+   "guide": {
+    "state": "playing",
+    "clip": "NAR-s31",
+    "slideId": "s-it-sustain",
+    "blocked": "false",
+    "status": "Narrating slide 31 of 39 · 07 Impact & funding",
+    "tap": false
+   }
+  },
+  {
+   "t": "2026-10-01T06:41:58.317Z",
+   "scenario": "S11-sweep-phone",
+   "step": "slide 32",
+   "expect": 32,
+   "vis": {
+    "n": 32,
+    "id": "s-it-partners",
+    "slideId": "s-it-partners"
+   },
+   "audio": {
+    "src": "NAR-s32-s-it-partners.mp3",
+    "clip": "NAR-s32",
+    "t": 0.91,
+    "muted": false
+   },
+   "cc": "Delivered with candidate partners across the humanitarian, development and technology sectors, shown here for internal review only pending written authorisation.",
+   "guide": {
+    "state": "playing",
+    "clip": "NAR-s32",
+    "slideId": "s-it-partners",
+    "blocked": "false",
+    "status": "Narrating slide 32 of 39 · 07 Impact & funding",
+    "tap": false
+   }
+  },
+  {
+   "t": "2026-10-01T06:41:59.450Z",
+   "scenario": "S11-sweep-phone",
+   "step": "slide 33",
+   "expect": 33,
+   "vis": {
+    "n": 33,
+    "id": "s-it-join",
+    "slideId": "s-it-join"
+   },
+   "audio": {
+    "src": "NAR-s33-s-it-join.mp3",
+    "clip": "NAR-s33",
+    "t": 0.92,
+    "muted": false
+   },
+   "cc": "Join the pact.",
+   "guide": {
+    "state": "playing",
+    "clip": "NAR-s33",
+    "slideId": "s-it-join",
+    "blocked": "false",
+    "status": "Narrating slide 33 of 39 · 07 Impact & funding",
+    "tap": false
+   }
+  },
+  {
+   "t": "2026-10-01T06:42:00.586Z",
+   "scenario": "S11-sweep-phone",
+   "step": "slide 34",
+   "expect": 34,
+   "vis": {
+    "n": 34,
+    "id": "s-aos-overview",
+    "slideId": "s-aos-overview"
+   },
+   "audio": {
+    "src": "NAR-s34-s-aos-overview.mp3",
+    "clip": "NAR-s34",
+    "t": 0.9,
+    "muted": false
+   },
+   "cc": "Section eight, Athar OS.",
+   "guide": {
+    "state": "playing",
+    "clip": "NAR-s34",
+    "slideId": "s-aos-overview",
+    "blocked": "false",
+    "status": "Narrating slide 34 of 39 · 08 Athar OS",
+    "tap": false
+   }
+  },
+  {
+   "t": "2026-10-01T06:42:01.824Z",
+   "scenario": "S11-sweep-phone",
+   "step": "slide 35",
+   "expect": 35,
+   "vis": {
+    "n": 35,
+    "id": "s-aos-tour",
+    "slideId": "s-aos-tour"
+   },
+   "audio": {
+    "src": "NAR-s35-s-aos-tour.mp3",
+    "clip": "NAR-s35",
+    "t": 1.04,
+    "muted": false
+   },
+   "cc": "The product tour shows the real screens: the marketplace, the playground, the agent flow builder and the tools and deployment views, captured from the Athar OS wireframes and the launch film.",
+   "guide": {
+    "state": "playing",
+    "clip": "NAR-s35",
+    "slideId": "s-aos-tour",
+    "blocked": "false",
+    "status": "Narrating slide 35 of 39 · 08 Athar OS",
+    "tap": false
+   }
+  },
+  {
+   "t": "2026-10-01T06:42:02.959Z",
+   "scenario": "S11-sweep-phone",
+   "step": "slide 36",
+   "expect": 36,
+   "vis": {
+    "n": 36,
+    "id": "s-aos-roadmap",
+    "slideId": "s-aos-roadmap"
+   },
+   "audio": {
+    "src": "NAR-s36-s-aos-roadmap.mp3",
+    "clip": "NAR-s36",
+    "t": 0.91,
+    "muted": false
+   },
+   "cc": "The roadmap runs now in Q4, 2026, next in 2027 and later in 2028.",
+   "guide": {
+    "state": "playing",
+    "clip": "NAR-s36",
+    "slideId": "s-aos-roadmap",
+    "blocked": "false",
+    "status": "Narrating slide 36 of 39 · 08 Athar OS",
+    "tap": false
+   }
+  },
+  {
+   "t": "2026-10-01T06:42:04.094Z",
+   "scenario": "S11-sweep-phone",
+   "step": "slide 37",
+   "expect": 37,
+   "vis": {
+    "n": 37,
+    "id": "s-aos-deploy",
+    "slideId": "s-aos-deploy"
+   },
+   "audio": {
+    "src": "NAR-s37-s-aos-deploy.mp3",
+    "clip": "NAR-s37",
+    "t": 0.9,
+    "muted": false
+   },
+   "cc": "Deploy anywhere, own it.",
+   "guide": {
+    "state": "playing",
+    "clip": "NAR-s37",
+    "slideId": "s-aos-deploy",
+    "blocked": "false",
+    "status": "Narrating slide 37 of 39 · 08 Athar OS",
+    "tap": false
+   }
+  },
+  {
+   "t": "2026-10-01T06:42:05.232Z",
+   "scenario": "S11-sweep-phone",
+   "step": "slide 38",
+   "expect": 38,
+   "vis": {
+    "n": 38,
+    "id": "s-aos-nations",
+    "slideId": "s-aos-nations"
+   },
+   "audio": {
+    "src": "NAR-s38-s-aos-nations.mp3",
+    "clip": "NAR-s38",
+    "t": 0.9,
+    "muted": false
+   },
+   "cc": "Nations empowered.",
+   "guide": {
+    "state": "playing",
+    "clip": "NAR-s38",
+    "slideId": "s-aos-nations",
+    "blocked": "false",
+    "status": "Narrating slide 38 of 39 · 08 Athar OS",
+    "tap": false
+   }
+  },
+  {
+   "t": "2026-10-01T06:42:06.370Z",
+   "scenario": "S11-sweep-phone",
+   "step": "slide 39",
+   "expect": 39,
+   "vis": {
+    "n": 39,
+    "id": "s-closing",
+    "slideId": "s-closing"
+   },
+   "audio": {
+    "src": "NAR-s39-s-closing.mp3",
+    "clip": "NAR-s39",
+    "t": 0.92,
+    "muted": false
+   },
+   "cc": "Join the Pact.",
+   "guide": {
+    "state": "playing",
+    "clip": "NAR-s39",
+    "slideId": "s-closing",
+    "blocked": "false",
+    "status": "Narrating slide 39 of 39 · Join the pact",
+    "tap": false
+   }
+  },
+  {
+   "t": "2026-10-01T06:42:13.605Z",
+   "scenario": "S12-phone-rapid-blocked",
+   "step": "phone first load, no gesture",
+   "expect": 4,
+   "vis": {
+    "n": 4,
+    "id": "s-four-outcomes",
+    "slideId": "s-four-outcomes"
+   },
+   "audio": null,
+   "cc": "Section two, the Community Model.",
+   "guide": {
+    "state": "blocked",
+    "clip": "NAR-s04",
+    "slideId": "s-four-outcomes",
+    "blocked": "true",
+    "status": "Narration blocked by the browser — tap to play · slide 4 of 39 · 02 Community model",
+    "tap": true
+   }
+  },
+  {
+   "t": "2026-10-01T06:42:15.773Z",
+   "scenario": "S12-phone-rapid-blocked",
+   "step": "tap bar next → 5",
+   "expect": 5,
+   "vis": {
+    "n": 5,
+    "id": "s-managed-programme",
+    "slideId": "s-managed-programme"
+   },
+   "audio": {
+    "src": "NAR-s05-s-managed-programme.mp3",
+    "clip": "NAR-s05",
+    "t": 1.78,
+    "muted": false
+   },
+   "cc": "This is a managed global programme, not a social channel.",
+   "guide": {
+    "state": "playing",
+    "clip": "NAR-s05",
+    "slideId": "s-managed-programme",
+    "blocked": "false",
+    "status": "Narrating slide 5 of 39 · 02 Community model",
+    "tap": false
+   }
+  },
+  {
+   "t": "2026-10-01T06:42:20.227Z",
+   "scenario": "S12-phone-rapid-blocked",
+   "step": "6× bar next (≈270 ms) → 11",
+   "expect": 11,
+   "vis": {
+    "n": 11,
+    "id": "s-agent-marketplace",
+    "slideId": "s-agent-marketplace"
+   },
+   "audio": {
+    "src": "NAR-s11-s-agent-marketplace.mp3",
+    "clip": "NAR-s11",
+    "t": 3.32,
+    "muted": false
+   },
+   "cc": "The builder journey runs from an idea to a validated agent.",
+   "guide": {
+    "state": "playing",
+    "clip": "NAR-s11",
+    "slideId": "s-agent-marketplace",
+    "blocked": "false",
+    "status": "Narrating slide 11 of 39 · 02 Community model",
+    "tap": false
+   }
+  }
+ ],
+ "console": []
+}
