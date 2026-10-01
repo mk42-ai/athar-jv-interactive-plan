@@ -1,0 +1,234 @@
+{
+ "label": "final-1x-S3-S6",
+ "started": "2026-10-01T05:55:01Z",
+ "finished": "2026-10-01T05:55:10Z",
+ "pass": 32,
+ "fail": 0,
+ "rows": [
+  {
+   "t": "2026-10-01T05:55:04Z",
+   "scenario": "S3 N shortcut",
+   "step": "N starts narration on slide 5 · slide on screen",
+   "ok": true,
+   "detail": "visible slide 5 (expected 5) hash=#/05"
+  },
+  {
+   "t": "2026-10-01T05:55:04Z",
+   "scenario": "S3 N shortcut",
+   "step": "N starts narration on slide 5 · clip == slide mapping",
+   "ok": true,
+   "detail": "bar clip NAR-02 vs expected NAR-02 for slide 5 (4 ms)"
+  },
+  {
+   "t": "2026-10-01T05:55:04Z",
+   "scenario": "S3 N shortcut",
+   "step": "N starts narration on slide 5 · audio playing ≤1 s",
+   "ok": true,
+   "detail": "paused=false src=guide-02-community-model-9gUnFBtxrM.mp3 ct=0 playingEvents=1 rejected=none (15 ms)"
+  },
+  {
+   "t": "2026-10-01T05:55:04Z",
+   "scenario": "S3 N shortcut",
+   "step": "N starts narration on slide 5 · active cue narrates visible slide",
+   "ok": true,
+   "detail": "cue #1 (slide 4) vs visible 5; audio 0.01s; expected first cue #1"
+  },
+  {
+   "t": "2026-10-01T05:55:04Z",
+   "scenario": "S3 N shortcut",
+   "step": "N starts narration on slide 5 · audio progressing",
+   "ok": true,
+   "detail": "currentTime 0.06 → 0.42"
+  },
+  {
+   "t": "2026-10-01T05:55:04Z",
+   "scenario": "S3 N shortcut",
+   "step": "N starts narration on slide 5 · CC caption == active cue text",
+   "ok": true,
+   "detail": "caption=\"Section two, the Community Model.\" cue=\"Section two, the Community Model.\""
+  },
+  {
+   "t": "2026-10-01T05:55:04Z",
+   "scenario": "S3 N shortcut",
+   "step": "N starts narration on slide 5 · transcript highlight == on-screen slide",
+   "ok": true,
+   "detail": "highlighted sentence slide=4 cue=#1 (slide 4) visible=5 transcript chars=409"
+  },
+  {
+   "t": "2026-10-01T05:55:04Z",
+   "scenario": "S3 N shortcut",
+   "step": "N pauses narration",
+   "ok": true,
+   "detail": "paused=true narrating=false (was on slide 5)"
+  },
+  {
+   "t": "2026-10-01T05:55:05Z",
+   "scenario": "S3 N shortcut",
+   "step": "paused + ArrowRight: caption/transcript follow the slide without audio",
+   "ok": true,
+   "detail": "n=6 (expected 6) clip=NAR-02 paused=true cue=#1 (slide 4) highlight slide=4"
+  },
+  {
+   "t": "2026-10-01T05:55:05Z",
+   "scenario": "S3 N shortcut",
+   "step": "N resumes at the sentence of the slide on screen (6) · slide on screen",
+   "ok": true,
+   "detail": "visible slide 6 (expected 6) hash=#/06"
+  },
+  {
+   "t": "2026-10-01T05:55:05Z",
+   "scenario": "S3 N shortcut",
+   "step": "N resumes at the sentence of the slide on screen (6) · clip == slide mapping",
+   "ok": true,
+   "detail": "bar clip NAR-02 vs expected NAR-02 for slide 6 (2 ms)"
+  },
+  {
+   "t": "2026-10-01T05:55:05Z",
+   "scenario": "S3 N shortcut",
+   "step": "N resumes at the sentence of the slide on screen (6) · audio playing ≤1 s",
+   "ok": true,
+   "detail": "paused=false src=guide-02-community-model-9gUnFBtxrM.mp3 ct=0.51 playingEvents=0 rejected=none (8 ms)"
+  },
+  {
+   "t": "2026-10-01T05:55:05Z",
+   "scenario": "S3 N shortcut",
+   "step": "N resumes at the sentence of the slide on screen (6) · active cue narrates visible slide",
+   "ok": true,
+   "detail": "cue #1 (slide 4) vs visible 6; audio 0.51s; expected first cue #1"
+  },
+  {
+   "t": "2026-10-01T05:55:05Z",
+   "scenario": "S3 N shortcut",
+   "step": "N resumes at the sentence of the slide on screen (6) · audio progressing",
+   "ok": true,
+   "detail": "currentTime 0.56 → 0.92"
+  },
+  {
+   "t": "2026-10-01T05:55:05Z",
+   "scenario": "S3 N shortcut",
+   "step": "N resumes at the sentence of the slide on screen (6) · CC caption == active cue text",
+   "ok": true,
+   "detail": "caption=\"Section two, the Community Model.\" cue=\"Section two, the Community Model.\""
+  },
+  {
+   "t": "2026-10-01T05:55:05Z",
+   "scenario": "S3 N shortcut",
+   "step": "N resumes at the sentence of the slide on screen (6) · transcript highlight == on-screen slide",
+   "ok": true,
+   "detail": "highlighted sentence slide=4 cue=#1 (slide 4) visible=6 transcript chars=409"
+  },
+  {
+   "t": "2026-10-01T05:55:07Z",
+   "scenario": "S6 Replay intro and return",
+   "step": "guide on slide 4 · slide on screen",
+   "ok": true,
+   "detail": "visible slide 4 (expected 4) hash=#/04"
+  },
+  {
+   "t": "2026-10-01T05:55:07Z",
+   "scenario": "S6 Replay intro and return",
+   "step": "guide on slide 4 · clip == slide mapping",
+   "ok": true,
+   "detail": "bar clip NAR-02 vs expected NAR-02 for slide 4 (1 ms)"
+  },
+  {
+   "t": "2026-10-01T05:55:07Z",
+   "scenario": "S6 Replay intro and return",
+   "step": "guide on slide 4 · audio playing ≤1 s",
+   "ok": true,
+   "detail": "paused=false src=guide-02-community-model-9gUnFBtxrM.mp3 ct=0 playingEvents=0 rejected=none (5 ms)"
+  },
+  {
+   "t": "2026-10-01T05:55:07Z",
+   "scenario": "S6 Replay intro and return",
+   "step": "guide on slide 4 · active cue narrates visible slide",
+   "ok": true,
+   "detail": "cue #1 (slide 4) vs visible 4; audio 0.01s; expected first cue #1"
+  },
+  {
+   "t": "2026-10-01T05:55:08Z",
+   "scenario": "S6 Replay intro and return",
+   "step": "guide on slide 4 · audio progressing",
+   "ok": true,
+   "detail": "currentTime 0.06 → 0.42"
+  },
+  {
+   "t": "2026-10-01T05:55:08Z",
+   "scenario": "S6 Replay intro and return",
+   "step": "guide on slide 4 · CC caption == active cue text",
+   "ok": true,
+   "detail": "caption=\"Section two, the Community Model.\" cue=\"Section two, the Community Model.\""
+  },
+  {
+   "t": "2026-10-01T05:55:08Z",
+   "scenario": "S6 Replay intro and return",
+   "step": "guide on slide 4 · transcript highlight == on-screen slide",
+   "ok": true,
+   "detail": "highlighted sentence slide=4 cue=#1 (slide 4) visible=4 transcript chars=409"
+  },
+  {
+   "t": "2026-10-01T05:55:08Z",
+   "scenario": "S6 Replay intro and return",
+   "step": "Replay intro opens the intro film",
+   "ok": true,
+   "detail": "intro-gate shown"
+  },
+  {
+   "t": "2026-10-01T05:55:09Z",
+   "scenario": "S6 Replay intro and return",
+   "step": "guide/narration is silent while the intro film plays",
+   "ok": true,
+   "detail": "audio=guide-02-community-model-9gUnFBtxrM.mp3 paused=true play() calls="
+  },
+  {
+   "t": "2026-10-01T05:55:10Z",
+   "scenario": "S6 Replay intro and return",
+   "step": "after the replayed intro the guide narrates the slide it returned to (4) · slide on screen",
+   "ok": true,
+   "detail": "visible slide 4 (expected 4) hash=#/04"
+  },
+  {
+   "t": "2026-10-01T05:55:10Z",
+   "scenario": "S6 Replay intro and return",
+   "step": "after the replayed intro the guide narrates the slide it returned to (4) · clip == slide mapping",
+   "ok": true,
+   "detail": "bar clip NAR-02 vs expected NAR-02 for slide 4 (2 ms)"
+  },
+  {
+   "t": "2026-10-01T05:55:10Z",
+   "scenario": "S6 Replay intro and return",
+   "step": "after the replayed intro the guide narrates the slide it returned to (4) · audio playing ≤1 s",
+   "ok": true,
+   "detail": "paused=false src=guide-02-community-model-9gUnFBtxrM.mp3 ct=0.84 playingEvents=0 rejected=none (8 ms)"
+  },
+  {
+   "t": "2026-10-01T05:55:10Z",
+   "scenario": "S6 Replay intro and return",
+   "step": "after the replayed intro the guide narrates the slide it returned to (4) · active cue narrates visible slide",
+   "ok": true,
+   "detail": "cue #1 (slide 4) vs visible 4; audio 0.84s; expected first cue #1"
+  },
+  {
+   "t": "2026-10-01T05:55:10Z",
+   "scenario": "S6 Replay intro and return",
+   "step": "after the replayed intro the guide narrates the slide it returned to (4) · audio progressing",
+   "ok": true,
+   "detail": "currentTime 0.96 → 1.31"
+  },
+  {
+   "t": "2026-10-01T05:55:10Z",
+   "scenario": "S6 Replay intro and return",
+   "step": "after the replayed intro the guide narrates the slide it returned to (4) · CC caption == active cue text",
+   "ok": true,
+   "detail": "caption=\"Section two, the Community Model.\" cue=\"Section two, the Community Model.\""
+  },
+  {
+   "t": "2026-10-01T05:55:10Z",
+   "scenario": "S6 Replay intro and return",
+   "step": "after the replayed intro the guide narrates the slide it returned to (4) · transcript highlight == on-screen slide",
+   "ok": true,
+   "detail": "highlighted sentence slide=4 cue=#1 (slide 4) visible=4 transcript chars=409"
+  }
+ ],
+ "defects": []
+}

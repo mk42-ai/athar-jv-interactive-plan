@@ -13,7 +13,8 @@ const DIST = path.resolve(String(opt('--dist', 'dist')));
 const QUIET = !!opt('--quiet', false), JSON_OUT = opt('--json', null), CSV_OUT = opt('--csv', null);
 const IMG_EXT = /\.(png|jpe?g|webp|avif|gif|svg|ico)$/i, MEDIA_EXT = /\.(png|jpe?g|webp|avif|gif|svg|ico|mp4|webm|vtt|woff2?|json|webmanifest)$/i;
 const refs = []; const files = [];
-(function walk(d) { for (const e of fs.readdirSync(d, { withFileTypes: true })) { const p = path.join(d, e.name); if (e.isDirectory()) { if (e.name === '_unreferenced') continue; walk(p); } else files.push(p); } })(DIST);
+/* v1.5.4: dist/qa/ holds QA evidence pages (DOM-diff report, screenshots) — not deck content, excluded from the image gate */
+(function walk(d) { for (const e of fs.readdirSync(d, { withFileTypes: true })) { const p = path.join(d, e.name); if (e.isDirectory()) { if (e.name === '_unreferenced' || (e.name === 'qa' && d === DIST)) continue; walk(p); } else files.push(p); } })(DIST);
 const rel = p => path.relative(DIST, p).split(path.sep).join('/');
 const lower = new Map(); for (const f of files) lower.set(rel(f).toLowerCase(), rel(f));
 function add(src, line, kind, raw, ctx) { refs.push({ ref_source_file: rel(src), line, kind, raw_reference: raw, ctx: (ctx || '').slice(0, 120) }); }

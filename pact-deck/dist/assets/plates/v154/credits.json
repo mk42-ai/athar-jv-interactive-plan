@@ -1,0 +1,487 @@
+{
+ "generated_utc": "2026-10-01T05:50:51Z",
+ "version": "1.5.4",
+ "scope": "slide 29 OWNERSHIP montage + slide 38 strip (the SAME file: ownership-montage.*)",
+ "montage": {
+  "composed_from": [
+   "ownership-p1-training",
+   "ownership-p2-handover",
+   "ownership-p3-operations"
+  ],
+  "size": [
+   1816,
+   400
+  ],
+  "gutter_px": 8,
+  "gutter_colour": "#F7F3EA",
+  "exports": {
+   "png": {
+    "path": "/tmp/terminal-work/work/6692b763e851d28a036ab30e/6abc5d318c19ce74d2a7dbc8/athar-jv-interactive-plan/pact-deck/dist/assets/plates/v154/ownership-montage.png",
+    "bytes": 1293783,
+    "sha256": "82ace899ad8249144502cd0416fd2b6f8e5f9ef5eb4fa800d6bade3e81138c86",
+    "size": [
+     1816,
+     400
+    ]
+   },
+   "webp": {
+    "path": "/tmp/terminal-work/work/6692b763e851d28a036ab30e/6abc5d318c19ce74d2a7dbc8/athar-jv-interactive-plan/pact-deck/dist/assets/plates/v154/ownership-montage.webp",
+    "bytes": 138774,
+    "sha256": "01c8f81e6536b033f48ce66d50a2da21e8fa4d435336ac70d39116147f4dfbd4",
+    "size": [
+     1816,
+     400
+    ]
+   },
+   "avif": {
+    "path": "/tmp/terminal-work/work/6692b763e851d28a036ab30e/6abc5d318c19ce74d2a7dbc8/athar-jv-interactive-plan/pact-deck/dist/assets/plates/v154/ownership-montage.avif",
+    "bytes": 79024,
+    "sha256": "f896c7a9ecd17cde27b9f1f9418108466a2913fb5e896b809ba09ef67d1d5375",
+    "size": [
+     1816,
+     400
+    ]
+   }
+  }
+ },
+ "items": {
+  "ownership-p1-training": {
+   "slot": "Montage panel 1 · training + certification",
+   "label": "Concept render / تصوّر مفاهيمي",
+   "candidate": "P1b5E",
+   "generator": "GPT Image 2.5 (OnDemand plugin agent-1789134730, bulk generation, 1536x1024, quality high) via OnDemand MCP chat session; relay endpoint predefined-claude-sonnet-5.5",
+   "batch": 5,
+   "raw_url": "https://airevdev.blob.core.windows.net/on-demand-dev/6692b763e851d28a036ab30e/agents/wFmbiTdT3O.png?se=2026-10-08T04%3A47%3A11Z&sig=NyeCrIjLDpLJoDzT551GS66IYJHJFPr2eOrtCq3i%2Bz8%3D&ske=2026-10-08T04%3A47%3A11Z&skoid=f6fe3b05-8f6e-4558-96bd-b7f53ddd5066&sks=b&skt=2026-10-01T04%3A47%3A11Z&sktid=03628b8d-e6ad-4dd7-bca0-020e6a6cfdda&skv=2025-05-05&sp=r&sr=b&st=2026-10-01T04%3A57%3A11Z&sv=2025-05-05",
+   "raw_sha256": "454f50696dab520031decdc8324688931475df4328014d38e22edd4098c105d5",
+   "prompt": "Inside a shipping-container data centre in rural Kenya: an aisle between black server racks with status lights and real cabling, daylight from the open door at the far end. Three young Kenyan trainee operators in plain Gulf Blue (#1E3A5F) polo shirts, seen from behind and framed from the waist up, stand in the aisle facing a senior Kenyan instructor in a grey shirt at the far end, who stands beside an open rack with his hands clasped behind his back, explaining. On the side wall hang two framed certificates, each a chroma-key green rectangle. Eye-level camera. Ultra-realistic documentary photo, 35mm lens, natural daylight, warm-neutral grade (cream, sand) with a Gulf Blue accent, fine film grain, real fabric and skin texture. No hands visible in the frame. No text, letters, numbers, logos or UI anywhere (no labels on the equipment, no badges). Each certificate is a flat solid chroma-key green (#00B140) rectangle, matte, crisp edges. No robots, holograms, neon or sci-fi. Landscape 3:2.",
+   "composite": {
+    "method": "chroma-key placeholder → perspective warp (cv2.getPerspectiveTransform, 2× supersampled) of the EXACT master / real UI files; placeholder shading + DOF + grain matched; green fringe inpainted",
+    "regions": [
+     {
+      "kind": "cert",
+      "bbox": [
+       1351,
+       55,
+       129,
+       201
+      ],
+      "quad_TL_TR_BR_BL": [
+       [
+        1352.3,
+        84.1
+       ],
+       [
+        1478.8,
+        53.7
+       ],
+       [
+        1475.7,
+        256.1
+       ],
+       [
+        1350.2,
+        256.1
+       ]
+      ],
+      "orient": "portrait",
+      "edge_blur_sigma": 0.55,
+      "grain_std": 15.26,
+      "asset": "cert-ke-portrait.png",
+      "asset_sha256": "53de639d6ca513fad00d92e676176d96564fe41dcf01851d11970407865cb400"
+     },
+     {
+      "kind": "cert",
+      "bbox": [
+       1346,
+       338,
+       128,
+       201
+      ],
+      "quad_TL_TR_BR_BL": [
+       [
+        1349.3,
+        336.9
+       ],
+       [
+        1473.8,
+        351.0
+       ],
+       [
+        1469.7,
+        539.3
+       ],
+       [
+        1345.2,
+        500.8
+       ]
+      ],
+      "orient": "portrait",
+      "edge_blur_sigma": 0.55,
+      "grain_std": 16.0,
+      "asset": "cert-ke-portrait.png",
+      "asset_sha256": "53de639d6ca513fad00d92e676176d96564fe41dcf01851d11970407865cb400"
+     }
+    ],
+    "composite_sha256": "0fab348b4336a79aca2132ce2e8007f45ceb3531a0b2bb4cd22281979c4c273e"
+   },
+   "athar_master": {
+    "file": "Athar_Logo_Horizontal_transparent_v1 (user-supplied master, 4330×923 RGBA)",
+    "sha256": "862dc135e31fdd6299bd7cd989d2ce869fdf4803773791f67052548f26cbd1ab",
+    "white_variant": "same alpha, ink set to #FFFFFF (approved \"white solid on dark\"), geometry untouched",
+    "clear_space": "≥1x on every side of the logo inside each panel (x = ATHAR cap height per Brand Guidelines FINAL v3 §2.10; implementation uses the master alif height = 644 px as the unit, which is stricter)"
+   },
+   "edit_pass": {
+    "tool": "GPT Image 2.5 image edit (lighting/blending only prompt)",
+    "url": "https://airevdev.blob.core.windows.net/on-demand-dev/6692b763e851d28a036ab30e/agents/WPemxSpjvE.png?se=2026-10-08T04%3A59%3A15Z&sig=I5omPObCgTRzpqK%2BrncqIgQaQr2F4IIzp3Rw702oMTc%3D&ske=2026-10-08T04%3A59%3A15Z&skoid=f6fe3b05-8f6e-4558-96bd-b7f53ddd5066&sks=b&skt=2026-10-01T04%3A59%3A15Z&sktid=03628b8d-e6ad-4dd7-bca0-020e6a6cfdda&skv=2025-05-05&sp=r&sr=b&st=2026-10-01T05%3A09%3A15Z&sv=2025-05-05",
+    "sha256": "8f39f6204d7203bc71f84dea06689e0a0d1550523f7d2a073ab29938be7d3eb0",
+    "ssim_global_vs_composite": 0.847,
+    "logo_corr_composite": null,
+    "logo_corr_after_edit_raw": null,
+    "restamped": "every composited region (logo, certificate, screens) re-stamped from the exact composite with the edit's low-frequency lighting — the AI-redrawn logo was NOT trusted"
+   },
+   "finishing": {
+    "unified_grade": "finish.GRADE — S-curve 0.10, shadows→Gulf Blue 5.5 %, highlights→Manuscript 5 %, mids→Legacy Gold 2.5 %, saturation 0.92, warmth +1.2 %, unsharp 1.1 px/0.42, grain σ 0.020 (midtone-weighted, 0.55 px), vignette 7 %",
+    "crop": "3:2 full frame kept (1536×1024 master → 1200×800 hero / 900×600 panel), no letterbox"
+   },
+   "exports": {
+    "png": {
+     "path": "/tmp/terminal-work/work/6692b763e851d28a036ab30e/6abc5d318c19ce74d2a7dbc8/athar-jv-interactive-plan/pact-deck/dist/assets/plates/v154/ownership-p1-training.png",
+     "bytes": 964224,
+     "sha256": "204516dcc8443ef136622c5115a10499fe6933df5e64b80b672203b5419f3dd7",
+     "size": [
+      900,
+      600
+     ]
+    },
+    "webp": {
+     "path": "/tmp/terminal-work/work/6692b763e851d28a036ab30e/6abc5d318c19ce74d2a7dbc8/athar-jv-interactive-plan/pact-deck/dist/assets/plates/v154/ownership-p1-training.webp",
+     "bytes": 109836,
+     "sha256": "e3719fb923829a7bd32737f9455e4151fef553e9f8cd45882794c776a018d379",
+     "size": [
+      900,
+      600
+     ]
+    },
+    "avif": {
+     "path": "/tmp/terminal-work/work/6692b763e851d28a036ab30e/6abc5d318c19ce74d2a7dbc8/athar-jv-interactive-plan/pact-deck/dist/assets/plates/v154/ownership-p1-training.avif",
+     "bytes": 61032,
+     "sha256": "dab10e4b99926b746eae70d9185a47a000a38626f35df3c1711982a90d521efa",
+     "size": [
+      900,
+      600
+     ]
+    }
+   },
+   "alt": {
+    "en": "Panel 1 — young Kenyan operators trained and certified inside the Athar node",
+    "ar": "اللوحة 1 — تدريب مشغّلين كينيين شباب واعتمادهم داخل عقدة أثر"
+   },
+   "judge": {
+    "id": "P1b5E",
+    "slot": "Montage panel 1 (training + certification)",
+    "photorealism": 7,
+    "athar_logo": 9,
+    "semantics": 10,
+    "consistency": 9,
+    "crop_fit": 10,
+    "no_content_change": 10,
+    "art_direction": 9,
+    "verdict": "FAIL — below bar, shipped as best available",
+    "selected": true,
+    "notes": "instructor hand merges with rack; certificates exact"
+   }
+  },
+  "ownership-p2-handover": {
+   "slot": "Montage panel 2 · handover",
+   "label": "Concept render / تصوّر مفاهيمي",
+   "candidate": "P2b5aE",
+   "generator": "GPT Image 2.5 (OnDemand plugin agent-1789134730, bulk generation, 1536x1024, quality high) via OnDemand MCP chat session; relay endpoint predefined-claude-sonnet-5.5",
+   "batch": 5,
+   "raw_url": "https://airevdev.blob.core.windows.net/on-demand-dev/6692b763e851d28a036ab30e/agents/Rz0AMYNw6s.png?se=2026-10-08T04%3A47%3A10Z&sig=ADoRYClMAXQUkV7sEk%2BPOPa2bSuvE2IVDTDhdfijqiE%3D&ske=2026-10-08T04%3A47%3A10Z&skoid=f6fe3b05-8f6e-4558-96bd-b7f53ddd5066&sks=b&skt=2026-10-01T04%3A47%3A10Z&sktid=03628b8d-e6ad-4dd7-bca0-020e6a6cfdda&skv=2025-05-05&sp=r&sr=b&st=2026-10-01T04%3A57%3A10Z&sv=2025-05-05",
+   "raw_sha256": "f8196909bb66c67e9dc8bf0575b4506bfb3b10625712dec67370d1e4a36fc27f",
+   "prompt": "Kenyan farmland in soft morning light: a matte Gulf Blue (#1E3A5F) shipping-container data centre under a straight steel frame of solar panels; a plaque-sized chroma-key green rectangle is mounted on the container wall at head height. A Kenyan woman government official in a dark suit and a delivery engineer in a Gulf Blue jacket stand on either side of the green plaque, framed from the waist up, both with their hands clasped behind their backs, facing the camera and smiling; behind them, slightly out of focus, three young local operators in Gulf Blue polos, also framed from the waist up. A small handover ceremony. Ultra-realistic documentary photo, 35mm lens, natural daylight, warm-neutral grade (cream, sand) with a Gulf Blue accent, fine film grain, real skin and fabric texture. No hands visible in the frame. No text, letters, numbers, logos or UI anywhere. The plaque is a flat solid chroma-key green (#00B140) rectangle, matte, crisp edges. No robots, holograms, neon or sci-fi. Landscape 3:2.",
+   "composite": {
+    "method": "chroma-key placeholder → perspective warp (cv2.getPerspectiveTransform, 2× supersampled) of the EXACT master / real UI files; placeholder shading + DOF + grain matched; green fringe inpainted",
+    "regions": [
+     {
+      "kind": "panel",
+      "bbox": [
+       697,
+       183,
+       285,
+       280
+      ],
+      "quad_TL_TR_BR_BL": [
+       [
+        697.2,
+        230.4
+       ],
+       [
+        980.8,
+        183.1
+       ],
+       [
+        978.8,
+        458.7
+       ],
+       [
+        696.2,
+        460.8
+       ]
+      ],
+      "orient": "auto",
+      "edge_blur_sigma": 0.56,
+      "grain_std": 5.4,
+      "logo_px": [
+       1075,
+       216
+      ],
+      "clear_space_px": 162.5,
+      "scale": 0.25225
+     }
+    ],
+    "composite_sha256": "a2776f217ca8f18786ca6180157f8035b3fe9900bf110ecc4be45316f2c2b0c6"
+   },
+   "athar_master": {
+    "file": "Athar_Logo_Horizontal_transparent_v1 (user-supplied master, 4330×923 RGBA)",
+    "sha256": "862dc135e31fdd6299bd7cd989d2ce869fdf4803773791f67052548f26cbd1ab",
+    "white_variant": "same alpha, ink set to #FFFFFF (approved \"white solid on dark\"), geometry untouched",
+    "clear_space": "≥1x on every side of the logo inside each panel (x = ATHAR cap height per Brand Guidelines FINAL v3 §2.10; implementation uses the master alif height = 644 px as the unit, which is stricter)"
+   },
+   "edit_pass": {
+    "tool": "GPT Image 2.5 image edit (lighting/blending only prompt)",
+    "url": "https://airevdev.blob.core.windows.net/on-demand-dev/6692b763e851d28a036ab30e/agents/psUdJZ84AH.png?se=2026-10-08T05%3A00%3A06Z&sig=1f%2BM9RQcNciHxoo383Kq7YLocNIjxD0jMWpxAPyOyB8%3D&ske=2026-10-08T05%3A00%3A06Z&skoid=f6fe3b05-8f6e-4558-96bd-b7f53ddd5066&sks=b&skt=2026-10-01T05%3A00%3A06Z&sktid=03628b8d-e6ad-4dd7-bca0-020e6a6cfdda&skv=2025-05-05&sp=r&sr=b&st=2026-10-01T05%3A10%3A06Z&sv=2025-05-05",
+    "sha256": "8f66873ea6882a5298f3429622dfe4f2af2762e45dc90b0c08f2c70df90ee97a",
+    "ssim_global_vs_composite": 0.899,
+    "logo_corr_composite": -0.968,
+    "logo_corr_after_edit_raw": -0.793,
+    "restamped": "every composited region (logo, certificate, screens) re-stamped from the exact composite with the edit's low-frequency lighting — the AI-redrawn logo was NOT trusted"
+   },
+   "finishing": {
+    "unified_grade": "finish.GRADE — S-curve 0.10, shadows→Gulf Blue 5.5 %, highlights→Manuscript 5 %, mids→Legacy Gold 2.5 %, saturation 0.92, warmth +1.2 %, unsharp 1.1 px/0.42, grain σ 0.020 (midtone-weighted, 0.55 px), vignette 7 %",
+    "crop": "3:2 full frame kept (1536×1024 master → 1200×800 hero / 900×600 panel), no letterbox"
+   },
+   "exports": {
+    "png": {
+     "path": "/tmp/terminal-work/work/6692b763e851d28a036ab30e/6abc5d318c19ce74d2a7dbc8/athar-jv-interactive-plan/pact-deck/dist/assets/plates/v154/ownership-p2-handover.png",
+     "bytes": 970061,
+     "sha256": "41bc47df4b074c7cebda0297d2f4f7af5c6ad416dfc53f12bf05f8878c767a10",
+     "size": [
+      900,
+      600
+     ]
+    },
+    "webp": {
+     "path": "/tmp/terminal-work/work/6692b763e851d28a036ab30e/6abc5d318c19ce74d2a7dbc8/athar-jv-interactive-plan/pact-deck/dist/assets/plates/v154/ownership-p2-handover.webp",
+     "bytes": 107600,
+     "sha256": "a788024681813839b6e3b6fd51e31d2d3163da67d348549e663ca4b318650c88",
+     "size": [
+      900,
+      600
+     ]
+    },
+    "avif": {
+     "path": "/tmp/terminal-work/work/6692b763e851d28a036ab30e/6abc5d318c19ce74d2a7dbc8/athar-jv-interactive-plan/pact-deck/dist/assets/plates/v154/ownership-p2-handover.avif",
+     "bytes": 59742,
+     "sha256": "6cf6c318ce50c3667e888aca87b6201acc90914951031b220e77ea338e7457d4",
+     "size": [
+      900,
+      600
+     ]
+    }
+   },
+   "alt": {
+    "en": "Panel 2 — the node handed over to the national entity",
+    "ar": "اللوحة 2 — تسليم العقدة إلى الجهة الوطنية"
+   },
+   "judge": {
+    "id": "P2b5aE",
+    "slot": "Montage panel 2 (handover)",
+    "photorealism": 7,
+    "athar_logo": 10,
+    "semantics": 10,
+    "consistency": 9,
+    "crop_fit": 10,
+    "no_content_change": 10,
+    "art_direction": 9,
+    "verdict": "FAIL — below bar, shipped as best available",
+    "selected": true,
+    "notes": "judge reads hidden hands as an AI evasion; plaque logo exact"
+   }
+  },
+  "ownership-p3-operations": {
+   "slot": "Montage panel 3 · operations",
+   "label": "Concept render / تصوّر مفاهيمي",
+   "candidate": "P3b6",
+   "generator": "GPT Image 2.5 (OnDemand plugin agent-1789134730, bulk generation, 1536x1024, quality high) via OnDemand MCP chat session; relay endpoint predefined-claude-sonnet-5.5",
+   "batch": 6,
+   "raw_url": "https://airevdev.blob.core.windows.net/on-demand-dev/6692b763e851d28a036ab30e/agents/5xszzm9ZCT.png?se=2026-10-08T05%3A01%3A16Z&sig=3HMZAjXvzOXjtWv8pvSXaKWgSHeHbd%2FCfN%2BvfiPTkMQ%3D&ske=2026-10-08T05%3A01%3A16Z&skoid=f6fe3b05-8f6e-4558-96bd-b7f53ddd5066&sks=b&skt=2026-10-01T05%3A01%3A16Z&sktid=03628b8d-e6ad-4dd7-bca0-020e6a6cfdda&skv=2025-05-05&sp=r&sr=b&st=2026-10-01T05%3A11%3A16Z&sv=2025-05-05",
+   "raw_sha256": "93980b91b715109fe1e355b570b0eb5a73a8f53bb456266b7d053ffac569ff4f",
+   "prompt": "Inside a shipping-container data centre in rural Kenya, in daily operation: two young Kenyan operators, a woman and a man, in plain Gulf Blue (#1E3A5F) polo shirts, seen from behind, sit side by side at a compact operations desk at the end of a server aisle, facing two wall-mounted monitors above the desk and an open laptop on it; every one of those screens faces the camera and is a chroma-key green rectangle; their arms and hands are hidden by their bodies. Black server racks with small status lights recede on the right; daylight from a small side window. No hands visible in the frame. Ultra-realistic documentary photo, 35mm lens, natural daylight, warm-neutral grade (cream, sand) with a Gulf Blue accent, fine film grain, real fabric texture. No text, letters, numbers, logos or UI anywhere, no labels on equipment. Each screen described is a flat solid chroma-key green (#00B140) rectangle, matte, crisp edges. No robots, holograms, neon or sci-fi. Landscape 3:2.",
+   "composite": {
+    "method": "chroma-key placeholder → perspective warp (cv2.getPerspectiveTransform, 2× supersampled) of the EXACT master / real UI files; placeholder shading + DOF + grain matched; green fringe inpainted",
+    "regions": [
+     {
+      "kind": "screen",
+      "bbox": [
+       337,
+       157,
+       323,
+       186
+      ],
+      "quad_TL_TR_BR_BL": [
+       [
+        335.7,
+        157.3
+       ],
+       [
+        660.3,
+        157.3
+       ],
+       [
+        660.3,
+        341.7
+       ],
+       [
+        338.7,
+        341.7
+       ]
+      ],
+      "orient": "landscape",
+      "edge_blur_sigma": 0.56,
+      "grain_std": 14.72,
+      "asset": "overview-light-en@2x.png",
+      "asset_sha256": "a3ad514c1bb84ea8bf9360414bc53b8ce872108b71b2f1510f5421d59a7a1d83"
+     },
+     {
+      "kind": "screen",
+      "bbox": [
+       688,
+       155,
+       328,
+       187
+      ],
+      "quad_TL_TR_BR_BL": [
+       [
+        686.5,
+        156.3
+       ],
+       [
+        1016.5,
+        154.2
+       ],
+       [
+        1014.5,
+        304.6
+       ],
+       [
+        686.5,
+        340.9
+       ]
+      ],
+      "orient": "landscape",
+      "edge_blur_sigma": 0.56,
+      "grain_std": 12.81,
+      "asset": "flow-light-en@2x.png",
+      "asset_sha256": "1e11571d8cdcb8694ad4b25aa226018e1075ad0b1f28dd3c9580fde9ffc5f512"
+     },
+     {
+      "kind": "screen",
+      "bbox": [
+       585,
+       441,
+       207,
+       119
+      ],
+      "quad_TL_TR_BR_BL": [
+       [
+        585.5,
+        440.3
+       ],
+       [
+        791.5,
+        440.3
+       ],
+       [
+        790.5,
+        552.9
+       ],
+       [
+        583.5,
+        538.6
+       ]
+      ],
+      "orient": "landscape",
+      "edge_blur_sigma": 0.56,
+      "grain_std": 13.15,
+      "asset": "playground-completed-dark-en@1x.png",
+      "asset_sha256": "be5987a979c475f99f1e55f94521ab2a7f16f18f46293a2420a3911c5943ee27"
+     }
+    ],
+    "composite_sha256": "743f68482cf46bf2eb0aa2d9e86fd63b0b24bdc6723520db3f5486cbf74c0df0"
+   },
+   "athar_master": {
+    "file": "Athar_Logo_Horizontal_transparent_v1 (user-supplied master, 4330×923 RGBA)",
+    "sha256": "862dc135e31fdd6299bd7cd989d2ce869fdf4803773791f67052548f26cbd1ab",
+    "white_variant": "same alpha, ink set to #FFFFFF (approved \"white solid on dark\"), geometry untouched",
+    "clear_space": "≥1x on every side of the logo inside each panel (x = ATHAR cap height per Brand Guidelines FINAL v3 §2.10; implementation uses the master alif height = 644 px as the unit, which is stricter)"
+   },
+   "edit_pass": null,
+   "finishing": {
+    "unified_grade": "finish.GRADE — S-curve 0.10, shadows→Gulf Blue 5.5 %, highlights→Manuscript 5 %, mids→Legacy Gold 2.5 %, saturation 0.92, warmth +1.2 %, unsharp 1.1 px/0.42, grain σ 0.020 (midtone-weighted, 0.55 px), vignette 7 %",
+    "crop": "3:2 full frame kept (1536×1024 master → 1200×800 hero / 900×600 panel), no letterbox"
+   },
+   "exports": {
+    "png": {
+     "path": "/tmp/terminal-work/work/6692b763e851d28a036ab30e/6abc5d318c19ce74d2a7dbc8/athar-jv-interactive-plan/pact-deck/dist/assets/plates/v154/ownership-p3-operations.png",
+     "bytes": 977620,
+     "sha256": "96420c13e411277539ec70a66c43cca4269bb244bf54f5c739cc2a3c08ea5e70",
+     "size": [
+      900,
+      600
+     ]
+    },
+    "webp": {
+     "path": "/tmp/terminal-work/work/6692b763e851d28a036ab30e/6abc5d318c19ce74d2a7dbc8/athar-jv-interactive-plan/pact-deck/dist/assets/plates/v154/ownership-p3-operations.webp",
+     "bytes": 103218,
+     "sha256": "e26eed323759649fcef34523302b9eaa6bd29067d6e0acffe3a417112c1175d4",
+     "size": [
+      900,
+      600
+     ]
+    },
+    "avif": {
+     "path": "/tmp/terminal-work/work/6692b763e851d28a036ab30e/6abc5d318c19ce74d2a7dbc8/athar-jv-interactive-plan/pact-deck/dist/assets/plates/v154/ownership-p3-operations.avif",
+     "bytes": 55921,
+     "sha256": "0a5df46d657b015a981dd37352702358927336ab65080c645425e7f97da64248",
+     "size": [
+      900,
+      600
+     ]
+    }
+   },
+   "alt": {
+    "en": "Panel 3 — local operators running the node",
+    "ar": "اللوحة 3 — مشغّلون محليون يديرون العقدة"
+   },
+   "judge": {
+    "id": "P3b6",
+    "slot": "Montage panel 3 (operations)",
+    "photorealism": 8,
+    "athar_logo": 9,
+    "semantics": 10,
+    "consistency": 9,
+    "crop_fit": 10,
+    "no_content_change": 10,
+    "art_direction": 9,
+    "verdict": "FAIL — below bar, shipped as best available",
+    "selected": true,
+    "notes": "hands hidden read as evasion; laptop keyboard soft"
+   }
+  }
+ },
+ "label": {
+  "slide29": "CONCEPT RENDER (unchanged text, moved to a solid top-left chip)",
+  "slide38": "Concept render — ownership handover (reused from slide 29) / تصوّر مفاهيمي — تسليم الملكية (من الشريحة 29)"
+ }
+}

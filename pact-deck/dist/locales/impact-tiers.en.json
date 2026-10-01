@@ -65,8 +65,8 @@
      "place": "Lebanon · Access",
      "amount": "$10M",
      "flagship": "Flagship: One Million Lebanese AI Experts",
-     "visual": "t1-licences",
-     "visualAlt": "Tier 1 — licences: government-service scene from the official Athar brand imagery (Brand Asset Pack v3)",
+     "visual": "t1-lebanon-licences",
+     "visualAlt": "Concept render: Lebanese professionals in a Beirut ministry training room working through a generative-AI certification on laptops running Athar OS, with an Athar certificate and wall sign at the front",
      "delivered": "1M citizens certified in generative AI; 18,000 in daily professional use in ministries, schools, clinics and small businesses.",
      "outcomes": "certificates issued · daily active users · ministry workflows live",
      "wb": {
@@ -86,8 +86,8 @@
      "place": "India · Ownership",
      "amount": "$13.7M",
      "flagship": "Flagship: the UAE–India CEPA gains an AI chapter",
-     "visual": "t2-ai-pc-composited",
-     "visualAlt": "Tier 2 — appliance AI PCs and desktops: small-business scene from the official Athar brand imagery (Brand Asset Pack v3)",
+     "visual": "t2-india-ai-pc",
+     "visualAlt": "Concept render: an Indian government-school classroom gathered around an Athar AI PC, the Athar mark on its bezel and a Hindi on-device tutoring lesson on screen",
      "delivered": "on-device AI tutoring in 100 government schools in Hindi and the state language; 10,000 AI PCs; teacher training; 8-person in-country team.",
      "partners": [
       {
@@ -122,8 +122,8 @@
      "place": "Kenya · Legacy",
      "amount": "~$33M",
      "flagship": "Flagship: a sovereign AI node that feeds farmers",
-     "visual": "t3-data-centre-composited",
-     "visualAlt": "Tier 3 — sovereign data-centre nodes: dark key visual from the official Athar brand imagery (Brand Asset Pack v3)",
+     "visual": "t3-kenya-node",
+     "visualAlt": "Concept render: an Athar-branded containerised data-centre node under a solar canopy in Kenyan farmland, a clinic and a school behind it, and a smallholder farmer listening to Swahili voice advice on her phone",
      "delivered": "a Kenyan-owned AIREV modular data centre on sovereign compute; Swahili voice advice for smallholder farmers; clinics and schools on the same node.",
      "outcomes": "farmers served · yield and income change · local operators certified · asset transferred",
      "wb": {
@@ -301,7 +301,7 @@
   }
  ],
  "counter": "Slide {n} of {total}",
- "version": "1.5.2",
+ "version": "1.5.4",
  "source": "Athar — Agentic AI for All: Three Impact Tiers for Foundation Funding (27 Sep 2026)",
  "news": [
   {
@@ -570,6 +570,30 @@
    "dir": "tiers",
    "file": "logo-qualcomm.svg",
    "credit": "Snapdragon X Elite Platform badge — Qualcomm press kit (Snapdragon Summit 2026, Day 1), www.qualcomm.com; reference only, no endorsement implied"
+  },
+  "t1-lebanon-licences": {
+   "dir": "impact/v154",
+   "base": "t1-lebanon-licences",
+   "ext": "png",
+   "avif": true,
+   "official": false,
+   "credit": "v1.5.4 concept render — see dist/assets/impact/v154/credits.json"
+  },
+  "t2-india-ai-pc": {
+   "dir": "impact/v154",
+   "base": "t2-india-ai-pc",
+   "ext": "png",
+   "avif": true,
+   "official": false,
+   "credit": "v1.5.4 concept render — see dist/assets/impact/v154/credits.json"
+  },
+  "t3-kenya-node": {
+   "dir": "impact/v154",
+   "base": "t3-kenya-node",
+   "ext": "png",
+   "avif": true,
+   "official": false,
+   "credit": "v1.5.4 concept render — see dist/assets/impact/v154/credits.json"
   }
  },
  "marks": {

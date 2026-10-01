@@ -1,0 +1,218 @@
+{
+ "mechanism": "delegate/sub-agent tool unavailable on this pod → fallback: 10 parallel terminal worker jobs. Each = `setsid nohup timeout -k 30 18000 python3 /tmp/orch/worker.py SAn` (own process group, hard 5 h cap) reading its scoped brief (/tmp/orch/briefs/SAn.json) and executing queued steps (bash/python/Playwright via a process-group wrapper with a hard per-step cap), ISO-8601 UTC logs. Workers are scripted jobs, not LLM agents; the lead authored the steps, generated/judged images through the OnDemand MCP plugins and made all code decisions.",
+ "model_requested_for_subagents": "Sonnet 5.5 — not available to terminal jobs; used as the relay endpoint (predefined-claude-sonnet-5.5) for every OnDemand plugin session (GPT Image 2.5 generation/edit, Gemini vision judging)",
+ "workers": [
+  {
+   "sa": "SA1",
+   "brief": "SA1 – Athar lockup: remove the rounded \"On Demand by AIREV\" badge everywhere; clean official lockup (Arabic mark + ATHAR) with 1A clear space / 2A to partner marks; fix clipped copy + Arabic right margin; partner row untouched",
+   "pid": 4130,
+   "pgid": 4119,
+   "started": "2026-10-01T04:22:18Z",
+   "ended": "2026-10-01T06:00:21Z",
+   "status": "done",
+   "steps": [
+    {
+     "step": "01-after-dom-snapshot.sh",
+     "start": "2026-10-01T05:44:14Z",
+     "rc": 0,
+     "end": "2026-10-01T05:45:18Z"
+    },
+    {
+     "step": "02-final-after-dom.sh",
+     "start": "2026-10-01T05:56:48Z",
+     "rc": 0,
+     "end": "2026-10-01T05:57:35Z"
+    }
+   ]
+  },
+  {
+   "sa": "SA2",
+   "brief": "SA2 – Tier 1 \"Licences\" (Lebanon · Access) hero: Beirut ministry/civic training room, generative-AI certification, laptops with Athar UI, Athar certificate/wall sign",
+   "pid": 4131,
+   "pgid": 4120,
+   "started": "2026-10-01T04:22:18Z",
+   "ended": "2026-10-01T06:00:21Z",
+   "status": "done",
+   "steps": [
+    {
+     "step": "01-verify-slot.sh",
+     "start": "2026-10-01T05:59:16Z",
+     "rc": 0,
+     "end": "2026-10-01T05:59:17Z"
+    }
+   ]
+  },
+  {
+   "sa": "SA3",
+   "brief": "SA3 – Tier 2 \"Ownership\" (India) hero: Indian government-school classroom built around an Athar-branded AI PC (logo on bezel/chassis), teacher + students, Hindi on screen",
+   "pid": 4132,
+   "pgid": 4121,
+   "started": "2026-10-01T04:22:18Z",
+   "ended": "2026-10-01T06:00:21Z",
+   "status": "done",
+   "steps": [
+    {
+     "step": "01-verify-slot.sh",
+     "start": "2026-10-01T05:59:16Z",
+     "rc": 0,
+     "end": "2026-10-01T05:59:17Z"
+    }
+   ]
+  },
+  {
+   "sa": "SA4",
+   "brief": "SA4 – Tier 3 \"Legacy\" (Kenya) hero: Athar-branded modular containerised data centre with solar canopy in Kenyan farmland; smallholder farmer using Swahili voice advice on a phone; clinic + school nearby",
+   "pid": 4133,
+   "pgid": 4122,
+   "started": "2026-10-01T04:22:18Z",
+   "ended": "2026-10-01T06:00:21Z",
+   "status": "done",
+   "steps": [
+    {
+     "step": "01-verify-slot.sh",
+     "start": "2026-10-01T05:59:16Z",
+     "rc": 0,
+     "end": "2026-10-01T05:59:17Z"
+    }
+   ]
+  },
+  {
+   "sa": "SA5",
+   "brief": "SA5 – Ownership CONCEPT RENDER montage (3 panels): (1) young local operators trained + certified inside the Athar node, (2) handover to the national entity, (3) operators running the node; keep the CONCEPT RENDER label, placed legibly",
+   "pid": 4134,
+   "pgid": 4123,
+   "started": "2026-10-01T04:22:18Z",
+   "ended": "2026-10-01T06:00:21Z",
+   "status": "done",
+   "steps": [
+    {
+     "step": "01-verify-slot.sh",
+     "start": "2026-10-01T05:59:16Z",
+     "rc": 0,
+     "end": "2026-10-01T05:59:17Z"
+    }
+   ]
+  },
+  {
+   "sa": "SA6",
+   "brief": "SA6 – Slide 38 strip: rewire the \"TIER PROGRESSION (REUSED FROM SLIDE 29)\" strip to reuse SA5 images exactly (truthful label); keep \"Product film still · at 16.7 s\"; add gutter above the CTA",
+   "pid": 4136,
+   "pgid": 4124,
+   "started": "2026-10-01T04:22:18Z",
+   "ended": "2026-10-01T06:00:21Z",
+   "status": "done",
+   "steps": [
+    {
+     "step": "01-verify-slide38.sh",
+     "start": "2026-10-01T05:59:16Z",
+     "rc": 0,
+     "end": "2026-10-01T05:59:51Z"
+    }
+   ]
+  },
+  {
+   "sa": "SA7",
+   "brief": "SA7 – Source tile grid: official PIB India logo (GoI/PIB emblem lockup from pib.gov.in) in the identical tile treatment; fix the clipped badge; audit every source tile (no plain-text fallbacks)",
+   "pid": 4137,
+   "pgid": 4125,
+   "started": "2026-10-01T04:22:18Z",
+   "ended": "2026-10-01T06:00:21Z",
+   "status": "done",
+   "steps": [
+    {
+     "step": "01-verify-tiles.sh",
+     "start": "2026-10-01T05:59:16Z",
+     "rc": 0,
+     "end": "2026-10-01T05:59:41Z"
+    }
+   ]
+  },
+  {
+   "sa": "SA8",
+   "brief": "SA8 – Deck-wide sweep (39 slides × EN/AR): find remaining illustrated / off-palette / semantically wrong AI images; fill batch 2 to exactly 5 with replacements or retakes",
+   "pid": 4138,
+   "pgid": 4126,
+   "started": "2026-10-01T04:22:18Z",
+   "ended": "2026-10-01T06:00:20Z",
+   "status": "done",
+   "steps": [
+    {
+     "step": "01-sweep.sh",
+     "start": "2026-10-01T04:33:52Z",
+     "rc": 0,
+     "end": "2026-10-01T04:34:14Z"
+    },
+    {
+     "step": "02-sweep-fixed.sh",
+     "start": "2026-10-01T04:35:36Z",
+     "rc": 0,
+     "end": "2026-10-01T04:36:31Z"
+    }
+   ]
+  },
+  {
+   "sa": "SA9",
+   "brief": "SA9 – Finishing: exact Athar master composited (perspective warp), unified warm cream/navy/gold grade, 3:2 no letterbox, AVIF/WebP + PNG fallback, alt text; truthful labels only where untruthful",
+   "pid": 4139,
+   "pgid": 4127,
+   "started": "2026-10-01T04:22:18Z",
+   "ended": "2026-10-01T06:00:21Z",
+   "status": "done",
+   "steps": [
+    {
+     "step": "01-verify-slot.sh",
+     "start": "2026-10-01T05:59:16Z",
+     "rc": 0,
+     "end": "2026-10-01T05:59:17Z"
+    }
+   ]
+  },
+  {
+   "sa": "SA10",
+   "brief": "SA10 – Regression guard: DOM text-diff EN+AR (zero copy/figure change; only img src/alt, badge removal, PIB logo may differ); render ledger + provenance; before/after screenshots of every touched slide",
+   "pid": 4135,
+   "pgid": 4128,
+   "started": "2026-10-01T04:22:18Z",
+   "ended": "2026-10-01T06:00:20Z",
+   "status": "done",
+   "steps": [
+    {
+     "step": "01-before-snapshot.sh",
+     "start": "2026-10-01T04:22:50Z",
+     "rc": 0,
+     "end": "2026-10-01T04:23:44Z"
+    },
+    {
+     "step": "02-before-snapshot-fixed.sh",
+     "start": "2026-10-01T04:35:36Z",
+     "rc": 0,
+     "end": "2026-10-01T04:36:31Z"
+    },
+    {
+     "step": "03-guide-qa-scenarios.sh",
+     "start": "2026-10-01T05:42:45Z",
+     "rc": 1,
+     "end": "2026-10-01T05:44:59Z"
+    },
+    {
+     "step": "04-guide-qa-scenarios-after-fix.sh",
+     "start": "2026-10-01T05:48:57Z",
+     "rc": 1,
+     "end": "2026-10-01T05:51:00Z"
+    },
+    {
+     "step": "05-guide-qa-scenarios-final.sh",
+     "start": "2026-10-01T05:52:36Z",
+     "rc": 1,
+     "end": "2026-10-01T05:54:38Z"
+    },
+    {
+     "step": "06-touched-shots.sh",
+     "start": "2026-10-01T05:56:48Z",
+     "rc": 0,
+     "end": "2026-10-01T05:58:18Z"
+    }
+   ]
+  }
+ ]
+}

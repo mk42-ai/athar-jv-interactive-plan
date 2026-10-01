@@ -2,7 +2,7 @@
   "$schema": "https://openapi.vercel.sh/vercel.json",
   "framework": null,
   "installCommand": "npm install --no-audit --no-fund --ignore-scripts || true",
-  "buildCommand": "node -e \"console.log('Athar Open Agentic Pact deck v1.5.2: pact-deck/dist is prebuilt (commit 093b0673) - nothing to build')\"",
+  "buildCommand": "node -e \"console.log('Athar Open Agentic Pact deck v1.5.4: pact-deck/dist is prebuilt - nothing to build')\"",
   "outputDirectory": "pact-deck/dist",
   "cleanUrls": false,
   "trailingSlash": false,

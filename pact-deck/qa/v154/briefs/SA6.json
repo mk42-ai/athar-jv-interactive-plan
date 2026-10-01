@@ -1,0 +1,11 @@
+{
+ "title": "SA6 – Slide 38 strip: rewire the \"TIER PROGRESSION (REUSED FROM SLIDE 29)\" strip to reuse SA5 images exactly (truthful label); keep \"Product film still · at 16.7 s\"; add gutter above the CTA",
+ "write_partition": [
+  "dist/js/athar-os.js (nation banner only)",
+  "dist/assets/release-v154.css (§E)"
+ ],
+ "sa": "SA6",
+ "model_requested": "Sonnet 5.5 (not available to terminal workers — scripted steps authored by the lead)",
+ "timeout_s": 18000,
+ "step_timeout_s": 1800
+}

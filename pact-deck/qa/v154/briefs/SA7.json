@@ -1,0 +1,13 @@
+{
+ "title": "SA7 – Source tile grid: official PIB India logo (GoI/PIB emblem lockup from pib.gov.in) in the identical tile treatment; fix the clipped badge; audit every source tile (no plain-text fallbacks)",
+ "write_partition": [
+  "dist/assets/news/marks/*",
+  "dist/js/impact-tiers.js (NEWS marks only)",
+  "dist/assets/news/credits.json",
+  "dist/assets/release-v154.css (§D)"
+ ],
+ "sa": "SA7",
+ "model_requested": "Sonnet 5.5 (not available to terminal workers — scripted steps authored by the lead)",
+ "timeout_s": 18000,
+ "step_timeout_s": 1800
+}

@@ -1,0 +1,497 @@
+{
+ "schema": "athar.narration.cues/1",
+ "version": "v1.5.4 (re-created 2026-10-01 from the v1.5.2 manifest texts; method: sentence split, proportional-by-characters timing over the measured clip durations, slide assignment per the v1.5.3 cue table)",
+ "generated_utc": "2026-10-01T03:03:18Z",
+ "method": "proportional-by-characters sentence split (unchanged); start/end rescaled to the measured clip durations on 2026-10-01T03:03:18Z by scripts/narration/measure-cues.mjs (music-metadata)",
+ "clips": [
+  {
+   "clipId": "NAR-00",
+   "section": "Welcome",
+   "file": "/audio/guide/guide-00-welcome-lhbIUXFwLO.mp3",
+   "durationSec": 17.16,
+   "slides": [
+    1
+   ],
+   "cues": [
+    {
+     "i": 1,
+     "slide": 1,
+     "anchor": "s1-c1",
+     "start": 0,
+     "end": 5.39,
+     "text": "Welcome to the Athar Open Agentic Pact, a community proposal from ODA and AIREV."
+    },
+    {
+     "i": 2,
+     "slide": 1,
+     "anchor": "s1-c2",
+     "start": 5.39,
+     "end": 14.47,
+     "text": "This guided narration walks you through the pact, its community model, six pillars, governance, impact tiers, and the Athar OS roadmap."
+    },
+    {
+     "i": 3,
+     "slide": 1,
+     "anchor": "s1-c3",
+     "start": 14.47,
+     "end": 17.16,
+     "text": "Use the arrows to move at your own pace."
+    }
+   ]
+  },
+  {
+   "clipId": "NAR-01",
+   "section": "01 The pact",
+   "file": "/audio/guide/guide-01-the-pact-df1pHtGsVr.mp3",
+   "durationSec": 25.03,
+   "slides": [
+    2,
+    3
+   ],
+   "cues": [
+    {
+     "i": 1,
+     "slide": 2,
+     "anchor": "s2-c1",
+     "start": 0,
+     "end": 1.53,
+     "text": "Section one, the Pact."
+    },
+    {
+     "i": 2,
+     "slide": 2,
+     "anchor": "s2-c2",
+     "start": 1.53,
+     "end": 12.13,
+     "text": "The Athar Open Agentic Pact is an open commitment between institutions, partners and platforms to learn, build and deploy agentic AI for public benefit."
+    },
+    {
+     "i": 3,
+     "slide": 3,
+     "anchor": "s3-c1",
+     "start": 12.13,
+     "end": 18.2,
+     "text": "It is a community proposal from ODA and AI Rev, designed as a community, not a product."
+    },
+    {
+     "i": 4,
+     "slide": 3,
+     "anchor": "s3-c2",
+     "start": 18.2,
+     "end": 25.03,
+     "text": "Signatories agree on shared standards, an open plugin approach and measurable real-world outcomes."
+    }
+   ]
+  },
+  {
+   "clipId": "NAR-02",
+   "section": "02 Community model",
+   "file": "/audio/guide/guide-02-community-model-9gUnFBtxrM.mp3",
+   "durationSec": 26.7,
+   "slides": [
+    4,
+    5,
+    6,
+    7,
+    8,
+    9,
+    10,
+    11,
+    12
+   ],
+   "cues": [
+    {
+     "i": 1,
+     "slide": 4,
+     "anchor": "s4-c1",
+     "start": 0,
+     "end": 2.17,
+     "text": "Section two, the Community Model."
+    },
+    {
+     "i": 2,
+     "slide": 7,
+     "anchor": "s7-c1",
+     "start": 2.17,
+     "end": 11.12,
+     "text": "Every webinar, chapter event and challenge should lead somewhere real, so the model is built around four outcomes for every participant."
+    },
+    {
+     "i": 3,
+     "slide": 11,
+     "anchor": "s11-c1",
+     "start": 11.12,
+     "end": 26.7,
+     "text": "Learn agentic AI, build a useful agent through the Builder Journey and Marketplace, deploy it through a named Accountable Institution, and measure a real-world benefit with baseline evidence of time saved, better service, or wider reach."
+    }
+   ]
+  },
+  {
+   "clipId": "NAR-03",
+   "section": "03 Six pillars",
+   "file": "/audio/guide/guide-03-six-pillars-yxVqZJ2k1a.mp3",
+   "durationSec": 19.41,
+   "slides": [
+    13,
+    14,
+    15,
+    16,
+    17,
+    18
+   ],
+   "cues": [
+    {
+     "i": 1,
+     "slide": 13,
+     "anchor": "s13-c1",
+     "start": 0,
+     "end": 1.81,
+     "text": "Section three, six pillars."
+    },
+    {
+     "i": 2,
+     "slide": 13,
+     "anchor": "s13-c2",
+     "start": 1.81,
+     "end": 8.6,
+     "text": "Plugins are the connective tissue: one shared plugin standard, so every integration works everywhere."
+    },
+    {
+     "i": 3,
+     "slide": 14,
+     "anchor": "s14-c1",
+     "start": 8.6,
+     "end": 12.83,
+     "text": "Reusable skills are built once and shared across the community."
+    },
+    {
+     "i": 4,
+     "slide": 17,
+     "anchor": "s17-c1",
+     "start": 12.83,
+     "end": 19.41,
+     "text": "Universal API licences are managed by Athar, giving members access without duplicated procurement."
+    }
+   ]
+  },
+  {
+   "clipId": "NAR-04",
+   "section": "04 Pledge & signing",
+   "file": "/audio/guide/guide-04-pledge-and-signing-PWeXZj1Rgc.mp3",
+   "durationSec": 24.56,
+   "slides": [
+    19,
+    20
+   ],
+   "cues": [
+    {
+     "i": 1,
+     "slide": 19,
+     "anchor": "s19-c1",
+     "start": 0,
+     "end": 2.09,
+     "text": "Section four, Pledge and Signing."
+    },
+    {
+     "i": 2,
+     "slide": 19,
+     "anchor": "s19-c2",
+     "start": 2.09,
+     "end": 5.08,
+     "text": "Joining the Pact is a simple public commitment."
+    },
+    {
+     "i": 3,
+     "slide": 20,
+     "anchor": "s20-c1",
+     "start": 5.08,
+     "end": 13.71,
+     "text": "A signatory chooses its roles, sign, govern, build or learn, and pledges to contribute to at least one of the four participant outcomes."
+    },
+    {
+     "i": 4,
+     "slide": 20,
+     "anchor": "s20-c2",
+     "start": 13.71,
+     "end": 24.56,
+     "text": "Signing brings access to the learning pathway, the builder journey, and the plugin standard, together with a commitment to report outcomes through the shared impact tiers."
+    }
+   ]
+  },
+  {
+   "clipId": "NAR-05",
+   "section": "05 Actors & roles",
+   "file": "/audio/guide/guide-05-actors-and-roles-0PbyoFNYNV.mp3",
+   "durationSec": 31.53,
+   "slides": [
+    21,
+    22,
+    23,
+    24,
+    25
+   ],
+   "cues": [
+    {
+     "i": 1,
+     "slide": 21,
+     "anchor": "s21-c1",
+     "start": 0,
+     "end": 19.59,
+     "text": "Section five, Actors and Roles, institutions, partners and platforms building the Athar ecosystem together, ODA and AIREV sign and govern, with AIREV, OnDemand, e& and ai& and Discord building, UNDP, UNICEF, IFRC, WFP and UNHCR sign and learn."
+    },
+    {
+     "i": 2,
+     "slide": 23,
+     "anchor": "s23-c1",
+     "start": 19.59,
+     "end": 26.77,
+     "text": "The UAE Ministry of Foreign Trade signs and governs and the United Arab Emirates governs."
+    },
+    {
+     "i": 3,
+     "slide": 23,
+     "anchor": "s23-c2",
+     "start": 26.77,
+     "end": 31.53,
+     "text": "Every actor has a clear role, sign, govern, build or learn."
+    }
+   ]
+  },
+  {
+   "clipId": "NAR-06",
+   "section": "06 Governance & roadmap",
+   "file": "/audio/guide/guide-06-governance-and-roadmap-kyzmCSHcw8.mp3",
+   "durationSec": 15.73,
+   "slides": [
+    26,
+    27
+   ],
+   "cues": [
+    {
+     "i": 1,
+     "slide": 26,
+     "anchor": "s26-c1",
+     "start": 0,
+     "end": 2.17,
+     "text": "Section six, governance and roadmap."
+    },
+    {
+     "i": 2,
+     "slide": 26,
+     "anchor": "s26-c2",
+     "start": 2.17,
+     "end": 7.14,
+     "text": "An open steering council sets the shared plugin standard and approves the roadmap."
+    },
+    {
+     "i": 3,
+     "slide": 27,
+     "anchor": "s27-c1",
+     "start": 7.14,
+     "end": 15.73,
+     "text": "Decisions, releases, and outcome reports are published, so every member can see how priorities are set and how the platform evolves over time."
+    }
+   ]
+  },
+  {
+   "clipId": "NAR-07",
+   "section": "07 Impact & funding",
+   "file": "/audio/guide/guide-07-impact-and-funding-vWkiINp1IS.mp3",
+   "durationSec": 30.33,
+   "slides": [
+    28,
+    29,
+    30,
+    31,
+    32,
+    33
+   ],
+   "cues": [
+    {
+     "i": 1,
+     "slide": 28,
+     "anchor": "s28-c1",
+     "start": 0,
+     "end": 2.33,
+     "text": "Section seven, Impact and Funding."
+    },
+    {
+     "i": 2,
+     "slide": 29,
+     "anchor": "s29-c1",
+     "start": 2.33,
+     "end": 6.86,
+     "text": "Three impact tiers, one delivery model, access, ownership, legacy."
+    },
+    {
+     "i": 3,
+     "slide": 29,
+     "anchor": "s29-c2",
+     "start": 6.86,
+     "end": 9.68,
+     "text": "A funder can enter at any tier and climb."
+    },
+    {
+     "i": 4,
+     "slide": 30,
+     "anchor": "s30-c1",
+     "start": 9.68,
+     "end": 21.41,
+     "text": "Every agreement includes named cohorts and activation targets, independent evaluator baselines, quarterly outcome reports, and open book costs with unspent funds returned."
+    },
+    {
+     "i": 5,
+     "slide": 31,
+     "anchor": "s31-c1",
+     "start": 21.41,
+     "end": 30.33,
+     "text": "Universal API licenses, marketplace revenue share and sovereign pilot options fund the model so each partner can choose what fits."
+    }
+   ]
+  },
+  {
+   "clipId": "NAR-08",
+   "section": "08 Athar OS",
+   "file": "/audio/guide/guide-08-athar-os-Ib4oKe91OD.mp3",
+   "durationSec": 33.02,
+   "slides": [
+    34,
+    35,
+    36,
+    37,
+    38
+   ],
+   "cues": [
+    {
+     "i": 1,
+     "slide": 34,
+     "anchor": "s34-c1",
+     "start": 0,
+     "end": 2.14,
+     "text": "Section eight, Athar OS."
+    },
+    {
+     "i": 2,
+     "slide": 36,
+     "anchor": "s36-c1",
+     "start": 2.14,
+     "end": 7.96,
+     "text": "The roadmap runs now in Q4, 2026, next in 2027 and later in 2028."
+    },
+    {
+     "i": 3,
+     "slide": 38,
+     "anchor": "s38-c1",
+     "start": 7.96,
+     "end": 9.57,
+     "text": "Nations empowered."
+    },
+    {
+     "i": 4,
+     "slide": 38,
+     "anchor": "s38-c2",
+     "start": 9.57,
+     "end": 15.12,
+     "text": "Lebanon, Access, 1 million Lebanese AI experts at $10 million."
+    },
+    {
+     "i": 5,
+     "slide": 38,
+     "anchor": "s38-c3",
+     "start": 15.12,
+     "end": 21.83,
+     "text": "India, ownership, 100 government schools and 10,000 AI PCs at 13.7 million."
+    },
+    {
+     "i": 6,
+     "slide": 38,
+     "anchor": "s38-c4",
+     "start": 21.83,
+     "end": 33.02,
+     "text": "Kenya, Legacy, a Kenyan-owned sovereign node at around 33 million transferred to a national entity after five to seven years."
+    }
+   ]
+  },
+  {
+   "clipId": "NAR-09",
+   "section": "Join the pact",
+   "file": "/audio/guide/guide-09-join-the-pact-Hx4Ywy843S.mp3",
+   "durationSec": 26.57,
+   "slides": [
+    39
+   ],
+   "cues": [
+    {
+     "i": 1,
+     "slide": 39,
+     "anchor": "s39-c1",
+     "start": 0,
+     "end": 0.99,
+     "text": "Join the Pact."
+    },
+    {
+     "i": 2,
+     "slide": 39,
+     "anchor": "s39-c2",
+     "start": 0.99,
+     "end": 9.61,
+     "text": "You have seen the agreement, the community model, the six pillars, the actors, the roadmap, the impact tiers and Athar OS."
+    },
+    {
+     "i": 3,
+     "slide": 39,
+     "anchor": "s39-c3",
+     "start": 9.61,
+     "end": 11.59,
+     "text": "Now the invitation is yours."
+    },
+    {
+     "i": 4,
+     "slide": 39,
+     "anchor": "s39-c4",
+     "start": 11.59,
+     "end": 14.91,
+     "text": "Choose your role, sign, govern, build or learn."
+    },
+    {
+     "i": 5,
+     "slide": 39,
+     "anchor": "s39-c5",
+     "start": 14.91,
+     "end": 16.82,
+     "text": "Commit to one real outcome."
+    },
+    {
+     "i": 6,
+     "slide": 39,
+     "anchor": "s39-c6",
+     "start": 16.82,
+     "end": 19.65,
+     "text": "The founding cohort starts this quarter."
+    },
+    {
+     "i": 7,
+     "slide": 39,
+     "anchor": "s39-c7",
+     "start": 19.65,
+     "end": 26.01,
+     "text": "Open the pledge, add your name and help us build a Gentick AI that leaves a lasting trace."
+    },
+    {
+     "i": 8,
+     "slide": 39,
+     "anchor": "s39-c8",
+     "start": 26.01,
+     "end": 26.57,
+     "text": "Join us."
+    }
+   ]
+  }
+ ],
+ "measured": {
+  "utc": "2026-10-01T03:03:18Z",
+  "tool": "music-metadata MPEG 1 Layer 3 44100Hz",
+  "maxDriftSec": 0.05,
+  "clipsRetimed": 10
+ }
+}

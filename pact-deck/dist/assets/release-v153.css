@@ -1,0 +1,156 @@
+/* Athar Open Agentic Pact deck — v1.5.3/v1.5.4 release stylesheet (re-created 2026-10-01 from the 2026-09-30 specification)
+   1) layout space reserved for the docked Guide bar (nothing is obscured: stage, footer and chevrons keep their own space)
+   2) slide 38 'Nations empowered': side column (film still + tier banner), no empty zone, banner at its native 5:1 ratio,
+      imagery label below the strip, real tabs with tier badges
+   3) slide 29 tier cards: hero images at 3:2 (no crop) with a capped height, equal card heights, chevrons in the gutters
+   4) footer at phone width: the lock-up text wraps instead of clipping; chevrons never sit under the footer/guide bar
+   5) AIREV marks: every remaining raster/placeholder tile uses the official wordmark (see cobrand.js)
+   7) the 2026-09-30 ui-validator pass: text-colour tokens, RTL stage origin, 44 px targets, phone grids                    */
+
+/* 1 — reserved space for the docked guide bar */
+html.has-guide-bar .stage{inset-block-end:calc(var(--footer-h,56px) + var(--guide-h,52px))}
+/* desktop: the stage keeps its 844 px design height and is scaled to fit above the bar (--guide-fit is set by narration.js:
+   (viewport − footer − guide bar) / (viewport − footer)), so every slide keeps the layout it was QA'd with, only ~6 % smaller */
+@media (min-width:601px){
+  html.has-guide-bar .stage{inset-block-end:auto;inset-inline-end:auto;inline-size:calc((100vw - var(--rail-w,0px)) / var(--guide-fit,1));block-size:calc(100vh - var(--footer-h,56px));transform:scale(var(--guide-fit,1));transform-origin:top left}
+  html[dir=rtl].has-guide-bar .stage{transform-origin:top right} /* Arabic: scale about the inline-start corner, else the deck is pushed 79 px off the left edge */
+}
+html.has-guide-bar .arrow{inset-block-start:calc(50% - (var(--footer-h,56px) + var(--guide-h,52px)) / 2)}
+html.has-guide-bar .intro-gate,html.has-guide-bar .intro-film{inset-block-end:calc(var(--footer-h,56px) + var(--guide-h,52px))}
+/* 3b — chevrons sit in the gutters beside the slide body, not over it (44 px wide, at the stage edges) */
+.arrow{inline-size:44px}
+.arrow.prev{inset-inline-start:var(--rail-w,0px)}
+.arrow.next{inset-inline-end:0}
+@media (max-width:600px){.arrow{display:none}}
+
+/* 2 — slide 38 */
+#s-aos-nations .aos-countries{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:8px}
+#s-aos-nations .aos-country{position:relative;display:flex;align-items:center;justify-content:space-between;gap:8px;min-block-size:44px;padding:6px 12px;border:1px solid var(--stone);border-radius:10px;background:var(--white);color:var(--athar-navy);cursor:pointer;text-align:start}
+#s-aos-nations .aos-country:hover{border-color:var(--legacy-gold)}
+#s-aos-nations .aos-country:focus-visible{outline:2px solid var(--falaj-teal);outline-offset:2px}
+#s-aos-nations .aos-country.is-on{border-color:var(--falaj-teal);box-shadow:inset 0 -3px 0 var(--falaj-teal);background:#EAF4F1}
+#s-aos-nations .aos-country .aos-seg-t{font-weight:600;font-size:clamp(12px,.95vw,15px)}
+#s-aos-nations .aos-tier-badge{display:inline-flex;align-items:center;border-radius:999px;padding:2px 9px;font-size:.6rem;letter-spacing:.08em;text-transform:uppercase;font-weight:600;border:1px solid currentColor;white-space:nowrap}
+#s-aos-nations .aos-tier-badge--t1{color:var(--legacy-gold-text,#7A6130)}#s-aos-nations .aos-tier-badge--t2{color:var(--gulf-blue)}#s-aos-nations .aos-tier-badge--t3{color:var(--falaj-teal-text,#0B6E64)}
+#s-aos-nations .aos-country.is-on .aos-tier-badge{background:var(--white)}
+#s-aos-nations .aos-nation{grid-template-columns:minmax(0,1fr) minmax(280px,34%);align-items:start;gap:clamp(12px,1.4vw,24px)}
+#s-aos-nations .aos-nation-copy{display:flex;flex-direction:column;justify-content:flex-start;gap:clamp(8px,1.2vh,14px)}
+#s-aos-nations .aos-nation-side{display:flex;flex-direction:column;gap:clamp(8px,1.2vh,14px);min-inline-size:0;min-block-size:0}
+#s-aos-nations .aos-nation-side .aos-plate--s5,#s-aos-nations .aos-nation-side .rs-still{flex:0 0 auto;max-inline-size:100%;align-self:stretch}
+#s-aos-nations .aos-nation-side .rs-still img,#s-aos-nations .aos-plate--s5 img{aspect-ratio:16/10;object-fit:cover;inline-size:100%;block-size:auto}
+#s-aos-nations .aos-nation-banner{margin:0;position:relative;border-radius:6px;overflow:visible;border:0;background:transparent;max-block-size:none;flex:0 0 auto}
+#s-aos-nations .aos-nation-banner picture{display:block;border:1px solid var(--stone);border-radius:6px;overflow:hidden;background:var(--manuscript)}
+#s-aos-nations .aos-nation-banner img{display:block;inline-size:100%;block-size:auto;aspect-ratio:1600/320;object-fit:cover;max-block-size:none}
+#s-aos-nations .aos-nation-banner .aos-tag,#s-aos-nations .aos-tag--below{position:static;display:block;margin:4px 0 0;font-size:.55rem;letter-spacing:.06em;text-transform:uppercase;color:var(--slate);background:transparent;padding:0;border:0;white-space:normal;line-height:1.3}
+#s-aos-nations .aos-nation-copy .aos-mini{margin-block-start:auto;padding:8px 10px;border:1px solid var(--stone);border-radius:6px;background:var(--white)}
+#s-aos-nations .aos-mini-track{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:6px;align-items:start}
+#s-aos-nations .aos-mini-ph{display:flex;flex-direction:column;align-items:flex-start;gap:4px;min-inline-size:0}
+#s-aos-nations .aos-mini-t{white-space:normal;overflow-wrap:anywhere;font-size:clamp(9.5px,.7vw,11px);line-height:1.25}
+#s-aos-nations .aos-nation-foot{margin-block-start:auto}
+@media (max-height:760px){#s-aos-nations .aos-nation-side .rs-still img,#s-aos-nations .aos-plate--s5 img{aspect-ratio:2/1}}
+@media (min-width:1200px){
+  #s-aos-nations .aos-nation-title{font-size:clamp(15px,1.3vw,21px);line-height:1.25}
+  #s-aos-nations .aos-nation-dl{font-size:clamp(12px,1vw,15px);line-height:1.5}
+  #s-aos-nations .aos-nation-dl dd{margin-block-end:8px}
+  #s-aos-nations .aos-wdi .it-wbtag,#s-aos-nations .aos-evidence-link,#s-aos-nations .aos-wdi-src,#s-aos-nations .it-wblabel{font-size:clamp(10.5px,.85vw,13px)}
+  #s-aos-nations .aos-mini-t{font-size:clamp(10.5px,.8vw,12.5px)}
+  #s-aos-nations .aos-amount{font-size:clamp(18px,1.6vw,26px)}
+  #s-aos-nations .aos-nation-copy{gap:clamp(10px,1.5vh,18px);padding:clamp(12px,1.6vh,20px) clamp(14px,1.4vw,22px)}
+}
+
+/* 3 — slide 29 tier cards */
+#s-it-tiers .it-tiers{align-items:stretch;grid-auto-rows:auto;block-size:auto;flex:0 0 auto}
+#s-it-tiers .it-tier{display:flex;flex-direction:column;block-size:auto;min-block-size:0}
+#s-it-tiers .it-tier>*{flex:0 0 auto}
+#s-it-tiers .it-tier .it-impact{margin-block-start:auto}
+#s-it-tiers .it-tier .it-vis,#s-it-tiers .it-tier figure{flex:0 0 auto}
+#s-it-tiers .it-product{block-size:auto;max-block-size:none;flex:0 0 auto}
+#s-it-tiers .it-product picture{display:block;block-size:auto}
+#s-it-tiers .it-product img{inline-size:100%;block-size:auto;aspect-ratio:3/2;max-block-size:clamp(100px,16.5vh,160px);object-fit:contain;background:var(--parchment)}
+#s-it-tiers .it-vis-cap{max-inline-size:calc(100% - 12px)}
+
+/* 4 — footer + chevrons at phone width; slides scroll instead of cropping their content */
+@media (max-width:600px){
+  :root{--footer-h:64px}
+  .pagefooter{padding:4px 10px;gap:6px;align-items:center}
+  .pagefooter{position:fixed;flex-wrap:wrap}
+  .pagefooter .footer-left{flex:1 1 100%;min-inline-size:0;display:flex;flex-wrap:wrap;gap:2px 8px;align-items:center;padding-inline-end:120px}
+  .pagefooter .footer-right{position:absolute;inset-inline-end:10px;inset-block-start:8px;display:inline-flex;gap:8px;align-items:center}
+  .pagefooter .footer-left>[data-testid=footer-text]{flex:1 1 100%;order:9;display:block;white-space:normal;overflow:visible;text-overflow:clip;font-size:.56rem;line-height:1.15;max-inline-size:100%}
+  .pagefooter .aps-footer{display:none}
+  .pagefooter .footer-right{flex:0 0 auto;font-size:.6rem}
+  .slide.is-active{overflow-y:auto;overflow-x:hidden;overscroll-behavior:contain;-webkit-overflow-scrolling:touch}
+  .slide.is-active>.s-body{block-size:auto;min-block-size:100%}
+  #s-aos-nations .aos-nation{grid-template-columns:1fr}
+  #s-aos-nations .aos-countries{grid-template-columns:1fr;gap:6px}
+  #s-aos-nations .aos-country{min-block-size:44px}
+}
+
+/* 5 — AIREV marks: the official wordmark is light-on-dark; on light tiles it is shown in navy via the same filter as the footer */
+img.v153-airev-official{object-fit:contain;filter:brightness(.18) saturate(1.4)}
+.it-tile--dark img.v153-airev-official,.tile--dark img.v153-airev-official{filter:none}
+
+/* 6 — keep the three densest slides inside the frame at every desktop height (measured after the stage scale-to-fit) */
+#s-aos-tour .rs-still{max-block-size:50vh}
+#s-aos-tour .rs-still img{max-block-size:50vh;object-fit:contain;block-size:auto}
+#s-aos-tour .aos-note{margin-block:4px 0;line-height:1.3}
+#s-aos-tour .rs-src{line-height:1.25}
+#s-it-metrics .it-card-photo img{block-size:clamp(84px,14vh,160px)}
+#s-it-metrics .it-news-grid{gap:6px}
+#s-it-metrics .it-news-head{-webkit-line-clamp:2;line-clamp:2}
+#s-it-metrics .it-footnotes{padding-block-start:2px;gap:1px}
+html[lang=ar] #s-aos-roadmap .aos-ms-t{font-size:10px;line-height:1.2}
+html[lang=ar] #s-aos-roadmap .aos-tl-grid{gap:4px}
+html[lang=ar] #s-aos-roadmap .aos-ms{padding-block:3px}
+#s-aos-tour .aos-app{flex:1 1 auto;min-block-size:0}
+#s-aos-tour .rs-tab,#s-aos-tour .rs-holder,#s-aos-tour .rs-device{min-block-size:0;max-block-size:100%}
+#s-aos-tour .rs-device{aspect-ratio:auto}
+#s-aos-tour .rs-device img,#s-aos-tour .rs-device video,#s-aos-tour .rs-screen{max-block-size:100%;block-size:auto;object-fit:contain}
+#s-aos-tour .aos-note,#s-aos-tour .rs-src{flex:0 0 auto}
+
+/* 7 — the 2026-09-30 ui-validator pass (39 slides × 1440×900 / 390×844 × EN/AR) */
+/* 7a text-colour tokens: WCAG 4.5:1 on Manuscript/Parchment/white for every small text that used the brand fills as ink */
+:root{--slate:#5B6470;--falaj-teal-text:#0B6E64;--legacy-gold-text:#7A6130}
+.v152-x{color:var(--slate)}
+#s-it-metrics .it-tag{color:var(--falaj-teal-text)}
+.it-endorse-sep{color:var(--legacy-gold-text)}
+.aos-check{background:var(--falaj-teal-text);color:var(--white,#fff)} /* decorative ✓ disc: white on teal-text 6.1:1 */
+.aos-wdi-src{color:var(--slate)} /* was navy at 60 % opacity (4.3:1) */
+.topctl .ctl-btn{min-block-size:44px;min-inline-size:44px;box-sizing:border-box}
+.aos-plate figcaption.aos-tag:not(.aos-tag--below),.rs-still figcaption.aos-tag:not(.aos-tag--below),.aos-plate .aos-tag:not(.aos-tag--below){color:var(--white,#fff)} /* film-still tags read white on their navy strip */
+/* 7c 44 px targets: Replay intro (was 28 px), language / overview toggles (34 px), rail links (33 px), closing CTA */
+footer.pagefooter .intro-replay{min-block-size:44px;min-inline-size:44px;box-sizing:border-box}
+.lang-toggle,.overview-toggle{min-block-size:44px;min-inline-size:44px;box-sizing:border-box}
+nav.rail ol a{min-block-size:44px;display:flex;align-items:center;box-sizing:border-box}
+#s-closing .cta{min-block-size:47px;box-sizing:border-box} /* 47 CSS px → 44 px after the 0.94 stage scale */
+/* 7e phone (≤600 px): the slides whose desktop grids clipped text at 390 px */
+@media (max-width:600px){
+  #s-it-metrics .it-news-cols.it-news-grid{grid-template-columns:1fr;grid-auto-rows:auto}
+  #s-it-metrics .it-news-grid .it-news-head{-webkit-line-clamp:3;line-clamp:3}
+  #s-it-metrics .it-chip,#s-it-metrics .it-wbtag,#s-it-metrics .it-tag{white-space:normal;text-overflow:clip}
+  #s-aos-overview .aos-harness{grid-template-columns:1fr}
+  #s-aos-overview .aos-layer-detail{block-size:auto;min-block-size:0;overflow:visible}
+  #s-aos-tour .aos-app{flex:0 0 auto;min-block-size:0}
+  #s-aos-tour .rs-tab,#s-aos-tour .rs-holder,#s-aos-tour .rs-device{max-block-size:none;block-size:auto}
+  #s-aos-tour .rs-device{aspect-ratio:16/10}
+  #s-aos-tour .rs-device img,#s-aos-tour .rs-device video,#s-aos-tour .rs-screen{max-block-size:none;block-size:auto;inline-size:100%}
+  #s-aos-tour .rs-still,#s-aos-tour .rs-still img{max-block-size:none}
+  #s-aos-deploy .aos-deploy-top{grid-template-columns:1fr}
+  #s-aos-deploy .aos-where{overflow-x:auto;-webkit-overflow-scrolling:touch}
+  #s-aos-deploy .aos-where-col,#s-aos-deploy .aos-where-label{white-space:normal;overflow-wrap:anywhere}
+  #s-aos-tour .rs-src{white-space:normal;overflow-wrap:anywhere}
+  #s-aos-tour .rs-cap{flex-wrap:wrap;min-inline-size:0}
+  #s-aos-tour .rs-cap > *{min-inline-size:0;max-inline-size:100%;white-space:normal;overflow-wrap:anywhere}
+  #s-pillar-universal-licence .al-owner,.al-owner{white-space:normal;overflow-wrap:anywhere;text-overflow:clip}
+  #s-aos-deploy .aos-plate .aos-tag,#s-aos-nations .aos-plate .aos-tag{white-space:normal;line-height:1.2;max-inline-size:calc(100% - 8px);overflow-wrap:anywhere}
+  #s-cover .cover-grid.v152-stage-host{block-size:auto;min-block-size:0;align-content:start;align-items:start}
+  #s-cover .cover-grid.v152-stage-host > .cover-copy{align-self:start}
+  #s-aos-tour .aos-tab,#s-aos-tour [data-testid=tour-lang],.avp .avp-bar .avp-btn,.aos-tab-hero.avp .avp-bar .avp-btn{min-block-size:44px;min-inline-size:44px;box-sizing:border-box}
+  #s-aos-nations .aos-evidence-link{display:flex;align-items:center;min-block-size:44px;padding-block:2px;box-sizing:border-box}
+}
+/* 7g 44 px targets inside the scaled desktop stage (0.94 → 47 CSS px) */
+@media (min-width:601px){
+  .cta,.nar-listen,#s-aos-nations .aos-country,#s-aos-tour .aos-tab,#s-aos-tour [data-testid=tour-lang],.avp .avp-bar .avp-btn,.aos-tab-hero.avp .avp-bar .avp-btn{min-block-size:47px;box-sizing:border-box}
+  #s-aos-tour [data-testid=tour-lang],.avp .avp-bar .avp-btn,.aos-tab-hero.avp .avp-bar .avp-btn{min-inline-size:47px}
+  #s-aos-nations .aos-evidence-link{display:flex;align-items:center;min-block-size:47px;padding-block:2px;box-sizing:border-box}
+}

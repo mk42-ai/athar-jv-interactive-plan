@@ -1,0 +1,37 @@
+/* Athar Open Agentic Pact deck — v1.5.4 release stylesheet (2026-10-01)
+   §A SA1 lock-up: badge removed in cobrand.js; Athar clear space (x = ATHAR wordmark cap height, Brand Guidelines FINAL v3 §2.10)
+      kept free around the strip lock-up; bilingual intro transcript never covered; Arabic block off the inline-end edge
+   §C slide 29: tier heroes + ownership montage (v1.5.4 concept renders, 3:2 / 3-panel montage), legible CONCEPT RENDER tag
+   §D slide 30: source tiles — one identical logo treatment, chips never clipped
+   §E slide 38: strip reuses the slide-29 montage; gutter above the Join-the-pact CTA                                          */
+
+/* §A — lock-up + transcript */
+#s-cover .pmark--ondemand,#s-closing .pmark--ondemand{display:none!important} /* belt-and-braces: element is removed by cobrand.js */
+.nar-intro{padding-inline-end:18px}
+.nar-intro-ar{padding-inline-start:10px;padding-inline-end:2px}
+html[dir=rtl] .nar-intro{padding-inline-start:16px}
+#s-cover .athar-partner-strip{z-index:1}
+#s-cover .cover-copy{position:relative;z-index:2}
+
+/* §C — slide 29: 3:2 tier heroes with NO letterbox/pillarbox (the frame shrinks to the photo instead of padding it),
+       three-panel montage at its native 1816:400, CONCEPT RENDER tags legible (solid chip, ≥ 4.5:1)                    */
+#s-it-tiers .it-product{align-self:center;inline-size:min(100%,calc(clamp(100px,16.5vh,160px) * 1.5));background:transparent}
+#s-it-tiers .it-product picture{display:block}
+#s-it-tiers .it-product img{inline-size:100%;block-size:auto;aspect-ratio:3/2;max-block-size:none;object-fit:cover;background:transparent}
+#s-it-tiers .it-vis-cap{font-size:9.5px;font-weight:600;letter-spacing:.07em;background:#0F1E2C;color:#fff;opacity:1;padding:2px 7px}
+.it-own-banner{block-size:auto;aspect-ratio:1816/400;inline-size:min(100%,560px,calc(clamp(64px,7.4vh,92px) * 4.54))}
+.it-own-banner img{object-fit:cover}
+.it-own-banner .it-vis-cap--band{inset-block-start:4px;inset-inline-start:4px;inset-block-end:auto;background:#0F1E2C;color:#fff;font-size:9.5px;font-weight:600;letter-spacing:.08em;padding:2px 8px;border-radius:3px;box-shadow:0 0 0 1px rgba(247,243,234,.85)}
+html[lang=ar] .it-own-banner .it-vis-cap--band{letter-spacing:0}
+@media (max-width:600px){.it-own-banner{inline-size:100%}}
+
+/* §E — slide 38: the strip is the slide-29 montage (same file, native ratio) + a gutter above the Join-the-pact CTA     */
+#s-aos-nations .aos-nation-banner img{aspect-ratio:1816/400;object-fit:cover}
+#s-aos-nations .aos-nation-banner{inline-size:min(100%,360px);margin-inline-start:auto} /* keeps ≥ 32 px of gutter above the CTA at every desktop size */
+html[dir=rtl] #s-aos-nations .aos-nation-banner{margin-inline-start:auto}
+#s-aos-nations [data-testid="join-pact-cta"]{margin-block-start:clamp(14px,2.2vh,24px)}
+
+/* §D — slide 30 source tiles: one treatment for every official mark; chips can wrap but never clip                       */
+.news-card .it-news-foot{flex-wrap:wrap;row-gap:3px;min-inline-size:0}
+.news-card .it-tag,.news-card .it-tierchip{max-inline-size:100%;overflow:visible;text-overflow:clip;white-space:nowrap}
+.news-card .it-news-mark img[src$="publisher-pib-official.png"]{max-block-size:calc(var(--it-mark-h) - 6px)}

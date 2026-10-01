@@ -1,3 +1,9 @@
+# Athar Open Agentic Pact deck — v1.5.4 (2026-10-01) · lock-up, concept renders, PIB mark, Guide fix
+
+See `CHANGELOG.md` → v1.5.4 for the full record (orchestration log, judge scorecard, DOM text-diff, guide tests). QA artefacts: `qa/v154/` (served at `/qa/v154/`), Guide suite: `npx playwright test -c tests/guide/playwright.config.mjs`.
+
+---
+
 # Athar Open Agentic Pact deck — v1.4.7 (2026-09-29) · image-integrity release
 
 Bilingual (EN/AR, RTL) **39-slide** community-pact deck by ODA × AIREV, skinned to the Athar brand tokens. `dist/` is the shipped artefact (v1.2.1 Vite build + runtime modules `dist/js/*.js` + appended CSS); the React/TypeScript sources have been 0-byte since the first platform restore, so every change since v1.2.0 is applied in place at runtime.
