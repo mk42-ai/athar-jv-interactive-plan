@@ -1,0 +1,69 @@
+{
+ "url": "https://sb-4koagr3m5c3y.vercel.run/#/27/new-3",
+ "ok": true,
+ "screenshots": [
+  "/tmp/terminal-work/work/6692b763e851d28a036ab30e/6abc5d318c19ce74d2a7dbc8/.ui-proof/v154-s30-phone-390x844.png"
+ ],
+ "assertions": [
+  {
+   "kind": "http-status",
+   "target": "https://sb-4koagr3m5c3y.vercel.run/#/27/new-3",
+   "ok": true,
+   "detail": "200"
+  },
+  {
+   "kind": "wait-selector",
+   "target": "#athar-narration",
+   "ok": true,
+   "detail": "appeared"
+  },
+  {
+   "kind": "click",
+   "target": "[data-testid=\"guide-toggle\"]",
+   "ok": true,
+   "detail": "clicked"
+  },
+  {
+   "kind": "eval",
+   "target": "(() => {\n  const vw = innerWidth, vh = innerHeight, bad = [];\n  const R = (el) => el.getBoundingClientRect();\n  const hit = (a, b) => a.left < b.right - 1 && b.left < a.right - 1 && a.top < b.bottom -",
+   "ok": true,
+   "detail": "true"
+  },
+  {
+   "kind": "eval",
+   "target": "window.AtharGuide && window.AtharGuide.slideId === 's-it-metrics'",
+   "ok": true,
+   "detail": "true"
+  },
+  {
+   "kind": "eval",
+   "target": "document.documentElement.getAttribute('data-deck-version') === '1.5.4' && /v1\\.5\\.4/.test((document.querySelector('footer.pagefooter .deck-version') || {}).textContent || '')",
+   "ok": true,
+   "detail": "true"
+  },
+  {
+   "kind": "eval",
+   "target": "(['loading','playing'].includes(window.AtharGuide.state) || (window.AtharGuide.state === 'blocked' && !!document.querySelector('[data-testid=\"guide-tap-to-play\"]:not([hidden])') && document.querySelec",
+   "ok": true,
+   "detail": "true"
+  },
+  {
+   "kind": "page-rendered",
+   "target": "document.body",
+   "ok": true,
+   "detail": "innerText=2918 chars, bodyHeight=701px"
+  }
+ ],
+ "consoleErrors": [],
+ "pageErrors": [],
+ "failedRequests": [],
+ "browser": "/usr/bin/chromium",
+ "httpStatus": 200,
+ "title": "Athar Open Agentic Pact — Build once. Run everywhere. Lift everyone.",
+ "textLength": 2918,
+ "_exit": 0,
+ "_secs": 7.7,
+ "_n": 30,
+ "_slideId": "s-it-metrics",
+ "_viewport": "390x844"
+}

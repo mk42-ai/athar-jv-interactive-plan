@@ -79,3 +79,6 @@
 .gbar.is-blocked .gbar-guide{animation:none}
 @media (max-width:600px){.gbar.is-blocked .gbar-guide{display:none}.gbar-tap{padding:0 10px;font-size:.68rem;margin-inline-end:auto}}
 @media (prefers-reduced-motion:reduce){.gbar-tap{animation:none}}
+/* v1.5.4 — the chapter rail ends above the docked guide bar: at desktop sizes the bar (z 94) covered the rail's bottom 52 px,
+   hiding the "← → navigate · Esc overview · Home / End" hint (found by the v1.5.4 validator, element-at-point = bar play button) */
+html.has-guide-bar nav.rail{inset-block-end:calc(var(--footer-h,56px) + var(--guide-h,52px))}

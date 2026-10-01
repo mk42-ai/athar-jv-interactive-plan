@@ -1,49 +1,49 @@
 {
- "base": "http://127.0.0.1:4302",
- "written": "2026-10-01T07:00:03.092Z",
+ "base": "https://sb-4koagr3m5c3y.vercel.run",
+ "written": "2026-10-01T07:13:55.259Z",
  "rows": [
   {
    "burst": "2 ArrowRight×6",
    "attempt": 1,
    "keyEventsInPage": 6,
-   "burstMs": 101,
+   "burstMs": 97,
    "target": 8,
    "audibleClip": "NAR-s08",
    "strayClipsStarted": [],
-   "syncMs": 131,
+   "syncMs": 119,
    "pass": true
   },
   {
    "burst": "8 ArrowRight×5",
    "attempt": 1,
    "keyEventsInPage": 5,
-   "burstMs": 76,
+   "burstMs": 93,
    "target": 13,
    "audibleClip": "NAR-s13",
    "strayClipsStarted": [],
-   "syncMs": 123,
+   "syncMs": 124,
    "pass": true
   },
   {
    "burst": "15 ArrowLeft×5",
    "attempt": 1,
    "keyEventsInPage": 5,
-   "burstMs": 145,
+   "burstMs": 85,
    "target": 10,
    "audibleClip": "NAR-s10",
    "strayClipsStarted": [],
-   "syncMs": 118,
+   "syncMs": 141,
    "pass": true
   },
   {
    "burst": "10 ArrowRight×6",
    "attempt": 1,
    "keyEventsInPage": 6,
-   "burstMs": 95,
+   "burstMs": 89,
    "target": 16,
    "audibleClip": "NAR-s16",
    "strayClipsStarted": [],
-   "syncMs": 25,
+   "syncMs": 20,
    "pass": true
   },
   {
@@ -51,7 +51,7 @@
    "target": 17,
    "audibleClip": "NAR-s17",
    "strayClipsStarted": [],
-   "syncMs": 116,
+   "syncMs": 130,
    "samplesChecked": 7,
    "desyncedSamples": [],
    "pass": true

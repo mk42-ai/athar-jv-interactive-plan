@@ -31,7 +31,7 @@ fa1bb43e815772fa1bc00ecb5b99c1c2277d9b1754bd12c1ca1bcfdad3f281e5  ./dist/assets/
 b63df00cfd7ab7909d4b4ff495c91aa47e287f5f7c6f3c3ff7da2f46e7de9454  ./dist/assets/intro/intro.css
 70007dde3b651e8081221211ff73587ffe727d813f84c7476cee1fdbbb374e23  ./dist/assets/intro/v1.4.2/intro-poster.png
 3d30a75cf62dc58c2c4bd41aba235d60ba006baca37a47d803c8e45647dbef4d  ./dist/assets/intro/v1.4.2/intro.mp4
-67fe6c94f5031bf231b5e93b0d838dbda5813578dc4b06eba32db07bc981d941  ./dist/assets/narration.css
+5ab102703fb959a7eacc1df4b7d8b491e572c855879979360ad26e9214d26e59  ./dist/assets/narration.css
 081ae2463ca081a2c37199085aa949f57a7b272196c32e2254b7f2655304dc24  ./dist/assets/news/credits.json
 e6e878f5551362b641ccff93c197a14e5f24393776352eae8e9669b83a057399  ./dist/assets/news/marks/logo-intel.png
 4a3cbd87151061556d69331fcd8a254e0f7f833a695235accdedc20861e4a0f2  ./dist/assets/news/marks/logo-qualcomm.svg
