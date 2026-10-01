@@ -27,9 +27,12 @@
   #s-cover .cover-grid.v152-stage-host > .cover-copy,#s-closing .closing-grid.v152-stage-host > .closing-copy{grid-column:1;grid-row:1}
   #s-cover .cover-grid.v152-stage-host > .v152-tier--lead,#s-closing .closing-grid.v152-stage-host > .v152-tier--lead{grid-column:1;grid-row:2}
   #s-cover .cover-grid.v152-stage-host > .logo-stage,#s-closing .closing-grid.v152-stage-host > .closing-lockup{grid-column:1;grid-row:3}}
-/* partner rows on 1 / 39: ODA + AIREV pmarks hidden here (carried by the parent tier above the lock-up), OnDemand mark kept */
+/* partner rows on 1 / 39: ODA + AIREV + OnDemand pmarks all hidden here (lock-up = Athar mark + ATHAR wordmark only; ODA × AIREV is carried by the parent tier above it, Brand Guidelines Fig. 8.8) - the OnDemand mark is hidden as well */
 .v152-hidden-dup{display:none!important}
+#s-cover .cover-partners .pmark--ondemand,#s-closing .closing-partners .pmark--ondemand{display:none!important}
 .pmark--airev img.v152-airev-inline{block-size:26px;filter:brightness(.18) saturate(1.4)}
+/* official AIREV wordmark (137:43) keeps its intrinsic ratio in the footer, the cover/closing rows and slide 4 */
+img.v152-airev,img.v152-airev-inline,img.v153-airev-official{inline-size:auto;aspect-ratio:137/43;object-fit:contain}
 /* slide 4 partner block: tier row before the Athar box, marks row removed */
 .athar-partner-strip.v152-strip{align-items:center}
 .athar-partner-strip .v152-tier--block{font-size:clamp(16px,1.9vh,26px);background:var(--white,#fff);border:1px solid var(--stone,#D9D4C7);border-radius:8px}

@@ -12,7 +12,7 @@
    Athar logo composited programmatically (dist/assets/plates/credits.json). */
 (function () {
   'use strict';
-  var VERSION = 'v1.5.2';
+  var VERSION = 'v1.5.4';
   var PLEDGE_HASH = '#/19'; /* 04 Pledge & signing — first slide of the chapter */
 
   /* ---------- helpers ---------- */
@@ -366,15 +366,16 @@
   /* ================= S5 · Nations empowered ================= */
   function renderS5(lang, api) {
     var d = S[lang], s = d.s5, body = api.head(d.chapter, d.kicker, 'impact', s.title, s.sub); body.classList.add('aos-body--s5');
-    var sel = el('div', 'aos-seg aos-countries'); sel.setAttribute('role', 'group'); sel.setAttribute('aria-label', s.title); sel.setAttribute('data-testid', 'country-selector');
-    var cb = s.countries.map(function (c) { var b = btn('aos-seg-btn aos-country', null, { 'data-country': c.k, 'aria-pressed': 'false' }); b.appendChild(el('span', 'aos-seg-t', c.t)); b.appendChild(el('span', 'aos-seg-s', c.tier)); sel.appendChild(b); return b; });
+    var sel = el('div', 'aos-seg aos-countries'); sel.setAttribute('role', 'tablist'); sel.setAttribute('aria-label', s.title); sel.setAttribute('data-testid', 'country-selector');
+    var TB = { access: 't1', ownership: 't2', legacy: 't3' }, ci = 0;
+    var cb = s.countries.map(function (c) { ci++; var b = btn('aos-seg-btn aos-country aos-country--' + (c.tierK === 'access' ? 'acc' : c.tierK === 'ownership' ? 'own' : 'leg'), null, { 'data-country': c.k, 'aria-pressed': 'false', role: 'tab', 'aria-selected': 'false', 'aria-controls': 'aos-nation-panel', id: 'aos-tab-' + c.k, 'data-cue': 's38-c' + (ci + 1) }); b.appendChild(el('span', 'aos-seg-t', c.t)); var bd = el('span', 'aos-seg-s aos-tier-badge aos-tier-badge--' + (TB[c.tierK] || 't1'), c.tier); bd.setAttribute('data-testid', 'tier-badge'); b.appendChild(bd); sel.appendChild(b); return b; }); /* v1.5.3: a real tablist with tier badges */
     body.appendChild(sel);
-    var panel = el('div', 'aos-nation'); panel.setAttribute('aria-live', 'polite'); panel.setAttribute('data-testid', 'nation-panel');
+    var panel = el('div', 'aos-nation'); panel.id = 'aos-nation-panel'; panel.setAttribute('role', 'tabpanel'); panel.setAttribute('aria-live', 'polite'); panel.setAttribute('data-testid', 'nation-panel');
     body.appendChild(panel);
     var cta = api.link ? el('a', 'cta aos-cta', s.cta) : el('a', 'cta aos-cta', s.cta); cta.href = PLEDGE_HASH; cta.setAttribute('data-testid', 'join-pact-cta'); cta.setAttribute('aria-label', s.ctaAria); cta.setAttribute('data-deck-jump', PLEDGE_HASH);
     var foot = el('div', 'aos-nation-foot'); foot.appendChild(el('p', 'muted small aos-src', s.srcNote)); foot.appendChild(cta); body.appendChild(foot);
     function show(k) {
-      cb.forEach(function (b) { var on = b.getAttribute('data-country') === k; b.setAttribute('aria-pressed', on ? 'true' : 'false'); b.classList.toggle('is-on', on); });
+      cb.forEach(function (b) { var on = b.getAttribute('data-country') === k; b.setAttribute('aria-selected', on ? 'true' : 'false'); b.setAttribute('aria-pressed', on ? 'true' : 'false'); b.tabIndex = on ? 0 : -1; b.classList.toggle('is-on', on); if (on) panel.setAttribute('aria-labelledby', b.id); });
       var c = s.countries.filter(function (x) { return x.k === k; })[0];
       panel.innerHTML = ''; panel.setAttribute('data-country', k); panel.setAttribute('data-tier', c.tierK);
       var left = el('div', 'aos-nation-copy');
@@ -392,11 +393,12 @@
       var bn = el('figure', 'aos-nation-banner'); bn.setAttribute('data-testid', 'nation-banner'); bn.setAttribute('data-no-mirror', 'true'); /* v1.5.2: official brand imagery banner reused from the three-tiers slide */
       var bp = el('picture'); var bs = el('source'); bs.type = 'image/webp'; bs.srcset = '/assets/plates/plate5-banner.webp'; bp.appendChild(bs);
       var bi = img('/assets/plates/plate5-banner.png', s.bannerTag || ''); bi.width = 1600; bi.height = 320; bi.setAttribute('data-no-mirror', 'true'); bp.appendChild(bi); bn.appendChild(bp);
-      bn.appendChild(el('figcaption', 'aos-tag', s.bannerTag || '')); left.appendChild(bn);
+      bn.appendChild(el('figcaption', 'aos-tag aos-tag--below', s.bannerTag || ''));
       var mini = el('div', 'aos-mini'); mini.setAttribute('data-testid', 'mini-timeline'); mini.appendChild(el('span', 'aos-mini-lbl', s.phaseLabel));
-      var track = el('ol', 'aos-mini-track'); s.phases.forEach(function (p) { var li = el('li', 'aos-mini-ph' + (p.k === c.phase ? ' is-on' : '')); li.setAttribute('data-phase', p.k); if (p.k === c.phase) li.setAttribute('aria-current', 'step'); li.appendChild(el('span', 'aos-mini-dot')); li.appendChild(el('span', 'aos-mini-t', p.t)); track.appendChild(li); }); mini.appendChild(track); left.appendChild(mini);
+      var track = el('ol', 'aos-mini-track'); s.phases.forEach(function (p) { var li = el('li', 'aos-mini-ph' + (p.k === c.phase ? ' is-on' : '')); li.setAttribute('data-phase', p.k); if (p.k === c.phase) li.setAttribute('aria-current', 'step'); li.appendChild(el('span', 'aos-mini-dot')); li.appendChild(el('span', 'aos-mini-t', p.t)); track.appendChild(li); }); mini.appendChild(track); left.appendChild(mini); /* v1.5.3 QA: the roadmap phase closes the copy column */
       panel.appendChild(left);
-      var fig = plate(c.plate, c.plateAlt, d.tag, 'aos-plate--s5', c.plate === 'plate6-kenya-maize'); panel.appendChild(fig);
+      var side = el('div', 'aos-nation-side'); side.setAttribute('data-testid', 'nation-side'); /* v1.5.3: film still + tier banner in the right column */
+      var fig = plate(c.plate, c.plateAlt, d.tag, 'aos-plate--s5', c.plate === 'plate6-kenya-maize'); side.appendChild(fig); side.appendChild(bn); panel.appendChild(side);
     }
     cb.forEach(function (b) { b.addEventListener('click', function () { show(b.getAttribute('data-country')); }); });
     roving(cb, function (j) { show(cb[j].getAttribute('data-country')); }, 'h');

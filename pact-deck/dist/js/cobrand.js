@@ -11,7 +11,7 @@
    Idempotent, re-runs on language / slide changes, never mirrors a logo. */
 (function () {
   'use strict';
-  var VERSION = 'v1.5.2';
+  var VERSION = 'v1.5.4';
   var AIREV = '/brand/partners-official/airev-logo-official.svg';           /* 137×43 official wordmark (dark-ground variant) */
   var ODA = '/partners/review/oda__athar_partner_oda_logo_bw_v1.png';        /* 3980×1222 ODA mark already in the deck */
   var TXT = {
@@ -73,11 +73,11 @@
       swapPmarks(clo.querySelector('.closing-partners'));
     }
   }
-  function swapPmarks(row) { /* the raster airev-mark.png (118×40) → official SVG; ODA + AIREV pmarks hidden here because the parent tier above the lock-up carries them */
+  function swapPmarks(row) { /* the raster airev-mark.png (118×40) → official SVG; ODA + AIREV + OnDemand pmarks all hidden here: lock-up = Athar mark + ATHAR wordmark only, the parent tier above carries ODA × AIREV (Brand Guidelines Fig. 8.8) */
     if (!row || row.getAttribute('data-v152') === 'done') return;
     var a = row.querySelector('.pmark--airev img'); if (a && a.src.indexOf('airev-logo-official') === -1) { a.src = AIREV; a.width = 137; a.height = 43; a.alt = 'AIREV'; a.classList.add('v152-airev-inline'); a.setAttribute('data-official-source', 'brand/partners-official/credits.json#airev'); }
-    var od = row.querySelector('.pmark--oda'), ai = row.querySelector('.pmark--airev');
-    if (od) od.classList.add('v152-hidden-dup'); if (ai) ai.classList.add('v152-hidden-dup');
+    var od = row.querySelector('.pmark--oda'), ai = row.querySelector('.pmark--airev'), ode = row.querySelector('.pmark--ondemand');
+    if (od) od.classList.add('v152-hidden-dup'); if (ai) ai.classList.add('v152-hidden-dup'); if (ode) ode.classList.add('v152-hidden-dup');
     row.setAttribute('data-v152', 'done');
   }
   /* ---- slide 4: partner block hierarchy + one marks row + equal cards with an evidence line ---- */
@@ -101,7 +101,10 @@
       cards.setAttribute('data-v152-lang', l); cards.classList.add('v152-cards');
     }
   }
-  function run() { try { footer(); cover(); slide4(); } catch (e) { /* never break the deck */ } }
+  function swapAllAirev() { /* v1.5.3: every remaining raster AIREV tile (slides 21/22/24 partner rows, any .pmark--airev) → the official airev.ae wordmark */
+    document.querySelectorAll('img[src*="partners/airev-mark.png"], .pmark--airev img').forEach(function (a) { if (a.src.indexOf('airev-logo-official') !== -1) return; a.src = AIREV; a.width = 137; a.height = 43; a.alt = 'AIREV'; a.classList.add('v153-airev-official'); a.setAttribute('data-official-source', 'brand/partners-official/credits.json#airev'); });
+  }
+  function run() { try { footer(); cover(); slide4(); swapAllAirev(); } catch (e) { /* never break the deck */ } }
   var pending = false;
   function schedule() { if (pending) return; pending = true; window.requestAnimationFrame(function () { pending = false; run(); }); }
   var root = document.getElementById('root');

@@ -403,6 +403,248 @@
     "bytes": 226900,
     "sha256": "3122754221142f676aac786b80ed295290194f8f3258be746204eb327275baba"
    }
+  },
+  "plate5-handover": {
+   "role": "slide 29 OWNERSHIP callout band (figure.it-own-banner) - NEW dedicated file pair (slide 38 keeps plate5-banner): GPT Image 2.5 photoreal handover scene in the Kenyan modular data-centre node; official Athar marks composited programmatically; 5:1 crop of the composited 1536x1024 frame",
+   "composited": true,
+   "added_utc": "2026-10-01T02:24:40Z",
+   "version": "1.5.4",
+   "package": "P5",
+   "generator": "GPT Image 2.5 (On Demand plugin agent-1789134730, tool generateImageUsing2.5), 1536x1024, quality high, slot handover",
+   "source_download": {
+    "file": "gen/batch1/handover.png",
+    "sha256": "7fbcba761ff10f15b1b370e914188d44ce51f8245151c8107f3607c50f468d2d",
+    "url_without_token": "https://airevdev.blob.core.windows.net/on-demand-dev/6692b763e851d28a036ab30e/agents/wCxE0xp3zR.png",
+    "generated_at_utc": "2026-10-01T02:12:31Z"
+   },
+   "composited_frame": {
+    "file": "gen/batch1/handover-composited-1536x1024.png",
+    "size": [
+     1536,
+     1024
+    ]
+   },
+   "crop_box_in_1536x1024": [
+    0,
+    224,
+    1536,
+    531
+   ],
+   "resize": "1536x307 -> 1600x320 (Lanczos)",
+   "logo_files": {
+    "athar-mark-light-1600.png": "9cd7d7fca389ee2c3e7e19b15302962867953d2744dfd097451131c6156e04c8",
+    "athar-mark-dark-1600.png": "501912ff7366812f10d418ad5fe5d6451842867cd1d8db1a74759537ae0eab25",
+    "athar-lockup-primary-en-navy-on-transparent-1600.png": "f9433b04fab2d3739d3aae7fbd8b7c3a919b1f41263482b78ee8cb4343a750f9"
+   },
+   "logo_method": "ImageMagick: trim -> fit inside the blank surface -> -distort Perspective to the 4 detected corners (viewport 1536x1024, transparent virtual pixels); numpy grain matched to the photo (RGB only) + 0.3 px blur + alpha 0.9; blend SoftLight (light mark on dark patch; extra SoftLight/Screen pass only if dL* < 18) or Multiply (dark mark / navy lockup on light surface); composite via magick -compose; pixels outside the quads verified unchanged",
+   "elements": [
+    {
+     "id": "patch1",
+     "corners_tl_tr_br_bl_px_in_1536x1024": [
+      [
+       429.0,
+       494.0
+      ],
+      [
+       462.0,
+       491.0
+      ],
+      [
+       467.0,
+       510.0
+      ],
+      [
+       436.0,
+       513.0
+      ]
+     ],
+     "asset": "athar-mark-light-1600.png",
+     "blend": "Multiply",
+     "passes": [
+      "Multiply",
+      "Multiply"
+     ],
+     "opacity": 0.9,
+     "deltaL_star": 0.0
+    },
+    {
+     "id": "patch2",
+     "corners_tl_tr_br_bl_px_in_1536x1024": [
+      [
+       1376.0,
+       450.0
+      ],
+      [
+       1444.0,
+       454.0
+      ],
+      [
+       1439.0,
+       485.0
+      ],
+      [
+       1369.0,
+       478.0
+      ]
+     ],
+     "asset": "athar-mark-light-1600.png",
+     "blend": "Multiply",
+     "passes": [
+      "Multiply",
+      "Multiply"
+     ],
+     "opacity": 0.9,
+     "deltaL_star": -43.8
+    },
+    {
+     "id": "patch3",
+     "corners_tl_tr_br_bl_px_in_1536x1024": [
+      [
+       1152.0,
+       499.0
+      ],
+      [
+       1197.0,
+       509.0
+      ],
+      [
+       1188.0,
+       531.0
+      ],
+      [
+       1141.0,
+       516.0
+      ]
+     ],
+     "asset": "athar-mark-light-1600.png",
+     "blend": "Multiply",
+     "passes": [
+      "Multiply",
+      "Multiply"
+     ],
+     "opacity": 0.9,
+     "deltaL_star": -39.7
+    },
+    {
+     "id": "patch4",
+     "corners_tl_tr_br_bl_px_in_1536x1024": [
+      [
+       196.0,
+       440.0
+      ],
+      [
+       222.0,
+       442.0
+      ],
+      [
+       225.0,
+       464.0
+      ],
+      [
+       201.0,
+       462.0
+      ]
+     ],
+     "asset": "athar-mark-light-1600.png",
+     "blend": "Multiply",
+     "passes": [
+      "Multiply",
+      "Multiply"
+     ],
+     "opacity": 0.9,
+     "deltaL_star": -39.2
+    },
+    {
+     "id": "certificate-header",
+     "corners_tl_tr_br_bl_px_in_1536x1024": [
+      [
+       703.0,
+       463.0
+      ],
+      [
+       846.0,
+       456.0
+      ],
+      [
+       859.0,
+       622.0
+      ],
+      [
+       720.0,
+       630.0
+      ]
+     ],
+     "asset": "athar-lockup-primary-en-navy-on-transparent-1600.png",
+     "blend": "Multiply",
+     "passes": [
+      "Multiply"
+     ],
+     "opacity": 0.9,
+     "deltaL_star": -47.9
+    }
+   ],
+   "webp": {
+    "path": "dist/assets/plates/plate5-handover.webp",
+    "bytes": 59162,
+    "sha256": "44ef922940399d0d79047e64e75dd141be729c67d5c43c55a432b15984ad8252",
+    "size": [
+     1600,
+     320
+    ],
+    "quality": 82
+   },
+   "png_fallback": {
+    "path": "dist/assets/plates/plate5-handover.png",
+    "bytes": 257558,
+    "sha256": "4642948cde85aba8149969cd44406d78304b6ff575c116a1742b0d3f7251709a",
+    "size": [
+     1600,
+     320
+    ],
+    "note": "palette PNG (256 colours, Floyd-Steinberg) served only where WebP is unsupported"
+   },
+   "verification": {
+    "outside_quad_max_abs_diff": 0,
+    "inside_quad_max_abs_diff": 174,
+    "quad_dilation_px": 6
+   },
+   "readability_at_600px": [
+    {
+     "id": "patch1",
+     "w": 0,
+     "h": 0,
+     "deltaL": -9.7,
+     "readable": false
+    },
+    {
+     "id": "patch2",
+     "w": 8,
+     "h": 7,
+     "deltaL": -19.4,
+     "readable": false
+    },
+    {
+     "id": "patch3",
+     "w": 1,
+     "h": 1,
+     "deltaL": -13.6,
+     "readable": false
+    },
+    {
+     "id": "patch4",
+     "w": 3,
+     "h": 5,
+     "deltaL": -10.1,
+     "readable": false
+    },
+    {
+     "id": "certificate-header",
+     "w": 45,
+     "h": 8,
+     "deltaL": -21.1,
+     "readable": true
+    }
+   ]
   }
  },
  "logo_files": {

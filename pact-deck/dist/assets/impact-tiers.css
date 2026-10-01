@@ -143,15 +143,18 @@ html[lang=ar] .it-tile-sub{letter-spacing:0;text-transform:none}
 @media (prefers-reduced-motion:reduce){body.it-virtual #root section.slide.is-active:not(.it-slide){transition:none}.it-news{transition:none}}
 
 /* ---------- v1.3.3 · slide 30 news cards: publisher / partner mark instead of the article photo ---------- */
-.it-news-mark{flex:0 0 clamp(64px,5.6vw,104px);block-size:clamp(38px,3.8vw,58px);align-self:center;display:flex;align-items:center;justify-content:center;border-radius:4px;overflow:hidden;background:var(--white);border:1px solid var(--stone);padding:4px 6px}
+.it-news-mark{flex:0 0 clamp(64px,5.6vw,104px);block-size:var(--it-mark-h);align-self:center;display:flex;align-items:center;justify-content:center;border-radius:4px;overflow:hidden;background:var(--white);border:1px solid var(--stone);padding:4px 6px}
 .it-news-mark--dark{background:var(--athar-navy);border-color:var(--athar-navy)}
 .it-news-mark img{display:block;max-inline-size:100%;max-block-size:100%;inline-size:auto;block-size:auto;object-fit:contain}
 .it-news-mark--publisher img{max-block-size:88%}
 .it-news-markword{font-family:var(--font-serif, var(--font-sans));font-weight:var(--fw-semibold);color:var(--athar-navy);font-size:clamp(10px,.8vw,13px);line-height:1.1;text-align:center;letter-spacing:.01em}
+/* v1.5.4 · uniform mark token: one box height for every publisher / partner mark; the image is contained inside it with a 5px margin per side */
+:root{--it-mark-h:clamp(38px,3.8vw,58px)}
+.it-news-mark img,.it-news-mark svg{max-block-size:calc(var(--it-mark-h) - 10px);max-inline-size:calc(100% - 10px);inline-size:auto;block-size:auto;object-fit:contain}
 .it-news-pub{justify-content:space-between}
 .it-slide--it-metrics .it-footnotes{padding-block-start:3px}
 @media (max-height:820px){
-  .it-news-mark{flex-basis:56px;block-size:32px;padding:3px 5px}.it-news-markword{font-size:9px}
+  .it-news-mark{--it-mark-h:32px;flex-basis:56px;padding:3px 5px}.it-news-markword{font-size:9px}
   .it-slide--it-metrics .it-footnote{font-size:8.4px!important;line-height:1.22!important}
 }
 
