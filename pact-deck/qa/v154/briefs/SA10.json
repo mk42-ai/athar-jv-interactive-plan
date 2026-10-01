@@ -1,0 +1,7 @@
+{
+ "title": "SA10 – Regression guard: DOM text-diff EN+AR (zero copy/figure change; only img src/alt, badge removal, PIB logo may differ); render ledger + provenance; before/after screenshots of every touched slide",
+ "sa": "SA10",
+ "model_requested": "Sonnet 5.5 (not available to terminal workers — scripted steps authored by the lead)",
+ "timeout_s": 18000,
+ "step_timeout_s": 1800
+}

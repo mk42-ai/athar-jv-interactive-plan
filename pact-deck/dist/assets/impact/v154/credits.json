@@ -1,0 +1,570 @@
+{
+ "generated_utc": "2026-10-01T05:50:51Z",
+ "version": "1.5.4",
+ "scope": "slide 29 tier heroes (AVIF → WebP → PNG, 1200×800, 3:2)",
+ "truthfulness": "AI-generated concept renders: captioned with the deck's existing \"Concept render\" label (official:false); never presented as photography of real deployments",
+ "items": {
+  "t1-lebanon-licences": {
+   "slot": "Tier 1 · Licences · Lebanon · Access",
+   "label": "Concept render / تصوّر مفاهيمي",
+   "candidate": "T1b6a",
+   "generator": "GPT Image 2.5 (OnDemand plugin agent-1789134730, bulk generation, 1536x1024, quality high) via OnDemand MCP chat session; relay endpoint predefined-claude-sonnet-5.5",
+   "batch": 6,
+   "raw_url": "https://airevdev.blob.core.windows.net/on-demand-dev/6692b763e851d28a036ab30e/agents/L8HeSZ1b3K.png?se=2026-10-08T05%3A01%3A17Z&sig=%2FYiDIhWGLlQ8sRQnoDXu%2BvlHN2tkGZGyd24l3xoAbCo%3D&ske=2026-10-08T05%3A01%3A17Z&skoid=f6fe3b05-8f6e-4558-96bd-b7f53ddd5066&sks=b&skt=2026-10-01T05%3A01%3A17Z&sktid=03628b8d-e6ad-4dd7-bca0-020e6a6cfdda&skv=2025-05-05&sp=r&sr=b&st=2026-10-01T05%3A11%3A17Z&sv=2025-05-05",
+   "raw_sha256": "70a592cc281533e04ef7b61b8c58c47b1893b4ac688325dc5a397b67c3620211",
+   "prompt": "Bright civic training room in a Beirut government ministry: tall arched limestone windows, cream plaster walls, warm daylight. Seen from directly behind, three Lebanese adult learners (a woman in a headscarf, a man in a grey sweater, a woman with dark hair) sit side by side at a long wooden table, each in front of an open laptop whose screen faces the camera over their shoulders; every laptop screen is a chroma-key green rectangle; their arms and hands are hidden by their bodies. At the front of the room a Lebanese woman trainer in a Gulf Blue (#1E3A5F) blazer stands beside a large framed certificate on the wall, which is a chroma-key green rectangle, her hands clasped behind her back; a rectangular wall sign panel that is a chroma-key green rectangle hangs next to the door. Seated eye-level camera, gentle depth of field. No hands visible in the frame. Ultra-realistic documentary photo, 35mm lens, natural daylight, warm-neutral grade (cream, sand) with a Gulf Blue accent, fine film grain, real skin and fabric texture. No text, letters, numbers, logos or UI anywhere. Each screen, sign or certificate described is a flat solid chroma-key green (#00B140) rectangle, matte, crisp edges. No robots, holograms, neon or sci-fi. Landscape 3:2.",
+   "composite": {
+    "method": "chroma-key placeholder → perspective warp (cv2.getPerspectiveTransform, 2× supersampled) of the EXACT master / real UI files; placeholder shading + DOF + grain matched; green fringe inpainted",
+    "regions": [
+     {
+      "kind": "cert",
+      "bbox": [
+       649,
+       93,
+       404,
+       269
+      ],
+      "quad_TL_TR_BR_BL": [
+       [
+        647.8,
+        97.3
+       ],
+       [
+        1053.1,
+        93.2
+       ],
+       [
+        1050.1,
+        361.8
+       ],
+       [
+        672.0,
+        359.7
+       ]
+      ],
+      "orient": "landscape",
+      "edge_blur_sigma": 0.56,
+      "grain_std": 16.98,
+      "asset": "cert-lb.png",
+      "asset_sha256": "983ab3c8528542bf4609d1f6c180af23ebe4c29a8c09c0d574962e2dcd275b38"
+     },
+     {
+      "kind": "panel",
+      "bbox": [
+       1252,
+       177,
+       112,
+       119
+      ],
+      "quad_TL_TR_BR_BL": [
+       [
+        1252.2,
+        199.4
+       ],
+       [
+        1362.8,
+        176.1
+       ],
+       [
+        1362.8,
+        288.7
+       ],
+       [
+        1252.2,
+        295.8
+       ]
+      ],
+      "orient": "landscape",
+      "edge_blur_sigma": 0.55,
+      "grain_std": 8.74,
+      "logo_px": [
+       1075,
+       216
+      ],
+      "clear_space_px": 162.5,
+      "scale": 0.25225
+     },
+     {
+      "kind": "screen",
+      "bbox": [
+       1019,
+       630,
+       179,
+       126
+      ],
+      "quad_TL_TR_BR_BL": [
+       [
+        1021.3,
+        754.7
+       ],
+       [
+        1019.2,
+        629.3
+       ],
+       [
+        1196.3,
+        631.3
+       ],
+       [
+        1105.2,
+        755.7
+       ]
+      ],
+      "orient": "landscape",
+      "edge_blur_sigma": 0.56,
+      "grain_std": 19.11,
+      "asset": "overview-light-ar@2x.png",
+      "asset_sha256": "28a011002eefec53c44bbc14d9d70ad5da0b9823c290e4636cda7ae5b1d989a3"
+     },
+     {
+      "kind": "screen",
+      "bbox": [
+       313,
+       626,
+       168,
+       129
+      ],
+      "quad_TL_TR_BR_BL": [
+       [
+        425.0,
+        754.9
+       ],
+       [
+        311.5,
+        625.1
+       ],
+       [
+        479.8,
+        626.1
+       ],
+       [
+        472.7,
+        754.9
+       ]
+      ],
+      "orient": "landscape",
+      "edge_blur_sigma": 0.55,
+      "grain_std": 16.42,
+      "asset": "marketplace-light-ar@2x.png",
+      "asset_sha256": "ff76cdc375a137f57264022bba3157e0f12301e10d058ba9ad06286e5c67c0b3"
+     },
+     {
+      "kind": "screen",
+      "bbox": [
+       586,
+       623,
+       135,
+       69
+      ],
+      "quad_TL_TR_BR_BL": [
+       [
+        588.5,
+        622.3
+       ],
+       [
+        722.0,
+        623.3
+       ],
+       [
+        692.2,
+        657.2
+       ],
+       [
+        584.4,
+        691.1
+       ]
+      ],
+      "orient": "landscape",
+      "edge_blur_sigma": 0.51,
+      "grain_std": 26.81,
+      "asset": "flow-light-ar@2x.png",
+      "asset_sha256": "970a8bb02468853df54f86646e3da37c38cf3610c4ce123f13a598943da588c8"
+     },
+     {
+      "kind": "screen",
+      "bbox": [
+       851,
+       629,
+       55,
+       42
+      ],
+      "quad_TL_TR_BR_BL": [
+       [
+        849.7,
+        628.3
+       ],
+       [
+        905.0,
+        628.3
+       ],
+       [
+        906.1,
+        671.1
+       ],
+       [
+        862.2,
+        653.3
+       ]
+      ],
+      "orient": "landscape",
+      "edge_blur_sigma": 0.51,
+      "grain_std": 15.89,
+      "asset": "overview-light-ar@2x.png",
+      "asset_sha256": "28a011002eefec53c44bbc14d9d70ad5da0b9823c290e4636cda7ae5b1d989a3"
+     }
+    ],
+    "composite_sha256": "6a108ca1ecb159e7c5d0fa07d13e01507aeec9191839849fa8867ce02a30cbfb"
+   },
+   "athar_master": {
+    "file": "Athar_Logo_Horizontal_transparent_v1 (user-supplied master, 4330×923 RGBA)",
+    "sha256": "862dc135e31fdd6299bd7cd989d2ce869fdf4803773791f67052548f26cbd1ab",
+    "white_variant": "same alpha, ink set to #FFFFFF (approved \"white solid on dark\"), geometry untouched",
+    "clear_space": "≥1x on every side of the logo inside each panel (x = ATHAR cap height per Brand Guidelines FINAL v3 §2.10; implementation uses the master alif height = 644 px as the unit, which is stricter)"
+   },
+   "edit_pass": null,
+   "finishing": {
+    "unified_grade": "finish.GRADE — S-curve 0.10, shadows→Gulf Blue 5.5 %, highlights→Manuscript 5 %, mids→Legacy Gold 2.5 %, saturation 0.92, warmth +1.2 %, unsharp 1.1 px/0.42, grain σ 0.020 (midtone-weighted, 0.55 px), vignette 7 %",
+    "crop": "3:2 full frame kept (1536×1024 master → 1200×800 hero / 900×600 panel), no letterbox"
+   },
+   "exports": {
+    "png": {
+     "path": "/tmp/terminal-work/work/6692b763e851d28a036ab30e/6abc5d318c19ce74d2a7dbc8/athar-jv-interactive-plan/pact-deck/dist/assets/impact/v154/t1-lebanon-licences.png",
+     "bytes": 1643479,
+     "sha256": "96ea3c886005445fff79c3aa435b19f9c17cc5e275c3cfd744d37e1a7d285b5c",
+     "size": [
+      1200,
+      800
+     ]
+    },
+    "webp": {
+     "path": "/tmp/terminal-work/work/6692b763e851d28a036ab30e/6abc5d318c19ce74d2a7dbc8/athar-jv-interactive-plan/pact-deck/dist/assets/impact/v154/t1-lebanon-licences.webp",
+     "bytes": 156406,
+     "sha256": "069a7b75d6abbbacb2a44f3dec3a53c90823b17002b4c02fe1e337741c278f76",
+     "size": [
+      1200,
+      800
+     ]
+    },
+    "avif": {
+     "path": "/tmp/terminal-work/work/6692b763e851d28a036ab30e/6abc5d318c19ce74d2a7dbc8/athar-jv-interactive-plan/pact-deck/dist/assets/impact/v154/t1-lebanon-licences.avif",
+     "bytes": 92509,
+     "sha256": "ec9b838a535c6c534a4b13e2a48725ea12795243e17b3c63df148a667ad18748",
+     "size": [
+      1200,
+      800
+     ]
+    }
+   },
+   "alt": {
+    "en": "Concept render: Lebanese professionals in a Beirut ministry training room working through a generative-AI certification on laptops running Athar OS, with an Athar certificate and wall sign at the front",
+    "ar": "تصوّر مفاهيمي: مهنيون لبنانيون في قاعة تدريب وزارية في بيروت يتابعون شهادة في الذكاء الاصطناعي التوليدي على حواسيب محمولة تعمل بنظام أثر، مع شهادة أثر ولافتته في مقدمة القاعة"
+   },
+   "judge": {
+    "id": "T1b6a",
+    "slot": "Tier 1 Lebanon",
+    "photorealism": 9,
+    "athar_logo": 10,
+    "semantics": 10,
+    "consistency": 9,
+    "crop_fit": 10,
+    "no_content_change": 10,
+    "art_direction": 9,
+    "verdict": "PASS",
+    "selected": true,
+    "notes": "slight DOF softness on keyboards; composited certificate/sign/UI read as authentic"
+   }
+  },
+  "t2-india-ai-pc": {
+   "slot": "Tier 2 · Appliance AI PCs & desktops · India · Ownership",
+   "label": "Concept render / تصوّر مفاهيمي",
+   "candidate": "T2b6a",
+   "generator": "GPT Image 2.5 (OnDemand plugin agent-1789134730, bulk generation, 1536x1024, quality high) via OnDemand MCP chat session; relay endpoint predefined-claude-sonnet-5.5",
+   "batch": 6,
+   "raw_url": "https://airevdev.blob.core.windows.net/on-demand-dev/6692b763e851d28a036ab30e/agents/xA9IxYEWOx.png?se=2026-10-08T05%3A01%3A17Z&sig=4F9kcKdk0fFy9M%2BwWN90jtrpR0ef6ucR4Wzg8phiQYk%3D&ske=2026-10-08T05%3A01%3A17Z&skoid=f6fe3b05-8f6e-4558-96bd-b7f53ddd5066&sks=b&skt=2026-10-01T05%3A01%3A17Z&sktid=03628b8d-e6ad-4dd7-bca0-020e6a6cfdda&skv=2025-05-05&sp=r&sr=b&st=2026-10-01T05%3A11%3A17Z&sv=2025-05-05",
+   "raw_sha256": "289994d586bbe576ec88baa037691ba70dd7985d62cf11bf36379566a999f21f",
+   "prompt": "Close eye-level photo in an Indian government primary school classroom: pale green and cream walls, a blackboard with chalk circles, window bars, afternoon sun. An all-in-one desktop PC with a matte Gulf Blue (#1E3A5F) chassis fills the left half of the frame, front-on at a slight angle; its screen is a chroma-key green rectangle, and a wide chroma-key green rectangular badge area, one third of the screen width, is centred on its deep bottom bezel. On the right, four children aged 9 to 11 in light blue shirts sit on a wooden bench, seen from behind and the side, watching the screen; a woman teacher in a cotton sari stands behind them with her hands clasped behind her back, smiling. No hands visible in the frame. Ultra-realistic documentary photo, 35mm lens, natural daylight, warm-neutral grade (cream, sand) with a Gulf Blue accent, fine film grain, real skin and fabric texture. No text, letters, numbers, logos or UI anywhere. Each screen or badge area described is a flat solid chroma-key green (#00B140) rectangle, matte, crisp edges. No robots, holograms, neon or sci-fi. Landscape 3:2.",
+   "composite": {
+    "method": "chroma-key placeholder → perspective warp (cv2.getPerspectiveTransform, 2× supersampled) of the EXACT master / real UI files; placeholder shading + DOF + grain matched; green fringe inpainted",
+    "regions": [
+     {
+      "kind": "screen",
+      "bbox": [
+       94,
+       269,
+       421,
+       275
+      ],
+      "quad_TL_TR_BR_BL": [
+       [
+        93.8,
+        275.3
+       ],
+       [
+        507.2,
+        269.2
+       ],
+       [
+        483.1,
+        510.7
+       ],
+       [
+        105.9,
+        543.8
+       ]
+      ],
+      "orient": "landscape",
+      "edge_blur_sigma": 0.55,
+      "grain_std": 3.3,
+      "asset": "hi-tutor.png",
+      "asset_sha256": "ead4814a1d88db094c7ca02e2add62153d601f76f6c9a15e31184ae9fb5708c9"
+     },
+     {
+      "kind": "badge",
+      "bbox": [
+       269,
+       535,
+       106,
+       41
+      ],
+      "quad_TL_TR_BR_BL": [
+       [
+        266.4,
+        544.5
+       ],
+       [
+        375.6,
+        534.0
+       ],
+       [
+        375.6,
+        565.5
+       ],
+       [
+        267.4,
+        576.0
+       ]
+      ],
+      "orient": "landscape",
+      "edge_blur_sigma": 0.53,
+      "grain_std": 4.33,
+      "logo_px": [
+       1200,
+       241
+      ],
+      "clear_space_px": 181.4,
+      "scale": 0.28161
+     }
+    ],
+    "composite_sha256": "4947abc91082f44546869b257d4b4fc65a785d127dbe8da18982bd4ec24e7641"
+   },
+   "athar_master": {
+    "file": "Athar_Logo_Horizontal_transparent_v1 (user-supplied master, 4330×923 RGBA)",
+    "sha256": "862dc135e31fdd6299bd7cd989d2ce869fdf4803773791f67052548f26cbd1ab",
+    "white_variant": "same alpha, ink set to #FFFFFF (approved \"white solid on dark\"), geometry untouched",
+    "clear_space": "≥1x on every side of the logo inside each panel (x = ATHAR cap height per Brand Guidelines FINAL v3 §2.10; implementation uses the master alif height = 644 px as the unit, which is stricter)"
+   },
+   "edit_pass": null,
+   "finishing": {
+    "unified_grade": "finish.GRADE — S-curve 0.10, shadows→Gulf Blue 5.5 %, highlights→Manuscript 5 %, mids→Legacy Gold 2.5 %, saturation 0.92, warmth +1.2 %, unsharp 1.1 px/0.42, grain σ 0.020 (midtone-weighted, 0.55 px), vignette 7 %",
+    "crop": "3:2 full frame kept (1536×1024 master → 1200×800 hero / 900×600 panel), no letterbox"
+   },
+   "exports": {
+    "png": {
+     "path": "/tmp/terminal-work/work/6692b763e851d28a036ab30e/6abc5d318c19ce74d2a7dbc8/athar-jv-interactive-plan/pact-deck/dist/assets/impact/v154/t2-india-ai-pc.png",
+     "bytes": 1697209,
+     "sha256": "d72edd98cfb2f5c90600aed5677a32c7ef84866a5edc540346d10a9d3868c891",
+     "size": [
+      1200,
+      800
+     ]
+    },
+    "webp": {
+     "path": "/tmp/terminal-work/work/6692b763e851d28a036ab30e/6abc5d318c19ce74d2a7dbc8/athar-jv-interactive-plan/pact-deck/dist/assets/impact/v154/t2-india-ai-pc.webp",
+     "bytes": 184778,
+     "sha256": "4e7bca70ec287f86789f26db542d07e671fb5548718457e054702d48ffe59ccd",
+     "size": [
+      1200,
+      800
+     ]
+    },
+    "avif": {
+     "path": "/tmp/terminal-work/work/6692b763e851d28a036ab30e/6abc5d318c19ce74d2a7dbc8/athar-jv-interactive-plan/pact-deck/dist/assets/impact/v154/t2-india-ai-pc.avif",
+     "bytes": 109873,
+     "sha256": "f7c2e2f76c233736a475e6922cf9336cb1e48a993ff4cd6e9ceeb4c9809404d1",
+     "size": [
+      1200,
+      800
+     ]
+    }
+   },
+   "alt": {
+    "en": "Concept render: an Indian government-school classroom gathered around an Athar AI PC, the Athar mark on its bezel and a Hindi on-device tutoring lesson on screen",
+    "ar": "تصوّر مفاهيمي: صف في مدرسة حكومية هندية حول حاسوب أثر للذكاء الاصطناعي، شعار أثر على إطار الشاشة ودرس تعليمي بالهندية يعمل على الجهاز"
+   },
+   "judge": {
+    "id": "T2b6a",
+    "slot": "Tier 2 India",
+    "photorealism": 7,
+    "athar_logo": 10,
+    "semantics": 10,
+    "consistency": 9,
+    "crop_fit": 10,
+    "no_content_change": 10,
+    "art_direction": 9,
+    "verdict": "FAIL — below bar, shipped as best available",
+    "selected": true,
+    "notes": "AI keyboard/mouse fused; logo crisp; Hindi screen legible"
+   }
+  },
+  "t3-kenya-node": {
+   "slot": "Tier 3 · Sovereign data-centre nodes · Kenya · Legacy",
+   "label": "Concept render / تصوّر مفاهيمي",
+   "candidate": "T3b5aE",
+   "generator": "GPT Image 2.5 (OnDemand plugin agent-1789134730, bulk generation, 1536x1024, quality high) via OnDemand MCP chat session; relay endpoint predefined-claude-sonnet-5.5",
+   "batch": 5,
+   "raw_url": "https://airevdev.blob.core.windows.net/on-demand-dev/6692b763e851d28a036ab30e/agents/XceEQ8rUFa.png?se=2026-10-08T04%3A47%3A12Z&sig=17JsdblkNGY%2BkWTUovtjo0iRMI7ahbREqDN%2BFyAG51I%3D&ske=2026-10-08T04%3A47%3A12Z&skoid=f6fe3b05-8f6e-4558-96bd-b7f53ddd5066&sks=b&skt=2026-10-01T04%3A47%3A12Z&sktid=03628b8d-e6ad-4dd7-bca0-020e6a6cfdda&skv=2025-05-05&sp=r&sr=b&st=2026-10-01T04%3A57%3A12Z&sv=2025-05-05",
+   "raw_sha256": "2033255cb8b7b3ef1354ed7d4354135117bfcf6a5c052503920bd646607793d4",
+   "prompt": "Kenyan highland farmland at golden hour: young maize rows, red-earth path, acacia trees. On the right a matte Gulf Blue (#1E3A5F) shipping-container data centre on a concrete plinth under a straight steel frame of solar panels, with a large chroma-key green rectangular panel on its long side facing the camera; behind it a small white rural clinic with a veranda and a primary school with a corrugated roof. Foreground left: a Kenyan woman farmer in a patterned headwrap sits on a low wooden stool at the field edge, seen in three-quarter profile, listening to a smartphone lying face-up on a wooden crate beside her on speaker; the phone screen is a chroma-key green rectangle; her hands rest in her lap hidden in the folds of her wrap skirt. Ultra-realistic documentary photo, 35mm lens, natural daylight, warm-neutral grade (cream, sand) with a Gulf Blue accent, fine film grain, real skin texture. No text, letters, numbers, logos or UI anywhere. Each screen or panel described is a flat solid chroma-key green (#00B140) rectangle, matte, crisp edges. No robots, holograms, neon or sci-fi. Landscape 3:2.",
+   "composite": {
+    "method": "chroma-key placeholder → perspective warp (cv2.getPerspectiveTransform, 2× supersampled) of the EXACT master / real UI files; placeholder shading + DOF + grain matched; green fringe inpainted",
+    "regions": [
+     {
+      "kind": "panel",
+      "bbox": [
+       831,
+       192,
+       315,
+       181
+      ],
+      "quad_TL_TR_BR_BL": [
+       [
+        830.5,
+        224.4
+       ],
+       [
+        1146.5,
+        192.1
+       ],
+       [
+        1144.5,
+        372.8
+       ],
+       [
+        830.5,
+        365.7
+       ]
+      ],
+      "orient": "landscape",
+      "edge_blur_sigma": 0.55,
+      "grain_std": 11.66,
+      "logo_px": [
+       1075,
+       216
+      ],
+      "clear_space_px": 162.5,
+      "scale": 0.25225
+     },
+     {
+      "kind": "phone",
+      "bbox": [
+       649,
+       813,
+       95,
+       31
+      ],
+      "quad_TL_TR_BR_BL": [
+       [
+        646.8,
+        824.9
+       ],
+       [
+        678.2,
+        812.3
+       ],
+       [
+        745.2,
+        831.1
+       ],
+       [
+        713.8,
+        843.7
+       ]
+      ],
+      "orient": "auto",
+      "edge_blur_sigma": 0.42,
+      "grain_std": 13.08,
+      "asset": "sw-phone.png",
+      "asset_sha256": "0cd62bc4766c427f99c75324239c99e8ca6ec90777ae43f79eb8aef236bf8466"
+     }
+    ],
+    "composite_sha256": "997ce423b8966a0ff2d571b9e124e06dd9d1fd2d1f145f5e90567e4198b791ce"
+   },
+   "athar_master": {
+    "file": "Athar_Logo_Horizontal_transparent_v1 (user-supplied master, 4330×923 RGBA)",
+    "sha256": "862dc135e31fdd6299bd7cd989d2ce869fdf4803773791f67052548f26cbd1ab",
+    "white_variant": "same alpha, ink set to #FFFFFF (approved \"white solid on dark\"), geometry untouched",
+    "clear_space": "≥1x on every side of the logo inside each panel (x = ATHAR cap height per Brand Guidelines FINAL v3 §2.10; implementation uses the master alif height = 644 px as the unit, which is stricter)"
+   },
+   "edit_pass": {
+    "tool": "GPT Image 2.5 image edit (lighting/blending only prompt)",
+    "url": "https://airevdev.blob.core.windows.net/on-demand-dev/6692b763e851d28a036ab30e/agents/NExD6IeLQT.png?se=2026-10-08T04%3A58%3A19Z&sig=DYCKv0468ccwTBFMoa0jzADcTmxKxJzUm893U0D9Tvo%3D&ske=2026-10-08T04%3A58%3A19Z&skoid=f6fe3b05-8f6e-4558-96bd-b7f53ddd5066&sks=b&skt=2026-10-01T04%3A58%3A19Z&sktid=03628b8d-e6ad-4dd7-bca0-020e6a6cfdda&skv=2025-05-05&sp=r&sr=b&st=2026-10-01T05%3A08%3A19Z&sv=2025-05-05",
+    "sha256": "bf205fefae7cf2627ad1a885d7c8c4be5162a7797eaa3e6899171c1f83c3444d",
+    "ssim_global_vs_composite": 0.79,
+    "logo_corr_composite": -0.974,
+    "logo_corr_after_edit_raw": -0.855,
+    "restamped": "every composited region (logo, certificate, screens) re-stamped from the exact composite with the edit's low-frequency lighting — the AI-redrawn logo was NOT trusted"
+   },
+   "finishing": {
+    "unified_grade": "finish.GRADE — S-curve 0.10, shadows→Gulf Blue 5.5 %, highlights→Manuscript 5 %, mids→Legacy Gold 2.5 %, saturation 0.92, warmth +1.2 %, unsharp 1.1 px/0.42, grain σ 0.020 (midtone-weighted, 0.55 px), vignette 7 %",
+    "crop": "3:2 full frame kept (1536×1024 master → 1200×800 hero / 900×600 panel), no letterbox"
+   },
+   "exports": {
+    "png": {
+     "path": "/tmp/terminal-work/work/6692b763e851d28a036ab30e/6abc5d318c19ce74d2a7dbc8/athar-jv-interactive-plan/pact-deck/dist/assets/impact/v154/t3-kenya-node.png",
+     "bytes": 2077139,
+     "sha256": "330cef6bcb8db61ca49b21f5a59120a8e7cc03e143751983f3e835abc152290a",
+     "size": [
+      1200,
+      800
+     ]
+    },
+    "webp": {
+     "path": "/tmp/terminal-work/work/6692b763e851d28a036ab30e/6abc5d318c19ce74d2a7dbc8/athar-jv-interactive-plan/pact-deck/dist/assets/impact/v154/t3-kenya-node.webp",
+     "bytes": 348412,
+     "sha256": "a6f874edd5a7a62a928486c28416b5cd392f88ecb871fc6ba3570de56f907b17",
+     "size": [
+      1200,
+      800
+     ]
+    },
+    "avif": {
+     "path": "/tmp/terminal-work/work/6692b763e851d28a036ab30e/6abc5d318c19ce74d2a7dbc8/athar-jv-interactive-plan/pact-deck/dist/assets/impact/v154/t3-kenya-node.avif",
+     "bytes": 187370,
+     "sha256": "6a58938b53ebf75786c9e7a8ebe8a48da742c93a9a43a017947a2f0437ae6902",
+     "size": [
+      1200,
+      800
+     ]
+    }
+   },
+   "alt": {
+    "en": "Concept render: an Athar-branded containerised data-centre node under a solar canopy in Kenyan farmland, a clinic and a school behind it, and a smallholder farmer listening to Swahili voice advice on her phone",
+    "ar": "تصوّر مفاهيمي: عقدة مركز بيانات حاوية تحمل شعار أثر تحت مظلة شمسية في أرض زراعية كينية وخلفها عيادة ومدرسة، ومزارعة تستمع إلى إرشاد صوتي بالسواحيلية على هاتفها"
+   },
+   "judge": {
+    "id": "T3b5aE",
+    "slot": "Tier 3 Kenya",
+    "photorealism": 8,
+    "athar_logo": 10,
+    "semantics": 10,
+    "consistency": 9,
+    "crop_fit": 10,
+    "no_content_change": 10,
+    "art_direction": 9,
+    "verdict": "FAIL — below bar, shipped as best available",
+    "selected": true,
+    "notes": "edit pass (lighting) + exact logo re-stamped; residual hand fusion at lap"
+   }
+  }
+ }
+}

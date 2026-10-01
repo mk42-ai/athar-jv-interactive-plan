@@ -1,0 +1,13 @@
+@font-face{font-family:Plex;src:url(file:///tmp/terminal-work/work/6692b763e851d28a036ab30e/6abc5d318c19ce74d2a7dbc8/athar-jv-interactive-plan/pact-deck/dist/fonts/IBMPlexSans-Regular.woff2)}
+@font-face{font-family:Plex;font-weight:500;src:url(file:///tmp/terminal-work/work/6692b763e851d28a036ab30e/6abc5d318c19ce74d2a7dbc8/athar-jv-interactive-plan/pact-deck/dist/fonts/IBMPlexSans-Medium.woff2)}
+@font-face{font-family:Plex;font-weight:600;src:url(file:///tmp/terminal-work/work/6692b763e851d28a036ab30e/6abc5d318c19ce74d2a7dbc8/athar-jv-interactive-plan/pact-deck/dist/fonts/IBMPlexSans-SemiBold.woff2)}
+@font-face{font-family:Plex;font-weight:700;src:url(file:///tmp/terminal-work/work/6692b763e851d28a036ab30e/6abc5d318c19ce74d2a7dbc8/athar-jv-interactive-plan/pact-deck/dist/fonts/IBMPlexSans-Bold.woff2)}
+@font-face{font-family:PlexAr;src:url(file:///tmp/terminal-work/work/6692b763e851d28a036ab30e/6abc5d318c19ce74d2a7dbc8/athar-jv-interactive-plan/pact-deck/dist/fonts/IBMPlexSansArabic-Regular.woff2)}
+@font-face{font-family:PlexAr;font-weight:600;src:url(file:///tmp/terminal-work/work/6692b763e851d28a036ab30e/6abc5d318c19ce74d2a7dbc8/athar-jv-interactive-plan/pact-deck/dist/fonts/IBMPlexSansArabic-SemiBold.woff2)}
+@font-face{font-family:PlexAr;font-weight:700;src:url(file:///tmp/terminal-work/work/6692b763e851d28a036ab30e/6abc5d318c19ce74d2a7dbc8/athar-jv-interactive-plan/pact-deck/dist/fonts/IBMPlexSansArabic-Bold.woff2)}
+@font-face{font-family:PlexSerif;font-weight:600;src:url(file:///tmp/terminal-work/work/6692b763e851d28a036ab30e/6abc5d318c19ce74d2a7dbc8/athar-jv-interactive-plan/pact-deck/dist/fonts/IBMPlexSerif-SemiBold.woff2)}
+*{box-sizing:border-box;margin:0;padding:0}
+html,body{width:100%;height:100%}
+body{font-family:Plex,'Noto Sans Devanagari',sans-serif;color:#0F1E2C;background:#F7F3EA;-webkit-font-smoothing:antialiased}
+.ar{font-family:PlexAr,sans-serif;direction:rtl}
+.hi{font-family:'Noto Sans Devanagari',Plex,sans-serif}

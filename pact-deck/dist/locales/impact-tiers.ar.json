@@ -65,8 +65,8 @@
      "place": "لبنان · الوصول",
      "amount": "10 ملايين دولار",
      "flagship": "البرنامج الرائد: مليون خبير لبناني في الذكاء الاصطناعي",
-     "visual": "t1-licences",
-     "visualAlt": "الفئة 1 — التراخيص: مشهد خدمة حكومية من صور هوية أثر الرسمية (حزمة أصول العلامة v3)",
+     "visual": "t1-lebanon-licences",
+     "visualAlt": "تصوّر مفاهيمي: مهنيون لبنانيون في قاعة تدريب وزارية في بيروت يتابعون شهادة في الذكاء الاصطناعي التوليدي على حواسيب محمولة تعمل بنظام أثر، مع شهادة أثر ولافتته في مقدمة القاعة",
      "delivered": "اعتماد مليون مواطن في الذكاء الاصطناعي التوليدي؛ 18,000 في الاستخدام المهني اليومي في الوزارات والمدارس والعيادات والأعمال الصغيرة.",
      "outcomes": "الشهادات الصادرة · المستخدمون النشطون يوميًا · مسارات العمل الحكومية المفعّلة",
      "wb": {
@@ -86,8 +86,8 @@
      "place": "الهند · التملّك",
      "amount": "13.7 مليون دولار",
      "flagship": "البرنامج الرائد: فصل للذكاء الاصطناعي في اتفاقية الشراكة الاقتصادية الشاملة بين الإمارات والهند",
-     "visual": "t2-ai-pc-composited",
-     "visualAlt": "الفئة 2 — حواسيب الذكاء الاصطناعي وأجهزة سطح المكتب: مشهد أعمال صغيرة من صور هوية أثر الرسمية (حزمة أصول العلامة v3)",
+     "visual": "t2-india-ai-pc",
+     "visualAlt": "تصوّر مفاهيمي: صف في مدرسة حكومية هندية حول حاسوب أثر للذكاء الاصطناعي، شعار أثر على إطار الشاشة ودرس تعليمي بالهندية يعمل على الجهاز",
      "delivered": "تدريس بالذكاء الاصطناعي على الجهاز في 100 مدرسة حكومية بالهندية ولغة الولاية؛ 10,000 حاسوب ذكاء اصطناعي؛ تدريب المعلمين؛ فريق من 8 أشخاص داخل البلد.",
      "partners": [
       {
@@ -122,8 +122,8 @@
      "place": "كينيا · الإرث",
      "amount": "~33 مليون دولار",
      "flagship": "البرنامج الرائد: عقدة ذكاء اصطناعي سيادية تخدم المزارعين",
-     "visual": "t3-data-centre-composited",
-     "visualAlt": "الفئة 3 — عقد مراكز البيانات السيادية: صورة رئيسية داكنة من صور هوية أثر الرسمية (حزمة أصول العلامة v3)",
+     "visual": "t3-kenya-node",
+     "visualAlt": "تصوّر مفاهيمي: عقدة مركز بيانات حاوية تحمل شعار أثر تحت مظلة شمسية في أرض زراعية كينية وخلفها عيادة ومدرسة، ومزارعة تستمع إلى إرشاد صوتي بالسواحيلية على هاتفها",
      "delivered": "مركز بيانات معياري من AIREV مملوك كينيًا على حوسبة سيادية؛ إرشاد صوتي بالسواحلية لصغار المزارعين؛ العيادات والمدارس على العقدة نفسها.",
      "outcomes": "المزارعون المخدومون · تغيّر الغلّة والدخل · المشغّلون المحليون المعتمدون · نقل الأصل",
      "wb": {
@@ -301,7 +301,7 @@
   }
  ],
  "counter": "الشريحة {n} من {total}",
- "version": "1.5.2",
+ "version": "1.5.4",
  "source": "Athar — Agentic AI for All: Three Impact Tiers for Foundation Funding (27 Sep 2026)",
  "news": [
   {
@@ -570,6 +570,30 @@
    "dir": "tiers",
    "file": "logo-qualcomm.svg",
    "credit": "Snapdragon X Elite Platform badge — Qualcomm press kit (Snapdragon Summit 2026, Day 1), www.qualcomm.com; reference only, no endorsement implied"
+  },
+  "t1-lebanon-licences": {
+   "dir": "impact/v154",
+   "base": "t1-lebanon-licences",
+   "ext": "png",
+   "avif": true,
+   "official": false,
+   "credit": "v1.5.4 concept render — see dist/assets/impact/v154/credits.json"
+  },
+  "t2-india-ai-pc": {
+   "dir": "impact/v154",
+   "base": "t2-india-ai-pc",
+   "ext": "png",
+   "avif": true,
+   "official": false,
+   "credit": "v1.5.4 concept render — see dist/assets/impact/v154/credits.json"
+  },
+  "t3-kenya-node": {
+   "dir": "impact/v154",
+   "base": "t3-kenya-node",
+   "ext": "png",
+   "avif": true,
+   "official": false,
+   "credit": "v1.5.4 concept render — see dist/assets/impact/v154/credits.json"
   }
  },
  "marks": {

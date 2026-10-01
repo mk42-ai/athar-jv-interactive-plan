@@ -1,0 +1,11 @@
+{
+ "title": "SA3 – Tier 2 \"Ownership\" (India) hero: Indian government-school classroom built around an Athar-branded AI PC (logo on bezel/chassis), teacher + students, Hindi on screen",
+ "batch": 1,
+ "slot": "T2",
+ "target": "dist/assets/impact/v154/t2-india-ai-pc.{avif,webp,png}",
+ "prompt": "A government primary school classroom in a small Indian town: pale green and cream painted walls, ceiling fans, a blackboard with simple chalk drawings of shapes (no writing), wooden benches and desks, afternoon sun through barred windows. At the centre, on the teacher's wooden table, stands one all-in-one AI desktop PC facing the camera at a slight three-quarter angle: a slim matte Gulf Blue (#1E3A5F) chassis with a broad flat bottom bezel; a small chroma-key green rectangle is centred on that bottom bezel (about one fifth of the screen width, where a badge would be), and the monitor screen itself is a chroma-key green rectangle. An Indian woman teacher in a simple cotton sari leans in and points at the screen while five schoolchildren aged 9 to 11 in light blue and white government school uniforms gather around; two children sit at the keyboard, the others watch attentively. Camera slightly behind and beside the children at their eye level, so the screen and its bezel face the camera. Ultra-realistic documentary photograph shot on a full-frame camera with a 35mm lens at f/4; natural directional daylight from one side; warm-neutral colour grade (cream, sand and soft parchment tones) with one deep Gulf Blue (#1E3A5F) element anchoring the frame; subtle natural film grain; true-to-life skin texture; accurate anatomy, natural relaxed hands with five fingers; candid, unposed, real people in a real work setting; no stock-photo gloss. Absolutely no text, letters, numbers, logos, signage, UI or writing anywhere in the image. Every screen and every blank sign/certificate surface described is a flat, evenly lit, solid chroma-key green (#00B140) rectangle with crisp straight edges and square corners, matte, no reflections, no glare, no green light spill on people or objects. No robots, no holograms, no glowing brains, no neon, no sci-fi effects. Landscape 3:2 composition.",
+ "sa": "SA3",
+ "model_requested": "Sonnet 5.5 (not available to terminal workers — scripted steps authored by the lead)",
+ "timeout_s": 18000,
+ "step_timeout_s": 1800
+}

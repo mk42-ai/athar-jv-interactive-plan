@@ -1,0 +1,2030 @@
+{
+ "views": [
+  {
+   "lang": "ar",
+   "n": 1,
+   "id": "s-cover",
+   "text_equal": true,
+   "text_ops": [],
+   "textContent_equal": true,
+   "textContent_ops": [],
+   "img_removed": [
+    [
+     "/partners/ondemand-by-airev-mark.png",
+     "أون ديماند من إيريف — علامة كلمة (مقتطعة من الترويسة الموثّقة)"
+    ]
+   ],
+   "img_added": [],
+   "footer_equal": false,
+   "footer_ops": [
+    [
+     "Athar Open Agentic Pact | Community proposal | ODA × AIREV | 24 September 2026 × للمراجعة الداخلية فقط · INTERNAL REVIEW ONLY v1.5.4إعادة تشغيل المقدمةالشريحة 1 من 39",
+     "Athar Open Agentic Pact | Community proposal | ODA × AIREV | 24 September 2026 × للمراجعة الداخلية فقط · INTERNAL REVIEW ONLY v1.5.4الشريحة 1 من 39إعادة تشغيل المقدمة"
+    ]
+   ],
+   "tabs": []
+  },
+  {
+   "lang": "ar",
+   "n": 2,
+   "id": "s-hero",
+   "text_equal": true,
+   "text_ops": [],
+   "textContent_equal": true,
+   "textContent_ops": [],
+   "img_removed": [],
+   "img_added": [],
+   "footer_equal": false,
+   "footer_ops": [
+    [
+     "Athar Open Agentic Pact | Community proposal | ODA × AIREV | 24 September 2026 × للمراجعة الداخلية فقط · INTERNAL REVIEW ONLY v1.5.4إعادة تشغيل المقدمةالشريحة 2 من 39",
+     "Athar Open Agentic Pact | Community proposal | ODA × AIREV | 24 September 2026 × للمراجعة الداخلية فقط · INTERNAL REVIEW ONLY v1.5.4الشريحة 2 من 39إعادة تشغيل المقدمة"
+    ]
+   ],
+   "tabs": []
+  },
+  {
+   "lang": "ar",
+   "n": 3,
+   "id": "s-why-pact",
+   "text_equal": true,
+   "text_ops": [],
+   "textContent_equal": true,
+   "textContent_ops": [],
+   "img_removed": [],
+   "img_added": [],
+   "footer_equal": false,
+   "footer_ops": [
+    [
+     "Athar Open Agentic Pact | Community proposal | ODA × AIREV | 24 September 2026 × للمراجعة الداخلية فقط · INTERNAL REVIEW ONLY v1.5.4إعادة تشغيل المقدمةالشريحة 3 من 39",
+     "Athar Open Agentic Pact | Community proposal | ODA × AIREV | 24 September 2026 × للمراجعة الداخلية فقط · INTERNAL REVIEW ONLY v1.5.4الشريحة 3 من 39إعادة تشغيل المقدمة"
+    ]
+   ],
+   "tabs": []
+  },
+  {
+   "lang": "ar",
+   "n": 4,
+   "id": "s-four-outcomes",
+   "text_equal": true,
+   "text_ops": [],
+   "textContent_equal": true,
+   "textContent_ops": [],
+   "img_removed": [],
+   "img_added": [],
+   "footer_equal": false,
+   "footer_ops": [
+    [
+     "Athar Open Agentic Pact | Community proposal | ODA × AIREV | 24 September 2026 × للمراجعة الداخلية فقط · INTERNAL REVIEW ONLY v1.5.4إعادة تشغيل المقدمةالشريحة 4 من 39",
+     "Athar Open Agentic Pact | Community proposal | ODA × AIREV | 24 September 2026 × للمراجعة الداخلية فقط · INTERNAL REVIEW ONLY v1.5.4الشريحة 4 من 39إعادة تشغيل المقدمة"
+    ]
+   ],
+   "tabs": []
+  },
+  {
+   "lang": "ar",
+   "n": 5,
+   "id": "s-managed-programme",
+   "text_equal": true,
+   "text_ops": [],
+   "textContent_equal": true,
+   "textContent_ops": [],
+   "img_removed": [],
+   "img_added": [],
+   "footer_equal": false,
+   "footer_ops": [
+    [
+     "Athar Open Agentic Pact | Community proposal | ODA × AIREV | 24 September 2026 × للمراجعة الداخلية فقط · INTERNAL REVIEW ONLY v1.5.4إعادة تشغيل المقدمةالشريحة 5 من 39",
+     "Athar Open Agentic Pact | Community proposal | ODA × AIREV | 24 September 2026 × للمراجعة الداخلية فقط · INTERNAL REVIEW ONLY v1.5.4الشريحة 5 من 39إعادة تشغيل المقدمة"
+    ]
+   ],
+   "tabs": []
+  },
+  {
+   "lang": "ar",
+   "n": 6,
+   "id": "s-discord-home",
+   "text_equal": true,
+   "text_ops": [],
+   "textContent_equal": true,
+   "textContent_ops": [],
+   "img_removed": [],
+   "img_added": [],
+   "footer_equal": false,
+   "footer_ops": [
+    [
+     "Athar Open Agentic Pact | Community proposal | ODA × AIREV | 24 September 2026 × للمراجعة الداخلية فقط · INTERNAL REVIEW ONLY v1.5.4إعادة تشغيل المقدمةالشريحة 6 من 39",
+     "Athar Open Agentic Pact | Community proposal | ODA × AIREV | 24 September 2026 × للمراجعة الداخلية فقط · INTERNAL REVIEW ONLY v1.5.4الشريحة 6 من 39إعادة تشغيل المقدمة"
+    ]
+   ],
+   "tabs": []
+  },
+  {
+   "lang": "ar",
+   "n": 7,
+   "id": "s-country-chapters",
+   "text_equal": true,
+   "text_ops": [],
+   "textContent_equal": true,
+   "textContent_ops": [],
+   "img_removed": [],
+   "img_added": [],
+   "footer_equal": false,
+   "footer_ops": [
+    [
+     "Athar Open Agentic Pact | Community proposal | ODA × AIREV | 24 September 2026 × للمراجعة الداخلية فقط · INTERNAL REVIEW ONLY v1.5.4إعادة تشغيل المقدمةالشريحة 7 من 39",
+     "Athar Open Agentic Pact | Community proposal | ODA × AIREV | 24 September 2026 × للمراجعة الداخلية فقط · INTERNAL REVIEW ONLY v1.5.4الشريحة 7 من 39إعادة تشغيل المقدمة"
+    ]
+   ],
+   "tabs": []
+  },
+  {
+   "lang": "ar",
+   "n": 8,
+   "id": "s-learning-formats",
+   "text_equal": true,
+   "text_ops": [],
+   "textContent_equal": true,
+   "textContent_ops": [],
+   "img_removed": [],
+   "img_added": [],
+   "footer_equal": false,
+   "footer_ops": [
+    [
+     "Athar Open Agentic Pact | Community proposal | ODA × AIREV | 24 September 2026 × للمراجعة الداخلية فقط · INTERNAL REVIEW ONLY v1.5.4إعادة تشغيل المقدمةالشريحة 8 من 39",
+     "Athar Open Agentic Pact | Community proposal | ODA × AIREV | 24 September 2026 × للمراجعة الداخلية فقط · INTERNAL REVIEW ONLY v1.5.4الشريحة 8 من 39إعادة تشغيل المقدمة"
+    ]
+   ],
+   "tabs": []
+  },
+  {
+   "lang": "ar",
+   "n": 9,
+   "id": "s-challenges-showcases",
+   "text_equal": true,
+   "text_ops": [],
+   "textContent_equal": true,
+   "textContent_ops": [],
+   "img_removed": [],
+   "img_added": [],
+   "footer_equal": false,
+   "footer_ops": [
+    [
+     "Athar Open Agentic Pact | Community proposal | ODA × AIREV | 24 September 2026 × للمراجعة الداخلية فقط · INTERNAL REVIEW ONLY v1.5.4إعادة تشغيل المقدمةالشريحة 9 من 39",
+     "Athar Open Agentic Pact | Community proposal | ODA × AIREV | 24 September 2026 × للمراجعة الداخلية فقط · INTERNAL REVIEW ONLY v1.5.4الشريحة 9 من 39إعادة تشغيل المقدمة"
+    ]
+   ],
+   "tabs": []
+  },
+  {
+   "lang": "ar",
+   "n": 10,
+   "id": "s-office-hours",
+   "text_equal": true,
+   "text_ops": [],
+   "textContent_equal": true,
+   "textContent_ops": [],
+   "img_removed": [],
+   "img_added": [],
+   "footer_equal": false,
+   "footer_ops": [
+    [
+     "Athar Open Agentic Pact | Community proposal | ODA × AIREV | 24 September 2026 × للمراجعة الداخلية فقط · INTERNAL REVIEW ONLY v1.5.4إعادة تشغيل المقدمةالشريحة 10 من 39",
+     "Athar Open Agentic Pact | Community proposal | ODA × AIREV | 24 September 2026 × للمراجعة الداخلية فقط · INTERNAL REVIEW ONLY v1.5.4الشريحة 10 من 39إعادة تشغيل المقدمة"
+    ]
+   ],
+   "tabs": []
+  },
+  {
+   "lang": "ar",
+   "n": 11,
+   "id": "s-agent-marketplace",
+   "text_equal": true,
+   "text_ops": [],
+   "textContent_equal": true,
+   "textContent_ops": [],
+   "img_removed": [],
+   "img_added": [],
+   "footer_equal": false,
+   "footer_ops": [
+    [
+     "Athar Open Agentic Pact | Community proposal | ODA × AIREV | 24 September 2026 × للمراجعة الداخلية فقط · INTERNAL REVIEW ONLY v1.5.4إعادة تشغيل المقدمةالشريحة 11 من 39",
+     "Athar Open Agentic Pact | Community proposal | ODA × AIREV | 24 September 2026 × للمراجعة الداخلية فقط · INTERNAL REVIEW ONLY v1.5.4الشريحة 11 من 39إعادة تشغيل المقدمة"
+    ]
+   ],
+   "tabs": []
+  },
+  {
+   "lang": "ar",
+   "n": 12,
+   "id": "s-decision-table",
+   "text_equal": true,
+   "text_ops": [],
+   "textContent_equal": true,
+   "textContent_ops": [],
+   "img_removed": [],
+   "img_added": [],
+   "footer_equal": false,
+   "footer_ops": [
+    [
+     "Athar Open Agentic Pact | Community proposal | ODA × AIREV | 24 September 2026 × للمراجعة الداخلية فقط · INTERNAL REVIEW ONLY v1.5.4إعادة تشغيل المقدمةالشريحة 12 من 39",
+     "Athar Open Agentic Pact | Community proposal | ODA × AIREV | 24 September 2026 × للمراجعة الداخلية فقط · INTERNAL REVIEW ONLY v1.5.4الشريحة 12 من 39إعادة تشغيل المقدمة"
+    ]
+   ],
+   "tabs": []
+  },
+  {
+   "lang": "ar",
+   "n": 13,
+   "id": "s-pillar-plugins",
+   "text_equal": true,
+   "text_ops": [],
+   "textContent_equal": true,
+   "textContent_ops": [],
+   "img_removed": [],
+   "img_added": [],
+   "footer_equal": false,
+   "footer_ops": [
+    [
+     "Athar Open Agentic Pact | Community proposal | ODA × AIREV | 24 September 2026 × للمراجعة الداخلية فقط · INTERNAL REVIEW ONLY v1.5.4إعادة تشغيل المقدمةالشريحة 13 من 39",
+     "Athar Open Agentic Pact | Community proposal | ODA × AIREV | 24 September 2026 × للمراجعة الداخلية فقط · INTERNAL REVIEW ONLY v1.5.4الشريحة 13 من 39إعادة تشغيل المقدمة"
+    ]
+   ],
+   "tabs": []
+  },
+  {
+   "lang": "ar",
+   "n": 14,
+   "id": "s-pillar-skills",
+   "text_equal": true,
+   "text_ops": [],
+   "textContent_equal": true,
+   "textContent_ops": [],
+   "img_removed": [],
+   "img_added": [],
+   "footer_equal": false,
+   "footer_ops": [
+    [
+     "Athar Open Agentic Pact | Community proposal | ODA × AIREV | 24 September 2026 × للمراجعة الداخلية فقط · INTERNAL REVIEW ONLY v1.5.4إعادة تشغيل المقدمةالشريحة 14 من 39",
+     "Athar Open Agentic Pact | Community proposal | ODA × AIREV | 24 September 2026 × للمراجعة الداخلية فقط · INTERNAL REVIEW ONLY v1.5.4الشريحة 14 من 39إعادة تشغيل المقدمة"
+    ]
+   ],
+   "tabs": []
+  },
+  {
+   "lang": "ar",
+   "n": 15,
+   "id": "s-pillar-open-ecosystem",
+   "text_equal": true,
+   "text_ops": [],
+   "textContent_equal": true,
+   "textContent_ops": [],
+   "img_removed": [],
+   "img_added": [],
+   "footer_equal": false,
+   "footer_ops": [
+    [
+     "Athar Open Agentic Pact | Community proposal | ODA × AIREV | 24 September 2026 × للمراجعة الداخلية فقط · INTERNAL REVIEW ONLY v1.5.4إعادة تشغيل المقدمةالشريحة 15 من 39",
+     "Athar Open Agentic Pact | Community proposal | ODA × AIREV | 24 September 2026 × للمراجعة الداخلية فقط · INTERNAL REVIEW ONLY v1.5.4الشريحة 15 من 39إعادة تشغيل المقدمة"
+    ]
+   ],
+   "tabs": []
+  },
+  {
+   "lang": "ar",
+   "n": 16,
+   "id": "s-pillar-cross-model",
+   "text_equal": true,
+   "text_ops": [],
+   "textContent_equal": true,
+   "textContent_ops": [],
+   "img_removed": [],
+   "img_added": [],
+   "footer_equal": false,
+   "footer_ops": [
+    [
+     "Athar Open Agentic Pact | Community proposal | ODA × AIREV | 24 September 2026 × للمراجعة الداخلية فقط · INTERNAL REVIEW ONLY v1.5.4إعادة تشغيل المقدمةالشريحة 16 من 39",
+     "Athar Open Agentic Pact | Community proposal | ODA × AIREV | 24 September 2026 × للمراجعة الداخلية فقط · INTERNAL REVIEW ONLY v1.5.4الشريحة 16 من 39إعادة تشغيل المقدمة"
+    ]
+   ],
+   "tabs": []
+  },
+  {
+   "lang": "ar",
+   "n": 17,
+   "id": "s-pillar-universal-licence",
+   "text_equal": true,
+   "text_ops": [],
+   "textContent_equal": true,
+   "textContent_ops": [],
+   "img_removed": [],
+   "img_added": [],
+   "footer_equal": false,
+   "footer_ops": [
+    [
+     "Athar Open Agentic Pact | Community proposal | ODA × AIREV | 24 September 2026 × للمراجعة الداخلية فقط · INTERNAL REVIEW ONLY v1.5.4إعادة تشغيل المقدمةالشريحة 17 من 39",
+     "Athar Open Agentic Pact | Community proposal | ODA × AIREV | 24 September 2026 × للمراجعة الداخلية فقط · INTERNAL REVIEW ONLY v1.5.4الشريحة 17 من 39إعادة تشغيل المقدمة"
+    ]
+   ],
+   "tabs": []
+  },
+  {
+   "lang": "ar",
+   "n": 18,
+   "id": "s-pillar-upskilling",
+   "text_equal": true,
+   "text_ops": [],
+   "textContent_equal": true,
+   "textContent_ops": [],
+   "img_removed": [],
+   "img_added": [],
+   "footer_equal": false,
+   "footer_ops": [
+    [
+     "Athar Open Agentic Pact | Community proposal | ODA × AIREV | 24 September 2026 × للمراجعة الداخلية فقط · INTERNAL REVIEW ONLY v1.5.4إعادة تشغيل المقدمةالشريحة 18 من 39",
+     "Athar Open Agentic Pact | Community proposal | ODA × AIREV | 24 September 2026 × للمراجعة الداخلية فقط · INTERNAL REVIEW ONLY v1.5.4الشريحة 18 من 39إعادة تشغيل المقدمة"
+    ]
+   ],
+   "tabs": []
+  },
+  {
+   "lang": "ar",
+   "n": 19,
+   "id": "s-pact-principles",
+   "text_equal": true,
+   "text_ops": [],
+   "textContent_equal": true,
+   "textContent_ops": [],
+   "img_removed": [],
+   "img_added": [],
+   "footer_equal": false,
+   "footer_ops": [
+    [
+     "Athar Open Agentic Pact | Community proposal | ODA × AIREV | 24 September 2026 × للمراجعة الداخلية فقط · INTERNAL REVIEW ONLY v1.5.4إعادة تشغيل المقدمةالشريحة 19 من 39",
+     "Athar Open Agentic Pact | Community proposal | ODA × AIREV | 24 September 2026 × للمراجعة الداخلية فقط · INTERNAL REVIEW ONLY v1.5.4الشريحة 19 من 39إعادة تشغيل المقدمة"
+    ]
+   ],
+   "tabs": []
+  },
+  {
+   "lang": "ar",
+   "n": 20,
+   "id": "s-how-to-sign",
+   "text_equal": true,
+   "text_ops": [],
+   "textContent_equal": true,
+   "textContent_ops": [],
+   "img_removed": [],
+   "img_added": [],
+   "footer_equal": false,
+   "footer_ops": [
+    [
+     "Athar Open Agentic Pact | Community proposal | ODA × AIREV | 24 September 2026 × للمراجعة الداخلية فقط · INTERNAL REVIEW ONLY v1.5.4إعادة تشغيل المقدمةالشريحة 20 من 39",
+     "Athar Open Agentic Pact | Community proposal | ODA × AIREV | 24 September 2026 × للمراجعة الداخلية فقط · INTERNAL REVIEW ONLY v1.5.4الشريحة 20 من 39إعادة تشغيل المقدمة"
+    ]
+   ],
+   "tabs": []
+  },
+  {
+   "lang": "ar",
+   "n": 21,
+   "id": "s-actors-wall",
+   "text_equal": true,
+   "text_ops": [],
+   "textContent_equal": true,
+   "textContent_ops": [],
+   "img_removed": [],
+   "img_added": [],
+   "footer_equal": false,
+   "footer_ops": [
+    [
+     "Athar Open Agentic Pact | Community proposal | ODA × AIREV | 24 September 2026 × للمراجعة الداخلية فقط · INTERNAL REVIEW ONLY v1.5.4إعادة تشغيل المقدمةالشريحة 21 من 39",
+     "Athar Open Agentic Pact | Community proposal | ODA × AIREV | 24 September 2026 × للمراجعة الداخلية فقط · INTERNAL REVIEW ONLY v1.5.4الشريحة 21 من 39إعادة تشغيل المقدمة"
+    ]
+   ],
+   "tabs": []
+  },
+  {
+   "lang": "ar",
+   "n": 22,
+   "id": "s-who-signs",
+   "text_equal": true,
+   "text_ops": [],
+   "textContent_equal": true,
+   "textContent_ops": [],
+   "img_removed": [],
+   "img_added": [],
+   "footer_equal": false,
+   "footer_ops": [
+    [
+     "Athar Open Agentic Pact | Community proposal | ODA × AIREV | 24 September 2026 × للمراجعة الداخلية فقط · INTERNAL REVIEW ONLY v1.5.4إعادة تشغيل المقدمةالشريحة 22 من 39",
+     "Athar Open Agentic Pact | Community proposal | ODA × AIREV | 24 September 2026 × للمراجعة الداخلية فقط · INTERNAL REVIEW ONLY v1.5.4الشريحة 22 من 39إعادة تشغيل المقدمة"
+    ]
+   ],
+   "tabs": []
+  },
+  {
+   "lang": "ar",
+   "n": 23,
+   "id": "s-who-governs",
+   "text_equal": true,
+   "text_ops": [],
+   "textContent_equal": true,
+   "textContent_ops": [],
+   "img_removed": [],
+   "img_added": [],
+   "footer_equal": false,
+   "footer_ops": [
+    [
+     "Athar Open Agentic Pact | Community proposal | ODA × AIREV | 24 September 2026 × للمراجعة الداخلية فقط · INTERNAL REVIEW ONLY v1.5.4إعادة تشغيل المقدمةالشريحة 23 من 39",
+     "Athar Open Agentic Pact | Community proposal | ODA × AIREV | 24 September 2026 × للمراجعة الداخلية فقط · INTERNAL REVIEW ONLY v1.5.4الشريحة 23 من 39إعادة تشغيل المقدمة"
+    ]
+   ],
+   "tabs": []
+  },
+  {
+   "lang": "ar",
+   "n": 24,
+   "id": "s-who-builds",
+   "text_equal": true,
+   "text_ops": [],
+   "textContent_equal": true,
+   "textContent_ops": [],
+   "img_removed": [],
+   "img_added": [],
+   "footer_equal": false,
+   "footer_ops": [
+    [
+     "Athar Open Agentic Pact | Community proposal | ODA × AIREV | 24 September 2026 × للمراجعة الداخلية فقط · INTERNAL REVIEW ONLY v1.5.4إعادة تشغيل المقدمةالشريحة 24 من 39",
+     "Athar Open Agentic Pact | Community proposal | ODA × AIREV | 24 September 2026 × للمراجعة الداخلية فقط · INTERNAL REVIEW ONLY v1.5.4الشريحة 24 من 39إعادة تشغيل المقدمة"
+    ]
+   ],
+   "tabs": []
+  },
+  {
+   "lang": "ar",
+   "n": 25,
+   "id": "s-who-learns",
+   "text_equal": true,
+   "text_ops": [],
+   "textContent_equal": true,
+   "textContent_ops": [],
+   "img_removed": [],
+   "img_added": [],
+   "footer_equal": false,
+   "footer_ops": [
+    [
+     "Athar Open Agentic Pact | Community proposal | ODA × AIREV | 24 September 2026 × للمراجعة الداخلية فقط · INTERNAL REVIEW ONLY v1.5.4إعادة تشغيل المقدمةالشريحة 25 من 39",
+     "Athar Open Agentic Pact | Community proposal | ODA × AIREV | 24 September 2026 × للمراجعة الداخلية فقط · INTERNAL REVIEW ONLY v1.5.4الشريحة 25 من 39إعادة تشغيل المقدمة"
+    ]
+   ],
+   "tabs": []
+  },
+  {
+   "lang": "ar",
+   "n": 26,
+   "id": "s-governance-licence",
+   "text_equal": true,
+   "text_ops": [],
+   "textContent_equal": true,
+   "textContent_ops": [],
+   "img_removed": [],
+   "img_added": [],
+   "footer_equal": false,
+   "footer_ops": [
+    [
+     "Athar Open Agentic Pact | Community proposal | ODA × AIREV | 24 September 2026 × للمراجعة الداخلية فقط · INTERNAL REVIEW ONLY v1.5.4إعادة تشغيل المقدمةالشريحة 26 من 39",
+     "Athar Open Agentic Pact | Community proposal | ODA × AIREV | 24 September 2026 × للمراجعة الداخلية فقط · INTERNAL REVIEW ONLY v1.5.4الشريحة 26 من 39إعادة تشغيل المقدمة"
+    ]
+   ],
+   "tabs": []
+  },
+  {
+   "lang": "ar",
+   "n": 27,
+   "id": "s-roadmap",
+   "text_equal": true,
+   "text_ops": [],
+   "textContent_equal": true,
+   "textContent_ops": [],
+   "img_removed": [],
+   "img_added": [],
+   "footer_equal": false,
+   "footer_ops": [
+    [
+     "Athar Open Agentic Pact | Community proposal | ODA × AIREV | 24 September 2026 × للمراجعة الداخلية فقط · INTERNAL REVIEW ONLY v1.5.4إعادة تشغيل المقدمةالشريحة 27 من 39",
+     "Athar Open Agentic Pact | Community proposal | ODA × AIREV | 24 September 2026 × للمراجعة الداخلية فقط · INTERNAL REVIEW ONLY v1.5.4الشريحة 27 من 39إعادة تشغيل المقدمة"
+    ]
+   ],
+   "tabs": []
+  },
+  {
+   "lang": "ar",
+   "n": 28,
+   "id": "s-it-outcomes",
+   "text_equal": true,
+   "text_ops": [],
+   "textContent_equal": true,
+   "textContent_ops": [],
+   "img_removed": [],
+   "img_added": [],
+   "footer_equal": false,
+   "footer_ops": [
+    [
+     "Athar Open Agentic Pact | Community proposal | ODA × AIREV | 24 September 2026 × للمراجعة الداخلية فقط · INTERNAL REVIEW ONLY v1.5.4إعادة تشغيل المقدمةالشريحة 28 من 39",
+     "Athar Open Agentic Pact | Community proposal | ODA × AIREV | 24 September 2026 × للمراجعة الداخلية فقط · INTERNAL REVIEW ONLY v1.5.4الشريحة 28 من 39إعادة تشغيل المقدمة"
+    ]
+   ],
+   "tabs": []
+  },
+  {
+   "lang": "ar",
+   "n": 29,
+   "id": "s-it-tiers",
+   "text_equal": false,
+   "text_ops": [
+    [
+     "replace",
+     "صورة رسمية من ",
+     "تصوّر مفا"
+    ],
+    [
+     "replace",
+     "وية أثر",
+     "يمي"
+    ],
+    [
+     "replace",
+     "صورة رسمية من ",
+     "تصوّر مفا"
+    ],
+    [
+     "replace",
+     "وية أثر",
+     "يمي"
+    ],
+    [
+     "replace",
+     "صورة رسمية من ",
+     "تصوّر مفا"
+    ],
+    [
+     "replace",
+     "وية أثر",
+     "يمي"
+    ]
+   ],
+   "textContent_equal": false,
+   "textContent_ops": [
+    [
+     "insert",
+     "",
+     "ت"
+    ],
+    [
+     "insert",
+     "",
+     "ّ"
+    ],
+    [
+     "delete",
+     "ة",
+     ""
+    ],
+    [
+     "replace",
+     "رس",
+     "مفاهي"
+    ],
+    [
+     "delete",
+     "ة من هوية أثر",
+     ""
+    ],
+    [
+     "insert",
+     "",
+     "ت"
+    ],
+    [
+     "insert",
+     "",
+     "ّ"
+    ],
+    [
+     "delete",
+     "ة",
+     ""
+    ],
+    [
+     "replace",
+     "رس",
+     "مفاهي"
+    ],
+    [
+     "delete",
+     "ة من هوية أثر",
+     ""
+    ],
+    [
+     "insert",
+     "",
+     "ت"
+    ],
+    [
+     "insert",
+     "",
+     "ّ"
+    ]
+   ],
+   "img_removed": [
+    [
+     "/assets/impact/v133/t1-licences.png",
+     "الفئة 1 — التراخيص: مشهد خدمة حكومية من صور هوية أثر الرسمية (حزمة أصول العلامة v3)"
+    ],
+    [
+     "/assets/impact/v133/t2-ai-pc-composited.png",
+     "الفئة 2 — حواسيب الذكاء الاصطناعي وأجهزة سطح المكتب: مشهد أعمال صغيرة من صور هوية أثر الرسمية (حزمة أصول العلامة v3)"
+    ],
+    [
+     "/assets/impact/v133/t3-data-centre-composited.png",
+     "الفئة 3 — عقد مراكز البيانات السيادية: صورة رئيسية داكنة من صور هوية أثر الرسمية (حزمة أصول العلامة v3)"
+    ],
+    [
+     "/assets/plates/plate5-banner.png",
+     "تسليم الملكية — شريط عريض من صور هوية أثر الرسمية (اللوحة الثلاثية الشاملة، حزمة أصول العلامة v3)"
+    ]
+   ],
+   "img_added": [
+    [
+     "/assets/impact/v154/t1-lebanon-licences.png",
+     "تصوّر مفاهيمي: مهنيون لبنانيون في قاعة تدريب وزارية في بيروت يتابعون شهادة في الذكاء الاصطناعي التوليدي على حواسيب محمولة تعمل بنظام أثر، مع شهادة أثر ولافتته في مقدمة القاعة"
+    ],
+    [
+     "/assets/impact/v154/t2-india-ai-pc.png",
+     "تصوّر مفاهيمي: صف في مدرسة حكومية هندية حول حاسوب أثر للذكاء الاصطناعي، شعار أثر على إطار الشاشة ودرس تعليمي بالهندية يعمل على الجهاز"
+    ],
+    [
+     "/assets/impact/v154/t3-kenya-node.png",
+     "تصوّر مفاهيمي: عقدة مركز بيانات حاوية تحمل شعار أثر تحت مظلة شمسية في أرض زراعية كينية وخلفها عيادة ومدرسة، ومزارعة تستمع إلى إرشاد صوتي بالسواحيلية على هاتفها"
+    ],
+    [
+     "/assets/plates/v154/ownership-montage.png",
+     "تصوّر مفاهيمي من ثلاث لوحات: تدريب مشغّلين كينيين شباب واعتمادهم داخل عقدة أثر، ثم تسليم العقدة إلى الجهة الوطنية، ثم مشغّلون محليون يديرون العقدة"
+    ]
+   ],
+   "footer_equal": false,
+   "footer_ops": [
+    [
+     "Athar Open Agentic Pact | Community proposal | ODA × AIREV | 24 September 2026 × للمراجعة الداخلية فقط · INTERNAL REVIEW ONLY v1.5.4إعادة تشغيل المقدمةالشريحة 29 من 39",
+     "Athar Open Agentic Pact | Community proposal | ODA × AIREV | 24 September 2026 × للمراجعة الداخلية فقط · INTERNAL REVIEW ONLY v1.5.4الشريحة 29 من 39إعادة تشغيل المقدمة"
+    ]
+   ],
+   "tabs": []
+  },
+  {
+   "lang": "ar",
+   "n": 30,
+   "id": "s-it-metrics",
+   "text_equal": true,
+   "text_ops": [],
+   "textContent_equal": true,
+   "textContent_ops": [],
+   "img_removed": [
+    [
+     "/assets/news/marks/publisher-pib.png",
+     "PIB India — mark shown for reference only"
+    ]
+   ],
+   "img_added": [
+    [
+     "/assets/news/marks/publisher-pib-official.png",
+     "PIB India — mark shown for reference only"
+    ]
+   ],
+   "footer_equal": false,
+   "footer_ops": [
+    [
+     "Athar Open Agentic Pact | Community proposal | ODA × AIREV | 24 September 2026 × للمراجعة الداخلية فقط · INTERNAL REVIEW ONLY v1.5.4إعادة تشغيل المقدمةالشريحة 30 من 39",
+     "Athar Open Agentic Pact | Community proposal | ODA × AIREV | 24 September 2026 × للمراجعة الداخلية فقط · INTERNAL REVIEW ONLY v1.5.4الشريحة 30 من 39إعادة تشغيل المقدمة"
+    ]
+   ],
+   "tabs": []
+  },
+  {
+   "lang": "ar",
+   "n": 31,
+   "id": "s-it-sustain",
+   "text_equal": true,
+   "text_ops": [],
+   "textContent_equal": true,
+   "textContent_ops": [],
+   "img_removed": [],
+   "img_added": [],
+   "footer_equal": false,
+   "footer_ops": [
+    [
+     "Athar Open Agentic Pact | Community proposal | ODA × AIREV | 24 September 2026 × للمراجعة الداخلية فقط · INTERNAL REVIEW ONLY v1.5.4إعادة تشغيل المقدمةالشريحة 31 من 39",
+     "Athar Open Agentic Pact | Community proposal | ODA × AIREV | 24 September 2026 × للمراجعة الداخلية فقط · INTERNAL REVIEW ONLY v1.5.4الشريحة 31 من 39إعادة تشغيل المقدمة"
+    ]
+   ],
+   "tabs": []
+  },
+  {
+   "lang": "ar",
+   "n": 32,
+   "id": "s-it-partners",
+   "text_equal": true,
+   "text_ops": [],
+   "textContent_equal": true,
+   "textContent_ops": [],
+   "img_removed": [],
+   "img_added": [],
+   "footer_equal": false,
+   "footer_ops": [
+    [
+     "Athar Open Agentic Pact | Community proposal | ODA × AIREV | 24 September 2026 × للمراجعة الداخلية فقط · INTERNAL REVIEW ONLY v1.5.4إعادة تشغيل المقدمةالشريحة 32 من 39",
+     "Athar Open Agentic Pact | Community proposal | ODA × AIREV | 24 September 2026 × للمراجعة الداخلية فقط · INTERNAL REVIEW ONLY v1.5.4الشريحة 32 من 39إعادة تشغيل المقدمة"
+    ]
+   ],
+   "tabs": []
+  },
+  {
+   "lang": "ar",
+   "n": 33,
+   "id": "s-it-join",
+   "text_equal": true,
+   "text_ops": [],
+   "textContent_equal": true,
+   "textContent_ops": [],
+   "img_removed": [],
+   "img_added": [],
+   "footer_equal": false,
+   "footer_ops": [
+    [
+     "Athar Open Agentic Pact | Community proposal | ODA × AIREV | 24 September 2026 × للمراجعة الداخلية فقط · INTERNAL REVIEW ONLY v1.5.4إعادة تشغيل المقدمةالشريحة 33 من 39",
+     "Athar Open Agentic Pact | Community proposal | ODA × AIREV | 24 September 2026 × للمراجعة الداخلية فقط · INTERNAL REVIEW ONLY v1.5.4الشريحة 33 من 39إعادة تشغيل المقدمة"
+    ]
+   ],
+   "tabs": []
+  },
+  {
+   "lang": "ar",
+   "n": 34,
+   "id": "s-aos-overview",
+   "text_equal": true,
+   "text_ops": [],
+   "textContent_equal": true,
+   "textContent_ops": [],
+   "img_removed": [],
+   "img_added": [],
+   "footer_equal": false,
+   "footer_ops": [
+    [
+     "Athar Open Agentic Pact | Community proposal | ODA × AIREV | 24 September 2026 × للمراجعة الداخلية فقط · INTERNAL REVIEW ONLY v1.5.4إعادة تشغيل المقدمةالشريحة 34 من 39",
+     "Athar Open Agentic Pact | Community proposal | ODA × AIREV | 24 September 2026 × للمراجعة الداخلية فقط · INTERNAL REVIEW ONLY v1.5.4الشريحة 34 من 39إعادة تشغيل المقدمة"
+    ]
+   ],
+   "tabs": []
+  },
+  {
+   "lang": "ar",
+   "n": 35,
+   "id": "s-aos-tour",
+   "text_equal": true,
+   "text_ops": [],
+   "textContent_equal": true,
+   "textContent_ops": [],
+   "img_removed": [],
+   "img_added": [],
+   "footer_equal": false,
+   "footer_ops": [
+    [
+     "Athar Open Agentic Pact | Community proposal | ODA × AIREV | 24 September 2026 × للمراجعة الداخلية فقط · INTERNAL REVIEW ONLY v1.5.4إعادة تشغيل المقدمةالشريحة 35 من 39",
+     "Athar Open Agentic Pact | Community proposal | ODA × AIREV | 24 September 2026 × للمراجعة الداخلية فقط · INTERNAL REVIEW ONLY v1.5.4الشريحة 35 من 39إعادة تشغيل المقدمة"
+    ]
+   ],
+   "tabs": []
+  },
+  {
+   "lang": "ar",
+   "n": 36,
+   "id": "s-aos-roadmap",
+   "text_equal": true,
+   "text_ops": [],
+   "textContent_equal": true,
+   "textContent_ops": [],
+   "img_removed": [],
+   "img_added": [],
+   "footer_equal": false,
+   "footer_ops": [
+    [
+     "Athar Open Agentic Pact | Community proposal | ODA × AIREV | 24 September 2026 × للمراجعة الداخلية فقط · INTERNAL REVIEW ONLY v1.5.4إعادة تشغيل المقدمةالشريحة 36 من 39",
+     "Athar Open Agentic Pact | Community proposal | ODA × AIREV | 24 September 2026 × للمراجعة الداخلية فقط · INTERNAL REVIEW ONLY v1.5.4الشريحة 36 من 39إعادة تشغيل المقدمة"
+    ]
+   ],
+   "tabs": []
+  },
+  {
+   "lang": "ar",
+   "n": 37,
+   "id": "s-aos-deploy",
+   "text_equal": true,
+   "text_ops": [],
+   "textContent_equal": true,
+   "textContent_ops": [],
+   "img_removed": [],
+   "img_added": [],
+   "footer_equal": false,
+   "footer_ops": [
+    [
+     "Athar Open Agentic Pact | Community proposal | ODA × AIREV | 24 September 2026 × للمراجعة الداخلية فقط · INTERNAL REVIEW ONLY v1.5.4إعادة تشغيل المقدمةالشريحة 37 من 39",
+     "Athar Open Agentic Pact | Community proposal | ODA × AIREV | 24 September 2026 × للمراجعة الداخلية فقط · INTERNAL REVIEW ONLY v1.5.4الشريحة 37 من 39إعادة تشغيل المقدمة"
+    ]
+   ],
+   "tabs": []
+  },
+  {
+   "lang": "ar",
+   "n": 38,
+   "id": "s-aos-nations",
+   "text_equal": false,
+   "text_ops": [
+    [
+     "insert",
+     "",
+     "ت"
+    ],
+    [
+     "replace",
+     "رة رسمية من ",
+     "ّر مفا"
+    ],
+    [
+     "replace",
+     "وية أثر",
+     "يمي"
+    ],
+    [
+     "replace",
+     "درّج الفئات",
+     "سليم الملكية"
+    ]
+   ],
+   "textContent_equal": false,
+   "textContent_ops": [
+    [
+     "insert",
+     "",
+     "ت"
+    ],
+    [
+     "insert",
+     "",
+     "ّ"
+    ],
+    [
+     "delete",
+     "ة",
+     ""
+    ],
+    [
+     "replace",
+     "رس",
+     "مفاهي"
+    ],
+    [
+     "delete",
+     "ة من هوية أثر",
+     ""
+    ],
+    [
+     "replace",
+     "درّج",
+     "سليم"
+    ],
+    [
+     "replace",
+     "فئات",
+     "ملكية"
+    ]
+   ],
+   "img_removed": [
+    [
+     "/assets/plates/plate5-banner.png",
+     "صورة رسمية من هوية أثر — تدرّج الفئات (من الشريحة 29)"
+    ]
+   ],
+   "img_added": [
+    [
+     "/assets/plates/v154/ownership-montage.png",
+     "تصوّر مفاهيمي من ثلاث لوحات: تدريب مشغّلين كينيين شباب واعتمادهم داخل عقدة أثر، ثم تسليم العقدة إلى الجهة الوطنية، ثم مشغّلون محليون يديرون العقدة"
+    ]
+   ],
+   "footer_equal": false,
+   "footer_ops": [
+    [
+     "Athar Open Agentic Pact | Community proposal | ODA × AIREV | 24 September 2026 × للمراجعة الداخلية فقط · INTERNAL REVIEW ONLY v1.5.4إعادة تشغيل المقدمةالشريحة 38 من 39",
+     "Athar Open Agentic Pact | Community proposal | ODA × AIREV | 24 September 2026 × للمراجعة الداخلية فقط · INTERNAL REVIEW ONLY v1.5.4الشريحة 38 من 39إعادة تشغيل المقدمة"
+    ]
+   ],
+   "tabs": [
+    {
+     "k": "lb",
+     "text_equal": false,
+     "ops": [
+      [
+       "insert",
+       "",
+       "ت"
+      ],
+      [
+       "replace",
+       "رة رسمية من ",
+       "ّر مفا"
+      ],
+      [
+       "replace",
+       "وية أثر",
+       "يمي"
+      ],
+      [
+       "replace",
+       "درّج الفئات",
+       "سليم الملكية"
+      ]
+     ],
+     "img_removed": [
+      [
+       "/assets/plates/plate5-banner.png",
+       "صورة رسمية من هوية أثر — تدرّج الفئات (من الشريحة 29)"
+      ]
+     ],
+     "img_added": [
+      [
+       "/assets/plates/v154/ownership-montage.png",
+       "تصوّر مفاهيمي من ثلاث لوحات: تدريب مشغّلين كينيين شباب واعتمادهم داخل عقدة أثر، ثم تسليم العقدة إلى الجهة الوطنية، ثم مشغّلون محليون يديرون العقدة"
+      ]
+     ]
+    },
+    {
+     "k": "in",
+     "text_equal": false,
+     "ops": [
+      [
+       "insert",
+       "",
+       "ت"
+      ],
+      [
+       "replace",
+       "رة رسمية من هوية أثر",
+       "ّر مفاهيمي"
+      ],
+      [
+       "replace",
+       "درّج الفئات",
+       "سليم الملكية"
+      ]
+     ],
+     "img_removed": [
+      [
+       "/assets/plates/plate5-banner.png",
+       "صورة رسمية من هوية أثر — تدرّج الفئات (من الشريحة 29)"
+      ]
+     ],
+     "img_added": [
+      [
+       "/assets/plates/v154/ownership-montage.png",
+       "تصوّر مفاهيمي من ثلاث لوحات: تدريب مشغّلين كينيين شباب واعتمادهم داخل عقدة أثر، ثم تسليم العقدة إلى الجهة الوطنية، ثم مشغّلون محليون يديرون العقدة"
+      ]
+     ]
+    },
+    {
+     "k": "ke",
+     "text_equal": false,
+     "ops": [
+      [
+       "insert",
+       "",
+       "ت"
+      ],
+      [
+       "replace",
+       "رة رسمية من ",
+       "ّر مفا"
+      ],
+      [
+       "replace",
+       "وية أثر",
+       "يمي"
+      ],
+      [
+       "replace",
+       "درّج الفئات",
+       "سليم الملكية"
+      ]
+     ],
+     "img_removed": [
+      [
+       "/assets/plates/plate5-banner.png",
+       "صورة رسمية من هوية أثر — تدرّج الفئات (من الشريحة 29)"
+      ]
+     ],
+     "img_added": [
+      [
+       "/assets/plates/v154/ownership-montage.png",
+       "تصوّر مفاهيمي من ثلاث لوحات: تدريب مشغّلين كينيين شباب واعتمادهم داخل عقدة أثر، ثم تسليم العقدة إلى الجهة الوطنية، ثم مشغّلون محليون يديرون العقدة"
+      ]
+     ]
+    }
+   ]
+  },
+  {
+   "lang": "ar",
+   "n": 39,
+   "id": "s-closing",
+   "text_equal": true,
+   "text_ops": [],
+   "textContent_equal": true,
+   "textContent_ops": [],
+   "img_removed": [
+    [
+     "/partners/ondemand-by-airev-mark.png",
+     "أون ديماند من إيريف — علامة كلمة (مقتطعة من الترويسة الموثّقة)"
+    ]
+   ],
+   "img_added": [],
+   "footer_equal": false,
+   "footer_ops": [
+    [
+     "Athar Open Agentic Pact | Community proposal | ODA × AIREV | 24 September 2026 × للمراجعة الداخلية فقط · INTERNAL REVIEW ONLY v1.5.4إعادة تشغيل المقدمةالشريحة 39 من 39",
+     "Athar Open Agentic Pact | Community proposal | ODA × AIREV | 24 September 2026 × للمراجعة الداخلية فقط · INTERNAL REVIEW ONLY v1.5.4الشريحة 39 من 39إعادة تشغيل المقدمة"
+    ]
+   ],
+   "tabs": []
+  },
+  {
+   "lang": "en",
+   "n": 1,
+   "id": "s-cover",
+   "text_equal": true,
+   "text_ops": [],
+   "textContent_equal": true,
+   "textContent_ops": [],
+   "img_removed": [
+    [
+     "/partners/ondemand-by-airev-mark.png",
+     "OnDemand by AIREV — wordmark (cropped from the verified lockup)"
+    ]
+   ],
+   "img_added": [],
+   "footer_equal": true,
+   "footer_ops": [],
+   "tabs": []
+  },
+  {
+   "lang": "en",
+   "n": 2,
+   "id": "s-hero",
+   "text_equal": true,
+   "text_ops": [],
+   "textContent_equal": true,
+   "textContent_ops": [],
+   "img_removed": [],
+   "img_added": [],
+   "footer_equal": true,
+   "footer_ops": [],
+   "tabs": []
+  },
+  {
+   "lang": "en",
+   "n": 3,
+   "id": "s-why-pact",
+   "text_equal": true,
+   "text_ops": [],
+   "textContent_equal": true,
+   "textContent_ops": [],
+   "img_removed": [],
+   "img_added": [],
+   "footer_equal": true,
+   "footer_ops": [],
+   "tabs": []
+  },
+  {
+   "lang": "en",
+   "n": 4,
+   "id": "s-four-outcomes",
+   "text_equal": true,
+   "text_ops": [],
+   "textContent_equal": true,
+   "textContent_ops": [],
+   "img_removed": [],
+   "img_added": [],
+   "footer_equal": true,
+   "footer_ops": [],
+   "tabs": []
+  },
+  {
+   "lang": "en",
+   "n": 5,
+   "id": "s-managed-programme",
+   "text_equal": true,
+   "text_ops": [],
+   "textContent_equal": true,
+   "textContent_ops": [],
+   "img_removed": [],
+   "img_added": [],
+   "footer_equal": true,
+   "footer_ops": [],
+   "tabs": []
+  },
+  {
+   "lang": "en",
+   "n": 6,
+   "id": "s-discord-home",
+   "text_equal": true,
+   "text_ops": [],
+   "textContent_equal": true,
+   "textContent_ops": [],
+   "img_removed": [],
+   "img_added": [],
+   "footer_equal": true,
+   "footer_ops": [],
+   "tabs": []
+  },
+  {
+   "lang": "en",
+   "n": 7,
+   "id": "s-country-chapters",
+   "text_equal": true,
+   "text_ops": [],
+   "textContent_equal": true,
+   "textContent_ops": [],
+   "img_removed": [],
+   "img_added": [],
+   "footer_equal": true,
+   "footer_ops": [],
+   "tabs": []
+  },
+  {
+   "lang": "en",
+   "n": 8,
+   "id": "s-learning-formats",
+   "text_equal": true,
+   "text_ops": [],
+   "textContent_equal": true,
+   "textContent_ops": [],
+   "img_removed": [],
+   "img_added": [],
+   "footer_equal": true,
+   "footer_ops": [],
+   "tabs": []
+  },
+  {
+   "lang": "en",
+   "n": 9,
+   "id": "s-challenges-showcases",
+   "text_equal": true,
+   "text_ops": [],
+   "textContent_equal": true,
+   "textContent_ops": [],
+   "img_removed": [],
+   "img_added": [],
+   "footer_equal": true,
+   "footer_ops": [],
+   "tabs": []
+  },
+  {
+   "lang": "en",
+   "n": 10,
+   "id": "s-office-hours",
+   "text_equal": true,
+   "text_ops": [],
+   "textContent_equal": true,
+   "textContent_ops": [],
+   "img_removed": [],
+   "img_added": [],
+   "footer_equal": true,
+   "footer_ops": [],
+   "tabs": []
+  },
+  {
+   "lang": "en",
+   "n": 11,
+   "id": "s-agent-marketplace",
+   "text_equal": true,
+   "text_ops": [],
+   "textContent_equal": true,
+   "textContent_ops": [],
+   "img_removed": [],
+   "img_added": [],
+   "footer_equal": true,
+   "footer_ops": [],
+   "tabs": []
+  },
+  {
+   "lang": "en",
+   "n": 12,
+   "id": "s-decision-table",
+   "text_equal": true,
+   "text_ops": [],
+   "textContent_equal": true,
+   "textContent_ops": [],
+   "img_removed": [],
+   "img_added": [],
+   "footer_equal": true,
+   "footer_ops": [],
+   "tabs": []
+  },
+  {
+   "lang": "en",
+   "n": 13,
+   "id": "s-pillar-plugins",
+   "text_equal": true,
+   "text_ops": [],
+   "textContent_equal": true,
+   "textContent_ops": [],
+   "img_removed": [],
+   "img_added": [],
+   "footer_equal": true,
+   "footer_ops": [],
+   "tabs": []
+  },
+  {
+   "lang": "en",
+   "n": 14,
+   "id": "s-pillar-skills",
+   "text_equal": true,
+   "text_ops": [],
+   "textContent_equal": true,
+   "textContent_ops": [],
+   "img_removed": [],
+   "img_added": [],
+   "footer_equal": true,
+   "footer_ops": [],
+   "tabs": []
+  },
+  {
+   "lang": "en",
+   "n": 15,
+   "id": "s-pillar-open-ecosystem",
+   "text_equal": true,
+   "text_ops": [],
+   "textContent_equal": true,
+   "textContent_ops": [],
+   "img_removed": [],
+   "img_added": [],
+   "footer_equal": true,
+   "footer_ops": [],
+   "tabs": []
+  },
+  {
+   "lang": "en",
+   "n": 16,
+   "id": "s-pillar-cross-model",
+   "text_equal": true,
+   "text_ops": [],
+   "textContent_equal": true,
+   "textContent_ops": [],
+   "img_removed": [],
+   "img_added": [],
+   "footer_equal": true,
+   "footer_ops": [],
+   "tabs": []
+  },
+  {
+   "lang": "en",
+   "n": 17,
+   "id": "s-pillar-universal-licence",
+   "text_equal": true,
+   "text_ops": [],
+   "textContent_equal": true,
+   "textContent_ops": [],
+   "img_removed": [],
+   "img_added": [],
+   "footer_equal": true,
+   "footer_ops": [],
+   "tabs": []
+  },
+  {
+   "lang": "en",
+   "n": 18,
+   "id": "s-pillar-upskilling",
+   "text_equal": true,
+   "text_ops": [],
+   "textContent_equal": true,
+   "textContent_ops": [],
+   "img_removed": [],
+   "img_added": [],
+   "footer_equal": true,
+   "footer_ops": [],
+   "tabs": []
+  },
+  {
+   "lang": "en",
+   "n": 19,
+   "id": "s-pact-principles",
+   "text_equal": true,
+   "text_ops": [],
+   "textContent_equal": true,
+   "textContent_ops": [],
+   "img_removed": [],
+   "img_added": [],
+   "footer_equal": true,
+   "footer_ops": [],
+   "tabs": []
+  },
+  {
+   "lang": "en",
+   "n": 20,
+   "id": "s-how-to-sign",
+   "text_equal": true,
+   "text_ops": [],
+   "textContent_equal": true,
+   "textContent_ops": [],
+   "img_removed": [],
+   "img_added": [],
+   "footer_equal": true,
+   "footer_ops": [],
+   "tabs": []
+  },
+  {
+   "lang": "en",
+   "n": 21,
+   "id": "s-actors-wall",
+   "text_equal": true,
+   "text_ops": [],
+   "textContent_equal": true,
+   "textContent_ops": [],
+   "img_removed": [],
+   "img_added": [],
+   "footer_equal": true,
+   "footer_ops": [],
+   "tabs": []
+  },
+  {
+   "lang": "en",
+   "n": 22,
+   "id": "s-who-signs",
+   "text_equal": true,
+   "text_ops": [],
+   "textContent_equal": true,
+   "textContent_ops": [],
+   "img_removed": [],
+   "img_added": [],
+   "footer_equal": true,
+   "footer_ops": [],
+   "tabs": []
+  },
+  {
+   "lang": "en",
+   "n": 23,
+   "id": "s-who-governs",
+   "text_equal": true,
+   "text_ops": [],
+   "textContent_equal": true,
+   "textContent_ops": [],
+   "img_removed": [],
+   "img_added": [],
+   "footer_equal": true,
+   "footer_ops": [],
+   "tabs": []
+  },
+  {
+   "lang": "en",
+   "n": 24,
+   "id": "s-who-builds",
+   "text_equal": true,
+   "text_ops": [],
+   "textContent_equal": true,
+   "textContent_ops": [],
+   "img_removed": [],
+   "img_added": [],
+   "footer_equal": true,
+   "footer_ops": [],
+   "tabs": []
+  },
+  {
+   "lang": "en",
+   "n": 25,
+   "id": "s-who-learns",
+   "text_equal": true,
+   "text_ops": [],
+   "textContent_equal": true,
+   "textContent_ops": [],
+   "img_removed": [],
+   "img_added": [],
+   "footer_equal": true,
+   "footer_ops": [],
+   "tabs": []
+  },
+  {
+   "lang": "en",
+   "n": 26,
+   "id": "s-governance-licence",
+   "text_equal": true,
+   "text_ops": [],
+   "textContent_equal": true,
+   "textContent_ops": [],
+   "img_removed": [],
+   "img_added": [],
+   "footer_equal": true,
+   "footer_ops": [],
+   "tabs": []
+  },
+  {
+   "lang": "en",
+   "n": 27,
+   "id": "s-roadmap",
+   "text_equal": true,
+   "text_ops": [],
+   "textContent_equal": true,
+   "textContent_ops": [],
+   "img_removed": [],
+   "img_added": [],
+   "footer_equal": true,
+   "footer_ops": [],
+   "tabs": []
+  },
+  {
+   "lang": "en",
+   "n": 28,
+   "id": "s-it-outcomes",
+   "text_equal": true,
+   "text_ops": [],
+   "textContent_equal": true,
+   "textContent_ops": [],
+   "img_removed": [],
+   "img_added": [],
+   "footer_equal": true,
+   "footer_ops": [],
+   "tabs": []
+  },
+  {
+   "lang": "en",
+   "n": 29,
+   "id": "s-it-tiers",
+   "text_equal": false,
+   "text_ops": [
+    [
+     "insert",
+     "",
+     "C"
+    ],
+    [
+     "replace",
+     "FFI",
+     "N"
+    ],
+    [
+     "replace",
+     "IAL B",
+     "EPT "
+    ],
+    [
+     "replace",
+     "A",
+     "E"
+    ],
+    [
+     "delete",
+     " IMAG",
+     ""
+    ],
+    [
+     "delete",
+     "Y",
+     ""
+    ],
+    [
+     "insert",
+     "",
+     "C"
+    ],
+    [
+     "replace",
+     "FFI",
+     "N"
+    ],
+    [
+     "replace",
+     "IAL B",
+     "EPT "
+    ],
+    [
+     "replace",
+     "A",
+     "E"
+    ],
+    [
+     "delete",
+     " IMAG",
+     ""
+    ],
+    [
+     "delete",
+     "Y",
+     ""
+    ],
+    [
+     "insert",
+     "",
+     "C"
+    ],
+    [
+     "replace",
+     "FFI",
+     "N"
+    ],
+    [
+     "replace",
+     "IAL B",
+     "EPT "
+    ],
+    [
+     "replace",
+     "A",
+     "E"
+    ],
+    [
+     "delete",
+     " IMAG",
+     ""
+    ],
+    [
+     "delete",
+     "Y",
+     ""
+    ]
+   ],
+   "textContent_equal": false,
+   "textContent_ops": [
+    [
+     "replace",
+     "Offi",
+     "Con"
+    ],
+    [
+     "replace",
+     "ial",
+     "ept"
+    ],
+    [
+     "delete",
+     "b",
+     ""
+    ],
+    [
+     "replace",
+     "a",
+     "e"
+    ],
+    [
+     "delete",
+     " imag",
+     ""
+    ],
+    [
+     "delete",
+     "y",
+     ""
+    ],
+    [
+     "replace",
+     "Offi",
+     "Con"
+    ],
+    [
+     "replace",
+     "ial",
+     "ept"
+    ],
+    [
+     "delete",
+     "b",
+     ""
+    ],
+    [
+     "replace",
+     "a",
+     "e"
+    ],
+    [
+     "delete",
+     " imag",
+     ""
+    ],
+    [
+     "delete",
+     "y",
+     ""
+    ]
+   ],
+   "img_removed": [
+    [
+     "/assets/impact/v133/t1-licences.png",
+     "Tier 1 — licences: government-service scene from the official Athar brand imagery (Brand Asset Pack v3)"
+    ],
+    [
+     "/assets/impact/v133/t2-ai-pc-composited.png",
+     "Tier 2 — appliance AI PCs and desktops: small-business scene from the official Athar brand imagery (Brand Asset Pack v3)"
+    ],
+    [
+     "/assets/impact/v133/t3-data-centre-composited.png",
+     "Tier 3 — sovereign data-centre nodes: dark key visual from the official Athar brand imagery (Brand Asset Pack v3)"
+    ],
+    [
+     "/assets/plates/plate5-banner.png",
+     "Ownership handover — wide band from the official Athar brand imagery (inclusive triptych, Brand Asset Pack v3)"
+    ]
+   ],
+   "img_added": [
+    [
+     "/assets/impact/v154/t1-lebanon-licences.png",
+     "Concept render: Lebanese professionals in a Beirut ministry training room working through a generative-AI certification on laptops running Athar OS, with an Athar certificate and wall sign at the front"
+    ],
+    [
+     "/assets/impact/v154/t2-india-ai-pc.png",
+     "Concept render: an Indian government-school classroom gathered around an Athar AI PC, the Athar mark on its bezel and a Hindi on-device tutoring lesson on screen"
+    ],
+    [
+     "/assets/impact/v154/t3-kenya-node.png",
+     "Concept render: an Athar-branded containerised data-centre node under a solar canopy in Kenyan farmland, a clinic and a school behind it, and a smallholder farmer listening to Swahili voice advice on her phone"
+    ],
+    [
+     "/assets/plates/v154/ownership-montage.png",
+     "Concept render, three panels: young Kenyan operators trained and certified inside the Athar node; the node handed over to the national entity; local operators running the node"
+    ]
+   ],
+   "footer_equal": true,
+   "footer_ops": [],
+   "tabs": []
+  },
+  {
+   "lang": "en",
+   "n": 30,
+   "id": "s-it-metrics",
+   "text_equal": true,
+   "text_ops": [],
+   "textContent_equal": true,
+   "textContent_ops": [],
+   "img_removed": [
+    [
+     "/assets/news/marks/publisher-pib.png",
+     "PIB India — mark shown for reference only"
+    ]
+   ],
+   "img_added": [
+    [
+     "/assets/news/marks/publisher-pib-official.png",
+     "PIB India — mark shown for reference only"
+    ]
+   ],
+   "footer_equal": true,
+   "footer_ops": [],
+   "tabs": []
+  },
+  {
+   "lang": "en",
+   "n": 31,
+   "id": "s-it-sustain",
+   "text_equal": true,
+   "text_ops": [],
+   "textContent_equal": true,
+   "textContent_ops": [],
+   "img_removed": [],
+   "img_added": [],
+   "footer_equal": true,
+   "footer_ops": [],
+   "tabs": []
+  },
+  {
+   "lang": "en",
+   "n": 32,
+   "id": "s-it-partners",
+   "text_equal": true,
+   "text_ops": [],
+   "textContent_equal": true,
+   "textContent_ops": [],
+   "img_removed": [],
+   "img_added": [],
+   "footer_equal": true,
+   "footer_ops": [],
+   "tabs": []
+  },
+  {
+   "lang": "en",
+   "n": 33,
+   "id": "s-it-join",
+   "text_equal": true,
+   "text_ops": [],
+   "textContent_equal": true,
+   "textContent_ops": [],
+   "img_removed": [],
+   "img_added": [],
+   "footer_equal": true,
+   "footer_ops": [],
+   "tabs": []
+  },
+  {
+   "lang": "en",
+   "n": 34,
+   "id": "s-aos-overview",
+   "text_equal": true,
+   "text_ops": [],
+   "textContent_equal": true,
+   "textContent_ops": [],
+   "img_removed": [],
+   "img_added": [],
+   "footer_equal": true,
+   "footer_ops": [],
+   "tabs": []
+  },
+  {
+   "lang": "en",
+   "n": 35,
+   "id": "s-aos-tour",
+   "text_equal": true,
+   "text_ops": [],
+   "textContent_equal": true,
+   "textContent_ops": [],
+   "img_removed": [],
+   "img_added": [],
+   "footer_equal": true,
+   "footer_ops": [],
+   "tabs": []
+  },
+  {
+   "lang": "en",
+   "n": 36,
+   "id": "s-aos-roadmap",
+   "text_equal": true,
+   "text_ops": [],
+   "textContent_equal": true,
+   "textContent_ops": [],
+   "img_removed": [],
+   "img_added": [],
+   "footer_equal": true,
+   "footer_ops": [],
+   "tabs": []
+  },
+  {
+   "lang": "en",
+   "n": 37,
+   "id": "s-aos-deploy",
+   "text_equal": true,
+   "text_ops": [],
+   "textContent_equal": true,
+   "textContent_ops": [],
+   "img_removed": [],
+   "img_added": [],
+   "footer_equal": true,
+   "footer_ops": [],
+   "tabs": []
+  },
+  {
+   "lang": "en",
+   "n": 38,
+   "id": "s-aos-nations",
+   "text_equal": false,
+   "text_ops": [
+    [
+     "delete",
+     "OFFI",
+     ""
+    ],
+    [
+     "replace",
+     "IAL BRA",
+     "ONCEPT RE"
+    ],
+    [
+     "replace",
+     " IMAGERY",
+     "ER"
+    ],
+    [
+     "replace",
+     "TIER ",
+     "OWNERSHI"
+    ],
+    [
+     "replace",
+     "ROGRESSION",
+     " HANDOVER"
+    ]
+   ],
+   "textContent_equal": false,
+   "textContent_ops": [
+    [
+     "replace",
+     "Off",
+     "Concept render — ownersh"
+    ],
+    [
+     "replace",
+     "cial",
+     "p"
+    ],
+    [
+     "replace",
+     "br",
+     "h"
+    ],
+    [
+     "replace",
+     " imag",
+     "ov"
+    ],
+    [
+     "delete",
+     "y — tier progression",
+     ""
+    ]
+   ],
+   "img_removed": [
+    [
+     "/assets/plates/plate5-banner.png",
+     "Official brand imagery — tier progression (reused from slide 29)"
+    ]
+   ],
+   "img_added": [
+    [
+     "/assets/plates/v154/ownership-montage.png",
+     "Concept render, three panels: young Kenyan operators trained and certified inside the Athar node; the node handed over to the national entity; local operators running the node"
+    ]
+   ],
+   "footer_equal": true,
+   "footer_ops": [],
+   "tabs": [
+    {
+     "k": "lb",
+     "text_equal": false,
+     "ops": [
+      [
+       "delete",
+       "OFFI",
+       ""
+      ],
+      [
+       "replace",
+       "IAL BRA",
+       "ONCEPT RE"
+      ],
+      [
+       "replace",
+       " IMAGERY",
+       "ER"
+      ],
+      [
+       "replace",
+       "TIER ",
+       "OWNERSHI"
+      ],
+      [
+       "replace",
+       "ROGRESSION",
+       " HANDOVER"
+      ]
+     ],
+     "img_removed": [
+      [
+       "/assets/plates/plate5-banner.png",
+       "Official brand imagery — tier progression (reused from slide 29)"
+      ]
+     ],
+     "img_added": [
+      [
+       "/assets/plates/v154/ownership-montage.png",
+       "Concept render, three panels: young Kenyan operators trained and certified inside the Athar node; the node handed over to the national entity; local operators running the node"
+      ]
+     ]
+    },
+    {
+     "k": "in",
+     "text_equal": false,
+     "ops": [
+      [
+       "delete",
+       "OFFI",
+       ""
+      ],
+      [
+       "replace",
+       "IAL BRA",
+       "ONCEPT RE"
+      ],
+      [
+       "replace",
+       " IMAGERY",
+       "ER"
+      ],
+      [
+       "replace",
+       "TIER ",
+       "OWNERSHI"
+      ],
+      [
+       "replace",
+       "ROGRESSION",
+       " HANDOVER"
+      ]
+     ],
+     "img_removed": [
+      [
+       "/assets/plates/plate5-banner.png",
+       "Official brand imagery — tier progression (reused from slide 29)"
+      ]
+     ],
+     "img_added": [
+      [
+       "/assets/plates/v154/ownership-montage.png",
+       "Concept render, three panels: young Kenyan operators trained and certified inside the Athar node; the node handed over to the national entity; local operators running the node"
+      ]
+     ]
+    },
+    {
+     "k": "ke",
+     "text_equal": false,
+     "ops": [
+      [
+       "insert",
+       "",
+       "C"
+      ],
+      [
+       "replace",
+       "FFI",
+       "N"
+      ],
+      [
+       "replace",
+       "IAL BRA",
+       "EPT RE"
+      ],
+      [
+       "replace",
+       " IMAGERY",
+       "ER"
+      ],
+      [
+       "replace",
+       "TIER ",
+       "OWNERSHI"
+      ],
+      [
+       "replace",
+       "R",
+       " HAND"
+      ],
+      [
+       "replace",
+       "GRESSION",
+       "VER"
+      ]
+     ],
+     "img_removed": [
+      [
+       "/assets/plates/plate5-banner.png",
+       "Official brand imagery — tier progression (reused from slide 29)"
+      ]
+     ],
+     "img_added": [
+      [
+       "/assets/plates/v154/ownership-montage.png",
+       "Concept render, three panels: young Kenyan operators trained and certified inside the Athar node; the node handed over to the national entity; local operators running the node"
+      ]
+     ]
+    }
+   ]
+  },
+  {
+   "lang": "en",
+   "n": 39,
+   "id": "s-closing",
+   "text_equal": true,
+   "text_ops": [],
+   "textContent_equal": true,
+   "textContent_ops": [],
+   "img_removed": [
+    [
+     "/partners/ondemand-by-airev-mark.png",
+     "OnDemand by AIREV — wordmark (cropped from the verified lockup)"
+    ]
+   ],
+   "img_added": [],
+   "footer_equal": true,
+   "footer_ops": [],
+   "tabs": []
+  }
+ ],
+ "summary": {
+  "views": 78,
+  "rendered_text_changed_views": 4,
+  "textContent_changed_views": 4,
+  "img_changed_views": 10,
+  "before": "2026-10-01T04:35:37Z",
+  "after": "2026-10-01T05:56:49Z"
+ }
+}

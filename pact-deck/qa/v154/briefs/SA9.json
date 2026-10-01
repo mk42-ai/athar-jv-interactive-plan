@@ -1,0 +1,7 @@
+{
+ "title": "SA9 – Finishing: exact Athar master composited (perspective warp), unified warm cream/navy/gold grade, 3:2 no letterbox, AVIF/WebP + PNG fallback, alt text; truthful labels only where untruthful",
+ "sa": "SA9",
+ "model_requested": "Sonnet 5.5 (not available to terminal workers — scripted steps authored by the lead)",
+ "timeout_s": 18000,
+ "step_timeout_s": 1800
+}

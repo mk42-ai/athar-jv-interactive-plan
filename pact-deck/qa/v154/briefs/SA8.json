@@ -1,0 +1,17 @@
+{
+ "title": "SA8 \u2013 Deck-wide sweep (39 slides \u00d7 EN/AR): find remaining illustrated / off-palette / semantically wrong AI images; fill batch 2 to exactly 5 with replacements or retakes",
+ "batch": 2,
+ "sa": "SA8",
+ "model_requested": "Sonnet 5.5 (not available to terminal workers \u2014 scripted steps authored by the lead)",
+ "timeout_s": 18000,
+ "step_timeout_s": 1800,
+ "batch2_fill": {
+  "sweep_result": "AI/brand-pack photographic slots found: slide 29 tier heroes \u00d73 + ownership montage (slides 29, 38) \u2014 all already covered by SA2\u2013SA5; no further AI photo slots \u2192 remaining batch-2 slots filled with retakes of batch-1 failures (T2, T3, P1, P2)",
+  "slots": [
+   "T2r",
+   "T3r",
+   "P1r",
+   "P2r"
+  ]
+ }
+}

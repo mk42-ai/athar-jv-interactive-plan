@@ -1,0 +1,56 @@
+{
+ "batch": 5,
+ "session": "GPT Image 2.5 via OnDemand MCP session 6abde7dc\u2026, relay predefined-claude-sonnet-5.5",
+ "items": [
+  {
+   "id": "T3b5a",
+   "url": "https://airevdev.blob.core.windows.net/on-demand-dev/6692b763e851d28a036ab30e/agents/XceEQ8rUFa.png?se=2026-10-08T04%3A47%3A12Z&sig=17JsdblkNGY%2BkWTUovtjo0iRMI7ahbREqDN%2BFyAG51I%3D&ske=2026-10-08T04%3A47%3A12Z&skoid=f6fe3b05-8f6e-4558-96bd-b7f53ddd5066&sks=b&skt=2026-10-01T04%3A47%3A12Z&sktid=03628b8d-e6ad-4dd7-bca0-020e6a6cfdda&skv=2025-05-05&sp=r&sr=b&st=2026-10-01T04%3A57%3A12Z&sv=2025-05-05",
+   "bytes": 3274322,
+   "sha256": "2033255cb8b7b3ef1354ed7d4354135117bfcf6a5c052503920bd646607793d4",
+   "size": [
+    1536,
+    1024
+   ]
+  },
+  {
+   "id": "T3b5b",
+   "url": "https://airevdev.blob.core.windows.net/on-demand-dev/6692b763e851d28a036ab30e/agents/GcVzYjEgAK.png?se=2026-10-08T04%3A47%3A12Z&sig=c6F%2Frt9uTnikAHzkujYeupNqYKynAyK7j4K0hOk3GHk%3D&ske=2026-10-08T04%3A47%3A12Z&skoid=f6fe3b05-8f6e-4558-96bd-b7f53ddd5066&sks=b&skt=2026-10-01T04%3A47%3A12Z&sktid=03628b8d-e6ad-4dd7-bca0-020e6a6cfdda&skv=2025-05-05&sp=r&sr=b&st=2026-10-01T04%3A57%3A12Z&sv=2025-05-05",
+   "bytes": 2939758,
+   "sha256": "fa0020e427b79ed0a93004ec46210d8e8e48aa2ac4de4a97f045d7db096c3b88",
+   "size": [
+    1536,
+    1024
+   ]
+  },
+  {
+   "id": "P1b5",
+   "url": "https://airevdev.blob.core.windows.net/on-demand-dev/6692b763e851d28a036ab30e/agents/wFmbiTdT3O.png?se=2026-10-08T04%3A47%3A11Z&sig=NyeCrIjLDpLJoDzT551GS66IYJHJFPr2eOrtCq3i%2Bz8%3D&ske=2026-10-08T04%3A47%3A11Z&skoid=f6fe3b05-8f6e-4558-96bd-b7f53ddd5066&sks=b&skt=2026-10-01T04%3A47%3A11Z&sktid=03628b8d-e6ad-4dd7-bca0-020e6a6cfdda&skv=2025-05-05&sp=r&sr=b&st=2026-10-01T04%3A57%3A11Z&sv=2025-05-05",
+   "bytes": 2338814,
+   "sha256": "454f50696dab520031decdc8324688931475df4328014d38e22edd4098c105d5",
+   "size": [
+    1536,
+    1024
+   ]
+  },
+  {
+   "id": "P2b5a",
+   "url": "https://airevdev.blob.core.windows.net/on-demand-dev/6692b763e851d28a036ab30e/agents/Rz0AMYNw6s.png?se=2026-10-08T04%3A47%3A10Z&sig=ADoRYClMAXQUkV7sEk%2BPOPa2bSuvE2IVDTDhdfijqiE%3D&ske=2026-10-08T04%3A47%3A10Z&skoid=f6fe3b05-8f6e-4558-96bd-b7f53ddd5066&sks=b&skt=2026-10-01T04%3A47%3A10Z&sktid=03628b8d-e6ad-4dd7-bca0-020e6a6cfdda&skv=2025-05-05&sp=r&sr=b&st=2026-10-01T04%3A57%3A10Z&sv=2025-05-05",
+   "bytes": 2285690,
+   "sha256": "f8196909bb66c67e9dc8bf0575b4506bfb3b10625712dec67370d1e4a36fc27f",
+   "size": [
+    1536,
+    1024
+   ]
+  },
+  {
+   "id": "P2b5b",
+   "url": "https://airevdev.blob.core.windows.net/on-demand-dev/6692b763e851d28a036ab30e/agents/7d83AnNPDm.png?se=2026-10-08T04%3A47%3A09Z&sig=dRdQB2eSlw8Ya%2FWqbVaLqqsUrLmnrvi1U6jcBxjRSdk%3D&ske=2026-10-08T04%3A47%3A09Z&skoid=f6fe3b05-8f6e-4558-96bd-b7f53ddd5066&sks=b&skt=2026-10-01T04%3A47%3A09Z&sktid=03628b8d-e6ad-4dd7-bca0-020e6a6cfdda&skv=2025-05-05&sp=r&sr=b&st=2026-10-01T04%3A57%3A09Z&sv=2025-05-05",
+   "bytes": 2283450,
+   "sha256": "b0d7966dfbc8713ffb696484aae4ee96b6c4b3685767bdc7f6d7de38f01ab5a2",
+   "size": [
+    1536,
+    1024
+   ]
+  }
+ ]
+}

@@ -1,0 +1,19 @@
+{
+ "title": "SA1 – Athar lockup: remove the rounded \"On Demand by AIREV\" badge everywhere; clean official lockup (Arabic mark + ATHAR) with 1A clear space / 2A to partner marks; fix clipped copy + Arabic right margin; partner row untouched",
+ "write_partition": [
+  "dist/js/cobrand.js",
+  "dist/assets/cobrand.css",
+  "dist/assets/release-v154.css (§A)"
+ ],
+ "inputs": [
+  "/tmp/inputs/athar-logo-master.png",
+  "brand guidelines FINAL v3 §clear-space"
+ ],
+ "outputs": [
+  "/tmp/orch/out/SA1/audit-*.json"
+ ],
+ "sa": "SA1",
+ "model_requested": "Sonnet 5.5 (not available to terminal workers — scripted steps authored by the lead)",
+ "timeout_s": 18000,
+ "step_timeout_s": 1800
+}
