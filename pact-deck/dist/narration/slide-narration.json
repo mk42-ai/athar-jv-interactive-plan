@@ -1,7 +1,7 @@
 {
  "schema": "athar.narration.slides/1",
  "version": "1.5.5",
- "generated_utc": "2026-10-01T10:50:00Z",
+ "generated_utc": "2026-10-01T14:00:00Z",
  "keyedBy": "data-slide-id (stable section id) — never by slide index",
  "voice": "George - Warm, Captivating Storyteller",
  "voiceId": "JBFqnCBsd6RMkjVDRZzb",
@@ -2164,62 +2164,77 @@
    "slideId": "s-exec-intro",
    "clipId": "NAR-s40",
    "file": "/audio/guide/slides/NAR-s40-s-exec-intro.mp3",
-   "bytes": 227831,
-   "sha256": "272a2ea7650da8975833f1f263ff846ded70d35a3b1c4889034585079fb08d41",
-   "durationSec": 14.21,
+   "bytes": 41004,
+   "sha256": "8dafe5492c32c3ca3bf8bf98790f2bfec8726ab2835df151891bc4e6693136f3",
+   "durationSec": 2.53,
    "section": "09 Executive Team",
    "sectionAr": "09 الفريق التنفيذي",
    "source": {
     "type": "tts",
     "provider": "ElevenLabs textToSpeech",
-    "voiceRequested": "George — same voice as the existing guide (voice id JBFqnCBsd6RMkjVDRZzb per generation history; not echoed in the TTS response)",
+    "voice": "George (premade; voice list returned one match)",
     "modelRequested": "eleven_multilingual_v2",
-    "generationRef": "Pi9RANaude",
-    "generatedUtc": "2026-10-01T09:26:41Z",
-    "storedAs": "downloaded into the repo — the expiring SAS URL is not hotlinked",
-    "textSource": "transcribed from the audio with Whisper small.en and checked word by word"
+    "generationRef": "KwKjDhenPt",
+    "generatedUtc": "2026-10-01T13:14:48Z",
+    "storedAs": "downloaded into the repo — no SAS hotlink",
+    "textSource": "Whisper small.en transcript, proper nouns per the published spelling",
+    "contentCheck": "matches the slide"
    },
-   "text": "Behind every lasting impact stands a team. In this final section, meet the executive leadership guiding the Athar Pact, the people turning a shared vision into responsible, human-centred intelligence for a brighter tomorrow.",
+   "text": "Section nine, the Executive Team.",
    "cues": [
     {
      "i": 1,
-     "text": "Behind every lasting impact stands a team.",
+     "text": "Section nine, the Executive Team.",
      "start": 0.0,
-     "end": 3.32,
+     "end": 2.48,
      "anchor": "s40-c1"
-    },
-    {
-     "i": 2,
-     "text": "In this final section, meet the executive leadership guiding the Athar Pact, the people turning a shared vision into responsible, human-centred intelligence for a brighter tomorrow.",
-     "start": 3.32,
-     "end": 14.14,
-     "anchor": "s40-c2"
     }
    ]
   },
   {
    "n": 41,
    "slideId": "s-exec-al-zeyoudi",
-   "clipId": null,
-   "file": null,
-   "bytes": null,
-   "sha256": null,
-   "durationSec": null,
+   "clipId": "NAR-s41",
+   "file": "/audio/guide/slides/NAR-s41-s-exec-al-zeyoudi.mp3",
+   "bytes": 346532,
+   "sha256": "b7f8a9a3c7fe20a05c4783176da6a46203db8554668118b0e30b990b2c6cdea5",
+   "durationSec": 21.63,
    "section": "09 Executive Team",
    "sectionAr": "09 الفريق التنفيذي",
    "source": {
-    "type": "missing",
-    "reason": "TTS request failed: HTTP 429 concurrent_limit_exceeded (ElevenLabs, 2026-10-01T09:26Z) — no clip delivered",
-    "note": "caption only; AUTO moves on after 9 s. ElevenLabs history holds an earlier George render (history item ORyyP3A3jX53iHcLKhiZ, 09:13Z) that was not supplied for this release."
+    "type": "tts",
+    "provider": "ElevenLabs textToSpeech",
+    "voice": "George (premade; voice list returned one match)",
+    "modelRequested": "eleven_multilingual_v2",
+    "generationRef": "v9QRCfvtIX",
+    "generatedUtc": "2026-10-01T13:14:48Z",
+    "storedAs": "downloaded into the repo — no SAS hotlink",
+    "textSource": "Whisper small.en transcript, proper nouns per the published spelling",
+    "contentCheck": "matches the slide",
+    "factCheck": "CEPA programme + MC13 chair (Africa CEO Forum / SALT profiles); AIREV chairmanship June 2026 (Gulf News, 24 Jun 2026)"
    },
-   "text": "H.E. Dr Thani bin Ahmed Al Zeyoudi — UAE Minister of Foreign Trade and Chairman of AIREV.",
+   "text": "His Excellency Dr Thani bin Ahmed Al Zeyoudi, Chairman of AIREV and UAE Minister of Foreign Trade. He led the UAE’s Comprehensive Economic Partnership Agreement programme and chaired the 13th WTO Ministerial Conference in Abu Dhabi. He became Chairman of AIREV in June 2026.",
    "cues": [
     {
      "i": 1,
-     "text": "H.E. Dr Thani bin Ahmed Al Zeyoudi — UAE Minister of Foreign Trade and Chairman of AIREV.",
-     "start": 0,
-     "end": 0,
+     "text": "His Excellency Dr Thani bin Ahmed Al Zeyoudi, Chairman of AIREV and UAE Minister of Foreign Trade.",
+     "start": 0.0,
+     "end": 8.44,
      "anchor": "s41-c1"
+    },
+    {
+     "i": 2,
+     "text": "He led the UAE’s Comprehensive Economic Partnership Agreement programme and chaired the 13th WTO Ministerial Conference in Abu Dhabi.",
+     "start": 8.44,
+     "end": 17.86,
+     "anchor": "s41-c2"
+    },
+    {
+     "i": 3,
+     "text": "He became Chairman of AIREV in June 2026.",
+     "start": 17.86,
+     "end": 21.58,
+     "anchor": "s41-c3"
     }
    ]
   },
@@ -2228,164 +2243,141 @@
    "slideId": "s-exec-al-ameri",
    "clipId": "NAR-s42",
    "file": "/audio/guide/slides/NAR-s42-s-exec-al-ameri.mp3",
-   "bytes": 213621,
-   "sha256": "7b8a9ce485cdba4eed914de9a3a69b39a2a07be197b733f49623d073df71d247",
-   "durationSec": 13.32,
+   "bytes": 333157,
+   "sha256": "9f43d9a0e6ca5ec50b8d280dbcfeefc75c1437a68dfdcc71e68930bd43704740",
+   "durationSec": 20.79,
    "section": "09 Executive Team",
    "sectionAr": "09 الفريق التنفيذي",
    "source": {
     "type": "tts",
     "provider": "ElevenLabs textToSpeech",
-    "voiceRequested": "George — same voice as the existing guide (voice id JBFqnCBsd6RMkjVDRZzb per generation history; not echoed in the TTS response)",
+    "voice": "George (premade; voice list returned one match)",
     "modelRequested": "eleven_multilingual_v2",
-    "generationRef": "2iu0GUeMnZ",
-    "generatedUtc": "2026-10-01T09:26:41Z",
-    "storedAs": "downloaded into the repo — the expiring SAS URL is not hotlinked",
-    "textSource": "transcribed from the audio with Whisper small.en and checked word by word"
+    "generationRef": "GXQlbIyvrh",
+    "generatedUtc": "2026-10-01T13:14:48Z",
+    "storedAs": "downloaded into the repo — no SAS hotlink",
+    "textSource": "Whisper small.en transcript, proper nouns per the published spelling",
+    "contentCheck": "matches the slide",
+    "factCheck": "uaenep.ae official profile (EN/AR)",
+    "pronunciation": "voice says \"Mohammed\"; the official spelling is \"Mohamed\""
    },
-   "text": "His Excellency Fahad Mohamed Al Ameri is Executive Director of Development and Humanitarian Affairs at the Presidential Court, and has played a key role in the UAE’s humanitarian and development initiatives.",
+   "text": "His Excellency Fahad Mohamed Al Ameri, Executive Director of Development and Humanitarian Affairs at the UAE Presidential Court. He played a defining role in creating Erth Zayed Philanthropies, the UAE International Aid Agency, and the International Humanitarian and Philanthropic Council, the IHPC.",
    "cues": [
     {
      "i": 1,
-     "text": "His Excellency Fahad Mohamed Al Ameri is Executive Director of Development and Humanitarian Affairs at the Presidential Court,",
+     "text": "His Excellency Fahad Mohamed Al Ameri, Executive Director of Development and Humanitarian Affairs at the UAE Presidential Court.",
      "start": 0.0,
-     "end": 8.52,
+     "end": 9.26,
      "anchor": "s42-c1"
     },
     {
      "i": 2,
-     "text": "and has played a key role in the UAE’s humanitarian and development initiatives.",
-     "start": 8.52,
-     "end": 13.26,
+     "text": "He played a defining role in creating Erth Zayed Philanthropies, the UAE International Aid Agency, and the International Humanitarian and Philanthropic Council, the IHPC.",
+     "start": 9.26,
+     "end": 20.74,
      "anchor": "s42-c2"
     }
    ]
   },
   {
    "n": 43,
-   "slideId": "s-exec-al-aryani",
+   "slideId": "s-exec-khalid",
    "clipId": "NAR-s43",
-   "file": "/audio/guide/slides/NAR-s43-s-exec-al-aryani.mp3",
-   "bytes": 128775,
-   "sha256": "17a018cd2229baece4c8981f757da0c0f982032bed9c701f52b9f2a8f3e28b76",
-   "durationSec": 8.02,
+   "file": "/audio/guide/slides/NAR-s43-s-exec-khalid.mp3",
+   "bytes": 335247,
+   "sha256": "fd14af7b671fde7c18924f4e2f59997ab910833920b8df694928e7af6ac75cfa",
+   "durationSec": 20.92,
    "section": "09 Executive Team",
    "sectionAr": "09 الفريق التنفيذي",
    "source": {
     "type": "tts",
     "provider": "ElevenLabs textToSpeech",
-    "voiceRequested": "George — same voice as the existing guide (voice id JBFqnCBsd6RMkjVDRZzb per generation history; not echoed in the TTS response)",
+    "voice": "George (premade; voice list returned one match)",
     "modelRequested": "eleven_multilingual_v2",
-    "generationRef": "S925zT9UDu",
-    "generatedUtc": "2026-10-01T09:26:41Z",
-    "storedAs": "downloaded into the repo — the expiring SAS URL is not hotlinked",
-    "textSource": "transcribed from the audio with Whisper small.en and checked word by word",
-    "note": "generated for the \"Presidential Court official\" slot before the Ary resolution — it names no one and does not link the official to Development and Humanitarian Affairs"
+    "generationRef": "MXYBQD2Rhf",
+    "generatedUtc": "2026-10-01T13:14:48Z",
+    "storedAs": "downloaded into the repo — no SAS hotlink",
+    "textSource": "Whisper small.en transcript, proper nouns per the published spelling",
+    "contentCheck": "matches the slide",
+    "factCheck": "42 Network (4 million+ users, 140+ countries; OnDemand); The National 30 Sep 2024 (Core42 backing)",
+    "pronunciation": "voice says \"Mohammed\" — captions/lower-thirds and the deck spell \"Muhammed\" (non-blocking)"
    },
-   "text": "Representing the Presidential Court, we are honoured to welcome a distinguished official whose guidance anchors the Athar Pact in national purpose.",
+   "text": "Muhammed Khalid, founder and CEO of AIREV. He built School Hack, which has reached more than 4 million users in over 140 countries. He secured backing from Core42, a G42 company, and leads OnDemand, AIREV’s agentic AI operating system. Press play to watch his Athar impact story.",
    "cues": [
     {
      "i": 1,
-     "text": "Representing the Presidential Court, we are honoured to welcome a distinguished official whose guidance anchors the Athar Pact in national purpose.",
+     "text": "Muhammed Khalid, founder and CEO of AIREV.",
      "start": 0.0,
-     "end": 7.96,
+     "end": 3.5,
      "anchor": "s43-c1"
+    },
+    {
+     "i": 2,
+     "text": "He built School Hack, which has reached more than 4 million users in over 140 countries.",
+     "start": 3.5,
+     "end": 9.2,
+     "anchor": "s43-c2"
+    },
+    {
+     "i": 3,
+     "text": "He secured backing from Core42, a G42 company, and leads OnDemand, AIREV’s agentic AI operating system.",
+     "start": 9.2,
+     "end": 18.06,
+     "anchor": "s43-c3"
+    },
+    {
+     "i": 4,
+     "text": "Press play to watch his Athar impact story.",
+     "start": 18.06,
+     "end": 20.88,
+     "anchor": "s43-c4"
     }
    ]
   },
   {
    "n": 44,
-   "slideId": "s-exec-khalid",
-   "clipId": null,
-   "file": null,
-   "bytes": null,
-   "sha256": null,
-   "durationSec": null,
-   "section": "09 Executive Team",
-   "sectionAr": "09 الفريق التنفيذي",
-   "source": {
-    "type": "missing",
-    "reason": "TTS request failed: HTTP 429 concurrent_limit_exceeded (ElevenLabs, 2026-10-01T09:26Z) — no lead-in clip delivered",
-    "note": "caption only; the guide waits for the impact-story film (it pauses while the film plays and moves on after it). ElevenLabs history holds an earlier George render (history item Q4jpHTymrX0YosmJIAu3, 09:13Z) that was not supplied for this release."
-   },
-   "text": "Muhammed Khalid — founder and CEO of AIREV, creator of OnDemand. His impact story plays on this slide.",
-   "cues": [
-    {
-     "i": 1,
-     "text": "Muhammed Khalid — founder and CEO of AIREV, creator of OnDemand. His impact story plays on this slide.",
-     "start": 0,
-     "end": 0,
-     "anchor": "s44-c1"
-    }
-   ]
-  },
-  {
-   "n": 45,
    "slideId": "s-exec-unwalla",
-   "clipId": "NAR-s45",
-   "file": "/audio/guide/slides/NAR-s45-s-exec-unwalla.mp3",
-   "bytes": 120415,
-   "sha256": "25a4e4a22d80ea12dead1d15f5396bdd1dae3f0666f24b7a3b28911c546e4884",
-   "durationSec": 7.5,
-   "section": "09 Executive Team",
-   "sectionAr": "09 الفريق التنفيذي",
-   "source": {
-    "type": "cut",
-    "parentClip": "VnuUpOBonR",
-    "parentSha256": "b200d3c763e17d61ea70191dd8be1e1c165f9494c6e27da65ef587805a305770",
-    "startSec": 0.0,
-    "endSec": 7.45,
-    "note": "frame-accurate cut of the George TTS render (ffmpeg -c copy, no re-encoding) at the 7.20–7.64 s silence — drops the unsourced closing sentence \"More than 300 agents, over 3,000 tools, and one agentic operating system.\"",
-    "generatedUtc": "2026-10-01T09:26:41Z",
-    "voiceRequested": "George",
-    "modelRequested": "eleven_multilingual_v2"
-   },
-   "text": "Kayaan Unwalla, co-founder of AIREV, drives the OnDemand platform and its marketplace flywheel.",
-   "cues": [
-    {
-     "i": 1,
-     "text": "Kayaan Unwalla, co-founder of AIREV, drives the OnDemand platform and its marketplace flywheel.",
-     "start": 0.0,
-     "end": 7.2,
-     "anchor": "s45-c1"
-    }
-   ]
-  },
-  {
-   "n": 46,
-   "slideId": "s-exec-lorenzo",
-   "clipId": "NAR-s46",
-   "file": "/audio/guide/slides/NAR-s46-s-exec-lorenzo.mp3",
-   "bytes": 128775,
-   "sha256": "2a08e88c6219541a8c15c501ed6bb9cccf8feec14b8379d9c62973ab5103832b",
-   "durationSec": 8.02,
+   "clipId": "NAR-s44",
+   "file": "/audio/guide/slides/NAR-s44-s-exec-unwalla.mp3",
+   "bytes": 211949,
+   "sha256": "028fe924e0ed495247cddddb62517679b614d06fba70581614e565ab581da2ba",
+   "durationSec": 13.22,
    "section": "09 Executive Team",
    "sectionAr": "09 الفريق التنفيذي",
    "source": {
     "type": "tts",
     "provider": "ElevenLabs textToSpeech",
-    "voiceRequested": "George — same voice as the existing guide (voice id JBFqnCBsd6RMkjVDRZzb per generation history; not echoed in the TTS response)",
+    "voice": "George (premade; voice list returned one match)",
     "modelRequested": "eleven_multilingual_v2",
-    "generationRef": "H44Q5E4gGD",
-    "generatedUtc": "2026-10-01T09:26:41Z",
-    "storedAs": "downloaded into the repo — the expiring SAS URL is not hotlinked",
-    "textSource": "transcribed from the audio with Whisper small.en and checked word by word",
-    "note": "contains no surname or role — nothing unverified about Lorenzo is narrated"
+    "generationRef": "nzkWVR3qWN",
+    "generatedUtc": "2026-10-01T13:14:48Z",
+    "storedAs": "downloaded into the repo — no SAS hotlink",
+    "textSource": "Whisper small.en transcript, proper nouns per the published spelling",
+    "contentCheck": "matches the slide",
+    "factCheck": "CSO & co-founder (The GPU, Issue #42); former roles user-confirmed",
+    "pronunciation": "voice spells AIREV as letters (A-R-E-V)"
    },
-   "text": "And finally, Lorenzo, who completes the Athar Executive Team and helps carry this pact forward, from insight to lasting impact.",
+   "text": "Kayaan K. Unwalla, co-founder and Chief Strategy Officer of AIREV. Before AIREV, he was a corporate partner at Norton Rose Fulbright in Dubai and head of Corporate, Middle East, at DWF.",
    "cues": [
     {
      "i": 1,
-     "text": "And finally, Lorenzo, who completes the Athar Executive Team and helps carry this pact forward, from insight to lasting impact.",
+     "text": "Kayaan K. Unwalla, co-founder and Chief Strategy Officer of AIREV.",
      "start": 0.0,
-     "end": 7.96,
-     "anchor": "s46-c1"
+     "end": 4.86,
+     "anchor": "s44-c1"
+    },
+    {
+     "i": 2,
+     "text": "Before AIREV, he was a corporate partner at Norton Rose Fulbright in Dubai and head of Corporate, Middle East, at DWF.",
+     "start": 5.34,
+     "end": 13.16,
+     "anchor": "s44-c2"
     }
    ]
   }
  ],
  "verifiedBy": "ElevenLabs Scribe (speechToText, model scribe_v1 requested, language en) on every per-slide clip",
  "notes": [
-  "v1.5.5: slides 40–46 (section 09 Executive Team). Clips for 40, 42, 43, 45 (cut), 46 delivered; 41 (Dr Thani) and 44 (Muhammed Khalid) have NO clip — both TTS requests returned HTTP 429."
+  "v1.5.5: slides 40–44 (section 09 Executive Team: intro, Dr Thani Al Zeyoudi, Fahad Al Ameri, Muhammed Khalid, Kayaan K. Unwalla) — five George clips (KwKjDhenPt, v9QRCfvtIX, GXQlbIyvrh, MXYBQD2Rhf, nzkWVR3qWN) bundled locally; hidden cards (Ary, Lorenzo) are not narrated."
  ]
 }

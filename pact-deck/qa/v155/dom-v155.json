@@ -1,7 +1,7 @@
 {
  "base": "http://127.0.0.1:4405",
- "total": 46,
- "started": "2026-10-01T11:05:23.381Z",
+ "total": 44,
+ "started": "2026-10-01T14:10:39.901Z",
  "slides": {
   "en": [
    {
@@ -96,7 +96,7 @@
       "tracks": []
      }
     ],
-    "counter": "Slide 1 of 46",
+    "counter": "Slide 1 of 44",
     "dir": "ltr",
     "lang": "en"
    },
@@ -118,7 +118,7 @@
      }
     ],
     "videos": [],
-    "counter": "Slide 2 of 46",
+    "counter": "Slide 2 of 44",
     "dir": "ltr",
     "lang": "en"
    },
@@ -138,7 +138,7 @@
       "tracks": []
      }
     ],
-    "counter": "Slide 3 of 46",
+    "counter": "Slide 3 of 44",
     "dir": "ltr",
     "lang": "en"
    },
@@ -206,7 +206,7 @@
      }
     ],
     "videos": [],
-    "counter": "Slide 4 of 46",
+    "counter": "Slide 4 of 44",
     "dir": "ltr",
     "lang": "en"
    },
@@ -227,7 +227,7 @@
     ],
     "imgs": [],
     "videos": [],
-    "counter": "Slide 5 of 46",
+    "counter": "Slide 5 of 44",
     "dir": "ltr",
     "lang": "en"
    },
@@ -247,7 +247,7 @@
       "tracks": []
      }
     ],
-    "counter": "Slide 6 of 46",
+    "counter": "Slide 6 of 44",
     "dir": "ltr",
     "lang": "en"
    },
@@ -273,7 +273,7 @@
     ],
     "imgs": [],
     "videos": [],
-    "counter": "Slide 7 of 46",
+    "counter": "Slide 7 of 44",
     "dir": "ltr",
     "lang": "en"
    },
@@ -287,7 +287,7 @@
     ],
     "imgs": [],
     "videos": [],
-    "counter": "Slide 8 of 46",
+    "counter": "Slide 8 of 44",
     "dir": "ltr",
     "lang": "en"
    },
@@ -305,7 +305,7 @@
     ],
     "imgs": [],
     "videos": [],
-    "counter": "Slide 9 of 46",
+    "counter": "Slide 9 of 44",
     "dir": "ltr",
     "lang": "en"
    },
@@ -319,7 +319,7 @@
     ],
     "imgs": [],
     "videos": [],
-    "counter": "Slide 10 of 46",
+    "counter": "Slide 10 of 44",
     "dir": "ltr",
     "lang": "en"
    },
@@ -333,7 +333,7 @@
     ],
     "imgs": [],
     "videos": [],
-    "counter": "Slide 11 of 46",
+    "counter": "Slide 11 of 44",
     "dir": "ltr",
     "lang": "en"
    },
@@ -347,7 +347,7 @@
     ],
     "imgs": [],
     "videos": [],
-    "counter": "Slide 12 of 46",
+    "counter": "Slide 12 of 44",
     "dir": "ltr",
     "lang": "en"
    },
@@ -408,7 +408,7 @@
      }
     ],
     "videos": [],
-    "counter": "Slide 13 of 46",
+    "counter": "Slide 13 of 44",
     "dir": "ltr",
     "lang": "en"
    },
@@ -434,7 +434,7 @@
      }
     ],
     "videos": [],
-    "counter": "Slide 14 of 46",
+    "counter": "Slide 14 of 44",
     "dir": "ltr",
     "lang": "en"
    },
@@ -465,7 +465,7 @@
      }
     ],
     "videos": [],
-    "counter": "Slide 15 of 46",
+    "counter": "Slide 15 of 44",
     "dir": "ltr",
     "lang": "en"
    },
@@ -494,7 +494,7 @@
      }
     ],
     "videos": [],
-    "counter": "Slide 16 of 46",
+    "counter": "Slide 16 of 44",
     "dir": "ltr",
     "lang": "en"
    },
@@ -567,7 +567,7 @@
      }
     ],
     "videos": [],
-    "counter": "Slide 17 of 46",
+    "counter": "Slide 17 of 44",
     "dir": "ltr",
     "lang": "en"
    },
@@ -600,7 +600,7 @@
      }
     ],
     "videos": [],
-    "counter": "Slide 18 of 46",
+    "counter": "Slide 18 of 44",
     "dir": "ltr",
     "lang": "en"
    },
@@ -657,7 +657,7 @@
      }
     ],
     "videos": [],
-    "counter": "Slide 19 of 46",
+    "counter": "Slide 19 of 44",
     "dir": "ltr",
     "lang": "en"
    },
@@ -671,7 +671,7 @@
     ],
     "imgs": [],
     "videos": [],
-    "counter": "Slide 20 of 46",
+    "counter": "Slide 20 of 44",
     "dir": "ltr",
     "lang": "en"
    },
@@ -756,7 +756,7 @@
      }
     ],
     "videos": [],
-    "counter": "Slide 21 of 46",
+    "counter": "Slide 21 of 44",
     "dir": "ltr",
     "lang": "en"
    },
@@ -820,7 +820,7 @@
      }
     ],
     "videos": [],
-    "counter": "Slide 22 of 46",
+    "counter": "Slide 22 of 44",
     "dir": "ltr",
     "lang": "en"
    },
@@ -856,7 +856,7 @@
      }
     ],
     "videos": [],
-    "counter": "Slide 23 of 46",
+    "counter": "Slide 23 of 44",
     "dir": "ltr",
     "lang": "en"
    },
@@ -892,7 +892,7 @@
      }
     ],
     "videos": [],
-    "counter": "Slide 24 of 46",
+    "counter": "Slide 24 of 44",
     "dir": "ltr",
     "lang": "en"
    },
@@ -949,7 +949,7 @@
      }
     ],
     "videos": [],
-    "counter": "Slide 25 of 46",
+    "counter": "Slide 25 of 44",
     "dir": "ltr",
     "lang": "en"
    },
@@ -999,7 +999,7 @@
      }
     ],
     "videos": [],
-    "counter": "Slide 26 of 46",
+    "counter": "Slide 26 of 44",
     "dir": "ltr",
     "lang": "en"
    },
@@ -1040,7 +1040,7 @@
      }
     ],
     "videos": [],
-    "counter": "Slide 27 of 46",
+    "counter": "Slide 27 of 44",
     "dir": "ltr",
     "lang": "en"
    },
@@ -1068,7 +1068,7 @@
      }
     ],
     "videos": [],
-    "counter": "Slide 28 of 46",
+    "counter": "Slide 28 of 44",
     "dir": "ltr",
     "lang": "en"
    },
@@ -1171,7 +1171,7 @@
      }
     ],
     "videos": [],
-    "counter": "Slide 29 of 46",
+    "counter": "Slide 29 of 44",
     "dir": "ltr",
     "lang": "en"
    },
@@ -1313,7 +1313,7 @@
      }
     ],
     "videos": [],
-    "counter": "Slide 30 of 46",
+    "counter": "Slide 30 of 44",
     "dir": "ltr",
     "lang": "en"
    },
@@ -1339,7 +1339,7 @@
      }
     ],
     "videos": [],
-    "counter": "Slide 31 of 46",
+    "counter": "Slide 31 of 44",
     "dir": "ltr",
     "lang": "en"
    },
@@ -1347,7 +1347,7 @@
     "n": 32,
     "visible": 32,
     "id": "s-it-partners",
-    "text": "07 IMPACT & FUNDING Delivered with The actors of the Pact and the funders named in the Athar funding paper. PACT ACTORS ODA United Arab Emirates UNDP UNICEF IFRC WFP UNHCR Discord FUNDERS NAMED IN THE PAPER (PP. 3–5) Gates Foundation CO-FUNDER — EDUCATION (INDIA) AND FARMER LAYER (KENYA) The Rockefeller Foundation FARMER LAYER, LEGACY Patrick J. McGovern Foundation CANDIDATE CO-FUNDER, ACCESS Mastercard Foundation YOUTH OPERATORS AND BUILDERS, LEGACY TECHNOLOGY PARTNERS — IN THE NEWS Redington to distribute UAE-built AIREV OnDemand agentic AI platform across MEA Muhammad Khalid (F-L), AIREV founder, and Sayantan Dev (F-R), President of MEA at Redington, sign the agreement, in the presence of Dr Thani Al Zeyoudi (B-C), UAE Minister of Foreign Trade and Chairman of AIREV. Source: Gulf News, 22 July 2026 ↗ INTERNAL REVIEW ONLY — candidate partner marks pending written verification from each organisation; not for external distribution. Mastercard Foundation: guideline compliance and Foundation approval pending. The Rockefeller Foundation: prior written approval pending. Patrick J. McGovern Foundation: no public brand guideline located — approval pending. Source: Athar — Agentic AI for All: Three Impact Tiers for Foundation Funding (27 Sep 2026); figures are the paper’s illustrative targets (p. 3).",
+    "text": "07 IMPACT & FUNDING Delivered with The actors of the Pact and the funders named in the Athar funding paper. PACT ACTORS ODA United Arab Emirates UNDP UNICEF IFRC WFP UNHCR Discord FUNDERS NAMED IN THE PAPER (PP. 3–5) Gates Foundation CO-FUNDER — EDUCATION (INDIA) AND FARMER LAYER (KENYA) The Rockefeller Foundation FARMER LAYER, LEGACY Patrick J. McGovern Foundation CANDIDATE CO-FUNDER, ACCESS YOUTH OPERATORS AND BUILDERS, LEGACY pending written authorisation TECHNOLOGY PARTNERS — IN THE NEWS Redington to distribute UAE-built AIREV OnDemand agentic AI platform across MEA Muhammad Khalid (F-L), AIREV founder, and Sayantan Dev (F-R), President of MEA at Redington, sign the agreement, in the presence of Dr Thani Al Zeyoudi (B-C), UAE Minister of Foreign Trade and Chairman of AIREV. Source: Gulf News, 22 July 2026 ↗ INTERNAL REVIEW ONLY — candidate partner marks pending written verification from each organisation; not for external distribution. Mastercard Foundation: guideline compliance and Foundation approval pending. The Rockefeller Foundation: prior written approval pending. Patrick J. McGovern Foundation: no public brand guideline located — approval pending. Source: Athar — Agentic AI for All: Three Impact Tiers for Foundation Funding (27 Sep 2026); figures are the paper’s illustrative targets (p. 3).",
     "figures": [
      "07",
      "3",
@@ -1444,10 +1444,10 @@
       "broken": false
      },
      {
-      "src": "/partners/review/mastercard-foundation__full-colour-positive.svg",
+      "src": "/partners/review/mastercard-foundation__full-colour.png",
       "alt": "Mastercard Foundation — mark shown for internal review only, not authorised for external use",
-      "w": 381,
-      "h": 361,
+      "w": 3681,
+      "h": 3489,
       "broken": false
      },
      {
@@ -1459,7 +1459,7 @@
      }
     ],
     "videos": [],
-    "counter": "Slide 32 of 46",
+    "counter": "Slide 32 of 44",
     "dir": "ltr",
     "lang": "en"
    },
@@ -1484,7 +1484,7 @@
      }
     ],
     "videos": [],
-    "counter": "Slide 33 of 46",
+    "counter": "Slide 33 of 44",
     "dir": "ltr",
     "lang": "en"
    },
@@ -1525,7 +1525,7 @@
       "tracks": []
      }
     ],
-    "counter": "Slide 34 of 46",
+    "counter": "Slide 34 of 44",
     "dir": "ltr",
     "lang": "en"
    },
@@ -1581,7 +1581,7 @@
       "tracks": []
      }
     ],
-    "counter": "Slide 35 of 46",
+    "counter": "Slide 35 of 44",
     "dir": "ltr",
     "lang": "en"
    },
@@ -1623,7 +1623,7 @@
      }
     ],
     "videos": [],
-    "counter": "Slide 36 of 46",
+    "counter": "Slide 36 of 44",
     "dir": "ltr",
     "lang": "en"
    },
@@ -1669,7 +1669,7 @@
      }
     ],
     "videos": [],
-    "counter": "Slide 37 of 46",
+    "counter": "Slide 37 of 44",
     "dir": "ltr",
     "lang": "en"
    },
@@ -1719,15 +1719,15 @@
       "broken": false
      },
      {
-      "src": "/assets/plates/plate5-montage-v155.webp",
-      "alt": "Concept render montage in three uncropped panels: a family using the Athar app on a tablet, a team at an Athar wall screen, and a family at an Athar service kiosk",
-      "w": 1952,
-      "h": 427,
+      "src": "/assets/plates/plate5-strip-v155.webp",
+      "alt": "Concept render strip in three panels: a woman and a child using a tablet, colleagues working together at laptops, and a man with a boy in a wheelchair at an Athar service kiosk",
+      "w": 1550,
+      "h": 320,
       "broken": false
      }
     ],
     "videos": [],
-    "counter": "Slide 38 of 46",
+    "counter": "Slide 38 of 44",
     "dir": "ltr",
     "lang": "en"
    },
@@ -1825,7 +1825,7 @@
       "tracks": []
      }
     ],
-    "counter": "Slide 39 of 46",
+    "counter": "Slide 39 of 44",
     "dir": "ltr",
     "lang": "en"
    },
@@ -1833,16 +1833,18 @@
     "n": 40,
     "visible": 40,
     "id": "s-exec-intro",
-    "text": "09 09 · EXECUTIVE TEAM Executive Team EXECUTIVE TEAM الفريق التنفيذي Executive Team Six letters of introduction — one for each member of the Executive Team carrying the Athar Pact forward. Every statement is sourced; portraits appear only where a canonical image from an official source is verified, and a monogram seal stands in everywhere else. 41 H.E. Dr Thani bin Ahmed Al Zeyoudi UAE Minister of Foreign Trade · Chairman of AIREV 42 H.E. Fahad Al Ameri Executive Director, Development and Humanitarian Affairs — UAE Presidential Court 43 H.E. Saif Sultan Al Aryani Advisor at the UAE Presidential Court, with the rank of Minister 44 Muhammed Khalid Founder & CEO, AIREV · Creator of OnDemand 45 Kayaan Unwalla Co-founder & Chief Strategy Officer, AIREV 46 Lorenzo Athar Executive Team · surname and role awaiting confirmation",
+    "text": "09 09 · EXECUTIVE TEAM Executive Team Executive Team Executive Team Four letters of introduction to the people leading Athar. Every statement is sourced; the officials’ letters quote published statements only. 41 H.E. Dr Thani bin Ahmed Al Zeyoudi Chairman, AIREV · UAE Minister of Foreign Trade 42 H.E. Fahad Mohamed Al Ameri Executive Director, Development and Humanitarian Affairs, UAE Presidential Court 43 Muhammed Khalid Founder & CEO, AIREV 44 Kayaan K. Unwalla Co-founder & Chief Strategy Officer, AIREV الفريق التنفيذي أربع رسائل تعريف بالقيادات التي تقود أثر. كل معلومة موثّقة بمصدر، ورسائل المسؤولين تقتبس تصريحات منشورة فقط. 41 معالي الدكتور ثاني بن أحمد الزيودي رئيس مجلس إدارة AIREV · وزير التجارة الخارجية في دولة الإمارات 42 سعادة فهد محمد العامري المدير التنفيذي، شؤون التنمية والعمل الإنساني، ديوان الرئاسة في دولة الإمارات 43 محمد خالد المؤسس والرئيس التنفيذي لشركة AIREV 44 كايان ك. أونوالا شريك مؤسس ورئيس الاستراتيجية، AIREV",
     "figures": [
      "09",
      "09",
      "41",
      "42",
+     "43 M",
+     "44 K",
+     "41",
+     "42",
      "43",
-     "44 M",
-     "45 K",
-     "46"
+     "44"
     ],
     "imgs": [
      {
@@ -1861,7 +1863,7 @@
      }
     ],
     "videos": [],
-    "counter": "Slide 40 of 46",
+    "counter": "Slide 40 of 44",
     "dir": "ltr",
     "lang": "en"
    },
@@ -1869,24 +1871,29 @@
     "n": 41,
     "visible": 41,
     "id": "s-exec-al-zeyoudi",
-    "text": "09 09 · EXECUTIVE TEAM · LETTER 1 OF 6 Executive Team LETTER 1 OF 6 INTRODUCING معالي الدكتور ثاني بن أحمد الزيودي H.E. Dr Thani bin Ahmed Al Zeyoudi UAE Minister of Foreign Trade · Chairman of AIREV Official headshot · identity cross-checked against four independent published photographs H.E. Dr Thani bin Ahmed Al Zeyoudi was appointed the UAE’s Minister of State for Foreign Trade in July 2020, and has served as Minister of Foreign Trade since June 2025. He leads the UAE’s programme of Comprehensive Economic Partnership Agreements (CEPAs) — the first concluded with India in May 2022 — and chaired the 13th WTO Ministerial Conference (MC13) in Abu Dhabi in February 2024. He is Chairman of AIREV, the Abu Dhabi company behind the OnDemand platform. H.E. Dr Thani bin Ahmed Al Zeyoudi Athar Executive Team Sources: The Africa CEO Forum 2026 — speaker profile · SALT — speaker profile · Gulf News, 13 Aug 2026 · TechAfrica News, 22 Jul 2026",
+    "text": "09 09 · EXECUTIVE TEAM · LETTER 1 OF 4 Executive Team Letter 1 of 4 For clearance by office Official portrait · UAE Ministry of Foreign Trade (trade.gov.ae) H.E. Dr Thani bin Ahmed Al Zeyoudi Chairman, AIREV · UAE Minister of Foreign Trade Dear partners, H.E. Dr Thani bin Ahmed Al Zeyoudi has been the UAE’s Minister of Foreign Trade since the Ministry of Foreign Trade was formed in June 2025. In June 2026 he assumed the chairmanship of AIREV’s Board of Directors, as reported by Gulf News and announced in his own LinkedIn post. On 13 August 2026 he observed the signing of the AIREV–Qualcomm memorandum of understanding. “The UAE has built one of the world’s most dynamic trading economies, and our next frontier is to export not only goods and services, but homegrown technology and the intellectual property behind it…” Published statement · Gulf News, 24 June 2026 With respect, The Athar team معالي الدكتور ثاني بن أحمد الزيودي رئيس مجلس إدارة AIREV · وزير التجارة الخارجية في دولة الإمارات شركاءنا الأعزاء، يشغل معالي الدكتور ثاني بن أحمد الزيودي منصب وزير التجارة الخارجية في دولة الإمارات منذ تأسيس وزارة التجارة الخارجية في يونيو 2025. وفي يونيو 2026 تولّى رئاسة مجلس إدارة AIREV، وفق ما نشرته «غلف نيوز» وما أعلنه في منشوره على لينكدإن. وفي 13 أغسطس 2026 شهد توقيع مذكرة التفاهم بين AIREV وQualcomm. «بنت دولة الإمارات واحداً من أكثر الاقتصادات التجارية حيوية في العالم، وآفاقنا المقبلة هي تصدير ليس السلع والخدمات فحسب، بل التكنولوجيا المطوّرة محلياً والملكية الفكرية التي تقف وراءها…» تصريح منشور · غلف نيوز، 24 يونيو 2026 (ترجمة غير رسمية) مع خالص التقدير، فريق أثر Sources: Ministry of Foreign Trade · GCC Business Watch — new ministry · Gulf News, 24 Jun 2026 · LinkedIn post · Gulf News, 13 Aug 2026",
     "figures": [
      "09",
      "09",
      "1",
-     "6",
+     "4",
      "1",
-     "6",
-     "2020,",
+     "4",
      "2025.",
-     "2022",
-     "13",
-     "13",
-     "2024.",
      "2026",
      "13",
      "2026",
-     "22",
+     "24",
+     "2026",
+     "2025.",
+     "2026",
+     "13",
+     "2026",
+     "24",
+     "2026",
+     "24",
+     "2026",
+     "13",
      "2026"
     ],
     "imgs": [
@@ -1905,15 +1912,15 @@
       "broken": false
      },
      {
-      "src": "/assets/exec/portraits/thani-al-zeyoudi-official.jpg",
+      "src": "/assets/exec/portraits/thani-al-zeyoudi-mof.jpg",
       "alt": "H.E. Dr Thani bin Ahmed Al Zeyoudi",
-      "w": 417,
-      "h": 626,
+      "w": 640,
+      "h": 934,
       "broken": false
      }
     ],
     "videos": [],
-    "counter": "Slide 41 of 46",
+    "counter": "Slide 41 of 44",
     "dir": "ltr",
     "lang": "en"
    },
@@ -1921,14 +1928,14 @@
     "n": 42,
     "visible": 42,
     "id": "s-exec-al-ameri",
-    "text": "09 09 · EXECUTIVE TEAM · LETTER 2 OF 6 Executive Team LETTER 2 OF 6 INTRODUCING سعادة فهد محمد العامري H.E. Fahad Al Ameri Executive Director, Development and Humanitarian Affairs — UAE Presidential Court Official portrait · UAE National Experts Program (uaenep.ae) As Executive Director of Development and Humanitarian Affairs at the Presidential Court, H.E. Fahad Al Ameri is among the leaders shaping the UAE’s global humanitarian and development agenda. He played a defining role in creating Erth Zayed Philanthropies, the UAE International Aid Agency and the International Humanitarian and Philanthropic Council (IHPC), where he serves as General Secretary; he is also a Board Member of the Zayed Charitable and Humanitarian Foundation. He previously held senior positions in the Abu Dhabi Crown Prince Court, the Department of Transport and the General Secretariat of the Executive Council. H.E. Fahad Al Ameri Athar Executive Team Sources: UAE National Experts Program — profile (EN) · برنامج خبراء الإمارات — الملف (AR)",
+    "text": "09 09 · EXECUTIVE TEAM · LETTER 2 OF 4 Executive Team Letter 2 of 4 For clearance by office FA ف ع H.E. Fahad Mohamed Al Ameri Executive Director, Development and Humanitarian Affairs, UAE Presidential Court Dear partners, H.E. Fahad Mohamed Al Ameri is Executive Director of Development and Humanitarian Affairs at the UAE Presidential Court. He played a defining role in creating Erth Zayed Philanthropies, the UAE International Aid Agency and the International Humanitarian and Philanthropic Council (IHPC), where he serves as General Secretary. With respect, The Athar team سعادة فهد محمد العامري المدير التنفيذي، شؤون التنمية والعمل الإنساني، ديوان الرئاسة في دولة الإمارات شركاءنا الأعزاء، سعادة فهد محمد العامري هو المدير التنفيذي للشؤون التنموية والإنسانية في ديوان الرئاسة. أدّى دوراً محورياً في تأسيس مؤسسة إرث زايد الإنسانية ووكالة الإمارات للمساعدات الدولية ومجلس الشؤون الإنسانية والدولية، ويشغل منصب مقرِّر المجلس. مع خالص التقدير، فريق أثر Sources: UAE National Experts Program (EN) · برنامج خبراء الإمارات (AR)",
     "figures": [
      "09",
      "09",
      "2",
-     "6",
+     "4",
      "2",
-     "6"
+     "4"
     ],
     "imgs": [
      {
@@ -1944,97 +1951,41 @@
       "w": 1200,
       "h": 241,
       "broken": false
-     },
-     {
-      "src": "/assets/exec/portraits/fahad-al-ameri-uaenep.jpg",
-      "alt": "H.E. Fahad Al Ameri",
-      "w": 376,
-      "h": 316,
-      "broken": false
      }
     ],
     "videos": [],
-    "counter": "Slide 42 of 46",
+    "counter": "Slide 42 of 44",
     "dir": "ltr",
     "lang": "en"
    },
    {
     "n": 43,
     "visible": 43,
-    "id": "s-exec-al-aryani",
-    "text": "09 09 · EXECUTIVE TEAM · LETTER 3 OF 6 Executive Team LETTER 3 OF 6 INTRODUCING معالي سيف سلطان العرياني H.E. Saif Sultan Al Aryani Advisor at the UAE Presidential Court, with the rank of Minister س S Monogram seal — no verified official portrait On 9 January 2023, President His Highness Sheikh Mohamed bin Zayed Al Nahyan issued a Federal Decree appointing H.E. Saif Sultan Al Aryani as Advisor at the Presidential Court, with the rank of Minister. The decree took effect on the date of issuance and was published in the Official Gazette. H.E. Saif Sultan Al Aryani Athar Executive Team Sources: Gulf News (WAM), 9 Jan 2023 · الإمارات اليوم، 9 يناير 2023",
-    "figures": [
-     "09",
-     "09",
-     "3",
-     "6",
-     "3",
-     "6",
-     "9",
-     "2023,",
-     "9",
-     "2023",
-     "9",
-     "2023"
-    ],
-    "imgs": [
-     {
-      "src": "/brand/icons/pack/community.png",
-      "alt": "",
-      "w": 256,
-      "h": 256,
-      "broken": false
-     },
-     {
-      "src": "/assets/exec/athar-logo-master-1200.png",
-      "alt": "Athar | أثر",
-      "w": 1200,
-      "h": 241,
-      "broken": false
-     }
-    ],
-    "videos": [],
-    "counter": "Slide 43 of 46",
-    "dir": "ltr",
-    "lang": "en"
-   },
-   {
-    "n": 44,
-    "visible": 44,
     "id": "s-exec-khalid",
-    "text": "09 09 · EXECUTIVE TEAM · LETTER 4 OF 6 Executive Team LETTER 4 OF 6 INTRODUCING محمد خالد Muhammed Khalid Founder & CEO, AIREV · Creator of OnDemand م M Monogram seal — no verified official portrait Muhammed Khalid is the founder and CEO of AIREV, the Abu Dhabi-based AI company behind School Hack and OnDemand — platforms used by millions worldwide. AIREV, which he co-founded in September 2023, launched OnDemand in July 2024 with backing from Core42, a unit of G42, and has since signed partnerships with Intel (October 2025) and Qualcomm (August 2026) and an agreement with Redington (July 2026). His impact story — from his first five years in Sierra Leone to building in the UAE — plays alongside this letter. Muhammed Khalid Athar Executive Team Sources: 42 Network, 2026 · The National, 30 Sep 2024 · Middle East AI News, 15 Apr 2025 · Gulf News, 14 Oct 2025 · Gulf News, 13 Aug 2026 · TechAfrica News, 22 Jul 2026 Athar — Origins of Impact, Episode 01: Muhammed Khalid (40 s) Poster: the episode’s end card · Captions: English (burned in, plus WebVTT) · Arabic (WebVTT) · plays 0:00–0:39.4 · the narrated guide pauses while the film plays and resumes after it.",
+    "text": "09 09 · EXECUTIVE TEAM · LETTER 3 OF 4 Executive Team Letter 3 of 4 MK م خ Muhammed Khalid Founder & CEO, AIREV Dear partners, Muhammed Khalid is the founder and CEO of AIREV, the Abu Dhabi company behind School Hack and OnDemand. School Hack, launched in early 2023, has grown to over 4 million users across 140+ countries. OnDemand, AIREV’s agentic AI operating system, is backed by Core42, a G42 company. His Athar impact story plays alongside this letter. With respect, The Athar team محمد خالد المؤسس والرئيس التنفيذي لشركة AIREV شركاءنا الأعزاء، محمد خالد هو المؤسس والرئيس التنفيذي لشركة AIREV، الشركة التي تتخذ من أبوظبي مقراً والتي تقف وراء منصتي School Hack وOnDemand. نمت منصة School Hack، التي أُطلقت مطلع عام 2023، إلى أكثر من 4 ملايين مستخدم في أكثر من 140 دولة. أما OnDemand، نظام التشغيل الوكيلي للذكاء الاصطناعي من AIREV، فتدعمه Core42 التابعة لمجموعة G42. وتُعرض قصة أثره إلى جانب هذه الرسالة. مع خالص التقدير، فريق أثر Sources: 42 Network · The National, 30 Sep 2024 Athar — Origins of Impact, Episode 01: Muhammed Khalid Poster frame at 00:15.5 (the film has no text-free frame) · captions EN / AR · the narrated guide pauses while the film plays and resumes after it.",
     "figures": [
      "09",
      "09",
+     "3",
      "4",
-     "6",
-     "4",
-     "6",
+     "3",
+     "4 M",
      "2023,",
-     "2024",
+     "4 m",
+     "140",
      "42,",
-     "42,",
-     "2025",
-     "2026",
-     "2026",
      "42",
-     "2026",
+     "2023",
+     "4",
+     "140",
+     "42",
+     "42.",
+     "42",
      "30 S",
      "2024",
-     "15",
-     "2025",
-     "14",
-     "2025",
-     "13",
-     "2026",
-     "22",
-     "2026",
      "01",
-     "40 s",
-     "0",
      "00",
-     "0",
-     "39.4"
+     "15.5"
     ],
     "imgs": [
      {
@@ -2055,70 +2006,30 @@
     "videos": [
      {
       "src": "/assets/exec/video/athar-origins-of-impact-ep01-muhammed-khalid-720p.mp4#t=0,39.4",
-      "poster": "/assets/exec/video/athar-origins-of-impact-ep01-poster.jpg",
+      "poster": "/assets/exec/video/athar-origins-of-impact-ep01-poster-15s5.jpg",
       "tracks": [
        "en",
        "ar"
       ]
      }
     ],
-    "counter": "Slide 44 of 46",
+    "counter": "Slide 43 of 44",
     "dir": "ltr",
     "lang": "en"
    },
    {
-    "n": 45,
-    "visible": 45,
+    "n": 44,
+    "visible": 44,
     "id": "s-exec-unwalla",
-    "text": "09 09 · EXECUTIVE TEAM · LETTER 5 OF 6 Executive Team LETTER 5 OF 6 INTRODUCING كايان أونوالا Kayaan Unwalla Co-founder & Chief Strategy Officer, AIREV ك K Monogram seal — no verified official portrait Kayaan Unwalla is a co-founder of AIREV and its Chief Strategy Officer, leading strategy, market expansion and ecosystem partnerships for the OnDemand platform. He co-founded AIREV in September 2023 with Muhammed Khalid and Dr Youssef Youssef — the team that created School Hack. In April 2025, Ireland’s VentureWave Capital invested in AIREV as part of its Series A round, to support the global growth of OnDemand. Kayaan Unwalla Athar Executive Team Sources: The GPU, Issue #42 · The National, 30 Sep 2024 · Middle East AI News, 15 Apr 2025",
+    "text": "09 09 · EXECUTIVE TEAM · LETTER 4 OF 4 Executive Team Letter 4 of 4 KU ك أ Kayaan K. Unwalla Co-founder & Chief Strategy Officer, AIREV Dear partners, Kayaan K. Unwalla is a co-founder of AIREV and its Chief Strategy Officer, leading strategy, market expansion and ecosystem partnerships. Before AIREV he was a corporate partner at Norton Rose Fulbright in Dubai and head of Corporate (Middle East) at DWF. With respect, The Athar team كايان ك. أونوالا شريك مؤسس ورئيس الاستراتيجية، AIREV شركاءنا الأعزاء، كايان ك. أونوالا شريك مؤسس في AIREV ورئيس الاستراتيجية فيها، ويقود الاستراتيجية والتوسع في الأسواق وشراكات المنظومة. وقبل انضمامه إلى AIREV، كان شريكاً في قسم الشركات لدى Norton Rose Fulbright في دبي، ورئيساً لقسم الشركات (الشرق الأوسط) لدى DWF. مع خالص التقدير، فريق أثر Sources: The GPU, Issue #42 · Former roles confirmed by Athar, 1 Oct 2026",
     "figures": [
      "09",
      "09",
-     "5",
-     "6",
-     "5",
-     "6",
-     "2023",
-     "2025,",
+     "4",
+     "4",
+     "4",
+     "4 K",
      "42",
-     "30 S",
-     "2024",
-     "15",
-     "2025"
-    ],
-    "imgs": [
-     {
-      "src": "/brand/icons/pack/community.png",
-      "alt": "",
-      "w": 256,
-      "h": 256,
-      "broken": false
-     },
-     {
-      "src": "/assets/exec/athar-logo-master-1200.png",
-      "alt": "Athar | أثر",
-      "w": 1200,
-      "h": 241,
-      "broken": false
-     }
-    ],
-    "videos": [],
-    "counter": "Slide 45 of 46",
-    "dir": "ltr",
-    "lang": "en"
-   },
-   {
-    "n": 46,
-    "visible": 46,
-    "id": "s-exec-lorenzo",
-    "text": "09 09 · EXECUTIVE TEAM · LETTER 6 OF 6 Executive Team LETTER 6 OF 6 INTRODUCING لورينزو Lorenzo Athar Executive Team · surname and role awaiting confirmation ل L Monogram seal — no verified official portrait Lorenzo is a member of the Athar Executive Team. His surname and role have not yet been confirmed from a verifiable source, so this letter states nothing further until Athar confirms them. Lorenzo Athar Executive Team · Confirmation requested Sources: Athar Executive Team roster (supplied by Athar, 1 Oct 2026)",
-    "figures": [
-     "09",
-     "09",
-     "6",
-     "6",
-     "6",
-     "6",
      "1",
      "2026"
     ],
@@ -2139,7 +2050,7 @@
      }
     ],
     "videos": [],
-    "counter": "Slide 46 of 46",
+    "counter": "Slide 44 of 44",
     "dir": "ltr",
     "lang": "en"
    }
@@ -2237,7 +2148,7 @@
       "tracks": []
      }
     ],
-    "counter": "الشريحة 1 من 46",
+    "counter": "الشريحة 1 من 44",
     "dir": "rtl",
     "lang": "ar"
    },
@@ -2259,7 +2170,7 @@
      }
     ],
     "videos": [],
-    "counter": "الشريحة 2 من 46",
+    "counter": "الشريحة 2 من 44",
     "dir": "rtl",
     "lang": "ar"
    },
@@ -2279,7 +2190,7 @@
       "tracks": []
      }
     ],
-    "counter": "الشريحة 3 من 46",
+    "counter": "الشريحة 3 من 44",
     "dir": "rtl",
     "lang": "ar"
    },
@@ -2347,7 +2258,7 @@
      }
     ],
     "videos": [],
-    "counter": "الشريحة 4 من 46",
+    "counter": "الشريحة 4 من 44",
     "dir": "rtl",
     "lang": "ar"
    },
@@ -2368,7 +2279,7 @@
     ],
     "imgs": [],
     "videos": [],
-    "counter": "الشريحة 5 من 46",
+    "counter": "الشريحة 5 من 44",
     "dir": "rtl",
     "lang": "ar"
    },
@@ -2388,7 +2299,7 @@
       "tracks": []
      }
     ],
-    "counter": "الشريحة 6 من 46",
+    "counter": "الشريحة 6 من 44",
     "dir": "rtl",
     "lang": "ar"
    },
@@ -2411,7 +2322,7 @@
     ],
     "imgs": [],
     "videos": [],
-    "counter": "الشريحة 7 من 46",
+    "counter": "الشريحة 7 من 44",
     "dir": "rtl",
     "lang": "ar"
    },
@@ -2425,7 +2336,7 @@
     ],
     "imgs": [],
     "videos": [],
-    "counter": "الشريحة 8 من 46",
+    "counter": "الشريحة 8 من 44",
     "dir": "rtl",
     "lang": "ar"
    },
@@ -2443,7 +2354,7 @@
     ],
     "imgs": [],
     "videos": [],
-    "counter": "الشريحة 9 من 46",
+    "counter": "الشريحة 9 من 44",
     "dir": "rtl",
     "lang": "ar"
    },
@@ -2457,7 +2368,7 @@
     ],
     "imgs": [],
     "videos": [],
-    "counter": "الشريحة 10 من 46",
+    "counter": "الشريحة 10 من 44",
     "dir": "rtl",
     "lang": "ar"
    },
@@ -2471,7 +2382,7 @@
     ],
     "imgs": [],
     "videos": [],
-    "counter": "الشريحة 11 من 46",
+    "counter": "الشريحة 11 من 44",
     "dir": "rtl",
     "lang": "ar"
    },
@@ -2485,7 +2396,7 @@
     ],
     "imgs": [],
     "videos": [],
-    "counter": "الشريحة 12 من 46",
+    "counter": "الشريحة 12 من 44",
     "dir": "rtl",
     "lang": "ar"
    },
@@ -2546,7 +2457,7 @@
      }
     ],
     "videos": [],
-    "counter": "الشريحة 13 من 46",
+    "counter": "الشريحة 13 من 44",
     "dir": "rtl",
     "lang": "ar"
    },
@@ -2572,7 +2483,7 @@
      }
     ],
     "videos": [],
-    "counter": "الشريحة 14 من 46",
+    "counter": "الشريحة 14 من 44",
     "dir": "rtl",
     "lang": "ar"
    },
@@ -2603,7 +2514,7 @@
      }
     ],
     "videos": [],
-    "counter": "الشريحة 15 من 46",
+    "counter": "الشريحة 15 من 44",
     "dir": "rtl",
     "lang": "ar"
    },
@@ -2632,7 +2543,7 @@
      }
     ],
     "videos": [],
-    "counter": "الشريحة 16 من 46",
+    "counter": "الشريحة 16 من 44",
     "dir": "rtl",
     "lang": "ar"
    },
@@ -2705,7 +2616,7 @@
      }
     ],
     "videos": [],
-    "counter": "الشريحة 17 من 46",
+    "counter": "الشريحة 17 من 44",
     "dir": "rtl",
     "lang": "ar"
    },
@@ -2735,7 +2646,7 @@
      }
     ],
     "videos": [],
-    "counter": "الشريحة 18 من 46",
+    "counter": "الشريحة 18 من 44",
     "dir": "rtl",
     "lang": "ar"
    },
@@ -2792,7 +2703,7 @@
      }
     ],
     "videos": [],
-    "counter": "الشريحة 19 من 46",
+    "counter": "الشريحة 19 من 44",
     "dir": "rtl",
     "lang": "ar"
    },
@@ -2806,7 +2717,7 @@
     ],
     "imgs": [],
     "videos": [],
-    "counter": "الشريحة 20 من 46",
+    "counter": "الشريحة 20 من 44",
     "dir": "rtl",
     "lang": "ar"
    },
@@ -2891,7 +2802,7 @@
      }
     ],
     "videos": [],
-    "counter": "الشريحة 21 من 46",
+    "counter": "الشريحة 21 من 44",
     "dir": "rtl",
     "lang": "ar"
    },
@@ -2955,7 +2866,7 @@
      }
     ],
     "videos": [],
-    "counter": "الشريحة 22 من 46",
+    "counter": "الشريحة 22 من 44",
     "dir": "rtl",
     "lang": "ar"
    },
@@ -2991,7 +2902,7 @@
      }
     ],
     "videos": [],
-    "counter": "الشريحة 23 من 46",
+    "counter": "الشريحة 23 من 44",
     "dir": "rtl",
     "lang": "ar"
    },
@@ -3027,7 +2938,7 @@
      }
     ],
     "videos": [],
-    "counter": "الشريحة 24 من 46",
+    "counter": "الشريحة 24 من 44",
     "dir": "rtl",
     "lang": "ar"
    },
@@ -3084,7 +2995,7 @@
      }
     ],
     "videos": [],
-    "counter": "الشريحة 25 من 46",
+    "counter": "الشريحة 25 من 44",
     "dir": "rtl",
     "lang": "ar"
    },
@@ -3134,7 +3045,7 @@
      }
     ],
     "videos": [],
-    "counter": "الشريحة 26 من 46",
+    "counter": "الشريحة 26 من 44",
     "dir": "rtl",
     "lang": "ar"
    },
@@ -3172,7 +3083,7 @@
      }
     ],
     "videos": [],
-    "counter": "الشريحة 27 من 46",
+    "counter": "الشريحة 27 من 44",
     "dir": "rtl",
     "lang": "ar"
    },
@@ -3199,7 +3110,7 @@
      }
     ],
     "videos": [],
-    "counter": "الشريحة 28 من 46",
+    "counter": "الشريحة 28 من 44",
     "dir": "rtl",
     "lang": "ar"
    },
@@ -3297,7 +3208,7 @@
      }
     ],
     "videos": [],
-    "counter": "الشريحة 29 من 46",
+    "counter": "الشريحة 29 من 44",
     "dir": "rtl",
     "lang": "ar"
    },
@@ -3440,7 +3351,7 @@
      }
     ],
     "videos": [],
-    "counter": "الشريحة 30 من 46",
+    "counter": "الشريحة 30 من 44",
     "dir": "rtl",
     "lang": "ar"
    },
@@ -3466,7 +3377,7 @@
      }
     ],
     "videos": [],
-    "counter": "الشريحة 31 من 46",
+    "counter": "الشريحة 31 من 44",
     "dir": "rtl",
     "lang": "ar"
    },
@@ -3474,7 +3385,7 @@
     "n": 32,
     "visible": 32,
     "id": "s-it-partners",
-    "text": "07 الأثر والتمويل نُنجز مع الجهات الفاعلة في الميثاق والممولون المذكورون في ورقة تمويل أثر. الجهات الفاعلة في الميثاق مكتب الشؤون التنموية (ODA) دولة الإمارات العربية المتحدة برنامج الأمم المتحدة الإنمائي اليونيسف الاتحاد الدولي لجمعيات الصليب الأحمر والهلال الأحمر برنامج الأغذية العالمي المفوضية السامية للأمم المتحدة لشؤون اللاجئين ديسكورد ممولون مذكورون في الورقة (ص 3–5) مؤسسة غيتس ممول مشارك — التعليم (الهند) وطبقة المزارعين (كينيا) مؤسسة روكفلر طبقة المزارعين — الإرث مؤسسة باتريك ج. ماكغفرن ممول مشارك مرشّح — الوصول مؤسسة ماستركارد المشغّلون والبناة الشباب — الإرث شركاء التقنية — في الأخبار Redington توزّع منصة AIREV OnDemand للذكاء الاصطناعي الوكيلي المبنية في الإمارات عبر الشرق الأوسط وأفريقيا محمد خالد (يسار الصف الأمامي)، مؤسس AIREV، وسايانتان ديف (يمين الصف الأمامي)، رئيس منطقة الشرق الأوسط وأفريقيا في Redington، يوقّعان الاتفاقية بحضور الدكتور ثاني الزيودي (وسط الصف الخلفي)، وزير دولة للتجارة الخارجية ورئيس مجلس إدارة AIREV. المصدر: غلف نيوز، 22 يوليو 2026 ↗ للمراجعة الداخلية فقط · INTERNAL REVIEW ONLY — علامات الشركاء المرشّحين بانتظار تحقق خطي من كل جهة؛ ليست للتوزيع الخارجي. مؤسسة ماستركارد: الالتزام بدليل الهوية وموافقة المؤسسة قيد الانتظار. مؤسسة روكفلر: الموافقة الخطية المسبقة قيد الانتظار. مؤسسة باتريك ج. ماكغفرن: لم يُعثر على دليل هوية عام — الموافقة قيد الانتظار. المصدر: أثر — الذكاء الاصطناعي الوكيلي للجميع: ثلاث فئات أثر لتمويل المؤسسات (27 سبتمبر 2026)؛ الأرقام أهداف استرشادية من الورقة (ص 3).",
+    "text": "07 الأثر والتمويل نُنجز مع الجهات الفاعلة في الميثاق والممولون المذكورون في ورقة تمويل أثر. الجهات الفاعلة في الميثاق مكتب الشؤون التنموية (ODA) دولة الإمارات العربية المتحدة برنامج الأمم المتحدة الإنمائي اليونيسف الاتحاد الدولي لجمعيات الصليب الأحمر والهلال الأحمر برنامج الأغذية العالمي المفوضية السامية للأمم المتحدة لشؤون اللاجئين ديسكورد ممولون مذكورون في الورقة (ص 3–5) مؤسسة غيتس ممول مشارك — التعليم (الهند) وطبقة المزارعين (كينيا) مؤسسة روكفلر طبقة المزارعين — الإرث مؤسسة باتريك ج. ماكغفرن ممول مشارك مرشّح — الوصول المشغّلون والبناة الشباب — الإرث بانتظار التفويض الكتابي شركاء التقنية — في الأخبار Redington توزّع منصة AIREV OnDemand للذكاء الاصطناعي الوكيلي المبنية في الإمارات عبر الشرق الأوسط وأفريقيا محمد خالد (يسار الصف الأمامي)، مؤسس AIREV، وسايانتان ديف (يمين الصف الأمامي)، رئيس منطقة الشرق الأوسط وأفريقيا في Redington، يوقّعان الاتفاقية بحضور الدكتور ثاني الزيودي (وسط الصف الخلفي)، وزير دولة للتجارة الخارجية ورئيس مجلس إدارة AIREV. المصدر: غلف نيوز، 22 يوليو 2026 ↗ للمراجعة الداخلية فقط · INTERNAL REVIEW ONLY — علامات الشركاء المرشّحين بانتظار تحقق خطي من كل جهة؛ ليست للتوزيع الخارجي. مؤسسة ماستركارد: الالتزام بدليل الهوية وموافقة المؤسسة قيد الانتظار. مؤسسة روكفلر: الموافقة الخطية المسبقة قيد الانتظار. مؤسسة باتريك ج. ماكغفرن: لم يُعثر على دليل هوية عام — الموافقة قيد الانتظار. المصدر: أثر — الذكاء الاصطناعي الوكيلي للجميع: ثلاث فئات أثر لتمويل المؤسسات (27 سبتمبر 2026)؛ الأرقام أهداف استرشادية من الورقة (ص 3).",
     "figures": [
      "07",
      "3",
@@ -3571,10 +3482,10 @@
       "broken": false
      },
      {
-      "src": "/partners/review/mastercard-foundation__full-colour-positive.svg",
+      "src": "/partners/review/mastercard-foundation__full-colour.png",
       "alt": "مؤسسة ماستركارد — علامة معروضة للمراجعة الداخلية فقط",
-      "w": 381,
-      "h": 361,
+      "w": 3681,
+      "h": 3489,
       "broken": false
      },
      {
@@ -3586,7 +3497,7 @@
      }
     ],
     "videos": [],
-    "counter": "الشريحة 32 من 46",
+    "counter": "الشريحة 32 من 44",
     "dir": "rtl",
     "lang": "ar"
    },
@@ -3611,7 +3522,7 @@
      }
     ],
     "videos": [],
-    "counter": "الشريحة 33 من 46",
+    "counter": "الشريحة 33 من 44",
     "dir": "rtl",
     "lang": "ar"
    },
@@ -3652,7 +3563,7 @@
       "tracks": []
      }
     ],
-    "counter": "الشريحة 34 من 46",
+    "counter": "الشريحة 34 من 44",
     "dir": "rtl",
     "lang": "ar"
    },
@@ -3708,7 +3619,7 @@
       "tracks": []
      }
     ],
-    "counter": "الشريحة 35 من 46",
+    "counter": "الشريحة 35 من 44",
     "dir": "rtl",
     "lang": "ar"
    },
@@ -3748,7 +3659,7 @@
      }
     ],
     "videos": [],
-    "counter": "الشريحة 36 من 46",
+    "counter": "الشريحة 36 من 44",
     "dir": "rtl",
     "lang": "ar"
    },
@@ -3794,7 +3705,7 @@
      }
     ],
     "videos": [],
-    "counter": "الشريحة 37 من 46",
+    "counter": "الشريحة 37 من 44",
     "dir": "rtl",
     "lang": "ar"
    },
@@ -3802,7 +3713,7 @@
     "n": 38,
     "visible": 38,
     "id": "s-aos-nations",
-    "text": "08 أثر OS أمم مُمكَّنة ثلاث دول وثلاث فئات — اختر دولة لعرض برنامجها الرائد وبيانات أساسها ومرحلتها. لبنان الوصول الهند التملّك كينيا الإرث الوصول 10 ملايين دولار لبنان — مليون خبير لبناني في الذكاء الاصطناعي ما الذي يُقدَّم مليون مواطن معتمَد في الذكاء الاصطناعي التوليدي؛ 18,000 في الاستخدام المهني اليومي في الوزارات والمدارس والعيادات والشركات الصغيرة. النتائج المقيسة الشهادات الصادرة · المستخدمون النشطون يوميًا · سير العمل الوزاري المُفعَّل أساس البنك الدولي (WDI) السكان 5.85 مليون (2025) مستخدمو الإنترنت 80.6٪ (2024) المصدر: مؤشرات التنمية العالمية للبنك الدولي (2026-07-13) الأدلة وام · 25 سبتمبر 2026 — إطلاق مبادرة مليون خبير لبناني ذا ناشيونال · 25 سبتمبر 2026 مرحلة خارطة الطريق الآن · الربع الرابع 2026 التالي · 2027 لاحقًا · 2028 لقطة من فيلم المنتج · عند 16.7 ث تصوّر مفاهيمي · CONCEPT RENDER الأرقام: أثر — الذكاء الاصطناعي الوكيلي للجميع: ثلاث فئات أثر لتمويل المؤسسات (27 سبتمبر 2026)، أهداف توضيحية (ص 3). انضم إلى الميثاق",
+    "text": "08 أثر OS أمم مُمكَّنة ثلاث دول وثلاث فئات — اختر دولة لعرض برنامجها الرائد وبيانات أساسها ومرحلتها. لبنان الوصول الهند التملّك كينيا الإرث الوصول 10 ملايين دولار لبنان — مليون خبير لبناني في الذكاء الاصطناعي ما الذي يُقدَّم مليون مواطن معتمَد في الذكاء الاصطناعي التوليدي؛ 18,000 في الاستخدام المهني اليومي في الوزارات والمدارس والعيادات والشركات الصغيرة. النتائج المقيسة الشهادات الصادرة · المستخدمون النشطون يوميًا · سير العمل الوزاري المُفعَّل أساس البنك الدولي (WDI) السكان 5.85 مليون (2025) مستخدمو الإنترنت 80.6٪ (2024) المصدر: مؤشرات التنمية العالمية للبنك الدولي (2026-07-13) الأدلة وام · 25 سبتمبر 2026 — إطلاق مبادرة مليون خبير لبناني ذا ناشيونال · 25 سبتمبر 2026 مرحلة خارطة الطريق الآن · الربع الرابع 2026 التالي · 2027 لاحقًا · 2028 لقطة من فيلم المنتج · عند 16.7 ث تصوّر مفاهيمي الأرقام: أثر — الذكاء الاصطناعي الوكيلي للجميع: ثلاث فئات أثر لتمويل المؤسسات (27 سبتمبر 2026)، أهداف توضيحية (ص 3). انضم إلى الميثاق",
     "figures": [
      "08",
      "10",
@@ -3842,15 +3753,15 @@
       "broken": false
      },
      {
-      "src": "/assets/plates/plate5-montage-v155.webp",
-      "alt": "مونتاج تصوّر مفاهيمي من ثلاث لوحات كاملة غير مقصوصة: عائلة تستخدم تطبيق أثر على جهاز لوحي، وفريق أمام شاشة أثر الجدارية، وعائلة عند كشك خدمات أثر",
-      "w": 1952,
-      "h": 427,
+      "src": "/assets/plates/plate5-strip-v155.webp",
+      "alt": "شريط تصوّر مفاهيمي من ثلاث لوحات: امرأة وطفل يستخدمان جهازاً لوحياً، وزملاء يعملون معاً على حواسيب محمولة، ورجل مع فتى على كرسي متحرك أمام كشك خدمات أثر",
+      "w": 1550,
+      "h": 320,
       "broken": false
      }
     ],
     "videos": [],
-    "counter": "الشريحة 38 من 46",
+    "counter": "الشريحة 38 من 44",
     "dir": "rtl",
     "lang": "ar"
    },
@@ -3948,7 +3859,7 @@
       "tracks": []
      }
     ],
-    "counter": "الشريحة 39 من 46",
+    "counter": "الشريحة 39 من 44",
     "dir": "rtl",
     "lang": "ar"
    },
@@ -3956,7 +3867,7 @@
     "n": 40,
     "visible": 40,
     "id": "s-exec-intro",
-    "text": "09 09 · الفريق التنفيذي الفريق التنفيذي الفريق التنفيذي الفريق التنفيذي Executive Team ست رسائل تعريف — رسالة لكل عضو في الفريق التنفيذي الذي يمضي بميثاق أثر قُدُماً. كل معلومة موثّقة بمصدر، ولا تظهر الصور الشخصية إلا حيث تم التحقق من صورة معتمدة من مصدر رسمي، ويحلّ محلها ختم بالحرف الأول في ما عدا ذلك. 41 معالي الدكتور ثاني بن أحمد الزيودي وزير التجارة الخارجية في دولة الإمارات · رئيس مجلس إدارة AIREV 42 سعادة فهد محمد العامري المدير التنفيذي، شؤون التنمية والعمل الإنساني — ديوان الرئاسة في دولة الإمارات 43 معالي سيف سلطان العرياني مستشار في ديوان الرئاسة بدرجة وزير 44 محمد خالد المؤسس والرئيس التنفيذي لشركة AIREV · مبتكر منصة OnDemand 45 كايان أونوالا شريك مؤسس ورئيس الاستراتيجية في AIREV 46 لورينزو الفريق التنفيذي لأثر · بانتظار تأكيد اسم العائلة والمنصب",
+    "text": "09 09 · الفريق التنفيذي الفريق التنفيذي الفريق التنفيذي الفريق التنفيذي أربع رسائل تعريف بالقيادات التي تقود أثر. كل معلومة موثّقة بمصدر، ورسائل المسؤولين تقتبس تصريحات منشورة فقط. 41 معالي الدكتور ثاني بن أحمد الزيودي رئيس مجلس إدارة AIREV · وزير التجارة الخارجية في دولة الإمارات 42 سعادة فهد محمد العامري المدير التنفيذي، شؤون التنمية والعمل الإنساني، ديوان الرئاسة في دولة الإمارات 43 محمد خالد المؤسس والرئيس التنفيذي لشركة AIREV 44 كايان ك. أونوالا شريك مؤسس ورئيس الاستراتيجية، AIREV Executive Team Four letters of introduction to the people leading Athar. Every statement is sourced; the officials’ letters quote published statements only. 41 H.E. Dr Thani bin Ahmed Al Zeyoudi Chairman, AIREV · UAE Minister of Foreign Trade 42 H.E. Fahad Mohamed Al Ameri Executive Director, Development and Humanitarian Affairs, UAE Presidential Court 43 Muhammed Khalid Founder & CEO, AIREV 44 Kayaan K. Unwalla Co-founder & Chief Strategy Officer, AIREV",
     "figures": [
      "09",
      "09",
@@ -3964,8 +3875,10 @@
      "42",
      "43",
      "44",
-     "45",
-     "46"
+     "41",
+     "42",
+     "43 M",
+     "44 K"
     ],
     "imgs": [
      {
@@ -3984,7 +3897,7 @@
      }
     ],
     "videos": [],
-    "counter": "الشريحة 40 من 46",
+    "counter": "الشريحة 40 من 44",
     "dir": "rtl",
     "lang": "ar"
    },
@@ -3992,23 +3905,29 @@
     "n": 41,
     "visible": 41,
     "id": "s-exec-al-zeyoudi",
-    "text": "09 09 · الفريق التنفيذي · الرسالة 1 من 6 الفريق التنفيذي الرسالة 1 من 6 نقدّم إليكم معالي الدكتور ثاني بن أحمد الزيودي H.E. Dr Thani bin Ahmed Al Zeyoudi وزير التجارة الخارجية في دولة الإمارات · رئيس مجلس إدارة AIREV صورة رسمية · طُوبقت الهوية مع أربع صور منشورة مستقلة عُيّن معالي الدكتور ثاني بن أحمد الزيودي وزيرَ دولة للتجارة الخارجية في دولة الإمارات في يوليو 2020، ويشغل منصب وزير التجارة الخارجية منذ يونيو 2025. يقود برنامج اتفاقيات الشراكة الاقتصادية الشاملة (CEPA) لدولة الإمارات — وقد أُبرمت أولاها مع الهند في مايو 2022 — وترأس المؤتمر الوزاري الثالث عشر لمنظمة التجارة العالمية (MC13) في أبوظبي في فبراير 2024. وهو رئيس مجلس إدارة AIREV، الشركة التي تتخذ من أبوظبي مقراً والتي تقف وراء منصة OnDemand. معالي الدكتور ثاني بن أحمد الزيودي الفريق التنفيذي لأثر المصادر: The Africa CEO Forum 2026 — speaker profile · SALT — speaker profile · Gulf News, 13 Aug 2026 · TechAfrica News, 22 Jul 2026",
+    "text": "09 09 · الفريق التنفيذي · الرسالة 1 من 4 الفريق التنفيذي الرسالة 1 من 4 للاعتماد من المكتب صورة رسمية · وزارة التجارة الخارجية (trade.gov.ae) معالي الدكتور ثاني بن أحمد الزيودي رئيس مجلس إدارة AIREV · وزير التجارة الخارجية في دولة الإمارات شركاءنا الأعزاء، يشغل معالي الدكتور ثاني بن أحمد الزيودي منصب وزير التجارة الخارجية في دولة الإمارات منذ تأسيس وزارة التجارة الخارجية في يونيو 2025. وفي يونيو 2026 تولّى رئاسة مجلس إدارة AIREV، وفق ما نشرته «غلف نيوز» وما أعلنه في منشوره على لينكدإن. وفي 13 أغسطس 2026 شهد توقيع مذكرة التفاهم بين AIREV وQualcomm. «بنت دولة الإمارات واحداً من أكثر الاقتصادات التجارية حيوية في العالم، وآفاقنا المقبلة هي تصدير ليس السلع والخدمات فحسب، بل التكنولوجيا المطوّرة محلياً والملكية الفكرية التي تقف وراءها…» تصريح منشور · غلف نيوز، 24 يونيو 2026 (ترجمة غير رسمية) مع خالص التقدير، فريق أثر H.E. Dr Thani bin Ahmed Al Zeyoudi Chairman, AIREV · UAE Minister of Foreign Trade Dear partners, H.E. Dr Thani bin Ahmed Al Zeyoudi has been the UAE’s Minister of Foreign Trade since the Ministry of Foreign Trade was formed in June 2025. In June 2026 he assumed the chairmanship of AIREV’s Board of Directors, as reported by Gulf News and announced in his own LinkedIn post. On 13 August 2026 he observed the signing of the AIREV–Qualcomm memorandum of understanding. “The UAE has built one of the world’s most dynamic trading economies, and our next frontier is to export not only goods and services, but homegrown technology and the intellectual property behind it…” Published statement · Gulf News, 24 June 2026 With respect, The Athar team المصادر: Ministry of Foreign Trade · GCC Business Watch — new ministry · Gulf News, 24 Jun 2026 · LinkedIn post · Gulf News, 13 Aug 2026",
     "figures": [
      "09",
      "09",
      "1",
-     "6",
+     "4",
      "1",
-     "6",
-     "2020",
+     "4",
      "2025.",
-     "2022",
-     "13",
-     "2024.",
      "2026",
      "13",
      "2026",
-     "22",
+     "24",
+     "2026",
+     "2025.",
+     "2026",
+     "13",
+     "2026",
+     "24",
+     "2026",
+     "24",
+     "2026",
+     "13",
      "2026"
     ],
     "imgs": [
@@ -4027,15 +3946,15 @@
       "broken": false
      },
      {
-      "src": "/assets/exec/portraits/thani-al-zeyoudi-official.jpg",
+      "src": "/assets/exec/portraits/thani-al-zeyoudi-mof.jpg",
       "alt": "معالي الدكتور ثاني بن أحمد الزيودي",
-      "w": 417,
-      "h": 626,
+      "w": 640,
+      "h": 934,
       "broken": false
      }
     ],
     "videos": [],
-    "counter": "الشريحة 41 من 46",
+    "counter": "الشريحة 41 من 44",
     "dir": "rtl",
     "lang": "ar"
    },
@@ -4043,14 +3962,14 @@
     "n": 42,
     "visible": 42,
     "id": "s-exec-al-ameri",
-    "text": "09 09 · الفريق التنفيذي · الرسالة 2 من 6 الفريق التنفيذي الرسالة 2 من 6 نقدّم إليكم سعادة فهد محمد العامري H.E. Fahad Al Ameri المدير التنفيذي، شؤون التنمية والعمل الإنساني — ديوان الرئاسة في دولة الإمارات صورة رسمية · برنامج خبراء الإمارات (uaenep.ae) بصفته المدير التنفيذي للشؤون التنموية والإنسانية في ديوان الرئاسة، يُعدّ سعادة فهد العامري من القيادات التي تسهم في صياغة وتوجيه أجندة دولة الإمارات في مجالي التنمية والعمل الإنساني. أدّى دوراً محورياً في تأسيس مؤسسة إرث زايد الإنسانية ووكالة الإمارات للمساعدات الدولية ومجلس الشؤون الإنسانية والدولية، ويشغل منصب مقرِّر المجلس، كما أنه عضو مجلس أمناء مؤسسة زايد بن سلطان آل نهيان للأعمال الخيرية والإنسانية. وشغل قبل منصبه الحالي مناصب قيادية في ديوان ولي عهد أبوظبي ودائرة النقل والأمانة العامة للمجلس التنفيذي. سعادة فهد محمد العامري الفريق التنفيذي لأثر المصادر: UAE National Experts Program — profile (EN) · برنامج خبراء الإمارات — الملف (AR)",
+    "text": "09 09 · الفريق التنفيذي · الرسالة 2 من 4 الفريق التنفيذي الرسالة 2 من 4 للاعتماد من المكتب FA ف ع سعادة فهد محمد العامري المدير التنفيذي، شؤون التنمية والعمل الإنساني، ديوان الرئاسة في دولة الإمارات شركاءنا الأعزاء، سعادة فهد محمد العامري هو المدير التنفيذي للشؤون التنموية والإنسانية في ديوان الرئاسة. أدّى دوراً محورياً في تأسيس مؤسسة إرث زايد الإنسانية ووكالة الإمارات للمساعدات الدولية ومجلس الشؤون الإنسانية والدولية، ويشغل منصب مقرِّر المجلس. مع خالص التقدير، فريق أثر H.E. Fahad Mohamed Al Ameri Executive Director, Development and Humanitarian Affairs, UAE Presidential Court Dear partners, H.E. Fahad Mohamed Al Ameri is Executive Director of Development and Humanitarian Affairs at the UAE Presidential Court. He played a defining role in creating Erth Zayed Philanthropies, the UAE International Aid Agency and the International Humanitarian and Philanthropic Council (IHPC), where he serves as General Secretary. With respect, The Athar team المصادر: UAE National Experts Program (EN) · برنامج خبراء الإمارات (AR)",
     "figures": [
      "09",
      "09",
      "2",
-     "6",
+     "4",
      "2",
-     "6"
+     "4"
     ],
     "imgs": [
      {
@@ -4066,97 +3985,41 @@
       "w": 1200,
       "h": 241,
       "broken": false
-     },
-     {
-      "src": "/assets/exec/portraits/fahad-al-ameri-uaenep.jpg",
-      "alt": "سعادة فهد محمد العامري",
-      "w": 376,
-      "h": 316,
-      "broken": false
      }
     ],
     "videos": [],
-    "counter": "الشريحة 42 من 46",
+    "counter": "الشريحة 42 من 44",
     "dir": "rtl",
     "lang": "ar"
    },
    {
     "n": 43,
     "visible": 43,
-    "id": "s-exec-al-aryani",
-    "text": "09 09 · الفريق التنفيذي · الرسالة 3 من 6 الفريق التنفيذي الرسالة 3 من 6 نقدّم إليكم معالي سيف سلطان العرياني H.E. Saif Sultan Al Aryani مستشار في ديوان الرئاسة بدرجة وزير س S ختم بالحرف الأول — لا تتوفر صورة رسمية موثّقة في 9 يناير 2023، أصدر صاحب السمو الشيخ محمد بن زايد آل نهيان، رئيس الدولة، مرسوماً اتحادياً بتعيين معالي سيف سلطان العرياني مستشاراً في ديوان الرئاسة بدرجة وزير. ويُعمل بالمرسوم من تاريخ صدوره، ويُنشر في الجريدة الرسمية. معالي سيف سلطان العرياني الفريق التنفيذي لأثر المصادر: Gulf News (WAM), 9 Jan 2023 · الإمارات اليوم، 9 يناير 2023",
-    "figures": [
-     "09",
-     "09",
-     "3",
-     "6",
-     "3",
-     "6",
-     "9",
-     "2023",
-     "9",
-     "2023",
-     "9",
-     "2023"
-    ],
-    "imgs": [
-     {
-      "src": "/brand/icons/pack/community.png",
-      "alt": "",
-      "w": 256,
-      "h": 256,
-      "broken": false
-     },
-     {
-      "src": "/assets/exec/athar-logo-master-1200.png",
-      "alt": "أثر | Athar",
-      "w": 1200,
-      "h": 241,
-      "broken": false
-     }
-    ],
-    "videos": [],
-    "counter": "الشريحة 43 من 46",
-    "dir": "rtl",
-    "lang": "ar"
-   },
-   {
-    "n": 44,
-    "visible": 44,
     "id": "s-exec-khalid",
-    "text": "09 09 · الفريق التنفيذي · الرسالة 4 من 6 الفريق التنفيذي الرسالة 4 من 6 نقدّم إليكم محمد خالد Muhammed Khalid المؤسس والرئيس التنفيذي لشركة AIREV · مبتكر منصة OnDemand م M ختم بالحرف الأول — لا تتوفر صورة رسمية موثّقة محمد خالد هو المؤسس والرئيس التنفيذي لشركة AIREV، شركة الذكاء الاصطناعي التي تتخذ من أبوظبي مقراً والتي تقف وراء منصتي School Hack وOnDemand اللتين يستخدمهما الملايين حول العالم. شارك في تأسيس AIREV في سبتمبر 2023، وأطلقت الشركة منصة OnDemand في يوليو 2024 بدعم من Core42 التابعة لمجموعة G42، ثم وقّعت شراكات مع Intel (أكتوبر 2025) وQualcomm (أغسطس 2026) واتفاقية مع Redington (يوليو 2026). وتُعرض قصة أثره — من سنواته الخمس الأولى في سيراليون إلى البناء في الإمارات — إلى جانب هذه الرسالة. محمد خالد الفريق التنفيذي لأثر المصادر: 42 Network, 2026 · The National, 30 Sep 2024 · Middle East AI News, 15 Apr 2025 · Gulf News, 14 Oct 2025 · Gulf News, 13 Aug 2026 · TechAfrica News, 22 Jul 2026 أثر — أصول الأثر، الحلقة 01: محمد خالد (40 ثانية) صورة الغلاف: البطاقة الختامية للحلقة · الترجمة: الإنجليزية (مدمجة في الفيديو ومسار WebVTT) · العربية (WebVTT) · يُعرض من 0:00 إلى 0:39.4 · يتوقف الدليل الصوتي أثناء عرض الفيلم ويستأنف بعده.",
+    "text": "09 09 · الفريق التنفيذي · الرسالة 3 من 4 الفريق التنفيذي الرسالة 3 من 4 MK م خ محمد خالد المؤسس والرئيس التنفيذي لشركة AIREV شركاءنا الأعزاء، محمد خالد هو المؤسس والرئيس التنفيذي لشركة AIREV، الشركة التي تتخذ من أبوظبي مقراً والتي تقف وراء منصتي School Hack وOnDemand. نمت منصة School Hack، التي أُطلقت مطلع عام 2023، إلى أكثر من 4 ملايين مستخدم في أكثر من 140 دولة. أما OnDemand، نظام التشغيل الوكيلي للذكاء الاصطناعي من AIREV، فتدعمه Core42 التابعة لمجموعة G42. وتُعرض قصة أثره إلى جانب هذه الرسالة. مع خالص التقدير، فريق أثر Muhammed Khalid Founder & CEO, AIREV Dear partners, Muhammed Khalid is the founder and CEO of AIREV, the Abu Dhabi company behind School Hack and OnDemand. School Hack, launched in early 2023, has grown to over 4 million users across 140+ countries. OnDemand, AIREV’s agentic AI operating system, is backed by Core42, a G42 company. His Athar impact story plays alongside this letter. With respect, The Athar team المصادر: 42 Network · The National, 30 Sep 2024 أثر — أصول الأثر، الحلقة 01: محمد خالد صورة الغلاف عند 00:15.5 (لا يتضمن الفيلم إطاراً خالياً من النصوص) · ترجمة إنجليزية / عربية · يتوقف الدليل الصوتي أثناء عرض الفيلم ويستأنف بعده.",
     "figures": [
      "09",
      "09",
+     "3",
      "4",
-     "6",
-     "4",
-     "6",
+     "3",
+     "4 M",
      "2023",
-     "2024",
+     "4",
+     "140",
+     "42",
+     "42.",
+     "2023,",
+     "4 m",
+     "140",
+     "42,",
      "42",
      "42",
-     "2025",
-     "2026",
-     "2026",
-     "42",
-     "2026",
      "30 S",
      "2024",
-     "15",
-     "2025",
-     "14",
-     "2025",
-     "13",
-     "2026",
-     "22",
-     "2026",
      "01",
-     "40",
-     "0",
      "00",
-     "0",
-     "39.4"
+     "15.5"
     ],
     "imgs": [
      {
@@ -4177,70 +4040,30 @@
     "videos": [
      {
       "src": "/assets/exec/video/athar-origins-of-impact-ep01-muhammed-khalid-720p.mp4#t=0,39.4",
-      "poster": "/assets/exec/video/athar-origins-of-impact-ep01-poster.jpg",
+      "poster": "/assets/exec/video/athar-origins-of-impact-ep01-poster-15s5.jpg",
       "tracks": [
        "en",
        "ar"
       ]
      }
     ],
-    "counter": "الشريحة 44 من 46",
+    "counter": "الشريحة 43 من 44",
     "dir": "rtl",
     "lang": "ar"
    },
    {
-    "n": 45,
-    "visible": 45,
+    "n": 44,
+    "visible": 44,
     "id": "s-exec-unwalla",
-    "text": "09 09 · الفريق التنفيذي · الرسالة 5 من 6 الفريق التنفيذي الرسالة 5 من 6 نقدّم إليكم كايان أونوالا Kayaan Unwalla شريك مؤسس ورئيس الاستراتيجية في AIREV ك K ختم بالحرف الأول — لا تتوفر صورة رسمية موثّقة كايان أونوالا شريك مؤسس في AIREV ورئيس الاستراتيجية فيها، ويقود الاستراتيجية والتوسع في الأسواق وشراكات المنظومة لمنصة OnDemand. شارك في تأسيس AIREV في سبتمبر 2023 مع محمد خالد والدكتور يوسف يوسف — الفريق الذي طوّر منصة School Hack. وفي أبريل 2025، استثمرت شركة VentureWave Capital الأيرلندية في AIREV ضمن جولة التمويل من الفئة A، لدعم النمو العالمي لمنصة OnDemand. كايان أونوالا الفريق التنفيذي لأثر المصادر: The GPU, Issue #42 · The National, 30 Sep 2024 · Middle East AI News, 15 Apr 2025",
+    "text": "09 09 · الفريق التنفيذي · الرسالة 4 من 4 الفريق التنفيذي الرسالة 4 من 4 KU ك أ كايان ك. أونوالا شريك مؤسس ورئيس الاستراتيجية، AIREV شركاءنا الأعزاء، كايان ك. أونوالا شريك مؤسس في AIREV ورئيس الاستراتيجية فيها، ويقود الاستراتيجية والتوسع في الأسواق وشراكات المنظومة. وقبل انضمامه إلى AIREV، كان شريكاً في قسم الشركات لدى Norton Rose Fulbright في دبي، ورئيساً لقسم الشركات (الشرق الأوسط) لدى DWF. مع خالص التقدير، فريق أثر Kayaan K. Unwalla Co-founder & Chief Strategy Officer, AIREV Dear partners, Kayaan K. Unwalla is a co-founder of AIREV and its Chief Strategy Officer, leading strategy, market expansion and ecosystem partnerships. Before AIREV he was a corporate partner at Norton Rose Fulbright in Dubai and head of Corporate (Middle East) at DWF. With respect, The Athar team المصادر: The GPU, Issue #42 · Former roles confirmed by Athar, 1 Oct 2026",
     "figures": [
      "09",
      "09",
-     "5",
-     "6",
-     "5",
-     "6",
-     "2023",
-     "2025",
+     "4",
+     "4",
+     "4",
+     "4 K",
      "42",
-     "30 S",
-     "2024",
-     "15",
-     "2025"
-    ],
-    "imgs": [
-     {
-      "src": "/brand/icons/pack/community.png",
-      "alt": "",
-      "w": 256,
-      "h": 256,
-      "broken": false
-     },
-     {
-      "src": "/assets/exec/athar-logo-master-1200.png",
-      "alt": "أثر | Athar",
-      "w": 1200,
-      "h": 241,
-      "broken": false
-     }
-    ],
-    "videos": [],
-    "counter": "الشريحة 45 من 46",
-    "dir": "rtl",
-    "lang": "ar"
-   },
-   {
-    "n": 46,
-    "visible": 46,
-    "id": "s-exec-lorenzo",
-    "text": "09 09 · الفريق التنفيذي · الرسالة 6 من 6 الفريق التنفيذي الرسالة 6 من 6 نقدّم إليكم لورينزو Lorenzo الفريق التنفيذي لأثر · بانتظار تأكيد اسم العائلة والمنصب ل L ختم بالحرف الأول — لا تتوفر صورة رسمية موثّقة لورينزو عضو في الفريق التنفيذي لأثر. لم يُؤكَّد اسم عائلته ومنصبه بعد من مصدر يمكن التحقق منه، لذا لا تتضمن هذه الرسالة أي تفاصيل إضافية إلى حين تأكيدها من فريق أثر. لورينزو الفريق التنفيذي لأثر · طُلب التأكيد المصادر: Athar Executive Team roster (supplied by Athar, 1 Oct 2026)",
-    "figures": [
-     "09",
-     "09",
-     "6",
-     "6",
-     "6",
-     "6",
      "1",
      "2026"
     ],
@@ -4261,11 +4084,11 @@
      }
     ],
     "videos": [],
-    "counter": "الشريحة 46 من 46",
+    "counter": "الشريحة 44 من 44",
     "dir": "rtl",
     "lang": "ar"
    }
   ]
  },
- "finished": "2026-10-01T11:06:17.931Z"
+ "finished": "2026-10-01T14:11:32.361Z"
 }

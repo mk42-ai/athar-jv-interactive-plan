@@ -1,8 +1,8 @@
 {
   "$schema": "https://openapi.vercel.sh/vercel.json",
   "framework": null,
-  "installCommand": "npm install --no-audit --no-fund --ignore-scripts || true",
-  "buildCommand": "node -e \"console.log('Athar Open Agentic Pact deck v1.5.5: pact-deck/dist is prebuilt - nothing to build')\"",
+  "installCommand": "echo \"Athar deck: no dependencies to install (the build uses Node built-ins only)\"",
+  "buildCommand": "node pact-deck/scripts/vercel-build.mjs",
   "outputDirectory": "pact-deck/dist",
   "cleanUrls": false,
   "trailingSlash": false,

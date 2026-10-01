@@ -7,7 +7,7 @@ Every change is classified against the v1.5.5 allow-list (only the requested ite
 Usage: python3 dom-diff.py <v154.json> <v155.json> <out.json>"""
 import json, sys, difflib, hashlib
 a, b, out = json.load(open(sys.argv[1])), json.load(open(sys.argv[2])), sys.argv[3]
-ALLOWED_TEXT = {32: {'Mastercard', 'Foundation', 'official', 'mark', 'pending', 'verification', 'مؤسسة', 'ماستركارد', 'العلامة', 'الرسمية', 'بانتظار', 'التحقق'},
+ALLOWED_TEXT = {32: {'Mastercard', 'Foundation', 'official', 'mark', 'pending', 'verification', 'written', 'authorisation', 'مؤسسة', 'ماستركارد', 'العلامة', 'الرسمية', 'بانتظار', 'التحقق', 'التفويض', 'الكتابي'},
                 38: set('Official brand imagery — tier progression (reused from slide 29) CONCEPT RENDER صورة رسمية من هوية أثر تدرّج الفئات (من الشريحة 29) تصوّر مفاهيمي ·'.split())}
 rows, unexpected, changed = [], [], 0
 for lang in ('en', 'ar'):

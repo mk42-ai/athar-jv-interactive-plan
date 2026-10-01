@@ -15,5 +15,4 @@
 /presentation-config.json
 /package-lock.json
 /pact-deck/qa
-/pact-deck/scripts
 /pact-deck/serve.mjs

@@ -57,12 +57,15 @@
     gates:       { src: '/partners/review/gates-foundation__gf-primary-weathered-slate-logo_4by1-ratio-fixed.svg', w: 800, h: 200, name: 'Gates Foundation', nameAr: 'مؤسسة غيتس' },
     rockefeller: { src: '/partners/review/rockefeller-foundation__RF_logo_screen_green.png', w: 1600, h: 591, name: 'The Rockefeller Foundation', nameAr: 'مؤسسة روكفلر' },
     mcgovern:    { src: '/partners/review/mcgovern-foundation__mf-logo.svg', w: 267, h: 69, name: 'Patrick J. McGovern Foundation', nameAr: 'مؤسسة باتريك ج. ماكغفرن' },
-    /* v1.5.5: official Mastercard Foundation brand mark — vector master artwork from the Foundation's own "Mastercard Foundation Logos" package
-       (https://cdn.buttercms.com/MPuSQak9T7WMs107u9iV, linked from https://mastercardfdn.org/en/mastercard-foundation-brand-guidelines/,
-       retrieved 2026-10-01): "Full Colour 2.pdf" (Pantone Black wordmark, light grounds) and "Full Colour B2.pdf" (reversed white wordmark, dark
-       grounds), converted 1:1 PDF→SVG (vector paths only, colours #E51B24 / #F26522 / #F99F1C unchanged, nothing redrawn or retyped).
-       Free space ≥ x on every side (x = height of the words "mastercard foundation", Brand Guidelines June 2023 p. 4 & 8) — see impact-tiers.css. */
-    mastercard:  { src: '/partners/review/mastercard-foundation__full-colour-positive.svg', srcDark: '/partners/review/mastercard-foundation__full-colour-reverse.svg', w: 381, h: 361, name: 'Mastercard Foundation', nameAr: 'مؤسسة ماستركارد', freeSpace: 'x' }
+    /* v1.5.5: official Mastercard Foundation brand mark — the Foundation's own master artwork, used UNMODIFIED (byte-identical file, no
+       recolouring, no redrawing, no format conversion): "Full Colour .png" (full-colour preferred version — corporate symbol in Mastercard
+       red/orange/yellow, wordmark in black — for white / light grounds) from the "Mastercard Foundation Logos" package
+       https://cdn.buttercms.com/MPuSQak9T7WMs107u9iV, opened from the "Mastercard Foundation Logos" link on
+       https://mastercardfdn.org/en/mastercard-foundation-brand-guidelines/ (retrieved 2026-10-01 in the browser; zip sha256 996dcb02…bbd7a9,
+       file sha256 32afeb9e…cdbe40 — see dist/brand/partners-official/credits.json and asset-ledger-v1.5.5.csv). Shown ≥ 36 px wide at the
+       height of the other funder marks; the typed name and the duplicate caption are gone (the wordmark carries the name); footnote
+       "pending written authorisation". */
+    mastercard:  { src: '/partners/review/mastercard-foundation__full-colour.png', w: 3681, h: 3489, name: 'Mastercard Foundation', nameAr: 'مؤسسة ماستركارد', noCap: true, foot: 'pending written authorisation', footAr: 'بانتظار التفويض الكتابي' }
   };
   var WALL = [
     { group: 'actors', mark: 'oda' }, { group: 'actors', mark: 'uae' }, { group: 'actors', mark: 'undp' }, { group: 'actors', mark: 'unicef' },
@@ -375,10 +378,10 @@
           if (m.src) {
             if (m.dark) tile.classList.add('it-tile--dark');
             var sp = el('span', 'pmark pmark--img pmark--' + w.mark + ' pmark--md');
-            var mi = el('img'); mi.src = (m.dark && m.srcDark) ? m.srcDark : m.src; if (m.srcDark) mi.setAttribute('data-src-dark', m.srcDark); /* v1.5.5: reversed artwork on dark grounds */ if (m.w) { mi.width = m.w; mi.height = m.h; } mi.loading = 'eager'; mi.decoding = 'async'; mi.setAttribute('data-review', 'internal-only'); mi.setAttribute('data-no-mirror', 'true');
+            var mi = el('img'); mi.src = m.src; if (m.w) { mi.width = m.w; mi.height = m.h; } mi.loading = 'eager'; mi.decoding = 'async'; mi.setAttribute('data-review', 'internal-only'); mi.setAttribute('data-no-mirror', 'true');
             mi.alt = isAr ? m.nameAr + ' — علامة معروضة للمراجعة الداخلية فقط' : m.name + ' — mark shown for internal review only, not authorised for external use';
             sp.appendChild(mi); tile.appendChild(sp);
-            tile.appendChild(el('figcaption', 'it-tile-cap', isAr ? m.nameAr : m.name));
+            if (!m.noCap) tile.appendChild(el('figcaption', 'it-tile-cap', isAr ? m.nameAr : m.name)); /* v1.5.5: no duplicate name under the Mastercard Foundation wordmark */
           } else {
             var tx = el('span', 'pmark pmark--text pmark--md it-wordmark'); tx.setAttribute('lang', lang());
             tx.appendChild(el('span', 'pmark-name', isAr ? m.nameAr : m.name));
@@ -387,6 +390,7 @@
             tile.appendChild(el('figcaption', 'it-tile-cap', isAr ? m.nameAr : m.name));
           }
           if (w.sub) tile.appendChild(el('figcaption', 'it-tile-sub', isAr ? w.subAr : w.sub));
+          if (m.foot) { var ft = el('small', 'it-tile-foot', isAr ? m.footAr : m.foot); ft.setAttribute('data-testid', 'mark-footnote-' + w.mark); tile.appendChild(ft); } /* v1.5.5 */
           if (w.src) tile.setAttribute('data-src', w.src);
           row.appendChild(tile);
         });

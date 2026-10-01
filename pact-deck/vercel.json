@@ -134,6 +134,6 @@
   "$schema": "https://openapi.vercel.sh/vercel.json",
   "framework": null,
   "installCommand": "echo \"static deck — no dependencies\"",
-  "buildCommand": "node -e \"console.log('Athar deck v1.5.5: dist/ is prebuilt, nothing to build')\"",
+  "buildCommand": "node scripts/vercel-build.mjs",
   "outputDirectory": "dist"
 }

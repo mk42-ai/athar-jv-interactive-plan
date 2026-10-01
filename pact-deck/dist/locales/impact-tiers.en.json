@@ -652,13 +652,14 @@
    "nameAr": "مؤسسة باتريك ج. ماكغفرن"
   },
   "mastercard": {
-   "src": "/partners/review/mastercard-foundation__full-colour-positive.svg",
-   "srcDark": "/partners/review/mastercard-foundation__full-colour-reverse.svg",
-   "w": 381,
-   "h": 361,
+   "src": "/partners/review/mastercard-foundation__full-colour.png",
+   "w": 3681,
+   "h": 3489,
    "name": "Mastercard Foundation",
    "nameAr": "مؤسسة ماستركارد",
-   "freeSpace": "x"
+   "noCap": true,
+   "foot": "pending written authorisation",
+   "footAr": "بانتظار التفويض الكتابي"
   }
  },
  "wall": [

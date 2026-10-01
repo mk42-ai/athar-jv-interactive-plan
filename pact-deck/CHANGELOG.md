@@ -422,63 +422,95 @@ under parallel load (their assertions had all passed). Guide sync suite against 
 39/39 slides in sync in all four modes (desktop + phone × arrows + deep links), time-to-sync median 75 ms desktop / 127 ms phone, max 281 ms;
 AUTO: 7 hops per project, each preceded by the previous clip's `ended`, 0 desynced samples (`qa/v154/sync-results.json`).
 
-## v1.5.5 — 2026-10-01 (edit in place on v1.5.4 `04d09e8`: official Mastercard Foundation mark · slide-38 concept montage · section 09 Executive Team · Guide narration for slides 40–46)
+## v1.5.5 — 2026-10-01 (revised release, edit in place — supersedes the db9a1c7 draft of the same day; baseline = v1.5.4 `04d09e8`)
 
-Only the items below changed; the DOM text/figure diff against v1.5.4 (`qa/v155/dom-diff-v154-v155.json`) shows 74 of 78 shared slide
-views identical, the 4 changed views are exactly slides 32 and 38 in EN and AR, 0 unexpected changes, 0 broken images, plus the 14 new views.
+Hard rule held: no existing wording or figure changed. The DOM text/figure diff of slides 1–39 against the BEFORE snapshot taken from
+v1.5.4 before any edit (`qa/v155/dom-v154-before.json` → `qa/v155/dom-diff-v154-v155.json`) shows 74 of 78 views identical. The only
+changes are slide 32 (Mastercard tile) and slide 38 (strip label) in EN and AR, plus the counter ("n of 39" → "n of 44"). There are 0
+unexpected changes and 0 broken images.
 
-**(A) Mastercard Foundation — official mark (slide 32, EN + AR)**
-- The typed "Mastercard Foundation" heading and the "official mark pending verification" line are replaced by the Foundation's own vector
-  master artwork from its "Mastercard Foundation Logos" package (`https://cdn.buttercms.com/MPuSQak9T7WMs107u9iV`, linked from
-  `https://mastercardfdn.org/en/mastercard-foundation-brand-guidelines/`, zip sha256 `996dcb02…bbd7a9`): "Full Colour 2.pdf" → 
-  `partners/review/mastercard-foundation__full-colour-positive.svg` (black wordmark, light grounds) and "Full Colour B2.pdf" →
-  `…__full-colour-reverse.svg` (white wordmark, dark grounds). 1:1 PDF→SVG (vector paths only, #E51B24 / #F26522 / #F99F1C); rasterised
-  side by side with the official PDF the SVGs differ by at most 1/255 per channel. Nothing retyped, redrawn or generated.
-- Free space ≥ x on every side (x = height of the words "mastercard foundation", Brand Guidelines June 2023 p. 4 & 8): measured
-  14.5 px ≥ 13.3 px at 1440×900, 10.1 ≥ 9.0 at 1280×720, 14.0 ≥ 12.8 at 1728×871; smallest rendering 29.6 px (minimum 24 px).
-- The "Youth operators and builders, Legacy" caption and the tile caption are unchanged. The deck keeps its Manuscript surfaces under
-  OS dark mode, so the positive artwork is the guideline-correct variant in both colour schemes; the reverse artwork is wired for dark tiles.
-- Mastercard Foundation guidelines require the Foundation's approval before partners use the brand mark — still pending (INTERNAL REVIEW band unchanged).
+**(A) Slide 32 — Mastercard Foundation tile**
+- The official master artwork was downloaded from the "Mastercard Foundation Logos" link, opened in the browser on
+  https://mastercardfdn.org/en/mastercard-foundation-brand-guidelines/ (package https://cdn.buttercms.com/MPuSQak9T7WMs107u9iV,
+  zip sha256 `996dcb02…bbd7a9`). The deck uses "Full Colour .png", the full-colour preferred version for light grounds, **unmodified**:
+  byte-identical, sha256 `32afeb9e…cdbe40`, no recolouring, no redraw, no format conversion. The reverse artwork is not used because the
+  tile is light. The SVG conversions in the db9a1c7 draft were removed. No third-party logo site was used.
+- Removed: the typed "Mastercard Foundation" heading, the "official mark pending verification" label and the duplicate name caption.
+  Kept verbatim: "Youth operators and builders, Legacy" (AR «المشغّلون والبناة الشباب — الإرث"). Added a footnote:
+  "pending written authorisation" (AR «بانتظار التفويض الكتابي»).
+- Size: 44.8 × 42.4 px at 1728×872, against the other funder marks at 45.7 px. The height is capped about 7 % lower so the Foundation's
+  free space x is kept (13.9 px ≥ 12.9 px). At 390×844 it is 36.1 × 34.2 px, against Rockefeller at 34 px; this is the 36 px minimum width.
+- Ledger: `dist/brand/partners-official/credits.json` → `mastercardFoundation`, and `asset-ledger-v1.5.5.csv`.
+- Short viewports (≤ 820 px tall): the shared funder frame shrinks to 54 px, so the mark is set at 40 px. That keeps it ≥ 36 px wide on
+  screen and within 10 % of the other funder marks, but the Foundation's full free space x no longer fits inside the frame
+  (6 px against about 12 px). Flagged for the Foundation's review.
 
-**(B) Slide 38 montage**
-- `assets/plates/plate5-montage-v155.(png|webp)` (1952×427): the three step-8 concept renders (N7gA3HMhbC · eznG4BbWKD · 9FHimXpmhS,
-  1536×1024 each), every panel a full uncropped 3:2 frame, one shared warm grade (WB 1.035 / 1.005 / 0.935, split-tone to Athar Ink /
-  Manuscript at 7 %, −8 % saturation). The exact Athar master mark is pixel-composited (white, on a plate matched to the screen) over the
-  two soft marks found on the kiosk panel (template NCC 0.37 / 0.45; edge energy 0.47 / 0.50 of the master). No confident mark was found on
-  panels A and B (best NCC 0.33 / 0.39), so nothing was composited there — visual confirmation recommended.
-- Caption "Official brand imagery — tier progression (reused from slide 29)" → "CONCEPT RENDER" (AR «تصوّر مفاهيمي · CONCEPT RENDER»), the
-  v1.5.4 labelling; descriptive alt text. Shown whole (`object-fit: contain`, intrinsic ratio 4.571 rendered 4.571); gap to "Join the pact"
-  ≥ 40 px at all three QA viewports (EN 50 / 142 / 85, AR 40 / 135 / 78 px at 1728×871 / 1440×900 / 1280×720).
-- The panels are AI-generated concept renders that contain generated people (face detector: 2 / 6 / 1 faces) — labelled CONCEPT RENDER;
-  the brand rule "no AI-generated faces or bodies" is not met by these step-8 images and needs an owner decision before external use.
+**(B) Slide 38 — concept strip** (`assets/plates/plate5-strip-v155.(png|webp)`, 1550×320)
+- Panel A: **FAIL**. Edit zMSNYjJGPs scored photorealism 7, logo 3, hands 5, text 2 (no-OnDemand 10, tier fit 6). The judge did not
+  find it better than the existing slide-29 left panel: it loses on the two brand-critical criteria, an AI-drawn Athar logo and garbled
+  tablet UI text, which the existing official-brand-pack panel does not have. → The **existing left panel is kept**.
+- Panel B: **FAIL**. The edit was not produced (HTTP 500 `AuthenticationFailed: Signature fields not well formed`).
+  → The **existing middle panel is kept** as the best available version.
+- Panel C: **FAIL but best of the set**. Edit Eh4GFpPars scored photorealism 8, logo 8, hands 7, text 9 (no-OnDemand 10, tier fit 9).
+  It is used, with the official Athar master logo pixel-composited over both AI-drawn kiosk marks. Master-logo NCC is 0.995 / 0.996
+  after compositing, against 0.13 / 0.12 before. Remaining defect, not fixed: AI smearing on the boy's right hand (QA note).
+- Label "Official brand imagery — tier progression (reused from slide 29)" → "CONCEPT RENDER" (AR «تصوّر مفاهيمي»).
+- A 1 px Legacy Gold #B8975A hairline closes the strip.
+- "Join the pact" now sits on Athar Ink #0F1E2C (was Gulf Blue rgb(30,58,95)).
+- Gap from the strip to the button: 50 / 40 px (EN/AR) at 1728×872, up from 29 / 20 px in v1.5.4. In the 390×844 layout the button
+  sits above the strip with 357 / 332 px between them.
+- Every image is bundled in the repo; nothing is hotlinked.
+- On viewports ≤ 800 px tall the product-film still above the strip is scaled down (uncropped, aspect kept), so the strip still clears
+  the button by ≥ 32 px. Example: 65 / 55 px at 1728×729, against 3 px / an overlap before. Layouts at 1728×872 and taller are unchanged.
 
-**(C/D) Section 09 — Executive Team / الفريق التنفيذي (new slides 40–46 after the closing slide)**
-- `js/exec-team.js` + `assets/exec-team.css`: an intro letter with an index, then one letter per profile on Manuscript paper (procedural
-  fibre texture), Athar Ink text, exactly one Legacy Gold hairline rule, a signature line, IBM Plex Serif / Sans / Sans Arabic, Arabic-first
-  bilingual name lockups, full RTL in Arabic (`dir="rtl" lang="ar"` on every letter). Deep links `#/28/exec-1…7` (+ `#slide-40…46`),
-  footer "n of 46", rail entry 09, Esc-overview tiles 40–46, the bundle's disabled next chevron re-enabled on slide 39.
-- Profiles, in order (every statement sourced on the letter): H.E. Dr Thani bin Ahmed Al Zeyoudi (Minister of State for Foreign Trade
-  from July 2020, Minister of Foreign Trade since June 2025, CEPA programme, MC13 chair, Chairman of AIREV); H.E. Fahad Al Ameri (uaenep.ae EN/AR);
-  H.E. Saif Sultan Al Aryani — resolves "Ary", Advisor at the Presidential Court with the rank of Minister (Federal Decree, 9 Jan 2023) —
-  **not merged, distinct person** from Fahad Al Ameri; Muhammed Khalid (+ impact-story film); Kayaan Unwalla; Lorenzo (identity unverified —
-  name only, confirmation requested; nothing invented).
-- Portraits only where verified: Dr Thani (supplied official headshot, 4/4 independent face matches 96–98 %) and Fahad Al Ameri (official
-  uaenep.ae portrait); monogram seals for Al Aryani, Khalid, Unwalla and Lorenzo. No AI likenesses.
-- Film: latest impact story (`athar-origins-of-impact-ep01-muhammed-khalid_1080p_subtitled.mp4`, uploaded 2026-10-01T08:14:32Z, 40 s)
-  re-encoded to 1280×720 H.264 (6.7 MB); poster = the episode's end card at 39.25 s (no faces, no subtitle); in 0.000 s / out 39.400 s;
-  EN + AR WebVTT captions (cues at the top so they never cover the burned-in English subtitles; AR track shows by default in Arabic).
-  The film's narration says "Born in London in 1991" and does not mention Guy's Hospital or H.E. Dr Thani — captions follow the audio.
+**(C) Section 09 — Executive Team / الفريق التنفيذي** (`js/exec-team.js`, `assets/exec-team.css`; slides 40–44 after the closing slide)
+- Slides: S09 intro, then Letter 1 H.E. Dr Thani bin Ahmed Al Zeyoudi (Chairman, AIREV · UAE Minister of Foreign Trade), Letter 2
+  H.E. Fahad Mohamed Al Ameri (Executive Director, Development and Humanitarian Affairs, UAE Presidential Court), Letter 3 Muhammed Khalid
+  (Founder & CEO, AIREV) with the impact-story film, and Letter 4 Kayaan K. Unwalla (Co-founder & Chief Strategy Officer, AIREV).
+- Letter style: Manuscript #F7F3EA, ink-on-manuscript texture `ksV8ASq6b2` at 8 %, Athar Ink text, names in IBM Plex Serif 600, body in
+  IBM Plex Sans 16/24. Arabic is IBM Plex Sans Arabic at 107 % (17.12/27), letter-spacing 0, on the right of a hairline divider in both
+  decks. Each letter has a salutation, short paragraphs, a sign-off and one short (60 px) Legacy Gold hairline; no script fonts.
+  The Arabic deck is a full RTL mirror.
+- Dr Thani letter:
+  - The "Minister of State" caption is replaced; the Ministry of Foreign Trade was formed in June 2025.
+  - AIREV chair: Gulf News, 24 June 2026, and his LinkedIn post.
+  - He observed the AIREV–Qualcomm MoU signing (Gulf News, 13 Aug 2026).
+  - The published statement is quoted verbatim from Gulf News (the Arabic side marks its rendering as an unofficial translation).
+  - Portrait: the official Ministry of Foreign Trade portrait (trade.gov.ae). The webflow-CDN headshot from the draft had no confirmable
+    official host; the same person is confirmed by SFace cosine 0.737.
+- **Spelling correction logged:** the brief said "Farhad"; the official spelling verified on uaenep.ae is "Fahad Mohamed AlAmeri", and
+  "Fahad" is used. His letter uses published bio facts only and a monogram roundel "FA", since no officially sourced portrait was provided.
+- Both officials' letters carry the tag "for clearance by office" (AR «للاعتماد من المكتب»).
+- Kayaan's former roles at Norton Rose Fulbright Dubai and DWF are user-confirmed.
+- Hidden feature-flagged cards "Ary" (H.E. Saif Sultan Al Aryani, Advisor at the Presidential Court) and "Lorenzo" are behind
+  `FLAGS.pendingCards = false`: not rendered, not counted, not narrated.
 
-**(E) Guide narration and sync**
-- Five George clips downloaded into the repo (`audio/guide/slides/NAR-s40/42/43/45/46-*.mp3`, no SAS hotlinks) and keyed in
-  `narration/slide-narration.json` (now 46 slides, transcripts from Whisper small.en). NAR-s45 is a frame-accurate cut (no re-encode) that
-  drops the unsourced sentence "More than 300 agents, over 3,000 tools, and one agentic operating system."
-- **No clip** for slide 41 (Dr Thani) and slide 44 (Muhammed Khalid) — both TTS requests returned HTTP 429 `concurrent_limit_exceeded`;
-  those slides caption the slide, stay silent (state `ended`, reason `no-clip`) and AUTO moves on after 9 s (slide 44 waits for the film).
-- The guide pauses while the impact-story film plays (reason `video`) and resumes after it ends / stops at its out-point.
-- `qa/v155/guide-sync-46.spec.mjs` (Playwright): narrated slide id == visible slide id on every one of the 46 slides — **8/8 PASS**
-  (desktop 1728×872 + phone 390×844 × arrows 46/46, deep links 46/46, film pause/resume, no-clip AUTO). v1.5.4 suite re-run on v1.5.5: **24/24 PASS**.
+**(D) Film, narration and guide**
+- The film is the bundled 720p encode of the latest master (sha256 `c7c20005…ab2a`), with EN/AR WebVTT captions and in/out points
+  0.000 / 39.400 s.
+- **Poster caveat:** the poster frame is extracted at 00:15.5 (backup 00:36.1). Step 3 found **no text-free frame**: every shot carries
+  a lower third or a burned-in caption.
+- **Name-spelling mismatch (non-blocking):** the captions and lower thirds say "Muhammed", but the voice-over (and the new George clip)
+  says "Mohammed".
+- Five George clips are bundled and wired, each verified against its slide and transcribed for CC: NAR-s40 KwKjDhenPt (intro),
+  NAR-s41 v9QRCfvtIX (Dr Thani), NAR-s42 GXQlbIyvrh (Fahad), NAR-s43 MXYBQD2Rhf (Muhammed), NAR-s44 nzkWVR3qWN (Kayaan). All five
+  match their slides. Pronunciation notes: "Mohammed" for Muhammed and Mohamed; AIREV is spelled out as letters in two clips.
+- Counter "n of 44"; version label v1.5.5. The guide pauses while the film plays and resumes after it.
+- The Playwright guide-sync suite covers every slide (`qa/v155/guide-sync-all.spec.mjs`).
 
-**QA** — after-matrix 120 screenshots (slides 32, 38, 39, 40–46 × 1440×900 / 1280×720 / 1728×871 × EN/AR × light/dark): visible slide =
-expected 120/120, horizontal overflow 0, broken images 0, console errors 0, Arabic letters `rtl/ar` 60/60. `npm run build`: versions v1.5.5,
-check-assets missing 0, SHA256SUMS regenerated.
+**Build / Vercel**
+- The root `vercel.json` now runs `node pact-deck/scripts/vercel-build.mjs`. It reads the version from `pact-deck/package.json`, runs the
+  real build (version gate, check-assets, SHA256SUMS) and writes `dist/build-info.json`.
+- The build log no longer prints "deck v1.5.2 … nothing to build".
+- `.vercelignore` no longer excludes `pact-deck/scripts`.
+
+**QA (2026-10-01, local v1.5.5, system Chromium)**
+- Guide sync suite (`qa/v155/guide-sync-all.spec.mjs`): **8/8 PASS**. Desktop 1728×872 and phone 390×844, each covering: arrows 44/44,
+  deep links 44/44, film pause/resume on slide 43, and the hidden-card check.
+- v1.5.4 guide-sync suite re-run on v1.5.5: **24/24 PASS**.
+- Layout, all 44 slides × EN/AR × 1728×872 and 390×844 (176 views): 0 horizontal overflow, 0 wrong slide, 0 console errors.
+  - Section 09, slide 32 and slide 38 have no clipped text and no vertical overflow at 1728×872.
+  - Pre-existing and unchanged from v1.5.4: line-clamped/visually-hidden text on slides 6, 30, 36 and 37; 24 px scroll on AR slide 32.
+- Broken-image scan, light + dark × EN/AR × both viewports (352 views): **0 broken**.
+- DOM text/figure diff vs the BEFORE snapshot: 78 compared, 4 changed (all allow-listed), **0 unexpected**.
+- Build: `vercel-build.mjs` PASS — versions v1.5.5, check-assets missing 0, SHA256SUMS regenerated.

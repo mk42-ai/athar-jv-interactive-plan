@@ -27,9 +27,11 @@ try {
       run.keys.push(await page.evaluate(probe));
       for (let i = 0; i < 8; i++) { await page.keyboard.press(lang === 'ar' ? 'ArrowLeft' : 'ArrowRight'); await page.waitForTimeout(450); run.keys.push(await page.evaluate(probe)); }
       for (let i = 0; i < 8; i++) { await page.keyboard.press(lang === 'ar' ? 'ArrowRight' : 'ArrowLeft'); await page.waitForTimeout(350); run.keys.push(await page.evaluate(probe)); }
-      for (let i = 0; i < 3; i++) { await page.click('button.arrow.next'); await page.waitForTimeout(400); run.chevrons.push(await page.evaluate(probe)); }
-      await page.click('button.arrow.prev'); await page.waitForTimeout(400); run.chevrons.push(await page.evaluate(probe));
-      for (const n of [40, 44, 46, 41]) { await page.goto(base + '/' + hashFor(n), { waitUntil: 'load' }); await waitVisible(page, n, 15000); await page.waitForTimeout(900); run.deep.push(await page.evaluate(probe)); }
+      if (await page.locator('button.arrow.next').isVisible()) { /* chevrons are hidden in the phone layout */
+        for (let i = 0; i < 3; i++) { await page.click('button.arrow.next'); await page.waitForTimeout(400); run.chevrons.push(await page.evaluate(probe)); }
+        await page.click('button.arrow.prev'); await page.waitForTimeout(400); run.chevrons.push(await page.evaluate(probe));
+      }
+      for (const n of [40, 43, 44, 41]) { await page.goto(base + '/' + hashFor(n), { waitUntil: 'load' }); await waitVisible(page, n, 15000); await page.waitForTimeout(900); run.deep.push(await page.evaluate(probe)); }
       await gotoHash(page, 32); await waitVisible(page, 32, 9000); await page.waitForTimeout(900);
       run.s32 = await page.evaluate(() => { const t = document.querySelector('[data-actor="mastercard"]'); if (!t) return null; const i = t.querySelector('img'); const sp = t.querySelector('.pmark'); const ir = i && i.getBoundingClientRect(), pr = sp && sp.getBoundingClientRect();
         return { text: t.innerText.replace(/\s+/g, ' ').trim(), img: i && i.getAttribute('src'), natural: i && [i.naturalWidth, i.naturalHeight], rendered: ir && [Math.round(ir.width * 10) / 10, Math.round(ir.height * 10) / 10], frame: pr && [Math.round(pr.width), Math.round(pr.height)],

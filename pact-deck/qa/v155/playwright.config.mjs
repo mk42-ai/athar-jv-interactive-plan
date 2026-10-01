@@ -2,7 +2,7 @@
 import { defineConfig } from '../../node_modules/@playwright/test/index.mjs';
 const launchOptions = { executablePath: process.env.CHROMIUM_BIN || '/usr/bin/chromium', args: ['--no-sandbox', '--disable-dev-shm-usage', '--autoplay-policy=document-user-activation-required'] };
 export default defineConfig({
-  testDir: '.', testMatch: /guide-sync-46\.spec\.mjs$/, fullyParallel: true, workers: Number(process.env.PW_WORKERS || 1), retries: 0, timeout: 300000,
+  testDir: '.', testMatch: /guide-sync-all\.spec\.mjs$/, fullyParallel: true, workers: Number(process.env.PW_WORKERS || 1), retries: 0, timeout: 300000,
   reporter: [['list'], ['json', { outputFile: 'results/playwright-report.json' }]],
   use: { launchOptions, trace: 'retain-on-failure', screenshot: 'only-on-failure', actionTimeout: 15000 },
   outputDir: 'results/test-output',

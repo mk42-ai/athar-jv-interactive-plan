@@ -1,85 +1,90 @@
-/* Athar deck v1.5.5 — section 09 Executive Team / الفريق التنفيذي (dist/js/exec-team.js).
-   Brand tokens: Athar Ink #0F1E2C · Manuscript #F7F3EA · Legacy Gold #B8975A (ONE hairline rule per letter, nothing else gold) · Sand #E8D9B5.
-   IBM Plex Serif (Latin headings) · IBM Plex Sans (body/UI) · IBM Plex Sans Arabic (Arabic). Logical properties only, so RTL mirrors. */
-.ex-slide{--ex-ink:#0F1E2C;--ex-paper:#F7F3EA;--ex-gold:#B8975A;--ex-sand:#E8D9B5;--ex-edge:#E3DCCB;--ex-mute:#56606B}
-.ex-slide .ex-body{display:flex;flex-direction:column;gap:clamp(6px,1.2vh,14px);min-block-size:0}
-.ex-grid{display:grid;grid-template-columns:minmax(0,1fr);gap:clamp(12px,1.6vw,28px);align-items:start;min-block-size:0;flex:1 1 auto}
-.ex-grid--film{grid-template-columns:minmax(0,1.1fr) minmax(0,1fr);align-items:center}
-.ex-letter{position:relative;box-sizing:border-box;inline-size:100%;max-inline-size:min(100%,1000px);margin-inline:auto;background:var(--ex-paper) url(/assets/exec/manuscript-paper.webp) repeat;color:var(--ex-ink);border:1px solid var(--ex-edge);border-radius:2px;box-shadow:0 1px 0 rgba(15,30,44,.05),0 24px 46px -32px rgba(15,30,44,.5);padding:clamp(14px,2.4vh,30px) clamp(18px,2.6vw,46px) clamp(12px,2vh,24px);display:flex;flex-direction:column;gap:clamp(5px,1vh,12px)}
+/* Athar deck v1.5.5 — section 09 Executive Team / الفريق التنفيذي (dist/js/exec-team.js) — hand-written-letter style (Athar Brand Guidelines).
+   Athar Ink #0F1E2C on Manuscript #F7F3EA with the ink-on-manuscript texture at 8 % opacity; names IBM Plex Serif 600; body IBM Plex Sans
+   16/24, sentence case; Arabic IBM Plex Sans Arabic at 107 % of the Latin size, letter-spacing 0, on the right of a hairline divider;
+   ONE short Legacy Gold #B8975A hairline closes each letter (never full width). No script fonts. Logical properties → the AR deck mirrors. */
+.ex-slide{--ex-ink:#0F1E2C;--ex-paper:#F7F3EA;--ex-gold:#B8975A;--ex-hair:rgba(15,30,44,.28);--ex-mute:#4A5561}
+.ex-slide .ex-body{display:flex;flex-direction:column;gap:clamp(8px,1.3vh,14px);min-block-size:0}
+.ex-grid{display:grid;grid-template-columns:minmax(0,1fr);gap:24px;align-items:start;min-block-size:0}
+.ex-grid--film{grid-template-columns:minmax(0,1.18fr) minmax(0,1fr)}
+.ex-letter{position:relative;isolation:isolate;box-sizing:border-box;inline-size:100%;max-inline-size:1240px;margin-inline:auto;background:var(--ex-paper);color:var(--ex-ink);border:1px solid #E3DCCB;border-radius:2px;box-shadow:0 1px 0 rgba(15,30,44,.05),0 22px 44px -32px rgba(15,30,44,.45);padding:20px 32px 16px;display:flex;flex-direction:column;gap:12px}
+.ex-letter::before{content:"";position:absolute;inset:0;z-index:-1;background:url(/assets/exec/letter-texture-ksV8ASq6b2.webp) center/cover no-repeat;opacity:.08;pointer-events:none}
 .ex-grid--film .ex-letter{max-inline-size:none}
-.ex-letterhead{display:flex;align-items:center;justify-content:space-between;gap:12px}
-.ex-letterhead-logo{display:block;block-size:clamp(15px,2.3vh,24px);inline-size:auto}
-.ex-letterhead-meta{font:500 clamp(9.5px,.7vw,11.5px)/1.2 var(--font-sans);letter-spacing:.08em;text-transform:uppercase;color:var(--ex-mute)}
-.ex-top{display:flex;align-items:flex-start;justify-content:space-between;gap:clamp(12px,2vw,28px)}
-.ex-who{min-inline-size:0;display:flex;flex-direction:column;gap:3px}
-.ex-salute{margin:0;font:500 clamp(9.5px,.72vw,12px)/1.2 var(--font-sans);letter-spacing:.1em;text-transform:uppercase;color:var(--ex-mute)}
-.ex-lockup{display:flex;flex-direction:column;gap:1px}
-.ex-lock-ar{margin:0;font-family:var(--font-arabic);font-weight:600;font-size:clamp(14px,1.2vw,21px);line-height:1.4;color:var(--ex-ink)}
-.ex-lock-en{margin:0;font-family:var(--font-serif);font-weight:600;font-size:clamp(14px,1.1vw,19px);line-height:1.2;color:var(--ex-ink)}
-.ex-lock-title.ex-lock-en{font-size:clamp(20px,1.85vw,34px);line-height:1.12}
-.ex-lock-title.ex-lock-ar{font-size:clamp(21px,1.9vw,34px);line-height:1.35}
-.ex-role{margin:2px 0 0;font:500 clamp(11.5px,.9vw,15px)/1.4 var(--font-sans);color:#34404B}
-.ex-text{font:400 clamp(12.5px,.98vw,16.5px)/1.6 var(--font-sans);color:var(--ex-ink);display:flex;flex-direction:column;gap:clamp(3px,.75vh,9px);max-inline-size:78ch}
-.ex-text p{margin:0}
-.ex-rule{border:0;border-block-start:1px solid var(--ex-gold);block-size:0;inline-size:100%;margin:clamp(3px,.7vh,8px) 0 0;opacity:1}
-.ex-sign{display:flex;flex-direction:column;align-items:flex-start;gap:2px;margin-block-start:clamp(4px,1vh,12px)}
-.ex-sign-line{display:block;inline-size:min(240px,55%);border-block-start:1px solid rgba(15,30,44,.5);margin-block-end:3px}
-.ex-sign-name{font-family:var(--font-serif);font-weight:600;font-size:clamp(13px,1vw,17px);color:var(--ex-ink)}
-.ex-sign-role{font:400 clamp(9.5px,.72vw,12px)/1.3 var(--font-sans);color:var(--ex-mute)}
-.ex-sources{margin-block-start:clamp(3px,.7vh,8px);font:400 clamp(9px,.66vw,11px)/1.45 var(--font-sans);color:var(--ex-mute)}
-.ex-sources-lbl{font-weight:600;color:#34404B}
+.ex-letterhead{display:flex;align-items:center;justify-content:space-between;gap:16px}
+.ex-letterhead-logo{display:block;block-size:22px;inline-size:auto}
+.ex-letterhead-meta{display:flex;align-items:center;gap:10px;flex-wrap:wrap;justify-content:flex-end}
+.ex-letter-n{font:500 12px/16px var(--font-sans);color:var(--ex-mute);letter-spacing:.04em}
+.ex-clearance{font:600 11px/16px var(--font-sans);color:var(--ex-ink);border:1px solid rgba(15,30,44,.45);border-radius:999px;padding:2px 9px;letter-spacing:.02em}
+html[lang=ar] .ex-letter-n,html[lang=ar] .ex-clearance{font-family:var(--font-arabic);letter-spacing:0}
+.ex-top{display:grid;grid-template-columns:auto minmax(0,1fr);gap:24px;align-items:start}
+.ex-cols{display:grid;grid-template-columns:minmax(0,1fr) 1px minmax(0,1fr);column-gap:24px;align-items:start}
+.ex-divider{display:block;align-self:stretch;inline-size:1px;background:var(--ex-hair)}
+.ex-col{min-inline-size:0;display:flex;flex-direction:column;gap:8px}
+.ex-col p{margin:0}
+.ex-col--en{font-family:var(--font-sans);font-size:16px;line-height:24px;font-weight:400}
+.ex-col--ar{font-family:var(--font-arabic);font-size:17.12px;line-height:27px;letter-spacing:0;font-weight:400}
+.ex-name{margin:0;font-family:var(--font-serif);font-weight:600;font-size:24px;line-height:30px;color:var(--ex-ink)}
+.ex-col--ar .ex-name{font-family:var(--font-arabic);font-size:25.68px;line-height:34px}
+.ex-role{font-size:14px;line-height:20px;font-weight:500;color:#2C3742}
+.ex-col--ar .ex-role{font-size:14.98px;line-height:22px}
+.ex-salute{margin-block-start:4px!important}
+.ex-quote{margin:2px 0 0;padding-inline-start:14px;border-inline-start:1px solid rgba(15,30,44,.55)}
+.ex-quote p{margin:0}
+.ex-quote cite{display:block;margin-block-start:4px;font-style:normal;font-size:12px;line-height:16px;color:var(--ex-mute)}
+.ex-col--ar .ex-quote cite{font-size:12.84px;line-height:18px}
+.ex-signoff{display:flex;flex-direction:column;margin-block-start:4px!important}
+.ex-signoff-name{font-family:var(--font-serif);font-weight:600}
+.ex-col--ar .ex-signoff-name{font-family:var(--font-arabic)}
+.ex-rule{border:0;block-size:1px;inline-size:64px;background:var(--ex-gold);margin:4px auto 0;opacity:1}
+.ex-sources{font:400 11px/16px var(--font-sans);color:var(--ex-mute)}
+html[lang=ar] .ex-sources{font-family:var(--font-arabic);font-size:11.77px;line-height:18px}
+.ex-sources-lbl{font-weight:600;color:#2C3742}
 .ex-sources a{color:#1F4A63;text-decoration:underline;text-decoration-color:rgba(15,30,44,.35);text-underline-offset:2px}
 .ex-sources a:hover,.ex-sources a:focus-visible{color:var(--ex-ink)}
-.ex-portrait{margin:0;flex:0 0 auto;display:flex;flex-direction:column;align-items:center;gap:4px;max-inline-size:36%}
-.ex-portrait img{display:block;block-size:clamp(96px,19vh,210px);inline-size:auto;max-inline-size:100%;object-fit:contain;background:#fff;padding:5px;border:1px solid var(--ex-edge);box-shadow:0 12px 24px -18px rgba(15,30,44,.6)}
-.ex-portrait-cap,.ex-seal-cap{font:400 clamp(8.5px,.6vw,10px)/1.3 var(--font-sans);color:#666F79;text-align:center;max-inline-size:210px}
-.ex-seal{margin:0;flex:0 0 auto;display:flex;flex-direction:column;align-items:center;gap:4px}
-.ex-seal-svg{display:block;inline-size:clamp(76px,12vh,124px);block-size:auto}
-.ex-seal-ring{fill:none;stroke:rgba(15,30,44,.7);stroke-width:1.2}
-.ex-seal-ring--in{stroke:rgba(15,30,44,.45);stroke-width:.8;fill:rgba(232,217,181,.55)}
-.ex-seal-ar{font-family:var(--font-arabic);font-weight:600;font-size:34px;fill:var(--ex-ink)}
-.ex-seal-lat{font-family:var(--font-serif);font-weight:600;font-size:21px;fill:var(--ex-ink)}
+.ex-portrait{margin:0;display:flex;flex-direction:column;align-items:center;gap:6px;inline-size:min(150px,24vw)}
+.ex-portrait img{display:block;inline-size:100%;block-size:auto;object-fit:contain;background:#fff;padding:5px;border:1px solid #E3DCCB;box-shadow:0 12px 24px -18px rgba(15,30,44,.6)}
+.ex-portrait-cap{font:400 10.5px/14px var(--font-sans);color:var(--ex-mute);text-align:center}
+html[lang=ar] .ex-portrait-cap{font-family:var(--font-arabic)}
+.ex-roundel{margin:0;inline-size:96px}
+.ex-roundel-svg{display:block;inline-size:100%;block-size:auto}
+.ex-roundel-ring{fill:none;stroke:rgba(15,30,44,.75);stroke-width:1.1}
+.ex-roundel-ring--in{fill:rgba(232,217,181,.4);stroke:rgba(15,30,44,.4);stroke-width:.8}
+.ex-roundel-lat{font-family:var(--font-serif);font-weight:600;font-size:30px;fill:var(--ex-ink)}
+.ex-roundel-ar{font-family:var(--font-arabic);font-weight:600;font-size:17px;fill:var(--ex-ink)}
 /* intro */
-.ex-lockup--section .ex-lock-ar{font-size:clamp(22px,2.2vw,40px)}
-.ex-lockup--section .ex-lock-en{font-size:clamp(24px,2.3vw,42px);line-height:1.1}
-.ex-lede{margin:0;font:400 clamp(12.5px,1vw,16.5px)/1.6 var(--font-sans);color:var(--ex-ink);max-inline-size:76ch}
-.ex-index{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:4px 20px}
-.ex-index-btn{appearance:none;border:0;background:transparent;font:inherit;color:inherit;text-align:start;cursor:pointer;box-sizing:border-box;inline-size:100%;display:grid;grid-template-columns:auto minmax(0,1fr);column-gap:10px;row-gap:1px;padding:6px 8px;border-radius:4px;min-block-size:44px}
+.ex-section-title{font-family:var(--font-serif);font-weight:600;font-size:30px!important;line-height:36px!important;color:var(--ex-ink)}
+.ex-col--ar .ex-section-title{font-family:var(--font-arabic);font-size:32.1px!important;line-height:42px!important}
+.ex-index{list-style:none;margin:6px 0 0;padding:0;display:flex;flex-direction:column;gap:2px}
+.ex-index-btn{appearance:none;border:0;background:transparent;font:inherit;color:inherit;text-align:start;cursor:pointer;box-sizing:border-box;inline-size:100%;display:grid;grid-template-columns:auto minmax(0,1fr);column-gap:12px;padding:6px 8px;border-radius:4px;min-block-size:44px}
 .ex-index-btn:hover{background:rgba(232,217,181,.5)}
 .ex-index-btn:focus-visible{outline:2px solid var(--ex-ink);outline-offset:1px}
-.ex-index-n{grid-row:1 / span 2;font:600 clamp(12px,.9vw,15px)/1.45 var(--font-serif);color:#6B7280}
-.ex-index-name{font:600 clamp(13px,1vw,16.5px)/1.3 var(--font-serif);color:var(--ex-ink)}
-.ex-index-role{font:400 clamp(10.5px,.78vw,12.5px)/1.35 var(--font-sans);color:#46515C}
-/* film (Muhammed Khalid) */
+.ex-index-n{grid-row:1 / span 2;font-family:var(--font-serif);font-weight:600;color:#5B6570}
+.ex-index-name{font-weight:600}
+.ex-index-role{font-size:14px;line-height:20px;color:#3A4652}
+.ex-col--ar .ex-index-role{font-size:14.98px;line-height:22px}
+/* film */
 .ex-film{margin:0;display:flex;flex-direction:column;gap:6px;min-inline-size:0}
-.ex-film-video{display:block;inline-size:100%;block-size:auto;aspect-ratio:16/9;background:var(--ex-ink);border:1px solid var(--ex-edge);border-radius:2px}
+.ex-film-video{display:block;inline-size:100%;block-size:auto;aspect-ratio:16/9;background:var(--ex-ink);border:1px solid #E3DCCB;border-radius:2px}
 .ex-film-cap{display:flex;flex-direction:column;gap:2px}
-.ex-film-title{font:600 clamp(11.5px,.85vw,14.5px)/1.3 var(--font-serif);color:var(--ex-ink)}
-.ex-film-note{font:400 clamp(9px,.66vw,11px)/1.45 var(--font-sans);color:var(--ex-mute)}
-/* Arabic */
-html[lang=ar] .ex-letterhead-meta,html[lang=ar] .ex-salute{letter-spacing:0;text-transform:none;font-family:var(--font-arabic)}
-html[lang=ar] .ex-role,html[lang=ar] .ex-text,html[lang=ar] .ex-lede,html[lang=ar] .ex-sign-role,html[lang=ar] .ex-sources,html[lang=ar] .ex-index-role,html[lang=ar] .ex-portrait-cap,html[lang=ar] .ex-seal-cap,html[lang=ar] .ex-film-note{font-family:var(--font-arabic)}
-html[lang=ar] .ex-sign-name,html[lang=ar] .ex-index-name,html[lang=ar] .ex-film-title{font-family:var(--font-arabic)}
-html[lang=ar] .ex-text,html[lang=ar] .ex-lede{line-height:1.85}
-.ex-letter [lang=en]{font-family:var(--font-serif)}
-.ex-letter .ex-sources [lang=en],.ex-letter .ex-text [lang=en]{font-family:inherit}
-/* compact heights (1280×720 and similar) */
-@media (max-height:820px){
-  .ex-letter{padding:10px 18px 9px;gap:4px}
-  .ex-text{font-size:12px;line-height:1.48;gap:3px}
-  html[lang=ar] .ex-text,html[lang=ar] .ex-lede{font-size:12.5px;line-height:1.62}
-  .ex-lock-title.ex-lock-en,.ex-lock-title.ex-lock-ar{font-size:clamp(17px,1.55vw,24px)}
-  .ex-lock-ar,.ex-lock-en{font-size:clamp(12.5px,1vw,16px)}
-  .ex-role{font-size:11.5px}
-  .ex-portrait img{block-size:clamp(78px,15.5vh,124px)}
-  .ex-seal-svg{inline-size:72px}
-  .ex-sign{margin-block-start:3px}.ex-sign-name{font-size:12.5px}.ex-sign-role{font-size:9.5px}
-  .ex-sources{font-size:9px;line-height:1.35}
-  .ex-lockup--section .ex-lock-ar{font-size:24px}.ex-lockup--section .ex-lock-en{font-size:26px}
-  .ex-lede{font-size:12.5px;line-height:1.5}
-  .ex-index-btn{padding:3px 6px;min-block-size:40px}
-  .ex-index-name{font-size:12.5px}.ex-index-role{font-size:10px}
-  .ex-film-note{font-size:9px}
+.ex-film-title{font:600 14px/20px var(--font-serif);color:var(--ex-ink)}
+.ex-film-note{font:400 11px/16px var(--font-sans);color:var(--ex-mute)}
+html[lang=ar] .ex-film-title,html[lang=ar] .ex-film-note{font-family:var(--font-arabic)}
+/* film slide: narrower letter → tighter gaps */
+.ex-grid--film .ex-letter{padding:18px 24px 14px}
+.ex-grid--film .ex-top{grid-template-columns:minmax(0,1fr)}
+.ex-grid--film .ex-roundel{inline-size:72px}
+/* short desktop heights: the slide body scrolls rather than shrinking the 16/24 body */
+@media (max-height:780px) and (min-width:701px){.ex-slide .s-body.ex-body{overflow-y:auto}}
+/* phone: one column — Latin, horizontal hairline, Arabic (RTL), then the film */
+@media (max-width:700px){
+  .ex-letter{padding:16px 16px 12px}
+  .ex-top,.ex-grid--film{grid-template-columns:minmax(0,1fr)}
+  .ex-cols{grid-template-columns:minmax(0,1fr);row-gap:14px}
+  .ex-divider{inline-size:100%;block-size:1px}
+  .ex-portrait{inline-size:120px}
+  .ex-roundel{inline-size:72px}
+  .ex-letterhead{flex-wrap:wrap}
 }
-@media (max-width:900px){.ex-grid--film{grid-template-columns:minmax(0,1fr)}.ex-index{grid-template-columns:minmax(0,1fr)}.ex-top{flex-direction:column}.ex-portrait{max-inline-size:100%}}
 @media (prefers-reduced-motion:reduce){.ex-slide{transition:none}}
+/* the deck's html[lang=ar] h1–h3 rule would put the Latin name in the Arabic face in the AR deck — pin each column's name face */
+html .ex-col--en .ex-name,html[lang=ar] .ex-col--en .ex-name{font-family:var(--font-serif);letter-spacing:0}
+html .ex-col--ar .ex-name,html[lang=ar] .ex-col--ar .ex-name{font-family:var(--font-arabic);letter-spacing:0}

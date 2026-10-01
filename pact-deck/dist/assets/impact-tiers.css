@@ -240,10 +240,14 @@ html[dir=rtl] .it-news-ext svg{transform:scaleX(-1)} /* ↗ mirrors to ↖ in RT
 @media (max-width:760px){.it-exec{grid-template-columns:1fr}.it-exec-photo img{max-block-size:26vh}}
 /* v1.5.2 close-out — phone (≤760px): the tier-slide footnote wraps instead of clipping */
 @media (max-width:760px){.it-footnote,.it-footnotes--backed .it-footnote{white-space:normal!important;overflow:visible!important;text-overflow:clip!important;overflow-wrap:anywhere}}
-
-/* v1.5.5 — Mastercard Foundation official brand mark (stacked, the only configuration). Free space = x on every side, x = the combined height of the
-   words "mastercard foundation" = 0.305 × mark height (Brand Guidelines, June 2023, p. 4 & 8); the mark is sized to (frame − border) ÷ 1.62 so the
-   white frame leaves ≥ x above, below and beside it. Minimum screen size 24 px — the smallest rendering here is 32 px. Never stretched (inline-size auto). */
-.it-wall .it-wall-row--funders .it-tile .pmark--mastercard{padding:0;display:flex;align-items:center;justify-content:center}
-.it-wall .it-wall-row--funders .it-tile .pmark--mastercard img{max-inline-size:none;max-block-size:none;inline-size:auto;block-size:calc((clamp(56px,8.6vh,96px) - 2px) / 1.62);object-fit:contain;filter:none}
-@media (max-height:820px){.it-wall .it-wall-row--funders .it-tile .pmark--mastercard{padding:0}.it-wall .it-wall-row--funders .it-tile .pmark--mastercard img{block-size:calc((54px - 2px) / 1.62)}}
+/* v1.5.5 — Mastercard Foundation official mark (unmodified master PNG, stacked — the only configuration). Height matched to the other funder
+   marks (Gates / Rockefeller / McGovern ≈ 44–46 px at 1440–1728 px wide), capped so the white frame keeps the Foundation's free space x
+   (x = height of the words "mastercard foundation" = 0.305 × mark height → mark ≤ frame ÷ 1.61), never narrower than 36 px. */
+.it-wall .it-wall-row--funders .it-tile .pmark--mastercard{padding:0}
+.it-wall .it-wall-row--funders .it-tile .pmark--mastercard img{max-inline-size:none;inline-size:auto;block-size:calc(100% / 1.61);min-block-size:34.2px;max-block-size:46px;object-fit:contain;filter:none}
+@media (max-width:600px){.it-wall .it-wall-row--funders .it-tile .pmark--mastercard img{block-size:34.2px;max-block-size:34.2px}}
+.it-tile-foot{display:block;margin:1px 0 0;font-size:.55rem;line-height:1.25;color:var(--slate);font-style:normal;letter-spacing:0}
+html[lang=ar] .it-tile-foot{font-size:.6rem}
+/* v1.5.5: viewports ≤ 820 px tall shrink the shared funder frame to 54 px (and the stage scales ~0.92): 40 px keeps the mark ≥ 36 px wide on
+   screen and within 10 % of the other funder marks; the Foundation's full free space x cannot fit inside that frame (documented in CHANGELOG). */
+@media (max-height:820px) and (min-width:601px){.it-wall .it-wall-row--funders .it-tile .pmark--mastercard img{block-size:40px;min-block-size:40px;max-block-size:40px}}

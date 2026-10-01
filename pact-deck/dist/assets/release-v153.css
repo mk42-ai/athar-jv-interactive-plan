@@ -154,8 +154,12 @@ nav.rail ol a{min-block-size:44px;display:flex;align-items:center;box-sizing:bor
   #s-aos-tour [data-testid=tour-lang],.avp .avp-bar .avp-btn,.aos-tab-hero.avp .avp-bar .avp-btn{min-inline-size:47px}
   #s-aos-nations .aos-evidence-link{display:flex;align-items:center;min-block-size:47px;padding-block:2px;box-sizing:border-box}
 }
-
-/* v1.5.5 — slide 38 montage: three step-8 concept renders, each a full 3:2 frame (1952×427 composite), shown whole (contain, intrinsic ratio, never
-   cropped); CONCEPT RENDER caption below; ≥ 32 px clear gap above the 'Join the pact' row. */
+/* v1.5.5 — slide 38 concept strip (1550×320: existing left + middle panels, new panel C), shown whole at its intrinsic ratio, closed by a
+   1 px Legacy Gold #B8975A hairline; caption CONCEPT RENDER / تصوّر مفاهيمي; "Join the pact" on Athar Ink #0F1E2C, ≥ 32 px below the strip. */
 #s-aos-nations .aos-nation-banner picture{display:block;inline-size:fit-content;max-inline-size:100%}
-#s-aos-nations .aos-nation-banner img{aspect-ratio:1952/427;object-fit:contain;block-size:auto;inline-size:auto;max-inline-size:100%;max-block-size:clamp(60px,9vh,96px)}
+#s-aos-nations .aos-nation-banner img{aspect-ratio:1550/320;object-fit:contain;block-size:auto;inline-size:auto;max-inline-size:100%;max-block-size:clamp(56px,8.5vh,92px)}
+#s-aos-nations .aos-strip-rule{display:block;block-size:1px;inline-size:100%;background:#B8975A;margin-block-start:4px}
+#s-aos-nations .aos-cta,#s-aos-nations .aos-cta:hover,#s-aos-nations .aos-cta:focus-visible{background:#0F1E2C;color:#FFFFFF}
+/* v1.5.5: on short viewports (≤ 800 px tall) the film still above the strip is scaled down — uncropped, aspect kept — so the strip always
+   clears "Join the pact" by ≥ 32 px; at 1728×872 and taller nothing changes (the cap is larger than the still). */
+@media (max-height:800px) and (min-width:701px){#s-aos-nations .aos-nation-side .rs-still img,#s-aos-nations .aos-plate--s5 img{inline-size:auto;max-inline-size:100%;max-block-size:calc(100vh - 540px)}}

@@ -1,7 +1,7 @@
 {
  "base": "http://127.0.0.1:4405",
- "total": 46,
- "written": "2026-10-01T11:01:08.476Z",
+ "total": 44,
+ "written": "2026-10-01T14:07:45.605Z",
  "rows": [
   {
    "during": {
@@ -10,7 +10,8 @@
     "audible": null
    },
    "film": {
-    "poster": "athar-origins-of-impact-ep01-poster.jpg",
+    "poster": "athar-origins-of-impact-ep01-poster-15s5.jpg",
+    "posterTime": "15.5",
     "tracks": [
      "en:athar-origins-of-impact-ep01.en.vtt",
      "ar:athar-origins-of-impact-ep01.ar.vtt"
@@ -19,23 +20,19 @@
     "out": "39.4",
     "src": "athar-origins-of-impact-ep01-muhammed-khalid-720p.mp4#t=0,39.4"
    },
-   "filmState": {
-    "paused": true,
-    "t": 39.6
-   },
    "after": {
-    "n": 45,
+    "n": 43,
     "how": "after film",
-    "visibleSlideId": "s-exec-unwalla",
-    "narratedSlideId": "s-exec-unwalla",
-    "expectedClip": "NAR-s45",
-    "audibleClip": "NAR-s45",
-    "audibleSlideId": "s-exec-unwalla",
+    "visibleSlideId": "s-exec-khalid",
+    "narratedSlideId": "s-exec-khalid",
+    "expectedClip": "NAR-s43",
+    "audibleClip": "NAR-s43",
+    "audibleSlideId": "s-exec-khalid",
     "state": "playing",
     "reason": "",
     "ccMatches": true,
-    "syncMs": 210,
-    "t": "2026-10-01T11:01:08.452Z",
+    "syncMs": 17,
+    "t": "2026-10-01T14:07:45.597Z",
     "pass": true
    }
   }

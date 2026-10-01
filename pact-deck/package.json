@@ -11,7 +11,7 @@
     "prebuild": "node scripts/check-assets.mjs --dist dist",
     "build": "node scripts/v1.4.7/build.mjs",
     "postbuild": "node scripts/check-assets.mjs --dist dist --quiet",
-    "vercel-build": "node scripts/v1.4.7/build.mjs"
+    "vercel-build": "node scripts/vercel-build.mjs"
   },
   "devDependencies": {
     "@playwright/test": "^1.63.0",

@@ -29,5 +29,19 @@
   "date": "2026-10-01",
   "change": "OnDemand by AIREV product mark removed from the cover/closing lock-up rows; lock-up = Athar mark + ATHAR wordmark; parent tier ODA × AIREV uses airev-logo-official.svg",
   "reference": "Athar Brand Guidelines v2 Fig. 8.8"
+ },
+ "mastercardFoundation": {
+  "file": "/partners/review/mastercard-foundation__full-colour.png",
+  "official_package_url": "https://cdn.buttercms.com/MPuSQak9T7WMs107u9iV",
+  "official_package_file": "Mastercard-Foundation-Logos.zip",
+  "official_package_sha256": "996dcb02956c4dc190b87f522b1c2a8af4b0f33313a73924604880a70fbbd7a9",
+  "member": "Mastercard Foundation Logos/Logos/Full Colour .png",
+  "source_page": "https://mastercardfdn.org/en/mastercard-foundation-brand-guidelines/ (\"Mastercard Foundation Logos\" link, opened in the browser)",
+  "retrieved_utc": "2026-10-01T13:43:53Z",
+  "http_status": 200,
+  "bytes": 298185,
+  "sha256": "32afeb9eb97e8cc7164a508db975a20442cfe28b58fde4592699ddde28cdbe40",
+  "dimensions": "3681x3489",
+  "note": "Unmodified official master artwork (full-colour preferred version for light grounds; byte-identical to the package member). Reverse (white wordmark) artwork not used — every deck surface showing the mark is light. Partner use requires the Foundation's written approval — shown with the footnote \"pending written authorisation\", INTERNAL REVIEW ONLY."
  }
 }
