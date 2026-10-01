@@ -1,0 +1,135 @@
+{
+ "release": "v1.5.5",
+ "judge": "lead agent",
+ "mergeThreshold": 9,
+ "execution": "No sub-agent tool is available on this pod, so the six workstreams were executed sequentially by the lead and each output was judged against its own spec before merge (scores out of 10).",
+ "workstreams": [
+  {
+   "id": "A",
+   "name": "Mastercard mark",
+   "iterations": [
+    {
+     "score": 9.5,
+     "merged": true
+    }
+   ],
+   "evidence": [
+    "official package from mastercardfdn.org brand page (zip sha256 996dcb02…)",
+    "SVG vs official PDF raster: max diff 1/255",
+    "free space ≥ x at 1440×900 / 1280×720 / 1728×871 (14.5≥13.3, 10.1≥9.0, 14.0≥12.8 px)",
+    "EN + AR, light + dark scheme views: typed heading and pending line gone, caption kept"
+   ],
+   "deductions": [
+    "Foundation approval for partner use still pending (guideline requirement)",
+    "reverse artwork only used on dark tiles — the deck keeps light surfaces in OS dark mode"
+   ]
+  },
+  {
+   "id": "B",
+   "name": "Last-slide montage",
+   "iterations": [
+    {
+     "score": 8,
+     "merged": false,
+     "reason": "gap to \"Join the pact\" 20 px (EN) / 10 px (AR) at 1728×871 < 32 px"
+    },
+    {
+     "score": 9,
+     "merged": true,
+     "fix": "montage height capped by clamp(60px, 9vh, 96px) with intrinsic ratio — gap ≥ 40 px at all viewports, still uncropped"
+    }
+   ],
+   "evidence": [
+    "step-8 renders, uncropped 3:2 frames, ratio 4.571 rendered 4.571",
+    "one warm grade",
+    "exact Athar master composited over 2 soft kiosk marks",
+    "caption CONCEPT RENDER / تصوّر مفاهيمي · CONCEPT RENDER"
+   ],
+   "deductions": [
+    "no confident mark found on panels A/B — visual confirmation recommended",
+    "panels contain AI-generated people (2/6/1 faces) — conflicts with the no-AI-faces brand rule; owner decision"
+   ]
+  },
+  {
+   "id": "C",
+   "name": "Executive Team EN",
+   "iterations": [
+    {
+     "score": 9,
+     "merged": true
+    }
+   ],
+   "evidence": [
+    "7 slides (intro + 6 letters) after the closing slide, order as specified",
+    "every statement sourced and linked on its letter",
+    "portraits only for Dr Thani (4/4 face matches) and Fahad Al Ameri (official uaenep.ae)",
+    "monogram seals for Al Aryani, Khalid, Unwalla, Lorenzo",
+    "film: latest impact story, end-card poster, EN/AR WebVTT, in 0 / out 39.4 s",
+    "no overflow at 3 viewports"
+   ],
+   "deductions": [
+    "Dr Thani title updated to the sourced current office (Minister of Foreign Trade since June 2025) instead of the supplied \"Minister of State … since July 2020\"",
+    "Lorenzo profile limited to verified facts (first name only)",
+    "layout judged with DOM metrics and pixel statistics — no human visual review in this environment"
+   ]
+  },
+  {
+   "id": "D",
+   "name": "Executive Team AR/RTL",
+   "iterations": [
+    {
+     "score": 9,
+     "merged": true
+    }
+   ],
+   "evidence": [
+    "dir=rtl lang=ar on every Arabic letter (60/60 AR views in the matrix)",
+    "Arabic names/titles from official Arabic sources (uaenep.ae/ar, Emarat Al Youm)",
+    "AR caption track showing by default in Arabic",
+    "RTL keyboard navigation verified (ArrowLeft = next)"
+   ],
+   "deductions": [
+    "Arabic renderings of English-only sources are translations — native-speaker review recommended"
+   ]
+  },
+  {
+   "id": "E",
+   "name": "Guide narration and sync",
+   "iterations": [
+    {
+     "score": 9.5,
+     "merged": true
+    }
+   ],
+   "evidence": [
+    "5 clips in repo, no SAS hotlinks",
+    "missing clips reported: slide 41 Dr Thani, slide 44 Muhammed Khalid (HTTP 429)",
+    "unsourced \"300 agents / 3,000 tools\" sentence cut from NAR-s45 (frame-accurate, no re-encode)",
+    "guide pauses during the film and resumes after it",
+    "guide-sync-46: 8/8 local (desktop + phone), 4/4 on the live sandbox; v1.5.4 suite 24/24"
+   ],
+   "deductions": [
+    "voice id not echoed by the TTS response (George was requested)"
+   ]
+  },
+  {
+   "id": "F",
+   "name": "QA",
+   "iterations": [
+    {
+     "score": 9.5,
+     "merged": true
+    }
+   ],
+   "evidence": [
+    "DOM text/figure diff: 78 views, 4 changed (32/38 EN+AR, allow-listed), 0 unexpected",
+    "broken images 0 (DOM snapshot of 92 views + 120-shot matrix)",
+    "video playback test (film plays, stops at out-point, guide resumes)",
+    "before 42 / after 120 screenshots + ui-validator after-pass 12 shots"
+   ],
+   "deductions": [
+    "dark mode = prefers-color-scheme emulation (the deck ships no dark theme)"
+   ]
+  }
+ ]
+}

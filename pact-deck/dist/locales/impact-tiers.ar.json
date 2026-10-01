@@ -301,7 +301,7 @@
   }
  ],
  "counter": "الشريحة {n} من {total}",
- "version": "1.5.4",
+ "version": "1.5.5",
  "source": "Athar — Agentic AI for All: Three Impact Tiers for Foundation Funding (27 Sep 2026)",
  "news": [
   {
@@ -652,8 +652,13 @@
    "nameAr": "مؤسسة باتريك ج. ماكغفرن"
   },
   "mastercard": {
+   "src": "/partners/review/mastercard-foundation__full-colour-positive.svg",
+   "srcDark": "/partners/review/mastercard-foundation__full-colour-reverse.svg",
+   "w": 381,
+   "h": 361,
    "name": "Mastercard Foundation",
-   "nameAr": "مؤسسة ماستركارد"
+   "nameAr": "مؤسسة ماستركارد",
+   "freeSpace": "x"
   }
  },
  "wall": [

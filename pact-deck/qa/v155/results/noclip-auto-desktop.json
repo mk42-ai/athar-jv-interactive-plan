@@ -1,0 +1,37 @@
+{
+ "base": "https://sb-7fz45eeuhbw7.vercel.run",
+ "total": 46,
+ "written": "2026-10-01T11:16:43.934Z",
+ "rows": [
+  {
+   "n": 41,
+   "how": "no-clip",
+   "visibleSlideId": "s-exec-al-zeyoudi",
+   "narratedSlideId": "s-exec-al-zeyoudi",
+   "expectedClip": null,
+   "audibleClip": null,
+   "audibleSlideId": null,
+   "state": "ended",
+   "reason": "no-clip",
+   "ccMatches": true,
+   "syncMs": 20,
+   "t": "2026-10-01T11:16:34.691Z",
+   "pass": true
+  },
+  {
+   "n": 42,
+   "how": "auto",
+   "visibleSlideId": "s-exec-al-ameri",
+   "narratedSlideId": "s-exec-al-ameri",
+   "expectedClip": "NAR-s42",
+   "audibleClip": "NAR-s42",
+   "audibleSlideId": "s-exec-al-ameri",
+   "state": "playing",
+   "reason": "",
+   "ccMatches": true,
+   "syncMs": 227,
+   "t": "2026-10-01T11:16:43.926Z",
+   "pass": true
+  }
+ ]
+}

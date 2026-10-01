@@ -421,3 +421,64 @@ the bottom 52 px of the chapter rail, hiding its "← → navigate · Esc overvi
 under parallel load (their assertions had all passed). Guide sync suite against the live preview (07:12:37–07:14:22Z): **24/24 PASS**,
 39/39 slides in sync in all four modes (desktop + phone × arrows + deep links), time-to-sync median 75 ms desktop / 127 ms phone, max 281 ms;
 AUTO: 7 hops per project, each preceded by the previous clip's `ended`, 0 desynced samples (`qa/v154/sync-results.json`).
+
+## v1.5.5 — 2026-10-01 (edit in place on v1.5.4 `04d09e8`: official Mastercard Foundation mark · slide-38 concept montage · section 09 Executive Team · Guide narration for slides 40–46)
+
+Only the items below changed; the DOM text/figure diff against v1.5.4 (`qa/v155/dom-diff-v154-v155.json`) shows 74 of 78 shared slide
+views identical, the 4 changed views are exactly slides 32 and 38 in EN and AR, 0 unexpected changes, 0 broken images, plus the 14 new views.
+
+**(A) Mastercard Foundation — official mark (slide 32, EN + AR)**
+- The typed "Mastercard Foundation" heading and the "official mark pending verification" line are replaced by the Foundation's own vector
+  master artwork from its "Mastercard Foundation Logos" package (`https://cdn.buttercms.com/MPuSQak9T7WMs107u9iV`, linked from
+  `https://mastercardfdn.org/en/mastercard-foundation-brand-guidelines/`, zip sha256 `996dcb02…bbd7a9`): "Full Colour 2.pdf" → 
+  `partners/review/mastercard-foundation__full-colour-positive.svg` (black wordmark, light grounds) and "Full Colour B2.pdf" →
+  `…__full-colour-reverse.svg` (white wordmark, dark grounds). 1:1 PDF→SVG (vector paths only, #E51B24 / #F26522 / #F99F1C); rasterised
+  side by side with the official PDF the SVGs differ by at most 1/255 per channel. Nothing retyped, redrawn or generated.
+- Free space ≥ x on every side (x = height of the words "mastercard foundation", Brand Guidelines June 2023 p. 4 & 8): measured
+  14.5 px ≥ 13.3 px at 1440×900, 10.1 ≥ 9.0 at 1280×720, 14.0 ≥ 12.8 at 1728×871; smallest rendering 29.6 px (minimum 24 px).
+- The "Youth operators and builders, Legacy" caption and the tile caption are unchanged. The deck keeps its Manuscript surfaces under
+  OS dark mode, so the positive artwork is the guideline-correct variant in both colour schemes; the reverse artwork is wired for dark tiles.
+- Mastercard Foundation guidelines require the Foundation's approval before partners use the brand mark — still pending (INTERNAL REVIEW band unchanged).
+
+**(B) Slide 38 montage**
+- `assets/plates/plate5-montage-v155.(png|webp)` (1952×427): the three step-8 concept renders (N7gA3HMhbC · eznG4BbWKD · 9FHimXpmhS,
+  1536×1024 each), every panel a full uncropped 3:2 frame, one shared warm grade (WB 1.035 / 1.005 / 0.935, split-tone to Athar Ink /
+  Manuscript at 7 %, −8 % saturation). The exact Athar master mark is pixel-composited (white, on a plate matched to the screen) over the
+  two soft marks found on the kiosk panel (template NCC 0.37 / 0.45; edge energy 0.47 / 0.50 of the master). No confident mark was found on
+  panels A and B (best NCC 0.33 / 0.39), so nothing was composited there — visual confirmation recommended.
+- Caption "Official brand imagery — tier progression (reused from slide 29)" → "CONCEPT RENDER" (AR «تصوّر مفاهيمي · CONCEPT RENDER»), the
+  v1.5.4 labelling; descriptive alt text. Shown whole (`object-fit: contain`, intrinsic ratio 4.571 rendered 4.571); gap to "Join the pact"
+  ≥ 40 px at all three QA viewports (EN 50 / 142 / 85, AR 40 / 135 / 78 px at 1728×871 / 1440×900 / 1280×720).
+- The panels are AI-generated concept renders that contain generated people (face detector: 2 / 6 / 1 faces) — labelled CONCEPT RENDER;
+  the brand rule "no AI-generated faces or bodies" is not met by these step-8 images and needs an owner decision before external use.
+
+**(C/D) Section 09 — Executive Team / الفريق التنفيذي (new slides 40–46 after the closing slide)**
+- `js/exec-team.js` + `assets/exec-team.css`: an intro letter with an index, then one letter per profile on Manuscript paper (procedural
+  fibre texture), Athar Ink text, exactly one Legacy Gold hairline rule, a signature line, IBM Plex Serif / Sans / Sans Arabic, Arabic-first
+  bilingual name lockups, full RTL in Arabic (`dir="rtl" lang="ar"` on every letter). Deep links `#/28/exec-1…7` (+ `#slide-40…46`),
+  footer "n of 46", rail entry 09, Esc-overview tiles 40–46, the bundle's disabled next chevron re-enabled on slide 39.
+- Profiles, in order (every statement sourced on the letter): H.E. Dr Thani bin Ahmed Al Zeyoudi (Minister of State for Foreign Trade
+  from July 2020, Minister of Foreign Trade since June 2025, CEPA programme, MC13 chair, Chairman of AIREV); H.E. Fahad Al Ameri (uaenep.ae EN/AR);
+  H.E. Saif Sultan Al Aryani — resolves "Ary", Advisor at the Presidential Court with the rank of Minister (Federal Decree, 9 Jan 2023) —
+  **not merged, distinct person** from Fahad Al Ameri; Muhammed Khalid (+ impact-story film); Kayaan Unwalla; Lorenzo (identity unverified —
+  name only, confirmation requested; nothing invented).
+- Portraits only where verified: Dr Thani (supplied official headshot, 4/4 independent face matches 96–98 %) and Fahad Al Ameri (official
+  uaenep.ae portrait); monogram seals for Al Aryani, Khalid, Unwalla and Lorenzo. No AI likenesses.
+- Film: latest impact story (`athar-origins-of-impact-ep01-muhammed-khalid_1080p_subtitled.mp4`, uploaded 2026-10-01T08:14:32Z, 40 s)
+  re-encoded to 1280×720 H.264 (6.7 MB); poster = the episode's end card at 39.25 s (no faces, no subtitle); in 0.000 s / out 39.400 s;
+  EN + AR WebVTT captions (cues at the top so they never cover the burned-in English subtitles; AR track shows by default in Arabic).
+  The film's narration says "Born in London in 1991" and does not mention Guy's Hospital or H.E. Dr Thani — captions follow the audio.
+
+**(E) Guide narration and sync**
+- Five George clips downloaded into the repo (`audio/guide/slides/NAR-s40/42/43/45/46-*.mp3`, no SAS hotlinks) and keyed in
+  `narration/slide-narration.json` (now 46 slides, transcripts from Whisper small.en). NAR-s45 is a frame-accurate cut (no re-encode) that
+  drops the unsourced sentence "More than 300 agents, over 3,000 tools, and one agentic operating system."
+- **No clip** for slide 41 (Dr Thani) and slide 44 (Muhammed Khalid) — both TTS requests returned HTTP 429 `concurrent_limit_exceeded`;
+  those slides caption the slide, stay silent (state `ended`, reason `no-clip`) and AUTO moves on after 9 s (slide 44 waits for the film).
+- The guide pauses while the impact-story film plays (reason `video`) and resumes after it ends / stops at its out-point.
+- `qa/v155/guide-sync-46.spec.mjs` (Playwright): narrated slide id == visible slide id on every one of the 46 slides — **8/8 PASS**
+  (desktop 1728×872 + phone 390×844 × arrows 46/46, deep links 46/46, film pause/resume, no-clip AUTO). v1.5.4 suite re-run on v1.5.5: **24/24 PASS**.
+
+**QA** — after-matrix 120 screenshots (slides 32, 38, 39, 40–46 × 1440×900 / 1280×720 / 1728×871 × EN/AR × light/dark): visible slide =
+expected 120/120, horizontal overflow 0, broken images 0, console errors 0, Arabic letters `rtl/ar` 60/60. `npm run build`: versions v1.5.5,
+check-assets missing 0, SHA256SUMS regenerated.

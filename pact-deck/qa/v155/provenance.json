@@ -1,0 +1,162 @@
+{
+ "release": "v1.5.5",
+ "generated": "2026-10-01",
+ "note": "Provenance of every asset added in v1.5.5. Signed (SAS) URLs are deliberately not recorded — only stable identifiers.",
+ "mastercardFoundation": {
+  "officialPage": "https://mastercardfdn.org/en/mastercard-foundation-brand-guidelines/",
+  "package": "https://cdn.buttercms.com/MPuSQak9T7WMs107u9iV",
+  "packageFile": "Mastercard-Foundation-Logos.zip",
+  "packageSha256": "996dcb02956c4dc190b87f522b1c2a8af4b0f33313a73924604880a70fbbd7a9",
+  "guidelines": {
+   "url": "https://cdn.buttercms.com/1zm4dbaQ3CSP4zGSWyXd",
+   "file": "Mastercard-Foundation-Brand-Guidelines.pdf (June 2023)",
+   "sha256": "d68c4073f224cab450e989656a53350a5e68012b17b786c9d3a0d559af61534c",
+   "freeSpaceRule": "x = combined height of the words \"mastercard foundation\" on every side (p. 4, p. 8)",
+   "minimumSize": "screen 24 px (p. 8)",
+   "approvalNote": "Partners must use approved master artwork and contact the Foundation for approval before using the signature on non-Foundation products (brand page)."
+  },
+  "files": [
+   {
+    "repo": "dist/partners/review/mastercard-foundation__full-colour-positive.svg",
+    "from": "Mastercard Foundation Logos/Logos/Full Colour 2.pdf",
+    "fromSha256": "009c4830a3150355b229720a71fed8e48d11be37bafcfadad804d326adfc88ba",
+    "sha256": "d5bfa1ae229db4f16d20b25468f33212dd171ec9b7f538319eecf2a82cd7c183"
+   },
+   {
+    "repo": "dist/partners/review/mastercard-foundation__full-colour-reverse.svg",
+    "from": "Mastercard Foundation Logos/Logos/Full Colour B2.pdf",
+    "fromSha256": "5628ba80375dd222283efc22fd88baf25c1369f94271e54cb7b7722a80addf74",
+    "sha256": "235f3c451b856d53f933e8e4dd7707c3655cb6cd2d62918ca659899c9cf70e6d"
+   }
+  ],
+  "conversion": "PyMuPDF get_svg_image(text_as_path=True): vector paths only; rasterised against the PDF at 144 dpi → max channel difference 1/255"
+ },
+ "montage": {
+  "repo": [
+   "dist/assets/plates/plate5-montage-v155.png",
+   "dist/assets/plates/plate5-montage-v155.webp"
+  ],
+  "sha256": [
+   "43069035acaf9f5aff331f101eccf54b826a2c42899c52c66a617852238ed306",
+   "36458a9dead9fe1847d81d679bd6d9ce57425f9d006c47b8f86ec264b2b54f37"
+  ],
+  "panels": [
+   {
+    "panel": "A tablet",
+    "step8": "N7gA3HMhbC.png",
+    "step7Source": "ow3J2W9qG7.png",
+    "composites": []
+   },
+   {
+    "panel": "B wall screen",
+    "step8": "eznG4BbWKD.png",
+    "step7Source": "YDOWTY0uHu.png",
+    "composites": []
+   },
+   {
+    "panel": "C kiosk",
+    "step8": "9FHimXpmhS.png",
+    "step7Source": "FaHLDY1BmQ.png",
+    "composites": [
+     {
+      "box": [
+       1175,
+       133,
+       192,
+       39
+      ],
+      "softness": 0.473
+     },
+     {
+      "box": [
+       1168,
+       640,
+       150,
+       30
+      ],
+      "softness": 0.495
+     }
+    ]
+   }
+  ],
+  "generator": "bulkGenerateImagesUsing2.5 (step 7) → editImageUsing2.5 with the Athar master logo as reference (step 8), 1536×1024 — AI concept renders, labelled CONCEPT RENDER",
+  "faces": {
+   "A": 2,
+   "B": 6,
+   "C": 1,
+   "detector": "OpenCV FaceDetectorYN (YuNet 2023mar)"
+  },
+  "atharMaster": "Athar_Logo_Horizontal_transparent_v1.png (session upload 2026-09-25T15:07:48Z), 4330×923 RGBA"
+ },
+ "executiveTeam": {
+  "portraits": [
+   {
+    "person": "H.E. Dr Thani bin Ahmed Al Zeyoudi",
+    "repo": "dist/assets/exec/portraits/thani-al-zeyoudi-official.jpg",
+    "source": "https://cdn.prod.website-files.com/64196e4ee065344ff6b85f9c/659ecb78acdd8de53fc2d8f1_Headshot%20-%20Al%20Zeyoudi%2C%20H_E_%20Dr_%20Thani%20Bin%20Ahmed%20-%20Cropped.jpg",
+    "verification": "compareImages vs 4 independent published photos: 97.36 / 98.26 / 97.12 / 96.21 % (session step)",
+    "sha256": "977f322fd6f831e5b24146a8354e4f97ddbc91f346d17d0e18d700d16aa1313d"
+   },
+   {
+    "person": "H.E. Fahad Al Ameri",
+    "repo": "dist/assets/exec/portraits/fahad-al-ameri-uaenep.jpg",
+    "source": "https://uaenep.ae/storage/post/large/uZVrRgwSHJqEzfv7FYbIZi3waOaD1VoEvFc0xS9J.jpg (official participant page https://uaenep.ae/en/participant/fahad-al-ameri)",
+    "verification": "photo of the named official programme page; single face detected",
+    "sha256": "8c79b43df698455f85ad8043acf9092737b5f70db6b1cb8d2e5668129c7289d5"
+   }
+  ],
+  "monogramSeals": [
+   "H.E. Saif Sultan Al Aryani",
+   "Muhammed Khalid",
+   "Kayaan Unwalla",
+   "Lorenzo"
+  ],
+  "aryResolution": {
+   "resolvedAs": "H.E. Saif Sultan Al Aryani — Advisor at the Presidential Court, rank of Minister (Federal Decree, 9 Jan 2023)",
+   "merged": false,
+   "note": "Not merged — distinct person from H.E. Fahad Al Ameri; not linked to Development and Humanitarian Affairs",
+   "sources": [
+    "https://gulfnews.com/uae/government/uae-president-appoints-saif-al-aryani-as-advisor-at-presidential-court-1.1673240213399",
+    "https://www.emaratalyoum.com/local-section/other/2023-01-09-1.1706450"
+   ],
+   "unreadable": "https://www.wam.ae/en/article/15d15l0-uae-president-issues-federal-decree-appointing (client-rendered page, no text over HTTP)"
+  },
+  "lorenzo": {
+   "status": "identity unverified — no surname/role in workspace or session data; public results are unrelated people (Torresani, Windrow II, Javier, Serafini)",
+   "action": "profile shows the first name only; confirmation of surname and role requested from Athar"
+  },
+  "film": {
+   "master": "athar-origins-of-impact-ep01-muhammed-khalid_1080p_subtitled.mp4",
+   "uploaded": "2026-10-01T08:14:32Z (latest of the impact-story versions in the session file directory)",
+   "masterSha256": "c7c200050a422d580426b9972e83335c0b0456d442df51c1604b482a3a43ab2a",
+   "repo": "dist/assets/exec/video/athar-origins-of-impact-ep01-muhammed-khalid-720p.mp4",
+   "sha256": "3a32a2dbcf656a0d3af40cb3d3e5e61c7f6d9bc5cb98949ba01930eab33ccd05",
+   "encode": "libx264 CRF 23 1280×720, AAC 128k, faststart",
+   "poster": "end card at 39.25 s",
+   "inSec": 0.0,
+   "outSec": 39.4,
+   "captions": [
+    "en (WebVTT, from the narration + burned-in subtitles)",
+    "ar (WebVTT, translation)"
+   ],
+   "narrationDiscrepancy": "audio says \"Born in London in 1991\"; no mention of Guy's Hospital or of H.E. Dr Thani"
+  }
+ },
+ "narration": {
+  "delivered": [
+   "NAR-s40 Pi9RANaude",
+   "NAR-s42 2iu0GUeMnZ",
+   "NAR-s43 S925zT9UDu",
+   "NAR-s45 VnuUpOBonR (cut at 7.45 s)",
+   "NAR-s46 H44Q5E4gGD"
+  ],
+  "missing": [
+   "slide 41 Dr Thani — HTTP 429 concurrent_limit_exceeded",
+   "slide 44 Muhammed Khalid — HTTP 429 concurrent_limit_exceeded"
+  ],
+  "historyCandidates": {
+   "ORyyP3A3jX53iHcLKhiZ": "Dr Thani George render 09:13:40Z (not supplied; script includes an unverified \"June 2026\" claim)",
+   "Q4jpHTymrX0YosmJIAu3": "Muhammed Khalid George render 09:13:56Z (not supplied)"
+  }
+ }
+}

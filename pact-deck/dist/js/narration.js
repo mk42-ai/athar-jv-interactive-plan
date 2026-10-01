@@ -30,14 +30,14 @@
    Keyboard: N = play / pause (start when off, retry when blocked); ← → change slide (handled by the deck, never intercepted). */
 (function () {
   'use strict';
-  var VERSION = 'v1.5.4', KEY = 'athar-guide-prefs-v3', OLDKEY = 'athar-narration-prefs-v2', TABLE = '/narration/slide-narration.json', MANIFEST = '/narration/narration-manifest.json', TOTAL = 39, SETTLE_MS = 140;
+  var VERSION = 'v1.5.5', KEY = 'athar-guide-prefs-v3', OLDKEY = 'athar-narration-prefs-v2', TABLE = '/narration/slide-narration.json', MANIFEST = '/narration/narration-manifest.json', TOTAL = 39 + ((window.AtharExecTeam && window.AtharExecTeam.count) || 0), SETTLE_MS = 140, NOCLIP_MS = 9000; /* v1.5.5: 39 + section 09 Executive Team (slides 40–46) */
   var STATES = { idle: 1, loading: 1, playing: 1, paused: 1, blocked: 1, ended: 1 };
   var T = {
-    en: { region: 'Narrated guide', guide: 'Guide', guideOn: 'Guide on', play: 'Play narration', pause: 'Pause narration', mute: 'Mute', unmute: 'Unmute', auto: 'AUTO — advance to the next slide when its narration ends', cc: 'CC — live caption of the sentence being narrated', txOpen: 'Hide transcript', txShow: 'Show transcript', tx: 'Transcript', tap: 'Tap to play', tapRetry: 'Retry narration', tapAria: 'The browser blocked the narration. Tap to play the narration for slide {n} of 39', tapRetryAria: 'The narration could not load. Tap to retry slide {n} of 39',
-      idleN: 'Guide ready · slide {n} of 39', loadingN: 'Loading narration · slide {n} of 39', playingN: 'Narrating slide {n} of 39', pausedN: 'Guide paused · slide {n} of 39', blockedN: 'Narration blocked by the browser — tap to play · slide {n} of 39', errorN: 'Narration could not load — tap to retry · slide {n} of 39', endedN: 'Narration finished · slide {n} of 39',
+    en: { region: 'Narrated guide', guide: 'Guide', guideOn: 'Guide on', play: 'Play narration', pause: 'Pause narration', mute: 'Mute', unmute: 'Unmute', auto: 'AUTO — advance to the next slide when its narration ends', cc: 'CC — live caption of the sentence being narrated', txOpen: 'Hide transcript', txShow: 'Show transcript', tx: 'Transcript', tap: 'Tap to play', tapRetry: 'Retry narration', tapAria: 'The browser blocked the narration. Tap to play the narration for slide {n} of {t}', tapRetryAria: 'The narration could not load. Tap to retry slide {n} of {t}',
+      idleN: 'Guide ready · slide {n} of {t}', loadingN: 'Loading narration · slide {n} of {t}', playingN: 'Narrating slide {n} of {t}', pausedN: 'Guide paused · slide {n} of {t}', blockedN: 'Narration blocked by the browser — tap to play · slide {n} of {t}', errorN: 'Narration could not load — tap to retry · slide {n} of {t}', endedN: 'Narration finished · slide {n} of {t}', noclipN: 'No narration clip for slide {n} of {t} yet — caption shown', videoN: 'Guide paused while the film plays · slide {n} of {t}',
       seek: 'Narration position', key: 'N play / pause · ← → slides', voice: 'George · ElevenLabs eleven_multilingual_v2', arNote: 'Guide audio is in English; Arabic transcript pending.', listen: 'Listen to the guide', prev: 'Previous slide', next: 'Next slide', introTx: 'Intro film · transcript', status: 'Guide status' },
-    ar: { region: 'الدليل الصوتي', guide: 'الدليل', guideOn: 'الدليل يعمل', play: 'تشغيل التعليق', pause: 'إيقاف مؤقت', mute: 'كتم', unmute: 'إلغاء الكتم', auto: 'تلقائي — الانتقال إلى الشريحة التالية عند انتهاء تعليقها', cc: 'CC — تعليق مباشر للجملة المسرودة', txOpen: 'إخفاء النص', txShow: 'إظهار النص', tx: 'النص', tap: 'اضغط للتشغيل', tapRetry: 'إعادة المحاولة', tapAria: 'منع المتصفح تشغيل التعليق. اضغط لتشغيل تعليق الشريحة {n} من 39', tapRetryAria: 'تعذّر تحميل التعليق. اضغط لإعادة المحاولة للشريحة {n} من 39',
-      idleN: 'الدليل جاهز · الشريحة {n} من 39', loadingN: 'جارٍ تحميل التعليق · الشريحة {n} من 39', playingN: 'يروي الدليل الشريحة {n} من 39', pausedN: 'الدليل متوقف مؤقتًا · الشريحة {n} من 39', blockedN: 'منع المتصفح التعليق — اضغط للتشغيل · الشريحة {n} من 39', errorN: 'تعذّر تحميل التعليق — اضغط لإعادة المحاولة · الشريحة {n} من 39', endedN: 'انتهى التعليق · الشريحة {n} من 39',
+    ar: { region: 'الدليل الصوتي', guide: 'الدليل', guideOn: 'الدليل يعمل', play: 'تشغيل التعليق', pause: 'إيقاف مؤقت', mute: 'كتم', unmute: 'إلغاء الكتم', auto: 'تلقائي — الانتقال إلى الشريحة التالية عند انتهاء تعليقها', cc: 'CC — تعليق مباشر للجملة المسرودة', txOpen: 'إخفاء النص', txShow: 'إظهار النص', tx: 'النص', tap: 'اضغط للتشغيل', tapRetry: 'إعادة المحاولة', tapAria: 'منع المتصفح تشغيل التعليق. اضغط لتشغيل تعليق الشريحة {n} من {t}', tapRetryAria: 'تعذّر تحميل التعليق. اضغط لإعادة المحاولة للشريحة {n} من {t}',
+      idleN: 'الدليل جاهز · الشريحة {n} من {t}', loadingN: 'جارٍ تحميل التعليق · الشريحة {n} من {t}', playingN: 'يروي الدليل الشريحة {n} من {t}', pausedN: 'الدليل متوقف مؤقتًا · الشريحة {n} من {t}', blockedN: 'منع المتصفح التعليق — اضغط للتشغيل · الشريحة {n} من {t}', errorN: 'تعذّر تحميل التعليق — اضغط لإعادة المحاولة · الشريحة {n} من {t}', endedN: 'انتهى التعليق · الشريحة {n} من {t}', noclipN: 'لا يتوفر مقطع تعليق للشريحة {n} من {t} بعد — يظهر النص', videoN: 'الدليل متوقف أثناء عرض الفيلم · الشريحة {n} من {t}',
       seek: 'موضع التعليق', key: 'N تشغيل/إيقاف · ← → الشرائح', voice: 'جورج · ElevenLabs eleven_multilingual_v2', arNote: 'الدليل الصوتي بالإنجليزية؛ النص العربي قيد الإعداد.', listen: 'استمع إلى الدليل', prev: 'الشريحة السابقة', next: 'الشريحة التالية', introTx: 'فيلم المقدمة · النص', status: 'حالة الدليل' }
   };
   var TAB_CUE = { lb: 's38-c2', 'in': 's38-c3', ke: 's38-c4' }, CUE_TAB = { 's38-c2': 'lb', 's38-c3': 'in', 's38-c4': 'ke' }, NATIONS = 's-aos-nations';
@@ -56,8 +56,8 @@
   function lang() { return document.documentElement.lang === 'ar' ? 'ar' : 'en'; }
   function el(t, c, txt) { var e = document.createElement(t); if (c) e.className = c; if (txt != null) e.textContent = txt; return e; }
   function fmt(s) { if (!isFinite(s)) return '0:00'; s = Math.max(0, Math.round(s)); return Math.floor(s / 60) + ':' + ('0' + (s % 60)).slice(-2); }
-  function fill(str, n) { return String(str).replace('{n}', String(n)); }
-  function hashFor(n) { return n <= 27 ? '#/' + n : (n === TOTAL ? '#/28' : '#/27/new-' + (n - 27)); }
+  function fill(str, n) { return String(str).replace('{n}', String(n)).replace('{t}', String(TOTAL)); }
+  function hashFor(n) { return n <= 27 ? '#/' + n : n <= 38 ? '#/27/new-' + (n - 27) : n === 39 ? '#/28' : '#/28/exec-' + (n - 39); } /* v1.5.5: slides 40–46 */
   function introActive() { var g = document.querySelector('.intro-gate'); return !!(g && g.offsetParent !== null); }
   function iso() { return new Date().toISOString(); }
   function log(ev, extra) { var r = { t: iso(), ev: ev, state: S.state, reason: S.reason, gen: S.gen, slideId: S.slideId, clip: S.clip ? S.clip.clipId : null, at: Math.round((audio.currentTime || 0) * 100) / 100 }; if (extra) for (var k in extra) r[k] = extra[k]; journal.push(r); if (journal.length > 600) journal.shift(); }
@@ -82,7 +82,8 @@
   /* every navigation path ends here (detected from the DOM: the slide on screen changed) */
   function onSlideChange(id, cause) {
     var g = ++S.gen; hardStop(); var e = entry(id); S.slideId = id; S.n = e ? e.n : 0; S.cue = e && e.cues && e.cues.length ? e.cues[0] : null;
-    log('slide', { cause: cause });
+    log('slide', { cause: cause }); S.resumeAfterFilm = false;
+    if (e && S.state === 'paused' && S.reason === 'video') { setState('loading'); prepare(e, g, true); return; } /* v1.5.5: the film paused the guide; a new slide re-engages it */
     if (!e) { render(); return; }
     if (S.state === 'idle') { render(); return; }                                        /* guide off: labels + caption follow the slide, no audio */
     if (S.state === 'paused' && S.reason !== 'intro') { prepare(e, g, false); render(); return; } /* stay paused on the new slide (its clip is ready) */
@@ -92,6 +93,7 @@
   }
   /* fetch the slide's clip (abortable) and put it in the single <audio> element; optionally play after the settle delay */
   function prepare(e, g, play) {
+    if (!e.file) { noClip(e, g, play); return; } /* v1.5.5: slides whose George clip has not been generated yet */
     if (S.ac) { try { S.ac.abort(); } catch (x) {} }
     var ac = ('AbortController' in window) ? new AbortController() : null; S.ac = ac;
     blobUrl(e, ac ? ac.signal : undefined).then(function (url) {
@@ -102,6 +104,12 @@
       render();
       if (play) later(function () { playNow(g); }, SETTLE_MS, g);
     }, function (err) { if (g !== S.gen || (err && err.name === 'AbortError')) return; log('load-error', { err: String(err && err.message || err) }); if (engaged()) setState('blocked', 'error'); });
+  }
+  function filmOnSlide() { var sec = visibleSection(); return !!(sec && sec.querySelector('video[data-narration-pause]')); }
+  function noClip(e, g, play) { /* v1.5.5: no clip → caption only; AUTO moves on after NOCLIP_MS unless the slide carries the impact-story film */
+    S.clip = null; try { audio.removeAttribute('src'); audio.load(); } catch (x) {} audio.setAttribute('data-gen', String(g));
+    if (play && S.state !== 'idle') { setState('ended', 'no-clip'); if (prefs.auto && !introActive() && !filmOnSlide()) { var nx = nextId(S.slideId); if (nx) later(function () { if (S.filmPlaying) return; S.navCause = 'auto'; log('auto-advance', { to: nx, reason: 'no-clip' }); try { location.hash = hashFor(entry(nx).n); } catch (x) {} }, NOCLIP_MS, g); } }
+    render();
   }
   function blobUrl(e, signal) {
     if (cache[e.clipId]) return Promise.resolve(cache[e.clipId]);
@@ -127,7 +135,7 @@
     });
   }
   /* user intents */
-  function start() { S.unlocked = true; if (!S.slideId) observe('start'); var e = entry(S.slideId); if (!e) return; if (S.clip && S.clip.slideId === S.slideId && audio.getAttribute('data-gen') === String(S.gen)) { if (audio.ended) { try { audio.currentTime = 0; } catch (x) {} } setState('loading'); playNow(S.gen); return; } var g = ++S.gen; hardStop(); setState('loading'); prepare(e, g, true); }
+  function start() { S.unlocked = true; if (!S.slideId) observe('start'); var e = entry(S.slideId); if (!e) return; if (!e.file) { var g0 = ++S.gen; hardStop(); setState('loading'); noClip(e, g0, true); return; } if (S.clip && S.clip.slideId === S.slideId && audio.getAttribute('data-gen') === String(S.gen)) { if (audio.ended) { try { audio.currentTime = 0; } catch (x) {} } setState('loading'); playNow(S.gen); return; } var g = ++S.gen; hardStop(); setState('loading'); prepare(e, g, true); }
   function resume() { start(); }
   function pause(reason) { if (S.state === 'idle') return; clearPending(); S.ownPause = true; try { audio.pause(); } catch (e) {} S.ownPause = false; abortLoads(); var e = entry(S.slideId); if (e && (!S.clip || S.clip.slideId !== S.slideId)) prepare(e, S.gen, false); setState('paused', reason || 'user'); }
   function stop() { ++S.gen; hardStop(); setState('idle'); prefs.on = false; savePrefs(); render(); }
@@ -137,6 +145,19 @@
   /* ---------- audio events (generation-guarded) ---------- */
   audio.addEventListener('playing', function () { if (!current()) { S.ownPause = true; audio.pause(); S.ownPause = false; return; } setState('playing'); loop(S.gen); prefetchNext(); });
   audio.addEventListener('pause', function () { if (!current() || S.ownPause || audio.ended) return; if (S.state === 'playing' || S.state === 'loading') { clearPending(); setState('paused', 'external'); } });
+  /* v1.5.5: impact-story film (video[data-narration-pause]) — narration pauses while it plays and resumes after it ends (or stops at its out-point) */
+  function filmOf(t) { return t && t.tagName === 'VIDEO' && t.hasAttribute && t.hasAttribute('data-narration-pause') ? t : null; }
+  document.addEventListener('play', function (ev) { var v = filmOf(ev.target); if (!v) return; S.filmPlaying = true; clearPending();
+    if (S.state === 'playing' || S.state === 'loading' || (S.state === 'ended' && S.reason === 'no-clip')) { S.resumeAfterFilm = true; log('film-play', { resume: true }); if (S.state === 'ended') { setState('paused', 'video'); render(); } else pause('video'); }
+    else log('film-play', { resume: false }); }, true);
+  function filmDone(ev) { var v = filmOf(ev.target); if (!v) return; var out = parseFloat(v.getAttribute('data-out') || '0');
+    if (ev.type === 'pause' && !(v.ended || (out && v.currentTime >= out - 0.3))) { S.filmPlaying = false; log('film-pause-user', {}); return; }
+    S.filmPlaying = false; if (!S.resumeAfterFilm) return; S.resumeAfterFilm = false; log('film-done', { how: ev.type });
+    var e = entry(S.slideId); if (!e) return; var g = S.gen;
+    if (e.file) { start(); return; }
+    if (prefs.auto && !introActive()) { var nx = nextId(S.slideId); if (nx) { later(function () { S.navCause = 'auto'; log('auto-advance', { to: nx, reason: 'film-ended' }); try { location.hash = hashFor(entry(nx).n); } catch (x) {} }, 600, g); setState('ended', 'no-clip'); render(); return; } }
+    setState('ended', 'no-clip'); render(); }
+  document.addEventListener('ended', filmDone, true); document.addEventListener('pause', filmDone, true);
   audio.addEventListener('ended', function () {
     if (!current()) return; var g = S.gen; clearPending(); setState('ended');
     if (prefs.auto && !introActive()) { var nx = nextId(S.slideId); if (nx) { var e = entry(nx); later(function () { S.navCause = 'auto'; log('auto-advance', { to: nx }); try { location.hash = hashFor(e.n); } catch (x) {} }, 0, g); } }
@@ -215,13 +236,13 @@
     r.classList.toggle('is-playing', playing); r.classList.toggle('is-reduced', reduced); r.classList.toggle('is-blocked', st === 'blocked'); r.classList.toggle('is-unavailable', st === 'blocked' && S.reason === 'error');
     ui.guide.textContent = st === 'idle' ? L.guide : L.guideOn; ui.guide.setAttribute('aria-pressed', st === 'idle' ? 'false' : 'true'); ui.guide.disabled = !e; ui.guide.title = L.key;
     var blocked = st === 'blocked', retry = blocked && S.reason === 'error'; ui.tap.hidden = !blocked; ui.tap.innerHTML = icon('play') + '<span>' + (retry ? L.tapRetry : L.tap) + '</span>'; ui.tap.setAttribute('aria-label', fill(retry ? L.tapRetryAria : L.tapAria, n));
-    var pp = playing || st === 'loading'; ui.play.innerHTML = icon(pp ? 'pause' : 'play'); ui.play.setAttribute('aria-label', pp ? L.pause : L.play); ui.play.setAttribute('aria-pressed', pp ? 'true' : 'false'); ui.play.disabled = !e;
+    var pp = playing || st === 'loading'; ui.play.innerHTML = icon(pp ? 'pause' : 'play'); ui.play.setAttribute('aria-label', pp ? L.pause : L.play); ui.play.setAttribute('aria-pressed', pp ? 'true' : 'false'); ui.play.disabled = !e || !e.file;
     ui.mute.innerHTML = icon(prefs.muted ? 'muted' : 'sound'); ui.mute.setAttribute('aria-label', prefs.muted ? L.unmute : L.mute); ui.mute.setAttribute('aria-pressed', prefs.muted ? 'true' : 'false');
     ui.auto.setAttribute('aria-pressed', prefs.auto ? 'true' : 'false'); ui.auto.title = L.auto; ui.auto.setAttribute('aria-label', L.auto);
     ui.cc.setAttribute('aria-pressed', prefs.captions ? 'true' : 'false'); ui.cc.title = L.cc; ui.cc.setAttribute('aria-label', L.cc);
     ui.tx.setAttribute('aria-expanded', prefs.transcript ? 'true' : 'false'); ui.tx.setAttribute('aria-label', prefs.transcript ? L.txOpen : L.txShow); ui.tx.innerHTML = icon(prefs.transcript ? 'down' : 'up'); ui.drawer.hidden = !prefs.transcript; ui.drawer.setAttribute('aria-label', L.tx);
     ui.prev.setAttribute('aria-label', L.prev); ui.prev.title = L.prev; ui.next.setAttribute('aria-label', L.next); ui.next.title = L.next; ui.prev.disabled = n <= 1; ui.next.disabled = !n || n >= TOTAL;
-    var key = retry ? 'errorN' : st + 'N', sec = e ? (lang() === 'ar' ? (e.sectionAr || e.section || '') : (e.section || '')) : '';
+    var key = retry ? 'errorN' : S.reason === 'no-clip' ? 'noclipN' : (S.reason === 'video' && st === 'paused') ? 'videoN' : st + 'N', sec = e ? (lang() === 'ar' ? (e.sectionAr || e.section || '') : (e.section || '')) : '';
     var title = n ? fill(L[key], n) + (sec ? ' · ' + sec : '') : ''; if (ui.ttl.textContent !== title) ui.ttl.textContent = title;
     progress(); renderCaption(); publish();
   }

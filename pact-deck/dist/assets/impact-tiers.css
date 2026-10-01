@@ -240,3 +240,10 @@ html[dir=rtl] .it-news-ext svg{transform:scaleX(-1)} /* ↗ mirrors to ↖ in RT
 @media (max-width:760px){.it-exec{grid-template-columns:1fr}.it-exec-photo img{max-block-size:26vh}}
 /* v1.5.2 close-out — phone (≤760px): the tier-slide footnote wraps instead of clipping */
 @media (max-width:760px){.it-footnote,.it-footnotes--backed .it-footnote{white-space:normal!important;overflow:visible!important;text-overflow:clip!important;overflow-wrap:anywhere}}
+
+/* v1.5.5 — Mastercard Foundation official brand mark (stacked, the only configuration). Free space = x on every side, x = the combined height of the
+   words "mastercard foundation" = 0.305 × mark height (Brand Guidelines, June 2023, p. 4 & 8); the mark is sized to (frame − border) ÷ 1.62 so the
+   white frame leaves ≥ x above, below and beside it. Minimum screen size 24 px — the smallest rendering here is 32 px. Never stretched (inline-size auto). */
+.it-wall .it-wall-row--funders .it-tile .pmark--mastercard{padding:0;display:flex;align-items:center;justify-content:center}
+.it-wall .it-wall-row--funders .it-tile .pmark--mastercard img{max-inline-size:none;max-block-size:none;inline-size:auto;block-size:calc((clamp(56px,8.6vh,96px) - 2px) / 1.62);object-fit:contain;filter:none}
+@media (max-height:820px){.it-wall .it-wall-row--funders .it-tile .pmark--mastercard{padding:0}.it-wall .it-wall-row--funders .it-tile .pmark--mastercard img{block-size:calc((54px - 2px) / 1.62)}}

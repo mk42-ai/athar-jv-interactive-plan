@@ -37,9 +37,10 @@
    and exposes the deep links #/27/new-1 … #/27/new-6. */
 (function () {
   'use strict';
-  var VERSION = 'v1.5.4';
+  var VERSION = 'v1.5.5';
   var EXT = (window.AtharOS && window.AtharOS.slides) || []; /* v1.4.0: slides registered by dist/js/athar-os.js (loaded first) */
-  var REAL_TOTAL = 28, ANCHOR = 27, N_IT = 6, N = N_IT + EXT.length, TOTAL = REAL_TOTAL + N;
+  var REAL_TOTAL = 28, ANCHOR = 27, N_IT = 6, N = N_IT + EXT.length, CLOSING_N = REAL_TOTAL + N, XT = window.AtharExecTeam || null, TOTAL = CLOSING_N + (XT ? XT.count : 0); /* v1.5.5: + section 09 Executive Team (dist/js/exec-team.js, slides 40–46) after the closing slide */
+  function execX() { try { return XT && XT.active() ? XT.index() : 0; } catch (e) { return 0; } }
   var SRC = 'Athar — Agentic AI for All: Three Impact Tiers for Foundation Funding (27 Sep 2026)';
   var initialHash = window.location.hash;
 
@@ -56,7 +57,12 @@
     gates:       { src: '/partners/review/gates-foundation__gf-primary-weathered-slate-logo_4by1-ratio-fixed.svg', w: 800, h: 200, name: 'Gates Foundation', nameAr: 'مؤسسة غيتس' },
     rockefeller: { src: '/partners/review/rockefeller-foundation__RF_logo_screen_green.png', w: 1600, h: 591, name: 'The Rockefeller Foundation', nameAr: 'مؤسسة روكفلر' },
     mcgovern:    { src: '/partners/review/mcgovern-foundation__mf-logo.svg', w: 267, h: 69, name: 'Patrick J. McGovern Foundation', nameAr: 'مؤسسة باتريك ج. ماكغفرن' },
-    mastercard:  { name: 'Mastercard Foundation', nameAr: 'مؤسسة ماستركارد' } /* v1.4.7: Full-Colour PNG unrecoverable and no standalone official file obtainable (mastercardfdn.org serves only an inline 20-year-anniversary lockup; Wikimedia 404) — rendered as the typographic tile, never redrawn */
+    /* v1.5.5: official Mastercard Foundation brand mark — vector master artwork from the Foundation's own "Mastercard Foundation Logos" package
+       (https://cdn.buttercms.com/MPuSQak9T7WMs107u9iV, linked from https://mastercardfdn.org/en/mastercard-foundation-brand-guidelines/,
+       retrieved 2026-10-01): "Full Colour 2.pdf" (Pantone Black wordmark, light grounds) and "Full Colour B2.pdf" (reversed white wordmark, dark
+       grounds), converted 1:1 PDF→SVG (vector paths only, colours #E51B24 / #F26522 / #F99F1C unchanged, nothing redrawn or retyped).
+       Free space ≥ x on every side (x = height of the words "mastercard foundation", Brand Guidelines June 2023 p. 4 & 8) — see impact-tiers.css. */
+    mastercard:  { src: '/partners/review/mastercard-foundation__full-colour-positive.svg', srcDark: '/partners/review/mastercard-foundation__full-colour-reverse.svg', w: 381, h: 361, name: 'Mastercard Foundation', nameAr: 'مؤسسة ماستركارد', freeSpace: 'x' }
   };
   var WALL = [
     { group: 'actors', mark: 'oda' }, { group: 'actors', mark: 'uae' }, { group: 'actors', mark: 'undp' }, { group: 'actors', mark: 'unicef' },
@@ -369,7 +375,7 @@
           if (m.src) {
             if (m.dark) tile.classList.add('it-tile--dark');
             var sp = el('span', 'pmark pmark--img pmark--' + w.mark + ' pmark--md');
-            var mi = el('img'); mi.src = m.src; if (m.w) { mi.width = m.w; mi.height = m.h; } mi.loading = 'eager'; mi.decoding = 'async'; mi.setAttribute('data-review', 'internal-only'); mi.setAttribute('data-no-mirror', 'true');
+            var mi = el('img'); mi.src = (m.dark && m.srcDark) ? m.srcDark : m.src; if (m.srcDark) mi.setAttribute('data-src-dark', m.srcDark); /* v1.5.5: reversed artwork on dark grounds */ if (m.w) { mi.width = m.w; mi.height = m.h; } mi.loading = 'eager'; mi.decoding = 'async'; mi.setAttribute('data-review', 'internal-only'); mi.setAttribute('data-no-mirror', 'true');
             mi.alt = isAr ? m.nameAr + ' — علامة معروضة للمراجعة الداخلية فقط' : m.name + ' — mark shown for internal review only, not authorised for external use';
             sp.appendChild(mi); tile.appendChild(sp);
             tile.appendChild(el('figcaption', 'it-tile-cap', isAr ? m.nameAr : m.name));
@@ -491,10 +497,10 @@
   }
   function syncOverview() {
     var grid = document.querySelector('.overview .overview-grid'); if (!grid) return;
-    var cards = grid.querySelectorAll('button.ov-card:not([data-virtual])'); if (cards.length !== REAL_TOTAL) return;
+    var cards = grid.querySelectorAll('button.ov-card:not([data-virtual]):not([data-exec])'); if (cards.length !== REAL_TOTAL) return;
     var closingCard = cards[REAL_TOTAL - 1], l = lang();
-    var cn = closingCard.querySelector('.ov-n'); if (cn && cn.textContent !== String(TOTAL)) cn.textContent = String(TOTAL);
-    var mine = grid.querySelectorAll('button.ov-card[data-virtual]');
+    var cn = closingCard.querySelector('.ov-n'); if (cn && cn.textContent !== String(CLOSING_N)) cn.textContent = String(CLOSING_N);
+    var mine = grid.querySelectorAll('button.ov-card[data-virtual]:not([data-exec])');
     if (mine.length !== N || (mine[0] && mine[0].getAttribute('data-lang') !== l)) {
       Array.prototype.forEach.call(mine, function (b) { b.remove(); });
       var titles = L[l].slides.map(function (s) { return s.title; }).concat(EXT.map(function (e) { return e.title[l]; }));
@@ -509,8 +515,8 @@
         grid.insertBefore(b, closingCard);
       });
     }
-    Array.prototype.forEach.call(grid.querySelectorAll('button.ov-card[data-virtual]'), function (b) { b.classList.toggle('on', parseInt(b.getAttribute('data-virtual'), 10) === v); });
-    if (v) Array.prototype.forEach.call(grid.querySelectorAll('button.ov-card:not([data-virtual])'), function (b) { b.classList.remove('on'); });
+    Array.prototype.forEach.call(grid.querySelectorAll('button.ov-card[data-virtual]:not([data-exec])'), function (b) { b.classList.toggle('on', parseInt(b.getAttribute('data-virtual'), 10) === v); });
+    if (v) Array.prototype.forEach.call(grid.querySelectorAll('button.ov-card:not([data-virtual]):not([data-exec])'), function (b) { b.classList.remove('on'); });
   }
   function relabel() {
     var dict = L[lang()];
@@ -547,7 +553,8 @@
   function exit() { if (v) show(0); }
   function updateCounter() {
     var c = document.querySelector('footer.pagefooter .counter'); if (!c) return;
-    var r = realN(), n = v ? ANCHOR + v : (r >= REAL_TOTAL ? TOTAL : r);
+    if (execX()) { var dv0 = document.querySelector('footer.pagefooter .deck-version'); if (dv0 && dv0.textContent !== VERSION) dv0.textContent = VERSION; return; } /* v1.5.5: exec-team.js owns the counter on slides 40–46 */
+    var r = realN(), n = v ? ANCHOR + v : (r >= REAL_TOTAL ? CLOSING_N : r);
     if (!n) return;
     var txt = L[lang()].counter(n, TOTAL);
     if (c.textContent !== txt) c.textContent = txt;
@@ -609,5 +616,5 @@
   }
   if (m0) { var tries = 0, iv = window.setInterval(function () { tries++; tryDeep(); if (!pendingDeep || tries > 2400) window.clearInterval(iv); }, 25); }
   schedule();
-  window.AtharImpactTiers = { version: VERSION, total: TOTAL, extCount: EXT.length, current: function () { return v ? ANCHOR + v : realN() === REAL_TOTAL ? TOTAL : realN(); }, go: enter, exit: exit, virtualIndex: function () { return v; } };
+  window.AtharImpactTiers = { version: VERSION, total: TOTAL, extCount: EXT.length, current: function () { var xx = execX(); if (xx) return CLOSING_N + xx; return v ? ANCHOR + v : realN() === REAL_TOTAL ? CLOSING_N : realN(); }, closing: CLOSING_N, go: enter, exit: exit, virtualIndex: function () { return v; } };
 })();

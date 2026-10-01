@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="en" dir="ltr" data-deck-version="1.5.4">
+<html lang="en" dir="ltr" data-deck-version="1.5.5">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
@@ -11,8 +11,8 @@
     <title>Athar Open Agentic Pact — Build once. Run everywhere. Lift everyone.</title>
     <!-- favicon set: symbol-only crops of the official Athar mark (brand/logo-manifest.json); the 16 px icon is faint by construction -->
     <script src="/js/img-guard.js"></script>
-    <script>/* v1.5.4 deep-link alias: #slide-07 (and #slide-7) → the deck's #/7 scheme; runs before the router reads the hash and first on every hashchange */
-(function(){function f(){var m=/^#slide-0*(\d+)$/i.exec(location.hash||'');if(!m)return;var n=parseInt(m[1],10);if(!(n>=1&&n<=39))return;var h=n<=27?'#/'+n:(n===39?'#/28':'#/27/new-'+(n-27));try{history.replaceState(null,'',h);}catch(e){location.hash=h;}}f();window.addEventListener('hashchange',f);})();
+    <script>/* v1.5.4 deep-link alias: #slide-07 (and #slide-7) → the deck's #/7 scheme (v1.5.5: #slide-40 … #slide-46 → #/28/exec-1 … exec-7); runs before the router reads the hash and first on every hashchange */
+(function(){function f(){var m=/^#slide-0*(\d+)$/i.exec(location.hash||'');if(!m)return;var n=parseInt(m[1],10);if(!(n>=1&&n<=46))return;var h=n<=27?'#/'+n:(n===39?'#/28':(n>39?'#/28/exec-'+(n-39):'#/27/new-'+(n-27)));try{history.replaceState(null,'',h);}catch(e){location.hash=h;}}f();window.addEventListener('hashchange',f);})();
     </script>
     <link rel="icon" href="/brand/favicon.ico" sizes="16x16 32x32 48x48 64x64" />
     <link rel="icon" type="image/png" sizes="32x32" href="/brand/athar-favicon-32.png" />
@@ -51,6 +51,7 @@
     <link rel="stylesheet" href="/assets/tour/real-screens.css">
     <script defer src="/js/tour/real-screens.js"></script>
     <link rel="stylesheet" href="/assets/impact-tiers.css">
+    <script defer src="/js/exec-team.js" data-v155="exec-team"></script><!-- v1.5.5: section 09 Executive Team (slides 40–46); loads before impact-tiers.js so the deck total is 46 -->
     <script defer src="/js/impact-tiers.js"></script>
     <!-- v1.3.3 2026-09-27: slide 17 "Universal API licences managed by Athar" — seat-tier pricing removed from the bundle copy; API-licence tile grid rendered by a runtime module (10 official/typographic marks, provenance in dist/assets/api/credits.json) -->
     <link rel="stylesheet" href="/assets/api-licences.css">
@@ -60,6 +61,7 @@
     <link rel="stylesheet" href="/assets/cobrand.css">
     <link rel="stylesheet" href="/assets/narration.css">
     <link rel="stylesheet" href="/assets/release-v153.css">
+    <link rel="stylesheet" href="/assets/exec-team.css" data-v155="exec-team">
     <script defer src="/js/intro-gate.js"></script>
     <script defer src="/js/cobrand.js" data-v152="cobrand"></script>
     <script defer src="/js/narration.js" data-v152="narration"></script>
@@ -99,7 +101,7 @@
       var lastLang=null;
       function inject(){var l=lang();var relabel=lastLang!==null&&lastLang!==l;lastLang=l;
         document.querySelectorAll('section.slide').forEach(function(sec){if(!STRIP_SLIDES[sec.id])return;var ex=sec.querySelector(':scope>.athar-partner-strip');if(ex&&relabel){ex.remove();ex=null;}if(!ex){sec.classList.add('has-partner-strip');sec.appendChild(strip());}});fitAll();
-        var f=document.querySelector('footer.pagefooter');if(f){var ex=f.querySelector(':scope>.aps-footer');if(ex&&relabel){ex.remove();ex=null;}if(!ex){var r=f.querySelector(':scope>.footer-right');f.insertBefore(footerStrip(),r||null);}var fr=f.querySelector(':scope>.footer-right');if(fr&&!fr.querySelector('.deck-version')){var v=document.createElement('span');v.className='deck-version';v.setAttribute('data-testid','deck-version');v.textContent='v1.5.4';fr.insertBefore(v,fr.firstChild);}}}
+        var f=document.querySelector('footer.pagefooter');if(f){var ex=f.querySelector(':scope>.aps-footer');if(ex&&relabel){ex.remove();ex=null;}if(!ex){var r=f.querySelector(':scope>.footer-right');f.insertBefore(footerStrip(),r||null);}var fr=f.querySelector(':scope>.footer-right');if(fr&&!fr.querySelector('.deck-version')){var v=document.createElement('span');v.className='deck-version';v.setAttribute('data-testid','deck-version');v.textContent='v1.5.5';fr.insertBefore(v,fr.firstChild);}}}
       var root=document.getElementById('root');var pending=false;
       function schedule(){if(pending)return;pending=true;window.requestAnimationFrame(function(){pending=false;try{inject();}catch(e){}});}
       new MutationObserver(schedule).observe(root,{childList:true,subtree:true});

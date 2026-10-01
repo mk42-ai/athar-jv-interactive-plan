@@ -154,3 +154,8 @@ nav.rail ol a{min-block-size:44px;display:flex;align-items:center;box-sizing:bor
   #s-aos-tour [data-testid=tour-lang],.avp .avp-bar .avp-btn,.aos-tab-hero.avp .avp-bar .avp-btn{min-inline-size:47px}
   #s-aos-nations .aos-evidence-link{display:flex;align-items:center;min-block-size:47px;padding-block:2px;box-sizing:border-box}
 }
+
+/* v1.5.5 — slide 38 montage: three step-8 concept renders, each a full 3:2 frame (1952×427 composite), shown whole (contain, intrinsic ratio, never
+   cropped); CONCEPT RENDER caption below; ≥ 32 px clear gap above the 'Join the pact' row. */
+#s-aos-nations .aos-nation-banner picture{display:block;inline-size:fit-content;max-inline-size:100%}
+#s-aos-nations .aos-nation-banner img{aspect-ratio:1952/427;object-fit:contain;block-size:auto;inline-size:auto;max-inline-size:100%;max-block-size:clamp(60px,9vh,96px)}

@@ -8,9 +8,9 @@ import path from 'node:path';
 import { fileURLToPath } from 'node:url';
 export const HERE = path.dirname(fileURLToPath(import.meta.url));
 export const DIST = path.resolve(HERE, '../../dist');
-export const TOTAL = 39;
+export const TOTAL = Number(process.env.DECK_TOTAL || 39);
 export const CHROMIUM = process.env.CHROMIUM_BIN || '/usr/bin/chromium';
-export const hashFor = (n) => (n <= 27 ? '#/' + n : n === TOTAL ? '#/28' : '#/27/new-' + (n - 27));
+export const hashFor = (n) => (n <= 27 ? '#/' + n : n <= 38 ? '#/27/new-' + (n - 27) : n === 39 ? '#/28' : '#/28/exec-' + (n - 39));
 const clipMap = JSON.parse(fs.readFileSync(path.join(DIST, 'narration/clip-map.json'), 'utf8'));
 export const FILE2CLIP = Object.fromEntries(clipMap.clips.map((c) => [c.file.split('/').pop(), c.clipId]));
 // v1.5.4 per-slide clips (if present) are added so the logger can name them
@@ -68,8 +68,8 @@ export async function launch(extraArgs = []) {
   // default Chromium autoplay policy is stated explicitly so the "first load, no gesture" scenario is deterministic
   return chromium.launch({ executablePath: CHROMIUM, args: ['--no-sandbox', '--disable-dev-shm-usage', '--autoplay-policy=document-user-activation-required', ...extraArgs] });
 }
-export async function newPage(browser, { viewport = { width: 1728, height: 872 }, mobile = false, rate = 1, storage = null, lang = 'en', intro = false } = {}) {
-  const ctx = await browser.newContext({ viewport, isMobile: mobile, hasTouch: mobile, deviceScaleFactor: 1, locale: 'en-US' });
+export async function newPage(browser, { viewport = { width: 1728, height: 872 }, mobile = false, rate = 1, storage = null, lang = 'en', intro = false, colorScheme = 'light' } = {}) {
+  const ctx = await browser.newContext({ viewport, isMobile: mobile, hasTouch: mobile, deviceScaleFactor: 1, locale: 'en-US', colorScheme });
   await ctx.addInitScript(instrument(FILE2CLIP, rate));
   await ctx.addInitScript(({ storage, lang, intro }) => { try { if (!intro) sessionStorage.setItem('athar-intro-v1.4.2', 'done'); } catch (e) {} try { localStorage.setItem('athar-pact-lang', lang); if (storage) for (const [k, v] of Object.entries(storage)) localStorage.setItem(k, v); } catch (e) {} }, { storage, lang, intro });
   const page = await ctx.newPage();
