@@ -482,8 +482,8 @@ unexpected changes and 0 broken images.
   "Fahad" is used. His letter uses published bio facts only and a monogram roundel "FA", since no officially sourced portrait was provided.
 - Both officials' letters carry the tag "for clearance by office" (AR «للاعتماد من المكتب»).
 - Kayaan's former roles at Norton Rose Fulbright Dubai and DWF are user-confirmed.
-- Hidden feature-flagged cards "Ary" (H.E. Saif Sultan Al Aryani, Advisor at the Presidential Court) and "Lorenzo" are behind
-  `FLAGS.pendingCards = false`: not rendered, not counted, not narrated.
+- A hidden feature-flagged card ("Lorenzo") is behind `FLAGS.pendingCards = false`: not rendered, not counted, not narrated. (A second pending card, for a
+  different Presidential Court official, was drafted here; it was removed in v1.5.6.)
 
 **(D) Film, narration and guide**
 - The film is the bundled 720p encode of the latest master (sha256 `c7c20005…ab2a`), with EN/AR WebVTT captions and in/out points

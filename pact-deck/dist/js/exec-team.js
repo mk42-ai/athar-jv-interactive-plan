@@ -6,8 +6,9 @@
    paragraphs · sign-off, closed by a SHORT Legacy Gold hairline (never full width). No script fonts. The Arabic deck is a full RTL mirror.
    Portraits only where officially sourced (Dr Thani: Ministry of Foreign Trade portrait, trade.gov.ae); everyone else has a monogram
    roundel. The officials' letters quote published statements only and carry the tag "for clearance by office".
-   Hidden, feature-flagged cards (FLAGS.pendingCards = false → not rendered, not counted, not narrated): "Ary" (H.E. Saif Sultan Al Aryani,
-   Advisor at the Presidential Court — a different person from H.E. Fahad Al Ameri) and Lorenzo (surname and role unconfirmed).
+   Hidden, feature-flagged card (FLAGS.pendingCards = false → not rendered, not counted, not narrated): Lorenzo (surname and role unconfirmed).
+   v1.5.6: the other pending card (a different Presidential Court official, not Fahad) was removed outright; H.E. Fahad Mohamed Al Ameri's letter is
+   published as Letter 2 (not behind the flag). Name LABELS carry no honorific; the letter bodies keep H.E. / معالي / سعادة.
    Navigation mirrors dist/js/impact-tiers.js; this file loads BEFORE impact-tiers.js and narration.js so the deck total is 39 + 5 = 44. */
 (function () {
   'use strict';
@@ -30,7 +31,6 @@
     n42: 'https://www.42network.org/blog/whos-behind-42-muhammed-khaled-founder-ceo-of-airev/',
     tn: 'https://www.thenationalnews.com/future/technology/2024/09/30/core42-airev-generative-ai/',
     gpu: 'https://thegpu.ai/p/issue-42-building-real-world-ai-deployment-layer-airev',
-    gnAry: 'https://gulfnews.com/uae/government/uae-president-appoints-saif-al-aryani-as-advisor-at-presidential-court-1.1673240213399',
     dwf: 'https://dwfgroup.com/en/news-and-insights/press-releases/2018/6/dwf-middle-east-appoints-head-of-corporate-and-defence-and-security',
     sra: 'https://www.sra.org.uk/consumers/register/person/?sraNumber=430771'
   };
@@ -50,15 +50,23 @@
                ar: '«بنت دولة الإمارات واحداً من أكثر الاقتصادات التجارية حيوية في العالم، وآفاقنا المقبلة هي تصدير ليس السلع والخدمات فحسب، بل التكنولوجيا المطوّرة محلياً والملكية الفكرية التي تقف وراءها…»',
                cite: { en: 'Published statement · Gulf News, 24 June 2026', ar: 'تصريح منشور · غلف نيوز، 24 يونيو 2026 (ترجمة غير رسمية)' } },
       src: [['Ministry of Foreign Trade', S.mof], ['GCC Business Watch — new ministry', S.moft], ['Gulf News, 24 Jun 2026', S.gnChair], ['LinkedIn post', S.li], ['Gulf News, 13 Aug 2026', S.gnQc]] },
-    { id: 'al-ameri', mono: ['FA', 'ف ع'], official: true,
+    { id: 'al-ameri', mono: ['FA', 'ف ع'], official: true, /* published letter 2 — no portrait exists, so the monogram roundel is used (no generated face) */
       name: { en: 'Fahad Mohamed Al Ameri', ar: 'فهد محمد العامري' }, /* v1.5.6: label without honorific; the letter body keeps H.E. / سعادة */
       role: { en: 'Executive Director, Development and Humanitarian Affairs, UAE Presidential Court', ar: 'المدير التنفيذي، شؤون التنمية والعمل الإنساني، ديوان الرئاسة في دولة الإمارات' },
       body: {
         en: ['H.E. Fahad Mohamed Al Ameri is Executive Director of Development and Humanitarian Affairs at the UAE Presidential Court.',
-             'He played a defining role in creating Erth Zayed Philanthropies, the UAE International Aid Agency and the International Humanitarian and Philanthropic Council (IHPC), where he serves as General Secretary.'],
+             'He helped create Erth Zayed Philanthropies, the UAE International Aid Agency and the International Humanitarian and Philanthropic Council (IHPC). He is General Secretary of the IHPC and Managing Director of the Erth Zayed Fund.'],
         ar: ['سعادة فهد محمد العامري هو المدير التنفيذي للشؤون التنموية والإنسانية في ديوان الرئاسة.',
-             'أدّى دوراً محورياً في تأسيس مؤسسة إرث زايد الإنسانية ووكالة الإمارات للمساعدات الدولية ومجلس الشؤون الإنسانية والدولية، ويشغل منصب مقرِّر المجلس.'] },
-      src: [['UAE National Experts Program (EN)', S.nepEn], ['برنامج خبراء الإمارات (AR)', S.nepAr]] },
+             'أسهم في تأسيس مؤسسة إرث زايد الإنسانية ووكالة الإمارات للمساعدات الدولية ومجلس الشؤون الإنسانية والدولية. وهو مقرِّر المجلس ومدير صندوق إرث زايد الإنساني.'] },
+      facts: {
+        en: [['Boards', 'Zayed Charitable and Humanitarian Foundation · Clean Rivers · Zoud Foundation for Financial Literacy'],
+             ['Career', 'Abu Dhabi Executive Council 2011–14 · Abu Dhabi Executive Office 2014–18 · Department of Transport 2018–20 · President’s Office 2020–22 · Director of Strategic Affairs from 2022'],
+             ['Education', 'MSE Mechanical Engineering and BS Bioengineering (summa cum laude), University of Pennsylvania · CFA charterholder · Emirates Experts Program graduate (NEP 2.0)']],
+        ar: [['المجالس', 'مجلس أمناء مؤسسة زايد بن سلطان آل نهيان للأعمال الخيرية والإنسانية · مجلس إدارة مؤسسة الأنهار النظيفة (Clean Rivers) · مجلس إدارة مؤسسة زود للثقافة المالية'],
+             ['المسيرة', 'المجلس التنفيذي لإمارة أبوظبي 2011–2014 · المكتب التنفيذي لإمارة أبوظبي 2014–2018 · دائرة النقل 2018–2020 · مكتب رئيس الدولة 2020–2022 · مدير الشؤون الاستراتيجية منذ 2022'],
+             ['التعليم', 'ماجستير العلوم في الهندسة الميكانيكية وبكالوريوس العلوم في الهندسة الحيوية (بتقدير امتياز مع مرتبة الشرف الأولى) من جامعة بنسلفانيا · محلل مالي معتمد (CFA) · خريج برنامج خبراء الإمارات (النسخة الثانية)']] },
+      src: [['UAE National Experts Program (EN)', S.nepEn], ['برنامج خبراء الإمارات (AR)', S.nepAr],
+            [{ en: 'Career timeline and programme status as supplied by Athar, 2 Oct 2026', ar: 'الجدول الزمني للمسيرة وحالة البرنامج كما قدّمها فريق أثر، 2 أكتوبر 2026' }, null]] },
     { id: 'khalid', mono: ['MK', 'م خ'], film: true,
       name: { en: 'Muhammed Khalid', ar: 'محمد خالد' },
       role: { en: 'Founder & CEO, AIREV', ar: 'المؤسس والرئيس التنفيذي لشركة AIREV' },
@@ -100,8 +108,6 @@
             [{ en: 'Former roles confirmed by Athar, 1 Oct 2026', ar: 'الأدوار السابقة مؤكَّدة من فريق أثر، 1 أكتوبر 2026' }, null]] }
   ];
   var HIDDEN = [ /* feature-flagged OFF (FLAGS.pendingCards) — never rendered, counted or narrated while off */
-    { id: 'al-aryani', mono: ['SA', 'س ع'], official: true, name: { en: 'H.E. Saif Sultan Al Aryani', ar: 'معالي سيف سلطان العرياني' }, role: { en: 'Advisor, UAE Presidential Court (rank of Minister)', ar: 'مستشار في ديوان الرئاسة بدرجة وزير' },
-      body: { en: ['Appointed Advisor at the Presidential Court, with the rank of Minister, by Federal Decree on 9 January 2023.'], ar: ['عُيّن مستشاراً في ديوان الرئاسة بدرجة وزير بمرسوم اتحادي في 9 يناير 2023.'] }, src: [['Gulf News (WAM), 9 Jan 2023', S.gnAry]] },
     { id: 'lorenzo', mono: ['L', 'ل'], name: { en: 'Lorenzo', ar: 'لورينزو' }, role: { en: 'Surname and role awaiting confirmation', ar: 'بانتظار تأكيد اسم العائلة والمنصب' }, body: { en: [], ar: [] }, src: [] }
   ];
   if (FLAGS.pendingCards) P = P.concat(HIDDEN);

@@ -113,16 +113,50 @@ test.describe(`guide narration ⇔ visible slide — all ${TOTAL} slides`, () =>
     expect(page.__errors).toEqual([]);
   });
 
-  test('hidden cards (Ary, Lorenzo) are not rendered, not counted and not narrated', async ({ page }) => {
+  test('hidden card (Lorenzo) is not rendered, not counted and not narrated', async ({ page }) => {
     test.setTimeout(60000);
     await setup(page); await open(page, 44);
     const r = await page.evaluate(() => ({ ids: [...document.querySelectorAll('#root section.ex-slide')].map((x) => x.id), count: window.AtharExecTeam.count, total: window.AtharExecTeam.total,
       counter: (document.querySelector('footer.pagefooter .counter') || {}).textContent, text: document.body.innerText }));
-    const hiddenInTable = TABLE.slides.filter((x) => /aryani|lorenzo/.test(x.slideId)).length;
-    write('hidden-cards', [{ ...r, text: undefined, hiddenInTable, mentionsHidden: /Lorenzo|Al Aryani|العرياني|لورينزو/.test(r.text) }]);
+    const hiddenInTable = TABLE.slides.filter((x) => /lorenzo/.test(x.slideId)).length;
+    write('hidden-cards', [{ ...r, text: undefined, hiddenInTable, mentionsHidden: /Lorenzo|لورينزو/.test(r.text) }]);
     expect(r.ids).toEqual(['s-exec-intro', 's-exec-al-zeyoudi', 's-exec-al-ameri', 's-exec-khalid', 's-exec-unwalla']);
     expect(r.count).toBe(5); expect(r.total).toBe(44); expect(TOTAL).toBe(44); expect(hiddenInTable).toBe(0);
-    expect(/Lorenzo|Al Aryani|العرياني|لورينزو/.test(r.text)).toBe(false);
+    expect(/Lorenzo|لورينزو/.test(r.text)).toBe(false);
     expect(r.counter).toContain('44');
+  });
+
+  // v1.5.6 — name labels without honorific, completed Fahad / Kayaan cards (EN + AR), trimmed 1080p film
+  test('v1.5.6: name labels carry no honorific, bodies keep it; Fahad and Kayaan cards are complete in EN and AR; the film is the trimmed 1080p', async ({ page }, info) => {
+    test.setTimeout(90000);
+    await setup(page); await open(page, 44);
+    const r = await page.evaluate(async () => {
+      const sec = (id) => document.getElementById(id);
+      const txt = (sel) => [...document.querySelectorAll(sel)].map((e) => e.textContent.trim());
+      const facts = (id, lg) => [...sec(id).querySelectorAll('.ex-card-col--' + lg + ' .ex-fact')].map((f) => f.textContent.trim());
+      const body = (id, lg) => [...sec(id).querySelectorAll('.ex-col--' + lg + ' .ex-p')].map((p) => p.textContent).join(' ');
+      const v = sec('s-exec-khalid').querySelector('video');
+      await new Promise((res) => { if (v.readyState >= 1) res(); else { v.addEventListener('loadedmetadata', res, { once: true }); try { v.load(); } catch (e) {} } });
+      return { names: txt('#root section.ex-slide .ex-name'), index: txt('#root section.ex-slide .ex-index-name'), thaniEn: body('s-exec-al-zeyoudi', 'en'), thaniAr: body('s-exec-al-zeyoudi', 'ar'),
+        fahadEn: body('s-exec-al-ameri', 'en'), fahadAr: body('s-exec-al-ameri', 'ar'), fahadFactsEn: facts('s-exec-al-ameri', 'en'), fahadFactsAr: facts('s-exec-al-ameri', 'ar'),
+        kayaanEn: body('s-exec-unwalla', 'en'), kayaanAr: body('s-exec-unwalla', 'ar'), kayaanFactsEn: facts('s-exec-unwalla', 'en'), kayaanFactsAr: facts('s-exec-unwalla', 'ar'),
+        film: { src: v.querySelector('source').getAttribute('src'), out: v.dataset.out, duration: v.duration, w: v.videoWidth, h: v.videoHeight } };
+    });
+    const HON = /H\.E\.|سعادة|معالي/;
+    write('v156-cards-' + info.project.name, [{ ...r, kayaanEn: undefined, kayaanAr: undefined, thaniEn: undefined, thaniAr: undefined, fahadEn: undefined, fahadAr: undefined }]);
+    expect(r.names).toHaveLength(8); expect(r.names.filter((n) => HON.test(n))).toEqual([]);
+    expect(r.index).toHaveLength(8); expect(r.index.filter((n) => HON.test(n))).toEqual([]);
+    expect(r.thaniEn).toContain('H.E. Dr Thani'); expect(r.thaniAr).toContain('معالي'); expect(r.fahadEn).toContain('H.E. Fahad'); expect(r.fahadAr).toContain('سعادة');
+    expect(r.fahadFactsEn).toHaveLength(3); expect(r.fahadFactsAr).toHaveLength(3);
+    for (const k of ['University of Pennsylvania', 'CFA', 'Zoud', 'Abu Dhabi Executive Council 2011–14']) expect(r.fahadFactsEn.join(' | ')).toContain(k);
+    for (const k of ['جامعة بنسلفانيا', 'زود', 'المجلس التنفيذي لإمارة أبوظبي']) expect(r.fahadFactsAr.join(' | ')).toContain(k);
+    expect(r.fahadEn).toContain('Erth Zayed Fund'); expect(r.fahadAr).toContain('صندوق إرث زايد');
+    expect(r.kayaanFactsEn).toHaveLength(7); expect(r.kayaanFactsAr).toHaveLength(7);
+    for (const k of ['Warwick', 'Bombay', 'BPP', 'Gujarati', 'Hindi', 'ProtectedBy.AI', 'SRA no. 430771', 'Defense']) expect(r.kayaanFactsEn.join(' | ')).toContain(k);
+    for (const k of ['وارويك', 'الغوجاراتية', 'ProtectedBy.AI', '430771']) expect(r.kayaanFactsAr.join(' | ')).toContain(k);
+    expect(r.kayaanFactsEn.find((f) => /^Admission/.test(f))).not.toMatch(/\b(2007|2010)\b/); // the admission year is disputed (2007 vs 15 Jun 2010) — shown without a year
+    expect(r.kayaanEn).toContain('Corporate Partner at Norton Rose Fulbright'); expect(r.kayaanEn).toContain('DWF'); expect(r.kayaanAr).toContain('Norton Rose Fulbright');
+    expect(r.film.src).toContain('muhammed-khalid-1080p.mp4#t=0,37.3'); expect(r.film.out).toBe('37.3');
+    expect(r.film.w).toBe(1920); expect(r.film.h).toBe(1080); expect(r.film.duration).toBeGreaterThan(37.3); expect(r.film.duration).toBeLessThan(37.4); // 40.000 s master minus the closing end card
   });
 });
