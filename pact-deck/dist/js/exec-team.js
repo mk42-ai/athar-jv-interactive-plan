@@ -37,7 +37,7 @@
   var P = [
     { id: 'al-zeyoudi', mono: ['TZ', 'ث ز'], official: true,
       portrait: { src: '/assets/exec/portraits/thani-al-zeyoudi-mof.jpg', w: 640, h: 934, credit: { en: 'Official portrait · UAE Ministry of Foreign Trade (trade.gov.ae)', ar: 'صورة رسمية · وزارة التجارة الخارجية (trade.gov.ae)' } },
-      name: { en: 'H.E. Dr Thani bin Ahmed Al Zeyoudi', ar: 'معالي الدكتور ثاني بن أحمد الزيودي' },
+      name: { en: 'Dr Thani bin Ahmed Al Zeyoudi', ar: 'الدكتور ثاني بن أحمد الزيودي' }, /* v1.5.6: name LABELS carry no honorific (no H.E. / معالي); the letter body keeps it */
       role: { en: 'Chairman, AIREV · UAE Minister of Foreign Trade', ar: 'رئيس مجلس إدارة AIREV · وزير التجارة الخارجية في دولة الإمارات' },
       body: {
         en: ['H.E. Dr Thani bin Ahmed Al Zeyoudi has been the UAE’s Minister of Foreign Trade since the Ministry of Foreign Trade was formed in June 2025.',
@@ -49,7 +49,7 @@
                cite: { en: 'Published statement · Gulf News, 24 June 2026', ar: 'تصريح منشور · غلف نيوز، 24 يونيو 2026 (ترجمة غير رسمية)' } },
       src: [['Ministry of Foreign Trade', S.mof], ['GCC Business Watch — new ministry', S.moft], ['Gulf News, 24 Jun 2026', S.gnChair], ['LinkedIn post', S.li], ['Gulf News, 13 Aug 2026', S.gnQc]] },
     { id: 'al-ameri', mono: ['FA', 'ف ع'], official: true,
-      name: { en: 'H.E. Fahad Mohamed Al Ameri', ar: 'سعادة فهد محمد العامري' },
+      name: { en: 'Fahad Mohamed Al Ameri', ar: 'فهد محمد العامري' }, /* v1.5.6: label without honorific; the letter body keeps H.E. / سعادة */
       role: { en: 'Executive Director, Development and Humanitarian Affairs, UAE Presidential Court', ar: 'المدير التنفيذي، شؤون التنمية والعمل الإنساني، ديوان الرئاسة في دولة الإمارات' },
       body: {
         en: ['H.E. Fahad Mohamed Al Ameri is Executive Director of Development and Humanitarian Affairs at the UAE Presidential Court.',
