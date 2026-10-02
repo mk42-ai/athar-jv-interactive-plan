@@ -1,7 +1,7 @@
 {
- "base": "http://127.0.0.1:4405",
+ "base": "http://127.0.0.1:4455",
  "total": 44,
- "written": "2026-10-01T14:07:39.743Z",
+ "written": "2026-10-02T13:52:41.549Z",
  "rows": [
   {
    "n": 39,
@@ -14,8 +14,8 @@
    "state": "playing",
    "reason": "",
    "ccMatches": true,
-   "syncMs": 153,
-   "t": "2026-10-01T14:07:30.332Z",
+   "syncMs": 148,
+   "t": "2026-10-02T13:52:32.308Z",
    "pass": true
   },
   {
@@ -29,8 +29,8 @@
    "state": "playing",
    "reason": "",
    "ccMatches": true,
-   "syncMs": 134,
-   "t": "2026-10-01T14:07:30.560Z",
+   "syncMs": 125,
+   "t": "2026-10-02T13:52:32.522Z",
    "pass": true
   },
   {
@@ -44,8 +44,8 @@
    "state": "playing",
    "reason": "",
    "ccMatches": true,
-   "syncMs": 212,
-   "t": "2026-10-01T14:07:30.885Z",
+   "syncMs": 110,
+   "t": "2026-10-02T13:52:32.737Z",
    "pass": true
   },
   {
@@ -59,8 +59,8 @@
    "state": "playing",
    "reason": "",
    "ccMatches": true,
-   "syncMs": 114,
-   "t": "2026-10-01T14:07:31.075Z",
+   "syncMs": 115,
+   "t": "2026-10-02T13:52:32.943Z",
    "pass": true
   },
   {
@@ -74,8 +74,8 @@
    "state": "playing",
    "reason": "",
    "ccMatches": true,
-   "syncMs": 121,
-   "t": "2026-10-01T14:07:31.304Z",
+   "syncMs": 116,
+   "t": "2026-10-02T13:52:33.161Z",
    "pass": true
   },
   {
@@ -89,8 +89,8 @@
    "state": "playing",
    "reason": "",
    "ccMatches": true,
-   "syncMs": 110,
-   "t": "2026-10-01T14:07:31.491Z",
+   "syncMs": 118,
+   "t": "2026-10-02T13:52:33.352Z",
    "pass": true
   },
   {
@@ -104,8 +104,8 @@
    "state": "playing",
    "reason": "",
    "ccMatches": true,
-   "syncMs": 120,
-   "t": "2026-10-01T14:07:31.720Z",
+   "syncMs": 119,
+   "t": "2026-10-02T13:52:33.584Z",
    "pass": true
   },
   {
@@ -119,8 +119,8 @@
    "state": "playing",
    "reason": "",
    "ccMatches": true,
-   "syncMs": 117,
-   "t": "2026-10-01T14:07:31.919Z",
+   "syncMs": 115,
+   "t": "2026-10-02T13:52:33.769Z",
    "pass": true
   },
   {
@@ -134,8 +134,8 @@
    "state": "playing",
    "reason": "",
    "ccMatches": true,
-   "syncMs": 115,
-   "t": "2026-10-01T14:07:32.163Z",
+   "syncMs": 118,
+   "t": "2026-10-02T13:52:33.997Z",
    "pass": true
   },
   {
@@ -150,7 +150,7 @@
    "reason": "",
    "ccMatches": true,
    "syncMs": 114,
-   "t": "2026-10-01T14:07:32.379Z",
+   "t": "2026-10-02T13:52:34.229Z",
    "pass": true
   },
   {
@@ -164,8 +164,8 @@
    "state": "playing",
    "reason": "",
    "ccMatches": true,
-   "syncMs": 111,
-   "t": "2026-10-01T14:07:32.567Z",
+   "syncMs": 109,
+   "t": "2026-10-02T13:52:34.412Z",
    "pass": true
   },
   {
@@ -179,8 +179,8 @@
    "state": "playing",
    "reason": "",
    "ccMatches": true,
-   "syncMs": 119,
-   "t": "2026-10-01T14:07:32.782Z",
+   "syncMs": 120,
+   "t": "2026-10-02T13:52:34.635Z",
    "pass": true
   },
   {
@@ -194,8 +194,8 @@
    "state": "playing",
    "reason": "",
    "ccMatches": true,
-   "syncMs": 106,
-   "t": "2026-10-01T14:07:32.972Z",
+   "syncMs": 111,
+   "t": "2026-10-02T13:52:34.828Z",
    "pass": true
   },
   {
@@ -209,8 +209,8 @@
    "state": "playing",
    "reason": "",
    "ccMatches": true,
-   "syncMs": 113,
-   "t": "2026-10-01T14:07:33.186Z",
+   "syncMs": 114,
+   "t": "2026-10-02T13:52:35.043Z",
    "pass": true
   },
   {
@@ -224,8 +224,8 @@
    "state": "playing",
    "reason": "",
    "ccMatches": true,
-   "syncMs": 109,
-   "t": "2026-10-01T14:07:33.371Z",
+   "syncMs": 118,
+   "t": "2026-10-02T13:52:35.232Z",
    "pass": true
   },
   {
@@ -239,8 +239,8 @@
    "state": "playing",
    "reason": "",
    "ccMatches": true,
-   "syncMs": 119,
-   "t": "2026-10-01T14:07:33.587Z",
+   "syncMs": 108,
+   "t": "2026-10-02T13:52:35.442Z",
    "pass": true
   },
   {
@@ -254,8 +254,8 @@
    "state": "playing",
    "reason": "",
    "ccMatches": true,
-   "syncMs": 129,
-   "t": "2026-10-01T14:07:33.783Z",
+   "syncMs": 116,
+   "t": "2026-10-02T13:52:35.629Z",
    "pass": true
   },
   {
@@ -269,8 +269,8 @@
    "state": "playing",
    "reason": "",
    "ccMatches": true,
-   "syncMs": 108,
-   "t": "2026-10-01T14:07:34.023Z",
+   "syncMs": 111,
+   "t": "2026-10-02T13:52:35.886Z",
    "pass": true
   },
   {
@@ -284,8 +284,8 @@
    "state": "playing",
    "reason": "",
    "ccMatches": true,
-   "syncMs": 109,
-   "t": "2026-10-01T14:07:34.233Z",
+   "syncMs": 114,
+   "t": "2026-10-02T13:52:36.104Z",
    "pass": true
   },
   {
@@ -299,8 +299,8 @@
    "state": "playing",
    "reason": "",
    "ccMatches": true,
-   "syncMs": 107,
-   "t": "2026-10-01T14:07:34.469Z",
+   "syncMs": 112,
+   "t": "2026-10-02T13:52:36.349Z",
    "pass": true
   },
   {
@@ -314,8 +314,8 @@
    "state": "playing",
    "reason": "",
    "ccMatches": true,
-   "syncMs": 113,
-   "t": "2026-10-01T14:07:34.675Z",
+   "syncMs": 108,
+   "t": "2026-10-02T13:52:36.550Z",
    "pass": true
   },
   {
@@ -329,8 +329,8 @@
    "state": "playing",
    "reason": "",
    "ccMatches": true,
-   "syncMs": 110,
-   "t": "2026-10-01T14:07:34.916Z",
+   "syncMs": 111,
+   "t": "2026-10-02T13:52:36.786Z",
    "pass": true
   },
   {
@@ -344,8 +344,8 @@
    "state": "playing",
    "reason": "",
    "ccMatches": true,
-   "syncMs": 121,
-   "t": "2026-10-01T14:07:35.115Z",
+   "syncMs": 118,
+   "t": "2026-10-02T13:52:36.975Z",
    "pass": true
   },
   {
@@ -359,8 +359,8 @@
    "state": "playing",
    "reason": "",
    "ccMatches": true,
-   "syncMs": 111,
-   "t": "2026-10-01T14:07:35.358Z",
+   "syncMs": 109,
+   "t": "2026-10-02T13:52:37.219Z",
    "pass": true
   },
   {
@@ -374,8 +374,8 @@
    "state": "playing",
    "reason": "",
    "ccMatches": true,
-   "syncMs": 119,
-   "t": "2026-10-01T14:07:35.565Z",
+   "syncMs": 117,
+   "t": "2026-10-02T13:52:37.405Z",
    "pass": true
   },
   {
@@ -389,8 +389,8 @@
    "state": "playing",
    "reason": "",
    "ccMatches": true,
-   "syncMs": 110,
-   "t": "2026-10-01T14:07:35.796Z",
+   "syncMs": 145,
+   "t": "2026-10-02T13:52:37.666Z",
    "pass": true
   },
   {
@@ -404,8 +404,8 @@
    "state": "playing",
    "reason": "",
    "ccMatches": true,
-   "syncMs": 118,
-   "t": "2026-10-01T14:07:36.047Z",
+   "syncMs": 111,
+   "t": "2026-10-02T13:52:37.937Z",
    "pass": true
   },
   {
@@ -419,8 +419,8 @@
    "state": "playing",
    "reason": "",
    "ccMatches": true,
-   "syncMs": 109,
-   "t": "2026-10-01T14:07:36.237Z",
+   "syncMs": 117,
+   "t": "2026-10-02T13:52:38.135Z",
    "pass": true
   },
   {
@@ -434,8 +434,8 @@
    "state": "playing",
    "reason": "",
    "ccMatches": true,
-   "syncMs": 108,
-   "t": "2026-10-01T14:07:36.466Z",
+   "syncMs": 115,
+   "t": "2026-10-02T13:52:38.379Z",
    "pass": true
   },
   {
@@ -449,8 +449,8 @@
    "state": "playing",
    "reason": "",
    "ccMatches": true,
-   "syncMs": 115,
-   "t": "2026-10-01T14:07:36.656Z",
+   "syncMs": 118,
+   "t": "2026-10-02T13:52:38.571Z",
    "pass": true
   },
   {
@@ -464,8 +464,8 @@
    "state": "playing",
    "reason": "",
    "ccMatches": true,
-   "syncMs": 123,
-   "t": "2026-10-01T14:07:36.919Z",
+   "syncMs": 24,
+   "t": "2026-10-02T13:52:38.737Z",
    "pass": true
   },
   {
@@ -479,8 +479,8 @@
    "state": "playing",
    "reason": "",
    "ccMatches": true,
-   "syncMs": 115,
-   "t": "2026-10-01T14:07:37.109Z",
+   "syncMs": 114,
+   "t": "2026-10-02T13:52:38.924Z",
    "pass": true
   },
   {
@@ -494,8 +494,8 @@
    "state": "playing",
    "reason": "",
    "ccMatches": true,
-   "syncMs": 18,
-   "t": "2026-10-01T14:07:37.271Z",
+   "syncMs": 34,
+   "t": "2026-10-02T13:52:39.100Z",
    "pass": true
   },
   {
@@ -509,8 +509,8 @@
    "state": "playing",
    "reason": "",
    "ccMatches": true,
-   "syncMs": 113,
-   "t": "2026-10-01T14:07:37.463Z",
+   "syncMs": 116,
+   "t": "2026-10-02T13:52:39.305Z",
    "pass": true
   },
   {
@@ -524,8 +524,8 @@
    "state": "playing",
    "reason": "",
    "ccMatches": true,
-   "syncMs": 21,
-   "t": "2026-10-01T14:07:37.714Z",
+   "syncMs": 17,
+   "t": "2026-10-02T13:52:39.534Z",
    "pass": true
   },
   {
@@ -539,8 +539,8 @@
    "state": "playing",
    "reason": "",
    "ccMatches": true,
-   "syncMs": 118,
-   "t": "2026-10-01T14:07:37.967Z",
+   "syncMs": 116,
+   "t": "2026-10-02T13:52:39.794Z",
    "pass": true
   },
   {
@@ -554,8 +554,8 @@
    "state": "playing",
    "reason": "",
    "ccMatches": true,
-   "syncMs": 110,
-   "t": "2026-10-01T14:07:38.164Z",
+   "syncMs": 111,
+   "t": "2026-10-02T13:52:39.979Z",
    "pass": true
   },
   {
@@ -570,7 +570,7 @@
    "reason": "",
    "ccMatches": true,
    "syncMs": 107,
-   "t": "2026-10-01T14:07:38.398Z",
+   "t": "2026-10-02T13:52:40.215Z",
    "pass": true
   },
   {
@@ -584,8 +584,8 @@
    "state": "playing",
    "reason": "",
    "ccMatches": true,
-   "syncMs": 123,
-   "t": "2026-10-01T14:07:38.594Z",
+   "syncMs": 113,
+   "t": "2026-10-02T13:52:40.409Z",
    "pass": true
   },
   {
@@ -599,8 +599,8 @@
    "state": "playing",
    "reason": "",
    "ccMatches": true,
-   "syncMs": 118,
-   "t": "2026-10-01T14:07:38.848Z",
+   "syncMs": 119,
+   "t": "2026-10-02T13:52:40.654Z",
    "pass": true
   },
   {
@@ -615,7 +615,7 @@
    "reason": "",
    "ccMatches": true,
    "syncMs": 119,
-   "t": "2026-10-01T14:07:39.046Z",
+   "t": "2026-10-02T13:52:40.857Z",
    "pass": true
   },
   {
@@ -629,8 +629,8 @@
    "state": "playing",
    "reason": "",
    "ccMatches": true,
-   "syncMs": 111,
-   "t": "2026-10-01T14:07:39.282Z",
+   "syncMs": 118,
+   "t": "2026-10-02T13:52:41.117Z",
    "pass": true
   },
   {
@@ -644,8 +644,8 @@
    "state": "playing",
    "reason": "",
    "ccMatches": true,
-   "syncMs": 119,
-   "t": "2026-10-01T14:07:39.478Z",
+   "syncMs": 117,
+   "t": "2026-10-02T13:52:41.309Z",
    "pass": true
   },
   {
@@ -659,8 +659,8 @@
    "state": "playing",
    "reason": "",
    "ccMatches": true,
-   "syncMs": 121,
-   "t": "2026-10-01T14:07:39.736Z",
+   "syncMs": 109,
+   "t": "2026-10-02T13:52:41.541Z",
    "pass": true
   }
  ]

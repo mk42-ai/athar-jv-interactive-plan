@@ -6,7 +6,7 @@
    from the deck's slide router, reduced-motion honoured (no autoplay), data-avp-* attributes for QA. window.AtharVideoPlayer = { create, players, isOpen, log }. */
 (function () {
   'use strict';
-  var VERSION = 'v1.5.5';
+  var VERSION = 'v1.5.6';
   var UI = {
     en: { play: 'Play video', pause: 'Pause video', expand: 'Expand', close: 'Close', exitFs: 'Exit fullscreen', unmute: 'Unmute', mute: 'Mute', playing: 'Playing', paused: 'Paused', loading: 'Loading…', error: 'The film could not be played in this browser.', download: 'Download the MP4', dialog: 'Video lightbox' },
     ar: { play: 'تشغيل الفيديو', pause: 'إيقاف الفيديو مؤقتًا', expand: 'توسيع', close: 'إغلاق', exitFs: 'الخروج من ملء الشاشة', unmute: 'تشغيل الصوت', mute: 'كتم الصوت', playing: 'قيد التشغيل', paused: 'متوقف مؤقتًا', loading: 'جارٍ التحميل…', error: 'تعذّر تشغيل الفيلم في هذا المتصفح.', download: 'تنزيل ملف MP4', dialog: 'نافذة الفيديو' }

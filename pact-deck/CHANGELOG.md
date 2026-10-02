@@ -514,3 +514,38 @@ unexpected changes and 0 broken images.
 - Broken-image scan, light + dark × EN/AR × both viewports (352 views): **0 broken**.
 - DOM text/figure diff vs the BEFORE snapshot: 78 compared, 4 changed (all allow-listed), **0 unexpected**.
 - Build: `vercel-build.mjs` PASS — versions v1.5.5, check-assets missing 0, SHA256SUMS regenerated.
+
+## v1.5.6 — 2026-10-02 (edit in place on v1.5.5 `ad94152`, PR #8 branch `deck/pact-v1.5.2-close-out`; no source regenerated, 44 slides unchanged)
+
+Baseline = v1.5.5 `ad94152` cloned fresh (the earlier 295-file zip lacked `build-info.json` and the ep01 `.vtt` files and was not used).
+
+**(A) Muhammed Khalid film — closing end card removed** (`assets/exec/video/athar-origins-of-impact-ep01-muhammed-khalid-1080p.mp4`)
+- Source: the 1080p master with burned-in English subtitles (`…_1080p_subtitled.mp4`, 89 359 557 B, 40.000 s, 24 fps, sha256 `c7c20005…ab2a`; the file the v1.5.5 720p encode came from).
+- End-card start by frame/scene analysis: a hard cut at **frame 896 = 37.3333 s** (frame-to-frame difference 134 against < 2 inside the shot; mean luminance 103 → 237). The card
+  ("From lived experience to lasting impact · Muhammed Khalid · Agentic AI for all") holds to 40.000 s. The VO line "Athar — agentic AI for all" is split by the cut:
+  "Athar" ends at 36.75 s, "agentic" starts at 37.44 s, so no spoken word is cut.
+- Output: frames 0–895 (896 frames, **37.333 s**, was 40.000 s), 1920×1080, H.264 High L4.1 `-preset slow -crf 20` (≈ 9.5 Mbit/s, 45.4 MB; PSNR 45.3 dB / SSIM 0.981 vs the master),
+  AAC-LC 48 kHz stereo 256 kbit/s with a 0.33 s fade-out after the last word, `+faststart`. Audio/video offset 0 samples vs the master (cross-correlation 1.000); last output frame = master
+  frame 895 (PSNR 41.5 dB; 4.7 dB against the end card; mean luminance 103). In the browser: duration 37.333 s, last-frame luminance 102.
+- `exec-team.js` FILM: new file, out-point 39.4 → 37.3 s, 1920×1080. EN/AR WebVTT: out-point note and cue c12 clipped to "Athar." / «أثر.» (36.100–37.300 s). The 1280×720 encode is removed
+  (it still contained the end card; it stays in git history). The original master is kept as a backup outside `dist/` (not committed: 89 MB, already in the media library).
+- `asset-ledger-v1.5.6.csv`, build-gate required-asset list and the Playwright film test updated.
+
+**(B) Executive team — name labels without "H.E."** — "Dr Thani bin Ahmed Al Zeyoudi" / «الدكتور ثاني بن أحمد الزيودي»; "Fahad Mohamed Al Ameri" / «فهد محمد العامري» (letter headings, intro index,
+overview tiles, aria-labels, portrait alt). The honorific stays in the BODY of both formal letters (EN "H.E." / AR «معالي», «سعادة»); the salutation is the generic "Dear partners," and has none.
+Still present by design: the two letter bodies; the spoken George clips NAR-s41 / NAR-s42 and their caption text ("His Excellency …").
+
+**(C) Kayaan K. Unwalla (slide 44)** — letter and new profile card (EN + AR) from the verified brief; monogram roundel kept; NRF + DWF + SRA sources; conflicts and unverifiable sources documented in
+`docs/kayaan-unwalla-sources-and-conflicts.md` (NRF profile / press-release URLs return 404 today and the SRA register is behind a Cloudflare challenge, so those rows are BRIEF-ONLY).
+
+**(D) H.E. Fahad Mohamed Al Ameri (slide 42) and the hidden pending card** — Fahad's letter was already Letter 2; it is rewritten from the verified facts with a profile card (`docs/fahad-al-ameri-sources.md`).
+The hidden pending card for a different Presidential Court official is deleted everywhere; Lorenzo stays hidden behind `FLAGS.pendingCards`. Letter order: Dr Thani → Fahad → Muhammed → Kayaan.
+
+**(E) Layout** — new `.ex-grid--card` / `.ex-card` (same Manuscript paper, hairline and ink as the letter): letter left, card right (mirrored in AR; stacked on phones). At 1728×872 the letter and card end
+above the guide bar (Kayaan letter bottom 701 px, card 694 px, guide 764 px), no overflow, no text overlap, no clipping.
+
+**Build / QA (2026-10-02)** — `node pact-deck/scripts/vercel-build.mjs` PASS: version gate v1.5.6, 28 required assets, check-assets missing 0, SHA256SUMS over 297 files (+ `build-info.json` = 298 on disk).
+Version label v1.5.6 (package.json, index.html, meta, footer badge, module `VERSION`s, locales, narration tables). Tests: `qa/v155` guide-sync 10/10 (desktop + phone: arrows 44/44, deep links 44/44, film pause/resume with the 37.3 s
+out-point, hidden card, new v1.5.6 label/card/film test), `qa/v154` guide-sync 24/24, root `npm test` 124 pass / 0 fail / 1 skipped (clean worktree with deps), python ingestion 8/8 and ui-unit 25/25.
+On a fresh Vercel sandbox preview: 297/297 files from `SHA256SUMS.txt` fetched over HTTP with matching sha256, 54/54 narration clips 200 `audio/mpeg`, EN→AR toggle (dir=rtl) and back, slides 32/38/42 deep links,
+section 09 = slides 40–44, 0 console errors, no removed-person strings in any served text asset; before/after screenshots at 1728×872 and 390×844 for slides 40–44 (EN + AR) captured with ui-validator (not committed).

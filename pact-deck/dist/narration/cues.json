@@ -1,6 +1,6 @@
 {
  "schema": "athar.narration.cues/2",
- "version": "v1.5.5",
+ "version": "v1.5.6",
  "generated_utc": "2026-10-01T06:54:58Z",
  "method": "one clip per slide; sentence start/end aligned onto the ElevenLabs Scribe word timestamps of that clip (scripts/narration/verify-slide-clips.py); replaces the v1.5.3 proportional-by-characters estimates",
  "keyedBy": "slideId",

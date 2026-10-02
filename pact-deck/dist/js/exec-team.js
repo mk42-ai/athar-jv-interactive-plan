@@ -1,4 +1,4 @@
-/* Athar Open Agentic Pact deck — v1.5.5 (2026-10-01) — section 09 "Executive Team" / «الفريق التنفيذي».
+/* Athar Open Agentic Pact deck — v1.5.6 (2026-10-02; v1.5.5 2026-10-01) — section 09 "Executive Team" / «الفريق التنفيذي».
    Appended AFTER the closing slide (#s-closing, slide 39): S09 intro + four letters = slides 40–44, deep links #/28/exec-1 … #/28/exec-5
    (also #slide-40 … #slide-44). Hand-written-letter style per the Athar Brand Guidelines: Manuscript #F7F3EA ground with the
    ink-on-manuscript texture at 8 % opacity, Athar Ink #0F1E2C text, names in IBM Plex Serif 600, body IBM Plex Sans 16/24 (sentence case),
@@ -12,7 +12,7 @@
    Navigation mirrors dist/js/impact-tiers.js; this file loads BEFORE impact-tiers.js and narration.js so the deck total is 39 + 5 = 44. */
 (function () {
   'use strict';
-  var VERSION = 'v1.5.5';
+  var VERSION = 'v1.5.6';
   var FLAGS = { pendingCards: false };
   var REAL_LAST = 28, CLOSING_N = 39;
   /* v1.5.6: the 1080p master (burned-in English subtitles) trimmed at the closing end card — 896 frames / 37.333 s, H.264 High + AAC, faststart. The end card
