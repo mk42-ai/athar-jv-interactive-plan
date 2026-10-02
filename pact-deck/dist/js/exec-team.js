@@ -30,7 +30,9 @@
     n42: 'https://www.42network.org/blog/whos-behind-42-muhammed-khaled-founder-ceo-of-airev/',
     tn: 'https://www.thenationalnews.com/future/technology/2024/09/30/core42-airev-generative-ai/',
     gpu: 'https://thegpu.ai/p/issue-42-building-real-world-ai-deployment-layer-airev',
-    gnAry: 'https://gulfnews.com/uae/government/uae-president-appoints-saif-al-aryani-as-advisor-at-presidential-court-1.1673240213399'
+    gnAry: 'https://gulfnews.com/uae/government/uae-president-appoints-saif-al-aryani-as-advisor-at-presidential-court-1.1673240213399',
+    dwf: 'https://dwfgroup.com/en/news-and-insights/press-releases/2018/6/dwf-middle-east-appoints-head-of-corporate-and-defence-and-security',
+    sra: 'https://www.sra.org.uk/consumers/register/person/?sraNumber=430771'
   };
   var SALUTE = { en: 'Dear partners,', ar: 'شركاءنا الأعزاء،' };
   var SIGN = { en: ['With respect,', 'The Athar team'], ar: ['مع خالص التقدير،', 'فريق أثر'] };
@@ -68,15 +70,34 @@
              'نمت منصة School Hack، التي أُطلقت مطلع عام 2023، إلى أكثر من 4 ملايين مستخدم في أكثر من 140 دولة. أما OnDemand، نظام التشغيل الوكيلي للذكاء الاصطناعي من AIREV، فتدعمه Core42 التابعة لمجموعة G42.',
              'وتُعرض قصة أثره إلى جانب هذه الرسالة.'] },
       src: [['42 Network', S.n42], ['The National, 30 Sep 2024', S.tn]] },
-    { id: 'unwalla', mono: ['KU', 'ك أ'],
+    { id: 'unwalla', mono: ['KU', 'ك أ'], /* no headshot supplied — the monogram roundel stays */
       name: { en: 'Kayaan K. Unwalla', ar: 'كايان ك. أونوالا' },
       role: { en: 'Co-founder & Chief Strategy Officer, AIREV', ar: 'شريك مؤسس ورئيس الاستراتيجية، AIREV' },
       body: {
         en: ['Kayaan K. Unwalla is a co-founder of AIREV and its Chief Strategy Officer, leading strategy, market expansion and ecosystem partnerships.',
-             'Before AIREV he was a corporate partner at Norton Rose Fulbright in Dubai and head of Corporate (Middle East) at DWF.'],
+             'Before AIREV he was a corporate lawyer in the region: Corporate Partner at Norton Rose Fulbright in Dubai, which he joined as Partner in November 2020, and before that Partner and Head of Corporate (Middle East) at DWF Middle East, appointed in June 2018.',
+             'Earlier he spent two years in-house with a US government contractor in Afghanistan, the Middle East and Africa.'],
         ar: ['كايان ك. أونوالا شريك مؤسس في AIREV ورئيس الاستراتيجية فيها، ويقود الاستراتيجية والتوسع في الأسواق وشراكات المنظومة.',
-             'وقبل انضمامه إلى AIREV، كان شريكاً في قسم الشركات لدى Norton Rose Fulbright في دبي، ورئيساً لقسم الشركات (الشرق الأوسط) لدى DWF.'] },
-      src: [['The GPU, Issue #42', S.gpu], ['Former roles confirmed by Athar, 1 Oct 2026', null]] }
+             'وقبل AIREV كان محامياً متخصصاً في قانون الشركات في المنطقة: شريكاً في قسم الشركات لدى Norton Rose Fulbright في دبي، وانضم إليها شريكاً في نوفمبر 2020، وقبل ذلك شريكاً ورئيساً لقسم الشركات (الشرق الأوسط) لدى DWF الشرق الأوسط، بتعيينه في يونيو 2018.',
+             'وقبل ذلك قضى عامين مستشاراً قانونياً داخلياً لدى متعاقد حكومي أمريكي في أفغانستان والشرق الأوسط وأفريقيا.'] },
+      facts: {
+        en: [['Earlier roles', 'Head of Defence & Security, DWF Middle East · legal roles at the US Department of Defense, the UK Ministry of Defence and a NATO prime contractor'],
+             ['Practice', 'M&A · joint ventures · commercial and transactional agreements · government contracts · cross-border transactions · regulatory advice'],
+             ['Sectors', 'Technology · defence, national security and aerospace · manufacturing · life sciences and healthcare · transport'],
+             ['AI and technology', 'Mandates including ProtectedBy.AI · publications listed on his Norton Rose Fulbright profile include AI in financial services and the Global Outer Space Guide (UAE)'],
+             ['Education', 'LLB (Hons), University of Warwick, 2006 · B.Comm (Hons), University of Bombay, 2003 · LPC, BPP Law School London, 2007'],
+             ['Admission', 'Solicitor, England and Wales (SRA no. 430771)'],
+             ['Languages', 'English · Hindi · Gujarati']],
+        ar: [['أدوار سابقة', 'رئيس قسم الدفاع والأمن في DWF الشرق الأوسط · مناصب قانونية في وزارة الدفاع الأمريكية ووزارة الدفاع البريطانية ولدى متعاقد رئيسي مع حلف الناتو'],
+             ['الممارسة', 'الاندماج والاستحواذ · المشاريع المشتركة · الاتفاقيات التجارية والمعاملاتية · العقود الحكومية · المعاملات العابرة للحدود · الاستشارات التنظيمية'],
+             ['القطاعات', 'التكنولوجيا · الدفاع والأمن الوطني والطيران والفضاء · التصنيع · علوم الحياة والرعاية الصحية · النقل'],
+             ['الذكاء الاصطناعي والتقنية', 'تكليفات تشمل ProtectedBy.AI · ومن المنشورات المدرجة في ملفه لدى Norton Rose Fulbright: الذكاء الاصطناعي في الخدمات المالية، و«Global Outer Space Guide» (الإمارات)'],
+             ['التعليم', 'بكالوريوس القانون (مرتبة الشرف)، جامعة وارويك، 2006 · بكالوريوس التجارة (مرتبة الشرف)، جامعة مومباي، 2003 · دورة الممارسة القانونية (LPC)، كلية BPP للقانون في لندن، 2007'],
+             ['التسجيل المهني', 'سوليسيتر (Solicitor) في إنجلترا وويلز (رقم SRA: 430771)'],
+             ['اللغات', 'الإنجليزية · الهندية · الغوجاراتية']] },
+      src: [['The GPU, Issue #42', S.gpu], ['DWF press release, 27 Jun 2018', S.dwf], ['SRA register, no. 430771', S.sra],
+            [{ en: 'Norton Rose Fulbright profile and Nov 2020 announcement (links pending)', ar: 'ملف Norton Rose Fulbright وإعلان نوفمبر 2020 (الروابط قيد التأكيد)' }, null],
+            [{ en: 'Former roles confirmed by Athar, 1 Oct 2026', ar: 'الأدوار السابقة مؤكَّدة من فريق أثر، 1 أكتوبر 2026' }, null]] }
   ];
   var HIDDEN = [ /* feature-flagged OFF (FLAGS.pendingCards) — never rendered, counted or narrated while off */
     { id: 'al-aryani', mono: ['SA', 'س ع'], official: true, name: { en: 'H.E. Saif Sultan Al Aryani', ar: 'معالي سيف سلطان العرياني' }, role: { en: 'Advisor, UAE Presidential Court (rank of Minister)', ar: 'مستشار في ديوان الرئاسة بدرجة وزير' },
@@ -85,11 +106,11 @@
   ];
   if (FLAGS.pendingCards) P = P.concat(HIDDEN);
   var T = {
-    en: { chapter: '09', kicker: '09 · Executive Team', title: 'Executive Team', letterOf: 'Letter {i} of {t}', clearance: 'For clearance by office', sources: 'Sources',
+    en: { chapter: '09', kicker: '09 · Executive Team', title: 'Executive Team', letterOf: 'Letter {i} of {t}', clearance: 'For clearance by office', sources: 'Sources', cardTitle: 'At a glance', cardLabel: 'Profile card',
       lede: 'Four letters of introduction to the people leading Athar. Every statement is sourced; the officials’ letters quote published statements only.', mono: 'Monogram roundel — no officially sourced portrait',
       counter: function (n, t) { return 'Slide ' + n + ' of ' + t; }, railTitle: 'Executive Team',
       film: 'Athar — Origins of Impact, Episode 01: Muhammed Khalid', filmNote: 'Poster frame at 00:15.5 (the film has no text-free frame) · captions EN / AR · the narrated guide pauses while the film plays and resumes after it.', filmAria: 'Impact story film: Athar — Origins of Impact, Episode 01, Muhammed Khalid' },
-    ar: { chapter: '09', kicker: '09 · الفريق التنفيذي', title: 'الفريق التنفيذي', letterOf: 'الرسالة {i} من {t}', clearance: 'للاعتماد من المكتب', sources: 'المصادر',
+    ar: { chapter: '09', kicker: '09 · الفريق التنفيذي', title: 'الفريق التنفيذي', letterOf: 'الرسالة {i} من {t}', clearance: 'للاعتماد من المكتب', sources: 'المصادر', cardTitle: 'نظرة سريعة', cardLabel: 'بطاقة تعريفية',
       lede: 'أربع رسائل تعريف بالقيادات التي تقود أثر. كل معلومة موثّقة بمصدر، ورسائل المسؤولين تقتبس تصريحات منشورة فقط.', mono: 'ختم بالحروف الأولى — لا تتوفر صورة من مصدر رسمي',
       counter: function (n, t) { return 'الشريحة ' + n + ' من ' + t; }, railTitle: 'الفريق التنفيذي',
       film: 'أثر — أصول الأثر، الحلقة 01: محمد خالد', filmNote: 'صورة الغلاف عند 00:15.5 (لا يتضمن الفيلم إطاراً خالياً من النصوص) · ترجمة إنجليزية / عربية · يتوقف الدليل الصوتي أثناء عرض الفيلم ويستأنف بعده.', filmAria: 'فيلم قصة الأثر: أثر — أصول الأثر، الحلقة 01، محمد خالد' }
@@ -145,8 +166,20 @@
   }
   function sources(p, l) {
     var f = el('footer', 'ex-sources'); f.appendChild(el('span', 'ex-sources-lbl', T[l].sources + ': '));
-    p.src.forEach(function (s, j) { if (j) f.appendChild(document.createTextNode(' · ')); if (s[1]) { var a = el('a', 'ex-src', s[0]); a.href = s[1]; a.target = '_blank'; a.rel = 'noopener noreferrer'; f.appendChild(a); } else f.appendChild(el('span', 'ex-src', s[0])); });
+    p.src.forEach(function (s, j) { if (j) f.appendChild(document.createTextNode(' · ')); var lbl = typeof s[0] === 'string' ? s[0] : s[0][l]; if (s[1]) { var a = el('a', 'ex-src', lbl); a.href = s[1]; a.target = '_blank'; a.rel = 'noopener noreferrer'; f.appendChild(a); } else f.appendChild(el('span', 'ex-src', lbl)); });
     return f;
+  }
+  function cardEl(p, l) { /* v1.5.6: the profile card beside the letter — the same facts in both languages, the deck language first */
+    var card = el('aside', 'ex-card'); card.setAttribute('data-testid', 'exec-card-' + p.id); card.setAttribute('aria-label', T[l].cardLabel + ' — ' + p.name[l]);
+    card.appendChild(p.portrait ? portrait(p, l) : roundel(p, l));
+    var cols = el('div', 'ex-card-cols');
+    ['en', 'ar'].sort(function (a, b) { return a === l ? -1 : b === l ? 1 : 0; }).forEach(function (lg, j) {
+      if (j) { var d = el('span', 'ex-divider'); d.setAttribute('aria-hidden', 'true'); cols.appendChild(d); }
+      var c = langEl('div', 'ex-card-col ex-card-col--' + lg, null, lg); c.setAttribute('data-testid', 'exec-card-' + lg); c.appendChild(el('p', 'ex-card-title', T[lg].cardTitle));
+      var dl = el('dl', 'ex-facts'); p.facts[lg].forEach(function (f) { var row = el('div', 'ex-fact'); row.appendChild(el('dt', null, f[0])); row.appendChild(el('dd', null, f[1])); dl.appendChild(row); });
+      c.appendChild(dl); cols.appendChild(c);
+    });
+    card.appendChild(cols); return card;
   }
   function filmEl(l) {
     var fig = el('figure', 'ex-film'); fig.setAttribute('data-testid', 'exec-film');
@@ -180,17 +213,17 @@
   function renderProfile(p, i, l) {
     var body = el('div', 's-body ex-body' + (p.film ? ' ex-body--film' : '')); var rule = el('span', 'trace-rule'); rule.setAttribute('aria-hidden', 'true'); body.appendChild(rule);
     body.appendChild(header(l, fill(T[l].letterOf, i)));
-    var grid = el('div', 'ex-grid' + (p.film ? ' ex-grid--film' : ''));
+    var grid = el('div', 'ex-grid' + (p.film ? ' ex-grid--film' : '') + (p.facts ? ' ex-grid--card' : ''));
     var art = el('article', 'ex-letter'); art.setAttribute('data-testid', 'exec-letter-' + p.id); art.setAttribute('dir', l === 'ar' ? 'rtl' : 'ltr'); art.setAttribute('lang', l); art.setAttribute('aria-label', p.name[l]);
     if (p.official) art.setAttribute('data-clearance', 'for clearance by office');
     art.appendChild(letterhead(l, i, !!p.official));
-    var top = el('div', 'ex-top'); top.appendChild(p.portrait ? portrait(p, l) : roundel(p, l));
+    var top = el('div', 'ex-top'); if (!p.facts) top.appendChild(p.portrait ? portrait(p, l) : roundel(p, l)); /* v1.5.6: card profiles carry their monogram roundel on the card */
     var cols = el('div', 'ex-cols');
     ['en', 'ar'].sort(function (a, b) { return a === l ? -1 : b === l ? 1 : 0; }).forEach(function (lg, j) { if (j) { var d = el('span', 'ex-divider'); d.setAttribute('aria-hidden', 'true'); cols.appendChild(d); } cols.appendChild(column(p, lg)); });
     top.appendChild(cols); art.appendChild(top);
     var hr = el('hr', 'ex-rule'); hr.setAttribute('aria-hidden', 'true'); art.appendChild(hr);
     art.appendChild(sources(p, l));
-    grid.appendChild(art); if (p.film) grid.appendChild(filmEl(l));
+    grid.appendChild(art); if (p.film) grid.appendChild(filmEl(l)); if (p.facts) grid.appendChild(cardEl(p, l));
     body.appendChild(grid); return body;
   }
   function renderSlide(k, l) { return k === 1 ? renderIntro(l) : renderProfile(P[k - 2], k - 1, l); }

@@ -50,6 +50,26 @@ html[lang=ar] .ex-portrait-cap{font-family:var(--font-arabic)}
 .ex-roundel-ring--in{fill:rgba(232,217,181,.4);stroke:rgba(15,30,44,.4);stroke-width:.8}
 .ex-roundel-lat{font-family:var(--font-serif);font-weight:600;font-size:30px;fill:var(--ex-ink)}
 .ex-roundel-ar{font-family:var(--font-arabic);font-weight:600;font-size:17px;fill:var(--ex-ink)}
+/* v1.5.6: profile card beside the letter (Fahad, Kayaan) — same Manuscript paper, hairline and ink as the letter; facts run in at 13/18 with the label inline */
+.ex-grid--card{grid-template-columns:minmax(0,1.18fr) minmax(0,1fr)}
+.ex-grid--card .ex-letter{max-inline-size:none;padding:18px 24px 14px}
+.ex-grid--card .ex-top{grid-template-columns:minmax(0,1fr)}
+.ex-card>.ex-roundel,.ex-card>.ex-portrait{margin:0 auto 12px}
+.ex-card>.ex-roundel{inline-size:72px}
+.ex-card{position:relative;isolation:isolate;box-sizing:border-box;min-inline-size:0;background:var(--ex-paper);color:var(--ex-ink);border:1px solid #E3DCCB;border-radius:2px;box-shadow:0 1px 0 rgba(15,30,44,.05),0 22px 44px -32px rgba(15,30,44,.45);padding:16px 20px 14px}
+.ex-card::before{content:"";position:absolute;inset:0;z-index:-1;background:url(/assets/exec/letter-texture-ksV8ASq6b2.webp) center/cover no-repeat;opacity:.08;pointer-events:none}
+.ex-card-cols{display:grid;grid-template-columns:minmax(0,1fr) 1px minmax(0,1fr);column-gap:16px;align-items:start}
+.ex-card-col{min-inline-size:0;display:flex;flex-direction:column;gap:6px}
+.ex-card-col--en{font-family:var(--font-sans)}
+.ex-card-col--ar{font-family:var(--font-arabic);letter-spacing:0}
+.ex-card-title{margin:0;font:600 13px/18px var(--font-serif);color:var(--ex-ink);padding-block-end:4px;border-block-end:1px solid var(--ex-hair)}
+.ex-card-col--ar .ex-card-title{font:600 14px/20px var(--font-arabic)}
+.ex-facts{margin:0;display:flex;flex-direction:column;gap:7px}
+.ex-fact{display:block;font-size:13px;line-height:18px}
+.ex-card-col--ar .ex-fact{font-size:13.91px;line-height:21px}
+.ex-fact dt{display:inline;font-weight:600;color:var(--ex-mute)}
+.ex-fact dt::after{content:": "}
+.ex-fact dd{display:inline;margin:0;color:var(--ex-ink)}
 /* intro */
 .ex-section-title{font-family:var(--font-serif);font-weight:600;font-size:30px!important;line-height:36px!important;color:var(--ex-ink)}
 .ex-col--ar .ex-section-title{font-family:var(--font-arabic);font-size:32.1px!important;line-height:42px!important}
@@ -76,6 +96,8 @@ html[lang=ar] .ex-film-title,html[lang=ar] .ex-film-note{font-family:var(--font-
 @media (max-height:780px) and (min-width:701px){.ex-slide .s-body.ex-body{overflow-y:auto}}
 /* phone: one column — Latin, horizontal hairline, Arabic (RTL), then the film */
 @media (max-width:700px){
+  .ex-grid--card{grid-template-columns:minmax(0,1fr)}
+  .ex-card-cols{grid-template-columns:minmax(0,1fr);row-gap:14px}
   .ex-letter{padding:16px 16px 12px}
   .ex-top,.ex-grid--film{grid-template-columns:minmax(0,1fr)}
   .ex-cols{grid-template-columns:minmax(0,1fr);row-gap:14px}
