@@ -1,7 +1,7 @@
 WEBVTT
 
 NOTE Athar — Origins of Impact, Episode 01: Muhammed Khalid. English captions transcribed from the narration (burned-in subtitles are the reference; proper nouns per the burned-in text).
-NOTE v1.5.5 · in-point 0.000 s · out-point 39.400 s · cues sit at the top of the frame (line:6%) so they never cover the burned-in English subtitles.
+NOTE v1.5.6 · in-point 0.000 s · out-point 37.300 s (the closing end card — from 37.333 s of the 40 s master — is removed from the file) · cues sit at the top of the frame (line:6%) so they never cover the burned-in English subtitles.
 
 c01
 00:00:00.000 --> 00:00:02.150 line:6% position:50% align:center
@@ -48,5 +48,5 @@ c11
 from lived experience to lasting impact.
 
 c12
-00:00:36.100 --> 00:00:39.000 line:6% position:50% align:center
-Athar — agentic AI for all.
+00:00:36.100 --> 00:00:37.300 line:6% position:50% align:center
+Athar.

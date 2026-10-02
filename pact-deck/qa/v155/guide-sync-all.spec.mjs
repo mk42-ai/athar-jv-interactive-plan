@@ -100,12 +100,12 @@ test.describe(`guide narration ⇔ visible slide — all ${TOTAL} slides`, () =>
     s = await narratedEqualsVisible(page, 43); expect(s.ok, 'slide 43 lead-in clip audible').toBe(true);
     const film = await page.evaluate(() => { const v = document.querySelector('#s-exec-khalid video[data-narration-pause]'); return v ? { poster: v.poster.split('/').pop(), posterTime: v.dataset.posterTime, tracks: [...v.querySelectorAll('track')].map((t) => t.srclang + ':' + t.getAttribute('src').split('/').pop()), in: v.dataset.in, out: v.dataset.out, src: v.querySelector('source').getAttribute('src').split('/').pop() } : null; });
     expect(film).not.toBeNull(); expect(film.poster).toBe('athar-origins-of-impact-ep01-poster-15s5.jpg'); expect(film.tracks).toEqual(['en:athar-origins-of-impact-ep01.en.vtt', 'ar:athar-origins-of-impact-ep01.ar.vtt']);
-    await page.evaluate(async () => { const v = document.querySelector('#s-exec-khalid video'); await new Promise((r) => { if (v.readyState >= 1) r(); else v.addEventListener('loadedmetadata', r, { once: true }); }); v.currentTime = 36.0; await v.play(); });
+    await page.evaluate(async () => { const v = document.querySelector('#s-exec-khalid video'); await new Promise((r) => { if (v.readyState >= 1) r(); else v.addEventListener('loadedmetadata', r, { once: true }); }); v.currentTime = 34.0; await v.play(); });
     await page.waitForFunction(() => document.getElementById('athar-narration').getAttribute('data-reason') === 'video', null, { timeout: 6000 });
-    const during = await snap(page); const filmPlaying = await page.evaluate(() => { const v = document.querySelector('#s-exec-khalid video'); return !v.paused && v.currentTime > 36; });
+    const during = await snap(page); const filmPlaying = await page.evaluate(() => { const v = document.querySelector('#s-exec-khalid video'); return !v.paused && v.currentTime > 34; });
     expect(during.state, 'guide paused while the film plays').toBe('paused'); expect(during.audible, 'no narration audible during the film').toBeNull(); expect(filmPlaying).toBe(true);
-    // the film stops at its out-point (39.4 s) → the guide resumes the slide-43 clip
-    await page.waitForFunction(() => { const v = document.querySelector('#s-exec-khalid video'); return v.paused && v.currentTime >= 39.3; }, null, { timeout: 15000 });
+    // the film stops at its out-point (37.3 s — v1.5.6: the 1080p master trimmed before the closing end card; was 39.4 s) → the guide resumes the slide-43 clip
+    await page.waitForFunction(() => { const v = document.querySelector('#s-exec-khalid video'); return v.paused && v.currentTime >= 37.2; }, null, { timeout: 15000 });
     const after = await narratedEqualsVisible(page, 43, 8000);
     const resumed = after.ok || (await page.evaluate(() => window.__qaVisible().n)) === 44;
     write('film-' + info.project.name, [{ during: { state: during.state, reason: during.reason, audible: during.audible }, film, after: row(43, after, 'after film') }]);

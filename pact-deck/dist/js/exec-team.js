@@ -14,8 +14,11 @@
   var VERSION = 'v1.5.5';
   var FLAGS = { pendingCards: false };
   var REAL_LAST = 28, CLOSING_N = 39;
-  var FILM = { mp4: '/assets/exec/video/athar-origins-of-impact-ep01-muhammed-khalid-720p.mp4', poster: '/assets/exec/video/athar-origins-of-impact-ep01-poster-15s5.jpg',
-    vttEn: '/assets/exec/video/athar-origins-of-impact-ep01.en.vtt', vttAr: '/assets/exec/video/athar-origins-of-impact-ep01.ar.vtt', inPt: 0, outPt: 39.4, w: 1280, h: 720 };
+  /* v1.5.6: the 1080p master (burned-in English subtitles) trimmed at the closing end card — 896 frames / 37.333 s, H.264 High + AAC, faststart. The end card
+     ("From lived experience to lasting impact · Muhammed Khalid · Agentic AI for all") began at frame 896 (37.3333 s) and is no longer in the file; the out-point
+     37.3 s is the last content frame. Master sha256 c7c20005…ab2a (kept as a backup outside dist/). */
+  var FILM = { mp4: '/assets/exec/video/athar-origins-of-impact-ep01-muhammed-khalid-1080p.mp4', poster: '/assets/exec/video/athar-origins-of-impact-ep01-poster-15s5.jpg',
+    vttEn: '/assets/exec/video/athar-origins-of-impact-ep01.en.vtt', vttAr: '/assets/exec/video/athar-origins-of-impact-ep01.ar.vtt', inPt: 0, outPt: 37.3, w: 1920, h: 1080 };
   var LOGO = '/assets/exec/athar-logo-master-1200.png';
   var S = {
     mof: 'https://www.trade.gov.ae/dr-thani-bin-ahmed-al-zeyoudi',
