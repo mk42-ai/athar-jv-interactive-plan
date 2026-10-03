@@ -9,17 +9,16 @@
    Hidden, feature-flagged card (FLAGS.pendingCards = false → not rendered, not counted, not narrated): Lorenzo (surname and role unconfirmed).
    v1.5.6: the other pending card (a different Presidential Court official, not Fahad) was removed outright; H.E. Fahad Mohamed Al Ameri's letter is
    published as Letter 2 (not behind the flag). Name LABELS carry no honorific; the letter bodies keep H.E. / معالي / سعادة.
-   Navigation mirrors dist/js/impact-tiers.js; this file loads BEFORE impact-tiers.js and narration.js so the deck total is 39 + 4 = 43. v1.5.7: the former Letter 1 was removed (4 → 3 letters). */
+   Navigation mirrors dist/js/impact-tiers.js; this file loads BEFORE impact-tiers.js and narration.js so the deck total is 39 + 4 = 43. v1.5.7: the former Letter 1 was removed (4 → 3 letters); the CEO film is an optional feature (off). */
 (function () {
   'use strict';
   var VERSION = 'v1.5.6';
   var FLAGS = { pendingCards: false };
   var REAL_LAST = 28, CLOSING_N = 39;
-  /* v1.5.6: the 1080p master (burned-in English subtitles) trimmed at the closing end card — 896 frames / 37.333 s, H.264 High + AAC, faststart. The end card
-     ("From lived experience to lasting impact · Muhammed Khalid · Agentic AI for all") began at frame 896 (37.3333 s) and is no longer in the file; the out-point
-     37.3 s is the last content frame. Master sha256 c7c20005…ab2a (kept as a backup outside dist/). */
-  var FILM = { mp4: '/assets/exec/video/athar-origins-of-impact-ep01-muhammed-khalid-1080p.mp4', poster: '/assets/exec/video/athar-origins-of-impact-ep01-poster-15s5.jpg',
-    vttEn: '/assets/exec/video/athar-origins-of-impact-ep01.en.vtt', vttAr: '/assets/exec/video/athar-origins-of-impact-ep01.ar.vtt', inPt: 0, outPt: 37.3, w: 1920, h: 1080 };
+  /* v1.5.7: the Muhammed Khalid impact-story film is an OPTIONAL feature (pact-deck/features.json → originsFilm, default false). When on, the build copies
+     features/origins-film/exec-film.js (+ its assets) into dist/ and injects its <script> BEFORE this file; it defines window.AtharExecFilm = { mp4, poster, vttEn, vttAr, inPt,
+     outPt, w, h, bodyExtra, strings }. With the flag off (shipped state) nothing about the film is in dist/ and this module renders the CEO letter without it. */
+  var FILM = (typeof window.AtharExecFilm === 'object' && window.AtharExecFilm) || null;
   var LOGO = '/assets/exec/athar-logo-master-1200.png';
   var S = {
     nepEn: 'https://uaenep.ae/en/participant/fahad-al-ameri', nepAr: 'https://uaenep.ae/ar/participant/fahad-al-ameri',
@@ -49,16 +48,14 @@
              ['التعليم', 'ماجستير العلوم في الهندسة الميكانيكية وبكالوريوس العلوم في الهندسة الحيوية (بتقدير امتياز مع مرتبة الشرف الأولى) من جامعة بنسلفانيا · محلل مالي معتمد (CFA) · خريج برنامج خبراء الإمارات (النسخة الثانية)']] },
       src: [['UAE National Experts Program (EN)', S.nepEn], ['برنامج خبراء الإمارات (AR)', S.nepAr],
             [{ en: 'Career timeline and programme status as supplied by Athar, 2 Oct 2026', ar: 'الجدول الزمني للمسيرة وحالة البرنامج كما قدّمها فريق أثر، 2 أكتوبر 2026' }, null]] },
-    { id: 'khalid', mono: ['MK', 'م خ'], film: true,
+    { id: 'khalid', mono: ['MK', 'م خ'], film: !!FILM,
       name: { en: 'Muhammed Khalid', ar: 'محمد خالد' },
       role: { en: 'Founder & CEO, AIREV', ar: 'المؤسس والرئيس التنفيذي لشركة AIREV' },
       body: {
         en: ['Muhammed Khalid is the founder and CEO of AIREV, the Abu Dhabi company behind School Hack and OnDemand.',
-             'School Hack, launched in early 2023, has grown to over 4 million users across 140+ countries. OnDemand, AIREV’s agentic AI operating system, is backed by Core42, a G42 company.',
-             'His Athar impact story plays alongside this letter.'],
+             'School Hack, launched in early 2023, has grown to over 4 million users across 140+ countries. OnDemand, AIREV’s agentic AI operating system, is backed by Core42, a G42 company.'],
         ar: ['محمد خالد هو المؤسس والرئيس التنفيذي لشركة AIREV، الشركة التي تتخذ من أبوظبي مقراً والتي تقف وراء منصتي School Hack وOnDemand.',
-             'نمت منصة School Hack، التي أُطلقت مطلع عام 2023، إلى أكثر من 4 ملايين مستخدم في أكثر من 140 دولة. أما OnDemand، نظام التشغيل الوكيلي للذكاء الاصطناعي من AIREV، فتدعمه Core42 التابعة لمجموعة G42.',
-             'وتُعرض قصة أثره إلى جانب هذه الرسالة.'] },
+             'نمت منصة School Hack، التي أُطلقت مطلع عام 2023، إلى أكثر من 4 ملايين مستخدم في أكثر من 140 دولة. أما OnDemand، نظام التشغيل الوكيلي للذكاء الاصطناعي من AIREV، فتدعمه Core42 التابعة لمجموعة G42.'] },
       src: [['42 Network', S.n42], ['The National, 30 Sep 2024', S.tn]] },
     { id: 'unwalla', mono: ['KU', 'ك أ'], /* no headshot supplied — the monogram roundel stays */
       name: { en: 'Kayaan K. Unwalla', ar: 'كايان ك. أونوالا' },
@@ -97,12 +94,16 @@
     en: { chapter: '09', kicker: '09 · Executive Team', title: 'Executive Team', letterOf: 'Letter {i} of {t}', clearance: 'For clearance by office', sources: 'Sources', cardTitle: 'At a glance', cardLabel: 'Profile card',
       lede: 'Three letters of introduction to the people leading Athar. Every statement is sourced; the official’s letter uses published statements only.', mono: 'Monogram roundel — no officially sourced portrait',
       counter: function (n, t) { return 'Slide ' + n + ' of ' + t; }, railTitle: 'Executive Team',
-      film: 'Athar — Origins of Impact, Episode 01: Muhammed Khalid', filmNote: 'Poster frame at 00:15.5 (the film has no text-free frame) · captions EN / AR · the narrated guide pauses while the film plays and resumes after it.', filmAria: 'Impact story film: Athar — Origins of Impact, Episode 01, Muhammed Khalid' },
+       },
     ar: { chapter: '09', kicker: '09 · الفريق التنفيذي', title: 'الفريق التنفيذي', letterOf: 'الرسالة {i} من {t}', clearance: 'للاعتماد من المكتب', sources: 'المصادر', cardTitle: 'نظرة سريعة', cardLabel: 'بطاقة تعريفية',
       lede: 'ثلاث رسائل تعريف بالقيادات التي تقود أثر. كل معلومة موثّقة بمصدر، ورسالة المسؤول تستند إلى تصريحات منشورة فقط.', mono: 'ختم بالحروف الأولى — لا تتوفر صورة من مصدر رسمي',
       counter: function (n, t) { return 'الشريحة ' + n + ' من ' + t; }, railTitle: 'الفريق التنفيذي',
-      film: 'أثر — أصول الأثر، الحلقة 01: محمد خالد', filmNote: 'صورة الغلاف عند 00:15.5 (لا يتضمن الفيلم إطاراً خالياً من النصوص) · ترجمة إنجليزية / عربية · يتوقف الدليل الصوتي أثناء عرض الفيلم ويستأنف بعده.', filmAria: 'فيلم قصة الأثر: أثر — أصول الأثر، الحلقة 01، محمد خالد' }
+       }
   };
+  if (FILM) { /* optional film feature: strings, the extra letter paragraph and the film flag come from window.AtharExecFilm */
+    ['en', 'ar'].forEach(function (lg) { var st = (FILM.strings || {})[lg] || {}; T[lg].film = st.title || ''; T[lg].filmNote = st.note || ''; T[lg].filmAria = st.aria || ''; });
+    P.forEach(function (p) { if (p.film && FILM.bodyExtra) { p.body.en.push(FILM.bodyExtra.en); p.body.ar.push(FILM.bodyExtra.ar); } });
+  }
   var N = P.length + 1, TOTAL = CLOSING_N + N;
   var IDS = ['s-exec-intro'].concat(P.map(function (p) { return 's-exec-' + p.id; }));
   var x = 0, sections = [], lastLang = null, initialHash = window.location.hash;

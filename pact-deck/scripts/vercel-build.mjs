@@ -12,6 +12,6 @@ const r = spawnSync(process.execPath, [path.join(ROOT, 'scripts/v1.4.7/build.mjs
 if (r.status !== 0) { console.error(`Athar deck v${pkg.version}: BUILD FAILED (exit ${r.status})`); process.exit(r.status || 1); }
 const files = []; (function walk(d) { for (const e of fs.readdirSync(d, { withFileTypes: true })) { const p = path.join(d, e.name); if (e.isDirectory()) walk(p); else files.push(p); } })(path.join(ROOT, 'dist'));
 const info = { deck: 'Athar Open Agentic Pact', version: pkg.version, commit: commit || null, branch: process.env.VERCEL_GIT_COMMIT_REF || null, vercelEnv: process.env.VERCEL_ENV || null,
-  builtAt: new Date().toISOString(), distFiles: files.length, gates: ['version gate', 'check-assets', 'SHA256SUMS'] };
+  builtAt: new Date().toISOString(), features: JSON.parse(fs.readFileSync(path.join(ROOT, 'features.json'), 'utf8')), distFiles: files.length, gates: ['version gate', 'check-assets', 'SHA256SUMS'] };
 fs.writeFileSync(path.join(ROOT, 'dist', 'build-info.json'), JSON.stringify(info, null, 1) + '\n');
 console.log(`Athar Open Agentic Pact deck v${pkg.version}: build complete — ${files.length} files in dist/, gates PASS, dist/build-info.json written`);
