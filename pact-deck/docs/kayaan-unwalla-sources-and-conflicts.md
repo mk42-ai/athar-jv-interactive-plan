@@ -1,6 +1,6 @@
-# Kayaan K. Unwalla — card + letter (section 09, slide 44): sources, verification status, conflicts
+# Kayaan K. Unwalla — card + letter (section 09, slide 43 in v1.5.7; was 44): sources, verification status, conflicts
 
-Deck: Athar Open Agentic Pact v1.5.6 · slide 44 (`s-exec-unwalla`, `dist/js/exec-team.js`) · EN + AR · written 2026-10-02.
+Deck: Athar Open Agentic Pact v1.5.6 · slide 43 since v1.5.7 — was slide 44 (`s-exec-unwalla`, `dist/js/exec-team.js`) · EN + AR · written 2026-10-02.
 Rule applied: **invent nothing.** Every statement on the card/letter is one of the details listed in the Athar brief of 2 Oct 2026 (itself
 taken from the Athar research run: a web-search plugin dossier plus the four URLs below). This file records, per statement, where it comes
 from and whether the source could be opened and re-read when the deck was built.

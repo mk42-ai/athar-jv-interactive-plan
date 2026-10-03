@@ -1,6 +1,6 @@
-# H.E. Fahad Mohamed Al Ameri — card + letter (section 09, slide 42): sources, verification status, open items
+# H.E. Fahad Mohamed Al Ameri — card + letter (section 09, slide 41 in v1.5.7; was 42): sources, verification status, open items
 
-Deck: Athar Open Agentic Pact v1.5.6 · slide 42 (`s-exec-al-ameri`, Letter 2 of 4) · EN + AR · written 2026-10-02.
+Deck: Athar Open Agentic Pact v1.5.6 · slide 41 since v1.5.7 (`s-exec-al-ameri`; slide 42 and Letter 2 of 4 in v1.5.6) · EN + AR · written 2026-10-02.
 Spelling: **Fahad** (official: "Fahad Mohamed AlAmeri" / "Fahad Al Ameri", uaenep.ae); Arabic **فهد محمد العامري**. The letter body says "H.E." / «سعادة»;
 the name label above it does not (v1.5.6 name-label rule).
 
@@ -9,7 +9,7 @@ the name label above it does not (v1.5.6 name-label rule).
 The brief asked to replace the hidden "Presidential Court" pending card with H.E. Fahad Mohamed Al Ameri and to publish it. In v1.5.5 Fahad's letter was
 **already published** as Letter 2 (slide 42, no feature flag); the hidden, flag-off card was a *different* Presidential Court official. So there is exactly one
 Fahad card: the published one, rewritten from the verified facts below. The hidden card was deleted outright (data, source link, narration note, tests, changelog
-and progress-log mentions). Letter order is H.E. Dr Thani → H.E. Fahad → Muhammed → Kayaan; Lorenzo stays hidden behind `FLAGS.pendingCards`. Deck total stays **44**.
+and progress-log mentions). Letter order in v1.5.6 was H.E. Dr Thani → H.E. Fahad → Muhammed → Kayaan; **v1.5.7 removed the former Letter 1**, so the order is now H.E. Fahad (Letter 1 of 3, slide 41) → Muhammed → Kayaan and the deck total is **43**. Lorenzo stays hidden behind `FLAGS.pendingCards`.
 
 ## Sources
 

@@ -1,15 +1,15 @@
 /* Athar Open Agentic Pact deck — v1.5.6 (2026-10-02; v1.5.5 2026-10-01) — section 09 "Executive Team" / «الفريق التنفيذي».
-   Appended AFTER the closing slide (#s-closing, slide 39): S09 intro + four letters = slides 40–44, deep links #/28/exec-1 … #/28/exec-5
-   (also #slide-40 … #slide-44). Hand-written-letter style per the Athar Brand Guidelines: Manuscript #F7F3EA ground with the
+   Appended AFTER the closing slide (#s-closing, slide 39): S09 intro + three letters = slides 40–43, deep links #/28/exec-1 … #/28/exec-4
+   (also #slide-40 … #slide-43). Hand-written-letter style per the Athar Brand Guidelines: Manuscript #F7F3EA ground with the
    ink-on-manuscript texture at 8 % opacity, Athar Ink #0F1E2C text, names in IBM Plex Serif 600, body IBM Plex Sans 16/24 (sentence case),
    Arabic in IBM Plex Sans Arabic at 107 % of the Latin size on the right of a hairline divider (letter-spacing 0), salutation · short
    paragraphs · sign-off, closed by a SHORT Legacy Gold hairline (never full width). No script fonts. The Arabic deck is a full RTL mirror.
-   Portraits only where officially sourced (Dr Thani: Ministry of Foreign Trade portrait, trade.gov.ae); everyone else has a monogram
-   roundel. The officials' letters quote published statements only and carry the tag "for clearance by office".
+   Portraits only where officially sourced (none at present); everyone else has a monogram
+   roundel. The official's letter uses published statements only and carries the tag "for clearance by office".
    Hidden, feature-flagged card (FLAGS.pendingCards = false → not rendered, not counted, not narrated): Lorenzo (surname and role unconfirmed).
    v1.5.6: the other pending card (a different Presidential Court official, not Fahad) was removed outright; H.E. Fahad Mohamed Al Ameri's letter is
    published as Letter 2 (not behind the flag). Name LABELS carry no honorific; the letter bodies keep H.E. / معالي / سعادة.
-   Navigation mirrors dist/js/impact-tiers.js; this file loads BEFORE impact-tiers.js and narration.js so the deck total is 39 + 5 = 44. */
+   Navigation mirrors dist/js/impact-tiers.js; this file loads BEFORE impact-tiers.js and narration.js so the deck total is 39 + 4 = 43. v1.5.7: the former Letter 1 was removed (4 → 3 letters). */
 (function () {
   'use strict';
   var VERSION = 'v1.5.6';
@@ -22,11 +22,6 @@
     vttEn: '/assets/exec/video/athar-origins-of-impact-ep01.en.vtt', vttAr: '/assets/exec/video/athar-origins-of-impact-ep01.ar.vtt', inPt: 0, outPt: 37.3, w: 1920, h: 1080 };
   var LOGO = '/assets/exec/athar-logo-master-1200.png';
   var S = {
-    mof: 'https://www.trade.gov.ae/dr-thani-bin-ahmed-al-zeyoudi',
-    moft: 'https://gccbusinesswatch.com/news/uae-launches-new-foreign-trade-ministry-led-by-dr-thani-al-zeyoudi/',
-    gnChair: 'https://gulfnews.com/business/corporate-news/dr-thani-al-zeyoudi-joins-as-chairman-of-agentic-ai-firm-airev-as-uae-advances-ambition-to-export-homegrown-artificial-intelligence-1.500584941',
-    li: 'https://www.linkedin.com/posts/drthanialzeyoudi_ai-uae-nextgenfdi-activity-7475467719258169344-qR1E',
-    gnQc: 'https://gulfnews.com/business/corporate-news/airev-and-qualcomm-to-advance-autonomous-ai-across-enterprise-and-government-environments-1.500639938',
     nepEn: 'https://uaenep.ae/en/participant/fahad-al-ameri', nepAr: 'https://uaenep.ae/ar/participant/fahad-al-ameri',
     n42: 'https://www.42network.org/blog/whos-behind-42-muhammed-khaled-founder-ceo-of-airev/',
     tn: 'https://www.thenationalnews.com/future/technology/2024/09/30/core42-airev-generative-ai/',
@@ -37,19 +32,6 @@
   var SALUTE = { en: 'Dear partners,', ar: 'شركاءنا الأعزاء،' };
   var SIGN = { en: ['With respect,', 'The Athar team'], ar: ['مع خالص التقدير،', 'فريق أثر'] };
   var P = [
-    { id: 'al-zeyoudi', mono: ['TZ', 'ث ز'], official: true,
-      portrait: { src: '/assets/exec/portraits/thani-al-zeyoudi-mof.jpg', w: 640, h: 934, credit: { en: 'Official portrait · UAE Ministry of Foreign Trade (trade.gov.ae)', ar: 'صورة رسمية · وزارة التجارة الخارجية (trade.gov.ae)' } },
-      name: { en: 'Dr Thani bin Ahmed Al Zeyoudi', ar: 'الدكتور ثاني بن أحمد الزيودي' }, /* v1.5.6: name LABELS carry no honorific (no H.E. / معالي); the letter body keeps it */
-      role: { en: 'Chairman, AIREV · UAE Minister of Foreign Trade', ar: 'رئيس مجلس إدارة AIREV · وزير التجارة الخارجية في دولة الإمارات' },
-      body: {
-        en: ['H.E. Dr Thani bin Ahmed Al Zeyoudi has been the UAE’s Minister of Foreign Trade since the Ministry of Foreign Trade was formed in June 2025.',
-             'In June 2026 he assumed the chairmanship of AIREV’s Board of Directors, as reported by Gulf News and announced in his own LinkedIn post. On 13 August 2026 he observed the signing of the AIREV–Qualcomm memorandum of understanding.'],
-        ar: ['يشغل معالي الدكتور ثاني بن أحمد الزيودي منصب وزير التجارة الخارجية في دولة الإمارات منذ تأسيس وزارة التجارة الخارجية في يونيو 2025.',
-             'وفي يونيو 2026 تولّى رئاسة مجلس إدارة AIREV، وفق ما نشرته «غلف نيوز» وما أعلنه في منشوره على لينكدإن. وفي 13 أغسطس 2026 شهد توقيع مذكرة التفاهم بين AIREV وQualcomm.'] },
-      quote: { en: '“The UAE has built one of the world’s most dynamic trading economies, and our next frontier is to export not only goods and services, but homegrown technology and the intellectual property behind it…”',
-               ar: '«بنت دولة الإمارات واحداً من أكثر الاقتصادات التجارية حيوية في العالم، وآفاقنا المقبلة هي تصدير ليس السلع والخدمات فحسب، بل التكنولوجيا المطوّرة محلياً والملكية الفكرية التي تقف وراءها…»',
-               cite: { en: 'Published statement · Gulf News, 24 June 2026', ar: 'تصريح منشور · غلف نيوز، 24 يونيو 2026 (ترجمة غير رسمية)' } },
-      src: [['Ministry of Foreign Trade', S.mof], ['GCC Business Watch — new ministry', S.moft], ['Gulf News, 24 Jun 2026', S.gnChair], ['LinkedIn post', S.li], ['Gulf News, 13 Aug 2026', S.gnQc]] },
     { id: 'al-ameri', mono: ['FA', 'ف ع'], official: true, /* published letter 2 — no portrait exists, so the monogram roundel is used (no generated face) */
       name: { en: 'Fahad Mohamed Al Ameri', ar: 'فهد محمد العامري' }, /* v1.5.6: label without honorific; the letter body keeps H.E. / سعادة */
       role: { en: 'Executive Director, Development and Humanitarian Affairs, UAE Presidential Court', ar: 'المدير التنفيذي، شؤون التنمية والعمل الإنساني، ديوان الرئاسة في دولة الإمارات' },
@@ -113,11 +95,11 @@
   if (FLAGS.pendingCards) P = P.concat(HIDDEN);
   var T = {
     en: { chapter: '09', kicker: '09 · Executive Team', title: 'Executive Team', letterOf: 'Letter {i} of {t}', clearance: 'For clearance by office', sources: 'Sources', cardTitle: 'At a glance', cardLabel: 'Profile card',
-      lede: 'Four letters of introduction to the people leading Athar. Every statement is sourced; the officials’ letters quote published statements only.', mono: 'Monogram roundel — no officially sourced portrait',
+      lede: 'Three letters of introduction to the people leading Athar. Every statement is sourced; the official’s letter uses published statements only.', mono: 'Monogram roundel — no officially sourced portrait',
       counter: function (n, t) { return 'Slide ' + n + ' of ' + t; }, railTitle: 'Executive Team',
       film: 'Athar — Origins of Impact, Episode 01: Muhammed Khalid', filmNote: 'Poster frame at 00:15.5 (the film has no text-free frame) · captions EN / AR · the narrated guide pauses while the film plays and resumes after it.', filmAria: 'Impact story film: Athar — Origins of Impact, Episode 01, Muhammed Khalid' },
     ar: { chapter: '09', kicker: '09 · الفريق التنفيذي', title: 'الفريق التنفيذي', letterOf: 'الرسالة {i} من {t}', clearance: 'للاعتماد من المكتب', sources: 'المصادر', cardTitle: 'نظرة سريعة', cardLabel: 'بطاقة تعريفية',
-      lede: 'أربع رسائل تعريف بالقيادات التي تقود أثر. كل معلومة موثّقة بمصدر، ورسائل المسؤولين تقتبس تصريحات منشورة فقط.', mono: 'ختم بالحروف الأولى — لا تتوفر صورة من مصدر رسمي',
+      lede: 'ثلاث رسائل تعريف بالقيادات التي تقود أثر. كل معلومة موثّقة بمصدر، ورسالة المسؤول تستند إلى تصريحات منشورة فقط.', mono: 'ختم بالحروف الأولى — لا تتوفر صورة من مصدر رسمي',
       counter: function (n, t) { return 'الشريحة ' + n + ' من ' + t; }, railTitle: 'الفريق التنفيذي',
       film: 'أثر — أصول الأثر، الحلقة 01: محمد خالد', filmNote: 'صورة الغلاف عند 00:15.5 (لا يتضمن الفيلم إطاراً خالياً من النصوص) · ترجمة إنجليزية / عربية · يتوقف الدليل الصوتي أثناء عرض الفيلم ويستأنف بعده.', filmAria: 'فيلم قصة الأثر: أثر — أصول الأثر، الحلقة 01، محمد خالد' }
   };

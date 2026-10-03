@@ -2193,53 +2193,6 @@
   },
   {
    "n": 41,
-   "slideId": "s-exec-al-zeyoudi",
-   "clipId": "NAR-s41",
-   "file": "/audio/guide/slides/NAR-s41-s-exec-al-zeyoudi.mp3",
-   "bytes": 346532,
-   "sha256": "b7f8a9a3c7fe20a05c4783176da6a46203db8554668118b0e30b990b2c6cdea5",
-   "durationSec": 21.63,
-   "section": "09 Executive Team",
-   "sectionAr": "09 الفريق التنفيذي",
-   "source": {
-    "type": "tts",
-    "provider": "ElevenLabs textToSpeech",
-    "voice": "George (premade; voice list returned one match)",
-    "modelRequested": "eleven_multilingual_v2",
-    "generationRef": "v9QRCfvtIX",
-    "generatedUtc": "2026-10-01T13:14:48Z",
-    "storedAs": "downloaded into the repo — no SAS hotlink",
-    "textSource": "Whisper small.en transcript, proper nouns per the published spelling",
-    "contentCheck": "matches the slide",
-    "factCheck": "CEPA programme + MC13 chair (Africa CEO Forum / SALT profiles); AIREV chairmanship June 2026 (Gulf News, 24 Jun 2026)"
-   },
-   "text": "His Excellency Dr Thani bin Ahmed Al Zeyoudi, Chairman of AIREV and UAE Minister of Foreign Trade. He led the UAE’s Comprehensive Economic Partnership Agreement programme and chaired the 13th WTO Ministerial Conference in Abu Dhabi. He became Chairman of AIREV in June 2026.",
-   "cues": [
-    {
-     "i": 1,
-     "text": "His Excellency Dr Thani bin Ahmed Al Zeyoudi, Chairman of AIREV and UAE Minister of Foreign Trade.",
-     "start": 0.0,
-     "end": 8.44,
-     "anchor": "s41-c1"
-    },
-    {
-     "i": 2,
-     "text": "He led the UAE’s Comprehensive Economic Partnership Agreement programme and chaired the 13th WTO Ministerial Conference in Abu Dhabi.",
-     "start": 8.44,
-     "end": 17.86,
-     "anchor": "s41-c2"
-    },
-    {
-     "i": 3,
-     "text": "He became Chairman of AIREV in June 2026.",
-     "start": 17.86,
-     "end": 21.58,
-     "anchor": "s41-c3"
-    }
-   ]
-  },
-  {
-   "n": 42,
    "slideId": "s-exec-al-ameri",
    "clipId": "NAR-s42",
    "file": "/audio/guide/slides/NAR-s42-s-exec-al-ameri.mp3",
@@ -2280,7 +2233,7 @@
    ]
   },
   {
-   "n": 43,
+   "n": 42,
    "slideId": "s-exec-khalid",
    "clipId": "NAR-s43",
    "file": "/audio/guide/slides/NAR-s43-s-exec-khalid.mp3",
@@ -2335,7 +2288,7 @@
    ]
   },
   {
-   "n": 44,
+   "n": 43,
    "slideId": "s-exec-unwalla",
    "clipId": "NAR-s44",
    "file": "/audio/guide/slides/NAR-s44-s-exec-unwalla.mp3",
@@ -2378,6 +2331,6 @@
  ],
  "verifiedBy": "ElevenLabs Scribe (speechToText, model scribe_v1 requested, language en) on every per-slide clip",
  "notes": [
-  "v1.5.5: slides 40–44 (section 09 Executive Team: intro, Dr Thani Al Zeyoudi, Fahad Al Ameri, Muhammed Khalid, Kayaan K. Unwalla) — five George clips (KwKjDhenPt, v9QRCfvtIX, GXQlbIyvrh, MXYBQD2Rhf, nzkWVR3qWN) bundled locally; the hidden card (Lorenzo) is not narrated."
+  "v1.5.7: slides 40–43 (section 09 Executive Team: intro, Fahad Al Ameri, Muhammed Khalid, Kayaan K. Unwalla). The former slide 41 (Letter 1) and its clip NAR-s41 were removed and the following slides renumbered — clip ids keep their original numbers (NAR-s42 = slide 41, NAR-s43 = slide 42, NAR-s44 = slide 43). The hidden card (Lorenzo) is not narrated."
  ]
 }
