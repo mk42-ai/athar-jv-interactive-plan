@@ -1,6 +1,6 @@
 {
  "schema": "athar.narration.slides/1",
- "version": "1.5.8",
+ "version": "1.5.9",
  "generated_utc": "2026-10-01T14:00:00Z",
  "keyedBy": "data-slide-id (stable section id) — never by slide index",
  "voice": "George - Warm, Captivating Storyteller",
@@ -2297,9 +2297,9 @@
    "slideId": "s-exec-khalid",
    "clipId": "NAR-s43",
    "file": "/audio/guide/slides/NAR-s43-s-exec-khalid.mp3",
-   "bytes": 284255,
-   "sha256": "d08d939638dea2365b644c51059fc57abbf2b80b0675a83140d72e96d43eaf15",
-   "durationSec": 17.74,
+   "bytes": 335247,
+   "sha256": "fd14af7b671fde7c18924f4e2f59997ab910833920b8df694928e7af6ac75cfa",
+   "durationSec": 20.92,
    "section": "09 Executive Team",
    "sectionAr": "09 الفريق التنفيذي",
    "source": {
@@ -2314,9 +2314,9 @@
     "contentCheck": "matches the slide",
     "factCheck": "42 Network (4 million+ users, 140+ countries; OnDemand); The National 30 Sep 2024 (Core42 backing)",
     "pronunciation": "voice says \"Mohammed\" — captions/lower-thirds and the deck spell \"Muhammed\" (non-blocking)",
-    "trim": "v1.5.7: cut at 17.70 s (inside the 17.31-18.10 s pause after sentence 3, stream copy, no re-encode) to drop the final sentence \"Press play to watch his Athar impact story.\" — the film is disabled. Untrimmed clip (20.92 s, sha256 fd14af7b671fde7c18924f4e2f59997ab910833920b8df694928e7af6ac75cfa) is in git history at ad94152/3b625be."
+    "v159": "v1.5.9: the untrimmed v1.5.6 clip is restored from 3b625be (its last sentence “Press play to watch his Athar impact story.” applies again — the film is back on the card, press-to-play)"
    },
-   "text": "Muhammed Khalid, founder and CEO of AIREV. He built School Hack, which has reached more than 4 million users in over 140 countries. He secured backing from Core42, a G42 company, and leads OnDemand, AIREV’s agentic AI operating system.",
+   "text": "Muhammed Khalid, founder and CEO of AIREV. He built School Hack, which has reached more than 4 million users in over 140 countries. He secured backing from Core42, a G42 company, and leads OnDemand, AIREV’s agentic AI operating system. Press play to watch his Athar impact story.",
    "cues": [
     {
      "i": 1,
@@ -2336,8 +2336,15 @@
      "i": 3,
      "text": "He secured backing from Core42, a G42 company, and leads OnDemand, AIREV’s agentic AI operating system.",
      "start": 9.2,
-     "end": 17.31,
+     "end": 18.06,
      "anchor": "s43-c3"
+    },
+    {
+     "i": 4,
+     "text": "Press play to watch his Athar impact story.",
+     "start": 18.06,
+     "end": 20.88,
+     "anchor": "s43-c4"
     }
    ]
   },
@@ -2386,6 +2393,7 @@
  "verifiedBy": "ElevenLabs Scribe (speechToText, model scribe_v1 requested, language en) on every per-slide clip",
  "notes": [
   "v1.5.8: slides 40–44 (section 09 Executive Team: intro, Fahad Al Ameri, Ary Ferreira da Cunha, Muhammed Khalid, Kayaan K. Unwalla). Ary's clip is NAR-s45 (a new id — NAR-s41 stays retired with the former Letter 1); the following entries were renumbered n 42→43 and 43→44 (clip ids keep their numbers). Ary's role rests on his own LinkedIn profile (no independent UAE government source) — the card is tagged \"for clearance by office\".",
-  "v1.5.7: slides 40–43 (section 09 Executive Team: intro, Fahad Al Ameri, Muhammed Khalid, Kayaan K. Unwalla). The former slide 41 (Letter 1) and its clip NAR-s41 were removed and the following slides renumbered — clip ids keep their original numbers (NAR-s42 = slide 41, NAR-s43 = slide 42, NAR-s44 = slide 43). NAR-s43 was trimmed to drop its last sentence because the CEO film is disabled. The hidden card (Lorenzo) is not narrated."
+  "v1.5.7: slides 40–43 (section 09 Executive Team: intro, Fahad Al Ameri, Muhammed Khalid, Kayaan K. Unwalla). The former slide 41 (Letter 1) and its clip NAR-s41 were removed and the following slides renumbered — clip ids keep their original numbers (NAR-s42 = slide 41, NAR-s43 = slide 42, NAR-s44 = slide 43). NAR-s43 was trimmed to drop its last sentence because the CEO film is disabled. The hidden card (Lorenzo) is not narrated.",
+  "v1.5.9: NAR-s43 (s-exec-khalid) restored to the untrimmed v1.5.6 clip (20.92 s, 4 cues) — the Origins of Impact film is back on the CEO card (press-to-play); every other entry unchanged."
  ]
 }

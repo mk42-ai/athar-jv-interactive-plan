@@ -6,40 +6,60 @@ import fs from 'node:fs'; import path from 'node:path'; import crypto from 'node
 const ROOT = path.resolve(path.dirname(new URL(import.meta.url).pathname), '..', '..'); const DIST = path.join(ROOT, 'dist');
 const fail = (m) => { console.error('BUILD FAIL: ' + m); process.exit(1); };
 const V = JSON.parse(fs.readFileSync(path.join(ROOT, 'package.json'), 'utf8')).version;
-const need = { 'dist/index.html': [`data-deck-version="${V}"`], 'dist/js/impact-tiers.js': [`var VERSION = 'v${V}'`], 'dist/js/athar-os.js': [`var VERSION = 'v${V}'`], 'dist/js/img-guard.js': [`version: 'v${V}'`], 'dist/js/video-player.js': [`var VERSION = 'v${V}'`], 'dist/js/exec-team.js': [`var VERSION = 'v${V}'`], 'dist/js/narration.js': [`var VERSION = 'v${V}'`], 'dist/locales/impact-tiers.en.json': [`"version": "${V}"`], 'dist/locales/impact-tiers.ar.json': [`"version": "${V}"`] };
+const need = { 'dist/index.html': [`data-deck-version="${V}"`], 'dist/js/impact-tiers.js': [`var VERSION = 'v${V}'`], 'dist/js/athar-os.js': [`var VERSION = 'v${V}'`], 'dist/js/img-guard.js': [`version: 'v${V}'`], 'dist/js/video-player.js': [`var VERSION = 'v${V}'`], 'dist/js/exec-team.js': [`var VERSION = 'v${V}'`], 'dist/js/narration.js': [`var VERSION = 'v${V}'`], 'dist/js/exec-film-player.js': [`var VERSION = 'v${V}'`], 'dist/js/intro-gate.js': [`var VERSION = 'v${V}'`], 'dist/locales/impact-tiers.en.json': [`"version": "${V}"`], 'dist/locales/impact-tiers.ar.json': [`"version": "${V}"`] };
 for (const [f, lits] of Object.entries(need)) { const p = path.join(ROOT, f); if (!fs.existsSync(p)) fail('missing ' + f); const s = fs.readFileSync(p, 'utf8'); for (const l of lits) if (!s.includes(l)) fail(`${f} does not carry ${l}`); }
-/* v1.5.7 feature flags (pact-deck/features.json): sync dist/ to the flags BEFORE the gates run — idempotent, so a committed dist/ and a fresh Vercel build agree.
-   originsFilm (default false): the Muhammed Khalid impact-story film. ON  → features/origins-film/exec-film.js → dist/js/exec-film.js, its assets/ → dist/assets/exec/video/, and
-   <script src="/js/exec-film.js"> injected before exec-team.js in dist/index.html. OFF → those files and the tag are removed from dist/ and the gate below proves no trace is served. */
+/* v1.5.9 feature flag (pact-deck/features.json → execFilms, replaces v1.5.7's originsFilm): sync dist/ to the flag BEFORE the gates run — idempotent, so a committed dist/
+   and a fresh Vercel build agree. The source of truth is features/exec-films/films.json (one entry per Section 09 card; status 'shipped' | 'coming-soon').
+   ON  → dist/js/exec-films.js is GENERATED from films.json (window.AtharExecFilms, absolute dist paths), every shipped film's assets/<person>/ folder is copied to
+         dist/assets/exec/films/<person>/, and <script src="/js/exec-films.js"> is injected before exec-team.js in dist/index.html (the shared player module
+         dist/js/exec-film-player.js is a permanent runtime module and ships either way — it also renders the "Film coming soon" ready slots).
+   OFF → the generated file, the film folders and the tag are removed from dist/ and the gate below proves no film string is served. */
 const FEAT = JSON.parse(fs.readFileSync(path.join(ROOT, 'features.json'), 'utf8'));
-if (typeof FEAT.originsFilm !== 'boolean') fail('features.json: originsFilm must be true or false');
-const FILM_SRC = path.join(ROOT, 'features/origins-film'), FILM_JS = path.join(DIST, 'js/exec-film.js'), FILM_VIDEO_DIR = path.join(DIST, 'assets/exec/video'), FILM_TAG = '<script src="/js/exec-film.js" data-v157="origins-film"></script>';
-const filmAssets = fs.existsSync(path.join(FILM_SRC, 'assets')) ? fs.readdirSync(path.join(FILM_SRC, 'assets')) : [];
+if (typeof FEAT.execFilms !== 'boolean') fail('features.json: execFilms must be true or false');
+const FILMS_SRC = path.join(ROOT, 'features/exec-films'), FILMS_JS = path.join(DIST, 'js/exec-films.js'), FILMS_DIST = path.join(DIST, 'assets/exec/films'), FILMS_TAG = '<script src="/js/exec-films.js" data-v159="exec-films"></script>';
+const FILMS = JSON.parse(fs.readFileSync(path.join(FILMS_SRC, 'films.json'), 'utf8'));
+const sha = (p) => crypto.createHash('sha256').update(fs.readFileSync(p)).digest('hex');
 let indexHtml = fs.readFileSync(path.join(DIST, 'index.html'), 'utf8');
-if (FEAT.originsFilm) {
-  if (!fs.existsSync(path.join(FILM_SRC, 'exec-film.js')) || !filmAssets.length) fail('originsFilm is true but features/origins-film/ is missing exec-film.js or assets/');
-  fs.copyFileSync(path.join(FILM_SRC, 'exec-film.js'), FILM_JS); fs.mkdirSync(FILM_VIDEO_DIR, { recursive: true });
-  for (const f of filmAssets) fs.copyFileSync(path.join(FILM_SRC, 'assets', f), path.join(FILM_VIDEO_DIR, f));
-  if (!indexHtml.includes(FILM_TAG)) { const m = /<script[^>]*src="\/js\/exec-team\.js"[^>]*><\/script>/.exec(indexHtml); if (!m) fail('index.html: exec-team.js script tag not found'); indexHtml = indexHtml.replace(m[0], FILM_TAG + m[0]); }
+const filmMust = [];
+if (FEAT.execFilms) {
+  const out = { version: FILMS.version, generated: 'scripts/v1.4.7/build.mjs from features/exec-films/films.json', films: {} };
+  for (const [id, f] of Object.entries(FILMS.films)) {
+    if (f.status !== 'shipped') { out.films[id] = { status: f.status || 'coming-soon', person: f.person || null }; continue; }
+    const dir = path.join(FILMS_SRC, 'assets', id); if (!fs.existsSync(dir)) fail(`films.json: ${id} is 'shipped' but features/exec-films/assets/${id}/ is missing`);
+    const abs = (rel) => rel ? FILMS.distBase + rel : null;
+    for (const [k, want] of [['mp4', f.mp4Sha256], ['mp4Mobile', f.mp4MobileSha256], ['poster', f.posterSha256], ['posterWebp', null]]) {
+      if (!f[k]) { if (k === 'mp4' || k === 'poster') fail(`films.json: ${id} has no ${k}`); continue; }
+      const src = path.join(FILMS_SRC, 'assets', f[k]); if (!fs.existsSync(src) || !fs.statSync(src).size) fail(`films.json: ${id}.${k} → ${f[k]} missing or empty`);
+      if (want && sha(src) !== want) fail(`films.json: ${id}.${k} sha256 mismatch (${f[k]})`);
+    }
+    for (const lg of ['en', 'ar']) { const rel = f.captions && f.captions[lg]; if (!rel) fail(`films.json: ${id} has no ${lg} captions`); const src = path.join(FILMS_SRC, 'assets', rel); if (!fs.existsSync(src) || !/^WEBVTT/.test(fs.readFileSync(src, 'utf8'))) fail(`films.json: ${id} ${lg} captions missing or not WebVTT (${rel})`); if (f.captionsSha256 && f.captionsSha256[lg] && sha(src) !== f.captionsSha256[lg]) fail(`films.json: ${id} ${lg} captions sha256 mismatch`); }
+    fs.mkdirSync(path.join(FILMS_DIST, id), { recursive: true });
+    for (const name of fs.readdirSync(dir)) { fs.copyFileSync(path.join(dir, name), path.join(FILMS_DIST, id, name)); filmMust.push('dist/assets/exec/films/' + id + '/' + name); }
+    out.films[id] = { status: 'shipped', person: f.person, title: f.title, aria: f.aria || null, bodyExtra: f.bodyExtra || null, mp4: abs(f.mp4), mp4Mobile: abs(f.mp4Mobile), poster: abs(f.poster), posterWebp: abs(f.posterWebp), posterTimeSec: f.posterTimeSec,
+      vttEn: abs(f.captions.en), vttAr: abs(f.captions.ar), durationSec: f.durationSec, durationLabel: f.durationLabel, inPt: f.inPt || 0, outPt: f.outPt || f.durationSec, w: f.w, h: f.h, sha256: f.mp4Sha256 };
+  }
+  fs.writeFileSync(FILMS_JS, `/* Athar deck v${V} — GENERATED by scripts/v1.4.7/build.mjs from pact-deck/features/exec-films/films.json. Do not edit: edit films.json and rebuild.\n   window.AtharExecFilms → read by dist/js/exec-team.js; a 'shipped' entry renders the shared player (dist/js/exec-film-player.js), anything else the ready slot. */\nwindow.AtharExecFilms = ${JSON.stringify(out, null, 1)};\n`);
+  filmMust.push('dist/js/exec-films.js');
+  if (!indexHtml.includes(FILMS_TAG)) { const m = /<script[^>]*src="\/js\/exec-team\.js"[^>]*><\/script>/.exec(indexHtml); if (!m) fail('index.html: exec-team.js script tag not found'); indexHtml = indexHtml.replace(m[0], FILMS_TAG + m[0]); }
 } else {
-  fs.rmSync(FILM_JS, { force: true }); for (const f of filmAssets) fs.rmSync(path.join(FILM_VIDEO_DIR, f), { force: true });
-  try { fs.rmdirSync(FILM_VIDEO_DIR); } catch (e) { /* not empty / absent */ }
-  indexHtml = indexHtml.split(FILM_TAG).join('');
+  fs.rmSync(FILMS_JS, { force: true }); fs.rmSync(FILMS_DIST, { recursive: true, force: true });
+  indexHtml = indexHtml.split(FILMS_TAG).join('');
 }
+for (const legacy of ['dist/js/exec-film.js', 'dist/assets/exec/video']) fs.rmSync(path.join(ROOT, legacy), { recursive: true, force: true }); /* v1.5.7 layout — never served alongside v1.5.9 */
 fs.writeFileSync(path.join(DIST, 'index.html'), indexHtml);
-const filmMust = FEAT.originsFilm ? ['dist/js/exec-film.js', ...filmAssets.map(f => 'dist/assets/exec/video/' + f)] : [];
 const must = ['dist/assets/img/fallback-athar.svg', 'dist/js/img-guard.js', 'dist/assets/img/lebanon-one-million-ai-experts-20260925.jpg', 'dist/assets/img/lebanon-one-million-ai-experts-20260925.webp', 'dist/assets/tour/video/athar-os-launch-30s.mp4', 'dist/assets/tour/video/athar-os-launch-30s-poster.jpg', 'dist/assets/intro/v1.4.2/intro.mp4', 'dist/assets/plates/plate5-banner.webp', 'dist/assets/impact/v133/t1-licences.webp', 'dist/assets/impact/v133/t2-ai-pc-composited.webp', 'dist/assets/impact/v133/t3-data-centre-composited.webp', /* v1.5.5 */ 'dist/assets/plates/plate5-concept-v157-1x.webp', 'dist/assets/plates/plate5-concept-v157-2x.webp', 'dist/assets/plates/plate5-concept-v157-1x.jpg', 'dist/assets/plates/plate5-concept-v157-2x.jpg', 'dist/partners/review/mastercard-foundation__full-colour.png', 'dist/js/exec-team.js', 'dist/assets/exec-team.css', 'dist/assets/exec/athar-logo-master-1200.png', 'dist/audio/guide/slides/NAR-s40-s-exec-intro.mp3', 'dist/audio/guide/slides/NAR-s43-s-exec-khalid.mp3', 'dist/audio/guide/slides/NAR-s44-s-exec-unwalla.mp3', 'dist/assets/exec/letter-texture-ksV8ASq6b2.webp', 'dist/audio/guide/slides/NAR-s42-s-exec-al-ameri.mp3', /* v1.5.8 */ 'dist/audio/guide/slides/NAR-s45-s-exec-ferreira-da-cunha.mp3', 'dist/assets/plates/plate5-lebanon-v158-1x.webp', 'dist/assets/plates/plate5-lebanon-v158-2x.webp', 'dist/assets/plates/plate5-lebanon-v158-1x.jpg', 'dist/assets/plates/plate5-lebanon-v158-2x.jpg'];
-must.push(...filmMust);
+must.push('dist/js/exec-film-player.js', 'dist/assets/exec-film-player.css', ...filmMust);
 for (const f of must) { const p = path.join(ROOT, f); if (!fs.existsSync(p) || fs.statSync(p).size === 0) fail('required asset missing or empty: ' + f); }
-/* v1.5.7 gate: with originsFilm OFF no served text file may carry the film's names, paths or captions */
-if (!FEAT.originsFilm) {
+/* v1.5.7 gate (kept): with execFilms OFF no served text file may carry the film's names, paths or captions */
+if (!FEAT.execFilms) {
   const bad = /origins[- ]of[- ]impact|\bep01\b|Episode 01|أصول الأثر|الحلقة 01/i, hits = [];
   (function walk(d) { for (const e of fs.readdirSync(d, { withFileTypes: true })) { const q = path.join(d, e.name); if (e.isDirectory()) walk(q); else if (/\.(html|js|css|json|vtt|txt|csv|md|svg|webmanifest)$/i.test(e.name) && bad.test(fs.readFileSync(q, 'utf8'))) hits.push(path.relative(ROOT, q)); } })(DIST);
-  if (hits.length) fail('originsFilm is off but film strings are still served in: ' + hits.join(', '));
+  if (hits.length) fail('execFilms is off but film strings are still served in: ' + hits.join(', '));
 }
 const gate = spawnSync(process.execPath, [path.join(ROOT, 'scripts/check-assets.mjs'), '--dist', DIST, '--quiet'], { stdio: 'inherit' });
 if (gate.status !== 0) fail('check-assets gate failed (exit ' + gate.status + ')');
 const files = []; (function walk(d) { for (const e of fs.readdirSync(d, { withFileTypes: true })) { const p = path.join(d, e.name); if (e.isDirectory()) walk(p); else files.push(p); } })(DIST);
 files.sort(); const lines = files.map(f => crypto.createHash('sha256').update(fs.readFileSync(f)).digest('hex') + '  ./' + path.relative(ROOT, f).split(path.sep).join('/'));
 fs.writeFileSync(path.join(ROOT, 'SHA256SUMS.txt'), lines.join('\n') + '\n');
-console.log(`build v${V}: features ${JSON.stringify(FEAT.originsFilm ? { originsFilm: true } : { originsFilm: false })}, versions OK, ${must.length} required assets present, check-assets gate PASS, SHA256SUMS.txt regenerated over dist/ (${files.length} files)`);
+const shipped = Object.entries(FILMS.films).filter(([, f]) => f.status === 'shipped').map(([id]) => id), slots = Object.entries(FILMS.films).filter(([, f]) => f.status !== 'shipped').map(([id]) => id);
+console.log(`build v${V}: features ${JSON.stringify({ execFilms: FEAT.execFilms })} (films shipped: ${shipped.join(', ') || 'none'}; ready slots: ${slots.join(', ') || 'none'}), versions OK, ${must.length} required assets present, check-assets gate PASS, SHA256SUMS.txt regenerated over dist/ (${files.length} files)`);

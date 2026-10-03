@@ -1,4 +1,4 @@
-/* Athar deck v1.5.8 (v1.5.5 base) — section 09 Executive Team / الفريق التنفيذي (dist/js/exec-team.js) — hand-written-letter style (Athar Brand Guidelines).
+/* Athar deck v1.5.9 (v1.5.5 base) — section 09 Executive Team / الفريق التنفيذي (dist/js/exec-team.js) — hand-written-letter style (Athar Brand Guidelines).
    Athar Ink #0F1E2C on Manuscript #F7F3EA with the ink-on-manuscript texture at 8 % opacity; names IBM Plex Serif 600; body IBM Plex Sans
    16/24, sentence case; Arabic IBM Plex Sans Arabic at 107 % of the Latin size, letter-spacing 0, on the right of a hairline divider;
    ONE short Legacy Gold #B8975A hairline closes each letter (never full width). No script fonts. Logical properties → the AR deck mirrors. */
@@ -54,8 +54,8 @@ html[lang=ar] .ex-portrait-cap{font-family:var(--font-arabic)}
 .ex-grid--card{grid-template-columns:minmax(0,1.18fr) minmax(0,1fr)}
 .ex-grid--card .ex-letter{max-inline-size:none;padding:18px 24px 14px}
 .ex-grid--card .ex-top{grid-template-columns:minmax(0,1fr)}
-.ex-card>.ex-roundel,.ex-card>.ex-portrait{margin:0 auto 12px}
-.ex-card>.ex-roundel{inline-size:72px}
+.ex-card>.ex-roundel,.ex-card>.ex-portrait,.ex-card-head>.ex-roundel,.ex-card-head>.ex-portrait{margin:0 0 12px}
+.ex-card>.ex-roundel,.ex-card-head>.ex-roundel{inline-size:72px;flex:0 0 72px}
 .ex-card{position:relative;isolation:isolate;box-sizing:border-box;min-inline-size:0;background:var(--ex-paper);color:var(--ex-ink);border:1px solid #E3DCCB;border-radius:2px;box-shadow:0 1px 0 rgba(15,30,44,.05),0 22px 44px -32px rgba(15,30,44,.45);padding:16px 20px 14px}
 .ex-card::before{content:"";position:absolute;inset:0;z-index:-1;background:url(/assets/exec/letter-texture-ksV8ASq6b2.webp) center/cover no-repeat;opacity:.08;pointer-events:none}
 .ex-card-cols{display:grid;grid-template-columns:minmax(0,1fr) 1px minmax(0,1fr);column-gap:16px;align-items:start}
@@ -94,6 +94,27 @@ html[lang=ar] .ex-film-title,html[lang=ar] .ex-film-note{font-family:var(--font-
 .ex-grid--film .ex-roundel{inline-size:72px}
 /* short desktop heights: the slide body scrolls rather than shrinking the 16/24 body */
 @media (max-height:780px) and (min-width:701px){.ex-slide .s-body.ex-body{overflow-y:auto}}
+/* v1.5.9 — executive films: the shared player (.efp, dist/assets/exec-film-player.css) or the ready slot (.efp-slot) sits BESIDE the profile:
+   on a card profile (Fahad · Ary · Kayaan) in the card head next to the monogram roundel; on the letter-only CEO profile in its own column next to the letter.
+   Desktop: side by side · phone: stacked under the roundel / letter. 16:9 box with aspect-ratio → no layout shift; logical properties → the AR deck mirrors. */
+.ex-card-head{display:flex;align-items:flex-start;gap:16px;margin-block-end:12px;min-inline-size:0}
+.ex-card-head>.ex-roundel,.ex-card-head>.ex-portrait{margin:0}
+.ex-card-media{flex:1 1 auto;min-inline-size:0}
+.ex-card-head--film .ex-card-media{max-inline-size:480px}
+.ex-card-head .efp-slot{align-self:center}
+.ex-media-col{display:flex;flex-direction:column;gap:12px;min-inline-size:0;position:sticky;inset-block-start:0}
+.ex-grid--film .ex-media-col .efp{inline-size:100%}
+.ex-grid--slot.ex-grid--film{grid-template-columns:minmax(0,1.18fr) minmax(0,.82fr)}
+.ex-grid--slot .ex-media-col .efp-slot{padding:16px 18px}
+/* desktop: a film slide's body scrolls instead of clipping at any height (phone keeps the section as its scroll container, like every other slide) */
+@media (min-width:701px){.ex-slide .s-body.ex-body:has(.efp){overflow-y:auto;overscroll-behavior:contain}}
+@media (max-width:700px){
+  .ex-card-head{flex-direction:column;align-items:stretch;gap:12px}
+  .ex-card-head>.ex-roundel{margin-inline:auto}
+  .ex-card-head--film .ex-card-media{max-inline-size:none}
+  .ex-media-col{position:static}
+  .ex-grid--slot.ex-grid--film{grid-template-columns:minmax(0,1fr)}
+}
 /* phone: one column — Latin, horizontal hairline, Arabic (RTL), then the film */
 @media (max-width:700px){
   .ex-grid--card{grid-template-columns:minmax(0,1fr)}

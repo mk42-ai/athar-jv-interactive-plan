@@ -1,0 +1,102 @@
+{
+ "_comment": "v1.5.9 — Section 09 executive films (one slot per card). Source of truth for scripts/v1.4.7/build.mjs (copies assets/<person>/ → dist/assets/exec/films/<person>/), dist/build-info.json (films[]), features/exec-films/exec-films.js (window.AtharExecFilms) and the QA suite. status: 'shipped' = file verified and served · 'coming-soon' = labelled ready slot, no file served. To ship a film later: drop the files into assets/<person>/, fill the entry, set status to shipped, run the build.",
+ "version": "1.5.9",
+ "distBase": "/assets/exec/films/",
+ "films": {
+  "khalid": {
+   "status": "shipped",
+   "person": {
+    "en": "Muhammed Khalid",
+    "ar": "محمد خالد"
+   },
+   "title": {
+    "en": "Athar — Origins of Impact, Episode 01: Muhammed Khalid",
+    "ar": "أثر — أصول الأثر، الحلقة 01: محمد خالد"
+   },
+   "aria": {
+    "en": "Impact story film: Athar — Origins of Impact, Episode 01, Muhammed Khalid",
+    "ar": "فيلم قصة الأثر: أثر — أصول الأثر، الحلقة 01، محمد خالد"
+   },
+   "bodyExtra": {
+    "en": "His Athar impact story plays alongside this letter.",
+    "ar": "وتُعرض قصة أثره إلى جانب هذه الرسالة."
+   },
+   "requestedFile": "athar-origins-of-impact-ep01-muhammed-khalid_1080p_subtitled_v2.mp4",
+   "requestedFileFound": false,
+   "usedInsteadOf": "the _v2 file (~109.23 MB) was not found anywhere (media library, uploads, prior artefacts, deployment zips, repo history); the best verified file is the media-library master athar-origins-of-impact-ep01-muhammed-khalid_1080p_subtitled.mp4 (id 6abe166ad64782b8259834dc, 40.000 s, sha256 c7c20005…3ab2a) in its v1.5.6 trim (closing end card removed at frame 896 / 37.333 s) — the committed 1080p source below",
+   "source": {
+    "file": "assets/khalid/athar-origins-of-impact-ep01-muhammed-khalid-1080p.mp4",
+    "note": "1080p source kept in the repo (45,357,475 B; 1920×1080 24 fps H.264 High 9.45 Mb/s + AAC-LC 48 kHz stereo, faststart, burned-in English subtitles); master provenance in sources/khalid/SOURCE.md"
+   },
+   "mp4": "khalid/athar-origins-of-impact-ep01-muhammed-khalid-1080p.mp4",
+   "mp4Sha256": "f71b761b455fd329eb96d66de2c9bbf48bb6e69ab90a904b8146397f33ad6048",
+   "mp4Bytes": 45357475,
+   "mp4Mobile": "khalid/athar-origins-of-impact-ep01-muhammed-khalid-720p.mp4",
+   "mp4MobileSha256": "e8638ddc6a84e681248ffad9162c65ebadd2b160c80a783bc3303069fb1cacf3",
+   "mp4MobileBytes": 6442036,
+   "mp4MobileNote": "1280×720 transcode of the 1080p source (libx264 High@4.0 crf 23, AAC 128k, +faststart) for viewports ≤ 720 px and Save-Data",
+   "poster": "khalid/athar-origins-of-impact-ep01-poster-09s1.jpg",
+   "posterWebp": "khalid/athar-origins-of-impact-ep01-poster-09s1.webp",
+   "posterSha256": "0c34da116fb1b1030abb3ce238eceec61ddd980ccf27adb719408ca0006115d9",
+   "posterTimeSec": 9.1,
+   "posterNote": "frame at 00:09.100 — the only caption-free window in the transcript (between cues c03 08.800 and c04 09.400; the film carries burned-in English subtitles everywhere else). The film has no frame that is guaranteed free of its own title typography; chosen by transcript timing + pixel heuristics, not by eye. Replaces the v1.5.6 poster at 00:15.5, which showed the name title card under a burned-in caption.",
+   "w": 1920,
+   "h": 1080,
+   "fps": 24,
+   "durationSec": 37.333,
+   "durationLabel": "0:37",
+   "inPt": 0,
+   "outPt": 37.3,
+   "captions": {
+    "en": "khalid/athar-origins-of-impact-ep01.en.vtt",
+    "ar": "khalid/athar-origins-of-impact-ep01.ar.vtt",
+    "note": "WebVTT, 12 cues each, generated from the burned-in English subtitles (EN) and translated (AR); cues sit at line:6% so they never cover the burned-in text"
+   },
+   "captionsSha256": {
+    "en": "eaf7bb4a3494325ba7b39b8904965890a52b375b817e6e64d34590a5f5410385",
+    "ar": "d4d4b9746be4f120edd56a3b1ef5221ad92f183dc5b07abf9f4ad162d7214562"
+   },
+   "videoCodec": "h264 High",
+   "audioCodec": "aac LC 48 kHz stereo",
+   "subtitleStreams": "none (burned-in EN) — soft EN/AR via <track>"
+  },
+  "al-ameri": {
+   "status": "coming-soon",
+   "person": {
+    "en": "H.E. Fahad Mohamed Al Ameri",
+    "ar": "سعادة فهد محمد العامري"
+   },
+   "requestedFile": "ATHAR_EP01_FahadAlAmeri_1080p_subtitled.mp4",
+   "requestedFileFound": false,
+   "searched": "media library (Media API, 2,244 items), uploads index, this and every other session workspace, prior-turn artefacts, the v1.5.6 / v1.5.7 / v1.5.8 deployment zips, repo history (git log --all -- '*.mp4') — 2026-10-03",
+   "mp4": null,
+   "poster": null,
+   "captions": null
+  },
+  "ferreira-da-cunha": {
+   "status": "coming-soon",
+   "person": {
+    "en": "Ary Ferreira da Cunha",
+    "ar": "آري فيريرا دا كونيا"
+   },
+   "requestedFile": "ary_origins_1080p_FINAL_subtitled_v1.mp4",
+   "requestedFileFound": false,
+   "searched": "media library (Media API, 2,244 items), uploads index, this and every other session workspace, prior-turn artefacts, the v1.5.6 / v1.5.7 / v1.5.8 deployment zips, repo history (git log --all -- '*.mp4') — 2026-10-03",
+   "mp4": null,
+   "poster": null,
+   "captions": null
+  },
+  "unwalla": {
+   "status": "coming-soon",
+   "person": {
+    "en": "Kayaan K. Unwalla",
+    "ar": "كايان ك. أونوالا"
+   },
+   "requestedFile": null,
+   "note": "no film requested or supplied — labelled ready slot (Film coming soon / قريباً)",
+   "mp4": null,
+   "poster": null,
+   "captions": null
+  }
+ }
+}

@@ -1,11 +1,11 @@
 <!doctype html>
-<html lang="en" dir="ltr" data-deck-version="1.5.8">
+<html lang="en" dir="ltr" data-deck-version="1.5.9">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
     <meta name="color-scheme" content="light" />
     <meta name="theme-color" content="#062739" />
-    <meta name="application-version" content="1.5.8" />
+    <meta name="application-version" content="1.5.9" />
     <meta name="generator" content="athar-community-deck v1.4.7 (2026-09-29; image-integrity release: every image slot restored or replaced from official sources, img-guard fallback, check-assets build gate; lineage v1.4.2 (2026-09-28; v1.2.1 build + runtime modules: impact-tiers section, API-licence grid, section 08 Athar OS with the real-screen product tour, product film and stills; intro film gate with Skip)" />
     <meta name="description" content="Athar Open Agentic Pact — Build once. Run everywhere. Lift everyone. A community proposal by ODA × AIREV (24 September 2026)." />
     <title>Athar Open Agentic Pact — Build once. Run everywhere. Lift everyone.</title>
@@ -51,7 +51,8 @@
     <link rel="stylesheet" href="/assets/tour/real-screens.css">
     <script defer src="/js/tour/real-screens.js"></script>
     <link rel="stylesheet" href="/assets/impact-tiers.css">
-    <script defer src="/js/exec-team.js" data-v155="exec-team"></script><!-- v1.5.5: section 09 Executive Team (slides 40–46); loads before impact-tiers.js so the deck total is 46 -->
+    <script defer src="/js/exec-film-player.js" data-v159="exec-film-player"></script><!-- v1.5.9: shared press-to-play film player (window.AtharExecFilmPlayer); loads before exec-team.js -->
+    <script src="/js/exec-films.js" data-v159="exec-films"></script><script defer src="/js/exec-team.js" data-v155="exec-team"></script><!-- v1.5.5: section 09 Executive Team (slides 40–46); loads before impact-tiers.js so the deck total is 46 -->
     <script defer src="/js/impact-tiers.js"></script>
     <!-- v1.3.3 2026-09-27: slide 17 "Universal API licences managed by Athar" — seat-tier pricing removed from the bundle copy; API-licence tile grid rendered by a runtime module (10 official/typographic marks, provenance in dist/assets/api/credits.json) -->
     <link rel="stylesheet" href="/assets/api-licences.css">
@@ -62,6 +63,7 @@
     <link rel="stylesheet" href="/assets/narration.css">
     <link rel="stylesheet" href="/assets/release-v153.css">
     <link rel="stylesheet" href="/assets/exec-team.css" data-v155="exec-team">
+    <link rel="stylesheet" href="/assets/exec-film-player.css" data-v159="exec-film-player"><!-- v1.5.9: shared executive-film player + ready slot -->
     <script defer src="/js/intro-gate.js"></script>
     <script defer src="/js/cobrand.js" data-v152="cobrand"></script>
     <script defer src="/js/narration.js" data-v152="narration"></script>
@@ -101,7 +103,7 @@
       var lastLang=null;
       function inject(){var l=lang();var relabel=lastLang!==null&&lastLang!==l;lastLang=l;
         document.querySelectorAll('section.slide').forEach(function(sec){if(!STRIP_SLIDES[sec.id])return;var ex=sec.querySelector(':scope>.athar-partner-strip');if(ex&&relabel){ex.remove();ex=null;}if(!ex){sec.classList.add('has-partner-strip');sec.appendChild(strip());}});fitAll();
-        var f=document.querySelector('footer.pagefooter');if(f){var ex=f.querySelector(':scope>.aps-footer');if(ex&&relabel){ex.remove();ex=null;}if(!ex){var r=f.querySelector(':scope>.footer-right');f.insertBefore(footerStrip(),r||null);}var fr=f.querySelector(':scope>.footer-right');if(fr&&!fr.querySelector('.deck-version')){var v=document.createElement('span');v.className='deck-version';v.setAttribute('data-testid','deck-version');v.textContent='v1.5.8';fr.insertBefore(v,fr.firstChild);}}}
+        var f=document.querySelector('footer.pagefooter');if(f){var ex=f.querySelector(':scope>.aps-footer');if(ex&&relabel){ex.remove();ex=null;}if(!ex){var r=f.querySelector(':scope>.footer-right');f.insertBefore(footerStrip(),r||null);}var fr=f.querySelector(':scope>.footer-right');if(fr&&!fr.querySelector('.deck-version')){var v=document.createElement('span');v.className='deck-version';v.setAttribute('data-testid','deck-version');v.textContent='v1.5.9';fr.insertBefore(v,fr.firstChild);}}}
       var root=document.getElementById('root');var pending=false;
       function schedule(){if(pending)return;pending=true;window.requestAnimationFrame(function(){pending=false;try{inject();}catch(e){}});}
       new MutationObserver(schedule).observe(root,{childList:true,subtree:true});
