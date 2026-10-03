@@ -1,6 +1,6 @@
 {
  "base": "http://127.0.0.1:4159",
- "written": "2026-10-03T13:21:26.507Z",
+ "written": "2026-10-03T13:33:35.419Z",
  "rows": [
   {
    "url": "/audio/guide/guide-00-welcome-lhbIUXFwLO.mp3",
@@ -345,7 +345,7 @@
    "status": 200,
    "type": "application/json; charset=utf-8",
    "bytes": 3301,
-   "sha256": "b2a1e4f9f10d006e1cd874da4662a5f61f200b0ccb3d25cbd3056d6b9459ed0d"
+   "sha256": "6e305b1a03f90e9bf2c4da5bbded352d4b79dba352d9f3e9e3ad8bbbbab28a36"
   },
   {
    "url": "/js/exec-film.js",

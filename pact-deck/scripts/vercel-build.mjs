@@ -21,4 +21,7 @@ const films = Object.entries(FILMS.films).map(([id, f]) => f.status === 'shipped
 const info = { deck: 'Athar Open Agentic Pact', version: pkg.version, commit: commit || null, commitNote: process.env.VERCEL_GIT_COMMIT_SHA ? 'VERCEL_GIT_COMMIT_SHA' : (commit ? 'git HEAD at build time (the commit this dist/ was built from)' : null), branch,
   vercelEnv: process.env.VERCEL_ENV || null, builtAt: new Date().toISOString(), features: JSON.parse(fs.readFileSync(path.join(ROOT, 'features.json'), 'utf8')), films, distFiles: files.length, gates: ['version gate', 'check-assets', 'films manifest (sha256 + WebVTT)', 'SHA256SUMS'] };
 fs.writeFileSync(path.join(ROOT, 'dist', 'build-info.json'), JSON.stringify(info, null, 1) + '\n');
+/* v1.5.9: SHA256SUMS.txt covers the COMMITTED dist/ (build-info.json is generated per build and git-ignored, so build.mjs leaves it out); build-info records the manifest it belongs to */
+info.sha256sums = { file: 'SHA256SUMS.txt', files: fs.readFileSync(path.join(ROOT, 'SHA256SUMS.txt'), 'utf8').split('\n').filter(Boolean).length, sha256: (await import('node:crypto')).createHash('sha256').update(fs.readFileSync(path.join(ROOT, 'SHA256SUMS.txt'))).digest('hex') };
+fs.writeFileSync(path.join(ROOT, 'dist', 'build-info.json'), JSON.stringify(info, null, 1) + '\n');
 console.log(`Athar Open Agentic Pact deck v${pkg.version}: build complete — ${files.length} files in dist/, gates PASS, dist/build-info.json written`);

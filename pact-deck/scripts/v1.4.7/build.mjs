@@ -58,7 +58,7 @@ if (!FEAT.execFilms) {
 }
 const gate = spawnSync(process.execPath, [path.join(ROOT, 'scripts/check-assets.mjs'), '--dist', DIST, '--quiet'], { stdio: 'inherit' });
 if (gate.status !== 0) fail('check-assets gate failed (exit ' + gate.status + ')');
-const files = []; (function walk(d) { for (const e of fs.readdirSync(d, { withFileTypes: true })) { const p = path.join(d, e.name); if (e.isDirectory()) walk(p); else files.push(p); } })(DIST);
+const files = []; (function walk(d) { for (const e of fs.readdirSync(d, { withFileTypes: true })) { const p = path.join(d, e.name); if (e.isDirectory()) walk(p); else if (!(d === DIST && e.name === 'build-info.json')) files.push(p); } })(DIST); /* v1.5.9: build-info.json is generated per build (git-ignored) — SHA256SUMS covers the committed dist/ */
 files.sort(); const lines = files.map(f => crypto.createHash('sha256').update(fs.readFileSync(f)).digest('hex') + '  ./' + path.relative(ROOT, f).split(path.sep).join('/'));
 fs.writeFileSync(path.join(ROOT, 'SHA256SUMS.txt'), lines.join('\n') + '\n');
 const shipped = Object.entries(FILMS.films).filter(([, f]) => f.status === 'shipped').map(([id]) => id), slots = Object.entries(FILMS.films).filter(([, f]) => f.status !== 'shipped').map(([id]) => id);
