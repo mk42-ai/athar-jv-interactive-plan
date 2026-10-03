@@ -8,7 +8,7 @@
    roundel. The official's letter uses published statements only and carries the tag "for clearance by office".
    Hidden, feature-flagged card (FLAGS.pendingCards = false → not rendered, not counted, not narrated): Lorenzo (surname and role unconfirmed).
    v1.5.6: the other pending card (a different Presidential Court official, not Fahad) was removed outright; H.E. Fahad Mohamed Al Ameri's letter is
-   published as Letter 2 (not behind the flag). Name LABELS carry no honorific; the letter bodies keep H.E. / معالي / سعادة.
+   published as Letter 2 (not behind the flag). Name LABELS carry no honorific — except Fahad's (v1.5.8: H.E. / سعادة restored for him only); the letter bodies keep H.E. / معالي / سعادة.
    Navigation mirrors dist/js/impact-tiers.js; this file loads BEFORE impact-tiers.js and narration.js so the deck total is 39 + 4 = 43. v1.5.7: the former Letter 1 was removed (4 → 3 letters); the CEO film is an optional feature (off). */
 (function () {
   'use strict';
@@ -32,7 +32,7 @@
   var SIGN = { en: ['With respect,', 'The Athar team'], ar: ['مع خالص التقدير،', 'فريق أثر'] };
   var P = [
     { id: 'al-ameri', mono: ['FA', 'ف ع'], official: true, /* published letter 2 — no portrait exists, so the monogram roundel is used (no generated face) */
-      name: { en: 'Fahad Mohamed Al Ameri', ar: 'فهد محمد العامري' }, /* v1.5.6: label without honorific; the letter body keeps H.E. / سعادة */
+      name: { en: 'H.E. Fahad Mohamed Al Ameri', ar: 'سعادة فهد محمد العامري' }, /* v1.5.8: the honorific is restored on Fahad's label ONLY (EN 'H.E.', AR 'سعادة' — the form his label carried before the v1.5.6 removal, c989d86^, and his letter body still uses); every other label stays without one */
       role: { en: 'Executive Director, Development and Humanitarian Affairs, UAE Presidential Court', ar: 'المدير التنفيذي، شؤون التنمية والعمل الإنساني، ديوان الرئاسة في دولة الإمارات' },
       body: {
         en: ['H.E. Fahad Mohamed Al Ameri is Executive Director of Development and Humanitarian Affairs at the UAE Presidential Court.',

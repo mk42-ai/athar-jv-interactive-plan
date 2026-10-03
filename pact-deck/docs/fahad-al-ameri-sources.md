@@ -1,8 +1,12 @@
-# H.E. Fahad Mohamed Al Ameri — card + letter (section 09, slide 41 in v1.5.7; was 42): sources, verification status, open items
+# H.E. Fahad Mohamed Al Ameri — card + letter (section 09, slide 41 in v1.5.7 and v1.5.8; was 42 in v1.5.6): sources, verification status, open items
 
 Deck: Athar Open Agentic Pact v1.5.6 · slide 41 since v1.5.7 (`s-exec-al-ameri`; slide 42 and Letter 2 of 4 in v1.5.6) · EN + AR · written 2026-10-02.
-Spelling: **Fahad** (official: "Fahad Mohamed AlAmeri" / "Fahad Al Ameri", uaenep.ae); Arabic **فهد محمد العامري**. The letter body says "H.E." / «سعادة»;
-the name label above it does not (v1.5.6 name-label rule).
+Spelling: **Fahad** (official: "Fahad Mohamed AlAmeri" / "Fahad Al Ameri", uaenep.ae); Arabic **فهد محمد العامري**. The letter body says "H.E." / «سعادة».
+**v1.5.8 — honorific restored on the label (Fahad only):** EN **"H.E. Fahad Mohamed Al Ameri"**, AR **«سعادة فهد محمد العامري»** — the exact forms his label carried before the v1.5.6
+removal (`git show c989d86^:pact-deck/dist/js/exec-team.js`, line `name: { en: 'H.E. Fahad Mohamed Al Ameri', ar: 'سعادة فهد محمد العامري' }`) and the form his letter body uses.
+The brief suggested «معالي» as an option; the repository history shows «سعادة» (the Gulf form for director-level officials; «معالي» is the ministerial form), so «سعادة» was restored.
+It applies wherever the name label is rendered (letter header, profile-card aria-label, intro index, overview tile, slide titles, monogram aria-label); the narration clip already says
+"His Excellency". No other label got an honorific back (the v1.5.6 rule stays for Muhammed, Kayaan and Ary).
 
 ## What this slide replaced
 
