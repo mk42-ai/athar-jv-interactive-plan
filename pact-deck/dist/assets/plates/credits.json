@@ -645,6 +645,123 @@
      "readable": true
     }
    ]
+  },
+  "plate5-concept-v157": {
+   "role": "slide 38 (Athar OS · nations) product concept image — ONE full 16:10 picture in the right column under the \"PRODUCT CONCEPT\" / «مفهوم المنتج» tab, caption CONCEPT RENDER / تصوّر مفاهيمي",
+   "ai_generated": true,
+   "disclosure": {
+    "en": "AI-generated concept render (GPT Image 2.5). Not a photograph and not a frame from the Athar product film; the people, kiosk and screens are illustrative.",
+    "ar": "تصوّر مفاهيمي مولَّد بالذكاء الاصطناعي (GPT Image 2.5). ليس صورة فوتوغرافية وليس لقطة من فيلم منتج أثر؛ الأشخاص والكشك والشاشات توضيحية."
+   },
+   "added_utc": "2026-10-02T23:59:00Z",
+   "version": "1.5.7",
+   "generator": "GPT Image 2.5 (On Demand plugin agent-1789134730, tool generateImageUsing2.5; model gpt-image-2.5-flare), 1536x1024, quality high, n=3, output png",
+   "selected_candidate": {
+    "id": "wKr19OqvTJ",
+    "rank": 1,
+    "sha256": "73a2e23f2236089ee5f50ebf47ff98774ccde52bba88594a0334fc033e0fdc67",
+    "url_without_token": "https://airevdev.blob.core.windows.net/on-demand-dev/6692b763e851d28a036ab30e/agents/wKr19OqvTJ.png",
+    "size": [
+     1536,
+     1024
+    ]
+   },
+   "alternates": [
+    {
+     "id": "lXwphbcUrC",
+     "rank": 2,
+     "sha256": "b00290b8ef03d8cac13d0b9bf271712fe1815068a06effd25cd33bcf36112a81",
+     "url_without_token": "https://airevdev.blob.core.windows.net/on-demand-dev/6692b763e851d28a036ab30e/agents/lXwphbcUrC.png"
+    },
+    {
+     "id": "nMfQMgPMyX",
+     "rank": 3,
+     "sha256": "dbd54705ac62ad36e455734de2cade8cbbfa55055356bbdd2ae8998e41eebded",
+     "url_without_token": "https://airevdev.blob.core.windows.net/on-demand-dev/6692b763e851d28a036ab30e/agents/nMfQMgPMyX.png"
+    }
+   ],
+   "selection": {
+    "rubric": "no cropped heads · no garbled text · correct anatomy · clear kiosk and tablet · on-brand palette (cream / navy / black / white / gold)",
+    "deterministic": {
+     "face_detector": "OpenCV YuNet: 6 faces found in the selected image, none within 58 px of an edge (all three candidates: 6-7 faces, none touching an edge)",
+     "kiosk_wordmark_ocr": "tesseract: exact \"ATHAR\" (conf >= 91) on the kiosk in all three candidates",
+     "tablet_arabic_ocr": "tesseract ara on 384x256 tiles: selected image reads موعدك + الطبي exactly (conf 92 / 91); candidate 3 first word malformed (موعرك / موعدرك), candidate 2 second word read as الطيي",
+     "palette_off_brand_pct": {
+      "wKr19OqvTJ": 3.98,
+      "lXwphbcUrC": 5.92,
+      "nMfQMgPMyX": 6.77
+     },
+     "saturated_cyan_pct": {
+      "wKr19OqvTJ": 0.4,
+      "lXwphbcUrC": 1.07,
+      "nMfQMgPMyX": 0.43
+     }
+    },
+    "vision_judge": "Gemini agentic-vision plugin, 3 passes per image — noisy (single passes ranged 0-8/10). Compact structured pass: garbled-text areas 1 / 2 / 5 and clearly malformed hands 1 / 1 / 2 for the selected / second / third image.",
+    "known_defects_not_retouched": "AI-typical softness on hands and wheelchair structure; pseudo-text on the background wall display and kiosk screen UI (illegible at slide size)."
+   },
+   "crop": {
+    "source": "wKr19OqvTJ.png",
+    "box_xyxy_in_1536x1024": [
+     0,
+     64,
+     1536,
+     1024
+    ],
+    "result": [
+     1536,
+     960
+    ],
+    "aspect": "16:10",
+    "note": "top 64 px (ceiling) removed; every face keeps >= 184 px headroom; nothing else cropped"
+   },
+   "resize": "2x = 1536x960 (the crop); 1x = 768x480 (Lanczos)",
+   "files": {
+    "webp_1x": {
+     "path": "dist/assets/plates/plate5-concept-v157-1x.webp",
+     "bytes": 50220,
+     "sha256": "94dbc32320d6cca22f1b4c2dd7121c8f164302986ba883e6585f80c94158f07c",
+     "size": [
+      768,
+      480
+     ]
+    },
+    "webp_2x": {
+     "path": "dist/assets/plates/plate5-concept-v157-2x.webp",
+     "bytes": 126860,
+     "sha256": "f739e4d951fc79fa3c7769186ca43caa851b75baa68168a051325930815ecede",
+     "size": [
+      1536,
+      960
+     ]
+    },
+    "jpg_1x": {
+     "path": "dist/assets/plates/plate5-concept-v157-1x.jpg",
+     "bytes": 77270,
+     "sha256": "ec3503854871057ee9ce0556ece93109cf8a3c9759b40f10dc9a898ebcda425b",
+     "size": [
+      768,
+      480
+     ]
+    },
+    "jpg_2x": {
+     "path": "dist/assets/plates/plate5-concept-v157-2x.jpg",
+     "bytes": 227799,
+     "sha256": "8cc7e99ee9246d3f2f330b1f7d43a8cb35965a092e1ebaaac93e21cbc433bdf7",
+     "size": [
+      1536,
+      960
+     ]
+    }
+   },
+   "alt": {
+    "en": "AI-generated concept render of an Athar service hall: a man in a wheelchair is helped at a reception desk beside a navy ATHAR self-service kiosk, a mother and her young son look at a tablet showing an Arabic medical-appointment screen, and two colleagues sit at a meeting table in the background",
+    "ar": "تصوّر مفاهيمي مولَّد بالذكاء الاصطناعي لقاعة خدمات أثر: رجل على كرسي متحرك يتلقى المساعدة عند مكتب الاستقبال بجوار كشك أثر الأزرق الداكن للخدمة الذاتية، وأم مع ابنها الصغير تنظران إلى جهاز لوحي تظهر عليه شاشة موعد طبي بالعربية، وزميلان يجلسان إلى طاولة اجتماعات في الخلفية"
+   },
+   "tab_label": {
+    "en": "PRODUCT CONCEPT",
+    "ar": "مفهوم المنتج"
+   }
   }
  },
  "logo_files": {
@@ -665,5 +782,29 @@
    "sha256": "862dc135e31fdd6299bd7cd989d2ce869fdf4803773791f67052548f26cbd1ab"
   }
  },
- "method": "Plates 1 and 5 carry the OFFICIAL Athar logo composited programmatically (OpenCV: blank-panel detection → convex quad → perspective warp; multiply on light panels; plate-matched blur/grain/shadow; pixels outside the quad verified unchanged; never redrawn). Plate 1: monogram on the wall patch; Plate 5: horizontal logo in the wall nameplate. WebP q84/method 6 (≤ 420 KB at 1920 px), 960-px thumbnails, palette-PNG fallbacks; every use tagged 'Concept render' / «تصوّر مفاهيمي»."
+ "method": "Plates 1 and 5 carry the OFFICIAL Athar logo composited programmatically (OpenCV: blank-panel detection → convex quad → perspective warp; multiply on light panels; plate-matched blur/grain/shadow; pixels outside the quad verified unchanged; never redrawn). Plate 1: monogram on the wall patch; Plate 5: horizontal logo in the wall nameplate. WebP q84/method 6 (≤ 420 KB at 1920 px), 960-px thumbnails, palette-PNG fallbacks; every use tagged 'Concept render' / «تصوّر مفاهيمي».",
+ "removed_v157": [
+  {
+   "file": "dist/assets/plates/plate5-strip-v155.png",
+   "sha256": "eb00077e5fe2ccdb6506a171bd144360abbeb84121af5025139e44a36f965167",
+   "bytes": 760689,
+   "why": "3-panel strip (1550x320) that cut off faces; replaced by plate5-concept-v157"
+  },
+  {
+   "file": "dist/assets/plates/plate5-strip-v155.webp",
+   "why": "webp of the same strip"
+  },
+  {
+   "file": "dist/assets/tour/stills/p20.png (+ p20-960.webp)",
+   "why": "product-film still at 16.7 s, tagged \"PRODUCT FILM STILL · AT 16.7 S\"; retired with its tag"
+  },
+  {
+   "file": "dist/assets/tour/stills/p50.png (+ p50-960.webp)",
+   "why": "product-film still at 41.75 s; retired"
+  },
+  {
+   "file": "dist/assets/tour/stills/p80.png (+ p80-960.webp)",
+   "why": "product-film still at 66.8 s; retired"
+  }
+ ]
 }

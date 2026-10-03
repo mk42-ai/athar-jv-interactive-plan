@@ -163,3 +163,13 @@ nav.rail ol a{min-block-size:44px;display:flex;align-items:center;box-sizing:bor
 /* v1.5.5: on short viewports (≤ 800 px tall) the film still above the strip is scaled down — uncropped, aspect kept — so the strip always
    clears "Join the pact" by ≥ 32 px; at 1728×872 and taller nothing changes (the cap is larger than the still). */
 @media (max-height:800px) and (min-width:701px){#s-aos-nations .aos-nation-side .rs-still img,#s-aos-nations .aos-plate--s5 img{inline-size:auto;max-inline-size:100%;max-block-size:calc(100vh - 540px)}}
+/* v1.5.7 — slide 38 right column: ONE concept image (16:10, 1x/2x webp + jpg) under a "PRODUCT CONCEPT" / «مفهوم المنتج» tab, caption CONCEPT RENDER / تصوّر مفاهيمي, closed by the
+   Legacy Gold hairline. Replaces the product-film still (p20/p50/p80, "PRODUCT FILM STILL · AT n S") and the 3-panel strip that cut off faces. The right column is widened (34 % → 40 %)
+   so the whole picture shows; on short viewports (≤ 800 px tall) it is scaled down uncropped so it clears "Join the pact". Logical properties → the AR deck mirrors. */
+@media (min-width:701px){#s-aos-nations .aos-nation{grid-template-columns:minmax(0,1fr) minmax(300px,40%)}}
+#s-aos-nations .aos-nation-concept{margin:0;display:flex;flex-direction:column;align-items:stretch;min-inline-size:0;flex:0 0 auto}
+#s-aos-nations .aos-nation-concept .aos-concept-tab{position:static;align-self:flex-start;margin:0;padding:3px 10px;font-size:.6rem;line-height:1.25;letter-spacing:.08em;border-radius:6px 6px 0 0;white-space:normal}
+html[lang=ar] #s-aos-nations .aos-nation-concept .aos-concept-tab{letter-spacing:0;font-size:.7rem}
+#s-aos-nations .aos-nation-concept picture{display:block;inline-size:100%;border:1px solid var(--stone);border-radius:6px;border-start-start-radius:0;overflow:hidden;background:var(--manuscript)}
+#s-aos-nations .aos-nation-concept img{display:block;inline-size:100%;block-size:auto;aspect-ratio:16/10;object-fit:cover}
+@media (max-height:800px) and (min-width:701px){#s-aos-nations .aos-nation-concept picture{inline-size:fit-content;max-inline-size:100%}#s-aos-nations .aos-nation-concept img{inline-size:auto;max-inline-size:100%;max-block-size:calc(100vh - 470px)}}

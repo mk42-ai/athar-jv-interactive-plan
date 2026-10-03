@@ -10,7 +10,7 @@
 (function () {
   'use strict';
   var BASE = '/assets/tour/';
-  var TS = { 'kf-0000.png': 0, 'kf-0571.png': 19.05, 'kf-0673.png': 22.46, 'kf-0875.png': 29.2, 'kf-1178.png': 39.31, 'kf-1481.png': 49.42, 'kf-1682.png': 56.12, 'kf-1783.png': 59.49, 'kf-2086.png': 69.6, 'kf-2389.png': 79.71, 'p20.png': 16.7, 'p50.png': 41.75, 'p80.png': 66.8, 'poster.png': 25.05 };
+  var TS = { 'kf-0000.png': 0, 'kf-0571.png': 19.05, 'kf-0673.png': 22.46, 'kf-0875.png': 29.2, 'kf-1178.png': 39.31, 'kf-1481.png': 49.42, 'kf-1682.png': 56.12, 'kf-1783.png': 59.49, 'kf-2086.png': 69.6, 'kf-2389.png': 79.71, 'poster.png': 25.05 };
   var FILM = ['kf-0000.png', 'kf-0571.png', 'kf-0875.png', 'kf-1178.png', 'kf-1481.png', 'kf-1783.png', 'kf-2086.png', 'kf-2389.png'];
   var META = { timestamps: TS, filmstrip: FILM }; // mirrored in /assets/tour/tour-assets.json
   var SCREENS = { // key → {src key, page reference, label}

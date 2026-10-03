@@ -3,9 +3,6 @@
  "still_map": {
   "plate2-ai-pc-container": "kf-0673.png",
   "plate6-kenya-maize": "kf-1682.png",
-  "plate4-lebanon": "p20.png",
-  "plate4-india": "p50.png",
-  "plate4-kenya": "p80.png",
   "plate5-composited": "kf-1178.png",
   "plate3-builders-canvas": "poster.png",
   "plate1-composited": "poster.png"
@@ -21,7 +18,6 @@
   "kf-2389.png"
  ],
  "timestamps": {
-  "p50.png": 41.75,
   "kf-1178.png": 39.31,
   "kf-0000.png": 0.0,
   "kf-0571.png": 19.05,
@@ -31,8 +27,6 @@
   "kf-1481.png": 49.42,
   "kf-1783.png": 59.49,
   "kf-2389.png": 79.71,
-  "p20.png": 16.7,
-  "p80.png": 66.8,
   "kf-2086.png": 69.6,
   "kf-0673.png": 22.46
  },
@@ -44,6 +38,6 @@
   "width": 1920,
   "height": 848,
   "source": "Athar_Package.zip member 08 Web Prototype/athar_web_UI.mp4",
-  "captions": "none \u2014 no VTT for this film exists in the package or the workspace, so no <track> is emitted"
+  "captions": "none — no VTT for this film exists in the package or the workspace, so no <track> is emitted"
  }
 }
