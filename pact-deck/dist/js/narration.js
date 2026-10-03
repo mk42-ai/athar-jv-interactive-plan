@@ -30,7 +30,7 @@
    Keyboard: N = play / pause (start when off, retry when blocked); ← → change slide (handled by the deck, never intercepted). */
 (function () {
   'use strict';
-  var VERSION = 'v1.5.8', KEY = 'athar-guide-prefs-v3', OLDKEY = 'athar-narration-prefs-v2', TABLE = '/narration/slide-narration.json', MANIFEST = '/narration/narration-manifest.json', TOTAL = 39 + ((window.AtharExecTeam && window.AtharExecTeam.count) || 0), SETTLE_MS = 140, NOCLIP_MS = 9000; /* v1.5.5: 39 + section 09 Executive Team (slides 40–46) */
+  var VERSION = 'v1.5.9', KEY = 'athar-guide-prefs-v3', OLDKEY = 'athar-narration-prefs-v2', TABLE = '/narration/slide-narration.json', MANIFEST = '/narration/narration-manifest.json', TOTAL = 39 + ((window.AtharExecTeam && window.AtharExecTeam.count) || 0), SETTLE_MS = 140, NOCLIP_MS = 9000; /* v1.5.5: 39 + section 09 Executive Team (slides 40–46) */
   var STATES = { idle: 1, loading: 1, playing: 1, paused: 1, blocked: 1, ended: 1 };
   var T = {
     en: { region: 'Narrated guide', guide: 'Guide', guideOn: 'Guide on', play: 'Play narration', pause: 'Pause narration', mute: 'Mute', unmute: 'Unmute', auto: 'AUTO — advance to the next slide when its narration ends', cc: 'CC — live caption of the sentence being narrated', txOpen: 'Hide transcript', txShow: 'Show transcript', tx: 'Transcript', tap: 'Tap to play', tapRetry: 'Retry narration', tapAria: 'The browser blocked the narration. Tap to play the narration for slide {n} of {t}', tapRetryAria: 'The narration could not load. Tap to retry slide {n} of {t}',
@@ -145,14 +145,15 @@
   /* ---------- audio events (generation-guarded) ---------- */
   audio.addEventListener('playing', function () { if (!current()) { S.ownPause = true; audio.pause(); S.ownPause = false; return; } setState('playing'); loop(S.gen); prefetchNext(); });
   audio.addEventListener('pause', function () { if (!current() || S.ownPause || audio.ended) return; if (S.state === 'playing' || S.state === 'loading') { clearPending(); setState('paused', 'external'); } });
-  /* v1.5.5: impact-story film (video[data-narration-pause]) — narration pauses while it plays and resumes after it ends (or stops at its out-point) */
+  /* v1.5.5: impact-story film (video[data-narration-pause]) — narration pauses while it plays and resumes after it ends (or stops at its out-point).
+     v1.5.9: the same wiring serves EVERY film (the intro gate's film and each Section 09 executive film) and the guide now also resumes when the USER pauses a film, not only at its end. */
   function filmOf(t) { return t && t.tagName === 'VIDEO' && t.hasAttribute && t.hasAttribute('data-narration-pause') ? t : null; }
   document.addEventListener('play', function (ev) { var v = filmOf(ev.target); if (!v) return; S.filmPlaying = true; clearPending();
     if (S.state === 'playing' || S.state === 'loading' || (S.state === 'ended' && S.reason === 'no-clip')) { S.resumeAfterFilm = true; log('film-play', { resume: true }); if (S.state === 'ended') { setState('paused', 'video'); render(); } else pause('video'); }
     else log('film-play', { resume: false }); }, true);
   function filmDone(ev) { var v = filmOf(ev.target); if (!v) return; var out = parseFloat(v.getAttribute('data-out') || '0');
-    if (ev.type === 'pause' && !(v.ended || (out && v.currentTime >= out - 0.3))) { S.filmPlaying = false; log('film-pause-user', {}); return; }
-    S.filmPlaying = false; if (!S.resumeAfterFilm) return; S.resumeAfterFilm = false; log('film-done', { how: ev.type });
+    var userPause = ev.type === 'pause' && !(v.ended || (out && v.currentTime >= out - 0.3));
+    S.filmPlaying = false; if (!S.resumeAfterFilm) return; S.resumeAfterFilm = false; log(userPause ? 'film-pause-user' : 'film-done', { how: ev.type, resume: true }); /* v1.5.9: resume on pause AND on ended */
     var e = entry(S.slideId); if (!e) return; var g = S.gen;
     if (e.file) { start(); return; }
     if (prefs.auto && !introActive()) { var nx = nextId(S.slideId); if (nx) { later(function () { S.navCause = 'auto'; log('auto-advance', { to: nx, reason: 'film-ended' }); try { location.hash = hashFor(entry(nx).n); } catch (x) {} }, 600, g); setState('ended', 'no-clip'); render(); return; } }
@@ -292,7 +293,7 @@
     window.addEventListener('hashchange', function () { window.setTimeout(function () { observe('hash'); }, 0); });
     window.addEventListener('load', function () { observe('load'); });
     window.addEventListener('pageshow', function (ev) { if (ev.persisted) { observe('pageshow'); if (S.state === 'playing' && audio.paused) setState('paused', 'external'); } });
-    document.addEventListener('athar:intro-open', function () { if (S.state === 'playing' || S.state === 'loading') { S.resumeAfterIntro = true; clearPending(); S.ownPause = true; audio.pause(); S.ownPause = false; setState('paused', 'intro'); } });
+    document.addEventListener('athar:intro-open', function () { log('intro-open', { pressToPlay: true }); }); /* v1.5.9: opening the (press-to-play) intro no longer pauses the guide by itself — the intro film's own `play` does, through the film wiring above; `pause` / `ended` resume it */
     document.addEventListener('athar:intro-finished', function () { window.setTimeout(function () { observe('intro'); if (S.resumeAfterIntro && S.state === 'paused' && S.reason === 'intro') { S.resumeAfterIntro = false; start(); } }, 60); });
     window.AtharGuide = {
       version: VERSION, states: Object.keys(STATES),

@@ -1,4 +1,9 @@
-/* Athar Open Agentic Pact deck — v1.4.2 (2026-09-28) intro film gate.
+/* Athar Open Agentic Pact deck — v1.4.2 (2026-09-28) intro film gate · v1.5.9 (2026-10-03): PRESS-TO-PLAY.
+   v1.5.9: the intro no longer autoplays and never auto-starts muted — the gate opens on the animated intro sign (the poster frame with a gentle float +
+   sheen, none under prefers-reduced-motion) carrying the EN/AR label "Intro film — Athar · 1:00" / «فيلم المقدمة — أثر»; the film starts only from the
+   gold Play button (click / Enter / Space), with sound; a click on the film pauses / resumes it. The <video> carries data-narration-pause, so the narrated
+   guide pauses on `play` and resumes on `pause` / `ended` (dist/js/narration.js — the same wiring as the Section 09 executive-film player).
+   Original v1.4.2 behaviour, otherwise unchanged:
    Renders BEFORE slide 1 on first load (EN and AR): full-bleed <video> (MP4 + WebM, poster, playsinline,
    preload=metadata, starts muted with an Unmute toggle, captions track when narration exists), a "Skip intro" /
    «تخطي المقدمة» button visible from t=0 (inline-end = top-right in LTR, top-left in RTL, ≥44×44 px,
@@ -11,7 +16,7 @@
    overlay and one footer button. */
 (function () {
   'use strict';
-  var VERSION = 'v1.5.8'; /* sessionStorage key deliberately unchanged */
+  var VERSION = 'v1.5.9'; /* sessionStorage key deliberately unchanged */
   var KEY = 'athar-intro-v1.4.2';
   var BASE = '/assets/intro/v1.4.2/';
   var MEDIA = {
@@ -26,14 +31,14 @@
   var T = {
     en: { skip: 'Skip intro', skipAria: 'Skip intro — go straight to slide 1', unmute: 'Unmute', mute: 'Mute',
           unmuteAria: 'Unmute the intro film', muteAria: 'Mute the intro film', play: 'Play intro',
-          playAria: 'Play the intro film (reduced motion: no autoplay)', replay: 'Replay intro',
+          playAria: 'Play the intro film', replay: 'Replay intro',
           replayAria: 'Replay the intro film', dialog: 'Intro film — Athar', film: 'Athar film',
-          desc: 'The Athar intro film is playing. Press Escape or the Skip intro button to go to the deck.' },
+          desc: 'Intro film — Athar. Press Play to watch it, or Escape / the Skip intro button to go to the deck.', label: 'Intro film — Athar', labelKicker: 'Intro', labelDur: '1:00', pauseFilm: 'Pause intro', pauseFilmAria: 'Pause the intro film', resume: 'Resume intro' },
     ar: { skip: 'تخطي المقدمة', skipAria: 'تخطي المقدمة — الانتقال مباشرة إلى الشريحة 1', unmute: 'تشغيل الصوت', mute: 'كتم الصوت',
           unmuteAria: 'تشغيل صوت فيلم المقدمة', muteAria: 'كتم صوت فيلم المقدمة', play: 'تشغيل المقدمة',
-          playAria: 'تشغيل فيلم المقدمة (تقليل الحركة: بدون تشغيل تلقائي)', replay: 'إعادة تشغيل المقدمة',
+          playAria: 'تشغيل فيلم المقدمة', replay: 'إعادة تشغيل المقدمة',
           replayAria: 'إعادة تشغيل فيلم المقدمة', dialog: 'فيلم المقدمة — أثر', film: 'فيلم أثر',
-          desc: 'يُعرض فيلم مقدمة أثر. اضغط Escape أو زر تخطي المقدمة للانتقال إلى العرض.' }
+          desc: 'فيلم المقدمة — أثر. اضغط «تشغيل» لمشاهدته، أو Escape / زر تخطي المقدمة للانتقال إلى العرض.', label: 'فيلم المقدمة — أثر', labelKicker: 'المقدمة', labelDur: '1:00', pauseFilm: 'إيقاف المقدمة مؤقتاً', pauseFilmAria: 'إيقاف فيلم المقدمة مؤقتاً', resume: 'متابعة المقدمة' }
   };
   function lang() { return document.documentElement.lang === 'ar' ? 'ar' : 'en'; }
   function dir() { return document.documentElement.dir === 'rtl' ? 'rtl' : 'ltr'; }
@@ -81,7 +86,8 @@
     var d = n.querySelector('.intro-desc'); if (d) d.textContent = t.desc;
     var s = n.querySelector('.intro-skip'); if (s) { s.textContent = t.skip; s.setAttribute('aria-label', t.skipAria); s.setAttribute('title', t.skip); }
     var m = n.querySelector('.intro-mute'); if (m) { var muted = !state.video || state.video.muted; m.textContent = muted ? t.unmute : t.mute; m.setAttribute('aria-label', muted ? t.unmuteAria : t.muteAria); m.setAttribute('aria-pressed', muted ? 'false' : 'true'); }
-    var p = n.querySelector('.intro-play'); if (p) { p.textContent = t.play; p.setAttribute('aria-label', t.playAria); }
+    var p = n.querySelector('.intro-play'); if (p) { var started = state.video && state.video.currentTime > 0 && !state.video.ended; p.textContent = started ? t.resume : t.play; p.setAttribute('aria-label', t.playAria); }
+    var lb = n.querySelector('.intro-label'); if (lb) { lb.querySelector('.intro-label-kicker').textContent = t.labelKicker; lb.querySelector('.intro-label-title').textContent = t.label; lb.querySelector('.intro-label-dur').textContent = t.labelDur; lb.setAttribute('aria-label', t.label + ' · ' + t.labelDur); }
     if (state.video) state.video.setAttribute('aria-label', t.film);
     var tracks = state.video ? state.video.querySelectorAll('track') : [];
     Array.prototype.forEach.call(tracks, function (tr) { try { tr.track.mode = (tr.srclang === L) ? 'showing' : 'disabled'; } catch (e) {} });
@@ -94,15 +100,22 @@
     var desc = el('p', 'intro-desc sr-only', t.desc); desc.id = 'intro-gate-desc'; n.setAttribute('aria-describedby', desc.id); n.appendChild(desc);
     var v = document.createElement('video');
     v.className = 'intro-video'; v.setAttribute('data-testid', 'intro-video'); v.setAttribute('playsinline', ''); v.playsInline = true;
-    v.setAttribute('preload', 'metadata'); v.preload = 'metadata'; v.muted = true; v.setAttribute('muted', ''); v.defaultMuted = true;
+    v.setAttribute('preload', 'metadata'); v.preload = 'metadata'; /* v1.5.9: no muted auto-start — the film plays with sound from the user's Play press */
     v.setAttribute('poster', MEDIA.poster); v.poster = MEDIA.poster; v.setAttribute('aria-label', t.film); v.setAttribute('disablepictureinpicture', '');
-    if (!state.reduced) { v.autoplay = true; v.setAttribute('autoplay', ''); }
+    v.setAttribute('data-narration-pause', 'true'); v.setAttribute('data-intro-film', 'true'); /* v1.5.9: the narrated guide pauses on play, resumes on pause / ended (narration.js) — no autoplay attribute, ever */
+    v.autoplay = false; v.removeAttribute('autoplay');
     var s1 = document.createElement('source'); s1.src = MEDIA.mp4; s1.type = MEDIA.mp4Type; v.appendChild(s1);
     var s2 = document.createElement('source'); s2.src = MEDIA.webm; s2.type = MEDIA.webmType; v.appendChild(s2);
     MEDIA.tracks.forEach(function (tr) {
       var k = document.createElement('track'); k.kind = 'captions'; k.srclang = tr.lang; k.label = tr.label; k.src = tr.src; if (tr.lang === L) k.default = true; v.appendChild(k);
     });
     n.appendChild(v);
+    /* v1.5.9: the animated intro sign — the poster frame as a layer over the paused film (gentle float + sheen via CSS; none under prefers-reduced-motion); removed the moment the film plays */
+    var sign = el('div', 'intro-sign'); sign.setAttribute('aria-hidden', 'true'); sign.setAttribute('data-testid', 'intro-sign'); sign.setAttribute('data-motion', state.reduced ? 'reduced' : 'animated');
+    var si = el('img', 'intro-sign-img'); si.src = MEDIA.poster; si.alt = ''; si.width = 1920; si.height = 1080; si.decoding = 'async'; si.setAttribute('data-no-mirror', 'true'); sign.appendChild(si);
+    var sheen = el('span', 'intro-sign-sheen'); sheen.setAttribute('aria-hidden', 'true'); sign.appendChild(sheen); n.appendChild(sign);
+    var label = el('div', 'intro-label'); label.setAttribute('data-testid', 'intro-label'); label.setAttribute('role', 'note'); label.setAttribute('aria-label', t.label + ' · ' + t.labelDur);
+    label.appendChild(el('span', 'intro-label-kicker', t.labelKicker)); label.appendChild(el('span', 'intro-label-title', t.label)); label.appendChild(el('span', 'intro-label-dur', t.labelDur)); n.appendChild(label);
     var top = el('div', 'intro-top');
     var skip = el('button', 'intro-skip', t.skip); skip.type = 'button'; skip.setAttribute('data-testid', 'intro-skip'); skip.setAttribute('aria-label', t.skipAria);
     skip.addEventListener('click', function (e) { e.preventDefault(); finish('skip'); });
@@ -111,9 +124,13 @@
     var mute = el('button', 'intro-mute', t.unmute); mute.type = 'button'; mute.setAttribute('data-testid', 'intro-mute'); mute.setAttribute('aria-pressed', 'false'); mute.setAttribute('aria-label', t.unmuteAria);
     mute.addEventListener('click', function () { v.muted = !v.muted; if (!v.muted) v.volume = 1; relabel(); });
     bottom.appendChild(mute); n.appendChild(bottom);
-    var play = el('button', 'intro-play', t.play); play.type = 'button'; play.setAttribute('data-testid', 'intro-play'); play.setAttribute('aria-label', t.playAria); play.hidden = true;
-    play.addEventListener('click', function () { play.hidden = true; n.classList.remove('is-paused'); var pr = v.play(); if (pr && pr.catch) pr.catch(function () { play.hidden = false; n.classList.add('is-paused'); }); });
+    var play = el('button', 'intro-play', t.play); play.type = 'button'; play.setAttribute('data-testid', 'intro-play'); play.setAttribute('aria-label', t.playAria); play.hidden = false; /* v1.5.9: press-to-play — visible from the start */
+    function requestPlay() { play.hidden = true; n.classList.remove('is-paused'); var pr; try { pr = v.play(); } catch (e) { play.hidden = false; n.classList.add('is-paused'); return; } if (pr && pr.catch) pr.catch(function () { play.hidden = false; n.classList.add('is-paused'); }); }
+    play.addEventListener('click', function (e) { e.preventDefault(); requestPlay(); });
     n.appendChild(play);
+    v.addEventListener('click', function () { if (state.leaving) return; if (v.paused) requestPlay(); else v.pause(); });
+    v.addEventListener('play', function () { n.classList.add('is-playing'); n.classList.remove('is-paused'); n.setAttribute('data-played', 'true'); play.hidden = true; });
+    v.addEventListener('pause', function () { if (state.leaving || v.ended) return; n.classList.remove('is-playing'); n.classList.add('is-paused'); play.hidden = false; relabel(); try { play.focus({ preventScroll: true }); } catch (e) {} });
     v.addEventListener('ended', function () { finish('ended'); });
     v.addEventListener('error', function () { n.classList.add('has-error'); }, true);
     v.addEventListener('volumechange', relabel);
@@ -133,13 +150,8 @@
     state.open = true;
     window.addEventListener('keydown', onKey, true); window.addEventListener('keyup', onKeyOther, true); window.addEventListener('keypress', onKeyOther, true);
     relabel();
-    if (state.reduced) {
-      n.classList.add('is-paused'); n.querySelector('.intro-play').hidden = false;
-    } else {
-      var pr = state.video.play();
-      if (pr && pr.catch) pr.catch(function () { n.classList.add('is-paused'); n.querySelector('.intro-play').hidden = false; });
-    }
-    window.setTimeout(function () { var s = n.querySelector('.intro-skip'); if (s && state.open) s.focus(); }, 0);
+    n.classList.add('is-paused'); n.querySelector('.intro-play').hidden = false; /* v1.5.9: press-to-play for everyone — no autoplay, reduced motion or not */
+    window.setTimeout(function () { var p = n.querySelector('.intro-play'); if (p && state.open) p.focus(); }, 0);
     try { document.dispatchEvent(new CustomEvent('athar:intro-open', { detail: { reason: state.reason, reducedMotion: state.reduced } })); } catch (e) {}
     return true;
   }
@@ -188,7 +200,7 @@
   }
 
   window.AtharIntro = { VERSION: VERSION, KEY: KEY, MEDIA: MEDIA, open: open, skip: function () { finish('skip'); }, isOpen: function () { return state.open; },
-    state: function () { return { open: state.open, reduced: state.reduced, reason: state.reason, done: getDone(), currentTime: state.video ? state.video.currentTime : null, paused: state.video ? state.video.paused : null, muted: state.video ? state.video.muted : null }; },
+    state: function () { return { open: state.open, reduced: state.reduced, reason: state.reason, done: getDone(), currentTime: state.video ? state.video.currentTime : null, paused: state.video ? state.video.paused : null, muted: state.video ? state.video.muted : null, autoplay: state.video ? state.video.hasAttribute('autoplay') : null, pressToPlay: true }; },
     reset: function () { try { sessionStorage.removeItem(KEY); } catch (e) {} },
     /* the exact first-load decision the module makes on (re)load: forced by ?intro=1, else once per session on the start slide */
     wouldShow: function (hash) { var f = false; try { f = new URLSearchParams(location.search).get('intro') === '1'; } catch (e) {} return f || (!getDone() && isStartHash(hash == null ? location.hash : hash)); } };
