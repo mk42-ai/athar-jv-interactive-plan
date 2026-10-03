@@ -2234,6 +2234,66 @@
   },
   {
    "n": 42,
+   "slideId": "s-exec-ferreira-da-cunha",
+   "clipId": "NAR-s45",
+   "file": "/audio/guide/slides/NAR-s45-s-exec-ferreira-da-cunha.mp3",
+   "bytes": 279658,
+   "sha256": "dfa5079b877a38847a4370dc6df7e77a2c06ca8f494229a09d2c8bdddd4d5e48",
+   "durationSec": 17.45,
+   "section": "09 Executive Team",
+   "sectionAr": "09 الفريق التنفيذي",
+   "source": {
+    "type": "tts",
+    "provider": "ElevenLabs textToSpeech",
+    "voice": "George - Warm, Captivating Storyteller (premade, voice id JBFqnCBsd6RMkjVDRZzb)",
+    "modelRequested": "eleven_multilingual_v2",
+    "outputFormat": "mp3_44100_128",
+    "generationRef": "fxGyuyQ2EU",
+    "generatedUtc": "2026-10-03T02:36:47Z",
+    "storedAs": "downloaded into the repo — no SAS hotlink",
+    "textSource": "narration text as written for this slide (3 sentences, every statement from the card's confirmed facts); verified word-for-word with ElevenLabs Scribe (scribe_v1 requested)",
+    "contentCheck": "matches the slide",
+    "factCheck": "LinkedIn profile and post (role, McKinsey 8+ years, focus areas); U.Porto news + Casa Comum pages (law degree, master's and PhD in law)",
+    "pronunciation": "voice says \"Ari\" (Portuguese pronunciation of \"Ary\"); the published spelling is \"Ary\""
+   },
+   "text": "Ary Ferreira da Cunha, Principal at the Presidential Court in Abu Dhabi. He spent more than eight years at McKinsey, and his focus is AI transformation, public policy and economic development. He holds a law degree, a master’s and a PhD in law from the University of Porto.",
+   "cues": [
+    {
+     "i": 1,
+     "text": "Ary Ferreira da Cunha, Principal at the Presidential Court in Abu Dhabi.",
+     "start": 0.0,
+     "end": 4.49,
+     "anchor": "s45-c1"
+    },
+    {
+     "i": 2,
+     "text": "He spent more than eight years at McKinsey, and his focus is AI transformation, public policy and economic development.",
+     "start": 4.49,
+     "end": 11.94,
+     "anchor": "s45-c2"
+    },
+    {
+     "i": 3,
+     "text": "He holds a law degree, a master’s and a PhD in law from the University of Porto.",
+     "start": 11.94,
+     "end": 17.08,
+     "anchor": "s45-c3"
+    }
+   ],
+   "scribe": {
+    "transcriptionId": null,
+    "model": "scribe_v1 (requested)",
+    "language": "en",
+    "languageProbability": null,
+    "audioDurationSec": 17.45,
+    "ratioVsNarrationText": 0.98,
+    "transcript": "Ari Ferreira da Cunha, Principal at the Presidential Court in Abu Dhabi. He spent more than eight years at McKinsey, and his focus is AI transformation, public policy, and economic development. He holds a law degree, a master's, and a PhD in law from the University of Porto",
+    "utc": "2026-10-03T02:36:47Z",
+    "note": "word-level timings (0.08 s … 17.08 s) used for the cue boundaries; \"Ari\" vs published \"Ary\" is the only token difference"
+   }
+  },
+  {
+   "n": 43,
    "slideId": "s-exec-khalid",
    "clipId": "NAR-s43",
    "file": "/audio/guide/slides/NAR-s43-s-exec-khalid.mp3",
@@ -2282,7 +2342,7 @@
    ]
   },
   {
-   "n": 43,
+   "n": 44,
    "slideId": "s-exec-unwalla",
    "clipId": "NAR-s44",
    "file": "/audio/guide/slides/NAR-s44-s-exec-unwalla.mp3",
@@ -2325,6 +2385,7 @@
  ],
  "verifiedBy": "ElevenLabs Scribe (speechToText, model scribe_v1 requested, language en) on every per-slide clip",
  "notes": [
+  "v1.5.8: slides 40–44 (section 09 Executive Team: intro, Fahad Al Ameri, Ary Ferreira da Cunha, Muhammed Khalid, Kayaan K. Unwalla). Ary's clip is NAR-s45 (a new id — NAR-s41 stays retired with the former Letter 1); the following entries were renumbered n 42→43 and 43→44 (clip ids keep their numbers). Ary's role rests on his own LinkedIn profile (no independent UAE government source) — the card is tagged \"for clearance by office\".",
   "v1.5.7: slides 40–43 (section 09 Executive Team: intro, Fahad Al Ameri, Muhammed Khalid, Kayaan K. Unwalla). The former slide 41 (Letter 1) and its clip NAR-s41 were removed and the following slides renumbered — clip ids keep their original numbers (NAR-s42 = slide 41, NAR-s43 = slide 42, NAR-s44 = slide 43). NAR-s43 was trimmed to drop its last sentence because the CEO film is disabled. The hidden card (Lorenzo) is not narrated."
  ]
 }

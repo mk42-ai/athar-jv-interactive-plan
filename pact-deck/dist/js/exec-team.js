@@ -1,15 +1,15 @@
 /* Athar Open Agentic Pact deck — v1.5.7 (2026-10-03; v1.5.6 2026-10-02) — section 09 "Executive Team" / «الفريق التنفيذي».
-   Appended AFTER the closing slide (#s-closing, slide 39): S09 intro + three letters = slides 40–43, deep links #/28/exec-1 … #/28/exec-4
-   (also #slide-40 … #slide-43). Hand-written-letter style per the Athar Brand Guidelines: Manuscript #F7F3EA ground with the
+   Appended AFTER the closing slide (#s-closing, slide 39): S09 intro + four letters = slides 40–44, deep links #/28/exec-1 … #/28/exec-5
+   (also #slide-40 … #slide-44). Hand-written-letter style per the Athar Brand Guidelines: Manuscript #F7F3EA ground with the
    ink-on-manuscript texture at 8 % opacity, Athar Ink #0F1E2C text, names in IBM Plex Serif 600, body IBM Plex Sans 16/24 (sentence case),
    Arabic in IBM Plex Sans Arabic at 107 % of the Latin size on the right of a hairline divider (letter-spacing 0), salutation · short
    paragraphs · sign-off, closed by a SHORT Legacy Gold hairline (never full width). No script fonts. The Arabic deck is a full RTL mirror.
    Portraits only where officially sourced (none at present); everyone else has a monogram
-   roundel. The official's letter uses published statements only and carries the tag "for clearance by office".
+   roundel. The officials' letters use published statements only and carry the tag "for clearance by office".
    Hidden, feature-flagged card (FLAGS.pendingCards = false → not rendered, not counted, not narrated): Lorenzo (surname and role unconfirmed).
    v1.5.6: the other pending card (a different Presidential Court official, not Fahad) was removed outright; H.E. Fahad Mohamed Al Ameri's letter is
    published as Letter 2 (not behind the flag). Name LABELS carry no honorific — except Fahad's (v1.5.8: H.E. / سعادة restored for him only); the letter bodies keep H.E. / معالي / سعادة.
-   Navigation mirrors dist/js/impact-tiers.js; this file loads BEFORE impact-tiers.js and narration.js so the deck total is 39 + 4 = 43. v1.5.7: the former Letter 1 was removed (4 → 3 letters); the CEO film is an optional feature (off). */
+   Navigation mirrors dist/js/impact-tiers.js; this file loads BEFORE impact-tiers.js and narration.js so the deck total is 39 + 5 = 44. v1.5.7: the former Letter 1 was removed (4 → 3 letters); the CEO film is an optional feature (off). v1.5.8: Ary Ferreira da Cunha added as Letter 2, after Fahad (3 → 4 letters). */
 (function () {
   'use strict';
   var VERSION = 'v1.5.7';
@@ -22,6 +22,9 @@
   var LOGO = '/assets/exec/athar-logo-master-1200.png';
   var S = {
     nepEn: 'https://uaenep.ae/en/participant/fahad-al-ameri', nepAr: 'https://uaenep.ae/ar/participant/fahad-al-ameri',
+    liAry: 'https://ae.linkedin.com/in/aryfcunha', liAryPost: 'https://www.linkedin.com/posts/aryfcunha_tldr-saying-goodbye-to-mckinsey-sharing-activity-7368608246753878018-uCBF',
+    upNews: 'https://noticias.up.pt/nos-por-la/ary-ferreira-da-cunha/', upCasa: 'https://www.up.pt/casacomum/alumni-mundus/2-ary-ferreira-da-cunha/',
+    ulBook: 'https://repositorio.ulisboa.pt/bitstream/10451/49588/1/ulfd0148962_tese.pdf',
     n42: 'https://www.42network.org/blog/whos-behind-42-muhammed-khaled-founder-ceo-of-airev/',
     tn: 'https://www.thenationalnews.com/future/technology/2024/09/30/core42-airev-generative-ai/',
     gpu: 'https://thegpu.ai/p/issue-42-building-real-world-ai-deployment-layer-airev',
@@ -48,6 +51,33 @@
              ['التعليم', 'ماجستير العلوم في الهندسة الميكانيكية وبكالوريوس العلوم في الهندسة الحيوية (بتقدير امتياز مع مرتبة الشرف الأولى) من جامعة بنسلفانيا · محلل مالي معتمد (CFA) · خريج برنامج خبراء الإمارات (النسخة الثانية)']] },
       src: [['UAE National Experts Program (EN)', S.nepEn], ['برنامج خبراء الإمارات (AR)', S.nepAr],
             [{ en: 'Career timeline and programme status as supplied by Athar, 2 Oct 2026', ar: 'الجدول الزمني للمسيرة وحالة البرنامج كما قدّمها فريق أثر، 2 أكتوبر 2026' }, null]] },
+    { id: 'ferreira-da-cunha', mono: ['AC', 'آ ك'], official: true, /* v1.5.8 Letter 2 — no portrait (none supplied or officially sourced), so the monogram roundel is used; his role and focus areas rest on his own LinkedIn, hence the clearance tag */
+      name: { en: 'Ary Ferreira da Cunha', ar: 'آري فيريرا دا كونيا' }, /* no honorific; the Arabic form is a reasonable transliteration of the Portuguese name — UNVERIFIED, flagged to the client */
+      role: { en: 'Principal, Presidential Court (UAE), Abu Dhabi', ar: 'Principal، ديوان الرئاسة في دولة الإمارات، أبوظبي' },
+      body: {
+        en: ['Ary Ferreira da Cunha is a Principal at the Presidential Court of the UAE, based in Abu Dhabi, according to his LinkedIn profile. His focus areas are AI transformation, public policy and economic development.',
+             'He previously spent more than eight years at McKinsey & Company, as he wrote in his own LinkedIn post “Saying goodbye to McKinsey”.',
+             'He holds a law degree, a master’s and a PhD in law from the Universidade do Porto, with visiting research at Oxford and Utrecht, and is the author of the 2015 book “Combate à corrupção, da teoria à prática”. He is a Portuguese national.'],
+        ar: ['آري فيريرا دا كونيا يشغل منصب Principal في ديوان الرئاسة في دولة الإمارات، ومقرّه أبوظبي، بحسب ملفه الشخصي على لينكدإن. وتتركّز مجالات اهتمامه في التحوّل بالذكاء الاصطناعي والسياسات العامة والتنمية الاقتصادية.',
+             'وقضى سابقاً أكثر من ثماني سنوات في McKinsey & Company، كما كتب في منشوره الخاص على لينكدإن «Saying goodbye to McKinsey».',
+             'وهو حاصل على بكالوريوس القانون والماجستير والدكتوراه في القانون من جامعة بورتو (Universidade do Porto)، وأجرى أبحاثاً زائرة في أكسفورد وأوترخت، وهو مؤلف كتاب «Combate à corrupção, da teoria à prática» (2015). وهو برتغالي الجنسية.'] },
+      facts: {
+        en: [['Role', 'Principal, Presidential Court (UAE), Abu Dhabi — as stated on his LinkedIn profile'],
+             ['Previously', 'McKinsey & Company, 8+ years — per his own LinkedIn post “Saying goodbye to McKinsey”'],
+             ['Focus areas', 'AI transformation · public policy · economic development'],
+             ['Education', 'Universidade do Porto — law degree, master’s and PhD in law · visiting research at Oxford and Utrecht'],
+             ['Publication', '“Combate à corrupção, da teoria à prática” (2015)'],
+             ['Nationality', 'Portuguese']],
+        ar: [['المنصب', 'Principal، ديوان الرئاسة في دولة الإمارات، أبوظبي — بحسب ملفه الشخصي على لينكدإن'],
+             ['سابقاً', 'McKinsey & Company، أكثر من 8 سنوات — بحسب منشوره الخاص «Saying goodbye to McKinsey» على لينكدإن'],
+             ['مجالات التركيز', 'التحوّل بالذكاء الاصطناعي · السياسات العامة · التنمية الاقتصادية'],
+             ['التعليم', 'جامعة بورتو (Universidade do Porto) — بكالوريوس القانون، وماجستير ودكتوراه في القانون · أبحاث زائرة في أكسفورد وأوترخت'],
+             ['مؤلَّف', '«Combate à corrupção, da teoria à prática» (2015)'],
+             ['الجنسية', 'برتغالي']] },
+      src: [['LinkedIn profile', S.liAry], [{ en: 'LinkedIn post “Saying goodbye to McKinsey”', ar: 'منشور لينكدإن «Saying goodbye to McKinsey»' }, S.liAryPost],
+            [{ en: 'U.Porto — “Nós por lá”', ar: 'جامعة بورتو — «Nós por lá»' }, S.upNews], [{ en: 'U.Porto — Casa Comum, Alumni Mundus #2', ar: 'جامعة بورتو — Casa Comum، الحلقة 2 من Alumni Mundus' }, S.upCasa],
+            [{ en: 'Book citation (Quid Juris, Lisbon, 2015) — University of Lisbon repository', ar: 'الإحالة إلى الكتاب (Quid Juris، لشبونة، 2015) — مستودع جامعة لشبونة' }, S.ulBook],
+            [{ en: 'Role as stated on his own LinkedIn — pending confirmation by his office', ar: 'المنصب كما ورد في ملفه الشخصي على لينكدإن — بانتظار تأكيد مكتبه' }, null]] },
     { id: 'khalid', mono: ['MK', 'م خ'], film: !!FILM,
       name: { en: 'Muhammed Khalid', ar: 'محمد خالد' },
       role: { en: 'Founder & CEO, AIREV', ar: 'المؤسس والرئيس التنفيذي لشركة AIREV' },
@@ -92,11 +122,11 @@
   if (FLAGS.pendingCards) P = P.concat(HIDDEN);
   var T = {
     en: { chapter: '09', kicker: '09 · Executive Team', title: 'Executive Team', letterOf: 'Letter {i} of {t}', clearance: 'For clearance by office', sources: 'Sources', cardTitle: 'At a glance', cardLabel: 'Profile card',
-      lede: 'Three letters of introduction to the people leading Athar. Every statement is sourced; the official’s letter uses published statements only.', mono: 'Monogram roundel — no officially sourced portrait',
+      lede: 'Four letters of introduction to the people leading Athar. Every statement is sourced; the officials’ letters use published statements only.', mono: 'Monogram roundel — no officially sourced portrait',
       counter: function (n, t) { return 'Slide ' + n + ' of ' + t; }, railTitle: 'Executive Team',
        },
     ar: { chapter: '09', kicker: '09 · الفريق التنفيذي', title: 'الفريق التنفيذي', letterOf: 'الرسالة {i} من {t}', clearance: 'للاعتماد من المكتب', sources: 'المصادر', cardTitle: 'نظرة سريعة', cardLabel: 'بطاقة تعريفية',
-      lede: 'ثلاث رسائل تعريف بالقيادات التي تقود أثر. كل معلومة موثّقة بمصدر، ورسالة المسؤول تستند إلى تصريحات منشورة فقط.', mono: 'ختم بالحروف الأولى — لا تتوفر صورة من مصدر رسمي',
+      lede: 'أربع رسائل تعريف بالقيادات التي تقود أثر. كل معلومة موثّقة بمصدر، ورسائل المسؤولين تستند إلى تصريحات منشورة فقط.', mono: 'ختم بالحروف الأولى — لا تتوفر صورة من مصدر رسمي',
       counter: function (n, t) { return 'الشريحة ' + n + ' من ' + t; }, railTitle: 'الفريق التنفيذي',
        }
   };
