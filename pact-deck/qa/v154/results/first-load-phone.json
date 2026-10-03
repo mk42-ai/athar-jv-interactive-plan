@@ -1,13 +1,13 @@
 {
- "base": "https://sb-4koagr3m5c3y.vercel.run",
- "written": "2026-10-01T07:14:14.227Z",
+ "base": "http://127.0.0.1:4159",
+ "written": "2026-10-03T13:28:48.012Z",
  "rows": [
   {
    "before": {
     "state": "blocked",
     "audible": null,
     "playCallsBeforeGesture": 0,
-    "tapLabel": "The browser blocked the narration. Tap to play the narration for slide 5 of 39"
+    "tapLabel": "The browser blocked the narration. Tap to play the narration for slide 5 of 44"
    },
    "after": {
     "state": "playing",

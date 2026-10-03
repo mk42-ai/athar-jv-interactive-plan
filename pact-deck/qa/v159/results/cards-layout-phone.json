@@ -1,0 +1,384 @@
+{
+ "base": "http://127.0.0.1:4159",
+ "written": "2026-10-03T13:22:59.768Z",
+ "rows": [
+  {
+   "lang": "en",
+   "who": "al-ameri",
+   "dir": "ltr",
+   "hash": "#/28/exec-2",
+   "cls": 0,
+   "clsEntries": [],
+   "docOverflowX": 0,
+   "secOverflowX": 0,
+   "bodyScroll": 1228,
+   "bodyOverflowY": "visible",
+   "video": null,
+   "figDir": null,
+   "ratio": null,
+   "stage": null,
+   "stageInViewport": null,
+   "slot": {
+    "state": "coming-soon",
+    "text": "Film coming soonA verified film for this card will appear here.",
+    "dir": "ltr",
+    "visible": true
+   },
+   "letter": {
+    "x": 16,
+    "y": 132,
+    "w": 358,
+    "h": 966
+   },
+   "card": {
+    "x": 16,
+    "y": 1122,
+    "w": 358,
+    "h": 790
+   },
+   "media": {
+    "x": 37,
+    "y": 1223,
+    "w": 316,
+    "h": 95
+   },
+   "roundel": {
+    "x": 159,
+    "y": 1139,
+    "w": 72,
+    "h": 72
+   }
+  },
+  {
+   "lang": "en",
+   "who": "ferreira-da-cunha",
+   "dir": "ltr",
+   "hash": "#/28/exec-3",
+   "cls": 0,
+   "clsEntries": [],
+   "docOverflowX": 0,
+   "secOverflowX": 0,
+   "bodyScroll": 1594,
+   "bodyOverflowY": "visible",
+   "video": null,
+   "figDir": null,
+   "ratio": null,
+   "stage": null,
+   "stageInViewport": null,
+   "slot": {
+    "state": "coming-soon",
+    "text": "Film coming soonA verified film for this card will appear here.",
+    "dir": "ltr",
+    "visible": true
+   },
+   "letter": {
+    "x": 16,
+    "y": 132,
+    "w": 358,
+    "h": 1251
+   },
+   "card": {
+    "x": 16,
+    "y": 1407,
+    "w": 358,
+    "h": 871
+   },
+   "media": {
+    "x": 37,
+    "y": 1508,
+    "w": 316,
+    "h": 95
+   },
+   "roundel": {
+    "x": 159,
+    "y": 1424,
+    "w": 72,
+    "h": 72
+   }
+  },
+  {
+   "lang": "en",
+   "who": "khalid",
+   "dir": "ltr",
+   "hash": "#/28/exec-4",
+   "cls": 0,
+   "clsEntries": [],
+   "docOverflowX": 0,
+   "secOverflowX": 0,
+   "bodyScroll": 769,
+   "bodyOverflowY": "auto",
+   "video": {
+    "paused": true,
+    "ct": 0,
+    "autoplay": false,
+    "poster": "athar-origins-of-impact-ep01-poster-09s1.jpg",
+    "defaultTrack": "en"
+   },
+   "figDir": "ltr",
+   "ratio": 1.7777777777777777,
+   "stage": {
+    "x": 16,
+    "y": 1173,
+    "w": 358,
+    "h": 201
+   },
+   "stageInViewport": true,
+   "slot": null,
+   "letter": {
+    "x": 16,
+    "y": 132,
+    "w": 358,
+    "h": 1017
+   },
+   "card": null,
+   "media": {
+    "x": 16,
+    "y": 1173,
+    "w": 358,
+    "h": 279
+   },
+   "roundel": {
+    "x": 41,
+    "y": 185,
+    "w": 72,
+    "h": 72
+   }
+  },
+  {
+   "lang": "en",
+   "who": "unwalla",
+   "dir": "ltr",
+   "hash": "#/28/exec-5",
+   "cls": 0,
+   "clsEntries": [],
+   "docOverflowX": 0,
+   "secOverflowX": 0,
+   "bodyScroll": 1719,
+   "bodyOverflowY": "visible",
+   "video": null,
+   "figDir": null,
+   "ratio": null,
+   "stage": null,
+   "stageInViewport": null,
+   "slot": {
+    "state": "coming-soon",
+    "text": "Film coming soonA verified film for this card will appear here.",
+    "dir": "ltr",
+    "visible": true
+   },
+   "letter": {
+    "x": 16,
+    "y": 132,
+    "w": 358,
+    "h": 1092
+   },
+   "card": {
+    "x": 16,
+    "y": 1248,
+    "w": 358,
+    "h": 1155
+   },
+   "media": {
+    "x": 37,
+    "y": 1349,
+    "w": 316,
+    "h": 95
+   },
+   "roundel": {
+    "x": 159,
+    "y": 1265,
+    "w": 72,
+    "h": 72
+   }
+  },
+  {
+   "lang": "ar",
+   "who": "al-ameri",
+   "dir": "rtl",
+   "hash": "#/28/exec-2",
+   "cls": 0,
+   "clsEntries": [],
+   "docOverflowX": 0,
+   "secOverflowX": 0,
+   "bodyScroll": 1246,
+   "bodyOverflowY": "visible",
+   "video": null,
+   "figDir": null,
+   "ratio": null,
+   "stage": null,
+   "stageInViewport": null,
+   "slot": {
+    "state": "coming-soon",
+    "text": "الفيلم قريباًسيظهر هنا الفيلم المعتمد لهذه البطاقة.",
+    "dir": "rtl",
+    "visible": true
+   },
+   "letter": {
+    "x": 16,
+    "y": 137,
+    "w": 358,
+    "h": 972
+   },
+   "card": {
+    "x": 16,
+    "y": 1133,
+    "w": 358,
+    "h": 798
+   },
+   "media": {
+    "x": 37,
+    "y": 1234,
+    "w": 316,
+    "h": 103
+   },
+   "roundel": {
+    "x": 159,
+    "y": 1150,
+    "w": 72,
+    "h": 72
+   }
+  },
+  {
+   "lang": "ar",
+   "who": "ferreira-da-cunha",
+   "dir": "rtl",
+   "hash": "#/28/exec-3",
+   "cls": 0,
+   "clsEntries": [],
+   "docOverflowX": 0,
+   "secOverflowX": 0,
+   "bodyScroll": 1616,
+   "bodyOverflowY": "visible",
+   "video": null,
+   "figDir": null,
+   "ratio": null,
+   "stage": null,
+   "stageInViewport": null,
+   "slot": {
+    "state": "coming-soon",
+    "text": "الفيلم قريباًسيظهر هنا الفيلم المعتمد لهذه البطاقة.",
+    "dir": "rtl",
+    "visible": true
+   },
+   "letter": {
+    "x": 16,
+    "y": 137,
+    "w": 358,
+    "h": 1261
+   },
+   "card": {
+    "x": 16,
+    "y": 1422,
+    "w": 358,
+    "h": 879
+   },
+   "media": {
+    "x": 37,
+    "y": 1523,
+    "w": 316,
+    "h": 103
+   },
+   "roundel": {
+    "x": 159,
+    "y": 1439,
+    "w": 72,
+    "h": 72
+   }
+  },
+  {
+   "lang": "ar",
+   "who": "khalid",
+   "dir": "rtl",
+   "hash": "#/28/exec-4",
+   "cls": 0,
+   "clsEntries": [],
+   "docOverflowX": 0,
+   "secOverflowX": 0,
+   "bodyScroll": 761,
+   "bodyOverflowY": "auto",
+   "video": {
+    "paused": true,
+    "ct": 0,
+    "autoplay": false,
+    "poster": "athar-origins-of-impact-ep01-poster-09s1.jpg",
+    "defaultTrack": "ar"
+   },
+   "figDir": "rtl",
+   "ratio": 1.7777777777777777,
+   "stage": {
+    "x": 16,
+    "y": 1180,
+    "w": 358,
+    "h": 201
+   },
+   "stageInViewport": true,
+   "slot": null,
+   "letter": {
+    "x": 16,
+    "y": 137,
+    "w": 358,
+    "h": 1019
+   },
+   "card": null,
+   "media": {
+    "x": 16,
+    "y": 1180,
+    "w": 358,
+    "h": 265
+   },
+   "roundel": {
+    "x": 277,
+    "y": 190,
+    "w": 72,
+    "h": 72
+   }
+  },
+  {
+   "lang": "ar",
+   "who": "unwalla",
+   "dir": "rtl",
+   "hash": "#/28/exec-5",
+   "cls": 0,
+   "clsEntries": [],
+   "docOverflowX": 0,
+   "secOverflowX": 0,
+   "bodyScroll": 1739,
+   "bodyOverflowY": "visible",
+   "video": null,
+   "figDir": null,
+   "ratio": null,
+   "stage": null,
+   "stageInViewport": null,
+   "slot": {
+    "state": "coming-soon",
+    "text": "الفيلم قريباًسيظهر هنا الفيلم المعتمد لهذه البطاقة.",
+    "dir": "rtl",
+    "visible": true
+   },
+   "letter": {
+    "x": 16,
+    "y": 137,
+    "w": 358,
+    "h": 1100
+   },
+   "card": {
+    "x": 16,
+    "y": 1261,
+    "w": 358,
+    "h": 1163
+   },
+   "media": {
+    "x": 37,
+    "y": 1362,
+    "w": 316,
+    "h": 103
+   },
+   "roundel": {
+    "x": 159,
+    "y": 1278,
+    "w": 72,
+    "h": 72
+   }
+  }
+ ]
+}

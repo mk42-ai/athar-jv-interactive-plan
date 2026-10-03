@@ -1,0 +1,25 @@
+{
+ "base": "http://127.0.0.1:4159",
+ "written": "2026-10-03T13:22:35.359Z",
+ "rows": [
+  {
+   "before": {
+    "dir": "ltr",
+    "fig": "ltr",
+    "title": "Athar — Origins of Impact, Episode 01: Muhammed Khalid"
+   },
+   "after": {
+    "dir": "rtl",
+    "fig": "rtl",
+    "lang": "ar",
+    "title": "أثر — أصول الأثر، الحلقة 01: محمد خالد",
+    "defaultTrack": "ar",
+    "paused": true,
+    "autoplay": false,
+    "play": "تشغيل الفيلم0:37",
+    "cc": "ترجمة إنجليزية / عربية"
+   },
+   "errors": []
+  }
+ ]
+}

@@ -1,0 +1,29 @@
+{
+ "base": "http://127.0.0.1:4159",
+ "written": "2026-10-03T13:21:10.727Z",
+ "rows": [
+  {
+   "onOpen": {
+    "state": "playing",
+    "reason": "",
+    "slide": "s-managed-programme"
+   },
+   "onPlay": {
+    "state": "paused",
+    "reason": "video",
+    "slide": "s-managed-programme"
+   },
+   "onPause": {
+    "state": "playing",
+    "reason": "",
+    "slide": "s-managed-programme"
+   },
+   "onSkip": {
+    "state": "playing",
+    "reason": "",
+    "slide": "s-managed-programme"
+   },
+   "errors": []
+  }
+ ]
+}

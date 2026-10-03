@@ -16,7 +16,7 @@ const TABLE = JSON.parse(fs.readFileSync(path.join(DIST, 'narration/slide-narrat
 const TOTAL = TABLE.slides.length;
 const BY_N = Object.fromEntries(TABLE.slides.map((s) => [s.n, s]));
 const CLIP2SLIDE = Object.fromEntries(TABLE.slides.filter((s) => s.clipId).map((s) => [s.clipId, s.slideId]));
-const FEATURES = JSON.parse(fs.readFileSync(path.join(HERE, '../../features.json'), 'utf8')); const FILM_ON = !!FEATURES.originsFilm; // v1.5.7: the CEO film is an optional feature, off in the shipped build
+const FEATURES = JSON.parse(fs.readFileSync(path.join(HERE, '../../features.json'), 'utf8')); const FILM_ON = !!FEATURES.execFilms; // v1.5.7: the CEO film was an optional feature (originsFilm, off); v1.5.9: execFilms (features/exec-films/films.json) — on, the CEO film ships through the shared player
 const RESULTS = path.join(HERE, 'results'); fs.mkdirSync(RESULTS, { recursive: true });
 
 async function setup(page, { lang = 'en', prefs = null } = {}) {
@@ -93,14 +93,14 @@ test.describe(`guide narration ⇔ visible slide — all ${TOTAL} slides`, () =>
     expect(page.__errors).toEqual([]);
   });
 
-  test('impact-story film (slide 43, only when features.json originsFilm=true) pauses the guide while it plays and the guide resumes after it', async ({ page }, info) => {
-    test.skip(!FILM_ON, 'originsFilm feature is off (pact-deck/features.json) — no film is shipped'); test.setTimeout(150000); const mobile = info.project.name === 'phone';
+  test('impact-story film (slide 43, only when features.json execFilms=true) pauses the guide while it plays and the guide resumes after it', async ({ page }, info) => {
+    test.skip(!FILM_ON, 'execFilms feature is off (pact-deck/features.json) — no film is shipped'); test.setTimeout(150000); const mobile = info.project.name === 'phone';
     await setup(page); await open(page, 42); await setAuto(page, true); await startGuide(page, mobile);
     let s = await narratedEqualsVisible(page, 42); expect(s.ok).toBe(true);
     await page.keyboard.press('ArrowRight'); await page.waitForFunction(() => window.__qaVisible().n === 43, null, { timeout: 8000 });
     s = await narratedEqualsVisible(page, 43); expect(s.ok, 'slide 43 lead-in clip audible').toBe(true);
     const film = await page.evaluate(() => { const v = document.querySelector('#s-exec-khalid video[data-narration-pause]'); return v ? { poster: v.poster.split('/').pop(), posterTime: v.dataset.posterTime, tracks: [...v.querySelectorAll('track')].map((t) => t.srclang + ':' + t.getAttribute('src').split('/').pop()), in: v.dataset.in, out: v.dataset.out, src: v.querySelector('source').getAttribute('src').split('/').pop() } : null; });
-    expect(film).not.toBeNull(); expect(film.poster).toBe('athar-origins-of-impact-ep01-poster-15s5.jpg'); expect(film.tracks).toEqual(['en:athar-origins-of-impact-ep01.en.vtt', 'ar:athar-origins-of-impact-ep01.ar.vtt']);
+    expect(film).not.toBeNull(); expect(film.poster).toBe('athar-origins-of-impact-ep01-poster-09s1.jpg'); /* v1.5.9: poster at 00:09.1 (caption-free window), shared player */ expect(film.tracks).toEqual(['en:athar-origins-of-impact-ep01.en.vtt', 'ar:athar-origins-of-impact-ep01.ar.vtt']);
     await page.evaluate(async () => { const v = document.querySelector('#s-exec-khalid video'); await new Promise((r) => { if (v.readyState >= 1) r(); else v.addEventListener('loadedmetadata', r, { once: true }); }); v.currentTime = 34.0; await v.play(); });
     await page.waitForFunction(() => document.getElementById('athar-narration').getAttribute('data-reason') === 'video', null, { timeout: 6000 });
     const during = await snap(page); const filmPlaying = await page.evaluate(() => { const v = document.querySelector('#s-exec-khalid video'); return !v.paused && v.currentTime > 34; });

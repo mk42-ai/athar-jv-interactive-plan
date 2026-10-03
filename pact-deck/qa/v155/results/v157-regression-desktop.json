@@ -1,7 +1,7 @@
 {
- "base": "http://127.0.0.1:4405",
+ "base": "http://127.0.0.1:4159",
  "total": 44,
- "written": "2026-10-03T02:52:41.595Z",
+ "written": "2026-10-03T13:25:26.814Z",
  "rows": [
   {
    "slide38": {
@@ -53,11 +53,11 @@
     "index": 8
    },
    "ceo": {
-    "videos": 0,
+    "videos": 1,
     "roundel": 1,
-    "letterW": 1161,
+    "letterW": 742,
     "bodyW": 1394,
-    "clipDurationSec": 17.74
+    "clipDurationSec": 20.92
    }
   }
  ]

@@ -1,0 +1,534 @@
+{
+ "base": "http://127.0.0.1:4159",
+ "written": "2026-10-03T13:21:48.358Z",
+ "rows": [
+  {
+   "lang": "en",
+   "n": 1,
+   "id": "s-cover",
+   "errors": 0
+  },
+  {
+   "lang": "en",
+   "n": 2,
+   "id": "s-hero",
+   "errors": 0
+  },
+  {
+   "lang": "en",
+   "n": 3,
+   "id": "s-why-pact",
+   "errors": 0
+  },
+  {
+   "lang": "en",
+   "n": 4,
+   "id": "s-four-outcomes",
+   "errors": 0
+  },
+  {
+   "lang": "en",
+   "n": 5,
+   "id": "s-managed-programme",
+   "errors": 0
+  },
+  {
+   "lang": "en",
+   "n": 6,
+   "id": "s-discord-home",
+   "errors": 0
+  },
+  {
+   "lang": "en",
+   "n": 7,
+   "id": "s-country-chapters",
+   "errors": 0
+  },
+  {
+   "lang": "en",
+   "n": 8,
+   "id": "s-learning-formats",
+   "errors": 0
+  },
+  {
+   "lang": "en",
+   "n": 9,
+   "id": "s-challenges-showcases",
+   "errors": 0
+  },
+  {
+   "lang": "en",
+   "n": 10,
+   "id": "s-office-hours",
+   "errors": 0
+  },
+  {
+   "lang": "en",
+   "n": 11,
+   "id": "s-agent-marketplace",
+   "errors": 0
+  },
+  {
+   "lang": "en",
+   "n": 12,
+   "id": "s-decision-table",
+   "errors": 0
+  },
+  {
+   "lang": "en",
+   "n": 13,
+   "id": "s-pillar-plugins",
+   "errors": 0
+  },
+  {
+   "lang": "en",
+   "n": 14,
+   "id": "s-pillar-skills",
+   "errors": 0
+  },
+  {
+   "lang": "en",
+   "n": 15,
+   "id": "s-pillar-open-ecosystem",
+   "errors": 0
+  },
+  {
+   "lang": "en",
+   "n": 16,
+   "id": "s-pillar-cross-model",
+   "errors": 0
+  },
+  {
+   "lang": "en",
+   "n": 17,
+   "id": "s-pillar-universal-licence",
+   "errors": 0
+  },
+  {
+   "lang": "en",
+   "n": 18,
+   "id": "s-pillar-upskilling",
+   "errors": 0
+  },
+  {
+   "lang": "en",
+   "n": 19,
+   "id": "s-pact-principles",
+   "errors": 0
+  },
+  {
+   "lang": "en",
+   "n": 20,
+   "id": "s-how-to-sign",
+   "errors": 0
+  },
+  {
+   "lang": "en",
+   "n": 21,
+   "id": "s-actors-wall",
+   "errors": 0
+  },
+  {
+   "lang": "en",
+   "n": 22,
+   "id": "s-who-signs",
+   "errors": 0
+  },
+  {
+   "lang": "en",
+   "n": 23,
+   "id": "s-who-governs",
+   "errors": 0
+  },
+  {
+   "lang": "en",
+   "n": 24,
+   "id": "s-who-builds",
+   "errors": 0
+  },
+  {
+   "lang": "en",
+   "n": 25,
+   "id": "s-who-learns",
+   "errors": 0
+  },
+  {
+   "lang": "en",
+   "n": 26,
+   "id": "s-governance-licence",
+   "errors": 0
+  },
+  {
+   "lang": "en",
+   "n": 27,
+   "id": "s-roadmap",
+   "errors": 0
+  },
+  {
+   "lang": "en",
+   "n": 28,
+   "id": "s-it-outcomes",
+   "errors": 0
+  },
+  {
+   "lang": "en",
+   "n": 29,
+   "id": "s-it-tiers",
+   "errors": 0
+  },
+  {
+   "lang": "en",
+   "n": 30,
+   "id": "s-it-metrics",
+   "errors": 0
+  },
+  {
+   "lang": "en",
+   "n": 31,
+   "id": "s-it-sustain",
+   "errors": 0
+  },
+  {
+   "lang": "en",
+   "n": 32,
+   "id": "s-it-partners",
+   "errors": 0
+  },
+  {
+   "lang": "en",
+   "n": 33,
+   "id": "s-it-join",
+   "errors": 0
+  },
+  {
+   "lang": "en",
+   "n": 34,
+   "id": "s-aos-overview",
+   "errors": 0
+  },
+  {
+   "lang": "en",
+   "n": 35,
+   "id": "s-aos-tour",
+   "errors": 0
+  },
+  {
+   "lang": "en",
+   "n": 36,
+   "id": "s-aos-roadmap",
+   "errors": 0
+  },
+  {
+   "lang": "en",
+   "n": 37,
+   "id": "s-aos-deploy",
+   "errors": 0
+  },
+  {
+   "lang": "en",
+   "n": 38,
+   "id": "s-aos-nations",
+   "errors": 0
+  },
+  {
+   "lang": "en",
+   "n": 39,
+   "id": "s-closing",
+   "errors": 0
+  },
+  {
+   "lang": "en",
+   "n": 40,
+   "id": "s-exec-intro",
+   "errors": 0
+  },
+  {
+   "lang": "en",
+   "n": 41,
+   "id": "s-exec-al-ameri",
+   "errors": 0
+  },
+  {
+   "lang": "en",
+   "n": 42,
+   "id": "s-exec-ferreira-da-cunha",
+   "errors": 0
+  },
+  {
+   "lang": "en",
+   "n": 43,
+   "id": "s-exec-khalid",
+   "errors": 0
+  },
+  {
+   "lang": "en",
+   "n": 44,
+   "id": "s-exec-unwalla",
+   "errors": 0
+  },
+  {
+   "lang": "ar",
+   "n": 1,
+   "id": "s-cover",
+   "errors": 0
+  },
+  {
+   "lang": "ar",
+   "n": 2,
+   "id": "s-hero",
+   "errors": 0
+  },
+  {
+   "lang": "ar",
+   "n": 3,
+   "id": "s-why-pact",
+   "errors": 0
+  },
+  {
+   "lang": "ar",
+   "n": 4,
+   "id": "s-four-outcomes",
+   "errors": 0
+  },
+  {
+   "lang": "ar",
+   "n": 5,
+   "id": "s-managed-programme",
+   "errors": 0
+  },
+  {
+   "lang": "ar",
+   "n": 6,
+   "id": "s-discord-home",
+   "errors": 0
+  },
+  {
+   "lang": "ar",
+   "n": 7,
+   "id": "s-country-chapters",
+   "errors": 0
+  },
+  {
+   "lang": "ar",
+   "n": 8,
+   "id": "s-learning-formats",
+   "errors": 0
+  },
+  {
+   "lang": "ar",
+   "n": 9,
+   "id": "s-challenges-showcases",
+   "errors": 0
+  },
+  {
+   "lang": "ar",
+   "n": 10,
+   "id": "s-office-hours",
+   "errors": 0
+  },
+  {
+   "lang": "ar",
+   "n": 11,
+   "id": "s-agent-marketplace",
+   "errors": 0
+  },
+  {
+   "lang": "ar",
+   "n": 12,
+   "id": "s-decision-table",
+   "errors": 0
+  },
+  {
+   "lang": "ar",
+   "n": 13,
+   "id": "s-pillar-plugins",
+   "errors": 0
+  },
+  {
+   "lang": "ar",
+   "n": 14,
+   "id": "s-pillar-skills",
+   "errors": 0
+  },
+  {
+   "lang": "ar",
+   "n": 15,
+   "id": "s-pillar-open-ecosystem",
+   "errors": 0
+  },
+  {
+   "lang": "ar",
+   "n": 16,
+   "id": "s-pillar-cross-model",
+   "errors": 0
+  },
+  {
+   "lang": "ar",
+   "n": 17,
+   "id": "s-pillar-universal-licence",
+   "errors": 0
+  },
+  {
+   "lang": "ar",
+   "n": 18,
+   "id": "s-pillar-upskilling",
+   "errors": 0
+  },
+  {
+   "lang": "ar",
+   "n": 19,
+   "id": "s-pact-principles",
+   "errors": 0
+  },
+  {
+   "lang": "ar",
+   "n": 20,
+   "id": "s-how-to-sign",
+   "errors": 0
+  },
+  {
+   "lang": "ar",
+   "n": 21,
+   "id": "s-actors-wall",
+   "errors": 0
+  },
+  {
+   "lang": "ar",
+   "n": 22,
+   "id": "s-who-signs",
+   "errors": 0
+  },
+  {
+   "lang": "ar",
+   "n": 23,
+   "id": "s-who-governs",
+   "errors": 0
+  },
+  {
+   "lang": "ar",
+   "n": 24,
+   "id": "s-who-builds",
+   "errors": 0
+  },
+  {
+   "lang": "ar",
+   "n": 25,
+   "id": "s-who-learns",
+   "errors": 0
+  },
+  {
+   "lang": "ar",
+   "n": 26,
+   "id": "s-governance-licence",
+   "errors": 0
+  },
+  {
+   "lang": "ar",
+   "n": 27,
+   "id": "s-roadmap",
+   "errors": 0
+  },
+  {
+   "lang": "ar",
+   "n": 28,
+   "id": "s-it-outcomes",
+   "errors": 0
+  },
+  {
+   "lang": "ar",
+   "n": 29,
+   "id": "s-it-tiers",
+   "errors": 0
+  },
+  {
+   "lang": "ar",
+   "n": 30,
+   "id": "s-it-metrics",
+   "errors": 0
+  },
+  {
+   "lang": "ar",
+   "n": 31,
+   "id": "s-it-sustain",
+   "errors": 0
+  },
+  {
+   "lang": "ar",
+   "n": 32,
+   "id": "s-it-partners",
+   "errors": 0
+  },
+  {
+   "lang": "ar",
+   "n": 33,
+   "id": "s-it-join",
+   "errors": 0
+  },
+  {
+   "lang": "ar",
+   "n": 34,
+   "id": "s-aos-overview",
+   "errors": 0
+  },
+  {
+   "lang": "ar",
+   "n": 35,
+   "id": "s-aos-tour",
+   "errors": 0
+  },
+  {
+   "lang": "ar",
+   "n": 36,
+   "id": "s-aos-roadmap",
+   "errors": 0
+  },
+  {
+   "lang": "ar",
+   "n": 37,
+   "id": "s-aos-deploy",
+   "errors": 0
+  },
+  {
+   "lang": "ar",
+   "n": 38,
+   "id": "s-aos-nations",
+   "errors": 0
+  },
+  {
+   "lang": "ar",
+   "n": 39,
+   "id": "s-closing",
+   "errors": 0
+  },
+  {
+   "lang": "ar",
+   "n": 40,
+   "id": "s-exec-intro",
+   "errors": 0
+  },
+  {
+   "lang": "ar",
+   "n": 41,
+   "id": "s-exec-al-ameri",
+   "errors": 0
+  },
+  {
+   "lang": "ar",
+   "n": 42,
+   "id": "s-exec-ferreira-da-cunha",
+   "errors": 0
+  },
+  {
+   "lang": "ar",
+   "n": 43,
+   "id": "s-exec-khalid",
+   "errors": 0
+  },
+  {
+   "lang": "ar",
+   "n": 44,
+   "id": "s-exec-unwalla",
+   "errors": 0
+  }
+ ]
+}

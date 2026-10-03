@@ -1,0 +1,363 @@
+{
+ "base": "http://127.0.0.1:4159",
+ "written": "2026-10-03T13:22:36.109Z",
+ "rows": [
+  {
+   "url": "/audio/guide/guide-00-welcome-lhbIUXFwLO.mp3",
+   "status": 200,
+   "type": "audio/mpeg"
+  },
+  {
+   "url": "/audio/guide/guide-01-the-pact-df1pHtGsVr.mp3",
+   "status": 200,
+   "type": "audio/mpeg"
+  },
+  {
+   "url": "/audio/guide/guide-02-community-model-9gUnFBtxrM.mp3",
+   "status": 200,
+   "type": "audio/mpeg"
+  },
+  {
+   "url": "/audio/guide/guide-03-six-pillars-yxVqZJ2k1a.mp3",
+   "status": 200,
+   "type": "audio/mpeg"
+  },
+  {
+   "url": "/audio/guide/guide-04-pledge-and-signing-PWeXZj1Rgc.mp3",
+   "status": 200,
+   "type": "audio/mpeg"
+  },
+  {
+   "url": "/audio/guide/guide-05-actors-and-roles-0PbyoFNYNV.mp3",
+   "status": 200,
+   "type": "audio/mpeg"
+  },
+  {
+   "url": "/audio/guide/guide-06-governance-and-roadmap-kyzmCSHcw8.mp3",
+   "status": 200,
+   "type": "audio/mpeg"
+  },
+  {
+   "url": "/audio/guide/guide-07-impact-and-funding-vWkiINp1IS.mp3",
+   "status": 200,
+   "type": "audio/mpeg"
+  },
+  {
+   "url": "/audio/guide/guide-08-athar-os-Ib4oKe91OD.mp3",
+   "status": 200,
+   "type": "audio/mpeg"
+  },
+  {
+   "url": "/audio/guide/guide-09-join-the-pact-Hx4Ywy843S.mp3",
+   "status": 200,
+   "type": "audio/mpeg"
+  },
+  {
+   "url": "/audio/guide/slides/NAR-s01-s-cover.mp3",
+   "status": 200,
+   "type": "audio/mpeg"
+  },
+  {
+   "url": "/audio/guide/slides/NAR-s02-s-hero.mp3",
+   "status": 200,
+   "type": "audio/mpeg"
+  },
+  {
+   "url": "/audio/guide/slides/NAR-s03-s-why-pact.mp3",
+   "status": 200,
+   "type": "audio/mpeg"
+  },
+  {
+   "url": "/audio/guide/slides/NAR-s04-s-four-outcomes.mp3",
+   "status": 200,
+   "type": "audio/mpeg"
+  },
+  {
+   "url": "/audio/guide/slides/NAR-s05-s-managed-programme.mp3",
+   "status": 200,
+   "type": "audio/mpeg"
+  },
+  {
+   "url": "/audio/guide/slides/NAR-s06-s-discord-home.mp3",
+   "status": 200,
+   "type": "audio/mpeg"
+  },
+  {
+   "url": "/audio/guide/slides/NAR-s07-s-country-chapters.mp3",
+   "status": 200,
+   "type": "audio/mpeg"
+  },
+  {
+   "url": "/audio/guide/slides/NAR-s08-s-learning-formats.mp3",
+   "status": 200,
+   "type": "audio/mpeg"
+  },
+  {
+   "url": "/audio/guide/slides/NAR-s09-s-challenges-showcases.mp3",
+   "status": 200,
+   "type": "audio/mpeg"
+  },
+  {
+   "url": "/audio/guide/slides/NAR-s10-s-office-hours.mp3",
+   "status": 200,
+   "type": "audio/mpeg"
+  },
+  {
+   "url": "/audio/guide/slides/NAR-s11-s-agent-marketplace.mp3",
+   "status": 200,
+   "type": "audio/mpeg"
+  },
+  {
+   "url": "/audio/guide/slides/NAR-s12-s-decision-table.mp3",
+   "status": 200,
+   "type": "audio/mpeg"
+  },
+  {
+   "url": "/audio/guide/slides/NAR-s13-s-pillar-plugins.mp3",
+   "status": 200,
+   "type": "audio/mpeg"
+  },
+  {
+   "url": "/audio/guide/slides/NAR-s14-s-pillar-skills.mp3",
+   "status": 200,
+   "type": "audio/mpeg"
+  },
+  {
+   "url": "/audio/guide/slides/NAR-s15-s-pillar-open-ecosystem.mp3",
+   "status": 200,
+   "type": "audio/mpeg"
+  },
+  {
+   "url": "/audio/guide/slides/NAR-s16-s-pillar-cross-model.mp3",
+   "status": 200,
+   "type": "audio/mpeg"
+  },
+  {
+   "url": "/audio/guide/slides/NAR-s17-s-pillar-universal-licence.mp3",
+   "status": 200,
+   "type": "audio/mpeg"
+  },
+  {
+   "url": "/audio/guide/slides/NAR-s18-s-pillar-upskilling.mp3",
+   "status": 200,
+   "type": "audio/mpeg"
+  },
+  {
+   "url": "/audio/guide/slides/NAR-s19-s-pact-principles.mp3",
+   "status": 200,
+   "type": "audio/mpeg"
+  },
+  {
+   "url": "/audio/guide/slides/NAR-s20-s-how-to-sign.mp3",
+   "status": 200,
+   "type": "audio/mpeg"
+  },
+  {
+   "url": "/audio/guide/slides/NAR-s21-s-actors-wall.mp3",
+   "status": 200,
+   "type": "audio/mpeg"
+  },
+  {
+   "url": "/audio/guide/slides/NAR-s22-s-who-signs.mp3",
+   "status": 200,
+   "type": "audio/mpeg"
+  },
+  {
+   "url": "/audio/guide/slides/NAR-s23-s-who-governs.mp3",
+   "status": 200,
+   "type": "audio/mpeg"
+  },
+  {
+   "url": "/audio/guide/slides/NAR-s24-s-who-builds.mp3",
+   "status": 200,
+   "type": "audio/mpeg"
+  },
+  {
+   "url": "/audio/guide/slides/NAR-s25-s-who-learns.mp3",
+   "status": 200,
+   "type": "audio/mpeg"
+  },
+  {
+   "url": "/audio/guide/slides/NAR-s26-s-governance-licence.mp3",
+   "status": 200,
+   "type": "audio/mpeg"
+  },
+  {
+   "url": "/audio/guide/slides/NAR-s27-s-roadmap.mp3",
+   "status": 200,
+   "type": "audio/mpeg"
+  },
+  {
+   "url": "/audio/guide/slides/NAR-s28-s-it-outcomes.mp3",
+   "status": 200,
+   "type": "audio/mpeg"
+  },
+  {
+   "url": "/audio/guide/slides/NAR-s29-s-it-tiers.mp3",
+   "status": 200,
+   "type": "audio/mpeg"
+  },
+  {
+   "url": "/audio/guide/slides/NAR-s30-s-it-metrics.mp3",
+   "status": 200,
+   "type": "audio/mpeg"
+  },
+  {
+   "url": "/audio/guide/slides/NAR-s31-s-it-sustain.mp3",
+   "status": 200,
+   "type": "audio/mpeg"
+  },
+  {
+   "url": "/audio/guide/slides/NAR-s32-s-it-partners.mp3",
+   "status": 200,
+   "type": "audio/mpeg"
+  },
+  {
+   "url": "/audio/guide/slides/NAR-s33-s-it-join.mp3",
+   "status": 200,
+   "type": "audio/mpeg"
+  },
+  {
+   "url": "/audio/guide/slides/NAR-s34-s-aos-overview.mp3",
+   "status": 200,
+   "type": "audio/mpeg"
+  },
+  {
+   "url": "/audio/guide/slides/NAR-s35-s-aos-tour.mp3",
+   "status": 200,
+   "type": "audio/mpeg"
+  },
+  {
+   "url": "/audio/guide/slides/NAR-s36-s-aos-roadmap.mp3",
+   "status": 200,
+   "type": "audio/mpeg"
+  },
+  {
+   "url": "/audio/guide/slides/NAR-s37-s-aos-deploy.mp3",
+   "status": 200,
+   "type": "audio/mpeg"
+  },
+  {
+   "url": "/audio/guide/slides/NAR-s38-s-aos-nations.mp3",
+   "status": 200,
+   "type": "audio/mpeg"
+  },
+  {
+   "url": "/audio/guide/slides/NAR-s39-s-closing.mp3",
+   "status": 200,
+   "type": "audio/mpeg"
+  },
+  {
+   "url": "/audio/guide/slides/NAR-s40-s-exec-intro.mp3",
+   "status": 200,
+   "type": "audio/mpeg"
+  },
+  {
+   "url": "/audio/guide/slides/NAR-s42-s-exec-al-ameri.mp3",
+   "status": 200,
+   "type": "audio/mpeg"
+  },
+  {
+   "url": "/audio/guide/slides/NAR-s43-s-exec-khalid.mp3",
+   "status": 200,
+   "type": "audio/mpeg"
+  },
+  {
+   "url": "/audio/guide/slides/NAR-s44-s-exec-unwalla.mp3",
+   "status": 200,
+   "type": "audio/mpeg"
+  },
+  {
+   "url": "/audio/guide/slides/NAR-s45-s-exec-ferreira-da-cunha.mp3",
+   "status": 200,
+   "type": "audio/mpeg"
+  },
+  {
+   "url": "/audio/intro-narration.mp3",
+   "status": 200,
+   "type": "audio/mpeg"
+  },
+  {
+   "url": "/assets/exec/films/khalid/athar-origins-of-impact-ep01-muhammed-khalid-1080p.mp4",
+   "status": 200,
+   "type": "video/mp4",
+   "bytes": 45357475,
+   "sha256": "f71b761b455fd329eb96d66de2c9bbf48bb6e69ab90a904b8146397f33ad6048"
+  },
+  {
+   "url": "/assets/exec/films/khalid/athar-origins-of-impact-ep01-muhammed-khalid-720p.mp4",
+   "status": 200,
+   "type": "video/mp4",
+   "bytes": 6442036,
+   "sha256": "e8638ddc6a84e681248ffad9162c65ebadd2b160c80a783bc3303069fb1cacf3"
+  },
+  {
+   "url": "/assets/exec/films/khalid/athar-origins-of-impact-ep01-poster-09s1.jpg",
+   "status": 200,
+   "type": "image/jpeg",
+   "bytes": 140647,
+   "sha256": "0c34da116fb1b1030abb3ce238eceec61ddd980ccf27adb719408ca0006115d9"
+  },
+  {
+   "url": "/assets/exec/films/khalid/athar-origins-of-impact-ep01-poster-09s1.webp",
+   "status": 200,
+   "type": "image/webp",
+   "bytes": 84456,
+   "sha256": "6d48c1824dc2b43eb81e1d8154c849ba0cfbef02a959463d0acef4ee7a24a782"
+  },
+  {
+   "url": "/assets/exec/films/khalid/athar-origins-of-impact-ep01.en.vtt",
+   "status": 200,
+   "type": "text/vtt; charset=utf-8",
+   "bytes": 1754,
+   "sha256": "eaf7bb4a3494325ba7b39b8904965890a52b375b817e6e64d34590a5f5410385"
+  },
+  {
+   "url": "/assets/exec/films/khalid/athar-origins-of-impact-ep01.ar.vtt",
+   "status": 200,
+   "type": "text/vtt; charset=utf-8",
+   "bytes": 2010,
+   "sha256": "d4d4b9746be4f120edd56a3b1ef5221ad92f183dc5b07abf9f4ad162d7214562"
+  },
+  {
+   "url": "/js/exec-films.js",
+   "status": 200,
+   "type": "text/javascript; charset=utf-8",
+   "bytes": 2351,
+   "sha256": "6046d21df5df076ae13e6fb1327dcae5b0c6621b078a1137c1f492941df2ed2e"
+  },
+  {
+   "url": "/js/exec-film-player.js",
+   "status": 200,
+   "type": "text/javascript; charset=utf-8",
+   "bytes": 11152,
+   "sha256": "006f83f95cd93a68209b6ad6b5ede974b2216c281c6eef4099d5a1e2cc4fc7f5"
+  },
+  {
+   "url": "/assets/exec-film-player.css",
+   "status": 200,
+   "type": "text/css; charset=utf-8",
+   "bytes": 4903,
+   "sha256": "352a3815d32ace2ea70a20fd9f6b9176ea5b3f509cd256feb3da8ce1f6195676"
+  },
+  {
+   "url": "/build-info.json",
+   "status": 200,
+   "type": "application/json; charset=utf-8",
+   "bytes": 3301,
+   "sha256": "b2a1e4f9f10d006e1cd874da4662a5f61f200b0ccb3d25cbd3056d6b9459ed0d"
+  },
+  {
+   "url": "/js/exec-film.js",
+   "status": 404
+  },
+  {
+   "url": "/assets/exec/video/athar-origins-of-impact-ep01-muhammed-khalid-1080p.mp4",
+   "status": 404
+  },
+  {
+   "url": "/assets/exec/video/athar-origins-of-impact-ep01.en.vtt",
+   "status": 404
+  }
+ ]
+}

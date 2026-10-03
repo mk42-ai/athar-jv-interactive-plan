@@ -1,0 +1,80 @@
+{
+ "base": "http://127.0.0.1:4159",
+ "written": "2026-10-03T13:21:22.514Z",
+ "rows": [
+  {
+   "meta": {
+    "state": "idle",
+    "poster": "athar-origins-of-impact-ep01-poster-09s1.jpg",
+    "posterTime": "9.1",
+    "variant": "1080p",
+    "src": "/assets/exec/films/khalid/athar-origins-of-impact-ep01-muhammed-khalid-1080p.mp4",
+    "tracks": [
+     "subtitles:en:athar-origins-of-impact-ep01.en.vtt:default",
+     "subtitles:ar:athar-origins-of-impact-ep01.ar.vtt"
+    ],
+    "autoplay": false,
+    "muted": false,
+    "controls": false,
+    "paused": true,
+    "ct": 0,
+    "out": "37.3",
+    "dur": "0:37",
+    "title": "Athar — Origins of Impact, Episode 01: Muhammed Khalid",
+    "play": true,
+    "playLabel": "Play the film — Athar — Origins of Impact, Episode 01: Muhammed Khalid",
+    "ratio": 1.7777778544239968,
+    "dir": "ltr",
+    "lang": "en"
+   },
+   "idle": {
+    "paused": true,
+    "ct": 0
+   },
+   "playing": {
+    "state": "playing",
+    "paused": false,
+    "ct": 1.272415,
+    "controls": true,
+    "playHidden": true,
+    "overlays": [],
+    "muted": false,
+    "showing": [
+     "en"
+    ]
+   },
+   "guide": {
+    "start": {
+     "state": "playing",
+     "reason": "",
+     "slide": "s-exec-khalid"
+    },
+    "onPlay": {
+     "state": "paused",
+     "reason": "video",
+     "slide": "s-exec-khalid"
+    },
+    "onPause": {
+     "state": "playing",
+     "reason": "",
+     "slide": "s-exec-khalid"
+    },
+    "atEnd": {
+     "state": "playing",
+     "reason": "",
+     "slide": "s-exec-khalid"
+    }
+   },
+   "pausedUi": {
+    "state": "paused",
+    "playVisible": true
+   },
+   "endUi": {
+    "state": "ended",
+    "endedAtOut": "true",
+    "replay": "Replay film0:37"
+   },
+   "errors": []
+  }
+ ]
+}

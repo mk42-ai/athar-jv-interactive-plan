@@ -2,10 +2,10 @@
   "config": {
     "argv": [
       "/usr/bin/node",
-      "/tmp/terminal-work/work/6692b763e851d28a036ab30e/6abf38265e9f29365b013161/athar-jv-interactive-plan/pact-deck/node_modules/.bin/playwright",
+      "/tmp/terminal-work/work/6692b763e851d28a036ab30e/6abf38265e9f29365b013161/athar-jv-interactive-plan/pact-deck/node_modules/@playwright/test/cli.js",
       "test",
       "-c",
-      "qa/v155/playwright.config.mjs"
+      "playwright.config.mjs"
     ],
     "configFile": "/tmp/terminal-work/work/6692b763e851d28a036ab30e/6abf38265e9f29365b013161/athar-jv-interactive-plan/pact-deck/qa/v155/playwright.config.mjs",
     "rootDir": "/tmp/terminal-work/work/6692b763e851d28a036ab30e/6abf38265e9f29365b013161/athar-jv-interactive-plan/pact-deck/qa/v155",
@@ -19,7 +19,7 @@
     "grepInvert": null,
     "maxFailures": 0,
     "metadata": {
-      "actualWorkers": 1
+      "actualWorkers": 2
     },
     "preserveOutput": "always",
     "projects": [
@@ -28,7 +28,7 @@
         "repeatEach": 1,
         "retries": 0,
         "metadata": {
-          "actualWorkers": 1
+          "actualWorkers": 2
         },
         "id": "desktop",
         "name": "desktop",
@@ -44,7 +44,7 @@
         "repeatEach": 1,
         "retries": 0,
         "metadata": {
-          "actualWorkers": 1
+          "actualWorkers": 2
         },
         "id": "phone",
         "name": "phone",
@@ -78,7 +78,7 @@
     "updateSnapshots": "missing",
     "updateSourceMethod": "patch",
     "version": "1.63.0",
-    "workers": 1,
+    "workers": 2,
     "webServer": null
   },
   "suites": [
@@ -111,146 +111,146 @@
                       "workerIndex": 0,
                       "parallelIndex": 0,
                       "status": "passed",
-                      "duration": 20795,
+                      "duration": 24401,
                       "errors": [],
                       "stdout": [],
                       "stderr": [],
                       "retry": 0,
                       "steps": [
                         {
-                          "title": "slide 1 s-cover: narrated s-cover · audible NAR-s01 (243 ms)",
-                          "duration": 5
+                          "title": "slide 1 s-cover: narrated s-cover · audible NAR-s01 (181 ms)",
+                          "duration": 15
                         },
                         {
-                          "title": "slide 2 s-hero: narrated s-hero · audible NAR-s02 (112 ms)",
+                          "title": "slide 2 s-hero: narrated s-hero · audible NAR-s02 (128 ms)",
                           "duration": 2
                         },
                         {
-                          "title": "slide 3 s-why-pact: narrated s-why-pact · audible NAR-s03 (113 ms)",
+                          "title": "slide 3 s-why-pact: narrated s-why-pact · audible NAR-s03 (31 ms)",
                           "duration": 3
                         },
                         {
-                          "title": "slide 4 s-four-outcomes: narrated s-four-outcomes · audible NAR-s04 (124 ms)",
+                          "title": "slide 4 s-four-outcomes: narrated s-four-outcomes · audible NAR-s04 (146 ms)",
                           "duration": 2
                         },
                         {
-                          "title": "slide 5 s-managed-programme: narrated s-managed-programme · audible NAR-s05 (116 ms)",
+                          "title": "slide 5 s-managed-programme: narrated s-managed-programme · audible NAR-s05 (148 ms)",
+                          "duration": 2
+                        },
+                        {
+                          "title": "slide 6 s-discord-home: narrated s-discord-home · audible NAR-s06 (149 ms)",
                           "duration": 1
                         },
                         {
-                          "title": "slide 6 s-discord-home: narrated s-discord-home · audible NAR-s06 (120 ms)",
+                          "title": "slide 7 s-country-chapters: narrated s-country-chapters · audible NAR-s07 (159 ms)",
                           "duration": 2
                         },
                         {
-                          "title": "slide 7 s-country-chapters: narrated s-country-chapters · audible NAR-s07 (143 ms)",
+                          "title": "slide 8 s-learning-formats: narrated s-learning-formats · audible NAR-s08 (147 ms)",
                           "duration": 1
                         },
                         {
-                          "title": "slide 8 s-learning-formats: narrated s-learning-formats · audible NAR-s08 (123 ms)",
+                          "title": "slide 9 s-challenges-showcases: narrated s-challenges-showcases · audible NAR-s09 (146 ms)",
                           "duration": 2
                         },
                         {
-                          "title": "slide 9 s-challenges-showcases: narrated s-challenges-showcases · audible NAR-s09 (131 ms)",
+                          "title": "slide 10 s-office-hours: narrated s-office-hours · audible NAR-s10 (140 ms)",
+                          "duration": 2
+                        },
+                        {
+                          "title": "slide 11 s-agent-marketplace: narrated s-agent-marketplace · audible NAR-s11 (136 ms)",
+                          "duration": 2
+                        },
+                        {
+                          "title": "slide 12 s-decision-table: narrated s-decision-table · audible NAR-s12 (132 ms)",
                           "duration": 1
                         },
                         {
-                          "title": "slide 10 s-office-hours: narrated s-office-hours · audible NAR-s10 (113 ms)",
+                          "title": "slide 13 s-pillar-plugins: narrated s-pillar-plugins · audible NAR-s13 (146 ms)",
                           "duration": 2
                         },
                         {
-                          "title": "slide 11 s-agent-marketplace: narrated s-agent-marketplace · audible NAR-s11 (123 ms)",
+                          "title": "slide 14 s-pillar-skills: narrated s-pillar-skills · audible NAR-s14 (145 ms)",
                           "duration": 2
                         },
                         {
-                          "title": "slide 12 s-decision-table: narrated s-decision-table · audible NAR-s12 (119 ms)",
+                          "title": "slide 15 s-pillar-open-ecosystem: narrated s-pillar-open-ecosystem · audible NAR-s15 (141 ms)",
+                          "duration": 2
+                        },
+                        {
+                          "title": "slide 16 s-pillar-cross-model: narrated s-pillar-cross-model · audible NAR-s16 (141 ms)",
+                          "duration": 2
+                        },
+                        {
+                          "title": "slide 17 s-pillar-universal-licence: narrated s-pillar-universal-licence · audible NAR-s17 (168 ms)",
+                          "duration": 7
+                        },
+                        {
+                          "title": "slide 18 s-pillar-upskilling: narrated s-pillar-upskilling · audible NAR-s18 (175 ms)",
+                          "duration": 8
+                        },
+                        {
+                          "title": "slide 19 s-pact-principles: narrated s-pact-principles · audible NAR-s19 (128 ms)",
+                          "duration": 2
+                        },
+                        {
+                          "title": "slide 20 s-how-to-sign: narrated s-how-to-sign · audible NAR-s20 (140 ms)",
+                          "duration": 2
+                        },
+                        {
+                          "title": "slide 21 s-actors-wall: narrated s-actors-wall · audible NAR-s21 (151 ms)",
+                          "duration": 2
+                        },
+                        {
+                          "title": "slide 22 s-who-signs: narrated s-who-signs · audible NAR-s22 (140 ms)",
+                          "duration": 2
+                        },
+                        {
+                          "title": "slide 23 s-who-governs: narrated s-who-governs · audible NAR-s23 (139 ms)",
+                          "duration": 1
+                        },
+                        {
+                          "title": "slide 24 s-who-builds: narrated s-who-builds · audible NAR-s24 (164 ms)",
+                          "duration": 1
+                        },
+                        {
+                          "title": "slide 25 s-who-learns: narrated s-who-learns · audible NAR-s25 (41 ms)",
                           "duration": 3
                         },
                         {
-                          "title": "slide 13 s-pillar-plugins: narrated s-pillar-plugins · audible NAR-s13 (120 ms)",
-                          "duration": 1
+                          "title": "slide 26 s-governance-licence: narrated s-governance-licence · audible NAR-s26 (174 ms)",
+                          "duration": 2
                         },
                         {
-                          "title": "slide 14 s-pillar-skills: narrated s-pillar-skills · audible NAR-s14 (119 ms)",
+                          "title": "slide 27 s-roadmap: narrated s-roadmap · audible NAR-s27 (152 ms)",
+                          "duration": 2
+                        },
+                        {
+                          "title": "slide 28 s-it-outcomes: narrated s-it-outcomes · audible NAR-s28 (171 ms)",
+                          "duration": 4
+                        },
+                        {
+                          "title": "slide 29 s-it-tiers: narrated s-it-tiers · audible NAR-s29 (42 ms)",
+                          "duration": 2
+                        },
+                        {
+                          "title": "slide 30 s-it-metrics: narrated s-it-metrics · audible NAR-s30 (179 ms)",
                           "duration": 3
                         },
                         {
-                          "title": "slide 15 s-pillar-open-ecosystem: narrated s-pillar-open-ecosystem · audible NAR-s15 (109 ms)",
+                          "title": "slide 31 s-it-sustain: narrated s-it-sustain · audible NAR-s31 (139 ms)",
                           "duration": 2
                         },
                         {
-                          "title": "slide 16 s-pillar-cross-model: narrated s-pillar-cross-model · audible NAR-s16 (112 ms)",
-                          "duration": 1
-                        },
-                        {
-                          "title": "slide 17 s-pillar-universal-licence: narrated s-pillar-universal-licence · audible NAR-s17 (114 ms)",
-                          "duration": 1
-                        },
-                        {
-                          "title": "slide 18 s-pillar-upskilling: narrated s-pillar-upskilling · audible NAR-s18 (113 ms)",
+                          "title": "slide 32 s-it-partners: narrated s-it-partners · audible NAR-s32 (137 ms)",
                           "duration": 2
                         },
                         {
-                          "title": "slide 19 s-pact-principles: narrated s-pact-principles · audible NAR-s19 (143 ms)",
+                          "title": "slide 33 s-it-join: narrated s-it-join · audible NAR-s33 (133 ms)",
                           "duration": 2
                         },
                         {
-                          "title": "slide 20 s-how-to-sign: narrated s-how-to-sign · audible NAR-s20 (119 ms)",
-                          "duration": 1
-                        },
-                        {
-                          "title": "slide 21 s-actors-wall: narrated s-actors-wall · audible NAR-s21 (133 ms)",
-                          "duration": 1
-                        },
-                        {
-                          "title": "slide 22 s-who-signs: narrated s-who-signs · audible NAR-s22 (117 ms)",
-                          "duration": 2
-                        },
-                        {
-                          "title": "slide 23 s-who-governs: narrated s-who-governs · audible NAR-s23 (112 ms)",
-                          "duration": 2
-                        },
-                        {
-                          "title": "slide 24 s-who-builds: narrated s-who-builds · audible NAR-s24 (116 ms)",
-                          "duration": 2
-                        },
-                        {
-                          "title": "slide 25 s-who-learns: narrated s-who-learns · audible NAR-s25 (108 ms)",
-                          "duration": 2
-                        },
-                        {
-                          "title": "slide 26 s-governance-licence: narrated s-governance-licence · audible NAR-s26 (114 ms)",
-                          "duration": 1
-                        },
-                        {
-                          "title": "slide 27 s-roadmap: narrated s-roadmap · audible NAR-s27 (121 ms)",
-                          "duration": 2
-                        },
-                        {
-                          "title": "slide 28 s-it-outcomes: narrated s-it-outcomes · audible NAR-s28 (114 ms)",
-                          "duration": 2
-                        },
-                        {
-                          "title": "slide 29 s-it-tiers: narrated s-it-tiers · audible NAR-s29 (118 ms)",
-                          "duration": 3
-                        },
-                        {
-                          "title": "slide 30 s-it-metrics: narrated s-it-metrics · audible NAR-s30 (115 ms)",
-                          "duration": 2
-                        },
-                        {
-                          "title": "slide 31 s-it-sustain: narrated s-it-sustain · audible NAR-s31 (123 ms)",
-                          "duration": 2
-                        },
-                        {
-                          "title": "slide 32 s-it-partners: narrated s-it-partners · audible NAR-s32 (118 ms)",
-                          "duration": 2
-                        },
-                        {
-                          "title": "slide 33 s-it-join: narrated s-it-join · audible NAR-s33 (118 ms)",
-                          "duration": 2
-                        },
-                        {
-                          "title": "slide 34 s-aos-overview: narrated s-aos-overview · audible NAR-s34 (129 ms)",
+                          "title": "slide 34 s-aos-overview: narrated s-aos-overview · audible NAR-s34 (135 ms)",
                           "duration": 1
                         },
                         {
@@ -258,43 +258,244 @@
                           "duration": 2
                         },
                         {
-                          "title": "slide 36 s-aos-roadmap: narrated s-aos-roadmap · audible NAR-s36 (124 ms)",
+                          "title": "slide 36 s-aos-roadmap: narrated s-aos-roadmap · audible NAR-s36 (143 ms)",
+                          "duration": 3
+                        },
+                        {
+                          "title": "slide 37 s-aos-deploy: narrated s-aos-deploy · audible NAR-s37 (150 ms)",
+                          "duration": 3
+                        },
+                        {
+                          "title": "slide 38 s-aos-nations: narrated s-aos-nations · audible NAR-s38 (75 ms)",
+                          "duration": 3
+                        },
+                        {
+                          "title": "slide 39 s-closing: narrated s-closing · audible NAR-s39 (37 ms)",
+                          "duration": 3
+                        },
+                        {
+                          "title": "slide 40 s-exec-intro: narrated s-exec-intro · audible NAR-s40 (198 ms)",
+                          "duration": 5
+                        },
+                        {
+                          "title": "slide 41 s-exec-al-ameri: narrated s-exec-al-ameri · audible NAR-s42 (52 ms)",
                           "duration": 2
                         },
                         {
-                          "title": "slide 37 s-aos-deploy: narrated s-aos-deploy · audible NAR-s37 (115 ms)",
+                          "title": "slide 42 s-exec-ferreira-da-cunha: narrated s-exec-ferreira-da-cunha · audible NAR-s45 (149 ms)",
                           "duration": 2
                         },
                         {
-                          "title": "slide 38 s-aos-nations: narrated s-aos-nations · audible NAR-s38 (116 ms)",
-                          "duration": 2
+                          "title": "slide 43 s-exec-khalid: narrated s-exec-khalid · audible NAR-s43 (165 ms)",
+                          "duration": 3
                         },
                         {
-                          "title": "slide 39 s-closing: narrated s-closing · audible NAR-s39 (122 ms)",
-                          "duration": 1
-                        },
-                        {
-                          "title": "slide 40 s-exec-intro: narrated s-exec-intro · audible NAR-s40 (116 ms)",
-                          "duration": 2
-                        },
-                        {
-                          "title": "slide 41 s-exec-al-ameri: narrated s-exec-al-ameri · audible NAR-s42 (129 ms)",
-                          "duration": 2
-                        },
-                        {
-                          "title": "slide 42 s-exec-ferreira-da-cunha: narrated s-exec-ferreira-da-cunha · audible NAR-s45 (136 ms)",
-                          "duration": 2
-                        },
-                        {
-                          "title": "slide 43 s-exec-khalid: narrated s-exec-khalid · audible NAR-s43 (115 ms)",
-                          "duration": 2
-                        },
-                        {
-                          "title": "slide 44 s-exec-unwalla: narrated s-exec-unwalla · audible NAR-s44 (116 ms)",
+                          "title": "slide 44 s-exec-unwalla: narrated s-exec-unwalla · audible NAR-s44 (178 ms)",
                           "duration": 2
                         }
                       ],
-                      "startTime": "2026-10-03T02:51:43.453Z",
+                      "startTime": "2026-10-03T13:24:57.471Z",
+                      "annotations": [],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "expected"
+                },
+                {
+                  "timeout": 300000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "phone",
+                  "projectName": "phone",
+                  "results": [
+                    {
+                      "workerIndex": 2,
+                      "parallelIndex": 0,
+                      "status": "passed",
+                      "duration": 22653,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "steps": [
+                        {
+                          "title": "slide 1 s-cover: narrated s-cover · audible NAR-s01 (158 ms)",
+                          "duration": 6
+                        },
+                        {
+                          "title": "slide 2 s-hero: narrated s-hero · audible NAR-s02 (149 ms)",
+                          "duration": 3
+                        },
+                        {
+                          "title": "slide 3 s-why-pact: narrated s-why-pact · audible NAR-s03 (134 ms)",
+                          "duration": 3
+                        },
+                        {
+                          "title": "slide 4 s-four-outcomes: narrated s-four-outcomes · audible NAR-s04 (137 ms)",
+                          "duration": 4
+                        },
+                        {
+                          "title": "slide 5 s-managed-programme: narrated s-managed-programme · audible NAR-s05 (126 ms)",
+                          "duration": 2
+                        },
+                        {
+                          "title": "slide 6 s-discord-home: narrated s-discord-home · audible NAR-s06 (126 ms)",
+                          "duration": 2
+                        },
+                        {
+                          "title": "slide 7 s-country-chapters: narrated s-country-chapters · audible NAR-s07 (151 ms)",
+                          "duration": 2
+                        },
+                        {
+                          "title": "slide 8 s-learning-formats: narrated s-learning-formats · audible NAR-s08 (142 ms)",
+                          "duration": 3
+                        },
+                        {
+                          "title": "slide 9 s-challenges-showcases: narrated s-challenges-showcases · audible NAR-s09 (139 ms)",
+                          "duration": 1
+                        },
+                        {
+                          "title": "slide 10 s-office-hours: narrated s-office-hours · audible NAR-s10 (134 ms)",
+                          "duration": 2
+                        },
+                        {
+                          "title": "slide 11 s-agent-marketplace: narrated s-agent-marketplace · audible NAR-s11 (133 ms)",
+                          "duration": 2
+                        },
+                        {
+                          "title": "slide 12 s-decision-table: narrated s-decision-table · audible NAR-s12 (147 ms)",
+                          "duration": 2
+                        },
+                        {
+                          "title": "slide 13 s-pillar-plugins: narrated s-pillar-plugins · audible NAR-s13 (133 ms)",
+                          "duration": 1
+                        },
+                        {
+                          "title": "slide 14 s-pillar-skills: narrated s-pillar-skills · audible NAR-s14 (133 ms)",
+                          "duration": 3
+                        },
+                        {
+                          "title": "slide 15 s-pillar-open-ecosystem: narrated s-pillar-open-ecosystem · audible NAR-s15 (138 ms)",
+                          "duration": 2
+                        },
+                        {
+                          "title": "slide 16 s-pillar-cross-model: narrated s-pillar-cross-model · audible NAR-s16 (127 ms)",
+                          "duration": 1
+                        },
+                        {
+                          "title": "slide 17 s-pillar-universal-licence: narrated s-pillar-universal-licence · audible NAR-s17 (127 ms)",
+                          "duration": 2
+                        },
+                        {
+                          "title": "slide 18 s-pillar-upskilling: narrated s-pillar-upskilling · audible NAR-s18 (141 ms)",
+                          "duration": 1
+                        },
+                        {
+                          "title": "slide 19 s-pact-principles: narrated s-pact-principles · audible NAR-s19 (125 ms)",
+                          "duration": 2
+                        },
+                        {
+                          "title": "slide 20 s-how-to-sign: narrated s-how-to-sign · audible NAR-s20 (141 ms)",
+                          "duration": 2
+                        },
+                        {
+                          "title": "slide 21 s-actors-wall: narrated s-actors-wall · audible NAR-s21 (132 ms)",
+                          "duration": 2
+                        },
+                        {
+                          "title": "slide 22 s-who-signs: narrated s-who-signs · audible NAR-s22 (128 ms)",
+                          "duration": 1
+                        },
+                        {
+                          "title": "slide 23 s-who-governs: narrated s-who-governs · audible NAR-s23 (128 ms)",
+                          "duration": 2
+                        },
+                        {
+                          "title": "slide 24 s-who-builds: narrated s-who-builds · audible NAR-s24 (135 ms)",
+                          "duration": 2
+                        },
+                        {
+                          "title": "slide 25 s-who-learns: narrated s-who-learns · audible NAR-s25 (144 ms)",
+                          "duration": 2
+                        },
+                        {
+                          "title": "slide 26 s-governance-licence: narrated s-governance-licence · audible NAR-s26 (149 ms)",
+                          "duration": 2
+                        },
+                        {
+                          "title": "slide 27 s-roadmap: narrated s-roadmap · audible NAR-s27 (146 ms)",
+                          "duration": 2
+                        },
+                        {
+                          "title": "slide 28 s-it-outcomes: narrated s-it-outcomes · audible NAR-s28 (134 ms)",
+                          "duration": 2
+                        },
+                        {
+                          "title": "slide 29 s-it-tiers: narrated s-it-tiers · audible NAR-s29 (128 ms)",
+                          "duration": 1
+                        },
+                        {
+                          "title": "slide 30 s-it-metrics: narrated s-it-metrics · audible NAR-s30 (146 ms)",
+                          "duration": 2
+                        },
+                        {
+                          "title": "slide 31 s-it-sustain: narrated s-it-sustain · audible NAR-s31 (118 ms)",
+                          "duration": 2
+                        },
+                        {
+                          "title": "slide 32 s-it-partners: narrated s-it-partners · audible NAR-s32 (132 ms)",
+                          "duration": 2
+                        },
+                        {
+                          "title": "slide 33 s-it-join: narrated s-it-join · audible NAR-s33 (122 ms)",
+                          "duration": 1
+                        },
+                        {
+                          "title": "slide 34 s-aos-overview: narrated s-aos-overview · audible NAR-s34 (140 ms)",
+                          "duration": 2
+                        },
+                        {
+                          "title": "slide 35 s-aos-tour: narrated s-aos-tour · audible NAR-s35 (31 ms)",
+                          "duration": 2
+                        },
+                        {
+                          "title": "slide 36 s-aos-roadmap: narrated s-aos-roadmap · audible NAR-s36 (125 ms)",
+                          "duration": 2
+                        },
+                        {
+                          "title": "slide 37 s-aos-deploy: narrated s-aos-deploy · audible NAR-s37 (127 ms)",
+                          "duration": 2
+                        },
+                        {
+                          "title": "slide 38 s-aos-nations: narrated s-aos-nations · audible NAR-s38 (113 ms)",
+                          "duration": 1
+                        },
+                        {
+                          "title": "slide 39 s-closing: narrated s-closing · audible NAR-s39 (139 ms)",
+                          "duration": 2
+                        },
+                        {
+                          "title": "slide 40 s-exec-intro: narrated s-exec-intro · audible NAR-s40 (109 ms)",
+                          "duration": 1
+                        },
+                        {
+                          "title": "slide 41 s-exec-al-ameri: narrated s-exec-al-ameri · audible NAR-s42 (119 ms)",
+                          "duration": 2
+                        },
+                        {
+                          "title": "slide 42 s-exec-ferreira-da-cunha: narrated s-exec-ferreira-da-cunha · audible NAR-s45 (127 ms)",
+                          "duration": 2
+                        },
+                        {
+                          "title": "slide 43 s-exec-khalid: narrated s-exec-khalid · audible NAR-s43 (120 ms)",
+                          "duration": 2
+                        },
+                        {
+                          "title": "slide 44 s-exec-unwalla: narrated s-exec-unwalla · audible NAR-s44 (131 ms)",
+                          "duration": 2
+                        }
+                      ],
+                      "startTime": "2026-10-03T13:25:28.082Z",
                       "annotations": [],
                       "attachments": []
                     }
@@ -320,15 +521,38 @@
                   "projectName": "desktop",
                   "results": [
                     {
-                      "workerIndex": 0,
-                      "parallelIndex": 0,
+                      "workerIndex": 1,
+                      "parallelIndex": 1,
                       "status": "passed",
-                      "duration": 11756,
+                      "duration": 13664,
                       "errors": [],
                       "stdout": [],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2026-10-03T02:52:04.699Z",
+                      "startTime": "2026-10-03T13:24:57.501Z",
+                      "annotations": [],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "expected"
+                },
+                {
+                  "timeout": 300000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "phone",
+                  "projectName": "phone",
+                  "results": [
+                    {
+                      "workerIndex": 3,
+                      "parallelIndex": 1,
+                      "status": "passed",
+                      "duration": 12567,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-10-03T13:25:31.877Z",
                       "annotations": [],
                       "attachments": []
                     }
@@ -342,55 +566,58 @@
               "column": 3
             },
             {
-              "title": "impact-story film (slide 43, only when features.json originsFilm=true) pauses the guide while it plays and the guide resumes after it",
+              "title": "impact-story film (slide 43, only when features.json execFilms=true) pauses the guide while it plays and the guide resumes after it",
               "ok": true,
               "tags": [],
               "tests": [
                 {
-                  "timeout": 300000,
-                  "annotations": [
-                    {
-                      "type": "skip",
-                      "description": "originsFilm feature is off (pact-deck/features.json) — no film is shipped",
-                      "location": {
-                        "file": "/tmp/terminal-work/work/6692b763e851d28a036ab30e/6abf38265e9f29365b013161/athar-jv-interactive-plan/pact-deck/qa/v155/guide-sync-all.spec.mjs",
-                        "line": 97,
-                        "column": 10
-                      }
-                    }
-                  ],
-                  "expectedStatus": "skipped",
+                  "timeout": 150000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
                   "projectId": "desktop",
                   "projectName": "desktop",
                   "results": [
                     {
-                      "workerIndex": 0,
-                      "parallelIndex": 0,
-                      "status": "skipped",
-                      "duration": 285,
+                      "workerIndex": 1,
+                      "parallelIndex": 1,
+                      "status": "passed",
+                      "duration": 6698,
                       "errors": [],
                       "stdout": [],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2026-10-03T02:52:16.469Z",
-                      "annotations": [
-                        {
-                          "type": "skip",
-                          "description": "originsFilm feature is off (pact-deck/features.json) — no film is shipped",
-                          "location": {
-                            "file": "/tmp/terminal-work/work/6692b763e851d28a036ab30e/6abf38265e9f29365b013161/athar-jv-interactive-plan/pact-deck/qa/v155/guide-sync-all.spec.mjs",
-                            "line": 97,
-                            "column": 10
-                          }
-                        }
-                      ],
+                      "startTime": "2026-10-03T13:25:11.652Z",
+                      "annotations": [],
                       "attachments": []
                     }
                   ],
-                  "status": "skipped"
+                  "status": "expected"
+                },
+                {
+                  "timeout": 150000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "phone",
+                  "projectName": "phone",
+                  "results": [
+                    {
+                      "workerIndex": 3,
+                      "parallelIndex": 1,
+                      "status": "passed",
+                      "duration": 5867,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-10-03T13:25:45.045Z",
+                      "annotations": [],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "expected"
                 }
               ],
-              "id": "704b50ec7c4d667232fa-a90013b85aaa9f068b3e",
+              "id": "704b50ec7c4d667232fa-03297736a71e34f02024",
               "file": "guide-sync-all.spec.mjs",
               "line": 96,
               "column": 3
@@ -408,15 +635,38 @@
                   "projectName": "desktop",
                   "results": [
                     {
-                      "workerIndex": 0,
-                      "parallelIndex": 0,
+                      "workerIndex": 1,
+                      "parallelIndex": 1,
                       "status": "passed",
-                      "duration": 1729,
+                      "duration": 2519,
                       "errors": [],
                       "stdout": [],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2026-10-03T02:52:16.769Z",
+                      "startTime": "2026-10-03T13:25:18.375Z",
+                      "annotations": [],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "expected"
+                },
+                {
+                  "timeout": 60000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "phone",
+                  "projectName": "phone",
+                  "results": [
+                    {
+                      "workerIndex": 3,
+                      "parallelIndex": 1,
+                      "status": "passed",
+                      "duration": 1694,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-10-03T13:25:50.926Z",
                       "annotations": [],
                       "attachments": []
                     }
@@ -442,15 +692,38 @@
                   "projectName": "desktop",
                   "results": [
                     {
-                      "workerIndex": 0,
-                      "parallelIndex": 0,
+                      "workerIndex": 1,
+                      "parallelIndex": 1,
                       "status": "passed",
-                      "duration": 1683,
+                      "duration": 2255,
                       "errors": [],
                       "stdout": [],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2026-10-03T02:52:18.509Z",
+                      "startTime": "2026-10-03T13:25:20.917Z",
+                      "annotations": [],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "expected"
+                },
+                {
+                  "timeout": 90000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "phone",
+                  "projectName": "phone",
+                  "results": [
+                    {
+                      "workerIndex": 2,
+                      "parallelIndex": 0,
+                      "status": "passed",
+                      "duration": 1738,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-10-03T13:25:51.308Z",
                       "annotations": [],
                       "attachments": []
                     }
@@ -479,12 +752,35 @@
                       "workerIndex": 0,
                       "parallelIndex": 0,
                       "status": "passed",
-                      "duration": 21491,
+                      "duration": 4676,
                       "errors": [],
                       "stdout": [],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2026-10-03T02:52:20.211Z",
+                      "startTime": "2026-10-03T13:25:22.335Z",
+                      "annotations": [],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "expected"
+                },
+                {
+                  "timeout": 150000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "phone",
+                  "projectName": "phone",
+                  "results": [
+                    {
+                      "workerIndex": 3,
+                      "parallelIndex": 1,
+                      "status": "passed",
+                      "duration": 3657,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-10-03T13:25:52.638Z",
                       "annotations": [],
                       "attachments": []
                     }
@@ -510,15 +806,38 @@
                   "projectName": "desktop",
                   "results": [
                     {
-                      "workerIndex": 0,
-                      "parallelIndex": 0,
+                      "workerIndex": 1,
+                      "parallelIndex": 1,
                       "status": "passed",
-                      "duration": 5551,
+                      "duration": 7909,
                       "errors": [],
                       "stdout": [],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2026-10-03T02:52:41.720Z",
+                      "startTime": "2026-10-03T13:25:23.201Z",
+                      "annotations": [],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "expected"
+                },
+                {
+                  "timeout": 240000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "phone",
+                  "projectName": "phone",
+                  "results": [
+                    {
+                      "workerIndex": 2,
+                      "parallelIndex": 0,
+                      "status": "passed",
+                      "duration": 7151,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-10-03T13:25:53.065Z",
                       "annotations": [],
                       "attachments": []
                     }
@@ -530,442 +849,6 @@
               "file": "guide-sync-all.spec.mjs",
               "line": 213,
               "column": 3
-            },
-            {
-              "title": "arrow keys 1 → 44: narrated slide id == visible slide id on every slide",
-              "ok": true,
-              "tags": [],
-              "tests": [
-                {
-                  "timeout": 300000,
-                  "annotations": [],
-                  "expectedStatus": "passed",
-                  "projectId": "phone",
-                  "projectName": "phone",
-                  "results": [
-                    {
-                      "workerIndex": 1,
-                      "parallelIndex": 0,
-                      "status": "passed",
-                      "duration": 20310,
-                      "errors": [],
-                      "stdout": [],
-                      "stderr": [],
-                      "retry": 0,
-                      "steps": [
-                        {
-                          "title": "slide 1 s-cover: narrated s-cover · audible NAR-s01 (215 ms)",
-                          "duration": 4
-                        },
-                        {
-                          "title": "slide 2 s-hero: narrated s-hero · audible NAR-s02 (121 ms)",
-                          "duration": 2
-                        },
-                        {
-                          "title": "slide 3 s-why-pact: narrated s-why-pact · audible NAR-s03 (117 ms)",
-                          "duration": 2
-                        },
-                        {
-                          "title": "slide 4 s-four-outcomes: narrated s-four-outcomes · audible NAR-s04 (117 ms)",
-                          "duration": 2
-                        },
-                        {
-                          "title": "slide 5 s-managed-programme: narrated s-managed-programme · audible NAR-s05 (119 ms)",
-                          "duration": 2
-                        },
-                        {
-                          "title": "slide 6 s-discord-home: narrated s-discord-home · audible NAR-s06 (113 ms)",
-                          "duration": 1
-                        },
-                        {
-                          "title": "slide 7 s-country-chapters: narrated s-country-chapters · audible NAR-s07 (122 ms)",
-                          "duration": 2
-                        },
-                        {
-                          "title": "slide 8 s-learning-formats: narrated s-learning-formats · audible NAR-s08 (107 ms)",
-                          "duration": 1
-                        },
-                        {
-                          "title": "slide 9 s-challenges-showcases: narrated s-challenges-showcases · audible NAR-s09 (112 ms)",
-                          "duration": 1
-                        },
-                        {
-                          "title": "slide 10 s-office-hours: narrated s-office-hours · audible NAR-s10 (111 ms)",
-                          "duration": 1
-                        },
-                        {
-                          "title": "slide 11 s-agent-marketplace: narrated s-agent-marketplace · audible NAR-s11 (116 ms)",
-                          "duration": 1
-                        },
-                        {
-                          "title": "slide 12 s-decision-table: narrated s-decision-table · audible NAR-s12 (111 ms)",
-                          "duration": 1
-                        },
-                        {
-                          "title": "slide 13 s-pillar-plugins: narrated s-pillar-plugins · audible NAR-s13 (133 ms)",
-                          "duration": 2
-                        },
-                        {
-                          "title": "slide 14 s-pillar-skills: narrated s-pillar-skills · audible NAR-s14 (112 ms)",
-                          "duration": 1
-                        },
-                        {
-                          "title": "slide 15 s-pillar-open-ecosystem: narrated s-pillar-open-ecosystem · audible NAR-s15 (116 ms)",
-                          "duration": 2
-                        },
-                        {
-                          "title": "slide 16 s-pillar-cross-model: narrated s-pillar-cross-model · audible NAR-s16 (109 ms)",
-                          "duration": 1
-                        },
-                        {
-                          "title": "slide 17 s-pillar-universal-licence: narrated s-pillar-universal-licence · audible NAR-s17 (110 ms)",
-                          "duration": 2
-                        },
-                        {
-                          "title": "slide 18 s-pillar-upskilling: narrated s-pillar-upskilling · audible NAR-s18 (116 ms)",
-                          "duration": 1
-                        },
-                        {
-                          "title": "slide 19 s-pact-principles: narrated s-pact-principles · audible NAR-s19 (121 ms)",
-                          "duration": 1
-                        },
-                        {
-                          "title": "slide 20 s-how-to-sign: narrated s-how-to-sign · audible NAR-s20 (112 ms)",
-                          "duration": 1
-                        },
-                        {
-                          "title": "slide 21 s-actors-wall: narrated s-actors-wall · audible NAR-s21 (125 ms)",
-                          "duration": 1
-                        },
-                        {
-                          "title": "slide 22 s-who-signs: narrated s-who-signs · audible NAR-s22 (116 ms)",
-                          "duration": 2
-                        },
-                        {
-                          "title": "slide 23 s-who-governs: narrated s-who-governs · audible NAR-s23 (114 ms)",
-                          "duration": 1
-                        },
-                        {
-                          "title": "slide 24 s-who-builds: narrated s-who-builds · audible NAR-s24 (113 ms)",
-                          "duration": 1
-                        },
-                        {
-                          "title": "slide 25 s-who-learns: narrated s-who-learns · audible NAR-s25 (116 ms)",
-                          "duration": 2
-                        },
-                        {
-                          "title": "slide 26 s-governance-licence: narrated s-governance-licence · audible NAR-s26 (115 ms)",
-                          "duration": 1
-                        },
-                        {
-                          "title": "slide 27 s-roadmap: narrated s-roadmap · audible NAR-s27 (119 ms)",
-                          "duration": 2
-                        },
-                        {
-                          "title": "slide 28 s-it-outcomes: narrated s-it-outcomes · audible NAR-s28 (108 ms)",
-                          "duration": 2
-                        },
-                        {
-                          "title": "slide 29 s-it-tiers: narrated s-it-tiers · audible NAR-s29 (127 ms)",
-                          "duration": 2
-                        },
-                        {
-                          "title": "slide 30 s-it-metrics: narrated s-it-metrics · audible NAR-s30 (114 ms)",
-                          "duration": 2
-                        },
-                        {
-                          "title": "slide 31 s-it-sustain: narrated s-it-sustain · audible NAR-s31 (122 ms)",
-                          "duration": 1
-                        },
-                        {
-                          "title": "slide 32 s-it-partners: narrated s-it-partners · audible NAR-s32 (113 ms)",
-                          "duration": 2
-                        },
-                        {
-                          "title": "slide 33 s-it-join: narrated s-it-join · audible NAR-s33 (115 ms)",
-                          "duration": 1
-                        },
-                        {
-                          "title": "slide 34 s-aos-overview: narrated s-aos-overview · audible NAR-s34 (119 ms)",
-                          "duration": 1
-                        },
-                        {
-                          "title": "slide 35 s-aos-tour: narrated s-aos-tour · audible NAR-s35 (33 ms)",
-                          "duration": 2
-                        },
-                        {
-                          "title": "slide 36 s-aos-roadmap: narrated s-aos-roadmap · audible NAR-s36 (112 ms)",
-                          "duration": 2
-                        },
-                        {
-                          "title": "slide 37 s-aos-deploy: narrated s-aos-deploy · audible NAR-s37 (115 ms)",
-                          "duration": 1
-                        },
-                        {
-                          "title": "slide 38 s-aos-nations: narrated s-aos-nations · audible NAR-s38 (107 ms)",
-                          "duration": 2
-                        },
-                        {
-                          "title": "slide 39 s-closing: narrated s-closing · audible NAR-s39 (124 ms)",
-                          "duration": 1
-                        },
-                        {
-                          "title": "slide 40 s-exec-intro: narrated s-exec-intro · audible NAR-s40 (116 ms)",
-                          "duration": 2
-                        },
-                        {
-                          "title": "slide 41 s-exec-al-ameri: narrated s-exec-al-ameri · audible NAR-s42 (111 ms)",
-                          "duration": 1
-                        },
-                        {
-                          "title": "slide 42 s-exec-ferreira-da-cunha: narrated s-exec-ferreira-da-cunha · audible NAR-s45 (111 ms)",
-                          "duration": 1
-                        },
-                        {
-                          "title": "slide 43 s-exec-khalid: narrated s-exec-khalid · audible NAR-s43 (112 ms)",
-                          "duration": 1
-                        },
-                        {
-                          "title": "slide 44 s-exec-unwalla: narrated s-exec-unwalla · audible NAR-s44 (109 ms)",
-                          "duration": 1
-                        }
-                      ],
-                      "startTime": "2026-10-03T02:52:47.965Z",
-                      "annotations": [],
-                      "attachments": []
-                    }
-                  ],
-                  "status": "expected"
-                }
-              ],
-              "id": "704b50ec7c4d667232fa-cbed35dc52c8bde517e2",
-              "file": "guide-sync-all.spec.mjs",
-              "line": 55,
-              "column": 3
-            },
-            {
-              "title": "deep links for all 44 slides (#/N · #/27/new-k · #/28 · #/28/exec-k)",
-              "ok": true,
-              "tags": [],
-              "tests": [
-                {
-                  "timeout": 300000,
-                  "annotations": [],
-                  "expectedStatus": "passed",
-                  "projectId": "phone",
-                  "projectName": "phone",
-                  "results": [
-                    {
-                      "workerIndex": 1,
-                      "parallelIndex": 0,
-                      "status": "passed",
-                      "duration": 11156,
-                      "errors": [],
-                      "stdout": [],
-                      "stderr": [],
-                      "retry": 0,
-                      "startTime": "2026-10-03T02:53:08.729Z",
-                      "annotations": [],
-                      "attachments": []
-                    }
-                  ],
-                  "status": "expected"
-                }
-              ],
-              "id": "704b50ec7c4d667232fa-0536b476fd3f9ca7c1cb",
-              "file": "guide-sync-all.spec.mjs",
-              "line": 76,
-              "column": 3
-            },
-            {
-              "title": "impact-story film (slide 43, only when features.json originsFilm=true) pauses the guide while it plays and the guide resumes after it",
-              "ok": true,
-              "tags": [],
-              "tests": [
-                {
-                  "timeout": 300000,
-                  "annotations": [
-                    {
-                      "type": "skip",
-                      "description": "originsFilm feature is off (pact-deck/features.json) — no film is shipped",
-                      "location": {
-                        "file": "/tmp/terminal-work/work/6692b763e851d28a036ab30e/6abf38265e9f29365b013161/athar-jv-interactive-plan/pact-deck/qa/v155/guide-sync-all.spec.mjs",
-                        "line": 97,
-                        "column": 10
-                      }
-                    }
-                  ],
-                  "expectedStatus": "skipped",
-                  "projectId": "phone",
-                  "projectName": "phone",
-                  "results": [
-                    {
-                      "workerIndex": 1,
-                      "parallelIndex": 0,
-                      "status": "skipped",
-                      "duration": 230,
-                      "errors": [],
-                      "stdout": [],
-                      "stderr": [],
-                      "retry": 0,
-                      "startTime": "2026-10-03T02:53:19.898Z",
-                      "annotations": [
-                        {
-                          "type": "skip",
-                          "description": "originsFilm feature is off (pact-deck/features.json) — no film is shipped",
-                          "location": {
-                            "file": "/tmp/terminal-work/work/6692b763e851d28a036ab30e/6abf38265e9f29365b013161/athar-jv-interactive-plan/pact-deck/qa/v155/guide-sync-all.spec.mjs",
-                            "line": 97,
-                            "column": 10
-                          }
-                        }
-                      ],
-                      "attachments": []
-                    }
-                  ],
-                  "status": "skipped"
-                }
-              ],
-              "id": "704b50ec7c4d667232fa-0e89a24d42f90905d056",
-              "file": "guide-sync-all.spec.mjs",
-              "line": 96,
-              "column": 3
-            },
-            {
-              "title": "hidden card (Lorenzo) is not rendered, not counted and not narrated",
-              "ok": true,
-              "tags": [],
-              "tests": [
-                {
-                  "timeout": 60000,
-                  "annotations": [],
-                  "expectedStatus": "passed",
-                  "projectId": "phone",
-                  "projectName": "phone",
-                  "results": [
-                    {
-                      "workerIndex": 1,
-                      "parallelIndex": 0,
-                      "status": "passed",
-                      "duration": 1393,
-                      "errors": [],
-                      "stdout": [],
-                      "stderr": [],
-                      "retry": 0,
-                      "startTime": "2026-10-03T02:53:20.141Z",
-                      "annotations": [],
-                      "attachments": []
-                    }
-                  ],
-                  "status": "expected"
-                }
-              ],
-              "id": "704b50ec7c4d667232fa-b8e44031656186099a38",
-              "file": "guide-sync-all.spec.mjs",
-              "line": 117,
-              "column": 3
-            },
-            {
-              "title": "v1.5.6 / v1.5.8: name labels carry no honorific EXCEPT Fahad's (H.E. / سعادة), bodies keep it; Fahad and Kayaan cards are complete in EN and AR",
-              "ok": true,
-              "tags": [],
-              "tests": [
-                {
-                  "timeout": 90000,
-                  "annotations": [],
-                  "expectedStatus": "passed",
-                  "projectId": "phone",
-                  "projectName": "phone",
-                  "results": [
-                    {
-                      "workerIndex": 1,
-                      "parallelIndex": 0,
-                      "status": "passed",
-                      "duration": 1389,
-                      "errors": [],
-                      "stdout": [],
-                      "stderr": [],
-                      "retry": 0,
-                      "startTime": "2026-10-03T02:53:21.548Z",
-                      "annotations": [],
-                      "attachments": []
-                    }
-                  ],
-                  "status": "expected"
-                }
-              ],
-              "id": "704b50ec7c4d667232fa-b94fad366bdc09001e64",
-              "file": "guide-sync-all.spec.mjs",
-              "line": 131,
-              "column": 3
-            },
-            {
-              "title": "v1.5.7: product concept image on slide 38 (EN + AR), Section 09 without the former Letter 1, CEO letter without the film — guide plays straight through",
-              "ok": true,
-              "tags": [],
-              "tests": [
-                {
-                  "timeout": 150000,
-                  "annotations": [],
-                  "expectedStatus": "passed",
-                  "projectId": "phone",
-                  "projectName": "phone",
-                  "results": [
-                    {
-                      "workerIndex": 1,
-                      "parallelIndex": 0,
-                      "status": "passed",
-                      "duration": 21199,
-                      "errors": [],
-                      "stdout": [],
-                      "stderr": [],
-                      "retry": 0,
-                      "startTime": "2026-10-03T02:53:22.948Z",
-                      "annotations": [],
-                      "attachments": []
-                    }
-                  ],
-                  "status": "expected"
-                }
-              ],
-              "id": "704b50ec7c4d667232fa-ff8f0211dea49bdf40b2",
-              "file": "guide-sync-all.spec.mjs",
-              "line": 162,
-              "column": 3
-            },
-            {
-              "title": "v1.5.8: Ary card + letter after Fahad (EN + AR, #/28/exec-3, clip NAR-s45), H.E. on Fahad only, Lebanon \"1M ATHAR USERS\" still — Thani and the film stay removed",
-              "ok": true,
-              "tags": [],
-              "tests": [
-                {
-                  "timeout": 240000,
-                  "annotations": [],
-                  "expectedStatus": "passed",
-                  "projectId": "phone",
-                  "projectName": "phone",
-                  "results": [
-                    {
-                      "workerIndex": 1,
-                      "parallelIndex": 0,
-                      "status": "passed",
-                      "duration": 5572,
-                      "errors": [],
-                      "stdout": [],
-                      "stderr": [],
-                      "retry": 0,
-                      "startTime": "2026-10-03T02:53:44.163Z",
-                      "annotations": [],
-                      "attachments": []
-                    }
-                  ],
-                  "status": "expected"
-                }
-              ],
-              "id": "704b50ec7c4d667232fa-2e406bd28a8d697dc393",
-              "file": "guide-sync-all.spec.mjs",
-              "line": 213,
-              "column": 3
             }
           ]
         }
@@ -974,10 +857,10 @@
   ],
   "errors": [],
   "stats": {
-    "startTime": "2026-10-03T02:51:42.645Z",
-    "duration": 127262.91900000001,
-    "expected": 12,
-    "skipped": 2,
+    "startTime": "2026-10-03T13:24:56.679Z",
+    "duration": 63728.356999999996,
+    "expected": 14,
+    "skipped": 0,
     "unexpected": 0,
     "flaky": 0
   }

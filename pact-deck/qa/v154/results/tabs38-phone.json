@@ -1,12 +1,12 @@
 {
- "base": "https://sb-4koagr3m5c3y.vercel.run",
- "written": "2026-10-01T07:14:10.991Z",
+ "base": "http://127.0.0.1:4159",
+ "written": "2026-10-03T13:28:47.145Z",
  "rows": [
   {
    "tab": "in",
    "cc": "India, ownership, 100 government schools and 10,000 AI PCs a",
    "audibleClip": "NAR-s38",
-   "audioT": 7.38,
+   "audioT": 7.4,
    "cueStart": 6.96,
    "cueEnd": 13.48,
    "tabSelected": "true",
@@ -16,7 +16,7 @@
    "tab": "ke",
    "cc": "Kenya, Legacy, a Kenyan-owned sovereign node at around 33 mi",
    "audibleClip": "NAR-s38",
-   "audioT": 14.83,
+   "audioT": 14.87,
    "cueStart": 14.42,
    "cueEnd": 22.66,
    "tabSelected": "true",
@@ -36,7 +36,7 @@
    "tab": "in",
    "cc": "India, ownership, 100 government schools and 10,000 AI PCs a",
    "audibleClip": "NAR-s38",
-   "audioT": 7.38,
+   "audioT": 7.4,
    "cueStart": 6.96,
    "cueEnd": 13.48,
    "tabSelected": "true",

@@ -1,0 +1,150 @@
+{
+ "base": "http://127.0.0.1:4159",
+ "written": "2026-10-03T13:22:21.365Z",
+ "rows": [
+  {
+   "lang": "en",
+   "n": 32,
+   "id": "s-it-partners",
+   "slideId": "s-it-partners",
+   "dir": "ltr",
+   "hash": "#/27/new-5",
+   "errors": []
+  },
+  {
+   "lang": "en",
+   "n": 38,
+   "id": "s-aos-nations",
+   "slideId": "s-aos-nations",
+   "dir": "ltr",
+   "hash": "#/27/new-11",
+   "errors": []
+  },
+  {
+   "lang": "en",
+   "n": 39,
+   "id": "s-closing",
+   "slideId": "s-closing",
+   "dir": "ltr",
+   "hash": "#/28",
+   "errors": []
+  },
+  {
+   "lang": "en",
+   "n": 40,
+   "id": "s-exec-intro",
+   "slideId": "s-exec-intro",
+   "dir": "ltr",
+   "hash": "#/28/exec-1",
+   "errors": []
+  },
+  {
+   "lang": "en",
+   "n": 41,
+   "id": "s-exec-al-ameri",
+   "slideId": "s-exec-al-ameri",
+   "dir": "ltr",
+   "hash": "#/28/exec-2",
+   "errors": []
+  },
+  {
+   "lang": "en",
+   "n": 42,
+   "id": "s-exec-ferreira-da-cunha",
+   "slideId": "s-exec-ferreira-da-cunha",
+   "dir": "ltr",
+   "hash": "#/28/exec-3",
+   "errors": []
+  },
+  {
+   "lang": "en",
+   "n": 43,
+   "id": "s-exec-khalid",
+   "slideId": "s-exec-khalid",
+   "dir": "ltr",
+   "hash": "#/28/exec-4",
+   "errors": []
+  },
+  {
+   "lang": "en",
+   "n": 44,
+   "id": "s-exec-unwalla",
+   "slideId": "s-exec-unwalla",
+   "dir": "ltr",
+   "hash": "#/28/exec-5",
+   "errors": []
+  },
+  {
+   "lang": "ar",
+   "n": 32,
+   "id": "s-it-partners",
+   "slideId": "s-it-partners",
+   "dir": "rtl",
+   "hash": "#/27/new-5",
+   "errors": []
+  },
+  {
+   "lang": "ar",
+   "n": 38,
+   "id": "s-aos-nations",
+   "slideId": "s-aos-nations",
+   "dir": "rtl",
+   "hash": "#/27/new-11",
+   "errors": []
+  },
+  {
+   "lang": "ar",
+   "n": 39,
+   "id": "s-closing",
+   "slideId": "s-closing",
+   "dir": "rtl",
+   "hash": "#/28",
+   "errors": []
+  },
+  {
+   "lang": "ar",
+   "n": 40,
+   "id": "s-exec-intro",
+   "slideId": "s-exec-intro",
+   "dir": "rtl",
+   "hash": "#/28/exec-1",
+   "errors": []
+  },
+  {
+   "lang": "ar",
+   "n": 41,
+   "id": "s-exec-al-ameri",
+   "slideId": "s-exec-al-ameri",
+   "dir": "rtl",
+   "hash": "#/28/exec-2",
+   "errors": []
+  },
+  {
+   "lang": "ar",
+   "n": 42,
+   "id": "s-exec-ferreira-da-cunha",
+   "slideId": "s-exec-ferreira-da-cunha",
+   "dir": "rtl",
+   "hash": "#/28/exec-3",
+   "errors": []
+  },
+  {
+   "lang": "ar",
+   "n": 43,
+   "id": "s-exec-khalid",
+   "slideId": "s-exec-khalid",
+   "dir": "rtl",
+   "hash": "#/28/exec-4",
+   "errors": []
+  },
+  {
+   "lang": "ar",
+   "n": 44,
+   "id": "s-exec-unwalla",
+   "slideId": "s-exec-unwalla",
+   "dir": "rtl",
+   "hash": "#/28/exec-5",
+   "errors": []
+  }
+ ]
+}

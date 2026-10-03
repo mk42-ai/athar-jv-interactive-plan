@@ -1,6 +1,6 @@
 {
- "base": "https://sb-4koagr3m5c3y.vercel.run",
- "written": "2026-10-01T07:13:29.766Z",
+ "base": "http://127.0.0.1:4159",
+ "written": "2026-10-03T13:28:14.905Z",
  "rows": [
   {
    "blocked": "blocked",
