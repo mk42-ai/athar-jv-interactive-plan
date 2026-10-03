@@ -1,0 +1,36 @@
+{
+ "release": "v1.5.5",
+ "note": "Provenance of assets added or replaced in v1.5.5 — full list with sha256 in asset-ledger-v1.5.5.csv. Signed SAS URLs are not recorded.",
+ "mastercard": {
+  "page": "https://mastercardfdn.org/en/mastercard-foundation-brand-guidelines/",
+  "link": "https://cdn.buttercms.com/MPuSQak9T7WMs107u9iV",
+  "zipSha256": "996dcb02956c4dc190b87f522b1c2a8af4b0f33313a73924604880a70fbbd7a9",
+  "file": "dist/partners/review/mastercard-foundation__full-colour.png",
+  "sha256": "32afeb9eb97e8cc7164a508db975a20442cfe28b58fde4592699ddde28cdbe40",
+  "method": "opened in the browser (chrome-devtools MCP), link href read from the page, package downloaded over HTTPS, member copied byte-for-byte"
+ },
+ "strip": {
+  "file": "dist/assets/plates/plate5-strip-v155.png",
+  "panels": {
+   "A": "existing plate5-banner left panel (kept; edit zMSNYjJGPs FAIL 7/3/5/2)",
+   "B": "existing plate5-banner middle panel (edit not produced: AuthenticationFailed)",
+   "C": "Eh4GFpPars (FAIL 8/8/7/9, best of set) + Athar master logo composited at (1240,130,1412,196) and (1206,632,1386,694)"
+  }
+ },
+ "thaniPortrait": {
+  "file": "dist/assets/exec/portraits/thani-al-zeyoudi-mof.jpg",
+  "source": "https://www.trade.gov.ae/dr-thani-bin-ahmed-al-zeyoudi",
+  "sface_cosine_vs_previous_headshot": 0.737
+ },
+ "clips": {
+  "NAR-s40": "KwKjDhenPt",
+  "NAR-s41": "v9QRCfvtIX",
+  "NAR-s42": "GXQlbIyvrh",
+  "NAR-s43": "MXYBQD2Rhf",
+  "NAR-s44": "nzkWVR3qWN"
+ },
+ "film": {
+  "masterSha256": "c7c200050a422d580426b9972e83335c0b0456d442df51c1604b482a3a43ab2a",
+  "poster": "00:15.5 (backup 00:36.1); no text-free frame exists"
+ }
+}

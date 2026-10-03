@@ -1,0 +1,1036 @@
+{
+ "marks": [
+  {
+   "t": "2026-10-01T06:39:36.767Z",
+   "scenario": "S06-deep-links",
+   "step": "loaded #/23 + guide",
+   "expect": 23,
+   "vis": {
+    "n": 23,
+    "id": "s-who-governs",
+    "slideId": "s-who-governs"
+   },
+   "audio": {
+    "src": "NAR-s23-s-who-governs.mp3",
+    "clip": "NAR-s23",
+    "t": 2.28,
+    "muted": false
+   },
+   "cc": "Every actor has a clear role, sign, govern, build or learn.",
+   "guide": {
+    "state": "playing",
+    "clip": "NAR-s23",
+    "slideId": "s-who-governs",
+    "blocked": "false",
+    "status": "Narrating slide 23 of 39 · 05 Actors & roles",
+    "tap": false
+   }
+  },
+  {
+   "t": "2026-10-01T06:39:39.305Z",
+   "scenario": "S06-deep-links",
+   "step": "hash #/27/new-8 → 35",
+   "expect": 35,
+   "vis": {
+    "n": 35,
+    "id": "s-aos-tour",
+    "slideId": "s-aos-tour"
+   },
+   "audio": {
+    "src": "NAR-s35-s-aos-tour.mp3",
+    "clip": "NAR-s35",
+    "t": 2.13,
+    "muted": false
+   },
+   "cc": "The product tour shows the real screens: the marketplace, the playground, the agent flow builder and the tools and deployment views, captured from the Athar OS wireframes and the launch film.",
+   "guide": {
+    "state": "playing",
+    "clip": "NAR-s35",
+    "slideId": "s-aos-tour",
+    "blocked": "false",
+    "status": "Narrating slide 35 of 39 · 08 Athar OS",
+    "tap": false
+   }
+  },
+  {
+   "t": "2026-10-01T06:39:41.841Z",
+   "scenario": "S06-deep-links",
+   "step": "hash #slide-07 → 7",
+   "expect": 7,
+   "vis": {
+    "n": 7,
+    "id": "s-country-chapters",
+    "slideId": "s-country-chapters"
+   },
+   "audio": {
+    "src": "NAR-s07-s-country-chapters.mp3",
+    "clip": "NAR-s07",
+    "t": 2.23,
+    "muted": false
+   },
+   "cc": "Country chapters bring the pact to life locally.",
+   "guide": {
+    "state": "playing",
+    "clip": "NAR-s07",
+    "slideId": "s-country-chapters",
+    "blocked": "false",
+    "status": "Narrating slide 7 of 39 · 02 Community model",
+    "tap": false
+   }
+  }
+ ],
+ "events": [
+  {
+   "scenario": "S06-deep-links",
+   "t": "2026-10-01T06:39:33.332Z",
+   "ms": 730,
+   "type": "sample",
+   "vis": {
+    "n": 23,
+    "id": "s-who-governs",
+    "slideId": null
+   },
+   "audio": null,
+   "cc": null,
+   "guide": null,
+   "hash": "#/23"
+  },
+  {
+   "scenario": "S06-deep-links",
+   "t": "2026-10-01T06:39:33.519Z",
+   "ms": 917,
+   "type": "sample",
+   "vis": {
+    "n": 23,
+    "id": "s-who-governs",
+    "slideId": "s-who-governs"
+   },
+   "audio": null,
+   "cc": "Every actor has a clear role, sign, govern, build or learn.",
+   "guide": {
+    "state": "idle",
+    "clip": "NAR-s23",
+    "slideId": "s-who-governs",
+    "gen": "0",
+    "status": "Guide ready · slide 23 of 39 · 05 Actors & roles"
+   },
+   "hash": "#/23"
+  },
+  {
+   "scenario": "S06-deep-links",
+   "t": "2026-10-01T06:39:34.224Z",
+   "ms": 1622,
+   "type": "click",
+   "vis": {
+    "n": 23,
+    "id": "s-who-governs",
+    "slideId": "s-who-governs"
+   },
+   "audio": null,
+   "cc": "Every actor has a clear role, sign, govern, build or learn.",
+   "guide": {
+    "state": "idle",
+    "clip": "NAR-s23",
+    "slideId": "s-who-governs",
+    "gen": "0",
+    "status": "Guide ready · slide 23 of 39 · 05 Actors & roles"
+   },
+   "hash": "#/23",
+   "target": "nar-autoplay"
+  },
+  {
+   "scenario": "S06-deep-links",
+   "t": "2026-10-01T06:39:34.261Z",
+   "ms": 1658,
+   "type": "click",
+   "vis": {
+    "n": 23,
+    "id": "s-who-governs",
+    "slideId": "s-who-governs"
+   },
+   "audio": null,
+   "cc": "Every actor has a clear role, sign, govern, build or learn.",
+   "guide": {
+    "state": "idle",
+    "clip": "NAR-s23",
+    "slideId": "s-who-governs",
+    "gen": "0",
+    "status": "Guide ready · slide 23 of 39 · 05 Actors & roles"
+   },
+   "hash": "#/23",
+   "target": "guide-toggle"
+  },
+  {
+   "scenario": "S06-deep-links",
+   "t": "2026-10-01T06:39:34.272Z",
+   "ms": 1670,
+   "type": "media:emptied",
+   "vis": {
+    "n": 23,
+    "id": "s-who-governs",
+    "slideId": "s-who-governs"
+   },
+   "audio": null,
+   "cc": "Every actor has a clear role, sign, govern, build or learn.",
+   "guide": {
+    "state": "loading",
+    "clip": "NAR-s23",
+    "slideId": "s-who-governs",
+    "gen": "1",
+    "status": "Loading narration · slide 23 of 39 · 05 Actors & roles"
+   },
+   "hash": "#/23",
+   "el": "NAR-s23-s-who-governs.mp3",
+   "ct": 0
+  },
+  {
+   "scenario": "S06-deep-links",
+   "t": "2026-10-01T06:39:34.273Z",
+   "ms": 1671,
+   "type": "media:loadstart",
+   "vis": {
+    "n": 23,
+    "id": "s-who-governs",
+    "slideId": "s-who-governs"
+   },
+   "audio": null,
+   "cc": "Every actor has a clear role, sign, govern, build or learn.",
+   "guide": {
+    "state": "loading",
+    "clip": "NAR-s23",
+    "slideId": "s-who-governs",
+    "gen": "1",
+    "status": "Loading narration · slide 23 of 39 · 05 Actors & roles"
+   },
+   "hash": "#/23",
+   "el": "NAR-s23-s-who-governs.mp3",
+   "ct": 0
+  },
+  {
+   "scenario": "S06-deep-links",
+   "t": "2026-10-01T06:39:34.303Z",
+   "ms": 1701,
+   "type": "sample",
+   "vis": {
+    "n": 23,
+    "id": "s-who-governs",
+    "slideId": "s-who-governs"
+   },
+   "audio": null,
+   "cc": "Every actor has a clear role, sign, govern, build or learn.",
+   "guide": {
+    "state": "loading",
+    "clip": "NAR-s23",
+    "slideId": "s-who-governs",
+    "gen": "1",
+    "status": "Loading narration · slide 23 of 39 · 05 Actors & roles"
+   },
+   "hash": "#/23"
+  },
+  {
+   "scenario": "S06-deep-links",
+   "t": "2026-10-01T06:39:34.324Z",
+   "ms": 1722,
+   "type": "media:canplay",
+   "vis": {
+    "n": 23,
+    "id": "s-who-governs",
+    "slideId": "s-who-governs"
+   },
+   "audio": null,
+   "cc": "Every actor has a clear role, sign, govern, build or learn.",
+   "guide": {
+    "state": "loading",
+    "clip": "NAR-s23",
+    "slideId": "s-who-governs",
+    "gen": "1",
+    "status": "Loading narration · slide 23 of 39 · 05 Actors & roles"
+   },
+   "hash": "#/23",
+   "el": "NAR-s23-s-who-governs.mp3",
+   "ct": 0
+  },
+  {
+   "scenario": "S06-deep-links",
+   "t": "2026-10-01T06:39:34.412Z",
+   "ms": 1810,
+   "type": "play()",
+   "vis": {
+    "n": 23,
+    "id": "s-who-governs",
+    "slideId": "s-who-governs"
+   },
+   "audio": {
+    "src": "NAR-s23-s-who-governs.mp3",
+    "clip": "NAR-s23",
+    "t": 0,
+    "muted": false
+   },
+   "cc": "Every actor has a clear role, sign, govern, build or learn.",
+   "guide": {
+    "state": "loading",
+    "clip": "NAR-s23",
+    "slideId": "s-who-governs",
+    "gen": "1",
+    "status": "Loading narration · slide 23 of 39 · 05 Actors & roles"
+   },
+   "hash": "#/23",
+   "el": "NAR-s23-s-who-governs.mp3",
+   "ct": 0
+  },
+  {
+   "scenario": "S06-deep-links",
+   "t": "2026-10-01T06:39:34.414Z",
+   "ms": 1812,
+   "type": "media:playing",
+   "vis": {
+    "n": 23,
+    "id": "s-who-governs",
+    "slideId": "s-who-governs"
+   },
+   "audio": {
+    "src": "NAR-s23-s-who-governs.mp3",
+    "clip": "NAR-s23",
+    "t": 0,
+    "muted": false
+   },
+   "cc": "Every actor has a clear role, sign, govern, build or learn.",
+   "guide": {
+    "state": "playing",
+    "clip": "NAR-s23",
+    "slideId": "s-who-governs",
+    "gen": "1",
+    "status": "Narrating slide 23 of 39 · 05 Actors & roles"
+   },
+   "hash": "#/23",
+   "el": "NAR-s23-s-who-governs.mp3",
+   "ct": 0
+  },
+  {
+   "scenario": "S06-deep-links",
+   "t": "2026-10-01T06:39:34.414Z",
+   "ms": 1812,
+   "type": "play():resolved",
+   "vis": {
+    "n": 23,
+    "id": "s-who-governs",
+    "slideId": "s-who-governs"
+   },
+   "audio": {
+    "src": "NAR-s23-s-who-governs.mp3",
+    "clip": "NAR-s23",
+    "t": 0,
+    "muted": false
+   },
+   "cc": "Every actor has a clear role, sign, govern, build or learn.",
+   "guide": {
+    "state": "playing",
+    "clip": "NAR-s23",
+    "slideId": "s-who-governs",
+    "gen": "1",
+    "status": "Narrating slide 23 of 39 · 05 Actors & roles"
+   },
+   "hash": "#/23",
+   "el": "NAR-s23-s-who-governs.mp3"
+  },
+  {
+   "scenario": "S06-deep-links",
+   "t": "2026-10-01T06:39:34.503Z",
+   "ms": 1901,
+   "type": "sample",
+   "vis": {
+    "n": 23,
+    "id": "s-who-governs",
+    "slideId": "s-who-governs"
+   },
+   "audio": {
+    "src": "NAR-s23-s-who-governs.mp3",
+    "clip": "NAR-s23",
+    "t": 0.02,
+    "muted": false
+   },
+   "cc": "Every actor has a clear role, sign, govern, build or learn.",
+   "guide": {
+    "state": "playing",
+    "clip": "NAR-s23",
+    "slideId": "s-who-governs",
+    "gen": "1",
+    "status": "Narrating slide 23 of 39 · 05 Actors & roles"
+   },
+   "hash": "#/23"
+  },
+  {
+   "scenario": "S06-deep-links",
+   "t": "2026-10-01T06:39:36.770Z",
+   "ms": 4167,
+   "type": "check",
+   "vis": {
+    "n": 23,
+    "id": "s-who-governs",
+    "slideId": "s-who-governs"
+   },
+   "audio": {
+    "src": "NAR-s23-s-who-governs.mp3",
+    "clip": "NAR-s23",
+    "t": 2.28,
+    "muted": false
+   },
+   "cc": "Every actor has a clear role, sign, govern, build or learn.",
+   "guide": {
+    "state": "playing",
+    "clip": "NAR-s23",
+    "slideId": "s-who-governs",
+    "gen": "1",
+    "status": "Narrating slide 23 of 39 · 05 Actors & roles"
+   },
+   "hash": "#/23",
+   "step": "loaded #/23 + guide",
+   "expect": 23
+  },
+  {
+   "scenario": "S06-deep-links",
+   "t": "2026-10-01T06:39:36.772Z",
+   "ms": 4170,
+   "type": "hashchange",
+   "vis": {
+    "n": 23,
+    "id": "s-who-governs",
+    "slideId": "s-who-governs"
+   },
+   "audio": {
+    "src": "NAR-s23-s-who-governs.mp3",
+    "clip": "NAR-s23",
+    "t": 2.28,
+    "muted": false
+   },
+   "cc": "Every actor has a clear role, sign, govern, build or learn.",
+   "guide": {
+    "state": "playing",
+    "clip": "NAR-s23",
+    "slideId": "s-who-governs",
+    "gen": "1",
+    "status": "Narrating slide 23 of 39 · 05 Actors & roles"
+   },
+   "hash": "#/27/new-8"
+  },
+  {
+   "scenario": "S06-deep-links",
+   "t": "2026-10-01T06:39:36.780Z",
+   "ms": 4178,
+   "type": "media:pause",
+   "vis": {
+    "n": 35,
+    "id": "s-aos-tour",
+    "slideId": "s-aos-tour"
+   },
+   "audio": null,
+   "cc": "The product tour shows the real screens: the marketplace, the playground, the agent flow builder and the tools and deployment views, captured from the Athar OS wireframes and the launch film.",
+   "guide": {
+    "state": "loading",
+    "clip": "NAR-s35",
+    "slideId": "s-aos-tour",
+    "gen": "2",
+    "status": "Loading narration · slide 35 of 39 · 08 Athar OS"
+   },
+   "hash": "#/27",
+   "el": "NAR-s23-s-who-governs.mp3",
+   "ct": 0
+  },
+  {
+   "scenario": "S06-deep-links",
+   "t": "2026-10-01T06:39:36.781Z",
+   "ms": 4178,
+   "type": "media:seeked",
+   "vis": {
+    "n": 35,
+    "id": "s-aos-tour",
+    "slideId": "s-aos-tour"
+   },
+   "audio": null,
+   "cc": "The product tour shows the real screens: the marketplace, the playground, the agent flow builder and the tools and deployment views, captured from the Athar OS wireframes and the launch film.",
+   "guide": {
+    "state": "loading",
+    "clip": "NAR-s35",
+    "slideId": "s-aos-tour",
+    "gen": "2",
+    "status": "Loading narration · slide 35 of 39 · 08 Athar OS"
+   },
+   "hash": "#/27",
+   "el": "NAR-s23-s-who-governs.mp3",
+   "ct": 0
+  },
+  {
+   "scenario": "S06-deep-links",
+   "t": "2026-10-01T06:39:36.781Z",
+   "ms": 4178,
+   "type": "media:canplay",
+   "vis": {
+    "n": 35,
+    "id": "s-aos-tour",
+    "slideId": "s-aos-tour"
+   },
+   "audio": null,
+   "cc": "The product tour shows the real screens: the marketplace, the playground, the agent flow builder and the tools and deployment views, captured from the Athar OS wireframes and the launch film.",
+   "guide": {
+    "state": "loading",
+    "clip": "NAR-s35",
+    "slideId": "s-aos-tour",
+    "gen": "2",
+    "status": "Loading narration · slide 35 of 39 · 08 Athar OS"
+   },
+   "hash": "#/27",
+   "el": "NAR-s23-s-who-governs.mp3",
+   "ct": 0
+  },
+  {
+   "scenario": "S06-deep-links",
+   "t": "2026-10-01T06:39:36.812Z",
+   "ms": 4210,
+   "type": "sample",
+   "vis": {
+    "n": 35,
+    "id": "s-aos-tour",
+    "slideId": "s-aos-tour"
+   },
+   "audio": null,
+   "cc": "The product tour shows the real screens: the marketplace, the playground, the agent flow builder and the tools and deployment views, captured from the Athar OS wireframes and the launch film.",
+   "guide": {
+    "state": "loading",
+    "clip": "NAR-s35",
+    "slideId": "s-aos-tour",
+    "gen": "2",
+    "status": "Loading narration · slide 35 of 39 · 08 Athar OS"
+   },
+   "hash": "#/27/new-8"
+  },
+  {
+   "scenario": "S06-deep-links",
+   "t": "2026-10-01T06:39:36.948Z",
+   "ms": 4346,
+   "type": "media:emptied",
+   "vis": {
+    "n": 35,
+    "id": "s-aos-tour",
+    "slideId": "s-aos-tour"
+   },
+   "audio": null,
+   "cc": "The product tour shows the real screens: the marketplace, the playground, the agent flow builder and the tools and deployment views, captured from the Athar OS wireframes and the launch film.",
+   "guide": {
+    "state": "loading",
+    "clip": "NAR-s35",
+    "slideId": "s-aos-tour",
+    "gen": "2",
+    "status": "Loading narration · slide 35 of 39 · 08 Athar OS"
+   },
+   "hash": "#/27/new-8",
+   "el": "NAR-s23-s-who-governs.mp3",
+   "ct": 0
+  },
+  {
+   "scenario": "S06-deep-links",
+   "t": "2026-10-01T06:39:36.949Z",
+   "ms": 4347,
+   "type": "media:loadstart",
+   "vis": {
+    "n": 35,
+    "id": "s-aos-tour",
+    "slideId": "s-aos-tour"
+   },
+   "audio": null,
+   "cc": "The product tour shows the real screens: the marketplace, the playground, the agent flow builder and the tools and deployment views, captured from the Athar OS wireframes and the launch film.",
+   "guide": {
+    "state": "loading",
+    "clip": "NAR-s35",
+    "slideId": "s-aos-tour",
+    "gen": "2",
+    "status": "Loading narration · slide 35 of 39 · 08 Athar OS"
+   },
+   "hash": "#/27/new-8",
+   "el": "NAR-s35-s-aos-tour.mp3",
+   "ct": 0
+  },
+  {
+   "scenario": "S06-deep-links",
+   "t": "2026-10-01T06:39:36.959Z",
+   "ms": 4357,
+   "type": "media:canplay",
+   "vis": {
+    "n": 35,
+    "id": "s-aos-tour",
+    "slideId": "s-aos-tour"
+   },
+   "audio": null,
+   "cc": "The product tour shows the real screens: the marketplace, the playground, the agent flow builder and the tools and deployment views, captured from the Athar OS wireframes and the launch film.",
+   "guide": {
+    "state": "loading",
+    "clip": "NAR-s35",
+    "slideId": "s-aos-tour",
+    "gen": "2",
+    "status": "Loading narration · slide 35 of 39 · 08 Athar OS"
+   },
+   "hash": "#/27/new-8",
+   "el": "NAR-s35-s-aos-tour.mp3",
+   "ct": 0
+  },
+  {
+   "scenario": "S06-deep-links",
+   "t": "2026-10-01T06:39:37.089Z",
+   "ms": 4486,
+   "type": "play()",
+   "vis": {
+    "n": 35,
+    "id": "s-aos-tour",
+    "slideId": "s-aos-tour"
+   },
+   "audio": {
+    "src": "NAR-s35-s-aos-tour.mp3",
+    "clip": "NAR-s35",
+    "t": 0,
+    "muted": false
+   },
+   "cc": "The product tour shows the real screens: the marketplace, the playground, the agent flow builder and the tools and deployment views, captured from the Athar OS wireframes and the launch film.",
+   "guide": {
+    "state": "loading",
+    "clip": "NAR-s35",
+    "slideId": "s-aos-tour",
+    "gen": "2",
+    "status": "Loading narration · slide 35 of 39 · 08 Athar OS"
+   },
+   "hash": "#/27/new-8",
+   "el": "NAR-s35-s-aos-tour.mp3",
+   "ct": 0
+  },
+  {
+   "scenario": "S06-deep-links",
+   "t": "2026-10-01T06:39:37.090Z",
+   "ms": 4488,
+   "type": "media:playing",
+   "vis": {
+    "n": 35,
+    "id": "s-aos-tour",
+    "slideId": "s-aos-tour"
+   },
+   "audio": {
+    "src": "NAR-s35-s-aos-tour.mp3",
+    "clip": "NAR-s35",
+    "t": 0,
+    "muted": false
+   },
+   "cc": "The product tour shows the real screens: the marketplace, the playground, the agent flow builder and the tools and deployment views, captured from the Athar OS wireframes and the launch film.",
+   "guide": {
+    "state": "playing",
+    "clip": "NAR-s35",
+    "slideId": "s-aos-tour",
+    "gen": "2",
+    "status": "Narrating slide 35 of 39 · 08 Athar OS"
+   },
+   "hash": "#/27/new-8",
+   "el": "NAR-s35-s-aos-tour.mp3",
+   "ct": 0
+  },
+  {
+   "scenario": "S06-deep-links",
+   "t": "2026-10-01T06:39:37.090Z",
+   "ms": 4488,
+   "type": "play():resolved",
+   "vis": {
+    "n": 35,
+    "id": "s-aos-tour",
+    "slideId": "s-aos-tour"
+   },
+   "audio": {
+    "src": "NAR-s35-s-aos-tour.mp3",
+    "clip": "NAR-s35",
+    "t": 0,
+    "muted": false
+   },
+   "cc": "The product tour shows the real screens: the marketplace, the playground, the agent flow builder and the tools and deployment views, captured from the Athar OS wireframes and the launch film.",
+   "guide": {
+    "state": "playing",
+    "clip": "NAR-s35",
+    "slideId": "s-aos-tour",
+    "gen": "2",
+    "status": "Narrating slide 35 of 39 · 08 Athar OS"
+   },
+   "hash": "#/27/new-8",
+   "el": "NAR-s35-s-aos-tour.mp3"
+  },
+  {
+   "scenario": "S06-deep-links",
+   "t": "2026-10-01T06:39:37.103Z",
+   "ms": 4501,
+   "type": "sample",
+   "vis": {
+    "n": 35,
+    "id": "s-aos-tour",
+    "slideId": "s-aos-tour"
+   },
+   "audio": {
+    "src": "NAR-s35-s-aos-tour.mp3",
+    "clip": "NAR-s35",
+    "t": 0,
+    "muted": false
+   },
+   "cc": "The product tour shows the real screens: the marketplace, the playground, the agent flow builder and the tools and deployment views, captured from the Athar OS wireframes and the launch film.",
+   "guide": {
+    "state": "playing",
+    "clip": "NAR-s35",
+    "slideId": "s-aos-tour",
+    "gen": "2",
+    "status": "Narrating slide 35 of 39 · 08 Athar OS"
+   },
+   "hash": "#/27/new-8"
+  },
+  {
+   "scenario": "S06-deep-links",
+   "t": "2026-10-01T06:39:39.306Z",
+   "ms": 6704,
+   "type": "check",
+   "vis": {
+    "n": 35,
+    "id": "s-aos-tour",
+    "slideId": "s-aos-tour"
+   },
+   "audio": {
+    "src": "NAR-s35-s-aos-tour.mp3",
+    "clip": "NAR-s35",
+    "t": 2.14,
+    "muted": false
+   },
+   "cc": "The product tour shows the real screens: the marketplace, the playground, the agent flow builder and the tools and deployment views, captured from the Athar OS wireframes and the launch film.",
+   "guide": {
+    "state": "playing",
+    "clip": "NAR-s35",
+    "slideId": "s-aos-tour",
+    "gen": "2",
+    "status": "Narrating slide 35 of 39 · 08 Athar OS"
+   },
+   "hash": "#/27/new-8",
+   "step": "hash #/27/new-8 → 35",
+   "expect": 35
+  },
+  {
+   "scenario": "S06-deep-links",
+   "t": "2026-10-01T06:39:39.308Z",
+   "ms": 6706,
+   "type": "hashchange",
+   "vis": {
+    "n": 35,
+    "id": "s-aos-tour",
+    "slideId": "s-aos-tour"
+   },
+   "audio": {
+    "src": "NAR-s35-s-aos-tour.mp3",
+    "clip": "NAR-s35",
+    "t": 2.14,
+    "muted": false
+   },
+   "cc": "The product tour shows the real screens: the marketplace, the playground, the agent flow builder and the tools and deployment views, captured from the Athar OS wireframes and the launch film.",
+   "guide": {
+    "state": "playing",
+    "clip": "NAR-s35",
+    "slideId": "s-aos-tour",
+    "gen": "2",
+    "status": "Narrating slide 35 of 39 · 08 Athar OS"
+   },
+   "hash": "#slide-07"
+  },
+  {
+   "scenario": "S06-deep-links",
+   "t": "2026-10-01T06:39:39.318Z",
+   "ms": 6716,
+   "type": "media:pause",
+   "vis": {
+    "n": 7,
+    "id": "s-country-chapters",
+    "slideId": "s-country-chapters"
+   },
+   "audio": null,
+   "cc": "Country chapters bring the pact to life locally.",
+   "guide": {
+    "state": "loading",
+    "clip": "NAR-s07",
+    "slideId": "s-country-chapters",
+    "gen": "4",
+    "status": "Loading narration · slide 7 of 39 · 02 Community model"
+   },
+   "hash": "#/07",
+   "el": "NAR-s35-s-aos-tour.mp3",
+   "ct": 0
+  },
+  {
+   "scenario": "S06-deep-links",
+   "t": "2026-10-01T06:39:39.337Z",
+   "ms": 6735,
+   "type": "media:seeked",
+   "vis": {
+    "n": 7,
+    "id": "s-country-chapters",
+    "slideId": "s-country-chapters"
+   },
+   "audio": null,
+   "cc": "Country chapters bring the pact to life locally.",
+   "guide": {
+    "state": "loading",
+    "clip": "NAR-s07",
+    "slideId": "s-country-chapters",
+    "gen": "4",
+    "status": "Loading narration · slide 7 of 39 · 02 Community model"
+   },
+   "hash": "#/07",
+   "el": "NAR-s35-s-aos-tour.mp3",
+   "ct": 0
+  },
+  {
+   "scenario": "S06-deep-links",
+   "t": "2026-10-01T06:39:39.338Z",
+   "ms": 6735,
+   "type": "media:canplay",
+   "vis": {
+    "n": 7,
+    "id": "s-country-chapters",
+    "slideId": "s-country-chapters"
+   },
+   "audio": null,
+   "cc": "Country chapters bring the pact to life locally.",
+   "guide": {
+    "state": "loading",
+    "clip": "NAR-s07",
+    "slideId": "s-country-chapters",
+    "gen": "4",
+    "status": "Loading narration · slide 7 of 39 · 02 Community model"
+   },
+   "hash": "#/07",
+   "el": "NAR-s35-s-aos-tour.mp3",
+   "ct": 0
+  },
+  {
+   "scenario": "S06-deep-links",
+   "t": "2026-10-01T06:39:39.398Z",
+   "ms": 6796,
+   "type": "media:emptied",
+   "vis": {
+    "n": 7,
+    "id": "s-country-chapters",
+    "slideId": "s-country-chapters"
+   },
+   "audio": null,
+   "cc": "Country chapters bring the pact to life locally.",
+   "guide": {
+    "state": "loading",
+    "clip": "NAR-s07",
+    "slideId": "s-country-chapters",
+    "gen": "4",
+    "status": "Loading narration · slide 7 of 39 · 02 Community model"
+   },
+   "hash": "#/07",
+   "el": "NAR-s35-s-aos-tour.mp3",
+   "ct": 0
+  },
+  {
+   "scenario": "S06-deep-links",
+   "t": "2026-10-01T06:39:39.399Z",
+   "ms": 6796,
+   "type": "media:loadstart",
+   "vis": {
+    "n": 7,
+    "id": "s-country-chapters",
+    "slideId": "s-country-chapters"
+   },
+   "audio": null,
+   "cc": "Country chapters bring the pact to life locally.",
+   "guide": {
+    "state": "loading",
+    "clip": "NAR-s07",
+    "slideId": "s-country-chapters",
+    "gen": "4",
+    "status": "Loading narration · slide 7 of 39 · 02 Community model"
+   },
+   "hash": "#/07",
+   "el": "NAR-s07-s-country-chapters.mp3",
+   "ct": 0
+  },
+  {
+   "scenario": "S06-deep-links",
+   "t": "2026-10-01T06:39:39.402Z",
+   "ms": 6800,
+   "type": "media:canplay",
+   "vis": {
+    "n": 7,
+    "id": "s-country-chapters",
+    "slideId": "s-country-chapters"
+   },
+   "audio": null,
+   "cc": "Country chapters bring the pact to life locally.",
+   "guide": {
+    "state": "loading",
+    "clip": "NAR-s07",
+    "slideId": "s-country-chapters",
+    "gen": "4",
+    "status": "Loading narration · slide 7 of 39 · 02 Community model"
+   },
+   "hash": "#/07",
+   "el": "NAR-s07-s-country-chapters.mp3",
+   "ct": 0
+  },
+  {
+   "scenario": "S06-deep-links",
+   "t": "2026-10-01T06:39:39.403Z",
+   "ms": 6801,
+   "type": "sample",
+   "vis": {
+    "n": 7,
+    "id": "s-country-chapters",
+    "slideId": "s-country-chapters"
+   },
+   "audio": null,
+   "cc": "Country chapters bring the pact to life locally.",
+   "guide": {
+    "state": "loading",
+    "clip": "NAR-s07",
+    "slideId": "s-country-chapters",
+    "gen": "4",
+    "status": "Loading narration · slide 7 of 39 · 02 Community model"
+   },
+   "hash": "#/07"
+  },
+  {
+   "scenario": "S06-deep-links",
+   "t": "2026-10-01T06:39:39.535Z",
+   "ms": 6933,
+   "type": "play()",
+   "vis": {
+    "n": 7,
+    "id": "s-country-chapters",
+    "slideId": "s-country-chapters"
+   },
+   "audio": {
+    "src": "NAR-s07-s-country-chapters.mp3",
+    "clip": "NAR-s07",
+    "t": 0,
+    "muted": false
+   },
+   "cc": "Country chapters bring the pact to life locally.",
+   "guide": {
+    "state": "loading",
+    "clip": "NAR-s07",
+    "slideId": "s-country-chapters",
+    "gen": "4",
+    "status": "Loading narration · slide 7 of 39 · 02 Community model"
+   },
+   "hash": "#/07",
+   "el": "NAR-s07-s-country-chapters.mp3",
+   "ct": 0
+  },
+  {
+   "scenario": "S06-deep-links",
+   "t": "2026-10-01T06:39:39.536Z",
+   "ms": 6934,
+   "type": "media:playing",
+   "vis": {
+    "n": 7,
+    "id": "s-country-chapters",
+    "slideId": "s-country-chapters"
+   },
+   "audio": {
+    "src": "NAR-s07-s-country-chapters.mp3",
+    "clip": "NAR-s07",
+    "t": 0,
+    "muted": false
+   },
+   "cc": "Country chapters bring the pact to life locally.",
+   "guide": {
+    "state": "playing",
+    "clip": "NAR-s07",
+    "slideId": "s-country-chapters",
+    "gen": "4",
+    "status": "Narrating slide 7 of 39 · 02 Community model"
+   },
+   "hash": "#/07",
+   "el": "NAR-s07-s-country-chapters.mp3",
+   "ct": 0
+  },
+  {
+   "scenario": "S06-deep-links",
+   "t": "2026-10-01T06:39:39.536Z",
+   "ms": 6934,
+   "type": "play():resolved",
+   "vis": {
+    "n": 7,
+    "id": "s-country-chapters",
+    "slideId": "s-country-chapters"
+   },
+   "audio": {
+    "src": "NAR-s07-s-country-chapters.mp3",
+    "clip": "NAR-s07",
+    "t": 0,
+    "muted": false
+   },
+   "cc": "Country chapters bring the pact to life locally.",
+   "guide": {
+    "state": "playing",
+    "clip": "NAR-s07",
+    "slideId": "s-country-chapters",
+    "gen": "4",
+    "status": "Narrating slide 7 of 39 · 02 Community model"
+   },
+   "hash": "#/07",
+   "el": "NAR-s07-s-country-chapters.mp3"
+  },
+  {
+   "scenario": "S06-deep-links",
+   "t": "2026-10-01T06:39:39.603Z",
+   "ms": 7001,
+   "type": "sample",
+   "vis": {
+    "n": 7,
+    "id": "s-country-chapters",
+    "slideId": "s-country-chapters"
+   },
+   "audio": {
+    "src": "NAR-s07-s-country-chapters.mp3",
+    "clip": "NAR-s07",
+    "t": 0.01,
+    "muted": false
+   },
+   "cc": "Country chapters bring the pact to life locally.",
+   "guide": {
+    "state": "playing",
+    "clip": "NAR-s07",
+    "slideId": "s-country-chapters",
+    "gen": "4",
+    "status": "Narrating slide 7 of 39 · 02 Community model"
+   },
+   "hash": "#/07"
+  },
+  {
+   "scenario": "S06-deep-links",
+   "t": "2026-10-01T06:39:41.842Z",
+   "ms": 9240,
+   "type": "check",
+   "vis": {
+    "n": 7,
+    "id": "s-country-chapters",
+    "slideId": "s-country-chapters"
+   },
+   "audio": {
+    "src": "NAR-s07-s-country-chapters.mp3",
+    "clip": "NAR-s07",
+    "t": 2.23,
+    "muted": false
+   },
+   "cc": "Country chapters bring the pact to life locally.",
+   "guide": {
+    "state": "playing",
+    "clip": "NAR-s07",
+    "slideId": "s-country-chapters",
+    "gen": "4",
+    "status": "Narrating slide 7 of 39 · 02 Community model"
+   },
+   "hash": "#/07",
+   "step": "hash #slide-07 → 7",
+   "expect": 7
+  }
+ ],
+ "console": []
+}

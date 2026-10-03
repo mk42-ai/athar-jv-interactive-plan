@@ -1,0 +1,4 @@
+{
+ "_comment": "Build-time feature flags (scripts/v1.4.7/build.mjs syncs dist/ to these). originsFilm: Muhammed Khalid impact-story film on the CEO letter slide — source in features/origins-film/. false = not shipped in dist/ (v1.5.7 default).",
+ "originsFilm": false
+}

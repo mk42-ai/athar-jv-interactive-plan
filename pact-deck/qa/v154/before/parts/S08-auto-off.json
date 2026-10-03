@@ -1,0 +1,717 @@
+{
+ "marks": [
+  {
+   "t": "2026-10-01T06:14:34.022Z",
+   "scenario": "S08-auto-off",
+   "step": "guide started on 26 (AUTO off, 4×)",
+   "expect": 26,
+   "vis": {
+    "n": 26,
+    "id": "s-governance-licence",
+    "slideId": null
+   },
+   "audio": {
+    "src": "guide-06-governance-and-roadmap-kyzmCSHcw8.mp3",
+    "clip": "NAR-06",
+    "t": 5.67,
+    "muted": false
+   },
+   "cc": "An open steering council sets the shared plugin standard and approves the roadmap.",
+   "guide": {
+    "state": "playing",
+    "clip": "NAR-06",
+    "slideId": null,
+    "blocked": "false",
+    "status": "Narrating slide 26 of 39 · 06 Governance & roadmap",
+    "tap": false
+   }
+  },
+  {
+   "t": "2026-10-01T06:14:36.034Z",
+   "scenario": "S08-auto-off",
+   "step": "AUTO off +2 s",
+   "expect": 26,
+   "vis": {
+    "n": 27,
+    "id": "s-roadmap",
+    "slideId": null
+   },
+   "audio": {
+    "src": "guide-06-governance-and-roadmap-kyzmCSHcw8.mp3",
+    "clip": "NAR-06",
+    "t": 13.72,
+    "muted": false
+   },
+   "cc": "Decisions, releases, and outcome reports are published, so every member can see how priorities are set and how the platform evolves over time.",
+   "guide": {
+    "state": "playing",
+    "clip": "NAR-06",
+    "slideId": null,
+    "blocked": "false",
+    "status": "Narrating slide 27 of 39 · 06 Governance & roadmap",
+    "tap": false
+   }
+  },
+  {
+   "t": "2026-10-01T06:14:38.039Z",
+   "scenario": "S08-auto-off",
+   "step": "AUTO off +4 s",
+   "expect": 26,
+   "vis": {
+    "n": 27,
+    "id": "s-roadmap",
+    "slideId": null
+   },
+   "audio": null,
+   "cc": "Decisions, releases, and outcome reports are published, so every member can see how priorities are set and how the platform evolves over time.",
+   "guide": {
+    "state": "ended",
+    "clip": "NAR-06",
+    "slideId": null,
+    "blocked": "false",
+    "status": "Narration finished · slide 27 of 39 · 06 Governance & roadmap",
+    "tap": false
+   }
+  },
+  {
+   "t": "2026-10-01T06:14:40.044Z",
+   "scenario": "S08-auto-off",
+   "step": "AUTO off +6 s",
+   "expect": 26,
+   "vis": {
+    "n": 27,
+    "id": "s-roadmap",
+    "slideId": null
+   },
+   "audio": null,
+   "cc": "Decisions, releases, and outcome reports are published, so every member can see how priorities are set and how the platform evolves over time.",
+   "guide": {
+    "state": "ended",
+    "clip": "NAR-06",
+    "slideId": null,
+    "blocked": "false",
+    "status": "Narration finished · slide 27 of 39 · 06 Governance & roadmap",
+    "tap": false
+   }
+  },
+  {
+   "t": "2026-10-01T06:14:42.049Z",
+   "scenario": "S08-auto-off",
+   "step": "AUTO off +8 s",
+   "expect": 26,
+   "vis": {
+    "n": 27,
+    "id": "s-roadmap",
+    "slideId": null
+   },
+   "audio": null,
+   "cc": "Decisions, releases, and outcome reports are published, so every member can see how priorities are set and how the platform evolves over time.",
+   "guide": {
+    "state": "ended",
+    "clip": "NAR-06",
+    "slideId": null,
+    "blocked": "false",
+    "status": "Narration finished · slide 27 of 39 · 06 Governance & roadmap",
+    "tap": false
+   }
+  }
+ ],
+ "events": [
+  {
+   "scenario": "S08-auto-off",
+   "t": "2026-10-01T06:14:31.519Z",
+   "ms": 735,
+   "type": "sample",
+   "vis": {
+    "n": 26,
+    "id": "s-governance-licence",
+    "slideId": null
+   },
+   "audio": null,
+   "cc": null,
+   "guide": null,
+   "hash": "#/26"
+  },
+  {
+   "scenario": "S08-auto-off",
+   "t": "2026-10-01T06:14:31.693Z",
+   "ms": 910,
+   "type": "sample",
+   "vis": {
+    "n": 26,
+    "id": "s-governance-licence",
+    "slideId": null
+   },
+   "audio": null,
+   "cc": "",
+   "guide": {
+    "state": "idle",
+    "clip": null,
+    "slideId": null,
+    "gen": null,
+    "status": "No narration for this slide"
+   },
+   "hash": "#/26"
+  },
+  {
+   "scenario": "S08-auto-off",
+   "t": "2026-10-01T06:14:31.696Z",
+   "ms": 913,
+   "type": "media:emptied",
+   "vis": {
+    "n": 26,
+    "id": "s-governance-licence",
+    "slideId": null
+   },
+   "audio": null,
+   "cc": "Section six, governance and roadmap.",
+   "guide": {
+    "state": "loading",
+    "clip": "NAR-06",
+    "slideId": null,
+    "gen": null,
+    "status": "Guide ready · slide 26 of 39 · 06 Governance & roadmap"
+   },
+   "hash": "#/26",
+   "el": "guide-06-governance-and-roadmap-kyzmCSHcw8.mp3",
+   "ct": 0
+  },
+  {
+   "scenario": "S08-auto-off",
+   "t": "2026-10-01T06:14:31.702Z",
+   "ms": 918,
+   "type": "media:loadstart",
+   "vis": {
+    "n": 26,
+    "id": "s-governance-licence",
+    "slideId": null
+   },
+   "audio": null,
+   "cc": "Section six, governance and roadmap.",
+   "guide": {
+    "state": "loading",
+    "clip": "NAR-06",
+    "slideId": null,
+    "gen": null,
+    "status": "Guide ready · slide 26 of 39 · 06 Governance & roadmap"
+   },
+   "hash": "#/26",
+   "el": "guide-06-governance-and-roadmap-kyzmCSHcw8.mp3",
+   "ct": 0
+  },
+  {
+   "scenario": "S08-auto-off",
+   "t": "2026-10-01T06:14:31.702Z",
+   "ms": 919,
+   "type": "media:loadstart",
+   "vis": {
+    "n": 26,
+    "id": "s-governance-licence",
+    "slideId": null
+   },
+   "audio": null,
+   "cc": "Section six, governance and roadmap.",
+   "guide": {
+    "state": "loading",
+    "clip": "NAR-06",
+    "slideId": null,
+    "gen": null,
+    "status": "Guide ready · slide 26 of 39 · 06 Governance & roadmap"
+   },
+   "hash": "#/26",
+   "el": "guide-07-impact-and-funding-vWkiINp1IS.mp3",
+   "ct": 0
+  },
+  {
+   "scenario": "S08-auto-off",
+   "t": "2026-10-01T06:14:31.761Z",
+   "ms": 978,
+   "type": "media:canplay",
+   "vis": {
+    "n": 26,
+    "id": "s-governance-licence",
+    "slideId": null
+   },
+   "audio": null,
+   "cc": "Section six, governance and roadmap.",
+   "guide": {
+    "state": "paused",
+    "clip": "NAR-06",
+    "slideId": null,
+    "gen": null,
+    "status": "Guide ready · slide 26 of 39 · 06 Governance & roadmap"
+   },
+   "hash": "#/26",
+   "el": "guide-06-governance-and-roadmap-kyzmCSHcw8.mp3",
+   "ct": 0
+  },
+  {
+   "scenario": "S08-auto-off",
+   "t": "2026-10-01T06:14:31.761Z",
+   "ms": 978,
+   "type": "media:canplay",
+   "vis": {
+    "n": 26,
+    "id": "s-governance-licence",
+    "slideId": null
+   },
+   "audio": null,
+   "cc": "Section six, governance and roadmap.",
+   "guide": {
+    "state": "paused",
+    "clip": "NAR-06",
+    "slideId": null,
+    "gen": null,
+    "status": "Guide ready · slide 26 of 39 · 06 Governance & roadmap"
+   },
+   "hash": "#/26",
+   "el": "guide-07-impact-and-funding-vWkiINp1IS.mp3",
+   "ct": 0
+  },
+  {
+   "scenario": "S08-auto-off",
+   "t": "2026-10-01T06:14:31.790Z",
+   "ms": 1007,
+   "type": "sample",
+   "vis": {
+    "n": 26,
+    "id": "s-governance-licence",
+    "slideId": null
+   },
+   "audio": null,
+   "cc": "Section six, governance and roadmap.",
+   "guide": {
+    "state": "paused",
+    "clip": "NAR-06",
+    "slideId": null,
+    "gen": null,
+    "status": "Guide ready · slide 26 of 39 · 06 Governance & roadmap"
+   },
+   "hash": "#/26"
+  },
+  {
+   "scenario": "S08-auto-off",
+   "t": "2026-10-01T06:14:32.469Z",
+   "ms": 1686,
+   "type": "click",
+   "vis": {
+    "n": 26,
+    "id": "s-governance-licence",
+    "slideId": null
+   },
+   "audio": null,
+   "cc": "Section six, governance and roadmap.",
+   "guide": {
+    "state": "paused",
+    "clip": "NAR-06",
+    "slideId": null,
+    "gen": null,
+    "status": "Guide ready · slide 26 of 39 · 06 Governance & roadmap"
+   },
+   "hash": "#/26",
+   "target": "nar-autoplay"
+  },
+  {
+   "scenario": "S08-auto-off",
+   "t": "2026-10-01T06:14:32.511Z",
+   "ms": 1727,
+   "type": "click",
+   "vis": {
+    "n": 26,
+    "id": "s-governance-licence",
+    "slideId": null
+   },
+   "audio": null,
+   "cc": "Section six, governance and roadmap.",
+   "guide": {
+    "state": "paused",
+    "clip": "NAR-06",
+    "slideId": null,
+    "gen": null,
+    "status": "Guide ready · slide 26 of 39 · 06 Governance & roadmap"
+   },
+   "hash": "#/26",
+   "target": "guide-toggle"
+  },
+  {
+   "scenario": "S08-auto-off",
+   "t": "2026-10-01T06:14:32.512Z",
+   "ms": 1728,
+   "type": "play()",
+   "vis": {
+    "n": 26,
+    "id": "s-governance-licence",
+    "slideId": null
+   },
+   "audio": {
+    "src": "guide-06-governance-and-roadmap-kyzmCSHcw8.mp3",
+    "clip": "NAR-06",
+    "t": 0,
+    "muted": false
+   },
+   "cc": "Section six, governance and roadmap.",
+   "guide": {
+    "state": "paused",
+    "clip": "NAR-06",
+    "slideId": null,
+    "gen": null,
+    "status": "Guide ready · slide 26 of 39 · 06 Governance & roadmap"
+   },
+   "hash": "#/26",
+   "el": "guide-06-governance-and-roadmap-kyzmCSHcw8.mp3",
+   "ct": 0
+  },
+  {
+   "scenario": "S08-auto-off",
+   "t": "2026-10-01T06:14:32.517Z",
+   "ms": 1733,
+   "type": "media:playing",
+   "vis": {
+    "n": 26,
+    "id": "s-governance-licence",
+    "slideId": null
+   },
+   "audio": {
+    "src": "guide-06-governance-and-roadmap-kyzmCSHcw8.mp3",
+    "clip": "NAR-06",
+    "t": 0,
+    "muted": false
+   },
+   "cc": "Section six, governance and roadmap.",
+   "guide": {
+    "state": "playing",
+    "clip": "NAR-06",
+    "slideId": null,
+    "gen": null,
+    "status": "Narrating slide 26 of 39 · 06 Governance & roadmap"
+   },
+   "hash": "#/26",
+   "el": "guide-06-governance-and-roadmap-kyzmCSHcw8.mp3",
+   "ct": 0
+  },
+  {
+   "scenario": "S08-auto-off",
+   "t": "2026-10-01T06:14:32.517Z",
+   "ms": 1733,
+   "type": "play():resolved",
+   "vis": {
+    "n": 26,
+    "id": "s-governance-licence",
+    "slideId": null
+   },
+   "audio": {
+    "src": "guide-06-governance-and-roadmap-kyzmCSHcw8.mp3",
+    "clip": "NAR-06",
+    "t": 0,
+    "muted": false
+   },
+   "cc": "Section six, governance and roadmap.",
+   "guide": {
+    "state": "playing",
+    "clip": "NAR-06",
+    "slideId": null,
+    "gen": null,
+    "status": "Narrating slide 26 of 39 · 06 Governance & roadmap"
+   },
+   "hash": "#/26",
+   "el": "guide-06-governance-and-roadmap-kyzmCSHcw8.mp3"
+  },
+  {
+   "scenario": "S08-auto-off",
+   "t": "2026-10-01T06:14:32.584Z",
+   "ms": 1800,
+   "type": "sample",
+   "vis": {
+    "n": 26,
+    "id": "s-governance-licence",
+    "slideId": null
+   },
+   "audio": {
+    "src": "guide-06-governance-and-roadmap-kyzmCSHcw8.mp3",
+    "clip": "NAR-06",
+    "t": 0.05,
+    "muted": false
+   },
+   "cc": "Section six, governance and roadmap.",
+   "guide": {
+    "state": "playing",
+    "clip": "NAR-06",
+    "slideId": null,
+    "gen": null,
+    "status": "Narrating slide 26 of 39 · 06 Governance & roadmap"
+   },
+   "hash": "#/26"
+  },
+  {
+   "scenario": "S08-auto-off",
+   "t": "2026-10-01T06:14:33.386Z",
+   "ms": 2603,
+   "type": "sample",
+   "vis": {
+    "n": 26,
+    "id": "s-governance-licence",
+    "slideId": null
+   },
+   "audio": {
+    "src": "guide-06-governance-and-roadmap-kyzmCSHcw8.mp3",
+    "clip": "NAR-06",
+    "t": 3.14,
+    "muted": false
+   },
+   "cc": "An open steering council sets the shared plugin standard and approves the roadmap.",
+   "guide": {
+    "state": "playing",
+    "clip": "NAR-06",
+    "slideId": null,
+    "gen": null,
+    "status": "Narrating slide 26 of 39 · 06 Governance & roadmap"
+   },
+   "hash": "#/26"
+  },
+  {
+   "scenario": "S08-auto-off",
+   "t": "2026-10-01T06:14:34.026Z",
+   "ms": 3243,
+   "type": "check",
+   "vis": {
+    "n": 26,
+    "id": "s-governance-licence",
+    "slideId": null
+   },
+   "audio": {
+    "src": "guide-06-governance-and-roadmap-kyzmCSHcw8.mp3",
+    "clip": "NAR-06",
+    "t": 5.69,
+    "muted": false
+   },
+   "cc": "An open steering council sets the shared plugin standard and approves the roadmap.",
+   "guide": {
+    "state": "playing",
+    "clip": "NAR-06",
+    "slideId": null,
+    "gen": null,
+    "status": "Narrating slide 26 of 39 · 06 Governance & roadmap"
+   },
+   "hash": "#/26",
+   "step": "guide started on 26 (AUTO off, 4×)",
+   "expect": 26
+  },
+  {
+   "scenario": "S08-auto-off",
+   "t": "2026-10-01T06:14:34.623Z",
+   "ms": 3840,
+   "type": "hashchange",
+   "vis": {
+    "n": 26,
+    "id": "s-governance-licence",
+    "slideId": null
+   },
+   "audio": {
+    "src": "guide-06-governance-and-roadmap-kyzmCSHcw8.mp3",
+    "clip": "NAR-06",
+    "t": 8.1,
+    "muted": false
+   },
+   "cc": "Decisions, releases, and outcome reports are published, so every member can see how priorities are set and how the platform evolves over time.",
+   "guide": {
+    "state": "playing",
+    "clip": "NAR-06",
+    "slideId": null,
+    "gen": null,
+    "status": "Narrating slide 26 of 39 · 06 Governance & roadmap"
+   },
+   "hash": "#/27"
+  },
+  {
+   "scenario": "S08-auto-off",
+   "t": "2026-10-01T06:14:34.684Z",
+   "ms": 3900,
+   "type": "sample",
+   "vis": {
+    "n": 27,
+    "id": "s-roadmap",
+    "slideId": null
+   },
+   "audio": {
+    "src": "guide-06-governance-and-roadmap-kyzmCSHcw8.mp3",
+    "clip": "NAR-06",
+    "t": 8.31,
+    "muted": false
+   },
+   "cc": "Decisions, releases, and outcome reports are published, so every member can see how priorities are set and how the platform evolves over time.",
+   "guide": {
+    "state": "playing",
+    "clip": "NAR-06",
+    "slideId": null,
+    "gen": null,
+    "status": "Narrating slide 27 of 39 · 06 Governance & roadmap"
+   },
+   "hash": "#/27"
+  },
+  {
+   "scenario": "S08-auto-off",
+   "t": "2026-10-01T06:14:36.035Z",
+   "ms": 5252,
+   "type": "check",
+   "vis": {
+    "n": 27,
+    "id": "s-roadmap",
+    "slideId": null
+   },
+   "audio": {
+    "src": "guide-06-governance-and-roadmap-kyzmCSHcw8.mp3",
+    "clip": "NAR-06",
+    "t": 13.72,
+    "muted": false
+   },
+   "cc": "Decisions, releases, and outcome reports are published, so every member can see how priorities are set and how the platform evolves over time.",
+   "guide": {
+    "state": "playing",
+    "clip": "NAR-06",
+    "slideId": null,
+    "gen": null,
+    "status": "Narrating slide 27 of 39 · 06 Governance & roadmap"
+   },
+   "hash": "#/27",
+   "step": "AUTO off +2 s",
+   "expect": 26
+  },
+  {
+   "scenario": "S08-auto-off",
+   "t": "2026-10-01T06:14:36.519Z",
+   "ms": 5736,
+   "type": "media:pause",
+   "vis": {
+    "n": 27,
+    "id": "s-roadmap",
+    "slideId": null
+   },
+   "audio": null,
+   "cc": "Decisions, releases, and outcome reports are published, so every member can see how priorities are set and how the platform evolves over time.",
+   "guide": {
+    "state": "playing",
+    "clip": "NAR-06",
+    "slideId": null,
+    "gen": null,
+    "status": "Narrating slide 27 of 39 · 06 Governance & roadmap"
+   },
+   "hash": "#/27",
+   "el": "guide-06-governance-and-roadmap-kyzmCSHcw8.mp3",
+   "ct": 15.7
+  },
+  {
+   "scenario": "S08-auto-off",
+   "t": "2026-10-01T06:14:36.520Z",
+   "ms": 5737,
+   "type": "media:ended",
+   "vis": {
+    "n": 27,
+    "id": "s-roadmap",
+    "slideId": null
+   },
+   "audio": null,
+   "cc": "Decisions, releases, and outcome reports are published, so every member can see how priorities are set and how the platform evolves over time.",
+   "guide": {
+    "state": "ended",
+    "clip": "NAR-06",
+    "slideId": null,
+    "gen": null,
+    "status": "Narration finished · slide 27 of 39 · 06 Governance & roadmap"
+   },
+   "hash": "#/27",
+   "el": "guide-06-governance-and-roadmap-kyzmCSHcw8.mp3",
+   "ct": 15.7
+  },
+  {
+   "scenario": "S08-auto-off",
+   "t": "2026-10-01T06:14:36.584Z",
+   "ms": 5800,
+   "type": "sample",
+   "vis": {
+    "n": 27,
+    "id": "s-roadmap",
+    "slideId": null
+   },
+   "audio": null,
+   "cc": "Decisions, releases, and outcome reports are published, so every member can see how priorities are set and how the platform evolves over time.",
+   "guide": {
+    "state": "ended",
+    "clip": "NAR-06",
+    "slideId": null,
+    "gen": null,
+    "status": "Narration finished · slide 27 of 39 · 06 Governance & roadmap"
+   },
+   "hash": "#/27"
+  },
+  {
+   "scenario": "S08-auto-off",
+   "t": "2026-10-01T06:14:38.040Z",
+   "ms": 7257,
+   "type": "check",
+   "vis": {
+    "n": 27,
+    "id": "s-roadmap",
+    "slideId": null
+   },
+   "audio": null,
+   "cc": "Decisions, releases, and outcome reports are published, so every member can see how priorities are set and how the platform evolves over time.",
+   "guide": {
+    "state": "ended",
+    "clip": "NAR-06",
+    "slideId": null,
+    "gen": null,
+    "status": "Narration finished · slide 27 of 39 · 06 Governance & roadmap"
+   },
+   "hash": "#/27",
+   "step": "AUTO off +4 s",
+   "expect": 26
+  },
+  {
+   "scenario": "S08-auto-off",
+   "t": "2026-10-01T06:14:40.045Z",
+   "ms": 9261,
+   "type": "check",
+   "vis": {
+    "n": 27,
+    "id": "s-roadmap",
+    "slideId": null
+   },
+   "audio": null,
+   "cc": "Decisions, releases, and outcome reports are published, so every member can see how priorities are set and how the platform evolves over time.",
+   "guide": {
+    "state": "ended",
+    "clip": "NAR-06",
+    "slideId": null,
+    "gen": null,
+    "status": "Narration finished · slide 27 of 39 · 06 Governance & roadmap"
+   },
+   "hash": "#/27",
+   "step": "AUTO off +6 s",
+   "expect": 26
+  },
+  {
+   "scenario": "S08-auto-off",
+   "t": "2026-10-01T06:14:42.050Z",
+   "ms": 11266,
+   "type": "check",
+   "vis": {
+    "n": 27,
+    "id": "s-roadmap",
+    "slideId": null
+   },
+   "audio": null,
+   "cc": "Decisions, releases, and outcome reports are published, so every member can see how priorities are set and how the platform evolves over time.",
+   "guide": {
+    "state": "ended",
+    "clip": "NAR-06",
+    "slideId": null,
+    "gen": null,
+    "status": "Narration finished · slide 27 of 39 · 06 Governance & roadmap"
+   },
+   "hash": "#/27",
+   "step": "AUTO off +8 s",
+   "expect": 26
+  }
+ ],
+ "console": []
+}

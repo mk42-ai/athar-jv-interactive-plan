@@ -1,0 +1,18 @@
+# deck/pact-v1.5.2-close-out preview branch: only pact-deck/dist is deployed (static, prebuilt).
+# Patterns are anchored to the repository root so nothing inside pact-deck/dist is excluded.
+# The JV interactive-plan app is NOT built on this branch; do not merge this branch to main.
+/api
+/server
+/src
+/scripts
+/tests
+/data
+/docs
+/public
+/index.html
+/vite.config.js
+/guide-script.json
+/presentation-config.json
+/package-lock.json
+/pact-deck/qa
+/pact-deck/serve.mjs

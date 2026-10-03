@@ -1,0 +1,57 @@
+{
+ "base": "http://127.0.0.1:4405",
+ "total": 44,
+ "written": "2026-10-03T02:52:19.904Z",
+ "rows": [
+  {
+   "names": [
+    "H.E. Fahad Mohamed Al Ameri",
+    "سعادة فهد محمد العامري",
+    "Ary Ferreira da Cunha",
+    "آري فيريرا دا كونيا",
+    "Muhammed Khalid",
+    "محمد خالد",
+    "Kayaan K. Unwalla",
+    "كايان ك. أونوالا"
+   ],
+   "index": [
+    "H.E. Fahad Mohamed Al Ameri",
+    "Ary Ferreira da Cunha",
+    "Muhammed Khalid",
+    "Kayaan K. Unwalla",
+    "سعادة فهد محمد العامري",
+    "آري فيريرا دا كونيا",
+    "محمد خالد",
+    "كايان ك. أونوالا"
+   ],
+   "fahadFactsEn": [
+    "BoardsZayed Charitable and Humanitarian Foundation · Clean Rivers · Zoud Foundation for Financial Literacy",
+    "CareerAbu Dhabi Executive Council 2011–14 · Abu Dhabi Executive Office 2014–18 · Department of Transport 2018–20 · President’s Office 2020–22 · Director of Strategic Affairs from 2022",
+    "EducationMSE Mechanical Engineering and BS Bioengineering (summa cum laude), University of Pennsylvania · CFA charterholder · Emirates Experts Program graduate (NEP 2.0)"
+   ],
+   "fahadFactsAr": [
+    "المجالسمجلس أمناء مؤسسة زايد بن سلطان آل نهيان للأعمال الخيرية والإنسانية · مجلس إدارة مؤسسة الأنهار النظيفة (Clean Rivers) · مجلس إدارة مؤسسة زود للثقافة المالية",
+    "المسيرةالمجلس التنفيذي لإمارة أبوظبي 2011–2014 · المكتب التنفيذي لإمارة أبوظبي 2014–2018 · دائرة النقل 2018–2020 · مكتب رئيس الدولة 2020–2022 · مدير الشؤون الاستراتيجية منذ 2022",
+    "التعليمماجستير العلوم في الهندسة الميكانيكية وبكالوريوس العلوم في الهندسة الحيوية (بتقدير امتياز مع مرتبة الشرف الأولى) من جامعة بنسلفانيا · محلل مالي معتمد (CFA) · خريج برنامج خبراء الإمارات (النسخة الثانية)"
+   ],
+   "kayaanFactsEn": [
+    "Earlier rolesHead of Defence & Security, DWF Middle East · legal roles at the US Department of Defense, the UK Ministry of Defence and a NATO prime contractor",
+    "PracticeM&A · joint ventures · commercial and transactional agreements · government contracts · cross-border transactions · regulatory advice",
+    "SectorsTechnology · defence, national security and aerospace · manufacturing · life sciences and healthcare · transport",
+    "AI and technologyMandates including ProtectedBy.AI · publications listed on his Norton Rose Fulbright profile include AI in financial services and the Global Outer Space Guide (UAE)",
+    "EducationLLB (Hons), University of Warwick, 2006 · B.Comm (Hons), University of Bombay, 2003 · LPC, BPP Law School London, 2007",
+    "AdmissionSolicitor, England and Wales (SRA no. 430771)",
+    "LanguagesEnglish · Hindi · Gujarati"
+   ],
+   "kayaanFactsAr": [
+    "أدوار سابقةرئيس قسم الدفاع والأمن في DWF الشرق الأوسط · مناصب قانونية في وزارة الدفاع الأمريكية ووزارة الدفاع البريطانية ولدى متعاقد رئيسي مع حلف الناتو",
+    "الممارسةالاندماج والاستحواذ · المشاريع المشتركة · الاتفاقيات التجارية والمعاملاتية · العقود الحكومية · المعاملات العابرة للحدود · الاستشارات التنظيمية",
+    "القطاعاتالتكنولوجيا · الدفاع والأمن الوطني والطيران والفضاء · التصنيع · علوم الحياة والرعاية الصحية · النقل",
+    "الذكاء الاصطناعي والتقنيةتكليفات تشمل ProtectedBy.AI · ومن المنشورات المدرجة في ملفه لدى Norton Rose Fulbright: الذكاء الاصطناعي في الخدمات المالية، و«Global Outer Space Guide» (الإمارات)",
+    "التعليمبكالوريوس القانون (مرتبة الشرف)، جامعة وارويك، 2006 · بكالوريوس التجارة (مرتبة الشرف)، جامعة مومباي، 2003 · دورة الممارسة القانونية (LPC)، كلية BPP للقانون في لندن، 2007",
+    "التسجيل المهنيسوليسيتر (Solicitor) في إنجلترا وويلز (رقم SRA: 430771)",
+    "اللغاتالإنجليزية · الهندية · الغوجاراتية"
+   ]
+  }
+ ]
+}

@@ -1,0 +1,1688 @@
+{
+ "marks": [
+  {
+   "t": "2026-10-01T06:13:45.357Z",
+   "scenario": "S04-esc-overview",
+   "step": "guide started on 3",
+   "expect": 3,
+   "vis": {
+    "n": 3,
+    "id": "s-why-pact",
+    "slideId": null
+   },
+   "audio": {
+    "src": "guide-01-the-pact-df1pHtGsVr.mp3",
+    "clip": "NAR-01",
+    "t": 13.55,
+    "muted": false
+   },
+   "cc": "It is a community proposal from ODA and AI Rev, designed as a community, not a product.",
+   "guide": {
+    "state": "playing",
+    "clip": "NAR-01",
+    "slideId": null,
+    "blocked": "false",
+    "status": "Narrating slide 3 of 39 · 01 The pact",
+    "tap": false
+   }
+  },
+  {
+   "t": "2026-10-01T06:13:47.927Z",
+   "scenario": "S04-esc-overview",
+   "step": "Esc → tile 21",
+   "expect": 21,
+   "vis": {
+    "n": 21,
+    "id": "s-actors-wall",
+    "slideId": null
+   },
+   "audio": {
+    "src": "guide-05-actors-and-roles-0PbyoFNYNV.mp3",
+    "clip": "NAR-05",
+    "t": 2.39,
+    "muted": false
+   },
+   "cc": "Section five, Actors and Roles, institutions, partners and platforms building the Athar ecosystem together, ODA and AIREV sign and govern, with AIREV, OnDemand, e& and ai& and Discord building, UNDP, UNICEF, IFRC, WFP and UNHCR sign and learn.",
+   "guide": {
+    "state": "playing",
+    "clip": "NAR-05",
+    "slideId": null,
+    "blocked": "false",
+    "status": "Narrating slide 21 of 39 · 05 Actors & roles",
+    "tap": false
+   }
+  },
+  {
+   "t": "2026-10-01T06:13:50.491Z",
+   "scenario": "S04-esc-overview",
+   "step": "Esc → tile 36",
+   "expect": 36,
+   "vis": {
+    "n": 36,
+    "id": "s-aos-roadmap",
+    "slideId": null
+   },
+   "audio": {
+    "src": "guide-08-athar-os-Ib4oKe91OD.mp3",
+    "clip": "NAR-08",
+    "t": 4.51,
+    "muted": false
+   },
+   "cc": "The roadmap runs now in Q4, 2026, next in 2027 and later in 2028.",
+   "guide": {
+    "state": "playing",
+    "clip": "NAR-08",
+    "slideId": null,
+    "blocked": "false",
+    "status": "Narrating slide 36 of 39 · 08 Athar OS",
+    "tap": false
+   }
+  },
+  {
+   "t": "2026-10-01T06:13:53.189Z",
+   "scenario": "S04-esc-overview",
+   "step": "Esc → tile 12",
+   "expect": 12,
+   "vis": {
+    "n": 12,
+    "id": "s-decision-table",
+    "slideId": null
+   },
+   "audio": {
+    "src": "guide-02-community-model-9gUnFBtxrM.mp3",
+    "clip": "NAR-02",
+    "t": 13.5,
+    "muted": false
+   },
+   "cc": "Learn agentic AI, build a useful agent through the Builder Journey and Marketplace, deploy it through a named Accountable Institution, and measure a real-world benefit with baseline evidence of time saved, better service, or wider reach.",
+   "guide": {
+    "state": "playing",
+    "clip": "NAR-02",
+    "slideId": null,
+    "blocked": "false",
+    "status": "Narrating slide 12 of 39 · 02 Community model",
+    "tap": false
+   }
+  }
+ ],
+ "events": [
+  {
+   "scenario": "S04-esc-overview",
+   "t": "2026-10-01T06:13:42.833Z",
+   "ms": 742,
+   "type": "sample",
+   "vis": {
+    "n": 3,
+    "id": "s-why-pact",
+    "slideId": null
+   },
+   "audio": null,
+   "cc": null,
+   "guide": null,
+   "hash": "#/03"
+  },
+  {
+   "scenario": "S04-esc-overview",
+   "t": "2026-10-01T06:13:43.017Z",
+   "ms": 927,
+   "type": "sample",
+   "vis": {
+    "n": 3,
+    "id": "s-why-pact",
+    "slideId": null
+   },
+   "audio": null,
+   "cc": "",
+   "guide": {
+    "state": "idle",
+    "clip": null,
+    "slideId": null,
+    "gen": null,
+    "status": "No narration for this slide"
+   },
+   "hash": "#/03"
+  },
+  {
+   "scenario": "S04-esc-overview",
+   "t": "2026-10-01T06:13:43.021Z",
+   "ms": 930,
+   "type": "media:emptied",
+   "vis": {
+    "n": 3,
+    "id": "s-why-pact",
+    "slideId": null
+   },
+   "audio": null,
+   "cc": "It is a community proposal from ODA and AI Rev, designed as a community, not a product.",
+   "guide": {
+    "state": "loading",
+    "clip": "NAR-01",
+    "slideId": null,
+    "gen": null,
+    "status": "Guide ready · slide 3 of 39 · 01 The pact"
+   },
+   "hash": "#/03",
+   "el": "guide-01-the-pact-df1pHtGsVr.mp3",
+   "ct": 0
+  },
+  {
+   "scenario": "S04-esc-overview",
+   "t": "2026-10-01T06:13:43.022Z",
+   "ms": 931,
+   "type": "media:loadstart",
+   "vis": {
+    "n": 3,
+    "id": "s-why-pact",
+    "slideId": null
+   },
+   "audio": null,
+   "cc": "It is a community proposal from ODA and AI Rev, designed as a community, not a product.",
+   "guide": {
+    "state": "loading",
+    "clip": "NAR-01",
+    "slideId": null,
+    "gen": null,
+    "status": "Guide ready · slide 3 of 39 · 01 The pact"
+   },
+   "hash": "#/03",
+   "el": "guide-01-the-pact-df1pHtGsVr.mp3",
+   "ct": 0
+  },
+  {
+   "scenario": "S04-esc-overview",
+   "t": "2026-10-01T06:13:43.023Z",
+   "ms": 932,
+   "type": "media:loadstart",
+   "vis": {
+    "n": 3,
+    "id": "s-why-pact",
+    "slideId": null
+   },
+   "audio": null,
+   "cc": "It is a community proposal from ODA and AI Rev, designed as a community, not a product.",
+   "guide": {
+    "state": "loading",
+    "clip": "NAR-01",
+    "slideId": null,
+    "gen": null,
+    "status": "Guide ready · slide 3 of 39 · 01 The pact"
+   },
+   "hash": "#/03",
+   "el": "guide-02-community-model-9gUnFBtxrM.mp3",
+   "ct": 0
+  },
+  {
+   "scenario": "S04-esc-overview",
+   "t": "2026-10-01T06:13:43.091Z",
+   "ms": 1001,
+   "type": "sample",
+   "vis": {
+    "n": 3,
+    "id": "s-why-pact",
+    "slideId": null
+   },
+   "audio": null,
+   "cc": "It is a community proposal from ODA and AI Rev, designed as a community, not a product.",
+   "guide": {
+    "state": "loading",
+    "clip": "NAR-01",
+    "slideId": null,
+    "gen": null,
+    "status": "Guide ready · slide 3 of 39 · 01 The pact"
+   },
+   "hash": "#/03"
+  },
+  {
+   "scenario": "S04-esc-overview",
+   "t": "2026-10-01T06:13:43.100Z",
+   "ms": 1009,
+   "type": "media:canplay",
+   "vis": {
+    "n": 3,
+    "id": "s-why-pact",
+    "slideId": null
+   },
+   "audio": null,
+   "cc": "It is a community proposal from ODA and AI Rev, designed as a community, not a product.",
+   "guide": {
+    "state": "loading",
+    "clip": "NAR-01",
+    "slideId": null,
+    "gen": null,
+    "status": "Guide ready · slide 3 of 39 · 01 The pact"
+   },
+   "hash": "#/03",
+   "el": "guide-02-community-model-9gUnFBtxrM.mp3",
+   "ct": 0
+  },
+  {
+   "scenario": "S04-esc-overview",
+   "t": "2026-10-01T06:13:43.101Z",
+   "ms": 1010,
+   "type": "media:seeked",
+   "vis": {
+    "n": 3,
+    "id": "s-why-pact",
+    "slideId": null
+   },
+   "audio": null,
+   "cc": "It is a community proposal from ODA and AI Rev, designed as a community, not a product.",
+   "guide": {
+    "state": "loading",
+    "clip": "NAR-01",
+    "slideId": null,
+    "gen": null,
+    "status": "Guide ready · slide 3 of 39 · 01 The pact"
+   },
+   "hash": "#/03",
+   "el": "guide-01-the-pact-df1pHtGsVr.mp3",
+   "ct": 12.13
+  },
+  {
+   "scenario": "S04-esc-overview",
+   "t": "2026-10-01T06:13:43.101Z",
+   "ms": 1011,
+   "type": "media:canplay",
+   "vis": {
+    "n": 3,
+    "id": "s-why-pact",
+    "slideId": null
+   },
+   "audio": null,
+   "cc": "It is a community proposal from ODA and AI Rev, designed as a community, not a product.",
+   "guide": {
+    "state": "paused",
+    "clip": "NAR-01",
+    "slideId": null,
+    "gen": null,
+    "status": "Guide ready · slide 3 of 39 · 01 The pact"
+   },
+   "hash": "#/03",
+   "el": "guide-01-the-pact-df1pHtGsVr.mp3",
+   "ct": 12.13
+  },
+  {
+   "scenario": "S04-esc-overview",
+   "t": "2026-10-01T06:13:43.191Z",
+   "ms": 1100,
+   "type": "sample",
+   "vis": {
+    "n": 3,
+    "id": "s-why-pact",
+    "slideId": null
+   },
+   "audio": null,
+   "cc": "It is a community proposal from ODA and AI Rev, designed as a community, not a product.",
+   "guide": {
+    "state": "paused",
+    "clip": "NAR-01",
+    "slideId": null,
+    "gen": null,
+    "status": "Guide ready · slide 3 of 39 · 01 The pact"
+   },
+   "hash": "#/03"
+  },
+  {
+   "scenario": "S04-esc-overview",
+   "t": "2026-10-01T06:13:43.815Z",
+   "ms": 1724,
+   "type": "click",
+   "vis": {
+    "n": 3,
+    "id": "s-why-pact",
+    "slideId": null
+   },
+   "audio": null,
+   "cc": "It is a community proposal from ODA and AI Rev, designed as a community, not a product.",
+   "guide": {
+    "state": "paused",
+    "clip": "NAR-01",
+    "slideId": null,
+    "gen": null,
+    "status": "Guide ready · slide 3 of 39 · 01 The pact"
+   },
+   "hash": "#/03",
+   "target": "nar-autoplay"
+  },
+  {
+   "scenario": "S04-esc-overview",
+   "t": "2026-10-01T06:13:43.850Z",
+   "ms": 1759,
+   "type": "click",
+   "vis": {
+    "n": 3,
+    "id": "s-why-pact",
+    "slideId": null
+   },
+   "audio": null,
+   "cc": "It is a community proposal from ODA and AI Rev, designed as a community, not a product.",
+   "guide": {
+    "state": "paused",
+    "clip": "NAR-01",
+    "slideId": null,
+    "gen": null,
+    "status": "Guide ready · slide 3 of 39 · 01 The pact"
+   },
+   "hash": "#/03",
+   "target": "guide-toggle"
+  },
+  {
+   "scenario": "S04-esc-overview",
+   "t": "2026-10-01T06:13:43.851Z",
+   "ms": 1760,
+   "type": "play()",
+   "vis": {
+    "n": 3,
+    "id": "s-why-pact",
+    "slideId": null
+   },
+   "audio": {
+    "src": "guide-01-the-pact-df1pHtGsVr.mp3",
+    "clip": "NAR-01",
+    "t": 12.13,
+    "muted": false
+   },
+   "cc": "It is a community proposal from ODA and AI Rev, designed as a community, not a product.",
+   "guide": {
+    "state": "paused",
+    "clip": "NAR-01",
+    "slideId": null,
+    "gen": null,
+    "status": "Guide ready · slide 3 of 39 · 01 The pact"
+   },
+   "hash": "#/03",
+   "el": "guide-01-the-pact-df1pHtGsVr.mp3",
+   "ct": 12.13
+  },
+  {
+   "scenario": "S04-esc-overview",
+   "t": "2026-10-01T06:13:43.872Z",
+   "ms": 1781,
+   "type": "media:playing",
+   "vis": {
+    "n": 3,
+    "id": "s-why-pact",
+    "slideId": null
+   },
+   "audio": {
+    "src": "guide-01-the-pact-df1pHtGsVr.mp3",
+    "clip": "NAR-01",
+    "t": 12.13,
+    "muted": false
+   },
+   "cc": "It is a community proposal from ODA and AI Rev, designed as a community, not a product.",
+   "guide": {
+    "state": "playing",
+    "clip": "NAR-01",
+    "slideId": null,
+    "gen": null,
+    "status": "Narrating slide 3 of 39 · 01 The pact"
+   },
+   "hash": "#/03",
+   "el": "guide-01-the-pact-df1pHtGsVr.mp3",
+   "ct": 12.13
+  },
+  {
+   "scenario": "S04-esc-overview",
+   "t": "2026-10-01T06:13:43.872Z",
+   "ms": 1781,
+   "type": "play():resolved",
+   "vis": {
+    "n": 3,
+    "id": "s-why-pact",
+    "slideId": null
+   },
+   "audio": {
+    "src": "guide-01-the-pact-df1pHtGsVr.mp3",
+    "clip": "NAR-01",
+    "t": 12.13,
+    "muted": false
+   },
+   "cc": "It is a community proposal from ODA and AI Rev, designed as a community, not a product.",
+   "guide": {
+    "state": "playing",
+    "clip": "NAR-01",
+    "slideId": null,
+    "gen": null,
+    "status": "Narrating slide 3 of 39 · 01 The pact"
+   },
+   "hash": "#/03",
+   "el": "guide-01-the-pact-df1pHtGsVr.mp3"
+  },
+  {
+   "scenario": "S04-esc-overview",
+   "t": "2026-10-01T06:13:43.892Z",
+   "ms": 1802,
+   "type": "sample",
+   "vis": {
+    "n": 3,
+    "id": "s-why-pact",
+    "slideId": null
+   },
+   "audio": {
+    "src": "guide-01-the-pact-df1pHtGsVr.mp3",
+    "clip": "NAR-01",
+    "t": 12.15,
+    "muted": false
+   },
+   "cc": "It is a community proposal from ODA and AI Rev, designed as a community, not a product.",
+   "guide": {
+    "state": "playing",
+    "clip": "NAR-01",
+    "slideId": null,
+    "gen": null,
+    "status": "Narrating slide 3 of 39 · 01 The pact"
+   },
+   "hash": "#/03"
+  },
+  {
+   "scenario": "S04-esc-overview",
+   "t": "2026-10-01T06:13:45.359Z",
+   "ms": 3268,
+   "type": "check",
+   "vis": {
+    "n": 3,
+    "id": "s-why-pact",
+    "slideId": null
+   },
+   "audio": {
+    "src": "guide-01-the-pact-df1pHtGsVr.mp3",
+    "clip": "NAR-01",
+    "t": 13.55,
+    "muted": false
+   },
+   "cc": "It is a community proposal from ODA and AI Rev, designed as a community, not a product.",
+   "guide": {
+    "state": "playing",
+    "clip": "NAR-01",
+    "slideId": null,
+    "gen": null,
+    "status": "Narrating slide 3 of 39 · 01 The pact"
+   },
+   "hash": "#/03",
+   "step": "guide started on 3",
+   "expect": 3
+  },
+  {
+   "scenario": "S04-esc-overview",
+   "t": "2026-10-01T06:13:45.361Z",
+   "ms": 3271,
+   "type": "key",
+   "vis": {
+    "n": 3,
+    "id": "s-why-pact",
+    "slideId": null
+   },
+   "audio": {
+    "src": "guide-01-the-pact-df1pHtGsVr.mp3",
+    "clip": "NAR-01",
+    "t": 13.55,
+    "muted": false
+   },
+   "cc": "It is a community proposal from ODA and AI Rev, designed as a community, not a product.",
+   "guide": {
+    "state": "playing",
+    "clip": "NAR-01",
+    "slideId": null,
+    "gen": null,
+    "status": "Narrating slide 3 of 39 · 01 The pact"
+   },
+   "hash": "#/03",
+   "key": "Escape"
+  },
+  {
+   "scenario": "S04-esc-overview",
+   "t": "2026-10-01T06:13:45.390Z",
+   "ms": 3299,
+   "type": "click",
+   "vis": {
+    "n": 3,
+    "id": "s-why-pact",
+    "slideId": null
+   },
+   "audio": {
+    "src": "guide-01-the-pact-df1pHtGsVr.mp3",
+    "clip": "NAR-01",
+    "t": 13.58,
+    "muted": false
+   },
+   "cc": "It is a community proposal from ODA and AI Rev, designed as a community, not a product.",
+   "guide": {
+    "state": "playing",
+    "clip": "NAR-01",
+    "slideId": null,
+    "gen": null,
+    "status": "Narrating slide 3 of 39 · 01 The pact"
+   },
+   "hash": "#/03",
+   "target": "21The actors of the pact"
+  },
+  {
+   "scenario": "S04-esc-overview",
+   "t": "2026-10-01T06:13:45.406Z",
+   "ms": 3315,
+   "type": "sample",
+   "vis": {
+    "n": 21,
+    "id": "s-actors-wall",
+    "slideId": null
+   },
+   "audio": {
+    "src": "guide-01-the-pact-df1pHtGsVr.mp3",
+    "clip": "NAR-01",
+    "t": 13.6,
+    "muted": false
+   },
+   "cc": "It is a community proposal from ODA and AI Rev, designed as a community, not a product.",
+   "guide": {
+    "state": "playing",
+    "clip": "NAR-01",
+    "slideId": null,
+    "gen": null,
+    "status": "Narrating slide 3 of 39 · 01 The pact"
+   },
+   "hash": "#/21"
+  },
+  {
+   "scenario": "S04-esc-overview",
+   "t": "2026-10-01T06:13:45.460Z",
+   "ms": 3369,
+   "type": "play()",
+   "vis": {
+    "n": 21,
+    "id": "s-actors-wall",
+    "slideId": null
+   },
+   "audio": {
+    "src": "guide-01-the-pact-df1pHtGsVr.mp3",
+    "clip": "NAR-01",
+    "t": 0,
+    "muted": false
+   },
+   "cc": "It is a community proposal from ODA and AI Rev, designed as a community, not a product.",
+   "guide": {
+    "state": "playing",
+    "clip": "NAR-01",
+    "slideId": null,
+    "gen": null,
+    "status": "Narrating slide 3 of 39 · 01 The pact"
+   },
+   "hash": "#/21",
+   "el": "guide-01-the-pact-df1pHtGsVr.mp3",
+   "ct": 0
+  },
+  {
+   "scenario": "S04-esc-overview",
+   "t": "2026-10-01T06:13:45.461Z",
+   "ms": 3370,
+   "type": "media:emptied",
+   "vis": {
+    "n": 21,
+    "id": "s-actors-wall",
+    "slideId": null
+   },
+   "audio": {
+    "src": "guide-01-the-pact-df1pHtGsVr.mp3",
+    "clip": "NAR-01",
+    "t": 0,
+    "muted": false
+   },
+   "cc": "Section five, Actors and Roles, institutions, partners and platforms building the Athar ecosystem together, ODA and AIREV sign and govern, with AIREV, OnDemand, e& and ai& and Discord building, UNDP, UNICEF, IFRC, WFP and UNHCR sign and learn.",
+   "guide": {
+    "state": "starting",
+    "clip": "NAR-05",
+    "slideId": null,
+    "gen": null,
+    "status": "Narrating slide 21 of 39 · 05 Actors & roles"
+   },
+   "hash": "#/21",
+   "el": "guide-01-the-pact-df1pHtGsVr.mp3",
+   "ct": 0
+  },
+  {
+   "scenario": "S04-esc-overview",
+   "t": "2026-10-01T06:13:45.463Z",
+   "ms": 3373,
+   "type": "media:loadstart",
+   "vis": {
+    "n": 21,
+    "id": "s-actors-wall",
+    "slideId": null
+   },
+   "audio": {
+    "src": "guide-05-actors-and-roles-0PbyoFNYNV.mp3",
+    "clip": "NAR-05",
+    "t": 0,
+    "muted": false
+   },
+   "cc": "Section five, Actors and Roles, institutions, partners and platforms building the Athar ecosystem together, ODA and AIREV sign and govern, with AIREV, OnDemand, e& and ai& and Discord building, UNDP, UNICEF, IFRC, WFP and UNHCR sign and learn.",
+   "guide": {
+    "state": "buffering",
+    "clip": "NAR-05",
+    "slideId": null,
+    "gen": null,
+    "status": "Narrating slide 21 of 39 · 05 Actors & roles"
+   },
+   "hash": "#/21",
+   "el": "guide-05-actors-and-roles-0PbyoFNYNV.mp3",
+   "ct": 0
+  },
+  {
+   "scenario": "S04-esc-overview",
+   "t": "2026-10-01T06:13:45.464Z",
+   "ms": 3373,
+   "type": "media:loadstart",
+   "vis": {
+    "n": 21,
+    "id": "s-actors-wall",
+    "slideId": null
+   },
+   "audio": {
+    "src": "guide-05-actors-and-roles-0PbyoFNYNV.mp3",
+    "clip": "NAR-05",
+    "t": 0,
+    "muted": false
+   },
+   "cc": "Section five, Actors and Roles, institutions, partners and platforms building the Athar ecosystem together, ODA and AIREV sign and govern, with AIREV, OnDemand, e& and ai& and Discord building, UNDP, UNICEF, IFRC, WFP and UNHCR sign and learn.",
+   "guide": {
+    "state": "buffering",
+    "clip": "NAR-05",
+    "slideId": null,
+    "gen": null,
+    "status": "Narrating slide 21 of 39 · 05 Actors & roles"
+   },
+   "hash": "#/21",
+   "el": "guide-06-governance-and-roadmap-kyzmCSHcw8.mp3",
+   "ct": 0
+  },
+  {
+   "scenario": "S04-esc-overview",
+   "t": "2026-10-01T06:13:45.472Z",
+   "ms": 3381,
+   "type": "media:canplay",
+   "vis": {
+    "n": 21,
+    "id": "s-actors-wall",
+    "slideId": null
+   },
+   "audio": {
+    "src": "guide-05-actors-and-roles-0PbyoFNYNV.mp3",
+    "clip": "NAR-05",
+    "t": 0,
+    "muted": false
+   },
+   "cc": "Section five, Actors and Roles, institutions, partners and platforms building the Athar ecosystem together, ODA and AIREV sign and govern, with AIREV, OnDemand, e& and ai& and Discord building, UNDP, UNICEF, IFRC, WFP and UNHCR sign and learn.",
+   "guide": {
+    "state": "buffering",
+    "clip": "NAR-05",
+    "slideId": null,
+    "gen": null,
+    "status": "Narrating slide 21 of 39 · 05 Actors & roles"
+   },
+   "hash": "#/21",
+   "el": "guide-05-actors-and-roles-0PbyoFNYNV.mp3",
+   "ct": 0
+  },
+  {
+   "scenario": "S04-esc-overview",
+   "t": "2026-10-01T06:13:45.472Z",
+   "ms": 3382,
+   "type": "media:playing",
+   "vis": {
+    "n": 21,
+    "id": "s-actors-wall",
+    "slideId": null
+   },
+   "audio": {
+    "src": "guide-05-actors-and-roles-0PbyoFNYNV.mp3",
+    "clip": "NAR-05",
+    "t": 0,
+    "muted": false
+   },
+   "cc": "Section five, Actors and Roles, institutions, partners and platforms building the Athar ecosystem together, ODA and AIREV sign and govern, with AIREV, OnDemand, e& and ai& and Discord building, UNDP, UNICEF, IFRC, WFP and UNHCR sign and learn.",
+   "guide": {
+    "state": "playing",
+    "clip": "NAR-05",
+    "slideId": null,
+    "gen": null,
+    "status": "Narrating slide 21 of 39 · 05 Actors & roles"
+   },
+   "hash": "#/21",
+   "el": "guide-05-actors-and-roles-0PbyoFNYNV.mp3",
+   "ct": 0
+  },
+  {
+   "scenario": "S04-esc-overview",
+   "t": "2026-10-01T06:13:45.472Z",
+   "ms": 3382,
+   "type": "play():resolved",
+   "vis": {
+    "n": 21,
+    "id": "s-actors-wall",
+    "slideId": null
+   },
+   "audio": {
+    "src": "guide-05-actors-and-roles-0PbyoFNYNV.mp3",
+    "clip": "NAR-05",
+    "t": 0,
+    "muted": false
+   },
+   "cc": "Section five, Actors and Roles, institutions, partners and platforms building the Athar ecosystem together, ODA and AIREV sign and govern, with AIREV, OnDemand, e& and ai& and Discord building, UNDP, UNICEF, IFRC, WFP and UNHCR sign and learn.",
+   "guide": {
+    "state": "playing",
+    "clip": "NAR-05",
+    "slideId": null,
+    "gen": null,
+    "status": "Narrating slide 21 of 39 · 05 Actors & roles"
+   },
+   "hash": "#/21",
+   "el": "guide-01-the-pact-df1pHtGsVr.mp3"
+  },
+  {
+   "scenario": "S04-esc-overview",
+   "t": "2026-10-01T06:13:45.498Z",
+   "ms": 3407,
+   "type": "media:canplay",
+   "vis": {
+    "n": 21,
+    "id": "s-actors-wall",
+    "slideId": null
+   },
+   "audio": {
+    "src": "guide-05-actors-and-roles-0PbyoFNYNV.mp3",
+    "clip": "NAR-05",
+    "t": 0,
+    "muted": false
+   },
+   "cc": "Section five, Actors and Roles, institutions, partners and platforms building the Athar ecosystem together, ODA and AIREV sign and govern, with AIREV, OnDemand, e& and ai& and Discord building, UNDP, UNICEF, IFRC, WFP and UNHCR sign and learn.",
+   "guide": {
+    "state": "playing",
+    "clip": "NAR-05",
+    "slideId": null,
+    "gen": null,
+    "status": "Narrating slide 21 of 39 · 05 Actors & roles"
+   },
+   "hash": "#/21",
+   "el": "guide-06-governance-and-roadmap-kyzmCSHcw8.mp3",
+   "ct": 0
+  },
+  {
+   "scenario": "S04-esc-overview",
+   "t": "2026-10-01T06:13:45.498Z",
+   "ms": 3408,
+   "type": "sample",
+   "vis": {
+    "n": 21,
+    "id": "s-actors-wall",
+    "slideId": null
+   },
+   "audio": {
+    "src": "guide-05-actors-and-roles-0PbyoFNYNV.mp3",
+    "clip": "NAR-05",
+    "t": 0,
+    "muted": false
+   },
+   "cc": "Section five, Actors and Roles, institutions, partners and platforms building the Athar ecosystem together, ODA and AIREV sign and govern, with AIREV, OnDemand, e& and ai& and Discord building, UNDP, UNICEF, IFRC, WFP and UNHCR sign and learn.",
+   "guide": {
+    "state": "playing",
+    "clip": "NAR-05",
+    "slideId": null,
+    "gen": null,
+    "status": "Narrating slide 21 of 39 · 05 Actors & roles"
+   },
+   "hash": "#/21"
+  },
+  {
+   "scenario": "S04-esc-overview",
+   "t": "2026-10-01T06:13:47.928Z",
+   "ms": 5838,
+   "type": "check",
+   "vis": {
+    "n": 21,
+    "id": "s-actors-wall",
+    "slideId": null
+   },
+   "audio": {
+    "src": "guide-05-actors-and-roles-0PbyoFNYNV.mp3",
+    "clip": "NAR-05",
+    "t": 2.39,
+    "muted": false
+   },
+   "cc": "Section five, Actors and Roles, institutions, partners and platforms building the Athar ecosystem together, ODA and AIREV sign and govern, with AIREV, OnDemand, e& and ai& and Discord building, UNDP, UNICEF, IFRC, WFP and UNHCR sign and learn.",
+   "guide": {
+    "state": "playing",
+    "clip": "NAR-05",
+    "slideId": null,
+    "gen": null,
+    "status": "Narrating slide 21 of 39 · 05 Actors & roles"
+   },
+   "hash": "#/21",
+   "step": "Esc → tile 21",
+   "expect": 21
+  },
+  {
+   "scenario": "S04-esc-overview",
+   "t": "2026-10-01T06:13:47.930Z",
+   "ms": 5839,
+   "type": "key",
+   "vis": {
+    "n": 21,
+    "id": "s-actors-wall",
+    "slideId": null
+   },
+   "audio": {
+    "src": "guide-05-actors-and-roles-0PbyoFNYNV.mp3",
+    "clip": "NAR-05",
+    "t": 2.39,
+    "muted": false
+   },
+   "cc": "Section five, Actors and Roles, institutions, partners and platforms building the Athar ecosystem together, ODA and AIREV sign and govern, with AIREV, OnDemand, e& and ai& and Discord building, UNDP, UNICEF, IFRC, WFP and UNHCR sign and learn.",
+   "guide": {
+    "state": "playing",
+    "clip": "NAR-05",
+    "slideId": null,
+    "gen": null,
+    "status": "Narrating slide 21 of 39 · 05 Actors & roles"
+   },
+   "hash": "#/21",
+   "key": "Escape"
+  },
+  {
+   "scenario": "S04-esc-overview",
+   "t": "2026-10-01T06:13:47.951Z",
+   "ms": 5861,
+   "type": "click",
+   "vis": {
+    "n": 21,
+    "id": "s-actors-wall",
+    "slideId": null
+   },
+   "audio": {
+    "src": "guide-05-actors-and-roles-0PbyoFNYNV.mp3",
+    "clip": "NAR-05",
+    "t": 2.41,
+    "muted": false
+   },
+   "cc": "Section five, Actors and Roles, institutions, partners and platforms building the Athar ecosystem together, ODA and AIREV sign and govern, with AIREV, OnDemand, e& and ai& and Discord building, UNDP, UNICEF, IFRC, WFP and UNHCR sign and learn.",
+   "guide": {
+    "state": "playing",
+    "clip": "NAR-05",
+    "slideId": null,
+    "gen": null,
+    "status": "Narrating slide 21 of 39 · 05 Actors & roles"
+   },
+   "hash": "#/21",
+   "target": "36Roadmap — Now, Next, Later"
+  },
+  {
+   "scenario": "S04-esc-overview",
+   "t": "2026-10-01T06:13:47.952Z",
+   "ms": 5861,
+   "type": "click",
+   "vis": {
+    "n": 21,
+    "id": "s-actors-wall",
+    "slideId": null
+   },
+   "audio": {
+    "src": "guide-05-actors-and-roles-0PbyoFNYNV.mp3",
+    "clip": "NAR-05",
+    "t": 2.41,
+    "muted": false
+   },
+   "cc": "Section five, Actors and Roles, institutions, partners and platforms building the Athar ecosystem together, ODA and AIREV sign and govern, with AIREV, OnDemand, e& and ai& and Discord building, UNDP, UNICEF, IFRC, WFP and UNHCR sign and learn.",
+   "guide": {
+    "state": "playing",
+    "clip": "NAR-05",
+    "slideId": null,
+    "gen": null,
+    "status": "Narrating slide 21 of 39 · 05 Actors & roles"
+   },
+   "hash": "#/21",
+   "target": "Close overview"
+  },
+  {
+   "scenario": "S04-esc-overview",
+   "t": "2026-10-01T06:13:47.952Z",
+   "ms": 5862,
+   "type": "hashchange",
+   "vis": {
+    "n": 21,
+    "id": "s-actors-wall",
+    "slideId": null
+   },
+   "audio": {
+    "src": "guide-05-actors-and-roles-0PbyoFNYNV.mp3",
+    "clip": "NAR-05",
+    "t": 2.41,
+    "muted": false
+   },
+   "cc": "Section five, Actors and Roles, institutions, partners and platforms building the Athar ecosystem together, ODA and AIREV sign and govern, with AIREV, OnDemand, e& and ai& and Discord building, UNDP, UNICEF, IFRC, WFP and UNHCR sign and learn.",
+   "guide": {
+    "state": "playing",
+    "clip": "NAR-05",
+    "slideId": null,
+    "gen": null,
+    "status": "Narrating slide 21 of 39 · 05 Actors & roles"
+   },
+   "hash": "#/27"
+  },
+  {
+   "scenario": "S04-esc-overview",
+   "t": "2026-10-01T06:13:47.991Z",
+   "ms": 5901,
+   "type": "sample",
+   "vis": {
+    "n": 36,
+    "id": "s-aos-roadmap",
+    "slideId": null
+   },
+   "audio": {
+    "src": "guide-05-actors-and-roles-0PbyoFNYNV.mp3",
+    "clip": "NAR-05",
+    "t": 2.45,
+    "muted": false
+   },
+   "cc": "Section five, Actors and Roles, institutions, partners and platforms building the Athar ecosystem together, ODA and AIREV sign and govern, with AIREV, OnDemand, e& and ai& and Discord building, UNDP, UNICEF, IFRC, WFP and UNHCR sign and learn.",
+   "guide": {
+    "state": "playing",
+    "clip": "NAR-05",
+    "slideId": null,
+    "gen": null,
+    "status": "Narrating slide 21 of 39 · 05 Actors & roles"
+   },
+   "hash": "#/27/new-9"
+  },
+  {
+   "scenario": "S04-esc-overview",
+   "t": "2026-10-01T06:13:48.017Z",
+   "ms": 5927,
+   "type": "play()",
+   "vis": {
+    "n": 36,
+    "id": "s-aos-roadmap",
+    "slideId": null
+   },
+   "audio": {
+    "src": "guide-05-actors-and-roles-0PbyoFNYNV.mp3",
+    "clip": "NAR-05",
+    "t": 0,
+    "muted": false
+   },
+   "cc": "Section five, Actors and Roles, institutions, partners and platforms building the Athar ecosystem together, ODA and AIREV sign and govern, with AIREV, OnDemand, e& and ai& and Discord building, UNDP, UNICEF, IFRC, WFP and UNHCR sign and learn.",
+   "guide": {
+    "state": "playing",
+    "clip": "NAR-05",
+    "slideId": null,
+    "gen": null,
+    "status": "Narrating slide 21 of 39 · 05 Actors & roles"
+   },
+   "hash": "#/27/new-9",
+   "el": "guide-05-actors-and-roles-0PbyoFNYNV.mp3",
+   "ct": 0
+  },
+  {
+   "scenario": "S04-esc-overview",
+   "t": "2026-10-01T06:13:48.018Z",
+   "ms": 5928,
+   "type": "media:emptied",
+   "vis": {
+    "n": 36,
+    "id": "s-aos-roadmap",
+    "slideId": null
+   },
+   "audio": {
+    "src": "guide-05-actors-and-roles-0PbyoFNYNV.mp3",
+    "clip": "NAR-05",
+    "t": 0,
+    "muted": false
+   },
+   "cc": "The roadmap runs now in Q4, 2026, next in 2027 and later in 2028.",
+   "guide": {
+    "state": "starting",
+    "clip": "NAR-08",
+    "slideId": null,
+    "gen": null,
+    "status": "Narrating slide 36 of 39 · 08 Athar OS"
+   },
+   "hash": "#/27/new-9",
+   "el": "guide-05-actors-and-roles-0PbyoFNYNV.mp3",
+   "ct": 0
+  },
+  {
+   "scenario": "S04-esc-overview",
+   "t": "2026-10-01T06:13:48.020Z",
+   "ms": 5930,
+   "type": "media:loadstart",
+   "vis": {
+    "n": 36,
+    "id": "s-aos-roadmap",
+    "slideId": null
+   },
+   "audio": {
+    "src": "guide-08-athar-os-Ib4oKe91OD.mp3",
+    "clip": "NAR-08",
+    "t": 0,
+    "muted": false
+   },
+   "cc": "The roadmap runs now in Q4, 2026, next in 2027 and later in 2028.",
+   "guide": {
+    "state": "buffering",
+    "clip": "NAR-08",
+    "slideId": null,
+    "gen": null,
+    "status": "Narrating slide 36 of 39 · 08 Athar OS"
+   },
+   "hash": "#/27/new-9",
+   "el": "guide-08-athar-os-Ib4oKe91OD.mp3",
+   "ct": 0
+  },
+  {
+   "scenario": "S04-esc-overview",
+   "t": "2026-10-01T06:13:48.020Z",
+   "ms": 5930,
+   "type": "media:loadstart",
+   "vis": {
+    "n": 36,
+    "id": "s-aos-roadmap",
+    "slideId": null
+   },
+   "audio": {
+    "src": "guide-08-athar-os-Ib4oKe91OD.mp3",
+    "clip": "NAR-08",
+    "t": 0,
+    "muted": false
+   },
+   "cc": "The roadmap runs now in Q4, 2026, next in 2027 and later in 2028.",
+   "guide": {
+    "state": "buffering",
+    "clip": "NAR-08",
+    "slideId": null,
+    "gen": null,
+    "status": "Narrating slide 36 of 39 · 08 Athar OS"
+   },
+   "hash": "#/27/new-9",
+   "el": "guide-09-join-the-pact-Hx4Ywy843S.mp3",
+   "ct": 0
+  },
+  {
+   "scenario": "S04-esc-overview",
+   "t": "2026-10-01T06:13:48.031Z",
+   "ms": 5940,
+   "type": "media:canplay",
+   "vis": {
+    "n": 36,
+    "id": "s-aos-roadmap",
+    "slideId": null
+   },
+   "audio": {
+    "src": "guide-08-athar-os-Ib4oKe91OD.mp3",
+    "clip": "NAR-08",
+    "t": 2.14,
+    "muted": false
+   },
+   "cc": "The roadmap runs now in Q4, 2026, next in 2027 and later in 2028.",
+   "guide": {
+    "state": "buffering",
+    "clip": "NAR-08",
+    "slideId": null,
+    "gen": null,
+    "status": "Narrating slide 36 of 39 · 08 Athar OS"
+   },
+   "hash": "#/27/new-9",
+   "el": "guide-09-join-the-pact-Hx4Ywy843S.mp3",
+   "ct": 0
+  },
+  {
+   "scenario": "S04-esc-overview",
+   "t": "2026-10-01T06:13:48.031Z",
+   "ms": 5940,
+   "type": "media:seeked",
+   "vis": {
+    "n": 36,
+    "id": "s-aos-roadmap",
+    "slideId": null
+   },
+   "audio": {
+    "src": "guide-08-athar-os-Ib4oKe91OD.mp3",
+    "clip": "NAR-08",
+    "t": 2.14,
+    "muted": false
+   },
+   "cc": "The roadmap runs now in Q4, 2026, next in 2027 and later in 2028.",
+   "guide": {
+    "state": "buffering",
+    "clip": "NAR-08",
+    "slideId": null,
+    "gen": null,
+    "status": "Narrating slide 36 of 39 · 08 Athar OS"
+   },
+   "hash": "#/27/new-9",
+   "el": "guide-08-athar-os-Ib4oKe91OD.mp3",
+   "ct": 2.14
+  },
+  {
+   "scenario": "S04-esc-overview",
+   "t": "2026-10-01T06:13:48.031Z",
+   "ms": 5940,
+   "type": "media:canplay",
+   "vis": {
+    "n": 36,
+    "id": "s-aos-roadmap",
+    "slideId": null
+   },
+   "audio": {
+    "src": "guide-08-athar-os-Ib4oKe91OD.mp3",
+    "clip": "NAR-08",
+    "t": 2.14,
+    "muted": false
+   },
+   "cc": "The roadmap runs now in Q4, 2026, next in 2027 and later in 2028.",
+   "guide": {
+    "state": "buffering",
+    "clip": "NAR-08",
+    "slideId": null,
+    "gen": null,
+    "status": "Narrating slide 36 of 39 · 08 Athar OS"
+   },
+   "hash": "#/27/new-9",
+   "el": "guide-08-athar-os-Ib4oKe91OD.mp3",
+   "ct": 2.14
+  },
+  {
+   "scenario": "S04-esc-overview",
+   "t": "2026-10-01T06:13:48.031Z",
+   "ms": 5941,
+   "type": "media:playing",
+   "vis": {
+    "n": 36,
+    "id": "s-aos-roadmap",
+    "slideId": null
+   },
+   "audio": {
+    "src": "guide-08-athar-os-Ib4oKe91OD.mp3",
+    "clip": "NAR-08",
+    "t": 2.14,
+    "muted": false
+   },
+   "cc": "The roadmap runs now in Q4, 2026, next in 2027 and later in 2028.",
+   "guide": {
+    "state": "playing",
+    "clip": "NAR-08",
+    "slideId": null,
+    "gen": null,
+    "status": "Narrating slide 36 of 39 · 08 Athar OS"
+   },
+   "hash": "#/27/new-9",
+   "el": "guide-08-athar-os-Ib4oKe91OD.mp3",
+   "ct": 2.14
+  },
+  {
+   "scenario": "S04-esc-overview",
+   "t": "2026-10-01T06:13:48.032Z",
+   "ms": 5941,
+   "type": "play():resolved",
+   "vis": {
+    "n": 36,
+    "id": "s-aos-roadmap",
+    "slideId": null
+   },
+   "audio": {
+    "src": "guide-08-athar-os-Ib4oKe91OD.mp3",
+    "clip": "NAR-08",
+    "t": 2.14,
+    "muted": false
+   },
+   "cc": "The roadmap runs now in Q4, 2026, next in 2027 and later in 2028.",
+   "guide": {
+    "state": "playing",
+    "clip": "NAR-08",
+    "slideId": null,
+    "gen": null,
+    "status": "Narrating slide 36 of 39 · 08 Athar OS"
+   },
+   "hash": "#/27/new-9",
+   "el": "guide-05-actors-and-roles-0PbyoFNYNV.mp3"
+  },
+  {
+   "scenario": "S04-esc-overview",
+   "t": "2026-10-01T06:13:48.091Z",
+   "ms": 6001,
+   "type": "sample",
+   "vis": {
+    "n": 36,
+    "id": "s-aos-roadmap",
+    "slideId": null
+   },
+   "audio": {
+    "src": "guide-08-athar-os-Ib4oKe91OD.mp3",
+    "clip": "NAR-08",
+    "t": 2.16,
+    "muted": false
+   },
+   "cc": "The roadmap runs now in Q4, 2026, next in 2027 and later in 2028.",
+   "guide": {
+    "state": "playing",
+    "clip": "NAR-08",
+    "slideId": null,
+    "gen": null,
+    "status": "Narrating slide 36 of 39 · 08 Athar OS"
+   },
+   "hash": "#/27/new-9"
+  },
+  {
+   "scenario": "S04-esc-overview",
+   "t": "2026-10-01T06:13:50.492Z",
+   "ms": 8401,
+   "type": "check",
+   "vis": {
+    "n": 36,
+    "id": "s-aos-roadmap",
+    "slideId": null
+   },
+   "audio": {
+    "src": "guide-08-athar-os-Ib4oKe91OD.mp3",
+    "clip": "NAR-08",
+    "t": 4.51,
+    "muted": false
+   },
+   "cc": "The roadmap runs now in Q4, 2026, next in 2027 and later in 2028.",
+   "guide": {
+    "state": "playing",
+    "clip": "NAR-08",
+    "slideId": null,
+    "gen": null,
+    "status": "Narrating slide 36 of 39 · 08 Athar OS"
+   },
+   "hash": "#/27/new-9",
+   "step": "Esc → tile 36",
+   "expect": 36
+  },
+  {
+   "scenario": "S04-esc-overview",
+   "t": "2026-10-01T06:13:50.640Z",
+   "ms": 8550,
+   "type": "key",
+   "vis": {
+    "n": 36,
+    "id": "s-aos-roadmap",
+    "slideId": null
+   },
+   "audio": {
+    "src": "guide-08-athar-os-Ib4oKe91OD.mp3",
+    "clip": "NAR-08",
+    "t": 4.66,
+    "muted": false
+   },
+   "cc": "The roadmap runs now in Q4, 2026, next in 2027 and later in 2028.",
+   "guide": {
+    "state": "playing",
+    "clip": "NAR-08",
+    "slideId": null,
+    "gen": null,
+    "status": "Narrating slide 36 of 39 · 08 Athar OS"
+   },
+   "hash": "#/27/new-9",
+   "key": "Escape"
+  },
+  {
+   "scenario": "S04-esc-overview",
+   "t": "2026-10-01T06:13:50.660Z",
+   "ms": 8569,
+   "type": "click",
+   "vis": {
+    "n": 36,
+    "id": "s-aos-roadmap",
+    "slideId": null
+   },
+   "audio": {
+    "src": "guide-08-athar-os-Ib4oKe91OD.mp3",
+    "clip": "NAR-08",
+    "t": 4.68,
+    "muted": false
+   },
+   "cc": "The roadmap runs now in Q4, 2026, next in 2027 and later in 2028.",
+   "guide": {
+    "state": "playing",
+    "clip": "NAR-08",
+    "slideId": null,
+    "gen": null,
+    "status": "Narrating slide 36 of 39 · 08 Athar OS"
+   },
+   "hash": "#/27/new-9",
+   "target": "12The decision in one page"
+  },
+  {
+   "scenario": "S04-esc-overview",
+   "t": "2026-10-01T06:13:50.697Z",
+   "ms": 8606,
+   "type": "sample",
+   "vis": {
+    "n": 12,
+    "id": "s-decision-table",
+    "slideId": null
+   },
+   "audio": {
+    "src": "guide-08-athar-os-Ib4oKe91OD.mp3",
+    "clip": "NAR-08",
+    "t": 4.72,
+    "muted": false
+   },
+   "cc": "The roadmap runs now in Q4, 2026, next in 2027 and later in 2028.",
+   "guide": {
+    "state": "playing",
+    "clip": "NAR-08",
+    "slideId": null,
+    "gen": null,
+    "status": "Narrating slide 36 of 39 · 08 Athar OS"
+   },
+   "hash": "#/12"
+  },
+  {
+   "scenario": "S04-esc-overview",
+   "t": "2026-10-01T06:13:50.736Z",
+   "ms": 8645,
+   "type": "play()",
+   "vis": {
+    "n": 12,
+    "id": "s-decision-table",
+    "slideId": null
+   },
+   "audio": {
+    "src": "guide-08-athar-os-Ib4oKe91OD.mp3",
+    "clip": "NAR-08",
+    "t": 0,
+    "muted": false
+   },
+   "cc": "The roadmap runs now in Q4, 2026, next in 2027 and later in 2028.",
+   "guide": {
+    "state": "playing",
+    "clip": "NAR-08",
+    "slideId": null,
+    "gen": null,
+    "status": "Narrating slide 36 of 39 · 08 Athar OS"
+   },
+   "hash": "#/12",
+   "el": "guide-08-athar-os-Ib4oKe91OD.mp3",
+   "ct": 0
+  },
+  {
+   "scenario": "S04-esc-overview",
+   "t": "2026-10-01T06:13:50.736Z",
+   "ms": 8646,
+   "type": "media:emptied",
+   "vis": {
+    "n": 12,
+    "id": "s-decision-table",
+    "slideId": null
+   },
+   "audio": {
+    "src": "guide-08-athar-os-Ib4oKe91OD.mp3",
+    "clip": "NAR-08",
+    "t": 0,
+    "muted": false
+   },
+   "cc": "Learn agentic AI, build a useful agent through the Builder Journey and Marketplace, deploy it through a named Accountable Institution, and measure a real-world benefit with baseline evidence of time saved, better service, or wider reach.",
+   "guide": {
+    "state": "starting",
+    "clip": "NAR-02",
+    "slideId": null,
+    "gen": null,
+    "status": "Narrating slide 12 of 39 · 02 Community model"
+   },
+   "hash": "#/12",
+   "el": "guide-08-athar-os-Ib4oKe91OD.mp3",
+   "ct": 0
+  },
+  {
+   "scenario": "S04-esc-overview",
+   "t": "2026-10-01T06:13:50.738Z",
+   "ms": 8647,
+   "type": "media:loadstart",
+   "vis": {
+    "n": 12,
+    "id": "s-decision-table",
+    "slideId": null
+   },
+   "audio": {
+    "src": "guide-02-community-model-9gUnFBtxrM.mp3",
+    "clip": "NAR-02",
+    "t": 0,
+    "muted": false
+   },
+   "cc": "Learn agentic AI, build a useful agent through the Builder Journey and Marketplace, deploy it through a named Accountable Institution, and measure a real-world benefit with baseline evidence of time saved, better service, or wider reach.",
+   "guide": {
+    "state": "buffering",
+    "clip": "NAR-02",
+    "slideId": null,
+    "gen": null,
+    "status": "Narrating slide 12 of 39 · 02 Community model"
+   },
+   "hash": "#/12",
+   "el": "guide-02-community-model-9gUnFBtxrM.mp3",
+   "ct": 0
+  },
+  {
+   "scenario": "S04-esc-overview",
+   "t": "2026-10-01T06:13:50.738Z",
+   "ms": 8648,
+   "type": "media:loadstart",
+   "vis": {
+    "n": 12,
+    "id": "s-decision-table",
+    "slideId": null
+   },
+   "audio": {
+    "src": "guide-02-community-model-9gUnFBtxrM.mp3",
+    "clip": "NAR-02",
+    "t": 0,
+    "muted": false
+   },
+   "cc": "Learn agentic AI, build a useful agent through the Builder Journey and Marketplace, deploy it through a named Accountable Institution, and measure a real-world benefit with baseline evidence of time saved, better service, or wider reach.",
+   "guide": {
+    "state": "buffering",
+    "clip": "NAR-02",
+    "slideId": null,
+    "gen": null,
+    "status": "Narrating slide 12 of 39 · 02 Community model"
+   },
+   "hash": "#/12",
+   "el": "guide-03-six-pillars-yxVqZJ2k1a.mp3",
+   "ct": 0
+  },
+  {
+   "scenario": "S04-esc-overview",
+   "t": "2026-10-01T06:13:50.742Z",
+   "ms": 8652,
+   "type": "media:seeked",
+   "vis": {
+    "n": 12,
+    "id": "s-decision-table",
+    "slideId": null
+   },
+   "audio": {
+    "src": "guide-02-community-model-9gUnFBtxrM.mp3",
+    "clip": "NAR-02",
+    "t": 11.12,
+    "muted": false
+   },
+   "cc": "Learn agentic AI, build a useful agent through the Builder Journey and Marketplace, deploy it through a named Accountable Institution, and measure a real-world benefit with baseline evidence of time saved, better service, or wider reach.",
+   "guide": {
+    "state": "buffering",
+    "clip": "NAR-02",
+    "slideId": null,
+    "gen": null,
+    "status": "Narrating slide 12 of 39 · 02 Community model"
+   },
+   "hash": "#/12",
+   "el": "guide-02-community-model-9gUnFBtxrM.mp3",
+   "ct": 11.12
+  },
+  {
+   "scenario": "S04-esc-overview",
+   "t": "2026-10-01T06:13:50.743Z",
+   "ms": 8652,
+   "type": "media:canplay",
+   "vis": {
+    "n": 12,
+    "id": "s-decision-table",
+    "slideId": null
+   },
+   "audio": {
+    "src": "guide-02-community-model-9gUnFBtxrM.mp3",
+    "clip": "NAR-02",
+    "t": 11.12,
+    "muted": false
+   },
+   "cc": "Learn agentic AI, build a useful agent through the Builder Journey and Marketplace, deploy it through a named Accountable Institution, and measure a real-world benefit with baseline evidence of time saved, better service, or wider reach.",
+   "guide": {
+    "state": "buffering",
+    "clip": "NAR-02",
+    "slideId": null,
+    "gen": null,
+    "status": "Narrating slide 12 of 39 · 02 Community model"
+   },
+   "hash": "#/12",
+   "el": "guide-02-community-model-9gUnFBtxrM.mp3",
+   "ct": 11.12
+  },
+  {
+   "scenario": "S04-esc-overview",
+   "t": "2026-10-01T06:13:50.743Z",
+   "ms": 8652,
+   "type": "media:playing",
+   "vis": {
+    "n": 12,
+    "id": "s-decision-table",
+    "slideId": null
+   },
+   "audio": {
+    "src": "guide-02-community-model-9gUnFBtxrM.mp3",
+    "clip": "NAR-02",
+    "t": 11.12,
+    "muted": false
+   },
+   "cc": "Learn agentic AI, build a useful agent through the Builder Journey and Marketplace, deploy it through a named Accountable Institution, and measure a real-world benefit with baseline evidence of time saved, better service, or wider reach.",
+   "guide": {
+    "state": "playing",
+    "clip": "NAR-02",
+    "slideId": null,
+    "gen": null,
+    "status": "Narrating slide 12 of 39 · 02 Community model"
+   },
+   "hash": "#/12",
+   "el": "guide-02-community-model-9gUnFBtxrM.mp3",
+   "ct": 11.12
+  },
+  {
+   "scenario": "S04-esc-overview",
+   "t": "2026-10-01T06:13:50.743Z",
+   "ms": 8652,
+   "type": "play():resolved",
+   "vis": {
+    "n": 12,
+    "id": "s-decision-table",
+    "slideId": null
+   },
+   "audio": {
+    "src": "guide-02-community-model-9gUnFBtxrM.mp3",
+    "clip": "NAR-02",
+    "t": 11.12,
+    "muted": false
+   },
+   "cc": "Learn agentic AI, build a useful agent through the Builder Journey and Marketplace, deploy it through a named Accountable Institution, and measure a real-world benefit with baseline evidence of time saved, better service, or wider reach.",
+   "guide": {
+    "state": "playing",
+    "clip": "NAR-02",
+    "slideId": null,
+    "gen": null,
+    "status": "Narrating slide 12 of 39 · 02 Community model"
+   },
+   "hash": "#/12",
+   "el": "guide-08-athar-os-Ib4oKe91OD.mp3"
+  },
+  {
+   "scenario": "S04-esc-overview",
+   "t": "2026-10-01T06:13:50.745Z",
+   "ms": 8654,
+   "type": "media:canplay",
+   "vis": {
+    "n": 12,
+    "id": "s-decision-table",
+    "slideId": null
+   },
+   "audio": {
+    "src": "guide-02-community-model-9gUnFBtxrM.mp3",
+    "clip": "NAR-02",
+    "t": 11.12,
+    "muted": false
+   },
+   "cc": "Learn agentic AI, build a useful agent through the Builder Journey and Marketplace, deploy it through a named Accountable Institution, and measure a real-world benefit with baseline evidence of time saved, better service, or wider reach.",
+   "guide": {
+    "state": "playing",
+    "clip": "NAR-02",
+    "slideId": null,
+    "gen": null,
+    "status": "Narrating slide 12 of 39 · 02 Community model"
+   },
+   "hash": "#/12",
+   "el": "guide-03-six-pillars-yxVqZJ2k1a.mp3",
+   "ct": 0
+  },
+  {
+   "scenario": "S04-esc-overview",
+   "t": "2026-10-01T06:13:50.791Z",
+   "ms": 8701,
+   "type": "sample",
+   "vis": {
+    "n": 12,
+    "id": "s-decision-table",
+    "slideId": null
+   },
+   "audio": {
+    "src": "guide-02-community-model-9gUnFBtxrM.mp3",
+    "clip": "NAR-02",
+    "t": 11.14,
+    "muted": false
+   },
+   "cc": "Learn agentic AI, build a useful agent through the Builder Journey and Marketplace, deploy it through a named Accountable Institution, and measure a real-world benefit with baseline evidence of time saved, better service, or wider reach.",
+   "guide": {
+    "state": "playing",
+    "clip": "NAR-02",
+    "slideId": null,
+    "gen": null,
+    "status": "Narrating slide 12 of 39 · 02 Community model"
+   },
+   "hash": "#/12"
+  },
+  {
+   "scenario": "S04-esc-overview",
+   "t": "2026-10-01T06:13:53.190Z",
+   "ms": 11100,
+   "type": "check",
+   "vis": {
+    "n": 12,
+    "id": "s-decision-table",
+    "slideId": null
+   },
+   "audio": {
+    "src": "guide-02-community-model-9gUnFBtxrM.mp3",
+    "clip": "NAR-02",
+    "t": 13.5,
+    "muted": false
+   },
+   "cc": "Learn agentic AI, build a useful agent through the Builder Journey and Marketplace, deploy it through a named Accountable Institution, and measure a real-world benefit with baseline evidence of time saved, better service, or wider reach.",
+   "guide": {
+    "state": "playing",
+    "clip": "NAR-02",
+    "slideId": null,
+    "gen": null,
+    "status": "Narrating slide 12 of 39 · 02 Community model"
+   },
+   "hash": "#/12",
+   "step": "Esc → tile 12",
+   "expect": 12
+  }
+ ],
+ "console": []
+}

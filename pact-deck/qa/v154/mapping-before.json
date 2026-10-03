@@ -1,0 +1,2138 @@
+{
+ "generated": "2026-10-01T06:20:46Z",
+ "method": "Clip-mapping verification (v1.5.4): ElevenLabs Scribe transcripts (word timestamps) vs slide ids (DOM text), cues.json and the guide scripts.\nEvery cue is aligned onto the Scribe word stream (difflib over normalised tokens), so its true start/end come from the audio; every sentence\nis scored against the slides of its own section with TF-IDF cosine on the slides' visible EN text. Usage: python3 mapping.py <dom-text.json> <out.json>",
+ "clips": [
+  {
+   "clipId": "NAR-00",
+   "section": "Welcome",
+   "file": "/audio/guide/guide-00-welcome-lhbIUXFwLO.mp3",
+   "sha256": "a7d2263e53d08bccdeb1f26fa90a9471303d00d82f9ae330f381f73670f009bc",
+   "transcriptionId": "a75l8XUXooNbFFDU2PwS",
+   "scribeDurationSec": 17.1363125,
+   "localDurationSec": 17.16,
+   "language": "eng",
+   "languageProbability": 1,
+   "words": 44,
+   "scribeText": "Welcome to the Athar Open Agentic Pact, a community proposal from ODA and Aerev. This guided narration walks you through the pact, its community model, six pillars, governance, impact tiers, and the Athar OS roadmap. Use the arrows to move at your own pace.",
+   "elevenLabsHistoryText": "Welcome to the Athar Open Agentic Pact, a community proposal from ODA and AIREV. This guided narration walks you through the pact, its community model, six pillars, governance, impact tiers, and the Athar OS roadmap. Use the arrows to move at your own pace.",
+   "ratioVsHistoryText": 1.0,
+   "ratioVsCuesText": 1.0,
+   "ratioVsManifestText": 1.0,
+   "manifestSlides": [
+    1
+   ],
+   "cueSlides": [
+    1
+   ],
+   "repoGuideScriptBest": {
+    "step": "slide 1 · s1-open",
+    "ratio": 0.196
+   },
+   "maxAbsTimingDriftSec": 0.41,
+   "cues": [
+    {
+     "cue": 1,
+     "anchor": "s1-c1",
+     "cueSlide": 1,
+     "verifiedSlide": 1,
+     "cueText": "Welcome to the Athar Open Agentic Pact, a community proposal from ODA and AIREV.",
+     "scribeText": "Welcome to the Athar Open Agentic Pact, a community proposal from ODA and Aerev.",
+     "textRatio": 1.0,
+     "cueStart": 0,
+     "cueEnd": 5.39,
+     "scribeStart": 0.1,
+     "scribeEnd": 5.1,
+     "driftStart": -0.1,
+     "driftEnd": 0.29,
+     "tfidfAssigned": 0.222,
+     "tfidfBest": 0.222,
+     "bestSlide": 1,
+     "sectionIntro": false
+    },
+    {
+     "cue": 2,
+     "anchor": "s1-c2",
+     "cueSlide": 1,
+     "verifiedSlide": 1,
+     "cueText": "This guided narration walks you through the pact, its community model, six pillars, governance, impact tiers, and the Athar OS roadmap.",
+     "scribeText": "This guided narration walks you through the pact, its community model, six pillars, governance, impact tiers, and the Athar OS roadmap.",
+     "textRatio": 1.0,
+     "cueStart": 5.39,
+     "cueEnd": 14.47,
+     "scribeStart": 5.78,
+     "scribeEnd": 14.16,
+     "driftStart": -0.39,
+     "driftEnd": 0.31,
+     "tfidfAssigned": 0.011,
+     "tfidfBest": 0.011,
+     "bestSlide": 1,
+     "sectionIntro": false
+    },
+    {
+     "cue": 3,
+     "anchor": "s1-c3",
+     "cueSlide": 1,
+     "verifiedSlide": 1,
+     "cueText": "Use the arrows to move at your own pace.",
+     "scribeText": "Use the arrows to move at your own pace.",
+     "textRatio": 1.0,
+     "cueStart": 14.47,
+     "cueEnd": 17.16,
+     "scribeStart": 14.88,
+     "scribeEnd": 16.84,
+     "driftStart": -0.41,
+     "driftEnd": 0.32,
+     "tfidfAssigned": 0.0,
+     "tfidfBest": 0.0,
+     "bestSlide": 1,
+     "sectionIntro": false
+    }
+   ]
+  },
+  {
+   "clipId": "NAR-01",
+   "section": "01 The pact",
+   "file": "/audio/guide/guide-01-the-pact-df1pHtGsVr.mp3",
+   "sha256": "c1107a2d96eb9550784b278dada4746ac8bddd528b6020dc11e879e0c53986ba",
+   "transcriptionId": "UMdrRFEJoQ6rd7VAUsgE",
+   "scribeDurationSec": 24.9846875,
+   "localDurationSec": 25.03,
+   "language": "eng",
+   "languageProbability": 1,
+   "words": 58,
+   "scribeText": "Section one: The Pact. The Ethar Open Agentic Pact is an open commitment between institutions, partners, and platforms to learn, build, and deploy agentic AI for public benefit. It is a community proposal from ODA and AI Rev, designed as a community, not a product. Signatories agree on shared standards, an open plugin approach, and measurable real-world outcomes",
+   "elevenLabsHistoryText": "Section one, the Pact. The Athar Open Agentic Pact is an open commitment between institutions, partners and platforms to learn, build and deploy agentic AI for public benefit. It is a community proposal from ODA and AI Rev, designed as a community, not a product. Signatories agree on shared standards, an open plugin approach and measurable real-world outcomes.",
+   "ratioVsHistoryText": 1.0,
+   "ratioVsCuesText": 1.0,
+   "ratioVsManifestText": 1.0,
+   "manifestSlides": [
+    2,
+    3
+   ],
+   "cueSlides": [
+    2,
+    3
+   ],
+   "repoGuideScriptBest": {
+    "step": "slide 2 · s2-g1",
+    "ratio": 0.182
+   },
+   "maxAbsTimingDriftSec": 1.0,
+   "cues": [
+    {
+     "cue": 1,
+     "anchor": "s2-c1",
+     "cueSlide": 2,
+     "verifiedSlide": 2,
+     "cueText": "Section one, the Pact.",
+     "scribeText": "Section one: The Pact.",
+     "textRatio": 1.0,
+     "cueStart": 0,
+     "cueEnd": 1.53,
+     "scribeStart": 0.08,
+     "scribeEnd": 1.46,
+     "driftStart": -0.08,
+     "driftEnd": 0.07,
+     "tfidfAssigned": 0.05,
+     "tfidfBest": 0.068,
+     "bestSlide": 3,
+     "sectionIntro": true
+    },
+    {
+     "cue": 2,
+     "anchor": "s2-c2",
+     "cueSlide": 2,
+     "verifiedSlide": 2,
+     "cueText": "The Athar Open Agentic Pact is an open commitment between institutions, partners and platforms to learn, build and deploy agentic AI for public benefit.",
+     "scribeText": "The Ethar Open Agentic Pact is an open commitment between institutions, partners, and platforms to learn, build, and deploy agentic AI for public benefit.",
+     "textRatio": 1.0,
+     "cueStart": 1.53,
+     "cueEnd": 12.13,
+     "scribeStart": 2.08,
+     "scribeEnd": 11.78,
+     "driftStart": -0.55,
+     "driftEnd": 0.35,
+     "tfidfAssigned": 0.262,
+     "tfidfBest": 0.262,
+     "bestSlide": 2,
+     "sectionIntro": false
+    },
+    {
+     "cue": 3,
+     "anchor": "s3-c1",
+     "cueSlide": 3,
+     "verifiedSlide": 3,
+     "cueText": "It is a community proposal from ODA and AI Rev, designed as a community, not a product.",
+     "scribeText": "It is a community proposal from ODA and AI Rev, designed as a community, not a product.",
+     "textRatio": 1.0,
+     "cueStart": 12.13,
+     "cueEnd": 18.2,
+     "scribeStart": 12.44,
+     "scribeEnd": 18.48,
+     "driftStart": -0.31,
+     "driftEnd": -0.28,
+     "tfidfAssigned": 0.055,
+     "tfidfBest": 0.055,
+     "bestSlide": 3,
+     "sectionIntro": false
+    },
+    {
+     "cue": 4,
+     "anchor": "s3-c2",
+     "cueSlide": 3,
+     "verifiedSlide": 2,
+     "cueText": "Signatories agree on shared standards, an open plugin approach and measurable real-world outcomes.",
+     "scribeText": "Signatories agree on shared standards, an open plugin approach, and measurable real-world outcomes",
+     "textRatio": 1.0,
+     "cueStart": 18.2,
+     "cueEnd": 25.03,
+     "scribeStart": 19.2,
+     "scribeEnd": 24.64,
+     "driftStart": -1.0,
+     "driftEnd": 0.39,
+     "tfidfAssigned": 0.036,
+     "tfidfBest": 0.135,
+     "bestSlide": 2,
+     "sectionIntro": false
+    }
+   ]
+  },
+  {
+   "clipId": "NAR-02",
+   "section": "02 Community model",
+   "file": "/audio/guide/guide-02-community-model-9gUnFBtxrM.mp3",
+   "sha256": "c810c12479ddbb16f77648447e606fd79cf866f3f04aaeeca2ab6caf9d0dc0fa",
+   "transcriptionId": "C791aNHPtObPgzgzZRLv",
+   "scribeDurationSec": 26.6565,
+   "localDurationSec": 26.7,
+   "language": "eng",
+   "languageProbability": 1,
+   "words": 62,
+   "scribeText": "Section two: The community model. Every webinar, chapter event, and challenge should lead somewhere real, so the model is built around four outcomes for every participant. Learn agentic AI, build a useful agent through the builder journey and marketplace, deploy it through a named accountable institution, and measure a real-world benefit with baseline evidence of time saved, better service, or wider reach",
+   "elevenLabsHistoryText": "Section two, the Community Model. Every webinar, chapter event and challenge should lead somewhere real, so the model is built around four outcomes for every participant. Learn agentic AI, build a useful agent through the Builder Journey and Marketplace, deploy it through a named Accountable Institution, and measure a real-world benefit with baseline evidence of time saved, better service, or wider reach.",
+   "ratioVsHistoryText": 1.0,
+   "ratioVsCuesText": 1.0,
+   "ratioVsManifestText": 1.0,
+   "manifestSlides": [
+    4,
+    5,
+    6,
+    7,
+    8,
+    9,
+    10,
+    11,
+    12
+   ],
+   "cueSlides": [
+    4,
+    7,
+    11
+   ],
+   "repoGuideScriptBest": {
+    "step": "slide 1 · s1-g2",
+    "ratio": 0.122
+   },
+   "maxAbsTimingDriftSec": 0.68,
+   "cues": [
+    {
+     "cue": 1,
+     "anchor": "s4-c1",
+     "cueSlide": 4,
+     "verifiedSlide": 4,
+     "cueText": "Section two, the Community Model.",
+     "scribeText": "Section two: The community model.",
+     "textRatio": 1.0,
+     "cueStart": 0,
+     "cueEnd": 2.17,
+     "scribeStart": 0.08,
+     "scribeEnd": 2.02,
+     "driftStart": -0.08,
+     "driftEnd": 0.15,
+     "tfidfAssigned": 0.0,
+     "tfidfBest": 0.075,
+     "bestSlide": 12,
+     "sectionIntro": true
+    },
+    {
+     "cue": 2,
+     "anchor": "s7-c1",
+     "cueSlide": 7,
+     "verifiedSlide": 4,
+     "cueText": "Every webinar, chapter event and challenge should lead somewhere real, so the model is built around four outcomes for every participant.",
+     "scribeText": "Every webinar, chapter event, and challenge should lead somewhere real, so the model is built around four outcomes for every participant.",
+     "textRatio": 1.0,
+     "cueStart": 2.17,
+     "cueEnd": 11.12,
+     "scribeStart": 2.78,
+     "scribeEnd": 10.44,
+     "driftStart": -0.61,
+     "driftEnd": 0.68,
+     "tfidfAssigned": 0.073,
+     "tfidfBest": 0.389,
+     "bestSlide": 4,
+     "sectionIntro": false
+    },
+    {
+     "cue": 3,
+     "anchor": "s11-c1",
+     "cueSlide": 11,
+     "verifiedSlide": 4,
+     "cueText": "Learn agentic AI, build a useful agent through the Builder Journey and Marketplace, deploy it through a named Accountable Institution, and measure a real-world benefit with baseline evidence of time saved, better service, or wider reach.",
+     "scribeText": "Learn agentic AI, build a useful agent through the builder journey and marketplace, deploy it through a named accountable institution, and measure a real-world benefit with baseline evidence of time saved, better service, or wider reach",
+     "textRatio": 1.0,
+     "cueStart": 11.12,
+     "cueEnd": 26.7,
+     "scribeStart": 11.46,
+     "scribeEnd": 26.3,
+     "driftStart": -0.34,
+     "driftEnd": 0.4,
+     "tfidfAssigned": 0.098,
+     "tfidfBest": 0.653,
+     "bestSlide": 4,
+     "sectionIntro": false
+    }
+   ]
+  },
+  {
+   "clipId": "NAR-03",
+   "section": "03 Six pillars",
+   "file": "/audio/guide/guide-03-six-pillars-yxVqZJ2k1a.mp3",
+   "sha256": "c86da1d11920c022eeca1441dbee5f6a8a6a352bc19763de6a8670bb584c01bf",
+   "transcriptionId": "5MO3ptKTPO4wLo2DSUUo",
+   "scribeDurationSec": 19.3654375,
+   "localDurationSec": 19.41,
+   "language": "eng",
+   "languageProbability": 1,
+   "words": 41,
+   "scribeText": "Section three: Six pillars. Plugins are the connective tissue. One shared plugin standard, so every integration works everywhere. Reusable skills are built once and shared across the community. Universal API licenses are managed by Athar, giving members access without duplicated procurement",
+   "elevenLabsHistoryText": "Section three, six pillars. Plugins are the connective tissue: one shared plugin standard, so every integration works everywhere. Reusable skills are built once and shared across the community. Universal API licences are managed by Athar, giving members access without duplicated procurement.",
+   "ratioVsHistoryText": 1.0,
+   "ratioVsCuesText": 1.0,
+   "ratioVsManifestText": 1.0,
+   "manifestSlides": [
+    13,
+    14,
+    15,
+    16,
+    17,
+    18
+   ],
+   "cueSlides": [
+    13,
+    14,
+    17
+   ],
+   "repoGuideScriptBest": {
+    "step": "slide 1 · s1-g6",
+    "ratio": 0.131
+   },
+   "maxAbsTimingDriftSec": 0.71,
+   "cues": [
+    {
+     "cue": 1,
+     "anchor": "s13-c1",
+     "cueSlide": 13,
+     "verifiedSlide": 13,
+     "cueText": "Section three, six pillars.",
+     "scribeText": "Section three: Six pillars.",
+     "textRatio": 1.0,
+     "cueStart": 0,
+     "cueEnd": 1.81,
+     "scribeStart": 0.1,
+     "scribeEnd": 1.88,
+     "driftStart": -0.1,
+     "driftEnd": -0.07,
+     "tfidfAssigned": 0.0,
+     "tfidfBest": 0.0,
+     "bestSlide": 13,
+     "sectionIntro": true
+    },
+    {
+     "cue": 2,
+     "anchor": "s13-c2",
+     "cueSlide": 13,
+     "verifiedSlide": 13,
+     "cueText": "Plugins are the connective tissue: one shared plugin standard, so every integration works everywhere.",
+     "scribeText": "Plugins are the connective tissue. One shared plugin standard, so every integration works everywhere.",
+     "textRatio": 1.0,
+     "cueStart": 1.81,
+     "cueEnd": 8.6,
+     "scribeStart": 2.52,
+     "scribeEnd": 8.28,
+     "driftStart": -0.71,
+     "driftEnd": 0.32,
+     "tfidfAssigned": 0.446,
+     "tfidfBest": 0.446,
+     "bestSlide": 13,
+     "sectionIntro": false
+    },
+    {
+     "cue": 3,
+     "anchor": "s14-c1",
+     "cueSlide": 14,
+     "verifiedSlide": 14,
+     "cueText": "Reusable skills are built once and shared across the community.",
+     "scribeText": "Reusable skills are built once and shared across the community.",
+     "textRatio": 1.0,
+     "cueStart": 8.6,
+     "cueEnd": 12.83,
+     "scribeStart": 8.96,
+     "scribeEnd": 12.26,
+     "driftStart": -0.36,
+     "driftEnd": 0.57,
+     "tfidfAssigned": 0.256,
+     "tfidfBest": 0.256,
+     "bestSlide": 14,
+     "sectionIntro": false
+    },
+    {
+     "cue": 4,
+     "anchor": "s17-c1",
+     "cueSlide": 17,
+     "verifiedSlide": 17,
+     "cueText": "Universal API licences are managed by Athar, giving members access without duplicated procurement.",
+     "scribeText": "Universal API licenses are managed by Athar, giving members access without duplicated procurement",
+     "textRatio": 1.0,
+     "cueStart": 12.83,
+     "cueEnd": 19.41,
+     "scribeStart": 12.96,
+     "scribeEnd": 19.04,
+     "driftStart": -0.13,
+     "driftEnd": 0.37,
+     "tfidfAssigned": 0.151,
+     "tfidfBest": 0.151,
+     "bestSlide": 17,
+     "sectionIntro": false
+    }
+   ]
+  },
+  {
+   "clipId": "NAR-04",
+   "section": "04 Pledge & signing",
+   "file": "/audio/guide/guide-04-pledge-and-signing-PWeXZj1Rgc.mp3",
+   "sha256": "5e90ce2e8f4a35681a8e3c80abea3c0beab858c67ea3f50b8d30f8fe76df2967",
+   "transcriptionId": "IwnuzAAwVIp8nERFOhhv",
+   "scribeDurationSec": 24.5203125,
+   "localDurationSec": 24.56,
+   "language": "eng",
+   "languageProbability": 1,
+   "words": 62,
+   "scribeText": "Section four: Pledge and signing. Joining the pact is a simple public commitment. A signatory chooses its roles: sign, govern, build, or learn, and pledges to contribute to at least one of the four participant outcomes. Signing brings access to the learning pathway, the builder journey, and the plugin standard, together with a commitment to report outcomes through the shared impact tiers",
+   "elevenLabsHistoryText": "Section four, Pledge and Signing. Joining the Pact is a simple public commitment. A signatory chooses its roles, sign, govern, build or learn, and pledges to contribute to at least one of the four participant outcomes. Signing brings access to the learning pathway, the builder journey, and the plugin standard, together with a commitment to report outcomes through the shared impact tiers.",
+   "ratioVsHistoryText": 1.0,
+   "ratioVsCuesText": 1.0,
+   "ratioVsManifestText": 1.0,
+   "manifestSlides": [
+    19,
+    20
+   ],
+   "cueSlides": [
+    19,
+    20
+   ],
+   "repoGuideScriptBest": {
+    "step": "slide 1 · s1-g6",
+    "ratio": 0.146
+   },
+   "maxAbsTimingDriftSec": 1.17,
+   "cues": [
+    {
+     "cue": 1,
+     "anchor": "s19-c1",
+     "cueSlide": 19,
+     "verifiedSlide": 19,
+     "cueText": "Section four, Pledge and Signing.",
+     "scribeText": "Section four: Pledge and signing.",
+     "textRatio": 1.0,
+     "cueStart": 0,
+     "cueEnd": 2.09,
+     "scribeStart": 0.1,
+     "scribeEnd": 2.08,
+     "driftStart": -0.1,
+     "driftEnd": 0.01,
+     "tfidfAssigned": 0.0,
+     "tfidfBest": 0.0,
+     "bestSlide": 19,
+     "sectionIntro": true
+    },
+    {
+     "cue": 2,
+     "anchor": "s19-c2",
+     "cueSlide": 19,
+     "verifiedSlide": 19,
+     "cueText": "Joining the Pact is a simple public commitment.",
+     "scribeText": "Joining the pact is a simple public commitment.",
+     "textRatio": 1.0,
+     "cueStart": 2.09,
+     "cueEnd": 5.08,
+     "scribeStart": 2.7,
+     "scribeEnd": 5.1,
+     "driftStart": -0.61,
+     "driftEnd": -0.02,
+     "tfidfAssigned": 0.096,
+     "tfidfBest": 0.096,
+     "bestSlide": 19,
+     "sectionIntro": false
+    },
+    {
+     "cue": 3,
+     "anchor": "s20-c1",
+     "cueSlide": 20,
+     "verifiedSlide": 20,
+     "cueText": "A signatory chooses its roles, sign, govern, build or learn, and pledges to contribute to at least one of the four participant outcomes.",
+     "scribeText": "A signatory chooses its roles: sign, govern, build, or learn, and pledges to contribute to at least one of the four participant outcomes.",
+     "textRatio": 1.0,
+     "cueStart": 5.08,
+     "cueEnd": 13.71,
+     "scribeStart": 6.02,
+     "scribeEnd": 14.18,
+     "driftStart": -0.94,
+     "driftEnd": -0.47,
+     "tfidfAssigned": 0.051,
+     "tfidfBest": 0.071,
+     "bestSlide": 19,
+     "sectionIntro": false
+    },
+    {
+     "cue": 4,
+     "anchor": "s20-c2",
+     "cueSlide": 20,
+     "verifiedSlide": 20,
+     "cueText": "Signing brings access to the learning pathway, the builder journey, and the plugin standard, together with a commitment to report outcomes through the shared impact tiers.",
+     "scribeText": "Signing brings access to the learning pathway, the builder journey, and the plugin standard, together with a commitment to report outcomes through the shared impact tiers",
+     "textRatio": 1.0,
+     "cueStart": 13.71,
+     "cueEnd": 24.56,
+     "scribeStart": 14.88,
+     "scribeEnd": 24.16,
+     "driftStart": -1.17,
+     "driftEnd": 0.4,
+     "tfidfAssigned": 0.062,
+     "tfidfBest": 0.062,
+     "bestSlide": 20,
+     "sectionIntro": false
+    }
+   ]
+  },
+  {
+   "clipId": "NAR-05",
+   "section": "05 Actors & roles",
+   "file": "/audio/guide/guide-05-actors-and-roles-0PbyoFNYNV.mp3",
+   "sha256": "254c252aa57400a01aaa4f6e0c9edf684dd65c5b6713e076cdf45239415b8095",
+   "transcriptionId": "UMJ4XBjGzmKMoWOrmZkm",
+   "scribeDurationSec": 31.48625,
+   "localDurationSec": 31.53,
+   "language": "eng",
+   "languageProbability": 1,
+   "words": 63,
+   "scribeText": "Section five: Actors and roles. Institutions, partners, and platforms building the Athar ecosystem together. ODA and Arev sign and govern, with Arev on demand, E&AI& and Discord building. UNDP, UNICEF, IFRC, WFP, and UNHCR sign and learn. The UAE Ministry of Foreign Trade signs and governs, and the United Arab Emirates governs. Every actor has a clear role: sign, govern, build, or learn",
+   "elevenLabsHistoryText": "Section five, Actors and Roles, institutions, partners and platforms building the Athar ecosystem together, ODA and AIREV sign and govern, with AIREV, OnDemand, e& and ai& and Discord building, UNDP, UNICEF, IFRC, WFP and UNHCR sign and learn. The UAE Ministry of Foreign Trade signs and governs and the United Arab Emirates governs. Every actor has a clear role, sign, govern, build or learn.",
+   "ratioVsHistoryText": 0.945,
+   "ratioVsCuesText": 0.945,
+   "ratioVsManifestText": 0.945,
+   "manifestSlides": [
+    21,
+    22,
+    23,
+    24,
+    25
+   ],
+   "cueSlides": [
+    21,
+    23
+   ],
+   "repoGuideScriptBest": {
+    "step": "slide 1 · s1-anchors",
+    "ratio": 0.168
+   },
+   "maxAbsTimingDriftSec": 1.43,
+   "cues": [
+    {
+     "cue": 1,
+     "anchor": "s21-c1",
+     "cueSlide": 21,
+     "verifiedSlide": 21,
+     "cueText": "Section five, Actors and Roles, institutions, partners and platforms building the Athar ecosystem together, ODA and AIREV sign and govern, with AIREV, OnDemand, e& and ai& and Discord building, UNDP, UNICEF, IFRC, WFP and UNHCR sign and learn.",
+     "scribeText": "Section five: Actors and roles. Institutions, partners, and platforms building the Athar ecosystem together. ODA and Arev sign and govern, with Arev on demand, E&AI& and Discord building. UNDP, UNICEF, IFRC, WFP, and UNHCR sign and learn.",
+     "textRatio": 0.907,
+     "cueStart": 0,
+     "cueEnd": 19.59,
+     "scribeStart": 0.1,
+     "scribeEnd": 20.36,
+     "driftStart": -0.1,
+     "driftEnd": -0.77,
+     "tfidfAssigned": 0.219,
+     "tfidfBest": 0.219,
+     "bestSlide": 21,
+     "sectionIntro": false
+    },
+    {
+     "cue": 2,
+     "anchor": "s23-c1",
+     "cueSlide": 23,
+     "verifiedSlide": 21,
+     "cueText": "The UAE Ministry of Foreign Trade signs and governs and the United Arab Emirates governs.",
+     "scribeText": "The UAE Ministry of Foreign Trade signs and governs, and the United Arab Emirates governs.",
+     "textRatio": 1.0,
+     "cueStart": 19.59,
+     "cueEnd": 26.77,
+     "scribeStart": 21.02,
+     "scribeEnd": 26.06,
+     "driftStart": -1.43,
+     "driftEnd": 0.71,
+     "tfidfAssigned": 0.107,
+     "tfidfBest": 0.283,
+     "bestSlide": 21,
+     "sectionIntro": false
+    },
+    {
+     "cue": 3,
+     "anchor": "s23-c2",
+     "cueSlide": 23,
+     "verifiedSlide": 23,
+     "cueText": "Every actor has a clear role, sign, govern, build or learn.",
+     "scribeText": "Every actor has a clear role: sign, govern, build, or learn",
+     "textRatio": 1.0,
+     "cueStart": 26.77,
+     "cueEnd": 31.53,
+     "scribeStart": 27,
+     "scribeEnd": 31.12,
+     "driftStart": -0.23,
+     "driftEnd": 0.41,
+     "tfidfAssigned": 0.133,
+     "tfidfBest": 0.133,
+     "bestSlide": 23,
+     "sectionIntro": false
+    }
+   ]
+  },
+  {
+   "clipId": "NAR-06",
+   "section": "06 Governance & roadmap",
+   "file": "/audio/guide/guide-06-governance-and-roadmap-kyzmCSHcw8.mp3",
+   "sha256": "7d6007d69c91b6460c7a69e877ef69fac67cb8727ce6bfa1cefb26a5946dc938",
+   "transcriptionId": "dqbfgGU4s7dQkqzPwCaM",
+   "scribeDurationSec": 15.6966875,
+   "localDurationSec": 15.73,
+   "language": "eng",
+   "languageProbability": 1,
+   "words": 41,
+   "scribeText": "Section six: Governance and roadmap. An open steering council sets the shared plugin standard and approves the roadmap. Decisions, releases, and outcome reports are published so every member can see how priorities are set and how the platform evolves over time",
+   "elevenLabsHistoryText": "Section six, governance and roadmap. An open steering council sets the shared plugin standard and approves the roadmap. Decisions, releases, and outcome reports are published, so every member can see how priorities are set and how the platform evolves over time.",
+   "ratioVsHistoryText": 1.0,
+   "ratioVsCuesText": 1.0,
+   "ratioVsManifestText": 1.0,
+   "manifestSlides": [
+    26,
+    27
+   ],
+   "cueSlides": [
+    26,
+    27
+   ],
+   "repoGuideScriptBest": {
+    "step": "slide 2 · s2-g6",
+    "ratio": 0.145
+   },
+   "maxAbsTimingDriftSec": 0.6,
+   "cues": [
+    {
+     "cue": 1,
+     "anchor": "s26-c1",
+     "cueSlide": 26,
+     "verifiedSlide": 26,
+     "cueText": "Section six, governance and roadmap.",
+     "scribeText": "Section six: Governance and roadmap.",
+     "textRatio": 1.0,
+     "cueStart": 0,
+     "cueEnd": 2.17,
+     "scribeStart": 0.1,
+     "scribeEnd": 2.22,
+     "driftStart": -0.1,
+     "driftEnd": -0.05,
+     "tfidfAssigned": 0.142,
+     "tfidfBest": 0.142,
+     "bestSlide": 26,
+     "sectionIntro": true
+    },
+    {
+     "cue": 2,
+     "anchor": "s26-c2",
+     "cueSlide": 26,
+     "verifiedSlide": 26,
+     "cueText": "An open steering council sets the shared plugin standard and approves the roadmap.",
+     "scribeText": "An open steering council sets the shared plugin standard and approves the roadmap.",
+     "textRatio": 1.0,
+     "cueStart": 2.17,
+     "cueEnd": 7.14,
+     "scribeStart": 2.62,
+     "scribeEnd": 7.04,
+     "driftStart": -0.45,
+     "driftEnd": 0.1,
+     "tfidfAssigned": 0.151,
+     "tfidfBest": 0.151,
+     "bestSlide": 26,
+     "sectionIntro": false
+    },
+    {
+     "cue": 3,
+     "anchor": "s27-c1",
+     "cueSlide": 27,
+     "verifiedSlide": 27,
+     "cueText": "Decisions, releases, and outcome reports are published, so every member can see how priorities are set and how the platform evolves over time.",
+     "scribeText": "Decisions, releases, and outcome reports are published so every member can see how priorities are set and how the platform evolves over time",
+     "textRatio": 1.0,
+     "cueStart": 7.14,
+     "cueEnd": 15.73,
+     "scribeStart": 7.74,
+     "scribeEnd": 15.32,
+     "driftStart": -0.6,
+     "driftEnd": 0.41,
+     "tfidfAssigned": 0.038,
+     "tfidfBest": 0.038,
+     "bestSlide": 27,
+     "sectionIntro": false
+    }
+   ]
+  },
+  {
+   "clipId": "NAR-07",
+   "section": "07 Impact & funding",
+   "file": "/audio/guide/guide-07-impact-and-funding-vWkiINp1IS.mp3",
+   "sha256": "e91ca756d9cb5bb74173e1b27736d547c37c152d185f8874d05b70377e5b55ae",
+   "transcriptionId": "SXylrucNGrpJAjWs5TCu",
+   "scribeDurationSec": 30.2788125,
+   "localDurationSec": 30.33,
+   "language": "eng",
+   "languageProbability": 1,
+   "words": 65,
+   "scribeText": "Section seven: Impact and funding. Three impact tiers, one delivery model: access, ownership, legacy. A funder can enter at any tier and climb. Every agreement includes named cohorts and activation targets, independent evaluator baselines, quarterly outcome reports, and open book costs with unspent funds returned. Universal API licenses, marketplace revenue share, and sovereign pilot options fund the model so each partner can choose what fits",
+   "elevenLabsHistoryText": "Section seven, Impact and Funding. Three impact tiers, one delivery model, access, ownership, legacy. A funder can enter at any tier and climb. Every agreement includes named cohorts and activation targets, independent evaluator baselines, quarterly outcome reports, and open book costs with unspent funds returned. Universal API licenses, marketplace revenue share and sovereign pilot options fund the model so each partner can choose what fits.",
+   "ratioVsHistoryText": 1.0,
+   "ratioVsCuesText": 1.0,
+   "ratioVsManifestText": 1.0,
+   "manifestSlides": [
+    28,
+    29,
+    30,
+    31,
+    32,
+    33
+   ],
+   "cueSlides": [
+    28,
+    29,
+    30,
+    31
+   ],
+   "repoGuideScriptBest": {
+    "step": "slide 1 · s1-product",
+    "ratio": 0.11
+   },
+   "maxAbsTimingDriftSec": 1.1,
+   "cues": [
+    {
+     "cue": 1,
+     "anchor": "s28-c1",
+     "cueSlide": 28,
+     "verifiedSlide": 28,
+     "cueText": "Section seven, Impact and Funding.",
+     "scribeText": "Section seven: Impact and funding.",
+     "textRatio": 1.0,
+     "cueStart": 0,
+     "cueEnd": 2.33,
+     "scribeStart": 0.1,
+     "scribeEnd": 2.04,
+     "driftStart": -0.1,
+     "driftEnd": 0.29,
+     "tfidfAssigned": 0.2,
+     "tfidfBest": 0.311,
+     "bestSlide": 33,
+     "sectionIntro": true
+    },
+    {
+     "cue": 2,
+     "anchor": "s29-c1",
+     "cueSlide": 29,
+     "verifiedSlide": 29,
+     "cueText": "Three impact tiers, one delivery model, access, ownership, legacy.",
+     "scribeText": "Three impact tiers, one delivery model: access, ownership, legacy.",
+     "textRatio": 1.0,
+     "cueStart": 2.33,
+     "cueEnd": 6.86,
+     "scribeStart": 2.74,
+     "scribeEnd": 7.24,
+     "driftStart": -0.41,
+     "driftEnd": -0.38,
+     "tfidfAssigned": 0.187,
+     "tfidfBest": 0.2,
+     "bestSlide": 31,
+     "sectionIntro": false
+    },
+    {
+     "cue": 3,
+     "anchor": "s29-c2",
+     "cueSlide": 29,
+     "verifiedSlide": 29,
+     "cueText": "A funder can enter at any tier and climb.",
+     "scribeText": "A funder can enter at any tier and climb.",
+     "textRatio": 1.0,
+     "cueStart": 6.86,
+     "cueEnd": 9.68,
+     "scribeStart": 7.8,
+     "scribeEnd": 9.96,
+     "driftStart": -0.94,
+     "driftEnd": -0.28,
+     "tfidfAssigned": 0.169,
+     "tfidfBest": 0.169,
+     "bestSlide": 29,
+     "sectionIntro": false
+    },
+    {
+     "cue": 4,
+     "anchor": "s30-c1",
+     "cueSlide": 30,
+     "verifiedSlide": 30,
+     "cueText": "Every agreement includes named cohorts and activation targets, independent evaluator baselines, quarterly outcome reports, and open book costs with unspent funds returned.",
+     "scribeText": "Every agreement includes named cohorts and activation targets, independent evaluator baselines, quarterly outcome reports, and open book costs with unspent funds returned.",
+     "textRatio": 1.0,
+     "cueStart": 9.68,
+     "cueEnd": 21.41,
+     "scribeStart": 10.78,
+     "scribeEnd": 21.1,
+     "driftStart": -1.1,
+     "driftEnd": 0.31,
+     "tfidfAssigned": 0.217,
+     "tfidfBest": 0.217,
+     "bestSlide": 30,
+     "sectionIntro": false
+    },
+    {
+     "cue": 5,
+     "anchor": "s31-c1",
+     "cueSlide": 31,
+     "verifiedSlide": 31,
+     "cueText": "Universal API licenses, marketplace revenue share and sovereign pilot options fund the model so each partner can choose what fits.",
+     "scribeText": "Universal API licenses, marketplace revenue share, and sovereign pilot options fund the model so each partner can choose what fits",
+     "textRatio": 1.0,
+     "cueStart": 21.41,
+     "cueEnd": 30.33,
+     "scribeStart": 22.1,
+     "scribeEnd": 29.9,
+     "driftStart": -0.69,
+     "driftEnd": 0.43,
+     "tfidfAssigned": 0.008,
+     "tfidfBest": 0.049,
+     "bestSlide": 29,
+     "sectionIntro": false
+    }
+   ]
+  },
+  {
+   "clipId": "NAR-08",
+   "section": "08 Athar OS",
+   "file": "/audio/guide/guide-08-athar-os-Ib4oKe91OD.mp3",
+   "sha256": "15c420b780db993a4efacb4f3995df6dced525c64b65ec866661f3ea7be50601",
+   "transcriptionId": "sMr6XHxmNENMeIkRG0Gc",
+   "scribeDurationSec": 32.972375,
+   "localDurationSec": 33.02,
+   "language": "eng",
+   "languageProbability": 1,
+   "words": 63,
+   "scribeText": "Section eight, Athar OS. The roadmap runs now in Q4 2026, next in 2027, and later in 2028. Nations empowered. Lebanon, access, one million Lebanese AI experts at $10 million. India, ownership, one hundred government schools and 10,000 AI PCs at $13.7 million. Kenya, legacy, a Kenyan-owned sovereign node at around $33 million transferred to a national entity after five to seven years.",
+   "elevenLabsHistoryText": "Section eight, Athar OS. The roadmap runs now in Q4, 2026, next in 2027 and later in 2028. Nations empowered. Lebanon, Access, 1 million Lebanese AI experts at $10 million. India, ownership, 100 government schools and 10,000 AI PCs at 13.7 million. Kenya, Legacy, a Kenyan-owned sovereign node at around 33 million transferred to a national entity after five to seven years.",
+   "ratioVsHistoryText": 1.0,
+   "ratioVsCuesText": 1.0,
+   "ratioVsManifestText": 1.0,
+   "manifestSlides": [
+    34,
+    35,
+    36,
+    37,
+    38
+   ],
+   "cueSlides": [
+    34,
+    36,
+    38
+   ],
+   "repoGuideScriptBest": {
+    "step": "slide 1 · s1-kpis-2",
+    "ratio": 0.118
+   },
+   "maxAbsTimingDriftSec": 2.53,
+   "cues": [
+    {
+     "cue": 1,
+     "anchor": "s34-c1",
+     "cueSlide": 34,
+     "verifiedSlide": 34,
+     "cueText": "Section eight, Athar OS.",
+     "scribeText": "Section eight, Athar OS.",
+     "textRatio": 1.0,
+     "cueStart": 0,
+     "cueEnd": 2.14,
+     "scribeStart": 0.08,
+     "scribeEnd": 1.86,
+     "driftStart": -0.08,
+     "driftEnd": 0.28,
+     "tfidfAssigned": 0.044,
+     "tfidfBest": 0.045,
+     "bestSlide": 35,
+     "sectionIntro": true
+    },
+    {
+     "cue": 2,
+     "anchor": "s36-c1",
+     "cueSlide": 36,
+     "verifiedSlide": 36,
+     "cueText": "The roadmap runs now in Q4, 2026, next in 2027 and later in 2028.",
+     "scribeText": "The roadmap runs now in Q4 2026, next in 2027, and later in 2028.",
+     "textRatio": 1.0,
+     "cueStart": 2.14,
+     "cueEnd": 7.96,
+     "scribeStart": 2.54,
+     "scribeEnd": 9.64,
+     "driftStart": -0.4,
+     "driftEnd": -1.68,
+     "tfidfAssigned": 0.247,
+     "tfidfBest": 0.267,
+     "bestSlide": 38,
+     "sectionIntro": false
+    },
+    {
+     "cue": 3,
+     "anchor": "s38-c1",
+     "cueSlide": 38,
+     "verifiedSlide": 38,
+     "cueText": "Nations empowered.",
+     "scribeText": "Nations empowered.",
+     "textRatio": 1.0,
+     "cueStart": 7.96,
+     "cueEnd": 9.57,
+     "scribeStart": 10.32,
+     "scribeEnd": 11.24,
+     "driftStart": -2.36,
+     "driftEnd": -1.67,
+     "tfidfAssigned": 0.18,
+     "tfidfBest": 0.18,
+     "bestSlide": 38,
+     "sectionIntro": false
+    },
+    {
+     "cue": 4,
+     "anchor": "s38-c2",
+     "cueSlide": 38,
+     "verifiedSlide": 38,
+     "cueText": "Lebanon, Access, 1 million Lebanese AI experts at $10 million.",
+     "scribeText": "Lebanon, access, one million Lebanese AI experts at $10 million.",
+     "textRatio": 1.0,
+     "cueStart": 9.57,
+     "cueEnd": 15.12,
+     "scribeStart": 11.82,
+     "scribeEnd": 15.84,
+     "driftStart": -2.25,
+     "driftEnd": -0.72,
+     "tfidfAssigned": 0.302,
+     "tfidfBest": 0.302,
+     "bestSlide": 38,
+     "sectionIntro": false
+    },
+    {
+     "cue": 5,
+     "anchor": "s38-c3",
+     "cueSlide": 38,
+     "verifiedSlide": 38,
+     "cueText": "India, ownership, 100 government schools and 10,000 AI PCs at 13.7 million.",
+     "scribeText": "India, ownership, one hundred government schools and 10,000 AI PCs at $13.7 million.",
+     "textRatio": 1.0,
+     "cueStart": 15.12,
+     "cueEnd": 21.83,
+     "scribeStart": 16.92,
+     "scribeEnd": 23.44,
+     "driftStart": -1.8,
+     "driftEnd": -1.61,
+     "tfidfAssigned": 0.129,
+     "tfidfBest": 0.163,
+     "bestSlide": 36,
+     "sectionIntro": false
+    },
+    {
+     "cue": 6,
+     "anchor": "s38-c4",
+     "cueSlide": 38,
+     "verifiedSlide": 34,
+     "cueText": "Kenya, Legacy, a Kenyan-owned sovereign node at around 33 million transferred to a national entity after five to seven years.",
+     "scribeText": "Kenya, legacy, a Kenyan-owned sovereign node at around $33 million transferred to a national entity after five to seven years.",
+     "textRatio": 1.0,
+     "cueStart": 21.83,
+     "cueEnd": 33.02,
+     "scribeStart": 24.36,
+     "scribeEnd": 32.6,
+     "driftStart": -2.53,
+     "driftEnd": 0.42,
+     "tfidfAssigned": 0.095,
+     "tfidfBest": 0.174,
+     "bestSlide": 34,
+     "sectionIntro": false
+    }
+   ]
+  },
+  {
+   "clipId": "NAR-09",
+   "section": "Join the pact",
+   "file": "/audio/guide/guide-09-join-the-pact-Hx4Ywy843S.mp3",
+   "sha256": "c4877a60fc3aacc6b141b18ec5f5c572d5203ea926524b172c8dca2b35450acc",
+   "transcriptionId": "pITCnFlOvvBbjKtdZVvq",
+   "scribeDurationSec": 26.5171875,
+   "localDurationSec": 26.57,
+   "language": "eng",
+   "languageProbability": 1,
+   "words": 67,
+   "scribeText": "Join the pact. You have seen the agreement, the community model, the six pillars, the actors, the roadmap, the impact tiers, and Athar OS. Now the invitation is yours. Choose your role. Sign, govern, build, or learn. Commit to one real outcome. The founding cohort starts this quarter. Open the pledge, add your name, and help us build agentic AI that leaves a lasting trace. Join us",
+   "elevenLabsHistoryText": "Join the Pact. You have seen the agreement, the community model, the six pillars, the actors, the roadmap, the impact tiers and Athar OS. Now the invitation is yours. Choose your role, sign, govern, build or learn. Commit to one real outcome. The founding cohort starts this quarter. Open the pledge, add your name and help us build a Gentick AI that leaves a lasting trace. Join us.",
+   "ratioVsHistoryText": 1.0,
+   "ratioVsCuesText": 1.0,
+   "ratioVsManifestText": 1.0,
+   "manifestSlides": [
+    39
+   ],
+   "cueSlides": [
+    39
+   ],
+   "repoGuideScriptBest": {
+    "step": "slide 1 · s1-g1",
+    "ratio": 0.163
+   },
+   "maxAbsTimingDriftSec": 1.01,
+   "cues": [
+    {
+     "cue": 1,
+     "anchor": "s39-c1",
+     "cueSlide": 39,
+     "verifiedSlide": 39,
+     "cueText": "Join the Pact.",
+     "scribeText": "Join the pact.",
+     "textRatio": 1.0,
+     "cueStart": 0,
+     "cueEnd": 0.99,
+     "scribeStart": 0.12,
+     "scribeEnd": 0.84,
+     "driftStart": -0.12,
+     "driftEnd": 0.15,
+     "tfidfAssigned": 0.02,
+     "tfidfBest": 0.02,
+     "bestSlide": 39,
+     "sectionIntro": false
+    },
+    {
+     "cue": 2,
+     "anchor": "s39-c2",
+     "cueSlide": 39,
+     "verifiedSlide": 39,
+     "cueText": "You have seen the agreement, the community model, the six pillars, the actors, the roadmap, the impact tiers and Athar OS.",
+     "scribeText": "You have seen the agreement, the community model, the six pillars, the actors, the roadmap, the impact tiers, and Athar OS.",
+     "textRatio": 1.0,
+     "cueStart": 0.99,
+     "cueEnd": 9.61,
+     "scribeStart": 1.34,
+     "scribeEnd": 8.7,
+     "driftStart": -0.35,
+     "driftEnd": 0.91,
+     "tfidfAssigned": 0.036,
+     "tfidfBest": 0.036,
+     "bestSlide": 39,
+     "sectionIntro": false
+    },
+    {
+     "cue": 3,
+     "anchor": "s39-c3",
+     "cueSlide": 39,
+     "verifiedSlide": 39,
+     "cueText": "Now the invitation is yours.",
+     "scribeText": "Now the invitation is yours.",
+     "textRatio": 1.0,
+     "cueStart": 9.61,
+     "cueEnd": 11.59,
+     "scribeStart": 9.32,
+     "scribeEnd": 10.72,
+     "driftStart": 0.29,
+     "driftEnd": 0.87,
+     "tfidfAssigned": 0.0,
+     "tfidfBest": 0.0,
+     "bestSlide": 39,
+     "sectionIntro": false
+    },
+    {
+     "cue": 4,
+     "anchor": "s39-c4",
+     "cueSlide": 39,
+     "verifiedSlide": 39,
+     "cueText": "Choose your role, sign, govern, build or learn.",
+     "scribeText": "Choose your role. Sign, govern, build, or learn.",
+     "textRatio": 1.0,
+     "cueStart": 11.59,
+     "cueEnd": 14.91,
+     "scribeStart": 11.24,
+     "scribeEnd": 14.68,
+     "driftStart": 0.35,
+     "driftEnd": 0.23,
+     "tfidfAssigned": 0.117,
+     "tfidfBest": 0.117,
+     "bestSlide": 39,
+     "sectionIntro": false
+    },
+    {
+     "cue": 5,
+     "anchor": "s39-c5",
+     "cueSlide": 39,
+     "verifiedSlide": 39,
+     "cueText": "Commit to one real outcome.",
+     "scribeText": "Commit to one real outcome.",
+     "textRatio": 1.0,
+     "cueStart": 14.91,
+     "cueEnd": 16.82,
+     "scribeStart": 15.08,
+     "scribeEnd": 16.5,
+     "driftStart": -0.17,
+     "driftEnd": 0.32,
+     "tfidfAssigned": 0.0,
+     "tfidfBest": 0.0,
+     "bestSlide": 39,
+     "sectionIntro": false
+    },
+    {
+     "cue": 6,
+     "anchor": "s39-c6",
+     "cueSlide": 39,
+     "verifiedSlide": 39,
+     "cueText": "The founding cohort starts this quarter.",
+     "scribeText": "The founding cohort starts this quarter.",
+     "textRatio": 1.0,
+     "cueStart": 16.82,
+     "cueEnd": 19.65,
+     "scribeStart": 16.92,
+     "scribeEnd": 18.98,
+     "driftStart": -0.1,
+     "driftEnd": 0.67,
+     "tfidfAssigned": 0.082,
+     "tfidfBest": 0.082,
+     "bestSlide": 39,
+     "sectionIntro": false
+    },
+    {
+     "cue": 7,
+     "anchor": "s39-c7",
+     "cueSlide": 39,
+     "verifiedSlide": 39,
+     "cueText": "Open the pledge, add your name and help us build a Gentick AI that leaves a lasting trace.",
+     "scribeText": "Open the pledge, add your name, and help us build agentic AI that leaves a lasting trace.",
+     "textRatio": 1.0,
+     "cueStart": 19.65,
+     "cueEnd": 26.01,
+     "scribeStart": 19.74,
+     "scribeEnd": 25,
+     "driftStart": -0.09,
+     "driftEnd": 1.01,
+     "tfidfAssigned": 0.052,
+     "tfidfBest": 0.052,
+     "bestSlide": 39,
+     "sectionIntro": false
+    },
+    {
+     "cue": 8,
+     "anchor": "s39-c8",
+     "cueSlide": 39,
+     "verifiedSlide": 39,
+     "cueText": "Join us.",
+     "scribeText": "Join us",
+     "textRatio": 1.0,
+     "cueStart": 26.01,
+     "cueEnd": 26.57,
+     "scribeStart": 25.72,
+     "scribeEnd": 26.16,
+     "driftStart": 0.29,
+     "driftEnd": 0.41,
+     "tfidfAssigned": 0.0,
+     "tfidfBest": 0.0,
+     "bestSlide": 39,
+     "sectionIntro": false
+    }
+   ]
+  }
+ ],
+ "slides": [
+  {
+   "n": 1,
+   "slideId": "s-cover",
+   "manifestSlideId": "s-cover",
+   "sectionClip": "NAR-00",
+   "section": "Welcome",
+   "cueTableSentences": [
+    "s1-c1",
+    "s1-c2",
+    "s1-c3"
+   ],
+   "verifiedSentences": [
+    "NAR-00#1 0.10–5.10 s",
+    "NAR-00#2 5.78–14.16 s",
+    "NAR-00#3 14.88–16.84 s"
+   ],
+   "verdict": "STALE",
+   "notes": [
+    "cue timing off the audio by up to 0.41 s"
+   ],
+   "scriptText": "Welcome to the Athar Open Agentic Pact — a community proposal by the Office of Development Affairs and AIREV. Build once. Run everywhere. Lift everyone. Over the next thirty-nine slides we set out the agreement, the community, the six pillars, the actors, the roadmap, the impact tiers and Athar OS.",
+   "scriptStatus": "to-generate",
+   "scriptVoiceId": "tnSpp4vdxKPjI9w0GnoV",
+   "repoGuideScriptBest": {
+    "step": "slide 2 · s2-g1",
+    "ratio": 0.15
+   }
+  },
+  {
+   "n": 2,
+   "slideId": "s-hero",
+   "manifestSlideId": "s-hero",
+   "sectionClip": "NAR-01",
+   "section": "01 The pact",
+   "cueTableSentences": [
+    "s2-c1",
+    "s2-c2"
+   ],
+   "verifiedSentences": [
+    "NAR-01#1 0.08–1.46 s",
+    "NAR-01#2 2.08–11.78 s",
+    "NAR-01#4 19.20–24.64 s"
+   ],
+   "verdict": "STALE",
+   "notes": [
+    "cue timing off the audio by up to 1.00 s",
+    "also narrated by cue(s) mis-assigned to slide 3"
+   ],
+   "scriptText": "One open pact for agentic AI that serves people. Athar joins institutions, builders and learners around a single, published standard, so an agent built in one place can be trusted, reused and measured everywhere. The promise is simple: agentic AI that leaves a lasting, verifiable trace in people's lives.",
+   "scriptStatus": "to-generate",
+   "scriptVoiceId": "tnSpp4vdxKPjI9w0GnoV",
+   "repoGuideScriptBest": {
+    "step": "slide 2 · s2-close",
+    "ratio": 0.112
+   }
+  },
+  {
+   "n": 3,
+   "slideId": "s-why-pact",
+   "manifestSlideId": "s-why-pact",
+   "sectionClip": "NAR-01",
+   "section": "01 The pact",
+   "cueTableSentences": [
+    "s3-c1",
+    "s3-c2"
+   ],
+   "verifiedSentences": [
+    "NAR-01#3 12.44–18.48 s"
+   ],
+   "verdict": "OK",
+   "notes": [],
+   "scriptText": "Why a pact, and not just a product launch? Because tools alone do not change outcomes. A pact commits every signatory to shared rules, open interfaces and independent measurement. It turns scattered pilots into a coordinated programme with named owners, agreed baselines and results that can be audited.",
+   "scriptStatus": "to-generate",
+   "scriptVoiceId": "tnSpp4vdxKPjI9w0GnoV",
+   "repoGuideScriptBest": {
+    "step": "slide 1 · s1-open",
+    "ratio": 0.083
+   }
+  },
+  {
+   "n": 4,
+   "slideId": "s-four-outcomes",
+   "manifestSlideId": "s-four-outcomes",
+   "sectionClip": "NAR-02",
+   "section": "02 Community model",
+   "cueTableSentences": [
+    "s4-c1"
+   ],
+   "verifiedSentences": [
+    "NAR-02#1 0.08–2.02 s",
+    "NAR-02#2 2.78–10.44 s",
+    "NAR-02#3 11.46–26.30 s"
+   ],
+   "verdict": "STALE",
+   "notes": [
+    "cue timing off the audio by up to 0.68 s",
+    "also narrated by cue(s) mis-assigned to slide 7,11"
+   ],
+   "scriptText": "Section two: the community model. Every webinar, chapter event and challenge should lead somewhere specific and real. So the model is built around four outcomes for every participant. One: learn agentic AI, building a practical understanding of agents, prompting, verification and responsible use. Two: build a useful agent, moving from an idea to a validated agent through the builder journey and the marketplace. Three: deploy through an institution, putting that agent to work inside a named, accountable deployment. And four: measure a real-world benefit, with baseline and outcome evidence of time saved, better service or wider reach.",
+   "scriptStatus": "recovered-text",
+   "scriptVoiceId": "tnSpp4vdxKPjI9w0GnoV",
+   "repoGuideScriptBest": {
+    "step": "slide 1 · s1-g2",
+    "ratio": 0.103
+   }
+  },
+  {
+   "n": 5,
+   "slideId": "s-managed-programme",
+   "manifestSlideId": "s-managed-programme",
+   "sectionClip": "NAR-02",
+   "section": "02 Community model",
+   "cueTableSentences": [],
+   "verifiedSentences": [],
+   "verdict": "MISSING",
+   "notes": [
+    "no George sentence for this slide in any clip"
+   ],
+   "scriptText": "This is a managed global programme, not a social channel. A Community Director, country chapter leads and a governance council run it against a published calendar. Every activity has an owner, a target and a report, so membership means participation in a working system rather than a mailing list.",
+   "scriptStatus": "to-generate",
+   "scriptVoiceId": "tnSpp4vdxKPjI9w0GnoV",
+   "repoGuideScriptBest": {
+    "step": "slide 1 · s1-open",
+    "ratio": 0.082
+   }
+  },
+  {
+   "n": 6,
+   "slideId": "s-discord-home",
+   "manifestSlideId": "s-discord-home",
+   "sectionClip": "NAR-02",
+   "section": "02 Community model",
+   "cueTableSentences": [],
+   "verifiedSentences": [],
+   "verdict": "MISSING",
+   "notes": [
+    "no George sentence for this slide in any clip"
+   ],
+   "scriptText": "Discord is the always-on home of the community. Chapters, cohorts and office hours live in structured channels with clear moderation and escalation. It is where builders ask questions, showcase agents and find collaborators between events — governed, searchable and open to every member.",
+   "scriptStatus": "to-generate",
+   "scriptVoiceId": "tnSpp4vdxKPjI9w0GnoV",
+   "repoGuideScriptBest": {
+    "step": "slide 1 · s1-g1",
+    "ratio": 0.135
+   }
+  },
+  {
+   "n": 7,
+   "slideId": "s-country-chapters",
+   "manifestSlideId": "s-country-chapters",
+   "sectionClip": "NAR-02",
+   "section": "02 Community model",
+   "cueTableSentences": [
+    "s7-c1"
+   ],
+   "verifiedSentences": [],
+   "verdict": "MIS-MAPPED",
+   "notes": [
+    "cue table points here, but Scribe/TF-IDF shows the audio narrates slide 4"
+   ],
+   "scriptText": "Country chapters bring the pact to life locally. Each chapter adapts the shared curriculum to its language and institutions, hosts events, and connects local builders with government and industry partners. Wave one starts with the UAE base plus two countries, then scales through the roadmap.",
+   "scriptStatus": "to-generate",
+   "scriptVoiceId": "tnSpp4vdxKPjI9w0GnoV",
+   "repoGuideScriptBest": {
+    "step": "slide 2 · s2-g1",
+    "ratio": 0.133
+   }
+  },
+  {
+   "n": 8,
+   "slideId": "s-learning-formats",
+   "manifestSlideId": "s-learning-formats",
+   "sectionClip": "NAR-02",
+   "section": "02 Community model",
+   "cueTableSentences": [],
+   "verifiedSentences": [],
+   "verdict": "MISSING",
+   "notes": [
+    "no George sentence for this slide in any clip"
+   ],
+   "scriptText": "Webinars, bootcamps and institutional academies form the learning ladder. Webinars introduce agentic AI, bootcamps build working agents in days, and academies embed the practice inside ministries, universities and companies. Every step issues evidence a learner can carry into the marketplace.",
+   "scriptStatus": "to-generate",
+   "scriptVoiceId": "tnSpp4vdxKPjI9w0GnoV",
+   "repoGuideScriptBest": {
+    "step": "slide 1 · s1-g6",
+    "ratio": 0.133
+   }
+  },
+  {
+   "n": 9,
+   "slideId": "s-challenges-showcases",
+   "manifestSlideId": "s-challenges-showcases",
+   "sectionClip": "NAR-02",
+   "section": "02 Community model",
+   "cueTableSentences": [],
+   "verifiedSentences": [],
+   "verdict": "MISSING",
+   "notes": [
+    "no George sentence for this slide in any clip"
+   ],
+   "scriptText": "Challenges, showcases and the annual summit turn learning into visible results. Time-boxed challenges solve real institutional problems, showcases publish validated agents, and the Global Summit reports the year's outcomes to funders and governments in one place.",
+   "scriptStatus": "to-generate",
+   "scriptVoiceId": "tnSpp4vdxKPjI9w0GnoV",
+   "repoGuideScriptBest": {
+    "step": "slide 1 · s1-g1",
+    "ratio": 0.116
+   }
+  },
+  {
+   "n": 10,
+   "slideId": "s-office-hours",
+   "manifestSlideId": "s-office-hours",
+   "sectionClip": "NAR-02",
+   "section": "02 Community model",
+   "cueTableSentences": [],
+   "verifiedSentences": [],
+   "verdict": "MISSING",
+   "notes": [
+    "no George sentence for this slide in any clip"
+   ],
+   "scriptText": "Weekly office hours and tiered support keep builders unblocked. Level one answers common questions in the community, level two brings platform engineers, and level three escalates to AIREV specialists. Institutions on a licence receive committed response times.",
+   "scriptStatus": "to-generate",
+   "scriptVoiceId": "tnSpp4vdxKPjI9w0GnoV",
+   "repoGuideScriptBest": {
+    "step": "slide 1 · s1-g6",
+    "ratio": 0.14
+   }
+  },
+  {
+   "n": 11,
+   "slideId": "s-agent-marketplace",
+   "manifestSlideId": "s-agent-marketplace",
+   "sectionClip": "NAR-02",
+   "section": "02 Community model",
+   "cueTableSentences": [
+    "s11-c1"
+   ],
+   "verifiedSentences": [],
+   "verdict": "MIS-MAPPED",
+   "notes": [
+    "cue table points here, but Scribe/TF-IDF shows the audio narrates slide 4"
+   ],
+   "scriptText": "The builder journey runs from an idea to a validated agent. Prototype, evaluate, validate — then publish in the agent marketplace with a disclosed intended use, a named owner and supported languages. Specialist agents can earn revenue share, sustaining the builders who create them.",
+   "scriptStatus": "to-generate",
+   "scriptVoiceId": "tnSpp4vdxKPjI9w0GnoV",
+   "repoGuideScriptBest": {
+    "step": "slide 2 · s2-close",
+    "ratio": 0.171
+   }
+  },
+  {
+   "n": 12,
+   "slideId": "s-decision-table",
+   "manifestSlideId": "s-decision-table",
+   "sectionClip": "NAR-02",
+   "section": "02 Community model",
+   "cueTableSentences": [],
+   "verifiedSentences": [],
+   "verdict": "MISSING",
+   "notes": [
+    "no George sentence for this slide in any clip"
+   ],
+   "scriptText": "The decision in one page. Approve the two-engine model — institutions and community — appoint the Community Director, select the first anchor institutions, and fund the founding cohort. Everything else on the roadmap follows from these four decisions.",
+   "scriptStatus": "to-generate",
+   "scriptVoiceId": "tnSpp4vdxKPjI9w0GnoV",
+   "repoGuideScriptBest": {
+    "step": "slide 1 · s1-g1",
+    "ratio": 0.206
+   }
+  },
+  {
+   "n": 13,
+   "slideId": "s-pillar-plugins",
+   "manifestSlideId": "s-pillar-plugins",
+   "sectionClip": "NAR-03",
+   "section": "03 Six pillars",
+   "cueTableSentences": [
+    "s13-c1",
+    "s13-c2"
+   ],
+   "verifiedSentences": [
+    "NAR-03#1 0.10–1.88 s",
+    "NAR-03#2 2.52–8.28 s"
+   ],
+   "verdict": "STALE",
+   "notes": [
+    "cue timing off the audio by up to 0.71 s"
+   ],
+   "scriptText": "Plugins are the connective tissue. Every agent reaches tools, data sources and services only through one shared plugin standard. Plugins are published, versioned and discoverable in the marketplace, each carrying a disclosed intended use, a named owner and supported languages — across institutions, countries and models.",
+   "scriptStatus": "to-generate",
+   "scriptVoiceId": "tnSpp4vdxKPjI9w0GnoV",
+   "repoGuideScriptBest": {
+    "step": "slide 1 · s1-kpis",
+    "ratio": 0.115
+   }
+  },
+  {
+   "n": 14,
+   "slideId": "s-pillar-skills",
+   "manifestSlideId": "s-pillar-skills",
+   "sectionClip": "NAR-03",
+   "section": "03 Six pillars",
+   "cueTableSentences": [
+    "s14-c1"
+   ],
+   "verifiedSentences": [
+    "NAR-03#3 8.96–12.26 s"
+   ],
+   "verdict": "STALE",
+   "notes": [
+    "cue timing off the audio by up to 0.57 s"
+   ],
+   "scriptText": "Reusable skills, built once and shared. A skill packages a capability so any validated agent can load and reuse it. Skills pass through the same builder journey — prototype, evaluate, validate — with no-code pathways for practitioners and pro-code pathways for developers.",
+   "scriptStatus": "to-generate",
+   "scriptVoiceId": "tnSpp4vdxKPjI9w0GnoV",
+   "repoGuideScriptBest": {
+    "step": "slide 2 · s2-g6",
+    "ratio": 0.114
+   }
+  },
+  {
+   "n": 15,
+   "slideId": "s-pillar-open-ecosystem",
+   "manifestSlideId": "s-pillar-open-ecosystem",
+   "sectionClip": "NAR-03",
+   "section": "03 Six pillars",
+   "cueTableSentences": [],
+   "verifiedSentences": [],
+   "verdict": "MISSING",
+   "notes": [
+    "no George sentence for this slide in any clip"
+   ],
+   "scriptText": "Open where possible, governed where necessary. Interfaces, curricula and the plugin standard are open; identity, data residency and deployment approvals are governed. The balance lets institutions adopt with confidence while the community keeps building in the open.",
+   "scriptStatus": "to-generate",
+   "scriptVoiceId": "tnSpp4vdxKPjI9w0GnoV",
+   "repoGuideScriptBest": {
+    "step": "slide 1 · s1-anchors",
+    "ratio": 0.123
+   }
+  },
+  {
+   "n": 16,
+   "slideId": "s-pillar-cross-model",
+   "manifestSlideId": "s-pillar-cross-model",
+   "sectionClip": "NAR-03",
+   "section": "03 Six pillars",
+   "cueTableSentences": [],
+   "verifiedSentences": [],
+   "verdict": "MISSING",
+   "notes": [
+    "no George sentence for this slide in any clip"
+   ],
+   "scriptText": "Cross-model interoperability by design. The pact does not bind any nation or institution to a single model. Agents, skills and plugins run across leading models, so partners can switch providers, host sovereign models and stay in control of cost and residency.",
+   "scriptStatus": "to-generate",
+   "scriptVoiceId": "tnSpp4vdxKPjI9w0GnoV",
+   "repoGuideScriptBest": {
+    "step": "slide 2 · s2-close",
+    "ratio": 0.099
+   }
+  },
+  {
+   "n": 17,
+   "slideId": "s-pillar-universal-licence",
+   "manifestSlideId": "s-pillar-universal-licence",
+   "sectionClip": "NAR-03",
+   "section": "03 Six pillars",
+   "cueTableSentences": [
+    "s17-c1"
+   ],
+   "verifiedSentences": [
+    "NAR-03#4 12.96–19.04 s"
+   ],
+   "verdict": "OK",
+   "notes": [],
+   "scriptText": "Universal API licences managed by Athar. Athar procures and manages the API licences and keys the community needs, on one reference ladder of seat tiers, with three ways to deploy: software-only on your own hardware, self-hosted in your cloud, or fully managed by AIREV. A thirty-day pilot proves value first.",
+   "scriptStatus": "to-generate",
+   "scriptVoiceId": "tnSpp4vdxKPjI9w0GnoV",
+   "repoGuideScriptBest": {
+    "step": "slide 1 · s1-g6",
+    "ratio": 0.137
+   }
+  },
+  {
+   "n": 18,
+   "slideId": "s-pillar-upskilling",
+   "manifestSlideId": "s-pillar-upskilling",
+   "sectionClip": "NAR-03",
+   "section": "03 Six pillars",
+   "cueTableSentences": [],
+   "verifiedSentences": [],
+   "verdict": "MISSING",
+   "notes": [
+    "no George sentence for this slide in any clip"
+   ],
+   "scriptText": "Agentic AI for all, not for a few. The pact is bilingual by design, accessible by requirement, and priced so a school or clinic can start small. Reach is measured, not assumed — with learners, deployments and benefits reported by country and by institution.",
+   "scriptStatus": "to-generate",
+   "scriptVoiceId": "tnSpp4vdxKPjI9w0GnoV",
+   "repoGuideScriptBest": {
+    "step": "slide 2 · s2-g1",
+    "ratio": 0.137
+   }
+  },
+  {
+   "n": 19,
+   "slideId": "s-pact-principles",
+   "manifestSlideId": "s-pact-principles",
+   "sectionClip": "NAR-04",
+   "section": "04 Pledge & signing",
+   "cueTableSentences": [
+    "s19-c1",
+    "s19-c2"
+   ],
+   "verifiedSentences": [
+    "NAR-04#1 0.10–2.08 s",
+    "NAR-04#2 2.70–5.10 s"
+   ],
+   "verdict": "STALE",
+   "notes": [
+    "cue timing off the audio by up to 0.61 s"
+   ],
+   "scriptText": "Six pledges stand behind the Athar Pact: openness, interoperability, accountability, inclusion, sovereignty and measured impact. Each pledge maps to a pillar, a governance body and a metric, so signing is a commitment that can be checked, not a statement of intent.",
+   "scriptStatus": "to-generate",
+   "scriptVoiceId": "tnSpp4vdxKPjI9w0GnoV",
+   "repoGuideScriptBest": {
+    "step": "slide 1 · s1-anchors",
+    "ratio": 0.118
+   }
+  },
+  {
+   "n": 20,
+   "slideId": "s-how-to-sign",
+   "manifestSlideId": "s-how-to-sign",
+   "sectionClip": "NAR-04",
+   "section": "04 Pledge & signing",
+   "cueTableSentences": [
+    "s20-c1",
+    "s20-c2"
+   ],
+   "verifiedSentences": [
+    "NAR-04#3 6.02–14.18 s",
+    "NAR-04#4 14.88–24.16 s"
+   ],
+   "verdict": "STALE",
+   "notes": [
+    "cue timing off the audio by up to 1.17 s"
+   ],
+   "scriptText": "How a member signs the pact. Choose a role — signatory, governor, builder or learner — accept the pledges, name an accountable owner, and commit to one real outcome. The pledge is countersigned by the governance council and published in the registry within a quarter.",
+   "scriptStatus": "to-generate",
+   "scriptVoiceId": "tnSpp4vdxKPjI9w0GnoV",
+   "repoGuideScriptBest": {
+    "step": "slide 1 · s1-anchors",
+    "ratio": 0.184
+   }
+  },
+  {
+   "n": 21,
+   "slideId": "s-actors-wall",
+   "manifestSlideId": "s-actors-wall",
+   "sectionClip": "NAR-05",
+   "section": "05 Actors & roles",
+   "cueTableSentences": [
+    "s21-c1"
+   ],
+   "verifiedSentences": [
+    "NAR-05#1 0.10–20.36 s",
+    "NAR-05#2 21.02–26.06 s"
+   ],
+   "verdict": "STALE",
+   "notes": [
+    "cue timing off the audio by up to 1.43 s",
+    "also narrated by cue(s) mis-assigned to slide 23"
+   ],
+   "scriptText": "The actors of the pact: ministries and public institutions, universities and academies, enterprises and small businesses, funders, technology partners and the builders and learners themselves. The next four slides describe who signs, who governs, who builds and who learns.",
+   "scriptStatus": "to-generate",
+   "scriptVoiceId": "tnSpp4vdxKPjI9w0GnoV",
+   "repoGuideScriptBest": {
+    "step": "slide 1 · s1-g2",
+    "ratio": 0.172
+   }
+  },
+  {
+   "n": 22,
+   "slideId": "s-who-signs",
+   "manifestSlideId": "s-who-signs",
+   "sectionClip": "NAR-05",
+   "section": "05 Actors & roles",
+   "cueTableSentences": [],
+   "verifiedSentences": [],
+   "verdict": "MISSING",
+   "notes": [
+    "no George sentence for this slide in any clip"
+   ],
+   "scriptText": "Who signs the pact. Institutions sign to deploy validated agents inside accountable workflows, backed by a licence, a named owner and quarterly reporting. Signing gives access to the marketplace, the academies and the shared plugin standard.",
+   "scriptStatus": "to-generate",
+   "scriptVoiceId": "tnSpp4vdxKPjI9w0GnoV",
+   "repoGuideScriptBest": {
+    "step": "slide 1 · s1-g1",
+    "ratio": 0.179
+   }
+  },
+  {
+   "n": 23,
+   "slideId": "s-who-governs",
+   "manifestSlideId": "s-who-governs",
+   "sectionClip": "NAR-05",
+   "section": "05 Actors & roles",
+   "cueTableSentences": [
+    "s23-c1",
+    "s23-c2"
+   ],
+   "verifiedSentences": [
+    "NAR-05#3 27.00–31.12 s"
+   ],
+   "verdict": "STALE",
+   "notes": [
+    "cue timing off the audio by up to 0.41 s"
+   ],
+   "scriptText": "Who governs the pact. A governance council of signatories sets standards and resolves escalations, an independent evaluator verifies outcomes, and licence management sits with Athar. Decisions, minutes and metrics are published on a fixed calendar.",
+   "scriptStatus": "to-generate",
+   "scriptVoiceId": "tnSpp4vdxKPjI9w0GnoV",
+   "repoGuideScriptBest": {
+    "step": "slide 1 · s1-g6",
+    "ratio": 0.145
+   }
+  },
+  {
+   "n": 24,
+   "slideId": "s-who-builds",
+   "manifestSlideId": "s-who-builds",
+   "sectionClip": "NAR-05",
+   "section": "05 Actors & roles",
+   "cueTableSentences": [],
+   "verifiedSentences": [],
+   "verdict": "MISSING",
+   "notes": [
+    "no George sentence for this slide in any clip"
+   ],
+   "scriptText": "Who builds on the pact. Developers, practitioners and student teams build agents and skills through the marketplace, with office hours, review and revenue share for specialist work. Builders keep their intellectual property while publishing under the shared standard.",
+   "scriptStatus": "to-generate",
+   "scriptVoiceId": "tnSpp4vdxKPjI9w0GnoV",
+   "repoGuideScriptBest": {
+    "step": "slide 1 · s1-g6",
+    "ratio": 0.172
+   }
+  },
+  {
+   "n": 25,
+   "slideId": "s-who-learns",
+   "manifestSlideId": "s-who-learns",
+   "sectionClip": "NAR-05",
+   "section": "05 Actors & roles",
+   "cueTableSentences": [],
+   "verifiedSentences": [],
+   "verdict": "MISSING",
+   "notes": [
+    "no George sentence for this slide in any clip"
+   ],
+   "scriptText": "Who learns through the pact. Public servants, teachers, clinicians, farmers and young people move from foundations to certification. Year-one targets: ten thousand learners, two thousand five hundred certified and one hundred facilitators — each recorded against a baseline.",
+   "scriptStatus": "to-generate",
+   "scriptVoiceId": "tnSpp4vdxKPjI9w0GnoV",
+   "repoGuideScriptBest": {
+    "step": "slide 1 · s1-open",
+    "ratio": 0.118
+   }
+  },
+  {
+   "n": 26,
+   "slideId": "s-governance-licence",
+   "manifestSlideId": "s-governance-licence",
+   "sectionClip": "NAR-06",
+   "section": "06 Governance & roadmap",
+   "cueTableSentences": [
+    "s26-c1",
+    "s26-c2"
+   ],
+   "verifiedSentences": [
+    "NAR-06#1 0.10–2.22 s",
+    "NAR-06#2 2.62–7.04 s"
+   ],
+   "verdict": "STALE",
+   "notes": [
+    "cue timing off the audio by up to 0.45 s"
+   ],
+   "scriptText": "Governance bodies and licence management. The council, the evaluator and the licence office each have a charter, a chair and a reporting line. Licence fees are open-book, unspent funds are returned, and every universal API key is traceable to a signatory and a purpose.",
+   "scriptStatus": "to-generate",
+   "scriptVoiceId": "tnSpp4vdxKPjI9w0GnoV",
+   "repoGuideScriptBest": {
+    "step": "slide 1 · s1-g2",
+    "ratio": 0.156
+   }
+  },
+  {
+   "n": 27,
+   "slideId": "s-roadmap",
+   "manifestSlideId": "s-roadmap",
+   "sectionClip": "NAR-06",
+   "section": "06 Governance & roadmap",
+   "cueTableSentences": [
+    "s27-c1"
+   ],
+   "verifiedSentences": [
+    "NAR-06#3 7.74–15.32 s"
+   ],
+   "verdict": "STALE",
+   "notes": [
+    "cue timing off the audio by up to 0.60 s"
+   ],
+   "scriptText": "The twelve-month implementation roadmap: days one to thirty stand up governance and the founding cohort; months two to six open chapters, academies and the first deployments; months seven to twelve deliver ten chapters, the Global Summit and the first annual outcome report.",
+   "scriptStatus": "to-generate",
+   "scriptVoiceId": "tnSpp4vdxKPjI9w0GnoV",
+   "repoGuideScriptBest": {
+    "step": "slide 1 · s1-g1",
+    "ratio": 0.189
+   }
+  },
+  {
+   "n": 28,
+   "slideId": "s-it-outcomes",
+   "manifestSlideId": "it-outcomes",
+   "sectionClip": "NAR-07",
+   "section": "07 Impact & funding",
+   "cueTableSentences": [
+    "s28-c1"
+   ],
+   "verifiedSentences": [
+    "NAR-07#1 0.10–2.04 s"
+   ],
+   "verdict": "OK",
+   "notes": [],
+   "scriptText": "Section seven: impact and funding. Impact is measured in three tiers, from learning, to deployed agents, to real-world benefit. The pact proposal of the twenty-fourth of September and the impact-tiers paper set the baseline now, with gating items such as the licence field and open-book fees resolved first. From 2027, quarterly outcome reports track the first outcomes, and later we measure learning gains, farmer income and asset-level results. Funding follows the same logic: universal API licences are managed by Athar, marketplace review and revenue share sustain builders, and sovereign pilots are offered as Option A, B or C so each partner can fund the model that fits.",
+   "scriptStatus": "recovered-text",
+   "scriptVoiceId": "tnSpp4vdxKPjI9w0GnoV",
+   "repoGuideScriptBest": {
+    "step": "slide 1 · s1-delivery",
+    "ratio": 0.105
+   }
+  },
+  {
+   "n": 29,
+   "slideId": "s-it-tiers",
+   "manifestSlideId": "it-tiers",
+   "sectionClip": "NAR-07",
+   "section": "07 Impact & funding",
+   "cueTableSentences": [
+    "s29-c1",
+    "s29-c2"
+   ],
+   "verifiedSentences": [
+    "NAR-07#2 2.74–7.24 s",
+    "NAR-07#3 7.80–9.96 s"
+   ],
+   "verdict": "STALE",
+   "notes": [
+    "cue timing off the audio by up to 0.94 s"
+   ],
+   "scriptText": "Three impact tiers, one delivery model. Access — Lebanon's One Million AI Experts. Ownership — India's one hundred government schools and ten thousand AI PCs. Legacy — a Kenyan-owned sovereign node that feeds farmers. Each tier has a baseline, an evaluator and a funding envelope.",
+   "scriptStatus": "to-generate",
+   "scriptVoiceId": "tnSpp4vdxKPjI9w0GnoV",
+   "repoGuideScriptBest": {
+    "step": "slide 1 · s1-g3",
+    "ratio": 0.097
+   }
+  },
+  {
+   "n": 30,
+   "slideId": "s-it-metrics",
+   "manifestSlideId": "it-metrics",
+   "sectionClip": "NAR-07",
+   "section": "07 Impact & funding",
+   "cueTableSentences": [
+    "s30-c1"
+   ],
+   "verifiedSentences": [
+    "NAR-07#4 10.78–21.10 s"
+   ],
+   "verdict": "STALE",
+   "notes": [
+    "cue timing off the audio by up to 1.10 s"
+   ],
+   "scriptText": "What we deliver, measurably. Access: one million citizens certified, eighteen thousand experts in daily use. Ownership: learning gains in one hundred schools. Legacy: farmers served and an asset transferred. Every agreement carries named cohorts, independent evaluation, quarterly reports and open-book costs — with verified news as evidence.",
+   "scriptStatus": "to-generate",
+   "scriptVoiceId": "tnSpp4vdxKPjI9w0GnoV",
+   "repoGuideScriptBest": {
+    "step": "slide 1 · s1-kpis-2",
+    "ratio": 0.099
+   }
+  },
+  {
+   "n": 31,
+   "slideId": "s-it-sustain",
+   "manifestSlideId": "it-sustain",
+   "sectionClip": "NAR-07",
+   "section": "07 Impact & funding",
+   "cueTableSentences": [
+    "s31-c1"
+   ],
+   "verifiedSentences": [
+    "NAR-07#5 22.10–29.90 s"
+   ],
+   "verdict": "STALE",
+   "notes": [
+    "cue timing off the audio by up to 0.69 s"
+   ],
+   "scriptText": "How the community sustains itself. Universal API licences fund the platform, marketplace review and revenue share sustain builders, and sovereign pilots are offered as options A, B or C. Chapters and academies generate trained local operators, so each country grows its own capacity.",
+   "scriptStatus": "to-generate",
+   "scriptVoiceId": "tnSpp4vdxKPjI9w0GnoV",
+   "repoGuideScriptBest": {
+    "step": "slide 1 · s1-g2",
+    "ratio": 0.129
+   }
+  },
+  {
+   "n": 32,
+   "slideId": "s-it-partners",
+   "manifestSlideId": "it-partners",
+   "sectionClip": "NAR-07",
+   "section": "07 Impact & funding",
+   "cueTableSentences": [],
+   "verifiedSentences": [],
+   "verdict": "MISSING",
+   "notes": [
+    "no George sentence for this slide in any clip"
+   ],
+   "scriptText": "Delivered with candidate partners across the humanitarian, development and technology sectors, shown here for internal review only pending written authorisation. Funders receive the same open-book reporting as signatories, aligned to the three impact tiers.",
+   "scriptStatus": "to-generate",
+   "scriptVoiceId": "tnSpp4vdxKPjI9w0GnoV",
+   "repoGuideScriptBest": {
+    "step": "slide 2 · s2-g2",
+    "ratio": 0.131
+   }
+  },
+  {
+   "n": 33,
+   "slideId": "s-it-join",
+   "manifestSlideId": "it-join",
+   "sectionClip": "NAR-07",
+   "section": "07 Impact & funding",
+   "cueTableSentences": [],
+   "verifiedSentences": [],
+   "verdict": "MISSING",
+   "notes": [
+    "no George sentence for this slide in any clip"
+   ],
+   "scriptText": "Join the pact. You have seen the agreement, the community model, the six pillars, the actors, the roadmap, the impact tiers and Athar OS. Now the invitation is yours. Choose your role: sign, govern, build or learn. Commit to one real outcome, a learner trained, an agent built, a deployment inside your institution, or a benefit measured. The founding cohort starts this quarter. Open the pledge, add your name, and help us build agentic AI that leaves a lasting trace. This is the Athar Open Agentic Pact. Join us.",
+   "scriptStatus": "recovered-text",
+   "scriptVoiceId": "tnSpp4vdxKPjI9w0GnoV",
+   "repoGuideScriptBest": {
+    "step": "slide 2 · s2-g1",
+    "ratio": 0.101
+   }
+  },
+  {
+   "n": 34,
+   "slideId": "s-aos-overview",
+   "manifestSlideId": "aos-overview",
+   "sectionClip": "NAR-08",
+   "section": "08 Athar OS",
+   "cueTableSentences": [
+    "s34-c1"
+   ],
+   "verifiedSentences": [
+    "NAR-08#1 0.08–1.86 s",
+    "NAR-08#6 24.36–32.60 s"
+   ],
+   "verdict": "STALE",
+   "notes": [
+    "cue timing off the audio by up to 2.53 s",
+    "also narrated by cue(s) mis-assigned to slide 38"
+   ],
+   "scriptText": "Section eight: Athar OS — an agentic harness that empowers nations. One harness for nations, institutions, builders, agents, skills, plugins, licences and sovereign compute — governed by the pact and built to run anywhere.",
+   "scriptStatus": "to-generate",
+   "scriptVoiceId": "tnSpp4vdxKPjI9w0GnoV",
+   "repoGuideScriptBest": {
+    "step": "slide 1 · s1-kpis-2",
+    "ratio": 0.138
+   }
+  },
+  {
+   "n": 35,
+   "slideId": "s-aos-tour",
+   "manifestSlideId": "aos-tour",
+   "sectionClip": "NAR-08",
+   "section": "08 Athar OS",
+   "cueTableSentences": [],
+   "verifiedSentences": [],
+   "verdict": "MISSING",
+   "notes": [
+    "no George sentence for this slide in any clip"
+   ],
+   "scriptText": "The product tour shows the real screens: the marketplace, the playground, the agent flow builder and the tools and deployment views, captured from the Athar OS wireframes and the launch film.",
+   "scriptStatus": "to-generate",
+   "scriptVoiceId": "tnSpp4vdxKPjI9w0GnoV",
+   "repoGuideScriptBest": {
+    "step": "slide 2 · s2-g1",
+    "ratio": 0.197
+   }
+  },
+  {
+   "n": 36,
+   "slideId": "s-aos-roadmap",
+   "manifestSlideId": "aos-roadmap",
+   "sectionClip": "NAR-08",
+   "section": "08 Athar OS",
+   "cueTableSentences": [
+    "s36-c1"
+   ],
+   "verifiedSentences": [
+    "NAR-08#2 2.54–9.64 s"
+   ],
+   "verdict": "STALE",
+   "notes": [
+    "cue timing off the audio by up to 1.68 s"
+   ],
+   "scriptText": "Roadmap — now, next, later. Five tracks: platform, community and skills, plugins and universal APIs, sovereign deployment, and impact and evaluation. Items with a deck source are dated; items without one are marked as targets until the council confirms them.",
+   "scriptStatus": "to-generate",
+   "scriptVoiceId": "tnSpp4vdxKPjI9w0GnoV",
+   "repoGuideScriptBest": {
+    "step": "slide 1 · s1-g2",
+    "ratio": 0.103
+   }
+  },
+  {
+   "n": 37,
+   "slideId": "s-aos-deploy",
+   "manifestSlideId": "aos-deploy",
+   "sectionClip": "NAR-08",
+   "section": "08 Athar OS",
+   "cueTableSentences": [],
+   "verifiedSentences": [],
+   "verdict": "MISSING",
+   "notes": [
+    "no George sentence for this slide in any clip"
+   ],
+   "scriptText": "Deploy anywhere, own it. Option A runs software-only on your own hardware, option B is self-hosted in your cloud, option C is fully managed by AIREV. Sovereign nodes transfer to national ownership after five to seven years, with local operators trained to run them.",
+   "scriptStatus": "to-generate",
+   "scriptVoiceId": "tnSpp4vdxKPjI9w0GnoV",
+   "repoGuideScriptBest": {
+    "step": "slide 1 · s1-g2",
+    "ratio": 0.092
+   }
+  },
+  {
+   "n": 38,
+   "slideId": "s-aos-nations",
+   "manifestSlideId": "aos-nations",
+   "sectionClip": "NAR-08",
+   "section": "08 Athar OS",
+   "cueTableSentences": [
+    "s38-c1",
+    "s38-c2",
+    "s38-c3",
+    "s38-c4"
+   ],
+   "verifiedSentences": [
+    "NAR-08#3 10.32–11.24 s",
+    "NAR-08#4 11.82–15.84 s",
+    "NAR-08#5 16.92–23.44 s"
+   ],
+   "verdict": "STALE",
+   "notes": [
+    "cue timing off the audio by up to 2.36 s"
+   ],
+   "scriptText": "Nations empowered. Lebanon, Access tier, ten million dollars: One Million Lebanese AI Experts, now. India, Ownership, thirteen point seven million: one hundred government schools, next. Kenya, Legacy, around thirty-three million: a sovereign node that feeds farmers, later. Baselines come from the World Bank.",
+   "scriptStatus": "to-generate",
+   "scriptVoiceId": "tnSpp4vdxKPjI9w0GnoV",
+   "repoGuideScriptBest": {
+    "step": "slide 1 · s1-commercials",
+    "ratio": 0.125
+   }
+  },
+  {
+   "n": 39,
+   "slideId": "s-closing",
+   "manifestSlideId": "s-closing",
+   "sectionClip": "NAR-09",
+   "section": "Join the pact",
+   "cueTableSentences": [
+    "s39-c1",
+    "s39-c2",
+    "s39-c3",
+    "s39-c4",
+    "s39-c5",
+    "s39-c6",
+    "s39-c7",
+    "s39-c8"
+   ],
+   "verifiedSentences": [
+    "NAR-09#1 0.12–0.84 s",
+    "NAR-09#2 1.34–8.70 s",
+    "NAR-09#3 9.32–10.72 s",
+    "NAR-09#4 11.24–14.68 s",
+    "NAR-09#5 15.08–16.50 s",
+    "NAR-09#6 16.92–18.98 s",
+    "NAR-09#7 19.74–25.00 s",
+    "NAR-09#8 25.72–26.16 s"
+   ],
+   "verdict": "STALE",
+   "notes": [
+    "cue timing off the audio by up to 1.01 s"
+   ],
+   "scriptText": "Sign the Athar Open Agentic Pact. Approve the two-engine model, select the first institutional anchor, appoint the Community Director, and open the founding cohort this quarter. Build once. Run everywhere. Lift everyone. Thank you.",
+   "scriptStatus": "to-generate",
+   "scriptVoiceId": "tnSpp4vdxKPjI9w0GnoV",
+   "repoGuideScriptBest": {
+    "step": "slide 1 · s1-open",
+    "ratio": 0.193
+   }
+  }
+ ],
+ "reassigned": [
+  {
+   "clip": "NAR-01",
+   "cue": 4,
+   "from": 3,
+   "to": 2,
+   "text": "Signatories agree on shared standards, an open plugin approach and measurable real-world o",
+   "tfidf": [
+    0.036,
+    0.135
+   ]
+  },
+  {
+   "clip": "NAR-02",
+   "cue": 2,
+   "from": 7,
+   "to": 4,
+   "text": "Every webinar, chapter event and challenge should lead somewhere real, so the model is bui",
+   "tfidf": [
+    0.073,
+    0.389
+   ]
+  },
+  {
+   "clip": "NAR-02",
+   "cue": 3,
+   "from": 11,
+   "to": 4,
+   "text": "Learn agentic AI, build a useful agent through the Builder Journey and Marketplace, deploy",
+   "tfidf": [
+    0.098,
+    0.653
+   ]
+  },
+  {
+   "clip": "NAR-05",
+   "cue": 2,
+   "from": 23,
+   "to": 21,
+   "text": "The UAE Ministry of Foreign Trade signs and governs and the United Arab Emirates governs.",
+   "tfidf": [
+    0.107,
+    0.283
+   ]
+  },
+  {
+   "clip": "NAR-08",
+   "cue": 6,
+   "from": 38,
+   "to": 34,
+   "text": "Kenya, Legacy, a Kenyan-owned sovereign node at around 33 million transferred to a nationa",
+   "tfidf": [
+    0.095,
+    0.174
+   ]
+  }
+ ],
+ "summary": {
+  "STALE": 18,
+  "OK": 3,
+  "MISSING": 16,
+  "MIS-MAPPED": 2
+ }
+}

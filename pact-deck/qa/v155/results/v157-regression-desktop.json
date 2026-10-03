@@ -1,0 +1,64 @@
+{
+ "base": "http://127.0.0.1:4405",
+ "total": 44,
+ "written": "2026-10-03T02:52:41.595Z",
+ "rows": [
+  {
+   "slide38": {
+    "en": {
+     "tab": "PRODUCT CONCEPT",
+     "cap": "CONCEPT RENDER",
+     "alt": "AI-generated concept render for the UAE–Lebanon partnership: a dusk Gulf skyline with the UAE flag on the left and the Lebanese coast with offshore rocks and the Lebanese flag on the right, joined by a luminous arc behind the ATHAR logo. The text reads “1M ATHAR USERS” and “UAE × LEBANON” — an illustrative target, not an achieved figure. Eight people of different ages, including a wheelchair user and a man with a white cane, gather along the bottom.",
+     "nat": [
+      768,
+      512
+     ],
+     "shown": [
+      519,
+      346
+     ],
+     "cur": "plate5-lebanon-v158-1x.webp",
+     "imgs": 1,
+     "stills": 0
+    },
+    "ar": {
+     "tab": "مفهوم المنتج",
+     "cap": "تصوّر مفاهيمي",
+     "alt": "تصوّر مفاهيمي مولَّد بالذكاء الاصطناعي للشراكة بين الإمارات ولبنان: أفق مدينة خليجية عند الغروب يتقدّمه علم الإمارات على اليسار، وساحل لبناني تظهر قبالته صخور بحرية يتقدّمه العلم اللبناني على اليمين، يربط بينهما قوس مضيء خلف شعار أثر. يظهر النص «1M ATHAR USERS» و«UAE × LEBANON» — وهو هدف استرشادي وليس رقماً محقَّقاً. وفي الأسفل يتجمّع ثمانية أشخاص من أعمار مختلفة، بينهم مستخدم كرسي متحرك ورجل يحمل عصا بيضاء.",
+     "nat": [
+      768,
+      512
+     ],
+     "shown": [
+      519,
+      346
+     ],
+     "cur": "plate5-lebanon-v158-1x.webp",
+     "imgs": 1,
+     "stills": 0
+    }
+   },
+   "section09": {
+    "ids": [
+     "s-exec-intro",
+     "s-exec-al-ameri",
+     "s-exec-ferreira-da-cunha",
+     "s-exec-khalid",
+     "s-exec-unwalla"
+    ],
+    "count": 5,
+    "total": 44,
+    "counter": "Slide 44 of 44",
+    "gone": true,
+    "index": 8
+   },
+   "ceo": {
+    "videos": 0,
+    "roundel": 1,
+    "letterW": 1161,
+    "bodyW": 1394,
+    "clipDurationSec": 17.74
+   }
+  }
+ ]
+}

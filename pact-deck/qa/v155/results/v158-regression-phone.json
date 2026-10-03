@@ -1,0 +1,156 @@
+{
+ "base": "http://127.0.0.1:4405",
+ "total": 44,
+ "written": "2026-10-03T02:53:49.685Z",
+ "rows": [
+  {
+   "ary": {
+    "names": [
+     "Ary Ferreira da Cunha",
+     "آري فيريرا دا كونيا"
+    ],
+    "roles": [
+     "Principal, Presidential Court (UAE), Abu Dhabi",
+     "Principal، ديوان الرئاسة في دولة الإمارات، أبوظبي"
+    ],
+    "factsEn": 6,
+    "factsAr": 6,
+    "links": [
+     "https://ae.linkedin.com/in/aryfcunha",
+     "https://www.linkedin.com/posts/aryfcunha_tldr-saying-goodbye-to-mckinsey-sharing-activity-7368608246753878018-uCBF",
+     "https://noticias.up.pt/nos-por-la/ary-ferreira-da-cunha/",
+     "https://www.up.pt/casacomum/alumni-mundus/2-ary-ferreira-da-cunha/",
+     "https://repositorio.ulisboa.pt/bitstream/10451/49588/1/ulfd0148962_tese.pdf"
+    ],
+    "clip": {
+     "id": "NAR-s45",
+     "bytes": 279658,
+     "durationSec": 17.45
+    },
+    "arNames": [
+     "آري فيريرا دا كونيا",
+     "Ary Ferreira da Cunha"
+    ],
+    "rtl": "rtl"
+   },
+   "fahad": [
+    "H.E. Fahad Mohamed Al Ameri",
+    "سعادة فهد محمد العامري"
+   ],
+   "slide38": {
+    "en": {
+     "lebanon": {
+      "country": "lb",
+      "concept": "lebanon-v158",
+      "tab": "PRODUCT CONCEPT",
+      "cap": "CONCEPT RENDER",
+      "alt": "AI-generated concept render for the UAE–Lebanon partnership: a dusk Gulf skyline with the UAE flag on the left and the Lebanese coast with offshore rocks and the Lebanese flag on the right, joined by a luminous arc behind the ATHAR logo. The text reads “1M ATHAR USERS” and “UAE × LEBANON” — an illustrative target, not an achieved figure. Eight people of different ages, including a wheelchair user and a man with a white cane, gather along the bottom.",
+      "nat": [
+       768,
+       512
+      ],
+      "shown": [
+       356,
+       237
+      ],
+      "cur": "plate5-lebanon-v158-1x.webp",
+      "imgs": 1,
+      "stills": 0
+     },
+     "in": {
+      "country": "in",
+      "concept": "generic-v157",
+      "tab": "PRODUCT CONCEPT",
+      "cap": "CONCEPT RENDER",
+      "alt": "AI-generated concept render of an Athar service hall: a man in a wheelchair is helped at a reception desk beside a navy ATHAR self-service kiosk, a mother and her young son look at a tablet showing an Arabic medical-appointment screen, and two colleagues sit at a meeting table in the background",
+      "nat": [
+       768,
+       480
+      ],
+      "shown": [
+       356,
+       223
+      ],
+      "cur": "plate5-concept-v157-1x.webp",
+      "imgs": 1,
+      "stills": 0
+     },
+     "ke": {
+      "country": "ke",
+      "concept": "generic-v157",
+      "tab": "PRODUCT CONCEPT",
+      "cap": "CONCEPT RENDER",
+      "alt": "AI-generated concept render of an Athar service hall: a man in a wheelchair is helped at a reception desk beside a navy ATHAR self-service kiosk, a mother and her young son look at a tablet showing an Arabic medical-appointment screen, and two colleagues sit at a meeting table in the background",
+      "nat": [
+       768,
+       480
+      ],
+      "shown": [
+       356,
+       223
+      ],
+      "cur": "plate5-concept-v157-1x.webp",
+      "imgs": 1,
+      "stills": 0
+     }
+    },
+    "ar": {
+     "lebanon": {
+      "country": "lb",
+      "concept": "lebanon-v158",
+      "tab": "مفهوم المنتج",
+      "cap": "تصوّر مفاهيمي",
+      "alt": "تصوّر مفاهيمي مولَّد بالذكاء الاصطناعي للشراكة بين الإمارات ولبنان: أفق مدينة خليجية عند الغروب يتقدّمه علم الإمارات على اليسار، وساحل لبناني تظهر قبالته صخور بحرية يتقدّمه العلم اللبناني على اليمين، يربط بينهما قوس مضيء خلف شعار أثر. يظهر النص «1M ATHAR USERS» و«UAE × LEBANON» — وهو هدف استرشادي وليس رقماً محقَّقاً. وفي الأسفل يتجمّع ثمانية أشخاص من أعمار مختلفة، بينهم مستخدم كرسي متحرك ورجل يحمل عصا بيضاء.",
+      "nat": [
+       768,
+       512
+      ],
+      "shown": [
+       356,
+       237
+      ],
+      "cur": "plate5-lebanon-v158-1x.webp",
+      "imgs": 1,
+      "stills": 0
+     },
+     "in": {
+      "country": "in",
+      "concept": "generic-v157",
+      "tab": "مفهوم المنتج",
+      "cap": "تصوّر مفاهيمي",
+      "alt": "تصوّر مفاهيمي مولَّد بالذكاء الاصطناعي لقاعة خدمات أثر: رجل على كرسي متحرك يتلقى المساعدة عند مكتب الاستقبال بجوار كشك أثر الأزرق الداكن للخدمة الذاتية، وأم مع ابنها الصغير تنظران إلى جهاز لوحي تظهر عليه شاشة موعد طبي بالعربية، وزميلان يجلسان إلى طاولة اجتماعات في الخلفية",
+      "nat": [
+       768,
+       480
+      ],
+      "shown": [
+       356,
+       223
+      ],
+      "cur": "plate5-concept-v157-1x.webp",
+      "imgs": 1,
+      "stills": 0
+     },
+     "ke": {
+      "country": "ke",
+      "concept": "generic-v157",
+      "tab": "مفهوم المنتج",
+      "cap": "تصوّر مفاهيمي",
+      "alt": "تصوّر مفاهيمي مولَّد بالذكاء الاصطناعي لقاعة خدمات أثر: رجل على كرسي متحرك يتلقى المساعدة عند مكتب الاستقبال بجوار كشك أثر الأزرق الداكن للخدمة الذاتية، وأم مع ابنها الصغير تنظران إلى جهاز لوحي تظهر عليه شاشة موعد طبي بالعربية، وزميلان يجلسان إلى طاولة اجتماعات في الخلفية",
+      "nat": [
+       768,
+       480
+      ],
+      "shown": [
+       356,
+       223
+      ],
+      "cur": "plate5-concept-v157-1x.webp",
+      "imgs": 1,
+      "stills": 0
+     }
+    }
+   }
+  }
+ ]
+}

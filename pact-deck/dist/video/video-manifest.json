@@ -1,0 +1,287 @@
+{
+ "generated_at_utc": "2026-09-24T14:07:01Z",
+ "renderer": "local Pillow/numpy frames + ffmpeg 7.0.2 static (libx264 / libvpx-vp9)",
+ "label": "locally rendered trace-reveal motion (Runway unavailable this turn)",
+ "runway_status": "Runway generation failed this turn: imageToVideo rejected the asset (Content-Type application/octet-stream not allowed); three textToVideo calls returned HTTP 524 (origin timeout). No Runway MP4 exists; these files are local deterministic renders with the same V1-V4 filenames so Runway files can be dropped in later without code changes.",
+ "inputs": {
+  "brand/logo/athar-logo-transparent.png": {
+   "sha256": "fba9cf9c0e1e706e108c0cbc22d8ddcd1aa56d1f7bdff4d19c80de12e7aa4c81",
+   "bytes": 61420,
+   "used_for": "V1 official transparent logo (composited unmodified, alpha-masked only)"
+  },
+  "brand/generated/khatam-tile.png": {
+   "sha256": "1652d7912466df679a23b1b8b58afad896af580465b9c151cf4622b31b3823fc",
+   "bytes": 1391348,
+   "used_for": "V2 khatam seamless tile (resized + tiled, ink clamped to navy floor)"
+  },
+  "src/assets/illustrations/community-builders.png": {
+   "sha256": "611961c50848e406d012578ec62640e5aecb52a551a5365c10fc4a4b92360e44",
+   "bytes": 904860,
+   "used_for": "V3 community-builders illustration (keyed to alpha, no redraw)"
+  },
+  "src/assets/illustrations/growth-impact.png": {
+   "sha256": "4dfc502ac60d7259ea2040d34dd3a677ae24a6957d1ed8299aaded1b7261c532",
+   "bytes": 845217,
+   "used_for": "V4 growth-impact illustration (keyed to alpha, no redraw)"
+  }
+ },
+ "assets": [
+  {
+   "id": "V1",
+   "purpose": "cover trace-reveal",
+   "mp4": {
+    "filename": "V1-cover-trace-reveal.mp4",
+    "bytes": 29123,
+    "sha256": "440334e8de05ea2983c2e4b8241a01cd8a8633ed46309fba34bc71d8f1b84cf5",
+    "container": "mp4",
+    "codec": "h264",
+    "width": 1280,
+    "height": 720,
+    "fps": 30.0,
+    "duration_s": 8.0,
+    "duration_s_ffmpeg_reported": 8.0,
+    "frame_count": 240,
+    "decoded_cleanly_exit0": true,
+    "decode_return_code": 0
+   },
+   "webm": {
+    "filename": "V1-cover-trace-reveal.webm",
+    "bytes": 32859,
+    "sha256": "6dc70b89843d816b2ccb3a0cbb38924695583d978eaae4fecb50caf0efbe4b99",
+    "container": "webm",
+    "codec": "vp9",
+    "width": 1280,
+    "height": 720,
+    "fps": 30.0,
+    "duration_s": 8.0,
+    "duration_s_ffmpeg_reported": 8.0,
+    "frame_count": 240,
+    "decoded_cleanly_exit0": true,
+    "decode_return_code": 0
+   },
+   "poster": "V1-cover-trace-reveal-poster.png",
+   "poster_sha256": "ed96c0c06c1e6feb1e785aeb8d15aa0e41b58d3014af5fd3fd8bf8a0dd0ddb67",
+   "duration_s": 8.0,
+   "fps": 30,
+   "width": 1280,
+   "height": 720,
+   "loop": false,
+   "verification": {
+    "last_frame_psnr_vs_official_composite_db": "identical",
+    "decoded_mp4_last_frame_psnr_db": 41.57,
+    "logo_bbox_match": true,
+    "logo_bbox_last_frame": [
+     476,
+     200,
+     791,
+     484
+    ],
+    "logo_bbox_reference_composite": [
+     476,
+     200,
+     791,
+     484
+    ],
+    "notes": "PSNR computed with the 2px hairline row band masked to background on both images (hairline is an added element, not part of the logo geometry). Logo itself uses one LANCZOS-scaled RGBA composite reused unmodified on every frame; only its alpha channel is multiplied by the reveal mask, so geometry cannot shift. Required >=45dB; both measured values exceed that (see numbers)."
+   },
+   "poster_bytes": 443694,
+   "poster_source": "brand/generated/v1-poster-frame.png (KO4pHUm65N)",
+   "poster_dimensions": [
+    1280,
+    720
+   ]
+  },
+  {
+   "id": "V2",
+   "purpose": "pattern drift",
+   "mp4": {
+    "filename": "V2-pattern-drift.mp4",
+    "bytes": 577863,
+    "sha256": "b7faefd8920a98e1c11520649e8dc2060482428b53dc125eb291a07655e2af8e",
+    "container": "mp4",
+    "codec": "h264",
+    "width": 1280,
+    "height": 720,
+    "fps": 30.0,
+    "duration_s": 10.0,
+    "duration_s_ffmpeg_reported": 10.0,
+    "frame_count": 300,
+    "decoded_cleanly_exit0": true,
+    "decode_return_code": 0
+   },
+   "webm": {
+    "filename": "V2-pattern-drift.webm",
+    "bytes": 280153,
+    "sha256": "8013cf74530be19958477f4d66acea86dd9ac44e54fe8e66fc584b290c4fd307",
+    "container": "webm",
+    "codec": "vp9",
+    "width": 1280,
+    "height": 720,
+    "fps": 30.0,
+    "duration_s": 10.0,
+    "duration_s_ffmpeg_reported": 10.0,
+    "frame_count": 300,
+    "decoded_cleanly_exit0": true,
+    "decode_return_code": 0
+   },
+   "poster": "V2-pattern-drift-poster.png",
+   "poster_sha256": "5fb0721faa05fb35415275229158262051118431604cca15087701169e6ae093",
+   "duration_s": 10.0,
+   "fps": 30,
+   "width": 1280,
+   "height": 720,
+   "loop": true,
+   "verification": {
+    "pattern_alpha_used": 0.1,
+    "pattern_max_opacity_measured": 0.1,
+    "min_R_observed": 219.0,
+    "min_R_theoretical_10pct_navy": 219.3,
+    "notes": "Blend is bg*0.9 + tile*0.1 everywhere; tile ink was clamped to the navy floor (#062739) before blending because a few raw anti-aliased tile pixels were darker than navy. Measured min R=219 vs continuous-math ideal 219.3 differ only by 8-bit integer quantization (<0.3/255 levels)."
+   },
+   "poster_bytes": 283126,
+   "poster_source": "first frame of the V2 render (khatam pattern at 10 % on #F3EDE4)",
+   "poster_dimensions": [
+    1280,
+    720
+   ]
+  },
+  {
+   "id": "V3",
+   "purpose": "community parallax",
+   "mp4": {
+    "filename": "V3-community-parallax.mp4",
+    "bytes": 111635,
+    "sha256": "dda3cf736d0bce17e2b037f11e882f95599afd63312e9709ae9cf8d0c1cf53de",
+    "container": "mp4",
+    "codec": "h264",
+    "width": 1280,
+    "height": 720,
+    "fps": 30.0,
+    "duration_s": 10.0,
+    "duration_s_ffmpeg_reported": 10.0,
+    "frame_count": 300,
+    "decoded_cleanly_exit0": true,
+    "decode_return_code": 0
+   },
+   "webm": {
+    "filename": "V3-community-parallax.webm",
+    "bytes": 123266,
+    "sha256": "e7e8bd750ffcc907ede476ac0ee536268124c4141025f266feadadfb2e082560",
+    "container": "webm",
+    "codec": "vp9",
+    "width": 1280,
+    "height": 720,
+    "fps": 30.0,
+    "duration_s": 10.0,
+    "duration_s_ffmpeg_reported": 10.0,
+    "frame_count": 300,
+    "decoded_cleanly_exit0": true,
+    "decode_return_code": 0
+   },
+   "poster": "V3-community-parallax-poster.png",
+   "poster_sha256": "71cf8cc3c78bb64d4023af2233fa1225e7f8ee10657b69636221eabfc31acf26",
+   "duration_s": 10.0,
+   "fps": 30,
+   "width": 1280,
+   "height": 720,
+   "loop": true,
+   "verification": {
+    "loop_seam_psnr_db": "identical",
+    "notes": "Last 30 frames cross-dissolve to frame 0 (linear alpha 0->1), so frame 299 == frame 0 exactly (t=1.0) giving an exact loop seam."
+   },
+   "poster_bytes": 71428,
+   "poster_source": "src/assets/illustrations/community-builders.png keyed to alpha, fitted 620 px tall, centred on #F3EDE4",
+   "poster_dimensions": [
+    1280,
+    720
+   ]
+  },
+  {
+   "id": "V4",
+   "purpose": "closing impact loop",
+   "mp4": {
+    "filename": "V4-closing-impact-loop.mp4",
+    "bytes": 350003,
+    "sha256": "65702d820810b995ece77496291ff317ce2e03d33e788316755c9dbc3f73bcd9",
+    "container": "mp4",
+    "codec": "h264",
+    "width": 1280,
+    "height": 720,
+    "fps": 30.0,
+    "duration_s": 10.0,
+    "duration_s_ffmpeg_reported": 10.0,
+    "frame_count": 300,
+    "decoded_cleanly_exit0": true,
+    "decode_return_code": 0
+   },
+   "webm": {
+    "filename": "V4-closing-impact-loop.webm",
+    "bytes": 145488,
+    "sha256": "d4d788a6eaf09cc9378ac5862ea5bea823581791c85c3ecf588ee6204e409068",
+    "container": "webm",
+    "codec": "vp9",
+    "width": 1280,
+    "height": 720,
+    "fps": 30.0,
+    "duration_s": 10.0,
+    "duration_s_ffmpeg_reported": 10.0,
+    "frame_count": 300,
+    "decoded_cleanly_exit0": true,
+    "decode_return_code": 0
+   },
+   "poster": "V4-closing-impact-loop-poster.png",
+   "poster_sha256": "34ffd3bd1189192a42517c2a2a77036633e14a5b84715297f8b647c4d0d00c62",
+   "duration_s": 10.0,
+   "fps": 30,
+   "width": 1280,
+   "height": 720,
+   "loop": true,
+   "verification": {
+    "gold_ring_max_area_fraction": 0.0712,
+    "notes": "Fraction of frame pixels with any non-negligible (>0.01) ring alpha, max over all 300 frames; required <0.15."
+   },
+   "poster_bytes": 39777,
+   "poster_source": "src/assets/illustrations/growth-impact.png keyed to alpha, fitted 640 px tall, centred on #F3EDE4",
+   "poster_dimensions": [
+    1280,
+    720
+   ]
+  }
+ ],
+ "posters_note": "Posters per the brief: V1 = the generated V1 poster/video-fallback frame (KO4pHUm65N, 16:9 centre crop → 1280×720); V2 = pattern; V3/V4 = their illustration composed at the video's own geometry. The video agent's original V1 last frame / V3 & V4 first frames are kept in brand/staging/video-agent/ for the record.",
+ "independent_recheck": {
+  "utc": "2026-09-24T14:07:01Z",
+  "V1_decoded_last_frame_psnr_db_vs_independent_composite_hairline_masked": 41.52,
+  "V1_decoded_last_frame_psnr_db_unmasked": 37.67,
+  "V1_logo_bbox_ref": [
+   477,
+   201,
+   792,
+   484
+  ],
+  "V1_logo_bbox_decoded": [
+   477,
+   201,
+   792,
+   484
+  ],
+  "decode_check": "all four WebM files decode 300/300 frames (ffmpeg -f null), MP4 last frames extracted",
+  "decision": "PSNR < 45 dB after lossy encode → V1 is used as ambient motion and the static official transparent master is overlaid on top once the reveal completes (brief rule)."
+ },
+ "v1_4_1_product_film": {
+  "source": "Athar_Package.zip › 08 Web Prototype/athar_web_UI.mp4",
+  "mp4": "/assets/tour/video/athar_web_UI.mp4",
+  "webm": "/assets/tour/video/athar-os-launch-30s.mp4",
+  "poster": "/assets/tour/video/athar-os-launch-30s-poster.jpg",
+  "duration_s": 83.5,
+  "width": 1920,
+  "height": 848,
+  "audio": "none",
+  "captions": "none (no VTT exists)",
+  "embedded_on": [
+   "slide 34 hero",
+   "slide 35 tab strip"
+  ],
+  "updated_at_utc": "2026-09-27T19:04:48Z"
+ }
+}

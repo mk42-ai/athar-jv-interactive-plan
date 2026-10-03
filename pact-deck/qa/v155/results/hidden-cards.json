@@ -1,0 +1,21 @@
+{
+ "base": "http://127.0.0.1:4405",
+ "total": 44,
+ "written": "2026-10-03T02:53:21.446Z",
+ "rows": [
+  {
+   "ids": [
+    "s-exec-intro",
+    "s-exec-al-ameri",
+    "s-exec-ferreira-da-cunha",
+    "s-exec-khalid",
+    "s-exec-unwalla"
+   ],
+   "count": 5,
+   "total": 44,
+   "counter": "Slide 44 of 44",
+   "hiddenInTable": 0,
+   "mentionsHidden": false
+  }
+ ]
+}

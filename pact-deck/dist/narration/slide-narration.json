@@ -1,0 +1,2391 @@
+{
+ "schema": "athar.narration.slides/1",
+ "version": "1.5.8",
+ "generated_utc": "2026-10-01T14:00:00Z",
+ "keyedBy": "data-slide-id (stable section id) — never by slide index",
+ "voice": "George - Warm, Captivating Storyteller",
+ "voiceId": "JBFqnCBsd6RMkjVDRZzb",
+ "modelId": "eleven_multilingual_v2",
+ "slides": [
+  {
+   "n": 1,
+   "slideId": "s-cover",
+   "clipId": "NAR-s01",
+   "file": "/audio/guide/slides/NAR-s01-s-cover.mp3",
+   "bytes": 274599,
+   "sha256": "83051327dd6fec4949a92b961c09c326537e79004ba694c9be33008ec8da2578",
+   "durationSec": 17.162,
+   "section": "Welcome",
+   "sectionAr": "مرحبًا",
+   "source": {
+    "type": "cut",
+    "parentClip": "NAR-00",
+    "parentFile": "/audio/guide/guide-00-welcome-lhbIUXFwLO.mp3",
+    "parentSha256": "a7d2263e53d08bccdeb1f26fa90a9471303d00d82f9ae330f381f73670f009bc",
+    "startSec": 0.0,
+    "endSec": 17.162,
+    "frames": [
+     0,
+     657
+    ],
+    "note": "byte range of whole MPEG frames of the parent clip — no re-encoding"
+   },
+   "text": "Welcome to the Athar Open Agentic Pact, a community proposal from ODA and AIREV. This guided narration walks you through the pact, its community model, six pillars, governance, impact tiers, and the Athar OS roadmap. Use the arrows to move at your own pace.",
+   "cues": [
+    {
+     "i": 1,
+     "text": "Welcome to the Athar Open Agentic Pact, a community proposal from ODA and AIREV.",
+     "start": 0.14,
+     "end": 5.12,
+     "anchor": "s1-c1"
+    },
+    {
+     "i": 2,
+     "text": "This guided narration walks you through the pact, its community model, six pillars, governance, impact tiers, and the Athar OS roadmap.",
+     "start": 5.8,
+     "end": 14.2,
+     "anchor": "s1-c2"
+    },
+    {
+     "i": 3,
+     "text": "Use the arrows to move at your own pace.",
+     "start": 14.9,
+     "end": 16.86,
+     "anchor": "s1-c3"
+    }
+   ],
+   "scribe": {
+    "transcriptionId": "aKq4xeI0BLdbeauZhjVu",
+    "model": "scribe_v1 (requested)",
+    "language": "eng",
+    "languageProbability": 1,
+    "audioDurationSec": 17.1624375,
+    "ratioVsNarrationText": 1.0,
+    "transcript": "Welcome to the Athar Open Agentic Pact, a community proposal from ODA and Aerev. This guided narration walks you through the pact, its community model, six pillars, governance, impact tiers, and the Athar OS roadmap. Use the arrows to move at your own pace.",
+    "utc": "2026-10-01T06:28:19Z"
+   }
+  },
+  {
+   "n": 2,
+   "slideId": "s-hero",
+   "clipId": "NAR-s02",
+   "file": "/audio/guide/slides/NAR-s02-s-hero.mp3",
+   "bytes": 193933,
+   "sha256": "da367428242fba9daf512f700fdb3bb7db51f580ca7b9d775456d106e7ac648b",
+   "durationSec": 12.121,
+   "section": "01 The pact",
+   "sectionAr": "01 الميثاق",
+   "source": {
+    "type": "cut",
+    "parentClip": "NAR-01",
+    "parentFile": "/audio/guide/guide-01-the-pact-df1pHtGsVr.mp3",
+    "parentSha256": "c1107a2d96eb9550784b278dada4746ac8bddd528b6020dc11e879e0c53986ba",
+    "startSec": 0.0,
+    "endSec": 12.121,
+    "frames": [
+     0,
+     464
+    ],
+    "note": "byte range of whole MPEG frames of the parent clip — no re-encoding"
+   },
+   "text": "Section one, the Pact. The Athar Open Agentic Pact is an open commitment between institutions, partners and platforms to learn, build and deploy agentic AI for public benefit.",
+   "cues": [
+    {
+     "i": 1,
+     "text": "Section one, the Pact.",
+     "start": 0.1,
+     "end": 1.48,
+     "anchor": "s2-c1"
+    },
+    {
+     "i": 2,
+     "text": "The Athar Open Agentic Pact is an open commitment between institutions, partners and platforms to learn, build and deploy agentic AI for public benefit.",
+     "start": 2.1,
+     "end": 11.78,
+     "anchor": "s2-c2"
+    }
+   ],
+   "scribe": {
+    "transcriptionId": "YK8CZo34Yp7e9pgb47c3",
+    "model": "scribe_v1 (requested)",
+    "language": "eng",
+    "languageProbability": 1,
+    "audioDurationSec": 12.1208125,
+    "ratioVsNarrationText": 0.964,
+    "transcript": "Section one: The Pact. The Aether Open Agentic Pact is an open commitment between institutions, partners, and platforms to learn, build, and deploy agentic AI for public benefit",
+    "utc": "2026-10-01T06:28:14Z"
+   }
+  },
+  {
+   "n": 3,
+   "slideId": "s-why-pact",
+   "clipId": "NAR-s03",
+   "file": "/audio/guide/slides/NAR-s03-s-why-pact.mp3",
+   "bytes": 206471,
+   "sha256": "6a4f51801ac203ab12dbe7ba2979cdf7fbba2c5abc319ab2e88dc01e68d3343a",
+   "durationSec": 12.904,
+   "section": "01 The pact",
+   "sectionAr": "01 الميثاق",
+   "source": {
+    "type": "cut",
+    "parentClip": "NAR-01",
+    "parentFile": "/audio/guide/guide-01-the-pact-df1pHtGsVr.mp3",
+    "parentSha256": "c1107a2d96eb9550784b278dada4746ac8bddd528b6020dc11e879e0c53986ba",
+    "startSec": 12.121,
+    "endSec": 25.025,
+    "frames": [
+     464,
+     958
+    ],
+    "note": "byte range of whole MPEG frames of the parent clip — no re-encoding"
+   },
+   "text": "It is a community proposal from ODA and AI Rev, designed as a community, not a product. Signatories agree on shared standards, an open plugin approach and measurable real-world outcomes.",
+   "cues": [
+    {
+     "i": 1,
+     "text": "It is a community proposal from ODA and AI Rev, designed as a community, not a product.",
+     "start": 0.34,
+     "end": 6.38,
+     "anchor": "s3-c1"
+    },
+    {
+     "i": 2,
+     "text": "Signatories agree on shared standards, an open plugin approach and measurable real-world outcomes.",
+     "start": 7.12,
+     "end": 12.54,
+     "anchor": "s3-c2"
+    }
+   ],
+   "scribe": {
+    "transcriptionId": "hja8Qycb2al9nKLTc1fK",
+    "model": "scribe_v1 (requested)",
+    "language": "eng",
+    "languageProbability": 1,
+    "audioDurationSec": 12.9045,
+    "ratioVsNarrationText": 1.0,
+    "transcript": "It is a community proposal from ODA and AI Rev, designed as a community, not a product. Signatories agree on shared standards, an open plugin approach, and measurable real-world outcomes",
+    "utc": "2026-10-01T06:28:14Z"
+   }
+  },
+  {
+   "n": 4,
+   "slideId": "s-four-outcomes",
+   "clipId": "NAR-s04",
+   "file": "/audio/guide/slides/NAR-s04-s-four-outcomes.mp3",
+   "bytes": 427154,
+   "sha256": "3a3a58b8ec64908715a9e869ffe743e185abe9605766545e0cba5e78d9c88a69",
+   "durationSec": 26.697,
+   "section": "02 Community model",
+   "sectionAr": "02 نموذج المجتمع",
+   "source": {
+    "type": "cut",
+    "parentClip": "NAR-02",
+    "parentFile": "/audio/guide/guide-02-community-model-9gUnFBtxrM.mp3",
+    "parentSha256": "c810c12479ddbb16f77648447e606fd79cf866f3f04aaeeca2ab6caf9d0dc0fa",
+    "startSec": 0.0,
+    "endSec": 26.697,
+    "frames": [
+     0,
+     1022
+    ],
+    "note": "byte range of whole MPEG frames of the parent clip — no re-encoding"
+   },
+   "text": "Section two, the Community Model. Every webinar, chapter event and challenge should lead somewhere real, so the model is built around four outcomes for every participant. Learn agentic AI, build a useful agent through the Builder Journey and Marketplace, deploy it through a named Accountable Institution, and measure a real-world benefit with baseline evidence of time saved, better service, or wider reach.",
+   "cues": [
+    {
+     "i": 1,
+     "text": "Section two, the Community Model.",
+     "start": 0.12,
+     "end": 2.04,
+     "anchor": "s4-c1"
+    },
+    {
+     "i": 2,
+     "text": "Every webinar, chapter event and challenge should lead somewhere real, so the model is built around four outcomes for every participant.",
+     "start": 2.8,
+     "end": 10.46,
+     "anchor": "s7-c1"
+    },
+    {
+     "i": 3,
+     "text": "Learn agentic AI, build a useful agent through the Builder Journey and Marketplace, deploy it through a named Accountable Institution, and measure a real-world benefit with baseline evidence of time saved, better service, or wider reach.",
+     "start": 11.48,
+     "end": 26.32,
+     "anchor": "s11-c1"
+    }
+   ],
+   "scribe": {
+    "transcriptionId": "ARuAanGgyHGIElLGvrT9",
+    "model": "scribe_v1 (requested)",
+    "language": "eng",
+    "languageProbability": 1,
+    "audioDurationSec": 26.697125,
+    "ratioVsNarrationText": 1.0,
+    "transcript": "Section two: The community model. Every webinar, chapter event, and challenge should lead somewhere real, so the model is built around four outcomes for every participant. Learn agentic AI, build a useful agent through the builder journey and marketplace, deploy it through a named accountable institution, and measure a real-world benefit with baseline evidence of time saved, better service, or wider reach",
+    "utc": "2026-10-01T06:28:29Z"
+   }
+  },
+  {
+   "n": 5,
+   "slideId": "s-managed-programme",
+   "clipId": "NAR-s05",
+   "file": "/audio/guide/slides/NAR-s05-s-managed-programme.mp3",
+   "bytes": 290107,
+   "sha256": "a5fadad64d372559334948af13476d87e4df37f63419b6057de734039f7c3678",
+   "durationSec": 18.103,
+   "section": "02 Community model",
+   "sectionAr": "02 نموذج المجتمع",
+   "source": {
+    "type": "tts",
+    "voice": "George",
+    "voiceId": "JBFqnCBsd6RMkjVDRZzb",
+    "modelId": "eleven_multilingual_v2",
+    "outputFormat": "mp3_44100_128",
+    "textSource": "dist/narration/narration-script.json s05 (identical text)",
+    "renderedUtc": "2026-10-01T06:20:05Z",
+    "origin": "ElevenLabs textToSpeech via On Demand plugin agent-1789123753 (session message 6abdfb865e9f29365b011e1d)",
+    "originMediaId": "cRYYk5T8yW",
+    "characters": 297,
+    "historyItemId": "5gYKrD05dIMIDiL3irmK",
+    "historyVoiceName": "George - Warm, Captivating Storyteller",
+    "historyModelId": "eleven_multilingual_v2",
+    "historyUtc": "2026-10-01T06:20:00Z",
+    "historyTextMatchesScript": true
+   },
+   "text": "This is a managed global programme, not a social channel. A Community Director, country chapter leads and a governance council run it against a published calendar. Every activity has an owner, a target and a report, so membership means participation in a working system rather than a mailing list.",
+   "cues": [
+    {
+     "i": 1,
+     "text": "This is a managed global programme, not a social channel.",
+     "start": 0.14,
+     "end": 3.14
+    },
+    {
+     "i": 2,
+     "text": "A Community Director, country chapter leads and a governance council run it against a published calendar.",
+     "start": 3.98,
+     "end": 9.3
+    },
+    {
+     "i": 3,
+     "text": "Every activity has an owner, a target and a report, so membership means participation in a working system rather than a mailing list.",
+     "start": 10.02,
+     "end": 17.76
+    }
+   ],
+   "scribe": {
+    "transcriptionId": "W2vdWhe2VlPl0Tvpj5V1",
+    "model": "scribe_v1 (requested)",
+    "language": "eng",
+    "languageProbability": 1,
+    "audioDurationSec": 18.065125,
+    "ratioVsNarrationText": 0.98,
+    "transcript": "This is a managed global program, not a social channel. A community director, country chapter leads, and a governance council run it against a published calendar. Every activity has an owner, a target, and a report, so membership means participation in a working system rather than a mailing list",
+    "utc": "2026-10-01T06:28:23Z"
+   }
+  },
+  {
+   "n": 6,
+   "slideId": "s-discord-home",
+   "clipId": "NAR-s06",
+   "file": "/audio/guide/slides/NAR-s06-s-discord-home.mp3",
+   "bytes": 290107,
+   "sha256": "4d47818ad2ee55cc063fbe7d0979cd1d47e630337f983404fa3e5f40d0db261b",
+   "durationSec": 18.103,
+   "section": "02 Community model",
+   "sectionAr": "02 نموذج المجتمع",
+   "source": {
+    "type": "tts",
+    "voice": "George",
+    "voiceId": "JBFqnCBsd6RMkjVDRZzb",
+    "modelId": "eleven_multilingual_v2",
+    "outputFormat": "mp3_44100_128",
+    "textSource": "dist/narration/narration-script.json s06 (identical text)",
+    "renderedUtc": "2026-10-01T06:22:56Z",
+    "origin": "ElevenLabs textToSpeech via On Demand plugin agent-1789123753 (session message 6abdfc305e9f29365b011e4c)",
+    "originMediaId": "2heDsffSkp",
+    "characters": 287,
+    "historyItemId": "vqQOvIzMKGe5SWzruxVY",
+    "historyVoiceName": "George - Warm, Captivating Storyteller",
+    "historyModelId": "eleven_multilingual_v2",
+    "historyUtc": "2026-10-01T06:22:51Z",
+    "historyTextMatchesScript": true
+   },
+   "text": "Discord is the always-on home of the community. Chapters, cohorts and office hours live in structured channels with clear moderation and escalation. It is where builders ask questions, showcase agents and find collaborators between events — governed, searchable and open to every member.",
+   "cues": [
+    {
+     "i": 1,
+     "text": "Discord is the always-on home of the community.",
+     "start": 0.1,
+     "end": 2.68
+    },
+    {
+     "i": 2,
+     "text": "Chapters, cohorts and office hours live in structured channels with clear moderation and escalation.",
+     "start": 3.32,
+     "end": 8.98
+    },
+    {
+     "i": 3,
+     "text": "It is where builders ask questions, showcase agents and find collaborators between events — governed, searchable and open to every member.",
+     "start": 9.66,
+     "end": 17.68
+    }
+   ],
+   "scribe": {
+    "transcriptionId": "iazNdYFtgqTe3Y6wM3wf",
+    "model": "scribe_v1 (requested)",
+    "language": "eng",
+    "languageProbability": 1,
+    "audioDurationSec": 18.065125,
+    "ratioVsNarrationText": 1.0,
+    "transcript": "Discord is the always-on home of the community. Chapters, cohorts, and office hours live in structured channels with clear moderation and escalation. It is where builders ask questions, showcase agents, and find collaborators between events, governed, searchable, and open to every member",
+    "utc": "2026-10-01T06:28:21Z"
+   }
+  },
+  {
+   "n": 7,
+   "slideId": "s-country-chapters",
+   "clipId": "NAR-s07",
+   "file": "/audio/guide/slides/NAR-s07-s-country-chapters.mp3",
+   "bytes": 282584,
+   "sha256": "a86fa558f9306d8b029d5683a20fc6e210b03cb719b238f3b600347593722fd0",
+   "durationSec": 17.633,
+   "section": "02 Community model",
+   "sectionAr": "02 نموذج المجتمع",
+   "source": {
+    "type": "tts",
+    "voice": "George",
+    "voiceId": "JBFqnCBsd6RMkjVDRZzb",
+    "modelId": "eleven_multilingual_v2",
+    "outputFormat": "mp3_44100_128",
+    "textSource": "dist/narration/narration-script.json s07 (identical text)",
+    "renderedUtc": "2026-10-01T06:21:54Z",
+    "origin": "ElevenLabs textToSpeech via On Demand plugin agent-1789123753 (session message 6abdfbf35e9f29365b011e29)",
+    "originMediaId": "w1rz6SxZVY",
+    "characters": 292,
+    "historyItemId": "ULsVfYH4TJBOdwnyI42J",
+    "historyVoiceName": "George - Warm, Captivating Storyteller",
+    "historyModelId": "eleven_multilingual_v2",
+    "historyUtc": "2026-10-01T06:21:49Z",
+    "historyTextMatchesScript": true
+   },
+   "text": "Country chapters bring the pact to life locally. Each chapter adapts the shared curriculum to its language and institutions, hosts events, and connects local builders with government and industry partners. Wave one starts with the UAE base plus two countries, then scales through the roadmap.",
+   "cues": [
+    {
+     "i": 1,
+     "text": "Country chapters bring the pact to life locally.",
+     "start": 0.1,
+     "end": 2.52
+    },
+    {
+     "i": 2,
+     "text": "Each chapter adapts the shared curriculum to its language and institutions, hosts events, and connects local builders with government and industry partners.",
+     "start": 3.02,
+     "end": 11.3
+    },
+    {
+     "i": 3,
+     "text": "Wave one starts with the UAE base plus two countries, then scales through the roadmap.",
+     "start": 12.2,
+     "end": 17.24
+    }
+   ],
+   "scribe": {
+    "transcriptionId": "W9b9hHNXKUL76c7gQ9zH",
+    "model": "scribe_v1 (requested)",
+    "language": "eng",
+    "languageProbability": 1,
+    "audioDurationSec": 17.60075,
+    "ratioVsNarrationText": 1.0,
+    "transcript": "Country chapters bring the pact to life locally. Each chapter adapts the shared curriculum to its language and institutions, hosts events, and connects local builders with government and industry partners. Wave one starts with the UAE base plus two countries, then scales through the roadmap",
+    "utc": "2026-10-01T06:28:42Z"
+   }
+  },
+  {
+   "n": 8,
+   "slideId": "s-learning-formats",
+   "clipId": "NAR-s08",
+   "file": "/audio/guide/slides/NAR-s08-s-learning-formats.mp3",
+   "bytes": 308079,
+   "sha256": "6d3492e8939eba28d798981adc169ef3e732245e77aca9376cd62979baf538a0",
+   "durationSec": 19.226,
+   "section": "02 Community model",
+   "sectionAr": "02 نموذج المجتمع",
+   "source": {
+    "type": "tts",
+    "voice": "George",
+    "voiceId": "JBFqnCBsd6RMkjVDRZzb",
+    "modelId": "eleven_multilingual_v2",
+    "outputFormat": "mp3_44100_128",
+    "textSource": "dist/narration/narration-script.json s08 (identical text)",
+    "renderedUtc": "2026-10-01T06:21:55Z",
+    "origin": "ElevenLabs textToSpeech via On Demand plugin agent-1789123753 (session message 6abdfbf35e9f29365b011e28)",
+    "originMediaId": "rsFIn3chen",
+    "characters": 293,
+    "historyItemId": "UbYG92HDyqeK0kAiMHf2",
+    "historyVoiceName": "George - Warm, Captivating Storyteller",
+    "historyModelId": "eleven_multilingual_v2",
+    "historyUtc": "2026-10-01T06:21:50Z",
+    "historyTextMatchesScript": true
+   },
+   "text": "Webinars, bootcamps and institutional academies form the learning ladder. Webinars introduce agentic AI, bootcamps build working agents in days, and academies embed the practice inside ministries, universities and companies. Every step issues evidence a learner can carry into the marketplace.",
+   "cues": [
+    {
+     "i": 1,
+     "text": "Webinars, bootcamps and institutional academies form the learning ladder.",
+     "start": 0.1,
+     "end": 4.08
+    },
+    {
+     "i": 2,
+     "text": "Webinars introduce agentic AI, bootcamps build working agents in days, and academies embed the practice inside ministries, universities and companies.",
+     "start": 4.8,
+     "end": 14.48
+    },
+    {
+     "i": 3,
+     "text": "Every step issues evidence a learner can carry into the marketplace.",
+     "start": 15.3,
+     "end": 18.82
+    }
+   ],
+   "scribe": {
+    "transcriptionId": "RwXOOxEr8hNWz29rsjve",
+    "model": "scribe_v1 (requested)",
+    "language": "eng",
+    "languageProbability": 1,
+    "audioDurationSec": 19.1796875,
+    "ratioVsNarrationText": 0.927,
+    "transcript": "Webinars, boot camps, and institutional academies form the learning ladder. Webinars introduce agentic AI, boot camps build working agents in days, and academies embed the practice inside ministries, universities, and companies. Every step issues evidence a learner can carry into the marketplace.",
+    "utc": "2026-10-01T06:28:42Z"
+   }
+  },
+  {
+   "n": 9,
+   "slideId": "s-challenges-showcases",
+   "clipId": "NAR-s09",
+   "file": "/audio/guide/slides/NAR-s09-s-challenges-showcases.mp3",
+   "bytes": 265448,
+   "sha256": "ff3646b4b3ebe1c2ee1674c1e6e444c0d9f5b39c53c16f8c6f21e915cb3a4c40",
+   "durationSec": 16.562,
+   "section": "02 Community model",
+   "sectionAr": "02 نموذج المجتمع",
+   "source": {
+    "type": "tts",
+    "voice": "George",
+    "voiceId": "JBFqnCBsd6RMkjVDRZzb",
+    "modelId": "eleven_multilingual_v2",
+    "outputFormat": "mp3_44100_128",
+    "textSource": "dist/narration/narration-script.json s09 (identical text)",
+    "renderedUtc": "2026-10-01T06:22:56Z",
+    "origin": "ElevenLabs textToSpeech via On Demand plugin agent-1789123753 (session message 6abdfc307cb494a6f6b3ddec)",
+    "originMediaId": "ErqlcaVshW",
+    "characters": 263,
+    "historyItemId": "sMYIEY3H5C64dvvrqDgP",
+    "historyVoiceName": "George - Warm, Captivating Storyteller",
+    "historyModelId": "eleven_multilingual_v2",
+    "historyUtc": "2026-10-01T06:22:51Z",
+    "historyTextMatchesScript": true
+   },
+   "text": "Challenges, showcases and the annual summit turn learning into visible results. Time-boxed challenges solve real institutional problems, showcases publish validated agents, and the Global Summit reports the year's outcomes to funders and governments in one place.",
+   "cues": [
+    {
+     "i": 1,
+     "text": "Challenges, showcases and the annual summit turn learning into visible results.",
+     "start": 0.1,
+     "end": 4.64
+    },
+    {
+     "i": 2,
+     "text": "Time-boxed challenges solve real institutional problems, showcases publish validated agents, and the Global Summit reports the year's outcomes to funders and governments in one place.",
+     "start": 5.38,
+     "end": 16.14
+    }
+   ],
+   "scribe": {
+    "transcriptionId": "x2wFViXIULGwGgp7lSUA",
+    "model": "scribe_v1 (requested)",
+    "language": "eng",
+    "languageProbability": 1,
+    "audioDurationSec": 16.532625,
+    "ratioVsNarrationText": 1.0,
+    "transcript": "Challenges, showcases, and the annual summit turn learning into visible results. Time-boxed challenges solve real institutional problems, showcases publish validated agents, and the global summit reports the year's outcomes to funders and governments in one place",
+    "utc": "2026-10-01T06:28:45Z"
+   }
+  },
+  {
+   "n": 10,
+   "slideId": "s-office-hours",
+   "clipId": "NAR-s10",
+   "file": "/audio/guide/slides/NAR-s10-s-office-hours.mp3",
+   "bytes": 267955,
+   "sha256": "3801aed072a4de51f9f0a2739efe059b2af82c8e7b6302399ab698ade403e667",
+   "durationSec": 16.718,
+   "section": "02 Community model",
+   "sectionAr": "02 نموذج المجتمع",
+   "source": {
+    "type": "tts",
+    "voice": "George",
+    "voiceId": "JBFqnCBsd6RMkjVDRZzb",
+    "modelId": "eleven_multilingual_v2",
+    "outputFormat": "mp3_44100_128",
+    "textSource": "dist/narration/narration-script.json s10 (identical text)",
+    "renderedUtc": "2026-10-01T06:21:54Z",
+    "origin": "ElevenLabs textToSpeech via On Demand plugin agent-1789123753 (session message 6abdfbf37cb494a6f6b3dda8)",
+    "originMediaId": "SRu5mgNrQ9",
+    "characters": 261,
+    "historyItemId": "JNHRA70TvxGqHnlfRuru",
+    "historyVoiceName": "George - Warm, Captivating Storyteller",
+    "historyModelId": "eleven_multilingual_v2",
+    "historyUtc": "2026-10-01T06:21:49Z",
+    "historyTextMatchesScript": true
+   },
+   "text": "Weekly office hours and tiered support keep builders unblocked. Level one answers common questions in the community, level two brings platform engineers, and level three escalates to AIREV specialists. Institutions on a licence receive committed response times.",
+   "cues": [
+    {
+     "i": 1,
+     "text": "Weekly office hours and tiered support keep builders unblocked.",
+     "start": 0.12,
+     "end": 3.44
+    },
+    {
+     "i": 2,
+     "text": "Level one answers common questions in the community, level two brings platform engineers, and level three escalates to AIREV specialists.",
+     "start": 4.1,
+     "end": 12.3
+    },
+    {
+     "i": 3,
+     "text": "Institutions on a licence receive committed response times.",
+     "start": 12.98,
+     "end": 16.3
+    }
+   ],
+   "scribe": {
+    "transcriptionId": "3JgONlRdwEvbDwmkk2FT",
+    "model": "scribe_v1 (requested)",
+    "language": "eng",
+    "languageProbability": 1,
+    "audioDurationSec": 16.6719375,
+    "ratioVsNarrationText": 0.946,
+    "transcript": "Weekly office hours and tiered support keep builders unblocked. Level one answers common questions in the community. Level two brings platform engineers, and level three escalates to ARF specialists. Institutions on a license receive committed response times.",
+    "utc": "2026-10-01T06:28:48Z"
+   }
+  },
+  {
+   "n": 11,
+   "slideId": "s-agent-marketplace",
+   "clipId": "NAR-s11",
+   "file": "/audio/guide/slides/NAR-s11-s-agent-marketplace.mp3",
+   "bytes": 287182,
+   "sha256": "fff160fbf40aa6d0249f4a49f3723df062d0012c406b216c7855ae640fd96558",
+   "durationSec": 17.92,
+   "section": "02 Community model",
+   "sectionAr": "02 نموذج المجتمع",
+   "source": {
+    "type": "tts",
+    "voice": "George",
+    "voiceId": "JBFqnCBsd6RMkjVDRZzb",
+    "modelId": "eleven_multilingual_v2",
+    "outputFormat": "mp3_44100_128",
+    "textSource": "dist/narration/narration-script.json s11 (identical text)",
+    "renderedUtc": "2026-10-01T06:21:55Z",
+    "origin": "ElevenLabs textToSpeech via On Demand plugin agent-1789123753 (session message 6abdfbf35e9f29365b011e2d)",
+    "originMediaId": "tQvoJ2XkNq",
+    "characters": 282,
+    "historyItemId": "YPyn7l2foawTNXKP07P9",
+    "historyVoiceName": "George - Warm, Captivating Storyteller",
+    "historyModelId": "eleven_multilingual_v2",
+    "historyUtc": "2026-10-01T06:21:49Z",
+    "historyTextMatchesScript": true
+   },
+   "text": "The builder journey runs from an idea to a validated agent. Prototype, evaluate, validate — then publish in the agent marketplace with a disclosed intended use, a named owner and supported languages. Specialist agents can earn revenue share, sustaining the builders who create them.",
+   "cues": [
+    {
+     "i": 1,
+     "text": "The builder journey runs from an idea to a validated agent.",
+     "start": 0.1,
+     "end": 3.28
+    },
+    {
+     "i": 2,
+     "text": "Prototype, evaluate, validate — then publish in the agent marketplace with a disclosed intended use, a named owner and supported languages.",
+     "start": 3.78,
+     "end": 12.32
+    },
+    {
+     "i": 3,
+     "text": "Specialist agents can earn revenue share, sustaining the builders who create them.",
+     "start": 13.3,
+     "end": 17.54
+    }
+   ],
+   "scribe": {
+    "transcriptionId": "bacbnTGB5O8CZtHt3jx1",
+    "model": "scribe_v1 (requested)",
+    "language": "eng",
+    "languageProbability": 1,
+    "audioDurationSec": 17.879375,
+    "ratioVsNarrationText": 1.0,
+    "transcript": "The builder journey runs from an idea to a validated agent. Prototype, evaluate, validate, then publish in the agent marketplace with a disclosed intended use, a named owner, and supported languages. Specialist agents can earn revenue share, sustaining the builders who create them",
+    "utc": "2026-10-01T06:28:52Z"
+   }
+  },
+  {
+   "n": 12,
+   "slideId": "s-decision-table",
+   "clipId": "NAR-s12",
+   "file": "/audio/guide/slides/NAR-s12-s-decision-table.mp3",
+   "bytes": 243296,
+   "sha256": "d45b4f66b669fb758f234b55e071a23b925615f27d26271693dd92feec52a576",
+   "durationSec": 15.177,
+   "section": "02 Community model",
+   "sectionAr": "02 نموذج المجتمع",
+   "source": {
+    "type": "tts",
+    "voice": "George",
+    "voiceId": "JBFqnCBsd6RMkjVDRZzb",
+    "modelId": "eleven_multilingual_v2",
+    "outputFormat": "mp3_44100_128",
+    "textSource": "dist/narration/narration-script.json s12 (identical text)",
+    "renderedUtc": "2026-10-01T06:23:11Z",
+    "origin": "ElevenLabs textToSpeech via On Demand plugin agent-1789123753 (session message 6abdfc415e9f29365b011e51)",
+    "originMediaId": "jC9RqQsN2o",
+    "characters": 251,
+    "historyItemId": "r7i4fmpd8GA7lBU38STw",
+    "historyVoiceName": "George - Warm, Captivating Storyteller",
+    "historyModelId": "eleven_multilingual_v2",
+    "historyUtc": "2026-10-01T06:23:06Z",
+    "historyTextMatchesScript": true
+   },
+   "text": "The decision in one page. Approve the two-engine model — institutions and community — appoint the Community Director, select the first anchor institutions, and fund the founding cohort. Everything else on the roadmap follows from these four decisions.",
+   "cues": [
+    {
+     "i": 1,
+     "text": "The decision in one page.",
+     "start": 0.1,
+     "end": 1.46
+    },
+    {
+     "i": 2,
+     "text": "Approve the two-engine model — institutions and community — appoint the Community Director, select the first anchor institutions, and fund the founding cohort.",
+     "start": 1.9,
+     "end": 10.98
+    },
+    {
+     "i": 3,
+     "text": "Everything else on the roadmap follows from these four decisions.",
+     "start": 11.64,
+     "end": 14.78
+    }
+   ],
+   "scribe": {
+    "transcriptionId": "K4QZURtQQobg3x96IvSJ",
+    "model": "scribe_v1 (requested)",
+    "language": "eng",
+    "languageProbability": 1,
+    "audioDurationSec": 15.1394375,
+    "ratioVsNarrationText": 1.0,
+    "transcript": "The decision in one page: approve the two-engine model, institutions and community, appoint the community director, select the first anchor institutions, and fund the founding cohort. Everything else on the roadmap follows from these four decisions",
+    "utc": "2026-10-01T06:28:55Z"
+   }
+  },
+  {
+   "n": 13,
+   "slideId": "s-pillar-plugins",
+   "clipId": "NAR-s13",
+   "file": "/audio/guide/slides/NAR-s13-s-pillar-plugins.mp3",
+   "bytes": 137926,
+   "sha256": "eeaadbef995bd214fcfd3e5e2b9eabfc828e21de8a87591e6134a1986a0a030d",
+   "durationSec": 8.62,
+   "section": "03 Six pillars",
+   "sectionAr": "03 الركائز الست",
+   "source": {
+    "type": "cut",
+    "parentClip": "NAR-03",
+    "parentFile": "/audio/guide/guide-03-six-pillars-yxVqZJ2k1a.mp3",
+    "parentSha256": "c86da1d11920c022eeca1441dbee5f6a8a6a352bc19763de6a8670bb584c01bf",
+    "startSec": 0.0,
+    "endSec": 8.62,
+    "frames": [
+     0,
+     330
+    ],
+    "note": "byte range of whole MPEG frames of the parent clip — no re-encoding"
+   },
+   "text": "Section three, six pillars. Plugins are the connective tissue: one shared plugin standard, so every integration works everywhere.",
+   "cues": [
+    {
+     "i": 1,
+     "text": "Section three, six pillars.",
+     "start": 0.12,
+     "end": 1.9,
+     "anchor": "s13-c1"
+    },
+    {
+     "i": 2,
+     "text": "Plugins are the connective tissue: one shared plugin standard, so every integration works everywhere.",
+     "start": 2.56,
+     "end": 8.3,
+     "anchor": "s13-c2"
+    }
+   ],
+   "scribe": {
+    "transcriptionId": "j8zvpUibq0cWAA778EGB",
+    "model": "scribe_v1 (requested)",
+    "language": "eng",
+    "languageProbability": 1,
+    "audioDurationSec": 8.6204375,
+    "ratioVsNarrationText": 1.0,
+    "transcript": "Section three: Six pillars. Plugins are the connective tissue. One shared plugin standard so every integration works everywhere",
+    "utc": "2026-10-01T06:29:01Z"
+   }
+  },
+  {
+   "n": 14,
+   "slideId": "s-pillar-skills",
+   "clipId": "NAR-s14",
+   "file": "/audio/guide/slides/NAR-s14-s-pillar-skills.mp3",
+   "bytes": 63948,
+   "sha256": "1bbd5e2d2b6890f579a3858f3f0532c4b40d3b8a9389cb8a56194356d5a4f289",
+   "durationSec": 3.997,
+   "section": "03 Six pillars",
+   "sectionAr": "03 الركائز الست",
+   "source": {
+    "type": "cut",
+    "parentClip": "NAR-03",
+    "parentFile": "/audio/guide/guide-03-six-pillars-yxVqZJ2k1a.mp3",
+    "parentSha256": "c86da1d11920c022eeca1441dbee5f6a8a6a352bc19763de6a8670bb584c01bf",
+    "startSec": 8.62,
+    "endSec": 12.617,
+    "frames": [
+     330,
+     483
+    ],
+    "note": "byte range of whole MPEG frames of the parent clip — no re-encoding"
+   },
+   "text": "Reusable skills are built once and shared across the community.",
+   "cues": [
+    {
+     "i": 1,
+     "text": "Reusable skills are built once and shared across the community.",
+     "start": 0.36,
+     "end": 3.66,
+     "anchor": "s14-c1"
+    }
+   ],
+   "scribe": {
+    "transcriptionId": "pWklfOwErqKVTSisp1V0",
+    "model": "scribe_v1 (requested)",
+    "language": "eng",
+    "languageProbability": 1,
+    "audioDurationSec": 3.99675,
+    "ratioVsNarrationText": 1.0,
+    "transcript": "Reusable skills are built once and shared across the community",
+    "utc": "2026-10-01T06:28:58Z"
+   }
+  },
+  {
+   "n": 15,
+   "slideId": "s-pillar-open-ecosystem",
+   "clipId": "NAR-s15",
+   "file": "/audio/guide/slides/NAR-s15-s-pillar-open-ecosystem.mp3",
+   "bytes": 267955,
+   "sha256": "c621ac492ee171f519dd62f7646d748359d952da62cfd476ccaaa2794707fcfd",
+   "durationSec": 16.718,
+   "section": "03 Six pillars",
+   "sectionAr": "03 الركائز الست",
+   "source": {
+    "type": "tts",
+    "voice": "George",
+    "voiceId": "JBFqnCBsd6RMkjVDRZzb",
+    "modelId": "eleven_multilingual_v2",
+    "outputFormat": "mp3_44100_128",
+    "textSource": "dist/narration/narration-script.json s15 (identical text)",
+    "renderedUtc": "2026-10-01T06:23:12Z",
+    "origin": "ElevenLabs textToSpeech via On Demand plugin agent-1789123753 (session message 6abdfc407cb494a6f6b3ddef)",
+    "originMediaId": "1iNY84KZ3Y",
+    "characters": 266,
+    "historyItemId": "EGDoVbW4CvKFkMY2duUL",
+    "historyVoiceName": "George - Warm, Captivating Storyteller",
+    "historyModelId": "eleven_multilingual_v2",
+    "historyUtc": "2026-10-01T06:23:07Z",
+    "historyTextMatchesScript": true
+   },
+   "text": "Open where possible, governed where necessary. Interfaces, curricula and the plugin standard are open; identity, data residency and deployment approvals are governed. The balance lets institutions adopt with confidence while the community keeps building in the open.",
+   "cues": [
+    {
+     "i": 1,
+     "text": "Open where possible, governed where necessary.",
+     "start": 0.1,
+     "end": 2.44
+    },
+    {
+     "i": 2,
+     "text": "Interfaces, curricula and the plugin standard are open; identity, data residency and deployment approvals are governed.",
+     "start": 3.04,
+     "end": 10.38
+    },
+    {
+     "i": 3,
+     "text": "The balance lets institutions adopt with confidence while the community keeps building in the open.",
+     "start": 11.18,
+     "end": 16.3
+    }
+   ],
+   "scribe": {
+    "transcriptionId": "nsfimsPb2suy2CRDCqz0",
+    "model": "scribe_v1 (requested)",
+    "language": "eng",
+    "languageProbability": 1,
+    "audioDurationSec": 16.6719375,
+    "ratioVsNarrationText": 1.0,
+    "transcript": "Open where possible, governed where necessary. Interfaces, curricula, and the plugin standard are open. Identity, data residency, and deployment approvals are governed. The balance lets institutions adopt with confidence while the community keeps building in the open",
+    "utc": "2026-10-01T06:29:14Z"
+   }
+  },
+  {
+   "n": 16,
+   "slideId": "s-pillar-cross-model",
+   "clipId": "NAR-s16",
+   "file": "/audio/guide/slides/NAR-s16-s-pillar-cross-model.mp3",
+   "bytes": 275061,
+   "sha256": "99f03c33fce55e599b1b0413682bd055aa1f4ad11a5a7d1a607f3e6fdde32b33",
+   "durationSec": 17.162,
+   "section": "03 Six pillars",
+   "sectionAr": "03 الركائز الست",
+   "source": {
+    "type": "tts",
+    "voice": "George",
+    "voiceId": "JBFqnCBsd6RMkjVDRZzb",
+    "modelId": "eleven_multilingual_v2",
+    "outputFormat": "mp3_44100_128",
+    "textSource": "dist/narration/narration-script.json s16 (identical text)",
+    "renderedUtc": "2026-10-01T06:21:54Z",
+    "origin": "ElevenLabs textToSpeech via On Demand plugin agent-1789123753 (session message 6abdfbf35e9f29365b011e27)",
+    "originMediaId": "uhJBwsYwxl",
+    "characters": 260,
+    "historyItemId": "QpQrUyjrcs13ja7WyT8M",
+    "historyVoiceName": "George - Warm, Captivating Storyteller",
+    "historyModelId": "eleven_multilingual_v2",
+    "historyUtc": "2026-10-01T06:21:50Z",
+    "historyTextMatchesScript": true
+   },
+   "text": "Cross-model interoperability by design. The pact does not bind any nation or institution to a single model. Agents, skills and plugins run across leading models, so partners can switch providers, host sovereign models and stay in control of cost and residency.",
+   "cues": [
+    {
+     "i": 1,
+     "text": "Cross-model interoperability by design.",
+     "start": 0.1,
+     "end": 2.52
+    },
+    {
+     "i": 2,
+     "text": "The pact does not bind any nation or institution to a single model.",
+     "start": 3.16,
+     "end": 6.84
+    },
+    {
+     "i": 3,
+     "text": "Agents, skills and plugins run across leading models, so partners can switch providers, host sovereign models and stay in control of cost and residency.",
+     "start": 7.6,
+     "end": 16.76
+    }
+   ],
+   "scribe": {
+    "transcriptionId": "17Jz0y14dHcNWfzDfpzV",
+    "model": "scribe_v1 (requested)",
+    "language": "eng",
+    "languageProbability": 1,
+    "audioDurationSec": 17.1363125,
+    "ratioVsNarrationText": 1.0,
+    "transcript": "Cross-model interoperability by design. The Pact does not bind any nation or institution to a single model. Agents, skills, and plugins run across leading models so partners can switch providers, host sovereign models, and stay in control of cost and residency",
+    "utc": "2026-10-01T06:29:21Z"
+   }
+  },
+  {
+   "n": 17,
+   "slideId": "s-pillar-universal-licence",
+   "clipId": "NAR-s17",
+   "file": "/audio/guide/slides/NAR-s17-s-pillar-universal-licence.mp3",
+   "bytes": 108669,
+   "sha256": "9eac1941bf83564ca75d12875384343a512933fb7209b4a7263e3f837a7c3994",
+   "durationSec": 6.792,
+   "section": "03 Six pillars",
+   "sectionAr": "03 الركائز الست",
+   "source": {
+    "type": "cut",
+    "parentClip": "NAR-03",
+    "parentFile": "/audio/guide/guide-03-six-pillars-yxVqZJ2k1a.mp3",
+    "parentSha256": "c86da1d11920c022eeca1441dbee5f6a8a6a352bc19763de6a8670bb584c01bf",
+    "startSec": 12.617,
+    "endSec": 19.409,
+    "frames": [
+     483,
+     743
+    ],
+    "note": "byte range of whole MPEG frames of the parent clip — no re-encoding"
+   },
+   "text": "Universal API licences are managed by Athar, giving members access without duplicated procurement.",
+   "cues": [
+    {
+     "i": 1,
+     "text": "Universal API licences are managed by Athar, giving members access without duplicated procurement.",
+     "start": 0.34,
+     "end": 6.46,
+     "anchor": "s17-c1"
+    }
+   ],
+   "scribe": {
+    "transcriptionId": "olexL7a5ZKAUhTY6ZMqg",
+    "model": "scribe_v1 (requested)",
+    "language": "eng",
+    "languageProbability": 1,
+    "audioDurationSec": 6.791875,
+    "ratioVsNarrationText": 1.0,
+    "transcript": "Universal API licenses are managed by Athar, giving members access without duplicated procurement",
+    "utc": "2026-10-01T06:29:10Z"
+   }
+  },
+  {
+   "n": 18,
+   "slideId": "s-pillar-upskilling",
+   "clipId": "NAR-s18",
+   "file": "/audio/guide/slides/NAR-s18-s-pillar-upskilling.mp3",
+   "bytes": 275897,
+   "sha256": "0834907dc86d3c961ee03f1dd545a480c063e528ec4f35cd148bc0331c9b3dfe",
+   "durationSec": 17.215,
+   "section": "03 Six pillars",
+   "sectionAr": "03 الركائز الست",
+   "source": {
+    "type": "tts",
+    "voice": "George",
+    "voiceId": "JBFqnCBsd6RMkjVDRZzb",
+    "modelId": "eleven_multilingual_v2",
+    "outputFormat": "mp3_44100_128",
+    "textSource": "dist/narration/narration-script.json s18 (identical text)",
+    "renderedUtc": "2026-10-01T06:23:28Z",
+    "origin": "ElevenLabs textToSpeech via On Demand plugin agent-1789123753 (session message 6abdfc4f7cb494a6f6b3ddf7)",
+    "originMediaId": "psgjhrEsyE",
+    "characters": 257,
+    "historyItemId": "1Mln3oAl1sdpSPuoOiog",
+    "historyVoiceName": "George - Warm, Captivating Storyteller",
+    "historyModelId": "eleven_multilingual_v2",
+    "historyUtc": "2026-10-01T06:23:22Z",
+    "historyTextMatchesScript": true
+   },
+   "text": "Agentic AI for all, not for a few. The pact is bilingual by design, accessible by requirement, and priced so a school or clinic can start small. Reach is measured, not assumed — with learners, deployments and benefits reported by country and by institution.",
+   "cues": [
+    {
+     "i": 1,
+     "text": "Agentic AI for all, not for a few.",
+     "start": 0.1,
+     "end": 2.4
+    },
+    {
+     "i": 2,
+     "text": "The pact is bilingual by design, accessible by requirement, and priced so a school or clinic can start small.",
+     "start": 2.98,
+     "end": 9.58
+    },
+    {
+     "i": 3,
+     "text": "Reach is measured, not assumed — with learners, deployments and benefits reported by country and by institution.",
+     "start": 10.18,
+     "end": 16.82
+    }
+   ],
+   "scribe": {
+    "transcriptionId": "daxpnxxsVu7JpnDltHZm",
+    "model": "scribe_v1 (requested)",
+    "language": "eng",
+    "languageProbability": 1,
+    "audioDurationSec": 17.18275,
+    "ratioVsNarrationText": 1.0,
+    "transcript": "Agentic AI for all, not for a few. The pact is bilingual by design, accessible by requirement, and priced so a school or clinic can start small. Reach is measured, not assumed, with learners, deployments, and benefits reported by country and by institution",
+    "utc": "2026-10-01T06:29:23Z"
+   }
+  },
+  {
+   "n": 19,
+   "slideId": "s-pact-principles",
+   "clipId": "NAR-s19",
+   "file": "/audio/guide/slides/NAR-s19-s-pact-principles.mp3",
+   "bytes": 89025,
+   "sha256": "d4572bfe6b48652cf89310de99cb57389ece74cf780b2e418856cdb99c893a84",
+   "durationSec": 5.564,
+   "section": "04 Pledge & signing",
+   "sectionAr": "04 التعهد والتوقيع",
+   "source": {
+    "type": "cut",
+    "parentClip": "NAR-04",
+    "parentFile": "/audio/guide/guide-04-pledge-and-signing-PWeXZj1Rgc.mp3",
+    "parentSha256": "5e90ce2e8f4a35681a8e3c80abea3c0beab858c67ea3f50b8d30f8fe76df2967",
+    "startSec": 0.0,
+    "endSec": 5.564,
+    "frames": [
+     0,
+     213
+    ],
+    "note": "byte range of whole MPEG frames of the parent clip — no re-encoding"
+   },
+   "text": "Section four, Pledge and Signing. Joining the Pact is a simple public commitment.",
+   "cues": [
+    {
+     "i": 1,
+     "text": "Section four, Pledge and Signing.",
+     "start": 0.12,
+     "end": 2.1,
+     "anchor": "s19-c1"
+    },
+    {
+     "i": 2,
+     "text": "Joining the Pact is a simple public commitment.",
+     "start": 2.74,
+     "end": 5.12,
+     "anchor": "s19-c2"
+    }
+   ],
+   "scribe": {
+    "transcriptionId": "EXPY69EHtSeXW4gVSsRC",
+    "model": "scribe_v1 (requested)",
+    "language": "eng",
+    "languageProbability": 1,
+    "audioDurationSec": 5.5640625,
+    "ratioVsNarrationText": 1.0,
+    "transcript": "Section four: Pledge and signing. Joining the pact is a simple public commitment",
+    "utc": "2026-10-01T06:29:14Z"
+   }
+  },
+  {
+   "n": 20,
+   "slideId": "s-how-to-sign",
+   "clipId": "NAR-s20",
+   "file": "/audio/guide/slides/NAR-s20-s-how-to-sign.mp3",
+   "bytes": 303856,
+   "sha256": "93e676c7428be8a832e9d2de3491bf40512483f847c7237b57f68988c6094070",
+   "durationSec": 18.991,
+   "section": "04 Pledge & signing",
+   "sectionAr": "04 التعهد والتوقيع",
+   "source": {
+    "type": "cut",
+    "parentClip": "NAR-04",
+    "parentFile": "/audio/guide/guide-04-pledge-and-signing-PWeXZj1Rgc.mp3",
+    "parentSha256": "5e90ce2e8f4a35681a8e3c80abea3c0beab858c67ea3f50b8d30f8fe76df2967",
+    "startSec": 5.564,
+    "endSec": 24.555,
+    "frames": [
+     213,
+     940
+    ],
+    "note": "byte range of whole MPEG frames of the parent clip — no re-encoding"
+   },
+   "text": "A signatory chooses its roles, sign, govern, build or learn, and pledges to contribute to at least one of the four participant outcomes. Signing brings access to the learning pathway, the builder journey, and the plugin standard, together with a commitment to report outcomes through the shared impact tiers.",
+   "cues": [
+    {
+     "i": 1,
+     "text": "A signatory chooses its roles, sign, govern, build or learn, and pledges to contribute to at least one of the four participant outcomes.",
+     "start": 0.46,
+     "end": 8.64,
+     "anchor": "s20-c1"
+    },
+    {
+     "i": 2,
+     "text": "Signing brings access to the learning pathway, the builder journey, and the plugin standard, together with a commitment to report outcomes through the shared impact tiers.",
+     "start": 9.3,
+     "end": 18.62,
+     "anchor": "s20-c2"
+    }
+   ],
+   "scribe": {
+    "transcriptionId": "LVvsxhkyuGIFJ8SyZeBj",
+    "model": "scribe_v1 (requested)",
+    "language": "eng",
+    "languageProbability": 1,
+    "audioDurationSec": 18.991,
+    "ratioVsNarrationText": 1.0,
+    "transcript": "A signatory chooses its roles: sign, govern, build, or learn, and pledges to contribute to at least one of the four participant outcomes. Signing brings access to the learning pathway, the builder journey, and the plugin standard, together with a commitment to report outcomes through the shared impact tiers",
+    "utc": "2026-10-01T06:29:34Z"
+   }
+  },
+  {
+   "n": 21,
+   "slideId": "s-actors-wall",
+   "clipId": "NAR-s21",
+   "file": "/audio/guide/slides/NAR-s21-s-actors-wall.mp3",
+   "bytes": 424646,
+   "sha256": "0310eae7421de1ccf744015bd276ef9eb984cb1e2a94a1ccbb16a935388f07a3",
+   "durationSec": 26.54,
+   "section": "05 Actors & roles",
+   "sectionAr": "05 الجهات الفاعلة والأدوار",
+   "source": {
+    "type": "cut",
+    "parentClip": "NAR-05",
+    "parentFile": "/audio/guide/guide-05-actors-and-roles-0PbyoFNYNV.mp3",
+    "parentSha256": "254c252aa57400a01aaa4f6e0c9edf684dd65c5b6713e076cdf45239415b8095",
+    "startSec": 0.0,
+    "endSec": 26.54,
+    "frames": [
+     0,
+     1016
+    ],
+    "note": "byte range of whole MPEG frames of the parent clip — no re-encoding"
+   },
+   "text": "Section five, Actors and Roles, institutions, partners and platforms building the Athar ecosystem together, ODA and AIREV sign and govern, with AIREV, OnDemand, e& and ai& and Discord building, UNDP, UNICEF, IFRC, WFP and UNHCR sign and learn. The UAE Ministry of Foreign Trade signs and governs and the United Arab Emirates governs.",
+   "cues": [
+    {
+     "i": 1,
+     "text": "Section five, Actors and Roles, institutions, partners and platforms building the Athar ecosystem together, ODA and AIREV sign and govern, with AIREV, OnDemand, e& and ai& and Discord building, UNDP, UNICEF, IFRC, WFP and UNHCR sign and learn.",
+     "start": 0.12,
+     "end": 20.38,
+     "anchor": "s21-c1"
+    },
+    {
+     "i": 2,
+     "text": "The UAE Ministry of Foreign Trade signs and governs and the United Arab Emirates governs.",
+     "start": 21.06,
+     "end": 26.08,
+     "anchor": "s23-c1"
+    }
+   ],
+   "scribe": {
+    "transcriptionId": "XDIyH3GnxQWniIUQGPIJ",
+    "model": "scribe_v1 (requested)",
+    "language": "eng",
+    "languageProbability": 1,
+    "audioDurationSec": 26.5404375,
+    "ratioVsNarrationText": 0.933,
+    "transcript": "Section five: Actors and roles. Institutions, partners, and platforms building the Athar ecosystem together. ODA and AirEv sign and govern with AirEv on demand, E&AI& and Discord building. UNDP, UNICEF, IFRC, WFP, and UNHCR sign and learn. The UAE Ministry of Foreign Trade signs and governs, and the United Arab Emirates governs",
+    "utc": "2026-10-01T06:29:45Z"
+   }
+  },
+  {
+   "n": 22,
+   "slideId": "s-who-signs",
+   "clipId": "NAR-s22",
+   "file": "/audio/guide/slides/NAR-s22-s-who-signs.mp3",
+   "bytes": 249147,
+   "sha256": "d2993a3c16d8515289f87bf8fdd31f2b3dbb932fd1b476a42136a859192b1948",
+   "durationSec": 15.543,
+   "section": "05 Actors & roles",
+   "sectionAr": "05 الجهات الفاعلة والأدوار",
+   "source": {
+    "type": "tts",
+    "voice": "George",
+    "voiceId": "JBFqnCBsd6RMkjVDRZzb",
+    "modelId": "eleven_multilingual_v2",
+    "outputFormat": "mp3_44100_128",
+    "textSource": "dist/narration/narration-script.json s22 (identical text)",
+    "renderedUtc": "2026-10-01T06:22:05Z",
+    "origin": "ElevenLabs textToSpeech via On Demand plugin agent-1789123753 (session message 6abdfbff5e9f29365b011e39)",
+    "originMediaId": "xMCO4fJGaS",
+    "characters": 241,
+    "historyItemId": "kqpROqrIO7hoFoTan6E4",
+    "historyVoiceName": "George - Warm, Captivating Storyteller",
+    "historyModelId": "eleven_multilingual_v2",
+    "historyUtc": "2026-10-01T06:22:01Z",
+    "historyTextMatchesScript": true
+   },
+   "text": "Who signs the pact. Institutions sign to deploy validated agents inside accountable workflows, backed by a licence, a named owner and quarterly reporting. Signing gives access to the marketplace, the academies and the shared plugin standard.",
+   "cues": [
+    {
+     "i": 1,
+     "text": "Who signs the pact.",
+     "start": 0.1,
+     "end": 1.16
+    },
+    {
+     "i": 2,
+     "text": "Institutions sign to deploy validated agents inside accountable workflows, backed by a licence, a named owner and quarterly reporting.",
+     "start": 1.62,
+     "end": 9.74
+    },
+    {
+     "i": 3,
+     "text": "Signing gives access to the marketplace, the academies and the shared plugin standard.",
+     "start": 10.58,
+     "end": 15.14
+    }
+   ],
+   "scribe": {
+    "transcriptionId": "LYnLnbw8glyIX4w0eKwA",
+    "model": "scribe_v1 (requested)",
+    "language": "eng",
+    "languageProbability": 1,
+    "audioDurationSec": 15.5109375,
+    "ratioVsNarrationText": 0.972,
+    "transcript": "Who signs the pact? Institutions sign to deploy validated agents inside accountable workflows, backed by a license, a named owner, and quarterly reporting. Signing gives access to the marketplace, the academies, and the shared plugin standard",
+    "utc": "2026-10-01T06:29:39Z"
+   }
+  },
+  {
+   "n": 23,
+   "slideId": "s-who-governs",
+   "clipId": "NAR-s23",
+   "file": "/audio/guide/slides/NAR-s23-s-who-governs.mp3",
+   "bytes": 79830,
+   "sha256": "bd86e77a1ed40e21a338a49d6338bcde9c0b8d86df03aafd3343f3df229dc05b",
+   "durationSec": 4.989,
+   "section": "05 Actors & roles",
+   "sectionAr": "05 الجهات الفاعلة والأدوار",
+   "source": {
+    "type": "cut",
+    "parentClip": "NAR-05",
+    "parentFile": "/audio/guide/guide-05-actors-and-roles-0PbyoFNYNV.mp3",
+    "parentSha256": "254c252aa57400a01aaa4f6e0c9edf684dd65c5b6713e076cdf45239415b8095",
+    "startSec": 26.54,
+    "endSec": 31.53,
+    "frames": [
+     1016,
+     1207
+    ],
+    "note": "byte range of whole MPEG frames of the parent clip — no re-encoding"
+   },
+   "text": "Every actor has a clear role, sign, govern, build or learn.",
+   "cues": [
+    {
+     "i": 1,
+     "text": "Every actor has a clear role, sign, govern, build or learn.",
+     "start": 0.46,
+     "end": 4.62,
+     "anchor": "s23-c2"
+    }
+   ],
+   "scribe": {
+    "transcriptionId": "AyrcCh3CbgHjd3vOBZrj",
+    "model": "scribe_v1 (requested)",
+    "language": "eng",
+    "languageProbability": 1,
+    "audioDurationSec": 4.989375,
+    "ratioVsNarrationText": 1.0,
+    "transcript": "Every actor has a clear role: sign, govern, build, or learn.",
+    "utc": "2026-10-01T06:29:28Z"
+   }
+  },
+  {
+   "n": 24,
+   "slideId": "s-who-builds",
+   "clipId": "NAR-s24",
+   "file": "/audio/guide/slides/NAR-s24-s-who-builds.mp3",
+   "bytes": 272135,
+   "sha256": "91b8f2f9cc4e4ec5d2b8ec01b006f1f06ec8ee1c80829ede3c4d6e3bec89114a",
+   "durationSec": 16.98,
+   "section": "05 Actors & roles",
+   "sectionAr": "05 الجهات الفاعلة والأدوار",
+   "source": {
+    "type": "tts",
+    "voice": "George",
+    "voiceId": "JBFqnCBsd6RMkjVDRZzb",
+    "modelId": "eleven_multilingual_v2",
+    "outputFormat": "mp3_44100_128",
+    "textSource": "dist/narration/narration-script.json s24 (identical text)",
+    "renderedUtc": "2026-10-01T06:22:08Z",
+    "origin": "ElevenLabs textToSpeech via On Demand plugin agent-1789123753 (session message 6abdfc007cb494a6f6b3ddc2)",
+    "originMediaId": "ZmKBsBrcNU",
+    "characters": 267,
+    "historyItemId": "j7G68R8ZT7wQt9wVFcH1",
+    "historyVoiceName": "George - Warm, Captivating Storyteller",
+    "historyModelId": "eleven_multilingual_v2",
+    "historyUtc": "2026-10-01T06:22:02Z",
+    "historyTextMatchesScript": true
+   },
+   "text": "Who builds on the pact. Developers, practitioners and student teams build agents and skills through the marketplace, with office hours, review and revenue share for specialist work. Builders keep their intellectual property while publishing under the shared standard.",
+   "cues": [
+    {
+     "i": 1,
+     "text": "Who builds on the pact.",
+     "start": 0.1,
+     "end": 1.22
+    },
+    {
+     "i": 2,
+     "text": "Developers, practitioners and student teams build agents and skills through the marketplace, with office hours, review and revenue share for specialist work.",
+     "start": 2.12,
+     "end": 11.4
+    },
+    {
+     "i": 3,
+     "text": "Builders keep their intellectual property while publishing under the shared standard.",
+     "start": 12.3,
+     "end": 16.62
+    }
+   ],
+   "scribe": {
+    "transcriptionId": "DcGdlFP5L2jzjX2GBx04",
+    "model": "scribe_v1 (requested)",
+    "language": "eng",
+    "languageProbability": 1,
+    "audioDurationSec": 16.9505625,
+    "ratioVsNarrationText": 1.0,
+    "transcript": "Who builds on the pact? Developers, practitioners, and student teams build agents and skills through the marketplace with office hours, review, and revenue share for specialist work. Builders keep their intellectual property while publishing under the shared standard",
+    "utc": "2026-10-01T06:29:48Z"
+   }
+  },
+  {
+   "n": 25,
+   "slideId": "s-who-learns",
+   "clipId": "NAR-s25",
+   "file": "/audio/guide/slides/NAR-s25-s-who-learns.mp3",
+   "bytes": 294705,
+   "sha256": "4fe6509f68aff9c834078b00e7fe57ea55fe1e9ba3fc713940a7203f6b9d8665",
+   "durationSec": 18.39,
+   "section": "05 Actors & roles",
+   "sectionAr": "05 الجهات الفاعلة والأدوار",
+   "source": {
+    "type": "tts",
+    "voice": "George",
+    "voiceId": "JBFqnCBsd6RMkjVDRZzb",
+    "modelId": "eleven_multilingual_v2",
+    "outputFormat": "mp3_44100_128",
+    "textSource": "dist/narration/narration-script.json s25 (identical text)",
+    "renderedUtc": "2026-10-01T06:22:06Z",
+    "origin": "ElevenLabs textToSpeech via On Demand plugin agent-1789123753 (session message 6abdfc000c1d5d8acfb4fdab)",
+    "originMediaId": "Z8Ym4KIWph",
+    "characters": 274,
+    "historyItemId": "M6U12Id0JeSHNJwvHPYe",
+    "historyVoiceName": "George - Warm, Captivating Storyteller",
+    "historyModelId": "eleven_multilingual_v2",
+    "historyUtc": "2026-10-01T06:22:02Z",
+    "historyTextMatchesScript": true
+   },
+   "text": "Who learns through the pact. Public servants, teachers, clinicians, farmers and young people move from foundations to certification. Year-one targets: ten thousand learners, two thousand five hundred certified and one hundred facilitators — each recorded against a baseline.",
+   "cues": [
+    {
+     "i": 1,
+     "text": "Who learns through the pact.",
+     "start": 0.1,
+     "end": 1.4
+    },
+    {
+     "i": 2,
+     "text": "Public servants, teachers, clinicians, farmers and young people move from foundations to certification.",
+     "start": 2.1,
+     "end": 8.42
+    },
+    {
+     "i": 3,
+     "text": "Year-one targets: ten thousand learners, two thousand five hundred certified and one hundred facilitators — each recorded against a baseline.",
+     "start": 9.22,
+     "end": 18
+    }
+   ],
+   "scribe": {
+    "transcriptionId": "JJbAVT1mkeDcaKpU7Bte",
+    "model": "scribe_v1 (requested)",
+    "language": "eng",
+    "languageProbability": 1,
+    "audioDurationSec": 18.34375,
+    "ratioVsNarrationText": 1.0,
+    "transcript": "Who learns through the pact? Public servants, teachers, clinicians, farmers, and young people move from foundations to certification. Year one targets ten thousand learners, two thousand five hundred certified, and one hundred facilitators, each recorded against a baseline.",
+    "utc": "2026-10-01T06:29:51Z"
+   }
+  },
+  {
+   "n": 26,
+   "slideId": "s-governance-licence",
+   "clipId": "NAR-s26",
+   "file": "/audio/guide/slides/NAR-s26-s-governance-licence.mp3",
+   "bytes": 118282,
+   "sha256": "8a81b3b2e86a784fdf5e8dbe03cc5dfb14f9cf68ad719d736b5d94ac4937e2c6",
+   "durationSec": 7.393,
+   "section": "06 Governance & roadmap",
+   "sectionAr": "06 الحوكمة وخارطة الطريق",
+   "source": {
+    "type": "cut",
+    "parentClip": "NAR-06",
+    "parentFile": "/audio/guide/guide-06-governance-and-roadmap-kyzmCSHcw8.mp3",
+    "parentSha256": "7d6007d69c91b6460c7a69e877ef69fac67cb8727ce6bfa1cefb26a5946dc938",
+    "startSec": 0.0,
+    "endSec": 7.393,
+    "frames": [
+     0,
+     283
+    ],
+    "note": "byte range of whole MPEG frames of the parent clip — no re-encoding"
+   },
+   "text": "Section six, governance and roadmap. An open steering council sets the shared plugin standard and approves the roadmap.",
+   "cues": [
+    {
+     "i": 1,
+     "text": "Section six, governance and roadmap.",
+     "start": 0.12,
+     "end": 2.26,
+     "anchor": "s26-c1"
+    },
+    {
+     "i": 2,
+     "text": "An open steering council sets the shared plugin standard and approves the roadmap.",
+     "start": 2.64,
+     "end": 7.06,
+     "anchor": "s26-c2"
+    }
+   ],
+   "scribe": {
+    "transcriptionId": "SBgYJ53JjRuAcvHKMBbZ",
+    "model": "scribe_v1 (requested)",
+    "language": "eng",
+    "languageProbability": 1,
+    "audioDurationSec": 7.3926875,
+    "ratioVsNarrationText": 1.0,
+    "transcript": "Section six: Governance and roadmap. An open steering council sets the shared plugin standard and approves the roadmap",
+    "utc": "2026-10-01T06:29:50Z"
+   }
+  },
+  {
+   "n": 27,
+   "slideId": "s-roadmap",
+   "clipId": "NAR-s27",
+   "file": "/audio/guide/slides/NAR-s27-s-roadmap.mp3",
+   "bytes": 133329,
+   "sha256": "96c570ebe55670082375885bf2f90b81e3bd78224f8a78f4f2fd8718c9f06fb9",
+   "durationSec": 8.333,
+   "section": "06 Governance & roadmap",
+   "sectionAr": "06 الحوكمة وخارطة الطريق",
+   "source": {
+    "type": "cut",
+    "parentClip": "NAR-06",
+    "parentFile": "/audio/guide/guide-06-governance-and-roadmap-kyzmCSHcw8.mp3",
+    "parentSha256": "7d6007d69c91b6460c7a69e877ef69fac67cb8727ce6bfa1cefb26a5946dc938",
+    "startSec": 7.393,
+    "endSec": 15.726,
+    "frames": [
+     283,
+     602
+    ],
+    "note": "byte range of whole MPEG frames of the parent clip — no re-encoding"
+   },
+   "text": "Decisions, releases, and outcome reports are published, so every member can see how priorities are set and how the platform evolves over time.",
+   "cues": [
+    {
+     "i": 1,
+     "text": "Decisions, releases, and outcome reports are published, so every member can see how priorities are set and how the platform evolves over time.",
+     "start": 0.38,
+     "end": 7.94,
+     "anchor": "s27-c1"
+    }
+   ],
+   "scribe": {
+    "transcriptionId": "yRlikqUrBYjG6gGnjrAb",
+    "model": "scribe_v1 (requested)",
+    "language": "eng",
+    "languageProbability": 1,
+    "audioDurationSec": 8.3330625,
+    "ratioVsNarrationText": 1.0,
+    "transcript": "Decisions, releases, and outcome reports are published so every member can see how priorities are set and how the platform evolves over time",
+    "utc": "2026-10-01T06:29:56Z"
+   }
+  },
+  {
+   "n": 28,
+   "slideId": "s-it-outcomes",
+   "clipId": "NAR-s28",
+   "file": "/audio/guide/slides/NAR-s28-s-it-outcomes.mp3",
+   "bytes": 38034,
+   "sha256": "f8a2fc780c55a22e5852209e62db442932f8df59ce9ed0a261e4c8f4430ccd1f",
+   "durationSec": 2.377,
+   "section": "07 Impact & funding",
+   "sectionAr": "07 الأثر والتمويل",
+   "source": {
+    "type": "cut",
+    "parentClip": "NAR-07",
+    "parentFile": "/audio/guide/guide-07-impact-and-funding-vWkiINp1IS.mp3",
+    "parentSha256": "e91ca756d9cb5bb74173e1b27736d547c37c152d185f8874d05b70377e5b55ae",
+    "startSec": 0.0,
+    "endSec": 2.377,
+    "frames": [
+     0,
+     91
+    ],
+    "note": "byte range of whole MPEG frames of the parent clip — no re-encoding"
+   },
+   "text": "Section seven, Impact and Funding.",
+   "cues": [
+    {
+     "i": 1,
+     "text": "Section seven, Impact and Funding.",
+     "start": 0.12,
+     "end": 2.06,
+     "anchor": "s28-c1"
+    }
+   ],
+   "scribe": {
+    "transcriptionId": "aPMHM5v0mCInADnVpez8",
+    "model": "scribe_v1 (requested)",
+    "language": "eng",
+    "languageProbability": 1,
+    "audioDurationSec": 2.377125,
+    "ratioVsNarrationText": 1.0,
+    "transcript": "Section seven: Impact and funding",
+    "utc": "2026-10-01T06:29:52Z"
+   }
+  },
+  {
+   "n": 29,
+   "slideId": "s-it-tiers",
+   "clipId": "NAR-s29",
+   "file": "/audio/guide/slides/NAR-s29-s-it-tiers.mp3",
+   "bytes": 127895,
+   "sha256": "ac21fbf59655e921ff2e1aaea73938d5cf5ca319aa735d0f512133da9f534756",
+   "durationSec": 7.993,
+   "section": "07 Impact & funding",
+   "sectionAr": "07 الأثر والتمويل",
+   "source": {
+    "type": "cut",
+    "parentClip": "NAR-07",
+    "parentFile": "/audio/guide/guide-07-impact-and-funding-vWkiINp1IS.mp3",
+    "parentSha256": "e91ca756d9cb5bb74173e1b27736d547c37c152d185f8874d05b70377e5b55ae",
+    "startSec": 2.377,
+    "endSec": 10.371,
+    "frames": [
+     91,
+     397
+    ],
+    "note": "byte range of whole MPEG frames of the parent clip — no re-encoding"
+   },
+   "text": "Three impact tiers, one delivery model, access, ownership, legacy. A funder can enter at any tier and climb.",
+   "cues": [
+    {
+     "i": 1,
+     "text": "Three impact tiers, one delivery model, access, ownership, legacy.",
+     "start": 0.38,
+     "end": 4.88,
+     "anchor": "s29-c1"
+    },
+    {
+     "i": 2,
+     "text": "A funder can enter at any tier and climb.",
+     "start": 5.46,
+     "end": 7.6,
+     "anchor": "s29-c2"
+    }
+   ],
+   "scribe": {
+    "transcriptionId": "SFPdTnp1OsY2FZNy1Ftu",
+    "model": "scribe_v1 (requested)",
+    "language": "eng",
+    "languageProbability": 1,
+    "audioDurationSec": 7.9935,
+    "ratioVsNarrationText": 1.0,
+    "transcript": "Three impact tiers, one delivery model: access, ownership, legacy. A funder can enter at any tier and climb",
+    "utc": "2026-10-01T06:30:04Z"
+   }
+  },
+  {
+   "n": 30,
+   "slideId": "s-it-metrics",
+   "clipId": "NAR-s30",
+   "file": "/audio/guide/slides/NAR-s30-s-it-metrics.mp3",
+   "bytes": 179723,
+   "sha256": "8fd4bc2d037503e512982fd642be9606794b8cdecb359eab5df860b31f961dba",
+   "durationSec": 11.233,
+   "section": "07 Impact & funding",
+   "sectionAr": "07 الأثر والتمويل",
+   "source": {
+    "type": "cut",
+    "parentClip": "NAR-07",
+    "parentFile": "/audio/guide/guide-07-impact-and-funding-vWkiINp1IS.mp3",
+    "parentSha256": "e91ca756d9cb5bb74173e1b27736d547c37c152d185f8874d05b70377e5b55ae",
+    "startSec": 10.371,
+    "endSec": 21.603,
+    "frames": [
+     397,
+     827
+    ],
+    "note": "byte range of whole MPEG frames of the parent clip — no re-encoding"
+   },
+   "text": "Every agreement includes named cohorts and activation targets, independent evaluator baselines, quarterly outcome reports, and open book costs with unspent funds returned.",
+   "cues": [
+    {
+     "i": 1,
+     "text": "Every agreement includes named cohorts and activation targets, independent evaluator baselines, quarterly outcome reports, and open book costs with unspent funds returned.",
+     "start": 0.42,
+     "end": 10.74,
+     "anchor": "s30-c1"
+    }
+   ],
+   "scribe": {
+    "transcriptionId": "SVvQd2dVuweioK3957D3",
+    "model": "scribe_v1 (requested)",
+    "language": "eng",
+    "languageProbability": 1,
+    "audioDurationSec": 11.2326875,
+    "ratioVsNarrationText": 1.0,
+    "transcript": "Every agreement includes named cohorts and activation targets, independent evaluator baselines, quarterly outcome reports, and open book costs with unspent funds returned",
+    "utc": "2026-10-01T06:30:10Z"
+   }
+  },
+  {
+   "n": 31,
+   "slideId": "s-it-sustain",
+   "clipId": "NAR-s31",
+   "file": "/audio/guide/slides/NAR-s31-s-it-sustain.mp3",
+   "bytes": 139598,
+   "sha256": "49dd589b48d26f8b88932549559df84cffb834cd3ca0e698737ea8d2db59d91a",
+   "durationSec": 8.725,
+   "section": "07 Impact & funding",
+   "sectionAr": "07 الأثر والتمويل",
+   "source": {
+    "type": "cut",
+    "parentClip": "NAR-07",
+    "parentFile": "/audio/guide/guide-07-impact-and-funding-vWkiINp1IS.mp3",
+    "parentSha256": "e91ca756d9cb5bb74173e1b27736d547c37c152d185f8874d05b70377e5b55ae",
+    "startSec": 21.603,
+    "endSec": 30.328,
+    "frames": [
+     827,
+     1161
+    ],
+    "note": "byte range of whole MPEG frames of the parent clip — no re-encoding"
+   },
+   "text": "Universal API licenses, marketplace revenue share and sovereign pilot options fund the model so each partner can choose what fits.",
+   "cues": [
+    {
+     "i": 1,
+     "text": "Universal API licenses, marketplace revenue share and sovereign pilot options fund the model so each partner can choose what fits.",
+     "start": 0.52,
+     "end": 8.32,
+     "anchor": "s31-c1"
+    }
+   ],
+   "scribe": {
+    "transcriptionId": "GImLIQ3Y4ov0B8S7ABUp",
+    "model": "scribe_v1 (requested)",
+    "language": "eng",
+    "languageProbability": 1,
+    "audioDurationSec": 8.7249375,
+    "ratioVsNarrationText": 1.0,
+    "transcript": "Universal API licenses, marketplace revenue share, and sovereign pilot options fund the model so each partner can choose what fits",
+    "utc": "2026-10-01T06:30:12Z"
+   }
+  },
+  {
+   "n": 32,
+   "slideId": "s-it-partners",
+   "clipId": "NAR-s32",
+   "file": "/audio/guide/slides/NAR-s32-s-it-partners.mp3",
+   "bytes": 247057,
+   "sha256": "f4d797a6cc350010be502e7ebdca6c495fe8c42acf4ebb0fcc8580d16968682a",
+   "durationSec": 15.412,
+   "section": "07 Impact & funding",
+   "sectionAr": "07 الأثر والتمويل",
+   "source": {
+    "type": "tts",
+    "voice": "George",
+    "voiceId": "JBFqnCBsd6RMkjVDRZzb",
+    "modelId": "eleven_multilingual_v2",
+    "outputFormat": "mp3_44100_128",
+    "textSource": "dist/narration/narration-script.json s32 (identical text)",
+    "renderedUtc": "2026-10-01T06:22:05Z",
+    "origin": "ElevenLabs textToSpeech via On Demand plugin agent-1789123753 (session message 6abdfc005e9f29365b011e3f)",
+    "originMediaId": "NVdzKPe9JM",
+    "characters": 257,
+    "historyItemId": "9gCIggq0L0YwlcQA6y2b",
+    "historyVoiceName": "George - Warm, Captivating Storyteller",
+    "historyModelId": "eleven_multilingual_v2",
+    "historyUtc": "2026-10-01T06:22:00Z",
+    "historyTextMatchesScript": true
+   },
+   "text": "Delivered with candidate partners across the humanitarian, development and technology sectors, shown here for internal review only pending written authorisation. Funders receive the same open-book reporting as signatories, aligned to the three impact tiers.",
+   "cues": [
+    {
+     "i": 1,
+     "text": "Delivered with candidate partners across the humanitarian, development and technology sectors, shown here for internal review only pending written authorisation.",
+     "start": 0.08,
+     "end": 8.08
+    },
+    {
+     "i": 2,
+     "text": "Funders receive the same open-book reporting as signatories, aligned to the three impact tiers.",
+     "start": 9.68,
+     "end": 15
+    }
+   ],
+   "scribe": {
+    "transcriptionId": "EIZkI1pBLyvzlVqneevr",
+    "model": "scribe_v1 (requested)",
+    "language": "eng",
+    "languageProbability": 1,
+    "audioDurationSec": 15.371625,
+    "ratioVsNarrationText": 0.971,
+    "transcript": "Delivered with candidate partners across the humanitarian, development, and technology sectors, shown here for internal review only pending written authorization. Funders receive the same open book reporting as signatories aligned to the three impact tiers",
+    "utc": "2026-10-01T06:30:17Z"
+   }
+  },
+  {
+   "n": 33,
+   "slideId": "s-it-join",
+   "clipId": "NAR-s33",
+   "file": "/audio/guide/slides/NAR-s33-s-it-join.mp3",
+   "bytes": 549242,
+   "sha256": "d0d49561d18b6153ab1237bdf8a725c23b57a41d8f320e5f020b1b0e5d870da4",
+   "durationSec": 34.299,
+   "section": "07 Impact & funding",
+   "sectionAr": "07 الأثر والتمويل",
+   "source": {
+    "type": "tts",
+    "voice": "George",
+    "voiceId": "JBFqnCBsd6RMkjVDRZzb",
+    "modelId": "eleven_multilingual_v2",
+    "outputFormat": "mp3_44100_128",
+    "textSource": "dist/narration/narration-script.json s33 (identical text)",
+    "renderedUtc": "2026-10-01T06:22:12Z",
+    "origin": "ElevenLabs textToSpeech via On Demand plugin agent-1789123753 (session message 6abdfc007cb494a6f6b3ddc8)",
+    "originMediaId": "DAkVnINTKl",
+    "characters": 515,
+    "historyItemId": "E1RntdrirMvX9dM9MIez",
+    "historyVoiceName": "George - Warm, Captivating Storyteller",
+    "historyModelId": "eleven_multilingual_v2",
+    "historyUtc": "2026-10-01T06:22:06Z",
+    "historyTextMatchesScript": true
+   },
+   "text": "Join the pact. You have seen the agreement, the community model, the six pillars, the actors, the roadmap, the impact tiers and Athar OS. Now the invitation is yours. Choose your role: sign, govern, build or learn. Commit to one real outcome, a learner trained, an agent built, a deployment inside your institution, or a benefit measured. The founding cohort starts this quarter. Open the pledge, add your name, and help us build agentic AI that leaves a lasting trace. This is the Athar Open Agentic Pact. Join us.",
+   "cues": [
+    {
+     "i": 1,
+     "text": "Join the pact.",
+     "start": 0.1,
+     "end": 0.82
+    },
+    {
+     "i": 2,
+     "text": "You have seen the agreement, the community model, the six pillars, the actors, the roadmap, the impact tiers and Athar OS.",
+     "start": 1.24,
+     "end": 8.24
+    },
+    {
+     "i": 3,
+     "text": "Now the invitation is yours.",
+     "start": 8.98,
+     "end": 10.36
+    },
+    {
+     "i": 4,
+     "text": "Choose your role: sign, govern, build or learn.",
+     "start": 10.88,
+     "end": 14.16
+    },
+    {
+     "i": 5,
+     "text": "Commit to one real outcome, a learner trained, an agent built, a deployment inside your institution, or a benefit measured.",
+     "start": 14.5,
+     "end": 21.7
+    },
+    {
+     "i": 6,
+     "text": "The founding cohort starts this quarter.",
+     "start": 22.28,
+     "end": 24.3
+    },
+    {
+     "i": 7,
+     "text": "Open the pledge, add your name, and help us build agentic AI that leaves a lasting trace.",
+     "start": 24.94,
+     "end": 30.28
+    },
+    {
+     "i": 8,
+     "text": "This is the Athar Open Agentic Pact.",
+     "start": 30.96,
+     "end": 33.08
+    },
+    {
+     "i": 9,
+     "text": "Join us.",
+     "start": 33.48,
+     "end": 33.9
+    }
+   ],
+   "scribe": {
+    "transcriptionId": "wBIgOBVrLr1xq7TGD6q6",
+    "model": "scribe_v1 (requested)",
+    "language": "eng",
+    "languageProbability": 1,
+    "audioDurationSec": 34.2726875,
+    "ratioVsNarrationText": 1.0,
+    "transcript": "Join the pact. You have seen the agreement, the community model, the six pillars, the actors, the roadmap, the impact tiers, and Athar OS. Now the invitation is yours. Choose your role. Sign, govern, build, or learn. Commit to one real outcome: a learner trained, an agent built, a deployment inside your institution, or a benefit measured. The founding cohort starts this quarter. Open the pledge, add your name, and help us build agentic AI that leaves a lasting trace. This is the Athar Open Agentic Pact. Join us",
+    "utc": "2026-10-01T06:30:43Z"
+   }
+  },
+  {
+   "n": 34,
+   "slideId": "s-aos-overview",
+   "clipId": "NAR-s34",
+   "file": "/audio/guide/slides/NAR-s34-s-aos-overview.mp3",
+   "bytes": 35108,
+   "sha256": "dc023ff835658d72992661b38ce964af77a384a82de238ceb2296e827cacd2ca",
+   "durationSec": 2.194,
+   "section": "08 Athar OS",
+   "sectionAr": "08 أثر OS",
+   "source": {
+    "type": "cut",
+    "parentClip": "NAR-08",
+    "parentFile": "/audio/guide/guide-08-athar-os-Ib4oKe91OD.mp3",
+    "parentSha256": "15c420b780db993a4efacb4f3995df6dced525c64b65ec866661f3ea7be50601",
+    "startSec": 0.0,
+    "endSec": 2.194,
+    "frames": [
+     0,
+     84
+    ],
+    "note": "byte range of whole MPEG frames of the parent clip — no re-encoding"
+   },
+   "text": "Section eight, Athar OS.",
+   "cues": [
+    {
+     "i": 1,
+     "text": "Section eight, Athar OS.",
+     "start": 0.12,
+     "end": 1.9,
+     "anchor": "s34-c1"
+    }
+   ],
+   "scribe": {
+    "transcriptionId": "29BJdmIsQ9OgTh9clNz3",
+    "model": "scribe_v1 (requested)",
+    "language": "eng",
+    "languageProbability": 1,
+    "audioDurationSec": 2.1943125,
+    "ratioVsNarrationText": 1.0,
+    "transcript": "Section eight, Athar OS",
+    "utc": "2026-10-01T06:30:10Z"
+   }
+  },
+  {
+   "n": 35,
+   "slideId": "s-aos-tour",
+   "clipId": "NAR-s35",
+   "file": "/audio/guide/slides/NAR-s35-s-aos-tour.mp3",
+   "bytes": 183110,
+   "sha256": "624d328f422cfc381de2a048ca43798fe7ee47eefc5a5c5c33a1efd5e1b9e2f9",
+   "durationSec": 11.416,
+   "section": "08 Athar OS",
+   "sectionAr": "08 أثر OS",
+   "source": {
+    "type": "tts",
+    "voice": "George",
+    "voiceId": "JBFqnCBsd6RMkjVDRZzb",
+    "modelId": "eleven_multilingual_v2",
+    "outputFormat": "mp3_44100_128",
+    "textSource": "dist/narration/narration-script.json s35 (identical text)",
+    "renderedUtc": "2026-10-01T06:23:25Z",
+    "origin": "ElevenLabs textToSpeech via On Demand plugin agent-1789123753 (session message 6abdfc507cb494a6f6b3ddfb)",
+    "originMediaId": "sgv7EgKtcQ",
+    "characters": 191,
+    "historyItemId": "dVo8QQNo5aLuDuDhJn8d",
+    "historyVoiceName": "George - Warm, Captivating Storyteller",
+    "historyModelId": "eleven_multilingual_v2",
+    "historyUtc": "2026-10-01T06:23:20Z",
+    "historyTextMatchesScript": true
+   },
+   "text": "The product tour shows the real screens: the marketplace, the playground, the agent flow builder and the tools and deployment views, captured from the Athar OS wireframes and the launch film.",
+   "cues": [
+    {
+     "i": 1,
+     "text": "The product tour shows the real screens: the marketplace, the playground, the agent flow builder and the tools and deployment views, captured from the Athar OS wireframes and the launch film.",
+     "start": 0.12,
+     "end": 11.02
+    }
+   ],
+   "scribe": {
+    "transcriptionId": "xAnd6buDw2MjiIKLMxbJ",
+    "model": "scribe_v1 (requested)",
+    "language": "eng",
+    "languageProbability": 1,
+    "audioDurationSec": 11.3778125,
+    "ratioVsNarrationText": 1.0,
+    "transcript": "The product tour shows the real screens, the marketplace, the playground, the agent flow builder, and the tools and deployment views captured from the Athar OS wireframes and the launch film",
+    "utc": "2026-10-01T06:30:28Z"
+   }
+  },
+  {
+   "n": 36,
+   "slideId": "s-aos-roadmap",
+   "clipId": "NAR-s36",
+   "file": "/audio/guide/slides/NAR-s36-s-aos-roadmap.mp3",
+   "bytes": 124552,
+   "sha256": "026d2ddd0ee01a59d3f2741ac72095fcbdb9d4cebf877c3f4a3cdee9a2d97f0a",
+   "durationSec": 7.784,
+   "section": "08 Athar OS",
+   "sectionAr": "08 أثر OS",
+   "source": {
+    "type": "cut",
+    "parentClip": "NAR-08",
+    "parentFile": "/audio/guide/guide-08-athar-os-Ib4oKe91OD.mp3",
+    "parentSha256": "15c420b780db993a4efacb4f3995df6dced525c64b65ec866661f3ea7be50601",
+    "startSec": 2.194,
+    "endSec": 9.979,
+    "frames": [
+     84,
+     382
+    ],
+    "note": "byte range of whole MPEG frames of the parent clip — no re-encoding"
+   },
+   "text": "The roadmap runs now in Q4, 2026, next in 2027 and later in 2028.",
+   "cues": [
+    {
+     "i": 1,
+     "text": "The roadmap runs now in Q4, 2026, next in 2027 and later in 2028.",
+     "start": 0.34,
+     "end": 7.48,
+     "anchor": "s36-c1"
+    }
+   ],
+   "scribe": {
+    "transcriptionId": "3QJW1zmzSqmkjJlz3yDR",
+    "model": "scribe_v1 (requested)",
+    "language": "eng",
+    "languageProbability": 1,
+    "audioDurationSec": 7.7845,
+    "ratioVsNarrationText": 1.0,
+    "transcript": "The roadmap runs now in Q4 2026, next in 2027, and later in 2028",
+    "utc": "2026-10-01T06:30:26Z"
+   }
+  },
+  {
+   "n": 37,
+   "slideId": "s-aos-deploy",
+   "clipId": "NAR-s37",
+   "file": "/audio/guide/slides/NAR-s37-s-aos-deploy.mp3",
+   "bytes": 295123,
+   "sha256": "f6c0b9246aa5091d375e665dfbe603961dc82ab8acd0a008bcad3928f9019232",
+   "durationSec": 18.416,
+   "section": "08 Athar OS",
+   "sectionAr": "08 أثر OS",
+   "source": {
+    "type": "tts",
+    "voice": "George",
+    "voiceId": "JBFqnCBsd6RMkjVDRZzb",
+    "modelId": "eleven_multilingual_v2",
+    "outputFormat": "mp3_44100_128",
+    "textSource": "dist/narration/narration-script.json s37 (identical text)",
+    "renderedUtc": "2026-10-01T06:22:07Z",
+    "origin": "ElevenLabs textToSpeech via On Demand plugin agent-1789123753 (session message 6abdfc037cb494a6f6b3ddd5)",
+    "originMediaId": "dH6XPSQUEg",
+    "characters": 265,
+    "historyItemId": "cuwwbQMAJc2cHmUsjfss",
+    "historyVoiceName": "George - Warm, Captivating Storyteller",
+    "historyModelId": "eleven_multilingual_v2",
+    "historyUtc": "2026-10-01T06:22:04Z",
+    "historyTextMatchesScript": true
+   },
+   "text": "Deploy anywhere, own it. Option A runs software-only on your own hardware, option B is self-hosted in your cloud, option C is fully managed by AIREV. Sovereign nodes transfer to national ownership after five to seven years, with local operators trained to run them.",
+   "cues": [
+    {
+     "i": 1,
+     "text": "Deploy anywhere, own it.",
+     "start": 0.1,
+     "end": 1.66
+    },
+    {
+     "i": 2,
+     "text": "Option A runs software-only on your own hardware, option B is self-hosted in your cloud, option C is fully managed by AIREV.",
+     "start": 2.6,
+     "end": 10.32
+    },
+    {
+     "i": 3,
+     "text": "Sovereign nodes transfer to national ownership after five to seven years, with local operators trained to run them.",
+     "start": 11.76,
+     "end": 18.06
+    }
+   ],
+   "scribe": {
+    "transcriptionId": "ndm8vbiPMR1dBj8icXX2",
+    "model": "scribe_v1 (requested)",
+    "language": "eng",
+    "languageProbability": 1,
+    "audioDurationSec": 18.3901875,
+    "ratioVsNarrationText": 1.0,
+    "transcript": "Deploy anywhere. Own it. Option A runs software only on your own hardware. Option B is self-hosted in your cloud. Option C is fully managed by AI Rev. Sovereign nodes transfer to national ownership after five to seven years, with local operators trained to run them",
+    "utc": "2026-10-01T06:30:41Z"
+   }
+  },
+  {
+   "n": 38,
+   "slideId": "s-aos-nations",
+   "clipId": "NAR-s38",
+   "file": "/audio/guide/slides/NAR-s38-s-aos-nations.mp3",
+   "bytes": 368640,
+   "sha256": "8ce63089ca9b1b70e05c8e730e1cf97a117d372e5c733fc65ea18b3ad11aff6d",
+   "durationSec": 23.04,
+   "section": "08 Athar OS",
+   "sectionAr": "08 أثر OS",
+   "source": {
+    "type": "cut",
+    "parentClip": "NAR-08",
+    "parentFile": "/audio/guide/guide-08-athar-os-Ib4oKe91OD.mp3",
+    "parentSha256": "15c420b780db993a4efacb4f3995df6dced525c64b65ec866661f3ea7be50601",
+    "startSec": 9.979,
+    "endSec": 33.019,
+    "frames": [
+     382,
+     1264
+    ],
+    "note": "byte range of whole MPEG frames of the parent clip — no re-encoding"
+   },
+   "text": "Nations empowered. Lebanon, Access, 1 million Lebanese AI experts at $10 million. India, ownership, 100 government schools and 10,000 AI PCs at 13.7 million. Kenya, Legacy, a Kenyan-owned sovereign node at around 33 million transferred to a national entity after five to seven years.",
+   "cues": [
+    {
+     "i": 1,
+     "text": "Nations empowered.",
+     "start": 0.36,
+     "end": 1.3,
+     "anchor": "s38-c1"
+    },
+    {
+     "i": 2,
+     "text": "Lebanon, Access, 1 million Lebanese AI experts at $10 million.",
+     "start": 1.86,
+     "end": 5.88,
+     "anchor": "s38-c2"
+    },
+    {
+     "i": 3,
+     "text": "India, ownership, 100 government schools and 10,000 AI PCs at 13.7 million.",
+     "start": 6.96,
+     "end": 13.48,
+     "anchor": "s38-c3"
+    },
+    {
+     "i": 4,
+     "text": "Kenya, Legacy, a Kenyan-owned sovereign node at around 33 million transferred to a national entity after five to seven years.",
+     "start": 14.42,
+     "end": 22.66,
+     "anchor": "s38-c4"
+    }
+   ],
+   "scribe": {
+    "transcriptionId": "PABA3Gwp0e0WcRigIhu1",
+    "model": "scribe_v1 (requested)",
+    "language": "eng",
+    "languageProbability": 1,
+    "audioDurationSec": 23.04,
+    "ratioVsNarrationText": 1.0,
+    "transcript": "Nations empowered. Lebanon, access, one million Lebanese AI experts at $10 million. India, ownership, 100 government schools and 10,000 AI PCs at $13.7 million. Kenya, legacy, a Kenyan-owned sovereign node at around $33 million transferred to a national entity after five to seven years.",
+    "utc": "2026-10-01T06:30:41Z"
+   }
+  },
+  {
+   "n": 39,
+   "slideId": "s-closing",
+   "clipId": "NAR-s39",
+   "file": "/audio/guide/slides/NAR-s39-s-closing.mp3",
+   "bytes": 425064,
+   "sha256": "53de2969bc5d472f84e3bcc4d36be7ef23a3d7fbd31ce436220f1dbf995eacb4",
+   "durationSec": 26.567,
+   "section": "Join the pact",
+   "sectionAr": "انضم إلى الميثاق",
+   "source": {
+    "type": "cut",
+    "parentClip": "NAR-09",
+    "parentFile": "/audio/guide/guide-09-join-the-pact-Hx4Ywy843S.mp3",
+    "parentSha256": "c4877a60fc3aacc6b141b18ec5f5c572d5203ea926524b172c8dca2b35450acc",
+    "startSec": 0.0,
+    "endSec": 26.567,
+    "frames": [
+     0,
+     1017
+    ],
+    "note": "byte range of whole MPEG frames of the parent clip — no re-encoding"
+   },
+   "text": "Join the Pact. You have seen the agreement, the community model, the six pillars, the actors, the roadmap, the impact tiers and Athar OS. Now the invitation is yours. Choose your role, sign, govern, build or learn. Commit to one real outcome. The founding cohort starts this quarter. Open the pledge, add your name and help us build a Gentick AI that leaves a lasting trace. Join us.",
+   "cues": [
+    {
+     "i": 1,
+     "text": "Join the Pact.",
+     "start": 0.14,
+     "end": 0.88,
+     "anchor": "s39-c1"
+    },
+    {
+     "i": 2,
+     "text": "You have seen the agreement, the community model, the six pillars, the actors, the roadmap, the impact tiers and Athar OS.",
+     "start": 1.36,
+     "end": 8.72,
+     "anchor": "s39-c2"
+    },
+    {
+     "i": 3,
+     "text": "Now the invitation is yours.",
+     "start": 9.36,
+     "end": 10.76,
+     "anchor": "s39-c3"
+    },
+    {
+     "i": 4,
+     "text": "Choose your role, sign, govern, build or learn.",
+     "start": 11.28,
+     "end": 14.7,
+     "anchor": "s39-c4"
+    },
+    {
+     "i": 5,
+     "text": "Commit to one real outcome.",
+     "start": 15.1,
+     "end": 16.54,
+     "anchor": "s39-c5"
+    },
+    {
+     "i": 6,
+     "text": "The founding cohort starts this quarter.",
+     "start": 16.96,
+     "end": 19,
+     "anchor": "s39-c6"
+    },
+    {
+     "i": 7,
+     "text": "Open the pledge, add your name and help us build a Gentick AI that leaves a lasting trace.",
+     "start": 19.76,
+     "end": 25.02,
+     "anchor": "s39-c7"
+    },
+    {
+     "i": 8,
+     "text": "Join us.",
+     "start": 25.74,
+     "end": 26.2,
+     "anchor": "s39-c8"
+    }
+   ],
+   "scribe": {
+    "transcriptionId": "U5lkprwfkKUl4ibihzCz",
+    "model": "scribe_v1 (requested)",
+    "language": "eng",
+    "languageProbability": 1,
+    "audioDurationSec": 26.5665625,
+    "ratioVsNarrationText": 1.0,
+    "transcript": "Join the pact. You have seen the agreement, the community model, the six pillars, the actors, the roadmap, the impact tiers, and Athar OS. Now the invitation is yours. Choose your role. Sign, govern, build, or learn. Commit to one real outcome. The founding cohort starts this quarter. Open the pledge, add your name, and help us build agentic AI that leaves a lasting trace. Join us",
+    "utc": "2026-10-01T06:30:55Z"
+   }
+  },
+  {
+   "n": 40,
+   "slideId": "s-exec-intro",
+   "clipId": "NAR-s40",
+   "file": "/audio/guide/slides/NAR-s40-s-exec-intro.mp3",
+   "bytes": 41004,
+   "sha256": "8dafe5492c32c3ca3bf8bf98790f2bfec8726ab2835df151891bc4e6693136f3",
+   "durationSec": 2.53,
+   "section": "09 Executive Team",
+   "sectionAr": "09 الفريق التنفيذي",
+   "source": {
+    "type": "tts",
+    "provider": "ElevenLabs textToSpeech",
+    "voice": "George (premade; voice list returned one match)",
+    "modelRequested": "eleven_multilingual_v2",
+    "generationRef": "KwKjDhenPt",
+    "generatedUtc": "2026-10-01T13:14:48Z",
+    "storedAs": "downloaded into the repo — no SAS hotlink",
+    "textSource": "Whisper small.en transcript, proper nouns per the published spelling",
+    "contentCheck": "matches the slide"
+   },
+   "text": "Section nine, the Executive Team.",
+   "cues": [
+    {
+     "i": 1,
+     "text": "Section nine, the Executive Team.",
+     "start": 0.0,
+     "end": 2.48,
+     "anchor": "s40-c1"
+    }
+   ]
+  },
+  {
+   "n": 41,
+   "slideId": "s-exec-al-ameri",
+   "clipId": "NAR-s42",
+   "file": "/audio/guide/slides/NAR-s42-s-exec-al-ameri.mp3",
+   "bytes": 333157,
+   "sha256": "9f43d9a0e6ca5ec50b8d280dbcfeefc75c1437a68dfdcc71e68930bd43704740",
+   "durationSec": 20.79,
+   "section": "09 Executive Team",
+   "sectionAr": "09 الفريق التنفيذي",
+   "source": {
+    "type": "tts",
+    "provider": "ElevenLabs textToSpeech",
+    "voice": "George (premade; voice list returned one match)",
+    "modelRequested": "eleven_multilingual_v2",
+    "generationRef": "GXQlbIyvrh",
+    "generatedUtc": "2026-10-01T13:14:48Z",
+    "storedAs": "downloaded into the repo — no SAS hotlink",
+    "textSource": "Whisper small.en transcript, proper nouns per the published spelling",
+    "contentCheck": "matches the slide",
+    "factCheck": "uaenep.ae official profile (EN/AR)",
+    "pronunciation": "voice says \"Mohammed\"; the official spelling is \"Mohamed\""
+   },
+   "text": "His Excellency Fahad Mohamed Al Ameri, Executive Director of Development and Humanitarian Affairs at the UAE Presidential Court. He played a defining role in creating Erth Zayed Philanthropies, the UAE International Aid Agency, and the International Humanitarian and Philanthropic Council, the IHPC.",
+   "cues": [
+    {
+     "i": 1,
+     "text": "His Excellency Fahad Mohamed Al Ameri, Executive Director of Development and Humanitarian Affairs at the UAE Presidential Court.",
+     "start": 0.0,
+     "end": 9.26,
+     "anchor": "s42-c1"
+    },
+    {
+     "i": 2,
+     "text": "He played a defining role in creating Erth Zayed Philanthropies, the UAE International Aid Agency, and the International Humanitarian and Philanthropic Council, the IHPC.",
+     "start": 9.26,
+     "end": 20.74,
+     "anchor": "s42-c2"
+    }
+   ]
+  },
+  {
+   "n": 42,
+   "slideId": "s-exec-ferreira-da-cunha",
+   "clipId": "NAR-s45",
+   "file": "/audio/guide/slides/NAR-s45-s-exec-ferreira-da-cunha.mp3",
+   "bytes": 279658,
+   "sha256": "dfa5079b877a38847a4370dc6df7e77a2c06ca8f494229a09d2c8bdddd4d5e48",
+   "durationSec": 17.45,
+   "section": "09 Executive Team",
+   "sectionAr": "09 الفريق التنفيذي",
+   "source": {
+    "type": "tts",
+    "provider": "ElevenLabs textToSpeech",
+    "voice": "George - Warm, Captivating Storyteller (premade, voice id JBFqnCBsd6RMkjVDRZzb)",
+    "modelRequested": "eleven_multilingual_v2",
+    "outputFormat": "mp3_44100_128",
+    "generationRef": "fxGyuyQ2EU",
+    "generatedUtc": "2026-10-03T02:36:47Z",
+    "storedAs": "downloaded into the repo — no SAS hotlink",
+    "textSource": "narration text as written for this slide (3 sentences, every statement from the card's confirmed facts); verified word-for-word with ElevenLabs Scribe (scribe_v1 requested)",
+    "contentCheck": "matches the slide",
+    "factCheck": "LinkedIn profile and post (role, McKinsey 8+ years, focus areas); U.Porto news + Casa Comum pages (law degree, master's and PhD in law)",
+    "pronunciation": "voice says \"Ari\" (Portuguese pronunciation of \"Ary\"); the published spelling is \"Ary\""
+   },
+   "text": "Ary Ferreira da Cunha, Principal at the Presidential Court in Abu Dhabi. He spent more than eight years at McKinsey, and his focus is AI transformation, public policy and economic development. He holds a law degree, a master’s and a PhD in law from the University of Porto.",
+   "cues": [
+    {
+     "i": 1,
+     "text": "Ary Ferreira da Cunha, Principal at the Presidential Court in Abu Dhabi.",
+     "start": 0.0,
+     "end": 4.49,
+     "anchor": "s45-c1"
+    },
+    {
+     "i": 2,
+     "text": "He spent more than eight years at McKinsey, and his focus is AI transformation, public policy and economic development.",
+     "start": 4.49,
+     "end": 11.94,
+     "anchor": "s45-c2"
+    },
+    {
+     "i": 3,
+     "text": "He holds a law degree, a master’s and a PhD in law from the University of Porto.",
+     "start": 11.94,
+     "end": 17.08,
+     "anchor": "s45-c3"
+    }
+   ],
+   "scribe": {
+    "transcriptionId": null,
+    "model": "scribe_v1 (requested)",
+    "language": "en",
+    "languageProbability": null,
+    "audioDurationSec": 17.45,
+    "ratioVsNarrationText": 0.98,
+    "transcript": "Ari Ferreira da Cunha, Principal at the Presidential Court in Abu Dhabi. He spent more than eight years at McKinsey, and his focus is AI transformation, public policy, and economic development. He holds a law degree, a master's, and a PhD in law from the University of Porto",
+    "utc": "2026-10-03T02:36:47Z",
+    "note": "word-level timings (0.08 s … 17.08 s) used for the cue boundaries; \"Ari\" vs published \"Ary\" is the only token difference"
+   }
+  },
+  {
+   "n": 43,
+   "slideId": "s-exec-khalid",
+   "clipId": "NAR-s43",
+   "file": "/audio/guide/slides/NAR-s43-s-exec-khalid.mp3",
+   "bytes": 284255,
+   "sha256": "d08d939638dea2365b644c51059fc57abbf2b80b0675a83140d72e96d43eaf15",
+   "durationSec": 17.74,
+   "section": "09 Executive Team",
+   "sectionAr": "09 الفريق التنفيذي",
+   "source": {
+    "type": "tts",
+    "provider": "ElevenLabs textToSpeech",
+    "voice": "George (premade; voice list returned one match)",
+    "modelRequested": "eleven_multilingual_v2",
+    "generationRef": "MXYBQD2Rhf",
+    "generatedUtc": "2026-10-01T13:14:48Z",
+    "storedAs": "downloaded into the repo — no SAS hotlink",
+    "textSource": "Whisper small.en transcript, proper nouns per the published spelling",
+    "contentCheck": "matches the slide",
+    "factCheck": "42 Network (4 million+ users, 140+ countries; OnDemand); The National 30 Sep 2024 (Core42 backing)",
+    "pronunciation": "voice says \"Mohammed\" — captions/lower-thirds and the deck spell \"Muhammed\" (non-blocking)",
+    "trim": "v1.5.7: cut at 17.70 s (inside the 17.31-18.10 s pause after sentence 3, stream copy, no re-encode) to drop the final sentence \"Press play to watch his Athar impact story.\" — the film is disabled. Untrimmed clip (20.92 s, sha256 fd14af7b671fde7c18924f4e2f59997ab910833920b8df694928e7af6ac75cfa) is in git history at ad94152/3b625be."
+   },
+   "text": "Muhammed Khalid, founder and CEO of AIREV. He built School Hack, which has reached more than 4 million users in over 140 countries. He secured backing from Core42, a G42 company, and leads OnDemand, AIREV’s agentic AI operating system.",
+   "cues": [
+    {
+     "i": 1,
+     "text": "Muhammed Khalid, founder and CEO of AIREV.",
+     "start": 0.0,
+     "end": 3.5,
+     "anchor": "s43-c1"
+    },
+    {
+     "i": 2,
+     "text": "He built School Hack, which has reached more than 4 million users in over 140 countries.",
+     "start": 3.5,
+     "end": 9.2,
+     "anchor": "s43-c2"
+    },
+    {
+     "i": 3,
+     "text": "He secured backing from Core42, a G42 company, and leads OnDemand, AIREV’s agentic AI operating system.",
+     "start": 9.2,
+     "end": 17.31,
+     "anchor": "s43-c3"
+    }
+   ]
+  },
+  {
+   "n": 44,
+   "slideId": "s-exec-unwalla",
+   "clipId": "NAR-s44",
+   "file": "/audio/guide/slides/NAR-s44-s-exec-unwalla.mp3",
+   "bytes": 211949,
+   "sha256": "028fe924e0ed495247cddddb62517679b614d06fba70581614e565ab581da2ba",
+   "durationSec": 13.22,
+   "section": "09 Executive Team",
+   "sectionAr": "09 الفريق التنفيذي",
+   "source": {
+    "type": "tts",
+    "provider": "ElevenLabs textToSpeech",
+    "voice": "George (premade; voice list returned one match)",
+    "modelRequested": "eleven_multilingual_v2",
+    "generationRef": "nzkWVR3qWN",
+    "generatedUtc": "2026-10-01T13:14:48Z",
+    "storedAs": "downloaded into the repo — no SAS hotlink",
+    "textSource": "Whisper small.en transcript, proper nouns per the published spelling",
+    "contentCheck": "matches the slide",
+    "factCheck": "CSO & co-founder (The GPU, Issue #42); former roles user-confirmed",
+    "pronunciation": "voice spells AIREV as letters (A-R-E-V)"
+   },
+   "text": "Kayaan K. Unwalla, co-founder and Chief Strategy Officer of AIREV. Before AIREV, he was a corporate partner at Norton Rose Fulbright in Dubai and head of Corporate, Middle East, at DWF.",
+   "cues": [
+    {
+     "i": 1,
+     "text": "Kayaan K. Unwalla, co-founder and Chief Strategy Officer of AIREV.",
+     "start": 0.0,
+     "end": 4.86,
+     "anchor": "s44-c1"
+    },
+    {
+     "i": 2,
+     "text": "Before AIREV, he was a corporate partner at Norton Rose Fulbright in Dubai and head of Corporate, Middle East, at DWF.",
+     "start": 5.34,
+     "end": 13.16,
+     "anchor": "s44-c2"
+    }
+   ]
+  }
+ ],
+ "verifiedBy": "ElevenLabs Scribe (speechToText, model scribe_v1 requested, language en) on every per-slide clip",
+ "notes": [
+  "v1.5.8: slides 40–44 (section 09 Executive Team: intro, Fahad Al Ameri, Ary Ferreira da Cunha, Muhammed Khalid, Kayaan K. Unwalla). Ary's clip is NAR-s45 (a new id — NAR-s41 stays retired with the former Letter 1); the following entries were renumbered n 42→43 and 43→44 (clip ids keep their numbers). Ary's role rests on his own LinkedIn profile (no independent UAE government source) — the card is tagged \"for clearance by office\".",
+  "v1.5.7: slides 40–43 (section 09 Executive Team: intro, Fahad Al Ameri, Muhammed Khalid, Kayaan K. Unwalla). The former slide 41 (Letter 1) and its clip NAR-s41 were removed and the following slides renumbered — clip ids keep their original numbers (NAR-s42 = slide 41, NAR-s43 = slide 42, NAR-s44 = slide 43). NAR-s43 was trimmed to drop its last sentence because the CEO film is disabled. The hidden card (Lorenzo) is not narrated."
+ ]
+}

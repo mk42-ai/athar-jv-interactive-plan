@@ -1,0 +1,61 @@
+{
+ "base": "http://127.0.0.1:4405",
+ "written": "2026-10-01T14:08:54.110Z",
+ "rows": [
+  {
+   "tab": "in",
+   "cc": "India, ownership, 100 government schools and 10,000 AI PCs a",
+   "audibleClip": "NAR-s38",
+   "audioT": 7.4,
+   "cueStart": 6.96,
+   "cueEnd": 13.48,
+   "tabSelected": "true",
+   "pass": true
+  },
+  {
+   "tab": "ke",
+   "cc": "Kenya, Legacy, a Kenyan-owned sovereign node at around 33 mi",
+   "audibleClip": "NAR-s38",
+   "audioT": 14.84,
+   "cueStart": 14.42,
+   "cueEnd": 22.66,
+   "tabSelected": "true",
+   "pass": true
+  },
+  {
+   "tab": "lb",
+   "cc": "Lebanon, Access, 1 million Lebanese AI experts at $10 millio",
+   "audibleClip": "NAR-s38",
+   "audioT": 2.28,
+   "cueStart": 1.86,
+   "cueEnd": 5.88,
+   "tabSelected": "true",
+   "pass": true
+  },
+  {
+   "tab": "in",
+   "cc": "India, ownership, 100 government schools and 10,000 AI PCs a",
+   "audibleClip": "NAR-s38",
+   "audioT": 7.39,
+   "cueStart": 6.96,
+   "cueEnd": 13.48,
+   "tabSelected": "true",
+   "pass": true
+  },
+  {
+   "tab": "ke",
+   "cc": "Kenya, Legacy, a Kenyan-owned sovereign node at around 33 mi",
+   "audibleClip": "NAR-s38",
+   "audioT": 14.84,
+   "cueStart": 14.42,
+   "cueEnd": 22.66,
+   "tabSelected": "true",
+   "pass": true
+  },
+  {
+   "after": "ArrowRight → 39",
+   "audibleClip": "NAR-s39",
+   "pass": true
+  }
+ ]
+}

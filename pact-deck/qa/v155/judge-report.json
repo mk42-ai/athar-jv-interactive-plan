@@ -1,0 +1,91 @@
+{
+ "release": "v1.5.5 (revised, supersedes db9a1c7)",
+ "judge": "lead agent",
+ "mergeThreshold": "pass all acceptance criteria",
+ "execution": "No parallel sub-agent tool exists on this pod; the five sub-agent workstreams (A–E) were executed sequentially by the lead. Each diff/output was judged against its acceptance criteria and reworked until it passed before merge.",
+ "subagents": [
+  {
+   "id": "A",
+   "name": "Mastercard mark",
+   "verdict": "PASS",
+   "score": 9,
+   "iterations": [
+    "v1 failed the size check on short viewports (33 px wide at 1728×729) → v2 sets 40 px at ≤ 820 px heights"
+   ],
+   "evidence": [
+    "link opened in the browser on mastercardfdn.org → cdn.buttercms.com/MPuSQak9T7WMs107u9iV",
+    "Full Colour .png byte-identical (sha256 32afeb9e…)",
+    "typed heading, pending label and duplicate name removed; caption kept verbatim; footnote added EN/AR",
+    "44.8 × 42.4 px at 1728×872 (others 45.7), free space 13.9 ≥ x 12.9; 36.1 × 34.2 px at 390×844",
+    "ledger: credits.json + asset-ledger-v1.5.5.csv"
+   ],
+   "notes": [
+    "at ≤ 820 px heights the full free space cannot fit the shared 54 px frame",
+    "caption separator kept as the existing comma (the brief wrote \"·\"; no wording change allowed)"
+   ]
+  },
+  {
+   "id": "B",
+   "name": "Slide 38 strip",
+   "verdict": "PASS",
+   "score": 9,
+   "iterations": [
+    "v1 gap 3 px / overlap at 1728×729 → v2 scales the film still on ≤ 800 px heights (uncropped) → 65 / 55 px"
+   ],
+   "evidence": [
+    "Panel A FAIL (7/3/5/2) — existing left panel kept",
+    "Panel B FAIL (edit not produced) — existing middle panel kept",
+    "Panel C FAIL but best (8/8/7/9) — used, master logo composited over both AI marks (NCC 0.995/0.996)",
+    "CONCEPT RENDER / تصوّر مفاهيمي; 1 px #B8975A hairline; CTA #0F1E2C; gap ≥ 32 px at 1728×872, 1728×729, 1440×900, 1280×720; CTA above strip on phone (357/332 px)"
+   ],
+   "notes": [
+    "panel-A judgement rests on the QA scores plus the two measurable brand-critical criteria (logo, on-screen text); no human visual review on this pod"
+   ]
+  },
+  {
+   "id": "C",
+   "name": "Section 09 build",
+   "verdict": "PASS",
+   "score": 9,
+   "iterations": [
+    "v1: Latin names fell back to the Arabic face in the AR deck (deck h3 rule) → v2 pins each column’s face"
+   ],
+   "evidence": [
+    "intro + 4 letters (40–44), EN 16/24 Plex Sans, AR 17.12/27 Plex Sans Arabic ls 0 on the right of a hairline divider in both decks",
+    "Plex Serif 600 names, Ink on Manuscript + texture 8 %, one 60 px gold hairline per letter, salutation/sign-off",
+    "Dr Thani: MoFT official portrait (trade.gov.ae, SFace 0.737 vs earlier headshot); quote verbatim from Gulf News 24 Jun 2026; clearance tags on both officials",
+    "Fahad spelling corrected; monogram FA",
+    "hidden Lorenzo card: not rendered/counted/narrated (test)",
+    "no overflow at 1728×872; no horizontal overflow at 390×844"
+   ]
+  },
+  {
+   "id": "D",
+   "name": "Video + narration wiring",
+   "verdict": "PASS",
+   "score": 9.5,
+   "evidence": [
+    "poster at 00:15.5 (no text-free frame — logged); EN/AR VTT; in/out 0/39.4 s",
+    "5 clips bundled, transcribed, all match their slides; counter 44; version v1.5.5",
+    "guide pauses during the film and resumes after it (test)"
+   ],
+   "notes": [
+    "pronunciations: \"Mohammed\" (VO) vs \"Muhammed\"; AIREV spelled as letters in two clips"
+   ]
+  },
+  {
+   "id": "E",
+   "name": "QA",
+   "verdict": "PASS",
+   "score": 9.5,
+   "evidence": [
+    "guide-sync suite 8/8 (44/44 arrows + 44/44 deep links per project)",
+    "v1.5.4 suite 24/24",
+    "layout 176 views: 0 h-overflow, 0 wrong slide, 0 console errors; new/changed slides 0 clipping",
+    "broken-image scan light+dark × EN/AR 352 views: 0",
+    "DOM diff vs BEFORE: 74/78 identical, 4 allow-listed changes, 0 unexpected",
+    "ui-validator after: s32 9/9, s38 8/8, s40 8/8 at 1728×872 + 390×844"
+   ]
+  }
+ ]
+}

@@ -1,0 +1,1699 @@
+{
+ "marks": [
+  {
+   "t": "2026-10-01T06:42:13.605Z",
+   "scenario": "S12-phone-rapid-blocked",
+   "step": "phone first load, no gesture",
+   "expect": 4,
+   "vis": {
+    "n": 4,
+    "id": "s-four-outcomes",
+    "slideId": "s-four-outcomes"
+   },
+   "audio": null,
+   "cc": "Section two, the Community Model.",
+   "guide": {
+    "state": "blocked",
+    "clip": "NAR-s04",
+    "slideId": "s-four-outcomes",
+    "blocked": "true",
+    "status": "Narration blocked by the browser — tap to play · slide 4 of 39 · 02 Community model",
+    "tap": true
+   }
+  },
+  {
+   "t": "2026-10-01T06:42:15.773Z",
+   "scenario": "S12-phone-rapid-blocked",
+   "step": "tap bar next → 5",
+   "expect": 5,
+   "vis": {
+    "n": 5,
+    "id": "s-managed-programme",
+    "slideId": "s-managed-programme"
+   },
+   "audio": {
+    "src": "NAR-s05-s-managed-programme.mp3",
+    "clip": "NAR-s05",
+    "t": 1.78,
+    "muted": false
+   },
+   "cc": "This is a managed global programme, not a social channel.",
+   "guide": {
+    "state": "playing",
+    "clip": "NAR-s05",
+    "slideId": "s-managed-programme",
+    "blocked": "false",
+    "status": "Narrating slide 5 of 39 · 02 Community model",
+    "tap": false
+   }
+  },
+  {
+   "t": "2026-10-01T06:42:20.227Z",
+   "scenario": "S12-phone-rapid-blocked",
+   "step": "6× bar next (≈270 ms) → 11",
+   "expect": 11,
+   "vis": {
+    "n": 11,
+    "id": "s-agent-marketplace",
+    "slideId": "s-agent-marketplace"
+   },
+   "audio": {
+    "src": "NAR-s11-s-agent-marketplace.mp3",
+    "clip": "NAR-s11",
+    "t": 3.32,
+    "muted": false
+   },
+   "cc": "The builder journey runs from an idea to a validated agent.",
+   "guide": {
+    "state": "playing",
+    "clip": "NAR-s11",
+    "slideId": "s-agent-marketplace",
+    "blocked": "false",
+    "status": "Narrating slide 11 of 39 · 02 Community model",
+    "tap": false
+   }
+  }
+ ],
+ "events": [
+  {
+   "scenario": "S12-phone-rapid-blocked",
+   "t": "2026-10-01T06:42:10.292Z",
+   "ms": 729,
+   "type": "sample",
+   "vis": {
+    "n": 4,
+    "id": "s-four-outcomes",
+    "slideId": null
+   },
+   "audio": null,
+   "cc": null,
+   "guide": null,
+   "hash": "#/04"
+  },
+  {
+   "scenario": "S12-phone-rapid-blocked",
+   "t": "2026-10-01T06:42:10.459Z",
+   "ms": 896,
+   "type": "media:emptied",
+   "vis": {
+    "n": 4,
+    "id": "s-four-outcomes",
+    "slideId": "s-four-outcomes"
+   },
+   "audio": null,
+   "cc": "Section two, the Community Model.",
+   "guide": {
+    "state": "blocked",
+    "clip": "NAR-s04",
+    "slideId": "s-four-outcomes",
+    "gen": "0",
+    "status": "Narration blocked by the browser — tap to play · slide 4 of 39 · 02 Community model"
+   },
+   "hash": "#/04",
+   "el": "NAR-s04-s-four-outcomes.mp3",
+   "ct": 0
+  },
+  {
+   "scenario": "S12-phone-rapid-blocked",
+   "t": "2026-10-01T06:42:10.466Z",
+   "ms": 903,
+   "type": "media:loadstart",
+   "vis": {
+    "n": 4,
+    "id": "s-four-outcomes",
+    "slideId": "s-four-outcomes"
+   },
+   "audio": null,
+   "cc": "Section two, the Community Model.",
+   "guide": {
+    "state": "blocked",
+    "clip": "NAR-s04",
+    "slideId": "s-four-outcomes",
+    "gen": "0",
+    "status": "Narration blocked by the browser — tap to play · slide 4 of 39 · 02 Community model"
+   },
+   "hash": "#/04",
+   "el": "NAR-s04-s-four-outcomes.mp3",
+   "ct": 0
+  },
+  {
+   "scenario": "S12-phone-rapid-blocked",
+   "t": "2026-10-01T06:42:10.470Z",
+   "ms": 907,
+   "type": "sample",
+   "vis": {
+    "n": 4,
+    "id": "s-four-outcomes",
+    "slideId": "s-four-outcomes"
+   },
+   "audio": null,
+   "cc": "Section two, the Community Model.",
+   "guide": {
+    "state": "blocked",
+    "clip": "NAR-s04",
+    "slideId": "s-four-outcomes",
+    "gen": "0",
+    "status": "Narration blocked by the browser — tap to play · slide 4 of 39 · 02 Community model"
+   },
+   "hash": "#/04"
+  },
+  {
+   "scenario": "S12-phone-rapid-blocked",
+   "t": "2026-10-01T06:42:10.522Z",
+   "ms": 959,
+   "type": "media:canplay",
+   "vis": {
+    "n": 4,
+    "id": "s-four-outcomes",
+    "slideId": "s-four-outcomes"
+   },
+   "audio": null,
+   "cc": "Section two, the Community Model.",
+   "guide": {
+    "state": "blocked",
+    "clip": "NAR-s04",
+    "slideId": "s-four-outcomes",
+    "gen": "0",
+    "status": "Narration blocked by the browser — tap to play · slide 4 of 39 · 02 Community model"
+   },
+   "hash": "#/04",
+   "el": "NAR-s04-s-four-outcomes.mp3",
+   "ct": 0
+  },
+  {
+   "scenario": "S12-phone-rapid-blocked",
+   "t": "2026-10-01T06:42:13.606Z",
+   "ms": 4043,
+   "type": "check",
+   "vis": {
+    "n": 4,
+    "id": "s-four-outcomes",
+    "slideId": "s-four-outcomes"
+   },
+   "audio": null,
+   "cc": "Section two, the Community Model.",
+   "guide": {
+    "state": "blocked",
+    "clip": "NAR-s04",
+    "slideId": "s-four-outcomes",
+    "gen": "0",
+    "status": "Narration blocked by the browser — tap to play · slide 4 of 39 · 02 Community model"
+   },
+   "hash": "#/04",
+   "step": "phone first load, no gesture",
+   "expect": 4
+  },
+  {
+   "scenario": "S12-phone-rapid-blocked",
+   "t": "2026-10-01T06:42:13.715Z",
+   "ms": 4152,
+   "type": "click",
+   "vis": {
+    "n": 4,
+    "id": "s-four-outcomes",
+    "slideId": "s-four-outcomes"
+   },
+   "audio": null,
+   "cc": "Section two, the Community Model.",
+   "guide": {
+    "state": "blocked",
+    "clip": "NAR-s04",
+    "slideId": "s-four-outcomes",
+    "gen": "0",
+    "status": "Narration blocked by the browser — tap to play · slide 4 of 39 · 02 Community model"
+   },
+   "hash": "#/04",
+   "target": "nar-next"
+  },
+  {
+   "scenario": "S12-phone-rapid-blocked",
+   "t": "2026-10-01T06:42:13.730Z",
+   "ms": 4166,
+   "type": "hashchange",
+   "vis": {
+    "n": 4,
+    "id": "s-four-outcomes",
+    "slideId": "s-four-outcomes"
+   },
+   "audio": null,
+   "cc": "Section two, the Community Model.",
+   "guide": {
+    "state": "blocked",
+    "clip": "NAR-s04",
+    "slideId": "s-four-outcomes",
+    "gen": "0",
+    "status": "Narration blocked by the browser — tap to play · slide 4 of 39 · 02 Community model"
+   },
+   "hash": "#/5"
+  },
+  {
+   "scenario": "S12-phone-rapid-blocked",
+   "t": "2026-10-01T06:42:13.735Z",
+   "ms": 4172,
+   "type": "media:seeked",
+   "vis": {
+    "n": 5,
+    "id": "s-managed-programme",
+    "slideId": "s-managed-programme"
+   },
+   "audio": null,
+   "cc": "This is a managed global programme, not a social channel.",
+   "guide": {
+    "state": "loading",
+    "clip": "NAR-s05",
+    "slideId": "s-managed-programme",
+    "gen": "1",
+    "status": "Loading narration · slide 5 of 39 · 02 Community model"
+   },
+   "hash": "#/05",
+   "el": "NAR-s04-s-four-outcomes.mp3",
+   "ct": 0
+  },
+  {
+   "scenario": "S12-phone-rapid-blocked",
+   "t": "2026-10-01T06:42:13.735Z",
+   "ms": 4172,
+   "type": "media:canplay",
+   "vis": {
+    "n": 5,
+    "id": "s-managed-programme",
+    "slideId": "s-managed-programme"
+   },
+   "audio": null,
+   "cc": "This is a managed global programme, not a social channel.",
+   "guide": {
+    "state": "loading",
+    "clip": "NAR-s05",
+    "slideId": "s-managed-programme",
+    "gen": "1",
+    "status": "Loading narration · slide 5 of 39 · 02 Community model"
+   },
+   "hash": "#/05",
+   "el": "NAR-s04-s-four-outcomes.mp3",
+   "ct": 0
+  },
+  {
+   "scenario": "S12-phone-rapid-blocked",
+   "t": "2026-10-01T06:42:13.763Z",
+   "ms": 4200,
+   "type": "sample",
+   "vis": {
+    "n": 5,
+    "id": "s-managed-programme",
+    "slideId": "s-managed-programme"
+   },
+   "audio": null,
+   "cc": "This is a managed global programme, not a social channel.",
+   "guide": {
+    "state": "loading",
+    "clip": "NAR-s05",
+    "slideId": "s-managed-programme",
+    "gen": "1",
+    "status": "Loading narration · slide 5 of 39 · 02 Community model"
+   },
+   "hash": "#/05"
+  },
+  {
+   "scenario": "S12-phone-rapid-blocked",
+   "t": "2026-10-01T06:42:13.773Z",
+   "ms": 4210,
+   "type": "media:emptied",
+   "vis": {
+    "n": 5,
+    "id": "s-managed-programme",
+    "slideId": "s-managed-programme"
+   },
+   "audio": null,
+   "cc": "This is a managed global programme, not a social channel.",
+   "guide": {
+    "state": "loading",
+    "clip": "NAR-s05",
+    "slideId": "s-managed-programme",
+    "gen": "1",
+    "status": "Loading narration · slide 5 of 39 · 02 Community model"
+   },
+   "hash": "#/05",
+   "el": "NAR-s04-s-four-outcomes.mp3",
+   "ct": 0
+  },
+  {
+   "scenario": "S12-phone-rapid-blocked",
+   "t": "2026-10-01T06:42:13.774Z",
+   "ms": 4211,
+   "type": "media:loadstart",
+   "vis": {
+    "n": 5,
+    "id": "s-managed-programme",
+    "slideId": "s-managed-programme"
+   },
+   "audio": null,
+   "cc": "This is a managed global programme, not a social channel.",
+   "guide": {
+    "state": "loading",
+    "clip": "NAR-s05",
+    "slideId": "s-managed-programme",
+    "gen": "1",
+    "status": "Loading narration · slide 5 of 39 · 02 Community model"
+   },
+   "hash": "#/05",
+   "el": "NAR-s05-s-managed-programme.mp3",
+   "ct": 0
+  },
+  {
+   "scenario": "S12-phone-rapid-blocked",
+   "t": "2026-10-01T06:42:13.782Z",
+   "ms": 4219,
+   "type": "media:canplay",
+   "vis": {
+    "n": 5,
+    "id": "s-managed-programme",
+    "slideId": "s-managed-programme"
+   },
+   "audio": null,
+   "cc": "This is a managed global programme, not a social channel.",
+   "guide": {
+    "state": "loading",
+    "clip": "NAR-s05",
+    "slideId": "s-managed-programme",
+    "gen": "1",
+    "status": "Loading narration · slide 5 of 39 · 02 Community model"
+   },
+   "hash": "#/05",
+   "el": "NAR-s05-s-managed-programme.mp3",
+   "ct": 0
+  },
+  {
+   "scenario": "S12-phone-rapid-blocked",
+   "t": "2026-10-01T06:42:13.914Z",
+   "ms": 4351,
+   "type": "play()",
+   "vis": {
+    "n": 5,
+    "id": "s-managed-programme",
+    "slideId": "s-managed-programme"
+   },
+   "audio": {
+    "src": "NAR-s05-s-managed-programme.mp3",
+    "clip": "NAR-s05",
+    "t": 0,
+    "muted": false
+   },
+   "cc": "This is a managed global programme, not a social channel.",
+   "guide": {
+    "state": "loading",
+    "clip": "NAR-s05",
+    "slideId": "s-managed-programme",
+    "gen": "1",
+    "status": "Loading narration · slide 5 of 39 · 02 Community model"
+   },
+   "hash": "#/05",
+   "el": "NAR-s05-s-managed-programme.mp3",
+   "ct": 0
+  },
+  {
+   "scenario": "S12-phone-rapid-blocked",
+   "t": "2026-10-01T06:42:13.915Z",
+   "ms": 4352,
+   "type": "media:playing",
+   "vis": {
+    "n": 5,
+    "id": "s-managed-programme",
+    "slideId": "s-managed-programme"
+   },
+   "audio": {
+    "src": "NAR-s05-s-managed-programme.mp3",
+    "clip": "NAR-s05",
+    "t": 0,
+    "muted": false
+   },
+   "cc": "This is a managed global programme, not a social channel.",
+   "guide": {
+    "state": "playing",
+    "clip": "NAR-s05",
+    "slideId": "s-managed-programme",
+    "gen": "1",
+    "status": "Narrating slide 5 of 39 · 02 Community model"
+   },
+   "hash": "#/05",
+   "el": "NAR-s05-s-managed-programme.mp3",
+   "ct": 0
+  },
+  {
+   "scenario": "S12-phone-rapid-blocked",
+   "t": "2026-10-01T06:42:13.916Z",
+   "ms": 4352,
+   "type": "play():resolved",
+   "vis": {
+    "n": 5,
+    "id": "s-managed-programme",
+    "slideId": "s-managed-programme"
+   },
+   "audio": {
+    "src": "NAR-s05-s-managed-programme.mp3",
+    "clip": "NAR-s05",
+    "t": 0,
+    "muted": false
+   },
+   "cc": "This is a managed global programme, not a social channel.",
+   "guide": {
+    "state": "playing",
+    "clip": "NAR-s05",
+    "slideId": "s-managed-programme",
+    "gen": "1",
+    "status": "Narrating slide 5 of 39 · 02 Community model"
+   },
+   "hash": "#/05",
+   "el": "NAR-s05-s-managed-programme.mp3"
+  },
+  {
+   "scenario": "S12-phone-rapid-blocked",
+   "t": "2026-10-01T06:42:13.964Z",
+   "ms": 4401,
+   "type": "sample",
+   "vis": {
+    "n": 5,
+    "id": "s-managed-programme",
+    "slideId": "s-managed-programme"
+   },
+   "audio": {
+    "src": "NAR-s05-s-managed-programme.mp3",
+    "clip": "NAR-s05",
+    "t": 0.02,
+    "muted": false
+   },
+   "cc": "This is a managed global programme, not a social channel.",
+   "guide": {
+    "state": "playing",
+    "clip": "NAR-s05",
+    "slideId": "s-managed-programme",
+    "gen": "1",
+    "status": "Narrating slide 5 of 39 · 02 Community model"
+   },
+   "hash": "#/05"
+  },
+  {
+   "scenario": "S12-phone-rapid-blocked",
+   "t": "2026-10-01T06:42:15.774Z",
+   "ms": 6211,
+   "type": "check",
+   "vis": {
+    "n": 5,
+    "id": "s-managed-programme",
+    "slideId": "s-managed-programme"
+   },
+   "audio": {
+    "src": "NAR-s05-s-managed-programme.mp3",
+    "clip": "NAR-s05",
+    "t": 1.78,
+    "muted": false
+   },
+   "cc": "This is a managed global programme, not a social channel.",
+   "guide": {
+    "state": "playing",
+    "clip": "NAR-s05",
+    "slideId": "s-managed-programme",
+    "gen": "1",
+    "status": "Narrating slide 5 of 39 · 02 Community model"
+   },
+   "hash": "#/05",
+   "step": "tap bar next → 5",
+   "expect": 5
+  },
+  {
+   "scenario": "S12-phone-rapid-blocked",
+   "t": "2026-10-01T06:42:15.831Z",
+   "ms": 6268,
+   "type": "click",
+   "vis": {
+    "n": 5,
+    "id": "s-managed-programme",
+    "slideId": "s-managed-programme"
+   },
+   "audio": {
+    "src": "NAR-s05-s-managed-programme.mp3",
+    "clip": "NAR-s05",
+    "t": 1.84,
+    "muted": false
+   },
+   "cc": "This is a managed global programme, not a social channel.",
+   "guide": {
+    "state": "playing",
+    "clip": "NAR-s05",
+    "slideId": "s-managed-programme",
+    "gen": "1",
+    "status": "Narrating slide 5 of 39 · 02 Community model"
+   },
+   "hash": "#/05",
+   "target": "nar-next"
+  },
+  {
+   "scenario": "S12-phone-rapid-blocked",
+   "t": "2026-10-01T06:42:15.846Z",
+   "ms": 6283,
+   "type": "hashchange",
+   "vis": {
+    "n": 5,
+    "id": "s-managed-programme",
+    "slideId": "s-managed-programme"
+   },
+   "audio": {
+    "src": "NAR-s05-s-managed-programme.mp3",
+    "clip": "NAR-s05",
+    "t": 1.86,
+    "muted": false
+   },
+   "cc": "This is a managed global programme, not a social channel.",
+   "guide": {
+    "state": "playing",
+    "clip": "NAR-s05",
+    "slideId": "s-managed-programme",
+    "gen": "1",
+    "status": "Narrating slide 5 of 39 · 02 Community model"
+   },
+   "hash": "#/6"
+  },
+  {
+   "scenario": "S12-phone-rapid-blocked",
+   "t": "2026-10-01T06:42:15.852Z",
+   "ms": 6289,
+   "type": "media:emptied",
+   "vis": {
+    "n": 6,
+    "id": "s-discord-home",
+    "slideId": "s-discord-home"
+   },
+   "audio": null,
+   "cc": "Discord is the always-on home of the community.",
+   "guide": {
+    "state": "loading",
+    "clip": "NAR-s06",
+    "slideId": "s-discord-home",
+    "gen": "2",
+    "status": "Loading narration · slide 6 of 39 · 02 Community model"
+   },
+   "hash": "#/06",
+   "el": "NAR-s05-s-managed-programme.mp3",
+   "ct": 0
+  },
+  {
+   "scenario": "S12-phone-rapid-blocked",
+   "t": "2026-10-01T06:42:15.853Z",
+   "ms": 6290,
+   "type": "media:loadstart",
+   "vis": {
+    "n": 6,
+    "id": "s-discord-home",
+    "slideId": "s-discord-home"
+   },
+   "audio": null,
+   "cc": "Discord is the always-on home of the community.",
+   "guide": {
+    "state": "loading",
+    "clip": "NAR-s06",
+    "slideId": "s-discord-home",
+    "gen": "2",
+    "status": "Loading narration · slide 6 of 39 · 02 Community model"
+   },
+   "hash": "#/06",
+   "el": "NAR-s06-s-discord-home.mp3",
+   "ct": 0
+  },
+  {
+   "scenario": "S12-phone-rapid-blocked",
+   "t": "2026-10-01T06:42:15.870Z",
+   "ms": 6307,
+   "type": "sample",
+   "vis": {
+    "n": 6,
+    "id": "s-discord-home",
+    "slideId": "s-discord-home"
+   },
+   "audio": null,
+   "cc": "Discord is the always-on home of the community.",
+   "guide": {
+    "state": "loading",
+    "clip": "NAR-s06",
+    "slideId": "s-discord-home",
+    "gen": "2",
+    "status": "Loading narration · slide 6 of 39 · 02 Community model"
+   },
+   "hash": "#/06"
+  },
+  {
+   "scenario": "S12-phone-rapid-blocked",
+   "t": "2026-10-01T06:42:15.897Z",
+   "ms": 6334,
+   "type": "media:canplay",
+   "vis": {
+    "n": 6,
+    "id": "s-discord-home",
+    "slideId": "s-discord-home"
+   },
+   "audio": null,
+   "cc": "Discord is the always-on home of the community.",
+   "guide": {
+    "state": "loading",
+    "clip": "NAR-s06",
+    "slideId": "s-discord-home",
+    "gen": "2",
+    "status": "Loading narration · slide 6 of 39 · 02 Community model"
+   },
+   "hash": "#/06",
+   "el": "NAR-s06-s-discord-home.mp3",
+   "ct": 0
+  },
+  {
+   "scenario": "S12-phone-rapid-blocked",
+   "t": "2026-10-01T06:42:15.981Z",
+   "ms": 6418,
+   "type": "click",
+   "vis": {
+    "n": 6,
+    "id": "s-discord-home",
+    "slideId": "s-discord-home"
+   },
+   "audio": null,
+   "cc": "Discord is the always-on home of the community.",
+   "guide": {
+    "state": "loading",
+    "clip": "NAR-s06",
+    "slideId": "s-discord-home",
+    "gen": "2",
+    "status": "Loading narration · slide 6 of 39 · 02 Community model"
+   },
+   "hash": "#/06",
+   "target": "nar-next"
+  },
+  {
+   "scenario": "S12-phone-rapid-blocked",
+   "t": "2026-10-01T06:42:15.997Z",
+   "ms": 6434,
+   "type": "hashchange",
+   "vis": {
+    "n": 6,
+    "id": "s-discord-home",
+    "slideId": "s-discord-home"
+   },
+   "audio": null,
+   "cc": "Discord is the always-on home of the community.",
+   "guide": {
+    "state": "loading",
+    "clip": "NAR-s06",
+    "slideId": "s-discord-home",
+    "gen": "2",
+    "status": "Loading narration · slide 6 of 39 · 02 Community model"
+   },
+   "hash": "#/7"
+  },
+  {
+   "scenario": "S12-phone-rapid-blocked",
+   "t": "2026-10-01T06:42:16.002Z",
+   "ms": 6439,
+   "type": "media:seeked",
+   "vis": {
+    "n": 7,
+    "id": "s-country-chapters",
+    "slideId": "s-country-chapters"
+   },
+   "audio": null,
+   "cc": "Country chapters bring the pact to life locally.",
+   "guide": {
+    "state": "loading",
+    "clip": "NAR-s07",
+    "slideId": "s-country-chapters",
+    "gen": "3",
+    "status": "Loading narration · slide 7 of 39 · 02 Community model"
+   },
+   "hash": "#/07",
+   "el": "NAR-s06-s-discord-home.mp3",
+   "ct": 0
+  },
+  {
+   "scenario": "S12-phone-rapid-blocked",
+   "t": "2026-10-01T06:42:16.002Z",
+   "ms": 6439,
+   "type": "media:canplay",
+   "vis": {
+    "n": 7,
+    "id": "s-country-chapters",
+    "slideId": "s-country-chapters"
+   },
+   "audio": null,
+   "cc": "Country chapters bring the pact to life locally.",
+   "guide": {
+    "state": "loading",
+    "clip": "NAR-s07",
+    "slideId": "s-country-chapters",
+    "gen": "3",
+    "status": "Loading narration · slide 7 of 39 · 02 Community model"
+   },
+   "hash": "#/07",
+   "el": "NAR-s06-s-discord-home.mp3",
+   "ct": 0
+  },
+  {
+   "scenario": "S12-phone-rapid-blocked",
+   "t": "2026-10-01T06:42:16.045Z",
+   "ms": 6482,
+   "type": "media:emptied",
+   "vis": {
+    "n": 7,
+    "id": "s-country-chapters",
+    "slideId": "s-country-chapters"
+   },
+   "audio": null,
+   "cc": "Country chapters bring the pact to life locally.",
+   "guide": {
+    "state": "loading",
+    "clip": "NAR-s07",
+    "slideId": "s-country-chapters",
+    "gen": "3",
+    "status": "Loading narration · slide 7 of 39 · 02 Community model"
+   },
+   "hash": "#/07",
+   "el": "NAR-s06-s-discord-home.mp3",
+   "ct": 0
+  },
+  {
+   "scenario": "S12-phone-rapid-blocked",
+   "t": "2026-10-01T06:42:16.046Z",
+   "ms": 6483,
+   "type": "media:loadstart",
+   "vis": {
+    "n": 7,
+    "id": "s-country-chapters",
+    "slideId": "s-country-chapters"
+   },
+   "audio": null,
+   "cc": "Country chapters bring the pact to life locally.",
+   "guide": {
+    "state": "loading",
+    "clip": "NAR-s07",
+    "slideId": "s-country-chapters",
+    "gen": "3",
+    "status": "Loading narration · slide 7 of 39 · 02 Community model"
+   },
+   "hash": "#/07",
+   "el": "NAR-s07-s-country-chapters.mp3",
+   "ct": 0
+  },
+  {
+   "scenario": "S12-phone-rapid-blocked",
+   "t": "2026-10-01T06:42:16.055Z",
+   "ms": 6492,
+   "type": "media:canplay",
+   "vis": {
+    "n": 7,
+    "id": "s-country-chapters",
+    "slideId": "s-country-chapters"
+   },
+   "audio": null,
+   "cc": "Country chapters bring the pact to life locally.",
+   "guide": {
+    "state": "loading",
+    "clip": "NAR-s07",
+    "slideId": "s-country-chapters",
+    "gen": "3",
+    "status": "Loading narration · slide 7 of 39 · 02 Community model"
+   },
+   "hash": "#/07",
+   "el": "NAR-s07-s-country-chapters.mp3",
+   "ct": 0
+  },
+  {
+   "scenario": "S12-phone-rapid-blocked",
+   "t": "2026-10-01T06:42:16.064Z",
+   "ms": 6501,
+   "type": "sample",
+   "vis": {
+    "n": 7,
+    "id": "s-country-chapters",
+    "slideId": "s-country-chapters"
+   },
+   "audio": null,
+   "cc": "Country chapters bring the pact to life locally.",
+   "guide": {
+    "state": "loading",
+    "clip": "NAR-s07",
+    "slideId": "s-country-chapters",
+    "gen": "3",
+    "status": "Loading narration · slide 7 of 39 · 02 Community model"
+   },
+   "hash": "#/07"
+  },
+  {
+   "scenario": "S12-phone-rapid-blocked",
+   "t": "2026-10-01T06:42:16.148Z",
+   "ms": 6585,
+   "type": "click",
+   "vis": {
+    "n": 7,
+    "id": "s-country-chapters",
+    "slideId": "s-country-chapters"
+   },
+   "audio": null,
+   "cc": "Country chapters bring the pact to life locally.",
+   "guide": {
+    "state": "loading",
+    "clip": "NAR-s07",
+    "slideId": "s-country-chapters",
+    "gen": "3",
+    "status": "Loading narration · slide 7 of 39 · 02 Community model"
+   },
+   "hash": "#/07",
+   "target": "nar-next"
+  },
+  {
+   "scenario": "S12-phone-rapid-blocked",
+   "t": "2026-10-01T06:42:16.174Z",
+   "ms": 6611,
+   "type": "hashchange",
+   "vis": {
+    "n": 7,
+    "id": "s-country-chapters",
+    "slideId": "s-country-chapters"
+   },
+   "audio": null,
+   "cc": "Country chapters bring the pact to life locally.",
+   "guide": {
+    "state": "loading",
+    "clip": "NAR-s07",
+    "slideId": "s-country-chapters",
+    "gen": "3",
+    "status": "Loading narration · slide 7 of 39 · 02 Community model"
+   },
+   "hash": "#/8"
+  },
+  {
+   "scenario": "S12-phone-rapid-blocked",
+   "t": "2026-10-01T06:42:16.178Z",
+   "ms": 6615,
+   "type": "sample",
+   "vis": {
+    "n": 8,
+    "id": "s-learning-formats",
+    "slideId": "s-learning-formats"
+   },
+   "audio": null,
+   "cc": "Webinars, bootcamps and institutional academies form the learning ladder.",
+   "guide": {
+    "state": "loading",
+    "clip": "NAR-s08",
+    "slideId": "s-learning-formats",
+    "gen": "4",
+    "status": "Loading narration · slide 8 of 39 · 02 Community model"
+   },
+   "hash": "#/08"
+  },
+  {
+   "scenario": "S12-phone-rapid-blocked",
+   "t": "2026-10-01T06:42:16.179Z",
+   "ms": 6616,
+   "type": "media:seeked",
+   "vis": {
+    "n": 8,
+    "id": "s-learning-formats",
+    "slideId": "s-learning-formats"
+   },
+   "audio": null,
+   "cc": "Webinars, bootcamps and institutional academies form the learning ladder.",
+   "guide": {
+    "state": "loading",
+    "clip": "NAR-s08",
+    "slideId": "s-learning-formats",
+    "gen": "4",
+    "status": "Loading narration · slide 8 of 39 · 02 Community model"
+   },
+   "hash": "#/08",
+   "el": "NAR-s07-s-country-chapters.mp3",
+   "ct": 0
+  },
+  {
+   "scenario": "S12-phone-rapid-blocked",
+   "t": "2026-10-01T06:42:16.179Z",
+   "ms": 6616,
+   "type": "media:canplay",
+   "vis": {
+    "n": 8,
+    "id": "s-learning-formats",
+    "slideId": "s-learning-formats"
+   },
+   "audio": null,
+   "cc": "Webinars, bootcamps and institutional academies form the learning ladder.",
+   "guide": {
+    "state": "loading",
+    "clip": "NAR-s08",
+    "slideId": "s-learning-formats",
+    "gen": "4",
+    "status": "Loading narration · slide 8 of 39 · 02 Community model"
+   },
+   "hash": "#/08",
+   "el": "NAR-s07-s-country-chapters.mp3",
+   "ct": 0
+  },
+  {
+   "scenario": "S12-phone-rapid-blocked",
+   "t": "2026-10-01T06:42:16.215Z",
+   "ms": 6652,
+   "type": "media:emptied",
+   "vis": {
+    "n": 8,
+    "id": "s-learning-formats",
+    "slideId": "s-learning-formats"
+   },
+   "audio": null,
+   "cc": "Webinars, bootcamps and institutional academies form the learning ladder.",
+   "guide": {
+    "state": "loading",
+    "clip": "NAR-s08",
+    "slideId": "s-learning-formats",
+    "gen": "4",
+    "status": "Loading narration · slide 8 of 39 · 02 Community model"
+   },
+   "hash": "#/08",
+   "el": "NAR-s07-s-country-chapters.mp3",
+   "ct": 0
+  },
+  {
+   "scenario": "S12-phone-rapid-blocked",
+   "t": "2026-10-01T06:42:16.216Z",
+   "ms": 6653,
+   "type": "media:loadstart",
+   "vis": {
+    "n": 8,
+    "id": "s-learning-formats",
+    "slideId": "s-learning-formats"
+   },
+   "audio": null,
+   "cc": "Webinars, bootcamps and institutional academies form the learning ladder.",
+   "guide": {
+    "state": "loading",
+    "clip": "NAR-s08",
+    "slideId": "s-learning-formats",
+    "gen": "4",
+    "status": "Loading narration · slide 8 of 39 · 02 Community model"
+   },
+   "hash": "#/08",
+   "el": "NAR-s08-s-learning-formats.mp3",
+   "ct": 0
+  },
+  {
+   "scenario": "S12-phone-rapid-blocked",
+   "t": "2026-10-01T06:42:16.222Z",
+   "ms": 6659,
+   "type": "media:canplay",
+   "vis": {
+    "n": 8,
+    "id": "s-learning-formats",
+    "slideId": "s-learning-formats"
+   },
+   "audio": null,
+   "cc": "Webinars, bootcamps and institutional academies form the learning ladder.",
+   "guide": {
+    "state": "loading",
+    "clip": "NAR-s08",
+    "slideId": "s-learning-formats",
+    "gen": "4",
+    "status": "Loading narration · slide 8 of 39 · 02 Community model"
+   },
+   "hash": "#/08",
+   "el": "NAR-s08-s-learning-formats.mp3",
+   "ct": 0
+  },
+  {
+   "scenario": "S12-phone-rapid-blocked",
+   "t": "2026-10-01T06:42:16.331Z",
+   "ms": 6768,
+   "type": "click",
+   "vis": {
+    "n": 8,
+    "id": "s-learning-formats",
+    "slideId": "s-learning-formats"
+   },
+   "audio": null,
+   "cc": "Webinars, bootcamps and institutional academies form the learning ladder.",
+   "guide": {
+    "state": "loading",
+    "clip": "NAR-s08",
+    "slideId": "s-learning-formats",
+    "gen": "4",
+    "status": "Loading narration · slide 8 of 39 · 02 Community model"
+   },
+   "hash": "#/08",
+   "target": "nar-next"
+  },
+  {
+   "scenario": "S12-phone-rapid-blocked",
+   "t": "2026-10-01T06:42:16.358Z",
+   "ms": 6795,
+   "type": "hashchange",
+   "vis": {
+    "n": 8,
+    "id": "s-learning-formats",
+    "slideId": "s-learning-formats"
+   },
+   "audio": null,
+   "cc": "Webinars, bootcamps and institutional academies form the learning ladder.",
+   "guide": {
+    "state": "loading",
+    "clip": "NAR-s08",
+    "slideId": "s-learning-formats",
+    "gen": "4",
+    "status": "Loading narration · slide 8 of 39 · 02 Community model"
+   },
+   "hash": "#/9"
+  },
+  {
+   "scenario": "S12-phone-rapid-blocked",
+   "t": "2026-10-01T06:42:16.363Z",
+   "ms": 6800,
+   "type": "media:seeked",
+   "vis": {
+    "n": 9,
+    "id": "s-challenges-showcases",
+    "slideId": "s-challenges-showcases"
+   },
+   "audio": null,
+   "cc": "Challenges, showcases and the annual summit turn learning into visible results.",
+   "guide": {
+    "state": "loading",
+    "clip": "NAR-s09",
+    "slideId": "s-challenges-showcases",
+    "gen": "5",
+    "status": "Loading narration · slide 9 of 39 · 02 Community model"
+   },
+   "hash": "#/09",
+   "el": "NAR-s08-s-learning-formats.mp3",
+   "ct": 0
+  },
+  {
+   "scenario": "S12-phone-rapid-blocked",
+   "t": "2026-10-01T06:42:16.363Z",
+   "ms": 6800,
+   "type": "media:canplay",
+   "vis": {
+    "n": 9,
+    "id": "s-challenges-showcases",
+    "slideId": "s-challenges-showcases"
+   },
+   "audio": null,
+   "cc": "Challenges, showcases and the annual summit turn learning into visible results.",
+   "guide": {
+    "state": "loading",
+    "clip": "NAR-s09",
+    "slideId": "s-challenges-showcases",
+    "gen": "5",
+    "status": "Loading narration · slide 9 of 39 · 02 Community model"
+   },
+   "hash": "#/09",
+   "el": "NAR-s08-s-learning-formats.mp3",
+   "ct": 0
+  },
+  {
+   "scenario": "S12-phone-rapid-blocked",
+   "t": "2026-10-01T06:42:16.364Z",
+   "ms": 6801,
+   "type": "sample",
+   "vis": {
+    "n": 9,
+    "id": "s-challenges-showcases",
+    "slideId": "s-challenges-showcases"
+   },
+   "audio": null,
+   "cc": "Challenges, showcases and the annual summit turn learning into visible results.",
+   "guide": {
+    "state": "loading",
+    "clip": "NAR-s09",
+    "slideId": "s-challenges-showcases",
+    "gen": "5",
+    "status": "Loading narration · slide 9 of 39 · 02 Community model"
+   },
+   "hash": "#/09"
+  },
+  {
+   "scenario": "S12-phone-rapid-blocked",
+   "t": "2026-10-01T06:42:16.394Z",
+   "ms": 6831,
+   "type": "media:emptied",
+   "vis": {
+    "n": 9,
+    "id": "s-challenges-showcases",
+    "slideId": "s-challenges-showcases"
+   },
+   "audio": null,
+   "cc": "Challenges, showcases and the annual summit turn learning into visible results.",
+   "guide": {
+    "state": "loading",
+    "clip": "NAR-s09",
+    "slideId": "s-challenges-showcases",
+    "gen": "5",
+    "status": "Loading narration · slide 9 of 39 · 02 Community model"
+   },
+   "hash": "#/09",
+   "el": "NAR-s08-s-learning-formats.mp3",
+   "ct": 0
+  },
+  {
+   "scenario": "S12-phone-rapid-blocked",
+   "t": "2026-10-01T06:42:16.395Z",
+   "ms": 6832,
+   "type": "media:loadstart",
+   "vis": {
+    "n": 9,
+    "id": "s-challenges-showcases",
+    "slideId": "s-challenges-showcases"
+   },
+   "audio": null,
+   "cc": "Challenges, showcases and the annual summit turn learning into visible results.",
+   "guide": {
+    "state": "loading",
+    "clip": "NAR-s09",
+    "slideId": "s-challenges-showcases",
+    "gen": "5",
+    "status": "Loading narration · slide 9 of 39 · 02 Community model"
+   },
+   "hash": "#/09",
+   "el": "NAR-s09-s-challenges-showcases.mp3",
+   "ct": 0
+  },
+  {
+   "scenario": "S12-phone-rapid-blocked",
+   "t": "2026-10-01T06:42:16.398Z",
+   "ms": 6835,
+   "type": "media:canplay",
+   "vis": {
+    "n": 9,
+    "id": "s-challenges-showcases",
+    "slideId": "s-challenges-showcases"
+   },
+   "audio": null,
+   "cc": "Challenges, showcases and the annual summit turn learning into visible results.",
+   "guide": {
+    "state": "loading",
+    "clip": "NAR-s09",
+    "slideId": "s-challenges-showcases",
+    "gen": "5",
+    "status": "Loading narration · slide 9 of 39 · 02 Community model"
+   },
+   "hash": "#/09",
+   "el": "NAR-s09-s-challenges-showcases.mp3",
+   "ct": 0
+  },
+  {
+   "scenario": "S12-phone-rapid-blocked",
+   "t": "2026-10-01T06:42:16.498Z",
+   "ms": 6935,
+   "type": "click",
+   "vis": {
+    "n": 9,
+    "id": "s-challenges-showcases",
+    "slideId": "s-challenges-showcases"
+   },
+   "audio": null,
+   "cc": "Challenges, showcases and the annual summit turn learning into visible results.",
+   "guide": {
+    "state": "loading",
+    "clip": "NAR-s09",
+    "slideId": "s-challenges-showcases",
+    "gen": "5",
+    "status": "Loading narration · slide 9 of 39 · 02 Community model"
+   },
+   "hash": "#/09",
+   "target": "nar-next"
+  },
+  {
+   "scenario": "S12-phone-rapid-blocked",
+   "t": "2026-10-01T06:42:16.525Z",
+   "ms": 6962,
+   "type": "hashchange",
+   "vis": {
+    "n": 9,
+    "id": "s-challenges-showcases",
+    "slideId": "s-challenges-showcases"
+   },
+   "audio": null,
+   "cc": "Challenges, showcases and the annual summit turn learning into visible results.",
+   "guide": {
+    "state": "loading",
+    "clip": "NAR-s09",
+    "slideId": "s-challenges-showcases",
+    "gen": "5",
+    "status": "Loading narration · slide 9 of 39 · 02 Community model"
+   },
+   "hash": "#/10"
+  },
+  {
+   "scenario": "S12-phone-rapid-blocked",
+   "t": "2026-10-01T06:42:16.529Z",
+   "ms": 6966,
+   "type": "media:seeked",
+   "vis": {
+    "n": 10,
+    "id": "s-office-hours",
+    "slideId": "s-office-hours"
+   },
+   "audio": null,
+   "cc": "Weekly office hours and tiered support keep builders unblocked.",
+   "guide": {
+    "state": "loading",
+    "clip": "NAR-s10",
+    "slideId": "s-office-hours",
+    "gen": "6",
+    "status": "Loading narration · slide 10 of 39 · 02 Community model"
+   },
+   "hash": "#/10",
+   "el": "NAR-s09-s-challenges-showcases.mp3",
+   "ct": 0
+  },
+  {
+   "scenario": "S12-phone-rapid-blocked",
+   "t": "2026-10-01T06:42:16.529Z",
+   "ms": 6966,
+   "type": "media:canplay",
+   "vis": {
+    "n": 10,
+    "id": "s-office-hours",
+    "slideId": "s-office-hours"
+   },
+   "audio": null,
+   "cc": "Weekly office hours and tiered support keep builders unblocked.",
+   "guide": {
+    "state": "loading",
+    "clip": "NAR-s10",
+    "slideId": "s-office-hours",
+    "gen": "6",
+    "status": "Loading narration · slide 10 of 39 · 02 Community model"
+   },
+   "hash": "#/10",
+   "el": "NAR-s09-s-challenges-showcases.mp3",
+   "ct": 0
+  },
+  {
+   "scenario": "S12-phone-rapid-blocked",
+   "t": "2026-10-01T06:42:16.539Z",
+   "ms": 6976,
+   "type": "media:emptied",
+   "vis": {
+    "n": 10,
+    "id": "s-office-hours",
+    "slideId": "s-office-hours"
+   },
+   "audio": null,
+   "cc": "Weekly office hours and tiered support keep builders unblocked.",
+   "guide": {
+    "state": "loading",
+    "clip": "NAR-s10",
+    "slideId": "s-office-hours",
+    "gen": "6",
+    "status": "Loading narration · slide 10 of 39 · 02 Community model"
+   },
+   "hash": "#/10",
+   "el": "NAR-s09-s-challenges-showcases.mp3",
+   "ct": 0
+  },
+  {
+   "scenario": "S12-phone-rapid-blocked",
+   "t": "2026-10-01T06:42:16.540Z",
+   "ms": 6977,
+   "type": "media:loadstart",
+   "vis": {
+    "n": 10,
+    "id": "s-office-hours",
+    "slideId": "s-office-hours"
+   },
+   "audio": null,
+   "cc": "Weekly office hours and tiered support keep builders unblocked.",
+   "guide": {
+    "state": "loading",
+    "clip": "NAR-s10",
+    "slideId": "s-office-hours",
+    "gen": "6",
+    "status": "Loading narration · slide 10 of 39 · 02 Community model"
+   },
+   "hash": "#/10",
+   "el": "NAR-s10-s-office-hours.mp3",
+   "ct": 0
+  },
+  {
+   "scenario": "S12-phone-rapid-blocked",
+   "t": "2026-10-01T06:42:16.544Z",
+   "ms": 6981,
+   "type": "media:canplay",
+   "vis": {
+    "n": 10,
+    "id": "s-office-hours",
+    "slideId": "s-office-hours"
+   },
+   "audio": null,
+   "cc": "Weekly office hours and tiered support keep builders unblocked.",
+   "guide": {
+    "state": "loading",
+    "clip": "NAR-s10",
+    "slideId": "s-office-hours",
+    "gen": "6",
+    "status": "Loading narration · slide 10 of 39 · 02 Community model"
+   },
+   "hash": "#/10",
+   "el": "NAR-s10-s-office-hours.mp3",
+   "ct": 0
+  },
+  {
+   "scenario": "S12-phone-rapid-blocked",
+   "t": "2026-10-01T06:42:16.563Z",
+   "ms": 7000,
+   "type": "sample",
+   "vis": {
+    "n": 10,
+    "id": "s-office-hours",
+    "slideId": "s-office-hours"
+   },
+   "audio": null,
+   "cc": "Weekly office hours and tiered support keep builders unblocked.",
+   "guide": {
+    "state": "loading",
+    "clip": "NAR-s10",
+    "slideId": "s-office-hours",
+    "gen": "6",
+    "status": "Loading narration · slide 10 of 39 · 02 Community model"
+   },
+   "hash": "#/10"
+  },
+  {
+   "scenario": "S12-phone-rapid-blocked",
+   "t": "2026-10-01T06:42:16.648Z",
+   "ms": 7085,
+   "type": "click",
+   "vis": {
+    "n": 10,
+    "id": "s-office-hours",
+    "slideId": "s-office-hours"
+   },
+   "audio": null,
+   "cc": "Weekly office hours and tiered support keep builders unblocked.",
+   "guide": {
+    "state": "loading",
+    "clip": "NAR-s10",
+    "slideId": "s-office-hours",
+    "gen": "6",
+    "status": "Loading narration · slide 10 of 39 · 02 Community model"
+   },
+   "hash": "#/10",
+   "target": "nar-next"
+  },
+  {
+   "scenario": "S12-phone-rapid-blocked",
+   "t": "2026-10-01T06:42:16.675Z",
+   "ms": 7112,
+   "type": "hashchange",
+   "vis": {
+    "n": 10,
+    "id": "s-office-hours",
+    "slideId": "s-office-hours"
+   },
+   "audio": null,
+   "cc": "Weekly office hours and tiered support keep builders unblocked.",
+   "guide": {
+    "state": "loading",
+    "clip": "NAR-s10",
+    "slideId": "s-office-hours",
+    "gen": "6",
+    "status": "Loading narration · slide 10 of 39 · 02 Community model"
+   },
+   "hash": "#/11"
+  },
+  {
+   "scenario": "S12-phone-rapid-blocked",
+   "t": "2026-10-01T06:42:16.679Z",
+   "ms": 7116,
+   "type": "sample",
+   "vis": {
+    "n": 11,
+    "id": "s-agent-marketplace",
+    "slideId": "s-agent-marketplace"
+   },
+   "audio": null,
+   "cc": "The builder journey runs from an idea to a validated agent.",
+   "guide": {
+    "state": "loading",
+    "clip": "NAR-s11",
+    "slideId": "s-agent-marketplace",
+    "gen": "7",
+    "status": "Loading narration · slide 11 of 39 · 02 Community model"
+   },
+   "hash": "#/11"
+  },
+  {
+   "scenario": "S12-phone-rapid-blocked",
+   "t": "2026-10-01T06:42:16.680Z",
+   "ms": 7117,
+   "type": "media:seeked",
+   "vis": {
+    "n": 11,
+    "id": "s-agent-marketplace",
+    "slideId": "s-agent-marketplace"
+   },
+   "audio": null,
+   "cc": "The builder journey runs from an idea to a validated agent.",
+   "guide": {
+    "state": "loading",
+    "clip": "NAR-s11",
+    "slideId": "s-agent-marketplace",
+    "gen": "7",
+    "status": "Loading narration · slide 11 of 39 · 02 Community model"
+   },
+   "hash": "#/11",
+   "el": "NAR-s10-s-office-hours.mp3",
+   "ct": 0
+  },
+  {
+   "scenario": "S12-phone-rapid-blocked",
+   "t": "2026-10-01T06:42:16.680Z",
+   "ms": 7117,
+   "type": "media:canplay",
+   "vis": {
+    "n": 11,
+    "id": "s-agent-marketplace",
+    "slideId": "s-agent-marketplace"
+   },
+   "audio": null,
+   "cc": "The builder journey runs from an idea to a validated agent.",
+   "guide": {
+    "state": "loading",
+    "clip": "NAR-s11",
+    "slideId": "s-agent-marketplace",
+    "gen": "7",
+    "status": "Loading narration · slide 11 of 39 · 02 Community model"
+   },
+   "hash": "#/11",
+   "el": "NAR-s10-s-office-hours.mp3",
+   "ct": 0
+  },
+  {
+   "scenario": "S12-phone-rapid-blocked",
+   "t": "2026-10-01T06:42:16.691Z",
+   "ms": 7128,
+   "type": "media:emptied",
+   "vis": {
+    "n": 11,
+    "id": "s-agent-marketplace",
+    "slideId": "s-agent-marketplace"
+   },
+   "audio": null,
+   "cc": "The builder journey runs from an idea to a validated agent.",
+   "guide": {
+    "state": "loading",
+    "clip": "NAR-s11",
+    "slideId": "s-agent-marketplace",
+    "gen": "7",
+    "status": "Loading narration · slide 11 of 39 · 02 Community model"
+   },
+   "hash": "#/11",
+   "el": "NAR-s10-s-office-hours.mp3",
+   "ct": 0
+  },
+  {
+   "scenario": "S12-phone-rapid-blocked",
+   "t": "2026-10-01T06:42:16.693Z",
+   "ms": 7129,
+   "type": "media:loadstart",
+   "vis": {
+    "n": 11,
+    "id": "s-agent-marketplace",
+    "slideId": "s-agent-marketplace"
+   },
+   "audio": null,
+   "cc": "The builder journey runs from an idea to a validated agent.",
+   "guide": {
+    "state": "loading",
+    "clip": "NAR-s11",
+    "slideId": "s-agent-marketplace",
+    "gen": "7",
+    "status": "Loading narration · slide 11 of 39 · 02 Community model"
+   },
+   "hash": "#/11",
+   "el": "NAR-s11-s-agent-marketplace.mp3",
+   "ct": 0
+  },
+  {
+   "scenario": "S12-phone-rapid-blocked",
+   "t": "2026-10-01T06:42:16.695Z",
+   "ms": 7132,
+   "type": "media:canplay",
+   "vis": {
+    "n": 11,
+    "id": "s-agent-marketplace",
+    "slideId": "s-agent-marketplace"
+   },
+   "audio": null,
+   "cc": "The builder journey runs from an idea to a validated agent.",
+   "guide": {
+    "state": "loading",
+    "clip": "NAR-s11",
+    "slideId": "s-agent-marketplace",
+    "gen": "7",
+    "status": "Loading narration · slide 11 of 39 · 02 Community model"
+   },
+   "hash": "#/11",
+   "el": "NAR-s11-s-agent-marketplace.mp3",
+   "ct": 0
+  },
+  {
+   "scenario": "S12-phone-rapid-blocked",
+   "t": "2026-10-01T06:42:16.832Z",
+   "ms": 7269,
+   "type": "play()",
+   "vis": {
+    "n": 11,
+    "id": "s-agent-marketplace",
+    "slideId": "s-agent-marketplace"
+   },
+   "audio": {
+    "src": "NAR-s11-s-agent-marketplace.mp3",
+    "clip": "NAR-s11",
+    "t": 0,
+    "muted": false
+   },
+   "cc": "The builder journey runs from an idea to a validated agent.",
+   "guide": {
+    "state": "loading",
+    "clip": "NAR-s11",
+    "slideId": "s-agent-marketplace",
+    "gen": "7",
+    "status": "Loading narration · slide 11 of 39 · 02 Community model"
+   },
+   "hash": "#/11",
+   "el": "NAR-s11-s-agent-marketplace.mp3",
+   "ct": 0
+  },
+  {
+   "scenario": "S12-phone-rapid-blocked",
+   "t": "2026-10-01T06:42:16.833Z",
+   "ms": 7270,
+   "type": "media:playing",
+   "vis": {
+    "n": 11,
+    "id": "s-agent-marketplace",
+    "slideId": "s-agent-marketplace"
+   },
+   "audio": {
+    "src": "NAR-s11-s-agent-marketplace.mp3",
+    "clip": "NAR-s11",
+    "t": 0,
+    "muted": false
+   },
+   "cc": "The builder journey runs from an idea to a validated agent.",
+   "guide": {
+    "state": "playing",
+    "clip": "NAR-s11",
+    "slideId": "s-agent-marketplace",
+    "gen": "7",
+    "status": "Narrating slide 11 of 39 · 02 Community model"
+   },
+   "hash": "#/11",
+   "el": "NAR-s11-s-agent-marketplace.mp3",
+   "ct": 0
+  },
+  {
+   "scenario": "S12-phone-rapid-blocked",
+   "t": "2026-10-01T06:42:16.833Z",
+   "ms": 7270,
+   "type": "play():resolved",
+   "vis": {
+    "n": 11,
+    "id": "s-agent-marketplace",
+    "slideId": "s-agent-marketplace"
+   },
+   "audio": {
+    "src": "NAR-s11-s-agent-marketplace.mp3",
+    "clip": "NAR-s11",
+    "t": 0,
+    "muted": false
+   },
+   "cc": "The builder journey runs from an idea to a validated agent.",
+   "guide": {
+    "state": "playing",
+    "clip": "NAR-s11",
+    "slideId": "s-agent-marketplace",
+    "gen": "7",
+    "status": "Narrating slide 11 of 39 · 02 Community model"
+   },
+   "hash": "#/11",
+   "el": "NAR-s11-s-agent-marketplace.mp3"
+  },
+  {
+   "scenario": "S12-phone-rapid-blocked",
+   "t": "2026-10-01T06:42:16.864Z",
+   "ms": 7300,
+   "type": "sample",
+   "vis": {
+    "n": 11,
+    "id": "s-agent-marketplace",
+    "slideId": "s-agent-marketplace"
+   },
+   "audio": {
+    "src": "NAR-s11-s-agent-marketplace.mp3",
+    "clip": "NAR-s11",
+    "t": 0.01,
+    "muted": false
+   },
+   "cc": "The builder journey runs from an idea to a validated agent.",
+   "guide": {
+    "state": "playing",
+    "clip": "NAR-s11",
+    "slideId": "s-agent-marketplace",
+    "gen": "7",
+    "status": "Narrating slide 11 of 39 · 02 Community model"
+   },
+   "hash": "#/11"
+  },
+  {
+   "scenario": "S12-phone-rapid-blocked",
+   "t": "2026-10-01T06:42:20.227Z",
+   "ms": 10664,
+   "type": "check",
+   "vis": {
+    "n": 11,
+    "id": "s-agent-marketplace",
+    "slideId": "s-agent-marketplace"
+   },
+   "audio": {
+    "src": "NAR-s11-s-agent-marketplace.mp3",
+    "clip": "NAR-s11",
+    "t": 3.32,
+    "muted": false
+   },
+   "cc": "The builder journey runs from an idea to a validated agent.",
+   "guide": {
+    "state": "playing",
+    "clip": "NAR-s11",
+    "slideId": "s-agent-marketplace",
+    "gen": "7",
+    "status": "Narrating slide 11 of 39 · 02 Community model"
+   },
+   "hash": "#/11",
+   "step": "6× bar next (≈270 ms) → 11",
+   "expect": 11
+  }
+ ],
+ "console": []
+}

@@ -1,0 +1,22 @@
+{
+  "name": "Athar Open Agentic Pact",
+  "short_name": "Athar",
+  "icons": [
+    {
+      "src": "/brand/icon-512.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    },
+    {
+      "src": "/brand/apple-touch-icon.png",
+      "sizes": "180x180",
+      "type": "image/png"
+    }
+  ],
+  "theme_color": "#062739",
+  "background_color": "#F3EDE4",
+  "display": "standalone",
+  "start_url": "/",
+  "description": "Athar Open Agentic Pact — bilingual community-pact deck (v1.5.2, 2026-09-30)",
+  "id": "/?v=1.5.2"
+}

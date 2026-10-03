@@ -1,0 +1,59 @@
+{
+ "base": "http://127.0.0.1:4405",
+ "written": "2026-10-01T14:10:08.572Z",
+ "rows": {
+  "hops": [
+   {
+    "at": "2026-10-01T14:09:58.112Z",
+    "toHash": "#/27",
+    "previousClipEndedAt": "2026-10-01T14:09:58.111Z",
+    "endedClip": "NAR-s26",
+    "endedOnSlide": "s-governance-licence"
+   },
+   {
+    "at": "2026-10-01T14:09:59.728Z",
+    "toHash": "#/27/new-1",
+    "previousClipEndedAt": "2026-10-01T14:09:59.727Z",
+    "endedClip": "NAR-s27",
+    "endedOnSlide": "s-roadmap"
+   },
+   {
+    "at": "2026-10-01T14:10:00.343Z",
+    "toHash": "#/27/new-2",
+    "previousClipEndedAt": "2026-10-01T14:10:00.343Z",
+    "endedClip": "NAR-s28",
+    "endedOnSlide": "s-it-outcomes"
+   },
+   {
+    "at": "2026-10-01T14:10:01.890Z",
+    "toHash": "#/27/new-3",
+    "previousClipEndedAt": "2026-10-01T14:10:01.889Z",
+    "endedClip": "NAR-s29",
+    "endedOnSlide": "s-it-tiers"
+   },
+   {
+    "at": "2026-10-01T14:10:03.995Z",
+    "toHash": "#/27/new-4",
+    "previousClipEndedAt": "2026-10-01T14:10:03.995Z",
+    "endedClip": "NAR-s30",
+    "endedOnSlide": "s-it-metrics"
+   },
+   {
+    "at": "2026-10-01T14:10:05.685Z",
+    "toHash": "#/27/new-5",
+    "previousClipEndedAt": "2026-10-01T14:10:05.685Z",
+    "endedClip": "NAR-s31",
+    "endedOnSlide": "s-it-sustain"
+   },
+   {
+    "at": "2026-10-01T14:10:08.460Z",
+    "toHash": "#/27/new-6",
+    "previousClipEndedAt": "2026-10-01T14:10:08.460Z",
+    "endedClip": "NAR-s32",
+    "endedOnSlide": "s-it-partners"
+   }
+  ],
+  "mismatchedSamples": [],
+  "samples": 10
+ }
+}

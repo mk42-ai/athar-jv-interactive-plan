@@ -1,0 +1,1455 @@
+{
+ "marks": [
+  {
+   "t": "2026-10-01T06:16:45.904Z",
+   "scenario": "S12-phone-rapid-blocked",
+   "step": "phone first load, no gesture",
+   "expect": 4,
+   "vis": {
+    "n": 7,
+    "id": "s-country-chapters",
+    "slideId": null
+   },
+   "audio": {
+    "src": "guide-02-community-model-9gUnFBtxrM.mp3",
+    "clip": "NAR-02",
+    "t": 3.03,
+    "muted": false
+   },
+   "cc": "Every webinar, chapter event and challenge should lead somewhere real, so the model is built around four outcomes for every participant.",
+   "guide": {
+    "state": "playing",
+    "clip": "NAR-02",
+    "slideId": null,
+    "blocked": "false",
+    "status": "Narrating slide 7 of 39 · 02 Community model",
+    "tap": false
+   }
+  },
+  {
+   "t": "2026-10-01T06:16:48.094Z",
+   "scenario": "S12-phone-rapid-blocked",
+   "step": "tap bar next → 5",
+   "expect": 5,
+   "vis": {
+    "n": 8,
+    "id": "s-learning-formats",
+    "slideId": null
+   },
+   "audio": {
+    "src": "guide-02-community-model-9gUnFBtxrM.mp3",
+    "clip": "NAR-02",
+    "t": 5.22,
+    "muted": false
+   },
+   "cc": "Every webinar, chapter event and challenge should lead somewhere real, so the model is built around four outcomes for every participant.",
+   "guide": {
+    "state": "playing",
+    "clip": "NAR-02",
+    "slideId": null,
+    "blocked": "false",
+    "status": "Narrating slide 8 of 39 · 02 Community model",
+    "tap": false
+   }
+  },
+  {
+   "t": "2026-10-01T06:16:52.489Z",
+   "scenario": "S12-phone-rapid-blocked",
+   "step": "6× bar next (≈270 ms) → 11",
+   "expect": 11,
+   "vis": {
+    "n": 14,
+    "id": "s-pillar-skills",
+    "slideId": null
+   },
+   "audio": {
+    "src": "guide-03-six-pillars-yxVqZJ2k1a.mp3",
+    "clip": "NAR-03",
+    "t": 12.08,
+    "muted": false
+   },
+   "cc": "Reusable skills are built once and shared across the community.",
+   "guide": {
+    "state": "playing",
+    "clip": "NAR-03",
+    "slideId": null,
+    "blocked": "false",
+    "status": "Narrating slide 14 of 39 · 03 Six pillars",
+    "tap": false
+   }
+  }
+ ],
+ "events": [
+  {
+   "scenario": "S12-phone-rapid-blocked",
+   "t": "2026-10-01T06:16:42.576Z",
+   "ms": 721,
+   "type": "sample",
+   "vis": {
+    "n": 4,
+    "id": "s-four-outcomes",
+    "slideId": null
+   },
+   "audio": null,
+   "cc": null,
+   "guide": null,
+   "hash": "#/04"
+  },
+  {
+   "scenario": "S12-phone-rapid-blocked",
+   "t": "2026-10-01T06:16:42.761Z",
+   "ms": 906,
+   "type": "play()",
+   "vis": {
+    "n": 4,
+    "id": "s-four-outcomes",
+    "slideId": null
+   },
+   "audio": {
+    "src": "guide-02-community-model-9gUnFBtxrM.mp3",
+    "clip": "NAR-02",
+    "t": 0,
+    "muted": false
+   },
+   "cc": "",
+   "guide": {
+    "state": "idle",
+    "clip": null,
+    "slideId": null,
+    "gen": null,
+    "status": "No narration for this slide"
+   },
+   "hash": "#/04",
+   "el": "guide-02-community-model-9gUnFBtxrM.mp3",
+   "ct": 0
+  },
+  {
+   "scenario": "S12-phone-rapid-blocked",
+   "t": "2026-10-01T06:16:42.762Z",
+   "ms": 907,
+   "type": "sample",
+   "vis": {
+    "n": 4,
+    "id": "s-four-outcomes",
+    "slideId": null
+   },
+   "audio": {
+    "src": "guide-02-community-model-9gUnFBtxrM.mp3",
+    "clip": "NAR-02",
+    "t": 0,
+    "muted": false
+   },
+   "cc": "Section two, the Community Model.",
+   "guide": {
+    "state": "starting",
+    "clip": "NAR-02",
+    "slideId": null,
+    "gen": null,
+    "status": "Narrating slide 4 of 39 · 02 Community model"
+   },
+   "hash": "#/04"
+  },
+  {
+   "scenario": "S12-phone-rapid-blocked",
+   "t": "2026-10-01T06:16:42.763Z",
+   "ms": 908,
+   "type": "media:emptied",
+   "vis": {
+    "n": 4,
+    "id": "s-four-outcomes",
+    "slideId": null
+   },
+   "audio": {
+    "src": "guide-02-community-model-9gUnFBtxrM.mp3",
+    "clip": "NAR-02",
+    "t": 0,
+    "muted": false
+   },
+   "cc": "Section two, the Community Model.",
+   "guide": {
+    "state": "starting",
+    "clip": "NAR-02",
+    "slideId": null,
+    "gen": null,
+    "status": "Narrating slide 4 of 39 · 02 Community model"
+   },
+   "hash": "#/04",
+   "el": "guide-02-community-model-9gUnFBtxrM.mp3",
+   "ct": 0
+  },
+  {
+   "scenario": "S12-phone-rapid-blocked",
+   "t": "2026-10-01T06:16:42.765Z",
+   "ms": 910,
+   "type": "media:loadstart",
+   "vis": {
+    "n": 4,
+    "id": "s-four-outcomes",
+    "slideId": null
+   },
+   "audio": {
+    "src": "guide-02-community-model-9gUnFBtxrM.mp3",
+    "clip": "NAR-02",
+    "t": 0,
+    "muted": false
+   },
+   "cc": "Section two, the Community Model.",
+   "guide": {
+    "state": "buffering",
+    "clip": "NAR-02",
+    "slideId": null,
+    "gen": null,
+    "status": "Narrating slide 4 of 39 · 02 Community model"
+   },
+   "hash": "#/04",
+   "el": "guide-02-community-model-9gUnFBtxrM.mp3",
+   "ct": 0
+  },
+  {
+   "scenario": "S12-phone-rapid-blocked",
+   "t": "2026-10-01T06:16:42.766Z",
+   "ms": 911,
+   "type": "media:loadstart",
+   "vis": {
+    "n": 4,
+    "id": "s-four-outcomes",
+    "slideId": null
+   },
+   "audio": {
+    "src": "guide-02-community-model-9gUnFBtxrM.mp3",
+    "clip": "NAR-02",
+    "t": 0,
+    "muted": false
+   },
+   "cc": "Section two, the Community Model.",
+   "guide": {
+    "state": "buffering",
+    "clip": "NAR-02",
+    "slideId": null,
+    "gen": null,
+    "status": "Narrating slide 4 of 39 · 02 Community model"
+   },
+   "hash": "#/04",
+   "el": "guide-03-six-pillars-yxVqZJ2k1a.mp3",
+   "ct": 0
+  },
+  {
+   "scenario": "S12-phone-rapid-blocked",
+   "t": "2026-10-01T06:16:42.822Z",
+   "ms": 966,
+   "type": "media:canplay",
+   "vis": {
+    "n": 4,
+    "id": "s-four-outcomes",
+    "slideId": null
+   },
+   "audio": {
+    "src": "guide-02-community-model-9gUnFBtxrM.mp3",
+    "clip": "NAR-02",
+    "t": 0,
+    "muted": false
+   },
+   "cc": "Section two, the Community Model.",
+   "guide": {
+    "state": "buffering",
+    "clip": "NAR-02",
+    "slideId": null,
+    "gen": null,
+    "status": "Narrating slide 4 of 39 · 02 Community model"
+   },
+   "hash": "#/04",
+   "el": "guide-02-community-model-9gUnFBtxrM.mp3",
+   "ct": 0
+  },
+  {
+   "scenario": "S12-phone-rapid-blocked",
+   "t": "2026-10-01T06:16:42.822Z",
+   "ms": 967,
+   "type": "media:playing",
+   "vis": {
+    "n": 4,
+    "id": "s-four-outcomes",
+    "slideId": null
+   },
+   "audio": {
+    "src": "guide-02-community-model-9gUnFBtxrM.mp3",
+    "clip": "NAR-02",
+    "t": 0,
+    "muted": false
+   },
+   "cc": "Section two, the Community Model.",
+   "guide": {
+    "state": "playing",
+    "clip": "NAR-02",
+    "slideId": null,
+    "gen": null,
+    "status": "Narrating slide 4 of 39 · 02 Community model"
+   },
+   "hash": "#/04",
+   "el": "guide-02-community-model-9gUnFBtxrM.mp3",
+   "ct": 0
+  },
+  {
+   "scenario": "S12-phone-rapid-blocked",
+   "t": "2026-10-01T06:16:42.822Z",
+   "ms": 967,
+   "type": "play():resolved",
+   "vis": {
+    "n": 4,
+    "id": "s-four-outcomes",
+    "slideId": null
+   },
+   "audio": {
+    "src": "guide-02-community-model-9gUnFBtxrM.mp3",
+    "clip": "NAR-02",
+    "t": 0,
+    "muted": false
+   },
+   "cc": "Section two, the Community Model.",
+   "guide": {
+    "state": "playing",
+    "clip": "NAR-02",
+    "slideId": null,
+    "gen": null,
+    "status": "Narrating slide 4 of 39 · 02 Community model"
+   },
+   "hash": "#/04",
+   "el": "guide-02-community-model-9gUnFBtxrM.mp3"
+  },
+  {
+   "scenario": "S12-phone-rapid-blocked",
+   "t": "2026-10-01T06:16:42.823Z",
+   "ms": 968,
+   "type": "media:canplay",
+   "vis": {
+    "n": 4,
+    "id": "s-four-outcomes",
+    "slideId": null
+   },
+   "audio": {
+    "src": "guide-02-community-model-9gUnFBtxrM.mp3",
+    "clip": "NAR-02",
+    "t": 0,
+    "muted": false
+   },
+   "cc": "Section two, the Community Model.",
+   "guide": {
+    "state": "playing",
+    "clip": "NAR-02",
+    "slideId": null,
+    "gen": null,
+    "status": "Narrating slide 4 of 39 · 02 Community model"
+   },
+   "hash": "#/04",
+   "el": "guide-03-six-pillars-yxVqZJ2k1a.mp3",
+   "ct": 0
+  },
+  {
+   "scenario": "S12-phone-rapid-blocked",
+   "t": "2026-10-01T06:16:42.856Z",
+   "ms": 1001,
+   "type": "sample",
+   "vis": {
+    "n": 4,
+    "id": "s-four-outcomes",
+    "slideId": null
+   },
+   "audio": {
+    "src": "guide-02-community-model-9gUnFBtxrM.mp3",
+    "clip": "NAR-02",
+    "t": 0.02,
+    "muted": false
+   },
+   "cc": "Section two, the Community Model.",
+   "guide": {
+    "state": "playing",
+    "clip": "NAR-02",
+    "slideId": null,
+    "gen": null,
+    "status": "Narrating slide 4 of 39 · 02 Community model"
+   },
+   "hash": "#/04"
+  },
+  {
+   "scenario": "S12-phone-rapid-blocked",
+   "t": "2026-10-01T06:16:45.154Z",
+   "ms": 3299,
+   "type": "hashchange",
+   "vis": {
+    "n": 4,
+    "id": "s-four-outcomes",
+    "slideId": null
+   },
+   "audio": {
+    "src": "guide-02-community-model-9gUnFBtxrM.mp3",
+    "clip": "NAR-02",
+    "t": 2.28,
+    "muted": false
+   },
+   "cc": "Every webinar, chapter event and challenge should lead somewhere real, so the model is built around four outcomes for every participant.",
+   "guide": {
+    "state": "playing",
+    "clip": "NAR-02",
+    "slideId": null,
+    "gen": null,
+    "status": "Narrating slide 4 of 39 · 02 Community model"
+   },
+   "hash": "#/7"
+  },
+  {
+   "scenario": "S12-phone-rapid-blocked",
+   "t": "2026-10-01T06:16:45.159Z",
+   "ms": 3304,
+   "type": "sample",
+   "vis": {
+    "n": 7,
+    "id": "s-country-chapters",
+    "slideId": null
+   },
+   "audio": {
+    "src": "guide-02-community-model-9gUnFBtxrM.mp3",
+    "clip": "NAR-02",
+    "t": 2.29,
+    "muted": false
+   },
+   "cc": "Every webinar, chapter event and challenge should lead somewhere real, so the model is built around four outcomes for every participant.",
+   "guide": {
+    "state": "playing",
+    "clip": "NAR-02",
+    "slideId": null,
+    "gen": null,
+    "status": "Narrating slide 4 of 39 · 02 Community model"
+   },
+   "hash": "#/07"
+  },
+  {
+   "scenario": "S12-phone-rapid-blocked",
+   "t": "2026-10-01T06:16:45.906Z",
+   "ms": 4050,
+   "type": "check",
+   "vis": {
+    "n": 7,
+    "id": "s-country-chapters",
+    "slideId": null
+   },
+   "audio": {
+    "src": "guide-02-community-model-9gUnFBtxrM.mp3",
+    "clip": "NAR-02",
+    "t": 3.04,
+    "muted": false
+   },
+   "cc": "Every webinar, chapter event and challenge should lead somewhere real, so the model is built around four outcomes for every participant.",
+   "guide": {
+    "state": "playing",
+    "clip": "NAR-02",
+    "slideId": null,
+    "gen": null,
+    "status": "Narrating slide 7 of 39 · 02 Community model"
+   },
+   "hash": "#/07",
+   "step": "phone first load, no gesture",
+   "expect": 4
+  },
+  {
+   "scenario": "S12-phone-rapid-blocked",
+   "t": "2026-10-01T06:16:46.028Z",
+   "ms": 4172,
+   "type": "click",
+   "vis": {
+    "n": 7,
+    "id": "s-country-chapters",
+    "slideId": null
+   },
+   "audio": {
+    "src": "guide-02-community-model-9gUnFBtxrM.mp3",
+    "clip": "NAR-02",
+    "t": 3.16,
+    "muted": false
+   },
+   "cc": "Every webinar, chapter event and challenge should lead somewhere real, so the model is built around four outcomes for every participant.",
+   "guide": {
+    "state": "playing",
+    "clip": "NAR-02",
+    "slideId": null,
+    "gen": null,
+    "status": "Narrating slide 7 of 39 · 02 Community model"
+   },
+   "hash": "#/07",
+   "target": "nar-next"
+  },
+  {
+   "scenario": "S12-phone-rapid-blocked",
+   "t": "2026-10-01T06:16:46.041Z",
+   "ms": 4186,
+   "type": "hashchange",
+   "vis": {
+    "n": 7,
+    "id": "s-country-chapters",
+    "slideId": null
+   },
+   "audio": {
+    "src": "guide-02-community-model-9gUnFBtxrM.mp3",
+    "clip": "NAR-02",
+    "t": 3.17,
+    "muted": false
+   },
+   "cc": "Every webinar, chapter event and challenge should lead somewhere real, so the model is built around four outcomes for every participant.",
+   "guide": {
+    "state": "playing",
+    "clip": "NAR-02",
+    "slideId": null,
+    "gen": null,
+    "status": "Narrating slide 7 of 39 · 02 Community model"
+   },
+   "hash": "#/8"
+  },
+  {
+   "scenario": "S12-phone-rapid-blocked",
+   "t": "2026-10-01T06:16:46.063Z",
+   "ms": 4207,
+   "type": "sample",
+   "vis": {
+    "n": 8,
+    "id": "s-learning-formats",
+    "slideId": null
+   },
+   "audio": {
+    "src": "guide-02-community-model-9gUnFBtxrM.mp3",
+    "clip": "NAR-02",
+    "t": 3.19,
+    "muted": false
+   },
+   "cc": "Every webinar, chapter event and challenge should lead somewhere real, so the model is built around four outcomes for every participant.",
+   "guide": {
+    "state": "playing",
+    "clip": "NAR-02",
+    "slideId": null,
+    "gen": null,
+    "status": "Narrating slide 8 of 39 · 02 Community model"
+   },
+   "hash": "#/08"
+  },
+  {
+   "scenario": "S12-phone-rapid-blocked",
+   "t": "2026-10-01T06:16:48.095Z",
+   "ms": 6240,
+   "type": "check",
+   "vis": {
+    "n": 8,
+    "id": "s-learning-formats",
+    "slideId": null
+   },
+   "audio": {
+    "src": "guide-02-community-model-9gUnFBtxrM.mp3",
+    "clip": "NAR-02",
+    "t": 5.23,
+    "muted": false
+   },
+   "cc": "Every webinar, chapter event and challenge should lead somewhere real, so the model is built around four outcomes for every participant.",
+   "guide": {
+    "state": "playing",
+    "clip": "NAR-02",
+    "slideId": null,
+    "gen": null,
+    "status": "Narrating slide 8 of 39 · 02 Community model"
+   },
+   "hash": "#/08",
+   "step": "tap bar next → 5",
+   "expect": 5
+  },
+  {
+   "scenario": "S12-phone-rapid-blocked",
+   "t": "2026-10-01T06:16:48.159Z",
+   "ms": 6304,
+   "type": "click",
+   "vis": {
+    "n": 8,
+    "id": "s-learning-formats",
+    "slideId": null
+   },
+   "audio": {
+    "src": "guide-02-community-model-9gUnFBtxrM.mp3",
+    "clip": "NAR-02",
+    "t": 5.29,
+    "muted": false
+   },
+   "cc": "Every webinar, chapter event and challenge should lead somewhere real, so the model is built around four outcomes for every participant.",
+   "guide": {
+    "state": "playing",
+    "clip": "NAR-02",
+    "slideId": null,
+    "gen": null,
+    "status": "Narrating slide 8 of 39 · 02 Community model"
+   },
+   "hash": "#/08",
+   "target": "nar-next"
+  },
+  {
+   "scenario": "S12-phone-rapid-blocked",
+   "t": "2026-10-01T06:16:48.175Z",
+   "ms": 6320,
+   "type": "hashchange",
+   "vis": {
+    "n": 8,
+    "id": "s-learning-formats",
+    "slideId": null
+   },
+   "audio": {
+    "src": "guide-02-community-model-9gUnFBtxrM.mp3",
+    "clip": "NAR-02",
+    "t": 5.31,
+    "muted": false
+   },
+   "cc": "Every webinar, chapter event and challenge should lead somewhere real, so the model is built around four outcomes for every participant.",
+   "guide": {
+    "state": "playing",
+    "clip": "NAR-02",
+    "slideId": null,
+    "gen": null,
+    "status": "Narrating slide 8 of 39 · 02 Community model"
+   },
+   "hash": "#/9"
+  },
+  {
+   "scenario": "S12-phone-rapid-blocked",
+   "t": "2026-10-01T06:16:48.259Z",
+   "ms": 6403,
+   "type": "sample",
+   "vis": {
+    "n": 9,
+    "id": "s-challenges-showcases",
+    "slideId": null
+   },
+   "audio": {
+    "src": "guide-02-community-model-9gUnFBtxrM.mp3",
+    "clip": "NAR-02",
+    "t": 5.39,
+    "muted": false
+   },
+   "cc": "Every webinar, chapter event and challenge should lead somewhere real, so the model is built around four outcomes for every participant.",
+   "guide": {
+    "state": "playing",
+    "clip": "NAR-02",
+    "slideId": null,
+    "gen": null,
+    "status": "Narrating slide 9 of 39 · 02 Community model"
+   },
+   "hash": "#/09"
+  },
+  {
+   "scenario": "S12-phone-rapid-blocked",
+   "t": "2026-10-01T06:16:48.325Z",
+   "ms": 6470,
+   "type": "click",
+   "vis": {
+    "n": 9,
+    "id": "s-challenges-showcases",
+    "slideId": null
+   },
+   "audio": {
+    "src": "guide-02-community-model-9gUnFBtxrM.mp3",
+    "clip": "NAR-02",
+    "t": 5.46,
+    "muted": false
+   },
+   "cc": "Every webinar, chapter event and challenge should lead somewhere real, so the model is built around four outcomes for every participant.",
+   "guide": {
+    "state": "playing",
+    "clip": "NAR-02",
+    "slideId": null,
+    "gen": null,
+    "status": "Narrating slide 9 of 39 · 02 Community model"
+   },
+   "hash": "#/09",
+   "target": "nar-next"
+  },
+  {
+   "scenario": "S12-phone-rapid-blocked",
+   "t": "2026-10-01T06:16:48.342Z",
+   "ms": 6487,
+   "type": "hashchange",
+   "vis": {
+    "n": 9,
+    "id": "s-challenges-showcases",
+    "slideId": null
+   },
+   "audio": {
+    "src": "guide-02-community-model-9gUnFBtxrM.mp3",
+    "clip": "NAR-02",
+    "t": 5.47,
+    "muted": false
+   },
+   "cc": "Every webinar, chapter event and challenge should lead somewhere real, so the model is built around four outcomes for every participant.",
+   "guide": {
+    "state": "playing",
+    "clip": "NAR-02",
+    "slideId": null,
+    "gen": null,
+    "status": "Narrating slide 9 of 39 · 02 Community model"
+   },
+   "hash": "#/10"
+  },
+  {
+   "scenario": "S12-phone-rapid-blocked",
+   "t": "2026-10-01T06:16:48.356Z",
+   "ms": 6501,
+   "type": "sample",
+   "vis": {
+    "n": 10,
+    "id": "s-office-hours",
+    "slideId": null
+   },
+   "audio": {
+    "src": "guide-02-community-model-9gUnFBtxrM.mp3",
+    "clip": "NAR-02",
+    "t": 5.49,
+    "muted": false
+   },
+   "cc": "Every webinar, chapter event and challenge should lead somewhere real, so the model is built around four outcomes for every participant.",
+   "guide": {
+    "state": "playing",
+    "clip": "NAR-02",
+    "slideId": null,
+    "gen": null,
+    "status": "Narrating slide 9 of 39 · 02 Community model"
+   },
+   "hash": "#/10"
+  },
+  {
+   "scenario": "S12-phone-rapid-blocked",
+   "t": "2026-10-01T06:16:48.460Z",
+   "ms": 6604,
+   "type": "click",
+   "vis": {
+    "n": 10,
+    "id": "s-office-hours",
+    "slideId": null
+   },
+   "audio": {
+    "src": "guide-02-community-model-9gUnFBtxrM.mp3",
+    "clip": "NAR-02",
+    "t": 5.59,
+    "muted": false
+   },
+   "cc": "Every webinar, chapter event and challenge should lead somewhere real, so the model is built around four outcomes for every participant.",
+   "guide": {
+    "state": "playing",
+    "clip": "NAR-02",
+    "slideId": null,
+    "gen": null,
+    "status": "Narrating slide 10 of 39 · 02 Community model"
+   },
+   "hash": "#/10",
+   "target": "nar-next"
+  },
+  {
+   "scenario": "S12-phone-rapid-blocked",
+   "t": "2026-10-01T06:16:48.476Z",
+   "ms": 6620,
+   "type": "hashchange",
+   "vis": {
+    "n": 10,
+    "id": "s-office-hours",
+    "slideId": null
+   },
+   "audio": {
+    "src": "guide-02-community-model-9gUnFBtxrM.mp3",
+    "clip": "NAR-02",
+    "t": 5.61,
+    "muted": false
+   },
+   "cc": "Every webinar, chapter event and challenge should lead somewhere real, so the model is built around four outcomes for every participant.",
+   "guide": {
+    "state": "playing",
+    "clip": "NAR-02",
+    "slideId": null,
+    "gen": null,
+    "status": "Narrating slide 10 of 39 · 02 Community model"
+   },
+   "hash": "#/11"
+  },
+  {
+   "scenario": "S12-phone-rapid-blocked",
+   "t": "2026-10-01T06:16:48.502Z",
+   "ms": 6647,
+   "type": "media:seeked",
+   "vis": {
+    "n": 11,
+    "id": "s-agent-marketplace",
+    "slideId": null
+   },
+   "audio": {
+    "src": "guide-02-community-model-9gUnFBtxrM.mp3",
+    "clip": "NAR-02",
+    "t": 11.13,
+    "muted": false
+   },
+   "cc": "Learn agentic AI, build a useful agent through the Builder Journey and Marketplace, deploy it through a named Accountable Institution, and measure a real-world benefit with baseline evidence of time saved, better service, or wider reach.",
+   "guide": {
+    "state": "buffering",
+    "clip": "NAR-02",
+    "slideId": null,
+    "gen": null,
+    "status": "Narrating slide 11 of 39 · 02 Community model"
+   },
+   "hash": "#/11",
+   "el": "guide-02-community-model-9gUnFBtxrM.mp3",
+   "ct": 11.13
+  },
+  {
+   "scenario": "S12-phone-rapid-blocked",
+   "t": "2026-10-01T06:16:48.502Z",
+   "ms": 6647,
+   "type": "media:canplay",
+   "vis": {
+    "n": 11,
+    "id": "s-agent-marketplace",
+    "slideId": null
+   },
+   "audio": {
+    "src": "guide-02-community-model-9gUnFBtxrM.mp3",
+    "clip": "NAR-02",
+    "t": 11.13,
+    "muted": false
+   },
+   "cc": "Learn agentic AI, build a useful agent through the Builder Journey and Marketplace, deploy it through a named Accountable Institution, and measure a real-world benefit with baseline evidence of time saved, better service, or wider reach.",
+   "guide": {
+    "state": "buffering",
+    "clip": "NAR-02",
+    "slideId": null,
+    "gen": null,
+    "status": "Narrating slide 11 of 39 · 02 Community model"
+   },
+   "hash": "#/11",
+   "el": "guide-02-community-model-9gUnFBtxrM.mp3",
+   "ct": 11.13
+  },
+  {
+   "scenario": "S12-phone-rapid-blocked",
+   "t": "2026-10-01T06:16:48.503Z",
+   "ms": 6647,
+   "type": "media:playing",
+   "vis": {
+    "n": 11,
+    "id": "s-agent-marketplace",
+    "slideId": null
+   },
+   "audio": {
+    "src": "guide-02-community-model-9gUnFBtxrM.mp3",
+    "clip": "NAR-02",
+    "t": 11.13,
+    "muted": false
+   },
+   "cc": "Learn agentic AI, build a useful agent through the Builder Journey and Marketplace, deploy it through a named Accountable Institution, and measure a real-world benefit with baseline evidence of time saved, better service, or wider reach.",
+   "guide": {
+    "state": "playing",
+    "clip": "NAR-02",
+    "slideId": null,
+    "gen": null,
+    "status": "Narrating slide 11 of 39 · 02 Community model"
+   },
+   "hash": "#/11",
+   "el": "guide-02-community-model-9gUnFBtxrM.mp3",
+   "ct": 11.13
+  },
+  {
+   "scenario": "S12-phone-rapid-blocked",
+   "t": "2026-10-01T06:16:48.558Z",
+   "ms": 6703,
+   "type": "sample",
+   "vis": {
+    "n": 11,
+    "id": "s-agent-marketplace",
+    "slideId": null
+   },
+   "audio": {
+    "src": "guide-02-community-model-9gUnFBtxrM.mp3",
+    "clip": "NAR-02",
+    "t": 11.15,
+    "muted": false
+   },
+   "cc": "Learn agentic AI, build a useful agent through the Builder Journey and Marketplace, deploy it through a named Accountable Institution, and measure a real-world benefit with baseline evidence of time saved, better service, or wider reach.",
+   "guide": {
+    "state": "playing",
+    "clip": "NAR-02",
+    "slideId": null,
+    "gen": null,
+    "status": "Narrating slide 11 of 39 · 02 Community model"
+   },
+   "hash": "#/11"
+  },
+  {
+   "scenario": "S12-phone-rapid-blocked",
+   "t": "2026-10-01T06:16:48.609Z",
+   "ms": 6754,
+   "type": "click",
+   "vis": {
+    "n": 11,
+    "id": "s-agent-marketplace",
+    "slideId": null
+   },
+   "audio": {
+    "src": "guide-02-community-model-9gUnFBtxrM.mp3",
+    "clip": "NAR-02",
+    "t": 11.16,
+    "muted": false
+   },
+   "cc": "Learn agentic AI, build a useful agent through the Builder Journey and Marketplace, deploy it through a named Accountable Institution, and measure a real-world benefit with baseline evidence of time saved, better service, or wider reach.",
+   "guide": {
+    "state": "playing",
+    "clip": "NAR-02",
+    "slideId": null,
+    "gen": null,
+    "status": "Narrating slide 11 of 39 · 02 Community model"
+   },
+   "hash": "#/11",
+   "target": "nar-next"
+  },
+  {
+   "scenario": "S12-phone-rapid-blocked",
+   "t": "2026-10-01T06:16:48.624Z",
+   "ms": 6769,
+   "type": "hashchange",
+   "vis": {
+    "n": 11,
+    "id": "s-agent-marketplace",
+    "slideId": null
+   },
+   "audio": {
+    "src": "guide-02-community-model-9gUnFBtxrM.mp3",
+    "clip": "NAR-02",
+    "t": 11.17,
+    "muted": false
+   },
+   "cc": "Learn agentic AI, build a useful agent through the Builder Journey and Marketplace, deploy it through a named Accountable Institution, and measure a real-world benefit with baseline evidence of time saved, better service, or wider reach.",
+   "guide": {
+    "state": "playing",
+    "clip": "NAR-02",
+    "slideId": null,
+    "gen": null,
+    "status": "Narrating slide 11 of 39 · 02 Community model"
+   },
+   "hash": "#/12"
+  },
+  {
+   "scenario": "S12-phone-rapid-blocked",
+   "t": "2026-10-01T06:16:48.660Z",
+   "ms": 6804,
+   "type": "sample",
+   "vis": {
+    "n": 12,
+    "id": "s-decision-table",
+    "slideId": null
+   },
+   "audio": {
+    "src": "guide-02-community-model-9gUnFBtxrM.mp3",
+    "clip": "NAR-02",
+    "t": 11.21,
+    "muted": false
+   },
+   "cc": "Learn agentic AI, build a useful agent through the Builder Journey and Marketplace, deploy it through a named Accountable Institution, and measure a real-world benefit with baseline evidence of time saved, better service, or wider reach.",
+   "guide": {
+    "state": "playing",
+    "clip": "NAR-02",
+    "slideId": null,
+    "gen": null,
+    "status": "Narrating slide 12 of 39 · 02 Community model"
+   },
+   "hash": "#/12"
+  },
+  {
+   "scenario": "S12-phone-rapid-blocked",
+   "t": "2026-10-01T06:16:48.760Z",
+   "ms": 6904,
+   "type": "click",
+   "vis": {
+    "n": 12,
+    "id": "s-decision-table",
+    "slideId": null
+   },
+   "audio": {
+    "src": "guide-02-community-model-9gUnFBtxrM.mp3",
+    "clip": "NAR-02",
+    "t": 11.31,
+    "muted": false
+   },
+   "cc": "Learn agentic AI, build a useful agent through the Builder Journey and Marketplace, deploy it through a named Accountable Institution, and measure a real-world benefit with baseline evidence of time saved, better service, or wider reach.",
+   "guide": {
+    "state": "playing",
+    "clip": "NAR-02",
+    "slideId": null,
+    "gen": null,
+    "status": "Narrating slide 12 of 39 · 02 Community model"
+   },
+   "hash": "#/12",
+   "target": "nar-next"
+  },
+  {
+   "scenario": "S12-phone-rapid-blocked",
+   "t": "2026-10-01T06:16:48.775Z",
+   "ms": 6919,
+   "type": "hashchange",
+   "vis": {
+    "n": 12,
+    "id": "s-decision-table",
+    "slideId": null
+   },
+   "audio": {
+    "src": "guide-02-community-model-9gUnFBtxrM.mp3",
+    "clip": "NAR-02",
+    "t": 11.32,
+    "muted": false
+   },
+   "cc": "Learn agentic AI, build a useful agent through the Builder Journey and Marketplace, deploy it through a named Accountable Institution, and measure a real-world benefit with baseline evidence of time saved, better service, or wider reach.",
+   "guide": {
+    "state": "playing",
+    "clip": "NAR-02",
+    "slideId": null,
+    "gen": null,
+    "status": "Narrating slide 12 of 39 · 02 Community model"
+   },
+   "hash": "#/13"
+  },
+  {
+   "scenario": "S12-phone-rapid-blocked",
+   "t": "2026-10-01T06:16:48.796Z",
+   "ms": 6940,
+   "type": "play()",
+   "vis": {
+    "n": 13,
+    "id": "s-pillar-plugins",
+    "slideId": null
+   },
+   "audio": {
+    "src": "guide-02-community-model-9gUnFBtxrM.mp3",
+    "clip": "NAR-02",
+    "t": 0,
+    "muted": false
+   },
+   "cc": "Learn agentic AI, build a useful agent through the Builder Journey and Marketplace, deploy it through a named Accountable Institution, and measure a real-world benefit with baseline evidence of time saved, better service, or wider reach.",
+   "guide": {
+    "state": "playing",
+    "clip": "NAR-02",
+    "slideId": null,
+    "gen": null,
+    "status": "Narrating slide 12 of 39 · 02 Community model"
+   },
+   "hash": "#/13",
+   "el": "guide-02-community-model-9gUnFBtxrM.mp3",
+   "ct": 0
+  },
+  {
+   "scenario": "S12-phone-rapid-blocked",
+   "t": "2026-10-01T06:16:48.802Z",
+   "ms": 6946,
+   "type": "media:emptied",
+   "vis": {
+    "n": 13,
+    "id": "s-pillar-plugins",
+    "slideId": null
+   },
+   "audio": {
+    "src": "guide-02-community-model-9gUnFBtxrM.mp3",
+    "clip": "NAR-02",
+    "t": 0,
+    "muted": false
+   },
+   "cc": "Section three, six pillars.",
+   "guide": {
+    "state": "starting",
+    "clip": "NAR-03",
+    "slideId": null,
+    "gen": null,
+    "status": "Narrating slide 13 of 39 · 03 Six pillars"
+   },
+   "hash": "#/13",
+   "el": "guide-02-community-model-9gUnFBtxrM.mp3",
+   "ct": 0
+  },
+  {
+   "scenario": "S12-phone-rapid-blocked",
+   "t": "2026-10-01T06:16:48.804Z",
+   "ms": 6948,
+   "type": "media:loadstart",
+   "vis": {
+    "n": 13,
+    "id": "s-pillar-plugins",
+    "slideId": null
+   },
+   "audio": {
+    "src": "guide-03-six-pillars-yxVqZJ2k1a.mp3",
+    "clip": "NAR-03",
+    "t": 0,
+    "muted": false
+   },
+   "cc": "Section three, six pillars.",
+   "guide": {
+    "state": "buffering",
+    "clip": "NAR-03",
+    "slideId": null,
+    "gen": null,
+    "status": "Narrating slide 13 of 39 · 03 Six pillars"
+   },
+   "hash": "#/13",
+   "el": "guide-03-six-pillars-yxVqZJ2k1a.mp3",
+   "ct": 0
+  },
+  {
+   "scenario": "S12-phone-rapid-blocked",
+   "t": "2026-10-01T06:16:48.804Z",
+   "ms": 6948,
+   "type": "media:loadstart",
+   "vis": {
+    "n": 13,
+    "id": "s-pillar-plugins",
+    "slideId": null
+   },
+   "audio": {
+    "src": "guide-03-six-pillars-yxVqZJ2k1a.mp3",
+    "clip": "NAR-03",
+    "t": 0,
+    "muted": false
+   },
+   "cc": "Section three, six pillars.",
+   "guide": {
+    "state": "buffering",
+    "clip": "NAR-03",
+    "slideId": null,
+    "gen": null,
+    "status": "Narrating slide 13 of 39 · 03 Six pillars"
+   },
+   "hash": "#/13",
+   "el": "guide-04-pledge-and-signing-PWeXZj1Rgc.mp3",
+   "ct": 0
+  },
+  {
+   "scenario": "S12-phone-rapid-blocked",
+   "t": "2026-10-01T06:16:48.814Z",
+   "ms": 6958,
+   "type": "media:canplay",
+   "vis": {
+    "n": 13,
+    "id": "s-pillar-plugins",
+    "slideId": null
+   },
+   "audio": {
+    "src": "guide-03-six-pillars-yxVqZJ2k1a.mp3",
+    "clip": "NAR-03",
+    "t": 0,
+    "muted": false
+   },
+   "cc": "Section three, six pillars.",
+   "guide": {
+    "state": "buffering",
+    "clip": "NAR-03",
+    "slideId": null,
+    "gen": null,
+    "status": "Narrating slide 13 of 39 · 03 Six pillars"
+   },
+   "hash": "#/13",
+   "el": "guide-03-six-pillars-yxVqZJ2k1a.mp3",
+   "ct": 0
+  },
+  {
+   "scenario": "S12-phone-rapid-blocked",
+   "t": "2026-10-01T06:16:48.814Z",
+   "ms": 6959,
+   "type": "media:playing",
+   "vis": {
+    "n": 13,
+    "id": "s-pillar-plugins",
+    "slideId": null
+   },
+   "audio": {
+    "src": "guide-03-six-pillars-yxVqZJ2k1a.mp3",
+    "clip": "NAR-03",
+    "t": 0,
+    "muted": false
+   },
+   "cc": "Section three, six pillars.",
+   "guide": {
+    "state": "playing",
+    "clip": "NAR-03",
+    "slideId": null,
+    "gen": null,
+    "status": "Narrating slide 13 of 39 · 03 Six pillars"
+   },
+   "hash": "#/13",
+   "el": "guide-03-six-pillars-yxVqZJ2k1a.mp3",
+   "ct": 0
+  },
+  {
+   "scenario": "S12-phone-rapid-blocked",
+   "t": "2026-10-01T06:16:48.814Z",
+   "ms": 6959,
+   "type": "play():resolved",
+   "vis": {
+    "n": 13,
+    "id": "s-pillar-plugins",
+    "slideId": null
+   },
+   "audio": {
+    "src": "guide-03-six-pillars-yxVqZJ2k1a.mp3",
+    "clip": "NAR-03",
+    "t": 0,
+    "muted": false
+   },
+   "cc": "Section three, six pillars.",
+   "guide": {
+    "state": "playing",
+    "clip": "NAR-03",
+    "slideId": null,
+    "gen": null,
+    "status": "Narrating slide 13 of 39 · 03 Six pillars"
+   },
+   "hash": "#/13",
+   "el": "guide-02-community-model-9gUnFBtxrM.mp3"
+  },
+  {
+   "scenario": "S12-phone-rapid-blocked",
+   "t": "2026-10-01T06:16:48.819Z",
+   "ms": 6964,
+   "type": "media:canplay",
+   "vis": {
+    "n": 13,
+    "id": "s-pillar-plugins",
+    "slideId": null
+   },
+   "audio": {
+    "src": "guide-03-six-pillars-yxVqZJ2k1a.mp3",
+    "clip": "NAR-03",
+    "t": 0.01,
+    "muted": false
+   },
+   "cc": "Section three, six pillars.",
+   "guide": {
+    "state": "playing",
+    "clip": "NAR-03",
+    "slideId": null,
+    "gen": null,
+    "status": "Narrating slide 13 of 39 · 03 Six pillars"
+   },
+   "hash": "#/13",
+   "el": "guide-04-pledge-and-signing-PWeXZj1Rgc.mp3",
+   "ct": 0
+  },
+  {
+   "scenario": "S12-phone-rapid-blocked",
+   "t": "2026-10-01T06:16:48.859Z",
+   "ms": 7003,
+   "type": "sample",
+   "vis": {
+    "n": 13,
+    "id": "s-pillar-plugins",
+    "slideId": null
+   },
+   "audio": {
+    "src": "guide-03-six-pillars-yxVqZJ2k1a.mp3",
+    "clip": "NAR-03",
+    "t": 0.02,
+    "muted": false
+   },
+   "cc": "Section three, six pillars.",
+   "guide": {
+    "state": "playing",
+    "clip": "NAR-03",
+    "slideId": null,
+    "gen": null,
+    "status": "Narrating slide 13 of 39 · 03 Six pillars"
+   },
+   "hash": "#/13"
+  },
+  {
+   "scenario": "S12-phone-rapid-blocked",
+   "t": "2026-10-01T06:16:48.910Z",
+   "ms": 7055,
+   "type": "click",
+   "vis": {
+    "n": 13,
+    "id": "s-pillar-plugins",
+    "slideId": null
+   },
+   "audio": {
+    "src": "guide-03-six-pillars-yxVqZJ2k1a.mp3",
+    "clip": "NAR-03",
+    "t": 0.03,
+    "muted": false
+   },
+   "cc": "Section three, six pillars.",
+   "guide": {
+    "state": "playing",
+    "clip": "NAR-03",
+    "slideId": null,
+    "gen": null,
+    "status": "Narrating slide 13 of 39 · 03 Six pillars"
+   },
+   "hash": "#/13",
+   "target": "nar-next"
+  },
+  {
+   "scenario": "S12-phone-rapid-blocked",
+   "t": "2026-10-01T06:16:48.924Z",
+   "ms": 7069,
+   "type": "hashchange",
+   "vis": {
+    "n": 13,
+    "id": "s-pillar-plugins",
+    "slideId": null
+   },
+   "audio": {
+    "src": "guide-03-six-pillars-yxVqZJ2k1a.mp3",
+    "clip": "NAR-03",
+    "t": 0.04,
+    "muted": false
+   },
+   "cc": "Section three, six pillars.",
+   "guide": {
+    "state": "playing",
+    "clip": "NAR-03",
+    "slideId": null,
+    "gen": null,
+    "status": "Narrating slide 13 of 39 · 03 Six pillars"
+   },
+   "hash": "#/14"
+  },
+  {
+   "scenario": "S12-phone-rapid-blocked",
+   "t": "2026-10-01T06:16:48.949Z",
+   "ms": 7094,
+   "type": "media:seeked",
+   "vis": {
+    "n": 14,
+    "id": "s-pillar-skills",
+    "slideId": null
+   },
+   "audio": {
+    "src": "guide-03-six-pillars-yxVqZJ2k1a.mp3",
+    "clip": "NAR-03",
+    "t": 8.61,
+    "muted": false
+   },
+   "cc": "Reusable skills are built once and shared across the community.",
+   "guide": {
+    "state": "buffering",
+    "clip": "NAR-03",
+    "slideId": null,
+    "gen": null,
+    "status": "Narrating slide 14 of 39 · 03 Six pillars"
+   },
+   "hash": "#/14",
+   "el": "guide-03-six-pillars-yxVqZJ2k1a.mp3",
+   "ct": 8.61
+  },
+  {
+   "scenario": "S12-phone-rapid-blocked",
+   "t": "2026-10-01T06:16:48.950Z",
+   "ms": 7094,
+   "type": "media:canplay",
+   "vis": {
+    "n": 14,
+    "id": "s-pillar-skills",
+    "slideId": null
+   },
+   "audio": {
+    "src": "guide-03-six-pillars-yxVqZJ2k1a.mp3",
+    "clip": "NAR-03",
+    "t": 8.61,
+    "muted": false
+   },
+   "cc": "Reusable skills are built once and shared across the community.",
+   "guide": {
+    "state": "buffering",
+    "clip": "NAR-03",
+    "slideId": null,
+    "gen": null,
+    "status": "Narrating slide 14 of 39 · 03 Six pillars"
+   },
+   "hash": "#/14",
+   "el": "guide-03-six-pillars-yxVqZJ2k1a.mp3",
+   "ct": 8.61
+  },
+  {
+   "scenario": "S12-phone-rapid-blocked",
+   "t": "2026-10-01T06:16:48.950Z",
+   "ms": 7094,
+   "type": "media:playing",
+   "vis": {
+    "n": 14,
+    "id": "s-pillar-skills",
+    "slideId": null
+   },
+   "audio": {
+    "src": "guide-03-six-pillars-yxVqZJ2k1a.mp3",
+    "clip": "NAR-03",
+    "t": 8.61,
+    "muted": false
+   },
+   "cc": "Reusable skills are built once and shared across the community.",
+   "guide": {
+    "state": "playing",
+    "clip": "NAR-03",
+    "slideId": null,
+    "gen": null,
+    "status": "Narrating slide 14 of 39 · 03 Six pillars"
+   },
+   "hash": "#/14",
+   "el": "guide-03-six-pillars-yxVqZJ2k1a.mp3",
+   "ct": 8.61
+  },
+  {
+   "scenario": "S12-phone-rapid-blocked",
+   "t": "2026-10-01T06:16:48.962Z",
+   "ms": 7106,
+   "type": "sample",
+   "vis": {
+    "n": 14,
+    "id": "s-pillar-skills",
+    "slideId": null
+   },
+   "audio": {
+    "src": "guide-03-six-pillars-yxVqZJ2k1a.mp3",
+    "clip": "NAR-03",
+    "t": 8.62,
+    "muted": false
+   },
+   "cc": "Reusable skills are built once and shared across the community.",
+   "guide": {
+    "state": "playing",
+    "clip": "NAR-03",
+    "slideId": null,
+    "gen": null,
+    "status": "Narrating slide 14 of 39 · 03 Six pillars"
+   },
+   "hash": "#/14"
+  },
+  {
+   "scenario": "S12-phone-rapid-blocked",
+   "t": "2026-10-01T06:16:52.492Z",
+   "ms": 10636,
+   "type": "check",
+   "vis": {
+    "n": 14,
+    "id": "s-pillar-skills",
+    "slideId": null
+   },
+   "audio": {
+    "src": "guide-03-six-pillars-yxVqZJ2k1a.mp3",
+    "clip": "NAR-03",
+    "t": 12.08,
+    "muted": false
+   },
+   "cc": "Reusable skills are built once and shared across the community.",
+   "guide": {
+    "state": "playing",
+    "clip": "NAR-03",
+    "slideId": null,
+    "gen": null,
+    "status": "Narrating slide 14 of 39 · 03 Six pillars"
+   },
+   "hash": "#/14",
+   "step": "6× bar next (≈270 ms) → 11",
+   "expect": 11
+  }
+ ],
+ "console": []
+}

@@ -1,0 +1,341 @@
+{
+ "marks": [
+  {
+   "t": "2026-10-01T06:38:41.544Z",
+   "scenario": "S01-first-load-blocked",
+   "step": "no gesture: 3 s after load",
+   "expect": 5,
+   "vis": {
+    "n": 5,
+    "id": "s-managed-programme",
+    "slideId": "s-managed-programme"
+   },
+   "audio": null,
+   "cc": "This is a managed global programme, not a social channel.",
+   "guide": {
+    "state": "blocked",
+    "clip": "NAR-s05",
+    "slideId": "s-managed-programme",
+    "blocked": "true",
+    "status": "Narration blocked by the browser — tap to play · slide 5 of 39 · 02 Community model",
+    "tap": true
+   }
+  },
+  {
+   "t": "2026-10-01T06:38:44.156Z",
+   "scenario": "S01-first-load-blocked",
+   "step": "first click on the slide",
+   "expect": 5,
+   "vis": {
+    "n": 5,
+    "id": "s-managed-programme",
+    "slideId": "s-managed-programme"
+   },
+   "audio": {
+    "src": "NAR-s05-s-managed-programme.mp3",
+    "clip": "NAR-s05",
+    "t": 2.41,
+    "muted": false
+   },
+   "cc": "This is a managed global programme, not a social channel.",
+   "guide": {
+    "state": "playing",
+    "clip": "NAR-s05",
+    "slideId": "s-managed-programme",
+    "blocked": "false",
+    "status": "Narrating slide 5 of 39 · 02 Community model",
+    "tap": false
+   }
+  }
+ ],
+ "events": [
+  {
+   "scenario": "S01-first-load-blocked",
+   "t": "2026-10-01T06:38:37.679Z",
+   "ms": 739,
+   "type": "sample",
+   "vis": {
+    "n": 5,
+    "id": "s-managed-programme",
+    "slideId": null
+   },
+   "audio": null,
+   "cc": null,
+   "guide": null,
+   "hash": "#/05"
+  },
+  {
+   "scenario": "S01-first-load-blocked",
+   "t": "2026-10-01T06:38:37.885Z",
+   "ms": 946,
+   "type": "sample",
+   "vis": {
+    "n": 5,
+    "id": "s-managed-programme",
+    "slideId": "s-managed-programme"
+   },
+   "audio": null,
+   "cc": "This is a managed global programme, not a social channel.",
+   "guide": {
+    "state": "blocked",
+    "clip": "NAR-s05",
+    "slideId": "s-managed-programme",
+    "gen": "0",
+    "status": "Narration blocked by the browser — tap to play · slide 5 of 39 · 02 Community model"
+   },
+   "hash": "#/05"
+  },
+  {
+   "scenario": "S01-first-load-blocked",
+   "t": "2026-10-01T06:38:37.892Z",
+   "ms": 953,
+   "type": "media:emptied",
+   "vis": {
+    "n": 5,
+    "id": "s-managed-programme",
+    "slideId": "s-managed-programme"
+   },
+   "audio": null,
+   "cc": "This is a managed global programme, not a social channel.",
+   "guide": {
+    "state": "blocked",
+    "clip": "NAR-s05",
+    "slideId": "s-managed-programme",
+    "gen": "0",
+    "status": "Narration blocked by the browser — tap to play · slide 5 of 39 · 02 Community model"
+   },
+   "hash": "#/05",
+   "el": "NAR-s05-s-managed-programme.mp3",
+   "ct": 0
+  },
+  {
+   "scenario": "S01-first-load-blocked",
+   "t": "2026-10-01T06:38:37.899Z",
+   "ms": 959,
+   "type": "media:loadstart",
+   "vis": {
+    "n": 5,
+    "id": "s-managed-programme",
+    "slideId": "s-managed-programme"
+   },
+   "audio": null,
+   "cc": "This is a managed global programme, not a social channel.",
+   "guide": {
+    "state": "blocked",
+    "clip": "NAR-s05",
+    "slideId": "s-managed-programme",
+    "gen": "0",
+    "status": "Narration blocked by the browser — tap to play · slide 5 of 39 · 02 Community model"
+   },
+   "hash": "#/05",
+   "el": "NAR-s05-s-managed-programme.mp3",
+   "ct": 0
+  },
+  {
+   "scenario": "S01-first-load-blocked",
+   "t": "2026-10-01T06:38:37.955Z",
+   "ms": 1015,
+   "type": "media:canplay",
+   "vis": {
+    "n": 5,
+    "id": "s-managed-programme",
+    "slideId": "s-managed-programme"
+   },
+   "audio": null,
+   "cc": "This is a managed global programme, not a social channel.",
+   "guide": {
+    "state": "blocked",
+    "clip": "NAR-s05",
+    "slideId": "s-managed-programme",
+    "gen": "0",
+    "status": "Narration blocked by the browser — tap to play · slide 5 of 39 · 02 Community model"
+   },
+   "hash": "#/05",
+   "el": "NAR-s05-s-managed-programme.mp3",
+   "ct": 0
+  },
+  {
+   "scenario": "S01-first-load-blocked",
+   "t": "2026-10-01T06:38:41.545Z",
+   "ms": 4606,
+   "type": "check",
+   "vis": {
+    "n": 5,
+    "id": "s-managed-programme",
+    "slideId": "s-managed-programme"
+   },
+   "audio": null,
+   "cc": "This is a managed global programme, not a social channel.",
+   "guide": {
+    "state": "blocked",
+    "clip": "NAR-s05",
+    "slideId": "s-managed-programme",
+    "gen": "0",
+    "status": "Narration blocked by the browser — tap to play · slide 5 of 39 · 02 Community model"
+   },
+   "hash": "#/05",
+   "step": "no gesture: 3 s after load",
+   "expect": 5
+  },
+  {
+   "scenario": "S01-first-load-blocked",
+   "t": "2026-10-01T06:38:41.650Z",
+   "ms": 4710,
+   "type": "click",
+   "vis": {
+    "n": 5,
+    "id": "s-managed-programme",
+    "slideId": "s-managed-programme"
+   },
+   "audio": null,
+   "cc": "This is a managed global programme, not a social channel.",
+   "guide": {
+    "state": "blocked",
+    "clip": "NAR-s05",
+    "slideId": "s-managed-programme",
+    "gen": "0",
+    "status": "Narration blocked by the browser — tap to play · slide 5 of 39 · 02 Community model"
+   },
+   "hash": "#/05",
+   "target": null
+  },
+  {
+   "scenario": "S01-first-load-blocked",
+   "t": "2026-10-01T06:38:41.661Z",
+   "ms": 4721,
+   "type": "play()",
+   "vis": {
+    "n": 5,
+    "id": "s-managed-programme",
+    "slideId": "s-managed-programme"
+   },
+   "audio": {
+    "src": "NAR-s05-s-managed-programme.mp3",
+    "clip": "NAR-s05",
+    "t": 0,
+    "muted": false
+   },
+   "cc": "This is a managed global programme, not a social channel.",
+   "guide": {
+    "state": "loading",
+    "clip": "NAR-s05",
+    "slideId": "s-managed-programme",
+    "gen": "0",
+    "status": "Loading narration · slide 5 of 39 · 02 Community model"
+   },
+   "hash": "#/05",
+   "el": "NAR-s05-s-managed-programme.mp3",
+   "ct": 0
+  },
+  {
+   "scenario": "S01-first-load-blocked",
+   "t": "2026-10-01T06:38:41.662Z",
+   "ms": 4722,
+   "type": "media:playing",
+   "vis": {
+    "n": 5,
+    "id": "s-managed-programme",
+    "slideId": "s-managed-programme"
+   },
+   "audio": {
+    "src": "NAR-s05-s-managed-programme.mp3",
+    "clip": "NAR-s05",
+    "t": 0,
+    "muted": false
+   },
+   "cc": "This is a managed global programme, not a social channel.",
+   "guide": {
+    "state": "playing",
+    "clip": "NAR-s05",
+    "slideId": "s-managed-programme",
+    "gen": "0",
+    "status": "Narrating slide 5 of 39 · 02 Community model"
+   },
+   "hash": "#/05",
+   "el": "NAR-s05-s-managed-programme.mp3",
+   "ct": 0
+  },
+  {
+   "scenario": "S01-first-load-blocked",
+   "t": "2026-10-01T06:38:41.662Z",
+   "ms": 4723,
+   "type": "play():resolved",
+   "vis": {
+    "n": 5,
+    "id": "s-managed-programme",
+    "slideId": "s-managed-programme"
+   },
+   "audio": {
+    "src": "NAR-s05-s-managed-programme.mp3",
+    "clip": "NAR-s05",
+    "t": 0,
+    "muted": false
+   },
+   "cc": "This is a managed global programme, not a social channel.",
+   "guide": {
+    "state": "playing",
+    "clip": "NAR-s05",
+    "slideId": "s-managed-programme",
+    "gen": "0",
+    "status": "Narrating slide 5 of 39 · 02 Community model"
+   },
+   "hash": "#/05",
+   "el": "NAR-s05-s-managed-programme.mp3"
+  },
+  {
+   "scenario": "S01-first-load-blocked",
+   "t": "2026-10-01T06:38:41.741Z",
+   "ms": 4801,
+   "type": "sample",
+   "vis": {
+    "n": 5,
+    "id": "s-managed-programme",
+    "slideId": "s-managed-programme"
+   },
+   "audio": {
+    "src": "NAR-s05-s-managed-programme.mp3",
+    "clip": "NAR-s05",
+    "t": 0.02,
+    "muted": false
+   },
+   "cc": "This is a managed global programme, not a social channel.",
+   "guide": {
+    "state": "playing",
+    "clip": "NAR-s05",
+    "slideId": "s-managed-programme",
+    "gen": "0",
+    "status": "Narrating slide 5 of 39 · 02 Community model"
+   },
+   "hash": "#/05"
+  },
+  {
+   "scenario": "S01-first-load-blocked",
+   "t": "2026-10-01T06:38:44.158Z",
+   "ms": 7218,
+   "type": "check",
+   "vis": {
+    "n": 5,
+    "id": "s-managed-programme",
+    "slideId": "s-managed-programme"
+   },
+   "audio": {
+    "src": "NAR-s05-s-managed-programme.mp3",
+    "clip": "NAR-s05",
+    "t": 2.42,
+    "muted": false
+   },
+   "cc": "This is a managed global programme, not a social channel.",
+   "guide": {
+    "state": "playing",
+    "clip": "NAR-s05",
+    "slideId": "s-managed-programme",
+    "gen": "0",
+    "status": "Narrating slide 5 of 39 · 02 Community model"
+   },
+   "hash": "#/05",
+   "step": "first click on the slide",
+   "expect": 5
+  }
+ ],
+ "console": []
+}

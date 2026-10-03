@@ -1,0 +1,8 @@
+# The prebuilt deck IS the shipped artefact: re-include dist/ here (the repository root ignores dist/).
+!dist/
+!dist/**
+# v1.5.4 QA: Playwright traces / test-runner output are delivered in the project ZIP, not committed (60–180 MB)
+qa/v154/*/traces/
+qa/v154/results/test-output/
+# v1.5.5: written by scripts/vercel-build.mjs at deploy time — never committed
+dist/build-info.json

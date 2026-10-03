@@ -1,0 +1,1064 @@
+{
+ "marks": [
+  {
+   "t": "2026-10-01T06:39:26.600Z",
+   "scenario": "S05-home-end",
+   "step": "guide started on 10",
+   "expect": 10,
+   "vis": {
+    "n": 10,
+    "id": "s-office-hours",
+    "slideId": "s-office-hours"
+   },
+   "audio": {
+    "src": "NAR-s10-s-office-hours.mp3",
+    "clip": "NAR-s10",
+    "t": 1.27,
+    "muted": false
+   },
+   "cc": "Weekly office hours and tiered support keep builders unblocked.",
+   "guide": {
+    "state": "playing",
+    "clip": "NAR-s10",
+    "slideId": "s-office-hours",
+    "blocked": "false",
+    "status": "Narrating slide 10 of 39 · 02 Community model",
+    "tap": false
+   }
+  },
+  {
+   "t": "2026-10-01T06:39:29.148Z",
+   "scenario": "S05-home-end",
+   "step": "End → 39",
+   "expect": 39,
+   "vis": {
+    "n": 39,
+    "id": "s-closing",
+    "slideId": "s-closing"
+   },
+   "audio": {
+    "src": "NAR-s39-s-closing.mp3",
+    "clip": "NAR-s39",
+    "t": 2.24,
+    "muted": false
+   },
+   "cc": "You have seen the agreement, the community model, the six pillars, the actors, the roadmap, the impact tiers and Athar OS.",
+   "guide": {
+    "state": "playing",
+    "clip": "NAR-s39",
+    "slideId": "s-closing",
+    "blocked": "false",
+    "status": "Narrating slide 39 of 39 · Join the pact",
+    "tap": false
+   }
+  },
+  {
+   "t": "2026-10-01T06:39:31.687Z",
+   "scenario": "S05-home-end",
+   "step": "Home → 1",
+   "expect": 1,
+   "vis": {
+    "n": 1,
+    "id": "s-cover",
+    "slideId": "s-cover"
+   },
+   "audio": {
+    "src": "NAR-s01-s-cover.mp3",
+    "clip": "NAR-s01",
+    "t": 2.26,
+    "muted": false
+   },
+   "cc": "Welcome to the Athar Open Agentic Pact, a community proposal from ODA and AIREV.",
+   "guide": {
+    "state": "playing",
+    "clip": "NAR-s01",
+    "slideId": "s-cover",
+    "blocked": "false",
+    "status": "Narrating slide 1 of 39 · Welcome",
+    "tap": false
+   }
+  }
+ ],
+ "events": [
+  {
+   "scenario": "S05-home-end",
+   "t": "2026-10-01T06:39:24.182Z",
+   "ms": 780,
+   "type": "sample",
+   "vis": {
+    "n": 10,
+    "id": "s-office-hours",
+    "slideId": null
+   },
+   "audio": null,
+   "cc": null,
+   "guide": null,
+   "hash": "#/10"
+  },
+  {
+   "scenario": "S05-home-end",
+   "t": "2026-10-01T06:39:24.358Z",
+   "ms": 955,
+   "type": "sample",
+   "vis": {
+    "n": 10,
+    "id": "s-office-hours",
+    "slideId": "s-office-hours"
+   },
+   "audio": null,
+   "cc": "Weekly office hours and tiered support keep builders unblocked.",
+   "guide": {
+    "state": "idle",
+    "clip": "NAR-s10",
+    "slideId": "s-office-hours",
+    "gen": "0",
+    "status": "Guide ready · slide 10 of 39 · 02 Community model"
+   },
+   "hash": "#/10"
+  },
+  {
+   "scenario": "S05-home-end",
+   "t": "2026-10-01T06:39:25.058Z",
+   "ms": 1656,
+   "type": "click",
+   "vis": {
+    "n": 10,
+    "id": "s-office-hours",
+    "slideId": "s-office-hours"
+   },
+   "audio": null,
+   "cc": "Weekly office hours and tiered support keep builders unblocked.",
+   "guide": {
+    "state": "idle",
+    "clip": "NAR-s10",
+    "slideId": "s-office-hours",
+    "gen": "0",
+    "status": "Guide ready · slide 10 of 39 · 02 Community model"
+   },
+   "hash": "#/10",
+   "target": "nar-autoplay"
+  },
+  {
+   "scenario": "S05-home-end",
+   "t": "2026-10-01T06:39:25.093Z",
+   "ms": 1691,
+   "type": "click",
+   "vis": {
+    "n": 10,
+    "id": "s-office-hours",
+    "slideId": "s-office-hours"
+   },
+   "audio": null,
+   "cc": "Weekly office hours and tiered support keep builders unblocked.",
+   "guide": {
+    "state": "idle",
+    "clip": "NAR-s10",
+    "slideId": "s-office-hours",
+    "gen": "0",
+    "status": "Guide ready · slide 10 of 39 · 02 Community model"
+   },
+   "hash": "#/10",
+   "target": "guide-toggle"
+  },
+  {
+   "scenario": "S05-home-end",
+   "t": "2026-10-01T06:39:25.104Z",
+   "ms": 1702,
+   "type": "sample",
+   "vis": {
+    "n": 10,
+    "id": "s-office-hours",
+    "slideId": "s-office-hours"
+   },
+   "audio": null,
+   "cc": "Weekly office hours and tiered support keep builders unblocked.",
+   "guide": {
+    "state": "loading",
+    "clip": "NAR-s10",
+    "slideId": "s-office-hours",
+    "gen": "1",
+    "status": "Loading narration · slide 10 of 39 · 02 Community model"
+   },
+   "hash": "#/10"
+  },
+  {
+   "scenario": "S05-home-end",
+   "t": "2026-10-01T06:39:25.106Z",
+   "ms": 1704,
+   "type": "media:emptied",
+   "vis": {
+    "n": 10,
+    "id": "s-office-hours",
+    "slideId": "s-office-hours"
+   },
+   "audio": null,
+   "cc": "Weekly office hours and tiered support keep builders unblocked.",
+   "guide": {
+    "state": "loading",
+    "clip": "NAR-s10",
+    "slideId": "s-office-hours",
+    "gen": "1",
+    "status": "Loading narration · slide 10 of 39 · 02 Community model"
+   },
+   "hash": "#/10",
+   "el": "NAR-s10-s-office-hours.mp3",
+   "ct": 0
+  },
+  {
+   "scenario": "S05-home-end",
+   "t": "2026-10-01T06:39:25.107Z",
+   "ms": 1705,
+   "type": "media:loadstart",
+   "vis": {
+    "n": 10,
+    "id": "s-office-hours",
+    "slideId": "s-office-hours"
+   },
+   "audio": null,
+   "cc": "Weekly office hours and tiered support keep builders unblocked.",
+   "guide": {
+    "state": "loading",
+    "clip": "NAR-s10",
+    "slideId": "s-office-hours",
+    "gen": "1",
+    "status": "Loading narration · slide 10 of 39 · 02 Community model"
+   },
+   "hash": "#/10",
+   "el": "NAR-s10-s-office-hours.mp3",
+   "ct": 0
+  },
+  {
+   "scenario": "S05-home-end",
+   "t": "2026-10-01T06:39:25.160Z",
+   "ms": 1758,
+   "type": "media:canplay",
+   "vis": {
+    "n": 10,
+    "id": "s-office-hours",
+    "slideId": "s-office-hours"
+   },
+   "audio": null,
+   "cc": "Weekly office hours and tiered support keep builders unblocked.",
+   "guide": {
+    "state": "loading",
+    "clip": "NAR-s10",
+    "slideId": "s-office-hours",
+    "gen": "1",
+    "status": "Loading narration · slide 10 of 39 · 02 Community model"
+   },
+   "hash": "#/10",
+   "el": "NAR-s10-s-office-hours.mp3",
+   "ct": 0
+  },
+  {
+   "scenario": "S05-home-end",
+   "t": "2026-10-01T06:39:25.246Z",
+   "ms": 1844,
+   "type": "play()",
+   "vis": {
+    "n": 10,
+    "id": "s-office-hours",
+    "slideId": "s-office-hours"
+   },
+   "audio": {
+    "src": "NAR-s10-s-office-hours.mp3",
+    "clip": "NAR-s10",
+    "t": 0,
+    "muted": false
+   },
+   "cc": "Weekly office hours and tiered support keep builders unblocked.",
+   "guide": {
+    "state": "loading",
+    "clip": "NAR-s10",
+    "slideId": "s-office-hours",
+    "gen": "1",
+    "status": "Loading narration · slide 10 of 39 · 02 Community model"
+   },
+   "hash": "#/10",
+   "el": "NAR-s10-s-office-hours.mp3",
+   "ct": 0
+  },
+  {
+   "scenario": "S05-home-end",
+   "t": "2026-10-01T06:39:25.248Z",
+   "ms": 1846,
+   "type": "media:playing",
+   "vis": {
+    "n": 10,
+    "id": "s-office-hours",
+    "slideId": "s-office-hours"
+   },
+   "audio": {
+    "src": "NAR-s10-s-office-hours.mp3",
+    "clip": "NAR-s10",
+    "t": 0,
+    "muted": false
+   },
+   "cc": "Weekly office hours and tiered support keep builders unblocked.",
+   "guide": {
+    "state": "playing",
+    "clip": "NAR-s10",
+    "slideId": "s-office-hours",
+    "gen": "1",
+    "status": "Narrating slide 10 of 39 · 02 Community model"
+   },
+   "hash": "#/10",
+   "el": "NAR-s10-s-office-hours.mp3",
+   "ct": 0
+  },
+  {
+   "scenario": "S05-home-end",
+   "t": "2026-10-01T06:39:25.248Z",
+   "ms": 1846,
+   "type": "play():resolved",
+   "vis": {
+    "n": 10,
+    "id": "s-office-hours",
+    "slideId": "s-office-hours"
+   },
+   "audio": {
+    "src": "NAR-s10-s-office-hours.mp3",
+    "clip": "NAR-s10",
+    "t": 0,
+    "muted": false
+   },
+   "cc": "Weekly office hours and tiered support keep builders unblocked.",
+   "guide": {
+    "state": "playing",
+    "clip": "NAR-s10",
+    "slideId": "s-office-hours",
+    "gen": "1",
+    "status": "Narrating slide 10 of 39 · 02 Community model"
+   },
+   "hash": "#/10",
+   "el": "NAR-s10-s-office-hours.mp3"
+  },
+  {
+   "scenario": "S05-home-end",
+   "t": "2026-10-01T06:39:25.304Z",
+   "ms": 1901,
+   "type": "sample",
+   "vis": {
+    "n": 10,
+    "id": "s-office-hours",
+    "slideId": "s-office-hours"
+   },
+   "audio": {
+    "src": "NAR-s10-s-office-hours.mp3",
+    "clip": "NAR-s10",
+    "t": 0.02,
+    "muted": false
+   },
+   "cc": "Weekly office hours and tiered support keep builders unblocked.",
+   "guide": {
+    "state": "playing",
+    "clip": "NAR-s10",
+    "slideId": "s-office-hours",
+    "gen": "1",
+    "status": "Narrating slide 10 of 39 · 02 Community model"
+   },
+   "hash": "#/10"
+  },
+  {
+   "scenario": "S05-home-end",
+   "t": "2026-10-01T06:39:26.603Z",
+   "ms": 3201,
+   "type": "check",
+   "vis": {
+    "n": 10,
+    "id": "s-office-hours",
+    "slideId": "s-office-hours"
+   },
+   "audio": {
+    "src": "NAR-s10-s-office-hours.mp3",
+    "clip": "NAR-s10",
+    "t": 1.28,
+    "muted": false
+   },
+   "cc": "Weekly office hours and tiered support keep builders unblocked.",
+   "guide": {
+    "state": "playing",
+    "clip": "NAR-s10",
+    "slideId": "s-office-hours",
+    "gen": "1",
+    "status": "Narrating slide 10 of 39 · 02 Community model"
+   },
+   "hash": "#/10",
+   "step": "guide started on 10",
+   "expect": 10
+  },
+  {
+   "scenario": "S05-home-end",
+   "t": "2026-10-01T06:39:26.606Z",
+   "ms": 3204,
+   "type": "key",
+   "vis": {
+    "n": 10,
+    "id": "s-office-hours",
+    "slideId": "s-office-hours"
+   },
+   "audio": {
+    "src": "NAR-s10-s-office-hours.mp3",
+    "clip": "NAR-s10",
+    "t": 1.28,
+    "muted": false
+   },
+   "cc": "Weekly office hours and tiered support keep builders unblocked.",
+   "guide": {
+    "state": "playing",
+    "clip": "NAR-s10",
+    "slideId": "s-office-hours",
+    "gen": "1",
+    "status": "Narrating slide 10 of 39 · 02 Community model"
+   },
+   "hash": "#/10",
+   "key": "End"
+  },
+  {
+   "scenario": "S05-home-end",
+   "t": "2026-10-01T06:39:26.674Z",
+   "ms": 3271,
+   "type": "media:pause",
+   "vis": {
+    "n": 39,
+    "id": "s-closing",
+    "slideId": "s-closing"
+   },
+   "audio": null,
+   "cc": "Join the Pact.",
+   "guide": {
+    "state": "loading",
+    "clip": "NAR-s39",
+    "slideId": "s-closing",
+    "gen": "2",
+    "status": "Loading narration · slide 39 of 39 · Join the pact"
+   },
+   "hash": "#/28",
+   "el": "NAR-s10-s-office-hours.mp3",
+   "ct": 0
+  },
+  {
+   "scenario": "S05-home-end",
+   "t": "2026-10-01T06:39:26.679Z",
+   "ms": 3277,
+   "type": "media:seeked",
+   "vis": {
+    "n": 39,
+    "id": "s-closing",
+    "slideId": "s-closing"
+   },
+   "audio": null,
+   "cc": "Join the Pact.",
+   "guide": {
+    "state": "loading",
+    "clip": "NAR-s39",
+    "slideId": "s-closing",
+    "gen": "2",
+    "status": "Loading narration · slide 39 of 39 · Join the pact"
+   },
+   "hash": "#/28",
+   "el": "NAR-s10-s-office-hours.mp3",
+   "ct": 0
+  },
+  {
+   "scenario": "S05-home-end",
+   "t": "2026-10-01T06:39:26.679Z",
+   "ms": 3277,
+   "type": "media:canplay",
+   "vis": {
+    "n": 39,
+    "id": "s-closing",
+    "slideId": "s-closing"
+   },
+   "audio": null,
+   "cc": "Join the Pact.",
+   "guide": {
+    "state": "loading",
+    "clip": "NAR-s39",
+    "slideId": "s-closing",
+    "gen": "2",
+    "status": "Loading narration · slide 39 of 39 · Join the pact"
+   },
+   "hash": "#/28",
+   "el": "NAR-s10-s-office-hours.mp3",
+   "ct": 0
+  },
+  {
+   "scenario": "S05-home-end",
+   "t": "2026-10-01T06:39:26.682Z",
+   "ms": 3280,
+   "type": "media:emptied",
+   "vis": {
+    "n": 39,
+    "id": "s-closing",
+    "slideId": "s-closing"
+   },
+   "audio": null,
+   "cc": "Join the Pact.",
+   "guide": {
+    "state": "loading",
+    "clip": "NAR-s39",
+    "slideId": "s-closing",
+    "gen": "2",
+    "status": "Loading narration · slide 39 of 39 · Join the pact"
+   },
+   "hash": "#/28",
+   "el": "NAR-s10-s-office-hours.mp3",
+   "ct": 0
+  },
+  {
+   "scenario": "S05-home-end",
+   "t": "2026-10-01T06:39:26.683Z",
+   "ms": 3281,
+   "type": "media:loadstart",
+   "vis": {
+    "n": 39,
+    "id": "s-closing",
+    "slideId": "s-closing"
+   },
+   "audio": null,
+   "cc": "Join the Pact.",
+   "guide": {
+    "state": "loading",
+    "clip": "NAR-s39",
+    "slideId": "s-closing",
+    "gen": "2",
+    "status": "Loading narration · slide 39 of 39 · Join the pact"
+   },
+   "hash": "#/28",
+   "el": "NAR-s39-s-closing.mp3",
+   "ct": 0
+  },
+  {
+   "scenario": "S05-home-end",
+   "t": "2026-10-01T06:39:26.698Z",
+   "ms": 3296,
+   "type": "media:canplay",
+   "vis": {
+    "n": 39,
+    "id": "s-closing",
+    "slideId": "s-closing"
+   },
+   "audio": null,
+   "cc": "Join the Pact.",
+   "guide": {
+    "state": "loading",
+    "clip": "NAR-s39",
+    "slideId": "s-closing",
+    "gen": "2",
+    "status": "Loading narration · slide 39 of 39 · Join the pact"
+   },
+   "hash": "#/28",
+   "el": "NAR-s39-s-closing.mp3",
+   "ct": 0
+  },
+  {
+   "scenario": "S05-home-end",
+   "t": "2026-10-01T06:39:26.703Z",
+   "ms": 3300,
+   "type": "sample",
+   "vis": {
+    "n": 39,
+    "id": "s-closing",
+    "slideId": "s-closing"
+   },
+   "audio": null,
+   "cc": "Join the Pact.",
+   "guide": {
+    "state": "loading",
+    "clip": "NAR-s39",
+    "slideId": "s-closing",
+    "gen": "2",
+    "status": "Loading narration · slide 39 of 39 · Join the pact"
+   },
+   "hash": "#/28"
+  },
+  {
+   "scenario": "S05-home-end",
+   "t": "2026-10-01T06:39:26.822Z",
+   "ms": 3420,
+   "type": "play()",
+   "vis": {
+    "n": 39,
+    "id": "s-closing",
+    "slideId": "s-closing"
+   },
+   "audio": {
+    "src": "NAR-s39-s-closing.mp3",
+    "clip": "NAR-s39",
+    "t": 0,
+    "muted": false
+   },
+   "cc": "Join the Pact.",
+   "guide": {
+    "state": "loading",
+    "clip": "NAR-s39",
+    "slideId": "s-closing",
+    "gen": "2",
+    "status": "Loading narration · slide 39 of 39 · Join the pact"
+   },
+   "hash": "#/28",
+   "el": "NAR-s39-s-closing.mp3",
+   "ct": 0
+  },
+  {
+   "scenario": "S05-home-end",
+   "t": "2026-10-01T06:39:26.823Z",
+   "ms": 3420,
+   "type": "media:playing",
+   "vis": {
+    "n": 39,
+    "id": "s-closing",
+    "slideId": "s-closing"
+   },
+   "audio": {
+    "src": "NAR-s39-s-closing.mp3",
+    "clip": "NAR-s39",
+    "t": 0,
+    "muted": false
+   },
+   "cc": "Join the Pact.",
+   "guide": {
+    "state": "playing",
+    "clip": "NAR-s39",
+    "slideId": "s-closing",
+    "gen": "2",
+    "status": "Narrating slide 39 of 39 · Join the pact"
+   },
+   "hash": "#/28",
+   "el": "NAR-s39-s-closing.mp3",
+   "ct": 0
+  },
+  {
+   "scenario": "S05-home-end",
+   "t": "2026-10-01T06:39:26.823Z",
+   "ms": 3420,
+   "type": "play():resolved",
+   "vis": {
+    "n": 39,
+    "id": "s-closing",
+    "slideId": "s-closing"
+   },
+   "audio": {
+    "src": "NAR-s39-s-closing.mp3",
+    "clip": "NAR-s39",
+    "t": 0,
+    "muted": false
+   },
+   "cc": "Join the Pact.",
+   "guide": {
+    "state": "playing",
+    "clip": "NAR-s39",
+    "slideId": "s-closing",
+    "gen": "2",
+    "status": "Narrating slide 39 of 39 · Join the pact"
+   },
+   "hash": "#/28",
+   "el": "NAR-s39-s-closing.mp3"
+  },
+  {
+   "scenario": "S05-home-end",
+   "t": "2026-10-01T06:39:26.903Z",
+   "ms": 3501,
+   "type": "sample",
+   "vis": {
+    "n": 39,
+    "id": "s-closing",
+    "slideId": "s-closing"
+   },
+   "audio": {
+    "src": "NAR-s39-s-closing.mp3",
+    "clip": "NAR-s39",
+    "t": 0.02,
+    "muted": false
+   },
+   "cc": "Join the Pact.",
+   "guide": {
+    "state": "playing",
+    "clip": "NAR-s39",
+    "slideId": "s-closing",
+    "gen": "2",
+    "status": "Narrating slide 39 of 39 · Join the pact"
+   },
+   "hash": "#/28"
+  },
+  {
+   "scenario": "S05-home-end",
+   "t": "2026-10-01T06:39:28.303Z",
+   "ms": 4901,
+   "type": "sample",
+   "vis": {
+    "n": 39,
+    "id": "s-closing",
+    "slideId": "s-closing"
+   },
+   "audio": {
+    "src": "NAR-s39-s-closing.mp3",
+    "clip": "NAR-s39",
+    "t": 1.4,
+    "muted": false
+   },
+   "cc": "You have seen the agreement, the community model, the six pillars, the actors, the roadmap, the impact tiers and Athar OS.",
+   "guide": {
+    "state": "playing",
+    "clip": "NAR-s39",
+    "slideId": "s-closing",
+    "gen": "2",
+    "status": "Narrating slide 39 of 39 · Join the pact"
+   },
+   "hash": "#/28"
+  },
+  {
+   "scenario": "S05-home-end",
+   "t": "2026-10-01T06:39:29.149Z",
+   "ms": 5746,
+   "type": "check",
+   "vis": {
+    "n": 39,
+    "id": "s-closing",
+    "slideId": "s-closing"
+   },
+   "audio": {
+    "src": "NAR-s39-s-closing.mp3",
+    "clip": "NAR-s39",
+    "t": 2.24,
+    "muted": false
+   },
+   "cc": "You have seen the agreement, the community model, the six pillars, the actors, the roadmap, the impact tiers and Athar OS.",
+   "guide": {
+    "state": "playing",
+    "clip": "NAR-s39",
+    "slideId": "s-closing",
+    "gen": "2",
+    "status": "Narrating slide 39 of 39 · Join the pact"
+   },
+   "hash": "#/28",
+   "step": "End → 39",
+   "expect": 39
+  },
+  {
+   "scenario": "S05-home-end",
+   "t": "2026-10-01T06:39:29.150Z",
+   "ms": 5748,
+   "type": "key",
+   "vis": {
+    "n": 39,
+    "id": "s-closing",
+    "slideId": "s-closing"
+   },
+   "audio": {
+    "src": "NAR-s39-s-closing.mp3",
+    "clip": "NAR-s39",
+    "t": 2.25,
+    "muted": false
+   },
+   "cc": "You have seen the agreement, the community model, the six pillars, the actors, the roadmap, the impact tiers and Athar OS.",
+   "guide": {
+    "state": "playing",
+    "clip": "NAR-s39",
+    "slideId": "s-closing",
+    "gen": "2",
+    "status": "Narrating slide 39 of 39 · Join the pact"
+   },
+   "hash": "#/28",
+   "key": "Home"
+  },
+  {
+   "scenario": "S05-home-end",
+   "t": "2026-10-01T06:39:29.177Z",
+   "ms": 5775,
+   "type": "media:pause",
+   "vis": {
+    "n": 1,
+    "id": "s-cover",
+    "slideId": "s-cover"
+   },
+   "audio": null,
+   "cc": "Welcome to the Athar Open Agentic Pact, a community proposal from ODA and AIREV.",
+   "guide": {
+    "state": "loading",
+    "clip": "NAR-s01",
+    "slideId": "s-cover",
+    "gen": "3",
+    "status": "Loading narration · slide 1 of 39 · Welcome"
+   },
+   "hash": "#/01",
+   "el": "NAR-s39-s-closing.mp3",
+   "ct": 0
+  },
+  {
+   "scenario": "S05-home-end",
+   "t": "2026-10-01T06:39:29.179Z",
+   "ms": 5776,
+   "type": "media:seeked",
+   "vis": {
+    "n": 1,
+    "id": "s-cover",
+    "slideId": "s-cover"
+   },
+   "audio": null,
+   "cc": "Welcome to the Athar Open Agentic Pact, a community proposal from ODA and AIREV.",
+   "guide": {
+    "state": "loading",
+    "clip": "NAR-s01",
+    "slideId": "s-cover",
+    "gen": "3",
+    "status": "Loading narration · slide 1 of 39 · Welcome"
+   },
+   "hash": "#/01",
+   "el": "NAR-s39-s-closing.mp3",
+   "ct": 0
+  },
+  {
+   "scenario": "S05-home-end",
+   "t": "2026-10-01T06:39:29.179Z",
+   "ms": 5776,
+   "type": "media:canplay",
+   "vis": {
+    "n": 1,
+    "id": "s-cover",
+    "slideId": "s-cover"
+   },
+   "audio": null,
+   "cc": "Welcome to the Athar Open Agentic Pact, a community proposal from ODA and AIREV.",
+   "guide": {
+    "state": "loading",
+    "clip": "NAR-s01",
+    "slideId": "s-cover",
+    "gen": "3",
+    "status": "Loading narration · slide 1 of 39 · Welcome"
+   },
+   "hash": "#/01",
+   "el": "NAR-s39-s-closing.mp3",
+   "ct": 0
+  },
+  {
+   "scenario": "S05-home-end",
+   "t": "2026-10-01T06:39:29.213Z",
+   "ms": 5811,
+   "type": "sample",
+   "vis": {
+    "n": 1,
+    "id": "s-cover",
+    "slideId": "s-cover"
+   },
+   "audio": null,
+   "cc": "Welcome to the Athar Open Agentic Pact, a community proposal from ODA and AIREV.",
+   "guide": {
+    "state": "loading",
+    "clip": "NAR-s01",
+    "slideId": "s-cover",
+    "gen": "3",
+    "status": "Loading narration · slide 1 of 39 · Welcome"
+   },
+   "hash": "#/01"
+  },
+  {
+   "scenario": "S05-home-end",
+   "t": "2026-10-01T06:39:29.214Z",
+   "ms": 5811,
+   "type": "media:emptied",
+   "vis": {
+    "n": 1,
+    "id": "s-cover",
+    "slideId": "s-cover"
+   },
+   "audio": null,
+   "cc": "Welcome to the Athar Open Agentic Pact, a community proposal from ODA and AIREV.",
+   "guide": {
+    "state": "loading",
+    "clip": "NAR-s01",
+    "slideId": "s-cover",
+    "gen": "3",
+    "status": "Loading narration · slide 1 of 39 · Welcome"
+   },
+   "hash": "#/01",
+   "el": "NAR-s39-s-closing.mp3",
+   "ct": 0
+  },
+  {
+   "scenario": "S05-home-end",
+   "t": "2026-10-01T06:39:29.215Z",
+   "ms": 5813,
+   "type": "media:loadstart",
+   "vis": {
+    "n": 1,
+    "id": "s-cover",
+    "slideId": "s-cover"
+   },
+   "audio": null,
+   "cc": "Welcome to the Athar Open Agentic Pact, a community proposal from ODA and AIREV.",
+   "guide": {
+    "state": "loading",
+    "clip": "NAR-s01",
+    "slideId": "s-cover",
+    "gen": "3",
+    "status": "Loading narration · slide 1 of 39 · Welcome"
+   },
+   "hash": "#/01",
+   "el": "NAR-s01-s-cover.mp3",
+   "ct": 0
+  },
+  {
+   "scenario": "S05-home-end",
+   "t": "2026-10-01T06:39:29.218Z",
+   "ms": 5815,
+   "type": "media:canplay",
+   "vis": {
+    "n": 1,
+    "id": "s-cover",
+    "slideId": "s-cover"
+   },
+   "audio": null,
+   "cc": "Welcome to the Athar Open Agentic Pact, a community proposal from ODA and AIREV.",
+   "guide": {
+    "state": "loading",
+    "clip": "NAR-s01",
+    "slideId": "s-cover",
+    "gen": "3",
+    "status": "Loading narration · slide 1 of 39 · Welcome"
+   },
+   "hash": "#/01",
+   "el": "NAR-s01-s-cover.mp3",
+   "ct": 0
+  },
+  {
+   "scenario": "S05-home-end",
+   "t": "2026-10-01T06:39:29.351Z",
+   "ms": 5949,
+   "type": "play()",
+   "vis": {
+    "n": 1,
+    "id": "s-cover",
+    "slideId": "s-cover"
+   },
+   "audio": {
+    "src": "NAR-s01-s-cover.mp3",
+    "clip": "NAR-s01",
+    "t": 0,
+    "muted": false
+   },
+   "cc": "Welcome to the Athar Open Agentic Pact, a community proposal from ODA and AIREV.",
+   "guide": {
+    "state": "loading",
+    "clip": "NAR-s01",
+    "slideId": "s-cover",
+    "gen": "3",
+    "status": "Loading narration · slide 1 of 39 · Welcome"
+   },
+   "hash": "#/01",
+   "el": "NAR-s01-s-cover.mp3",
+   "ct": 0
+  },
+  {
+   "scenario": "S05-home-end",
+   "t": "2026-10-01T06:39:29.352Z",
+   "ms": 5950,
+   "type": "media:playing",
+   "vis": {
+    "n": 1,
+    "id": "s-cover",
+    "slideId": "s-cover"
+   },
+   "audio": {
+    "src": "NAR-s01-s-cover.mp3",
+    "clip": "NAR-s01",
+    "t": 0,
+    "muted": false
+   },
+   "cc": "Welcome to the Athar Open Agentic Pact, a community proposal from ODA and AIREV.",
+   "guide": {
+    "state": "playing",
+    "clip": "NAR-s01",
+    "slideId": "s-cover",
+    "gen": "3",
+    "status": "Narrating slide 1 of 39 · Welcome"
+   },
+   "hash": "#/01",
+   "el": "NAR-s01-s-cover.mp3",
+   "ct": 0
+  },
+  {
+   "scenario": "S05-home-end",
+   "t": "2026-10-01T06:39:29.352Z",
+   "ms": 5950,
+   "type": "play():resolved",
+   "vis": {
+    "n": 1,
+    "id": "s-cover",
+    "slideId": "s-cover"
+   },
+   "audio": {
+    "src": "NAR-s01-s-cover.mp3",
+    "clip": "NAR-s01",
+    "t": 0,
+    "muted": false
+   },
+   "cc": "Welcome to the Athar Open Agentic Pact, a community proposal from ODA and AIREV.",
+   "guide": {
+    "state": "playing",
+    "clip": "NAR-s01",
+    "slideId": "s-cover",
+    "gen": "3",
+    "status": "Narrating slide 1 of 39 · Welcome"
+   },
+   "hash": "#/01",
+   "el": "NAR-s01-s-cover.mp3"
+  },
+  {
+   "scenario": "S05-home-end",
+   "t": "2026-10-01T06:39:29.403Z",
+   "ms": 6001,
+   "type": "sample",
+   "vis": {
+    "n": 1,
+    "id": "s-cover",
+    "slideId": "s-cover"
+   },
+   "audio": {
+    "src": "NAR-s01-s-cover.mp3",
+    "clip": "NAR-s01",
+    "t": 0.02,
+    "muted": false
+   },
+   "cc": "Welcome to the Athar Open Agentic Pact, a community proposal from ODA and AIREV.",
+   "guide": {
+    "state": "playing",
+    "clip": "NAR-s01",
+    "slideId": "s-cover",
+    "gen": "3",
+    "status": "Narrating slide 1 of 39 · Welcome"
+   },
+   "hash": "#/01"
+  },
+  {
+   "scenario": "S05-home-end",
+   "t": "2026-10-01T06:39:31.688Z",
+   "ms": 8286,
+   "type": "check",
+   "vis": {
+    "n": 1,
+    "id": "s-cover",
+    "slideId": "s-cover"
+   },
+   "audio": {
+    "src": "NAR-s01-s-cover.mp3",
+    "clip": "NAR-s01",
+    "t": 2.26,
+    "muted": false
+   },
+   "cc": "Welcome to the Athar Open Agentic Pact, a community proposal from ODA and AIREV.",
+   "guide": {
+    "state": "playing",
+    "clip": "NAR-s01",
+    "slideId": "s-cover",
+    "gen": "3",
+    "status": "Narrating slide 1 of 39 · Welcome"
+   },
+   "hash": "#/01",
+   "step": "Home → 1",
+   "expect": 1
+  }
+ ],
+ "console": []
+}

@@ -1,0 +1,922 @@
+{
+ "marks": [
+  {
+   "t": "2026-10-01T06:14:07.950Z",
+   "scenario": "S06-deep-links",
+   "step": "loaded #/23 + guide",
+   "expect": 23,
+   "vis": {
+    "n": 23,
+    "id": "s-who-governs",
+    "slideId": null
+   },
+   "audio": {
+    "src": "guide-05-actors-and-roles-0PbyoFNYNV.mp3",
+    "clip": "NAR-05",
+    "t": 22.02,
+    "muted": false
+   },
+   "cc": "The UAE Ministry of Foreign Trade signs and governs and the United Arab Emirates governs.",
+   "guide": {
+    "state": "playing",
+    "clip": "NAR-05",
+    "slideId": null,
+    "blocked": "false",
+    "status": "Narrating slide 23 of 39 · 05 Actors & roles",
+    "tap": false
+   }
+  },
+  {
+   "t": "2026-10-01T06:14:10.489Z",
+   "scenario": "S06-deep-links",
+   "step": "hash #/27/new-8 → 35",
+   "expect": 35,
+   "vis": {
+    "n": 35,
+    "id": "s-aos-tour",
+    "slideId": null
+   },
+   "audio": {
+    "src": "guide-08-athar-os-Ib4oKe91OD.mp3",
+    "clip": "NAR-08",
+    "t": 2.26,
+    "muted": false
+   },
+   "cc": "Section eight, Athar OS.",
+   "guide": {
+    "state": "playing",
+    "clip": "NAR-08",
+    "slideId": null,
+    "blocked": "false",
+    "status": "Narrating slide 35 of 39 · 08 Athar OS",
+    "tap": false
+   }
+  },
+  {
+   "t": "2026-10-01T06:14:13.024Z",
+   "scenario": "S06-deep-links",
+   "step": "hash #slide-07 → 7",
+   "expect": 7,
+   "vis": {
+    "n": 36,
+    "id": "s-aos-roadmap",
+    "slideId": null
+   },
+   "audio": {
+    "src": "guide-08-athar-os-Ib4oKe91OD.mp3",
+    "clip": "NAR-08",
+    "t": 4.79,
+    "muted": false
+   },
+   "cc": "The roadmap runs now in Q4, 2026, next in 2027 and later in 2028.",
+   "guide": {
+    "state": "playing",
+    "clip": "NAR-08",
+    "slideId": null,
+    "blocked": "false",
+    "status": "Narrating slide 36 of 39 · 08 Athar OS",
+    "tap": false
+   }
+  }
+ ],
+ "events": [
+  {
+   "scenario": "S06-deep-links",
+   "t": "2026-10-01T06:14:04.261Z",
+   "ms": 539,
+   "type": "sample",
+   "vis": {
+    "n": 23,
+    "id": "s-who-governs",
+    "slideId": null
+   },
+   "audio": null,
+   "cc": null,
+   "guide": null,
+   "hash": "#/23"
+  },
+  {
+   "scenario": "S06-deep-links",
+   "t": "2026-10-01T06:14:04.631Z",
+   "ms": 908,
+   "type": "sample",
+   "vis": {
+    "n": 23,
+    "id": "s-who-governs",
+    "slideId": null
+   },
+   "audio": null,
+   "cc": "",
+   "guide": {
+    "state": "idle",
+    "clip": null,
+    "slideId": null,
+    "gen": null,
+    "status": "No narration for this slide"
+   },
+   "hash": "#/23"
+  },
+  {
+   "scenario": "S06-deep-links",
+   "t": "2026-10-01T06:14:04.635Z",
+   "ms": 912,
+   "type": "media:emptied",
+   "vis": {
+    "n": 23,
+    "id": "s-who-governs",
+    "slideId": null
+   },
+   "audio": null,
+   "cc": "The UAE Ministry of Foreign Trade signs and governs and the United Arab Emirates governs.",
+   "guide": {
+    "state": "loading",
+    "clip": "NAR-05",
+    "slideId": null,
+    "gen": null,
+    "status": "Guide ready · slide 23 of 39 · 05 Actors & roles"
+   },
+   "hash": "#/23",
+   "el": "guide-05-actors-and-roles-0PbyoFNYNV.mp3",
+   "ct": 0
+  },
+  {
+   "scenario": "S06-deep-links",
+   "t": "2026-10-01T06:14:04.637Z",
+   "ms": 915,
+   "type": "media:loadstart",
+   "vis": {
+    "n": 23,
+    "id": "s-who-governs",
+    "slideId": null
+   },
+   "audio": null,
+   "cc": "The UAE Ministry of Foreign Trade signs and governs and the United Arab Emirates governs.",
+   "guide": {
+    "state": "loading",
+    "clip": "NAR-05",
+    "slideId": null,
+    "gen": null,
+    "status": "Guide ready · slide 23 of 39 · 05 Actors & roles"
+   },
+   "hash": "#/23",
+   "el": "guide-05-actors-and-roles-0PbyoFNYNV.mp3",
+   "ct": 0
+  },
+  {
+   "scenario": "S06-deep-links",
+   "t": "2026-10-01T06:14:04.642Z",
+   "ms": 919,
+   "type": "media:loadstart",
+   "vis": {
+    "n": 23,
+    "id": "s-who-governs",
+    "slideId": null
+   },
+   "audio": null,
+   "cc": "The UAE Ministry of Foreign Trade signs and governs and the United Arab Emirates governs.",
+   "guide": {
+    "state": "loading",
+    "clip": "NAR-05",
+    "slideId": null,
+    "gen": null,
+    "status": "Guide ready · slide 23 of 39 · 05 Actors & roles"
+   },
+   "hash": "#/23",
+   "el": "guide-06-governance-and-roadmap-kyzmCSHcw8.mp3",
+   "ct": 0
+  },
+  {
+   "scenario": "S06-deep-links",
+   "t": "2026-10-01T06:14:04.700Z",
+   "ms": 977,
+   "type": "media:canplay",
+   "vis": {
+    "n": 23,
+    "id": "s-who-governs",
+    "slideId": null
+   },
+   "audio": null,
+   "cc": "The UAE Ministry of Foreign Trade signs and governs and the United Arab Emirates governs.",
+   "guide": {
+    "state": "loading",
+    "clip": "NAR-05",
+    "slideId": null,
+    "gen": null,
+    "status": "Guide ready · slide 23 of 39 · 05 Actors & roles"
+   },
+   "hash": "#/23",
+   "el": "guide-06-governance-and-roadmap-kyzmCSHcw8.mp3",
+   "ct": 0
+  },
+  {
+   "scenario": "S06-deep-links",
+   "t": "2026-10-01T06:14:04.701Z",
+   "ms": 978,
+   "type": "media:seeked",
+   "vis": {
+    "n": 23,
+    "id": "s-who-governs",
+    "slideId": null
+   },
+   "audio": null,
+   "cc": "The UAE Ministry of Foreign Trade signs and governs and the United Arab Emirates governs.",
+   "guide": {
+    "state": "loading",
+    "clip": "NAR-05",
+    "slideId": null,
+    "gen": null,
+    "status": "Guide ready · slide 23 of 39 · 05 Actors & roles"
+   },
+   "hash": "#/23",
+   "el": "guide-05-actors-and-roles-0PbyoFNYNV.mp3",
+   "ct": 19.59
+  },
+  {
+   "scenario": "S06-deep-links",
+   "t": "2026-10-01T06:14:04.702Z",
+   "ms": 979,
+   "type": "media:canplay",
+   "vis": {
+    "n": 23,
+    "id": "s-who-governs",
+    "slideId": null
+   },
+   "audio": null,
+   "cc": "The UAE Ministry of Foreign Trade signs and governs and the United Arab Emirates governs.",
+   "guide": {
+    "state": "paused",
+    "clip": "NAR-05",
+    "slideId": null,
+    "gen": null,
+    "status": "Guide ready · slide 23 of 39 · 05 Actors & roles"
+   },
+   "hash": "#/23",
+   "el": "guide-05-actors-and-roles-0PbyoFNYNV.mp3",
+   "ct": 19.59
+  },
+  {
+   "scenario": "S06-deep-links",
+   "t": "2026-10-01T06:14:04.730Z",
+   "ms": 1007,
+   "type": "sample",
+   "vis": {
+    "n": 23,
+    "id": "s-who-governs",
+    "slideId": null
+   },
+   "audio": null,
+   "cc": "The UAE Ministry of Foreign Trade signs and governs and the United Arab Emirates governs.",
+   "guide": {
+    "state": "paused",
+    "clip": "NAR-05",
+    "slideId": null,
+    "gen": null,
+    "status": "Guide ready · slide 23 of 39 · 05 Actors & roles"
+   },
+   "hash": "#/23"
+  },
+  {
+   "scenario": "S06-deep-links",
+   "t": "2026-10-01T06:14:05.404Z",
+   "ms": 1681,
+   "type": "click",
+   "vis": {
+    "n": 23,
+    "id": "s-who-governs",
+    "slideId": null
+   },
+   "audio": null,
+   "cc": "The UAE Ministry of Foreign Trade signs and governs and the United Arab Emirates governs.",
+   "guide": {
+    "state": "paused",
+    "clip": "NAR-05",
+    "slideId": null,
+    "gen": null,
+    "status": "Guide ready · slide 23 of 39 · 05 Actors & roles"
+   },
+   "hash": "#/23",
+   "target": "nar-autoplay"
+  },
+  {
+   "scenario": "S06-deep-links",
+   "t": "2026-10-01T06:14:05.439Z",
+   "ms": 1716,
+   "type": "click",
+   "vis": {
+    "n": 23,
+    "id": "s-who-governs",
+    "slideId": null
+   },
+   "audio": null,
+   "cc": "The UAE Ministry of Foreign Trade signs and governs and the United Arab Emirates governs.",
+   "guide": {
+    "state": "paused",
+    "clip": "NAR-05",
+    "slideId": null,
+    "gen": null,
+    "status": "Guide ready · slide 23 of 39 · 05 Actors & roles"
+   },
+   "hash": "#/23",
+   "target": "guide-toggle"
+  },
+  {
+   "scenario": "S06-deep-links",
+   "t": "2026-10-01T06:14:05.440Z",
+   "ms": 1717,
+   "type": "play()",
+   "vis": {
+    "n": 23,
+    "id": "s-who-governs",
+    "slideId": null
+   },
+   "audio": {
+    "src": "guide-05-actors-and-roles-0PbyoFNYNV.mp3",
+    "clip": "NAR-05",
+    "t": 19.59,
+    "muted": false
+   },
+   "cc": "The UAE Ministry of Foreign Trade signs and governs and the United Arab Emirates governs.",
+   "guide": {
+    "state": "paused",
+    "clip": "NAR-05",
+    "slideId": null,
+    "gen": null,
+    "status": "Guide ready · slide 23 of 39 · 05 Actors & roles"
+   },
+   "hash": "#/23",
+   "el": "guide-05-actors-and-roles-0PbyoFNYNV.mp3",
+   "ct": 19.59
+  },
+  {
+   "scenario": "S06-deep-links",
+   "t": "2026-10-01T06:14:05.466Z",
+   "ms": 1743,
+   "type": "media:playing",
+   "vis": {
+    "n": 23,
+    "id": "s-who-governs",
+    "slideId": null
+   },
+   "audio": {
+    "src": "guide-05-actors-and-roles-0PbyoFNYNV.mp3",
+    "clip": "NAR-05",
+    "t": 19.61,
+    "muted": false
+   },
+   "cc": "The UAE Ministry of Foreign Trade signs and governs and the United Arab Emirates governs.",
+   "guide": {
+    "state": "playing",
+    "clip": "NAR-05",
+    "slideId": null,
+    "gen": null,
+    "status": "Narrating slide 23 of 39 · 05 Actors & roles"
+   },
+   "hash": "#/23",
+   "el": "guide-05-actors-and-roles-0PbyoFNYNV.mp3",
+   "ct": 19.61
+  },
+  {
+   "scenario": "S06-deep-links",
+   "t": "2026-10-01T06:14:05.466Z",
+   "ms": 1743,
+   "type": "play():resolved",
+   "vis": {
+    "n": 23,
+    "id": "s-who-governs",
+    "slideId": null
+   },
+   "audio": {
+    "src": "guide-05-actors-and-roles-0PbyoFNYNV.mp3",
+    "clip": "NAR-05",
+    "t": 19.61,
+    "muted": false
+   },
+   "cc": "The UAE Ministry of Foreign Trade signs and governs and the United Arab Emirates governs.",
+   "guide": {
+    "state": "playing",
+    "clip": "NAR-05",
+    "slideId": null,
+    "gen": null,
+    "status": "Narrating slide 23 of 39 · 05 Actors & roles"
+   },
+   "hash": "#/23",
+   "el": "guide-05-actors-and-roles-0PbyoFNYNV.mp3"
+  },
+  {
+   "scenario": "S06-deep-links",
+   "t": "2026-10-01T06:14:05.524Z",
+   "ms": 1801,
+   "type": "sample",
+   "vis": {
+    "n": 23,
+    "id": "s-who-governs",
+    "slideId": null
+   },
+   "audio": {
+    "src": "guide-05-actors-and-roles-0PbyoFNYNV.mp3",
+    "clip": "NAR-05",
+    "t": 19.61,
+    "muted": false
+   },
+   "cc": "The UAE Ministry of Foreign Trade signs and governs and the United Arab Emirates governs.",
+   "guide": {
+    "state": "playing",
+    "clip": "NAR-05",
+    "slideId": null,
+    "gen": null,
+    "status": "Narrating slide 23 of 39 · 05 Actors & roles"
+   },
+   "hash": "#/23"
+  },
+  {
+   "scenario": "S06-deep-links",
+   "t": "2026-10-01T06:14:07.952Z",
+   "ms": 4229,
+   "type": "check",
+   "vis": {
+    "n": 23,
+    "id": "s-who-governs",
+    "slideId": null
+   },
+   "audio": {
+    "src": "guide-05-actors-and-roles-0PbyoFNYNV.mp3",
+    "clip": "NAR-05",
+    "t": 22.03,
+    "muted": false
+   },
+   "cc": "The UAE Ministry of Foreign Trade signs and governs and the United Arab Emirates governs.",
+   "guide": {
+    "state": "playing",
+    "clip": "NAR-05",
+    "slideId": null,
+    "gen": null,
+    "status": "Narrating slide 23 of 39 · 05 Actors & roles"
+   },
+   "hash": "#/23",
+   "step": "loaded #/23 + guide",
+   "expect": 23
+  },
+  {
+   "scenario": "S06-deep-links",
+   "t": "2026-10-01T06:14:07.954Z",
+   "ms": 4231,
+   "type": "hashchange",
+   "vis": {
+    "n": 23,
+    "id": "s-who-governs",
+    "slideId": null
+   },
+   "audio": {
+    "src": "guide-05-actors-and-roles-0PbyoFNYNV.mp3",
+    "clip": "NAR-05",
+    "t": 22.03,
+    "muted": false
+   },
+   "cc": "The UAE Ministry of Foreign Trade signs and governs and the United Arab Emirates governs.",
+   "guide": {
+    "state": "playing",
+    "clip": "NAR-05",
+    "slideId": null,
+    "gen": null,
+    "status": "Narrating slide 23 of 39 · 05 Actors & roles"
+   },
+   "hash": "#/27/new-8"
+  },
+  {
+   "scenario": "S06-deep-links",
+   "t": "2026-10-01T06:14:08.133Z",
+   "ms": 4410,
+   "type": "play()",
+   "vis": {
+    "n": 35,
+    "id": "s-aos-tour",
+    "slideId": null
+   },
+   "audio": {
+    "src": "guide-05-actors-and-roles-0PbyoFNYNV.mp3",
+    "clip": "NAR-05",
+    "t": 0,
+    "muted": false
+   },
+   "cc": "The UAE Ministry of Foreign Trade signs and governs and the United Arab Emirates governs.",
+   "guide": {
+    "state": "playing",
+    "clip": "NAR-05",
+    "slideId": null,
+    "gen": null,
+    "status": "Narrating slide 23 of 39 · 05 Actors & roles"
+   },
+   "hash": "#/27/new-8",
+   "el": "guide-05-actors-and-roles-0PbyoFNYNV.mp3",
+   "ct": 0
+  },
+  {
+   "scenario": "S06-deep-links",
+   "t": "2026-10-01T06:14:08.134Z",
+   "ms": 4411,
+   "type": "sample",
+   "vis": {
+    "n": 35,
+    "id": "s-aos-tour",
+    "slideId": null
+   },
+   "audio": {
+    "src": "guide-05-actors-and-roles-0PbyoFNYNV.mp3",
+    "clip": "NAR-05",
+    "t": 0,
+    "muted": false
+   },
+   "cc": "Section eight, Athar OS.",
+   "guide": {
+    "state": "starting",
+    "clip": "NAR-08",
+    "slideId": null,
+    "gen": null,
+    "status": "Narrating slide 35 of 39 · 08 Athar OS"
+   },
+   "hash": "#/27/new-8"
+  },
+  {
+   "scenario": "S06-deep-links",
+   "t": "2026-10-01T06:14:08.135Z",
+   "ms": 4412,
+   "type": "media:emptied",
+   "vis": {
+    "n": 35,
+    "id": "s-aos-tour",
+    "slideId": null
+   },
+   "audio": {
+    "src": "guide-05-actors-and-roles-0PbyoFNYNV.mp3",
+    "clip": "NAR-05",
+    "t": 0,
+    "muted": false
+   },
+   "cc": "Section eight, Athar OS.",
+   "guide": {
+    "state": "starting",
+    "clip": "NAR-08",
+    "slideId": null,
+    "gen": null,
+    "status": "Narrating slide 35 of 39 · 08 Athar OS"
+   },
+   "hash": "#/27/new-8",
+   "el": "guide-05-actors-and-roles-0PbyoFNYNV.mp3",
+   "ct": 0
+  },
+  {
+   "scenario": "S06-deep-links",
+   "t": "2026-10-01T06:14:08.139Z",
+   "ms": 4416,
+   "type": "media:loadstart",
+   "vis": {
+    "n": 35,
+    "id": "s-aos-tour",
+    "slideId": null
+   },
+   "audio": {
+    "src": "guide-08-athar-os-Ib4oKe91OD.mp3",
+    "clip": "NAR-08",
+    "t": 0,
+    "muted": false
+   },
+   "cc": "Section eight, Athar OS.",
+   "guide": {
+    "state": "buffering",
+    "clip": "NAR-08",
+    "slideId": null,
+    "gen": null,
+    "status": "Narrating slide 35 of 39 · 08 Athar OS"
+   },
+   "hash": "#/27/new-8",
+   "el": "guide-08-athar-os-Ib4oKe91OD.mp3",
+   "ct": 0
+  },
+  {
+   "scenario": "S06-deep-links",
+   "t": "2026-10-01T06:14:08.143Z",
+   "ms": 4421,
+   "type": "media:loadstart",
+   "vis": {
+    "n": 35,
+    "id": "s-aos-tour",
+    "slideId": null
+   },
+   "audio": {
+    "src": "guide-08-athar-os-Ib4oKe91OD.mp3",
+    "clip": "NAR-08",
+    "t": 0,
+    "muted": false
+   },
+   "cc": "Section eight, Athar OS.",
+   "guide": {
+    "state": "buffering",
+    "clip": "NAR-08",
+    "slideId": null,
+    "gen": null,
+    "status": "Narrating slide 35 of 39 · 08 Athar OS"
+   },
+   "hash": "#/27/new-8",
+   "el": "guide-09-join-the-pact-Hx4Ywy843S.mp3",
+   "ct": 0
+  },
+  {
+   "scenario": "S06-deep-links",
+   "t": "2026-10-01T06:14:08.153Z",
+   "ms": 4430,
+   "type": "media:canplay",
+   "vis": {
+    "n": 35,
+    "id": "s-aos-tour",
+    "slideId": null
+   },
+   "audio": {
+    "src": "guide-08-athar-os-Ib4oKe91OD.mp3",
+    "clip": "NAR-08",
+    "t": 0,
+    "muted": false
+   },
+   "cc": "Section eight, Athar OS.",
+   "guide": {
+    "state": "buffering",
+    "clip": "NAR-08",
+    "slideId": null,
+    "gen": null,
+    "status": "Narrating slide 35 of 39 · 08 Athar OS"
+   },
+   "hash": "#/27/new-8",
+   "el": "guide-08-athar-os-Ib4oKe91OD.mp3",
+   "ct": 0
+  },
+  {
+   "scenario": "S06-deep-links",
+   "t": "2026-10-01T06:14:08.153Z",
+   "ms": 4430,
+   "type": "media:playing",
+   "vis": {
+    "n": 35,
+    "id": "s-aos-tour",
+    "slideId": null
+   },
+   "audio": {
+    "src": "guide-08-athar-os-Ib4oKe91OD.mp3",
+    "clip": "NAR-08",
+    "t": 0,
+    "muted": false
+   },
+   "cc": "Section eight, Athar OS.",
+   "guide": {
+    "state": "playing",
+    "clip": "NAR-08",
+    "slideId": null,
+    "gen": null,
+    "status": "Narrating slide 35 of 39 · 08 Athar OS"
+   },
+   "hash": "#/27/new-8",
+   "el": "guide-08-athar-os-Ib4oKe91OD.mp3",
+   "ct": 0
+  },
+  {
+   "scenario": "S06-deep-links",
+   "t": "2026-10-01T06:14:08.153Z",
+   "ms": 4431,
+   "type": "play():resolved",
+   "vis": {
+    "n": 35,
+    "id": "s-aos-tour",
+    "slideId": null
+   },
+   "audio": {
+    "src": "guide-08-athar-os-Ib4oKe91OD.mp3",
+    "clip": "NAR-08",
+    "t": 0,
+    "muted": false
+   },
+   "cc": "Section eight, Athar OS.",
+   "guide": {
+    "state": "playing",
+    "clip": "NAR-08",
+    "slideId": null,
+    "gen": null,
+    "status": "Narrating slide 35 of 39 · 08 Athar OS"
+   },
+   "hash": "#/27/new-8",
+   "el": "guide-05-actors-and-roles-0PbyoFNYNV.mp3"
+  },
+  {
+   "scenario": "S06-deep-links",
+   "t": "2026-10-01T06:14:08.154Z",
+   "ms": 4431,
+   "type": "media:canplay",
+   "vis": {
+    "n": 35,
+    "id": "s-aos-tour",
+    "slideId": null
+   },
+   "audio": {
+    "src": "guide-08-athar-os-Ib4oKe91OD.mp3",
+    "clip": "NAR-08",
+    "t": 0,
+    "muted": false
+   },
+   "cc": "Section eight, Athar OS.",
+   "guide": {
+    "state": "playing",
+    "clip": "NAR-08",
+    "slideId": null,
+    "gen": null,
+    "status": "Narrating slide 35 of 39 · 08 Athar OS"
+   },
+   "hash": "#/27/new-8",
+   "el": "guide-09-join-the-pact-Hx4Ywy843S.mp3",
+   "ct": 0
+  },
+  {
+   "scenario": "S06-deep-links",
+   "t": "2026-10-01T06:14:08.224Z",
+   "ms": 4501,
+   "type": "sample",
+   "vis": {
+    "n": 35,
+    "id": "s-aos-tour",
+    "slideId": null
+   },
+   "audio": {
+    "src": "guide-08-athar-os-Ib4oKe91OD.mp3",
+    "clip": "NAR-08",
+    "t": 0.02,
+    "muted": false
+   },
+   "cc": "Section eight, Athar OS.",
+   "guide": {
+    "state": "playing",
+    "clip": "NAR-08",
+    "slideId": null,
+    "gen": null,
+    "status": "Narrating slide 35 of 39 · 08 Athar OS"
+   },
+   "hash": "#/27/new-8"
+  },
+  {
+   "scenario": "S06-deep-links",
+   "t": "2026-10-01T06:14:10.490Z",
+   "ms": 6767,
+   "type": "check",
+   "vis": {
+    "n": 35,
+    "id": "s-aos-tour",
+    "slideId": null
+   },
+   "audio": {
+    "src": "guide-08-athar-os-Ib4oKe91OD.mp3",
+    "clip": "NAR-08",
+    "t": 2.26,
+    "muted": false
+   },
+   "cc": "Section eight, Athar OS.",
+   "guide": {
+    "state": "playing",
+    "clip": "NAR-08",
+    "slideId": null,
+    "gen": null,
+    "status": "Narrating slide 35 of 39 · 08 Athar OS"
+   },
+   "hash": "#/27/new-8",
+   "step": "hash #/27/new-8 → 35",
+   "expect": 35
+  },
+  {
+   "scenario": "S06-deep-links",
+   "t": "2026-10-01T06:14:10.493Z",
+   "ms": 6770,
+   "type": "hashchange",
+   "vis": {
+    "n": 35,
+    "id": "s-aos-tour",
+    "slideId": null
+   },
+   "audio": {
+    "src": "guide-08-athar-os-Ib4oKe91OD.mp3",
+    "clip": "NAR-08",
+    "t": 2.26,
+    "muted": false
+   },
+   "cc": "Section eight, Athar OS.",
+   "guide": {
+    "state": "playing",
+    "clip": "NAR-08",
+    "slideId": null,
+    "gen": null,
+    "status": "Narrating slide 35 of 39 · 08 Athar OS"
+   },
+   "hash": "#slide-07"
+  },
+  {
+   "scenario": "S06-deep-links",
+   "t": "2026-10-01T06:14:10.527Z",
+   "ms": 6804,
+   "type": "sample",
+   "vis": {
+    "n": 7,
+    "id": "s-country-chapters",
+    "slideId": null
+   },
+   "audio": {
+    "src": "guide-08-athar-os-Ib4oKe91OD.mp3",
+    "clip": "NAR-08",
+    "t": 2.3,
+    "muted": false
+   },
+   "cc": "Section eight, Athar OS.",
+   "guide": {
+    "state": "playing",
+    "clip": "NAR-08",
+    "slideId": null,
+    "gen": null,
+    "status": "Narrating slide 35 of 39 · 08 Athar OS"
+   },
+   "hash": "#/07"
+  },
+  {
+   "scenario": "S06-deep-links",
+   "t": "2026-10-01T06:14:10.532Z",
+   "ms": 6809,
+   "type": "hashchange",
+   "vis": {
+    "n": 7,
+    "id": "s-country-chapters",
+    "slideId": null
+   },
+   "audio": {
+    "src": "guide-08-athar-os-Ib4oKe91OD.mp3",
+    "clip": "NAR-08",
+    "t": 2.3,
+    "muted": false
+   },
+   "cc": "The roadmap runs now in Q4, 2026, next in 2027 and later in 2028.",
+   "guide": {
+    "state": "playing",
+    "clip": "NAR-08",
+    "slideId": null,
+    "gen": null,
+    "status": "Narrating slide 35 of 39 · 08 Athar OS"
+   },
+   "hash": "#/27/new-9"
+  },
+  {
+   "scenario": "S06-deep-links",
+   "t": "2026-10-01T06:14:10.624Z",
+   "ms": 6901,
+   "type": "sample",
+   "vis": {
+    "n": 36,
+    "id": "s-aos-roadmap",
+    "slideId": null
+   },
+   "audio": {
+    "src": "guide-08-athar-os-Ib4oKe91OD.mp3",
+    "clip": "NAR-08",
+    "t": 2.39,
+    "muted": false
+   },
+   "cc": "The roadmap runs now in Q4, 2026, next in 2027 and later in 2028.",
+   "guide": {
+    "state": "playing",
+    "clip": "NAR-08",
+    "slideId": null,
+    "gen": null,
+    "status": "Narrating slide 36 of 39 · 08 Athar OS"
+   },
+   "hash": "#/27/new-9"
+  },
+  {
+   "scenario": "S06-deep-links",
+   "t": "2026-10-01T06:14:13.025Z",
+   "ms": 9302,
+   "type": "check",
+   "vis": {
+    "n": 36,
+    "id": "s-aos-roadmap",
+    "slideId": null
+   },
+   "audio": {
+    "src": "guide-08-athar-os-Ib4oKe91OD.mp3",
+    "clip": "NAR-08",
+    "t": 4.79,
+    "muted": false
+   },
+   "cc": "The roadmap runs now in Q4, 2026, next in 2027 and later in 2028.",
+   "guide": {
+    "state": "playing",
+    "clip": "NAR-08",
+    "slideId": null,
+    "gen": null,
+    "status": "Narrating slide 36 of 39 · 08 Athar OS"
+   },
+   "hash": "#/27/new-9",
+   "step": "hash #slide-07 → 7",
+   "expect": 7
+  }
+ ],
+ "console": []
+}

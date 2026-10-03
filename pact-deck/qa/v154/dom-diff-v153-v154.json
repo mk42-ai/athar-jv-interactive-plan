@@ -1,0 +1,788 @@
+{
+ "baseline": "http://127.0.0.1:4301",
+ "candidate": "http://127.0.0.1:4302",
+ "slidesCompared": 78,
+ "slidesChanged": 0,
+ "rows": [
+  {
+   "lang": "en",
+   "n": 1,
+   "slideId": "s-cover",
+   "chars": 872,
+   "sha256_v153": "1a521f5b29638b20",
+   "sha256_v154": "1a521f5b29638b20",
+   "identical": true,
+   "diff": []
+  },
+  {
+   "lang": "en",
+   "n": 2,
+   "slideId": "s-hero",
+   "chars": 387,
+   "sha256_v153": "c1acd771e92f0183",
+   "sha256_v154": "c1acd771e92f0183",
+   "identical": true,
+   "diff": []
+  },
+  {
+   "lang": "en",
+   "n": 3,
+   "slideId": "s-why-pact",
+   "chars": 453,
+   "sha256_v153": "04ae1ea717649bb9",
+   "sha256_v154": "04ae1ea717649bb9",
+   "identical": true,
+   "diff": []
+  },
+  {
+   "lang": "en",
+   "n": 4,
+   "slideId": "s-four-outcomes",
+   "chars": 962,
+   "sha256_v153": "46a687aedced40e8",
+   "sha256_v154": "46a687aedced40e8",
+   "identical": true,
+   "diff": []
+  },
+  {
+   "lang": "en",
+   "n": 5,
+   "slideId": "s-managed-programme",
+   "chars": 848,
+   "sha256_v153": "3a1fe4e73734c828",
+   "sha256_v154": "3a1fe4e73734c828",
+   "identical": true,
+   "diff": []
+  },
+  {
+   "lang": "en",
+   "n": 6,
+   "slideId": "s-discord-home",
+   "chars": 1117,
+   "sha256_v153": "e8f6d4c8a210304f",
+   "sha256_v154": "e8f6d4c8a210304f",
+   "identical": true,
+   "diff": []
+  },
+  {
+   "lang": "en",
+   "n": 7,
+   "slideId": "s-country-chapters",
+   "chars": 885,
+   "sha256_v153": "75f233c997b81eee",
+   "sha256_v154": "75f233c997b81eee",
+   "identical": true,
+   "diff": []
+  },
+  {
+   "lang": "en",
+   "n": 8,
+   "slideId": "s-learning-formats",
+   "chars": 916,
+   "sha256_v153": "dc8766ea600f2f1d",
+   "sha256_v154": "dc8766ea600f2f1d",
+   "identical": true,
+   "diff": []
+  },
+  {
+   "lang": "en",
+   "n": 9,
+   "slideId": "s-challenges-showcases",
+   "chars": 529,
+   "sha256_v153": "a4967dd6fa3a9775",
+   "sha256_v154": "a4967dd6fa3a9775",
+   "identical": true,
+   "diff": []
+  },
+  {
+   "lang": "en",
+   "n": 10,
+   "slideId": "s-office-hours",
+   "chars": 678,
+   "sha256_v153": "087efdf2cb145fb8",
+   "sha256_v154": "087efdf2cb145fb8",
+   "identical": true,
+   "diff": []
+  },
+  {
+   "lang": "en",
+   "n": 11,
+   "slideId": "s-agent-marketplace",
+   "chars": 1070,
+   "sha256_v153": "84c65369860a4c7c",
+   "sha256_v154": "84c65369860a4c7c",
+   "identical": true,
+   "diff": []
+  },
+  {
+   "lang": "en",
+   "n": 12,
+   "slideId": "s-decision-table",
+   "chars": 952,
+   "sha256_v153": "a7569b8ace41d1b1",
+   "sha256_v154": "a7569b8ace41d1b1",
+   "identical": true,
+   "diff": []
+  },
+  {
+   "lang": "en",
+   "n": 13,
+   "slideId": "s-pillar-plugins",
+   "chars": 640,
+   "sha256_v153": "b6ed47a3e9590d78",
+   "sha256_v154": "b6ed47a3e9590d78",
+   "identical": true,
+   "diff": []
+  },
+  {
+   "lang": "en",
+   "n": 14,
+   "slideId": "s-pillar-skills",
+   "chars": 559,
+   "sha256_v153": "c2e3e266168ab399",
+   "sha256_v154": "c2e3e266168ab399",
+   "identical": true,
+   "diff": []
+  },
+  {
+   "lang": "en",
+   "n": 15,
+   "slideId": "s-pillar-open-ecosystem",
+   "chars": 474,
+   "sha256_v153": "b6ac6b761129157c",
+   "sha256_v154": "b6ac6b761129157c",
+   "identical": true,
+   "diff": []
+  },
+  {
+   "lang": "en",
+   "n": 16,
+   "slideId": "s-pillar-cross-model",
+   "chars": 519,
+   "sha256_v153": "d6fe018bb12a3563",
+   "sha256_v154": "d6fe018bb12a3563",
+   "identical": true,
+   "diff": []
+  },
+  {
+   "lang": "en",
+   "n": 17,
+   "slideId": "s-pillar-universal-licence",
+   "chars": 2165,
+   "sha256_v153": "528ff9b06f8534f6",
+   "sha256_v154": "528ff9b06f8534f6",
+   "identical": true,
+   "diff": []
+  },
+  {
+   "lang": "en",
+   "n": 18,
+   "slideId": "s-pillar-upskilling",
+   "chars": 788,
+   "sha256_v153": "52edf2a2eade6b74",
+   "sha256_v154": "52edf2a2eade6b74",
+   "identical": true,
+   "diff": []
+  },
+  {
+   "lang": "en",
+   "n": 19,
+   "slideId": "s-pact-principles",
+   "chars": 632,
+   "sha256_v153": "0deeb4827f0df9ef",
+   "sha256_v154": "0deeb4827f0df9ef",
+   "identical": true,
+   "diff": []
+  },
+  {
+   "lang": "en",
+   "n": 20,
+   "slideId": "s-how-to-sign",
+   "chars": 497,
+   "sha256_v153": "7f15401b234aabfd",
+   "sha256_v154": "7f15401b234aabfd",
+   "identical": true,
+   "diff": []
+  },
+  {
+   "lang": "en",
+   "n": 21,
+   "slideId": "s-actors-wall",
+   "chars": 372,
+   "sha256_v153": "08ea9abbfed8f174",
+   "sha256_v154": "08ea9abbfed8f174",
+   "identical": true,
+   "diff": []
+  },
+  {
+   "lang": "en",
+   "n": 22,
+   "slideId": "s-who-signs",
+   "chars": 279,
+   "sha256_v153": "551a515f9c5f4cfa",
+   "sha256_v154": "551a515f9c5f4cfa",
+   "identical": true,
+   "diff": []
+  },
+  {
+   "lang": "en",
+   "n": 23,
+   "slideId": "s-who-governs",
+   "chars": 322,
+   "sha256_v153": "73feb851707b765f",
+   "sha256_v154": "73feb851707b765f",
+   "identical": true,
+   "diff": []
+  },
+  {
+   "lang": "en",
+   "n": 24,
+   "slideId": "s-who-builds",
+   "chars": 290,
+   "sha256_v153": "521c16ba150e3e8a",
+   "sha256_v154": "521c16ba150e3e8a",
+   "identical": true,
+   "diff": []
+  },
+  {
+   "lang": "en",
+   "n": 25,
+   "slideId": "s-who-learns",
+   "chars": 305,
+   "sha256_v153": "2123551d1bccf7fd",
+   "sha256_v154": "2123551d1bccf7fd",
+   "identical": true,
+   "diff": []
+  },
+  {
+   "lang": "en",
+   "n": 26,
+   "slideId": "s-governance-licence",
+   "chars": 1091,
+   "sha256_v153": "407ac19c68d31752",
+   "sha256_v154": "407ac19c68d31752",
+   "identical": true,
+   "diff": []
+  },
+  {
+   "lang": "en",
+   "n": 27,
+   "slideId": "s-roadmap",
+   "chars": 1564,
+   "sha256_v153": "12afbf499f2874be",
+   "sha256_v154": "12afbf499f2874be",
+   "identical": true,
+   "diff": []
+  },
+  {
+   "lang": "en",
+   "n": 28,
+   "slideId": "s-it-outcomes",
+   "chars": 988,
+   "sha256_v153": "49f6f3367dceba5e",
+   "sha256_v154": "49f6f3367dceba5e",
+   "identical": true,
+   "diff": []
+  },
+  {
+   "lang": "en",
+   "n": 29,
+   "slideId": "s-it-tiers",
+   "chars": 2251,
+   "sha256_v153": "72155af4d523d4a1",
+   "sha256_v154": "72155af4d523d4a1",
+   "identical": true,
+   "diff": []
+  },
+  {
+   "lang": "en",
+   "n": 30,
+   "slideId": "s-it-metrics",
+   "chars": 2728,
+   "sha256_v153": "8ba44ee267a54b58",
+   "sha256_v154": "8ba44ee267a54b58",
+   "identical": true,
+   "diff": []
+  },
+  {
+   "lang": "en",
+   "n": 31,
+   "slideId": "s-it-sustain",
+   "chars": 1287,
+   "sha256_v153": "053dd9cedf508f3c",
+   "sha256_v154": "053dd9cedf508f3c",
+   "identical": true,
+   "diff": []
+  },
+  {
+   "lang": "en",
+   "n": 32,
+   "slideId": "s-it-partners",
+   "chars": 1371,
+   "sha256_v153": "e7e7aa0229537fb8",
+   "sha256_v154": "e7e7aa0229537fb8",
+   "identical": true,
+   "diff": []
+  },
+  {
+   "lang": "en",
+   "n": 33,
+   "slideId": "s-it-join",
+   "chars": 483,
+   "sha256_v153": "fea63ec3deb51e7f",
+   "sha256_v154": "fea63ec3deb51e7f",
+   "identical": true,
+   "diff": []
+  },
+  {
+   "lang": "en",
+   "n": 34,
+   "slideId": "s-aos-overview",
+   "chars": 948,
+   "sha256_v153": "01e0560c4c7333f7",
+   "sha256_v154": "01e0560c4c7333f7",
+   "identical": true,
+   "diff": []
+  },
+  {
+   "lang": "en",
+   "n": 35,
+   "slideId": "s-aos-tour",
+   "chars": 773,
+   "sha256_v153": "fcabe4e5cdee5d8e",
+   "sha256_v154": "fcabe4e5cdee5d8e",
+   "identical": true,
+   "diff": []
+  },
+  {
+   "lang": "en",
+   "n": 36,
+   "slideId": "s-aos-roadmap",
+   "chars": 1722,
+   "sha256_v153": "f362a18b2db24e93",
+   "sha256_v154": "f362a18b2db24e93",
+   "identical": true,
+   "diff": []
+  },
+  {
+   "lang": "en",
+   "n": 37,
+   "slideId": "s-aos-deploy",
+   "chars": 1260,
+   "sha256_v153": "9f796d82eaccf8f6",
+   "sha256_v154": "9f796d82eaccf8f6",
+   "identical": true,
+   "diff": []
+  },
+  {
+   "lang": "en",
+   "n": 38,
+   "slideId": "s-aos-nations",
+   "chars": 941,
+   "sha256_v153": "cc940f3ba1637eea",
+   "sha256_v154": "cc940f3ba1637eea",
+   "identical": true,
+   "diff": []
+  },
+  {
+   "lang": "en",
+   "n": 39,
+   "slideId": "s-closing",
+   "chars": 439,
+   "sha256_v153": "52875f1045d4b556",
+   "sha256_v154": "52875f1045d4b556",
+   "identical": true,
+   "diff": []
+  },
+  {
+   "lang": "ar",
+   "n": 1,
+   "slideId": "s-cover",
+   "chars": 869,
+   "sha256_v153": "52a22da362d74a52",
+   "sha256_v154": "52a22da362d74a52",
+   "identical": true,
+   "diff": []
+  },
+  {
+   "lang": "ar",
+   "n": 2,
+   "slideId": "s-hero",
+   "chars": 368,
+   "sha256_v153": "ca10f3d1fb2fdcc5",
+   "sha256_v154": "ca10f3d1fb2fdcc5",
+   "identical": true,
+   "diff": []
+  },
+  {
+   "lang": "ar",
+   "n": 3,
+   "slideId": "s-why-pact",
+   "chars": 384,
+   "sha256_v153": "18dab99dbf096fca",
+   "sha256_v154": "18dab99dbf096fca",
+   "identical": true,
+   "diff": []
+  },
+  {
+   "lang": "ar",
+   "n": 4,
+   "slideId": "s-four-outcomes",
+   "chars": 753,
+   "sha256_v153": "4f9018e0eb31cdc6",
+   "sha256_v154": "4f9018e0eb31cdc6",
+   "identical": true,
+   "diff": []
+  },
+  {
+   "lang": "ar",
+   "n": 5,
+   "slideId": "s-managed-programme",
+   "chars": 649,
+   "sha256_v153": "dbb4e902768a4f68",
+   "sha256_v154": "dbb4e902768a4f68",
+   "identical": true,
+   "diff": []
+  },
+  {
+   "lang": "ar",
+   "n": 6,
+   "slideId": "s-discord-home",
+   "chars": 960,
+   "sha256_v153": "ef6403e6461c3163",
+   "sha256_v154": "ef6403e6461c3163",
+   "identical": true,
+   "diff": []
+  },
+  {
+   "lang": "ar",
+   "n": 7,
+   "slideId": "s-country-chapters",
+   "chars": 760,
+   "sha256_v153": "39493268c4c6a03a",
+   "sha256_v154": "39493268c4c6a03a",
+   "identical": true,
+   "diff": []
+  },
+  {
+   "lang": "ar",
+   "n": 8,
+   "slideId": "s-learning-formats",
+   "chars": 744,
+   "sha256_v153": "c825482ab1911d11",
+   "sha256_v154": "c825482ab1911d11",
+   "identical": true,
+   "diff": []
+  },
+  {
+   "lang": "ar",
+   "n": 9,
+   "slideId": "s-challenges-showcases",
+   "chars": 407,
+   "sha256_v153": "f0e8dd50cfe010c2",
+   "sha256_v154": "f0e8dd50cfe010c2",
+   "identical": true,
+   "diff": []
+  },
+  {
+   "lang": "ar",
+   "n": 10,
+   "slideId": "s-office-hours",
+   "chars": 556,
+   "sha256_v153": "f8615d42aa7141de",
+   "sha256_v154": "f8615d42aa7141de",
+   "identical": true,
+   "diff": []
+  },
+  {
+   "lang": "ar",
+   "n": 11,
+   "slideId": "s-agent-marketplace",
+   "chars": 904,
+   "sha256_v153": "37963b62fc5eeba9",
+   "sha256_v154": "37963b62fc5eeba9",
+   "identical": true,
+   "diff": []
+  },
+  {
+   "lang": "ar",
+   "n": 12,
+   "slideId": "s-decision-table",
+   "chars": 757,
+   "sha256_v153": "459ce47c4a07344e",
+   "sha256_v154": "459ce47c4a07344e",
+   "identical": true,
+   "diff": []
+  },
+  {
+   "lang": "ar",
+   "n": 13,
+   "slideId": "s-pillar-plugins",
+   "chars": 358,
+   "sha256_v153": "46afe546bb03103e",
+   "sha256_v154": "46afe546bb03103e",
+   "identical": true,
+   "diff": []
+  },
+  {
+   "lang": "ar",
+   "n": 14,
+   "slideId": "s-pillar-skills",
+   "chars": 380,
+   "sha256_v153": "f540221ee433acfe",
+   "sha256_v154": "f540221ee433acfe",
+   "identical": true,
+   "diff": []
+  },
+  {
+   "lang": "ar",
+   "n": 15,
+   "slideId": "s-pillar-open-ecosystem",
+   "chars": 409,
+   "sha256_v153": "0fed45e5e4201460",
+   "sha256_v154": "0fed45e5e4201460",
+   "identical": true,
+   "diff": []
+  },
+  {
+   "lang": "ar",
+   "n": 16,
+   "slideId": "s-pillar-cross-model",
+   "chars": 444,
+   "sha256_v153": "d6f0953b2412a47f",
+   "sha256_v154": "d6f0953b2412a47f",
+   "identical": true,
+   "diff": []
+  },
+  {
+   "lang": "ar",
+   "n": 17,
+   "slideId": "s-pillar-universal-licence",
+   "chars": 2120,
+   "sha256_v153": "4ca12b9f66fb7ede",
+   "sha256_v154": "4ca12b9f66fb7ede",
+   "identical": true,
+   "diff": []
+  },
+  {
+   "lang": "ar",
+   "n": 18,
+   "slideId": "s-pillar-upskilling",
+   "chars": 491,
+   "sha256_v153": "6590f638cdebc265",
+   "sha256_v154": "6590f638cdebc265",
+   "identical": true,
+   "diff": []
+  },
+  {
+   "lang": "ar",
+   "n": 19,
+   "slideId": "s-pact-principles",
+   "chars": 549,
+   "sha256_v153": "dd0abd216d38b5d0",
+   "sha256_v154": "dd0abd216d38b5d0",
+   "identical": true,
+   "diff": []
+  },
+  {
+   "lang": "ar",
+   "n": 20,
+   "slideId": "s-how-to-sign",
+   "chars": 408,
+   "sha256_v153": "00d51b4c72ad3a60",
+   "sha256_v154": "00d51b4c72ad3a60",
+   "identical": true,
+   "diff": []
+  },
+  {
+   "lang": "ar",
+   "n": 21,
+   "slideId": "s-actors-wall",
+   "chars": 292,
+   "sha256_v153": "59a8963f9c5a1613",
+   "sha256_v154": "59a8963f9c5a1613",
+   "identical": true,
+   "diff": []
+  },
+  {
+   "lang": "ar",
+   "n": 22,
+   "slideId": "s-who-signs",
+   "chars": 257,
+   "sha256_v153": "2e4755954b6fff57",
+   "sha256_v154": "2e4755954b6fff57",
+   "identical": true,
+   "diff": []
+  },
+  {
+   "lang": "ar",
+   "n": 23,
+   "slideId": "s-who-governs",
+   "chars": 256,
+   "sha256_v153": "e6ff467849da9c32",
+   "sha256_v154": "e6ff467849da9c32",
+   "identical": true,
+   "diff": []
+  },
+  {
+   "lang": "ar",
+   "n": 24,
+   "slideId": "s-who-builds",
+   "chars": 246,
+   "sha256_v153": "b2249ce39031c93f",
+   "sha256_v154": "b2249ce39031c93f",
+   "identical": true,
+   "diff": []
+  },
+  {
+   "lang": "ar",
+   "n": 25,
+   "slideId": "s-who-learns",
+   "chars": 270,
+   "sha256_v153": "78ed2ef83b52b217",
+   "sha256_v154": "78ed2ef83b52b217",
+   "identical": true,
+   "diff": []
+  },
+  {
+   "lang": "ar",
+   "n": 26,
+   "slideId": "s-governance-licence",
+   "chars": 933,
+   "sha256_v153": "8cc4f23a7defa157",
+   "sha256_v154": "8cc4f23a7defa157",
+   "identical": true,
+   "diff": []
+  },
+  {
+   "lang": "ar",
+   "n": 27,
+   "slideId": "s-roadmap",
+   "chars": 1383,
+   "sha256_v153": "d398de02d93bfd7a",
+   "sha256_v154": "d398de02d93bfd7a",
+   "identical": true,
+   "diff": []
+  },
+  {
+   "lang": "ar",
+   "n": 28,
+   "slideId": "s-it-outcomes",
+   "chars": 834,
+   "sha256_v153": "d3b4b01701e46e2a",
+   "sha256_v154": "d3b4b01701e46e2a",
+   "identical": true,
+   "diff": []
+  },
+  {
+   "lang": "ar",
+   "n": 29,
+   "slideId": "s-it-tiers",
+   "chars": 2283,
+   "sha256_v153": "529eea2667e30445",
+   "sha256_v154": "529eea2667e30445",
+   "identical": true,
+   "diff": []
+  },
+  {
+   "lang": "ar",
+   "n": 30,
+   "slideId": "s-it-metrics",
+   "chars": 2499,
+   "sha256_v153": "22dc164cfda00214",
+   "sha256_v154": "22dc164cfda00214",
+   "identical": true,
+   "diff": []
+  },
+  {
+   "lang": "ar",
+   "n": 31,
+   "slideId": "s-it-sustain",
+   "chars": 1092,
+   "sha256_v153": "60965836e9519bf4",
+   "sha256_v154": "60965836e9519bf4",
+   "identical": true,
+   "diff": []
+  },
+  {
+   "lang": "ar",
+   "n": 32,
+   "slideId": "s-it-partners",
+   "chars": 1485,
+   "sha256_v153": "e92c61921e3c935a",
+   "sha256_v154": "e92c61921e3c935a",
+   "identical": true,
+   "diff": []
+  },
+  {
+   "lang": "ar",
+   "n": 33,
+   "slideId": "s-it-join",
+   "chars": 430,
+   "sha256_v153": "b4a223cb26ac7228",
+   "sha256_v154": "b4a223cb26ac7228",
+   "identical": true,
+   "diff": []
+  },
+  {
+   "lang": "ar",
+   "n": 34,
+   "slideId": "s-aos-overview",
+   "chars": 828,
+   "sha256_v153": "f959da12140aac1f",
+   "sha256_v154": "f959da12140aac1f",
+   "identical": true,
+   "diff": []
+  },
+  {
+   "lang": "ar",
+   "n": 35,
+   "slideId": "s-aos-tour",
+   "chars": 744,
+   "sha256_v153": "668d69f9fa3d3ccb",
+   "sha256_v154": "668d69f9fa3d3ccb",
+   "identical": true,
+   "diff": []
+  },
+  {
+   "lang": "ar",
+   "n": 36,
+   "slideId": "s-aos-roadmap",
+   "chars": 1560,
+   "sha256_v153": "a1a649ef2af82fcf",
+   "sha256_v154": "a1a649ef2af82fcf",
+   "identical": true,
+   "diff": []
+  },
+  {
+   "lang": "ar",
+   "n": 37,
+   "slideId": "s-aos-deploy",
+   "chars": 1146,
+   "sha256_v153": "2e11a4e4f849e1fe",
+   "sha256_v154": "2e11a4e4f849e1fe",
+   "identical": true,
+   "diff": []
+  },
+  {
+   "lang": "ar",
+   "n": 38,
+   "slideId": "s-aos-nations",
+   "chars": 967,
+   "sha256_v153": "86583fda84cdd09a",
+   "sha256_v154": "86583fda84cdd09a",
+   "identical": true,
+   "diff": []
+  },
+  {
+   "lang": "ar",
+   "n": 39,
+   "slideId": "s-closing",
+   "chars": 372,
+   "sha256_v153": "d86ca0d3fbe3933b",
+   "sha256_v154": "d86ca0d3fbe3933b",
+   "identical": true,
+   "diff": []
+  }
+ ]
+}

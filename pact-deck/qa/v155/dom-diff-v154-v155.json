@@ -1,0 +1,1595 @@
+{
+ "baseline": "http://127.0.0.1:4401",
+ "candidate": "http://127.0.0.1:4405",
+ "compared": 78,
+ "changed": 4,
+ "unexpected": [],
+ "added": [
+  {
+   "lang": "en",
+   "n": 40,
+   "slideId": "s-exec-intro",
+   "chars": 946,
+   "imgs": [
+    "/brand/icons/pack/community.png",
+    "/assets/exec/athar-logo-master-1200.png"
+   ],
+   "broken": [],
+   "videos": [],
+   "counter": "Slide 40 of 44"
+  },
+  {
+   "lang": "en",
+   "n": 41,
+   "slideId": "s-exec-al-zeyoudi",
+   "chars": 1719,
+   "imgs": [
+    "/brand/icons/pack/community.png",
+    "/assets/exec/athar-logo-master-1200.png",
+    "/assets/exec/portraits/thani-al-zeyoudi-mof.jpg"
+   ],
+   "broken": [],
+   "videos": [],
+   "counter": "Slide 41 of 44"
+  },
+  {
+   "lang": "en",
+   "n": 42,
+   "slideId": "s-exec-al-ameri",
+   "chars": 1026,
+   "imgs": [
+    "/brand/icons/pack/community.png",
+    "/assets/exec/athar-logo-master-1200.png"
+   ],
+   "broken": [],
+   "videos": [],
+   "counter": "Slide 42 of 44"
+  },
+  {
+   "lang": "en",
+   "n": 43,
+   "slideId": "s-exec-khalid",
+   "chars": 1188,
+   "imgs": [
+    "/brand/icons/pack/community.png",
+    "/assets/exec/athar-logo-master-1200.png"
+   ],
+   "broken": [],
+   "videos": [
+    {
+     "src": "/assets/exec/video/athar-origins-of-impact-ep01-muhammed-khalid-720p.mp4#t=0,39.4",
+     "poster": "/assets/exec/video/athar-origins-of-impact-ep01-poster-15s5.jpg",
+     "tracks": [
+      "en",
+      "ar"
+     ]
+    }
+   ],
+   "counter": "Slide 43 of 44"
+  },
+  {
+   "lang": "en",
+   "n": 44,
+   "slideId": "s-exec-unwalla",
+   "chars": 851,
+   "imgs": [
+    "/brand/icons/pack/community.png",
+    "/assets/exec/athar-logo-master-1200.png"
+   ],
+   "broken": [],
+   "videos": [],
+   "counter": "Slide 44 of 44"
+  },
+  {
+   "lang": "ar",
+   "n": 40,
+   "slideId": "s-exec-intro",
+   "chars": 949,
+   "imgs": [
+    "/brand/icons/pack/community.png",
+    "/assets/exec/athar-logo-master-1200.png"
+   ],
+   "broken": [],
+   "videos": [],
+   "counter": "الشريحة 40 من 44"
+  },
+  {
+   "lang": "ar",
+   "n": 41,
+   "slideId": "s-exec-al-zeyoudi",
+   "chars": 1704,
+   "imgs": [
+    "/brand/icons/pack/community.png",
+    "/assets/exec/athar-logo-master-1200.png",
+    "/assets/exec/portraits/thani-al-zeyoudi-mof.jpg"
+   ],
+   "broken": [],
+   "videos": [],
+   "counter": "الشريحة 41 من 44"
+  },
+  {
+   "lang": "ar",
+   "n": 42,
+   "slideId": "s-exec-al-ameri",
+   "chars": 1025,
+   "imgs": [
+    "/brand/icons/pack/community.png",
+    "/assets/exec/athar-logo-master-1200.png"
+   ],
+   "broken": [],
+   "videos": [],
+   "counter": "الشريحة 42 من 44"
+  },
+  {
+   "lang": "ar",
+   "n": 43,
+   "slideId": "s-exec-khalid",
+   "chars": 1172,
+   "imgs": [
+    "/brand/icons/pack/community.png",
+    "/assets/exec/athar-logo-master-1200.png"
+   ],
+   "broken": [],
+   "videos": [
+    {
+     "src": "/assets/exec/video/athar-origins-of-impact-ep01-muhammed-khalid-720p.mp4#t=0,39.4",
+     "poster": "/assets/exec/video/athar-origins-of-impact-ep01-poster-15s5.jpg",
+     "tracks": [
+      "en",
+      "ar"
+     ]
+    }
+   ],
+   "counter": "الشريحة 43 من 44"
+  },
+  {
+   "lang": "ar",
+   "n": 44,
+   "slideId": "s-exec-unwalla",
+   "chars": 855,
+   "imgs": [
+    "/brand/icons/pack/community.png",
+    "/assets/exec/athar-logo-master-1200.png"
+   ],
+   "broken": [],
+   "videos": [],
+   "counter": "الشريحة 44 من 44"
+  }
+ ],
+ "brokenImages_v155": [],
+ "changedSlides": [
+  [
+   "ar",
+   32
+  ],
+  [
+   "ar",
+   38
+  ],
+  [
+   "en",
+   32
+  ],
+  [
+   "en",
+   38
+  ]
+ ],
+ "rows": [
+  {
+   "lang": "en",
+   "n": 1,
+   "slideId": "s-cover",
+   "identical": true,
+   "allowed": true,
+   "textDiff": [],
+   "imageChanges": [],
+   "figureChanges": [],
+   "counter": [
+    "Slide 1 of 39",
+    "Slide 1 of 44"
+   ],
+   "sha_v154": "1a521f5b29638b20",
+   "sha_v155": "1a521f5b29638b20",
+   "broken_v155": []
+  },
+  {
+   "lang": "en",
+   "n": 2,
+   "slideId": "s-hero",
+   "identical": true,
+   "allowed": true,
+   "textDiff": [],
+   "imageChanges": [],
+   "figureChanges": [],
+   "counter": [
+    "Slide 2 of 39",
+    "Slide 2 of 44"
+   ],
+   "sha_v154": "c1acd771e92f0183",
+   "sha_v155": "c1acd771e92f0183",
+   "broken_v155": []
+  },
+  {
+   "lang": "en",
+   "n": 3,
+   "slideId": "s-why-pact",
+   "identical": true,
+   "allowed": true,
+   "textDiff": [],
+   "imageChanges": [],
+   "figureChanges": [],
+   "counter": [
+    "Slide 3 of 39",
+    "Slide 3 of 44"
+   ],
+   "sha_v154": "04ae1ea717649bb9",
+   "sha_v155": "04ae1ea717649bb9",
+   "broken_v155": []
+  },
+  {
+   "lang": "en",
+   "n": 4,
+   "slideId": "s-four-outcomes",
+   "identical": true,
+   "allowed": true,
+   "textDiff": [],
+   "imageChanges": [],
+   "figureChanges": [],
+   "counter": [
+    "Slide 4 of 39",
+    "Slide 4 of 44"
+   ],
+   "sha_v154": "46a687aedced40e8",
+   "sha_v155": "46a687aedced40e8",
+   "broken_v155": []
+  },
+  {
+   "lang": "en",
+   "n": 5,
+   "slideId": "s-managed-programme",
+   "identical": true,
+   "allowed": true,
+   "textDiff": [],
+   "imageChanges": [],
+   "figureChanges": [],
+   "counter": [
+    "Slide 5 of 39",
+    "Slide 5 of 44"
+   ],
+   "sha_v154": "3a1fe4e73734c828",
+   "sha_v155": "3a1fe4e73734c828",
+   "broken_v155": []
+  },
+  {
+   "lang": "en",
+   "n": 6,
+   "slideId": "s-discord-home",
+   "identical": true,
+   "allowed": true,
+   "textDiff": [],
+   "imageChanges": [],
+   "figureChanges": [],
+   "counter": [
+    "Slide 6 of 39",
+    "Slide 6 of 44"
+   ],
+   "sha_v154": "e8f6d4c8a210304f",
+   "sha_v155": "e8f6d4c8a210304f",
+   "broken_v155": []
+  },
+  {
+   "lang": "en",
+   "n": 7,
+   "slideId": "s-country-chapters",
+   "identical": true,
+   "allowed": true,
+   "textDiff": [],
+   "imageChanges": [],
+   "figureChanges": [],
+   "counter": [
+    "Slide 7 of 39",
+    "Slide 7 of 44"
+   ],
+   "sha_v154": "75f233c997b81eee",
+   "sha_v155": "75f233c997b81eee",
+   "broken_v155": []
+  },
+  {
+   "lang": "en",
+   "n": 8,
+   "slideId": "s-learning-formats",
+   "identical": true,
+   "allowed": true,
+   "textDiff": [],
+   "imageChanges": [],
+   "figureChanges": [],
+   "counter": [
+    "Slide 8 of 39",
+    "Slide 8 of 44"
+   ],
+   "sha_v154": "dc8766ea600f2f1d",
+   "sha_v155": "dc8766ea600f2f1d",
+   "broken_v155": []
+  },
+  {
+   "lang": "en",
+   "n": 9,
+   "slideId": "s-challenges-showcases",
+   "identical": true,
+   "allowed": true,
+   "textDiff": [],
+   "imageChanges": [],
+   "figureChanges": [],
+   "counter": [
+    "Slide 9 of 39",
+    "Slide 9 of 44"
+   ],
+   "sha_v154": "a4967dd6fa3a9775",
+   "sha_v155": "a4967dd6fa3a9775",
+   "broken_v155": []
+  },
+  {
+   "lang": "en",
+   "n": 10,
+   "slideId": "s-office-hours",
+   "identical": true,
+   "allowed": true,
+   "textDiff": [],
+   "imageChanges": [],
+   "figureChanges": [],
+   "counter": [
+    "Slide 10 of 39",
+    "Slide 10 of 44"
+   ],
+   "sha_v154": "087efdf2cb145fb8",
+   "sha_v155": "087efdf2cb145fb8",
+   "broken_v155": []
+  },
+  {
+   "lang": "en",
+   "n": 11,
+   "slideId": "s-agent-marketplace",
+   "identical": true,
+   "allowed": true,
+   "textDiff": [],
+   "imageChanges": [],
+   "figureChanges": [],
+   "counter": [
+    "Slide 11 of 39",
+    "Slide 11 of 44"
+   ],
+   "sha_v154": "84c65369860a4c7c",
+   "sha_v155": "84c65369860a4c7c",
+   "broken_v155": []
+  },
+  {
+   "lang": "en",
+   "n": 12,
+   "slideId": "s-decision-table",
+   "identical": true,
+   "allowed": true,
+   "textDiff": [],
+   "imageChanges": [],
+   "figureChanges": [],
+   "counter": [
+    "Slide 12 of 39",
+    "Slide 12 of 44"
+   ],
+   "sha_v154": "a7569b8ace41d1b1",
+   "sha_v155": "a7569b8ace41d1b1",
+   "broken_v155": []
+  },
+  {
+   "lang": "en",
+   "n": 13,
+   "slideId": "s-pillar-plugins",
+   "identical": true,
+   "allowed": true,
+   "textDiff": [],
+   "imageChanges": [],
+   "figureChanges": [],
+   "counter": [
+    "Slide 13 of 39",
+    "Slide 13 of 44"
+   ],
+   "sha_v154": "36a9693cd804d324",
+   "sha_v155": "36a9693cd804d324",
+   "broken_v155": []
+  },
+  {
+   "lang": "en",
+   "n": 14,
+   "slideId": "s-pillar-skills",
+   "identical": true,
+   "allowed": true,
+   "textDiff": [],
+   "imageChanges": [],
+   "figureChanges": [],
+   "counter": [
+    "Slide 14 of 39",
+    "Slide 14 of 44"
+   ],
+   "sha_v154": "c2e3e266168ab399",
+   "sha_v155": "c2e3e266168ab399",
+   "broken_v155": []
+  },
+  {
+   "lang": "en",
+   "n": 15,
+   "slideId": "s-pillar-open-ecosystem",
+   "identical": true,
+   "allowed": true,
+   "textDiff": [],
+   "imageChanges": [],
+   "figureChanges": [],
+   "counter": [
+    "Slide 15 of 39",
+    "Slide 15 of 44"
+   ],
+   "sha_v154": "b6ac6b761129157c",
+   "sha_v155": "b6ac6b761129157c",
+   "broken_v155": []
+  },
+  {
+   "lang": "en",
+   "n": 16,
+   "slideId": "s-pillar-cross-model",
+   "identical": true,
+   "allowed": true,
+   "textDiff": [],
+   "imageChanges": [],
+   "figureChanges": [],
+   "counter": [
+    "Slide 16 of 39",
+    "Slide 16 of 44"
+   ],
+   "sha_v154": "d6fe018bb12a3563",
+   "sha_v155": "d6fe018bb12a3563",
+   "broken_v155": []
+  },
+  {
+   "lang": "en",
+   "n": 17,
+   "slideId": "s-pillar-universal-licence",
+   "identical": true,
+   "allowed": true,
+   "textDiff": [],
+   "imageChanges": [],
+   "figureChanges": [],
+   "counter": [
+    "Slide 17 of 39",
+    "Slide 17 of 44"
+   ],
+   "sha_v154": "528ff9b06f8534f6",
+   "sha_v155": "528ff9b06f8534f6",
+   "broken_v155": []
+  },
+  {
+   "lang": "en",
+   "n": 18,
+   "slideId": "s-pillar-upskilling",
+   "identical": true,
+   "allowed": true,
+   "textDiff": [],
+   "imageChanges": [],
+   "figureChanges": [],
+   "counter": [
+    "Slide 18 of 39",
+    "Slide 18 of 44"
+   ],
+   "sha_v154": "52edf2a2eade6b74",
+   "sha_v155": "52edf2a2eade6b74",
+   "broken_v155": []
+  },
+  {
+   "lang": "en",
+   "n": 19,
+   "slideId": "s-pact-principles",
+   "identical": true,
+   "allowed": true,
+   "textDiff": [],
+   "imageChanges": [],
+   "figureChanges": [],
+   "counter": [
+    "Slide 19 of 39",
+    "Slide 19 of 44"
+   ],
+   "sha_v154": "0deeb4827f0df9ef",
+   "sha_v155": "0deeb4827f0df9ef",
+   "broken_v155": []
+  },
+  {
+   "lang": "en",
+   "n": 20,
+   "slideId": "s-how-to-sign",
+   "identical": true,
+   "allowed": true,
+   "textDiff": [],
+   "imageChanges": [],
+   "figureChanges": [],
+   "counter": [
+    "Slide 20 of 39",
+    "Slide 20 of 44"
+   ],
+   "sha_v154": "7f15401b234aabfd",
+   "sha_v155": "7f15401b234aabfd",
+   "broken_v155": []
+  },
+  {
+   "lang": "en",
+   "n": 21,
+   "slideId": "s-actors-wall",
+   "identical": true,
+   "allowed": true,
+   "textDiff": [],
+   "imageChanges": [],
+   "figureChanges": [],
+   "counter": [
+    "Slide 21 of 39",
+    "Slide 21 of 44"
+   ],
+   "sha_v154": "08ea9abbfed8f174",
+   "sha_v155": "08ea9abbfed8f174",
+   "broken_v155": []
+  },
+  {
+   "lang": "en",
+   "n": 22,
+   "slideId": "s-who-signs",
+   "identical": true,
+   "allowed": true,
+   "textDiff": [],
+   "imageChanges": [],
+   "figureChanges": [],
+   "counter": [
+    "Slide 22 of 39",
+    "Slide 22 of 44"
+   ],
+   "sha_v154": "551a515f9c5f4cfa",
+   "sha_v155": "551a515f9c5f4cfa",
+   "broken_v155": []
+  },
+  {
+   "lang": "en",
+   "n": 23,
+   "slideId": "s-who-governs",
+   "identical": true,
+   "allowed": true,
+   "textDiff": [],
+   "imageChanges": [],
+   "figureChanges": [],
+   "counter": [
+    "Slide 23 of 39",
+    "Slide 23 of 44"
+   ],
+   "sha_v154": "73feb851707b765f",
+   "sha_v155": "73feb851707b765f",
+   "broken_v155": []
+  },
+  {
+   "lang": "en",
+   "n": 24,
+   "slideId": "s-who-builds",
+   "identical": true,
+   "allowed": true,
+   "textDiff": [],
+   "imageChanges": [],
+   "figureChanges": [],
+   "counter": [
+    "Slide 24 of 39",
+    "Slide 24 of 44"
+   ],
+   "sha_v154": "521c16ba150e3e8a",
+   "sha_v155": "521c16ba150e3e8a",
+   "broken_v155": []
+  },
+  {
+   "lang": "en",
+   "n": 25,
+   "slideId": "s-who-learns",
+   "identical": true,
+   "allowed": true,
+   "textDiff": [],
+   "imageChanges": [],
+   "figureChanges": [],
+   "counter": [
+    "Slide 25 of 39",
+    "Slide 25 of 44"
+   ],
+   "sha_v154": "2123551d1bccf7fd",
+   "sha_v155": "2123551d1bccf7fd",
+   "broken_v155": []
+  },
+  {
+   "lang": "en",
+   "n": 26,
+   "slideId": "s-governance-licence",
+   "identical": true,
+   "allowed": true,
+   "textDiff": [],
+   "imageChanges": [],
+   "figureChanges": [],
+   "counter": [
+    "Slide 26 of 39",
+    "Slide 26 of 44"
+   ],
+   "sha_v154": "407ac19c68d31752",
+   "sha_v155": "407ac19c68d31752",
+   "broken_v155": []
+  },
+  {
+   "lang": "en",
+   "n": 27,
+   "slideId": "s-roadmap",
+   "identical": true,
+   "allowed": true,
+   "textDiff": [],
+   "imageChanges": [],
+   "figureChanges": [],
+   "counter": [
+    "Slide 27 of 39",
+    "Slide 27 of 44"
+   ],
+   "sha_v154": "12afbf499f2874be",
+   "sha_v155": "12afbf499f2874be",
+   "broken_v155": []
+  },
+  {
+   "lang": "en",
+   "n": 28,
+   "slideId": "s-it-outcomes",
+   "identical": true,
+   "allowed": true,
+   "textDiff": [],
+   "imageChanges": [],
+   "figureChanges": [],
+   "counter": [
+    "Slide 28 of 39",
+    "Slide 28 of 44"
+   ],
+   "sha_v154": "49f6f3367dceba5e",
+   "sha_v155": "49f6f3367dceba5e",
+   "broken_v155": []
+  },
+  {
+   "lang": "en",
+   "n": 29,
+   "slideId": "s-it-tiers",
+   "identical": true,
+   "allowed": true,
+   "textDiff": [],
+   "imageChanges": [],
+   "figureChanges": [],
+   "counter": [
+    "Slide 29 of 39",
+    "Slide 29 of 44"
+   ],
+   "sha_v154": "72155af4d523d4a1",
+   "sha_v155": "72155af4d523d4a1",
+   "broken_v155": []
+  },
+  {
+   "lang": "en",
+   "n": 30,
+   "slideId": "s-it-metrics",
+   "identical": true,
+   "allowed": true,
+   "textDiff": [],
+   "imageChanges": [],
+   "figureChanges": [],
+   "counter": [
+    "Slide 30 of 39",
+    "Slide 30 of 44"
+   ],
+   "sha_v154": "8ba44ee267a54b58",
+   "sha_v155": "8ba44ee267a54b58",
+   "broken_v155": []
+  },
+  {
+   "lang": "en",
+   "n": 31,
+   "slideId": "s-it-sustain",
+   "identical": true,
+   "allowed": true,
+   "textDiff": [],
+   "imageChanges": [],
+   "figureChanges": [],
+   "counter": [
+    "Slide 31 of 39",
+    "Slide 31 of 44"
+   ],
+   "sha_v154": "053dd9cedf508f3c",
+   "sha_v155": "053dd9cedf508f3c",
+   "broken_v155": []
+  },
+  {
+   "lang": "en",
+   "n": 32,
+   "slideId": "s-it-partners",
+   "identical": false,
+   "allowed": true,
+   "textDiff": [
+    "-Mastercard",
+    "-Foundation",
+    "-OFFICIAL",
+    "-MARK",
+    "-PENDING",
+    "-VERIFICATION",
+    "-Mastercard",
+    "-Foundation",
+    "+pending",
+    "+written",
+    "+authorisation"
+   ],
+   "imageChanges": [
+    [
+     "+",
+     "/partners/review/mastercard-foundation__full-colour.png",
+     "Mastercard Foundation — mark shown for internal review only, not authorised for external use"
+    ]
+   ],
+   "figureChanges": [],
+   "counter": [
+    "Slide 32 of 39",
+    "Slide 32 of 44"
+   ],
+   "sha_v154": "e7e7aa0229537fb8",
+   "sha_v155": "6b570210405c149f",
+   "broken_v155": []
+  },
+  {
+   "lang": "en",
+   "n": 33,
+   "slideId": "s-it-join",
+   "identical": true,
+   "allowed": true,
+   "textDiff": [],
+   "imageChanges": [],
+   "figureChanges": [],
+   "counter": [
+    "Slide 33 of 39",
+    "Slide 33 of 44"
+   ],
+   "sha_v154": "fea63ec3deb51e7f",
+   "sha_v155": "fea63ec3deb51e7f",
+   "broken_v155": []
+  },
+  {
+   "lang": "en",
+   "n": 34,
+   "slideId": "s-aos-overview",
+   "identical": true,
+   "allowed": true,
+   "textDiff": [],
+   "imageChanges": [],
+   "figureChanges": [],
+   "counter": [
+    "Slide 34 of 39",
+    "Slide 34 of 44"
+   ],
+   "sha_v154": "01e0560c4c7333f7",
+   "sha_v155": "01e0560c4c7333f7",
+   "broken_v155": []
+  },
+  {
+   "lang": "en",
+   "n": 35,
+   "slideId": "s-aos-tour",
+   "identical": true,
+   "allowed": true,
+   "textDiff": [],
+   "imageChanges": [],
+   "figureChanges": [],
+   "counter": [
+    "Slide 35 of 39",
+    "Slide 35 of 44"
+   ],
+   "sha_v154": "fcabe4e5cdee5d8e",
+   "sha_v155": "fcabe4e5cdee5d8e",
+   "broken_v155": []
+  },
+  {
+   "lang": "en",
+   "n": 36,
+   "slideId": "s-aos-roadmap",
+   "identical": true,
+   "allowed": true,
+   "textDiff": [],
+   "imageChanges": [],
+   "figureChanges": [],
+   "counter": [
+    "Slide 36 of 39",
+    "Slide 36 of 44"
+   ],
+   "sha_v154": "f362a18b2db24e93",
+   "sha_v155": "f362a18b2db24e93",
+   "broken_v155": []
+  },
+  {
+   "lang": "en",
+   "n": 37,
+   "slideId": "s-aos-deploy",
+   "identical": true,
+   "allowed": true,
+   "textDiff": [],
+   "imageChanges": [],
+   "figureChanges": [],
+   "counter": [
+    "Slide 37 of 39",
+    "Slide 37 of 44"
+   ],
+   "sha_v154": "9f796d82eaccf8f6",
+   "sha_v155": "9f796d82eaccf8f6",
+   "broken_v155": []
+  },
+  {
+   "lang": "en",
+   "n": 38,
+   "slideId": "s-aos-nations",
+   "identical": false,
+   "allowed": true,
+   "textDiff": [
+    "-OFFICIAL",
+    "-BRAND",
+    "-IMAGERY",
+    "-—",
+    "-TIER",
+    "-PROGRESSION",
+    "-(REUSED",
+    "-FROM",
+    "-SLIDE",
+    "-29)",
+    "+CONCEPT",
+    "+RENDER"
+   ],
+   "imageChanges": [
+    [
+     "-",
+     "/assets/plates/plate5-banner.webp",
+     "Official brand imagery — tier progression (reused from slide 29)"
+    ],
+    [
+     "+",
+     "/assets/plates/plate5-strip-v155.webp",
+     "Concept render strip in three panels: a woman and a child using a tablet, colleagues working together at laptops, and a man with a boy in a wheelchair at an Athar service kiosk"
+    ]
+   ],
+   "figureChanges": [
+    "-29"
+   ],
+   "counter": [
+    "Slide 38 of 39",
+    "Slide 38 of 44"
+   ],
+   "sha_v154": "cc940f3ba1637eea",
+   "sha_v155": "a1139aaa41735aca",
+   "broken_v155": []
+  },
+  {
+   "lang": "en",
+   "n": 39,
+   "slideId": "s-closing",
+   "identical": true,
+   "allowed": true,
+   "textDiff": [],
+   "imageChanges": [],
+   "figureChanges": [],
+   "counter": [
+    "Slide 39 of 39",
+    "Slide 39 of 44"
+   ],
+   "sha_v154": "52875f1045d4b556",
+   "sha_v155": "52875f1045d4b556",
+   "broken_v155": []
+  },
+  {
+   "lang": "ar",
+   "n": 1,
+   "slideId": "s-cover",
+   "identical": true,
+   "allowed": true,
+   "textDiff": [],
+   "imageChanges": [],
+   "figureChanges": [],
+   "counter": [
+    "الشريحة 1 من 39",
+    "الشريحة 1 من 44"
+   ],
+   "sha_v154": "52a22da362d74a52",
+   "sha_v155": "52a22da362d74a52",
+   "broken_v155": []
+  },
+  {
+   "lang": "ar",
+   "n": 2,
+   "slideId": "s-hero",
+   "identical": true,
+   "allowed": true,
+   "textDiff": [],
+   "imageChanges": [],
+   "figureChanges": [],
+   "counter": [
+    "الشريحة 2 من 39",
+    "الشريحة 2 من 44"
+   ],
+   "sha_v154": "ca10f3d1fb2fdcc5",
+   "sha_v155": "ca10f3d1fb2fdcc5",
+   "broken_v155": []
+  },
+  {
+   "lang": "ar",
+   "n": 3,
+   "slideId": "s-why-pact",
+   "identical": true,
+   "allowed": true,
+   "textDiff": [],
+   "imageChanges": [],
+   "figureChanges": [],
+   "counter": [
+    "الشريحة 3 من 39",
+    "الشريحة 3 من 44"
+   ],
+   "sha_v154": "18dab99dbf096fca",
+   "sha_v155": "18dab99dbf096fca",
+   "broken_v155": []
+  },
+  {
+   "lang": "ar",
+   "n": 4,
+   "slideId": "s-four-outcomes",
+   "identical": true,
+   "allowed": true,
+   "textDiff": [],
+   "imageChanges": [],
+   "figureChanges": [],
+   "counter": [
+    "الشريحة 4 من 39",
+    "الشريحة 4 من 44"
+   ],
+   "sha_v154": "4f9018e0eb31cdc6",
+   "sha_v155": "4f9018e0eb31cdc6",
+   "broken_v155": []
+  },
+  {
+   "lang": "ar",
+   "n": 5,
+   "slideId": "s-managed-programme",
+   "identical": true,
+   "allowed": true,
+   "textDiff": [],
+   "imageChanges": [],
+   "figureChanges": [],
+   "counter": [
+    "الشريحة 5 من 39",
+    "الشريحة 5 من 44"
+   ],
+   "sha_v154": "dbb4e902768a4f68",
+   "sha_v155": "dbb4e902768a4f68",
+   "broken_v155": []
+  },
+  {
+   "lang": "ar",
+   "n": 6,
+   "slideId": "s-discord-home",
+   "identical": true,
+   "allowed": true,
+   "textDiff": [],
+   "imageChanges": [],
+   "figureChanges": [],
+   "counter": [
+    "الشريحة 6 من 39",
+    "الشريحة 6 من 44"
+   ],
+   "sha_v154": "ef6403e6461c3163",
+   "sha_v155": "ef6403e6461c3163",
+   "broken_v155": []
+  },
+  {
+   "lang": "ar",
+   "n": 7,
+   "slideId": "s-country-chapters",
+   "identical": true,
+   "allowed": true,
+   "textDiff": [],
+   "imageChanges": [],
+   "figureChanges": [],
+   "counter": [
+    "الشريحة 7 من 39",
+    "الشريحة 7 من 44"
+   ],
+   "sha_v154": "39493268c4c6a03a",
+   "sha_v155": "39493268c4c6a03a",
+   "broken_v155": []
+  },
+  {
+   "lang": "ar",
+   "n": 8,
+   "slideId": "s-learning-formats",
+   "identical": true,
+   "allowed": true,
+   "textDiff": [],
+   "imageChanges": [],
+   "figureChanges": [],
+   "counter": [
+    "الشريحة 8 من 39",
+    "الشريحة 8 من 44"
+   ],
+   "sha_v154": "c825482ab1911d11",
+   "sha_v155": "c825482ab1911d11",
+   "broken_v155": []
+  },
+  {
+   "lang": "ar",
+   "n": 9,
+   "slideId": "s-challenges-showcases",
+   "identical": true,
+   "allowed": true,
+   "textDiff": [],
+   "imageChanges": [],
+   "figureChanges": [],
+   "counter": [
+    "الشريحة 9 من 39",
+    "الشريحة 9 من 44"
+   ],
+   "sha_v154": "f0e8dd50cfe010c2",
+   "sha_v155": "f0e8dd50cfe010c2",
+   "broken_v155": []
+  },
+  {
+   "lang": "ar",
+   "n": 10,
+   "slideId": "s-office-hours",
+   "identical": true,
+   "allowed": true,
+   "textDiff": [],
+   "imageChanges": [],
+   "figureChanges": [],
+   "counter": [
+    "الشريحة 10 من 39",
+    "الشريحة 10 من 44"
+   ],
+   "sha_v154": "f8615d42aa7141de",
+   "sha_v155": "f8615d42aa7141de",
+   "broken_v155": []
+  },
+  {
+   "lang": "ar",
+   "n": 11,
+   "slideId": "s-agent-marketplace",
+   "identical": true,
+   "allowed": true,
+   "textDiff": [],
+   "imageChanges": [],
+   "figureChanges": [],
+   "counter": [
+    "الشريحة 11 من 39",
+    "الشريحة 11 من 44"
+   ],
+   "sha_v154": "37963b62fc5eeba9",
+   "sha_v155": "37963b62fc5eeba9",
+   "broken_v155": []
+  },
+  {
+   "lang": "ar",
+   "n": 12,
+   "slideId": "s-decision-table",
+   "identical": true,
+   "allowed": true,
+   "textDiff": [],
+   "imageChanges": [],
+   "figureChanges": [],
+   "counter": [
+    "الشريحة 12 من 39",
+    "الشريحة 12 من 44"
+   ],
+   "sha_v154": "459ce47c4a07344e",
+   "sha_v155": "459ce47c4a07344e",
+   "broken_v155": []
+  },
+  {
+   "lang": "ar",
+   "n": 13,
+   "slideId": "s-pillar-plugins",
+   "identical": true,
+   "allowed": true,
+   "textDiff": [],
+   "imageChanges": [],
+   "figureChanges": [],
+   "counter": [
+    "الشريحة 13 من 39",
+    "الشريحة 13 من 44"
+   ],
+   "sha_v154": "8e47dba04c27dde9",
+   "sha_v155": "8e47dba04c27dde9",
+   "broken_v155": []
+  },
+  {
+   "lang": "ar",
+   "n": 14,
+   "slideId": "s-pillar-skills",
+   "identical": true,
+   "allowed": true,
+   "textDiff": [],
+   "imageChanges": [],
+   "figureChanges": [],
+   "counter": [
+    "الشريحة 14 من 39",
+    "الشريحة 14 من 44"
+   ],
+   "sha_v154": "f540221ee433acfe",
+   "sha_v155": "f540221ee433acfe",
+   "broken_v155": []
+  },
+  {
+   "lang": "ar",
+   "n": 15,
+   "slideId": "s-pillar-open-ecosystem",
+   "identical": true,
+   "allowed": true,
+   "textDiff": [],
+   "imageChanges": [],
+   "figureChanges": [],
+   "counter": [
+    "الشريحة 15 من 39",
+    "الشريحة 15 من 44"
+   ],
+   "sha_v154": "0fed45e5e4201460",
+   "sha_v155": "0fed45e5e4201460",
+   "broken_v155": []
+  },
+  {
+   "lang": "ar",
+   "n": 16,
+   "slideId": "s-pillar-cross-model",
+   "identical": true,
+   "allowed": true,
+   "textDiff": [],
+   "imageChanges": [],
+   "figureChanges": [],
+   "counter": [
+    "الشريحة 16 من 39",
+    "الشريحة 16 من 44"
+   ],
+   "sha_v154": "d6f0953b2412a47f",
+   "sha_v155": "d6f0953b2412a47f",
+   "broken_v155": []
+  },
+  {
+   "lang": "ar",
+   "n": 17,
+   "slideId": "s-pillar-universal-licence",
+   "identical": true,
+   "allowed": true,
+   "textDiff": [],
+   "imageChanges": [],
+   "figureChanges": [],
+   "counter": [
+    "الشريحة 17 من 39",
+    "الشريحة 17 من 44"
+   ],
+   "sha_v154": "4ca12b9f66fb7ede",
+   "sha_v155": "4ca12b9f66fb7ede",
+   "broken_v155": []
+  },
+  {
+   "lang": "ar",
+   "n": 18,
+   "slideId": "s-pillar-upskilling",
+   "identical": true,
+   "allowed": true,
+   "textDiff": [],
+   "imageChanges": [],
+   "figureChanges": [],
+   "counter": [
+    "الشريحة 18 من 39",
+    "الشريحة 18 من 44"
+   ],
+   "sha_v154": "6590f638cdebc265",
+   "sha_v155": "6590f638cdebc265",
+   "broken_v155": []
+  },
+  {
+   "lang": "ar",
+   "n": 19,
+   "slideId": "s-pact-principles",
+   "identical": true,
+   "allowed": true,
+   "textDiff": [],
+   "imageChanges": [],
+   "figureChanges": [],
+   "counter": [
+    "الشريحة 19 من 39",
+    "الشريحة 19 من 44"
+   ],
+   "sha_v154": "dd0abd216d38b5d0",
+   "sha_v155": "dd0abd216d38b5d0",
+   "broken_v155": []
+  },
+  {
+   "lang": "ar",
+   "n": 20,
+   "slideId": "s-how-to-sign",
+   "identical": true,
+   "allowed": true,
+   "textDiff": [],
+   "imageChanges": [],
+   "figureChanges": [],
+   "counter": [
+    "الشريحة 20 من 39",
+    "الشريحة 20 من 44"
+   ],
+   "sha_v154": "00d51b4c72ad3a60",
+   "sha_v155": "00d51b4c72ad3a60",
+   "broken_v155": []
+  },
+  {
+   "lang": "ar",
+   "n": 21,
+   "slideId": "s-actors-wall",
+   "identical": true,
+   "allowed": true,
+   "textDiff": [],
+   "imageChanges": [],
+   "figureChanges": [],
+   "counter": [
+    "الشريحة 21 من 39",
+    "الشريحة 21 من 44"
+   ],
+   "sha_v154": "59a8963f9c5a1613",
+   "sha_v155": "59a8963f9c5a1613",
+   "broken_v155": []
+  },
+  {
+   "lang": "ar",
+   "n": 22,
+   "slideId": "s-who-signs",
+   "identical": true,
+   "allowed": true,
+   "textDiff": [],
+   "imageChanges": [],
+   "figureChanges": [],
+   "counter": [
+    "الشريحة 22 من 39",
+    "الشريحة 22 من 44"
+   ],
+   "sha_v154": "2e4755954b6fff57",
+   "sha_v155": "2e4755954b6fff57",
+   "broken_v155": []
+  },
+  {
+   "lang": "ar",
+   "n": 23,
+   "slideId": "s-who-governs",
+   "identical": true,
+   "allowed": true,
+   "textDiff": [],
+   "imageChanges": [],
+   "figureChanges": [],
+   "counter": [
+    "الشريحة 23 من 39",
+    "الشريحة 23 من 44"
+   ],
+   "sha_v154": "e6ff467849da9c32",
+   "sha_v155": "e6ff467849da9c32",
+   "broken_v155": []
+  },
+  {
+   "lang": "ar",
+   "n": 24,
+   "slideId": "s-who-builds",
+   "identical": true,
+   "allowed": true,
+   "textDiff": [],
+   "imageChanges": [],
+   "figureChanges": [],
+   "counter": [
+    "الشريحة 24 من 39",
+    "الشريحة 24 من 44"
+   ],
+   "sha_v154": "b2249ce39031c93f",
+   "sha_v155": "b2249ce39031c93f",
+   "broken_v155": []
+  },
+  {
+   "lang": "ar",
+   "n": 25,
+   "slideId": "s-who-learns",
+   "identical": true,
+   "allowed": true,
+   "textDiff": [],
+   "imageChanges": [],
+   "figureChanges": [],
+   "counter": [
+    "الشريحة 25 من 39",
+    "الشريحة 25 من 44"
+   ],
+   "sha_v154": "78ed2ef83b52b217",
+   "sha_v155": "78ed2ef83b52b217",
+   "broken_v155": []
+  },
+  {
+   "lang": "ar",
+   "n": 26,
+   "slideId": "s-governance-licence",
+   "identical": true,
+   "allowed": true,
+   "textDiff": [],
+   "imageChanges": [],
+   "figureChanges": [],
+   "counter": [
+    "الشريحة 26 من 39",
+    "الشريحة 26 من 44"
+   ],
+   "sha_v154": "8cc4f23a7defa157",
+   "sha_v155": "8cc4f23a7defa157",
+   "broken_v155": []
+  },
+  {
+   "lang": "ar",
+   "n": 27,
+   "slideId": "s-roadmap",
+   "identical": true,
+   "allowed": true,
+   "textDiff": [],
+   "imageChanges": [],
+   "figureChanges": [],
+   "counter": [
+    "الشريحة 27 من 39",
+    "الشريحة 27 من 44"
+   ],
+   "sha_v154": "d398de02d93bfd7a",
+   "sha_v155": "d398de02d93bfd7a",
+   "broken_v155": []
+  },
+  {
+   "lang": "ar",
+   "n": 28,
+   "slideId": "s-it-outcomes",
+   "identical": true,
+   "allowed": true,
+   "textDiff": [],
+   "imageChanges": [],
+   "figureChanges": [],
+   "counter": [
+    "الشريحة 28 من 39",
+    "الشريحة 28 من 44"
+   ],
+   "sha_v154": "d3b4b01701e46e2a",
+   "sha_v155": "d3b4b01701e46e2a",
+   "broken_v155": []
+  },
+  {
+   "lang": "ar",
+   "n": 29,
+   "slideId": "s-it-tiers",
+   "identical": true,
+   "allowed": true,
+   "textDiff": [],
+   "imageChanges": [],
+   "figureChanges": [],
+   "counter": [
+    "الشريحة 29 من 39",
+    "الشريحة 29 من 44"
+   ],
+   "sha_v154": "529eea2667e30445",
+   "sha_v155": "529eea2667e30445",
+   "broken_v155": []
+  },
+  {
+   "lang": "ar",
+   "n": 30,
+   "slideId": "s-it-metrics",
+   "identical": true,
+   "allowed": true,
+   "textDiff": [],
+   "imageChanges": [],
+   "figureChanges": [],
+   "counter": [
+    "الشريحة 30 من 39",
+    "الشريحة 30 من 44"
+   ],
+   "sha_v154": "22dc164cfda00214",
+   "sha_v155": "22dc164cfda00214",
+   "broken_v155": []
+  },
+  {
+   "lang": "ar",
+   "n": 31,
+   "slideId": "s-it-sustain",
+   "identical": true,
+   "allowed": true,
+   "textDiff": [],
+   "imageChanges": [],
+   "figureChanges": [],
+   "counter": [
+    "الشريحة 31 من 39",
+    "الشريحة 31 من 44"
+   ],
+   "sha_v154": "60965836e9519bf4",
+   "sha_v155": "60965836e9519bf4",
+   "broken_v155": []
+  },
+  {
+   "lang": "ar",
+   "n": 32,
+   "slideId": "s-it-partners",
+   "identical": false,
+   "allowed": true,
+   "textDiff": [
+    "-مؤسسة",
+    "-ماستركارد",
+    "-العلامة",
+    "-الرسمية",
+    "-بانتظار",
+    "-التحقق",
+    "-مؤسسة",
+    "-ماستركارد",
+    "+بانتظار",
+    "+التفويض",
+    "+الكتابي"
+   ],
+   "imageChanges": [
+    [
+     "+",
+     "/partners/review/mastercard-foundation__full-colour.png",
+     "مؤسسة ماستركارد — علامة معروضة للمراجعة الداخلية فقط"
+    ]
+   ],
+   "figureChanges": [],
+   "counter": [
+    "الشريحة 32 من 39",
+    "الشريحة 32 من 44"
+   ],
+   "sha_v154": "e92c61921e3c935a",
+   "sha_v155": "9da1b051cd870dd1",
+   "broken_v155": []
+  },
+  {
+   "lang": "ar",
+   "n": 33,
+   "slideId": "s-it-join",
+   "identical": true,
+   "allowed": true,
+   "textDiff": [],
+   "imageChanges": [],
+   "figureChanges": [],
+   "counter": [
+    "الشريحة 33 من 39",
+    "الشريحة 33 من 44"
+   ],
+   "sha_v154": "b4a223cb26ac7228",
+   "sha_v155": "b4a223cb26ac7228",
+   "broken_v155": []
+  },
+  {
+   "lang": "ar",
+   "n": 34,
+   "slideId": "s-aos-overview",
+   "identical": true,
+   "allowed": true,
+   "textDiff": [],
+   "imageChanges": [],
+   "figureChanges": [],
+   "counter": [
+    "الشريحة 34 من 39",
+    "الشريحة 34 من 44"
+   ],
+   "sha_v154": "f959da12140aac1f",
+   "sha_v155": "f959da12140aac1f",
+   "broken_v155": []
+  },
+  {
+   "lang": "ar",
+   "n": 35,
+   "slideId": "s-aos-tour",
+   "identical": true,
+   "allowed": true,
+   "textDiff": [],
+   "imageChanges": [],
+   "figureChanges": [],
+   "counter": [
+    "الشريحة 35 من 39",
+    "الشريحة 35 من 44"
+   ],
+   "sha_v154": "668d69f9fa3d3ccb",
+   "sha_v155": "668d69f9fa3d3ccb",
+   "broken_v155": []
+  },
+  {
+   "lang": "ar",
+   "n": 36,
+   "slideId": "s-aos-roadmap",
+   "identical": true,
+   "allowed": true,
+   "textDiff": [],
+   "imageChanges": [],
+   "figureChanges": [],
+   "counter": [
+    "الشريحة 36 من 39",
+    "الشريحة 36 من 44"
+   ],
+   "sha_v154": "a1a649ef2af82fcf",
+   "sha_v155": "a1a649ef2af82fcf",
+   "broken_v155": []
+  },
+  {
+   "lang": "ar",
+   "n": 37,
+   "slideId": "s-aos-deploy",
+   "identical": true,
+   "allowed": true,
+   "textDiff": [],
+   "imageChanges": [],
+   "figureChanges": [],
+   "counter": [
+    "الشريحة 37 من 39",
+    "الشريحة 37 من 44"
+   ],
+   "sha_v154": "2e11a4e4f849e1fe",
+   "sha_v155": "2e11a4e4f849e1fe",
+   "broken_v155": []
+  },
+  {
+   "lang": "ar",
+   "n": 38,
+   "slideId": "s-aos-nations",
+   "identical": false,
+   "allowed": true,
+   "textDiff": [
+    "-صورة",
+    "-رسمية",
+    "-من",
+    "-هوية",
+    "-أثر",
+    "-—",
+    "-تدرّج",
+    "-الفئات",
+    "-(من",
+    "-الشريحة",
+    "-29)",
+    "+تصوّر",
+    "+مفاهيمي"
+   ],
+   "imageChanges": [
+    [
+     "-",
+     "/assets/plates/plate5-banner.webp",
+     "صورة رسمية من هوية أثر — تدرّج الفئات (من الشريحة 29)"
+    ],
+    [
+     "+",
+     "/assets/plates/plate5-strip-v155.webp",
+     "شريط تصوّر مفاهيمي من ثلاث لوحات: امرأة وطفل يستخدمان جهازاً لوحياً، وزملاء يعملون معاً على حواسيب محمولة، ورجل مع فتى على كرسي متحرك أمام كشك خدمات أثر"
+    ]
+   ],
+   "figureChanges": [
+    "-29"
+   ],
+   "counter": [
+    "الشريحة 38 من 39",
+    "الشريحة 38 من 44"
+   ],
+   "sha_v154": "86583fda84cdd09a",
+   "sha_v155": "9d080da4f0457865",
+   "broken_v155": []
+  },
+  {
+   "lang": "ar",
+   "n": 39,
+   "slideId": "s-closing",
+   "identical": true,
+   "allowed": true,
+   "textDiff": [],
+   "imageChanges": [],
+   "figureChanges": [],
+   "counter": [
+    "الشريحة 39 من 39",
+    "الشريحة 39 من 44"
+   ],
+   "sha_v154": "d86ca0d3fbe3933b",
+   "sha_v155": "d86ca0d3fbe3933b",
+   "broken_v155": []
+  }
+ ]
+}

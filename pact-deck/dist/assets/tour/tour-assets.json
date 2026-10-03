@@ -1,0 +1,43 @@
+{
+ "version": "1.4.7",
+ "still_map": {
+  "plate2-ai-pc-container": "kf-0673.png",
+  "plate6-kenya-maize": "kf-1682.png",
+  "plate5-composited": "kf-1178.png",
+  "plate3-builders-canvas": "poster.png",
+  "plate1-composited": "poster.png"
+ },
+ "filmstrip": [
+  "kf-0000.png",
+  "kf-0571.png",
+  "kf-0875.png",
+  "kf-1178.png",
+  "kf-1481.png",
+  "kf-1783.png",
+  "kf-2086.png",
+  "kf-2389.png"
+ ],
+ "timestamps": {
+  "kf-1178.png": 39.31,
+  "kf-0000.png": 0.0,
+  "kf-0571.png": 19.05,
+  "kf-1682.png": 56.12,
+  "kf-0875.png": 29.2,
+  "poster.png": 25.05,
+  "kf-1481.png": 49.42,
+  "kf-1783.png": 59.49,
+  "kf-2389.png": 79.71,
+  "kf-2086.png": 69.6,
+  "kf-0673.png": 22.46
+ },
+ "video": {
+  "mp4": "/assets/tour/video/athar_web_UI.mp4",
+  "webm": "/assets/tour/video/athar-os-launch-30s.mp4",
+  "poster": "/assets/tour/video/athar-os-launch-30s-poster.jpg",
+  "duration_s": 83.5,
+  "width": 1920,
+  "height": 848,
+  "source": "Athar_Package.zip member 08 Web Prototype/athar_web_UI.mp4",
+  "captions": "none — no VTT for this film exists in the package or the workspace, so no <track> is emitted"
+ }
+}
