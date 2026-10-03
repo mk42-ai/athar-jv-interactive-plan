@@ -761,7 +761,167 @@
    "tab_label": {
     "en": "PRODUCT CONCEPT",
     "ar": "مفهوم المنتج"
-   }
+   },
+   "v1_5_8_note": "Since v1.5.8 this image is shown on the INDIA and KENYA panels only (generic Athar service-hall concept); the LEBANON panel shows plate5-lebanon-v158 (UAE × LEBANON · 1M ATHAR USERS)."
+  },
+  "plate5-lebanon-v158": {
+   "role": "slide 38 (Athar OS · nations), LEBANON panel only — the 'UAE × LEBANON · 1M ATHAR USERS' concept render, shown whole (3:2) in the right column under the \"PRODUCT CONCEPT\" / «مفهوم المنتج» tab, caption CONCEPT RENDER / تصوّر مفاهيمي. India and Kenya keep plate5-concept-v157",
+   "ai_generated": true,
+   "disclosure": {
+    "en": "AI-generated concept render (GPT Image 2.5). The ATHAR logo is the official brand asset composited over the render. Not a photograph — the people, flags, skylines and screens are illustrative. \"1M ATHAR USERS\" is an illustrative target in line with the deck's One Million Lebanese AI Experts programme (Access tier, illustrative targets p. 3), not an achieved figure.",
+    "ar": "تصوّر مفاهيمي مولَّد بالذكاء الاصطناعي (GPT Image 2.5). شعار أثر هو الأصل الرسمي للعلامة مركَّب فوق التصوّر. ليست صورة فوتوغرافية — الأشخاص والأعلام والمعالم والشاشات توضيحية. رقم «1M ATHAR USERS» هدف استرشادي يتّسق مع برنامج «مليون خبير لبناني في الذكاء الاصطناعي» في الورقة (فئة الوصول، أهداف استرشادية ص 3) وليس رقماً محقَّقاً."
+   },
+   "added_utc": "2026-10-03T02:41:56Z",
+   "version": "1.5.8",
+   "generator": "GPT Image 2.5 (On Demand plugin agent-1789134730, tools bulkGenerateImagesUsing2.5 + editImageUsing2.5), 1536x1024, quality high, n=3 text-to-image candidates + 1 reference-guided edit, output png",
+   "request_brief": "Generate a replacement 'product concept' hero still for the Athar JV pact deck with GPT Image 2.5 at high quality, landscape (widest supported, about 3:2), crop-safe with the key subject centered so it survives wide and phone crops. Theme: 'UAE × Lebanon · 1M Athar users'. Brand: ATHAR navy blue, warm cream and brushed-gold palette; the ATHAR logo shown clearly and exactly as the brand's stylized navy triangular 'A' mark above the uppercase wordmark ATHAR; accurate UAE flag (red, green, white, black) and Lebanese flag (red-white-red bands with a green cedar). The only legible text allowed is 'ATHAR', '1M', 'ATHAR USERS' and 'UAE × LEBANON', spelled exactly, with no gibberish or watermarks. Show dignified, inclusive users (families, a wheelchair user, a blind professional) with correct faces and hands in a premium photoreal visualisation style. (a) Batch three fresh candidates: A) golden-hour Dubai/Abu Dhabi skyline on the left and Beirut coastline with Raouche (Pigeon) Rocks on the right, joined by a luminous gold arc of light across the centre, large ATHAR logo and glowing '1M ATHAR USERS' beneath, small foreground vignette of diverse users on phones and tablets; B) bright premium Athar service hall with a giant wall display reading 'UAE × LEBANON · 1M ATHAR USERS' beside the ATHAR logo, an Emirati and a Lebanese team member handing a tablet to a family, a wheelchair user at a kiosk, both flags flanking the display; C) elegant 3D glass-and-gold map of the Gulf and Eastern Mediterranean with dense glowing user nodes over the UAE and Lebanon joined by a navy-and-gold arc, ATHAR logo top centre, hero numeral '1M', a row of diverse user portraits, both flags at the ends. (b) Reference-guided edit: use the current concept render uploaded in this chat (canvas-screenshot-567x435.png, URL <signed URL not stored>) as the logo and brand-style reference and reimagine it as a far more powerful hero with the same ATHAR logo, both flags and a large '1M ATHAR USERS · UAE × LEBANON' display, dropping the 'PRODUCT CONCEPT' tab, the 'CONCEPT RENDER' caption and any UI artefacts. Return every image URL.",
+   "prompt": "Premium photoreal hero visualisation, wide landscape 3:2, crop-safe with the key subject centered so it survives wide and phone crops. Golden-hour Dubai/Abu Dhabi skyline on the left and Beirut coastline with Raouche (Pigeon) Rocks on the right, joined by a luminous brushed-gold arc of light across the centre. Large ATHAR logo centered: a stylized navy triangular 'A' mark above the uppercase wordmark ATHAR, clearly and exactly rendered. Beneath it, glowing text '1M ATHAR USERS'. Small foreground vignette of diverse dignified users on phones and tablets: families, a wheelchair user, a blind professional with white cane and dark glasses, with correct faces and hands. Palette: ATHAR navy blue, warm cream, brushed gold. Accurate UAE flag (red, green, white, black) and Lebanese flag (red-white-red bands with a green cedar). The only legible text allowed: 'ATHAR', '1M', 'ATHAR USERS', 'UAE × LEBANON', spelled exactly. No gibberish text, no watermarks, no UI artefacts.",
+   "selected_candidate": {
+    "id": "xITKlbA5Bo",
+    "rank": 1,
+    "candidate": "A",
+    "sha256": "d9f4e54bfe033f0d6715e16983c27eb5cae5ad15a9551ffe25b3917212c050b9",
+    "url_without_token": "https://airevdev.blob.core.windows.net/on-demand-dev/6692b763e851d28a036ab30e/agents/xITKlbA5Bo.png",
+    "size": [
+     1536,
+     1024
+    ],
+    "prompt_index": 0
+   },
+   "alternates": [
+    {
+     "id": "t3VIJiIi7M",
+     "rank": 2,
+     "sha256": "8ce83a65fc12652cc9506dc9e4b6bf21b335f78276e4893ec8eb4cbf79721bd3",
+     "url_without_token": "https://airevdev.blob.core.windows.net/on-demand-dev/6692b763e851d28a036ab30e/agents/t3VIJiIi7M.png",
+     "size": [
+      1536,
+      1024
+     ],
+     "prompt": "Premium photoreal visualisation, wide landscape 3:2, crop-safe with the key subject centered so it survives wide and phone crops. Elegant 3D glass-and-gold map of the Gulf and Eastern Mediterranean with dense glowing user nodes over the UAE and Lebanon joined by a navy-and-gold arc. ATHAR logo top centre (stylized navy triangular 'A' mark above uppercase wordmark ATHAR, exact and clear). Hero numeral '1M' large and centered. A row of diverse dignified user portraits along the bottom including a family, a wheelchair user and a blind professional with dark glasses, with correct faces and hands. Accurate UAE flag (red, green, white, black) and Lebanese flag (red-white-red bands with a green cedar) at the two ends. Palette: ATHAR navy blue, warm cream, brushed gold. The only legible text allowed: 'ATHAR', '1M', 'ATHAR USERS', 'UAE × LEBANON', spelled exactly. No gibberish text, no watermarks, no UI artefacts.",
+     "verdict": "C: flags geometrically correct (UAE stripes 46:60:52, Lebanon red:white:red 40:80:43 + cedar); the hero numeral \"1M\" is stylised and OCR reads it as \"lM\" (not exact); bottom row of people 51 px from the frame edge"
+    },
+    {
+     "id": "IgzFJMsBrz",
+     "rank": 3,
+     "sha256": "1170f6132c47b77855b390280017b0dce56200250ada511b7198a45da616fbb0",
+     "url_without_token": "https://airevdev.blob.core.windows.net/on-demand-dev/6692b763e851d28a036ab30e/agents/IgzFJMsBrz.png",
+     "size": [
+      1536,
+      1024
+     ],
+     "prompt": "Premium photoreal hero visualisation, wide landscape 3:2, crop-safe with the key subject centered so it survives wide and phone crops. Bright premium Athar service hall, cream marble and brushed-gold accents, navy details. Centered giant wall display reading 'UAE × LEBANON · 1M ATHAR USERS' beside the ATHAR logo (stylized navy triangular 'A' mark above uppercase wordmark ATHAR, exact and clear). An Emirati team member in white kandura and a Lebanese team member in business attire hand a tablet to a family; a wheelchair user at a self-service kiosk. The UAE flag (red, green, white, black) and the Lebanese flag (red-white-red bands with a green cedar) flank the display. Dignified, inclusive people with correct faces and hands. The only legible text allowed: 'ATHAR', '1M', 'ATHAR USERS', 'UAE × LEBANON', spelled exactly. No gibberish text, no watermarks, no UI artefacts.",
+     "verdict": "B: all four strings read exactly, but no valid UAE / Lebanese stripe geometry was found for the flags"
+    },
+    {
+     "id": "4qjmUgjN2E",
+     "rank": "4 (not in the brief's candidate list)",
+     "sha256": "0e5b04f47f7bc9a114adfb4b12ae3d5720c46e2477e75c89f4ebe4ab62b64fd2",
+     "url_without_token": "https://airevdev.blob.core.windows.net/on-demand-dev/6692b763e851d28a036ab30e/agents/4qjmUgjN2E.png",
+     "size": [
+      1536,
+      1024
+     ],
+     "prompt": "(reference-guided edit of the v1.5.7 concept render, canvas-screenshot-567x435.png — editImageUsing2.5)",
+     "verdict": "E: strings read, but smaller text, only 4 faces, and no valid flag geometry"
+    }
+   ],
+   "selection": {
+    "rubric": "exact text ATHAR / 1M / ATHAR USERS / UAE × LEBANON · correct UAE and Lebanese flags · logo matches the official ATHAR asset · no garbled text or anatomy artefacts",
+    "ocr_tesseract": {
+     "A_xITKlbA5Bo": "ATHAR 92 · 1M 95 · ATHAR+USERS 93/96 · UAE 95 × LEBANON 96 — exact, no extra words",
+     "B_IgzFJMsBrz": "ATHAR · 1M 94 · ATHAR+USERS · UAE × LEBANON — exact, no extra words",
+     "C_t3VIJiIi7M": "ATHAR · ATHAR+USERS · UAE × LEBANON exact; \"1M\" not read (numeral reads \"lM\")",
+     "E_4qjmUgjN2E": "all four strings; extra token only a split of ATHAR"
+    },
+    "flag_geometry": {
+     "A_xITKlbA5Bo": "UAE: red hoist band + green:white:black = 45:46:48 and 42:44:34 px; Lebanon: red:white:red = 31:75:35 and 35:87:41 px (white ≈ 2.2–2.4x red) with a green cedar centred — both correct",
+     "C_t3VIJiIi7M": "UAE 46:60:52, Lebanon 40:80:43 with cedar — both correct",
+     "B_IgzFJMsBrz": "no stripe pattern found",
+     "E_4qjmUgjN2E": "no stripe pattern found"
+    },
+    "faces_yunet_score_0.6": {
+     "A": "10 faces, nearest 125 px from an edge",
+     "B": "7 faces, 179 px",
+     "C": "10 faces, 51 px",
+     "E": "4 faces, 224 px"
+    },
+    "logo_template_match_official_lockup": {
+     "A_original": 0.224,
+     "B_original": 0.263,
+     "C_original": 0.222,
+     "E_original": 0.236,
+     "A_composited": 0.91,
+     "note": "normalised correlation of the official lockup silhouette vs local-contrast ink map, multi-scale; the AI-drawn logos (a stylised triangular \"A\" mark) are off-brand — the official mark is the Arabic calligraphic أثر mark above the ATHAR wordmark"
+    },
+    "vision_judge": "Gemini agentic-vision plugin, strict JSON passes — noisy (scores A 8, B 8, C 9, E 9; flags \"correct\" for all four, contradicting the geometry for B and E). A zoomed pass over the 8 people of A found 0 malformed hands, 0 distorted faces (13 hand regions \"cannot tell\"). Decision rests on the deterministic checks.",
+    "known_defects_not_retouched": "AI-typical softness on hands and small devices; the small \"UAE × LEBANON\" line is only ~7 px tall at the 556 px column width (legible in the 2x asset)"
+   },
+   "post_processing": {
+    "logo": "the AI-drawn mark and wordmark (bbox [605,38,930,292]) were erased (Telea inpaint at half resolution, +9 px mask dilation) and the OFFICIAL lockup brand/athar-logo@3x.png (primary, navy, Arabic mark above ATHAR wordmark, sha256 2fdb40e7c9752197c7251213e9b752c2b69e9b503174858e34fc0a62e3374c8d) was composited at [648,36,887,251] (239x215 px; clear space below it to the \"1M\" ≥ 0.33 x logo height); edge softness matched to the render (≈3.4 px edge rise vs 3.2–3.9 px in the render), no halo",
+    "pixels_changed_outside_edit_zone": 0,
+    "crop": "none — the full 1536x1024 frame is shown (aspect 3:2, no object-fit crop)"
+   },
+   "files": {
+    "plate5-lebanon-v158-2x.webp": {
+     "path": "dist/assets/plates/plate5-lebanon-v158-2x.webp",
+     "bytes": 232964,
+     "sha256": "c15e51a7bc8345689f6e5b8376253416959955f1cbb3ccac83ebf0f01c8241e8",
+     "size": [
+      1536,
+      1024
+     ],
+     "quality": 82,
+     "psnr_logo_text_zone_db": 38.2
+    },
+    "plate5-lebanon-v158-2x.jpg": {
+     "path": "dist/assets/plates/plate5-lebanon-v158-2x.jpg",
+     "bytes": 325605,
+     "sha256": "ece33ea7c96ed2ae8f7793ce4a7a459421b3048db7d36c876b86e19361371965",
+     "size": [
+      1536,
+      1024
+     ],
+     "quality": 84,
+     "psnr_logo_text_zone_db": 36.9
+    },
+    "plate5-lebanon-v158-1x.webp": {
+     "path": "dist/assets/plates/plate5-lebanon-v158-1x.webp",
+     "bytes": 82528,
+     "sha256": "ae4399e0ba496aca5fa6ae791d33ce02da0527d42aa5d83a170192558ac6cb32",
+     "size": [
+      768,
+      512
+     ],
+     "quality": 82,
+     "psnr_logo_text_zone_db": 35.4
+    },
+    "plate5-lebanon-v158-1x.jpg": {
+     "path": "dist/assets/plates/plate5-lebanon-v158-1x.jpg",
+     "bytes": 103512,
+     "sha256": "9f3209ca7b991e7757c6ad9a25387e9b35e358cf070a54364fb3bd717429505e",
+     "size": [
+      768,
+      512
+     ],
+     "quality": 84,
+     "psnr_logo_text_zone_db": 34.0
+    }
+   },
+   "resize": "2x = 1536x1024 (the composited frame); 1x = 768x512 (Lanczos); webp q82 + jpg q84 (progressive, 4:2:0)",
+   "alt": {
+    "en": "AI-generated concept render for the UAE–Lebanon partnership: a dusk Gulf skyline with the UAE flag on the left and the Lebanese coast with offshore rocks and the Lebanese flag on the right, joined by a luminous arc behind the ATHAR logo. The text reads “1M ATHAR USERS” and “UAE × LEBANON” — an illustrative target, not an achieved figure. Eight people of different ages, including a wheelchair user and a man with a white cane, gather along the bottom.",
+    "ar": "تصوّر مفاهيمي مولَّد بالذكاء الاصطناعي للشراكة بين الإمارات ولبنان: أفق مدينة خليجية عند الغروب يتقدّمه علم الإمارات على اليسار، وساحل لبناني تظهر قبالته صخور بحرية يتقدّمه العلم اللبناني على اليمين، يربط بينهما قوس مضيء خلف شعار أثر. يظهر النص «1M ATHAR USERS» و«UAE × LEBANON» — وهو هدف استرشادي وليس رقماً محقَّقاً. وفي الأسفل يتجمّع ثمانية أشخاص من أعمار مختلفة، بينهم مستخدم كرسي متحرك ورجل يحمل عصا بيضاء."
+   },
+   "tab_label": {
+    "en": "PRODUCT CONCEPT",
+    "ar": "مفهوم المنتج"
+   },
+   "caption": {
+    "en": "CONCEPT RENDER",
+    "ar": "تصوّر مفاهيمي"
+   },
+   "one_m_wording": "The deck frames 1M as a TARGET: Lebanon Access tier flagship \"One Million Lebanese AI Experts\" (launched 25 Sep 2026, WAM), \"1M citizens certified in generative AI\", the slide footer says \"illustrative targets (p. 3)\". The render's \"1M ATHAR USERS\" is a different noun (users vs certified citizens) and is therefore disclosed here and in the alt text as an illustrative target."
   }
  },
  "logo_files": {

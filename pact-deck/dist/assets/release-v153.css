@@ -171,5 +171,10 @@ nav.rail ol a{min-block-size:44px;display:flex;align-items:center;box-sizing:bor
 #s-aos-nations .aos-nation-concept .aos-concept-tab{position:static;align-self:flex-start;margin:0;padding:3px 10px;font-size:.6rem;line-height:1.25;letter-spacing:.08em;border-radius:6px 6px 0 0;white-space:normal}
 html[lang=ar] #s-aos-nations .aos-nation-concept .aos-concept-tab{letter-spacing:0;font-size:.7rem}
 #s-aos-nations .aos-nation-concept picture{display:block;inline-size:100%;border:1px solid var(--stone);border-radius:6px;border-start-start-radius:0;overflow:hidden;background:var(--manuscript)}
-#s-aos-nations .aos-nation-concept img{display:block;inline-size:100%;block-size:auto;aspect-ratio:16/10;object-fit:cover}
+#s-aos-nations .aos-nation-concept img{display:block;inline-size:100%;block-size:auto;aspect-ratio:var(--aos-ar,16/10);object-fit:cover}
 @media (max-height:800px) and (min-width:701px){#s-aos-nations .aos-nation-concept picture{inline-size:fit-content;max-inline-size:100%}#s-aos-nations .aos-nation-concept img{inline-size:auto;max-inline-size:100%;max-block-size:calc(100vh - 470px)}}
+/* v1.5.8 — slide 38, Lebanon panel: the 'UAE × LEBANON · 1M ATHAR USERS' concept render is 3:2 and is shown WHOLE (set on the figure as --aos-ar: 3 / 2, no object-fit crop — its logo, text, flags and people
+   all stay inside the frame); India and Kenya keep the 16:10 generic concept image (default). Same column width as v1.5.7, so desktop 1728×872 and the phone stack stay balanced; the short-viewport cap above still applies. */
+@media (min-width:701px) and (max-height:931px){#s-aos-nations .aos-nation-concept[data-concept=lebanon-v158] picture{inline-size:fit-content;max-inline-size:min(100%,556px)}#s-aos-nations .aos-nation-concept[data-concept=lebanon-v158] img{inline-size:auto;max-inline-size:100%}}
+/* ↑ the deck stage is scaled to fit (≈ 0.936 at 1728×872: design 931 px tall), so the 3:2 Lebanon render is capped at 556 design px wide (≈ 369 px tall = the 16:10 generic image's height) in windows up to 931 px tall → at
+   1728×872 it renders ≈ 521×347 and the column ends as high as before (clearance above "Join the pact" ≈ 62 px EN / 49 px AR); taller windows show it at the full column width. The ≤ 800 px rule above still scales it down further. */
