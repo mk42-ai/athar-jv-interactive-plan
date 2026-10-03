@@ -1,6 +1,6 @@
 {
  "schema": "athar.narration.manifest/1",
- "version": "v1.5.7 (one clip per slide, keyed by data-slide-id; slides 40–46 in slide-narration.json)",
+ "version": "v1.5.8 (one clip per slide, keyed by data-slide-id; slides 40–46 in slide-narration.json)",
  "generated_utc": "2026-10-01T06:54:58Z",
  "voiceId": "JBFqnCBsd6RMkjVDRZzb",
  "modelId": "eleven_multilingual_v2",

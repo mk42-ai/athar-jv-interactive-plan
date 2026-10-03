@@ -1,10 +1,10 @@
-// Athar deck v1.5.5 — per-slide Guide sync test for ALL deck slides (43 = 39 + section 09; v1.5.7: 44 → 43 after the removal of the former Letter 1) (Playwright Test, system Chromium).
+// Athar deck v1.5.5 — per-slide Guide sync test for ALL deck slides (44 = 39 + section 09; v1.5.7: 44 → 43 after the removal of the former Letter 1; v1.5.8: 43 → 44 with Ary Ferreira da Cunha) (Playwright Test, system Chromium).
 // Closes the previously unconfirmed mismatch: for EVERY slide the narrated slide id (the player's data-slide-id AND, where a clip
 // exists, the slide id of the clip that is actually audible — identified at the network layer from the fetched MP3) must equal the
 // visible slide's data-slide-id. Slides 41 and 44 have no clip (TTS HTTP 429): there the player must target the visible slide,
 // stay silent (state ended · reason no-clip) and caption the slide. Also: the impact-story film on slide 44 pauses the guide and the
 // guide resumes after it; AUTO leaves a clip-less slide after 9 s.
-// Usage: GUIDE_BASE=http://127.0.0.1:4405 DECK_TOTAL=43 npx playwright test -c qa/v155/playwright.config.mjs
+// Usage: GUIDE_BASE=http://127.0.0.1:4405 DECK_TOTAL=44 npx playwright test -c qa/v155/playwright.config.mjs
 import { test, expect } from '../../node_modules/@playwright/test/index.mjs';
 import fs from 'node:fs';
 import path from 'node:path';
@@ -93,44 +93,44 @@ test.describe(`guide narration ⇔ visible slide — all ${TOTAL} slides`, () =>
     expect(page.__errors).toEqual([]);
   });
 
-  test('impact-story film (slide 42, only when features.json originsFilm=true) pauses the guide while it plays and the guide resumes after it', async ({ page }, info) => {
+  test('impact-story film (slide 43, only when features.json originsFilm=true) pauses the guide while it plays and the guide resumes after it', async ({ page }, info) => {
     test.skip(!FILM_ON, 'originsFilm feature is off (pact-deck/features.json) — no film is shipped'); test.setTimeout(150000); const mobile = info.project.name === 'phone';
-    await setup(page); await open(page, 41); await setAuto(page, true); await startGuide(page, mobile);
-    let s = await narratedEqualsVisible(page, 41); expect(s.ok).toBe(true);
-    await page.keyboard.press('ArrowRight'); await page.waitForFunction(() => window.__qaVisible().n === 42, null, { timeout: 8000 });
-    s = await narratedEqualsVisible(page, 42); expect(s.ok, 'slide 42 lead-in clip audible').toBe(true);
+    await setup(page); await open(page, 42); await setAuto(page, true); await startGuide(page, mobile);
+    let s = await narratedEqualsVisible(page, 42); expect(s.ok).toBe(true);
+    await page.keyboard.press('ArrowRight'); await page.waitForFunction(() => window.__qaVisible().n === 43, null, { timeout: 8000 });
+    s = await narratedEqualsVisible(page, 43); expect(s.ok, 'slide 43 lead-in clip audible').toBe(true);
     const film = await page.evaluate(() => { const v = document.querySelector('#s-exec-khalid video[data-narration-pause]'); return v ? { poster: v.poster.split('/').pop(), posterTime: v.dataset.posterTime, tracks: [...v.querySelectorAll('track')].map((t) => t.srclang + ':' + t.getAttribute('src').split('/').pop()), in: v.dataset.in, out: v.dataset.out, src: v.querySelector('source').getAttribute('src').split('/').pop() } : null; });
     expect(film).not.toBeNull(); expect(film.poster).toBe('athar-origins-of-impact-ep01-poster-15s5.jpg'); expect(film.tracks).toEqual(['en:athar-origins-of-impact-ep01.en.vtt', 'ar:athar-origins-of-impact-ep01.ar.vtt']);
     await page.evaluate(async () => { const v = document.querySelector('#s-exec-khalid video'); await new Promise((r) => { if (v.readyState >= 1) r(); else v.addEventListener('loadedmetadata', r, { once: true }); }); v.currentTime = 34.0; await v.play(); });
     await page.waitForFunction(() => document.getElementById('athar-narration').getAttribute('data-reason') === 'video', null, { timeout: 6000 });
     const during = await snap(page); const filmPlaying = await page.evaluate(() => { const v = document.querySelector('#s-exec-khalid video'); return !v.paused && v.currentTime > 34; });
     expect(during.state, 'guide paused while the film plays').toBe('paused'); expect(during.audible, 'no narration audible during the film').toBeNull(); expect(filmPlaying).toBe(true);
-    // the film stops at its out-point (37.3 s — v1.5.6: the 1080p master trimmed before the closing end card; was 39.4 s) → the guide resumes the slide-42 clip
+    // the film stops at its out-point (37.3 s — v1.5.6: the 1080p master trimmed before the closing end card; was 39.4 s) → the guide resumes the slide-43 clip
     await page.waitForFunction(() => { const v = document.querySelector('#s-exec-khalid video'); return v.paused && v.currentTime >= 37.2; }, null, { timeout: 15000 });
-    const after = await narratedEqualsVisible(page, 42, 8000);
-    const resumed = after.ok || (await page.evaluate(() => window.__qaVisible().n)) === 43;
-    write('film-' + info.project.name, [{ during: { state: during.state, reason: during.reason, audible: during.audible }, film, after: row(42, after, 'after film') }]);
+    const after = await narratedEqualsVisible(page, 43, 8000);
+    const resumed = after.ok || (await page.evaluate(() => window.__qaVisible().n)) === 44;
+    write('film-' + info.project.name, [{ during: { state: during.state, reason: during.reason, audible: during.audible }, film, after: row(43, after, 'after film') }]);
     expect(resumed, 'guide resumed after the film').toBe(true);
     expect(page.__errors).toEqual([]);
   });
 
   test('hidden card (Lorenzo) is not rendered, not counted and not narrated', async ({ page }) => {
     test.setTimeout(60000);
-    await setup(page); await open(page, 43);
+    await setup(page); await open(page, 44);
     const r = await page.evaluate(() => ({ ids: [...document.querySelectorAll('#root section.ex-slide')].map((x) => x.id), count: window.AtharExecTeam.count, total: window.AtharExecTeam.total,
       counter: (document.querySelector('footer.pagefooter .counter') || {}).textContent, text: document.body.innerText }));
     const hiddenInTable = TABLE.slides.filter((x) => /lorenzo/.test(x.slideId)).length;
     write('hidden-cards', [{ ...r, text: undefined, hiddenInTable, mentionsHidden: /Lorenzo|لورينزو/.test(r.text) }]);
-    expect(r.ids).toEqual(['s-exec-intro', 's-exec-al-ameri', 's-exec-khalid', 's-exec-unwalla']);
-    expect(r.count).toBe(4); expect(r.total).toBe(43); expect(TOTAL).toBe(43); expect(hiddenInTable).toBe(0);
+    expect(r.ids).toEqual(['s-exec-intro', 's-exec-al-ameri', 's-exec-ferreira-da-cunha', 's-exec-khalid', 's-exec-unwalla']);
+    expect(r.count).toBe(5); expect(r.total).toBe(44); expect(TOTAL).toBe(44); expect(hiddenInTable).toBe(0);
     expect(/Lorenzo|لورينزو/.test(r.text)).toBe(false);
-    expect(r.counter).toContain('43');
+    expect(r.counter).toContain('44');
   });
 
-  // v1.5.6 (updated for v1.5.7) — name labels without honorific, completed Fahad / Kayaan cards (EN + AR)
-  test('v1.5.6: name labels carry no honorific, bodies keep it; Fahad and Kayaan cards are complete in EN and AR', async ({ page }, info) => {
+  // v1.5.6 (updated for v1.5.7 and v1.5.8) — name labels without honorific, completed Fahad / Kayaan cards (EN + AR)
+  test('v1.5.6 / v1.5.8: name labels carry no honorific EXCEPT Fahad\'s (H.E. / سعادة), bodies keep it; Fahad and Kayaan cards are complete in EN and AR', async ({ page }, info) => {
     test.setTimeout(90000);
-    await setup(page); await open(page, 43);
+    await setup(page); await open(page, 44);
     const r = await page.evaluate(async () => {
       const sec = (id) => document.getElementById(id);
       const txt = (sel) => [...document.querySelectorAll(sel)].map((e) => e.textContent.trim());
@@ -142,8 +142,9 @@ test.describe(`guide narration ⇔ visible slide — all ${TOTAL} slides`, () =>
     });
     const HON = /H\.E\.|سعادة|معالي/;
     write('v156-cards-' + info.project.name, [{ ...r, kayaanEn: undefined, kayaanAr: undefined, fahadEn: undefined, fahadAr: undefined }]);
-    expect(r.names).toHaveLength(6); expect(r.names.filter((n) => HON.test(n))).toEqual([]);
-    expect(r.index).toHaveLength(6); expect(r.index.filter((n) => HON.test(n))).toEqual([]);
+    const FAHAD_LABELS = ['H.E. Fahad Mohamed Al Ameri', 'سعادة فهد محمد العامري']; // v1.5.8: the honorific is back on Fahad's label only — letter header, intro index; nobody else
+    expect(r.names).toHaveLength(8); expect(r.names.filter((n) => HON.test(n))).toEqual(FAHAD_LABELS);
+    expect(r.index).toHaveLength(8); expect(r.index.filter((n) => HON.test(n))).toEqual(FAHAD_LABELS);
     expect(r.fahadEn).toContain('H.E. Fahad'); expect(r.fahadAr).toContain('سعادة');
     expect(r.fahadFactsEn).toHaveLength(3); expect(r.fahadFactsAr).toHaveLength(3);
     for (const k of ['University of Pennsylvania', 'CFA', 'Zoud', 'Abu Dhabi Executive Council 2011–14']) expect(r.fahadFactsEn.join(' | ')).toContain(k);
@@ -156,9 +157,9 @@ test.describe(`guide narration ⇔ visible slide — all ${TOTAL} slides`, () =>
     expect(r.kayaanEn).toContain('Corporate Partner at Norton Rose Fulbright'); expect(r.kayaanEn).toContain('DWF'); expect(r.kayaanAr).toContain('Norton Rose Fulbright');
   });
 
-  // v1.5.7 — ONE regression test for the three intentional changes: (1) slide 38 shows ONE full concept image under a PRODUCT CONCEPT tab (no film-still claim),
-  // (2) Section 09 no longer contains the former Letter 1 (43 slides, renumbered, clip + transcript gone), (3) the CEO letter has no film and the guide plays straight through it.
-  test('v1.5.7: product concept image on slide 38 (EN + AR), Section 09 without the former Letter 1 (43 slides), CEO letter without the film — guide plays straight through', async ({ page }, info) => {
+  // v1.5.7 (renumbered for v1.5.8) — regression test for the v1.5.7 changes: (1) slide 38 shows ONE full concept image under a PRODUCT CONCEPT tab (no film-still claim),
+  // (2) Section 09 no longer contains the former Letter 1 (clip + transcript gone; 44 slides since Ary was added in v1.5.8), (3) the CEO letter (slide 43) has no film and the guide plays straight through it.
+  test('v1.5.7: product concept image on slide 38 (EN + AR), Section 09 without the former Letter 1, CEO letter without the film — guide plays straight through', async ({ page }, info) => {
     test.setTimeout(150000); const mobile = info.project.name === 'phone';
     await setup(page);
     const go = async (lg, n) => { await page.goto(BASE + '/?lang=' + lg + hashFor(n), { waitUntil: 'load' }); await page.waitForFunction(() => !!window.AtharGuide && !!document.querySelector('#athar-narration'), null, { timeout: 20000 });
@@ -173,21 +174,21 @@ test.describe(`guide narration ⇔ visible slide — all ${TOTAL} slides`, () =>
       seen38[lg] = { ...r, text: undefined };
       expect(r.tab).toBe(S38[lg].tab); expect(r.cap).toBe(S38[lg].cap); expect(r.imgs).toBe(1); expect(r.stills).toBe(0);
       expect(/film still|16\.7|لقطة من فيلم/i.test(r.text), 'no "film still at 16.7 s" claim').toBe(false);
-      expect(Math.abs(r.nat[0] / r.nat[1] - 1.6)).toBeLessThan(0.01); expect(Math.abs(r.shown[0] / r.shown[1] - 1.6), 'shown whole at 16:10 (no strip crop)').toBeLessThan(0.03);
-      expect(r.cur).toMatch(/plate5-concept-v157-[12]x\.(webp|jpg)$/);
+      expect(Math.abs(r.shown[0] / r.shown[1] - r.nat[0] / r.nat[1]), 'shown whole at its natural aspect (no strip crop)').toBeLessThan(0.03);
+      expect(r.cur).toMatch(/plate5-(concept-v157|lebanon-v158)-[12]x\.(webp|jpg)$/); // the default (Lebanon) panel shows the v1.5.8 render, India / Kenya the v1.5.7 concept image
       if (lg === 'en') expect(r.alt).toMatch(/^AI-generated concept render/); else expect(r.alt).toContain('مولَّد بالذكاء الاصطناعي');
     }
-    // (2) Section 09 — no former Letter 1, 43 slides, renumbered deep links, clip + transcript gone
-    await go('en', 43);
+    // (2) Section 09 — no former Letter 1, renumbered deep links, clip + transcript gone
+    await go('en', 44);
     const r2 = await page.evaluate(() => ({ ids: [...document.querySelectorAll('#root section.ex-slide')].map((x) => x.id), count: window.AtharExecTeam.count, total: window.AtharExecTeam.total, counter: (document.querySelector('footer.pagefooter .counter') || {}).textContent,
       gone: !/Zeyoudi|الزيودي|ثاني بن أحمد/.test([...document.querySelectorAll('#root section.ex-slide')].map((x) => x.textContent).join(' ')), // Section 09 only — Dr Thani is still named on other slides (news captions), which this release deliberately leaves untouched
        index: [...document.querySelectorAll('.ex-index-name')].length }));
-    expect(r2.ids).toEqual(['s-exec-intro', 's-exec-al-ameri', 's-exec-khalid', 's-exec-unwalla']); expect(r2.count).toBe(4); expect(r2.total).toBe(43); expect(TABLE.slides.length).toBe(43); expect(r2.counter).toContain('43'); expect(r2.gone).toBe(true); expect(r2.index).toBe(6);
+    expect(r2.ids).toEqual(['s-exec-intro', 's-exec-al-ameri', 's-exec-ferreira-da-cunha', 's-exec-khalid', 's-exec-unwalla']); expect(r2.count).toBe(5); expect(r2.total).toBe(44); expect(TABLE.slides.length).toBe(44); expect(r2.counter).toContain('44'); expect(r2.gone).toBe(true); expect(r2.index).toBe(8);
     expect(TABLE.slides.some((x) => /zeyoudi/i.test(x.slideId + (x.file || '') + x.text))).toBe(false);
     expect((await page.request.get(BASE + '/audio/guide/slides/NAR-s41-s-exec-al-zeyoudi.mp3')).status()).toBe(404);
-    expect([TABLE.slides.find((x) => x.slideId === 's-exec-al-ameri').n, TABLE.slides.find((x) => x.slideId === 's-exec-khalid').n, TABLE.slides.find((x) => x.slideId === 's-exec-unwalla').n]).toEqual([41, 42, 43]);
-    // (3) CEO letter (slide 42) — no film anywhere in the served files, copy re-flowed, narration trimmed, guide plays straight through to slide 43
-    await go('en', 42);
+    expect([TABLE.slides.find((x) => x.slideId === 's-exec-al-ameri').n, TABLE.slides.find((x) => x.slideId === 's-exec-khalid').n, TABLE.slides.find((x) => x.slideId === 's-exec-unwalla').n]).toEqual([41, 43, 44]);
+    // (3) CEO letter (slide 43) — no film anywhere in the served files, copy re-flowed, narration trimmed, guide plays straight through to slide 44
+    await go('en', 43);
     const r3 = await page.evaluate(() => { const sec = document.getElementById('s-exec-khalid'); return { videos: sec.querySelectorAll('video').length, pause: document.querySelectorAll('[data-narration-pause]').length, html: document.documentElement.innerHTML,
       roundel: sec.querySelectorAll('.ex-roundel').length, letterW: Math.round(sec.querySelector('.ex-letter').getBoundingClientRect().width), bodyW: Math.round(sec.querySelector('.s-body').getBoundingClientRect().width) }; });
     const ceo = TABLE.slides.find((x) => x.slideId === 's-exec-khalid');
@@ -198,11 +199,82 @@ test.describe(`guide narration ⇔ visible slide — all ${TOTAL} slides`, () =>
     for (const f of ['/js/exec-film.js', '/assets/exec/video/athar-origins-of-impact-ep01.en.vtt', '/assets/exec/video/athar-origins-of-impact-ep01-muhammed-khalid-1080p.mp4']) expect((await page.request.get(BASE + f)).status(), f).toBe(404);
     expect(ceo.text).not.toMatch(/press play|impact story/i); expect(ceo.durationSec).toBeLessThan(18.5); expect(ceo.cues).toHaveLength(3);
     await setAuto(page, true); await startGuide(page, mobile);
-    const g = await narratedEqualsVisible(page, 42); expect(g.ok, 'CEO clip audible on slide 42').toBe(true); expect(g.reason).not.toBe('video');
-    await page.waitForFunction(() => window.__qaVisible().n === 43, null, { timeout: 45000 });
-    const g2 = await narratedEqualsVisible(page, 43); expect(g2.ok, 'guide advanced to slide 43 and narrates it').toBe(true);
+    const g = await narratedEqualsVisible(page, 43); expect(g.ok, 'CEO clip audible on slide 43').toBe(true); expect(g.reason).not.toBe('video');
+    await page.waitForFunction(() => window.__qaVisible().n === 44, null, { timeout: 45000 });
+    const g2 = await narratedEqualsVisible(page, 44); expect(g2.ok, 'guide advanced to slide 44 and narrates it').toBe(true);
     }
     write('v157-regression-' + info.project.name, [{ slide38: seen38, section09: r2, ceo: { videos: r3.videos, roundel: r3.roundel, letterW: r3.letterW, bodyW: r3.bodyW, clipDurationSec: ceo.durationSec } }]);
+    expect(page.__errors).toEqual([]);
+  });
+
+  // v1.5.8 — ONE regression test for the three intentional changes: (1) Ary Ferreira da Cunha's card + letter right after Fahad (EN + AR, deep link #/28/exec-3, narration clip NAR-s45, no photo, no honorific),
+  // (2) 'H.E.' / «سعادة» on Fahad's name label ONLY, (3) the slide-38 Lebanon panel shows the 'UAE × LEBANON · 1M ATHAR USERS' render with the official logo (India / Kenya keep the v1.5.7 concept image) —
+  // while Dr Thani and the Origins film stay removed.
+  test('v1.5.8: Ary card + letter after Fahad (EN + AR, #/28/exec-3, clip NAR-s45), H.E. on Fahad only, Lebanon "1M ATHAR USERS" still — Thani and the film stay removed', async ({ page }, info) => {
+    test.setTimeout(240000); const mobile = info.project.name === 'phone';
+    await setup(page);
+    const go = async (lg, n) => { await page.goto(BASE + '/?lang=' + lg + hashFor(n), { waitUntil: 'load' }); await page.waitForFunction(() => !!window.AtharGuide && !!document.querySelector('#athar-narration'), null, { timeout: 20000 });
+      await page.waitForFunction((n) => window.__qaVisible().n === n, n, { timeout: 15000 }); };
+    // ---- (1) Ary: table, clip, card, letter, sources, deep link, narration
+    const ARY = TABLE.slides.find((x) => x.slideId === 's-exec-ferreira-da-cunha');
+    expect(ARY.n).toBe(42); expect(ARY.clipId).toBe('NAR-s45'); expect(hashFor(42)).toBe('#/28/exec-3'); expect(TABLE.slides.map((x) => x.n)).toEqual(Array.from({ length: 44 }, (_, i) => i + 1));
+    expect(TABLE.slides.find((x) => x.slideId === 's-exec-al-ameri').n).toBe(41);
+    const clip = await page.request.get(BASE + ARY.file); expect(clip.status(), 'Ary clip').toBe(200); expect(clip.headers()['content-type']).toMatch(/audio/); expect((await clip.body()).length).toBe(ARY.bytes);
+    expect(ARY.cues).toHaveLength(3); expect(ARY.text).toContain('Principal at the Presidential Court'); expect(ARY.text).not.toMatch(/\b(2025|2026)\b/);
+    await go('en', 42);
+    const a = await page.evaluate(() => { const sec = document.getElementById('s-exec-ferreira-da-cunha'); const txt = (sel) => [...sec.querySelectorAll(sel)].map((e) => e.textContent.trim());
+      const facts = (lg) => [...sec.querySelectorAll('.ex-card-col--' + lg + ' .ex-fact')].map((f) => f.textContent.trim());
+      return { names: txt('.ex-name'), roles: txt('.ex-role'), bodyEn: [...sec.querySelectorAll('.ex-col--en .ex-p')].map((p) => p.textContent).join(' '), bodyAr: [...sec.querySelectorAll('.ex-col--ar .ex-p')].map((p) => p.textContent).join(' '),
+        factsEn: facts('en'), factsAr: facts('ar'), tag: (sec.querySelector('[data-testid=clearance-tag]') || {}).textContent, roundel: sec.querySelectorAll('.ex-roundel').length, portrait: sec.querySelectorAll('.ex-portrait').length,
+        links: [...sec.querySelectorAll('.ex-sources a.ex-src')].map((x) => x.href), srcCount: sec.querySelectorAll('.ex-sources .ex-src').length, counter: (document.querySelector('footer.pagefooter .counter') || {}).textContent,
+        total: window.AtharImpactTiers.total, current: window.AtharImpactTiers.current(), text: sec.textContent, label: sec.getAttribute('aria-label') }; });
+    expect(a.names).toEqual(['Ary Ferreira da Cunha', 'آري فيريرا دا كونيا']); expect(a.names.filter((n) => /H\.E\.|سعادة|معالي|\bDr\b|دكتور/.test(n)), 'Ary has no honorific').toEqual([]);
+    expect(a.roles[0]).toBe('Principal, Presidential Court (UAE), Abu Dhabi'); expect(a.current).toBe(42); expect(a.total).toBe(44); expect(a.counter).toContain('42'); expect(a.counter).toContain('44'); expect(a.label).toBe('Executive Team — Ary Ferreira da Cunha');
+    expect(a.factsEn).toHaveLength(6); expect(a.factsAr).toHaveLength(6);
+    for (const k of ['McKinsey', 'Universidade do Porto', 'Oxford', 'Utrecht', 'Combate à corrupção, da teoria à prática', 'Portuguese', 'AI transformation', 'LinkedIn']) expect(a.factsEn.join(' | '), k).toContain(k);
+    for (const k of ['McKinsey', 'جامعة بورتو', 'أكسفورد', 'أوترخت', 'Combate à corrupção', 'برتغالي', 'لينكدإن']) expect(a.factsAr.join(' | '), k).toContain(k);
+    for (const k of ['according to his LinkedIn profile', 'more than eight years at McKinsey', 'a law degree, a master’s and a PhD in law', '2015 book', 'Portuguese national']) expect(a.bodyEn, k).toContain(k);
+    expect(a.bodyAr).toContain('آري فيريرا دا كونيا'); expect(a.bodyAr).toContain('جامعة بورتو'); expect(a.bodyAr).toContain('برتغالي الجنسية');
+    expect(a.tag).toBe('For clearance by office'); expect(a.roundel, 'monogram roundel').toBe(1); expect(a.portrait, 'no photo').toBe(0); expect(a.srcCount).toBe(6); expect(a.links).toHaveLength(5);
+    for (const u of ['https://ae.linkedin.com/in/aryfcunha', 'saying-goodbye-to-mckinsey', 'https://noticias.up.pt/nos-por-la/ary-ferreira-da-cunha/', 'https://www.up.pt/casacomum/alumni-mundus/2-ary-ferreira-da-cunha/', 'ulfd0148962_tese.pdf']) expect(a.links.join(' '), u).toContain(u);
+    expect(/Zeyoudi|Thani|Origins of Impact|\bep01\b/i.test(a.text), 'no Thani / film on Ary\'s slide').toBe(false); expect(/\b(2025|2026)\b/.test(a.text), 'no start date on the card').toBe(false);
+    await startGuide(page, mobile); const g = await narratedEqualsVisible(page, 42);
+    expect(g.ok, 'Ary clip audible on slide 42').toBe(true); expect(g.audible.clip).toBe('NAR-s45'); expect(ccOk(g), 'CC = a sentence of the visible slide').toBe(true); expect(g.reason).not.toBe('no-clip');
+    await go('ar', 42);
+    const ar = await page.evaluate(() => { const sec = document.getElementById('s-exec-ferreira-da-cunha'); return { dir: document.documentElement.dir, lang: document.documentElement.lang, names: [...sec.querySelectorAll('.ex-name')].map((e) => e.textContent.trim()), letterDir: sec.querySelector('.ex-letter').getAttribute('dir'),
+      counter: (document.querySelector('footer.pagefooter .counter') || {}).textContent, label: sec.getAttribute('aria-label') }; });
+    expect(ar.dir).toBe('rtl'); expect(ar.lang).toBe('ar'); expect(ar.letterDir).toBe('rtl'); expect(ar.names).toEqual(['آري فيريرا دا كونيا', 'Ary Ferreira da Cunha']); expect(ar.counter).toContain('44'); expect(ar.label).toBe('الفريق التنفيذي — آري فيريرا دا كونيا');
+    // ---- (2) Fahad — the honorific on his label only (card, letter, aria labels, title); the transcript already says 'His Excellency'
+    await go('en', 41);
+    const f = await page.evaluate(() => { const sec = document.getElementById('s-exec-al-ameri'); return { names: [...sec.querySelectorAll('.ex-name')].map((e) => e.textContent.trim()), letterAria: sec.querySelector('.ex-letter').getAttribute('aria-label'), cardAria: sec.querySelector('.ex-card').getAttribute('aria-label'),
+      roundelAria: sec.querySelector('.ex-roundel-svg').getAttribute('aria-label'), title: sec.getAttribute('aria-label'), others: window.AtharExecTeam.profiles.filter((p) => p.id !== 's-exec-al-ameri').map((p) => p.name.en + ' | ' + p.name.ar) }; });
+    expect(f.names).toEqual(['H.E. Fahad Mohamed Al Ameri', 'سعادة فهد محمد العامري']); expect(f.letterAria).toBe('H.E. Fahad Mohamed Al Ameri'); expect(f.cardAria).toContain('H.E. Fahad Mohamed Al Ameri'); expect(f.roundelAria).toContain('H.E. Fahad Mohamed Al Ameri'); expect(f.title).toBe('Executive Team — H.E. Fahad Mohamed Al Ameri');
+    expect(f.others.filter((n) => /H\.E\.|سعادة|معالي|\bDr\b|دكتور/.test(n)), 'nobody else gets an honorific back').toEqual([]);
+    expect(TABLE.slides.find((x) => x.slideId === 's-exec-al-ameri').text).toContain('His Excellency Fahad Mohamed Al Ameri');
+    // ---- (3) slide 38 — Lebanon: the 'UAE × LEBANON · 1M ATHAR USERS' render (official logo, 3:2 whole); India / Kenya keep the v1.5.7 concept image
+    const L38 = { en: { tab: 'PRODUCT CONCEPT', cap: 'CONCEPT RENDER', alt: /UAE–Lebanon partnership.*1M ATHAR USERS.*UAE × LEBANON.*illustrative target, not an achieved figure/s }, ar: { tab: 'مفهوم المنتج', cap: 'تصوّر مفاهيمي', alt: /مولَّد بالذكاء الاصطناعي.*1M ATHAR USERS.*هدف استرشادي وليس رقماً محقَّقاً/s } };
+    const seen = {};
+    for (const lg of ['en', 'ar']) {
+      await go(lg, 38); await page.waitForFunction(() => { const i = document.querySelector('#s-aos-nations .aos-nation-concept img'); return !!i && i.complete && i.naturalWidth > 0; }, null, { timeout: 15000 });
+      const grab = () => page.evaluate(() => { const sec = document.getElementById('s-aos-nations'), c = sec.querySelector('.aos-nation-concept'), i = c.querySelector('img'), b = i.getBoundingClientRect();
+        return { country: document.getElementById('aos-nation-panel').getAttribute('data-country'), concept: c.getAttribute('data-concept'), tab: c.querySelector('.aos-concept-tab').textContent.trim(), cap: c.querySelector('figcaption').textContent.trim(), alt: i.alt, nat: [i.naturalWidth, i.naturalHeight],
+          shown: [Math.round(b.width), Math.round(b.height)], cur: (i.currentSrc || '').split('/').pop(), imgs: sec.querySelectorAll('.aos-nation-side img').length, stills: sec.querySelectorAll('.rs-still').length, text: sec.textContent }; });
+      const lb = await grab(); seen[lg] = { lebanon: { ...lb, text: undefined } };
+      expect(lb.country).toBe('lb'); expect(lb.concept).toBe('lebanon-v158'); expect(lb.tab).toBe(L38[lg].tab); expect(lb.cap).toBe(L38[lg].cap); expect(lb.imgs).toBe(1); expect(lb.stills).toBe(0);
+      expect(lb.cur).toMatch(/^plate5-lebanon-v158-[12]x\.(webp|jpg)$/); expect(lb.nat[0] / lb.nat[1]).toBeCloseTo(1.5, 2); expect(Math.abs(lb.shown[0] / lb.shown[1] - 1.5), 'shown whole at 3:2 (no crop)').toBeLessThan(0.03); expect(lb.alt).toMatch(L38[lg].alt);
+      expect(/film still|16\.7/i.test(lb.text)).toBe(false);
+      for (const k of ['in', 'ke']) { await page.click('[data-country="' + k + '"]'); await page.waitForFunction((k) => document.getElementById('aos-nation-panel').getAttribute('data-country') === k, k, { timeout: 5000 });
+        await page.waitForFunction(() => { const i = document.querySelector('#s-aos-nations .aos-nation-concept img'); return !!i && i.complete && i.naturalWidth > 0; }, null, { timeout: 10000 });
+        const o = await grab(); seen[lg][k] = { ...o, text: undefined }; expect(o.concept, k + ' keeps the generic concept image').toBe('generic-v157'); expect(o.cur).toMatch(/^plate5-concept-v157-[12]x\.(webp|jpg)$/); expect(o.cap).toBe(L38[lg].cap); expect(o.tab).toBe(L38[lg].tab); }
+    }
+    // assets + manifest
+    for (const [f, w] of [['plate5-lebanon-v158-1x.webp', 768], ['plate5-lebanon-v158-2x.webp', 1536], ['plate5-lebanon-v158-1x.jpg', 768], ['plate5-lebanon-v158-2x.jpg', 1536]]) { const r = await page.request.get(BASE + '/assets/plates/' + f); expect(r.status(), f).toBe(200); expect(r.headers()['content-type']).toMatch(/^image\/(webp|jpeg)$/); expect((await r.body()).length, f).toBeGreaterThan(20000); void w; }
+    const cred = await (await page.request.get(BASE + '/assets/plates/credits.json')).json(); const lbm = cred.served['plate5-lebanon-v158'];
+    expect(lbm.ai_generated).toBe(true); expect(lbm.disclosure.en).toContain('AI-generated concept render (GPT Image 2.5)'); expect(lbm.generator).toContain('GPT Image 2.5'); expect(lbm.prompt).toContain('UAE × LEBANON'); expect(lbm.selected_candidate.id).toBe('xITKlbA5Bo'); expect(lbm.alternates.map((x) => x.id)).toEqual(['t3VIJiIi7M', 'IgzFJMsBrz', '4qjmUgjN2E']);
+    // ---- Thani and the Origins film stay removed
+    expect(TABLE.slides.some((x) => /zeyoudi/i.test(x.slideId + (x.file || '') + x.text))).toBe(false);
+    for (const f of ['/audio/guide/slides/NAR-s41-s-exec-al-zeyoudi.mp3', '/js/exec-film.js', '/assets/exec/video/athar-origins-of-impact-ep01-muhammed-khalid-1080p.mp4']) expect((await page.request.get(BASE + f)).status(), f).toBe(404);
+    write('v158-regression-' + info.project.name, [{ ary: { names: a.names, roles: a.roles, factsEn: a.factsEn.length, factsAr: a.factsAr.length, links: a.links, clip: { id: ARY.clipId, bytes: ARY.bytes, durationSec: ARY.durationSec }, arNames: ar.names, rtl: ar.dir }, fahad: f.names, slide38: seen }]);
     expect(page.__errors).toEqual([]);
   });
 });
