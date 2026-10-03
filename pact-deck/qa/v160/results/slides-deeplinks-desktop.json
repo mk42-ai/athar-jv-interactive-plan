@@ -1,0 +1,559 @@
+{
+ "base": "http://127.0.0.1:4160",
+ "version": "1.6.0",
+ "written": "2026-10-03T16:24:33.192Z",
+ "rows": [
+  {
+   "lang": "en",
+   "n": 1,
+   "errors": 0
+  },
+  {
+   "lang": "en",
+   "n": 2,
+   "errors": 0
+  },
+  {
+   "lang": "en",
+   "n": 3,
+   "errors": 0
+  },
+  {
+   "lang": "en",
+   "n": 4,
+   "errors": 0
+  },
+  {
+   "lang": "en",
+   "n": 5,
+   "errors": 0
+  },
+  {
+   "lang": "en",
+   "n": 6,
+   "errors": 0
+  },
+  {
+   "lang": "en",
+   "n": 7,
+   "errors": 0
+  },
+  {
+   "lang": "en",
+   "n": 8,
+   "errors": 0
+  },
+  {
+   "lang": "en",
+   "n": 9,
+   "errors": 0
+  },
+  {
+   "lang": "en",
+   "n": 10,
+   "errors": 0
+  },
+  {
+   "lang": "en",
+   "n": 11,
+   "errors": 0
+  },
+  {
+   "lang": "en",
+   "n": 12,
+   "errors": 0
+  },
+  {
+   "lang": "en",
+   "n": 13,
+   "errors": 0
+  },
+  {
+   "lang": "en",
+   "n": 14,
+   "errors": 0
+  },
+  {
+   "lang": "en",
+   "n": 15,
+   "errors": 0
+  },
+  {
+   "lang": "en",
+   "n": 16,
+   "errors": 0
+  },
+  {
+   "lang": "en",
+   "n": 17,
+   "errors": 0
+  },
+  {
+   "lang": "en",
+   "n": 18,
+   "errors": 0
+  },
+  {
+   "lang": "en",
+   "n": 19,
+   "errors": 0
+  },
+  {
+   "lang": "en",
+   "n": 20,
+   "errors": 0
+  },
+  {
+   "lang": "en",
+   "n": 21,
+   "errors": 0
+  },
+  {
+   "lang": "en",
+   "n": 22,
+   "errors": 0
+  },
+  {
+   "lang": "en",
+   "n": 23,
+   "errors": 0
+  },
+  {
+   "lang": "en",
+   "n": 24,
+   "errors": 0
+  },
+  {
+   "lang": "en",
+   "n": 25,
+   "errors": 0
+  },
+  {
+   "lang": "en",
+   "n": 26,
+   "errors": 0
+  },
+  {
+   "lang": "en",
+   "n": 27,
+   "errors": 0
+  },
+  {
+   "lang": "en",
+   "n": 28,
+   "errors": 0
+  },
+  {
+   "lang": "en",
+   "n": 29,
+   "errors": 0
+  },
+  {
+   "lang": "en",
+   "n": 30,
+   "errors": 0
+  },
+  {
+   "lang": "en",
+   "n": 31,
+   "errors": 0
+  },
+  {
+   "lang": "en",
+   "n": 32,
+   "errors": 0
+  },
+  {
+   "lang": "en",
+   "n": 33,
+   "errors": 0
+  },
+  {
+   "lang": "en",
+   "n": 34,
+   "errors": 0
+  },
+  {
+   "lang": "en",
+   "n": 35,
+   "errors": 0
+  },
+  {
+   "lang": "en",
+   "n": 36,
+   "errors": 0
+  },
+  {
+   "lang": "en",
+   "n": 37,
+   "errors": 0
+  },
+  {
+   "lang": "en",
+   "n": 38,
+   "errors": 0
+  },
+  {
+   "lang": "en",
+   "n": 39,
+   "errors": 0
+  },
+  {
+   "lang": "en",
+   "n": 40,
+   "errors": 0
+  },
+  {
+   "lang": "en",
+   "n": 41,
+   "errors": 0
+  },
+  {
+   "lang": "en",
+   "n": 42,
+   "errors": 0
+  },
+  {
+   "lang": "en",
+   "n": 43,
+   "errors": 0
+  },
+  {
+   "lang": "en",
+   "n": 44,
+   "errors": 0
+  },
+  {
+   "lang": "ar",
+   "n": 1,
+   "errors": 0
+  },
+  {
+   "lang": "ar",
+   "n": 2,
+   "errors": 0
+  },
+  {
+   "lang": "ar",
+   "n": 3,
+   "errors": 0
+  },
+  {
+   "lang": "ar",
+   "n": 4,
+   "errors": 0
+  },
+  {
+   "lang": "ar",
+   "n": 5,
+   "errors": 0
+  },
+  {
+   "lang": "ar",
+   "n": 6,
+   "errors": 0
+  },
+  {
+   "lang": "ar",
+   "n": 7,
+   "errors": 0
+  },
+  {
+   "lang": "ar",
+   "n": 8,
+   "errors": 0
+  },
+  {
+   "lang": "ar",
+   "n": 9,
+   "errors": 0
+  },
+  {
+   "lang": "ar",
+   "n": 10,
+   "errors": 0
+  },
+  {
+   "lang": "ar",
+   "n": 11,
+   "errors": 0
+  },
+  {
+   "lang": "ar",
+   "n": 12,
+   "errors": 0
+  },
+  {
+   "lang": "ar",
+   "n": 13,
+   "errors": 0
+  },
+  {
+   "lang": "ar",
+   "n": 14,
+   "errors": 0
+  },
+  {
+   "lang": "ar",
+   "n": 15,
+   "errors": 0
+  },
+  {
+   "lang": "ar",
+   "n": 16,
+   "errors": 0
+  },
+  {
+   "lang": "ar",
+   "n": 17,
+   "errors": 0
+  },
+  {
+   "lang": "ar",
+   "n": 18,
+   "errors": 0
+  },
+  {
+   "lang": "ar",
+   "n": 19,
+   "errors": 0
+  },
+  {
+   "lang": "ar",
+   "n": 20,
+   "errors": 0
+  },
+  {
+   "lang": "ar",
+   "n": 21,
+   "errors": 0
+  },
+  {
+   "lang": "ar",
+   "n": 22,
+   "errors": 0
+  },
+  {
+   "lang": "ar",
+   "n": 23,
+   "errors": 0
+  },
+  {
+   "lang": "ar",
+   "n": 24,
+   "errors": 0
+  },
+  {
+   "lang": "ar",
+   "n": 25,
+   "errors": 0
+  },
+  {
+   "lang": "ar",
+   "n": 26,
+   "errors": 0
+  },
+  {
+   "lang": "ar",
+   "n": 27,
+   "errors": 0
+  },
+  {
+   "lang": "ar",
+   "n": 28,
+   "errors": 0
+  },
+  {
+   "lang": "ar",
+   "n": 29,
+   "errors": 0
+  },
+  {
+   "lang": "ar",
+   "n": 30,
+   "errors": 0
+  },
+  {
+   "lang": "ar",
+   "n": 31,
+   "errors": 0
+  },
+  {
+   "lang": "ar",
+   "n": 32,
+   "errors": 0
+  },
+  {
+   "lang": "ar",
+   "n": 33,
+   "errors": 0
+  },
+  {
+   "lang": "ar",
+   "n": 34,
+   "errors": 0
+  },
+  {
+   "lang": "ar",
+   "n": 35,
+   "errors": 0
+  },
+  {
+   "lang": "ar",
+   "n": 36,
+   "errors": 0
+  },
+  {
+   "lang": "ar",
+   "n": 37,
+   "errors": 0
+  },
+  {
+   "lang": "ar",
+   "n": 38,
+   "errors": 0
+  },
+  {
+   "lang": "ar",
+   "n": 39,
+   "errors": 0
+  },
+  {
+   "lang": "ar",
+   "n": 40,
+   "errors": 0
+  },
+  {
+   "lang": "ar",
+   "n": 41,
+   "errors": 0
+  },
+  {
+   "lang": "ar",
+   "n": 42,
+   "errors": 0
+  },
+  {
+   "lang": "ar",
+   "n": 43,
+   "errors": 0
+  },
+  {
+   "lang": "ar",
+   "n": 44,
+   "errors": 0
+  },
+  {
+   "lang": "en",
+   "n": 32,
+   "cold": true,
+   "ok": true,
+   "errors": 0
+  },
+  {
+   "lang": "en",
+   "n": 38,
+   "cold": true,
+   "ok": true,
+   "errors": 0
+  },
+  {
+   "lang": "en",
+   "n": 39,
+   "cold": true,
+   "ok": true,
+   "errors": 0
+  },
+  {
+   "lang": "en",
+   "n": 40,
+   "cold": true,
+   "ok": true,
+   "errors": 0
+  },
+  {
+   "lang": "en",
+   "n": 41,
+   "cold": true,
+   "ok": true,
+   "errors": 0
+  },
+  {
+   "lang": "en",
+   "n": 42,
+   "cold": true,
+   "ok": true,
+   "errors": 0
+  },
+  {
+   "lang": "en",
+   "n": 43,
+   "cold": true,
+   "ok": true,
+   "errors": 0
+  },
+  {
+   "lang": "en",
+   "n": 44,
+   "cold": true,
+   "ok": true,
+   "errors": 0
+  },
+  {
+   "lang": "ar",
+   "n": 32,
+   "cold": true,
+   "ok": true,
+   "errors": 0
+  },
+  {
+   "lang": "ar",
+   "n": 38,
+   "cold": true,
+   "ok": true,
+   "errors": 0
+  },
+  {
+   "lang": "ar",
+   "n": 39,
+   "cold": true,
+   "ok": true,
+   "errors": 0
+  },
+  {
+   "lang": "ar",
+   "n": 40,
+   "cold": true,
+   "ok": true,
+   "errors": 0
+  },
+  {
+   "lang": "ar",
+   "n": 41,
+   "cold": true,
+   "ok": true,
+   "errors": 0
+  },
+  {
+   "lang": "ar",
+   "n": 42,
+   "cold": true,
+   "ok": true,
+   "errors": 0
+  },
+  {
+   "lang": "ar",
+   "n": 43,
+   "cold": true,
+   "ok": true,
+   "errors": 0
+  },
+  {
+   "lang": "ar",
+   "n": 44,
+   "cold": true,
+   "ok": true,
+   "errors": 0
+  }
+ ]
+}

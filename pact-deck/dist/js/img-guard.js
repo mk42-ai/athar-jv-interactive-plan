@@ -10,7 +10,7 @@
 (function () {
   'use strict';
   var FALLBACK = '/assets/img/fallback-athar.svg';
-  var G = { version: 'v1.5.9', fallbackSrc: FALLBACK, failed: [], retries: [], warnings: [], probed: {}, count: function () { return G.failed.length; }, harden: harden, observe: observe, sweep: sweep };
+  var G = { version: 'v1.6.0', fallbackSrc: FALLBACK, failed: [], retries: [], warnings: [], probed: {}, count: function () { return G.failed.length; }, harden: harden, observe: observe, sweep: sweep };
   function lang() { return document.documentElement.lang === 'ar' ? 'ar' : 'en'; }
   function record(url, kind, el) { try { G.failed.push({ url: url, kind: kind, at: new Date().toISOString(), tag: el && el.tagName }); document.dispatchEvent(new CustomEvent('athar:img-fallback', { detail: { url: url, kind: kind } })); } catch (e) {} }
   /* v1.4.7 (independent-verification pass): self-heal before falling back. attempt 0 → a <picture> drops its <source> candidates

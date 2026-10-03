@@ -1,0 +1,283 @@
+{
+ "base": "http://127.0.0.1:4160",
+ "version": "1.6.0",
+ "written": "2026-10-03T16:24:16.940Z",
+ "rows": [
+  {
+   "lang": "en",
+   "who": "al-ameri",
+   "dir": "ltr",
+   "cls": 0,
+   "docOverflowX": 0,
+   "secOverflowX": 0,
+   "video": {
+    "paused": true,
+    "autoplay": false,
+    "poster": "athar-origins-ep01-fahad-al-ameri-poster-07s0.jpg",
+    "defaultTrack": "en"
+   },
+   "figDir": "ltr",
+   "ratio": 1.7778125182519404,
+   "slot": null,
+   "letter": {
+    "x": 289,
+    "y": 141,
+    "w": 586,
+    "h": 571
+   },
+   "media": {
+    "x": 898,
+    "y": 141,
+    "w": 497,
+    "h": 338
+   },
+   "card": {
+    "x": 898,
+    "y": 492,
+    "w": 497,
+    "h": 466
+   },
+   "title": "Athar — Origins of Impact, Episode 01: H.E. Fahad Mohamed Al Ameri"
+  },
+  {
+   "lang": "en",
+   "who": "ferreira-da-cunha",
+   "dir": "ltr",
+   "cls": 0,
+   "docOverflowX": 0,
+   "secOverflowX": 0,
+   "video": {
+    "paused": true,
+    "autoplay": false,
+    "poster": "athar-origins-ep01-ary-ferreira-da-cunha-poster-04s0.jpg",
+    "defaultTrack": "en"
+   },
+   "figDir": "ltr",
+   "ratio": 1.7778125182519404,
+   "slot": null,
+   "letter": {
+    "x": 289,
+    "y": 141,
+    "w": 586,
+    "h": 693
+   },
+   "media": {
+    "x": 898,
+    "y": 141,
+    "w": 497,
+    "h": 338
+   },
+   "card": {
+    "x": 898,
+    "y": 492,
+    "w": 497,
+    "h": 486
+   },
+   "title": "Athar — Origins of Impact, Episode 01: Ary Ferreira da Cunha"
+  },
+  {
+   "lang": "en",
+   "who": "khalid",
+   "dir": "ltr",
+   "cls": 0,
+   "docOverflowX": 0,
+   "secOverflowX": 0,
+   "video": {
+    "paused": true,
+    "autoplay": false,
+    "poster": "athar-origins-of-impact-ep01-poster-09s1.jpg",
+    "defaultTrack": "en"
+   },
+   "figDir": "ltr",
+   "ratio": 1.7778125182519404,
+   "slot": null,
+   "letter": {
+    "x": 289,
+    "y": 141,
+    "w": 586,
+    "h": 605
+   },
+   "media": {
+    "x": 898,
+    "y": 141,
+    "w": 497,
+    "h": 338
+   },
+   "card": null,
+   "title": "Athar — Origins of Impact, Episode 01: Muhammed Khalid"
+  },
+  {
+   "lang": "en",
+   "who": "unwalla",
+   "dir": "ltr",
+   "cls": 0,
+   "docOverflowX": 0,
+   "secOverflowX": 0,
+   "video": null,
+   "figDir": null,
+   "ratio": null,
+   "slot": {
+    "state": "coming-soon",
+    "text": "Film coming soonA verified film for this card will appear here.",
+    "visible": true
+   },
+   "letter": {
+    "x": 289,
+    "y": 141,
+    "w": 586,
+    "h": 622
+   },
+   "media": {
+    "x": 1000,
+    "y": 157,
+    "w": 375,
+    "h": 67
+   },
+   "card": {
+    "x": 898,
+    "y": 141,
+    "w": 497,
+    "h": 670
+   },
+   "title": null
+  },
+  {
+   "lang": "ar",
+   "who": "al-ameri",
+   "dir": "rtl",
+   "cls": 0,
+   "docOverflowX": 0,
+   "secOverflowX": 0,
+   "video": {
+    "paused": true,
+    "autoplay": false,
+    "poster": "athar-origins-ep01-fahad-al-ameri-poster-07s0.jpg",
+    "defaultTrack": "ar"
+   },
+   "figDir": "rtl",
+   "ratio": 1.7778129306776083,
+   "slot": null,
+   "letter": {
+    "x": 565,
+    "y": 145,
+    "w": 586,
+    "h": 575
+   },
+   "media": {
+    "x": 45,
+    "y": 145,
+    "w": 497,
+    "h": 340
+   },
+   "card": {
+    "x": 45,
+    "y": 498,
+    "w": 497,
+    "h": 466
+   },
+   "title": "أثر — أصول الأثر، الحلقة 01: سعادة فهد محمد العامري"
+  },
+  {
+   "lang": "ar",
+   "who": "ferreira-da-cunha",
+   "dir": "rtl",
+   "cls": 0,
+   "docOverflowX": 0,
+   "secOverflowX": 0,
+   "video": {
+    "paused": true,
+    "autoplay": false,
+    "poster": "athar-origins-ep01-ary-ferreira-da-cunha-poster-04s0.jpg",
+    "defaultTrack": "ar"
+   },
+   "figDir": "rtl",
+   "ratio": 1.7778129306776083,
+   "slot": null,
+   "letter": {
+    "x": 565,
+    "y": 145,
+    "w": 586,
+    "h": 698
+   },
+   "media": {
+    "x": 45,
+    "y": 145,
+    "w": 497,
+    "h": 340
+   },
+   "card": {
+    "x": 45,
+    "y": 498,
+    "w": 497,
+    "h": 486
+   },
+   "title": "أثر — أصول الأثر، الحلقة 01: آري فيريرا دا كونيا"
+  },
+  {
+   "lang": "ar",
+   "who": "khalid",
+   "dir": "rtl",
+   "cls": 0,
+   "docOverflowX": 0,
+   "secOverflowX": 0,
+   "video": {
+    "paused": true,
+    "autoplay": false,
+    "poster": "athar-origins-of-impact-ep01-poster-09s1.jpg",
+    "defaultTrack": "ar"
+   },
+   "figDir": "rtl",
+   "ratio": 1.7778129306776083,
+   "slot": null,
+   "letter": {
+    "x": 565,
+    "y": 145,
+    "w": 586,
+    "h": 607
+   },
+   "media": {
+    "x": 45,
+    "y": 145,
+    "w": 497,
+    "h": 340
+   },
+   "card": null,
+   "title": "أثر — أصول الأثر، الحلقة 01: محمد خالد"
+  },
+  {
+   "lang": "ar",
+   "who": "unwalla",
+   "dir": "rtl",
+   "cls": 0,
+   "docOverflowX": 0,
+   "secOverflowX": 0,
+   "video": null,
+   "figDir": null,
+   "ratio": null,
+   "slot": {
+    "state": "coming-soon",
+    "text": "الفيلم قريباًسيظهر هنا الفيلم المعتمد لهذه البطاقة.",
+    "visible": true
+   },
+   "letter": {
+    "x": 565,
+    "y": 145,
+    "w": 586,
+    "h": 626
+   },
+   "media": {
+    "x": 65,
+    "y": 161,
+    "w": 375,
+    "h": 70
+   },
+   "card": {
+    "x": 45,
+    "y": 145,
+    "w": 497,
+    "h": 672
+   },
+   "title": null
+  }
+ ]
+}

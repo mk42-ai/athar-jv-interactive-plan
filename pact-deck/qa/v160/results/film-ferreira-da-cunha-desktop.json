@@ -1,0 +1,59 @@
+{
+ "base": "http://127.0.0.1:4160",
+ "version": "1.6.0",
+ "written": "2026-10-03T16:23:33.561Z",
+ "rows": [
+  {
+   "meta": {
+    "state": "idle",
+    "poster": "athar-origins-ep01-ary-ferreira-da-cunha-poster-04s0.jpg",
+    "posterTime": "4",
+    "variant": "1080p",
+    "src": "/assets/exec/films/ferreira-da-cunha/athar-origins-ep01-ary-ferreira-da-cunha-1080p.mp4",
+    "tracks": [
+     "subtitles:en:default",
+     "subtitles:ar"
+    ],
+    "autoplay": false,
+    "muted": false,
+    "controls": false,
+    "paused": true,
+    "ct": 0,
+    "dur": "0:40",
+    "title": "Athar — Origins of Impact, Episode 01: Ary Ferreira da Cunha",
+    "play": true,
+    "ratio": 1.7778125182519404
+   },
+   "idle": {
+    "paused": true,
+    "ct": 0
+   },
+   "playing": {
+    "state": "playing",
+    "paused": false,
+    "ct": 1.169536,
+    "controls": true,
+    "overlayHidden": true,
+    "overlays": 0,
+    "showing": [
+     "en"
+    ]
+   },
+   "guide": {
+    "onPlay": {
+     "state": "paused",
+     "reason": "video"
+    },
+    "onPause": {
+     "state": "playing",
+     "reason": ""
+    },
+    "atEnd": {
+     "state": "playing",
+     "reason": ""
+    }
+   },
+   "errors": []
+  }
+ ]
+}

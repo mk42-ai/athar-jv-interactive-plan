@@ -237,7 +237,7 @@ test.describe(`guide narration ⇔ visible slide — all ${TOTAL} slides`, () =>
     expect(a.bodyAr).toContain('آري فيريرا دا كونيا'); expect(a.bodyAr).toContain('جامعة بورتو'); expect(a.bodyAr).toContain('برتغالي الجنسية');
     expect(a.tag).toBe('For clearance by office'); expect(a.roundel, 'monogram roundel').toBe(1); expect(a.portrait, 'no photo').toBe(0); expect(a.srcCount).toBe(6); expect(a.links).toHaveLength(5);
     for (const u of ['https://ae.linkedin.com/in/aryfcunha', 'saying-goodbye-to-mckinsey', 'https://noticias.up.pt/nos-por-la/ary-ferreira-da-cunha/', 'https://www.up.pt/casacomum/alumni-mundus/2-ary-ferreira-da-cunha/', 'ulfd0148962_tese.pdf']) expect(a.links.join(' '), u).toContain(u);
-    expect(/Zeyoudi|Thani|Origins of Impact|\bep01\b/i.test(a.text), 'no Thani / film on Ary\'s slide').toBe(false); expect(/\b(2025|2026)\b/.test(a.text), 'no start date on the card').toBe(false);
+    expect(/Zeyoudi|Thani/i.test(a.text), 'no Thani on Ary\'s slide').toBe(false); /* v1.6.0: Ary's own Origins of Impact film now sits on his card */ expect(/\b(2025|2026)\b/.test(a.text), 'no start date on the card').toBe(false);
     await startGuide(page, mobile); const g = await narratedEqualsVisible(page, 42);
     expect(g.ok, 'Ary clip audible on slide 42').toBe(true); expect(g.audible.clip).toBe('NAR-s45'); expect(ccOk(g), 'CC = a sentence of the visible slide').toBe(true); expect(g.reason).not.toBe('no-clip');
     await go('ar', 42);

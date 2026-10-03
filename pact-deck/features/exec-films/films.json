@@ -1,6 +1,6 @@
 {
- "_comment": "v1.5.9 — Section 09 executive films (one slot per card). Source of truth for scripts/v1.4.7/build.mjs (copies assets/<person>/ → dist/assets/exec/films/<person>/), dist/build-info.json (films[]), features/exec-films/exec-films.js (window.AtharExecFilms) and the QA suite. status: 'shipped' = file verified and served · 'coming-soon' = labelled ready slot, no file served. To ship a film later: drop the files into assets/<person>/, fill the entry, set status to shipped, run the build.",
- "version": "1.5.9",
+ "_comment": "v1.6.0 (v1.5.9 base) — Section 09 executive films (one slot per card). Source of truth for scripts/v1.4.7/build.mjs (copies assets/<person>/ → dist/assets/exec/films/<person>/), dist/build-info.json (films[]), features/exec-films/exec-films.js (window.AtharExecFilms) and the QA suite. status: 'shipped' = file verified and served · 'coming-soon' = labelled ready slot, no file served. To ship a film later: drop the files into assets/<person>/, fill the entry, set status to shipped, run the build. burnedInSubtitles: whether the film itself carries burned-in captions (the <track> VTTs are shipped either way).",
+ "version": "1.6.0",
  "distBase": "/assets/exec/films/",
  "films": {
   "khalid": {
@@ -58,33 +58,128 @@
    },
    "videoCodec": "h264 High",
    "audioCodec": "aac LC 48 kHz stereo",
-   "subtitleStreams": "none (burned-in EN) — soft EN/AR via <track>"
+   "subtitleStreams": "none (burned-in EN) — soft EN/AR via <track>",
+   "burnedInSubtitles": true,
+   "burnedInSubtitlesNote": "burned-in English subtitles (v1.5.6 transcription reference)",
+   "v160": "retained unchanged in v1.6.0: the library search found NO '_v2' 1080p subtitled Khalid film — the 1 Oct master (this file's source) is the only one; a separate 4K master (athar-origins-of-impact_4K-master_v2.mp4, 3840x2160, 40 s, 71,354,505 B, library id 6ac1289e28a9b41edb0c1866, 2026-10-03T16:09Z) exists but was not requested for the card and is not used; shipped file sha256 re-verified by the build gate"
   },
   "al-ameri": {
-   "status": "coming-soon",
+   "status": "shipped",
    "person": {
     "en": "H.E. Fahad Mohamed Al Ameri",
     "ar": "سعادة فهد محمد العامري"
    },
-   "requestedFile": "ATHAR_EP01_FahadAlAmeri_1080p_subtitled.mp4",
-   "requestedFileFound": false,
-   "searched": "media library (Media API, 2,244 items), uploads index, this and every other session workspace, prior-turn artefacts, the v1.5.6 / v1.5.7 / v1.5.8 deployment zips, repo history (git log --all -- '*.mp4') — 2026-10-03",
-   "mp4": null,
-   "poster": null,
-   "captions": null
+   "title": {
+    "en": "Athar — Origins of Impact, Episode 01: H.E. Fahad Mohamed Al Ameri",
+    "ar": "أثر — أصول الأثر، الحلقة 01: سعادة فهد محمد العامري"
+   },
+   "aria": {
+    "en": "Impact story film: Athar — Origins of Impact, Episode 01, H.E. Fahad Mohamed Al Ameri",
+    "ar": "فيلم قصة الأثر: أثر — أصول الأثر، الحلقة 01، سعادة فهد محمد العامري"
+   },
+   "bodyExtra": null,
+   "requestedFile": "ATHAR_EP01_FahadAlAmeri_1080p_subtitled_v1 (1).mp4",
+   "requestedFileFound": true,
+   "source": {
+    "file": "ATHAR_EP01_FahadAlAmeri_1080p_subtitled_v1 (1).mp4",
+    "libraryUploaded": "2026-10-03",
+    "sha256": "20f5381ac043d1ab84d7661c2b67472118b6dee6f8169b5141c770be3b235bac",
+    "bytes": 27343878,
+    "note": "downloaded from the user's file library (signed blob URL; the library 'url' field is an .mp3 audio extract, which was used only for the speech-to-text transcript)"
+   },
+   "mp4": "al-ameri/athar-origins-ep01-fahad-al-ameri-1080p.mp4",
+   "mp4Sha256": "66d9a6d6e0369037b18287178f998e7aa364958d53d31a79a85182f34a424f6b",
+   "mp4Bytes": 27343878,
+   "mp4Note": "source remuxed with ffmpeg -c copy -movflags +faststart (moov before mdat; H.264 High 1920x1080 24 fps + AAC-LC 48 kHz stereo — no re-encode)",
+   "mp4Mobile": "al-ameri/athar-origins-ep01-fahad-al-ameri-720p.mp4",
+   "mp4MobileSha256": "7aef034321e7d0e0af4ff116c758cbc520dd9d4a3b79c067e5e9d64f8452bd97",
+   "mp4MobileBytes": 6524587,
+   "mp4MobileNote": "1280x720 transcode (libx264 High@4.0 crf 23, AAC 128k, +faststart) for viewports ≤ 720 px and Save-Data",
+   "poster": "al-ameri/athar-origins-ep01-fahad-al-ameri-poster-07s0.jpg",
+   "posterWebp": "al-ameri/athar-origins-ep01-fahad-al-ameri-poster-07s0.webp",
+   "posterSha256": "6b79ef75424518fe5f57eb499d4caf771e25981b64adc2048fe2351ad10e7c59",
+   "posterTimeSec": 7.0,
+   "posterNote": "frame at 00:07.000 — the largest, sharpest frontal talking-head frame (face ≈ 20 % of the frame, centred, lowest inter-frame motion of the 5.0–7.0 s shot; YuNet face detection + Laplacian sharpness), away from the opening and the end card; a burned-in caption may be visible since the narration is continuous",
+   "w": 1920,
+   "h": 1080,
+   "fps": 24,
+   "durationSec": 40.0,
+   "durationLabel": "0:40",
+   "inPt": 0,
+   "outPt": 40.0,
+   "captions": {
+    "en": "al-ameri/athar-origins-ep01-fahad-al-ameri.en.vtt",
+    "ar": "al-ameri/athar-origins-ep01-fahad-al-ameri.ar.vtt",
+    "note": "WebVTT, 11 cues each — EN transcribed from the narration (On Demand speech-to-text, proper nouns corrected), AR translated with Arabic punctuation; cue timing is a proportional estimate over the detected speech span (no word-level timestamps); cues at line:6%"
+   },
+   "captionsSha256": {
+    "en": "4d30c550ba89263f7cdec4965d28a21bb25f47056af7812cda7b61c50876f433",
+    "ar": "dc1d7819d970fd4c59276efdc95e448ad5f14b03e0b7caa0d7801a448dbde6a4"
+   },
+   "burnedInSubtitles": true,
+   "burnedInSubtitlesNote": "burned-in English subtitles per the source file name ('_subtitled') and the library's scene description; not re-verified by eye (no OCR run)",
+   "videoCodec": "h264 High",
+   "audioCodec": "aac LC 48 kHz stereo",
+   "subtitleStreams": "none — soft EN/AR via <track>"
   },
   "ferreira-da-cunha": {
-   "status": "coming-soon",
+   "status": "shipped",
    "person": {
     "en": "Ary Ferreira da Cunha",
     "ar": "آري فيريرا دا كونيا"
    },
-   "requestedFile": "ary_origins_1080p_FINAL_subtitled_v1.mp4",
-   "requestedFileFound": false,
-   "searched": "media library (Media API, 2,244 items), uploads index, this and every other session workspace, prior-turn artefacts, the v1.5.6 / v1.5.7 / v1.5.8 deployment zips, repo history (git log --all -- '*.mp4') — 2026-10-03",
-   "mp4": null,
-   "poster": null,
-   "captions": null
+   "title": {
+    "en": "Athar — Origins of Impact, Episode 01: Ary Ferreira da Cunha",
+    "ar": "أثر — أصول الأثر، الحلقة 01: آري فيريرا دا كونيا"
+   },
+   "aria": {
+    "en": "Impact story film: Athar — Origins of Impact, Episode 01, Ary Ferreira da Cunha",
+    "ar": "فيلم قصة الأثر: أثر — أصول الأثر، الحلقة 01، آري فيريرا دا كونيا"
+   },
+   "bodyExtra": null,
+   "requestedFile": "ary_origins_1080p_FINAL_v1.mp4",
+   "requestedFileFound": true,
+   "source": {
+    "file": "ary_origins_1080p_FINAL_v1.mp4",
+    "libraryUploaded": "2026-10-03",
+    "sha256": "b155cd834b8ccd9e23f233ede21b1eddc4b8726d2f67327d037553383d6f705f",
+    "bytes": 37870048,
+    "note": "downloaded from the user's file library (signed blob URL; the library 'url' field is an .mp3 audio extract, which was used only for the speech-to-text transcript)"
+   },
+   "mp4": "ferreira-da-cunha/athar-origins-ep01-ary-ferreira-da-cunha-1080p.mp4",
+   "mp4Sha256": "b155cd834b8ccd9e23f233ede21b1eddc4b8726d2f67327d037553383d6f705f",
+   "mp4Bytes": 37870048,
+   "mp4Note": "source already had moov before mdat; ffmpeg -c copy -movflags +faststart produced a byte-identical file (sha256 equals the source)",
+   "mp4Mobile": "ferreira-da-cunha/athar-origins-ep01-ary-ferreira-da-cunha-720p.mp4",
+   "mp4MobileSha256": "281f18ef2582657b95c70bb923b0984d62b060ba8d3af6a31f5ad5a9f1922989",
+   "mp4MobileBytes": 9531379,
+   "mp4MobileNote": "1280x720 transcode (libx264 High@4.0 crf 23, AAC 128k, +faststart) for viewports ≤ 720 px and Save-Data",
+   "poster": "ferreira-da-cunha/athar-origins-ep01-ary-ferreira-da-cunha-poster-04s0.jpg",
+   "posterWebp": "ferreira-da-cunha/athar-origins-ep01-ary-ferreira-da-cunha-poster-04s0.webp",
+   "posterSha256": "c7cb38c99b6de2b5e1e2f8a410da34ffc5601a37949f2ec42ed5354567f6afea",
+   "posterTimeSec": 4.0,
+   "posterNote": "frame at 00:04.000 — the sharpest frontal talking-head frame of the opening 2.5–5.0 s shot (face ≈ 14 % of the frame, YuNet detection + Laplacian sharpness 554); the 13.5–21.5 s world-map / blurred orange-band segment and the end card were excluded",
+   "w": 1920,
+   "h": 1080,
+   "fps": 24,
+   "durationSec": 40.0,
+   "durationLabel": "0:40",
+   "inPt": 0,
+   "outPt": 40.0,
+   "captions": {
+    "en": "ferreira-da-cunha/athar-origins-ep01-ary-ferreira-da-cunha.en.vtt",
+    "ar": "ferreira-da-cunha/athar-origins-ep01-ary-ferreira-da-cunha.ar.vtt",
+    "note": "WebVTT, 11 cues each — EN transcribed from the narration (On Demand speech-to-text, proper nouns corrected), AR translated with Arabic punctuation; cue timing is a proportional estimate over the detected speech span (no word-level timestamps); cues at line:6%"
+   },
+   "captionsSha256": {
+    "en": "0d385859f2e68cca107615e8bf925e20f349b6fecbfbe1e8b55bc94344d099c9",
+    "ar": "cacf66b10a374cfcdf2b330c051c0e78bdde4ae5b4f69e94689f0d2de357ec6d"
+   },
+   "burnedInSubtitles": null,
+   "burnedInSubtitlesNote": "unknown — the file name does not say 'subtitled' and the frames could not be read by eye (no OCR run); the EN/AR <track> captions ship regardless, at the top of the frame",
+   "videoCodec": "h264 High",
+   "audioCodec": "aac LC 48 kHz stereo",
+   "subtitleStreams": "none — soft EN/AR via <track>"
   },
   "unwalla": {
    "status": "coming-soon",
