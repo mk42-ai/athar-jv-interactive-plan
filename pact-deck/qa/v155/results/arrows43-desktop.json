@@ -1,7 +1,7 @@
 {
  "base": "http://127.0.0.1:4455",
- "total": 44,
- "written": "2026-10-02T13:52:30.301Z",
+ "total": 43,
+ "written": "2026-10-03T00:18:13.193Z",
  "rows": [
   {
    "n": 1,
@@ -14,8 +14,8 @@
    "state": "playing",
    "reason": "",
    "ccMatches": true,
-   "syncMs": 227,
-   "t": "2026-10-02T13:52:12.088Z",
+   "syncMs": 226,
+   "t": "2026-10-03T00:17:55.082Z",
    "pass": true
   },
   {
@@ -29,8 +29,8 @@
    "state": "playing",
    "reason": "",
    "ccMatches": true,
-   "syncMs": 121,
-   "t": "2026-10-02T13:52:12.535Z",
+   "syncMs": 113,
+   "t": "2026-10-03T00:17:55.532Z",
    "pass": true
   },
   {
@@ -44,8 +44,8 @@
    "state": "playing",
    "reason": "",
    "ccMatches": true,
-   "syncMs": 117,
-   "t": "2026-10-02T13:52:12.964Z",
+   "syncMs": 111,
+   "t": "2026-10-03T00:17:55.985Z",
    "pass": true
   },
   {
@@ -59,8 +59,8 @@
    "state": "playing",
    "reason": "",
    "ccMatches": true,
-   "syncMs": 117,
-   "t": "2026-10-02T13:52:13.384Z",
+   "syncMs": 118,
+   "t": "2026-10-03T00:17:56.411Z",
    "pass": true
   },
   {
@@ -74,8 +74,8 @@
    "state": "playing",
    "reason": "",
    "ccMatches": true,
-   "syncMs": 122,
-   "t": "2026-10-02T13:52:13.809Z",
+   "syncMs": 114,
+   "t": "2026-10-03T00:17:56.818Z",
    "pass": true
   },
   {
@@ -89,8 +89,8 @@
    "state": "playing",
    "reason": "",
    "ccMatches": true,
-   "syncMs": 114,
-   "t": "2026-10-02T13:52:14.237Z",
+   "syncMs": 139,
+   "t": "2026-10-03T00:17:57.270Z",
    "pass": true
   },
   {
@@ -104,8 +104,8 @@
    "state": "playing",
    "reason": "",
    "ccMatches": true,
-   "syncMs": 117,
-   "t": "2026-10-02T13:52:14.661Z",
+   "syncMs": 129,
+   "t": "2026-10-03T00:17:57.696Z",
    "pass": true
   },
   {
@@ -119,8 +119,8 @@
    "state": "playing",
    "reason": "",
    "ccMatches": true,
-   "syncMs": 123,
-   "t": "2026-10-02T13:52:15.079Z",
+   "syncMs": 121,
+   "t": "2026-10-03T00:17:58.120Z",
    "pass": true
   },
   {
@@ -134,8 +134,8 @@
    "state": "playing",
    "reason": "",
    "ccMatches": true,
-   "syncMs": 115,
-   "t": "2026-10-02T13:52:15.496Z",
+   "syncMs": 113,
+   "t": "2026-10-03T00:17:58.532Z",
    "pass": true
   },
   {
@@ -149,8 +149,8 @@
    "state": "playing",
    "reason": "",
    "ccMatches": true,
-   "syncMs": 110,
-   "t": "2026-10-02T13:52:15.895Z",
+   "syncMs": 121,
+   "t": "2026-10-03T00:17:58.955Z",
    "pass": true
   },
   {
@@ -164,8 +164,8 @@
    "state": "playing",
    "reason": "",
    "ccMatches": true,
-   "syncMs": 115,
-   "t": "2026-10-02T13:52:16.306Z",
+   "syncMs": 127,
+   "t": "2026-10-03T00:17:59.386Z",
    "pass": true
   },
   {
@@ -179,8 +179,8 @@
    "state": "playing",
    "reason": "",
    "ccMatches": true,
-   "syncMs": 115,
-   "t": "2026-10-02T13:52:16.714Z",
+   "syncMs": 126,
+   "t": "2026-10-03T00:17:59.815Z",
    "pass": true
   },
   {
@@ -194,8 +194,8 @@
    "state": "playing",
    "reason": "",
    "ccMatches": true,
-   "syncMs": 116,
-   "t": "2026-10-02T13:52:17.134Z",
+   "syncMs": 124,
+   "t": "2026-10-03T00:18:00.251Z",
    "pass": true
   },
   {
@@ -209,8 +209,8 @@
    "state": "playing",
    "reason": "",
    "ccMatches": true,
-   "syncMs": 111,
-   "t": "2026-10-02T13:52:17.538Z",
+   "syncMs": 116,
+   "t": "2026-10-03T00:18:00.677Z",
    "pass": true
   },
   {
@@ -224,8 +224,8 @@
    "state": "playing",
    "reason": "",
    "ccMatches": true,
-   "syncMs": 114,
-   "t": "2026-10-02T13:52:17.962Z",
+   "syncMs": 125,
+   "t": "2026-10-03T00:18:01.099Z",
    "pass": true
   },
   {
@@ -239,8 +239,8 @@
    "state": "playing",
    "reason": "",
    "ccMatches": true,
-   "syncMs": 112,
-   "t": "2026-10-02T13:52:18.376Z",
+   "syncMs": 113,
+   "t": "2026-10-03T00:18:01.510Z",
    "pass": true
   },
   {
@@ -254,8 +254,8 @@
    "state": "playing",
    "reason": "",
    "ccMatches": true,
-   "syncMs": 109,
-   "t": "2026-10-02T13:52:18.787Z",
+   "syncMs": 115,
+   "t": "2026-10-03T00:18:01.921Z",
    "pass": true
   },
   {
@@ -269,8 +269,8 @@
    "state": "playing",
    "reason": "",
    "ccMatches": true,
-   "syncMs": 124,
-   "t": "2026-10-02T13:52:19.204Z",
+   "syncMs": 132,
+   "t": "2026-10-03T00:18:02.340Z",
    "pass": true
   },
   {
@@ -284,8 +284,8 @@
    "state": "playing",
    "reason": "",
    "ccMatches": true,
-   "syncMs": 110,
-   "t": "2026-10-02T13:52:19.611Z",
+   "syncMs": 132,
+   "t": "2026-10-03T00:18:02.761Z",
    "pass": true
   },
   {
@@ -299,8 +299,8 @@
    "state": "playing",
    "reason": "",
    "ccMatches": true,
-   "syncMs": 111,
-   "t": "2026-10-02T13:52:20.018Z",
+   "syncMs": 115,
+   "t": "2026-10-03T00:18:03.191Z",
    "pass": true
   },
   {
@@ -314,8 +314,8 @@
    "state": "playing",
    "reason": "",
    "ccMatches": true,
-   "syncMs": 129,
-   "t": "2026-10-02T13:52:20.461Z",
+   "syncMs": 116,
+   "t": "2026-10-03T00:18:03.624Z",
    "pass": true
   },
   {
@@ -329,8 +329,8 @@
    "state": "playing",
    "reason": "",
    "ccMatches": true,
-   "syncMs": 115,
-   "t": "2026-10-02T13:52:20.872Z",
+   "syncMs": 110,
+   "t": "2026-10-03T00:18:04.082Z",
    "pass": true
   },
   {
@@ -344,8 +344,8 @@
    "state": "playing",
    "reason": "",
    "ccMatches": true,
-   "syncMs": 112,
-   "t": "2026-10-02T13:52:21.295Z",
+   "syncMs": 109,
+   "t": "2026-10-03T00:18:04.513Z",
    "pass": true
   },
   {
@@ -359,8 +359,8 @@
    "state": "playing",
    "reason": "",
    "ccMatches": true,
-   "syncMs": 110,
-   "t": "2026-10-02T13:52:21.702Z",
+   "syncMs": 109,
+   "t": "2026-10-03T00:18:04.916Z",
    "pass": true
   },
   {
@@ -374,8 +374,8 @@
    "state": "playing",
    "reason": "",
    "ccMatches": true,
-   "syncMs": 112,
-   "t": "2026-10-02T13:52:22.113Z",
+   "syncMs": 113,
+   "t": "2026-10-03T00:18:05.321Z",
    "pass": true
   },
   {
@@ -389,8 +389,8 @@
    "state": "playing",
    "reason": "",
    "ccMatches": true,
-   "syncMs": 116,
-   "t": "2026-10-02T13:52:22.523Z",
+   "syncMs": 127,
+   "t": "2026-10-03T00:18:05.743Z",
    "pass": true
   },
   {
@@ -404,8 +404,8 @@
    "state": "playing",
    "reason": "",
    "ccMatches": true,
-   "syncMs": 120,
-   "t": "2026-10-02T13:52:22.923Z",
+   "syncMs": 114,
+   "t": "2026-10-03T00:18:06.160Z",
    "pass": true
   },
   {
@@ -419,8 +419,8 @@
    "state": "playing",
    "reason": "",
    "ccMatches": true,
-   "syncMs": 112,
-   "t": "2026-10-02T13:52:23.338Z",
+   "syncMs": 116,
+   "t": "2026-10-03T00:18:06.576Z",
    "pass": true
   },
   {
@@ -434,8 +434,8 @@
    "state": "playing",
    "reason": "",
    "ccMatches": true,
-   "syncMs": 114,
-   "t": "2026-10-02T13:52:23.744Z",
+   "syncMs": 112,
+   "t": "2026-10-03T00:18:06.990Z",
    "pass": true
   },
   {
@@ -449,8 +449,8 @@
    "state": "playing",
    "reason": "",
    "ccMatches": true,
-   "syncMs": 112,
-   "t": "2026-10-02T13:52:24.166Z",
+   "syncMs": 111,
+   "t": "2026-10-03T00:18:07.406Z",
    "pass": true
   },
   {
@@ -464,8 +464,8 @@
    "state": "playing",
    "reason": "",
    "ccMatches": true,
-   "syncMs": 108,
-   "t": "2026-10-02T13:52:24.571Z",
+   "syncMs": 110,
+   "t": "2026-10-03T00:18:07.804Z",
    "pass": true
   },
   {
@@ -479,8 +479,8 @@
    "state": "playing",
    "reason": "",
    "ccMatches": true,
-   "syncMs": 110,
-   "t": "2026-10-02T13:52:24.976Z",
+   "syncMs": 115,
+   "t": "2026-10-03T00:18:08.219Z",
    "pass": true
   },
   {
@@ -494,8 +494,8 @@
    "state": "playing",
    "reason": "",
    "ccMatches": true,
-   "syncMs": 116,
-   "t": "2026-10-02T13:52:25.404Z",
+   "syncMs": 132,
+   "t": "2026-10-03T00:18:08.653Z",
    "pass": true
   },
   {
@@ -509,8 +509,8 @@
    "state": "playing",
    "reason": "",
    "ccMatches": true,
-   "syncMs": 128,
-   "t": "2026-10-02T13:52:25.850Z",
+   "syncMs": 122,
+   "t": "2026-10-03T00:18:09.121Z",
    "pass": true
   },
   {
@@ -524,8 +524,8 @@
    "state": "playing",
    "reason": "",
    "ccMatches": true,
-   "syncMs": 18,
-   "t": "2026-10-02T13:52:26.283Z",
+   "syncMs": 16,
+   "t": "2026-10-03T00:18:09.564Z",
    "pass": true
   },
   {
@@ -539,8 +539,8 @@
    "state": "playing",
    "reason": "",
    "ccMatches": true,
-   "syncMs": 123,
-   "t": "2026-10-02T13:52:26.720Z",
+   "syncMs": 114,
+   "t": "2026-10-03T00:18:09.975Z",
    "pass": true
   },
   {
@@ -554,8 +554,8 @@
    "state": "playing",
    "reason": "",
    "ccMatches": true,
-   "syncMs": 122,
-   "t": "2026-10-02T13:52:27.153Z",
+   "syncMs": 130,
+   "t": "2026-10-03T00:18:10.410Z",
    "pass": true
   },
   {
@@ -569,8 +569,8 @@
    "state": "playing",
    "reason": "",
    "ccMatches": true,
-   "syncMs": 112,
-   "t": "2026-10-02T13:52:27.562Z",
+   "syncMs": 115,
+   "t": "2026-10-03T00:18:10.830Z",
    "pass": true
   },
   {
@@ -584,8 +584,8 @@
    "state": "playing",
    "reason": "",
    "ccMatches": true,
-   "syncMs": 132,
-   "t": "2026-10-02T13:52:28.007Z",
+   "syncMs": 109,
+   "t": "2026-10-03T00:18:11.249Z",
    "pass": true
   },
   {
@@ -599,27 +599,12 @@
    "state": "playing",
    "reason": "",
    "ccMatches": true,
-   "syncMs": 114,
-   "t": "2026-10-02T13:52:28.433Z",
+   "syncMs": 116,
+   "t": "2026-10-03T00:18:11.675Z",
    "pass": true
   },
   {
    "n": 41,
-   "how": "arrow",
-   "visibleSlideId": "s-exec-al-zeyoudi",
-   "narratedSlideId": "s-exec-al-zeyoudi",
-   "expectedClip": "NAR-s41",
-   "audibleClip": "NAR-s41",
-   "audibleSlideId": "s-exec-al-zeyoudi",
-   "state": "playing",
-   "reason": "",
-   "ccMatches": true,
-   "syncMs": 109,
-   "t": "2026-10-02T13:52:28.845Z",
-   "pass": true
-  },
-  {
-   "n": 42,
    "how": "arrow",
    "visibleSlideId": "s-exec-al-ameri",
    "narratedSlideId": "s-exec-al-ameri",
@@ -629,12 +614,12 @@
    "state": "playing",
    "reason": "",
    "ccMatches": true,
-   "syncMs": 116,
-   "t": "2026-10-02T13:52:29.258Z",
+   "syncMs": 118,
+   "t": "2026-10-03T00:18:12.116Z",
    "pass": true
   },
   {
-   "n": 43,
+   "n": 42,
    "how": "arrow",
    "visibleSlideId": "s-exec-khalid",
    "narratedSlideId": "s-exec-khalid",
@@ -644,12 +629,12 @@
    "state": "playing",
    "reason": "",
    "ccMatches": true,
-   "syncMs": 112,
-   "t": "2026-10-02T13:52:29.670Z",
+   "syncMs": 118,
+   "t": "2026-10-03T00:18:12.543Z",
    "pass": true
   },
   {
-   "n": 44,
+   "n": 43,
    "how": "arrow",
    "visibleSlideId": "s-exec-unwalla",
    "narratedSlideId": "s-exec-unwalla",
@@ -659,8 +644,8 @@
    "state": "playing",
    "reason": "",
    "ccMatches": true,
-   "syncMs": 114,
-   "t": "2026-10-02T13:52:30.077Z",
+   "syncMs": 112,
+   "t": "2026-10-03T00:18:12.967Z",
    "pass": true
   }
  ]

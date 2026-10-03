@@ -1,0 +1,63 @@
+{
+ "base": "http://127.0.0.1:4455",
+ "total": 43,
+ "written": "2026-10-03T00:18:49.838Z",
+ "rows": [
+  {
+   "slide38": {
+    "en": {
+     "tab": "PRODUCT CONCEPT",
+     "cap": "CONCEPT RENDER",
+     "alt": "AI-generated concept render of an Athar service hall: a man in a wheelchair is helped at a reception desk beside a navy ATHAR self-service kiosk, a mother and her young son look at a tablet showing an Arabic medical-appointment screen, and two colleagues sit at a meeting table in the background",
+     "nat": [
+      768,
+      480
+     ],
+     "shown": [
+      556,
+      347
+     ],
+     "cur": "plate5-concept-v157-1x.webp",
+     "imgs": 1,
+     "stills": 0
+    },
+    "ar": {
+     "tab": "مفهوم المنتج",
+     "cap": "تصوّر مفاهيمي",
+     "alt": "تصوّر مفاهيمي مولَّد بالذكاء الاصطناعي لقاعة خدمات أثر: رجل على كرسي متحرك يتلقى المساعدة عند مكتب الاستقبال بجوار كشك أثر الأزرق الداكن للخدمة الذاتية، وأم مع ابنها الصغير تنظران إلى جهاز لوحي تظهر عليه شاشة موعد طبي بالعربية، وزميلان يجلسان إلى طاولة اجتماعات في الخلفية",
+     "nat": [
+      768,
+      480
+     ],
+     "shown": [
+      556,
+      347
+     ],
+     "cur": "plate5-concept-v157-1x.webp",
+     "imgs": 1,
+     "stills": 0
+    }
+   },
+   "section09": {
+    "ids": [
+     "s-exec-intro",
+     "s-exec-al-ameri",
+     "s-exec-khalid",
+     "s-exec-unwalla"
+    ],
+    "count": 4,
+    "total": 43,
+    "counter": "Slide 43 of 43",
+    "gone": true,
+    "index": 6
+   },
+   "ceo": {
+    "videos": 0,
+    "roundel": 1,
+    "letterW": 1161,
+    "bodyW": 1394,
+    "clipDurationSec": 17.74
+   }
+  }
+ ]
+}

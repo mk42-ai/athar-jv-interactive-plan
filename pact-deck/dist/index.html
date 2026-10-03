@@ -1,11 +1,11 @@
 <!doctype html>
-<html lang="en" dir="ltr" data-deck-version="1.5.6">
+<html lang="en" dir="ltr" data-deck-version="1.5.7">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
     <meta name="color-scheme" content="light" />
     <meta name="theme-color" content="#062739" />
-    <meta name="application-version" content="1.5.6" />
+    <meta name="application-version" content="1.5.7" />
     <meta name="generator" content="athar-community-deck v1.4.7 (2026-09-29; image-integrity release: every image slot restored or replaced from official sources, img-guard fallback, check-assets build gate; lineage v1.4.2 (2026-09-28; v1.2.1 build + runtime modules: impact-tiers section, API-licence grid, section 08 Athar OS with the real-screen product tour, product film and stills; intro film gate with Skip)" />
     <meta name="description" content="Athar Open Agentic Pact — Build once. Run everywhere. Lift everyone. A community proposal by ODA × AIREV (24 September 2026)." />
     <title>Athar Open Agentic Pact — Build once. Run everywhere. Lift everyone.</title>
@@ -101,7 +101,7 @@
       var lastLang=null;
       function inject(){var l=lang();var relabel=lastLang!==null&&lastLang!==l;lastLang=l;
         document.querySelectorAll('section.slide').forEach(function(sec){if(!STRIP_SLIDES[sec.id])return;var ex=sec.querySelector(':scope>.athar-partner-strip');if(ex&&relabel){ex.remove();ex=null;}if(!ex){sec.classList.add('has-partner-strip');sec.appendChild(strip());}});fitAll();
-        var f=document.querySelector('footer.pagefooter');if(f){var ex=f.querySelector(':scope>.aps-footer');if(ex&&relabel){ex.remove();ex=null;}if(!ex){var r=f.querySelector(':scope>.footer-right');f.insertBefore(footerStrip(),r||null);}var fr=f.querySelector(':scope>.footer-right');if(fr&&!fr.querySelector('.deck-version')){var v=document.createElement('span');v.className='deck-version';v.setAttribute('data-testid','deck-version');v.textContent='v1.5.6';fr.insertBefore(v,fr.firstChild);}}}
+        var f=document.querySelector('footer.pagefooter');if(f){var ex=f.querySelector(':scope>.aps-footer');if(ex&&relabel){ex.remove();ex=null;}if(!ex){var r=f.querySelector(':scope>.footer-right');f.insertBefore(footerStrip(),r||null);}var fr=f.querySelector(':scope>.footer-right');if(fr&&!fr.querySelector('.deck-version')){var v=document.createElement('span');v.className='deck-version';v.setAttribute('data-testid','deck-version');v.textContent='v1.5.7';fr.insertBefore(v,fr.firstChild);}}}
       var root=document.getElementById('root');var pending=false;
       function schedule(){if(pending)return;pending=true;window.requestAnimationFrame(function(){pending=false;try{inject();}catch(e){}});}
       new MutationObserver(schedule).observe(root,{childList:true,subtree:true});

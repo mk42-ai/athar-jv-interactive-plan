@@ -1,7 +1,7 @@
 {
  "base": "http://127.0.0.1:4455",
- "total": 44,
- "written": "2026-10-02T13:52:41.549Z",
+ "total": 43,
+ "written": "2026-10-03T00:18:24.783Z",
  "rows": [
   {
    "n": 39,
@@ -14,8 +14,8 @@
    "state": "playing",
    "reason": "",
    "ccMatches": true,
-   "syncMs": 148,
-   "t": "2026-10-02T13:52:32.308Z",
+   "syncMs": 130,
+   "t": "2026-10-03T00:18:15.280Z",
    "pass": true
   },
   {
@@ -29,8 +29,8 @@
    "state": "playing",
    "reason": "",
    "ccMatches": true,
-   "syncMs": 125,
-   "t": "2026-10-02T13:52:32.522Z",
+   "syncMs": 214,
+   "t": "2026-10-03T00:18:15.579Z",
    "pass": true
   },
   {
@@ -44,8 +44,8 @@
    "state": "playing",
    "reason": "",
    "ccMatches": true,
-   "syncMs": 110,
-   "t": "2026-10-02T13:52:32.737Z",
+   "syncMs": 126,
+   "t": "2026-10-03T00:18:15.832Z",
    "pass": true
   },
   {
@@ -59,8 +59,8 @@
    "state": "playing",
    "reason": "",
    "ccMatches": true,
-   "syncMs": 115,
-   "t": "2026-10-02T13:52:32.943Z",
+   "syncMs": 122,
+   "t": "2026-10-03T00:18:16.077Z",
    "pass": true
   },
   {
@@ -74,8 +74,8 @@
    "state": "playing",
    "reason": "",
    "ccMatches": true,
-   "syncMs": 116,
-   "t": "2026-10-02T13:52:33.161Z",
+   "syncMs": 114,
+   "t": "2026-10-03T00:18:16.301Z",
    "pass": true
   },
   {
@@ -89,8 +89,8 @@
    "state": "playing",
    "reason": "",
    "ccMatches": true,
-   "syncMs": 118,
-   "t": "2026-10-02T13:52:33.352Z",
+   "syncMs": 115,
+   "t": "2026-10-03T00:18:16.496Z",
    "pass": true
   },
   {
@@ -104,8 +104,8 @@
    "state": "playing",
    "reason": "",
    "ccMatches": true,
-   "syncMs": 119,
-   "t": "2026-10-02T13:52:33.584Z",
+   "syncMs": 124,
+   "t": "2026-10-03T00:18:16.756Z",
    "pass": true
   },
   {
@@ -119,8 +119,8 @@
    "state": "playing",
    "reason": "",
    "ccMatches": true,
-   "syncMs": 115,
-   "t": "2026-10-02T13:52:33.769Z",
+   "syncMs": 110,
+   "t": "2026-10-03T00:18:16.948Z",
    "pass": true
   },
   {
@@ -134,8 +134,8 @@
    "state": "playing",
    "reason": "",
    "ccMatches": true,
-   "syncMs": 118,
-   "t": "2026-10-02T13:52:33.997Z",
+   "syncMs": 115,
+   "t": "2026-10-03T00:18:17.201Z",
    "pass": true
   },
   {
@@ -149,8 +149,8 @@
    "state": "playing",
    "reason": "",
    "ccMatches": true,
-   "syncMs": 114,
-   "t": "2026-10-02T13:52:34.229Z",
+   "syncMs": 122,
+   "t": "2026-10-03T00:18:17.429Z",
    "pass": true
   },
   {
@@ -165,7 +165,7 @@
    "reason": "",
    "ccMatches": true,
    "syncMs": 109,
-   "t": "2026-10-02T13:52:34.412Z",
+   "t": "2026-10-03T00:18:17.620Z",
    "pass": true
   },
   {
@@ -179,8 +179,8 @@
    "state": "playing",
    "reason": "",
    "ccMatches": true,
-   "syncMs": 120,
-   "t": "2026-10-02T13:52:34.635Z",
+   "syncMs": 116,
+   "t": "2026-10-03T00:18:17.833Z",
    "pass": true
   },
   {
@@ -194,8 +194,8 @@
    "state": "playing",
    "reason": "",
    "ccMatches": true,
-   "syncMs": 111,
-   "t": "2026-10-02T13:52:34.828Z",
+   "syncMs": 123,
+   "t": "2026-10-03T00:18:18.037Z",
    "pass": true
   },
   {
@@ -209,8 +209,8 @@
    "state": "playing",
    "reason": "",
    "ccMatches": true,
-   "syncMs": 114,
-   "t": "2026-10-02T13:52:35.043Z",
+   "syncMs": 118,
+   "t": "2026-10-03T00:18:18.271Z",
    "pass": true
   },
   {
@@ -224,8 +224,8 @@
    "state": "playing",
    "reason": "",
    "ccMatches": true,
-   "syncMs": 118,
-   "t": "2026-10-02T13:52:35.232Z",
+   "syncMs": 130,
+   "t": "2026-10-03T00:18:18.486Z",
    "pass": true
   },
   {
@@ -240,7 +240,7 @@
    "reason": "",
    "ccMatches": true,
    "syncMs": 108,
-   "t": "2026-10-02T13:52:35.442Z",
+   "t": "2026-10-03T00:18:18.699Z",
    "pass": true
   },
   {
@@ -254,23 +254,23 @@
    "state": "playing",
    "reason": "",
    "ccMatches": true,
-   "syncMs": 116,
-   "t": "2026-10-02T13:52:35.629Z",
+   "syncMs": 111,
+   "t": "2026-10-03T00:18:18.900Z",
    "pass": true
   },
   {
    "n": 41,
    "how": "deeplink #/28/exec-2",
-   "visibleSlideId": "s-exec-al-zeyoudi",
-   "narratedSlideId": "s-exec-al-zeyoudi",
-   "expectedClip": "NAR-s41",
-   "audibleClip": "NAR-s41",
-   "audibleSlideId": "s-exec-al-zeyoudi",
+   "visibleSlideId": "s-exec-al-ameri",
+   "narratedSlideId": "s-exec-al-ameri",
+   "expectedClip": "NAR-s42",
+   "audibleClip": "NAR-s42",
+   "audibleSlideId": "s-exec-al-ameri",
    "state": "playing",
    "reason": "",
    "ccMatches": true,
-   "syncMs": 111,
-   "t": "2026-10-02T13:52:35.886Z",
+   "syncMs": 116,
+   "t": "2026-10-03T00:18:19.149Z",
    "pass": true
   },
   {
@@ -284,8 +284,8 @@
    "state": "playing",
    "reason": "",
    "ccMatches": true,
-   "syncMs": 114,
-   "t": "2026-10-02T13:52:36.104Z",
+   "syncMs": 112,
+   "t": "2026-10-03T00:18:19.355Z",
    "pass": true
   },
   {
@@ -299,8 +299,8 @@
    "state": "playing",
    "reason": "",
    "ccMatches": true,
-   "syncMs": 112,
-   "t": "2026-10-02T13:52:36.349Z",
+   "syncMs": 109,
+   "t": "2026-10-03T00:18:19.584Z",
    "pass": true
   },
   {
@@ -314,8 +314,8 @@
    "state": "playing",
    "reason": "",
    "ccMatches": true,
-   "syncMs": 108,
-   "t": "2026-10-02T13:52:36.550Z",
+   "syncMs": 115,
+   "t": "2026-10-03T00:18:19.797Z",
    "pass": true
   },
   {
@@ -329,8 +329,8 @@
    "state": "playing",
    "reason": "",
    "ccMatches": true,
-   "syncMs": 111,
-   "t": "2026-10-02T13:52:36.786Z",
+   "syncMs": 125,
+   "t": "2026-10-03T00:18:20.053Z",
    "pass": true
   },
   {
@@ -344,8 +344,8 @@
    "state": "playing",
    "reason": "",
    "ccMatches": true,
-   "syncMs": 118,
-   "t": "2026-10-02T13:52:36.975Z",
+   "syncMs": 111,
+   "t": "2026-10-03T00:18:20.255Z",
    "pass": true
   },
   {
@@ -359,8 +359,8 @@
    "state": "playing",
    "reason": "",
    "ccMatches": true,
-   "syncMs": 109,
-   "t": "2026-10-02T13:52:37.219Z",
+   "syncMs": 107,
+   "t": "2026-10-03T00:18:20.483Z",
    "pass": true
   },
   {
@@ -374,8 +374,8 @@
    "state": "playing",
    "reason": "",
    "ccMatches": true,
-   "syncMs": 117,
-   "t": "2026-10-02T13:52:37.405Z",
+   "syncMs": 109,
+   "t": "2026-10-03T00:18:20.684Z",
    "pass": true
   },
   {
@@ -389,23 +389,23 @@
    "state": "playing",
    "reason": "",
    "ccMatches": true,
-   "syncMs": 145,
-   "t": "2026-10-02T13:52:37.666Z",
+   "syncMs": 110,
+   "t": "2026-10-03T00:18:20.911Z",
    "pass": true
   },
   {
    "n": 42,
    "how": "deeplink #/28/exec-3",
-   "visibleSlideId": "s-exec-al-ameri",
-   "narratedSlideId": "s-exec-al-ameri",
-   "expectedClip": "NAR-s42",
-   "audibleClip": "NAR-s42",
-   "audibleSlideId": "s-exec-al-ameri",
+   "visibleSlideId": "s-exec-khalid",
+   "narratedSlideId": "s-exec-khalid",
+   "expectedClip": "NAR-s43",
+   "audibleClip": "NAR-s43",
+   "audibleSlideId": "s-exec-khalid",
    "state": "playing",
    "reason": "",
    "ccMatches": true,
-   "syncMs": 111,
-   "t": "2026-10-02T13:52:37.937Z",
+   "syncMs": 113,
+   "t": "2026-10-03T00:18:21.155Z",
    "pass": true
   },
   {
@@ -419,8 +419,8 @@
    "state": "playing",
    "reason": "",
    "ccMatches": true,
-   "syncMs": 117,
-   "t": "2026-10-02T13:52:38.135Z",
+   "syncMs": 116,
+   "t": "2026-10-03T00:18:21.354Z",
    "pass": true
   },
   {
@@ -434,8 +434,8 @@
    "state": "playing",
    "reason": "",
    "ccMatches": true,
-   "syncMs": 115,
-   "t": "2026-10-02T13:52:38.379Z",
+   "syncMs": 111,
+   "t": "2026-10-03T00:18:21.592Z",
    "pass": true
   },
   {
@@ -449,8 +449,8 @@
    "state": "playing",
    "reason": "",
    "ccMatches": true,
-   "syncMs": 118,
-   "t": "2026-10-02T13:52:38.571Z",
+   "syncMs": 133,
+   "t": "2026-10-03T00:18:21.812Z",
    "pass": true
   },
   {
@@ -464,8 +464,8 @@
    "state": "playing",
    "reason": "",
    "ccMatches": true,
-   "syncMs": 24,
-   "t": "2026-10-02T13:52:38.737Z",
+   "syncMs": 121,
+   "t": "2026-10-03T00:18:22.058Z",
    "pass": true
   },
   {
@@ -479,8 +479,8 @@
    "state": "playing",
    "reason": "",
    "ccMatches": true,
-   "syncMs": 114,
-   "t": "2026-10-02T13:52:38.924Z",
+   "syncMs": 119,
+   "t": "2026-10-03T00:18:22.251Z",
    "pass": true
   },
   {
@@ -494,8 +494,8 @@
    "state": "playing",
    "reason": "",
    "ccMatches": true,
-   "syncMs": 34,
-   "t": "2026-10-02T13:52:39.100Z",
+   "syncMs": 116,
+   "t": "2026-10-03T00:18:22.509Z",
    "pass": true
   },
   {
@@ -509,8 +509,8 @@
    "state": "playing",
    "reason": "",
    "ccMatches": true,
-   "syncMs": 116,
-   "t": "2026-10-02T13:52:39.305Z",
+   "syncMs": 115,
+   "t": "2026-10-03T00:18:22.721Z",
    "pass": true
   },
   {
@@ -524,23 +524,23 @@
    "state": "playing",
    "reason": "",
    "ccMatches": true,
-   "syncMs": 17,
-   "t": "2026-10-02T13:52:39.534Z",
+   "syncMs": 19,
+   "t": "2026-10-03T00:18:22.970Z",
    "pass": true
   },
   {
    "n": 43,
    "how": "deeplink #/28/exec-4",
-   "visibleSlideId": "s-exec-khalid",
-   "narratedSlideId": "s-exec-khalid",
-   "expectedClip": "NAR-s43",
-   "audibleClip": "NAR-s43",
-   "audibleSlideId": "s-exec-khalid",
+   "visibleSlideId": "s-exec-unwalla",
+   "narratedSlideId": "s-exec-unwalla",
+   "expectedClip": "NAR-s44",
+   "audibleClip": "NAR-s44",
+   "audibleSlideId": "s-exec-unwalla",
    "state": "playing",
    "reason": "",
    "ccMatches": true,
-   "syncMs": 116,
-   "t": "2026-10-02T13:52:39.794Z",
+   "syncMs": 114,
+   "t": "2026-10-03T00:18:23.220Z",
    "pass": true
   },
   {
@@ -555,7 +555,7 @@
    "reason": "",
    "ccMatches": true,
    "syncMs": 111,
-   "t": "2026-10-02T13:52:39.979Z",
+   "t": "2026-10-03T00:18:23.421Z",
    "pass": true
   },
   {
@@ -569,8 +569,8 @@
    "state": "playing",
    "reason": "",
    "ccMatches": true,
-   "syncMs": 107,
-   "t": "2026-10-02T13:52:40.215Z",
+   "syncMs": 110,
+   "t": "2026-10-03T00:18:23.659Z",
    "pass": true
   },
   {
@@ -584,8 +584,8 @@
    "state": "playing",
    "reason": "",
    "ccMatches": true,
-   "syncMs": 113,
-   "t": "2026-10-02T13:52:40.409Z",
+   "syncMs": 110,
+   "t": "2026-10-03T00:18:23.864Z",
    "pass": true
   },
   {
@@ -599,8 +599,8 @@
    "state": "playing",
    "reason": "",
    "ccMatches": true,
-   "syncMs": 119,
-   "t": "2026-10-02T13:52:40.654Z",
+   "syncMs": 139,
+   "t": "2026-10-03T00:18:24.133Z",
    "pass": true
   },
   {
@@ -614,8 +614,8 @@
    "state": "playing",
    "reason": "",
    "ccMatches": true,
-   "syncMs": 119,
-   "t": "2026-10-02T13:52:40.857Z",
+   "syncMs": 123,
+   "t": "2026-10-03T00:18:24.347Z",
    "pass": true
   },
   {
@@ -629,8 +629,8 @@
    "state": "playing",
    "reason": "",
    "ccMatches": true,
-   "syncMs": 118,
-   "t": "2026-10-02T13:52:41.117Z",
+   "syncMs": 112,
+   "t": "2026-10-03T00:18:24.587Z",
    "pass": true
   },
   {
@@ -644,23 +644,8 @@
    "state": "playing",
    "reason": "",
    "ccMatches": true,
-   "syncMs": 117,
-   "t": "2026-10-02T13:52:41.309Z",
-   "pass": true
-  },
-  {
-   "n": 44,
-   "how": "deeplink #/28/exec-5",
-   "visibleSlideId": "s-exec-unwalla",
-   "narratedSlideId": "s-exec-unwalla",
-   "expectedClip": "NAR-s44",
-   "audibleClip": "NAR-s44",
-   "audibleSlideId": "s-exec-unwalla",
-   "state": "playing",
-   "reason": "",
-   "ccMatches": true,
-   "syncMs": 109,
-   "t": "2026-10-02T13:52:41.541Z",
+   "syncMs": 116,
+   "t": "2026-10-03T00:18:24.773Z",
    "pass": true
   }
  ]

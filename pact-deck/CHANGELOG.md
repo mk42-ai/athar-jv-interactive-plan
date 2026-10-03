@@ -549,3 +549,29 @@ Version label v1.5.6 (package.json, index.html, meta, footer badge, module `VERS
 out-point, hidden card, new v1.5.6 label/card/film test), `qa/v154` guide-sync 24/24, root `npm test` 124 pass / 0 fail / 1 skipped (clean worktree with deps), python ingestion 8/8 and ui-unit 25/25.
 On a fresh Vercel sandbox preview: 297/297 files from `SHA256SUMS.txt` fetched over HTTP with matching sha256, 54/54 narration clips 200 `audio/mpeg`, EN→AR toggle (dir=rtl) and back, slides 32/38/42 deep links,
 section 09 = slides 40–44, 0 console errors, no removed-person strings in any served text asset; before/after screenshots at 1728×872 and 390×844 for slides 40–44 (EN + AR) captured with ui-validator (not committed).
+
+## v1.5.7 — 2026-10-03 (edit in place on v1.5.6 `3b625be`, PR #8 branch `deck/pact-v1.5.2-close-out`; 44 → 43 slides)
+
+Exactly three changes, then the version bump. Everything else (H.E. name-label rule, Kayaan and Fahad cards, narration of the other slides) is unchanged.
+
+**(1) Slide 38 — ONE product-concept image** (`assets/plates/plate5-concept-v157-{1x,2x}.{webp,jpg}`)
+- The right column of the Athar OS nations slide held a product-film still (tag "PRODUCT FILM STILL · AT 16.7 S", `tour/stills/p20|p50|p80`) above a 3-panel strip shown at ~336×70 px that cut off faces. Both are gone; the column now holds one image under a
+  **PRODUCT CONCEPT** / «مفهوم المنتج» tab, caption **CONCEPT RENDER** / «تصوّر مفاهيمي» (kept), Legacy Gold hairline (kept).
+- Chosen from the 3 GPT Image 2.5 candidates (1536×1024): **wKr19OqvTJ**; alternates lXwphbcUrC (2nd) and nMfQMgPMyX (3rd). Evidence: faces — OpenCV YuNet finds 6 faces, none within 58 px of an edge (all three candidates pass); kiosk "ATHAR" reads exactly in all three (tesseract);
+  tablet Arabic موعدك الطبي reads exactly in the chosen one (conf 92/91), first word malformed in the 3rd; off-brand colour share 4.0 % / 5.9 % / 6.8 %; vision-judge compact pass: garbled areas 1 / 2 / 5, clearly malformed hands 1 / 1 / 2 (single judge passes were noisy, 0–8 /10).
+  Known, not retouched: AI-typical softness on hands and wheelchair, pseudo-text on the background wall display and kiosk screen (illegible at slide size).
+- Crop `[0,64,1536,1024]` → 1536×960 (16:10; only the ceiling band removed); 2x = 1536×960, 1x = 768×480; webp q82 (50 / 127 KB) + jpg q84 (77 / 228 KB) in a `<picture srcset 1x 2x>`; shown whole. EN + AR alt text say it is an AI-generated concept render.
+- Layout: column 34 % → 40 % (≥ 701 px wide); at 1728×872 the image is 556×347 and the column ends at y 619, "Join the pact" at 681; short viewports scale it down uncropped; phones stack it under the copy.
+- Removed from `dist/`: `plate5-strip-v155.*`, `tour/stills/p20|p50|p80` (+ `-960.webp`) and their `tour-assets.json` / `real-screens.js` entries. Disclosure + provenance: `assets/plates/credits.json` → `plate5-concept-v157`, `asset-ledger-v1.5.7.csv`.
+
+**(2) Section 09 — the former Letter 1 removed completely** — card, EN + AR copy, source links, portrait, intro-index / overview entry, his George clip `NAR-s41` and its transcript. Slides renumbered: intro 40, Fahad 41, CEO 42, Kayaan 43; deep links `#/28/exec-1…4`
+(`#slide-40…43`); deck total 43. Intro lede: "Three letters …" / «ثلاث رسائل …» and "the official's letter" (one official letter remains). Clip ids keep their numbers (NAR-s42 = slide 41, NAR-s43 = 42, NAR-s44 = 43).
+Other mentions left untouched (reported): slide 30 news caption / alt text (`js/impact-tiers.js`, EN + AR) and `assets/news/credits.json` name him as present at the Redington MoU signing.
+
+**(3) CEO letter — the Origins of Impact film is an optional feature, OFF.** `pact-deck/features.json` → `originsFilm: false`. Film, poster and EN/AR captions live in `pact-deck/features/origins-film/` (kept in the repo, README with the re-enable steps), not in `dist/`. The build syncs `dist/` to the flag
+(OFF: no `exec-film.js`, no video files, no `<script>` tag; ON: copied + injected before `exec-team.js`) and a new gate fails the build if any film name / path / caption is still served. Verified ON → OFF: `SHA256SUMS.txt` byte-identical to the shipped state.
+The CEO letter re-flows to the standard single-letter layout (no empty column). `NAR-s43` trimmed 20.92 → 17.74 s to drop "Press play to watch his Athar impact story." (stale without the film); the guide plays straight through slide 42 and advances to 43.
+
+**Build / QA (2026-10-03)** — `node pact-deck/scripts/vercel-build.mjs` PASS: version gate v1.5.7, 24 required assets, check-assets missing 0 (unreferenced 3, unchanged), `SHA256SUMS.txt` over 287 files (+ `build-info.json` with the features = 288 on disk).
+Tests: `qa/v155` guide-sync 10 passed / 2 skipped (the film test only runs with the flag on) — arrows 43/43, deep links 43/43, hidden card, label/card test, and the new v1.5.7 regression test (slide-38 image whole + tab + captions + alt in EN/AR; Section 09 without the former Letter 1; CEO letter without the film and the guide playing through to slide 43),
+desktop + phone; `qa/v154` guide-sync 24/24; root `npm test` 124 pass / 0 fail / 1 skipped (clean worktree with deps); python ingestion 8/8, ui-unit 25/25. Only assertions tied to the three changes were edited (slide count 44 → 43, removed slide/clip, film test conditional on the flag).

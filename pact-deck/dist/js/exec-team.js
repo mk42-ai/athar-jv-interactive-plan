@@ -1,4 +1,4 @@
-/* Athar Open Agentic Pact deck — v1.5.6 (2026-10-02; v1.5.5 2026-10-01) — section 09 "Executive Team" / «الفريق التنفيذي».
+/* Athar Open Agentic Pact deck — v1.5.7 (2026-10-03; v1.5.6 2026-10-02) — section 09 "Executive Team" / «الفريق التنفيذي».
    Appended AFTER the closing slide (#s-closing, slide 39): S09 intro + three letters = slides 40–43, deep links #/28/exec-1 … #/28/exec-4
    (also #slide-40 … #slide-43). Hand-written-letter style per the Athar Brand Guidelines: Manuscript #F7F3EA ground with the
    ink-on-manuscript texture at 8 % opacity, Athar Ink #0F1E2C text, names in IBM Plex Serif 600, body IBM Plex Sans 16/24 (sentence case),
@@ -12,7 +12,7 @@
    Navigation mirrors dist/js/impact-tiers.js; this file loads BEFORE impact-tiers.js and narration.js so the deck total is 39 + 4 = 43. v1.5.7: the former Letter 1 was removed (4 → 3 letters); the CEO film is an optional feature (off). */
 (function () {
   'use strict';
-  var VERSION = 'v1.5.6';
+  var VERSION = 'v1.5.7';
   var FLAGS = { pendingCards: false };
   var REAL_LAST = 28, CLOSING_N = 39;
   /* v1.5.7: the Muhammed Khalid impact-story film is an OPTIONAL feature (pact-deck/features.json → originsFilm, default false). When on, the build copies
