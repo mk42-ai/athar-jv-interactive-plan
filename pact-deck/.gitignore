@@ -6,3 +6,6 @@ qa/v154/*/traces/
 qa/v154/results/test-output/
 # v1.5.5: written by scripts/vercel-build.mjs at deploy time — never committed
 dist/build-info.json
+
+# Playwright traces / failure artefacts (qa/*/results/test-output) — never committed
+qa/*/results/test-output/
