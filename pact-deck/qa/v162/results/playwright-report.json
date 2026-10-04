@@ -90,7 +90,7 @@
       "specs": [],
       "suites": [
         {
-          "title": "v1.6.2",
+          "title": "v1.6.3",
           "file": "v162.spec.mjs",
           "line": 22,
           "column": 6,
@@ -111,12 +111,12 @@
                       "workerIndex": 0,
                       "parallelIndex": 0,
                       "status": "passed",
-                      "duration": 2359,
+                      "duration": 2306,
                       "errors": [],
                       "stdout": [],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2026-10-04T02:45:02.846Z",
+                      "startTime": "2026-10-04T04:57:22.828Z",
                       "annotations": [],
                       "attachments": []
                     }
@@ -134,12 +134,12 @@
                       "workerIndex": 2,
                       "parallelIndex": 1,
                       "status": "passed",
-                      "duration": 2185,
+                      "duration": 2091,
                       "errors": [],
                       "stdout": [],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2026-10-04T02:45:27.109Z",
+                      "startTime": "2026-10-04T04:57:46.718Z",
                       "annotations": [],
                       "attachments": []
                     }
@@ -147,7 +147,7 @@
                   "status": "expected"
                 }
               ],
-              "id": "b2bbbc2f1997c3dbfcd5-8f72b831cdafb60b442e",
+              "id": "b2bbbc2f1997c3dbfcd5-98e5bd84eb2f19aac1da",
               "file": "v162.spec.mjs",
               "line": 23,
               "column": 3
@@ -168,12 +168,12 @@
                       "workerIndex": 1,
                       "parallelIndex": 1,
                       "status": "passed",
-                      "duration": 12846,
+                      "duration": 12826,
                       "errors": [],
                       "stdout": [],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2026-10-04T02:45:02.861Z",
+                      "startTime": "2026-10-04T04:57:22.838Z",
                       "annotations": [],
                       "attachments": []
                     }
@@ -191,12 +191,12 @@
                       "workerIndex": 2,
                       "parallelIndex": 1,
                       "status": "passed",
-                      "duration": 11918,
+                      "duration": 11841,
                       "errors": [],
                       "stdout": [],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2026-10-04T02:45:29.822Z",
+                      "startTime": "2026-10-04T04:57:49.369Z",
                       "annotations": [],
                       "attachments": []
                     }
@@ -204,7 +204,7 @@
                   "status": "expected"
                 }
               ],
-              "id": "b2bbbc2f1997c3dbfcd5-6e33c3cc1232d945c954",
+              "id": "b2bbbc2f1997c3dbfcd5-b9044e0c8d46f0c8dbe6",
               "file": "v162.spec.mjs",
               "line": 33,
               "column": 3
@@ -225,12 +225,12 @@
                       "workerIndex": 0,
                       "parallelIndex": 0,
                       "status": "passed",
-                      "duration": 5082,
+                      "duration": 5090,
                       "errors": [],
                       "stdout": [],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2026-10-04T02:45:05.684Z",
+                      "startTime": "2026-10-04T04:57:25.623Z",
                       "annotations": [],
                       "attachments": []
                     }
@@ -248,12 +248,12 @@
                       "workerIndex": 2,
                       "parallelIndex": 1,
                       "status": "passed",
-                      "duration": 4839,
+                      "duration": 4998,
                       "errors": [],
                       "stdout": [],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2026-10-04T02:45:41.758Z",
+                      "startTime": "2026-10-04T04:58:01.230Z",
                       "annotations": [],
                       "attachments": []
                     }
@@ -261,7 +261,7 @@
                   "status": "expected"
                 }
               ],
-              "id": "b2bbbc2f1997c3dbfcd5-2a5f2a857a7fe7d859e1",
+              "id": "b2bbbc2f1997c3dbfcd5-34c4e397c0f3f15f11c8",
               "file": "v162.spec.mjs",
               "line": 50,
               "column": 3
@@ -282,12 +282,12 @@
                       "workerIndex": 0,
                       "parallelIndex": 0,
                       "status": "passed",
-                      "duration": 2797,
+                      "duration": 2872,
                       "errors": [],
                       "stdout": [],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2026-10-04T02:45:10.788Z",
+                      "startTime": "2026-10-04T04:57:30.730Z",
                       "annotations": [],
                       "attachments": []
                     }
@@ -305,12 +305,12 @@
                       "workerIndex": 2,
                       "parallelIndex": 1,
                       "status": "passed",
-                      "duration": 2816,
+                      "duration": 2586,
                       "errors": [],
                       "stdout": [],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2026-10-04T02:45:46.612Z",
+                      "startTime": "2026-10-04T04:58:06.239Z",
                       "annotations": [],
                       "attachments": []
                     }
@@ -318,7 +318,7 @@
                   "status": "expected"
                 }
               ],
-              "id": "b2bbbc2f1997c3dbfcd5-32bc6f41dfc9f7f80fda",
+              "id": "b2bbbc2f1997c3dbfcd5-61c54f07120278d1b8f1",
               "file": "v162.spec.mjs",
               "line": 58,
               "column": 36
@@ -339,12 +339,12 @@
                       "workerIndex": 0,
                       "parallelIndex": 0,
                       "status": "passed",
-                      "duration": 2740,
+                      "duration": 2764,
                       "errors": [],
                       "stdout": [],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2026-10-04T02:45:13.598Z",
+                      "startTime": "2026-10-04T04:57:33.618Z",
                       "annotations": [],
                       "attachments": []
                     }
@@ -362,12 +362,12 @@
                       "workerIndex": 3,
                       "parallelIndex": 0,
                       "status": "passed",
-                      "duration": 3601,
+                      "duration": 2820,
                       "errors": [],
                       "stdout": [],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2026-10-04T02:45:49.130Z",
+                      "startTime": "2026-10-04T04:58:08.804Z",
                       "annotations": [],
                       "attachments": []
                     }
@@ -375,7 +375,7 @@
                   "status": "expected"
                 }
               ],
-              "id": "b2bbbc2f1997c3dbfcd5-f066c73efca67d4ff776",
+              "id": "b2bbbc2f1997c3dbfcd5-0e30f4daedf599d3dd0e",
               "file": "v162.spec.mjs",
               "line": 58,
               "column": 36
@@ -396,12 +396,12 @@
                       "workerIndex": 1,
                       "parallelIndex": 1,
                       "status": "passed",
-                      "duration": 2998,
+                      "duration": 2939,
                       "errors": [],
                       "stdout": [],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2026-10-04T02:45:16.175Z",
+                      "startTime": "2026-10-04T04:57:36.143Z",
                       "annotations": [],
                       "attachments": []
                     }
@@ -419,12 +419,12 @@
                       "workerIndex": 2,
                       "parallelIndex": 1,
                       "status": "passed",
-                      "duration": 3219,
+                      "duration": 2557,
                       "errors": [],
                       "stdout": [],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2026-10-04T02:45:49.448Z",
+                      "startTime": "2026-10-04T04:58:08.845Z",
                       "annotations": [],
                       "attachments": []
                     }
@@ -432,7 +432,7 @@
                   "status": "expected"
                 }
               ],
-              "id": "b2bbbc2f1997c3dbfcd5-a17a0650453596ee44d6",
+              "id": "b2bbbc2f1997c3dbfcd5-304bb9c2e6802dd25931",
               "file": "v162.spec.mjs",
               "line": 58,
               "column": 36
@@ -453,12 +453,12 @@
                       "workerIndex": 0,
                       "parallelIndex": 0,
                       "status": "passed",
-                      "duration": 2943,
+                      "duration": 2862,
                       "errors": [],
                       "stdout": [],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2026-10-04T02:45:16.361Z",
+                      "startTime": "2026-10-04T04:57:36.408Z",
                       "annotations": [],
                       "attachments": []
                     }
@@ -476,12 +476,12 @@
                       "workerIndex": 2,
                       "parallelIndex": 1,
                       "status": "passed",
-                      "duration": 3162,
+                      "duration": 2537,
                       "errors": [],
                       "stdout": [],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2026-10-04T02:45:52.697Z",
+                      "startTime": "2026-10-04T04:58:11.416Z",
                       "annotations": [],
                       "attachments": []
                     }
@@ -489,7 +489,7 @@
                   "status": "expected"
                 }
               ],
-              "id": "b2bbbc2f1997c3dbfcd5-ebf9809db0335e5ee4cb",
+              "id": "b2bbbc2f1997c3dbfcd5-314ad1a5120ad8f66c3b",
               "file": "v162.spec.mjs",
               "line": 58,
               "column": 36
@@ -510,12 +510,12 @@
                       "workerIndex": 1,
                       "parallelIndex": 1,
                       "status": "passed",
-                      "duration": 1437,
+                      "duration": 1352,
                       "errors": [],
                       "stdout": [],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2026-10-04T02:45:19.186Z",
+                      "startTime": "2026-10-04T04:57:39.096Z",
                       "annotations": [],
                       "attachments": []
                     }
@@ -533,12 +533,12 @@
                       "workerIndex": 3,
                       "parallelIndex": 0,
                       "status": "passed",
-                      "duration": 1728,
+                      "duration": 1273,
                       "errors": [],
                       "stdout": [],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2026-10-04T02:45:53.502Z",
+                      "startTime": "2026-10-04T04:58:12.220Z",
                       "annotations": [],
                       "attachments": []
                     }
@@ -546,7 +546,7 @@
                   "status": "expected"
                 }
               ],
-              "id": "b2bbbc2f1997c3dbfcd5-cbf479abaa4f77615d47",
+              "id": "b2bbbc2f1997c3dbfcd5-7436db8d1332ab1c06d9",
               "file": "v162.spec.mjs",
               "line": 63,
               "column": 3
@@ -567,12 +567,12 @@
                       "workerIndex": 0,
                       "parallelIndex": 0,
                       "status": "passed",
-                      "duration": 28876,
+                      "duration": 28723,
                       "errors": [],
                       "stdout": [],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2026-10-04T02:45:19.326Z",
+                      "startTime": "2026-10-04T04:57:39.295Z",
                       "annotations": [],
                       "attachments": []
                     }
@@ -590,12 +590,12 @@
                       "workerIndex": 3,
                       "parallelIndex": 0,
                       "status": "passed",
-                      "duration": 24909,
+                      "duration": 23744,
                       "errors": [],
                       "stdout": [],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2026-10-04T02:45:55.257Z",
+                      "startTime": "2026-10-04T04:58:13.508Z",
                       "annotations": [],
                       "attachments": []
                     }
@@ -603,7 +603,7 @@
                   "status": "expected"
                 }
               ],
-              "id": "b2bbbc2f1997c3dbfcd5-c24a61d53329fcc5a76a",
+              "id": "b2bbbc2f1997c3dbfcd5-89890d195a64795b6bee",
               "file": "v162.spec.mjs",
               "line": 69,
               "column": 3
@@ -624,12 +624,12 @@
                       "workerIndex": 1,
                       "parallelIndex": 1,
                       "status": "passed",
-                      "duration": 737,
+                      "duration": 695,
                       "errors": [],
                       "stdout": [],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2026-10-04T02:45:20.641Z",
+                      "startTime": "2026-10-04T04:57:40.464Z",
                       "annotations": [],
                       "attachments": []
                     }
@@ -647,12 +647,12 @@
                       "workerIndex": 2,
                       "parallelIndex": 1,
                       "status": "passed",
-                      "duration": 716,
+                      "duration": 623,
                       "errors": [],
                       "stdout": [],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2026-10-04T02:45:55.884Z",
+                      "startTime": "2026-10-04T04:58:13.965Z",
                       "annotations": [],
                       "attachments": []
                     }
@@ -660,13 +660,13 @@
                   "status": "expected"
                 }
               ],
-              "id": "b2bbbc2f1997c3dbfcd5-2511b17c4d83bc1d0344",
+              "id": "b2bbbc2f1997c3dbfcd5-d9d007391b95ec346575",
               "file": "v162.spec.mjs",
               "line": 76,
               "column": 3
             },
             {
-              "title": "no-store: /, /index.html, /build-info.json and /js/exec-films.js are never cached; the served build-info commit is the deployed HEAD and the version is 1.6.2",
+              "title": "no-store: /, /index.html, /build-info.json and /js/exec-films.js are never cached; the served build-info commit is the deployed HEAD and the version is the package version",
               "ok": true,
               "tags": [],
               "tests": [
@@ -681,12 +681,12 @@
                       "workerIndex": 1,
                       "parallelIndex": 1,
                       "status": "passed",
-                      "duration": 321,
+                      "duration": 298,
                       "errors": [],
                       "stdout": [],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2026-10-04T02:45:21.402Z",
+                      "startTime": "2026-10-04T04:57:41.177Z",
                       "annotations": [],
                       "attachments": []
                     }
@@ -704,12 +704,12 @@
                       "workerIndex": 2,
                       "parallelIndex": 1,
                       "status": "passed",
-                      "duration": 327,
+                      "duration": 325,
                       "errors": [],
                       "stdout": [],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2026-10-04T02:45:56.618Z",
+                      "startTime": "2026-10-04T04:58:14.601Z",
                       "annotations": [],
                       "attachments": []
                     }
@@ -717,7 +717,7 @@
                   "status": "expected"
                 }
               ],
-              "id": "b2bbbc2f1997c3dbfcd5-9a261e09daf04d6d2c68",
+              "id": "b2bbbc2f1997c3dbfcd5-f8ca3fd20c4fe5709c4d",
               "file": "v162.spec.mjs",
               "line": 82,
               "column": 3
@@ -738,12 +738,12 @@
                       "workerIndex": 1,
                       "parallelIndex": 1,
                       "status": "passed",
-                      "duration": 4543,
+                      "duration": 4400,
                       "errors": [],
                       "stdout": [],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2026-10-04T02:45:21.741Z",
+                      "startTime": "2026-10-04T04:57:41.490Z",
                       "annotations": [],
                       "attachments": []
                     }
@@ -761,12 +761,12 @@
                       "workerIndex": 2,
                       "parallelIndex": 1,
                       "status": "passed",
-                      "duration": 4474,
+                      "duration": 3830,
                       "errors": [],
                       "stdout": [],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2026-10-04T02:45:56.967Z",
+                      "startTime": "2026-10-04T04:58:14.945Z",
                       "annotations": [],
                       "attachments": []
                     }
@@ -774,7 +774,7 @@
                   "status": "expected"
                 }
               ],
-              "id": "b2bbbc2f1997c3dbfcd5-08ef8ce8c380c1812c66",
+              "id": "b2bbbc2f1997c3dbfcd5-5cc5bebf7691845edbf9",
               "file": "v162.spec.mjs",
               "line": 88,
               "column": 3
@@ -786,8 +786,8 @@
   ],
   "errors": [],
   "stats": {
-    "startTime": "2026-10-04T02:45:02.026Z",
-    "duration": 78353.869,
+    "startTime": "2026-10-04T04:57:22.016Z",
+    "duration": 75453.231,
     "expected": 24,
     "skipped": 0,
     "unexpected": 0,

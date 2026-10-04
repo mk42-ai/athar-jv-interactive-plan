@@ -1,12 +1,12 @@
 {
- "base": "http://127.0.0.1:4162",
- "version": "1.6.2",
- "written": "2026-10-04T02:47:15.392Z",
+ "base": "http://127.0.0.1:4163",
+ "version": "1.6.3",
+ "written": "2026-10-04T04:59:50.599Z",
  "rows": [
   {
-   "badge": "v1.6.2",
-   "html": "1.6.2",
-   "exec": "v1.6.2",
+   "badge": "v1.6.3",
+   "html": "1.6.3",
+   "exec": "v1.6.3",
    "films": [
     "khalid:shipped",
     "al-ameri:shipped",
@@ -19,7 +19,7 @@
     "s-exec-khalid:shipped",
     "s-exec-unwalla:shipped"
    ],
-   "buildInfo": "1.6.2"
+   "buildInfo": "1.6.3"
   }
  ]
 }

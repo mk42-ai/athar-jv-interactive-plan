@@ -1,7 +1,7 @@
 // v1.2.1 (+ v1.4.4 Permissions-Policy; v1.4.5 gif/avif MIME, 404s logged; v1.4.6 video playback: GET + HEAD, single-range HTTP Range
 // requests → 206 with Accept-Ranges / Content-Range / Content-Length (suffix and open-ended ranges, 416 on unsatisfiable ranges),
 // explicit video/mp4 · video/webm · image MIME, media never compressed (this server applies no Content-Encoding at all — bytes are
-// streamed verbatim so byte ranges stay valid), Cache-Control per class (v1.6.2: no-store for index.html / build-info.json / js/exec-films.js, immutable for content-hashed media), Permissions-Policy autoplay=(self), fullscreen=(self);
+// streamed verbatim so byte ranges stay valid), Cache-Control per class (v1.6.3: no-store for every non-content-addressed file — html/json/js/css/vtt; immutable for content-hashed files), Permissions-Policy autoplay=(self), fullscreen=(self);
 // v1.4.7: image MIME table completed (svg → image/svg+xml, ico → image/x-icon, gif, avif, webp, jpg/jpeg, png), nosniff on every
 // response incl. 404/405, Referrer-Policy, X-Frame-Options) — dependency-free static server for dist/ (SPA fallback for extension-less paths).
 import http from 'node:http';
@@ -14,11 +14,14 @@ const MEDIA = /\.(mp4|webm)$/i;
 const PERMISSIONS = 'autoplay=(self), fullscreen=(self)';
 const BASE_H = {'X-Content-Type-Options': 'nosniff', 'Referrer-Policy': 'strict-origin-when-cross-origin', 'Permissions-Policy': PERMISSIONS}; // v1.5.1: X-Frame-Options removed so the deck embeds cross-origin (no CSP frame-ancestors either)
 function cacheControl(f) {
-  if (f.endsWith('index.html') || f.endsWith('build-info.json') || /[\\/]js[\\/]exec-films\.js$/.test(f)) return 'no-store'; // v1.6.2: entry document, build stamp and the generated films manifest are never cached — a redeploy is visible on the very next request
-  if (/\.[0-9a-f]{10}\.(mp4|webm|jpe?g|webp|vtt)$/i.test(f)) return 'public, max-age=31536000, immutable'; // v1.6.2: content-hashed media (the Khalid film, poster and captions) — the URL changes when the bytes change
-  if (MEDIA.test(f) || /\.(woff2?|png|jpe?g|webp|svg|ico|gif|avif)$/i.test(f)) return 'public, max-age=86400, stale-while-revalidate=604800';
+  // v1.6.3: anything that is NOT content-addressed is never cached (no-store) — html, json (build-info, locales, narration), js, css, vtt, webmanifest, txt —
+  // so a re-provisioned deployment is visible on the very next request and no browser can keep an older bundle (the stale 'v1.5.x' card seen on 4 Oct);
+  // content-addressed files (Vite's /assets/index-<hash>.*, and <name>.<sha256[0:10]>.<ext> media) are immutable; images, fonts and un-hashed media keep a day with stale-while-revalidate.
   if (/\/assets\/index-[A-Za-z0-9_-]+\.(js|css)$/.test(f)) return 'public, max-age=31536000, immutable';
-  return 'public, max-age=3600';
+  if (/\.[0-9a-f]{10}\.(mp4|webm|jpe?g|webp|vtt)$/i.test(f)) return 'public, max-age=31536000, immutable'; // v1.6.2: content-hashed media (the Khalid film, poster and captions)
+  if (/\.(html|json|m?js|css|vtt|webmanifest|txt|csv|md|xml)$/i.test(f)) return 'no-store';
+  if (MEDIA.test(f) || /\.(woff2?|png|jpe?g|webp|svg|ico|gif|avif|mp3|m4a|wav)$/i.test(f)) return 'public, max-age=86400, stale-while-revalidate=604800';
+  return 'no-store';
 }
 http.createServer((req, res) => {
   const method = req.method || 'GET';

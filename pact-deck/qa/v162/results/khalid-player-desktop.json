@@ -1,7 +1,7 @@
 {
- "base": "http://127.0.0.1:4162",
- "version": "1.6.2",
- "written": "2026-10-04T02:45:15.931Z",
+ "base": "http://127.0.0.1:4163",
+ "version": "1.6.3",
+ "written": "2026-10-04T04:57:35.892Z",
  "rows": [
   {
    "idle": {
@@ -30,7 +30,7 @@
     ],
     "readyState": 4,
     "duration": 50.005,
-    "currentTime": 1.187689,
+    "currentTime": 1.185379,
     "guide": "paused"
    },
    "gPause": "playing",

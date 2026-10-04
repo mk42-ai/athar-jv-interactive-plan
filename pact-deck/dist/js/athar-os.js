@@ -12,7 +12,7 @@
    Athar logo composited programmatically (dist/assets/plates/credits.json). */
 (function () {
   'use strict';
-  var VERSION = 'v1.6.2';
+  var VERSION = 'v1.6.3';
   var PLEDGE_HASH = '#/19'; /* 04 Pledge & signing — first slide of the chapter */
 
   /* ---------- helpers ---------- */

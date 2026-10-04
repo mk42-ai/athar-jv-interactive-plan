@@ -1,6 +1,6 @@
 {
- "base": "http://127.0.0.1:4162",
- "written": "2026-10-04T02:53:09.119Z",
+ "base": "http://127.0.0.1:4163",
+ "written": "2026-10-04T05:05:39.105Z",
  "rows": [
   {
    "url": "/audio/guide/guide-00-welcome-lhbIUXFwLO.mp3",
@@ -324,14 +324,14 @@
    "status": 200,
    "type": "text/javascript; charset=utf-8",
    "bytes": 6855,
-   "sha256": "5d54c3ff112e0d8ad4fe4bc64d8ac8a4b4e7788d51ca8a82cad4fe20f70255e9"
+   "sha256": "77f3660e732c6c1c6d3f779af4a864281282ed20880331623be1775177358192"
   },
   {
    "url": "/js/exec-film-player.js",
    "status": 200,
    "type": "text/javascript; charset=utf-8",
    "bytes": 11152,
-   "sha256": "dfabcf9f03b526c26160a5bd1072cfb869ce2f65e3d675f86b1394d820235f46"
+   "sha256": "e69c4e33c5d05171d8f71fa8ea86b669e624d946fc0d993d357bf1c58397161d"
   },
   {
    "url": "/assets/exec-film-player.css",
@@ -345,7 +345,7 @@
    "status": 200,
    "type": "application/json; charset=utf-8",
    "bytes": 6506,
-   "sha256": "afbf4e03ca3a8a03dc4df87cf82a056c7baea9b8210264a533f8b6178f3f6551"
+   "sha256": "aab67e07b305c5d90cf6cfd4e531716aa854cb4f021f923da0b6730737483272"
   },
   {
    "url": "/js/exec-film.js",

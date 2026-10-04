@@ -1,54 +1,54 @@
 {
- "base": "http://127.0.0.1:4162",
- "written": "2026-10-04T02:55:59.800Z",
+ "base": "http://127.0.0.1:4163",
+ "written": "2026-10-04T05:08:30.378Z",
  "rows": {
   "hops": [
    {
-    "at": "2026-10-04T02:55:49.344Z",
+    "at": "2026-10-04T05:08:19.910Z",
     "toHash": "#/27",
-    "previousClipEndedAt": "2026-10-04T02:55:49.343Z",
+    "previousClipEndedAt": "2026-10-04T05:08:19.909Z",
     "endedClip": "NAR-s26",
     "endedOnSlide": "s-governance-licence"
    },
    {
-    "at": "2026-10-04T02:55:50.966Z",
+    "at": "2026-10-04T05:08:21.532Z",
     "toHash": "#/27/new-1",
-    "previousClipEndedAt": "2026-10-04T02:55:50.966Z",
+    "previousClipEndedAt": "2026-10-04T05:08:21.531Z",
     "endedClip": "NAR-s27",
     "endedOnSlide": "s-roadmap"
    },
    {
-    "at": "2026-10-04T02:55:51.582Z",
+    "at": "2026-10-04T05:08:22.148Z",
     "toHash": "#/27/new-2",
-    "previousClipEndedAt": "2026-10-04T02:55:51.582Z",
+    "previousClipEndedAt": "2026-10-04T05:08:22.147Z",
     "endedClip": "NAR-s28",
     "endedOnSlide": "s-it-outcomes"
    },
    {
-    "at": "2026-10-04T02:55:53.129Z",
+    "at": "2026-10-04T05:08:23.693Z",
     "toHash": "#/27/new-3",
-    "previousClipEndedAt": "2026-10-04T02:55:53.128Z",
+    "previousClipEndedAt": "2026-10-04T05:08:23.692Z",
     "endedClip": "NAR-s29",
     "endedOnSlide": "s-it-tiers"
    },
    {
-    "at": "2026-10-04T02:55:55.231Z",
+    "at": "2026-10-04T05:08:25.797Z",
     "toHash": "#/27/new-4",
-    "previousClipEndedAt": "2026-10-04T02:55:55.230Z",
+    "previousClipEndedAt": "2026-10-04T05:08:25.796Z",
     "endedClip": "NAR-s30",
     "endedOnSlide": "s-it-metrics"
    },
    {
-    "at": "2026-10-04T02:55:56.917Z",
+    "at": "2026-10-04T05:08:27.481Z",
     "toHash": "#/27/new-5",
-    "previousClipEndedAt": "2026-10-04T02:55:56.916Z",
+    "previousClipEndedAt": "2026-10-04T05:08:27.481Z",
     "endedClip": "NAR-s31",
     "endedOnSlide": "s-it-sustain"
    },
    {
-    "at": "2026-10-04T02:55:59.698Z",
+    "at": "2026-10-04T05:08:30.259Z",
     "toHash": "#/27/new-6",
-    "previousClipEndedAt": "2026-10-04T02:55:59.697Z",
+    "previousClipEndedAt": "2026-10-04T05:08:30.258Z",
     "endedClip": "NAR-s32",
     "endedOnSlide": "s-it-partners"
    }

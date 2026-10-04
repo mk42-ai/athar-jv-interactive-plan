@@ -111,190 +111,190 @@
                       "workerIndex": 0,
                       "parallelIndex": 0,
                       "status": "passed",
-                      "duration": 23813,
+                      "duration": 23681,
                       "errors": [],
                       "stdout": [],
                       "stderr": [],
                       "retry": 0,
                       "steps": [
                         {
-                          "title": "slide 1 s-cover: narrated s-cover · audible NAR-s01 (175 ms)",
-                          "duration": 5
+                          "title": "slide 1 s-cover: narrated s-cover · audible NAR-s01 (189 ms)",
+                          "duration": 9
                         },
                         {
-                          "title": "slide 2 s-hero: narrated s-hero · audible NAR-s02 (143 ms)",
-                          "duration": 3
-                        },
-                        {
-                          "title": "slide 3 s-why-pact: narrated s-why-pact · audible NAR-s03 (40 ms)",
-                          "duration": 3
-                        },
-                        {
-                          "title": "slide 4 s-four-outcomes: narrated s-four-outcomes · audible NAR-s04 (142 ms)",
+                          "title": "slide 2 s-hero: narrated s-hero · audible NAR-s02 (132 ms)",
                           "duration": 2
                         },
                         {
-                          "title": "slide 5 s-managed-programme: narrated s-managed-programme · audible NAR-s05 (137 ms)",
+                          "title": "slide 3 s-why-pact: narrated s-why-pact · audible NAR-s03 (144 ms)",
                           "duration": 3
                         },
                         {
-                          "title": "slide 6 s-discord-home: narrated s-discord-home · audible NAR-s06 (48 ms)",
+                          "title": "slide 4 s-four-outcomes: narrated s-four-outcomes · audible NAR-s04 (145 ms)",
                           "duration": 2
                         },
                         {
-                          "title": "slide 7 s-country-chapters: narrated s-country-chapters · audible NAR-s07 (135 ms)",
+                          "title": "slide 5 s-managed-programme: narrated s-managed-programme · audible NAR-s05 (145 ms)",
+                          "duration": 2
+                        },
+                        {
+                          "title": "slide 6 s-discord-home: narrated s-discord-home · audible NAR-s06 (148 ms)",
                           "duration": 1
                         },
                         {
-                          "title": "slide 8 s-learning-formats: narrated s-learning-formats · audible NAR-s08 (141 ms)",
+                          "title": "slide 7 s-country-chapters: narrated s-country-chapters · audible NAR-s07 (136 ms)",
                           "duration": 2
                         },
                         {
-                          "title": "slide 9 s-challenges-showcases: narrated s-challenges-showcases · audible NAR-s09 (156 ms)",
+                          "title": "slide 8 s-learning-formats: narrated s-learning-formats · audible NAR-s08 (142 ms)",
                           "duration": 2
                         },
                         {
-                          "title": "slide 10 s-office-hours: narrated s-office-hours · audible NAR-s10 (154 ms)",
+                          "title": "slide 9 s-challenges-showcases: narrated s-challenges-showcases · audible NAR-s09 (147 ms)",
                           "duration": 2
                         },
                         {
-                          "title": "slide 11 s-agent-marketplace: narrated s-agent-marketplace · audible NAR-s11 (136 ms)",
+                          "title": "slide 10 s-office-hours: narrated s-office-hours · audible NAR-s10 (144 ms)",
                           "duration": 2
                         },
                         {
-                          "title": "slide 12 s-decision-table: narrated s-decision-table · audible NAR-s12 (137 ms)",
+                          "title": "slide 11 s-agent-marketplace: narrated s-agent-marketplace · audible NAR-s11 (153 ms)",
+                          "duration": 5
+                        },
+                        {
+                          "title": "slide 12 s-decision-table: narrated s-decision-table · audible NAR-s12 (159 ms)",
+                          "duration": 1
+                        },
+                        {
+                          "title": "slide 13 s-pillar-plugins: narrated s-pillar-plugins · audible NAR-s13 (139 ms)",
                           "duration": 2
                         },
                         {
-                          "title": "slide 13 s-pillar-plugins: narrated s-pillar-plugins · audible NAR-s13 (148 ms)",
-                          "duration": 3
-                        },
-                        {
-                          "title": "slide 14 s-pillar-skills: narrated s-pillar-skills · audible NAR-s14 (190 ms)",
-                          "duration": 7
-                        },
-                        {
-                          "title": "slide 15 s-pillar-open-ecosystem: narrated s-pillar-open-ecosystem · audible NAR-s15 (156 ms)",
-                          "duration": 3
-                        },
-                        {
-                          "title": "slide 16 s-pillar-cross-model: narrated s-pillar-cross-model · audible NAR-s16 (168 ms)",
+                          "title": "slide 14 s-pillar-skills: narrated s-pillar-skills · audible NAR-s14 (146 ms)",
                           "duration": 2
                         },
                         {
-                          "title": "slide 17 s-pillar-universal-licence: narrated s-pillar-universal-licence · audible NAR-s17 (204 ms)",
-                          "duration": 3
-                        },
-                        {
-                          "title": "slide 18 s-pillar-upskilling: narrated s-pillar-upskilling · audible NAR-s18 (37 ms)",
+                          "title": "slide 15 s-pillar-open-ecosystem: narrated s-pillar-open-ecosystem · audible NAR-s15 (136 ms)",
                           "duration": 2
                         },
                         {
-                          "title": "slide 19 s-pact-principles: narrated s-pact-principles · audible NAR-s19 (157 ms)",
-                          "duration": 3
-                        },
-                        {
-                          "title": "slide 20 s-how-to-sign: narrated s-how-to-sign · audible NAR-s20 (34 ms)",
-                          "duration": 3
-                        },
-                        {
-                          "title": "slide 21 s-actors-wall: narrated s-actors-wall · audible NAR-s21 (39 ms)",
+                          "title": "slide 16 s-pillar-cross-model: narrated s-pillar-cross-model · audible NAR-s16 (143 ms)",
                           "duration": 2
                         },
                         {
-                          "title": "slide 22 s-who-signs: narrated s-who-signs · audible NAR-s22 (31 ms)",
-                          "duration": 6
-                        },
-                        {
-                          "title": "slide 23 s-who-governs: narrated s-who-governs · audible NAR-s23 (148 ms)",
+                          "title": "slide 17 s-pillar-universal-licence: narrated s-pillar-universal-licence · audible NAR-s17 (123 ms)",
                           "duration": 2
                         },
                         {
-                          "title": "slide 24 s-who-builds: narrated s-who-builds · audible NAR-s24 (49 ms)",
-                          "duration": 3
-                        },
-                        {
-                          "title": "slide 25 s-who-learns: narrated s-who-learns · audible NAR-s25 (143 ms)",
-                          "duration": 2
-                        },
-                        {
-                          "title": "slide 26 s-governance-licence: narrated s-governance-licence · audible NAR-s26 (138 ms)",
+                          "title": "slide 18 s-pillar-upskilling: narrated s-pillar-upskilling · audible NAR-s18 (135 ms)",
                           "duration": 4
                         },
                         {
-                          "title": "slide 27 s-roadmap: narrated s-roadmap · audible NAR-s27 (164 ms)",
-                          "duration": 5
-                        },
-                        {
-                          "title": "slide 28 s-it-outcomes: narrated s-it-outcomes · audible NAR-s28 (138 ms)",
+                          "title": "slide 19 s-pact-principles: narrated s-pact-principles · audible NAR-s19 (159 ms)",
                           "duration": 2
                         },
                         {
-                          "title": "slide 29 s-it-tiers: narrated s-it-tiers · audible NAR-s29 (42 ms)",
+                          "title": "slide 20 s-how-to-sign: narrated s-how-to-sign · audible NAR-s20 (140 ms)",
                           "duration": 2
                         },
                         {
-                          "title": "slide 30 s-it-metrics: narrated s-it-metrics · audible NAR-s30 (137 ms)",
+                          "title": "slide 21 s-actors-wall: narrated s-actors-wall · audible NAR-s21 (135 ms)",
+                          "duration": 2
+                        },
+                        {
+                          "title": "slide 22 s-who-signs: narrated s-who-signs · audible NAR-s22 (140 ms)",
+                          "duration": 2
+                        },
+                        {
+                          "title": "slide 23 s-who-governs: narrated s-who-governs · audible NAR-s23 (137 ms)",
+                          "duration": 2
+                        },
+                        {
+                          "title": "slide 24 s-who-builds: narrated s-who-builds · audible NAR-s24 (163 ms)",
                           "duration": 1
                         },
                         {
-                          "title": "slide 31 s-it-sustain: narrated s-it-sustain · audible NAR-s31 (134 ms)",
-                          "duration": 2
-                        },
-                        {
-                          "title": "slide 32 s-it-partners: narrated s-it-partners · audible NAR-s32 (133 ms)",
-                          "duration": 2
-                        },
-                        {
-                          "title": "slide 33 s-it-join: narrated s-it-join · audible NAR-s33 (138 ms)",
+                          "title": "slide 25 s-who-learns: narrated s-who-learns · audible NAR-s25 (137 ms)",
                           "duration": 1
                         },
                         {
-                          "title": "slide 34 s-aos-overview: narrated s-aos-overview · audible NAR-s34 (133 ms)",
+                          "title": "slide 26 s-governance-licence: narrated s-governance-licence · audible NAR-s26 (122 ms)",
                           "duration": 1
                         },
                         {
-                          "title": "slide 35 s-aos-tour: narrated s-aos-tour · audible NAR-s35 (51 ms)",
-                          "duration": 2
-                        },
-                        {
-                          "title": "slide 36 s-aos-roadmap: narrated s-aos-roadmap · audible NAR-s36 (132 ms)",
-                          "duration": 2
-                        },
-                        {
-                          "title": "slide 37 s-aos-deploy: narrated s-aos-deploy · audible NAR-s37 (127 ms)",
+                          "title": "slide 27 s-roadmap: narrated s-roadmap · audible NAR-s27 (193 ms)",
                           "duration": 1
                         },
                         {
-                          "title": "slide 38 s-aos-nations: narrated s-aos-nations · audible NAR-s38 (125 ms)",
+                          "title": "slide 28 s-it-outcomes: narrated s-it-outcomes · audible NAR-s28 (129 ms)",
                           "duration": 2
                         },
                         {
-                          "title": "slide 39 s-closing: narrated s-closing · audible NAR-s39 (31 ms)",
+                          "title": "slide 29 s-it-tiers: narrated s-it-tiers · audible NAR-s29 (138 ms)",
+                          "duration": 1
+                        },
+                        {
+                          "title": "slide 30 s-it-metrics: narrated s-it-metrics · audible NAR-s30 (121 ms)",
                           "duration": 2
                         },
                         {
-                          "title": "slide 40 s-exec-intro: narrated s-exec-intro · audible NAR-s40 (144 ms)",
+                          "title": "slide 31 s-it-sustain: narrated s-it-sustain · audible NAR-s31 (132 ms)",
+                          "duration": 1
+                        },
+                        {
+                          "title": "slide 32 s-it-partners: narrated s-it-partners · audible NAR-s32 (149 ms)",
                           "duration": 2
                         },
                         {
-                          "title": "slide 41 s-exec-al-ameri: narrated s-exec-al-ameri · audible NAR-s42 (143 ms)",
+                          "title": "slide 33 s-it-join: narrated s-it-join · audible NAR-s33 (127 ms)",
+                          "duration": 1
+                        },
+                        {
+                          "title": "slide 34 s-aos-overview: narrated s-aos-overview · audible NAR-s34 (136 ms)",
+                          "duration": 1
+                        },
+                        {
+                          "title": "slide 35 s-aos-tour: narrated s-aos-tour · audible NAR-s35 (35 ms)",
+                          "duration": 2
+                        },
+                        {
+                          "title": "slide 36 s-aos-roadmap: narrated s-aos-roadmap · audible NAR-s36 (134 ms)",
+                          "duration": 2
+                        },
+                        {
+                          "title": "slide 37 s-aos-deploy: narrated s-aos-deploy · audible NAR-s37 (126 ms)",
+                          "duration": 2
+                        },
+                        {
+                          "title": "slide 38 s-aos-nations: narrated s-aos-nations · audible NAR-s38 (134 ms)",
+                          "duration": 2
+                        },
+                        {
+                          "title": "slide 39 s-closing: narrated s-closing · audible NAR-s39 (169 ms)",
                           "duration": 3
                         },
                         {
-                          "title": "slide 42 s-exec-ferreira-da-cunha: narrated s-exec-ferreira-da-cunha · audible NAR-s45 (146 ms)",
+                          "title": "slide 40 s-exec-intro: narrated s-exec-intro · audible NAR-s40 (119 ms)",
+                          "duration": 2
+                        },
+                        {
+                          "title": "slide 41 s-exec-al-ameri: narrated s-exec-al-ameri · audible NAR-s42 (178 ms)",
+                          "duration": 3
+                        },
+                        {
+                          "title": "slide 42 s-exec-ferreira-da-cunha: narrated s-exec-ferreira-da-cunha · audible NAR-s45 (129 ms)",
                           "duration": 2
                         },
                         {
                           "title": "slide 43 s-exec-khalid: narrated s-exec-khalid · audible NAR-s43 (140 ms)",
-                          "duration": 1
+                          "duration": 3
                         },
                         {
-                          "title": "slide 44 s-exec-unwalla: narrated s-exec-unwalla · audible NAR-s44 (167 ms)",
+                          "title": "slide 44 s-exec-unwalla: narrated s-exec-unwalla · audible NAR-s44 (128 ms)",
                           "duration": 2
                         }
                       ],
-                      "startTime": "2026-10-04T02:57:02.683Z",
+                      "startTime": "2026-10-04T05:06:04.875Z",
                       "annotations": [],
                       "attachments": []
                     }
@@ -312,190 +312,190 @@
                       "workerIndex": 2,
                       "parallelIndex": 0,
                       "status": "passed",
-                      "duration": 22437,
+                      "duration": 22464,
                       "errors": [],
                       "stdout": [],
                       "stderr": [],
                       "retry": 0,
                       "steps": [
                         {
-                          "title": "slide 1 s-cover: narrated s-cover · audible NAR-s01 (149 ms)",
-                          "duration": 6
-                        },
-                        {
-                          "title": "slide 2 s-hero: narrated s-hero · audible NAR-s02 (129 ms)",
-                          "duration": 3
-                        },
-                        {
-                          "title": "slide 3 s-why-pact: narrated s-why-pact · audible NAR-s03 (120 ms)",
-                          "duration": 2
-                        },
-                        {
-                          "title": "slide 4 s-four-outcomes: narrated s-four-outcomes · audible NAR-s04 (176 ms)",
-                          "duration": 2
-                        },
-                        {
-                          "title": "slide 5 s-managed-programme: narrated s-managed-programme · audible NAR-s05 (128 ms)",
-                          "duration": 2
-                        },
-                        {
-                          "title": "slide 6 s-discord-home: narrated s-discord-home · audible NAR-s06 (147 ms)",
+                          "title": "slide 1 s-cover: narrated s-cover · audible NAR-s01 (244 ms)",
                           "duration": 5
                         },
                         {
-                          "title": "slide 7 s-country-chapters: narrated s-country-chapters · audible NAR-s07 (138 ms)",
-                          "duration": 1
-                        },
-                        {
-                          "title": "slide 8 s-learning-formats: narrated s-learning-formats · audible NAR-s08 (168 ms)",
+                          "title": "slide 2 s-hero: narrated s-hero · audible NAR-s02 (129 ms)",
                           "duration": 2
                         },
                         {
-                          "title": "slide 9 s-challenges-showcases: narrated s-challenges-showcases · audible NAR-s09 (138 ms)",
+                          "title": "slide 3 s-why-pact: narrated s-why-pact · audible NAR-s03 (137 ms)",
+                          "duration": 2
+                        },
+                        {
+                          "title": "slide 4 s-four-outcomes: narrated s-four-outcomes · audible NAR-s04 (128 ms)",
                           "duration": 3
                         },
                         {
-                          "title": "slide 10 s-office-hours: narrated s-office-hours · audible NAR-s10 (134 ms)",
+                          "title": "slide 5 s-managed-programme: narrated s-managed-programme · audible NAR-s05 (131 ms)",
                           "duration": 2
                         },
                         {
-                          "title": "slide 11 s-agent-marketplace: narrated s-agent-marketplace · audible NAR-s11 (133 ms)",
-                          "duration": 2
-                        },
-                        {
-                          "title": "slide 12 s-decision-table: narrated s-decision-table · audible NAR-s12 (128 ms)",
-                          "duration": 2
-                        },
-                        {
-                          "title": "slide 13 s-pillar-plugins: narrated s-pillar-plugins · audible NAR-s13 (147 ms)",
-                          "duration": 1
-                        },
-                        {
-                          "title": "slide 14 s-pillar-skills: narrated s-pillar-skills · audible NAR-s14 (128 ms)",
-                          "duration": 2
-                        },
-                        {
-                          "title": "slide 15 s-pillar-open-ecosystem: narrated s-pillar-open-ecosystem · audible NAR-s15 (132 ms)",
-                          "duration": 1
-                        },
-                        {
-                          "title": "slide 16 s-pillar-cross-model: narrated s-pillar-cross-model · audible NAR-s16 (131 ms)",
-                          "duration": 1
-                        },
-                        {
-                          "title": "slide 17 s-pillar-universal-licence: narrated s-pillar-universal-licence · audible NAR-s17 (134 ms)",
-                          "duration": 2
-                        },
-                        {
-                          "title": "slide 18 s-pillar-upskilling: narrated s-pillar-upskilling · audible NAR-s18 (133 ms)",
-                          "duration": 2
-                        },
-                        {
-                          "title": "slide 19 s-pact-principles: narrated s-pact-principles · audible NAR-s19 (125 ms)",
-                          "duration": 2
-                        },
-                        {
-                          "title": "slide 20 s-how-to-sign: narrated s-how-to-sign · audible NAR-s20 (137 ms)",
-                          "duration": 2
-                        },
-                        {
-                          "title": "slide 21 s-actors-wall: narrated s-actors-wall · audible NAR-s21 (147 ms)",
-                          "duration": 2
-                        },
-                        {
-                          "title": "slide 22 s-who-signs: narrated s-who-signs · audible NAR-s22 (131 ms)",
-                          "duration": 2
-                        },
-                        {
-                          "title": "slide 23 s-who-governs: narrated s-who-governs · audible NAR-s23 (133 ms)",
-                          "duration": 2
-                        },
-                        {
-                          "title": "slide 24 s-who-builds: narrated s-who-builds · audible NAR-s24 (117 ms)",
-                          "duration": 2
-                        },
-                        {
-                          "title": "slide 25 s-who-learns: narrated s-who-learns · audible NAR-s25 (137 ms)",
-                          "duration": 2
-                        },
-                        {
-                          "title": "slide 26 s-governance-licence: narrated s-governance-licence · audible NAR-s26 (133 ms)",
-                          "duration": 2
-                        },
-                        {
-                          "title": "slide 27 s-roadmap: narrated s-roadmap · audible NAR-s27 (130 ms)",
-                          "duration": 2
-                        },
-                        {
-                          "title": "slide 28 s-it-outcomes: narrated s-it-outcomes · audible NAR-s28 (142 ms)",
-                          "duration": 1
-                        },
-                        {
-                          "title": "slide 29 s-it-tiers: narrated s-it-tiers · audible NAR-s29 (132 ms)",
-                          "duration": 2
-                        },
-                        {
-                          "title": "slide 30 s-it-metrics: narrated s-it-metrics · audible NAR-s30 (147 ms)",
-                          "duration": 2
-                        },
-                        {
-                          "title": "slide 31 s-it-sustain: narrated s-it-sustain · audible NAR-s31 (139 ms)",
+                          "title": "slide 6 s-discord-home: narrated s-discord-home · audible NAR-s06 (63 ms)",
                           "duration": 3
                         },
                         {
-                          "title": "slide 32 s-it-partners: narrated s-it-partners · audible NAR-s32 (130 ms)",
+                          "title": "slide 7 s-country-chapters: narrated s-country-chapters · audible NAR-s07 (142 ms)",
                           "duration": 2
                         },
                         {
-                          "title": "slide 33 s-it-join: narrated s-it-join · audible NAR-s33 (159 ms)",
+                          "title": "slide 8 s-learning-formats: narrated s-learning-formats · audible NAR-s08 (140 ms)",
+                          "duration": 1
+                        },
+                        {
+                          "title": "slide 9 s-challenges-showcases: narrated s-challenges-showcases · audible NAR-s09 (129 ms)",
+                          "duration": 1
+                        },
+                        {
+                          "title": "slide 10 s-office-hours: narrated s-office-hours · audible NAR-s10 (120 ms)",
                           "duration": 2
                         },
                         {
-                          "title": "slide 34 s-aos-overview: narrated s-aos-overview · audible NAR-s34 (136 ms)",
+                          "title": "slide 11 s-agent-marketplace: narrated s-agent-marketplace · audible NAR-s11 (136 ms)",
                           "duration": 2
                         },
                         {
-                          "title": "slide 35 s-aos-tour: narrated s-aos-tour · audible NAR-s35 (30 ms)",
+                          "title": "slide 12 s-decision-table: narrated s-decision-table · audible NAR-s12 (141 ms)",
+                          "duration": 1
+                        },
+                        {
+                          "title": "slide 13 s-pillar-plugins: narrated s-pillar-plugins · audible NAR-s13 (133 ms)",
                           "duration": 2
                         },
                         {
-                          "title": "slide 36 s-aos-roadmap: narrated s-aos-roadmap · audible NAR-s36 (123 ms)",
+                          "title": "slide 14 s-pillar-skills: narrated s-pillar-skills · audible NAR-s14 (122 ms)",
+                          "duration": 3
+                        },
+                        {
+                          "title": "slide 15 s-pillar-open-ecosystem: narrated s-pillar-open-ecosystem · audible NAR-s15 (128 ms)",
                           "duration": 2
+                        },
+                        {
+                          "title": "slide 16 s-pillar-cross-model: narrated s-pillar-cross-model · audible NAR-s16 (132 ms)",
+                          "duration": 2
+                        },
+                        {
+                          "title": "slide 17 s-pillar-universal-licence: narrated s-pillar-universal-licence · audible NAR-s17 (135 ms)",
+                          "duration": 2
+                        },
+                        {
+                          "title": "slide 18 s-pillar-upskilling: narrated s-pillar-upskilling · audible NAR-s18 (129 ms)",
+                          "duration": 2
+                        },
+                        {
+                          "title": "slide 19 s-pact-principles: narrated s-pact-principles · audible NAR-s19 (133 ms)",
+                          "duration": 3
+                        },
+                        {
+                          "title": "slide 20 s-how-to-sign: narrated s-how-to-sign · audible NAR-s20 (154 ms)",
+                          "duration": 2
+                        },
+                        {
+                          "title": "slide 21 s-actors-wall: narrated s-actors-wall · audible NAR-s21 (137 ms)",
+                          "duration": 1
+                        },
+                        {
+                          "title": "slide 22 s-who-signs: narrated s-who-signs · audible NAR-s22 (133 ms)",
+                          "duration": 2
+                        },
+                        {
+                          "title": "slide 23 s-who-governs: narrated s-who-governs · audible NAR-s23 (129 ms)",
+                          "duration": 2
+                        },
+                        {
+                          "title": "slide 24 s-who-builds: narrated s-who-builds · audible NAR-s24 (143 ms)",
+                          "duration": 1
+                        },
+                        {
+                          "title": "slide 25 s-who-learns: narrated s-who-learns · audible NAR-s25 (142 ms)",
+                          "duration": 2
+                        },
+                        {
+                          "title": "slide 26 s-governance-licence: narrated s-governance-licence · audible NAR-s26 (145 ms)",
+                          "duration": 2
+                        },
+                        {
+                          "title": "slide 27 s-roadmap: narrated s-roadmap · audible NAR-s27 (143 ms)",
+                          "duration": 2
+                        },
+                        {
+                          "title": "slide 28 s-it-outcomes: narrated s-it-outcomes · audible NAR-s28 (133 ms)",
+                          "duration": 2
+                        },
+                        {
+                          "title": "slide 29 s-it-tiers: narrated s-it-tiers · audible NAR-s29 (126 ms)",
+                          "duration": 1
+                        },
+                        {
+                          "title": "slide 30 s-it-metrics: narrated s-it-metrics · audible NAR-s30 (142 ms)",
+                          "duration": 3
+                        },
+                        {
+                          "title": "slide 31 s-it-sustain: narrated s-it-sustain · audible NAR-s31 (128 ms)",
+                          "duration": 2
+                        },
+                        {
+                          "title": "slide 32 s-it-partners: narrated s-it-partners · audible NAR-s32 (155 ms)",
+                          "duration": 2
+                        },
+                        {
+                          "title": "slide 33 s-it-join: narrated s-it-join · audible NAR-s33 (139 ms)",
+                          "duration": 3
+                        },
+                        {
+                          "title": "slide 34 s-aos-overview: narrated s-aos-overview · audible NAR-s34 (156 ms)",
+                          "duration": 2
+                        },
+                        {
+                          "title": "slide 35 s-aos-tour: narrated s-aos-tour · audible NAR-s35 (24 ms)",
+                          "duration": 1
+                        },
+                        {
+                          "title": "slide 36 s-aos-roadmap: narrated s-aos-roadmap · audible NAR-s36 (125 ms)",
+                          "duration": 1
                         },
                         {
                           "title": "slide 37 s-aos-deploy: narrated s-aos-deploy · audible NAR-s37 (116 ms)",
                           "duration": 2
                         },
                         {
-                          "title": "slide 38 s-aos-nations: narrated s-aos-nations · audible NAR-s38 (116 ms)",
-                          "duration": 2
-                        },
-                        {
-                          "title": "slide 39 s-closing: narrated s-closing · audible NAR-s39 (138 ms)",
+                          "title": "slide 38 s-aos-nations: narrated s-aos-nations · audible NAR-s38 (115 ms)",
                           "duration": 1
                         },
                         {
-                          "title": "slide 40 s-exec-intro: narrated s-exec-intro · audible NAR-s40 (109 ms)",
+                          "title": "slide 39 s-closing: narrated s-closing · audible NAR-s39 (117 ms)",
+                          "duration": 1
+                        },
+                        {
+                          "title": "slide 40 s-exec-intro: narrated s-exec-intro · audible NAR-s40 (123 ms)",
                           "duration": 2
                         },
                         {
-                          "title": "slide 41 s-exec-al-ameri: narrated s-exec-al-ameri · audible NAR-s42 (121 ms)",
+                          "title": "slide 41 s-exec-al-ameri: narrated s-exec-al-ameri · audible NAR-s42 (119 ms)",
                           "duration": 2
                         },
                         {
-                          "title": "slide 42 s-exec-ferreira-da-cunha: narrated s-exec-ferreira-da-cunha · audible NAR-s45 (133 ms)",
+                          "title": "slide 42 s-exec-ferreira-da-cunha: narrated s-exec-ferreira-da-cunha · audible NAR-s45 (119 ms)",
                           "duration": 2
                         },
                         {
-                          "title": "slide 43 s-exec-khalid: narrated s-exec-khalid · audible NAR-s43 (115 ms)",
+                          "title": "slide 43 s-exec-khalid: narrated s-exec-khalid · audible NAR-s43 (117 ms)",
                           "duration": 2
                         },
                         {
-                          "title": "slide 44 s-exec-unwalla: narrated s-exec-unwalla · audible NAR-s44 (113 ms)",
+                          "title": "slide 44 s-exec-unwalla: narrated s-exec-unwalla · audible NAR-s44 (136 ms)",
                           "duration": 2
                         }
                       ],
-                      "startTime": "2026-10-04T02:57:32.368Z",
+                      "startTime": "2026-10-04T05:06:34.249Z",
                       "annotations": [],
                       "attachments": []
                     }
@@ -524,12 +524,12 @@
                       "workerIndex": 1,
                       "parallelIndex": 1,
                       "status": "passed",
-                      "duration": 13659,
+                      "duration": 13484,
                       "errors": [],
                       "stdout": [],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2026-10-04T02:57:02.701Z",
+                      "startTime": "2026-10-04T05:06:04.905Z",
                       "annotations": [],
                       "attachments": []
                     }
@@ -547,12 +547,12 @@
                       "workerIndex": 3,
                       "parallelIndex": 1,
                       "status": "passed",
-                      "duration": 12623,
+                      "duration": 12400,
                       "errors": [],
                       "stdout": [],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2026-10-04T02:57:35.742Z",
+                      "startTime": "2026-10-04T05:06:37.473Z",
                       "annotations": [],
                       "attachments": []
                     }
@@ -581,12 +581,12 @@
                       "workerIndex": 1,
                       "parallelIndex": 1,
                       "status": "passed",
-                      "duration": 6870,
+                      "duration": 6868,
                       "errors": [],
                       "stdout": [],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2026-10-04T02:57:16.851Z",
+                      "startTime": "2026-10-04T05:06:18.869Z",
                       "annotations": [],
                       "attachments": []
                     }
@@ -604,12 +604,12 @@
                       "workerIndex": 3,
                       "parallelIndex": 1,
                       "status": "passed",
-                      "duration": 6342,
+                      "duration": 6393,
                       "errors": [],
                       "stdout": [],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2026-10-04T02:57:48.895Z",
+                      "startTime": "2026-10-04T05:06:50.400Z",
                       "annotations": [],
                       "attachments": []
                     }
@@ -638,12 +638,12 @@
                       "workerIndex": 1,
                       "parallelIndex": 1,
                       "status": "passed",
-                      "duration": 2072,
+                      "duration": 2017,
                       "errors": [],
                       "stdout": [],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2026-10-04T02:57:23.736Z",
+                      "startTime": "2026-10-04T05:06:25.753Z",
                       "annotations": [],
                       "attachments": []
                     }
@@ -661,12 +661,12 @@
                       "workerIndex": 3,
                       "parallelIndex": 1,
                       "status": "passed",
-                      "duration": 1749,
+                      "duration": 1794,
                       "errors": [],
                       "stdout": [],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2026-10-04T02:57:55.254Z",
+                      "startTime": "2026-10-04T05:06:56.812Z",
                       "annotations": [],
                       "attachments": []
                     }
@@ -695,12 +695,12 @@
                       "workerIndex": 1,
                       "parallelIndex": 1,
                       "status": "passed",
-                      "duration": 2059,
+                      "duration": 2063,
                       "errors": [],
                       "stdout": [],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2026-10-04T02:57:25.825Z",
+                      "startTime": "2026-10-04T05:06:27.786Z",
                       "annotations": [],
                       "attachments": []
                     }
@@ -718,12 +718,12 @@
                       "workerIndex": 2,
                       "parallelIndex": 0,
                       "status": "passed",
-                      "duration": 1746,
+                      "duration": 1739,
                       "errors": [],
                       "stdout": [],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2026-10-04T02:57:55.360Z",
+                      "startTime": "2026-10-04T05:06:57.251Z",
                       "annotations": [],
                       "attachments": []
                     }
@@ -752,12 +752,12 @@
                       "workerIndex": 0,
                       "parallelIndex": 0,
                       "status": "passed",
-                      "duration": 4439,
+                      "duration": 4338,
                       "errors": [],
                       "stdout": [],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2026-10-04T02:57:26.990Z",
+                      "startTime": "2026-10-04T05:06:29.050Z",
                       "annotations": [],
                       "attachments": []
                     }
@@ -775,12 +775,12 @@
                       "workerIndex": 3,
                       "parallelIndex": 1,
                       "status": "passed",
-                      "duration": 3864,
+                      "duration": 3823,
                       "errors": [],
                       "stdout": [],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2026-10-04T02:57:57.019Z",
+                      "startTime": "2026-10-04T05:06:58.620Z",
                       "annotations": [],
                       "attachments": []
                     }
@@ -809,12 +809,12 @@
                       "workerIndex": 1,
                       "parallelIndex": 1,
                       "status": "passed",
-                      "duration": 7080,
+                      "duration": 6853,
                       "errors": [],
                       "stdout": [],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2026-10-04T02:57:27.902Z",
+                      "startTime": "2026-10-04T05:06:29.867Z",
                       "annotations": [],
                       "attachments": []
                     }
@@ -832,12 +832,12 @@
                       "workerIndex": 2,
                       "parallelIndex": 0,
                       "status": "passed",
-                      "duration": 7552,
+                      "duration": 7430,
                       "errors": [],
                       "stdout": [],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2026-10-04T02:57:57.134Z",
+                      "startTime": "2026-10-04T05:06:59.010Z",
                       "annotations": [],
                       "attachments": []
                     }
@@ -857,8 +857,8 @@
   ],
   "errors": [],
   "stats": {
-    "startTime": "2026-10-04T02:57:01.817Z",
-    "duration": 63092.726,
+    "startTime": "2026-10-04T05:06:04.056Z",
+    "duration": 62581.652,
     "expected": 14,
     "skipped": 0,
     "unexpected": 0,

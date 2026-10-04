@@ -111,54 +111,54 @@
                       "workerIndex": 0,
                       "parallelIndex": 0,
                       "status": "passed",
-                      "duration": 22887,
+                      "duration": 23043,
                       "errors": [],
                       "stdout": [],
                       "stderr": [],
                       "retry": 0,
                       "steps": [
                         {
-                          "title": "slide 1 s-cover: audible NAR-s01 (171 ms)",
-                          "duration": 6
+                          "title": "slide 1 s-cover: audible NAR-s01 (154 ms)",
+                          "duration": 9
                         },
                         {
-                          "title": "slide 2 s-hero: audible NAR-s02 (130 ms)",
-                          "duration": 2
-                        },
-                        {
-                          "title": "slide 3 s-why-pact: audible NAR-s03 (28 ms)",
-                          "duration": 2
-                        },
-                        {
-                          "title": "slide 4 s-four-outcomes: audible NAR-s04 (127 ms)",
-                          "duration": 2
-                        },
-                        {
-                          "title": "slide 5 s-managed-programme: audible NAR-s05 (143 ms)",
-                          "duration": 2
-                        },
-                        {
-                          "title": "slide 6 s-discord-home: audible NAR-s06 (135 ms)",
+                          "title": "slide 2 s-hero: audible NAR-s02 (136 ms)",
                           "duration": 1
                         },
                         {
-                          "title": "slide 7 s-country-chapters: audible NAR-s07 (154 ms)",
+                          "title": "slide 3 s-why-pact: audible NAR-s03 (152 ms)",
                           "duration": 2
                         },
                         {
-                          "title": "slide 8 s-learning-formats: audible NAR-s08 (127 ms)",
+                          "title": "slide 4 s-four-outcomes: audible NAR-s04 (142 ms)",
                           "duration": 2
                         },
                         {
-                          "title": "slide 9 s-challenges-showcases: audible NAR-s09 (140 ms)",
+                          "title": "slide 5 s-managed-programme: audible NAR-s05 (128 ms)",
+                          "duration": 2
+                        },
+                        {
+                          "title": "slide 6 s-discord-home: audible NAR-s06 (146 ms)",
+                          "duration": 2
+                        },
+                        {
+                          "title": "slide 7 s-country-chapters: audible NAR-s07 (142 ms)",
                           "duration": 1
                         },
                         {
-                          "title": "slide 10 s-office-hours: audible NAR-s10 (122 ms)",
-                          "duration": 1
+                          "title": "slide 8 s-learning-formats: audible NAR-s08 (136 ms)",
+                          "duration": 2
                         },
                         {
-                          "title": "slide 11 s-agent-marketplace: audible NAR-s11 (144 ms)",
+                          "title": "slide 9 s-challenges-showcases: audible NAR-s09 (130 ms)",
+                          "duration": 2
+                        },
+                        {
+                          "title": "slide 10 s-office-hours: audible NAR-s10 (132 ms)",
+                          "duration": 2
+                        },
+                        {
+                          "title": "slide 11 s-agent-marketplace: audible NAR-s11 (161 ms)",
                           "duration": 1
                         },
                         {
@@ -166,115 +166,115 @@
                           "duration": 2
                         },
                         {
-                          "title": "slide 13 s-pillar-plugins: audible NAR-s13 (134 ms)",
-                          "duration": 1
-                        },
-                        {
-                          "title": "slide 14 s-pillar-skills: audible NAR-s14 (145 ms)",
+                          "title": "slide 13 s-pillar-plugins: audible NAR-s13 (150 ms)",
                           "duration": 2
                         },
                         {
-                          "title": "slide 15 s-pillar-open-ecosystem: audible NAR-s15 (153 ms)",
+                          "title": "slide 14 s-pillar-skills: audible NAR-s14 (126 ms)",
                           "duration": 2
                         },
                         {
-                          "title": "slide 16 s-pillar-cross-model: audible NAR-s16 (134 ms)",
+                          "title": "slide 15 s-pillar-open-ecosystem: audible NAR-s15 (137 ms)",
+                          "duration": 1
+                        },
+                        {
+                          "title": "slide 16 s-pillar-cross-model: audible NAR-s16 (137 ms)",
+                          "duration": 1
+                        },
+                        {
+                          "title": "slide 17 s-pillar-universal-licence: audible NAR-s17 (132 ms)",
+                          "duration": 1
+                        },
+                        {
+                          "title": "slide 18 s-pillar-upskilling: audible NAR-s18 (135 ms)",
+                          "duration": 1
+                        },
+                        {
+                          "title": "slide 19 s-pact-principles: audible NAR-s19 (135 ms)",
+                          "duration": 1
+                        },
+                        {
+                          "title": "slide 20 s-how-to-sign: audible NAR-s20 (145 ms)",
                           "duration": 2
                         },
                         {
-                          "title": "slide 17 s-pillar-universal-licence: audible NAR-s17 (140 ms)",
+                          "title": "slide 21 s-actors-wall: audible NAR-s21 (119 ms)",
                           "duration": 2
                         },
                         {
-                          "title": "slide 18 s-pillar-upskilling: audible NAR-s18 (130 ms)",
+                          "title": "slide 22 s-who-signs: audible NAR-s22 (32 ms)",
+                          "duration": 1
+                        },
+                        {
+                          "title": "slide 23 s-who-governs: audible NAR-s23 (114 ms)",
+                          "duration": 1
+                        },
+                        {
+                          "title": "slide 24 s-who-builds: audible NAR-s24 (139 ms)",
+                          "duration": 1
+                        },
+                        {
+                          "title": "slide 25 s-who-learns: audible NAR-s25 (30 ms)",
                           "duration": 2
                         },
                         {
-                          "title": "slide 19 s-pact-principles: audible NAR-s19 (130 ms)",
+                          "title": "slide 26 s-governance-licence: audible NAR-s26 (154 ms)",
                           "duration": 2
                         },
                         {
-                          "title": "slide 20 s-how-to-sign: audible NAR-s20 (132 ms)",
-                          "duration": 1
-                        },
-                        {
-                          "title": "slide 21 s-actors-wall: audible NAR-s21 (31 ms)",
+                          "title": "slide 27 s-roadmap: audible NAR-s27 (141 ms)",
                           "duration": 2
                         },
                         {
-                          "title": "slide 22 s-who-signs: audible NAR-s22 (124 ms)",
+                          "title": "slide 28 s-it-outcomes: audible NAR-s28 (148 ms)",
                           "duration": 1
                         },
                         {
-                          "title": "slide 23 s-who-governs: audible NAR-s23 (147 ms)",
+                          "title": "slide 29 s-it-tiers: audible NAR-s29 (142 ms)",
                           "duration": 1
                         },
                         {
-                          "title": "slide 24 s-who-builds: audible NAR-s24 (126 ms)",
+                          "title": "slide 30 s-it-metrics: audible NAR-s30 (160 ms)",
+                          "duration": 1
+                        },
+                        {
+                          "title": "slide 31 s-it-sustain: audible NAR-s31 (122 ms)",
+                          "duration": 1
+                        },
+                        {
+                          "title": "slide 32 s-it-partners: audible NAR-s32 (47 ms)",
                           "duration": 2
                         },
                         {
-                          "title": "slide 25 s-who-learns: audible NAR-s25 (130 ms)",
-                          "duration": 1
-                        },
-                        {
-                          "title": "slide 26 s-governance-licence: audible NAR-s26 (149 ms)",
-                          "duration": 1
-                        },
-                        {
-                          "title": "slide 27 s-roadmap: audible NAR-s27 (157 ms)",
-                          "duration": 1
-                        },
-                        {
-                          "title": "slide 28 s-it-outcomes: audible NAR-s28 (162 ms)",
-                          "duration": 3
-                        },
-                        {
-                          "title": "slide 29 s-it-tiers: audible NAR-s29 (131 ms)",
-                          "duration": 1
-                        },
-                        {
-                          "title": "slide 30 s-it-metrics: audible NAR-s30 (154 ms)",
+                          "title": "slide 33 s-it-join: audible NAR-s33 (121 ms)",
                           "duration": 2
                         },
                         {
-                          "title": "slide 31 s-it-sustain: audible NAR-s31 (132 ms)",
+                          "title": "slide 34 s-aos-overview: audible NAR-s34 (172 ms)",
+                          "duration": 1
+                        },
+                        {
+                          "title": "slide 35 s-aos-tour: audible NAR-s35 (26 ms)",
                           "duration": 2
                         },
                         {
-                          "title": "slide 32 s-it-partners: audible NAR-s32 (133 ms)",
+                          "title": "slide 36 s-aos-roadmap: audible NAR-s36 (155 ms)",
+                          "duration": 1
+                        },
+                        {
+                          "title": "slide 37 s-aos-deploy: audible NAR-s37 (133 ms)",
+                          "duration": 1
+                        },
+                        {
+                          "title": "slide 38 s-aos-nations: audible NAR-s38 (141 ms)",
+                          "duration": 1
+                        },
+                        {
+                          "title": "slide 39 s-closing: audible NAR-s39 (135 ms)",
                           "duration": 2
-                        },
-                        {
-                          "title": "slide 33 s-it-join: audible NAR-s33 (163 ms)",
-                          "duration": 1
-                        },
-                        {
-                          "title": "slide 34 s-aos-overview: audible NAR-s34 (44 ms)",
-                          "duration": 2
-                        },
-                        {
-                          "title": "slide 35 s-aos-tour: audible NAR-s35 (287 ms)",
-                          "duration": 1
-                        },
-                        {
-                          "title": "slide 36 s-aos-roadmap: audible NAR-s36 (138 ms)",
-                          "duration": 1
-                        },
-                        {
-                          "title": "slide 37 s-aos-deploy: audible NAR-s37 (163 ms)",
-                          "duration": 1
-                        },
-                        {
-                          "title": "slide 38 s-aos-nations: audible NAR-s38 (133 ms)",
-                          "duration": 2
-                        },
-                        {
-                          "title": "slide 39 s-closing: audible NAR-s39 (150 ms)",
-                          "duration": 1
                         }
                       ],
-                      "startTime": "2026-10-04T02:54:36.979Z",
+                      "startTime": "2026-10-04T05:07:07.869Z",
                       "annotations": [],
                       "attachments": []
                     }
@@ -290,172 +290,172 @@
                   "results": [
                     {
                       "workerIndex": 2,
-                      "parallelIndex": 1,
+                      "parallelIndex": 0,
                       "status": "passed",
-                      "duration": 21970,
+                      "duration": 22079,
                       "errors": [],
                       "stdout": [],
                       "stderr": [],
                       "retry": 0,
                       "steps": [
                         {
-                          "title": "slide 1 s-cover: audible NAR-s01 (143 ms)",
-                          "duration": 6
+                          "title": "slide 1 s-cover: audible NAR-s01 (161 ms)",
+                          "duration": 5
                         },
                         {
-                          "title": "slide 2 s-hero: audible NAR-s02 (121 ms)",
-                          "duration": 1
-                        },
-                        {
-                          "title": "slide 3 s-why-pact: audible NAR-s03 (124 ms)",
-                          "duration": 1
-                        },
-                        {
-                          "title": "slide 4 s-four-outcomes: audible NAR-s04 (135 ms)",
+                          "title": "slide 2 s-hero: audible NAR-s02 (135 ms)",
                           "duration": 2
                         },
                         {
-                          "title": "slide 5 s-managed-programme: audible NAR-s05 (132 ms)",
+                          "title": "slide 3 s-why-pact: audible NAR-s03 (132 ms)",
                           "duration": 2
                         },
                         {
-                          "title": "slide 6 s-discord-home: audible NAR-s06 (150 ms)",
+                          "title": "slide 4 s-four-outcomes: audible NAR-s04 (129 ms)",
+                          "duration": 1
+                        },
+                        {
+                          "title": "slide 5 s-managed-programme: audible NAR-s05 (42 ms)",
                           "duration": 2
                         },
                         {
-                          "title": "slide 7 s-country-chapters: audible NAR-s07 (132 ms)",
+                          "title": "slide 6 s-discord-home: audible NAR-s06 (138 ms)",
                           "duration": 2
                         },
                         {
-                          "title": "slide 8 s-learning-formats: audible NAR-s08 (135 ms)",
-                          "duration": 1
-                        },
-                        {
-                          "title": "slide 9 s-challenges-showcases: audible NAR-s09 (131 ms)",
-                          "duration": 1
-                        },
-                        {
-                          "title": "slide 10 s-office-hours: audible NAR-s10 (127 ms)",
-                          "duration": 1
-                        },
-                        {
-                          "title": "slide 11 s-agent-marketplace: audible NAR-s11 (130 ms)",
-                          "duration": 1
-                        },
-                        {
-                          "title": "slide 12 s-decision-table: audible NAR-s12 (135 ms)",
-                          "duration": 1
-                        },
-                        {
-                          "title": "slide 13 s-pillar-plugins: audible NAR-s13 (143 ms)",
+                          "title": "slide 7 s-country-chapters: audible NAR-s07 (163 ms)",
                           "duration": 2
                         },
                         {
-                          "title": "slide 14 s-pillar-skills: audible NAR-s14 (133 ms)",
+                          "title": "slide 8 s-learning-formats: audible NAR-s08 (133 ms)",
                           "duration": 1
                         },
                         {
-                          "title": "slide 15 s-pillar-open-ecosystem: audible NAR-s15 (129 ms)",
+                          "title": "slide 9 s-challenges-showcases: audible NAR-s09 (143 ms)",
                           "duration": 2
                         },
                         {
-                          "title": "slide 16 s-pillar-cross-model: audible NAR-s16 (131 ms)",
+                          "title": "slide 10 s-office-hours: audible NAR-s10 (126 ms)",
+                          "duration": 1
+                        },
+                        {
+                          "title": "slide 11 s-agent-marketplace: audible NAR-s11 (128 ms)",
+                          "duration": 1
+                        },
+                        {
+                          "title": "slide 12 s-decision-table: audible NAR-s12 (136 ms)",
+                          "duration": 1
+                        },
+                        {
+                          "title": "slide 13 s-pillar-plugins: audible NAR-s13 (147 ms)",
+                          "duration": 1
+                        },
+                        {
+                          "title": "slide 14 s-pillar-skills: audible NAR-s14 (151 ms)",
                           "duration": 2
                         },
                         {
-                          "title": "slide 17 s-pillar-universal-licence: audible NAR-s17 (126 ms)",
+                          "title": "slide 15 s-pillar-open-ecosystem: audible NAR-s15 (128 ms)",
+                          "duration": 1
+                        },
+                        {
+                          "title": "slide 16 s-pillar-cross-model: audible NAR-s16 (126 ms)",
+                          "duration": 1
+                        },
+                        {
+                          "title": "slide 17 s-pillar-universal-licence: audible NAR-s17 (128 ms)",
                           "duration": 2
                         },
                         {
-                          "title": "slide 18 s-pillar-upskilling: audible NAR-s18 (135 ms)",
+                          "title": "slide 18 s-pillar-upskilling: audible NAR-s18 (130 ms)",
+                          "duration": 1
+                        },
+                        {
+                          "title": "slide 19 s-pact-principles: audible NAR-s19 (129 ms)",
                           "duration": 2
                         },
                         {
-                          "title": "slide 19 s-pact-principles: audible NAR-s19 (130 ms)",
+                          "title": "slide 20 s-how-to-sign: audible NAR-s20 (129 ms)",
                           "duration": 2
                         },
                         {
-                          "title": "slide 20 s-how-to-sign: audible NAR-s20 (136 ms)",
+                          "title": "slide 21 s-actors-wall: audible NAR-s21 (141 ms)",
                           "duration": 1
                         },
                         {
-                          "title": "slide 21 s-actors-wall: audible NAR-s21 (142 ms)",
+                          "title": "slide 22 s-who-signs: audible NAR-s22 (130 ms)",
+                          "duration": 1
+                        },
+                        {
+                          "title": "slide 23 s-who-governs: audible NAR-s23 (135 ms)",
+                          "duration": 1
+                        },
+                        {
+                          "title": "slide 24 s-who-builds: audible NAR-s24 (139 ms)",
+                          "duration": 1
+                        },
+                        {
+                          "title": "slide 25 s-who-learns: audible NAR-s25 (124 ms)",
+                          "duration": 1
+                        },
+                        {
+                          "title": "slide 26 s-governance-licence: audible NAR-s26 (125 ms)",
+                          "duration": 1
+                        },
+                        {
+                          "title": "slide 27 s-roadmap: audible NAR-s27 (135 ms)",
                           "duration": 2
                         },
                         {
-                          "title": "slide 22 s-who-signs: audible NAR-s22 (128 ms)",
+                          "title": "slide 28 s-it-outcomes: audible NAR-s28 (137 ms)",
                           "duration": 2
                         },
                         {
-                          "title": "slide 23 s-who-governs: audible NAR-s23 (137 ms)",
+                          "title": "slide 29 s-it-tiers: audible NAR-s29 (128 ms)",
                           "duration": 1
                         },
                         {
-                          "title": "slide 24 s-who-builds: audible NAR-s24 (122 ms)",
+                          "title": "slide 30 s-it-metrics: audible NAR-s30 (128 ms)",
                           "duration": 1
                         },
                         {
-                          "title": "slide 25 s-who-learns: audible NAR-s25 (132 ms)",
-                          "duration": 1
-                        },
-                        {
-                          "title": "slide 26 s-governance-licence: audible NAR-s26 (131 ms)",
-                          "duration": 1
-                        },
-                        {
-                          "title": "slide 27 s-roadmap: audible NAR-s27 (147 ms)",
-                          "duration": 1
-                        },
-                        {
-                          "title": "slide 28 s-it-outcomes: audible NAR-s28 (116 ms)",
-                          "duration": 1
-                        },
-                        {
-                          "title": "slide 29 s-it-tiers: audible NAR-s29 (129 ms)",
-                          "duration": 1
-                        },
-                        {
-                          "title": "slide 30 s-it-metrics: audible NAR-s30 (121 ms)",
+                          "title": "slide 31 s-it-sustain: audible NAR-s31 (139 ms)",
                           "duration": 2
-                        },
-                        {
-                          "title": "slide 31 s-it-sustain: audible NAR-s31 (125 ms)",
-                          "duration": 1
                         },
                         {
                           "title": "slide 32 s-it-partners: audible NAR-s32 (148 ms)",
-                          "duration": 1
-                        },
-                        {
-                          "title": "slide 33 s-it-join: audible NAR-s33 (130 ms)",
-                          "duration": 1
-                        },
-                        {
-                          "title": "slide 34 s-aos-overview: audible NAR-s34 (161 ms)",
-                          "duration": 1
-                        },
-                        {
-                          "title": "slide 35 s-aos-tour: audible NAR-s35 (34 ms)",
-                          "duration": 1
-                        },
-                        {
-                          "title": "slide 36 s-aos-roadmap: audible NAR-s36 (145 ms)",
-                          "duration": 1
-                        },
-                        {
-                          "title": "slide 37 s-aos-deploy: audible NAR-s37 (140 ms)",
-                          "duration": 1
-                        },
-                        {
-                          "title": "slide 38 s-aos-nations: audible NAR-s38 (128 ms)",
                           "duration": 2
                         },
                         {
-                          "title": "slide 39 s-closing: audible NAR-s39 (151 ms)",
+                          "title": "slide 33 s-it-join: audible NAR-s33 (136 ms)",
+                          "duration": 1
+                        },
+                        {
+                          "title": "slide 34 s-aos-overview: audible NAR-s34 (162 ms)",
                           "duration": 2
+                        },
+                        {
+                          "title": "slide 35 s-aos-tour: audible NAR-s35 (27 ms)",
+                          "duration": 1
+                        },
+                        {
+                          "title": "slide 36 s-aos-roadmap: audible NAR-s36 (177 ms)",
+                          "duration": 2
+                        },
+                        {
+                          "title": "slide 37 s-aos-deploy: audible NAR-s37 (120 ms)",
+                          "duration": 1
+                        },
+                        {
+                          "title": "slide 38 s-aos-nations: audible NAR-s38 (152 ms)",
+                          "duration": 2
+                        },
+                        {
+                          "title": "slide 39 s-closing: audible NAR-s39 (148 ms)",
+                          "duration": 1
                         }
                       ],
-                      "startTime": "2026-10-04T02:55:23.523Z",
+                      "startTime": "2026-10-04T05:07:54.058Z",
                       "annotations": [],
                       "attachments": []
                     }
@@ -484,12 +484,12 @@
                       "workerIndex": 1,
                       "parallelIndex": 1,
                       "status": "passed",
-                      "duration": 12511,
+                      "duration": 11956,
                       "errors": [],
                       "stdout": [],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2026-10-04T02:54:36.968Z",
+                      "startTime": "2026-10-04T05:07:07.884Z",
                       "annotations": [],
                       "attachments": []
                     }
@@ -505,14 +505,14 @@
                   "results": [
                     {
                       "workerIndex": 3,
-                      "parallelIndex": 0,
+                      "parallelIndex": 1,
                       "status": "passed",
-                      "duration": 11262,
+                      "duration": 11077,
                       "errors": [],
                       "stdout": [],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2026-10-04T02:55:27.097Z",
+                      "startTime": "2026-10-04T05:07:57.764Z",
                       "annotations": [],
                       "attachments": []
                     }
@@ -541,12 +541,12 @@
                       "workerIndex": 1,
                       "parallelIndex": 1,
                       "status": "passed",
-                      "duration": 5544,
+                      "duration": 5457,
                       "errors": [],
                       "stdout": [],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2026-10-04T02:54:49.961Z",
+                      "startTime": "2026-10-04T05:07:20.312Z",
                       "annotations": [],
                       "attachments": []
                     }
@@ -562,14 +562,14 @@
                   "results": [
                     {
                       "workerIndex": 3,
-                      "parallelIndex": 0,
+                      "parallelIndex": 1,
                       "status": "passed",
-                      "duration": 5154,
+                      "duration": 4955,
                       "errors": [],
                       "stdout": [],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2026-10-04T02:55:38.906Z",
+                      "startTime": "2026-10-04T05:08:09.364Z",
                       "annotations": [],
                       "attachments": []
                     }
@@ -598,12 +598,12 @@
                       "workerIndex": 1,
                       "parallelIndex": 1,
                       "status": "passed",
-                      "duration": 5030,
+                      "duration": 5426,
                       "errors": [],
                       "stdout": [],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2026-10-04T02:54:55.522Z",
+                      "startTime": "2026-10-04T05:07:25.785Z",
                       "annotations": [],
                       "attachments": []
                     }
@@ -619,14 +619,14 @@
                   "results": [
                     {
                       "workerIndex": 3,
-                      "parallelIndex": 0,
+                      "parallelIndex": 1,
                       "status": "passed",
-                      "duration": 4831,
+                      "duration": 4878,
                       "errors": [],
                       "stdout": [],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2026-10-04T02:55:44.076Z",
+                      "startTime": "2026-10-04T05:08:14.336Z",
                       "annotations": [],
                       "attachments": []
                     }
@@ -652,15 +652,15 @@
                   "projectName": "desktop",
                   "results": [
                     {
-                      "workerIndex": 0,
-                      "parallelIndex": 0,
+                      "workerIndex": 1,
+                      "parallelIndex": 1,
                       "status": "passed",
-                      "duration": 14057,
+                      "duration": 13863,
                       "errors": [],
                       "stdout": [],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2026-10-04T02:55:00.338Z",
+                      "startTime": "2026-10-04T05:07:31.228Z",
                       "annotations": [],
                       "attachments": []
                     }
@@ -676,14 +676,14 @@
                   "results": [
                     {
                       "workerIndex": 2,
-                      "parallelIndex": 1,
+                      "parallelIndex": 0,
                       "status": "passed",
-                      "duration": 13851,
+                      "duration": 13809,
                       "errors": [],
                       "stdout": [],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2026-10-04T02:55:46.033Z",
+                      "startTime": "2026-10-04T05:08:16.638Z",
                       "annotations": [],
                       "attachments": []
                     }
@@ -709,15 +709,15 @@
                   "projectName": "desktop",
                   "results": [
                     {
-                      "workerIndex": 1,
-                      "parallelIndex": 1,
+                      "workerIndex": 0,
+                      "parallelIndex": 0,
                       "status": "passed",
-                      "duration": 6119,
+                      "duration": 6185,
                       "errors": [],
                       "stdout": [],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2026-10-04T02:55:00.576Z",
+                      "startTime": "2026-10-04T05:07:31.404Z",
                       "annotations": [],
                       "attachments": []
                     }
@@ -733,14 +733,14 @@
                   "results": [
                     {
                       "workerIndex": 3,
-                      "parallelIndex": 0,
+                      "parallelIndex": 1,
                       "status": "passed",
-                      "duration": 5891,
+                      "duration": 5930,
                       "errors": [],
                       "stdout": [],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2026-10-04T02:55:48.919Z",
+                      "startTime": "2026-10-04T05:08:19.228Z",
                       "annotations": [],
                       "attachments": []
                     }
@@ -766,15 +766,15 @@
                   "projectName": "desktop",
                   "results": [
                     {
-                      "workerIndex": 1,
-                      "parallelIndex": 1,
+                      "workerIndex": 0,
+                      "parallelIndex": 0,
                       "status": "passed",
-                      "duration": 5643,
+                      "duration": 5606,
                       "errors": [],
                       "stdout": [],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2026-10-04T02:55:06.717Z",
+                      "startTime": "2026-10-04T05:07:37.614Z",
                       "annotations": [],
                       "attachments": []
                     }
@@ -790,14 +790,14 @@
                   "results": [
                     {
                       "workerIndex": 3,
-                      "parallelIndex": 0,
+                      "parallelIndex": 1,
                       "status": "passed",
-                      "duration": 5417,
+                      "duration": 5219,
                       "errors": [],
                       "stdout": [],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2026-10-04T02:55:54.827Z",
+                      "startTime": "2026-10-04T05:08:25.174Z",
                       "annotations": [],
                       "attachments": []
                     }
@@ -823,15 +823,15 @@
                   "projectName": "desktop",
                   "results": [
                     {
-                      "workerIndex": 1,
-                      "parallelIndex": 1,
+                      "workerIndex": 0,
+                      "parallelIndex": 0,
                       "status": "passed",
-                      "duration": 4515,
+                      "duration": 4429,
                       "errors": [],
                       "stdout": [],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2026-10-04T02:55:12.383Z",
+                      "startTime": "2026-10-04T05:07:43.235Z",
                       "annotations": [],
                       "attachments": []
                     }
@@ -846,15 +846,15 @@
                   "projectName": "phone",
                   "results": [
                     {
-                      "workerIndex": 2,
+                      "workerIndex": 3,
                       "parallelIndex": 1,
                       "status": "passed",
-                      "duration": 4480,
+                      "duration": 4432,
                       "errors": [],
                       "stdout": [],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2026-10-04T02:55:59.899Z",
+                      "startTime": "2026-10-04T05:08:30.408Z",
                       "annotations": [],
                       "attachments": []
                     }
@@ -880,15 +880,15 @@
                   "projectName": "desktop",
                   "results": [
                     {
-                      "workerIndex": 0,
-                      "parallelIndex": 0,
+                      "workerIndex": 1,
+                      "parallelIndex": 1,
                       "status": "passed",
-                      "duration": 2873,
+                      "duration": 2853,
                       "errors": [],
                       "stdout": [],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2026-10-04T02:55:14.411Z",
+                      "startTime": "2026-10-04T05:07:45.109Z",
                       "annotations": [],
                       "attachments": []
                     }
@@ -903,15 +903,15 @@
                   "projectName": "phone",
                   "results": [
                     {
-                      "workerIndex": 3,
+                      "workerIndex": 2,
                       "parallelIndex": 0,
                       "status": "passed",
-                      "duration": 2643,
+                      "duration": 2730,
                       "errors": [],
                       "stdout": [],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2026-10-04T02:56:00.260Z",
+                      "startTime": "2026-10-04T05:08:30.462Z",
                       "annotations": [],
                       "attachments": []
                     }
@@ -937,15 +937,15 @@
                   "projectName": "desktop",
                   "results": [
                     {
-                      "workerIndex": 1,
-                      "parallelIndex": 1,
+                      "workerIndex": 0,
+                      "parallelIndex": 0,
                       "status": "passed",
-                      "duration": 5866,
+                      "duration": 5632,
                       "errors": [],
                       "stdout": [],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2026-10-04T02:55:16.920Z",
+                      "startTime": "2026-10-04T05:07:47.684Z",
                       "annotations": [],
                       "attachments": []
                     }
@@ -960,15 +960,15 @@
                   "projectName": "phone",
                   "results": [
                     {
-                      "workerIndex": 3,
+                      "workerIndex": 2,
                       "parallelIndex": 0,
                       "status": "passed",
-                      "duration": 5407,
+                      "duration": 5388,
                       "errors": [],
                       "stdout": [],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2026-10-04T02:56:02.921Z",
+                      "startTime": "2026-10-04T05:08:33.205Z",
                       "annotations": [],
                       "attachments": []
                     }
@@ -994,15 +994,15 @@
                   "projectName": "desktop",
                   "results": [
                     {
-                      "workerIndex": 0,
-                      "parallelIndex": 0,
+                      "workerIndex": 1,
+                      "parallelIndex": 1,
                       "status": "passed",
-                      "duration": 3724,
+                      "duration": 3791,
                       "errors": [],
                       "stdout": [],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2026-10-04T02:55:17.302Z",
+                      "startTime": "2026-10-04T05:07:47.982Z",
                       "annotations": [],
                       "attachments": []
                     }
@@ -1017,7 +1017,7 @@
                   "projectName": "phone",
                   "results": [
                     {
-                      "workerIndex": 2,
+                      "workerIndex": 3,
                       "parallelIndex": 1,
                       "status": "passed",
                       "duration": 3367,
@@ -1025,7 +1025,7 @@
                       "stdout": [],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2026-10-04T02:56:04.393Z",
+                      "startTime": "2026-10-04T05:08:34.855Z",
                       "annotations": [],
                       "attachments": []
                     }
@@ -1051,15 +1051,15 @@
                   "projectName": "desktop",
                   "results": [
                     {
-                      "workerIndex": 0,
-                      "parallelIndex": 0,
+                      "workerIndex": 1,
+                      "parallelIndex": 1,
                       "status": "passed",
-                      "duration": 5294,
+                      "duration": 5213,
                       "errors": [],
                       "stdout": [],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2026-10-04T02:55:21.047Z",
+                      "startTime": "2026-10-04T05:07:51.789Z",
                       "annotations": [],
                       "attachments": []
                     }
@@ -1074,15 +1074,15 @@
                   "projectName": "phone",
                   "results": [
                     {
-                      "workerIndex": 2,
+                      "workerIndex": 3,
                       "parallelIndex": 1,
                       "status": "passed",
-                      "duration": 4784,
+                      "duration": 4811,
                       "errors": [],
                       "stdout": [],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2026-10-04T02:56:07.774Z",
+                      "startTime": "2026-10-04T05:08:38.236Z",
                       "annotations": [],
                       "attachments": []
                     }
@@ -1102,8 +1102,8 @@
   ],
   "errors": [],
   "stats": {
-    "startTime": "2026-10-04T02:54:36.290Z",
-    "duration": 96423.287,
+    "startTime": "2026-10-04T05:07:07.189Z",
+    "duration": 96015.129,
     "expected": 24,
     "skipped": 0,
     "unexpected": 0,

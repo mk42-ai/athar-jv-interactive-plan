@@ -1,109 +1,109 @@
 {
- "base": "http://127.0.0.1:4162",
- "version": "1.6.2",
- "written": "2026-10-04T02:46:43.898Z",
+ "base": "http://127.0.0.1:4163",
+ "version": "1.6.3",
+ "written": "2026-10-04T04:59:19.508Z",
  "rows": [
   {
    "url": "https://www.mofa.gov.ae/en/MediaHub/News/2026/9/25/UAE-Lebanon",
    "status": 200,
    "final": "https://www.mofa.gov.ae/en/MediaHub/News/2026/9/25/UAE-Lebanon",
-   "ts": "2026-10-04T02:46:36.849Z"
+   "ts": "2026-10-04T04:58:52.214Z"
   },
   {
    "url": "https://www.thenationalnews.com/news/mena/2026/09/25/uae-and-lebanon-launch-ai-training-initiative/",
    "status": 200,
    "final": "https://www.thenationalnews.com/news/mena/2026/09/25/uae-and-lebanon-launch-ai-training-initiative/",
-   "ts": "2026-10-04T02:46:37.177Z"
+   "ts": "2026-10-04T04:58:52.505Z"
   },
   {
    "url": "https://gulfnews.com/uae/uae-to-equip-one-million-lebanese-with-generative-ai-skills-1.500687605",
    "status": 200,
    "final": "https://gulfnews.com/uae/uae-to-equip-one-million-lebanese-with-generative-ai-skills-1.500687605",
-   "ts": "2026-10-04T02:46:37.352Z"
+   "ts": "2026-10-04T04:58:52.991Z"
   },
   {
    "url": "https://www.middleeastainews.com/p/uae-lebanon-agree-to-train-one-million",
    "status": 200,
    "final": "https://www.middleeastainews.com/p/uae-lebanon-agree-to-train-one-million",
-   "ts": "2026-10-04T02:46:37.553Z"
+   "ts": "2026-10-04T04:58:53.240Z"
   },
   {
    "url": "https://www.wam.ae/en/article/b1ns93x-uae-india-sign-mou-accelerate-growth-digital",
    "status": 200,
    "final": "https://www.wam.ae/en/article/b1ns93x-uae-india-sign-mou-accelerate-growth-digital",
-   "ts": "2026-10-04T02:46:38.773Z"
+   "ts": "2026-10-04T04:58:54.467Z"
   },
   {
    "url": "https://www.pib.gov.in/PressReleasePage.aspx?PRID=2295050&lang=1&reg=6",
    "status": 200,
    "final": "https://www.pib.gov.in/PressReleasePage.aspx?PRID=2295050&lang=1&reg=6",
-   "ts": "2026-10-04T02:46:40.045Z"
+   "ts": "2026-10-04T04:58:57.207Z"
   },
   {
    "url": "https://www.wam.ae/en/article/1440s83-uae-india-business-forum-kicks-off-mumbai",
    "status": 200,
    "final": "https://www.wam.ae/en/article/1440s83-uae-india-business-forum-kicks-off-mumbai",
-   "ts": "2026-10-04T02:46:40.247Z"
+   "ts": "2026-10-04T04:58:57.400Z"
   },
   {
    "url": "https://www.bignewsnetwork.com/news/274575970/uae-india-business-forum-kicks-off-in-mumbai",
    "status": 200,
    "final": "https://www.bignewsnetwork.com/news/274575970/uae-india-business-forum-kicks-off-in-mumbai",
-   "ts": "2026-10-04T02:46:40.515Z"
+   "ts": "2026-10-04T04:58:57.656Z"
   },
   {
    "url": "https://www.wam.ae/en/article/b2dzbq3-uae-kenya-sign-investment-memorandum-advance",
    "status": 200,
    "final": "https://www.wam.ae/en/article/b2dzbq3-uae-kenya-sign-investment-memorandum-advance",
-   "ts": "2026-10-04T02:46:40.717Z"
+   "ts": "2026-10-04T04:58:57.851Z"
   },
   {
    "url": "https://www.ict.go.ke/kenyas-digital-future-brightens-construction-east-africas-largest-data-centre-starts",
    "status": 200,
    "final": "https://www.ict.go.ke/kenyas-digital-future-brightens-construction-east-africas-largest-data-centre-starts",
-   "ts": "2026-10-04T02:46:42.765Z"
+   "ts": "2026-10-04T04:59:11.929Z"
   },
   {
    "url": "https://www.ict.go.ke/node/797",
    "status": 200,
    "final": "https://www.ict.go.ke/node/797",
-   "ts": "2026-10-04T02:46:42.993Z"
+   "ts": "2026-10-04T04:59:18.219Z"
   },
   {
    "url": "https://www.thenationalnews.com/business/partner-content/2025/12/08/adex-leads-joint-uae-africa-initiative-leveraging-ai-to-advance-development-and-improve-lives/",
    "status": 200,
    "final": "https://www.thenationalnews.com/business/partner-content/2025/12/08/adex-leads-joint-uae-africa-initiative-leveraging-ai-to-advance-development-and-improve-lives/",
-   "ts": "2026-10-04T02:46:43.087Z"
+   "ts": "2026-10-04T04:59:18.282Z"
   },
   {
    "url": "https://gulfnews.com/business/corporate-news/airev-and-intel-partner-to-launch-ai-agents-that-run-entirely-on-your-pc-1.500383475",
    "status": 200,
    "final": "https://gulfnews.com/business/corporate-news/airev-and-intel-partner-to-launch-ai-agents-that-run-entirely-on-your-pc-1.500383475",
-   "ts": "2026-10-04T02:46:43.135Z"
+   "ts": "2026-10-04T04:59:18.536Z"
   },
   {
    "url": "https://gulfnews.com/business/corporate-news/intel-and-airev-partner-to-propel-ai-innovation-across-middle-east-and-globally-1.500306686",
    "status": 200,
    "final": "https://gulfnews.com/business/corporate-news/intel-and-airev-partner-to-propel-ai-innovation-across-middle-east-and-globally-1.500306686",
-   "ts": "2026-10-04T02:46:43.186Z"
+   "ts": "2026-10-04T04:59:18.801Z"
   },
   {
    "url": "https://www.wam.ae/en/article/c1pp81t-airev-qualcomm-advance-autonomous-across",
    "status": 200,
    "final": "https://www.wam.ae/en/article/c1pp81t-airev-qualcomm-advance-autonomous-across",
-   "ts": "2026-10-04T02:46:43.387Z"
+   "ts": "2026-10-04T04:59:18.995Z"
   },
   {
    "url": "https://gulfnews.com/business/corporate-news/redington-to-distribute-uae-built-airev-ondemand-agentic-ai-platform-across-mea-1.500616526",
    "status": 200,
    "final": "https://gulfnews.com/business/corporate-news/redington-to-distribute-uae-built-airev-ondemand-agentic-ai-platform-across-mea-1.500616526",
-   "ts": "2026-10-04T02:46:43.697Z"
+   "ts": "2026-10-04T04:59:19.314Z"
   },
   {
    "url": "https://www.wam.ae/en/article/17fxhet-abdullah-bin-zayed-meets-lebanese-new-york-%E2%80%98one",
    "status": 200,
    "final": "https://www.wam.ae/en/article/17fxhet-abdullah-bin-zayed-meets-lebanese-new-york-%E2%80%98one",
-   "ts": "2026-10-04T02:46:43.897Z"
+   "ts": "2026-10-04T04:59:19.507Z"
   }
  ]
 }
