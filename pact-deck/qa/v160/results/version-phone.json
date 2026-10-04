@@ -1,20 +1,20 @@
 {
- "base": "http://127.0.0.1:4170",
- "version": "1.7.0",
- "written": "2026-10-04T08:26:15.806Z",
+ "base": "http://127.0.0.1:4171",
+ "version": "1.7.1",
+ "written": "2026-10-04T10:15:18.912Z",
  "rows": [
   {
-   "badge": "v1.7.0",
-   "html": "1.7.0",
-   "exec": "v1.7.0",
-   "player": "v1.7.0",
-   "guide": "v1.7.0",
-   "intro": "v1.7.0",
-   "films": "1.7.0",
-   "buildInfo": "1.7.0",
+   "badge": "v1.7.1",
+   "html": "1.7.1",
+   "exec": "v1.7.1",
+   "player": "v1.7.1",
+   "guide": "v1.7.1",
+   "intro": "v1.7.1",
+   "films": "1.7.1",
+   "buildInfo": "1.7.1",
    "features": {
     "_comment": "Build-time feature flags (scripts/v1.4.7/build.mjs syncs dist/ to these). execFilms (v1.5.9, replaces v1.5.7's originsFilm): Section 09 executive films from features/exec-films/films.json — true = the verified films are shipped in dist/assets/exec/films/ and every card carries a player or a labelled 'Film coming soon' ready slot; false = no film file or film string is served.",
-    "version": "1.7.0",
+    "version": "1.7.1",
     "execFilms": true
    }
   }

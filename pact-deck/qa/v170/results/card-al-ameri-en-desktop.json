@@ -1,15 +1,15 @@
 {
- "base": "http://127.0.0.1:4170",
- "version": "1.7.0",
- "expectCommit": "131e1b5b1389289ef2139f37454a95e350128512",
- "written": "2026-10-04T08:19:28.669Z",
+ "base": "http://127.0.0.1:4171",
+ "version": "1.7.1",
+ "expectCommit": "4ea5cc03f7de0061996946e129a00d6c32a2500f",
+ "written": "2026-10-04T10:05:08.147Z",
  "rows": [
   {
    "idle": {
     "lang": "en",
     "dir": "ltr",
-    "badge": "v1.7.0",
-    "html": "1.7.0",
+    "badge": "v1.7.1",
+    "html": "1.7.1",
     "ids": [
      "s-exec-intro",
      "s-exec-al-ameri",
@@ -19,10 +19,10 @@
      "s-exec-lorenzo"
     ],
     "count": 6,
-    "total": 45,
+    "total": 48,
     "active": true,
     "n": 41,
-    "currentSrc": "http://127.0.0.1:4170/assets/exec/films/al-ameri/athar-origins-ep01-fahad-al-ameri-1080p.66d9a6d6e0.mp4",
+    "currentSrc": "http://127.0.0.1:4171/assets/exec/films/al-ameri/athar-origins-ep01-fahad-al-ameri-1080p.66d9a6d6e0.mp4",
     "src": "athar-origins-ep01-fahad-al-ameri-1080p.66d9a6d6e0.mp4",
     "poster": "athar-origins-ep01-fahad-al-ameri-poster-07s0.6b79ef7542.jpg",
     "posterLoaded": true,
@@ -40,7 +40,7 @@
    },
    "playing": {
     "paused": false,
-    "currentTime": 2.797531,
+    "currentTime": 2.812458,
     "duration": 40,
     "src": "athar-origins-ep01-fahad-al-ameri-1080p.66d9a6d6e0.mp4",
     "showing": [

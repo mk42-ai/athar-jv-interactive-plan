@@ -1,15 +1,15 @@
 {
- "base": "http://127.0.0.1:4170",
- "version": "1.7.0",
- "expectCommit": "131e1b5b1389289ef2139f37454a95e350128512",
- "written": "2026-10-04T08:23:24.218Z",
+ "base": "http://127.0.0.1:4171",
+ "version": "1.7.1",
+ "expectCommit": "4ea5cc03f7de0061996946e129a00d6c32a2500f",
+ "written": "2026-10-04T10:09:26.481Z",
  "rows": [
   {
    "idle": {
     "lang": "ar",
     "dir": "rtl",
-    "badge": "v1.7.0",
-    "htmlVersion": "1.7.0",
+    "badge": "v1.7.1",
+    "htmlVersion": "1.7.1",
     "src": "athar-origins-of-impact-ep01-muhammed-khalid-720p.f824472ae0.mp4",
     "poster": "athar-origins-of-impact-ep01-muhammed-khalid-poster-18s8.32839348ca.jpg",
     "posterTime": "18.8",
@@ -27,7 +27,7 @@
    },
    "playing": {
     "paused": false,
-    "currentTime": 1.369946,
+    "currentTime": 1.39942,
     "duration": 50.005,
     "src": "athar-origins-of-impact-ep01-muhammed-khalid-720p.f824472ae0.mp4",
     "showing": [

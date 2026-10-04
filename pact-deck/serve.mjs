@@ -18,7 +18,7 @@ function cacheControl(f) {
   // so a re-provisioned deployment is visible on the very next request and no browser can keep an older bundle (the stale 'v1.5.x' card seen on 4 Oct);
   // content-addressed files (Vite's /assets/index-<hash>.*, and <name>.<sha256[0:10]>.<ext> media) are immutable; images, fonts and un-hashed media keep a day with stale-while-revalidate.
   if (/\/assets\/index-[A-Za-z0-9_-]+\.(js|css)$/.test(f)) return 'public, max-age=31536000, immutable';
-  if (/\.[0-9a-f]{10}\.(mp4|webm|jpe?g|webp|vtt)$/i.test(f)) return 'public, max-age=31536000, immutable'; // v1.6.2: content-hashed media (the Khalid film, poster and captions)
+  if (/\.[0-9a-f]{10}\.(mp4|webm|jpe?g|webp|png|svg|vtt|woff2)$/i.test(f)) return 'public, max-age=31536000, immutable'; // v1.6.2: content-hashed media (films, posters, captions); v1.7.1: + section-10 brand images and self-hosted fonts
   if (/\.(html|json|m?js|css|vtt|webmanifest|txt|csv|md|xml)$/i.test(f)) return 'no-store';
   if (MEDIA.test(f) || /\.(woff2?|png|jpe?g|webp|svg|ico|gif|avif|mp3|m4a|wav)$/i.test(f)) return 'public, max-age=86400, stale-while-revalidate=604800';
   return 'no-store';

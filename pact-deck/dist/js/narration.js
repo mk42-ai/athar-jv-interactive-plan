@@ -1,4 +1,4 @@
-/* Athar Open Agentic Pact deck — Guide Mode v1.5.4 (2026-10-01) — slide-ID-keyed narration player.
+/* Athar Open Agentic Pact deck — Guide Mode v1.5.4 (2026-10-01) — slide-ID-keyed narration player. v1.7.1: 48 slides; section 10 (46–48) ships EN + AR George clips (slide-narration.json → ar{}) and the AR deck plays the Arabic clip there.
    Fixes the "narration does not always play / narrates a different page than the one on screen" reports (root causes in
    CHANGELOG.md v1.5.4). Docked guide bar (52 px, Manuscript/Sand surface, Falaj-Teal progress, 44 px targets; layout space is
    reserved via html.has-guide-bar so the bar never covers slide content, footer or chevrons).
@@ -30,7 +30,7 @@
    Keyboard: N = play / pause (start when off, retry when blocked); ← → change slide (handled by the deck, never intercepted). */
 (function () {
   'use strict';
-  var VERSION = 'v1.7.0', KEY = 'athar-guide-prefs-v3', OLDKEY = 'athar-narration-prefs-v2', TABLE = '/narration/slide-narration.json', MANIFEST = '/narration/narration-manifest.json', TOTAL = 39 + ((window.AtharExecTeam && window.AtharExecTeam.count) || 0), SETTLE_MS = 140, NOCLIP_MS = 9000; /* v1.5.5: 39 + section 09 Executive Team (slides 40–46) */
+  var VERSION = 'v1.7.1', KEY = 'athar-guide-prefs-v3', OLDKEY = 'athar-narration-prefs-v2', TABLE = '/narration/slide-narration.json', MANIFEST = '/narration/narration-manifest.json', TOTAL = 39 + ((window.AtharExecTeam && window.AtharExecTeam.count) || 0) + ((window.AtharBrand && window.AtharBrand.count) || 0), SETTLE_MS = 140, NOCLIP_MS = 9000; /* v1.5.5: 39 + section 09 Executive Team (slides 40–46) */
   var STATES = { idle: 1, loading: 1, playing: 1, paused: 1, blocked: 1, ended: 1 };
   var T = {
     en: { region: 'Narrated guide', guide: 'Guide', guideOn: 'Guide on', play: 'Play narration', pause: 'Pause narration', mute: 'Mute', unmute: 'Unmute', auto: 'AUTO — advance to the next slide when its narration ends', cc: 'CC — live caption of the sentence being narrated', txOpen: 'Hide transcript', txShow: 'Show transcript', tx: 'Transcript', tap: 'Tap to play', tapRetry: 'Retry narration', tapAria: 'The browser blocked the narration. Tap to play the narration for slide {n} of {t}', tapRetryAria: 'The narration could not load. Tap to retry slide {n} of {t}',
@@ -57,7 +57,8 @@
   function el(t, c, txt) { var e = document.createElement(t); if (c) e.className = c; if (txt != null) e.textContent = txt; return e; }
   function fmt(s) { if (!isFinite(s)) return '0:00'; s = Math.max(0, Math.round(s)); return Math.floor(s / 60) + ':' + ('0' + (s % 60)).slice(-2); }
   function fill(str, n) { return String(str).replace('{n}', String(n)).replace('{t}', String(TOTAL)); }
-  function hashFor(n) { return n <= 27 ? '#/' + n : n <= 38 ? '#/27/new-' + (n - 27) : n === 39 ? '#/28' : '#/28/exec-' + (n - 39); } /* v1.5.5: slides 40–46 */
+  var EXEC_LAST = 39 + ((window.AtharExecTeam && window.AtharExecTeam.count) || 0); /* v1.7.1: 45 */
+  function hashFor(n) { return n <= 27 ? '#/' + n : n <= 38 ? '#/27/new-' + (n - 27) : n === 39 ? '#/28' : n <= EXEC_LAST ? '#/28/exec-' + (n - 39) : '#/28/brand-' + (n - EXEC_LAST); } /* v1.5.5: slides 40–45; v1.7.1: 46–48 → #/28/brand-k */
   function introActive() { var g = document.querySelector('.intro-gate'); return !!(g && g.offsetParent !== null); }
   function iso() { return new Date().toISOString(); }
   function log(ev, extra) { var r = { t: iso(), ev: ev, state: S.state, reason: S.reason, gen: S.gen, slideId: S.slideId, clip: S.clip ? S.clip.clipId : null, at: Math.round((audio.currentTime || 0) * 100) / 100 }; if (extra) for (var k in extra) r[k] = extra[k]; journal.push(r); if (journal.length > 600) journal.shift(); }
@@ -67,7 +68,8 @@
   function tagSlides() { var list = document.querySelectorAll('#root section.slide'); for (var i = 0; i < list.length; i++) { var s = list[i]; if (s.id && s.getAttribute('data-slide-id') !== s.id) s.setAttribute('data-slide-id', s.id); } }
   function visibleSection() { var virt = document.body && document.body.classList.contains('it-virtual'); return virt ? document.querySelector('#root section.it-slide.is-active') : document.querySelector('#root section.slide.is-active:not(.it-slide)'); }
   function visibleSlideId() { var s = visibleSection(); if (!s) return null; var id = s.getAttribute('data-slide-id') || s.id || null; return id && BY_ID[id] ? id : null; }
-  function entry(id) { return id ? BY_ID[id] || null : null; }
+  function entry(id) { var e = id ? BY_ID[id] || null : null; if (e && e.ar && lang() === 'ar' && e.ar.file) { /* v1.7.1: slides with their own Arabic George clip (section 10) play it in the AR deck; everything else keeps the EN clip + note */
+      var k = '__ar'; if (!e[k]) { e[k] = {}; for (var p in e) if (p !== 'ar' && p !== k) e[k][p] = e[p]; e[k].file = e.ar.file; e[k].text = e.ar.text; e[k].cues = e.ar.cues; e[k].clipId = e.ar.clipId; e[k].durationSec = e.ar.durationSec; e[k].sha256 = e.ar.sha256; e[k].bytes = e.ar.bytes; e[k].arAudio = true; } return e[k]; } return e; }
   function nextId(id) { var e = entry(id); return e && e.n < TOTAL ? ORDER[e.n] : null; } /* ORDER is 0-based: ORDER[n] is slide n+1 */
   function current() { return !!(S.clip && audio.getAttribute('data-gen') === String(S.gen) && S.clip.slideId === S.slideId); }
 
@@ -224,7 +226,7 @@
     if (ui.tEn.getAttribute('data-slide-id') !== e.slideId + '|' + lang()) {
       ui.tEn.setAttribute('data-slide-id', e.slideId + '|' + lang()); ui.tEn.textContent = '';
       (e.cues && e.cues.length ? e.cues : [{ i: 1, text: e.text }]).forEach(function (q) { var sp = el('span', 'gbar-sent', q.text + ' '); sp.setAttribute('data-cue-i', String(q.i)); ui.tEn.appendChild(sp); });
-      ui.meta.textContent = e.clipId + ' · ' + L.voice + (lang() === 'ar' ? ' · ' + L.arNote : '') + ' · ' + L.key;
+      ui.meta.textContent = e.clipId + ' · ' + L.voice + (lang() === 'ar' && !e.arAudio ? ' · ' + L.arNote : '') + ' · ' + L.key; /* v1.7.1: no 'Arabic pending' note when the slide has its own Arabic clip */
     }
     var sps = ui.tEn.querySelectorAll('.gbar-sent'), idx = S.cue ? S.cue.i : -1;
     for (var i = 0; i < sps.length; i++) { var on = parseInt(sps[i].getAttribute('data-cue-i'), 10) === idx; if (sps[i].classList.contains('is-active') !== on) { sps[i].classList.toggle('is-active', on); if (on) sps[i].setAttribute('aria-current', 'true'); else sps[i].removeAttribute('aria-current'); } }

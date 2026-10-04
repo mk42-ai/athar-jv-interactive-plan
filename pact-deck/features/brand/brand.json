@@ -1,0 +1,557 @@
+{
+ "schema": "athar.brand.section/1",
+ "version": "1.7.1",
+ "section": {
+  "number": "10",
+  "id": "brand",
+  "slides": [
+   {
+    "n": 46,
+    "id": "s-brand-typography",
+    "hash": "#/28/brand-1"
+   },
+   {
+    "n": 47,
+    "id": "s-brand-assets",
+    "hash": "#/28/brand-2"
+   },
+   {
+    "n": 48,
+    "id": "s-brand-product",
+    "hash": "#/28/brand-3"
+   }
+  ],
+  "title": {
+   "en": "Branding",
+   "ar": "الهوية البصرية"
+  },
+  "kicker": {
+   "en": "10 · Branding",
+   "ar": "10 · الهوية البصرية"
+  }
+ },
+ "guidelines": {
+  "document": "Athar Brand Guidelines V2.2 — LOGO CONSISTENCY VERIFIED — FINAL — 24 September 2026 (310 pp.)",
+  "classification": "INTERNAL ONLY — never bundled, linked, embedded or screenshotted; only specs are extracted",
+  "pdf": {
+   "file": "Athar_Brand_Guidelines_FINAL.pdf",
+   "sha256": "dacc193b4a4169ee85741525850542c6dade950ddbdc8dc1a21b3a608c7f9abd"
+  },
+  "docx": {
+   "file": "Athar_Brand_Guidelines_FINAL.docx",
+   "sha256": "616f093ef5fe95ee2e58657f458b9c155aaafcb84af3c1dc489ecc74895715c4"
+  },
+  "packReadme": {
+   "file": "README.md (Athar Brand Asset Pack v1.0 / V2.1 / V2.2 notes)",
+   "sha256": "551a584eff04c19b5a4d07bc25a06c91f494330610f36daf7d309c8c44234a65"
+  },
+  "pagesUsed": {
+   "brandEssence": 9,
+   "clearSpaceMinSizes": [
+    19,
+    20,
+    21
+   ],
+   "placement": 21,
+   "backgroundPairings": 22,
+   "misuse": [
+    23,
+    24
+   ],
+   "masterFiles": [
+    24,
+    25,
+    26,
+    27,
+    28
+   ],
+   "palette": [
+    30,
+    31,
+    32
+   ],
+   "tokens": [
+    33,
+    34
+   ],
+   "typography": [
+    39,
+    40,
+    41,
+    42,
+    43
+   ]
+  }
+ },
+ "pack": {
+  "name": "Athar_Brand_Asset_Pack_v3",
+  "storage": "Google Drive / SharePoint",
+  "logoFilesInPack": [
+   "Athar_Logo_Horizontal_transparent_v1.png"
+  ],
+  "suppliedTokenFile": {
+   "file": "brand-tokens_v1.json",
+   "sha256": "a98f2cdab00047cbd3accb9f31f56ce8b5c903cb4b4877853f7385b4ee1c7ece",
+   "identity": "Erth Zayed Philanthropies — Brand Token Pack (25 portfolio entities, harvested 2026-08-21)",
+   "usedFor": "nothing on the slides — it carries no Athar palette; the Athar tokens come from the guidelines (features/brand/brand-tokens.json)"
+  },
+  "suppliedManifest": {
+   "file": "brand-asset-manifest_v1.csv",
+   "sha256": "b5aee85a33336e17f972c04fdf5bdef86fdc79d27ce8f3e77073353b713472e8",
+   "identity": "Erth Zayed portfolio web-asset harvest (96 rows, 2026-08-21)",
+   "usedFor": "counts by file type / availability on slide 47, labelled as the supplied manifest"
+  },
+  "pending": [
+   {
+    "item": "Athar_Brand_Asset_Pack_v3 manifest",
+    "detail": "the supplied brand-asset-manifest_v1.csv is the Erth Zayed portfolio harvest, not the Athar pack listing"
+   },
+   {
+    "item": "tokens_v2.json",
+    "detail": "the pack's token export named in the guidelines (p. 34) was not supplied; tokens re-extracted from the guidelines text instead"
+   },
+   {
+    "item": "Logo masters",
+    "detail": "Athar_Logo_Primary / Reversed / Monochrome / Monogram (PNG + SVG, guidelines 2.14) were not supplied — only the horizontal transparent PNG; the other versions on slide 47 are DERIVED FROM OFFICIAL LOGO"
+   },
+   {
+    "item": "Jost Light · Montserrat Light",
+    "detail": "sans display alternates (guidelines 4.1) not self-hosted — loaded only on surfaces that use the sans alternate, none in this deck"
+   }
+  ]
+ },
+ "fonts": {
+  "source": "github.com/google/fonts (main), SIL Open Font License 1.1 — self-hosted subset woff2, font-display: swap (guidelines 4.5)",
+  "fallbackNote": null,
+  "faces": [
+   {
+    "id": "CormorantGaramond-Light",
+    "family": "Cormorant Garamond",
+    "weight": 300,
+    "style": "normal",
+    "role": {
+     "en": "Display (Latin)",
+     "ar": "العرض (لاتيني)"
+    }
+   },
+   {
+    "id": "CormorantGaramond-Regular",
+    "family": "Cormorant Garamond",
+    "weight": 400,
+    "style": "normal",
+    "role": {
+     "en": "Headline (Latin)",
+     "ar": "العناوين (لاتيني)"
+    }
+   },
+   {
+    "id": "CormorantGaramond-LightItalic",
+    "family": "Cormorant Garamond",
+    "weight": 300,
+    "style": "italic",
+    "role": {
+     "en": "Pull-quotes",
+     "ar": "الاقتباسات"
+    }
+   },
+   {
+    "id": "IBMPlexMono-Regular",
+    "family": "IBM Plex Mono",
+    "weight": 400,
+    "style": "normal",
+    "role": {
+     "en": "Code / data",
+     "ar": "الشيفرة / البيانات"
+    }
+   },
+   {
+    "id": "IBMPlexSansArabic-Light",
+    "family": "IBM Plex Sans Arabic",
+    "weight": 300,
+    "style": "normal",
+    "role": {
+     "en": "Arabic display",
+     "ar": "العرض العربي"
+    }
+   }
+  ],
+  "alreadyInDeck": [
+   "IBM Plex Sans Regular / Medium / SemiBold / Bold (/fonts/IBMPlexSans-*.woff2)",
+   "IBM Plex Sans Arabic Regular / Medium / SemiBold / Bold (/fonts/IBMPlexSansArabic-*.woff2)",
+   "IBM Plex Serif SemiBold"
+  ]
+ },
+ "typography": {
+  "system": [
+   {
+    "role": {
+     "en": "Display (Latin)",
+     "ar": "العرض (لاتيني)"
+    },
+    "family": "Cormorant Garamond Light",
+    "weights": {
+     "en": "Light 300 (Regular 400 for small sizes)",
+     "ar": "خفيف 300 (عادي 400 للأحجام الصغيرة)"
+    },
+    "setting": {
+     "en": "Uppercase · tracking +250 (+200 to +300) · 3–5 words per line",
+     "ar": "أحرف كبيرة · تباعد +250 (من +200 إلى +300) · 3–5 كلمات في السطر"
+    }
+   },
+   {
+    "role": {
+     "en": "Headline (Latin)",
+     "ar": "العناوين (لاتيني)"
+    },
+    "family": "Cormorant Garamond",
+    "weights": {
+     "en": "Regular 400 · Light Italic for pull-quotes",
+     "ar": "عادي 400 · مائل خفيف للاقتباسات"
+    },
+    "setting": {
+     "en": "Sentence case · no tracking · never all caps below 24 px",
+     "ar": "حالة الجملة · بلا تباعد · لا أحرف كبيرة كاملة دون 24 بكسل"
+    }
+   },
+   {
+    "role": {
+     "en": "Body and UI (Latin)",
+     "ar": "المتن والواجهة (لاتيني)"
+    },
+    "family": "IBM Plex Sans",
+    "weights": {
+     "en": "Regular 400 · Medium 500 · SemiBold 600",
+     "ar": "عادي 400 · متوسط 500 · شبه عريض 600"
+    },
+    "setting": {
+     "en": "Sentence case; Medium for emphasis and eyebrows; SemiBold for H3 and buttons",
+     "ar": "حالة الجملة؛ المتوسط للتأكيد والعناوين الصغيرة؛ شبه العريض للعناوين الثالثة والأزرار"
+    }
+   },
+   {
+    "role": {
+     "en": "Arabic — all roles",
+     "ar": "العربية — جميع الأدوار"
+    },
+    "family": "IBM Plex Sans Arabic",
+    "weights": {
+     "en": "Light 300 (display) · Regular 400 · Medium 500 · SemiBold 600",
+     "ar": "خفيف 300 (العرض) · عادي 400 · متوسط 500 · شبه عريض 600"
+    },
+    "setting": {
+     "en": "Never tracked · never stretched · matched optical weight · Arabic-first sizing ×1.07 · line-height ×1.1",
+     "ar": "بلا تباعد · بلا تمديد · وزن بصري متطابق · تحجيم عربي أولًا ×1.07 · ارتفاع السطر ×1.1"
+    }
+   },
+   {
+    "role": {
+     "en": "Code / data",
+     "ar": "الشيفرة / البيانات"
+    },
+    "family": "IBM Plex Mono",
+    "weights": {
+     "en": "Regular 400",
+     "ar": "عادي 400"
+    },
+    "setting": {
+     "en": "Tokens, code samples, tabular figures",
+     "ar": "الرموز وعيّنات الشيفرة والأرقام الجدولية"
+    }
+   }
+  ],
+  "scale": [
+   {
+    "style": "Display",
+    "latin": "56 / 64",
+    "rem": "3.5 / 4.0",
+    "face": {
+     "en": "Cormorant Garamond Light · uppercase · +250",
+     "ar": "كورمورانت غارامون خفيف · أحرف كبيرة · +250"
+    },
+    "arabic": "60 / 70",
+    "arabicFace": {
+     "en": "Plex Sans Arabic Light · no tracking",
+     "ar": "بلكس سانس عربي خفيف · بلا تباعد"
+    },
+    "use": {
+     "en": "Hero lines, cover taglines, message blocks",
+     "ar": "السطور الرئيسية وشعارات الأغلفة وكتل الرسائل"
+    }
+   },
+   {
+    "style": "H1",
+    "latin": "36 / 44",
+    "rem": "2.25 / 2.75",
+    "face": {
+     "en": "Cormorant Garamond Regular · sentence case",
+     "ar": "كورمورانت غارامون عادي · حالة الجملة"
+    },
+    "arabic": "38.5 / 48",
+    "arabicFace": {
+     "en": "Plex Sans Arabic Regular",
+     "ar": "بلكس سانس عربي عادي"
+    },
+    "use": {
+     "en": "Page and chapter titles",
+     "ar": "عناوين الصفحات والفصول"
+    }
+   },
+   {
+    "style": "H2",
+    "latin": "28 / 36",
+    "rem": "1.75 / 2.25",
+    "face": {
+     "en": "IBM Plex Sans Medium",
+     "ar": "آي بي إم بلكس سانس متوسط"
+    },
+    "arabic": "30 / 40",
+    "arabicFace": {
+     "en": "Plex Sans Arabic Medium",
+     "ar": "بلكس سانس عربي متوسط"
+    },
+    "use": {
+     "en": "Section titles",
+     "ar": "عناوين الأقسام"
+    }
+   },
+   {
+    "style": "H3",
+    "latin": "22 / 30",
+    "rem": "1.375 / 1.875",
+    "face": {
+     "en": "IBM Plex Sans SemiBold",
+     "ar": "آي بي إم بلكس سانس شبه عريض"
+    },
+    "arabic": "23.5 / 33",
+    "arabicFace": {
+     "en": "Plex Sans Arabic SemiBold",
+     "ar": "بلكس سانس عربي شبه عريض"
+    },
+    "use": {
+     "en": "Sub-sections, card titles",
+     "ar": "الأقسام الفرعية وعناوين البطاقات"
+    }
+   },
+   {
+    "style": "Body",
+    "latin": "16 / 24",
+    "rem": "1.0 / 1.5",
+    "face": {
+     "en": "IBM Plex Sans Regular",
+     "ar": "آي بي إم بلكس سانس عادي"
+    },
+    "arabic": "17 / 26",
+    "arabicFace": {
+     "en": "Plex Sans Arabic Regular",
+     "ar": "بلكس سانس عربي عادي"
+    },
+    "use": {
+     "en": "Paragraphs, UI copy",
+     "ar": "الفقرات ونصوص الواجهة"
+    }
+   },
+   {
+    "style": "Small",
+    "latin": "14 / 20",
+    "rem": "0.875 / 1.25",
+    "face": {
+     "en": "IBM Plex Sans Regular",
+     "ar": "آي بي إم بلكس سانس عادي"
+    },
+    "arabic": "15 / 22",
+    "arabicFace": {
+     "en": "Plex Sans Arabic Regular",
+     "ar": "بلكس سانس عربي عادي"
+    },
+    "use": {
+     "en": "Secondary copy, table cells",
+     "ar": "النصوص الثانوية وخلايا الجداول"
+    }
+   },
+   {
+    "style": "Caption / eyebrow",
+    "latin": "12 / 16",
+    "rem": "0.75 / 1.0",
+    "face": {
+     "en": "IBM Plex Sans Medium · uppercase · +80",
+     "ar": "آي بي إم بلكس سانس متوسط · أحرف كبيرة · +80"
+    },
+    "arabic": "13 / 18",
+    "arabicFace": {
+     "en": "Plex Sans Arabic Medium · no caps, no tracking",
+     "ar": "بلكس سانس عربي متوسط · بلا أحرف كبيرة ولا تباعد"
+    },
+    "use": {
+     "en": "Labels, figure captions, eyebrows",
+     "ar": "التسميات وتعليقات الأشكال والعناوين الصغيرة"
+    }
+   }
+  ],
+  "dos": {
+   "en": [
+    "Shared baseline in every bilingual line — optical size matched by eye, not by equal point size",
+    "Equal visual weight: pair like with like (Medium with Medium, Bold with Bold)",
+    "Western Arabic digits 0–9 in UI, data, tables and identifiers in both languages",
+    "Arabic leads on bilingual lock-ups and paired lines; the endorsement line is set in each language separately",
+    "Set dir and lang on every language switch; mirror layouts in RTL with logical properties"
+   ],
+   "ar": [
+    "خط أساس مشترك في كل سطر ثنائي اللغة — يُطابَق الحجم البصري بالعين لا بتساوي النقاط",
+    "وزن بصري متساوٍ: يُقرَن المثيل بمثيله (المتوسط بالمتوسط والعريض بالعريض)",
+    "أرقام عربية غربية 0–9 في الواجهة والبيانات والجداول والمعرّفات في اللغتين",
+    "تتقدّم العربية في الشعارات والأسطر المقترنة؛ ويُكتب سطر الاعتماد بكل لغة على حدة",
+    "تُضبط dir وlang عند كل تبديل لغة؛ وتُعكَس التخطيطات في RTL بالخصائص المنطقية"
+   ]
+  },
+  "donts": {
+   "en": [
+    "No letter-spacing on Arabic, ever — the caption style's tracking applies to Latin capitals only",
+    "No fake styles: never synthesise italic or bold (font-synthesis: none); Arabic emphasis is weight or colour, not slant",
+    "Never scale Arabic down to 'fit'; never mix numeral systems inside one number",
+    "Never set the Arabic أثر mark in type — it is artwork; an accompanying Arabic display line is Plex Sans Arabic Light",
+    "Never justify Arabic body text with kashida (display lock-ups only)"
+   ],
+   "ar": [
+    "لا تباعد بين الحروف العربية أبدًا — تباعد نمط التعليق للأحرف اللاتينية الكبيرة فقط",
+    "لا أنماط مزيّفة: لا يُصنّع المائل أو العريض (font-synthesis: none)؛ التأكيد في العربية بالوزن أو اللون لا بالميل",
+    "لا تُصغَّر العربية «لتناسب»؛ ولا تُخلط أنظمة الأرقام داخل الرقم الواحد",
+    "لا تُكتب علامة أثر العربية بالخط — فهي عمل فني؛ وسطر العرض العربي المرافق بخط بلكس سانس عربي خفيف",
+    "لا تُضبط النصوص العربية بالكشيدة (في شعارات العرض فقط)"
+   ]
+  }
+ },
+ "logo": {
+  "clearSpace": {
+   "en": "Clear space = x, the cap height of the ATHAR wordmark; 1x free on all four sides of every lockup (monogram: x = one-sixth of the mark height). Nothing enters the zone.",
+   "ar": "المساحة الخالية = x، ارتفاع الحرف الكبير في اسم ATHAR؛ 1x حرّة من الجهات الأربع لكل شعار (المونوغرام: x = سُدس ارتفاع العلامة). لا يدخل المنطقة شيء."
+  },
+  "minSizes": [
+   {
+    "version": {
+     "en": "Stacked lockup",
+     "ar": "الشعار الرأسي"
+    },
+    "print": "20 mm",
+    "digital": "96 px"
+   },
+   {
+    "version": {
+     "en": "Horizontal lockup",
+     "ar": "الشعار الأفقي"
+    },
+    "print": "40 mm",
+    "digital": "160 px"
+   },
+   {
+    "version": {
+     "en": "Monogram",
+     "ar": "المونوغرام"
+    },
+    "print": "8 mm",
+    "digital": "32 px"
+   },
+   {
+    "version": {
+     "en": "Tagline lockup",
+     "ar": "شعار السطر التعريفي"
+    },
+    "print": "40 mm",
+    "digital": "200 px",
+    "note": {
+     "en": "never below · FOR CONFIRMATION",
+     "ar": "لا أقل من ذلك · للتأكيد"
+    }
+   }
+  ],
+  "pairings": {
+   "en": "Approved: Deep Ocean on Ivory (12.11:1) and on Sand (6.24:1) · reversed on Deep Ocean (Ivory mark 12.11:1, gold wordmark 4.52:1) · all-Ivory on Emerald (6.41:1) · black on white (21:1). Never: gold on Sand (1.38:1) or on Ivory (2.68:1), or over busy imagery without a Deep Ocean scrim.",
+   "ar": "معتمد: المحيط العميق على العاجي (12.11:1) وعلى الرملي (6.24:1) · معكوس على المحيط العميق (علامة عاجية 12.11:1، اسم ذهبي 4.52:1) · عاجي كامل على الزمرّدي (6.41:1) · أسود على أبيض (21:1). ممنوع: الذهبي على الرملي (1.38:1) أو على العاجي (2.68:1)، أو فوق صور مزدحمة دون طبقة محيط عميق."
+  },
+  "misuse": [
+   {
+    "key": "stretch",
+    "dont": {
+     "en": "Stretch or condense",
+     "ar": "التمديد أو الضغط"
+    },
+    "do": {
+     "en": "Scale proportionally from a corner handle",
+     "ar": "التحجيم نسبيًا من مقبض الزاوية"
+    }
+   },
+   {
+    "key": "outline",
+    "dont": {
+     "en": "Outline / keyline only",
+     "ar": "التحديد بخط خارجي فقط"
+    },
+    "do": {
+     "en": "Use a solid single-colour version",
+     "ar": "استخدام نسخة بلون واحد مصمت"
+    }
+   },
+   {
+    "key": "shadow",
+    "dont": {
+     "en": "Drop shadow, glow, bevel",
+     "ar": "ظل أو توهّج أو حافة بارزة"
+    },
+    "do": {
+     "en": "Use a scrim or a calmer image area",
+     "ar": "استخدام طبقة تعتيم أو منطقة أهدأ من الصورة"
+    }
+   },
+   {
+    "key": "rotate",
+    "dont": {
+     "en": "Rotate or tilt",
+     "ar": "التدوير أو الإمالة"
+    },
+    "do": {
+     "en": "Keep the vertical axis upright",
+     "ar": "إبقاء المحور الرأسي قائمًا"
+    }
+   },
+   {
+    "key": "lowcontrast",
+    "dont": {
+     "en": "Low-contrast ground (gold on Sand 1.38:1)",
+     "ar": "أرضية منخفضة التباين (الذهبي على الرملي 1.38:1)"
+    },
+    "do": {
+     "en": "Deep Ocean lockup on light grounds; gold only on Deep Ocean",
+     "ar": "شعار المحيط العميق على الأرضيات الفاتحة؛ والذهبي على المحيط العميق فقط"
+    }
+   },
+   {
+    "key": "busy",
+    "dont": {
+     "en": "Busy photo background",
+     "ar": "خلفية صورة مزدحمة"
+    },
+    "do": {
+     "en": "Calm area or a 55–65 % Deep Ocean scrim",
+     "ar": "منطقة هادئة أو طبقة محيط عميق بشفافية 55–65 %"
+    }
+   }
+  ]
+ },
+ "narration": {
+  "voice": "George (JBFqnCBsd6RMkjVDRZzb)",
+  "model": "eleven_multilingual_v2",
+  "clips": {
+   "s-brand-typography": {
+    "en": "NAR-s47",
+    "ar": "NAR-s47-ar"
+   },
+   "s-brand-assets": {
+    "en": "NAR-s48",
+    "ar": "NAR-s48-ar"
+   },
+   "s-brand-product": {
+    "en": "NAR-s49",
+    "ar": "NAR-s49-ar"
+   }
+  }
+ }
+}

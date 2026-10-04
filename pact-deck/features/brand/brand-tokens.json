@@ -1,0 +1,454 @@
+{
+ "schema": "athar.brand.tokens/1",
+ "version": "1.7.1",
+ "generated_utc": "2026-10-04T09:17:10Z",
+ "source": {
+  "document": "Athar Brand Guidelines V2.2 — LOGO CONSISTENCY VERIFIED — FINAL (24 September 2026), Chapter 3 · Colour Palette",
+  "file": "Athar_Brand_Guidelines_FINAL.pdf (INTERNAL ONLY — not in the repository)",
+  "sha256": "dacc193b4a4169ee85741525850542c6dade950ddbdc8dc1a21b3a608c7f9abd",
+  "pages": {
+   "palette": 30,
+   "proportion": 31,
+   "superseded": 32,
+   "lightTokens": 33,
+   "darkTokens": 34
+  },
+  "method": "scripts/v1.7.1/extract_brand_tokens.py — regex captures from the PDF text layer (PyMuPDF); no HEX value is typed by hand",
+  "status": "the five colours and their meanings are SOURCED (mood board); the sampled HEX values are SOURCED by measurement; tokens, proportion and rules are PROPOSED (guidelines p.39)",
+  "suppliedTokenFile": "brand-tokens_v1.json from the media library is the \"Erth Zayed Philanthropies — Brand Token Pack\" (25 entities, 2026-08-21) — it carries no Athar palette and is not used for any colour on slide 47"
+ },
+ "palette": [
+  {
+   "name": "Deep Ocean",
+   "token": "brand.deep-ocean",
+   "hex": "#192E3C",
+   "rgb": [
+    25,
+    46,
+    60
+   ],
+   "cmykNaive": [
+    58,
+    23,
+    0,
+    76
+   ],
+   "pantoneNearest": "7546 C (ΔE 4.5) — UNVERIFIED",
+   "meaning": "Trust · Stability · Intelligence",
+   "tier": "Primary",
+   "role": "mark, text, dark grounds",
+   "sharePct": 30,
+   "where": "Mark, body text, dark surfaces, primary action"
+  },
+  {
+   "name": "Emerald",
+   "token": "brand.emerald",
+   "hex": "#405A5B",
+   "rgb": [
+    64,
+    90,
+    91
+   ],
+   "cmykNaive": [
+    30,
+    1,
+    0,
+    64
+   ],
+   "pantoneNearest": "5477 C (ΔE 5.7) — UNVERIFIED",
+   "meaning": "Growth · Impact · Sustainability",
+   "tier": "Secondary",
+   "role": "alternate ground, links, secondary text",
+   "sharePct": 15,
+   "where": "Alternate ground for panels and social, secondary text, links"
+  },
+  {
+   "name": "Sand",
+   "token": "brand.sand",
+   "hex": "#BEAA91",
+   "rgb": [
+    190,
+    170,
+    145
+   ],
+   "cmykNaive": [
+    0,
+    11,
+    24,
+    25
+   ],
+   "pantoneNearest": "480 C (ΔE 3.8) — UNVERIFIED",
+   "meaning": "Heritage · Balance · Humanity",
+   "tier": "Secondary",
+   "role": "warm ground, borders, stone",
+   "sharePct": 10,
+   "where": "Warm ground for stone-like sections, borders, dividers, table stripes"
+  },
+  {
+   "name": "Ivory",
+   "token": "brand.ivory",
+   "hex": "#F2EEE5",
+   "rgb": [
+    242,
+    238,
+    229
+   ],
+   "cmykNaive": [
+    0,
+    2,
+    5,
+    5
+   ],
+   "pantoneNearest": "427 C (ΔE 6.9) — UNVERIFIED",
+   "meaning": "Clarity · Transparency · Opportunity",
+   "tier": "Primary",
+   "role": "page and product ground",
+   "sharePct": 40,
+   "where": "Page and product ground, cards, stationery stock"
+  },
+  {
+   "name": "Champagne Gold",
+   "token": "brand.champagne-gold",
+   "hex": "#AD8D63",
+   "rgb": [
+    173,
+    141,
+    99
+   ],
+   "cmykNaive": [
+    0,
+    18,
+    43,
+    32
+   ],
+   "pantoneNearest": "4655 C (ΔE 8.3) — UNVERIFIED",
+   "meaning": "Progress · Excellence · Shared Value",
+   "tier": "Accent",
+   "role": "rules, details, reversed mark on Deep Ocean",
+   "sharePct": 5,
+   "where": "Rules, sign-off details, reversed mark on Deep Ocean, foil"
+  }
+ ],
+ "proportionOfUse": [
+  {
+   "name": "Ivory",
+   "sharePct": 40,
+   "where": "Page and product ground, cards, stationery stock"
+  },
+  {
+   "name": "Deep Ocean",
+   "sharePct": 30,
+   "where": "Mark, body text, dark surfaces, primary action"
+  },
+  {
+   "name": "Emerald",
+   "sharePct": 15,
+   "where": "Alternate ground for panels and social, secondary text, links"
+  },
+  {
+   "name": "Sand",
+   "sharePct": 10,
+   "where": "Warm ground for stone-like sections, borders, dividers, table stripes"
+  },
+  {
+   "name": "Champagne Gold",
+   "sharePct": 5,
+   "where": "Rules, sign-off details, reversed mark on Deep Ocean, foil"
+  }
+ ],
+ "superseded": [
+  {
+   "name": "Sovereign Navy",
+   "hex": "#0F1B2D"
+  },
+  {
+   "name": "Heritage Gold",
+   "hex": "#B08D57"
+  },
+  {
+   "name": "Trace Cyan",
+   "hex": "#2FB7C8"
+  },
+  {
+   "name": "Sand Off-White",
+   "hex": "#F5F1EA"
+  },
+  {
+   "name": "Charcoal Ink",
+   "hex": "#1F2937"
+  },
+  {
+   "name": "Athar Ink",
+   "hex": "#0F1E2C"
+  },
+  {
+   "name": "Legacy Gold",
+   "hex": "#B8975A"
+  },
+  {
+   "name": "Manuscript",
+   "hex": "#F7F3EA"
+  }
+ ],
+ "light": [
+  {
+   "token": "surface.page",
+   "hex": "#F2EEE5"
+  },
+  {
+   "token": "surface.card",
+   "hex": "#FFFFFF"
+  },
+  {
+   "token": "surface.subtle",
+   "hex": "#EAE3D8"
+  },
+  {
+   "token": "surface.inverse",
+   "hex": "#192E3C"
+  },
+  {
+   "token": "text.primary",
+   "hex": "#192E3C"
+  },
+  {
+   "token": "text.heading",
+   "hex": "#192E3C"
+  },
+  {
+   "token": "text.secondary",
+   "hex": "#405A5B"
+  },
+  {
+   "token": "text.muted",
+   "hex": "#4D5C65"
+  },
+  {
+   "token": "text.on-accent",
+   "hex": "#192E3C"
+  },
+  {
+   "token": "text.inverse",
+   "hex": "#F2EEE5"
+  },
+  {
+   "token": "accent.rule",
+   "hex": "#AD8D63"
+  },
+  {
+   "token": "accent.gold",
+   "hex": "#AD8D63"
+  },
+  {
+   "token": "brand.emerald",
+   "hex": "#405A5B"
+  },
+  {
+   "token": "brand.sand",
+   "hex": "#BEAA91"
+  },
+  {
+   "token": "action.primary.bg",
+   "hex": "#192E3C"
+  },
+  {
+   "token": "action.primary.text",
+   "hex": "#F2EEE5"
+  },
+  {
+   "token": "action.primary.hover",
+   "hex": "#273D47"
+  },
+  {
+   "token": "action.secondary.border",
+   "hex": "#192E3C"
+  },
+  {
+   "token": "action.secondary.text",
+   "hex": "#192E3C"
+  },
+  {
+   "token": "link",
+   "hex": "#405A5B"
+  },
+  {
+   "token": "link.hover",
+   "hex": "#192E3C"
+  },
+  {
+   "token": "focus.ring",
+   "hex": "#192E3C"
+  },
+  {
+   "token": "focus.halo",
+   "hex": "#AD8D63"
+  },
+  {
+   "token": "border",
+   "hex": "#BEAA91"
+  },
+  {
+   "token": "border.strong",
+   "hex": "#788286"
+  },
+  {
+   "token": "divider",
+   "hex": "#D3C5B3"
+  },
+  {
+   "token": "state.error",
+   "hex": "#B3261E"
+  },
+  {
+   "token": "state.success",
+   "hex": "#1B6B43"
+  },
+  {
+   "token": "state.warning",
+   "hex": "#B06A00"
+  },
+  {
+   "token": "state.warning.text",
+   "hex": "#7A4A00"
+  },
+  {
+   "token": "state.info",
+   "hex": "#405A5B"
+  }
+ ],
+ "dark": [
+  {
+   "token": "surface.page",
+   "hex": "#192E3C"
+  },
+  {
+   "token": "surface.card",
+   "hex": "#2B3F4C"
+  },
+  {
+   "token": "surface.subtle",
+   "hex": "#223644"
+  },
+  {
+   "token": "surface.inverse",
+   "hex": "#F2EEE5"
+  },
+  {
+   "token": "text.primary",
+   "hex": "#F2EEE5"
+  },
+  {
+   "token": "text.heading",
+   "hex": "#F2EEE5"
+  },
+  {
+   "token": "text.secondary",
+   "hex": "#BEAA91"
+  },
+  {
+   "token": "text.muted",
+   "hex": "#B5B8B6"
+  },
+  {
+   "token": "text.on-accent",
+   "hex": "#192E3C"
+  },
+  {
+   "token": "text.inverse",
+   "hex": "#192E3C"
+  },
+  {
+   "token": "accent.rule",
+   "hex": "#AD8D63"
+  },
+  {
+   "token": "accent.gold",
+   "hex": "#AD8D63"
+  },
+  {
+   "token": "brand.emerald",
+   "hex": "#A7B0AB"
+  },
+  {
+   "token": "brand.sand",
+   "hex": "#BEAA91"
+  },
+  {
+   "token": "action.primary.bg",
+   "hex": "#AD8D63"
+  },
+  {
+   "token": "action.primary.text",
+   "hex": "#192E3C"
+  },
+  {
+   "token": "action.primary.hover",
+   "hex": "#B79C76"
+  },
+  {
+   "token": "action.secondary.border",
+   "hex": "#F2EEE5"
+  },
+  {
+   "token": "action.secondary.text",
+   "hex": "#F2EEE5"
+  },
+  {
+   "token": "link",
+   "hex": "#BEAA91"
+  },
+  {
+   "token": "link.hover",
+   "hex": "#F2EEE5"
+  },
+  {
+   "token": "focus.ring",
+   "hex": "#AD8D63"
+  },
+  {
+   "token": "focus.halo",
+   "hex": "#F2EEE5"
+  },
+  {
+   "token": "border",
+   "hex": "#495861"
+  },
+  {
+   "token": "border.strong",
+   "hex": "#868E90"
+  },
+  {
+   "token": "divider",
+   "hex": "#374954"
+  },
+  {
+   "token": "state.error",
+   "hex": "#E5484D"
+  },
+  {
+   "token": "state.error.text",
+   "hex": "#F5A3A6"
+  },
+  {
+   "token": "state.success",
+   "hex": "#4CC38A"
+  },
+  {
+   "token": "state.warning",
+   "hex": "#F5A524"
+  },
+  {
+   "token": "state.warning.text",
+   "hex": "#F5A524"
+  },
+  {
+   "token": "state.info",
+   "hex": "#909D99"
+  }
+ ],
+ "derived": {
+  "light": "text.muted = Deep Ocean at 76 % over Ivory; surface.subtle = Sand at 16 % over Ivory; border.strong = Deep Ocean at 56 % over Ivory (3.4:1 — meets the 3:1 non-text minimum for input boundaries); accent.rule and border are decorative and are never the only indicator of a boundary or state. State colours are retained from v",
+  "dark": "surface.card = Deep Ocean mixed 8 % toward white; text.muted = Ivory at 72 % over Deep Ocean; brand.emerald = Emerald lifted 58 % toward Ivory so that it clears 4.5:1 on cards; state.error.text = #F5A3A6 is used for error copy on Deep Ocean (the fill #E5484D is reserved for icons and borders)."
+ },
+ "tokensFile": "tokens_v2.json (asset pack; \"Tokens ship as tokens_v2.json; the CSS export is regenerated from it\" — p.34) — NOT supplied in this media library (PENDING BRAND PACK)"
+}

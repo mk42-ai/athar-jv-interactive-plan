@@ -1,6 +1,6 @@
 {
  "schema": "athar.narration.slides/1",
- "version": "1.7.0",
+ "version": "1.7.1",
  "generated_utc": "2026-10-01T14:00:00Z",
  "keyedBy": "data-slide-id (stable section id) — never by slide index",
  "voice": "George - Warm, Captivating Storyteller",
@@ -2430,10 +2430,338 @@
      "anchor": "s45-c2"
     }
    ]
+  },
+  {
+   "n": 46,
+   "slideId": "s-brand-typography",
+   "clipId": "NAR-s47",
+   "section": "10 Branding",
+   "sectionAr": "10 الهوية البصرية",
+   "file": "/audio/guide/slides/NAR-s47-s-brand-typography.mp3",
+   "bytes": 459381,
+   "sha256": "b596a741d845e6eae24c3d0cedccbdb3f281cc34b3e189ac1e65122ca0e24a66",
+   "durationSec": 28.682,
+   "source": {
+    "type": "tts",
+    "provider": "ElevenLabs textToSpeech (On Demand 'Elevan Labs Agent' plugin)",
+    "voice": "George (JBFqnCBsd6RMkjVDRZzb)",
+    "modelRequested": "eleven_multilingual_v2",
+    "languageCode": "en",
+    "generationRef": "S3Kp8wLWpp",
+    "generatedUtc": "2026-10-04T09:25Z",
+    "storedAs": "downloaded into the repo — no SAS hotlink",
+    "textSource": "section 10 slide copy (brand guidelines ch. 2–4 specs; pack README; asset manifest)",
+    "contentCheck": "ElevenLabs Scribe (speechToText, scribe_v1, language en) on the rendered clip — normalised word error rate 0.000 (65 script words / 63 transcribed)",
+    "sttTranscript": "Typography. Athar's typographic voice is quiet, tracked and generous. Display lines are set in Cormorant Garamond Light, thin and widely tracked capitals. Headlines in the same serif in sentence case and body copy in IBM Plex Sans. Arabic leads on Arabic first surfaces in IBM Plex Sans Arabic, seven percent larger, never tracked and never stretched. All faces are open licensed and self-hosted",
+    "cueTiming": "sentence boundaries from Scribe word timestamps (first/last word of each script sentence)"
+   },
+   "text": "Typography. Athar's typographic voice is quiet, tracked and generous. Display lines are set in Cormorant Garamond Light, thin and widely tracked capitals; headlines in the same serif in sentence case; and body copy in IBM Plex Sans. Arabic leads on Arabic-first surfaces in IBM Plex Sans Arabic, seven per cent larger, never tracked and never stretched. All faces are open-licensed and self-hosted.",
+   "cues": [
+    {
+     "i": 1,
+     "text": "Typography.",
+     "start": 0.0,
+     "end": 0.8,
+     "anchor": "s46-c1"
+    },
+    {
+     "i": 2,
+     "text": "Athar's typographic voice is quiet, tracked and generous.",
+     "start": 1.28,
+     "end": 5.6,
+     "anchor": "s46-c2"
+    },
+    {
+     "i": 3,
+     "text": "Display lines are set in Cormorant Garamond Light, thin and widely tracked capitals; headlines in the same serif in sentence case; and body copy in IBM Plex Sans.",
+     "start": 5.7,
+     "end": 16.54,
+     "anchor": "s46-c3"
+    },
+    {
+     "i": 4,
+     "text": "Arabic leads on Arabic-first surfaces in IBM Plex Sans Arabic, seven per cent larger, never tracked and never stretched.",
+     "start": 17.24,
+     "end": 24.6,
+     "anchor": "s46-c4"
+    },
+    {
+     "i": 5,
+     "text": "All faces are open-licensed and self-hosted.",
+     "start": 24.74,
+     "end": 28.34,
+     "anchor": "s46-c5"
+    }
+   ],
+   "ar": {
+    "clipId": "NAR-s47-ar",
+    "file": "/audio/guide/slides/NAR-s47-s-brand-typography.ar.mp3",
+    "bytes": 499505,
+    "sha256": "b6bb7d2c02927479b9fc581f8fff5661ecd8ffc7891dd0f2b4e4a6c14c71836e",
+    "durationSec": 31.19,
+    "source": {
+     "type": "tts",
+     "provider": "ElevenLabs textToSpeech (On Demand 'Elevan Labs Agent' plugin)",
+     "voice": "George (JBFqnCBsd6RMkjVDRZzb)",
+     "modelRequested": "eleven_multilingual_v2",
+     "languageCode": "ar",
+     "generationRef": "I3Dgu9z0tn",
+     "generatedUtc": "2026-10-04T09:27Z",
+     "storedAs": "downloaded into the repo — no SAS hotlink",
+     "textSource": "section 10 slide copy (brand guidelines ch. 2–4 specs; pack README; asset manifest)",
+     "contentCheck": "ElevenLabs Scribe (speechToText, scribe_v1, language ar) on the rendered clip — normalised word error rate 0.283 (60 script words / 55 transcribed) — the Arabic transliterations of the font names are transcribed as their Latin brand names (Cormorant Garamond, IBM Plex Sans) and 'سبعة في المئة' as '7%'; the audio reads the script",
+     "sttTranscript": "الطباعة: صوت أثر الطباعة هادئ ومتباعد الحروف وسخي. تكتب سطور العرض بخط Cormorant Garamond الخفيف، حروف كبيرة رفيعة واسعة التباعد، والعناوين بالخط نفسه بحالة الجملة، ونص المتن بخط IBM Plex Sans، وتتقدم العربية على الواجهات العربية أولًا بخط IBM Plex Sans Arabic أكبر بـ 7% دون تباعد ودون تمديد. جميع الخطوط مفتوحة الترخيص ومستضافة ذاتيًا.",
+     "cueTiming": "sentence boundaries from Scribe word timestamps (first/last word of each script sentence)"
+    },
+    "text": "الطباعة. صوت أثر الطباعي هادئ ومتباعد الحروف وسخيّ. تُكتب سطور العرض بخط كورمورانت غارامون الخفيف، حروف كبيرة رفيعة واسعة التباعد؛ والعناوين بالخط نفسه بحالة الجملة؛ ونص المتن بخط آي بي إم بلكس سانس. وتتقدّم العربية على الواجهات العربية أولًا بخط آي بي إم بلكس سانس عربي، أكبر بسبعة في المئة، دون تباعد ودون تمديد. جميع الخطوط مفتوحة الترخيص ومستضافة ذاتيًا.",
+    "cues": [
+     {
+      "i": 1,
+      "text": "الطباعة.",
+      "start": 0.0,
+      "end": 0.6,
+      "anchor": "s46-c1-ar"
+     },
+     {
+      "i": 2,
+      "text": "صوت أثر الطباعي هادئ ومتباعد الحروف وسخيّ.",
+      "start": 0.98,
+      "end": 3.48,
+      "anchor": "s46-c2-ar"
+     },
+     {
+      "i": 3,
+      "text": "تُكتب سطور العرض بخط كورمورانت غارامون الخفيف، حروف كبيرة رفيعة واسعة التباعد؛ والعناوين بالخط نفسه بحالة الجملة؛ ونص المتن بخط آي بي إم بلكس سانس.",
+      "start": 3.56,
+      "end": 15.54,
+      "anchor": "s46-c3-ar"
+     },
+     {
+      "i": 4,
+      "text": "وتتقدّم العربية على الواجهات العربية أولًا بخط آي بي إم بلكس سانس عربي، أكبر بسبعة في المئة، دون تباعد ودون تمديد.",
+      "start": 15.6,
+      "end": 27.32,
+      "anchor": "s46-c4-ar"
+     },
+     {
+      "i": 5,
+      "text": "جميع الخطوط مفتوحة الترخيص ومستضافة ذاتيًا.",
+      "start": 27.32,
+      "end": 30.84,
+      "anchor": "s46-c5-ar"
+     }
+    ],
+    "note": "v1.7.1: the AR deck plays this Arabic clip on this slide (narration.js entry() resolves ar{} when html[lang=ar]); CC/transcript show the Arabic text"
+   }
+  },
+  {
+   "n": 47,
+   "slideId": "s-brand-assets",
+   "clipId": "NAR-s48",
+   "section": "10 Branding",
+   "sectionAr": "10 الهوية البصرية",
+   "file": "/audio/guide/slides/NAR-s48-s-brand-assets.mp3",
+   "bytes": 463978,
+   "sha256": "d2e3c413dfaa79feecc1c1db0ea04f737c112852dd9ad900f0e981aab082f6e4",
+   "durationSec": 28.97,
+   "source": {
+    "type": "tts",
+    "provider": "ElevenLabs textToSpeech (On Demand 'Elevan Labs Agent' plugin)",
+    "voice": "George (JBFqnCBsd6RMkjVDRZzb)",
+    "modelRequested": "eleven_multilingual_v2",
+    "languageCode": "en",
+    "generationRef": "nd8HR3fq6v",
+    "generatedUtc": "2026-10-04T09:25Z",
+    "storedAs": "downloaded into the repo — no SAS hotlink",
+    "textSource": "section 10 slide copy (brand guidelines ch. 2–4 specs; pack README; asset manifest)",
+    "contentCheck": "ElevenLabs Scribe (speechToText, scribe_v1, language en) on the rendered clip — normalised word error rate 0.014 (72 script words / 72 transcribed)",
+    "sttTranscript": "Brand assets. One mark, the official horizontal lockup in five approved colors. Deep ocean and ivory lead, emerald and sand support, and champagne gold is the accent. A rule or a detail, never a field. Clear space is the cap height of the wordmark on all four sides, and the lockup is never stretched, outlined, shadowed, rotated, or placed on a busy photograph. The asset pack lives on Google Drive and SharePoint",
+    "cueTiming": "sentence boundaries from Scribe word timestamps (first/last word of each script sentence)"
+   },
+   "text": "Brand assets. One mark, the official horizontal lockup, in five approved colours: Deep Ocean and Ivory lead, Emerald and Sand support, and Champagne Gold is the accent, a rule or a detail, never a field. Clear space is the cap height of the wordmark on all four sides, and the lockup is never stretched, outlined, shadowed, rotated or placed on a busy photograph. The asset pack lives on Google Drive and SharePoint.",
+   "cues": [
+    {
+     "i": 1,
+     "text": "Brand assets.",
+     "start": 0.0,
+     "end": 0.86,
+     "anchor": "s47-c1"
+    },
+    {
+     "i": 2,
+     "text": "One mark, the official horizontal lockup, in five approved colours: Deep Ocean and Ivory lead, Emerald and Sand support, and Champagne Gold is the accent, a rule or a detail, never a field.",
+     "start": 1.3,
+     "end": 14.42,
+     "anchor": "s47-c2"
+    },
+    {
+     "i": 3,
+     "text": "Clear space is the cap height of the wordmark on all four sides, and the lockup is never stretched, outlined, shadowed, rotated or placed on a busy photograph.",
+     "start": 15.34,
+     "end": 25.1,
+     "anchor": "s47-c3"
+    },
+    {
+     "i": 4,
+     "text": "The asset pack lives on Google Drive and SharePoint.",
+     "start": 25.76,
+     "end": 28.56,
+     "anchor": "s47-c4"
+    }
+   ],
+   "ar": {
+    "clipId": "NAR-s48-ar",
+    "file": "/audio/guide/slides/NAR-s48-s-brand-assets.ar.mp3",
+    "bytes": 530852,
+    "sha256": "632dc68798b8b6720c5f72bf9753d6eab6bdfdef7f2e886fd362c23b5a86b5e0",
+    "durationSec": 33.149,
+    "source": {
+     "type": "tts",
+     "provider": "ElevenLabs textToSpeech (On Demand 'Elevan Labs Agent' plugin)",
+     "voice": "George (JBFqnCBsd6RMkjVDRZzb)",
+     "modelRequested": "eleven_multilingual_v2",
+     "languageCode": "ar",
+     "generationRef": "uGyKs8drL8",
+     "generatedUtc": "2026-10-04T09:27Z",
+     "storedAs": "downloaded into the repo — no SAS hotlink",
+     "textSource": "section 10 slide copy (brand guidelines ch. 2–4 specs; pack README; asset manifest)",
+     "contentCheck": "ElevenLabs Scribe (speechToText, scribe_v1, language ar) on the rendered clip — normalised word error rate 0.049 (61 script words / 61 transcribed)",
+     "sttTranscript": "أصول الهوية. علامة واحدة هي الشعار الأفقي الرسمي بخمسة ألوان معتمدة. المحيط العميق والعاجي يتصدران، والزمردي والرملي يساندان، والذهبي الشمباني لمسة تأكيد. خط أو تفصيل، لا مساحة أبدًا. المساحة الخالية تساوي ارتفاع الحرف الكبير في الاسم من الجهات الأربع، ولا يمدد الشعار، ولا يحدد بخط، ولا يظلل، ولا يدار، ولا يوضع فوق صورة مزدحمة. وتحفظ حزمة الأصول على Google Drive وSharePoint.",
+     "cueTiming": "sentence boundaries from Scribe word timestamps (first/last word of each script sentence)"
+    },
+    "text": "أصول الهوية. علامة واحدة، هي الشعار الأفقي الرسمي، بخمسة ألوان معتمدة: المحيط العميق والعاجي يتصدّران، والزمرّدي والرملي يساندان، والذهبي الشمبانيّ لمسةُ تأكيد، خطٌّ أو تفصيل، لا مساحةٌ أبدًا. المساحة الخالية تساوي ارتفاع الحرف الكبير في الاسم من الجهات الأربع، ولا يُمدَّد الشعار ولا يُحدَّد بخط ولا يُظلَّل ولا يُدار ولا يوضع فوق صورة مزدحمة. وتُحفظ حزمة الأصول على غوغل درايف وشيربوينت.",
+    "cues": [
+     {
+      "i": 1,
+      "text": "أصول الهوية.",
+      "start": 0.0,
+      "end": 0.88,
+      "anchor": "s47-c1-ar"
+     },
+     {
+      "i": 2,
+      "text": "علامة واحدة، هي الشعار الأفقي الرسمي، بخمسة ألوان معتمدة: المحيط العميق والعاجي يتصدّران، والزمرّدي والرملي يساندان، والذهبي الشمبانيّ لمسةُ تأكيد، خطٌّ أو تفصيل، لا مساحةٌ أبدًا.",
+      "start": 1.3,
+      "end": 15.88,
+      "anchor": "s47-c2-ar"
+     },
+     {
+      "i": 3,
+      "text": "المساحة الخالية تساوي ارتفاع الحرف الكبير في الاسم من الجهات الأربع، ولا يُمدَّد الشعار ولا يُحدَّد بخط ولا يُظلَّل ولا يُدار ولا يوضع فوق صورة مزدحمة.",
+      "start": 16.24,
+      "end": 28.08,
+      "anchor": "s47-c3-ar"
+     },
+     {
+      "i": 4,
+      "text": "وتُحفظ حزمة الأصول على غوغل درايف وشيربوينت.",
+      "start": 28.7,
+      "end": 32.8,
+      "anchor": "s47-c4-ar"
+     }
+    ],
+    "note": "v1.7.1: the AR deck plays this Arabic clip on this slide (narration.js entry() resolves ar{} when html[lang=ar]); CC/transcript show the Arabic text"
+   }
+  },
+  {
+   "n": 48,
+   "slideId": "s-brand-product",
+   "clipId": "NAR-s49",
+   "section": "10 Branding",
+   "sectionAr": "10 الهوية البصرية",
+   "file": "/audio/guide/slides/NAR-s49-s-brand-product.mp3",
+   "bytes": 361578,
+   "sha256": "6f6b01a045b88f0d868bef5abd23542ad6034b12cb600a24b9c9ad176fd76e0c",
+   "durationSec": 22.57,
+   "source": {
+    "type": "tts",
+    "provider": "ElevenLabs textToSpeech (On Demand 'Elevan Labs Agent' plugin)",
+    "voice": "George (JBFqnCBsd6RMkjVDRZzb)",
+    "modelRequested": "eleven_multilingual_v2",
+    "languageCode": "en",
+    "generationRef": "A1Qx2R5jqN",
+    "generatedUtc": "2026-10-04T09:25Z",
+    "storedAs": "downloaded into the repo — no SAS hotlink",
+    "textSource": "section 10 slide copy (brand guidelines ch. 2–4 specs; pack README; asset manifest)",
+    "contentCheck": "ElevenLabs Scribe (speechToText, scribe_v1, language en) on the rendered clip — normalised word error rate 0.000 (55 script words / 55 transcribed)",
+    "sttTranscript": "Product assets. Wireframes and real screens from the web app in English and Arabic, light and dark. Captures from this deck. The product film still, and the concept renders for India, Kenya, and Lebanon. Every tile carries its source, pack asset, film still, or concept render, so nothing illustrative is mistaken for a delivered product",
+    "cueTiming": "sentence boundaries from Scribe word timestamps (first/last word of each script sentence)"
+   },
+   "text": "Product assets. Wireframes and real screens from the web app, in English and Arabic, light and dark; captures from this deck; the product-film still; and the concept renders for India, Kenya and Lebanon. Every tile carries its source, pack asset, film still or concept render, so nothing illustrative is mistaken for a delivered product.",
+   "cues": [
+    {
+     "i": 1,
+     "text": "Product assets.",
+     "start": 0.0,
+     "end": 1.02,
+     "anchor": "s48-c1"
+    },
+    {
+     "i": 2,
+     "text": "Wireframes and real screens from the web app, in English and Arabic, light and dark; captures from this deck; the product-film still; and the concept renders for India, Kenya and Lebanon.",
+     "start": 1.6,
+     "end": 13.56,
+     "anchor": "s48-c2"
+    },
+    {
+     "i": 3,
+     "text": "Every tile carries its source, pack asset, film still or concept render, so nothing illustrative is mistaken for a delivered product.",
+     "start": 14.4,
+     "end": 22.2,
+     "anchor": "s48-c3"
+    }
+   ],
+   "ar": {
+    "clipId": "NAR-s49-ar",
+    "file": "/audio/guide/slides/NAR-s49-s-brand-product.ar.mp3",
+    "bytes": 379968,
+    "sha256": "2734e2f4efcbf6975edb3ea1d7953a1448ff8043eec25c655257e387b862d036",
+    "durationSec": 23.719,
+    "source": {
+     "type": "tts",
+     "provider": "ElevenLabs textToSpeech (On Demand 'Elevan Labs Agent' plugin)",
+     "voice": "George (JBFqnCBsd6RMkjVDRZzb)",
+     "modelRequested": "eleven_multilingual_v2",
+     "languageCode": "ar",
+     "generationRef": "pg0oCUiXiE",
+     "generatedUtc": "2026-10-04T09:27Z",
+     "storedAs": "downloaded into the repo — no SAS hotlink",
+     "textSource": "section 10 slide copy (brand guidelines ch. 2–4 specs; pack README; asset manifest)",
+     "contentCheck": "ElevenLabs Scribe (speechToText, scribe_v1, language ar) on the rendered clip — normalised word error rate 0.043 (47 script words / 47 transcribed)",
+     "sttTranscript": "أصول المنتج: إطارات سلكية وشاشات حقيقية من تطبيق الويب بالإنجليزية والعربية، فاتحة وداكنة، ولقطات من هذا العرض، ولقطة من فيلم المنتج، وتصويرات مفاهيمية للهند وكينيا ولبنان. كل بلاطة تحمل مصدرها، أصل من الحزمة أو لقطة فيلم أو تصوير مفاهيمي حتى لا يلتبس أي عنصر توضيحي بمنتج مسلم.",
+     "cueTiming": "sentence boundaries from Scribe word timestamps (first/last word of each script sentence)"
+    },
+    "text": "أصول المنتج. إطارات سلكية وشاشات حقيقية من تطبيق الويب، بالإنجليزية والعربية، فاتحة وداكنة؛ ولقطات من هذا العرض؛ ولقطة من فيلم المنتج؛ وتصييرات مفاهيمية للهند وكينيا ولبنان. كل بلاطة تحمل مصدرها، أصل من الحزمة أو لقطة فيلم أو تصيير مفاهيمي، حتى لا يُلتبس أي عنصر توضيحي بمنتج مُسلَّم.",
+    "cues": [
+     {
+      "i": 1,
+      "text": "أصول المنتج.",
+      "start": 0.0,
+      "end": 0.86,
+      "anchor": "s48-c1-ar"
+     },
+     {
+      "i": 2,
+      "text": "إطارات سلكية وشاشات حقيقية من تطبيق الويب، بالإنجليزية والعربية، فاتحة وداكنة؛ ولقطات من هذا العرض؛ ولقطة من فيلم المنتج؛ وتصييرات مفاهيمية للهند وكينيا ولبنان.",
+      "start": 1.28,
+      "end": 14.2,
+      "anchor": "s48-c2-ar"
+     },
+     {
+      "i": 3,
+      "text": "كل بلاطة تحمل مصدرها، أصل من الحزمة أو لقطة فيلم أو تصيير مفاهيمي، حتى لا يُلتبس أي عنصر توضيحي بمنتج مُسلَّم.",
+      "start": 14.58,
+      "end": 23.42,
+      "anchor": "s48-c3-ar"
+     }
+    ],
+    "note": "v1.7.1: the AR deck plays this Arabic clip on this slide (narration.js entry() resolves ar{} when html[lang=ar]); CC/transcript show the Arabic text"
+   }
   }
  ],
  "verifiedBy": "ElevenLabs Scribe (speechToText, model scribe_v1 requested, language en) on every per-slide clip",
  "notes": [
+  "v1.7.1: slides 46–48 (section 10 Branding: Typography, Brand assets, Product assets) — clip ids NAR-s47 / NAR-s48 / NAR-s49 (NAR-s46 stays Lorenzo). Each entry carries an ar{} block with its own Arabic George clip (eleven_multilingual_v2, language ar), Scribe-verified; the AR deck plays the Arabic clip on these slides.",
   "v1.5.8: slides 40–44 (section 09 Executive Team: intro, Fahad Al Ameri, Ary Ferreira da Cunha, Muhammed Khalid, Kayaan K. Unwalla). Ary's clip is NAR-s45 (a new id — NAR-s41 stays retired with the former Letter 1); the following entries were renumbered n 42→43 and 43→44 (clip ids keep their numbers). Ary's role rests on his own LinkedIn profile (no independent UAE government source) — the card is tagged \"for clearance by office\".",
   "v1.5.7: slides 40–43 (section 09 Executive Team: intro, Fahad Al Ameri, Muhammed Khalid, Kayaan K. Unwalla). The former slide 41 (Letter 1) and its clip NAR-s41 were removed and the following slides renumbered — clip ids keep their original numbers (NAR-s42 = slide 41, NAR-s43 = slide 42, NAR-s44 = slide 43). NAR-s43 was trimmed to drop its last sentence because the CEO film is disabled. The hidden card (Lorenzo) is not narrated.",
   "v1.5.9: NAR-s43 (s-exec-khalid) restored to the untrimmed v1.5.6 clip (20.92 s, 4 cues) — the Origins of Impact film is back on the CEO card (press-to-play); every other entry unchanged."

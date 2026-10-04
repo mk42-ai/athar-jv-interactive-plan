@@ -1,6 +1,6 @@
 {
- "base": "http://127.0.0.1:4170",
- "written": "2026-10-04T08:29:11.478Z",
+ "base": "http://127.0.0.1:4171",
+ "written": "2026-10-04T10:18:35.117Z",
  "rows": [
   {
    "lang": "en",
@@ -273,6 +273,24 @@
    "errors": 0
   },
   {
+   "lang": "en",
+   "n": 46,
+   "id": "s-brand-typography",
+   "errors": 0
+  },
+  {
+   "lang": "en",
+   "n": 47,
+   "id": "s-brand-assets",
+   "errors": 0
+  },
+  {
+   "lang": "en",
+   "n": 48,
+   "id": "s-brand-product",
+   "errors": 0
+  },
+  {
    "lang": "ar",
    "n": 1,
    "id": "s-cover",
@@ -540,6 +558,24 @@
    "lang": "ar",
    "n": 45,
    "id": "s-exec-lorenzo",
+   "errors": 0
+  },
+  {
+   "lang": "ar",
+   "n": 46,
+   "id": "s-brand-typography",
+   "errors": 0
+  },
+  {
+   "lang": "ar",
+   "n": 47,
+   "id": "s-brand-assets",
+   "errors": 0
+  },
+  {
+   "lang": "ar",
+   "n": 48,
+   "id": "s-brand-product",
    "errors": 0
   }
  ]

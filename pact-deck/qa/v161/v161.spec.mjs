@@ -61,7 +61,7 @@ test.describe(`v${PKG.version}`, () => {
     write('links-' + test.info().project.name, rows); expect(rows.filter((r) => r.status !== 200).map((r) => r.url)).toEqual([]);
   });
   test('deep links 32, 38, 39–45 and all 45 slides EN + AR with 0 errors', async ({ page }) => {
-    test.setTimeout(300000); await setup(page); await open(page, 1); for (const lang of ['en', 'ar']) { if (lang === 'ar') { await page.click('[data-testid="lang-toggle"]'); await page.waitForFunction(() => document.documentElement.dir === 'rtl', null, { timeout: 8000 }); } for (let n = 1; n <= 45; n++) { await page.evaluate((h) => { location.hash = h; }, hashFor(n)); await page.waitForFunction((n) => window.__qaVisible().n === n, n, { timeout: 9000 }); } }
+    test.setTimeout(300000); await setup(page); await open(page, 1); for (const lang of ['en', 'ar']) { if (lang === 'ar') { await page.click('[data-testid="lang-toggle"]'); await page.waitForFunction(() => document.documentElement.dir === 'rtl', null, { timeout: 8000 }); } for (let n = 1; n <= 48; n++) { await page.evaluate((h) => { location.hash = h; }, hashFor(n)); await page.waitForFunction((n) => window.__qaVisible().n === n, n, { timeout: 9000 }); } }
     for (const n of [32, 38, 39, 40, 41, 42, 43, 44, 45]) { const ctx = await page.context().browser().newContext({ viewport: page.viewportSize() }); const p2 = await ctx.newPage(); await setup(p2); await p2.goto(BASE + '/' + hashFor(n), { waitUntil: 'load' }); await p2.waitForFunction(() => !!window.AtharGuide, null, { timeout: 20000 }); await p2.waitForFunction((n) => window.__qaVisible().n === n, n, { timeout: 15000 }); expect(p2.__errors).toEqual([]); await ctx.close(); }
     expect(page.__errors).toEqual([]);
   });

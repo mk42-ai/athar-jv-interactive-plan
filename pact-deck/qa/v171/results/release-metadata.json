@@ -1,0 +1,202 @@
+{
+ "base": "http://127.0.0.1:4171",
+ "version": "1.7.1",
+ "expectCommit": "4ea5cc03f7de0061996946e129a00d6c32a2500f",
+ "written": "2026-10-04T10:03:07.004Z",
+ "rows": [
+  {
+   "version": "1.7.1",
+   "stamps": 28,
+   "assets": [
+    {
+     "id": "athar-logo-horizontal-official",
+     "file": "logo/athar-logo-horizontal-official.862dc135e3.png",
+     "bytes": 266005,
+     "label": "OFFICIAL"
+    },
+    {
+     "id": "athar-logo-horizontal-primary-1600",
+     "file": "logo/athar-logo-horizontal-primary-1600.f7fc85d259.png",
+     "bytes": 75188,
+     "label": "OFFICIAL (display copy)"
+    },
+    {
+     "id": "athar-logo-horizontal-reversed",
+     "file": "logo/athar-logo-horizontal-reversed.6ddd8ba877.png",
+     "bytes": 84183,
+     "label": "DERIVED FROM OFFICIAL LOGO"
+    },
+    {
+     "id": "athar-logo-horizontal-ivory",
+     "file": "logo/athar-logo-horizontal-ivory.5247ca2805.png",
+     "bytes": 81671,
+     "label": "DERIVED FROM OFFICIAL LOGO"
+    },
+    {
+     "id": "athar-logo-horizontal-mono-black",
+     "file": "logo/athar-logo-horizontal-mono-black.13604b8c87.png",
+     "bytes": 46863,
+     "label": "DERIVED FROM OFFICIAL LOGO"
+    },
+    {
+     "id": "athar-logo-horizontal-mono-white",
+     "file": "logo/athar-logo-horizontal-mono-white.e84c3a1574.png",
+     "bytes": 50345,
+     "label": "DERIVED FROM OFFICIAL LOGO"
+    },
+    {
+     "id": "athar-monogram-deep-ocean",
+     "file": "logo/athar-monogram-deep-ocean.8a68c3db50.png",
+     "bytes": 74529,
+     "label": "DERIVED FROM OFFICIAL LOGO"
+    },
+    {
+     "id": "athar-monogram-champagne-gold",
+     "file": "logo/athar-monogram-champagne-gold.7d2a6c89b6.png",
+     "bytes": 84434,
+     "label": "DERIVED FROM OFFICIAL LOGO"
+    },
+    {
+     "id": "athar-mood-board-key-visual",
+     "file": "mood/athar-mood-board-key-visual.022b7bc5aa.jpg",
+     "bytes": 275278,
+     "label": "PACK ASSET"
+    },
+    {
+     "id": "athar-web-agent-avatar-system-v2",
+     "file": "mood/athar-web-agent-avatar-system-v2.a299f157be.webp",
+     "bytes": 79790,
+     "label": "PACK ASSET"
+    },
+    {
+     "id": "athar-brand-background-tile",
+     "file": "mood/athar-brand-background-tile.8c0b8ed576.webp",
+     "bytes": 33646,
+     "label": "CONCEPT RENDER · ILLUSTRATIVE"
+    },
+    {
+     "id": "wireframes-p04-overview",
+     "file": "product/wireframes-p04-overview.80a57d9335.webp",
+     "bytes": 62702,
+     "label": "PACK ASSET"
+    },
+    {
+     "id": "screens-p09-p18-overview-en-ar",
+     "file": "product/screens-p09-p18-overview-en-ar.154fe45a71.webp",
+     "bytes": 104354,
+     "label": "PACK ASSET"
+    },
+    {
+     "id": "screens-p16-agent-flow-builder",
+     "file": "product/screens-p16-agent-flow-builder.4f46190bab.webp",
+     "bytes": 40754,
+     "label": "PACK ASSET"
+    },
+    {
+     "id": "deck-slide-38-nations-empowered",
+     "file": "product/deck-slide-38-nations-empowered.b007df3584.webp",
+     "bytes": 63896,
+     "label": "PACK ASSET"
+    },
+    {
+     "id": "deck-slide-30-impact-funding",
+     "file": "product/deck-slide-30-impact-funding.161d318005.webp",
+     "bytes": 99856,
+     "label": "PACK ASSET"
+    },
+    {
+     "id": "product-film-still-16s7-collage",
+     "file": "product/product-film-still-16s7-collage.a758e98d28.webp",
+     "bytes": 19846,
+     "label": "FILM STILL"
+    },
+    {
+     "id": "render-stationery-flat-lay",
+     "file": "product/render-stationery-flat-lay.1f8a5ef1ff.webp",
+     "bytes": 45544,
+     "label": "CONCEPT RENDER · ILLUSTRATIVE"
+    },
+    {
+     "id": "render-reception-kiosk",
+     "file": "product/render-reception-kiosk.1d3c748624.webp",
+     "bytes": 94006,
+     "label": "CONCEPT RENDER · ILLUSTRATIVE"
+    },
+    {
+     "id": "render-laptop-phone-dashboard",
+     "file": "product/render-laptop-phone-dashboard.7bbdfc6108.webp",
+     "bytes": 80834,
+     "label": "CONCEPT RENDER · ILLUSTRATIVE"
+    },
+    {
+     "id": "CormorantGaramond-Light",
+     "file": "fonts/CormorantGaramond-Light.ccc6cb322e.woff2",
+     "bytes": 36276,
+     "label": null
+    },
+    {
+     "id": "CormorantGaramond-Regular",
+     "file": "fonts/CormorantGaramond-Regular.fe7c426643.woff2",
+     "bytes": 38528,
+     "label": null
+    },
+    {
+     "id": "CormorantGaramond-LightItalic",
+     "file": "fonts/CormorantGaramond-LightItalic.888380eaa5.woff2",
+     "bytes": 27184,
+     "label": null
+    },
+    {
+     "id": "IBMPlexMono-Regular",
+     "file": "fonts/IBMPlexMono-Regular.3742991142.woff2",
+     "bytes": 10348,
+     "label": null
+    },
+    {
+     "id": "IBMPlexSansArabic-Light",
+     "file": "fonts/IBMPlexSansArabic-Light.3327209b93.woff2",
+     "bytes": 51600,
+     "label": null
+    }
+   ],
+   "narration": [
+    {
+     "n": 46,
+     "id": "s-brand-typography",
+     "en": "NAR-s47",
+     "ar": "NAR-s47-ar",
+     "enSec": 28.682,
+     "arSec": 31.19
+    },
+    {
+     "n": 47,
+     "id": "s-brand-assets",
+     "en": "NAR-s48",
+     "ar": "NAR-s48-ar",
+     "enSec": 28.97,
+     "arSec": 33.149
+    },
+    {
+     "n": 48,
+     "id": "s-brand-product",
+     "en": "NAR-s49",
+     "ar": "NAR-s49-ar",
+     "enSec": 22.57,
+     "arSec": 23.719
+    }
+   ],
+   "palette": [
+    "#192E3C",
+    "#405A5B",
+    "#BEAA91",
+    "#F2EEE5",
+    "#AD8D63"
+   ],
+   "tokens": {
+    "light": 31,
+    "dark": 32
+   },
+   "distFiles": 373
+  }
+ ]
+}

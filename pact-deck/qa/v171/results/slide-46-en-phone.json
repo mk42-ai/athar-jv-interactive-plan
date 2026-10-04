@@ -1,0 +1,95 @@
+{
+ "base": "http://127.0.0.1:4171",
+ "version": "1.7.1",
+ "expectCommit": "4ea5cc03f7de0061996946e129a00d6c32a2500f",
+ "written": "2026-10-04T10:03:11.176Z",
+ "rows": [
+  {
+   "active": true,
+   "dataN": "46",
+   "slideId": "s-brand-typography",
+   "visibleN": 46,
+   "aria": "Branding — Typography",
+   "dir": "ltr",
+   "lang": "en",
+   "hash": "#/28/brand-1",
+   "counter": "Slide 46 of 48",
+   "badge": "v1.7.1",
+   "html": "1.7.1",
+   "total": 48,
+   "first": 46,
+   "execTotal": 48,
+   "itTotal": 48,
+   "current": 46,
+   "fontsAttr": "loaded",
+   "fontsState": "Brand fonts loaded (5/5)",
+   "fontsBox": "loaded",
+   "fonts": [
+    {
+     "family": "Cormorant Garamond",
+     "weight": 300,
+     "style": "normal",
+     "ok": true
+    },
+    {
+     "family": "Cormorant Garamond",
+     "weight": 400,
+     "style": "normal",
+     "ok": true
+    },
+    {
+     "family": "Cormorant Garamond",
+     "weight": 300,
+     "style": "italic",
+     "ok": true
+    },
+    {
+     "family": "IBM Plex Mono",
+     "weight": 400,
+     "style": "normal",
+     "ok": true
+    },
+    {
+     "family": "IBM Plex Sans Arabic",
+     "weight": 300,
+     "style": "normal",
+     "ok": true
+    }
+   ],
+   "specimenRows": 5,
+   "specimenAr": 4,
+   "specimenEn": 5,
+   "systemRows": 6,
+   "scaleRows": 8,
+   "dos": 3,
+   "donts": 3,
+   "swatches": [],
+   "swatchText": [],
+   "swatchBg": [],
+   "tokensLight": [],
+   "tokensDark": 0,
+   "lockups": [],
+   "clear": false,
+   "clearX": null,
+   "minRows": 0,
+   "misuse": 0,
+   "mood": 0,
+   "bars": 0,
+   "pending": 0,
+   "tiles": null,
+   "tileImgs": 0,
+   "imgs": 1,
+   "broken": [],
+   "overflowX": false,
+   "clipId": "NAR-s47",
+   "railOrder": "01,02,03,04,05,06,07,08,09,10",
+   "railCurrent": "10",
+   "nextDisabled": false,
+   "h2": "Typography",
+   "kicker": "10 · Branding · Typography",
+   "lightbox": null,
+   "errors": [],
+   "failedRequests": []
+  }
+ ]
+}

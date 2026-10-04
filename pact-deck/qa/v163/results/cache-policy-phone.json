@@ -1,8 +1,8 @@
 {
- "base": "http://127.0.0.1:4170",
- "version": "1.7.0",
- "expectCommit": "131e1b5b1389289ef2139f37454a95e350128512",
- "written": "2026-10-04T08:23:24.449Z",
+ "base": "http://127.0.0.1:4171",
+ "version": "1.7.1",
+ "expectCommit": "4ea5cc03f7de0061996946e129a00d6c32a2500f",
+ "written": "2026-10-04T10:09:26.512Z",
  "rows": [
   {
    "path": "/",
@@ -10,7 +10,7 @@
    "cacheControl": "no-store",
    "age": null,
    "xVercelCache": null,
-   "lastModified": "Sun, 04 Oct 2026 08:11:07 GMT"
+   "lastModified": "Sun, 04 Oct 2026 10:01:52 GMT"
   },
   {
    "path": "/index.html",
@@ -18,7 +18,7 @@
    "cacheControl": "no-store",
    "age": null,
    "xVercelCache": null,
-   "lastModified": "Sun, 04 Oct 2026 08:11:07 GMT"
+   "lastModified": "Sun, 04 Oct 2026 10:01:52 GMT"
   },
   {
    "path": "/build-info.json",
@@ -26,7 +26,7 @@
    "cacheControl": "no-store",
    "age": null,
    "xVercelCache": null,
-   "lastModified": "Sun, 04 Oct 2026 08:11:07 GMT"
+   "lastModified": "Sun, 04 Oct 2026 10:01:53 GMT"
   },
   {
    "path": "/js/exec-films.js",
@@ -34,7 +34,7 @@
    "cacheControl": "no-store",
    "age": null,
    "xVercelCache": null,
-   "lastModified": "Sun, 04 Oct 2026 08:11:07 GMT"
+   "lastModified": "Sun, 04 Oct 2026 10:01:52 GMT"
   },
   {
    "path": "/js/exec-team.js",
@@ -42,7 +42,7 @@
    "cacheControl": "no-store",
    "age": null,
    "xVercelCache": null,
-   "lastModified": "Sun, 04 Oct 2026 08:04:02 GMT"
+   "lastModified": "Sun, 04 Oct 2026 09:49:33 GMT"
   },
   {
    "path": "/js/exec-film-player.js",
@@ -50,7 +50,7 @@
    "cacheControl": "no-store",
    "age": null,
    "xVercelCache": null,
-   "lastModified": "Sun, 04 Oct 2026 08:04:02 GMT"
+   "lastModified": "Sun, 04 Oct 2026 09:38:23 GMT"
   },
   {
    "path": "/js/narration.js",
@@ -58,7 +58,7 @@
    "cacheControl": "no-store",
    "age": null,
    "xVercelCache": null,
-   "lastModified": "Sun, 04 Oct 2026 08:04:02 GMT"
+   "lastModified": "Sun, 04 Oct 2026 09:45:08 GMT"
   },
   {
    "path": "/assets/exec-team.css",
@@ -66,7 +66,7 @@
    "cacheControl": "no-store",
    "age": null,
    "xVercelCache": null,
-   "lastModified": "Sun, 04 Oct 2026 07:48:17 GMT"
+   "lastModified": "Sun, 04 Oct 2026 09:06:29 GMT"
   },
   {
    "path": "/assets/exec-film-player.css",
@@ -74,7 +74,7 @@
    "cacheControl": "no-store",
    "age": null,
    "xVercelCache": null,
-   "lastModified": "Sun, 04 Oct 2026 07:48:17 GMT"
+   "lastModified": "Sun, 04 Oct 2026 09:06:29 GMT"
   },
   {
    "path": "/locales/impact-tiers.en.json",
@@ -82,7 +82,7 @@
    "cacheControl": "no-store",
    "age": null,
    "xVercelCache": null,
-   "lastModified": "Sun, 04 Oct 2026 08:04:02 GMT"
+   "lastModified": "Sun, 04 Oct 2026 09:38:23 GMT"
   },
   {
    "path": "/locales/impact-tiers.ar.json",
@@ -90,7 +90,7 @@
    "cacheControl": "no-store",
    "age": null,
    "xVercelCache": null,
-   "lastModified": "Sun, 04 Oct 2026 08:04:02 GMT"
+   "lastModified": "Sun, 04 Oct 2026 09:38:23 GMT"
   },
   {
    "path": "/narration/slide-narration.json",
@@ -98,7 +98,7 @@
    "cacheControl": "no-store",
    "age": null,
    "xVercelCache": null,
-   "lastModified": "Sun, 04 Oct 2026 08:04:02 GMT"
+   "lastModified": "Sun, 04 Oct 2026 09:46:40 GMT"
   },
   {
    "path": "/narration/narration-manifest.json",
@@ -106,7 +106,7 @@
    "cacheControl": "no-store",
    "age": null,
    "xVercelCache": null,
-   "lastModified": "Sun, 04 Oct 2026 08:04:02 GMT"
+   "lastModified": "Sun, 04 Oct 2026 09:46:40 GMT"
   },
   {
    "path": "/narration/clip-map.json",
@@ -114,7 +114,7 @@
    "cacheControl": "no-store",
    "age": null,
    "xVercelCache": null,
-   "lastModified": "Sun, 04 Oct 2026 07:48:18 GMT"
+   "lastModified": "Sun, 04 Oct 2026 09:06:29 GMT"
   },
   {
    "path": "/assets/exec/films/khalid/athar-origins-of-impact-ep01-muhammed-khalid-1080p.288c67b22b.mp4",
@@ -122,7 +122,7 @@
    "cacheControl": "public, max-age=31536000, immutable",
    "age": null,
    "xVercelCache": null,
-   "lastModified": "Sun, 04 Oct 2026 08:11:06 GMT"
+   "lastModified": "Sun, 04 Oct 2026 10:01:51 GMT"
   },
   {
    "path": "/assets/exec/films/khalid/athar-origins-of-impact-ep01-muhammed-khalid.en.4242fc2dfe.vtt",
@@ -130,7 +130,7 @@
    "cacheControl": "public, max-age=31536000, immutable",
    "age": null,
    "xVercelCache": null,
-   "lastModified": "Sun, 04 Oct 2026 08:11:06 GMT"
+   "lastModified": "Sun, 04 Oct 2026 10:01:51 GMT"
   },
   {
    "path": "/assets/exec/films/khalid/athar-origins-of-impact-ep01-muhammed-khalid.ar.e11f32091d.vtt",
@@ -138,7 +138,7 @@
    "cacheControl": "public, max-age=31536000, immutable",
    "age": null,
    "xVercelCache": null,
-   "lastModified": "Sun, 04 Oct 2026 08:11:06 GMT"
+   "lastModified": "Sun, 04 Oct 2026 10:01:51 GMT"
   },
   {
    "path": "/assets/exec/films/khalid/athar-origins-of-impact-ep01-muhammed-khalid-poster-18s8.32839348ca.jpg",
@@ -146,10 +146,10 @@
    "cacheControl": "public, max-age=31536000, immutable",
    "age": null,
    "xVercelCache": null,
-   "lastModified": "Sun, 04 Oct 2026 08:11:06 GMT"
+   "lastModified": "Sun, 04 Oct 2026 10:01:51 GMT"
   },
   {
-   "bundleTags": 26,
+   "bundleTags": 30,
    "unstamped": []
   },
   {
@@ -158,7 +158,7 @@
    "cacheControl": "public, max-age=31536000, immutable",
    "age": null,
    "xVercelCache": null,
-   "lastModified": "Sun, 04 Oct 2026 07:48:17 GMT"
+   "lastModified": "Sun, 04 Oct 2026 09:06:29 GMT"
   },
   {
    "path": "/assets/index-3FVNBt_6.css",
@@ -166,13 +166,13 @@
    "cacheControl": "public, max-age=31536000, immutable",
    "age": null,
    "xVercelCache": null,
-   "lastModified": "Sun, 04 Oct 2026 07:48:17 GMT"
+   "lastModified": "Sun, 04 Oct 2026 09:06:29 GMT"
   },
   {
-   "servedCommit": "131e1b5b1389289ef2139f37454a95e350128512",
-   "expectCommit": "131e1b5b1389289ef2139f37454a95e350128512",
-   "servedVersion": "1.7.0",
-   "builtAt": "2026-10-04T08:11:07.968Z",
+   "servedCommit": "4ea5cc03f7de0061996946e129a00d6c32a2500f",
+   "expectCommit": "4ea5cc03f7de0061996946e129a00d6c32a2500f",
+   "servedVersion": "1.7.1",
+   "builtAt": "2026-10-04T10:01:52.996Z",
    "khalid": "/assets/exec/films/khalid/athar-origins-of-impact-ep01-muhammed-khalid-1080p.288c67b22b.mp4"
   },
   {

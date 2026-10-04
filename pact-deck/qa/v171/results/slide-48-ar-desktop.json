@@ -1,0 +1,116 @@
+{
+ "base": "http://127.0.0.1:4171",
+ "version": "1.7.1",
+ "expectCommit": "4ea5cc03f7de0061996946e129a00d6c32a2500f",
+ "written": "2026-10-04T10:03:05.797Z",
+ "rows": [
+  {
+   "active": true,
+   "dataN": "48",
+   "slideId": "s-brand-product",
+   "visibleN": 48,
+   "aria": "الهوية البصرية — أصول المنتج",
+   "dir": "rtl",
+   "lang": "ar",
+   "hash": "#/28/brand-3",
+   "counter": "الشريحة 48 من 48",
+   "badge": "v1.7.1",
+   "html": "1.7.1",
+   "total": 48,
+   "first": 46,
+   "execTotal": 48,
+   "itTotal": 48,
+   "current": 48,
+   "fontsAttr": "loaded",
+   "fontsState": null,
+   "fontsBox": null,
+   "fonts": [
+    {
+     "family": "Cormorant Garamond",
+     "weight": 300,
+     "style": "normal",
+     "ok": true
+    },
+    {
+     "family": "Cormorant Garamond",
+     "weight": 400,
+     "style": "normal",
+     "ok": true
+    },
+    {
+     "family": "Cormorant Garamond",
+     "weight": 300,
+     "style": "italic",
+     "ok": true
+    },
+    {
+     "family": "IBM Plex Mono",
+     "weight": 400,
+     "style": "normal",
+     "ok": true
+    },
+    {
+     "family": "IBM Plex Sans Arabic",
+     "weight": 300,
+     "style": "normal",
+     "ok": true
+    }
+   ],
+   "specimenRows": 0,
+   "specimenAr": 0,
+   "specimenEn": 0,
+   "systemRows": 0,
+   "scaleRows": 0,
+   "dos": 0,
+   "donts": 0,
+   "swatches": [],
+   "swatchText": [],
+   "swatchBg": [],
+   "tokensLight": [],
+   "tokensDark": 0,
+   "lockups": [],
+   "clear": false,
+   "clearX": null,
+   "minRows": 0,
+   "misuse": 0,
+   "mood": 0,
+   "bars": 0,
+   "pending": 0,
+   "tiles": {
+    "brand": [
+     "46الهوية البصرية · الطباعة",
+     "47أصول الهوية",
+     "48أصول المنتج"
+    ],
+    "exec": [
+     "40الفريق التنفيذي",
+     "41سعادة فهد محمد العامري",
+     "42آري فيريرا دا كونيا",
+     "43محمد خالد",
+     "44كايان ك. أونوالا",
+     "45لورينزو أفيتابيلي"
+    ],
+    "total": 48,
+    "on": "48أصول المنتج"
+   },
+   "tileImgs": 12,
+   "imgs": 13,
+   "broken": [],
+   "overflowX": false,
+   "clipId": "NAR-s49-ar",
+   "railOrder": "01,02,03,04,05,06,07,08,09,10",
+   "railCurrent": "10",
+   "nextDisabled": true,
+   "h2": "أصول المنتج",
+   "kicker": "10 · الهوية البصرية · أصول المنتج",
+   "lightbox": {
+    "open": true,
+    "img": "/assets/brand/product/render-reception-kiosk.1d3c748624.webp",
+    "label": "CONCEPT RENDER · ILLUSTRATIVE",
+    "closed": true
+   },
+   "errors": [],
+   "failedRequests": []
+  }
+ ]
+}

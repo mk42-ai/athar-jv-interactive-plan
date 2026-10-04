@@ -37,10 +37,12 @@
    and exposes the deep links #/27/new-1 … #/27/new-6. */
 (function () {
   'use strict';
-  var VERSION = 'v1.7.0';
+  var VERSION = 'v1.7.1';
   var EXT = (window.AtharOS && window.AtharOS.slides) || []; /* v1.4.0: slides registered by dist/js/athar-os.js (loaded first) */
-  var REAL_TOTAL = 28, ANCHOR = 27, N_IT = 6, N = N_IT + EXT.length, CLOSING_N = REAL_TOTAL + N, XT = window.AtharExecTeam || null, TOTAL = CLOSING_N + (XT ? XT.count : 0); /* v1.5.5: + section 09 Executive Team (dist/js/exec-team.js, slides 40–46) after the closing slide */
+  var BRX = window.AtharBrand || null; /* v1.7.1: section 10 Branding (dist/js/brand-section.js) — three slides after section 09 */
+  var REAL_TOTAL = 28, ANCHOR = 27, N_IT = 6, N = N_IT + EXT.length, CLOSING_N = REAL_TOTAL + N, XT = window.AtharExecTeam || null, TOTAL = CLOSING_N + (XT ? XT.count : 0) + (BRX ? BRX.count : 0); /* v1.5.5: + section 09 Executive Team (dist/js/exec-team.js, slides 40–46) after the closing slide */
   function execX() { try { return XT && XT.active() ? XT.index() : 0; } catch (e) { return 0; } }
+  function brandX() { try { return BRX && BRX.active() ? BRX.index() : 0; } catch (e) { return 0; } } /* v1.7.1 */
   var SRC = 'Athar — Agentic AI for All: Three Impact Tiers for Foundation Funding (27 Sep 2026)';
   var initialHash = window.location.hash;
 
@@ -501,7 +503,7 @@
   }
   function syncOverview() {
     var grid = document.querySelector('.overview .overview-grid'); if (!grid) return;
-    var cards = grid.querySelectorAll('button.ov-card:not([data-virtual]):not([data-exec])'); if (cards.length !== REAL_TOTAL) return;
+    var cards = grid.querySelectorAll('button.ov-card:not([data-virtual]):not([data-exec]):not([data-brand])'); if (cards.length !== REAL_TOTAL) return; /* v1.7.1: section-10 tiles excluded */
     var closingCard = cards[REAL_TOTAL - 1], l = lang();
     var cn = closingCard.querySelector('.ov-n'); if (cn && cn.textContent !== String(CLOSING_N)) cn.textContent = String(CLOSING_N);
     var mine = grid.querySelectorAll('button.ov-card[data-virtual]:not([data-exec])');
@@ -520,7 +522,7 @@
       });
     }
     Array.prototype.forEach.call(grid.querySelectorAll('button.ov-card[data-virtual]:not([data-exec])'), function (b) { b.classList.toggle('on', parseInt(b.getAttribute('data-virtual'), 10) === v); });
-    if (v) Array.prototype.forEach.call(grid.querySelectorAll('button.ov-card:not([data-virtual]):not([data-exec])'), function (b) { b.classList.remove('on'); });
+    if (v) Array.prototype.forEach.call(grid.querySelectorAll('button.ov-card:not([data-virtual]):not([data-exec]):not([data-brand])'), function (b) { b.classList.remove('on'); });
   }
   function relabel() {
     var dict = L[lang()];
@@ -557,7 +559,7 @@
   function exit() { if (v) show(0); }
   function updateCounter() {
     var c = document.querySelector('footer.pagefooter .counter'); if (!c) return;
-    if (execX()) { var dv0 = document.querySelector('footer.pagefooter .deck-version'); if (dv0 && dv0.textContent !== VERSION) dv0.textContent = VERSION; return; } /* v1.5.5: exec-team.js owns the counter on slides 40–46 */
+    if (execX() || brandX()) { var dv0 = document.querySelector('footer.pagefooter .deck-version'); if (dv0 && dv0.textContent !== VERSION) dv0.textContent = VERSION; return; } /* v1.5.5: exec-team.js owns the counter on slides 40–45; v1.7.1: brand-section.js on 46–48 */
     var r = realN(), n = v ? ANCHOR + v : (r >= REAL_TOTAL ? CLOSING_N : r);
     if (!n) return;
     var txt = L[lang()].counter(n, TOTAL);
@@ -566,8 +568,8 @@
   }
 
   /* ---------- navigation interception ---------- */
-  function goNext(ev) { var r = realN(); if (v) { if (v < N) { enter(v + 1); stop(ev); } else { exit(); } return; } if (r === ANCHOR) { enter(1); stop(ev); } }
-  function goPrev(ev) { var r = realN(); if (v) { if (v > 1) { enter(v - 1); } else { exit(); } stop(ev); return; } if (r === REAL_TOTAL) { stop(ev); setHash('#/' + ANCHOR); window.dispatchEvent(new HashChangeEvent('hashchange')); window.setTimeout(function () { enter(N); }, 0); } }
+  function goNext(ev) { if (brandX()) return; /* v1.7.1: brand-section.js owns the keys on slides 46–48 */ var r = realN(); if (v) { if (v < N) { enter(v + 1); stop(ev); } else { exit(); } return; } if (r === ANCHOR) { enter(1); stop(ev); } }
+  function goPrev(ev) { if (brandX()) return; /* v1.7.1 */ var r = realN(); if (v) { if (v > 1) { enter(v - 1); } else { exit(); } stop(ev); return; } if (r === REAL_TOTAL) { stop(ev); setHash('#/' + ANCHOR); window.dispatchEvent(new HashChangeEvent('hashchange')); window.setTimeout(function () { enter(N); }, 0); } }
   function stop(ev) { if (ev) { ev.preventDefault(); ev.stopImmediatePropagation(); ev.stopPropagation(); } }
   document.addEventListener('click', function (ev) {
     var t = ev.target && ev.target.closest ? ev.target.closest('button.arrow') : null; if (!t) return;
@@ -620,5 +622,5 @@
   }
   if (m0) { var tries = 0, iv = window.setInterval(function () { tries++; tryDeep(); if (!pendingDeep || tries > 2400) window.clearInterval(iv); }, 25); }
   schedule();
-  window.AtharImpactTiers = { version: VERSION, total: TOTAL, extCount: EXT.length, current: function () { var xx = execX(); if (xx) return CLOSING_N + xx; return v ? ANCHOR + v : realN() === REAL_TOTAL ? CLOSING_N : realN(); }, closing: CLOSING_N, go: enter, exit: exit, virtualIndex: function () { return v; } };
+  window.AtharImpactTiers = { version: VERSION, total: TOTAL, extCount: EXT.length, current: function () { var bx = brandX(); if (bx) return CLOSING_N + (XT ? XT.count : 0) + bx; var xx = execX(); if (xx) return CLOSING_N + xx; return v ? ANCHOR + v : realN() === REAL_TOTAL ? CLOSING_N : realN(); }, closing: CLOSING_N, go: enter, exit: exit, virtualIndex: function () { return v; } };
 })();

@@ -1,0 +1,280 @@
+{
+ "base": "http://127.0.0.1:4171",
+ "version": "1.7.1",
+ "expectCommit": "4ea5cc03f7de0061996946e129a00d6c32a2500f",
+ "written": "2026-10-04T10:04:35.126Z",
+ "rows": [
+  {
+   "dirs": {
+    "en": "ltr",
+    "ar": "rtl"
+   },
+   "errors": [],
+   "failedRequests": [],
+   "deep": [
+    {
+     "lang": "en",
+     "n": 32,
+     "id": "s-it-partners",
+     "slideId": "s-it-partners",
+     "dir": "ltr",
+     "hash": "#/27/new-5",
+     "errors": [],
+     "failed": []
+    },
+    {
+     "lang": "en",
+     "n": 38,
+     "id": "s-aos-nations",
+     "slideId": "s-aos-nations",
+     "dir": "ltr",
+     "hash": "#/27/new-11",
+     "errors": [],
+     "failed": []
+    },
+    {
+     "lang": "en",
+     "n": 39,
+     "id": "s-closing",
+     "slideId": "s-closing",
+     "dir": "ltr",
+     "hash": "#/28",
+     "errors": [],
+     "failed": []
+    },
+    {
+     "lang": "en",
+     "n": 40,
+     "id": "s-exec-intro",
+     "slideId": "s-exec-intro",
+     "dir": "ltr",
+     "hash": "#/28/exec-1",
+     "errors": [],
+     "failed": []
+    },
+    {
+     "lang": "en",
+     "n": 41,
+     "id": "s-exec-al-ameri",
+     "slideId": "s-exec-al-ameri",
+     "dir": "ltr",
+     "hash": "#/28/exec-2",
+     "errors": [],
+     "failed": []
+    },
+    {
+     "lang": "en",
+     "n": 42,
+     "id": "s-exec-ferreira-da-cunha",
+     "slideId": "s-exec-ferreira-da-cunha",
+     "dir": "ltr",
+     "hash": "#/28/exec-3",
+     "errors": [],
+     "failed": []
+    },
+    {
+     "lang": "en",
+     "n": 43,
+     "id": "s-exec-khalid",
+     "slideId": "s-exec-khalid",
+     "dir": "ltr",
+     "hash": "#/28/exec-4",
+     "errors": [],
+     "failed": []
+    },
+    {
+     "lang": "en",
+     "n": 44,
+     "id": "s-exec-unwalla",
+     "slideId": "s-exec-unwalla",
+     "dir": "ltr",
+     "hash": "#/28/exec-5",
+     "errors": [],
+     "failed": []
+    },
+    {
+     "lang": "en",
+     "n": 45,
+     "id": "s-exec-lorenzo",
+     "slideId": "s-exec-lorenzo",
+     "dir": "ltr",
+     "hash": "#/28/exec-6",
+     "errors": [],
+     "failed": []
+    },
+    {
+     "lang": "en",
+     "n": 46,
+     "id": "s-brand-typography",
+     "slideId": "s-brand-typography",
+     "dir": "ltr",
+     "hash": "#/28/brand-1",
+     "errors": [],
+     "failed": []
+    },
+    {
+     "lang": "en",
+     "n": 47,
+     "id": "s-brand-assets",
+     "slideId": "s-brand-assets",
+     "dir": "ltr",
+     "hash": "#/28/brand-2",
+     "errors": [],
+     "failed": []
+    },
+    {
+     "lang": "en",
+     "n": 48,
+     "id": "s-brand-product",
+     "slideId": "s-brand-product",
+     "dir": "ltr",
+     "hash": "#/28/brand-3",
+     "errors": [],
+     "failed": []
+    },
+    {
+     "lang": "ar",
+     "n": 32,
+     "id": "s-it-partners",
+     "slideId": "s-it-partners",
+     "dir": "rtl",
+     "hash": "#/27/new-5",
+     "errors": [],
+     "failed": []
+    },
+    {
+     "lang": "ar",
+     "n": 38,
+     "id": "s-aos-nations",
+     "slideId": "s-aos-nations",
+     "dir": "rtl",
+     "hash": "#/27/new-11",
+     "errors": [],
+     "failed": []
+    },
+    {
+     "lang": "ar",
+     "n": 39,
+     "id": "s-closing",
+     "slideId": "s-closing",
+     "dir": "rtl",
+     "hash": "#/28",
+     "errors": [],
+     "failed": []
+    },
+    {
+     "lang": "ar",
+     "n": 40,
+     "id": "s-exec-intro",
+     "slideId": "s-exec-intro",
+     "dir": "rtl",
+     "hash": "#/28/exec-1",
+     "errors": [],
+     "failed": []
+    },
+    {
+     "lang": "ar",
+     "n": 41,
+     "id": "s-exec-al-ameri",
+     "slideId": "s-exec-al-ameri",
+     "dir": "rtl",
+     "hash": "#/28/exec-2",
+     "errors": [],
+     "failed": []
+    },
+    {
+     "lang": "ar",
+     "n": 42,
+     "id": "s-exec-ferreira-da-cunha",
+     "slideId": "s-exec-ferreira-da-cunha",
+     "dir": "rtl",
+     "hash": "#/28/exec-3",
+     "errors": [],
+     "failed": []
+    },
+    {
+     "lang": "ar",
+     "n": 43,
+     "id": "s-exec-khalid",
+     "slideId": "s-exec-khalid",
+     "dir": "rtl",
+     "hash": "#/28/exec-4",
+     "errors": [],
+     "failed": []
+    },
+    {
+     "lang": "ar",
+     "n": 44,
+     "id": "s-exec-unwalla",
+     "slideId": "s-exec-unwalla",
+     "dir": "rtl",
+     "hash": "#/28/exec-5",
+     "errors": [],
+     "failed": []
+    },
+    {
+     "lang": "ar",
+     "n": 45,
+     "id": "s-exec-lorenzo",
+     "slideId": "s-exec-lorenzo",
+     "dir": "rtl",
+     "hash": "#/28/exec-6",
+     "errors": [],
+     "failed": []
+    },
+    {
+     "lang": "ar",
+     "n": 46,
+     "id": "s-brand-typography",
+     "slideId": "s-brand-typography",
+     "dir": "rtl",
+     "hash": "#/28/brand-1",
+     "errors": [],
+     "failed": []
+    },
+    {
+     "lang": "ar",
+     "n": 47,
+     "id": "s-brand-assets",
+     "slideId": "s-brand-assets",
+     "dir": "rtl",
+     "hash": "#/28/brand-2",
+     "errors": [],
+     "failed": []
+    },
+    {
+     "lang": "ar",
+     "n": 48,
+     "id": "s-brand-product",
+     "slideId": "s-brand-product",
+     "dir": "rtl",
+     "hash": "#/28/brand-3",
+     "errors": [],
+     "failed": []
+    }
+   ],
+   "keys": {
+    "k1": {
+     "n": 46,
+     "id": "s-brand-typography",
+     "slideId": "s-brand-typography",
+     "hash": "#/28/brand-1",
+     "counter": "Slide 46 of 48"
+    },
+    "k2": {
+     "n": 45,
+     "id": "s-exec-lorenzo",
+     "slideId": "s-exec-lorenzo",
+     "hash": "#/28/exec-6"
+    },
+    "k3": {
+     "n": 39,
+     "id": "s-closing",
+     "slideId": "s-closing",
+     "hash": "#/28/exec-6",
+     "nextDisabled": false
+    }
+   }
+  }
+ ]
+}

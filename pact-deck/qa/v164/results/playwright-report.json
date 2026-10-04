@@ -90,7 +90,7 @@
       "specs": [],
       "suites": [
         {
-          "title": "v1.7.0",
+          "title": "v1.7.1",
           "file": "v164.spec.mjs",
           "line": 23,
           "column": 6,
@@ -111,12 +111,12 @@
                       "workerIndex": 0,
                       "parallelIndex": 0,
                       "status": "passed",
-                      "duration": 60,
+                      "duration": 61,
                       "errors": [],
                       "stdout": [],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2026-10-04T08:21:55.414Z",
+                      "startTime": "2026-10-04T10:07:47.027Z",
                       "annotations": [],
                       "attachments": []
                     }
@@ -134,12 +134,12 @@
                       "workerIndex": 2,
                       "parallelIndex": 0,
                       "status": "passed",
-                      "duration": 57,
+                      "duration": 79,
                       "errors": [],
                       "stdout": [],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2026-10-04T08:22:03.516Z",
+                      "startTime": "2026-10-04T10:07:55.493Z",
                       "annotations": [],
                       "attachments": []
                     }
@@ -147,7 +147,7 @@
                   "status": "expected"
                 }
               ],
-              "id": "652d7af99470120b9360-0c6a345f97861c5237f5",
+              "id": "652d7af99470120b9360-4f86e8b6eee80fffaf04",
               "file": "v164.spec.mjs",
               "line": 24,
               "column": 3
@@ -168,12 +168,12 @@
                       "workerIndex": 1,
                       "parallelIndex": 1,
                       "status": "passed",
-                      "duration": 6296,
+                      "duration": 6576,
                       "errors": [],
                       "stdout": [],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2026-10-04T08:21:55.412Z",
+                      "startTime": "2026-10-04T10:07:47.034Z",
                       "annotations": [],
                       "attachments": []
                     }
@@ -191,12 +191,12 @@
                       "workerIndex": 2,
                       "parallelIndex": 0,
                       "status": "passed",
-                      "duration": 5801,
+                      "duration": 6298,
                       "errors": [],
                       "stdout": [],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2026-10-04T08:22:03.617Z",
+                      "startTime": "2026-10-04T10:07:55.638Z",
                       "annotations": [],
                       "attachments": []
                     }
@@ -204,7 +204,7 @@
                   "status": "expected"
                 }
               ],
-              "id": "652d7af99470120b9360-2b85895289e6a7a4a139",
+              "id": "652d7af99470120b9360-271b51f60b125bb3a891",
               "file": "v164.spec.mjs",
               "line": 33,
               "column": 36
@@ -225,12 +225,12 @@
                       "workerIndex": 0,
                       "parallelIndex": 0,
                       "status": "passed",
-                      "duration": 6731,
+                      "duration": 7113,
                       "errors": [],
                       "stdout": [],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2026-10-04T08:21:55.518Z",
+                      "startTime": "2026-10-04T10:07:47.136Z",
                       "annotations": [],
                       "attachments": []
                     }
@@ -248,12 +248,12 @@
                       "workerIndex": 2,
                       "parallelIndex": 0,
                       "status": "passed",
-                      "duration": 6228,
+                      "duration": 6481,
                       "errors": [],
                       "stdout": [],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2026-10-04T08:22:09.984Z",
+                      "startTime": "2026-10-04T10:08:02.457Z",
                       "annotations": [],
                       "attachments": []
                     }
@@ -261,7 +261,7 @@
                   "status": "expected"
                 }
               ],
-              "id": "652d7af99470120b9360-ae1b360e8dcf7c5da2b7",
+              "id": "652d7af99470120b9360-1372af4612dad8b46a64",
               "file": "v164.spec.mjs",
               "line": 33,
               "column": 36
@@ -282,12 +282,12 @@
                       "workerIndex": 1,
                       "parallelIndex": 1,
                       "status": "passed",
-                      "duration": 413,
+                      "duration": 361,
                       "errors": [],
                       "stdout": [],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2026-10-04T08:22:02.180Z",
+                      "startTime": "2026-10-04T10:07:54.083Z",
                       "annotations": [],
                       "attachments": []
                     }
@@ -305,12 +305,12 @@
                       "workerIndex": 2,
                       "parallelIndex": 0,
                       "status": "passed",
-                      "duration": 518,
+                      "duration": 566,
                       "errors": [],
                       "stdout": [],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2026-10-04T08:22:16.229Z",
+                      "startTime": "2026-10-04T10:08:08.956Z",
                       "annotations": [],
                       "attachments": []
                     }
@@ -318,7 +318,7 @@
                   "status": "expected"
                 }
               ],
-              "id": "652d7af99470120b9360-7bd07fa38e3b8cb9fbd7",
+              "id": "652d7af99470120b9360-6d89f9d2ad8af56115e3",
               "file": "v164.spec.mjs",
               "line": 52,
               "column": 3
@@ -339,12 +339,12 @@
                       "workerIndex": 1,
                       "parallelIndex": 1,
                       "status": "passed",
-                      "duration": 58974,
+                      "duration": 67050,
                       "errors": [],
                       "stdout": [],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2026-10-04T08:22:02.607Z",
+                      "startTime": "2026-10-04T10:07:54.459Z",
                       "annotations": [],
                       "attachments": []
                     }
@@ -362,12 +362,12 @@
                       "workerIndex": 2,
                       "parallelIndex": 0,
                       "status": "passed",
-                      "duration": 53184,
+                      "duration": 61970,
                       "errors": [],
                       "stdout": [],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2026-10-04T08:22:16.768Z",
+                      "startTime": "2026-10-04T10:08:09.540Z",
                       "annotations": [],
                       "attachments": []
                     }
@@ -375,7 +375,7 @@
                   "status": "expected"
                 }
               ],
-              "id": "652d7af99470120b9360-b293f2ac7db46d7f11be",
+              "id": "652d7af99470120b9360-3f57e35ef03b34f2745f",
               "file": "v164.spec.mjs",
               "line": 62,
               "column": 3
@@ -387,8 +387,8 @@
   ],
   "errors": [],
   "stats": {
-    "startTime": "2026-10-04T08:21:54.655Z",
-    "duration": 75497.588,
+    "startTime": "2026-10-04T10:07:46.225Z",
+    "duration": 85484.261,
     "expected": 10,
     "skipped": 0,
     "unexpected": 0,

@@ -10,7 +10,7 @@ export const HERE = path.dirname(fileURLToPath(import.meta.url));
 export const DIST = path.resolve(HERE, '../../dist');
 export const TOTAL = Number(process.env.DECK_TOTAL || 39);
 export const CHROMIUM = process.env.CHROMIUM_BIN || '/usr/bin/chromium';
-export const hashFor = (n) => (n <= 27 ? '#/' + n : n <= 38 ? '#/27/new-' + (n - 27) : n === 39 ? '#/28' : '#/28/exec-' + (n - 39));
+export const hashFor = (n) => (n <= 27 ? '#/' + n : n <= 38 ? '#/27/new-' + (n - 27) : n === 39 ? '#/28' : n <= 45 ? '#/28/exec-' + (n - 39) : '#/28/brand-' + (n - 45)); /* v1.7.1: 46–48 → #/28/brand-k */
 const clipMap = JSON.parse(fs.readFileSync(path.join(DIST, 'narration/clip-map.json'), 'utf8'));
 export const FILE2CLIP = Object.fromEntries(clipMap.clips.map((c) => [c.file.split('/').pop(), c.clipId]));
 // v1.5.4 per-slide clips (if present) are added so the logger can name them

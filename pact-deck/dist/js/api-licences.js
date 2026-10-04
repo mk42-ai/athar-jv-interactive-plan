@@ -9,7 +9,7 @@
    never mirrored. Every mark file and its provenance: dist/assets/api/credits.json, BRAND_USAGE_NOTES.md § 15. */
 (function () {
   'use strict';
-  var VERSION = 'v1.7.0';
+  var VERSION = 'v1.7.1';
   var SEL = 'section.slide#s-pillar-universal-licence';
   var MARKS = {"stripe": {"file": "api-stripe.png", "w": 512, "h": 256}, "fastapi": {"file": "api-fastapi.png", "w": 512, "h": 256}, "google-maps-platform": {"file": "api-google-maps-platform.png", "w": 512, "h": 256}, "hugging-face": {"file": "api-hugging-face.png", "w": 512, "h": 256}, "mpesa-daraja": {"file": "api-mpesa-daraja.png", "w": 512, "h": 256}, "dhis2": {"file": "api-dhis2.png", "w": 512, "h": 256}, "openweather": {"file": "api-openweather.png", "w": 512, "h": 256}};
   var L = {

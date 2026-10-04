@@ -1,13 +1,13 @@
 {
- "base": "http://127.0.0.1:4170",
- "version": "1.7.0",
- "written": "2026-10-04T08:23:44.990Z",
+ "base": "http://127.0.0.1:4171",
+ "version": "1.7.1",
+ "written": "2026-10-04T10:26:21.930Z",
  "rows": [
   {
    "duration": 40,
    "controls": true,
    "readyState": 4,
-   "t": 0.643801,
+   "t": 0.65579,
    "filmsJson": 40
   }
  ]

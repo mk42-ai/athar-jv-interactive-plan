@@ -1,7 +1,7 @@
 {
- "base": "http://127.0.0.1:4170",
- "version": "1.7.0",
- "written": "2026-10-04T08:27:41.248Z",
+ "base": "http://127.0.0.1:4171",
+ "version": "1.7.1",
+ "written": "2026-10-04T10:16:54.199Z",
  "rows": [
   {
    "lang": "en",
@@ -229,6 +229,21 @@
    "errors": 0
   },
   {
+   "lang": "en",
+   "n": 46,
+   "errors": 0
+  },
+  {
+   "lang": "en",
+   "n": 47,
+   "errors": 0
+  },
+  {
+   "lang": "en",
+   "n": 48,
+   "errors": 0
+  },
+  {
    "lang": "ar",
    "n": 1,
    "errors": 0
@@ -451,6 +466,21 @@
   {
    "lang": "ar",
    "n": 45,
+   "errors": 0
+  },
+  {
+   "lang": "ar",
+   "n": 46,
+   "errors": 0
+  },
+  {
+   "lang": "ar",
+   "n": 47,
+   "errors": 0
+  },
+  {
+   "lang": "ar",
+   "n": 48,
    "errors": 0
   },
   {

@@ -1,7 +1,7 @@
 {
- "base": "http://127.0.0.1:4170",
- "total": 45,
- "written": "2026-10-04T08:31:10.291Z",
+ "base": "http://127.0.0.1:4171",
+ "total": 48,
+ "written": "2026-10-04T10:20:43.429Z",
  "rows": [
   {
    "slide38": {
@@ -48,8 +48,8 @@
      "s-exec-lorenzo"
     ],
     "count": 6,
-    "total": 45,
-    "counter": "Slide 44 of 45",
+    "total": 48,
+    "counter": "Slide 44 of 48",
     "gone": true,
     "index": 10
    },

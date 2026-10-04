@@ -1,12 +1,12 @@
 {
- "base": "http://127.0.0.1:4170",
- "version": "1.7.0",
- "written": "2026-10-04T08:23:28.622Z",
+ "base": "http://127.0.0.1:4171",
+ "version": "1.7.1",
+ "written": "2026-10-04T10:26:04.809Z",
  "rows": [
   {
-   "badge": "v1.7.0",
-   "html": "1.7.0",
-   "exec": "v1.7.0",
+   "badge": "v1.7.1",
+   "html": "1.7.1",
+   "exec": "v1.7.1",
    "films": [
     "khalid:shipped:288c67b2",
     "al-ameri:shipped:66d9a6d6",
@@ -14,11 +14,11 @@
     "unwalla:shipped:2c1c7f0f",
     "lorenzo:shipped:1566f386"
    ],
-   "player": "v1.7.0",
-   "guide": "v1.7.0",
+   "player": "v1.7.1",
+   "guide": "v1.7.1",
    "note": "Poster frame at 00:18.8 (face-detected, caption-free frame) · 50 s cut delivered 4 Oct 2026, installed full length · captions EN / AR · the narrated guide pauses while the film plays and resumes after it.",
    "dur": "0:50",
-   "buildInfo": "1.7.0"
+   "buildInfo": "1.7.1"
   }
  ]
 }
