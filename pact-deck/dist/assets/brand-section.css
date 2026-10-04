@@ -1,4 +1,4 @@
-/* Athar deck v1.7.1 — section 10 Branding / الهوية البصرية (dist/js/brand-section.js) — slides 46 Typography · 47 Brand assets · 48 Product assets.
+/* Athar deck v1.7.2 — section 10 Brand / الهوية (dist/js/brand-section.js) — slides 46 Brand foundations · 47 Typography · 48 Product & asset gallery (v1.7.1: Branding).
    Colours: ONLY var(--br-*) custom properties, set on each section at runtime from the tokens extracted from the brand guidelines
    (features/brand/brand-tokens.json → dist/js/brand-data.js) — no HEX is typed here; fallbacks are the deck's existing variables.
    Type: the self-hosted brand faces from dist/assets/brand-fonts.css (Cormorant Garamond Light/Regular/Light Italic, IBM Plex Mono,
@@ -10,6 +10,8 @@
 html[lang=ar] .br-slide .s-head h2{font-family:var(--font-arabic)}
 .br-grid{display:grid;gap:14px;align-items:start;min-block-size:0}
 .br-grid--typo{grid-template-columns:minmax(0,1.3fr) minmax(0,.9fr) minmax(0,1.1fr)}
+.br-grid--found{grid-template-columns:minmax(0,1.05fr) minmax(0,1fr)}
+.br-grid--gallery{grid-template-columns:minmax(0,.9fr) minmax(0,2.1fr)}
 .br-grid--assets{grid-template-columns:minmax(0,1.35fr) minmax(0,1fr)}
 .br-rules-row{display:grid;grid-template-columns:minmax(0,1.2fr) minmax(0,1fr);gap:10px;align-items:start}
 .br-rules .br-min{border:0;padding:0}
@@ -42,7 +44,7 @@ html[lang=ar] .br-table th{letter-spacing:0;text-transform:none;font-size:11px}
 .br-td-num{font-family:var(--font-mono);font-variant-numeric:tabular-nums;white-space:nowrap}
 /* ---------- slide 46 · typography ---------- */
 .br-specimen{gap:4px}
-.br-spec-row{display:grid;grid-template-columns:84px minmax(0,1fr);gap:8px;align-items:baseline;padding-block:2px;border-block-end:1px solid var(--br-divider,var(--stone))}
+.br-spec-row{display:grid;grid-template-columns:84px minmax(0,1fr);gap:8px;align-items:baseline;padding-block:1px;border-block-end:1px solid var(--br-divider,var(--stone))}
 .br-spec-row:last-of-type{border-block-end:0}
 .br-spec-lbl{font:600 10px/14px var(--font-sans);letter-spacing:.08em;text-transform:uppercase;color:var(--br-secondary,var(--gulf-blue))}
 html[lang=ar] .br-spec-lbl{font-family:var(--font-arabic);letter-spacing:0;text-transform:none;font-size:11px}
@@ -220,3 +222,75 @@ html[lang=ar] .br-lb-cap{font-family:var(--font-arabic)}
   .br-misuse-row{grid-template-columns:repeat(3,minmax(0,1fr))}
 }
 @media (prefers-reduced-motion:reduce){.br-tile,.br-mood-fig{transition:none}}
+
+/* ---------- v1.7.2 · section backdrop (the brand background tile render, washed to keep AA contrast) ---------- */
+.br-slide .slide-bg.br-bg{overflow:hidden}
+.br-backdrop{position:absolute;inset:0;background-image:var(--br-tile);background-size:cover;background-position:center;opacity:.16;filter:saturate(.85)}
+html[lang=ar] .br-backdrop{transform:none}
+/* ---------- slide 46 · foundations ---------- */
+.br-lockup-row--3{grid-template-columns:repeat(3,minmax(0,1fr))}
+.br-lockup-row--3 .br-lockup-frame{aspect-ratio:16/7}
+.br-lockup--monogram .br-lockup-frame{padding:6%}
+.br-swatches--5{grid-template-columns:repeat(5,minmax(0,1fr))}
+.br-swatches--2{grid-template-columns:repeat(2,minmax(0,1fr));max-inline-size:60%}
+.br-swatch--accent .br-swatch-chip{block-size:26px}
+.br-swatch-eq{font:500 9.5px/12px var(--font-mono);direction:ltr;text-align:start;color:var(--br-secondary,var(--gulf-blue))}
+.br-swatch--accent .br-swatch-where{display:block}
+.br-accents{padding-block-start:4px;border-block-start:1px solid var(--br-divider,var(--stone))}
+.br-tone{gap:4px}
+.br-tone-line{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:2px 18px;align-items:baseline;padding-block:2px}
+.br-tone-en{margin:0;font-family:"Cormorant Garamond",var(--font-serif);font-weight:300;text-transform:uppercase;letter-spacing:.22em;font-size:clamp(13px,1.15vw,17px);line-height:1.2;color:var(--br-ink)}
+.br-tone-ar{margin:0;font-family:var(--font-arabic);font-weight:300;font-size:clamp(14px,1.2vw,18px);line-height:1.3;letter-spacing:0;color:var(--br-ink)}
+.br-tone .br-rule{margin-inline-start:0}
+/* ---------- slide 47 · medium pairing row ---------- */
+.br-t-medium.br-spec--en{font:500 14px/20px var(--brand-font-en,var(--font-sans))}
+.br-t-medium.br-spec--ar{font-family:var(--brand-font-ar,var(--font-arabic));font-weight:500;font-size:15px;line-height:22px}
+.br-fonts-stacks{display:block;flex-basis:100%;font:400 9.5px/13px var(--font-mono);color:var(--br-muted,var(--slate));direction:ltr;text-align:start;overflow-wrap:anywhere}
+/* ---------- slide 48 · personas + gallery ---------- */
+.br-personas{gap:8px}
+.br-tile--board{cursor:zoom-in}
+.br-tile-frame--board{aspect-ratio:3/2}
+.br-tile-frame--board .br-tile-img{object-fit:contain;background:var(--br-ivory,var(--athar-offwhite))}
+.br-personas-legend{display:flex;flex-direction:column;gap:6px}
+.br-persona-list{margin:0;padding:0;list-style:none;display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:4px 8px}
+.br-persona{display:flex;flex-direction:column;gap:0;padding:4px 8px;border:1px solid var(--br-divider,var(--stone));border-radius:3px;background:var(--br-card,var(--white))}
+.br-persona-en{font:500 11px/14px var(--brand-font-en,var(--font-sans));color:var(--br-ink)}
+.br-persona-ar{font-family:var(--brand-font-ar,var(--font-arabic));font-weight:500;font-size:11.8px;line-height:16px;color:var(--br-secondary,var(--gulf-blue));text-align:start}
+.br-persona-meta{display:flex;flex-direction:column;gap:4px;font:400 10.5px/14px var(--font-sans);color:var(--br-muted,var(--slate))}
+html[lang=ar] .br-persona-meta{font-family:var(--font-arabic)}
+.br-persona-sizes,.br-persona-states{margin:0;display:flex;align-items:center;flex-wrap:wrap;gap:6px}
+.br-size-dot{display:inline-block;border-radius:50%;background:var(--br-navy,var(--athar-navy));box-shadow:inset 0 0 0 2px var(--br-cyan,var(--falaj-teal));flex:0 0 auto}
+.br-size-lbl{font-family:var(--font-mono);font-size:9.5px}
+.br-state{display:inline-block;padding:1px 7px;border-radius:999px;font:500 9.5px/14px var(--brand-font-en,var(--font-sans));border:1px solid var(--br-border-strong,var(--slate));color:var(--br-ink)}
+html[lang=ar] .br-state{font-family:var(--brand-font-ar,var(--font-arabic))}
+.br-state--1{border-color:var(--br-cyan,var(--falaj-teal));color:var(--br-ink)}
+.br-state--2{border-color:var(--br-heritage,var(--legacy-gold));background:color-mix(in srgb,var(--br-heritage,var(--legacy-gold)) 18%,transparent)}
+.br-state--3{border-color:var(--br-success,var(--falaj-teal));color:var(--br-success,var(--falaj-teal))}
+.br-tiles{grid-template-columns:repeat(5,minmax(0,1fr))}
+.br-grid--gallery .br-tiles{grid-template-columns:repeat(5,minmax(0,1fr))}
+.br-tile-img{inline-size:100%;block-size:100%;object-fit:cover;object-position:top}
+.br-tile[data-asset^="wireframe-"] .br-tile-img,.br-tile[data-asset^="screens-"] .br-tile-img{object-fit:contain;background:var(--br-ivory,var(--athar-offwhite))}
+/* the slide-38 concept-render tag, used statically inside the caption */
+.br-tile-cap .aos-tag.br-pill--concept,.br-lockup-cap .aos-tag.br-pill--concept{position:static;display:inline-block;align-self:flex-start;border-radius:4px;font-size:9px;line-height:14px;padding:1px 7px;letter-spacing:.08em;text-transform:uppercase;color:var(--white);background:rgba(var(--athar-navy-rgb),.78)}
+html[lang=ar] .br-tile-cap .aos-tag.br-pill--concept{letter-spacing:0;text-transform:none;font-family:var(--font-arabic)}
+/* lightbox — the video-player pattern: the SAME figure expanded into the top layer */
+.br-tile.is-lightbox{position:fixed;inset:0;z-index:2147483000;margin:0;padding:clamp(16px,3vh,32px);box-sizing:border-box;inline-size:100vw;block-size:100vh;max-inline-size:none;background:color-mix(in srgb,var(--athar-navy) 86%,transparent);display:flex;flex-direction:column;align-items:center;justify-content:center;gap:12px;cursor:default;border:0;outline:0}
+.br-tile.is-lightbox:popover-open{inset:0;inline-size:100vw;block-size:100vh}
+.br-tile.is-lightbox .br-tile-frame{aspect-ratio:auto;inline-size:min(96vw,1500px);max-block-size:80vh;background:transparent;border:0;display:flex;align-items:center;justify-content:center}
+.br-tile.is-lightbox .br-tile-img,.br-tile.is-lightbox picture{inline-size:auto;block-size:auto;max-inline-size:100%;max-block-size:80vh;object-fit:contain}
+.br-tile.is-lightbox .br-tile-cap{color:var(--text-on-dark);font-size:13px;line-height:18px;max-inline-size:min(96vw,1100px);align-items:center;text-align:center}
+.br-tile.is-lightbox .br-tile-cap .br-pill{align-self:center}
+.br-tile.is-lightbox .br-tile-txt{color:var(--white)}
+.br-tile.is-lightbox .br-tile-src{color:var(--text-muted-on-dark);-webkit-line-clamp:3}
+.br-lb-close{position:fixed;inset-block-start:14px;inset-inline-end:14px;inline-size:40px;block-size:40px;border-radius:50%;border:1px solid var(--stone);background:var(--white);font:600 16px/1 var(--font-sans);cursor:pointer;z-index:2}
+body.br-lightbox-open{overflow:hidden}
+@media (max-width:700px){
+  .br-grid--found,.br-grid--gallery{grid-template-columns:minmax(0,1fr)}
+  .br-lockup-row--3{grid-template-columns:minmax(0,1fr)}
+  .br-swatches--5{grid-template-columns:repeat(2,minmax(0,1fr))}
+  .br-swatches--2{max-inline-size:none}
+  .br-tone-line{grid-template-columns:minmax(0,1fr)}
+  .br-grid--gallery .br-tiles{grid-template-columns:minmax(0,1fr)}
+  .br-persona-list{grid-template-columns:repeat(2,minmax(0,1fr))}
+}
+@media (min-width:701px) and (max-width:1100px){.br-grid--found,.br-grid--gallery{grid-template-columns:minmax(0,1fr)}.br-grid--gallery .br-tiles{grid-template-columns:repeat(3,minmax(0,1fr))}}

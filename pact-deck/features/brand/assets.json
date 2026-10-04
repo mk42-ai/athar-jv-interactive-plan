@@ -1,7 +1,7 @@
 {
- "schema": "athar.brand.assets/1",
- "version": "1.7.1",
- "generated_utc": "2026-10-04T09:23:13Z",
+ "schema": "athar.brand.assets/2",
+ "version": "1.7.2",
+ "generated_utc": "2026-10-04T11:51:45Z",
  "distBase": "/assets/brand/",
  "items": [
   {
@@ -152,210 +152,902 @@
    }
   },
   {
-   "id": "athar-web-agent-avatar-system-v2",
-   "group": "mood",
-   "file": "mood/athar-web-agent-avatar-system-v2.a299f157be.webp",
-   "bytes": 79790,
-   "sha256": "a299f157be5de127e6a3fcdf19316501892e6e9ed024d3376128c5f632f32c2e",
-   "w": 1200,
-   "h": 800,
-   "label": "PACK ASSET",
-   "caption": {
-    "en": "Agent avatar / persona system board (athar_web_agent_avatar_system_v2; guidelines 6.7)",
-    "ar": "لوحة نظام الصور الرمزية للوكلاء (athar_web_agent_avatar_system_v2؛ الدليل 6.7)"
-   },
-   "source": "athar_web_agent_avatar_system_v2.jpg (Athar_Brand_Asset_Pack_v3)",
-   "sourceSha256": "ab86c0149cf28b24f779859dddcb778c096c7e0437e722ddac8f28af4b0e198a"
-  },
-  {
-   "id": "athar-brand-background-tile",
-   "group": "mood",
-   "file": "mood/athar-brand-background-tile.8c0b8ed576.webp",
-   "bytes": 33646,
-   "sha256": "8c0b8ed5761f5302fef2e6f39148c9db46f2ad0ff799ca5dcba70359a8cea251",
-   "w": 1200,
-   "h": 800,
-   "label": "CONCEPT RENDER · ILLUSTRATIVE",
-   "caption": {
-    "en": "Abstract brand background tile — supplementary render (step 4), used as the panel ground",
-    "ar": "بلاطة خلفية تجريدية — تصيير تكميلي (الخطوة 4) يُستخدم أرضيةً للوحة"
-   },
-   "source": "DFrA2lssVy.png (supplementary render, agents library)",
-   "sourceSha256": "0d7141f2913befade393a3b1064f920ed1836d58dc73c88b324a09fe118cf4a0"
-  },
-  {
-   "id": "wireframes-p04-overview",
-   "group": "product",
-   "file": "product/wireframes-p04-overview.80a57d9335.webp",
-   "bytes": 62702,
-   "sha256": "80a57d9335505c0fb1a246bdf8e7b70f8386f3cc6fad9682cffaf4196e492c92",
-   "w": 1754,
-   "h": 1240,
+   "id": "wireframe-p04-overview@2x",
+   "group": "gallery",
+   "file": "gallery/wireframe-p04-overview@2x.0c487fab5b.webp",
+   "bytes": 54366,
+   "sha256": "0c487fab5b06fda895b11879bda3b2f182c24765499e5d2e41ddb8610bf68652",
+   "w": 1600,
+   "h": 1131,
+   "role": "webp2x",
+   "setId": "wireframe-p04-overview",
    "label": "PACK ASSET",
    "kind": "wireframe",
    "caption": {
     "en": "Wireframe · Overview — credits, six live metrics, activity, grants, plugins, storage, models (p. 4)",
     "ar": "إطار سلكي · النظرة العامة — الرصيد وستة مؤشرات حيّة والنشاط والمنح والإضافات والتخزين والنماذج (ص 4)"
    },
-   "page": 4,
-   "source": "Athar_Wireframes_and_Screens_v1.pdf (26 pp., Web app OD_v1.25, 27 Sep 2026) — page rasterised at 150 dpi",
-   "sourceSha256": "e3a0e12b870c3a44e26524790d1b7e66ca816e5d6fabc5e1cea9071bcaabd2ba"
+   "source": "Athar_Wireframes_and_Screens_v1.pdf (26 pp., Web app OD_v1.25, 27 Sep 2026) — page rendered at 144 dpi (2x)",
+   "sourceSha256": "e3a0e12b870c3a44e26524790d1b7e66ca816e5d6fabc5e1cea9071bcaabd2ba",
+   "page": 4
   },
   {
-   "id": "screens-p09-p18-overview-en-ar",
-   "group": "product",
-   "file": "product/screens-p09-p18-overview-en-ar.154fe45a71.webp",
-   "bytes": 104354,
-   "sha256": "154fe45a71f2b28134f969e1c9406ee4d533c6da320bfe11c9109bf5700e2ba9",
-   "w": 1400,
-   "h": 1989,
+   "id": "wireframe-p04-overview@1x",
+   "group": "gallery",
+   "file": "gallery/wireframe-p04-overview@1x.2f97c8148a.webp",
+   "bytes": 21272,
+   "sha256": "2f97c8148a3b2c58b5893cf5de898205362c40e7ceb3fa083176dccbaff4a445",
+   "w": 800,
+   "h": 565,
+   "role": "webp1x",
+   "setId": "wireframe-p04-overview",
+   "label": "PACK ASSET",
+   "kind": "wireframe",
+   "caption": {
+    "en": "Wireframe · Overview — credits, six live metrics, activity, grants, plugins, storage, models (p. 4)",
+    "ar": "إطار سلكي · النظرة العامة — الرصيد وستة مؤشرات حيّة والنشاط والمنح والإضافات والتخزين والنماذج (ص 4)"
+   },
+   "source": "Athar_Wireframes_and_Screens_v1.pdf (26 pp., Web app OD_v1.25, 27 Sep 2026) — page rendered at 144 dpi (2x)",
+   "sourceSha256": "e3a0e12b870c3a44e26524790d1b7e66ca816e5d6fabc5e1cea9071bcaabd2ba",
+   "page": 4
+  },
+  {
+   "id": "wireframe-p04-overview",
+   "group": "gallery",
+   "file": "gallery/wireframe-p04-overview.7100c0dbc3.jpg",
+   "bytes": 115801,
+   "sha256": "7100c0dbc30b9b3a73f297e62db4dbe7d48054ce45d4f367637d43106fd56385",
+   "w": 1600,
+   "h": 1131,
+   "role": "jpg",
+   "setId": "wireframe-p04-overview",
+   "label": "PACK ASSET",
+   "kind": "wireframe",
+   "caption": {
+    "en": "Wireframe · Overview — credits, six live metrics, activity, grants, plugins, storage, models (p. 4)",
+    "ar": "إطار سلكي · النظرة العامة — الرصيد وستة مؤشرات حيّة والنشاط والمنح والإضافات والتخزين والنماذج (ص 4)"
+   },
+   "source": "Athar_Wireframes_and_Screens_v1.pdf (26 pp., Web app OD_v1.25, 27 Sep 2026) — page rendered at 144 dpi (2x)",
+   "sourceSha256": "e3a0e12b870c3a44e26524790d1b7e66ca816e5d6fabc5e1cea9071bcaabd2ba",
+   "page": 4
+  },
+  {
+   "id": "wireframe-p04-overview@2x",
+   "group": "gallery",
+   "file": "gallery/wireframe-p04-overview@2x.a7c7389294.png",
+   "bytes": 279281,
+   "sha256": "a7c73892944aca4a15a3cf0c19ed188eccd521bd40cc710df9fbab4a47f0d0c3",
+   "w": 1600,
+   "h": 1131,
+   "role": "png2x",
+   "setId": "wireframe-p04-overview",
+   "label": "PACK ASSET",
+   "kind": "wireframe",
+   "caption": {
+    "en": "Wireframe · Overview — credits, six live metrics, activity, grants, plugins, storage, models (p. 4)",
+    "ar": "إطار سلكي · النظرة العامة — الرصيد وستة مؤشرات حيّة والنشاط والمنح والإضافات والتخزين والنماذج (ص 4)"
+   },
+   "source": "Athar_Wireframes_and_Screens_v1.pdf (26 pp., Web app OD_v1.25, 27 Sep 2026) — page rendered at 144 dpi (2x)",
+   "sourceSha256": "e3a0e12b870c3a44e26524790d1b7e66ca816e5d6fabc5e1cea9071bcaabd2ba",
+   "page": 4
+  },
+  {
+   "id": "screens-p09-overview-en@2x",
+   "group": "gallery",
+   "file": "gallery/screens-p09-overview-en@2x.85e30aba37.webp",
+   "bytes": 64352,
+   "sha256": "85e30aba37222a830e2b08d53f0d9087669b549c1ab78617265d47ba8ac5b76c",
+   "w": 1600,
+   "h": 1131,
+   "role": "webp2x",
+   "setId": "screens-p09-overview-en",
    "label": "PACK ASSET",
    "kind": "screens",
    "caption": {
-    "en": "Screens · Overview — English LTR (p. 9) over Arabic RTL (p. 18), light beside dark",
-    "ar": "الشاشات · النظرة العامة — الإنجليزية (ص 9) فوق العربية من اليمين إلى اليسار (ص 18)، الفاتح بجانب الداكن"
+    "en": "Screens · Overview — English, light beside dark (p. 9)",
+    "ar": "الشاشات · النظرة العامة — الإنجليزية، الفاتح بجانب الداكن (ص 9)"
    },
-   "page": "9+18",
-   "source": "Athar_Wireframes_and_Screens_v1.pdf (26 pp., Web app OD_v1.25, 27 Sep 2026) — page rasterised at 150 dpi",
-   "sourceSha256": "e3a0e12b870c3a44e26524790d1b7e66ca816e5d6fabc5e1cea9071bcaabd2ba"
+   "source": "Athar_Wireframes_and_Screens_v1.pdf (26 pp., Web app OD_v1.25, 27 Sep 2026) — page rendered at 144 dpi (2x)",
+   "sourceSha256": "e3a0e12b870c3a44e26524790d1b7e66ca816e5d6fabc5e1cea9071bcaabd2ba",
+   "page": 9
   },
   {
-   "id": "screens-p16-agent-flow-builder",
-   "group": "product",
-   "file": "product/screens-p16-agent-flow-builder.4f46190bab.webp",
-   "bytes": 40754,
-   "sha256": "4f46190bab2feb204beb76a04408cee6d8791677413c2e440f882316ca9f873a",
-   "w": 1754,
-   "h": 1240,
+   "id": "screens-p09-overview-en@1x",
+   "group": "gallery",
+   "file": "gallery/screens-p09-overview-en@1x.3e010b0f2a.webp",
+   "bytes": 23376,
+   "sha256": "3e010b0f2a2317f4014a6aae975fa85363c0ffb99fec01589802a91eb78d9010",
+   "w": 800,
+   "h": 565,
+   "role": "webp1x",
+   "setId": "screens-p09-overview-en",
+   "label": "PACK ASSET",
+   "kind": "screens",
+   "caption": {
+    "en": "Screens · Overview — English, light beside dark (p. 9)",
+    "ar": "الشاشات · النظرة العامة — الإنجليزية، الفاتح بجانب الداكن (ص 9)"
+   },
+   "source": "Athar_Wireframes_and_Screens_v1.pdf (26 pp., Web app OD_v1.25, 27 Sep 2026) — page rendered at 144 dpi (2x)",
+   "sourceSha256": "e3a0e12b870c3a44e26524790d1b7e66ca816e5d6fabc5e1cea9071bcaabd2ba",
+   "page": 9
+  },
+  {
+   "id": "screens-p09-overview-en",
+   "group": "gallery",
+   "file": "gallery/screens-p09-overview-en.1866ba41c8.jpg",
+   "bytes": 127282,
+   "sha256": "1866ba41c8939a9408aef59c364b0e52993009f96a4ccf87cb265fe4b8deadba",
+   "w": 1600,
+   "h": 1131,
+   "role": "jpg",
+   "setId": "screens-p09-overview-en",
+   "label": "PACK ASSET",
+   "kind": "screens",
+   "caption": {
+    "en": "Screens · Overview — English, light beside dark (p. 9)",
+    "ar": "الشاشات · النظرة العامة — الإنجليزية، الفاتح بجانب الداكن (ص 9)"
+   },
+   "source": "Athar_Wireframes_and_Screens_v1.pdf (26 pp., Web app OD_v1.25, 27 Sep 2026) — page rendered at 144 dpi (2x)",
+   "sourceSha256": "e3a0e12b870c3a44e26524790d1b7e66ca816e5d6fabc5e1cea9071bcaabd2ba",
+   "page": 9
+  },
+  {
+   "id": "screens-p09-overview-en@2x",
+   "group": "gallery",
+   "file": "gallery/screens-p09-overview-en@2x.1cf9e905d0.png",
+   "bytes": 356894,
+   "sha256": "1cf9e905d0592e7860b2f854cbef1488b396fc383ae380f69aaf494dfe831d68",
+   "w": 1600,
+   "h": 1131,
+   "role": "png2x",
+   "setId": "screens-p09-overview-en",
+   "label": "PACK ASSET",
+   "kind": "screens",
+   "caption": {
+    "en": "Screens · Overview — English, light beside dark (p. 9)",
+    "ar": "الشاشات · النظرة العامة — الإنجليزية، الفاتح بجانب الداكن (ص 9)"
+   },
+   "source": "Athar_Wireframes_and_Screens_v1.pdf (26 pp., Web app OD_v1.25, 27 Sep 2026) — page rendered at 144 dpi (2x)",
+   "sourceSha256": "e3a0e12b870c3a44e26524790d1b7e66ca816e5d6fabc5e1cea9071bcaabd2ba",
+   "page": 9
+  },
+  {
+   "id": "screens-p16-agent-flow-builder@2x",
+   "group": "gallery",
+   "file": "gallery/screens-p16-agent-flow-builder@2x.22daf9f84c.webp",
+   "bytes": 36566,
+   "sha256": "22daf9f84c77d481317d60c3248a10890d5939b2992546e6e9b6ae4497d9fea1",
+   "w": 1600,
+   "h": 1131,
+   "role": "webp2x",
+   "setId": "screens-p16-agent-flow-builder",
    "label": "PACK ASSET",
    "kind": "screens",
    "caption": {
     "en": "Screens · Agent Flow Builder — multi-agent flows on a canvas (p. 16)",
     "ar": "الشاشات · منشئ تدفّق الوكلاء — تدفّقات متعددة الوكلاء على لوحة (ص 16)"
    },
-   "page": 16,
-   "source": "Athar_Wireframes_and_Screens_v1.pdf (26 pp., Web app OD_v1.25, 27 Sep 2026) — page rasterised at 150 dpi",
-   "sourceSha256": "e3a0e12b870c3a44e26524790d1b7e66ca816e5d6fabc5e1cea9071bcaabd2ba"
+   "source": "Athar_Wireframes_and_Screens_v1.pdf (26 pp., Web app OD_v1.25, 27 Sep 2026) — page rendered at 144 dpi (2x)",
+   "sourceSha256": "e3a0e12b870c3a44e26524790d1b7e66ca816e5d6fabc5e1cea9071bcaabd2ba",
+   "page": 16
   },
   {
-   "id": "deck-slide-38-nations-empowered",
-   "group": "product",
-   "file": "product/deck-slide-38-nations-empowered.b007df3584.webp",
-   "bytes": 63896,
-   "sha256": "b007df3584ebf4e3aa19eb5fc1586c1e6c775e74774d49386f69b3fb192f0227",
-   "w": 1400,
-   "h": 702,
+   "id": "screens-p16-agent-flow-builder@1x",
+   "group": "gallery",
+   "file": "gallery/screens-p16-agent-flow-builder@1x.57da969dd6.webp",
+   "bytes": 13920,
+   "sha256": "57da969dd64753c09bc5f4fa6c8da1b0a90293db6c8bfdbd0704548b1e3d36a2",
+   "w": 800,
+   "h": 565,
+   "role": "webp1x",
+   "setId": "screens-p16-agent-flow-builder",
    "label": "PACK ASSET",
-   "kind": "deck",
+   "kind": "screens",
    "caption": {
-    "en": "Deck screenshot · slide 38 “Nations empowered” (canvas 1473 × 738)",
-    "ar": "لقطة من العرض · الشريحة 38 «دول متمكّنة» (1473 × 738)"
+    "en": "Screens · Agent Flow Builder — multi-agent flows on a canvas (p. 16)",
+    "ar": "الشاشات · منشئ تدفّق الوكلاء — تدفّقات متعددة الوكلاء على لوحة (ص 16)"
    },
-   "source": "canvas-screenshot-1473x738.png (pack screenshot)",
-   "sourceSha256": "e35e674ab0459295d6797f5453e00338ba4b537b4a5c5e162ee5bcbbe55212cd"
+   "source": "Athar_Wireframes_and_Screens_v1.pdf (26 pp., Web app OD_v1.25, 27 Sep 2026) — page rendered at 144 dpi (2x)",
+   "sourceSha256": "e3a0e12b870c3a44e26524790d1b7e66ca816e5d6fabc5e1cea9071bcaabd2ba",
+   "page": 16
   },
   {
-   "id": "deck-slide-30-impact-funding",
-   "group": "product",
-   "file": "product/deck-slide-30-impact-funding.161d318005.webp",
-   "bytes": 99856,
-   "sha256": "161d318005d0805c0b5667f0b142684aa91afc8362b2d9476f9ea0de4c6edc3f",
-   "w": 1400,
-   "h": 685,
+   "id": "screens-p16-agent-flow-builder",
+   "group": "gallery",
+   "file": "gallery/screens-p16-agent-flow-builder.75a8083505.jpg",
+   "bytes": 81277,
+   "sha256": "75a808350518fbafc73d1a5c0a1b074c2f66a9007856e4facedddfcda0ece306",
+   "w": 1600,
+   "h": 1131,
+   "role": "jpg",
+   "setId": "screens-p16-agent-flow-builder",
    "label": "PACK ASSET",
-   "kind": "deck",
+   "kind": "screens",
    "caption": {
-    "en": "Deck screenshot · slide 30 “Impact & funding” (canvas 1728 × 871)",
-    "ar": "لقطة من العرض · الشريحة 30 «الأثر والتمويل» (1728 × 871)"
+    "en": "Screens · Agent Flow Builder — multi-agent flows on a canvas (p. 16)",
+    "ar": "الشاشات · منشئ تدفّق الوكلاء — تدفّقات متعددة الوكلاء على لوحة (ص 16)"
    },
-   "source": "canvas-screenshot-1728x871.png (pack screenshot)",
-   "sourceSha256": "cdba997c5dcfa92d7205d5a243be784e7fda288cd0e8c50eb4a77da53280b1ed"
+   "source": "Athar_Wireframes_and_Screens_v1.pdf (26 pp., Web app OD_v1.25, 27 Sep 2026) — page rendered at 144 dpi (2x)",
+   "sourceSha256": "e3a0e12b870c3a44e26524790d1b7e66ca816e5d6fabc5e1cea9071bcaabd2ba",
+   "page": 16
   },
   {
-   "id": "product-film-still-16s7-collage",
-   "group": "product",
-   "file": "product/product-film-still-16s7-collage.a758e98d28.webp",
-   "bytes": 19846,
-   "sha256": "a758e98d28a6f031dabf1c5fa06e96ba263a6664650a5b8fe7b3ca9b54509a93",
-   "w": 714,
-   "h": 171,
-   "label": "FILM STILL",
-   "kind": "film",
+   "id": "screens-p16-agent-flow-builder@2x",
+   "group": "gallery",
+   "file": "gallery/screens-p16-agent-flow-builder@2x.cd9e535679.png",
+   "bytes": 214419,
+   "sha256": "cd9e535679f3cb1b4a104af6164fbc9d190ac0da76a4cc104cf1601862dea735",
+   "w": 1600,
+   "h": 1131,
+   "role": "png2x",
+   "setId": "screens-p16-agent-flow-builder",
+   "label": "PACK ASSET",
+   "kind": "screens",
    "caption": {
-    "en": "Product-film still · at 16.7 s — concept collage (tablet · team · reception kiosk), as shown on slide 38 before v1.5.7",
-    "ar": "لقطة من فيلم المنتج · عند 16.7 ث — كولاج مفاهيمي (لوح · فريق · كشك استقبال) كما عُرض في الشريحة 38 قبل v1.5.7"
+    "en": "Screens · Agent Flow Builder — multi-agent flows on a canvas (p. 16)",
+    "ar": "الشاشات · منشئ تدفّق الوكلاء — تدفّقات متعددة الوكلاء على لوحة (ص 16)"
    },
-   "source": "canvas-screenshot-432x169.png (pack) — collage cropped from the slide capture",
-   "sourceSha256": "1b03fe01781d6e359b169e8ac69173711c38eb1f78a623fd34de796b519d8446",
-   "cropBox": [
-    0,
-    73,
-    714,
-    244
-   ]
+   "source": "Athar_Wireframes_and_Screens_v1.pdf (26 pp., Web app OD_v1.25, 27 Sep 2026) — page rendered at 144 dpi (2x)",
+   "sourceSha256": "e3a0e12b870c3a44e26524790d1b7e66ca816e5d6fabc5e1cea9071bcaabd2ba",
+   "page": 16
+  },
+  {
+   "id": "screens-p18-overview-ar@2x",
+   "group": "gallery",
+   "file": "gallery/screens-p18-overview-ar@2x.24aa2a0922.webp",
+   "bytes": 64506,
+   "sha256": "24aa2a0922065359ac470a95af16d5bdfa6ab422004361c2cf3ac3165eb8c6e0",
+   "w": 1600,
+   "h": 1131,
+   "role": "webp2x",
+   "setId": "screens-p18-overview-ar",
+   "label": "PACK ASSET",
+   "kind": "screens",
+   "caption": {
+    "en": "Screens · Overview — Arabic RTL, light beside dark (p. 18)",
+    "ar": "الشاشات · النظرة العامة — العربية من اليمين إلى اليسار، الفاتح بجانب الداكن (ص 18)"
+   },
+   "source": "Athar_Wireframes_and_Screens_v1.pdf (26 pp., Web app OD_v1.25, 27 Sep 2026) — page rendered at 144 dpi (2x)",
+   "sourceSha256": "e3a0e12b870c3a44e26524790d1b7e66ca816e5d6fabc5e1cea9071bcaabd2ba",
+   "page": 18
+  },
+  {
+   "id": "screens-p18-overview-ar@1x",
+   "group": "gallery",
+   "file": "gallery/screens-p18-overview-ar@1x.1a1108462f.webp",
+   "bytes": 24260,
+   "sha256": "1a1108462fb3538de484e0d7ef868df5b9be2d1e93aefbe8b218180283032821",
+   "w": 800,
+   "h": 565,
+   "role": "webp1x",
+   "setId": "screens-p18-overview-ar",
+   "label": "PACK ASSET",
+   "kind": "screens",
+   "caption": {
+    "en": "Screens · Overview — Arabic RTL, light beside dark (p. 18)",
+    "ar": "الشاشات · النظرة العامة — العربية من اليمين إلى اليسار، الفاتح بجانب الداكن (ص 18)"
+   },
+   "source": "Athar_Wireframes_and_Screens_v1.pdf (26 pp., Web app OD_v1.25, 27 Sep 2026) — page rendered at 144 dpi (2x)",
+   "sourceSha256": "e3a0e12b870c3a44e26524790d1b7e66ca816e5d6fabc5e1cea9071bcaabd2ba",
+   "page": 18
+  },
+  {
+   "id": "screens-p18-overview-ar",
+   "group": "gallery",
+   "file": "gallery/screens-p18-overview-ar.23761ba8ae.jpg",
+   "bytes": 129135,
+   "sha256": "23761ba8aebbf7561ef5043d918549c735e2cbecdf0a09112b8022f1d410d92a",
+   "w": 1600,
+   "h": 1131,
+   "role": "jpg",
+   "setId": "screens-p18-overview-ar",
+   "label": "PACK ASSET",
+   "kind": "screens",
+   "caption": {
+    "en": "Screens · Overview — Arabic RTL, light beside dark (p. 18)",
+    "ar": "الشاشات · النظرة العامة — العربية من اليمين إلى اليسار، الفاتح بجانب الداكن (ص 18)"
+   },
+   "source": "Athar_Wireframes_and_Screens_v1.pdf (26 pp., Web app OD_v1.25, 27 Sep 2026) — page rendered at 144 dpi (2x)",
+   "sourceSha256": "e3a0e12b870c3a44e26524790d1b7e66ca816e5d6fabc5e1cea9071bcaabd2ba",
+   "page": 18
+  },
+  {
+   "id": "screens-p18-overview-ar@2x",
+   "group": "gallery",
+   "file": "gallery/screens-p18-overview-ar@2x.fe752011b1.png",
+   "bytes": 348782,
+   "sha256": "fe752011b13393b3c2806f2d03585986492a079625d1acb3f546f4b7f88cd891",
+   "w": 1600,
+   "h": 1131,
+   "role": "png2x",
+   "setId": "screens-p18-overview-ar",
+   "label": "PACK ASSET",
+   "kind": "screens",
+   "caption": {
+    "en": "Screens · Overview — Arabic RTL, light beside dark (p. 18)",
+    "ar": "الشاشات · النظرة العامة — العربية من اليمين إلى اليسار، الفاتح بجانب الداكن (ص 18)"
+   },
+   "source": "Athar_Wireframes_and_Screens_v1.pdf (26 pp., Web app OD_v1.25, 27 Sep 2026) — page rendered at 144 dpi (2x)",
+   "sourceSha256": "e3a0e12b870c3a44e26524790d1b7e66ca816e5d6fabc5e1cea9071bcaabd2ba",
+   "page": 18
+  },
+  {
+   "id": "agent-avatar-system-v2@2x",
+   "group": "gallery",
+   "file": "gallery/agent-avatar-system-v2@2x.858ca22147.webp",
+   "bytes": 110062,
+   "sha256": "858ca22147d6e073562dc797749881636bd43c038ec8b3a7b5f55207e9090099",
+   "w": 1536,
+   "h": 1024,
+   "role": "webp2x",
+   "setId": "agent-avatar-system-v2",
+   "label": "PACK ASSET",
+   "kind": "avatar",
+   "caption": {
+    "en": "Agent avatar system v2 — six personas (Guide · Clerk · Scout · Tutor · Translator · Steward) at 96 / 48 / 24 px, four states",
+    "ar": "نظام الصور الرمزية للوكلاء v2 — ست شخصيات (المرشد · الكاتب · الكاشف · المعلّم · المترجم · الأمين) بأحجام 96 / 48 / 24 بكسل وأربع حالات"
+   },
+   "source": "athar_web_agent_avatar_system_v2.jpg (Athar_Brand_Asset_Pack_v3)",
+   "sourceSha256": "ab86c0149cf28b24f779859dddcb778c096c7e0437e722ddac8f28af4b0e198a"
+  },
+  {
+   "id": "agent-avatar-system-v2@1x",
+   "group": "gallery",
+   "file": "gallery/agent-avatar-system-v2@1x.fc6e8f8445.webp",
+   "bytes": 43632,
+   "sha256": "fc6e8f84455265125f0faa5a6c2a4855ce976772d869ba20cc0cfa1d623a8ae2",
+   "w": 800,
+   "h": 533,
+   "role": "webp1x",
+   "setId": "agent-avatar-system-v2",
+   "label": "PACK ASSET",
+   "kind": "avatar",
+   "caption": {
+    "en": "Agent avatar system v2 — six personas (Guide · Clerk · Scout · Tutor · Translator · Steward) at 96 / 48 / 24 px, four states",
+    "ar": "نظام الصور الرمزية للوكلاء v2 — ست شخصيات (المرشد · الكاتب · الكاشف · المعلّم · المترجم · الأمين) بأحجام 96 / 48 / 24 بكسل وأربع حالات"
+   },
+   "source": "athar_web_agent_avatar_system_v2.jpg (Athar_Brand_Asset_Pack_v3)",
+   "sourceSha256": "ab86c0149cf28b24f779859dddcb778c096c7e0437e722ddac8f28af4b0e198a"
+  },
+  {
+   "id": "agent-avatar-system-v2",
+   "group": "gallery",
+   "file": "gallery/agent-avatar-system-v2.d99f6bf802.jpg",
+   "bytes": 183767,
+   "sha256": "d99f6bf8020bd9e7dff49c88f78b24ec09a802f01dc5946ba76e2aaa55d2f2dd",
+   "w": 1536,
+   "h": 1024,
+   "role": "jpg",
+   "setId": "agent-avatar-system-v2",
+   "label": "PACK ASSET",
+   "kind": "avatar",
+   "caption": {
+    "en": "Agent avatar system v2 — six personas (Guide · Clerk · Scout · Tutor · Translator · Steward) at 96 / 48 / 24 px, four states",
+    "ar": "نظام الصور الرمزية للوكلاء v2 — ست شخصيات (المرشد · الكاتب · الكاشف · المعلّم · المترجم · الأمين) بأحجام 96 / 48 / 24 بكسل وأربع حالات"
+   },
+   "source": "athar_web_agent_avatar_system_v2.jpg (Athar_Brand_Asset_Pack_v3)",
+   "sourceSha256": "ab86c0149cf28b24f779859dddcb778c096c7e0437e722ddac8f28af4b0e198a"
+  },
+  {
+   "id": "render-stationery-flat-lay@2x",
+   "group": "gallery",
+   "file": "gallery/render-stationery-flat-lay@2x.7b3702442a.webp",
+   "bytes": 57518,
+   "sha256": "7b3702442a215fd14a53ba9fe57d1b84e1bc05f8d9b122d5a450a5561a982bb3",
+   "w": 1536,
+   "h": 1024,
+   "role": "webp2x",
+   "setId": "render-stationery-flat-lay",
+   "label": "CONCEPT RENDER",
+   "kind": "render",
+   "caption": {
+    "en": "Stationery flat-lay — official logo composited onto the reserved zones (letterhead, navy cards, ivory card, badge, notebook)",
+    "ar": "مجموعة قرطاسية — الشعار الرسمي مركّب على المساحات المحجوزة (ورقة الرسائل والبطاقات الكحلية والبطاقة العاجية والشارة والدفتر)"
+   },
+   "source": "render-flatlay.png (generated render, agents library)",
+   "sourceSha256": "d45fdc062676e4549318481104f3a723c084a51ad7b5bf4b1b3eecb8c9836aa0",
+   "logoComposite": {
+    "method": "Pillow alpha_composite of the official horizontal lockup (recoloured from the alpha layer, colours from brand-tokens.json) onto flat blank zones detected deterministically (local std < 3 over 12-px blocks); zone luminance picks the variant: light zones → Deep Ocean lockup, dark/navy zones → Ivory mark + Champagne Gold wordmark",
+    "zones": "letterhead (ivory) · navy header strip · navy card · ivory card · dark notebook/badge spine · small ivory badge",
+    "placements": [
+     {
+      "x": 419,
+      "y": 314,
+      "w": 182,
+      "h": 39,
+      "variant": "navy (Deep Ocean)",
+      "zone": {
+       "x": 388,
+       "y": 283,
+       "w": 456,
+       "h": 535,
+       "lum": 216.0228271484375,
+       "rgb": [
+        224,
+        214,
+        199
+       ],
+       "fill": 0.6
+      }
+     },
+     {
+      "x": 427,
+      "y": 207,
+      "w": 134,
+      "h": 29,
+      "variant": "Ivory / Champagne Gold (reversed)",
+      "zone": {
+       "x": 396,
+       "y": 176,
+       "w": 448,
+       "h": 84,
+       "lum": 40.215267181396484,
+       "rgb": [
+        26,
+        43,
+        58
+       ],
+       "fill": 0.63
+      }
+     },
+     {
+      "x": 96,
+      "y": 272,
+      "w": 120,
+      "h": 26,
+      "variant": "Ivory / Champagne Gold (reversed)",
+      "zone": {
+       "x": 80,
+       "y": 256,
+       "w": 240,
+       "h": 121,
+       "lum": 43.17720031738281,
+       "rgb": [
+        28,
+        46,
+        61
+       ],
+       "fill": 0.52
+      }
+     },
+     {
+      "x": 91,
+      "y": 484,
+      "w": 125,
+      "h": 27,
+      "variant": "navy (Deep Ocean)",
+      "zone": {
+       "x": 75,
+       "y": 468,
+       "w": 241,
+       "h": 60,
+       "lum": 225.4607696533203,
+       "rgb": [
+        233,
+        224,
+        209
+       ],
+       "fill": 0.69
+      }
+     },
+     {
+      "x": 936,
+      "y": 564,
+      "w": 65,
+      "h": 14,
+      "variant": "Ivory / Champagne Gold (reversed)",
+      "zone": {
+       "x": 916,
+       "y": 557,
+       "w": 106,
+       "h": 157,
+       "lum": 27.725984573364258,
+       "rgb": [
+        16,
+        30,
+        43
+       ],
+       "fill": 0.46
+      }
+     },
+     {
+      "x": 168,
+      "y": 557,
+      "w": 57,
+      "h": 12,
+      "variant": "navy (Deep Ocean)",
+      "zone": {
+       "x": 162,
+       "y": 551,
+       "w": 96,
+       "h": 49,
+       "lum": 226.97586059570312,
+       "rgb": [
+        234,
+        225,
+        211
+       ],
+       "fill": 0.85
+      }
+     }
+    ]
+   }
+  },
+  {
+   "id": "render-stationery-flat-lay@1x",
+   "group": "gallery",
+   "file": "gallery/render-stationery-flat-lay@1x.c0edce2134.webp",
+   "bytes": 18376,
+   "sha256": "c0edce2134a803e3e25a5a2e29eee48c35af1e13afffd4ebfda4c824f805f8cc",
+   "w": 800,
+   "h": 533,
+   "role": "webp1x",
+   "setId": "render-stationery-flat-lay",
+   "label": "CONCEPT RENDER",
+   "kind": "render",
+   "caption": {
+    "en": "Stationery flat-lay — official logo composited onto the reserved zones (letterhead, navy cards, ivory card, badge, notebook)",
+    "ar": "مجموعة قرطاسية — الشعار الرسمي مركّب على المساحات المحجوزة (ورقة الرسائل والبطاقات الكحلية والبطاقة العاجية والشارة والدفتر)"
+   },
+   "source": "render-flatlay.png (generated render, agents library)",
+   "sourceSha256": "d45fdc062676e4549318481104f3a723c084a51ad7b5bf4b1b3eecb8c9836aa0",
+   "logoComposite": {
+    "method": "Pillow alpha_composite of the official horizontal lockup (recoloured from the alpha layer, colours from brand-tokens.json) onto flat blank zones detected deterministically (local std < 3 over 12-px blocks); zone luminance picks the variant: light zones → Deep Ocean lockup, dark/navy zones → Ivory mark + Champagne Gold wordmark",
+    "zones": "letterhead (ivory) · navy header strip · navy card · ivory card · dark notebook/badge spine · small ivory badge",
+    "placements": [
+     {
+      "x": 419,
+      "y": 314,
+      "w": 182,
+      "h": 39,
+      "variant": "navy (Deep Ocean)",
+      "zone": {
+       "x": 388,
+       "y": 283,
+       "w": 456,
+       "h": 535,
+       "lum": 216.0228271484375,
+       "rgb": [
+        224,
+        214,
+        199
+       ],
+       "fill": 0.6
+      }
+     },
+     {
+      "x": 427,
+      "y": 207,
+      "w": 134,
+      "h": 29,
+      "variant": "Ivory / Champagne Gold (reversed)",
+      "zone": {
+       "x": 396,
+       "y": 176,
+       "w": 448,
+       "h": 84,
+       "lum": 40.215267181396484,
+       "rgb": [
+        26,
+        43,
+        58
+       ],
+       "fill": 0.63
+      }
+     },
+     {
+      "x": 96,
+      "y": 272,
+      "w": 120,
+      "h": 26,
+      "variant": "Ivory / Champagne Gold (reversed)",
+      "zone": {
+       "x": 80,
+       "y": 256,
+       "w": 240,
+       "h": 121,
+       "lum": 43.17720031738281,
+       "rgb": [
+        28,
+        46,
+        61
+       ],
+       "fill": 0.52
+      }
+     },
+     {
+      "x": 91,
+      "y": 484,
+      "w": 125,
+      "h": 27,
+      "variant": "navy (Deep Ocean)",
+      "zone": {
+       "x": 75,
+       "y": 468,
+       "w": 241,
+       "h": 60,
+       "lum": 225.4607696533203,
+       "rgb": [
+        233,
+        224,
+        209
+       ],
+       "fill": 0.69
+      }
+     },
+     {
+      "x": 936,
+      "y": 564,
+      "w": 65,
+      "h": 14,
+      "variant": "Ivory / Champagne Gold (reversed)",
+      "zone": {
+       "x": 916,
+       "y": 557,
+       "w": 106,
+       "h": 157,
+       "lum": 27.725984573364258,
+       "rgb": [
+        16,
+        30,
+        43
+       ],
+       "fill": 0.46
+      }
+     },
+     {
+      "x": 168,
+      "y": 557,
+      "w": 57,
+      "h": 12,
+      "variant": "navy (Deep Ocean)",
+      "zone": {
+       "x": 162,
+       "y": 551,
+       "w": 96,
+       "h": 49,
+       "lum": 226.97586059570312,
+       "rgb": [
+        234,
+        225,
+        211
+       ],
+       "fill": 0.85
+      }
+     }
+    ]
+   }
   },
   {
    "id": "render-stationery-flat-lay",
-   "group": "product",
-   "file": "product/render-stationery-flat-lay.1f8a5ef1ff.webp",
-   "bytes": 45544,
-   "sha256": "1f8a5ef1ff322862780d458707004aab454e1ce3c2749bcf8a500720f8186236",
-   "w": 1400,
-   "h": 933,
-   "label": "CONCEPT RENDER · ILLUSTRATIVE",
+   "group": "gallery",
+   "file": "gallery/render-stationery-flat-lay.7ecc6ef883.jpg",
+   "bytes": 143003,
+   "sha256": "7ecc6ef8839a966138a6c5141f7f51bc80f00367f6a2f2af8bc3846a0deb1859",
+   "w": 1536,
+   "h": 1024,
+   "role": "jpg",
+   "setId": "render-stationery-flat-lay",
+   "label": "CONCEPT RENDER",
    "kind": "render",
    "caption": {
-    "en": "Stationery flat-lay — official logo composited onto the blank logo areas",
-    "ar": "مجموعة قرطاسية — الشعار الرسمي مركّب على مساحات الشعار الفارغة"
+    "en": "Stationery flat-lay — official logo composited onto the reserved zones (letterhead, navy cards, ivory card, badge, notebook)",
+    "ar": "مجموعة قرطاسية — الشعار الرسمي مركّب على المساحات المحجوزة (ورقة الرسائل والبطاقات الكحلية والبطاقة العاجية والشارة والدفتر)"
    },
-   "source": "render-flatlay.png (supplementary render, step 4; agents library)",
+   "source": "render-flatlay.png (generated render, agents library)",
    "sourceSha256": "d45fdc062676e4549318481104f3a723c084a51ad7b5bf4b1b3eecb8c9836aa0",
    "logoComposite": {
-    "method": "official horizontal lockup composited onto flat (blank) regions detected programmatically (local std < 3 over 16-px blocks); Deep Ocean on light regions, Ivory/Gold reversed on dark regions",
+    "method": "Pillow alpha_composite of the official horizontal lockup (recoloured from the alpha layer, colours from brand-tokens.json) onto flat blank zones detected deterministically (local std < 3 over 12-px blocks); zone luminance picks the variant: light zones → Deep Ocean lockup, dark/navy zones → Ivory mark + Champagne Gold wordmark",
+    "zones": "letterhead (ivory) · navy header strip · navy card · ivory card · dark notebook/badge spine · small ivory badge",
     "placements": [
      {
-      "x": 423,
-      "y": 318,
-      "w": 179,
-      "h": 38,
-      "variant": "primary",
-      "region": {
-       "x": 392,
-       "y": 287,
+      "x": 419,
+      "y": 314,
+      "w": 182,
+      "h": 39,
+      "variant": "navy (Deep Ocean)",
+      "zone": {
+       "x": 388,
+       "y": 283,
+       "w": 456,
+       "h": 535,
+       "lum": 216.0228271484375,
+       "rgb": [
+        224,
+        214,
+        199
+       ],
+       "fill": 0.6
+      }
+     },
+     {
+      "x": 427,
+      "y": 207,
+      "w": 134,
+      "h": 29,
+      "variant": "Ivory / Champagne Gold (reversed)",
+      "zone": {
+       "x": 396,
+       "y": 176,
        "w": 448,
-       "h": 527,
-       "area": 127431,
-       "lum": 216.0198516845703
+       "h": 84,
+       "lum": 40.215267181396484,
+       "rgb": [
+        26,
+        43,
+        58
+       ],
+       "fill": 0.63
       }
      },
      {
-      "x": 100,
-      "y": 276,
-      "w": 116,
-      "h": 25,
-      "variant": "reversed",
-      "region": {
-       "x": 84,
-       "y": 260,
-       "w": 232,
-       "h": 113,
-       "area": 12262,
-       "lum": 43.25126266479492
+      "x": 96,
+      "y": 272,
+      "w": 120,
+      "h": 26,
+      "variant": "Ivory / Champagne Gold (reversed)",
+      "zone": {
+       "x": 80,
+       "y": 256,
+       "w": 240,
+       "h": 121,
+       "lum": 43.17720031738281,
+       "rgb": [
+        28,
+        46,
+        61
+       ],
+       "fill": 0.52
       }
      },
      {
-      "x": 161,
-      "y": 483,
-      "w": 84,
-      "h": 18,
-      "variant": "primary",
-      "region": {
-       "x": 150,
-       "y": 472,
-       "w": 162,
-       "h": 51,
-       "area": 8080,
-       "lum": 225.2772216796875
+      "x": 91,
+      "y": 484,
+      "w": 125,
+      "h": 27,
+      "variant": "navy (Deep Ocean)",
+      "zone": {
+       "x": 75,
+       "y": 468,
+       "w": 241,
+       "h": 60,
+       "lum": 225.4607696533203,
+       "rgb": [
+        233,
+        224,
+        209
+       ],
+       "fill": 0.69
+      }
+     },
+     {
+      "x": 936,
+      "y": 564,
+      "w": 65,
+      "h": 14,
+      "variant": "Ivory / Champagne Gold (reversed)",
+      "zone": {
+       "x": 916,
+       "y": 557,
+       "w": 106,
+       "h": 157,
+       "lum": 27.725984573364258,
+       "rgb": [
+        16,
+        30,
+        43
+       ],
+       "fill": 0.46
+      }
+     },
+     {
+      "x": 168,
+      "y": 557,
+      "w": 57,
+      "h": 12,
+      "variant": "navy (Deep Ocean)",
+      "zone": {
+       "x": 162,
+       "y": 551,
+       "w": 96,
+       "h": 49,
+       "lum": 226.97586059570312,
+       "rgb": [
+        234,
+        225,
+        211
+       ],
+       "fill": 0.85
+      }
+     }
+    ]
+   }
+  },
+  {
+   "id": "render-reception-kiosk@2x",
+   "group": "gallery",
+   "file": "gallery/render-reception-kiosk@2x.9670e7fcc8.webp",
+   "bytes": 104266,
+   "sha256": "9670e7fcc8ce82b298dc3651b4fec24ed4a0f41ebd584d30c0307ff410cf9b78",
+   "w": 1536,
+   "h": 1024,
+   "role": "webp2x",
+   "setId": "render-reception-kiosk",
+   "label": "CONCEPT RENDER",
+   "kind": "render",
+   "caption": {
+    "en": "Reception-lobby kiosk — official logo composited onto the kiosk header panel",
+    "ar": "كشك في بهو الاستقبال — الشعار الرسمي مركّب على لوحة رأس الكشك"
+   },
+   "source": "render-kiosk.png (generated render, agents library)",
+   "sourceSha256": "ffb3c5c2425dc7a6c1a44c18dd82aeb11593730a6243d406b44bc9f1da53abb6",
+   "logoComposite": {
+    "method": "Pillow alpha_composite of the official horizontal lockup (recoloured from the alpha layer, colours from brand-tokens.json) onto flat blank zones detected deterministically (local std < 3 over 12-px blocks); zone luminance picks the variant: light zones → Deep Ocean lockup, dark/navy zones → Ivory mark + Champagne Gold wordmark",
+    "zones": "kiosk front panel (light, top)",
+    "placements": [
+     {
+      "x": 484,
+      "y": 283,
+      "w": 113,
+      "h": 24,
+      "variant": "navy (Deep Ocean)",
+      "zone": {
+       "x": 418,
+       "y": 266,
+       "w": 246,
+       "h": 758,
+       "lum": 197.78163146972656,
+       "rgb": [
+        201,
+        195,
+        201
+       ],
+       "fill": 0.52
+      }
+     }
+    ]
+   }
+  },
+  {
+   "id": "render-reception-kiosk@1x",
+   "group": "gallery",
+   "file": "gallery/render-reception-kiosk@1x.c3f21cac22.webp",
+   "bytes": 49486,
+   "sha256": "c3f21cac22da2060cd131beed103df46feea8c7a4ff2ba035a44919050cec668",
+   "w": 800,
+   "h": 533,
+   "role": "webp1x",
+   "setId": "render-reception-kiosk",
+   "label": "CONCEPT RENDER",
+   "kind": "render",
+   "caption": {
+    "en": "Reception-lobby kiosk — official logo composited onto the kiosk header panel",
+    "ar": "كشك في بهو الاستقبال — الشعار الرسمي مركّب على لوحة رأس الكشك"
+   },
+   "source": "render-kiosk.png (generated render, agents library)",
+   "sourceSha256": "ffb3c5c2425dc7a6c1a44c18dd82aeb11593730a6243d406b44bc9f1da53abb6",
+   "logoComposite": {
+    "method": "Pillow alpha_composite of the official horizontal lockup (recoloured from the alpha layer, colours from brand-tokens.json) onto flat blank zones detected deterministically (local std < 3 over 12-px blocks); zone luminance picks the variant: light zones → Deep Ocean lockup, dark/navy zones → Ivory mark + Champagne Gold wordmark",
+    "zones": "kiosk front panel (light, top)",
+    "placements": [
+     {
+      "x": 484,
+      "y": 283,
+      "w": 113,
+      "h": 24,
+      "variant": "navy (Deep Ocean)",
+      "zone": {
+       "x": 418,
+       "y": 266,
+       "w": 246,
+       "h": 758,
+       "lum": 197.78163146972656,
+       "rgb": [
+        201,
+        195,
+        201
+       ],
+       "fill": 0.52
       }
      }
     ]
@@ -363,36 +1055,134 @@
   },
   {
    "id": "render-reception-kiosk",
-   "group": "product",
-   "file": "product/render-reception-kiosk.1d3c748624.webp",
-   "bytes": 94006,
-   "sha256": "1d3c748624f9543f2e2fb804855759b9ab09cf64ab77594bb027a25595303b46",
-   "w": 1400,
-   "h": 933,
-   "label": "CONCEPT RENDER · ILLUSTRATIVE",
+   "group": "gallery",
+   "file": "gallery/render-reception-kiosk.ddf19d13dc.jpg",
+   "bytes": 186220,
+   "sha256": "ddf19d13dc83d2a94a6d859fa7e5912d59cfa4a3451eb12872d3b8b897686379",
+   "w": 1536,
+   "h": 1024,
+   "role": "jpg",
+   "setId": "render-reception-kiosk",
+   "label": "CONCEPT RENDER",
    "kind": "render",
    "caption": {
     "en": "Reception-lobby kiosk — official logo composited onto the kiosk header panel",
     "ar": "كشك في بهو الاستقبال — الشعار الرسمي مركّب على لوحة رأس الكشك"
    },
-   "source": "render-kiosk.png (supplementary render, step 4; agents library)",
+   "source": "render-kiosk.png (generated render, agents library)",
    "sourceSha256": "ffb3c5c2425dc7a6c1a44c18dd82aeb11593730a6243d406b44bc9f1da53abb6",
    "logoComposite": {
-    "method": "official horizontal lockup composited onto flat (blank) regions detected programmatically (local std < 3 over 16-px blocks); Deep Ocean on light regions, Ivory/Gold reversed on dark regions",
+    "method": "Pillow alpha_composite of the official horizontal lockup (recoloured from the alpha layer, colours from brand-tokens.json) onto flat blank zones detected deterministically (local std < 3 over 12-px blocks); zone luminance picks the variant: light zones → Deep Ocean lockup, dark/navy zones → Ivory mark + Champagne Gold wordmark",
+    "zones": "kiosk front panel (light, top)",
     "placements": [
      {
-      "x": 486,
-      "y": 505,
-      "w": 109,
-      "h": 23,
-      "variant": "primary",
-      "region": {
-       "x": 421,
-       "y": 489,
-       "w": 239,
-       "h": 535,
-       "area": 83073,
-       "lum": 197.65469360351562
+      "x": 484,
+      "y": 283,
+      "w": 113,
+      "h": 24,
+      "variant": "navy (Deep Ocean)",
+      "zone": {
+       "x": 418,
+       "y": 266,
+       "w": 246,
+       "h": 758,
+       "lum": 197.78163146972656,
+       "rgb": [
+        201,
+        195,
+        201
+       ],
+       "fill": 0.52
+      }
+     }
+    ]
+   }
+  },
+  {
+   "id": "render-laptop-phone-dashboard@2x",
+   "group": "gallery",
+   "file": "gallery/render-laptop-phone-dashboard@2x.51124ee7e9.webp",
+   "bytes": 90566,
+   "sha256": "51124ee7e9246b4aaab1f22d8297f5fd3dad541e6d48812fe2b23e807484b228",
+   "w": 1536,
+   "h": 1024,
+   "role": "webp2x",
+   "setId": "render-laptop-phone-dashboard",
+   "label": "CONCEPT RENDER",
+   "kind": "render",
+   "caption": {
+    "en": "Laptop + phone dashboard — official logo composited onto the dark UI header area",
+    "ar": "لوحة تحكم على حاسوب محمول وهاتف — الشعار الرسمي مركّب على رأس الواجهة الداكن"
+   },
+   "source": "render-laptop-phone.png (generated render, agents library)",
+   "sourceSha256": "70442001d3fb20b2374bf961230b121d9375148fc6e7a2080d8792a1982a6507",
+   "logoComposite": {
+    "method": "Pillow alpha_composite of the official horizontal lockup (recoloured from the alpha layer, colours from brand-tokens.json) onto flat blank zones detected deterministically (local std < 3 over 12-px blocks); zone luminance picks the variant: light zones → Deep Ocean lockup, dark/navy zones → Ivory mark + Champagne Gold wordmark",
+    "zones": "dark flat UI zone (phone screen header)",
+    "placements": [
+     {
+      "x": 398,
+      "y": 374,
+      "w": 81,
+      "h": 17,
+      "variant": "Ivory / Champagne Gold (reversed)",
+      "zone": {
+       "x": 382,
+       "y": 367,
+       "w": 113,
+       "h": 295,
+       "lum": 14.60507583618164,
+       "rgb": [
+        0,
+        17,
+        37
+       ],
+       "fill": 0.49
+      }
+     }
+    ]
+   }
+  },
+  {
+   "id": "render-laptop-phone-dashboard@1x",
+   "group": "gallery",
+   "file": "gallery/render-laptop-phone-dashboard@1x.296284b693.webp",
+   "bytes": 39698,
+   "sha256": "296284b69397dc86adeae4c4cf7fdf91f5fa3d060ad5d15002541a4c469688fc",
+   "w": 800,
+   "h": 533,
+   "role": "webp1x",
+   "setId": "render-laptop-phone-dashboard",
+   "label": "CONCEPT RENDER",
+   "kind": "render",
+   "caption": {
+    "en": "Laptop + phone dashboard — official logo composited onto the dark UI header area",
+    "ar": "لوحة تحكم على حاسوب محمول وهاتف — الشعار الرسمي مركّب على رأس الواجهة الداكن"
+   },
+   "source": "render-laptop-phone.png (generated render, agents library)",
+   "sourceSha256": "70442001d3fb20b2374bf961230b121d9375148fc6e7a2080d8792a1982a6507",
+   "logoComposite": {
+    "method": "Pillow alpha_composite of the official horizontal lockup (recoloured from the alpha layer, colours from brand-tokens.json) onto flat blank zones detected deterministically (local std < 3 over 12-px blocks); zone luminance picks the variant: light zones → Deep Ocean lockup, dark/navy zones → Ivory mark + Champagne Gold wordmark",
+    "zones": "dark flat UI zone (phone screen header)",
+    "placements": [
+     {
+      "x": 398,
+      "y": 374,
+      "w": 81,
+      "h": 17,
+      "variant": "Ivory / Champagne Gold (reversed)",
+      "zone": {
+       "x": 382,
+       "y": 367,
+       "w": 113,
+       "h": 295,
+       "lum": 14.60507583618164,
+       "rgb": [
+        0,
+        17,
+        37
+       ],
+       "fill": 0.49
       }
      }
     ]
@@ -400,40 +1190,133 @@
   },
   {
    "id": "render-laptop-phone-dashboard",
-   "group": "product",
-   "file": "product/render-laptop-phone-dashboard.7bbdfc6108.webp",
-   "bytes": 80834,
-   "sha256": "7bbdfc610850e9ce04e831899a579b627a2e4cfcd75d392a76e2871b138de3a7",
-   "w": 1400,
-   "h": 933,
-   "label": "CONCEPT RENDER · ILLUSTRATIVE",
+   "group": "gallery",
+   "file": "gallery/render-laptop-phone-dashboard.84b9679ee2.jpg",
+   "bytes": 168260,
+   "sha256": "84b9679ee240c4f86289f282a9c9c6f394fe4b06c00d376bef70651a18badff7",
+   "w": 1536,
+   "h": 1024,
+   "role": "jpg",
+   "setId": "render-laptop-phone-dashboard",
+   "label": "CONCEPT RENDER",
    "kind": "render",
    "caption": {
     "en": "Laptop + phone dashboard — official logo composited onto the dark UI header area",
-    "ar": "لوحة تحكم على حاسوب محمول وهاتف — الشعار الرسمي مركّب على رأس الواجهة"
+    "ar": "لوحة تحكم على حاسوب محمول وهاتف — الشعار الرسمي مركّب على رأس الواجهة الداكن"
    },
-   "source": "render-laptop-phone.png (supplementary render, step 4; agents library)",
+   "source": "render-laptop-phone.png (generated render, agents library)",
    "sourceSha256": "70442001d3fb20b2374bf961230b121d9375148fc6e7a2080d8792a1982a6507",
    "logoComposite": {
-    "method": "official horizontal lockup composited onto flat (blank) regions detected programmatically (local std < 3 over 16-px blocks); Deep Ocean on light regions, Ivory/Gold reversed on dark regions",
+    "method": "Pillow alpha_composite of the official horizontal lockup (recoloured from the alpha layer, colours from brand-tokens.json) onto flat blank zones detected deterministically (local std < 3 over 12-px blocks); zone luminance picks the variant: light zones → Deep Ocean lockup, dark/navy zones → Ivory mark + Champagne Gold wordmark",
+    "zones": "dark flat UI zone (phone screen header)",
     "placements": [
      {
-      "x": 402,
-      "y": 505,
-      "w": 74,
-      "h": 16,
-      "variant": "reversed",
-      "region": {
-       "x": 387,
-       "y": 498,
-       "w": 104,
-       "h": 160,
-       "area": 12619,
-       "lum": 14.565258979797363
+      "x": 398,
+      "y": 374,
+      "w": 81,
+      "h": 17,
+      "variant": "Ivory / Champagne Gold (reversed)",
+      "zone": {
+       "x": 382,
+       "y": 367,
+       "w": 113,
+       "h": 295,
+       "lum": 14.60507583618164,
+       "rgb": [
+        0,
+        17,
+        37
+       ],
+       "fill": 0.49
       }
      }
     ]
    }
+  },
+  {
+   "id": "render-brand-background-tile@2x",
+   "group": "gallery",
+   "file": "gallery/render-brand-background-tile@2x.809bc68748.webp",
+   "bytes": 56036,
+   "sha256": "809bc687484777fa155a645e43599f59bd3c2a33c6301b16da4abff8b839fa80",
+   "w": 1536,
+   "h": 1024,
+   "role": "webp2x",
+   "setId": "render-brand-background-tile",
+   "label": "CONCEPT RENDER",
+   "kind": "render",
+   "caption": {
+    "en": "Abstract brand background tile — the Section 10 backdrop",
+    "ar": "بلاطة خلفية تجريدية — خلفية القسم 10"
+   },
+   "source": "render-brand-tile.png (generated render, agents library)",
+   "sourceSha256": "0d7141f2913befade393a3b1064f920ed1836d58dc73c88b324a09fe118cf4a0"
+  },
+  {
+   "id": "render-brand-background-tile@1x",
+   "group": "gallery",
+   "file": "gallery/render-brand-background-tile@1x.ee209d46ad.webp",
+   "bytes": 20730,
+   "sha256": "ee209d46ade0957341318a3e0a45afb7ffcc8cac411b7566c4321625dd563e65",
+   "w": 800,
+   "h": 533,
+   "role": "webp1x",
+   "setId": "render-brand-background-tile",
+   "label": "CONCEPT RENDER",
+   "kind": "render",
+   "caption": {
+    "en": "Abstract brand background tile — the Section 10 backdrop",
+    "ar": "بلاطة خلفية تجريدية — خلفية القسم 10"
+   },
+   "source": "render-brand-tile.png (generated render, agents library)",
+   "sourceSha256": "0d7141f2913befade393a3b1064f920ed1836d58dc73c88b324a09fe118cf4a0"
+  },
+  {
+   "id": "render-brand-background-tile",
+   "group": "gallery",
+   "file": "gallery/render-brand-background-tile.8a8130beab.jpg",
+   "bytes": 127732,
+   "sha256": "8a8130beabbb8945569450ba7425b58ddce880f0e04fe83aebd476035240cf02",
+   "w": 1536,
+   "h": 1024,
+   "role": "jpg",
+   "setId": "render-brand-background-tile",
+   "label": "CONCEPT RENDER",
+   "kind": "render",
+   "caption": {
+    "en": "Abstract brand background tile — the Section 10 backdrop",
+    "ar": "بلاطة خلفية تجريدية — خلفية القسم 10"
+   },
+   "source": "render-brand-tile.png (generated render, agents library)",
+   "sourceSha256": "0d7141f2913befade393a3b1064f920ed1836d58dc73c88b324a09fe118cf4a0"
+  },
+  {
+   "id": "IBMPlexSans-Medium",
+   "group": "fonts",
+   "file": "fonts/IBMPlexSans-Medium.f6a8a187ac.woff2",
+   "bytes": 18940,
+   "sha256": "f6a8a187ac0ad6ed50f4001fe3d5dd779a1576706939f0d1cae3f9de0f3b0f55",
+   "family": "IBM Plex Sans",
+   "weight": 500,
+   "style": "normal",
+   "glyphs": 298,
+   "subset": "latin",
+   "licence": "SIL Open Font License 1.1",
+   "source": "github.com/google/fonts (main) ofl/ibmplexsans/IBMPlexSans[wdth,wght].ttf (instanced wght=500, wdth=100)"
+  },
+  {
+   "id": "IBMPlexSansArabic-Medium",
+   "group": "fonts",
+   "file": "fonts/IBMPlexSansArabic-Medium.d10159458e.woff2",
+   "bytes": 51904,
+   "sha256": "d10159458e8cfdb840f2b1463f90167a5be57393a7bdaa400fde553d30e52d2b",
+   "family": "IBM Plex Sans Arabic",
+   "weight": 500,
+   "style": "normal",
+   "glyphs": 1685,
+   "subset": "full (Arabic + Latin)",
+   "licence": "SIL Open Font License 1.1",
+   "source": "github.com/google/fonts (main) ofl/ibmplexsansarabic/IBMPlexSansArabic-Medium.ttf"
   },
   {
    "id": "CormorantGaramond-Light",

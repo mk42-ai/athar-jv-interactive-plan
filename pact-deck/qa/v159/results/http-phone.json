@@ -1,6 +1,6 @@
 {
- "base": "http://127.0.0.1:4171",
- "written": "2026-10-04T10:19:31.989Z",
+ "base": "http://127.0.0.1:4172",
+ "written": "2026-10-04T12:31:18.823Z",
  "rows": [
   {
    "url": "/audio/guide/guide-00-welcome-lhbIUXFwLO.mp3",
@@ -288,22 +288,22 @@
    "type": "audio/mpeg"
   },
   {
-   "url": "/audio/guide/slides/NAR-s48-s-brand-assets.ar.mp3",
+   "url": "/audio/guide/slides/NAR-s50-s-brand-foundations.ar.mp3",
    "status": 200,
    "type": "audio/mpeg"
   },
   {
-   "url": "/audio/guide/slides/NAR-s48-s-brand-assets.mp3",
+   "url": "/audio/guide/slides/NAR-s50-s-brand-foundations.mp3",
    "status": 200,
    "type": "audio/mpeg"
   },
   {
-   "url": "/audio/guide/slides/NAR-s49-s-brand-product.ar.mp3",
+   "url": "/audio/guide/slides/NAR-s51-s-brand-gallery.ar.mp3",
    "status": 200,
    "type": "audio/mpeg"
   },
   {
-   "url": "/audio/guide/slides/NAR-s49-s-brand-product.mp3",
+   "url": "/audio/guide/slides/NAR-s51-s-brand-gallery.mp3",
    "status": 200,
    "type": "audio/mpeg"
   },
@@ -359,14 +359,14 @@
    "status": 200,
    "type": "text/javascript; charset=utf-8",
    "bytes": 8940,
-   "sha256": "a1450f929324784ecd689f8016605d583ba23af34edba814cb7a705af34e627f"
+   "sha256": "21c1a51e22b28699add7d183e86d1c1bd2e35719a75ca4eac9cdcd72af96d3d3"
   },
   {
    "url": "/js/exec-film-player.js",
    "status": 200,
    "type": "text/javascript; charset=utf-8",
    "bytes": 11152,
-   "sha256": "b88649258413a35702f44422fdf4d4ad69ce300708c7408d14e33ecc40245900"
+   "sha256": "20ffd3db9ae851e7d53ce058ba6639946e7992cae9b64363346876c19de924aa"
   },
   {
    "url": "/assets/exec-film-player.css",
@@ -380,7 +380,7 @@
    "status": 200,
    "type": "application/json; charset=utf-8",
    "bytes": 7902,
-   "sha256": "b6474c9d139d2f6a6bba6d2f416dc383aa3ef1c88f317081707bce968b0fe54e"
+   "sha256": "e5a02ec443c1d3d498e12ed1edaad3bf217e85a7ec7b0636240cea017d8b9685"
   },
   {
    "url": "/js/exec-film.js",

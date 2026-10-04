@@ -1,8 +1,8 @@
 {
- "base": "http://127.0.0.1:4171",
- "version": "1.7.1",
- "expectCommit": "4ea5cc03f7de0061996946e129a00d6c32a2500f",
- "written": "2026-10-04T10:08:09.469Z",
+ "base": "http://127.0.0.1:4172",
+ "version": "1.7.2",
+ "expectCommit": "ef50223325247b1cef452ecf3365c5d163b1b164",
+ "written": "2026-10-04T12:20:11.846Z",
  "rows": [
   {
    "key": "mp4",
@@ -59,10 +59,10 @@
    "sha256": "77f5e0717d67a5aee86f873c6b2884a8fe6948fbf9c68d1a0eba819449b22c80"
   },
   {
-   "servedCommit": "4ea5cc03f7de0061996946e129a00d6c32a2500f",
-   "expectCommit": "4ea5cc03f7de0061996946e129a00d6c32a2500f",
-   "servedVersion": "1.7.1",
-   "builtAt": "2026-10-04T10:01:52.996Z",
+   "servedCommit": "ef50223325247b1cef452ecf3365c5d163b1b164",
+   "expectCommit": "ef50223325247b1cef452ecf3365c5d163b1b164",
+   "servedVersion": "1.7.2",
+   "builtAt": "2026-10-04T12:07:41.348Z",
    "lorenzo": {
     "id": "lorenzo",
     "status": "shipped",

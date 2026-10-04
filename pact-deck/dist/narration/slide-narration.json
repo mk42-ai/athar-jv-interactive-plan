@@ -1,6 +1,6 @@
 {
  "schema": "athar.narration.slides/1",
- "version": "1.7.1",
+ "version": "1.7.2",
  "generated_utc": "2026-10-01T14:00:00Z",
  "keyedBy": "data-slide-id (stable section id) — never by slide index",
  "voice": "George - Warm, Captivating Storyteller",
@@ -2433,10 +2433,119 @@
   },
   {
    "n": 46,
+   "slideId": "s-brand-foundations",
+   "clipId": "NAR-s50",
+   "section": "10 Brand",
+   "sectionAr": "10 الهوية",
+   "file": "/audio/guide/slides/NAR-s50-s-brand-foundations.mp3",
+   "bytes": 646208,
+   "sha256": "e5e54164f05894b137bb067f4de2dc7b8c3e172c63d9d338e53623199d1221eb",
+   "durationSec": 40.359,
+   "source": {
+    "type": "tts",
+    "provider": "ElevenLabs textToSpeech (On Demand 'Elevan Labs Agent' plugin)",
+    "voice": "George (JBFqnCBsd6RMkjVDRZzb)",
+    "modelRequested": "eleven_multilingual_v2",
+    "languageCode": "en",
+    "generationRef": "KhCEzjPjoq",
+    "generatedUtc": "2026-10-04T11:42Z",
+    "storedAs": "downloaded into the repo — no SAS hotlink",
+    "textSource": "section 10 slide copy (brand guidelines ch. 2–4; v1.0 token set; moodboard tone lines; avatar system board)",
+    "contentCheck": "ElevenLabs Scribe (speechToText, scribe_v1, language en) on the rendered clip — normalised word error rate 0.038 (104 script words / 103 transcribed)",
+    "sttTranscript": "Brand foundations. One mark, the official horizontal lockup with the Arabic Athar kept clear on every side by the cap height of the wordmark and never set below forty millimeters or one hundred and sixty pixels. The color system comes from the brand tokens, sovereign navy, the deep ocean of trust and stability, sand off-white, the ivory of clarity, heritage gold, the champagne accent of progress, trace cyan for the agent's trace line, and charcoal ink for text with emerald and sand as mood board accents. Three lines carry the tone, intelligence for a brighter tomorrow, people, places, progress, a more lasting impact.",
+    "cueTiming": "sentence boundaries from Scribe word timestamps (first/last word of each script sentence)"
+   },
+   "text": "Brand foundations. One mark: the official horizontal lockup with the Arabic Athar, kept clear on every side by the cap height of the wordmark and never set below forty millimetres or one hundred and sixty pixels. The colour system comes from the brand tokens: Sovereign Navy, the deep ocean of trust and stability; Sand Off-White, the ivory of clarity; Heritage Gold, the champagne accent of progress; Trace Cyan for the agent's trace line; and Charcoal Ink for text, with Emerald and Sand as moodboard accents. Three lines carry the tone: intelligence for a brighter tomorrow; people, places, progress; a more lasting impact.",
+   "cues": [
+    {
+     "i": 1,
+     "text": "Brand foundations.",
+     "start": 0.0,
+     "end": 1.16,
+     "anchor": "s46-c1"
+    },
+    {
+     "i": 2,
+     "text": "One mark: the official horizontal lockup with the Arabic Athar, kept clear on every side by the cap height of the wordmark and never set below forty millimetres or one hundred and sixty pixels.",
+     "start": 1.54,
+     "end": 12.36,
+     "anchor": "s46-c2"
+    },
+    {
+     "i": 3,
+     "text": "The colour system comes from the brand tokens: Sovereign Navy, the deep ocean of trust and stability; Sand Off-White, the ivory of clarity; Heritage Gold, the champagne accent of progress; Trace Cyan for the agent's trace line; and Charcoal Ink for text, with Emerald and Sand as moodboard accents.",
+     "start": 13.06,
+     "end": 32.36,
+     "anchor": "s46-c3"
+    },
+    {
+     "i": 4,
+     "text": "Three lines carry the tone: intelligence for a brighter tomorrow; people, places, progress; a more lasting impact.",
+     "start": 32.94,
+     "end": 39.96,
+     "anchor": "s46-c4"
+    }
+   ],
+   "ar": {
+    "clipId": "NAR-s50-ar",
+    "file": "/audio/guide/slides/NAR-s50-s-brand-foundations.ar.mp3",
+    "bytes": 676302,
+    "sha256": "00afcb5772691ef7a0dfd2b1a03960d1d8ed75b8b8012f21d8ab147f09943146",
+    "durationSec": 42.24,
+    "source": {
+     "type": "tts",
+     "provider": "ElevenLabs textToSpeech (On Demand 'Elevan Labs Agent' plugin)",
+     "voice": "George (JBFqnCBsd6RMkjVDRZzb)",
+     "modelRequested": "eleven_multilingual_v2",
+     "languageCode": "ar",
+     "generationRef": "3Z3dh67exn",
+     "generatedUtc": "2026-10-04T11:43Z",
+     "storedAs": "downloaded into the repo — no SAS hotlink",
+     "textSource": "section 10 slide copy (brand guidelines ch. 2–4; v1.0 token set; moodboard tone lines; avatar system board)",
+     "contentCheck": "ElevenLabs Scribe (speechToText, scribe_v1, language ar) on the rendered clip — normalised word error rate 0.064 (78 script words / 77 transcribed)",
+     "sttTranscript": "أسس الهوية. علامة واحدة، الشعار الأفقي الرسمي مع كلمة أثر، تحيط به مساحة خالية تساوي ارتفاع الحرف الكبير من كل جانب، ولا يستخدم دون 40 ملم أو 160 بكسل. يأتي نظام الألوان من رموز الهوية، الأزرق السيادي محيط الثقة والاستقرار، والعاجي الرملي للوضوح، والذهبي التراثي لمسة التقدم، وسماوي الأثر لخط الوكيل، والحبر الفحمي للنصوص مع الزمردي والرملي لمسات من لوحة المزاج، وثلاثة أسطر تحمل النبرة، ذكاء من أجل غد أكثر إشراقًا، الناس والأماكن والتقدم، أثر أكثر دوامًا.",
+     "cueTiming": "sentence boundaries from Scribe word timestamps (first/last word of each script sentence)"
+    },
+    "text": "أسس الهوية. علامة واحدة: الشعار الأفقي الرسمي مع كلمة أثر، تحيط به مساحة خالية تساوي ارتفاع الحرف الكبير من كل جانب، ولا يُستخدم دون أربعين ملّيمترًا أو مئة وستين بكسلًا. يأتي نظام الألوان من رموز الهوية: الأزرق السيادي، محيطُ الثقة والاستقرار؛ والعاجي الرملي للوضوح؛ والذهبي التراثي لمسةُ التقدّم؛ وسماويّ الأثر لخطّ الوكيل؛ والحبر الفحمي للنصوص، مع الزمرّدي والرملي لمساتٍ من لوحة المزاج. وثلاثة أسطر تحمل النبرة: ذكاء من أجل غدٍ أكثر إشراقًا؛ الناس والأماكن والتقدّم؛ أثرٌ أكثر دوامًا.",
+    "cues": [
+     {
+      "i": 1,
+      "text": "أسس الهوية.",
+      "start": 0.0,
+      "end": 0.84,
+      "anchor": "s46-c1-ar"
+     },
+     {
+      "i": 2,
+      "text": "علامة واحدة: الشعار الأفقي الرسمي مع كلمة أثر، تحيط به مساحة خالية تساوي ارتفاع الحرف الكبير من كل جانب، ولا يُستخدم دون أربعين ملّيمترًا أو مئة وستين بكسلًا.",
+      "start": 1.5,
+      "end": 14.76,
+      "anchor": "s46-c2-ar"
+     },
+     {
+      "i": 3,
+      "text": "يأتي نظام الألوان من رموز الهوية: الأزرق السيادي، محيطُ الثقة والاستقرار؛ والعاجي الرملي للوضوح؛ والذهبي التراثي لمسةُ التقدّم؛ وسماويّ الأثر لخطّ الوكيل؛ والحبر الفحمي للنصوص، مع الزمرّدي والرملي لمساتٍ من لوحة المزاج.",
+      "start": 14.8,
+      "end": 32.82,
+      "anchor": "s46-c3-ar"
+     },
+     {
+      "i": 4,
+      "text": "وثلاثة أسطر تحمل النبرة: ذكاء من أجل غدٍ أكثر إشراقًا؛ الناس والأماكن والتقدّم؛ أثرٌ أكثر دوامًا.",
+      "start": 33.44,
+      "end": 41.9,
+      "anchor": "s46-c4-ar"
+     }
+    ],
+    "note": "the AR deck plays this Arabic clip on this slide (narration.js entry() resolves ar{} when html[lang=ar]); CC/transcript show the Arabic text"
+   }
+  },
+  {
+   "n": 47,
    "slideId": "s-brand-typography",
    "clipId": "NAR-s47",
-   "section": "10 Branding",
-   "sectionAr": "10 الهوية البصرية",
+   "section": "10 Brand",
+   "sectionAr": "10 الهوية",
    "file": "/audio/guide/slides/NAR-s47-s-brand-typography.mp3",
    "bytes": 459381,
    "sha256": "b596a741d845e6eae24c3d0cedccbdb3f281cc34b3e189ac1e65122ca0e24a66",
@@ -2551,219 +2660,125 @@
       "anchor": "s46-c5-ar"
      }
     ],
-    "note": "v1.7.1: the AR deck plays this Arabic clip on this slide (narration.js entry() resolves ar{} when html[lang=ar]); CC/transcript show the Arabic text"
-   }
-  },
-  {
-   "n": 47,
-   "slideId": "s-brand-assets",
-   "clipId": "NAR-s48",
-   "section": "10 Branding",
-   "sectionAr": "10 الهوية البصرية",
-   "file": "/audio/guide/slides/NAR-s48-s-brand-assets.mp3",
-   "bytes": 463978,
-   "sha256": "d2e3c413dfaa79feecc1c1db0ea04f737c112852dd9ad900f0e981aab082f6e4",
-   "durationSec": 28.97,
-   "source": {
-    "type": "tts",
-    "provider": "ElevenLabs textToSpeech (On Demand 'Elevan Labs Agent' plugin)",
-    "voice": "George (JBFqnCBsd6RMkjVDRZzb)",
-    "modelRequested": "eleven_multilingual_v2",
-    "languageCode": "en",
-    "generationRef": "nd8HR3fq6v",
-    "generatedUtc": "2026-10-04T09:25Z",
-    "storedAs": "downloaded into the repo — no SAS hotlink",
-    "textSource": "section 10 slide copy (brand guidelines ch. 2–4 specs; pack README; asset manifest)",
-    "contentCheck": "ElevenLabs Scribe (speechToText, scribe_v1, language en) on the rendered clip — normalised word error rate 0.014 (72 script words / 72 transcribed)",
-    "sttTranscript": "Brand assets. One mark, the official horizontal lockup in five approved colors. Deep ocean and ivory lead, emerald and sand support, and champagne gold is the accent. A rule or a detail, never a field. Clear space is the cap height of the wordmark on all four sides, and the lockup is never stretched, outlined, shadowed, rotated, or placed on a busy photograph. The asset pack lives on Google Drive and SharePoint",
-    "cueTiming": "sentence boundaries from Scribe word timestamps (first/last word of each script sentence)"
-   },
-   "text": "Brand assets. One mark, the official horizontal lockup, in five approved colours: Deep Ocean and Ivory lead, Emerald and Sand support, and Champagne Gold is the accent, a rule or a detail, never a field. Clear space is the cap height of the wordmark on all four sides, and the lockup is never stretched, outlined, shadowed, rotated or placed on a busy photograph. The asset pack lives on Google Drive and SharePoint.",
-   "cues": [
-    {
-     "i": 1,
-     "text": "Brand assets.",
-     "start": 0.0,
-     "end": 0.86,
-     "anchor": "s47-c1"
-    },
-    {
-     "i": 2,
-     "text": "One mark, the official horizontal lockup, in five approved colours: Deep Ocean and Ivory lead, Emerald and Sand support, and Champagne Gold is the accent, a rule or a detail, never a field.",
-     "start": 1.3,
-     "end": 14.42,
-     "anchor": "s47-c2"
-    },
-    {
-     "i": 3,
-     "text": "Clear space is the cap height of the wordmark on all four sides, and the lockup is never stretched, outlined, shadowed, rotated or placed on a busy photograph.",
-     "start": 15.34,
-     "end": 25.1,
-     "anchor": "s47-c3"
-    },
-    {
-     "i": 4,
-     "text": "The asset pack lives on Google Drive and SharePoint.",
-     "start": 25.76,
-     "end": 28.56,
-     "anchor": "s47-c4"
-    }
-   ],
-   "ar": {
-    "clipId": "NAR-s48-ar",
-    "file": "/audio/guide/slides/NAR-s48-s-brand-assets.ar.mp3",
-    "bytes": 530852,
-    "sha256": "632dc68798b8b6720c5f72bf9753d6eab6bdfdef7f2e886fd362c23b5a86b5e0",
-    "durationSec": 33.149,
-    "source": {
-     "type": "tts",
-     "provider": "ElevenLabs textToSpeech (On Demand 'Elevan Labs Agent' plugin)",
-     "voice": "George (JBFqnCBsd6RMkjVDRZzb)",
-     "modelRequested": "eleven_multilingual_v2",
-     "languageCode": "ar",
-     "generationRef": "uGyKs8drL8",
-     "generatedUtc": "2026-10-04T09:27Z",
-     "storedAs": "downloaded into the repo — no SAS hotlink",
-     "textSource": "section 10 slide copy (brand guidelines ch. 2–4 specs; pack README; asset manifest)",
-     "contentCheck": "ElevenLabs Scribe (speechToText, scribe_v1, language ar) on the rendered clip — normalised word error rate 0.049 (61 script words / 61 transcribed)",
-     "sttTranscript": "أصول الهوية. علامة واحدة هي الشعار الأفقي الرسمي بخمسة ألوان معتمدة. المحيط العميق والعاجي يتصدران، والزمردي والرملي يساندان، والذهبي الشمباني لمسة تأكيد. خط أو تفصيل، لا مساحة أبدًا. المساحة الخالية تساوي ارتفاع الحرف الكبير في الاسم من الجهات الأربع، ولا يمدد الشعار، ولا يحدد بخط، ولا يظلل، ولا يدار، ولا يوضع فوق صورة مزدحمة. وتحفظ حزمة الأصول على Google Drive وSharePoint.",
-     "cueTiming": "sentence boundaries from Scribe word timestamps (first/last word of each script sentence)"
-    },
-    "text": "أصول الهوية. علامة واحدة، هي الشعار الأفقي الرسمي، بخمسة ألوان معتمدة: المحيط العميق والعاجي يتصدّران، والزمرّدي والرملي يساندان، والذهبي الشمبانيّ لمسةُ تأكيد، خطٌّ أو تفصيل، لا مساحةٌ أبدًا. المساحة الخالية تساوي ارتفاع الحرف الكبير في الاسم من الجهات الأربع، ولا يُمدَّد الشعار ولا يُحدَّد بخط ولا يُظلَّل ولا يُدار ولا يوضع فوق صورة مزدحمة. وتُحفظ حزمة الأصول على غوغل درايف وشيربوينت.",
-    "cues": [
-     {
-      "i": 1,
-      "text": "أصول الهوية.",
-      "start": 0.0,
-      "end": 0.88,
-      "anchor": "s47-c1-ar"
-     },
-     {
-      "i": 2,
-      "text": "علامة واحدة، هي الشعار الأفقي الرسمي، بخمسة ألوان معتمدة: المحيط العميق والعاجي يتصدّران، والزمرّدي والرملي يساندان، والذهبي الشمبانيّ لمسةُ تأكيد، خطٌّ أو تفصيل، لا مساحةٌ أبدًا.",
-      "start": 1.3,
-      "end": 15.88,
-      "anchor": "s47-c2-ar"
-     },
-     {
-      "i": 3,
-      "text": "المساحة الخالية تساوي ارتفاع الحرف الكبير في الاسم من الجهات الأربع، ولا يُمدَّد الشعار ولا يُحدَّد بخط ولا يُظلَّل ولا يُدار ولا يوضع فوق صورة مزدحمة.",
-      "start": 16.24,
-      "end": 28.08,
-      "anchor": "s47-c3-ar"
-     },
-     {
-      "i": 4,
-      "text": "وتُحفظ حزمة الأصول على غوغل درايف وشيربوينت.",
-      "start": 28.7,
-      "end": 32.8,
-      "anchor": "s47-c4-ar"
-     }
-    ],
-    "note": "v1.7.1: the AR deck plays this Arabic clip on this slide (narration.js entry() resolves ar{} when html[lang=ar]); CC/transcript show the Arabic text"
+    "note": "the AR deck plays this Arabic clip on this slide"
    }
   },
   {
    "n": 48,
-   "slideId": "s-brand-product",
-   "clipId": "NAR-s49",
-   "section": "10 Branding",
-   "sectionAr": "10 الهوية البصرية",
-   "file": "/audio/guide/slides/NAR-s49-s-brand-product.mp3",
-   "bytes": 361578,
-   "sha256": "6f6b01a045b88f0d868bef5abd23542ad6034b12cb600a24b9c9ad176fd76e0c",
-   "durationSec": 22.57,
+   "slideId": "s-brand-gallery",
+   "clipId": "NAR-s51",
+   "section": "10 Brand",
+   "sectionAr": "10 الهوية",
+   "file": "/audio/guide/slides/NAR-s51-s-brand-gallery.mp3",
+   "bytes": 655822,
+   "sha256": "605790ab73429c2eee2f5d89c92131cb51abe8cc5ca278b62d8c231efbcbf095",
+   "durationSec": 40.96,
    "source": {
     "type": "tts",
     "provider": "ElevenLabs textToSpeech (On Demand 'Elevan Labs Agent' plugin)",
     "voice": "George (JBFqnCBsd6RMkjVDRZzb)",
     "modelRequested": "eleven_multilingual_v2",
     "languageCode": "en",
-    "generationRef": "A1Qx2R5jqN",
-    "generatedUtc": "2026-10-04T09:25Z",
+    "generationRef": "00h6EWGleY",
+    "generatedUtc": "2026-10-04T11:42Z",
     "storedAs": "downloaded into the repo — no SAS hotlink",
-    "textSource": "section 10 slide copy (brand guidelines ch. 2–4 specs; pack README; asset manifest)",
-    "contentCheck": "ElevenLabs Scribe (speechToText, scribe_v1, language en) on the rendered clip — normalised word error rate 0.000 (55 script words / 55 transcribed)",
-    "sttTranscript": "Product assets. Wireframes and real screens from the web app in English and Arabic, light and dark. Captures from this deck. The product film still, and the concept renders for India, Kenya, and Lebanon. Every tile carries its source, pack asset, film still, or concept render, so nothing illustrative is mistaken for a delivered product",
+    "textSource": "section 10 slide copy (brand guidelines ch. 2–4; v1.0 token set; moodboard tone lines; avatar system board)",
+    "contentCheck": "ElevenLabs Scribe (speechToText, scribe_v1, language en) on the rendered clip — normalised word error rate 0.042 (96 script words / 91 transcribed)",
+    "sttTranscript": "Product and asset gallery. Six agent personas: guide, clerk, scout, tutor, translator, and steward, each with an Arabic name drawn at ninety-six, forty-eight, and twenty-four pixels, and four states: idle, thinking, awaiting human approval, and done. Around them sit the concept renders, the reception kiosk, the laptop and phone dashboard, the stationary flatlay carrying the composited logo, the brand tile, the India and Kenya renders from slide thirty-eight, and the wireframes and screens of the web app in English and Arabic. Every image is labeled by source. Concept renders are illustrative.",
     "cueTiming": "sentence boundaries from Scribe word timestamps (first/last word of each script sentence)"
    },
-   "text": "Product assets. Wireframes and real screens from the web app, in English and Arabic, light and dark; captures from this deck; the product-film still; and the concept renders for India, Kenya and Lebanon. Every tile carries its source, pack asset, film still or concept render, so nothing illustrative is mistaken for a delivered product.",
+   "text": "Product and asset gallery. Six agent personas, Guide, Clerk, Scout, Tutor, Translator and Steward, each with an Arabic name, drawn at ninety-six, forty-eight and twenty-four pixels, and four states: idle, thinking, awaiting human approval, and done. Around them sit the concept renders: the reception kiosk, the laptop and phone dashboard, the stationery flat-lay carrying the composited logo, the brand tile, the India and Kenya renders from slide thirty-eight, and the wireframes and screens of the web app in English and Arabic. Every image is labelled by source; concept renders are illustrative.",
    "cues": [
     {
      "i": 1,
-     "text": "Product assets.",
+     "text": "Product and asset gallery.",
      "start": 0.0,
-     "end": 1.02,
+     "end": 1.48,
      "anchor": "s48-c1"
     },
     {
      "i": 2,
-     "text": "Wireframes and real screens from the web app, in English and Arabic, light and dark; captures from this deck; the product-film still; and the concept renders for India, Kenya and Lebanon.",
-     "start": 1.6,
-     "end": 13.56,
+     "text": "Six agent personas, Guide, Clerk, Scout, Tutor, Translator and Steward, each with an Arabic name, drawn at ninety-six, forty-eight and twenty-four pixels, and four states: idle, thinking, awaiting human approval, and done.",
+     "start": 2.14,
+     "end": 19.0,
      "anchor": "s48-c2"
     },
     {
      "i": 3,
-     "text": "Every tile carries its source, pack asset, film still or concept render, so nothing illustrative is mistaken for a delivered product.",
-     "start": 14.4,
-     "end": 22.2,
+     "text": "Around them sit the concept renders: the reception kiosk, the laptop and phone dashboard, the stationery flat-lay carrying the composited logo, the brand tile, the India and Kenya renders from slide thirty-eight, and the wireframes and screens of the web app in English and Arabic.",
+     "start": 19.04,
+     "end": 37.1,
      "anchor": "s48-c3"
+    },
+    {
+     "i": 4,
+     "text": "Every image is labelled by source; concept renders are illustrative.",
+     "start": 37.16,
+     "end": 40.56,
+     "anchor": "s48-c4"
     }
    ],
    "ar": {
-    "clipId": "NAR-s49-ar",
-    "file": "/audio/guide/slides/NAR-s49-s-brand-product.ar.mp3",
-    "bytes": 379968,
-    "sha256": "2734e2f4efcbf6975edb3ea1d7953a1448ff8043eec25c655257e387b862d036",
-    "durationSec": 23.719,
+    "clipId": "NAR-s51-ar",
+    "file": "/audio/guide/slides/NAR-s51-s-brand-gallery.ar.mp3",
+    "bytes": 659583,
+    "sha256": "6633fc9f683992582894d96620b27e7ab460bf4856b603b9782066bb59cc0b3f",
+    "durationSec": 41.195,
     "source": {
      "type": "tts",
      "provider": "ElevenLabs textToSpeech (On Demand 'Elevan Labs Agent' plugin)",
      "voice": "George (JBFqnCBsd6RMkjVDRZzb)",
      "modelRequested": "eleven_multilingual_v2",
      "languageCode": "ar",
-     "generationRef": "pg0oCUiXiE",
-     "generatedUtc": "2026-10-04T09:27Z",
+     "generationRef": "6DAAZ12PNS",
+     "generatedUtc": "2026-10-04T11:43Z",
      "storedAs": "downloaded into the repo — no SAS hotlink",
-     "textSource": "section 10 slide copy (brand guidelines ch. 2–4 specs; pack README; asset manifest)",
-     "contentCheck": "ElevenLabs Scribe (speechToText, scribe_v1, language ar) on the rendered clip — normalised word error rate 0.043 (47 script words / 47 transcribed)",
-     "sttTranscript": "أصول المنتج: إطارات سلكية وشاشات حقيقية من تطبيق الويب بالإنجليزية والعربية، فاتحة وداكنة، ولقطات من هذا العرض، ولقطة من فيلم المنتج، وتصويرات مفاهيمية للهند وكينيا ولبنان. كل بلاطة تحمل مصدرها، أصل من الحزمة أو لقطة فيلم أو تصوير مفاهيمي حتى لا يلتبس أي عنصر توضيحي بمنتج مسلم.",
+     "textSource": "section 10 slide copy (brand guidelines ch. 2–4; v1.0 token set; moodboard tone lines; avatar system board)",
+     "contentCheck": "ElevenLabs Scribe (speechToText, scribe_v1, language ar) on the rendered clip — normalised word error rate 0.046 (65 script words / 65 transcribed)",
+     "sttTranscript": "معرض المنتج والأصول، ست شخصيات للوكلاء، المرشد والكاتب والكاشف والمعلم والمترجم والأمين، لكل اسمه العربي، بأحجام ستة وتسعين وثمانية وأربعين وأربعة وعشرين، بكسلاً وأربع حالات، ساكن ويفكر، وبانتظار موافقة الإنسان ومكتمل، وحولها التصويرات المفاهيمية، كشك الاستقبال، ولوحة الحاسوب والهاتف، ومجموعة القرطاسية بالشعار المركب، وبلاطة الهوية، وتصوير الهند وكينيا من الشريحة ثمانٍ وثلاثين، وإطارات وشاشات تطبيق الويب بالإنجليزية والعربية، كل صورة موسومة بمصدرها، والتصويرات المفاهيمية توضيحية.",
      "cueTiming": "sentence boundaries from Scribe word timestamps (first/last word of each script sentence)"
     },
-    "text": "أصول المنتج. إطارات سلكية وشاشات حقيقية من تطبيق الويب، بالإنجليزية والعربية، فاتحة وداكنة؛ ولقطات من هذا العرض؛ ولقطة من فيلم المنتج؛ وتصييرات مفاهيمية للهند وكينيا ولبنان. كل بلاطة تحمل مصدرها، أصل من الحزمة أو لقطة فيلم أو تصيير مفاهيمي، حتى لا يُلتبس أي عنصر توضيحي بمنتج مُسلَّم.",
+    "text": "معرض المنتج والأصول. ستّ شخصيات للوكلاء، المرشد والكاتب والكاشف والمعلّم والمترجم والأمين، لكلٍّ اسمه العربي، بأحجام ستة وتسعين وثمانية وأربعين وأربعة وعشرين بكسلًا، وأربع حالات: ساكن، ويفكّر، وبانتظار موافقة الإنسان، ومكتمل. وحولها التصييرات المفاهيمية: كشك الاستقبال، ولوحة الحاسوب والهاتف، ومجموعة القرطاسية بالشعار المركّب، وبلاطة الهوية، وتصييرا الهند وكينيا من الشريحة ثمانٍ وثلاثين، وإطارات وشاشات تطبيق الويب بالإنجليزية والعربية. كل صورة موسومة بمصدرها؛ والتصييرات المفاهيمية توضيحية.",
     "cues": [
      {
       "i": 1,
-      "text": "أصول المنتج.",
+      "text": "معرض المنتج والأصول.",
       "start": 0.0,
-      "end": 0.86,
+      "end": 1.42,
       "anchor": "s48-c1-ar"
      },
      {
       "i": 2,
-      "text": "إطارات سلكية وشاشات حقيقية من تطبيق الويب، بالإنجليزية والعربية، فاتحة وداكنة؛ ولقطات من هذا العرض؛ ولقطة من فيلم المنتج؛ وتصييرات مفاهيمية للهند وكينيا ولبنان.",
-      "start": 1.28,
-      "end": 14.2,
+      "text": "ستّ شخصيات للوكلاء، المرشد والكاتب والكاشف والمعلّم والمترجم والأمين، لكلٍّ اسمه العربي، بأحجام ستة وتسعين وثمانية وأربعين وأربعة وعشرين بكسلًا، وأربع حالات: ساكن، ويفكّر، وبانتظار موافقة الإنسان، ومكتمل.",
+      "start": 1.78,
+      "end": 18.52,
       "anchor": "s48-c2-ar"
      },
      {
       "i": 3,
-      "text": "كل بلاطة تحمل مصدرها، أصل من الحزمة أو لقطة فيلم أو تصيير مفاهيمي، حتى لا يُلتبس أي عنصر توضيحي بمنتج مُسلَّم.",
-      "start": 14.58,
-      "end": 23.42,
+      "text": "وحولها التصييرات المفاهيمية: كشك الاستقبال، ولوحة الحاسوب والهاتف، ومجموعة القرطاسية بالشعار المركّب، وبلاطة الهوية، وتصييرا الهند وكينيا من الشريحة ثمانٍ وثلاثين، وإطارات وشاشات تطبيق الويب بالإنجليزية والعربية.",
+      "start": 18.9,
+      "end": 35.66,
       "anchor": "s48-c3-ar"
+     },
+     {
+      "i": 4,
+      "text": "كل صورة موسومة بمصدرها؛ والتصييرات المفاهيمية توضيحية.",
+      "start": 36.16,
+      "end": 40.82,
+      "anchor": "s48-c4-ar"
      }
     ],
-    "note": "v1.7.1: the AR deck plays this Arabic clip on this slide (narration.js entry() resolves ar{} when html[lang=ar]); CC/transcript show the Arabic text"
+    "note": "the AR deck plays this Arabic clip on this slide (narration.js entry() resolves ar{} when html[lang=ar]); CC/transcript show the Arabic text"
    }
   }
  ],
  "verifiedBy": "ElevenLabs Scribe (speechToText, model scribe_v1 requested, language en) on every per-slide clip",
  "notes": [
-  "v1.7.1: slides 46–48 (section 10 Branding: Typography, Brand assets, Product assets) — clip ids NAR-s47 / NAR-s48 / NAR-s49 (NAR-s46 stays Lorenzo). Each entry carries an ar{} block with its own Arabic George clip (eleven_multilingual_v2, language ar), Scribe-verified; the AR deck plays the Arabic clip on these slides.",
+  "v1.7.2: section 10 re-cut as Brand — 46 Brand foundations (NAR-s50 EN + AR, new), 47 Typography (NAR-s47 EN + AR, re-homed from slide 46), 48 Product & asset gallery (NAR-s51 EN + AR, new); NAR-s48 / NAR-s49 (v1.7.1 Brand assets / Product assets) retired with their files. Every clip Scribe-verified with word timestamps.",
   "v1.5.8: slides 40–44 (section 09 Executive Team: intro, Fahad Al Ameri, Ary Ferreira da Cunha, Muhammed Khalid, Kayaan K. Unwalla). Ary's clip is NAR-s45 (a new id — NAR-s41 stays retired with the former Letter 1); the following entries were renumbered n 42→43 and 43→44 (clip ids keep their numbers). Ary's role rests on his own LinkedIn profile (no independent UAE government source) — the card is tagged \"for clearance by office\".",
   "v1.5.7: slides 40–43 (section 09 Executive Team: intro, Fahad Al Ameri, Muhammed Khalid, Kayaan K. Unwalla). The former slide 41 (Letter 1) and its clip NAR-s41 were removed and the following slides renumbered — clip ids keep their original numbers (NAR-s42 = slide 41, NAR-s43 = slide 42, NAR-s44 = slide 43). NAR-s43 was trimmed to drop its last sentence because the CEO film is disabled. The hidden card (Lorenzo) is not narrated.",
-  "v1.5.9: NAR-s43 (s-exec-khalid) restored to the untrimmed v1.5.6 clip (20.92 s, 4 cues) — the Origins of Impact film is back on the CEO card (press-to-play); every other entry unchanged."
+  "v1.5.9: NAR-s43 (s-exec-khalid) restored to the untrimmed v1.5.6 clip (20.92 s, 4 cues) — the Origins of Impact film is back on the CEO card (press-to-play); every other entry unchanged.",
+  "v1.7.1: slides 46–48 (section 10 Branding: Typography, Brand assets, Product assets) — clip ids NAR-s47 / NAR-s48 / NAR-s49 (NAR-s46 stays Lorenzo). Each entry carries an ar{} block with its own Arabic George clip (eleven_multilingual_v2, language ar), Scribe-verified; the AR deck plays the Arabic clip on these slides."
  ]
 }

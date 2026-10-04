@@ -1,6 +1,6 @@
 {
- "base": "http://127.0.0.1:4171",
- "written": "2026-10-04T10:17:25.411Z",
+ "base": "http://127.0.0.1:4172",
+ "written": "2026-10-04T12:29:09.580Z",
  "rows": [
   {
    "lang": "en",
@@ -275,19 +275,19 @@
   {
    "lang": "en",
    "n": 46,
-   "id": "s-brand-typography",
+   "id": "s-brand-foundations",
    "errors": 0
   },
   {
    "lang": "en",
    "n": 47,
-   "id": "s-brand-assets",
+   "id": "s-brand-typography",
    "errors": 0
   },
   {
    "lang": "en",
    "n": 48,
-   "id": "s-brand-product",
+   "id": "s-brand-gallery",
    "errors": 0
   },
   {
@@ -563,19 +563,19 @@
   {
    "lang": "ar",
    "n": 46,
-   "id": "s-brand-typography",
+   "id": "s-brand-foundations",
    "errors": 0
   },
   {
    "lang": "ar",
    "n": 47,
-   "id": "s-brand-assets",
+   "id": "s-brand-typography",
    "errors": 0
   },
   {
    "lang": "ar",
    "n": 48,
-   "id": "s-brand-product",
+   "id": "s-brand-gallery",
    "errors": 0
   }
  ]

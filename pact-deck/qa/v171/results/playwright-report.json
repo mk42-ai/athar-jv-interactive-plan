@@ -90,13 +90,13 @@
       "specs": [],
       "suites": [
         {
-          "title": "v1.7.1 section 10 Branding",
+          "title": "v1.7.2 section 10 Brand (qa/v171 re-based on the v1.7.2 section: 46 Foundations · 47 Typography · 48 Gallery)",
           "file": "v171.spec.mjs",
-          "line": 34,
+          "line": 40,
           "column": 6,
           "specs": [
             {
-              "title": "release metadata: version everywhere, 48 narration rows (46–48 EN + AR, Scribe-verified), 25 content-hashed brand assets in SHA256SUMS, palette HEX == brand-tokens.json, no PDF/DOCX in dist",
+              "title": "release metadata: version everywhere, 48 narration rows (46–48 EN + AR, Scribe-verified), 47 hashed brand assets / 9 gallery sets / 7 fonts in SHA256SUMS, colour system == token file by name, no PDF/DOCX in dist",
               "ok": true,
               "tags": [],
               "tests": [
@@ -111,12 +111,12 @@
                       "workerIndex": 0,
                       "parallelIndex": 0,
                       "status": "passed",
-                      "duration": 192,
+                      "duration": 225,
                       "errors": [],
                       "stdout": [],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2026-10-04T10:02:50.005Z",
+                      "startTime": "2026-10-04T12:14:29.089Z",
                       "annotations": [],
                       "attachments": []
                     }
@@ -134,12 +134,12 @@
                       "workerIndex": 2,
                       "parallelIndex": 1,
                       "status": "passed",
-                      "duration": 212,
+                      "duration": 263,
                       "errors": [],
                       "stdout": [],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2026-10-04T10:03:06.749Z",
+                      "startTime": "2026-10-04T12:14:46.768Z",
                       "annotations": [],
                       "attachments": []
                     }
@@ -147,13 +147,13 @@
                   "status": "expected"
                 }
               ],
-              "id": "111cb7cc7ad174384dcc-d499c4ce3bc5746c777d",
+              "id": "111cb7cc7ad174384dcc-c99840cae60c338fd864",
               "file": "v171.spec.mjs",
-              "line": 35,
+              "line": 41,
               "column": 3
             },
             {
-              "title": "slide 46 s-brand-typography EN (cache disabled): active, counter 46 of 48, brand fonts loaded or fallback note; screenshot",
+              "title": "slide 46 s-brand-foundations EN (cache disabled): active, counter 46 of 48, lockups + colour system == tokens + tone lines; screenshot",
               "ok": true,
               "tags": [],
               "tests": [
@@ -168,12 +168,12 @@
                       "workerIndex": 1,
                       "parallelIndex": 1,
                       "status": "passed",
-                      "duration": 3910,
+                      "duration": 3870,
                       "errors": [],
                       "stdout": [],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2026-10-04T10:02:49.984Z",
+                      "startTime": "2026-10-04T12:14:29.101Z",
                       "annotations": [],
                       "attachments": []
                     }
@@ -191,12 +191,12 @@
                       "workerIndex": 2,
                       "parallelIndex": 1,
                       "status": "passed",
-                      "duration": 3727,
+                      "duration": 3582,
                       "errors": [],
                       "stdout": [],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2026-10-04T10:03:07.013Z",
+                      "startTime": "2026-10-04T12:14:47.084Z",
                       "annotations": [],
                       "attachments": []
                     }
@@ -204,13 +204,13 @@
                   "status": "expected"
                 }
               ],
-              "id": "111cb7cc7ad174384dcc-ddc5b22b3fead6e9a302",
+              "id": "111cb7cc7ad174384dcc-f79e90ba231cedfcf3a3",
               "file": "v171.spec.mjs",
-              "line": 70,
-              "column": 69
+              "line": 76,
+              "column": 75
             },
             {
-              "title": "slide 47 s-brand-assets EN (cache disabled): active, counter 47 of 48, palette HEX == tokens, lockups, clear space, misuse, pack; screenshot",
+              "title": "slide 47 s-brand-typography EN (cache disabled): active, counter 47 of 48, both brand font families loaded (document.fonts.check) + specimen; screenshot",
               "ok": true,
               "tags": [],
               "tests": [
@@ -225,12 +225,12 @@
                       "workerIndex": 0,
                       "parallelIndex": 0,
                       "status": "passed",
-                      "duration": 3987,
+                      "duration": 3852,
                       "errors": [],
                       "stdout": [],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2026-10-04T10:02:50.242Z",
+                      "startTime": "2026-10-04T12:14:29.356Z",
                       "annotations": [],
                       "attachments": []
                     }
@@ -248,12 +248,12 @@
                       "workerIndex": 2,
                       "parallelIndex": 1,
                       "status": "passed",
-                      "duration": 3429,
+                      "duration": 3448,
                       "errors": [],
                       "stdout": [],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2026-10-04T10:03:11.266Z",
+                      "startTime": "2026-10-04T12:14:51.190Z",
                       "annotations": [],
                       "attachments": []
                     }
@@ -261,13 +261,13 @@
                   "status": "expected"
                 }
               ],
-              "id": "111cb7cc7ad174384dcc-b80cac9cdf22d33c0eb2",
+              "id": "111cb7cc7ad174384dcc-2c408dc9e55da158fd06",
               "file": "v171.spec.mjs",
-              "line": 70,
-              "column": 69
+              "line": 76,
+              "column": 75
             },
             {
-              "title": "slide 48 s-brand-product EN (cache disabled): active, counter 48 of 48, 10 tiles with source pills; screenshot",
+              "title": "slide 48 s-brand-gallery EN (cache disabled): active, counter 48 of 48, 11 gallery tiles, concept tags, personas, lightbox; screenshot",
               "ok": true,
               "tags": [],
               "tests": [
@@ -282,12 +282,12 @@
                       "workerIndex": 1,
                       "parallelIndex": 1,
                       "status": "passed",
-                      "duration": 5343,
+                      "duration": 5845,
                       "errors": [],
                       "stdout": [],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2026-10-04T10:02:54.398Z",
+                      "startTime": "2026-10-04T12:14:33.460Z",
                       "annotations": [],
                       "attachments": []
                     }
@@ -305,12 +305,12 @@
                       "workerIndex": 2,
                       "parallelIndex": 1,
                       "status": "passed",
-                      "duration": 5396,
+                      "duration": 5881,
                       "errors": [],
                       "stdout": [],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2026-10-04T10:03:14.721Z",
+                      "startTime": "2026-10-04T12:14:54.653Z",
                       "annotations": [],
                       "attachments": []
                     }
@@ -318,13 +318,13 @@
                   "status": "expected"
                 }
               ],
-              "id": "111cb7cc7ad174384dcc-e722a64df344141892fa",
+              "id": "111cb7cc7ad174384dcc-3e7a6880b6cf40dd7ae5",
               "file": "v171.spec.mjs",
-              "line": 70,
-              "column": 69
+              "line": 76,
+              "column": 75
             },
             {
-              "title": "slide 46 s-brand-typography AR (cache disabled): active, counter 46 of 48, brand fonts loaded or fallback note; screenshot",
+              "title": "slide 46 s-brand-foundations AR (cache disabled): active, counter 46 of 48, lockups + colour system == tokens + tone lines; screenshot",
               "ok": true,
               "tags": [],
               "tests": [
@@ -339,12 +339,12 @@
                       "workerIndex": 0,
                       "parallelIndex": 0,
                       "status": "passed",
-                      "duration": 4067,
+                      "duration": 4242,
                       "errors": [],
                       "stdout": [],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2026-10-04T10:02:54.728Z",
+                      "startTime": "2026-10-04T12:14:33.689Z",
                       "annotations": [],
                       "attachments": []
                     }
@@ -362,12 +362,12 @@
                       "workerIndex": 2,
                       "parallelIndex": 1,
                       "status": "passed",
-                      "duration": 4148,
+                      "duration": 4101,
                       "errors": [],
                       "stdout": [],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2026-10-04T10:03:20.132Z",
+                      "startTime": "2026-10-04T12:15:00.565Z",
                       "annotations": [],
                       "attachments": []
                     }
@@ -375,13 +375,13 @@
                   "status": "expected"
                 }
               ],
-              "id": "111cb7cc7ad174384dcc-e1fc15421c599f62431a",
+              "id": "111cb7cc7ad174384dcc-0a717406dd7e66dc8e25",
               "file": "v171.spec.mjs",
-              "line": 70,
-              "column": 69
+              "line": 76,
+              "column": 75
             },
             {
-              "title": "slide 47 s-brand-assets AR (cache disabled): active, counter 47 of 48, palette HEX == tokens, lockups, clear space, misuse, pack; screenshot",
+              "title": "slide 47 s-brand-typography AR (cache disabled): active, counter 47 of 48, both brand font families loaded (document.fonts.check) + specimen; screenshot",
               "ok": true,
               "tags": [],
               "tests": [
@@ -396,12 +396,12 @@
                       "workerIndex": 0,
                       "parallelIndex": 0,
                       "status": "passed",
-                      "duration": 4027,
+                      "duration": 4071,
                       "errors": [],
                       "stdout": [],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2026-10-04T10:02:58.814Z",
+                      "startTime": "2026-10-04T12:14:37.963Z",
                       "annotations": [],
                       "attachments": []
                     }
@@ -419,12 +419,12 @@
                       "workerIndex": 2,
                       "parallelIndex": 1,
                       "status": "passed",
-                      "duration": 4565,
+                      "duration": 3979,
                       "errors": [],
                       "stdout": [],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2026-10-04T10:03:24.296Z",
+                      "startTime": "2026-10-04T12:15:04.682Z",
                       "annotations": [],
                       "attachments": []
                     }
@@ -432,13 +432,13 @@
                   "status": "expected"
                 }
               ],
-              "id": "111cb7cc7ad174384dcc-3e6b192b5c8cf1a4bbd9",
+              "id": "111cb7cc7ad174384dcc-698a396d10663e6e3235",
               "file": "v171.spec.mjs",
-              "line": 70,
-              "column": 69
+              "line": 76,
+              "column": 75
             },
             {
-              "title": "slide 48 s-brand-product AR (cache disabled): active, counter 48 of 48, 10 tiles with source pills; screenshot",
+              "title": "slide 48 s-brand-gallery AR (cache disabled): active, counter 48 of 48, 11 gallery tiles, concept tags, personas, lightbox; screenshot",
               "ok": true,
               "tags": [],
               "tests": [
@@ -453,12 +453,12 @@
                       "workerIndex": 1,
                       "parallelIndex": 1,
                       "status": "passed",
-                      "duration": 6143,
+                      "duration": 6585,
                       "errors": [],
                       "stdout": [],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2026-10-04T10:02:59.758Z",
+                      "startTime": "2026-10-04T12:14:39.325Z",
                       "annotations": [],
                       "attachments": []
                     }
@@ -476,12 +476,12 @@
                       "workerIndex": 2,
                       "parallelIndex": 1,
                       "status": "passed",
-                      "duration": 5898,
+                      "duration": 6209,
                       "errors": [],
                       "stdout": [],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2026-10-04T10:03:28.874Z",
+                      "startTime": "2026-10-04T12:15:08.676Z",
                       "annotations": [],
                       "attachments": []
                     }
@@ -489,13 +489,13 @@
                   "status": "expected"
                 }
               ],
-              "id": "111cb7cc7ad174384dcc-14c36ca783beae38c5d3",
+              "id": "111cb7cc7ad174384dcc-17c927f23ce4a371d7d6",
               "file": "v171.spec.mjs",
-              "line": 70,
-              "column": 69
+              "line": 76,
+              "column": 75
             },
             {
-              "title": "served: 25 hashed brand files 200 + sha256 + immutable; brand-data.js / brand-fonts.css / brand-section.js / build-info.json no-store; build-info commit == deployed HEAD; guideline file names 404",
+              "title": "served: 47 hashed brand files 200 + sha256 + immutable; brand-data.js / brand-fonts.css / brand-section.js / build-info.json no-store; build-info commit == deployed HEAD; six section-10 clips 200; guideline file names 404",
               "ok": true,
               "tags": [],
               "tests": [
@@ -510,12 +510,12 @@
                       "workerIndex": 0,
                       "parallelIndex": 0,
                       "status": "passed",
-                      "duration": 501,
+                      "duration": 609,
                       "errors": [],
                       "stdout": [],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2026-10-04T10:03:02.853Z",
+                      "startTime": "2026-10-04T12:14:42.054Z",
                       "annotations": [],
                       "attachments": []
                     }
@@ -533,12 +533,12 @@
                       "workerIndex": 2,
                       "parallelIndex": 1,
                       "status": "passed",
-                      "duration": 572,
+                      "duration": 651,
                       "errors": [],
                       "stdout": [],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2026-10-04T10:03:34.788Z",
+                      "startTime": "2026-10-04T12:15:14.902Z",
                       "annotations": [],
                       "attachments": []
                     }
@@ -546,18 +546,18 @@
                   "status": "expected"
                 }
               ],
-              "id": "111cb7cc7ad174384dcc-376c8d813bf0c423fb9b",
+              "id": "111cb7cc7ad174384dcc-b9d1910a771632fdd04b",
               "file": "v171.spec.mjs",
-              "line": 102,
+              "line": 108,
               "column": 3
             },
             {
-              "title": "deep links 32, 38, 39–45 unchanged + 46–48 (EN + AR); all 48 slides EN + AR with 0 console errors / 0 failed requests; keyboard 45 → 46 → 45; RTL in AR",
+              "title": "deep links 32, 38, 39–45 unchanged + 46–48 via #/28/brand-k, the #/29/brand-k alias and #slide-46…48 (EN + AR); all 48 slides EN + AR with 0 console errors / 0 failed requests; keyboard 45 → 46 → 45; RTL in AR",
               "ok": true,
               "tags": [],
               "tests": [
                 {
-                  "timeout": 360000,
+                  "timeout": 420000,
                   "annotations": [],
                   "expectedStatus": "passed",
                   "projectId": "desktop",
@@ -567,12 +567,12 @@
                       "workerIndex": 0,
                       "parallelIndex": 0,
                       "status": "passed",
-                      "duration": 92583,
+                      "duration": 116498,
                       "errors": [],
                       "stdout": [],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2026-10-04T10:03:03.369Z",
+                      "startTime": "2026-10-04T12:14:42.689Z",
                       "annotations": [],
                       "attachments": []
                     }
@@ -580,7 +580,7 @@
                   "status": "expected"
                 },
                 {
-                  "timeout": 360000,
+                  "timeout": 420000,
                   "annotations": [],
                   "expectedStatus": "passed",
                   "projectId": "phone",
@@ -590,12 +590,12 @@
                       "workerIndex": 2,
                       "parallelIndex": 1,
                       "status": "passed",
-                      "duration": 83191,
+                      "duration": 105966,
                       "errors": [],
                       "stdout": [],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2026-10-04T10:03:35.373Z",
+                      "startTime": "2026-10-04T12:15:15.573Z",
                       "annotations": [],
                       "attachments": []
                     }
@@ -603,9 +603,9 @@
                   "status": "expected"
                 }
               ],
-              "id": "111cb7cc7ad174384dcc-f3a03bca92535513419f",
+              "id": "111cb7cc7ad174384dcc-4349974ae6d7fdfe7766",
               "file": "v171.spec.mjs",
-              "line": 116,
+              "line": 123,
               "column": 3
             }
           ]
@@ -615,8 +615,8 @@
   ],
   "errors": [],
   "stats": {
-    "startTime": "2026-10-04T10:02:49.291Z",
-    "duration": 129489.212,
+    "startTime": "2026-10-04T12:14:28.297Z",
+    "duration": 153474.24899999998,
     "expected": 18,
     "skipped": 0,
     "unexpected": 0,

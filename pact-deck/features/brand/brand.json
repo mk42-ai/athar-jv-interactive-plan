@@ -1,34 +1,56 @@
 {
  "schema": "athar.brand.section/1",
- "version": "1.7.1",
+ "version": "1.7.2",
  "section": {
   "number": "10",
   "id": "brand",
+  "hashPrefix": "#/28/brand-",
+  "aliasPrefix": "#/29/brand-",
   "slides": [
    {
     "n": 46,
-    "id": "s-brand-typography",
-    "hash": "#/28/brand-1"
+    "id": "s-brand-foundations",
+    "hash": "#/28/brand-1",
+    "alias": "#/29/brand-1",
+    "title": {
+     "en": "Brand foundations",
+     "ar": "أسس الهوية"
+    }
    },
    {
     "n": 47,
-    "id": "s-brand-assets",
-    "hash": "#/28/brand-2"
+    "id": "s-brand-typography",
+    "hash": "#/28/brand-2",
+    "alias": "#/29/brand-2",
+    "title": {
+     "en": "Typography",
+     "ar": "الطباعة"
+    }
    },
    {
     "n": 48,
-    "id": "s-brand-product",
-    "hash": "#/28/brand-3"
+    "id": "s-brand-gallery",
+    "hash": "#/28/brand-3",
+    "alias": "#/29/brand-3",
+    "title": {
+     "en": "Product & asset gallery",
+     "ar": "معرض المنتج والأصول"
+    }
    }
   ],
   "title": {
-   "en": "Branding",
-   "ar": "الهوية البصرية"
+   "en": "Brand",
+   "ar": "الهوية"
   },
   "kicker": {
-   "en": "10 · Branding",
-   "ar": "10 · الهوية البصرية"
-  }
+   "en": "Section 10 · Brand",
+   "ar": "القسم ١٠ · الهوية"
+  },
+  "railTitle": {
+   "en": "Brand",
+   "ar": "الهوية"
+  },
+  "hashNote": "The bundle router only knows real slides 1–28; runtime sections hang off #/27 (new-k) and #/28 (exec-k, brand-k). #/29/brand-k is a first-class alias rewritten to #/28/brand-k by the index.html alias script before the router reads the hash (like #slide-NN)."
  },
  "guidelines": {
   "document": "Athar Brand Guidelines V2.2 — LOGO CONSISTENCY VERIFIED — FINAL — 24 September 2026 (310 pp.)",
@@ -81,6 +103,10 @@
     42,
     43
    ]
+  },
+  "pdfV3": {
+   "file": "Athar_Brand_Guidelines_FINAL_v3.pdf (cross-check copy)",
+   "sha256": "cd826c2d752505db3e0d608093ab2c06973621b2653e9805dc1fb1d92b556c46"
   }
  },
  "pack": {
@@ -93,7 +119,7 @@
    "file": "brand-tokens_v1.json",
    "sha256": "a98f2cdab00047cbd3accb9f31f56ce8b5c903cb4b4877853f7385b4ee1c7ece",
    "identity": "Erth Zayed Philanthropies — Brand Token Pack (25 portfolio entities, harvested 2026-08-21)",
-   "usedFor": "nothing on the slides — it carries no Athar palette; the Athar tokens come from the guidelines (features/brand/brand-tokens.json)"
+   "usedFor": "colour-system NAMING only — the file carries no Athar palette (0 occurrences of #0F1B2D / #B08D57 / #2FB7C8, no 'athar' entity); the v1.0 token HEX values on slide 46 are the guidelines' tokens_v1 list (p. 32), extracted by scripts/v1.7.1/extract_brand_tokens.py"
   },
   "suppliedManifest": {
    "file": "brand-asset-manifest_v1.csv",
@@ -103,35 +129,57 @@
   },
   "pending": [
    {
+    "item": "Athar brand-tokens.json (Athar palette)",
+    "detail": "the supplied brand-tokens_v1.json is the Erth Zayed Philanthropies token pack (25 entities, 0 Athar entries); the v1.0 token HEX values come from the guidelines' tokens_v1 list (p. 32)"
+   },
+   {
     "item": "Athar_Brand_Asset_Pack_v3 manifest",
-    "detail": "the supplied brand-asset-manifest_v1.csv is the Erth Zayed portfolio harvest, not the Athar pack listing"
+    "detail": "the supplied brand-asset-manifest_v1.csv is the Erth Zayed portfolio harvest (96 rows), not the Athar pack listing"
    },
    {
     "item": "tokens_v2.json",
-    "detail": "the pack's token export named in the guidelines (p. 34) was not supplied; tokens re-extracted from the guidelines text instead"
+    "detail": "the V2.2 token export named in the guidelines (p. 34) was not supplied; tokens re-extracted from the guidelines text"
    },
    {
     "item": "Logo masters",
-    "detail": "Athar_Logo_Primary / Reversed / Monochrome / Monogram (PNG + SVG, guidelines 2.14) were not supplied — only the horizontal transparent PNG; the other versions on slide 47 are DERIVED FROM OFFICIAL LOGO"
-   },
-   {
-    "item": "Jost Light · Montserrat Light",
-    "detail": "sans display alternates (guidelines 4.1) not self-hosted — loaded only on surfaces that use the sans alternate, none in this deck"
+    "detail": "Athar_Logo_Primary / Reversed / Monochrome / Monogram (PNG + SVG, guidelines 2.14) not supplied — only the horizontal transparent PNG; other versions are derived from it"
    }
   ]
  },
  "fonts": {
-  "source": "github.com/google/fonts (main), SIL Open Font License 1.1 — self-hosted subset woff2, font-display: swap (guidelines 4.5)",
+  "source": "github.com/google/fonts (main), SIL Open Font License 1.1 — self-hosted subset woff2, font-display: swap; IBM Plex Sans Medium instanced from IBMPlexSans[wdth,wght].ttf (wght 500, wdth 100), IBM Plex Sans Arabic Medium from the static TTF",
   "fallbackNote": null,
   "faces": [
+   {
+    "id": "IBMPlexSans-Medium",
+    "family": "IBM Plex Sans",
+    "weight": 500,
+    "style": "normal",
+    "role": {
+     "en": "Body & UI (Latin) — Medium 500",
+     "ar": "المتن والواجهة (لاتيني) — متوسط 500"
+    },
+    "fallbackStack": "\"IBM Plex Sans\", \"Lucida Grande\", Tahoma, Arial, sans-serif"
+   },
+   {
+    "id": "IBMPlexSansArabic-Medium",
+    "family": "IBM Plex Sans Arabic",
+    "weight": 500,
+    "style": "normal",
+    "role": {
+     "en": "Arabic — Medium 500",
+     "ar": "العربية — متوسط 500"
+    },
+    "fallbackStack": "\"IBM Plex Sans Arabic\", \"Segoe UI\", Tahoma, Arial, sans-serif"
+   },
    {
     "id": "CormorantGaramond-Light",
     "family": "Cormorant Garamond",
     "weight": 300,
     "style": "normal",
     "role": {
-     "en": "Display (Latin)",
-     "ar": "العرض (لاتيني)"
+     "en": "Display (Latin) — guidelines ch. 4",
+     "ar": "العرض (لاتيني) — الدليل ف4"
     }
    },
    {
@@ -179,7 +227,20 @@
    "IBM Plex Sans Regular / Medium / SemiBold / Bold (/fonts/IBMPlexSans-*.woff2)",
    "IBM Plex Sans Arabic Regular / Medium / SemiBold / Bold (/fonts/IBMPlexSansArabic-*.woff2)",
    "IBM Plex Serif SemiBold"
-  ]
+  ],
+  "primary": {
+   "en": {
+    "family": "IBM Plex Sans",
+    "weight": 500,
+    "stack": "\"IBM Plex Sans\", \"Lucida Grande\", Tahoma, Arial, sans-serif"
+   },
+   "ar": {
+    "family": "IBM Plex Sans Arabic",
+    "weight": 500,
+    "stack": "\"IBM Plex Sans Arabic\", \"Segoe UI\", Tahoma, Arial, sans-serif"
+   },
+   "licence": "SIL Open Font License 1.1 (© IBM Corp.; Mike Abbink / Bold Monday; Arabic with Wael Morcos & Khajag Apelian) — google/fonts main"
+  }
  },
  "typography": {
   "system": [
@@ -540,18 +601,184 @@
   "voice": "George (JBFqnCBsd6RMkjVDRZzb)",
   "model": "eleven_multilingual_v2",
   "clips": {
+   "s-brand-foundations": {
+    "en": "NAR-s50",
+    "ar": "NAR-s50-ar"
+   },
    "s-brand-typography": {
     "en": "NAR-s47",
     "ar": "NAR-s47-ar"
    },
-   "s-brand-assets": {
-    "en": "NAR-s48",
-    "ar": "NAR-s48-ar"
-   },
-   "s-brand-product": {
-    "en": "NAR-s49",
-    "ar": "NAR-s49-ar"
+   "s-brand-gallery": {
+    "en": "NAR-s51",
+    "ar": "NAR-s51-ar"
    }
-  }
+  },
+  "note": "v1.7.2: slide 46/48 clips regenerated for the new content (NAR-s50 / NAR-s51); NAR-s47 (typography) re-homed from slide 46 to 47; NAR-s48 / NAR-s49 (v1.7.1) retired"
+ },
+ "colourSystem": {
+  "note": {
+   "en": "Brand tokens (v1.0 set) reconciled to the moodboard names; token HEX wins on any conflict. Emerald and Sand are moodboard accents.",
+   "ar": "رموز الهوية (مجموعة v1.0) موفَّقة مع أسماء لوحة المزاج؛ وقيمة HEX في الرمز هي الفيصل عند أي تعارض. الزمرّدي والرملي لمستان من لوحة المزاج."
+  },
+  "tokens": [
+   {
+    "token": "Sovereign Navy",
+    "tokenKey": "sovereign-navy",
+    "moodboard": "Deep Ocean",
+    "meaning": {
+     "en": "Trust · Stability · Intelligence",
+     "ar": "الثقة · الاستقرار · الذكاء"
+    },
+    "role": {
+     "en": "Primary — mark, text, dark grounds",
+     "ar": "أساسي — العلامة والنص والأرضيات الداكنة"
+    }
+   },
+   {
+    "token": "Sand Off-White",
+    "tokenKey": "sand-off-white",
+    "moodboard": "Ivory",
+    "meaning": {
+     "en": "Clarity · Transparency · Opportunity",
+     "ar": "الوضوح · الشفافية · الفرصة"
+    },
+    "role": {
+     "en": "Primary — page and product ground",
+     "ar": "أساسي — أرضية الصفحة والمنتج"
+    }
+   },
+   {
+    "token": "Heritage Gold",
+    "tokenKey": "heritage-gold",
+    "moodboard": "Champagne Gold",
+    "meaning": {
+     "en": "Progress · Excellence · Shared Value",
+     "ar": "التقدّم · التميّز · القيمة المشتركة"
+    },
+    "role": {
+     "en": "Accent — rules, details, foil",
+     "ar": "تأكيد — الخطوط والتفاصيل والرقائق"
+    }
+   },
+   {
+    "token": "Trace Cyan",
+    "tokenKey": "trace-cyan",
+    "moodboard": null,
+    "meaning": {
+     "en": "The agent's trace line · focus halo · 'thinking' ring",
+     "ar": "خطّ أثر الوكيل · هالة التركيز · حلقة «التفكير»"
+    },
+    "role": {
+     "en": "Functional — agent states and traces",
+     "ar": "وظيفي — حالات الوكيل وآثاره"
+    }
+   },
+   {
+    "token": "Charcoal Ink",
+    "tokenKey": "charcoal-ink",
+    "moodboard": null,
+    "meaning": {
+     "en": "Body text and UI ink",
+     "ar": "حبر النصوص والواجهة"
+    },
+    "role": {
+     "en": "Text",
+     "ar": "النص"
+    }
+   }
+  ],
+  "accents": [
+   {
+    "name": "Emerald",
+    "meaning": {
+     "en": "Growth · Impact · Sustainability",
+     "ar": "النمو · الأثر · الاستدامة"
+    },
+    "role": {
+     "en": "Moodboard accent — alternate ground, links",
+     "ar": "لمسة من لوحة المزاج — أرضية بديلة وروابط"
+    }
+   },
+   {
+    "name": "Sand",
+    "meaning": {
+     "en": "Heritage · Balance · Humanity",
+     "ar": "التراث · التوازن · الإنسانية"
+    },
+    "role": {
+     "en": "Moodboard accent — warm ground, borders",
+     "ar": "لمسة من لوحة المزاج — أرضية دافئة وحدود"
+    }
+   }
+  ],
+  "toneLines": [
+   {
+    "en": "Intelligence for a brighter tomorrow",
+    "ar": "ذكاء من أجل غدٍ أكثر إشراقًا"
+   },
+   {
+    "en": "People · Places · Progress",
+    "ar": "الناس · الأماكن · التقدّم"
+   },
+   {
+    "en": "A more lasting impact",
+    "ar": "أثرٌ أكثر دوامًا"
+   }
+  ]
+ },
+ "personas": {
+  "source": "athar_web_agent_avatar_system_v2.jpg (pack)",
+  "sizesPx": [
+   96,
+   48,
+   24
+  ],
+  "states": [
+   {
+    "en": "Idle",
+    "ar": "ساكن"
+   },
+   {
+    "en": "Thinking",
+    "ar": "يفكّر"
+   },
+   {
+    "en": "Awaiting Human Approval",
+    "ar": "بانتظار موافقة الإنسان"
+   },
+   {
+    "en": "Done",
+    "ar": "مكتمل"
+   }
+  ],
+  "list": [
+   {
+    "en": "Guide",
+    "ar": "المرشد"
+   },
+   {
+    "en": "Clerk",
+    "ar": "الكاتب"
+   },
+   {
+    "en": "Scout",
+    "ar": "الكاشف"
+   },
+   {
+    "en": "Tutor",
+    "ar": "المعلّم"
+   },
+   {
+    "en": "Translator",
+    "ar": "المترجم"
+   },
+   {
+    "en": "Steward",
+    "ar": "الأمين"
+   }
+  ],
+  "typography": "IBM Plex Sans Medium (EN) + IBM Plex Sans Arabic Medium (AR)",
+  "colourSystem": "Sovereign Navy · Sand Off-White · Heritage Gold · Trace Cyan · Charcoal Ink (v1.0 tokens)"
  }
 }

@@ -1,12 +1,42 @@
 {
- "base": "http://127.0.0.1:4171",
- "written": "2026-10-04T10:22:52.372Z",
+ "base": "http://127.0.0.1:4172",
+ "written": "2026-10-04T12:34:31.416Z",
  "rows": [
   {
    "tab": "in",
    "cc": "India, ownership, 100 government schools and 10,000 AI PCs a",
    "audibleClip": "NAR-s38",
-   "audioT": 7.41,
+   "audioT": 7.4,
+   "cueStart": 6.96,
+   "cueEnd": 13.48,
+   "tabSelected": "true",
+   "pass": true
+  },
+  {
+   "tab": "ke",
+   "cc": "Kenya, Legacy, a Kenyan-owned sovereign node at around 33 mi",
+   "audibleClip": "NAR-s38",
+   "audioT": 14.86,
+   "cueStart": 14.42,
+   "cueEnd": 22.66,
+   "tabSelected": "true",
+   "pass": true
+  },
+  {
+   "tab": "lb",
+   "cc": "Lebanon, Access, 1 million Lebanese AI experts at $10 millio",
+   "audibleClip": "NAR-s38",
+   "audioT": 2.29,
+   "cueStart": 1.86,
+   "cueEnd": 5.88,
+   "tabSelected": "true",
+   "pass": true
+  },
+  {
+   "tab": "in",
+   "cc": "India, ownership, 100 government schools and 10,000 AI PCs a",
+   "audibleClip": "NAR-s38",
+   "audioT": 7.4,
    "cueStart": 6.96,
    "cueEnd": 13.48,
    "tabSelected": "true",
@@ -17,36 +47,6 @@
    "cc": "Kenya, Legacy, a Kenyan-owned sovereign node at around 33 mi",
    "audibleClip": "NAR-s38",
    "audioT": 14.87,
-   "cueStart": 14.42,
-   "cueEnd": 22.66,
-   "tabSelected": "true",
-   "pass": true
-  },
-  {
-   "tab": "lb",
-   "cc": "Lebanon, Access, 1 million Lebanese AI experts at $10 millio",
-   "audibleClip": "NAR-s38",
-   "audioT": 2.31,
-   "cueStart": 1.86,
-   "cueEnd": 5.88,
-   "tabSelected": "true",
-   "pass": true
-  },
-  {
-   "tab": "in",
-   "cc": "India, ownership, 100 government schools and 10,000 AI PCs a",
-   "audibleClip": "NAR-s38",
-   "audioT": 7.42,
-   "cueStart": 6.96,
-   "cueEnd": 13.48,
-   "tabSelected": "true",
-   "pass": true
-  },
-  {
-   "tab": "ke",
-   "cc": "Kenya, Legacy, a Kenyan-owned sovereign node at around 33 mi",
-   "audibleClip": "NAR-s38",
-   "audioT": 14.88,
    "cueStart": 14.42,
    "cueEnd": 22.66,
    "tabSelected": "true",

@@ -1,0 +1,123 @@
+{
+ "base": "http://127.0.0.1:4172",
+ "version": "1.7.2",
+ "expectCommit": "ef50223325247b1cef452ecf3365c5d163b1b164",
+ "written": "2026-10-04T12:12:25.537Z",
+ "rows": [
+  {
+   "active": true,
+   "dataN": "48",
+   "slideId": "s-brand-gallery",
+   "visibleN": 48,
+   "dir": "ltr",
+   "lang": "en",
+   "hash": "#/28/brand-3",
+   "counter": "Slide 48 of 48",
+   "badge": "v1.7.2",
+   "html": "1.7.2",
+   "kicker": "Section 10 · Brand · Product & asset gallery",
+   "h2": "Product & asset gallery",
+   "total": 48,
+   "execTotal": 48,
+   "itTotal": 48,
+   "current": 48,
+   "fontsAttr": "loaded",
+   "fontsPrimary": "loaded",
+   "fontsState": null,
+   "fonts": {
+    "sansMedium": true,
+    "arabicMedium": true,
+    "cormorant": true,
+    "mono": true,
+    "arabicLight": true
+   },
+   "stacks": null,
+   "specimenRows": 0,
+   "mediumRow": false,
+   "systemRows": 0,
+   "scaleRows": 0,
+   "dos": 0,
+   "donts": 0,
+   "swatches": [],
+   "swatchText": [],
+   "swatchBg": [],
+   "swatchNames": [],
+   "accents": [],
+   "tone": [],
+   "lockups": [
+    false,
+    false,
+    false
+   ],
+   "clear": false,
+   "clearX": null,
+   "minRows": 0,
+   "tiles": {
+    "brand": [
+     "46Brand · Brand foundations",
+     "47Typography",
+     "48Product & asset gallery"
+    ],
+    "exec": [
+     "40Executive Team",
+     "41H.E. Fahad Mohamed Al Ameri",
+     "42Ary Ferreira da Cunha",
+     "43Muhammed Khalid",
+     "44Kayaan K. Unwalla",
+     "45Lorenzo Avitabile"
+    ],
+    "total": 48,
+    "on": "48Product & asset gallery"
+   },
+   "concept": [
+    "CONCEPT RENDER",
+    "CONCEPT RENDER",
+    "CONCEPT RENDER",
+    "CONCEPT RENDER",
+    "CONCEPT RENDER",
+    "CONCEPT RENDER"
+   ],
+   "pictures": 11,
+   "jpgFallbacks": 11,
+   "personas": [
+    "Guide/المرشد",
+    "Clerk/الكاتب",
+    "Scout/الكاشف",
+    "Tutor/المعلّم",
+    "Translator/المترجم",
+    "Steward/الأمين"
+   ],
+   "states": [
+    "Idle",
+    "Thinking",
+    "Awaiting Human Approval",
+    "Done"
+   ],
+   "sizes": 3,
+   "backdrop": true,
+   "imgs": 12,
+   "broken": [],
+   "overflowX": false,
+   "clipId": "NAR-s51",
+   "railOrder": "01,02,03,04,05,06,07,08,09,10",
+   "railCurrent": "10",
+   "railTxt": "10Brand",
+   "nextDisabled": true,
+   "lightbox": {
+    "open": true,
+    "popover": true,
+    "role": "dialog",
+    "modal": "true",
+    "img": "http://127.0.0.1:4172/assets/brand/gallery/render-reception-kiosk@1x.c3f21cac22.webp",
+    "w": 390,
+    "h": 844,
+    "bodyFlag": true,
+    "closed": true,
+    "overviewOpened": false,
+    "hash": "#/28/brand-3"
+   },
+   "errors": [],
+   "failedRequests": []
+  }
+ ]
+}

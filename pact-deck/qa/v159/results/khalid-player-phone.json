@@ -1,6 +1,6 @@
 {
- "base": "http://127.0.0.1:4171",
- "written": "2026-10-04T10:19:27.956Z",
+ "base": "http://127.0.0.1:4172",
+ "written": "2026-10-04T12:31:14.880Z",
  "rows": [
   {
    "meta": {
@@ -34,7 +34,7 @@
    "playing": {
     "state": "playing",
     "paused": false,
-    "ct": 1.288797,
+    "ct": 1.276805,
     "controls": true,
     "playHidden": true,
     "overlays": [],

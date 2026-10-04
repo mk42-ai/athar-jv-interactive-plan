@@ -1,8 +1,8 @@
 {
- "base": "http://127.0.0.1:4171",
- "version": "1.7.1",
- "expectCommit": "4ea5cc03f7de0061996946e129a00d6c32a2500f",
- "written": "2026-10-04T10:04:58.046Z",
+ "base": "http://127.0.0.1:4172",
+ "version": "1.7.2",
+ "expectCommit": "ef50223325247b1cef452ecf3365c5d163b1b164",
+ "written": "2026-10-04T12:17:01.057Z",
  "rows": [
   {
    "dirs": {
@@ -15,6 +15,7 @@
     {
      "lang": "en",
      "n": 32,
+     "requested": "#/27/new-5",
      "id": "s-it-partners",
      "slideId": "s-it-partners",
      "dir": "ltr",
@@ -25,6 +26,7 @@
     {
      "lang": "en",
      "n": 38,
+     "requested": "#/27/new-11",
      "id": "s-aos-nations",
      "slideId": "s-aos-nations",
      "dir": "ltr",
@@ -35,6 +37,7 @@
     {
      "lang": "en",
      "n": 39,
+     "requested": "#/28",
      "id": "s-closing",
      "slideId": "s-closing",
      "dir": "ltr",
@@ -45,6 +48,7 @@
     {
      "lang": "en",
      "n": 40,
+     "requested": "#/28/exec-1",
      "id": "s-exec-intro",
      "slideId": "s-exec-intro",
      "dir": "ltr",
@@ -55,6 +59,7 @@
     {
      "lang": "en",
      "n": 41,
+     "requested": "#/28/exec-2",
      "id": "s-exec-al-ameri",
      "slideId": "s-exec-al-ameri",
      "dir": "ltr",
@@ -65,6 +70,7 @@
     {
      "lang": "en",
      "n": 42,
+     "requested": "#/28/exec-3",
      "id": "s-exec-ferreira-da-cunha",
      "slideId": "s-exec-ferreira-da-cunha",
      "dir": "ltr",
@@ -75,6 +81,7 @@
     {
      "lang": "en",
      "n": 43,
+     "requested": "#/28/exec-4",
      "id": "s-exec-khalid",
      "slideId": "s-exec-khalid",
      "dir": "ltr",
@@ -85,6 +92,7 @@
     {
      "lang": "en",
      "n": 44,
+     "requested": "#/28/exec-5",
      "id": "s-exec-unwalla",
      "slideId": "s-exec-unwalla",
      "dir": "ltr",
@@ -95,6 +103,7 @@
     {
      "lang": "en",
      "n": 45,
+     "requested": "#/28/exec-6",
      "id": "s-exec-lorenzo",
      "slideId": "s-exec-lorenzo",
      "dir": "ltr",
@@ -105,8 +114,9 @@
     {
      "lang": "en",
      "n": 46,
-     "id": "s-brand-typography",
-     "slideId": "s-brand-typography",
+     "requested": "#/28/brand-1",
+     "id": "s-brand-foundations",
+     "slideId": "s-brand-foundations",
      "dir": "ltr",
      "hash": "#/28/brand-1",
      "errors": [],
@@ -115,8 +125,9 @@
     {
      "lang": "en",
      "n": 47,
-     "id": "s-brand-assets",
-     "slideId": "s-brand-assets",
+     "requested": "#/28/brand-2",
+     "id": "s-brand-typography",
+     "slideId": "s-brand-typography",
      "dir": "ltr",
      "hash": "#/28/brand-2",
      "errors": [],
@@ -125,8 +136,64 @@
     {
      "lang": "en",
      "n": 48,
-     "id": "s-brand-product",
-     "slideId": "s-brand-product",
+     "requested": "#/28/brand-3",
+     "id": "s-brand-gallery",
+     "slideId": "s-brand-gallery",
+     "dir": "ltr",
+     "hash": "#/28/brand-3",
+     "errors": [],
+     "failed": []
+    },
+    {
+     "lang": "en",
+     "n": 46,
+     "requested": "#/29/brand-1",
+     "id": "s-brand-foundations",
+     "slideId": "s-brand-foundations",
+     "dir": "ltr",
+     "hash": "#/28/brand-1",
+     "errors": [],
+     "failed": []
+    },
+    {
+     "lang": "en",
+     "n": 47,
+     "requested": "#/29/brand-2",
+     "id": "s-brand-typography",
+     "slideId": "s-brand-typography",
+     "dir": "ltr",
+     "hash": "#/28/brand-2",
+     "errors": [],
+     "failed": []
+    },
+    {
+     "lang": "en",
+     "n": 48,
+     "requested": "#/29/brand-3",
+     "id": "s-brand-gallery",
+     "slideId": "s-brand-gallery",
+     "dir": "ltr",
+     "hash": "#/28/brand-3",
+     "errors": [],
+     "failed": []
+    },
+    {
+     "lang": "en",
+     "n": 46,
+     "requested": "#slide-46",
+     "id": "s-brand-foundations",
+     "slideId": "s-brand-foundations",
+     "dir": "ltr",
+     "hash": "#/28/brand-1",
+     "errors": [],
+     "failed": []
+    },
+    {
+     "lang": "en",
+     "n": 48,
+     "requested": "#slide-48",
+     "id": "s-brand-gallery",
+     "slideId": "s-brand-gallery",
      "dir": "ltr",
      "hash": "#/28/brand-3",
      "errors": [],
@@ -135,6 +202,7 @@
     {
      "lang": "ar",
      "n": 32,
+     "requested": "#/27/new-5",
      "id": "s-it-partners",
      "slideId": "s-it-partners",
      "dir": "rtl",
@@ -145,6 +213,7 @@
     {
      "lang": "ar",
      "n": 38,
+     "requested": "#/27/new-11",
      "id": "s-aos-nations",
      "slideId": "s-aos-nations",
      "dir": "rtl",
@@ -155,6 +224,7 @@
     {
      "lang": "ar",
      "n": 39,
+     "requested": "#/28",
      "id": "s-closing",
      "slideId": "s-closing",
      "dir": "rtl",
@@ -165,6 +235,7 @@
     {
      "lang": "ar",
      "n": 40,
+     "requested": "#/28/exec-1",
      "id": "s-exec-intro",
      "slideId": "s-exec-intro",
      "dir": "rtl",
@@ -175,6 +246,7 @@
     {
      "lang": "ar",
      "n": 41,
+     "requested": "#/28/exec-2",
      "id": "s-exec-al-ameri",
      "slideId": "s-exec-al-ameri",
      "dir": "rtl",
@@ -185,6 +257,7 @@
     {
      "lang": "ar",
      "n": 42,
+     "requested": "#/28/exec-3",
      "id": "s-exec-ferreira-da-cunha",
      "slideId": "s-exec-ferreira-da-cunha",
      "dir": "rtl",
@@ -195,6 +268,7 @@
     {
      "lang": "ar",
      "n": 43,
+     "requested": "#/28/exec-4",
      "id": "s-exec-khalid",
      "slideId": "s-exec-khalid",
      "dir": "rtl",
@@ -205,6 +279,7 @@
     {
      "lang": "ar",
      "n": 44,
+     "requested": "#/28/exec-5",
      "id": "s-exec-unwalla",
      "slideId": "s-exec-unwalla",
      "dir": "rtl",
@@ -215,6 +290,7 @@
     {
      "lang": "ar",
      "n": 45,
+     "requested": "#/28/exec-6",
      "id": "s-exec-lorenzo",
      "slideId": "s-exec-lorenzo",
      "dir": "rtl",
@@ -225,8 +301,9 @@
     {
      "lang": "ar",
      "n": 46,
-     "id": "s-brand-typography",
-     "slideId": "s-brand-typography",
+     "requested": "#/28/brand-1",
+     "id": "s-brand-foundations",
+     "slideId": "s-brand-foundations",
      "dir": "rtl",
      "hash": "#/28/brand-1",
      "errors": [],
@@ -235,8 +312,9 @@
     {
      "lang": "ar",
      "n": 47,
-     "id": "s-brand-assets",
-     "slideId": "s-brand-assets",
+     "requested": "#/28/brand-2",
+     "id": "s-brand-typography",
+     "slideId": "s-brand-typography",
      "dir": "rtl",
      "hash": "#/28/brand-2",
      "errors": [],
@@ -245,8 +323,64 @@
     {
      "lang": "ar",
      "n": 48,
-     "id": "s-brand-product",
-     "slideId": "s-brand-product",
+     "requested": "#/28/brand-3",
+     "id": "s-brand-gallery",
+     "slideId": "s-brand-gallery",
+     "dir": "rtl",
+     "hash": "#/28/brand-3",
+     "errors": [],
+     "failed": []
+    },
+    {
+     "lang": "ar",
+     "n": 46,
+     "requested": "#/29/brand-1",
+     "id": "s-brand-foundations",
+     "slideId": "s-brand-foundations",
+     "dir": "rtl",
+     "hash": "#/28/brand-1",
+     "errors": [],
+     "failed": []
+    },
+    {
+     "lang": "ar",
+     "n": 47,
+     "requested": "#/29/brand-2",
+     "id": "s-brand-typography",
+     "slideId": "s-brand-typography",
+     "dir": "rtl",
+     "hash": "#/28/brand-2",
+     "errors": [],
+     "failed": []
+    },
+    {
+     "lang": "ar",
+     "n": 48,
+     "requested": "#/29/brand-3",
+     "id": "s-brand-gallery",
+     "slideId": "s-brand-gallery",
+     "dir": "rtl",
+     "hash": "#/28/brand-3",
+     "errors": [],
+     "failed": []
+    },
+    {
+     "lang": "ar",
+     "n": 46,
+     "requested": "#slide-46",
+     "id": "s-brand-foundations",
+     "slideId": "s-brand-foundations",
+     "dir": "rtl",
+     "hash": "#/28/brand-1",
+     "errors": [],
+     "failed": []
+    },
+    {
+     "lang": "ar",
+     "n": 48,
+     "requested": "#slide-48",
+     "id": "s-brand-gallery",
+     "slideId": "s-brand-gallery",
      "dir": "rtl",
      "hash": "#/28/brand-3",
      "errors": [],
@@ -256,8 +390,8 @@
    "keys": {
     "k1": {
      "n": 46,
-     "id": "s-brand-typography",
-     "slideId": "s-brand-typography",
+     "id": "s-brand-foundations",
+     "slideId": "s-brand-foundations",
      "hash": "#/28/brand-1",
      "counter": "Slide 46 of 48"
     },
@@ -266,13 +400,6 @@
      "id": "s-exec-lorenzo",
      "slideId": "s-exec-lorenzo",
      "hash": "#/28/exec-6"
-    },
-    "k3": {
-     "n": 39,
-     "id": "s-closing",
-     "slideId": "s-closing",
-     "hash": "#/28/exec-6",
-     "nextDisabled": false
     }
    }
   }

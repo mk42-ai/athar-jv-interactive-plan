@@ -1,7 +1,7 @@
 {
- "base": "http://127.0.0.1:4171",
+ "base": "http://127.0.0.1:4172",
  "total": 48,
- "written": "2026-10-04T10:20:38.319Z",
+ "written": "2026-10-04T12:32:21.078Z",
  "rows": [
   {
    "n": 1,
@@ -14,8 +14,8 @@
    "state": "playing",
    "reason": "",
    "ccMatches": true,
-   "syncMs": 179,
-   "t": "2026-10-04T10:20:14.385Z",
+   "syncMs": 183,
+   "t": "2026-10-04T12:31:57.876Z",
    "pass": true
   },
   {
@@ -26,11 +26,11 @@
    "expectedClip": "NAR-s02",
    "audibleClip": "NAR-s02",
    "audibleSlideId": "s-hero",
-   "state": "loading",
+   "state": "playing",
    "reason": "",
    "ccMatches": true,
-   "syncMs": 43,
-   "t": "2026-10-04T10:20:14.814Z",
+   "syncMs": 153,
+   "t": "2026-10-04T12:31:58.411Z",
    "pass": true
   },
   {
@@ -41,11 +41,11 @@
    "expectedClip": "NAR-s03",
    "audibleClip": "NAR-s03",
    "audibleSlideId": "s-why-pact",
-   "state": "playing",
+   "state": "loading",
    "reason": "",
    "ccMatches": true,
-   "syncMs": 37,
-   "t": "2026-10-04T10:20:15.279Z",
+   "syncMs": 35,
+   "t": "2026-10-04T12:31:58.855Z",
    "pass": true
   },
   {
@@ -59,8 +59,8 @@
    "state": "playing",
    "reason": "",
    "ccMatches": true,
-   "syncMs": 35,
-   "t": "2026-10-04T10:20:15.710Z",
+   "syncMs": 40,
+   "t": "2026-10-04T12:31:59.300Z",
    "pass": true
   },
   {
@@ -74,8 +74,8 @@
    "state": "playing",
    "reason": "",
    "ccMatches": true,
-   "syncMs": 167,
-   "t": "2026-10-04T10:20:16.248Z",
+   "syncMs": 40,
+   "t": "2026-10-04T12:31:59.728Z",
    "pass": true
   },
   {
@@ -89,8 +89,8 @@
    "state": "playing",
    "reason": "",
    "ccMatches": true,
-   "syncMs": 212,
-   "t": "2026-10-04T10:20:16.813Z",
+   "syncMs": 36,
+   "t": "2026-10-04T12:32:00.175Z",
    "pass": true
   },
   {
@@ -104,8 +104,8 @@
    "state": "playing",
    "reason": "",
    "ccMatches": true,
-   "syncMs": 154,
-   "t": "2026-10-04T10:20:17.361Z",
+   "syncMs": 31,
+   "t": "2026-10-04T12:32:00.626Z",
    "pass": true
   },
   {
@@ -116,11 +116,11 @@
    "expectedClip": "NAR-s08",
    "audibleClip": "NAR-s08",
    "audibleSlideId": "s-learning-formats",
-   "state": "playing",
+   "state": "loading",
    "reason": "",
    "ccMatches": true,
-   "syncMs": 166,
-   "t": "2026-10-04T10:20:17.877Z",
+   "syncMs": 40,
+   "t": "2026-10-04T12:32:01.057Z",
    "pass": true
   },
   {
@@ -131,11 +131,11 @@
    "expectedClip": "NAR-s09",
    "audibleClip": "NAR-s09",
    "audibleSlideId": "s-challenges-showcases",
-   "state": "playing",
+   "state": "loading",
    "reason": "",
    "ccMatches": true,
-   "syncMs": 156,
-   "t": "2026-10-04T10:20:18.363Z",
+   "syncMs": 38,
+   "t": "2026-10-04T12:32:01.475Z",
    "pass": true
   },
   {
@@ -146,11 +146,11 @@
    "expectedClip": "NAR-s10",
    "audibleClip": "NAR-s10",
    "audibleSlideId": "s-office-hours",
-   "state": "playing",
+   "state": "loading",
    "reason": "",
    "ccMatches": true,
-   "syncMs": 166,
-   "t": "2026-10-04T10:20:18.873Z",
+   "syncMs": 41,
+   "t": "2026-10-04T12:32:01.900Z",
    "pass": true
   },
   {
@@ -164,8 +164,8 @@
    "state": "playing",
    "reason": "",
    "ccMatches": true,
-   "syncMs": 167,
-   "t": "2026-10-04T10:20:19.392Z",
+   "syncMs": 35,
+   "t": "2026-10-04T12:32:02.364Z",
    "pass": true
   },
   {
@@ -179,8 +179,8 @@
    "state": "playing",
    "reason": "",
    "ccMatches": true,
-   "syncMs": 194,
-   "t": "2026-10-04T10:20:19.938Z",
+   "syncMs": 57,
+   "t": "2026-10-04T12:32:02.811Z",
    "pass": true
   },
   {
@@ -194,8 +194,8 @@
    "state": "playing",
    "reason": "",
    "ccMatches": true,
-   "syncMs": 164,
-   "t": "2026-10-04T10:20:20.500Z",
+   "syncMs": 166,
+   "t": "2026-10-04T12:32:03.383Z",
    "pass": true
   },
   {
@@ -209,8 +209,8 @@
    "state": "playing",
    "reason": "",
    "ccMatches": true,
-   "syncMs": 169,
-   "t": "2026-10-04T10:20:21.017Z",
+   "syncMs": 147,
+   "t": "2026-10-04T12:32:03.890Z",
    "pass": true
   },
   {
@@ -224,8 +224,8 @@
    "state": "playing",
    "reason": "",
    "ccMatches": true,
-   "syncMs": 174,
-   "t": "2026-10-04T10:20:21.544Z",
+   "syncMs": 181,
+   "t": "2026-10-04T12:32:04.422Z",
    "pass": true
   },
   {
@@ -239,8 +239,8 @@
    "state": "playing",
    "reason": "",
    "ccMatches": true,
-   "syncMs": 197,
-   "t": "2026-10-04T10:20:22.122Z",
+   "syncMs": 153,
+   "t": "2026-10-04T12:32:04.921Z",
    "pass": true
   },
   {
@@ -254,8 +254,8 @@
    "state": "playing",
    "reason": "",
    "ccMatches": true,
-   "syncMs": 197,
-   "t": "2026-10-04T10:20:22.708Z",
+   "syncMs": 143,
+   "t": "2026-10-04T12:32:05.414Z",
    "pass": true
   },
   {
@@ -269,8 +269,8 @@
    "state": "playing",
    "reason": "",
    "ccMatches": true,
-   "syncMs": 196,
-   "t": "2026-10-04T10:20:23.264Z",
+   "syncMs": 162,
+   "t": "2026-10-04T12:32:05.935Z",
    "pass": true
   },
   {
@@ -284,8 +284,8 @@
    "state": "playing",
    "reason": "",
    "ccMatches": true,
-   "syncMs": 159,
-   "t": "2026-10-04T10:20:23.800Z",
+   "syncMs": 152,
+   "t": "2026-10-04T12:32:06.439Z",
    "pass": true
   },
   {
@@ -299,8 +299,8 @@
    "state": "playing",
    "reason": "",
    "ccMatches": true,
-   "syncMs": 151,
-   "t": "2026-10-04T10:20:24.315Z",
+   "syncMs": 135,
+   "t": "2026-10-04T12:32:06.933Z",
    "pass": true
   },
   {
@@ -314,8 +314,8 @@
    "state": "playing",
    "reason": "",
    "ccMatches": true,
-   "syncMs": 153,
-   "t": "2026-10-04T10:20:24.854Z",
+   "syncMs": 162,
+   "t": "2026-10-04T12:32:07.457Z",
    "pass": true
   },
   {
@@ -329,8 +329,8 @@
    "state": "playing",
    "reason": "",
    "ccMatches": true,
-   "syncMs": 148,
-   "t": "2026-10-04T10:20:25.332Z",
+   "syncMs": 156,
+   "t": "2026-10-04T12:32:07.980Z",
    "pass": true
   },
   {
@@ -344,8 +344,8 @@
    "state": "playing",
    "reason": "",
    "ccMatches": true,
-   "syncMs": 160,
-   "t": "2026-10-04T10:20:25.840Z",
+   "syncMs": 173,
+   "t": "2026-10-04T12:32:08.506Z",
    "pass": true
   },
   {
@@ -359,8 +359,8 @@
    "state": "playing",
    "reason": "",
    "ccMatches": true,
-   "syncMs": 177,
-   "t": "2026-10-04T10:20:26.378Z",
+   "syncMs": 152,
+   "t": "2026-10-04T12:32:08.995Z",
    "pass": true
   },
   {
@@ -374,8 +374,8 @@
    "state": "playing",
    "reason": "",
    "ccMatches": true,
-   "syncMs": 170,
-   "t": "2026-10-04T10:20:26.906Z",
+   "syncMs": 150,
+   "t": "2026-10-04T12:32:09.485Z",
    "pass": true
   },
   {
@@ -386,11 +386,11 @@
    "expectedClip": "NAR-s26",
    "audibleClip": "NAR-s26",
    "audibleSlideId": "s-governance-licence",
-   "state": "loading",
+   "state": "playing",
    "reason": "",
    "ccMatches": true,
-   "syncMs": 36,
-   "t": "2026-10-04T10:20:27.344Z",
+   "syncMs": 171,
+   "t": "2026-10-04T12:32:10.005Z",
    "pass": true
   },
   {
@@ -404,8 +404,8 @@
    "state": "playing",
    "reason": "",
    "ccMatches": true,
-   "syncMs": 170,
-   "t": "2026-10-04T10:20:27.866Z",
+   "syncMs": 157,
+   "t": "2026-10-04T12:32:10.518Z",
    "pass": true
   },
   {
@@ -419,8 +419,8 @@
    "state": "playing",
    "reason": "",
    "ccMatches": true,
-   "syncMs": 186,
-   "t": "2026-10-04T10:20:28.399Z",
+   "syncMs": 168,
+   "t": "2026-10-04T12:32:11.046Z",
    "pass": true
   },
   {
@@ -434,8 +434,8 @@
    "state": "playing",
    "reason": "",
    "ccMatches": true,
-   "syncMs": 143,
-   "t": "2026-10-04T10:20:28.915Z",
+   "syncMs": 151,
+   "t": "2026-10-04T12:32:11.533Z",
    "pass": true
   },
   {
@@ -449,8 +449,8 @@
    "state": "playing",
    "reason": "",
    "ccMatches": true,
-   "syncMs": 154,
-   "t": "2026-10-04T10:20:29.414Z",
+   "syncMs": 136,
+   "t": "2026-10-04T12:32:11.998Z",
    "pass": true
   },
   {
@@ -464,8 +464,8 @@
    "state": "playing",
    "reason": "",
    "ccMatches": true,
-   "syncMs": 201,
-   "t": "2026-10-04T10:20:29.945Z",
+   "syncMs": 154,
+   "t": "2026-10-04T12:32:12.497Z",
    "pass": true
   },
   {
@@ -479,8 +479,8 @@
    "state": "playing",
    "reason": "",
    "ccMatches": true,
-   "syncMs": 172,
-   "t": "2026-10-04T10:20:30.513Z",
+   "syncMs": 49,
+   "t": "2026-10-04T12:32:12.951Z",
    "pass": true
   },
   {
@@ -494,8 +494,8 @@
    "state": "playing",
    "reason": "",
    "ccMatches": true,
-   "syncMs": 161,
-   "t": "2026-10-04T10:20:31.018Z",
+   "syncMs": 131,
+   "t": "2026-10-04T12:32:13.471Z",
    "pass": true
   },
   {
@@ -509,8 +509,8 @@
    "state": "playing",
    "reason": "",
    "ccMatches": true,
-   "syncMs": 144,
-   "t": "2026-10-04T10:20:31.537Z",
+   "syncMs": 149,
+   "t": "2026-10-04T12:32:13.978Z",
    "pass": true
   },
   {
@@ -524,8 +524,8 @@
    "state": "playing",
    "reason": "",
    "ccMatches": true,
-   "syncMs": 43,
-   "t": "2026-10-04T10:20:32.008Z",
+   "syncMs": 131,
+   "t": "2026-10-04T12:32:14.461Z",
    "pass": true
   },
   {
@@ -539,8 +539,8 @@
    "state": "playing",
    "reason": "",
    "ccMatches": true,
-   "syncMs": 42,
-   "t": "2026-10-04T10:20:32.481Z",
+   "syncMs": 131,
+   "t": "2026-10-04T12:32:14.926Z",
    "pass": true
   },
   {
@@ -554,8 +554,8 @@
    "state": "playing",
    "reason": "",
    "ccMatches": true,
-   "syncMs": 32,
-   "t": "2026-10-04T10:20:32.914Z",
+   "syncMs": 139,
+   "t": "2026-10-04T12:32:15.402Z",
    "pass": true
   },
   {
@@ -569,8 +569,8 @@
    "state": "playing",
    "reason": "",
    "ccMatches": true,
-   "syncMs": 32,
-   "t": "2026-10-04T10:20:33.335Z",
+   "syncMs": 135,
+   "t": "2026-10-04T12:32:15.868Z",
    "pass": true
   },
   {
@@ -584,8 +584,8 @@
    "state": "playing",
    "reason": "",
    "ccMatches": true,
-   "syncMs": 33,
-   "t": "2026-10-04T10:20:33.759Z",
+   "syncMs": 130,
+   "t": "2026-10-04T12:32:16.344Z",
    "pass": true
   },
   {
@@ -599,8 +599,8 @@
    "state": "playing",
    "reason": "",
    "ccMatches": true,
-   "syncMs": 142,
-   "t": "2026-10-04T10:20:34.281Z",
+   "syncMs": 130,
+   "t": "2026-10-04T12:32:16.804Z",
    "pass": true
   },
   {
@@ -614,8 +614,8 @@
    "state": "playing",
    "reason": "",
    "ccMatches": true,
-   "syncMs": 45,
-   "t": "2026-10-04T10:20:34.723Z",
+   "syncMs": 173,
+   "t": "2026-10-04T12:32:17.319Z",
    "pass": true
   },
   {
@@ -629,8 +629,8 @@
    "state": "playing",
    "reason": "",
    "ccMatches": true,
-   "syncMs": 157,
-   "t": "2026-10-04T10:20:35.236Z",
+   "syncMs": 149,
+   "t": "2026-10-04T12:32:17.818Z",
    "pass": true
   },
   {
@@ -644,8 +644,8 @@
    "state": "playing",
    "reason": "",
    "ccMatches": true,
-   "syncMs": 50,
-   "t": "2026-10-04T10:20:35.651Z",
+   "syncMs": 166,
+   "t": "2026-10-04T12:32:18.345Z",
    "pass": true
   },
   {
@@ -659,8 +659,8 @@
    "state": "playing",
    "reason": "",
    "ccMatches": true,
-   "syncMs": 56,
-   "t": "2026-10-04T10:20:36.083Z",
+   "syncMs": 152,
+   "t": "2026-10-04T12:32:18.861Z",
    "pass": true
   },
   {
@@ -674,53 +674,53 @@
    "state": "playing",
    "reason": "",
    "ccMatches": true,
-   "syncMs": 166,
-   "t": "2026-10-04T10:20:36.619Z",
+   "syncMs": 129,
+   "t": "2026-10-04T12:32:19.330Z",
    "pass": true
   },
   {
    "n": 46,
+   "how": "arrow",
+   "visibleSlideId": "s-brand-foundations",
+   "narratedSlideId": "s-brand-foundations",
+   "expectedClip": "NAR-s50",
+   "audibleClip": "NAR-s50",
+   "audibleSlideId": "s-brand-foundations",
+   "state": "playing",
+   "reason": "",
+   "ccMatches": true,
+   "syncMs": 30,
+   "t": "2026-10-04T12:32:19.817Z",
+   "pass": true
+  },
+  {
+   "n": 47,
    "how": "arrow",
    "visibleSlideId": "s-brand-typography",
    "narratedSlideId": "s-brand-typography",
    "expectedClip": "NAR-s47",
    "audibleClip": "NAR-s47",
    "audibleSlideId": "s-brand-typography",
-   "state": "loading",
-   "reason": "",
-   "ccMatches": true,
-   "syncMs": 43,
-   "t": "2026-10-04T10:20:37.082Z",
-   "pass": true
-  },
-  {
-   "n": 47,
-   "how": "arrow",
-   "visibleSlideId": "s-brand-assets",
-   "narratedSlideId": "s-brand-assets",
-   "expectedClip": "NAR-s48",
-   "audibleClip": "NAR-s48",
-   "audibleSlideId": "s-brand-assets",
    "state": "playing",
    "reason": "",
    "ccMatches": true,
-   "syncMs": 148,
-   "t": "2026-10-04T10:20:37.609Z",
+   "syncMs": 140,
+   "t": "2026-10-04T12:32:20.306Z",
    "pass": true
   },
   {
    "n": 48,
    "how": "arrow",
-   "visibleSlideId": "s-brand-product",
-   "narratedSlideId": "s-brand-product",
-   "expectedClip": "NAR-s49",
-   "audibleClip": "NAR-s49",
-   "audibleSlideId": "s-brand-product",
+   "visibleSlideId": "s-brand-gallery",
+   "narratedSlideId": "s-brand-gallery",
+   "expectedClip": "NAR-s51",
+   "audibleClip": "NAR-s51",
+   "audibleSlideId": "s-brand-gallery",
    "state": "playing",
    "reason": "",
    "ccMatches": true,
-   "syncMs": 45,
-   "t": "2026-10-04T10:20:38.060Z",
+   "syncMs": 144,
+   "t": "2026-10-04T12:32:20.833Z",
    "pass": true
   }
  ]

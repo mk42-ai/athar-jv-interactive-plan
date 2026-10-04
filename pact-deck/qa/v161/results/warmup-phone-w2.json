@@ -1,19 +1,19 @@
 {
- "base": "http://127.0.0.1:4171",
- "version": "1.7.1",
- "written": "2026-10-04T10:11:46.401Z",
+ "base": "http://127.0.0.1:4172",
+ "version": "1.7.2",
+ "written": "2026-10-04T12:23:36.141Z",
  "rows": [
   {
-   "base": "http://127.0.0.1:4171",
-   "startedAt": "2026-10-04T10:11:46.298Z",
-   "totalMs": 103,
+   "base": "http://127.0.0.1:4172",
+   "startedAt": "2026-10-04T12:23:36.021Z",
+   "totalMs": 120,
    "requests": 40,
    "ok": 40,
    "rows": [
     {
      "url": "/build-info.json",
      "status": 200,
-     "ms": 2,
+     "ms": 8,
      "bytes": 7902,
      "cacheControl": "no-store",
      "range": null
@@ -30,15 +30,15 @@
      "url": "/index.html",
      "status": 200,
      "ms": 1,
-     "bytes": 15924,
+     "bytes": 16256,
      "cacheControl": "no-store",
      "range": null
     },
     {
      "url": "/narration/slide-narration.json",
      "status": 200,
-     "ms": 1,
-     "bytes": 114432,
+     "ms": 2,
+     "bytes": 118058,
      "cacheControl": "no-store",
      "range": null
     },
@@ -53,7 +53,7 @@
     {
      "url": "/assets/exec/films/khalid/athar-origins-of-impact-ep01-muhammed-khalid-poster-18s8.aaa6152b71.webp",
      "status": 200,
-     "ms": 1,
+     "ms": 2,
      "bytes": 48116,
      "cacheControl": "public, max-age=31536000, immutable",
      "range": null
@@ -61,7 +61,7 @@
     {
      "url": "/assets/exec/films/khalid/athar-origins-of-impact-ep01-muhammed-khalid-1080p.288c67b22b.mp4",
      "status": 206,
-     "ms": 6,
+     "ms": 9,
      "bytes": 2097152,
      "cacheControl": "public, max-age=31536000, immutable",
      "range": "bytes=0-2097151"
@@ -69,7 +69,7 @@
     {
      "url": "/assets/exec/films/khalid/athar-origins-of-impact-ep01-muhammed-khalid-720p.f824472ae0.mp4",
      "status": 206,
-     "ms": 7,
+     "ms": 9,
      "bytes": 2097152,
      "cacheControl": "public, max-age=31536000, immutable",
      "range": "bytes=0-2097151"
@@ -101,7 +101,7 @@
     {
      "url": "/assets/exec/films/al-ameri/athar-origins-ep01-fahad-al-ameri-poster-07s0.e1e464da7f.webp",
      "status": 200,
-     "ms": 0,
+     "ms": 1,
      "bytes": 64914,
      "cacheControl": "public, max-age=31536000, immutable",
      "range": null
@@ -109,7 +109,7 @@
     {
      "url": "/assets/exec/films/al-ameri/athar-origins-ep01-fahad-al-ameri-1080p.66d9a6d6e0.mp4",
      "status": 206,
-     "ms": 6,
+     "ms": 8,
      "bytes": 2097152,
      "cacheControl": "public, max-age=31536000, immutable",
      "range": "bytes=0-2097151"
@@ -117,7 +117,7 @@
     {
      "url": "/assets/exec/films/al-ameri/athar-origins-ep01-fahad-al-ameri-720p.7aef034321.mp4",
      "status": 206,
-     "ms": 15,
+     "ms": 16,
      "bytes": 2097152,
      "cacheControl": "public, max-age=31536000, immutable",
      "range": "bytes=0-2097151"
@@ -125,7 +125,7 @@
     {
      "url": "/assets/exec/films/al-ameri/athar-origins-ep01-fahad-al-ameri.en.4d30c550ba.vtt",
      "status": 200,
-     "ms": 5,
+     "ms": 2,
      "bytes": 1813,
      "cacheControl": "public, max-age=31536000, immutable",
      "range": null
@@ -141,7 +141,7 @@
     {
      "url": "/assets/exec/films/ferreira-da-cunha/athar-origins-ep01-ary-ferreira-da-cunha-poster-04s0.c7cb38c99b.jpg",
      "status": 200,
-     "ms": 1,
+     "ms": 0,
      "bytes": 64408,
      "cacheControl": "public, max-age=31536000, immutable",
      "range": null
@@ -149,7 +149,7 @@
     {
      "url": "/assets/exec/films/ferreira-da-cunha/athar-origins-ep01-ary-ferreira-da-cunha-poster-04s0.fa2245466a.webp",
      "status": 200,
-     "ms": 0,
+     "ms": 4,
      "bytes": 33562,
      "cacheControl": "public, max-age=31536000, immutable",
      "range": null
@@ -157,7 +157,7 @@
     {
      "url": "/assets/exec/films/ferreira-da-cunha/athar-origins-ep01-ary-ferreira-da-cunha-1080p.b155cd834b.mp4",
      "status": 206,
-     "ms": 4,
+     "ms": 5,
      "bytes": 2097152,
      "cacheControl": "public, max-age=31536000, immutable",
      "range": "bytes=0-2097151"
@@ -165,7 +165,7 @@
     {
      "url": "/assets/exec/films/ferreira-da-cunha/athar-origins-ep01-ary-ferreira-da-cunha-720p.281f18ef25.mp4",
      "status": 206,
-     "ms": 3,
+     "ms": 4,
      "bytes": 2097152,
      "cacheControl": "public, max-age=31536000, immutable",
      "range": "bytes=0-2097151"
@@ -173,7 +173,7 @@
     {
      "url": "/assets/exec/films/ferreira-da-cunha/athar-origins-ep01-ary-ferreira-da-cunha.en.0d385859f2.vtt",
      "status": 200,
-     "ms": 1,
+     "ms": 0,
      "bytes": 1744,
      "cacheControl": "public, max-age=31536000, immutable",
      "range": null
@@ -205,7 +205,7 @@
     {
      "url": "/assets/exec/films/unwalla/athar-origins-ep01-kayaan-unwalla-1080p.2c1c7f0f3b.mp4",
      "status": 206,
-     "ms": 6,
+     "ms": 7,
      "bytes": 2097152,
      "cacheControl": "public, max-age=31536000, immutable",
      "range": "bytes=0-2097151"
@@ -229,7 +229,7 @@
     {
      "url": "/assets/exec/films/unwalla/athar-origins-ep01-kayaan-unwalla.ar.b3b9a6e998.vtt",
      "status": 200,
-     "ms": 1,
+     "ms": 6,
      "bytes": 1970,
      "cacheControl": "public, max-age=31536000, immutable",
      "range": null
@@ -245,7 +245,7 @@
     {
      "url": "/assets/exec/films/lorenzo/lorenzo-poster.29aff048f8.webp",
      "status": 200,
-     "ms": 0,
+     "ms": 1,
      "bytes": 15946,
      "cacheControl": "public, max-age=31536000, immutable",
      "range": null
@@ -253,7 +253,7 @@
     {
      "url": "/assets/exec/films/lorenzo/lorenzo-1080p.1566f3861a.mp4",
      "status": 206,
-     "ms": 11,
+     "ms": 3,
      "bytes": 2097152,
      "cacheControl": "public, max-age=31536000, immutable",
      "range": "bytes=0-2097151"
@@ -261,7 +261,7 @@
     {
      "url": "/assets/exec/films/lorenzo/lorenzo-720p.1b56c492fc.mp4",
      "status": 206,
-     "ms": 4,
+     "ms": 3,
      "bytes": 2097152,
      "cacheControl": "public, max-age=31536000, immutable",
      "range": "bytes=0-2097151"
@@ -301,7 +301,7 @@
     {
      "url": "/audio/guide/slides/NAR-s45-s-exec-ferreira-da-cunha.mp3",
      "status": 200,
-     "ms": 1,
+     "ms": 2,
      "bytes": 279658,
      "cacheControl": "public, max-age=86400, stale-while-revalidate=604800",
      "range": null
@@ -309,7 +309,7 @@
     {
      "url": "/audio/guide/slides/NAR-s43-s-exec-khalid.mp3",
      "status": 200,
-     "ms": 2,
+     "ms": 1,
      "bytes": 335247,
      "cacheControl": "public, max-age=86400, stale-while-revalidate=604800",
      "range": null
@@ -325,7 +325,7 @@
     {
      "url": "/audio/guide/slides/NAR-s46-s-exec-lorenzo.mp3",
      "status": 200,
-     "ms": 2,
+     "ms": 1,
      "bytes": 306408,
      "cacheControl": "public, max-age=86400, stale-while-revalidate=604800",
      "range": null

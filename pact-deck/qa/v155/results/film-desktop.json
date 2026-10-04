@@ -1,7 +1,7 @@
 {
- "base": "http://127.0.0.1:4171",
+ "base": "http://127.0.0.1:4172",
  "total": 48,
- "written": "2026-10-04T10:20:34.047Z",
+ "written": "2026-10-04T12:32:16.787Z",
  "rows": [
   {
    "during": {
@@ -31,8 +31,8 @@
     "state": "playing",
     "reason": "",
     "ccMatches": true,
-    "syncMs": 41,
-    "t": "2026-10-04T10:20:34.028Z",
+    "syncMs": 36,
+    "t": "2026-10-04T12:32:16.770Z",
     "pass": true
    }
   }

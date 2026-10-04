@@ -1,15 +1,15 @@
 {
- "base": "http://127.0.0.1:4171",
- "version": "1.7.1",
- "expectCommit": "4ea5cc03f7de0061996946e129a00d6c32a2500f",
- "written": "2026-10-04T10:05:15.739Z",
+ "base": "http://127.0.0.1:4172",
+ "version": "1.7.2",
+ "expectCommit": "ef50223325247b1cef452ecf3365c5d163b1b164",
+ "written": "2026-10-04T12:17:18.730Z",
  "rows": [
   {
    "idle": {
     "lang": "ar",
     "dir": "rtl",
-    "badge": "v1.7.1",
-    "html": "1.7.1",
+    "badge": "v1.7.2",
+    "html": "1.7.2",
     "ids": [
      "s-exec-intro",
      "s-exec-al-ameri",
@@ -22,7 +22,7 @@
     "total": 48,
     "active": true,
     "n": 43,
-    "currentSrc": "http://127.0.0.1:4171/assets/exec/films/khalid/athar-origins-of-impact-ep01-muhammed-khalid-1080p.288c67b22b.mp4",
+    "currentSrc": "http://127.0.0.1:4172/assets/exec/films/khalid/athar-origins-of-impact-ep01-muhammed-khalid-1080p.288c67b22b.mp4",
     "src": "athar-origins-of-impact-ep01-muhammed-khalid-1080p.288c67b22b.mp4",
     "poster": "athar-origins-of-impact-ep01-muhammed-khalid-poster-18s8.32839348ca.jpg",
     "posterLoaded": true,
@@ -40,7 +40,7 @@
    },
    "playing": {
     "paused": false,
-    "currentTime": 2.815714,
+    "currentTime": 2.831239,
     "duration": 50.005,
     "src": "athar-origins-of-impact-ep01-muhammed-khalid-1080p.288c67b22b.mp4",
     "showing": [

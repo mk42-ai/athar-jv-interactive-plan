@@ -30,7 +30,7 @@
    Keyboard: N = play / pause (start when off, retry when blocked); ← → change slide (handled by the deck, never intercepted). */
 (function () {
   'use strict';
-  var VERSION = 'v1.7.1', KEY = 'athar-guide-prefs-v3', OLDKEY = 'athar-narration-prefs-v2', TABLE = '/narration/slide-narration.json', MANIFEST = '/narration/narration-manifest.json', TOTAL = 39 + ((window.AtharExecTeam && window.AtharExecTeam.count) || 0) + ((window.AtharBrand && window.AtharBrand.count) || 0), SETTLE_MS = 140, NOCLIP_MS = 9000; /* v1.5.5: 39 + section 09 Executive Team (slides 40–46) */
+  var VERSION = 'v1.7.2', KEY = 'athar-guide-prefs-v3', OLDKEY = 'athar-narration-prefs-v2', TABLE = '/narration/slide-narration.json', MANIFEST = '/narration/narration-manifest.json', TOTAL = 39 + ((window.AtharExecTeam && window.AtharExecTeam.count) || 0) + ((window.AtharBrand && window.AtharBrand.count) || 0), SETTLE_MS = 140, NOCLIP_MS = 9000; /* v1.5.5: 39 + section 09 Executive Team (slides 40–46) */
   var STATES = { idle: 1, loading: 1, playing: 1, paused: 1, blocked: 1, ended: 1 };
   var T = {
     en: { region: 'Narrated guide', guide: 'Guide', guideOn: 'Guide on', play: 'Play narration', pause: 'Pause narration', mute: 'Mute', unmute: 'Unmute', auto: 'AUTO — advance to the next slide when its narration ends', cc: 'CC — live caption of the sentence being narrated', txOpen: 'Hide transcript', txShow: 'Show transcript', tx: 'Transcript', tap: 'Tap to play', tapRetry: 'Retry narration', tapAria: 'The browser blocked the narration. Tap to play the narration for slide {n} of {t}', tapRetryAria: 'The narration could not load. Tap to retry slide {n} of {t}',

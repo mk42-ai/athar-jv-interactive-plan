@@ -1,0 +1,590 @@
+{
+ "base": "http://127.0.0.1:4172",
+ "version": "1.7.2",
+ "expectCommit": "ef50223325247b1cef452ecf3365c5d163b1b164",
+ "written": "2026-10-04T12:12:40.746Z",
+ "rows": [
+  {
+   "files": [
+    {
+     "id": "athar-logo-horizontal-official",
+     "url": "/assets/brand/logo/athar-logo-horizontal-official.862dc135e3.png",
+     "status": 200,
+     "bytes": 266005,
+     "sha256": "862dc135e31fdd6299bd7cd989d2ce869fdf4803773791f67052548f26cbd1ab",
+     "cacheControl": "public, max-age=31536000, immutable",
+     "contentType": "image/png"
+    },
+    {
+     "id": "athar-logo-horizontal-primary-1600",
+     "url": "/assets/brand/logo/athar-logo-horizontal-primary-1600.f7fc85d259.png",
+     "status": 200,
+     "bytes": 75188,
+     "sha256": "f7fc85d25964293848d27b0d3189318873c7c20236e45d5be8f7df76f6e4922c",
+     "cacheControl": "public, max-age=31536000, immutable",
+     "contentType": "image/png"
+    },
+    {
+     "id": "athar-logo-horizontal-reversed",
+     "url": "/assets/brand/logo/athar-logo-horizontal-reversed.6ddd8ba877.png",
+     "status": 200,
+     "bytes": 84183,
+     "sha256": "6ddd8ba87780f55641ec2c4da2687b786d09d99e91f279fe4b37695b59cf0745",
+     "cacheControl": "public, max-age=31536000, immutable",
+     "contentType": "image/png"
+    },
+    {
+     "id": "athar-logo-horizontal-ivory",
+     "url": "/assets/brand/logo/athar-logo-horizontal-ivory.5247ca2805.png",
+     "status": 200,
+     "bytes": 81671,
+     "sha256": "5247ca280599e867535a07ef6eb46b2bba0c7b3357e39c6575f59a4e98333488",
+     "cacheControl": "public, max-age=31536000, immutable",
+     "contentType": "image/png"
+    },
+    {
+     "id": "athar-logo-horizontal-mono-black",
+     "url": "/assets/brand/logo/athar-logo-horizontal-mono-black.13604b8c87.png",
+     "status": 200,
+     "bytes": 46863,
+     "sha256": "13604b8c87e37e867a43d1c1357ad2a92ef8e76eda0fd4fc78f8171aaac27750",
+     "cacheControl": "public, max-age=31536000, immutable",
+     "contentType": "image/png"
+    },
+    {
+     "id": "athar-logo-horizontal-mono-white",
+     "url": "/assets/brand/logo/athar-logo-horizontal-mono-white.e84c3a1574.png",
+     "status": 200,
+     "bytes": 50345,
+     "sha256": "e84c3a1574a8a6cf63b9e29eb49dc54c1e76a1519f6d6043c3dc3f560f9b1a36",
+     "cacheControl": "public, max-age=31536000, immutable",
+     "contentType": "image/png"
+    },
+    {
+     "id": "athar-monogram-deep-ocean",
+     "url": "/assets/brand/logo/athar-monogram-deep-ocean.8a68c3db50.png",
+     "status": 200,
+     "bytes": 74529,
+     "sha256": "8a68c3db50d6fd06159453ac9860c29c00fc734ab241cd0ff511c61898803d1d",
+     "cacheControl": "public, max-age=31536000, immutable",
+     "contentType": "image/png"
+    },
+    {
+     "id": "athar-monogram-champagne-gold",
+     "url": "/assets/brand/logo/athar-monogram-champagne-gold.7d2a6c89b6.png",
+     "status": 200,
+     "bytes": 84434,
+     "sha256": "7d2a6c89b607c40aa6191ef040f1b94c91b2373060740779176d19b0048b01f8",
+     "cacheControl": "public, max-age=31536000, immutable",
+     "contentType": "image/png"
+    },
+    {
+     "id": "athar-mood-board-key-visual",
+     "url": "/assets/brand/mood/athar-mood-board-key-visual.022b7bc5aa.jpg",
+     "status": 200,
+     "bytes": 275278,
+     "sha256": "022b7bc5aaac70c9b58531fd1c376b4fa5bfe74481afcabbc805482e0a9e6caa",
+     "cacheControl": "public, max-age=31536000, immutable",
+     "contentType": "image/jpeg"
+    },
+    {
+     "id": "wireframe-p04-overview@2x",
+     "url": "/assets/brand/gallery/wireframe-p04-overview@2x.0c487fab5b.webp",
+     "status": 200,
+     "bytes": 54366,
+     "sha256": "0c487fab5b06fda895b11879bda3b2f182c24765499e5d2e41ddb8610bf68652",
+     "cacheControl": "public, max-age=31536000, immutable",
+     "contentType": "image/webp"
+    },
+    {
+     "id": "wireframe-p04-overview@1x",
+     "url": "/assets/brand/gallery/wireframe-p04-overview@1x.2f97c8148a.webp",
+     "status": 200,
+     "bytes": 21272,
+     "sha256": "2f97c8148a3b2c58b5893cf5de898205362c40e7ceb3fa083176dccbaff4a445",
+     "cacheControl": "public, max-age=31536000, immutable",
+     "contentType": "image/webp"
+    },
+    {
+     "id": "wireframe-p04-overview",
+     "url": "/assets/brand/gallery/wireframe-p04-overview.7100c0dbc3.jpg",
+     "status": 200,
+     "bytes": 115801,
+     "sha256": "7100c0dbc30b9b3a73f297e62db4dbe7d48054ce45d4f367637d43106fd56385",
+     "cacheControl": "public, max-age=31536000, immutable",
+     "contentType": "image/jpeg"
+    },
+    {
+     "id": "wireframe-p04-overview@2x",
+     "url": "/assets/brand/gallery/wireframe-p04-overview@2x.a7c7389294.png",
+     "status": 200,
+     "bytes": 279281,
+     "sha256": "a7c73892944aca4a15a3cf0c19ed188eccd521bd40cc710df9fbab4a47f0d0c3",
+     "cacheControl": "public, max-age=31536000, immutable",
+     "contentType": "image/png"
+    },
+    {
+     "id": "screens-p09-overview-en@2x",
+     "url": "/assets/brand/gallery/screens-p09-overview-en@2x.85e30aba37.webp",
+     "status": 200,
+     "bytes": 64352,
+     "sha256": "85e30aba37222a830e2b08d53f0d9087669b549c1ab78617265d47ba8ac5b76c",
+     "cacheControl": "public, max-age=31536000, immutable",
+     "contentType": "image/webp"
+    },
+    {
+     "id": "screens-p09-overview-en@1x",
+     "url": "/assets/brand/gallery/screens-p09-overview-en@1x.3e010b0f2a.webp",
+     "status": 200,
+     "bytes": 23376,
+     "sha256": "3e010b0f2a2317f4014a6aae975fa85363c0ffb99fec01589802a91eb78d9010",
+     "cacheControl": "public, max-age=31536000, immutable",
+     "contentType": "image/webp"
+    },
+    {
+     "id": "screens-p09-overview-en",
+     "url": "/assets/brand/gallery/screens-p09-overview-en.1866ba41c8.jpg",
+     "status": 200,
+     "bytes": 127282,
+     "sha256": "1866ba41c8939a9408aef59c364b0e52993009f96a4ccf87cb265fe4b8deadba",
+     "cacheControl": "public, max-age=31536000, immutable",
+     "contentType": "image/jpeg"
+    },
+    {
+     "id": "screens-p09-overview-en@2x",
+     "url": "/assets/brand/gallery/screens-p09-overview-en@2x.1cf9e905d0.png",
+     "status": 200,
+     "bytes": 356894,
+     "sha256": "1cf9e905d0592e7860b2f854cbef1488b396fc383ae380f69aaf494dfe831d68",
+     "cacheControl": "public, max-age=31536000, immutable",
+     "contentType": "image/png"
+    },
+    {
+     "id": "screens-p16-agent-flow-builder@2x",
+     "url": "/assets/brand/gallery/screens-p16-agent-flow-builder@2x.22daf9f84c.webp",
+     "status": 200,
+     "bytes": 36566,
+     "sha256": "22daf9f84c77d481317d60c3248a10890d5939b2992546e6e9b6ae4497d9fea1",
+     "cacheControl": "public, max-age=31536000, immutable",
+     "contentType": "image/webp"
+    },
+    {
+     "id": "screens-p16-agent-flow-builder@1x",
+     "url": "/assets/brand/gallery/screens-p16-agent-flow-builder@1x.57da969dd6.webp",
+     "status": 200,
+     "bytes": 13920,
+     "sha256": "57da969dd64753c09bc5f4fa6c8da1b0a90293db6c8bfdbd0704548b1e3d36a2",
+     "cacheControl": "public, max-age=31536000, immutable",
+     "contentType": "image/webp"
+    },
+    {
+     "id": "screens-p16-agent-flow-builder",
+     "url": "/assets/brand/gallery/screens-p16-agent-flow-builder.75a8083505.jpg",
+     "status": 200,
+     "bytes": 81277,
+     "sha256": "75a808350518fbafc73d1a5c0a1b074c2f66a9007856e4facedddfcda0ece306",
+     "cacheControl": "public, max-age=31536000, immutable",
+     "contentType": "image/jpeg"
+    },
+    {
+     "id": "screens-p16-agent-flow-builder@2x",
+     "url": "/assets/brand/gallery/screens-p16-agent-flow-builder@2x.cd9e535679.png",
+     "status": 200,
+     "bytes": 214419,
+     "sha256": "cd9e535679f3cb1b4a104af6164fbc9d190ac0da76a4cc104cf1601862dea735",
+     "cacheControl": "public, max-age=31536000, immutable",
+     "contentType": "image/png"
+    },
+    {
+     "id": "screens-p18-overview-ar@2x",
+     "url": "/assets/brand/gallery/screens-p18-overview-ar@2x.24aa2a0922.webp",
+     "status": 200,
+     "bytes": 64506,
+     "sha256": "24aa2a0922065359ac470a95af16d5bdfa6ab422004361c2cf3ac3165eb8c6e0",
+     "cacheControl": "public, max-age=31536000, immutable",
+     "contentType": "image/webp"
+    },
+    {
+     "id": "screens-p18-overview-ar@1x",
+     "url": "/assets/brand/gallery/screens-p18-overview-ar@1x.1a1108462f.webp",
+     "status": 200,
+     "bytes": 24260,
+     "sha256": "1a1108462fb3538de484e0d7ef868df5b9be2d1e93aefbe8b218180283032821",
+     "cacheControl": "public, max-age=31536000, immutable",
+     "contentType": "image/webp"
+    },
+    {
+     "id": "screens-p18-overview-ar",
+     "url": "/assets/brand/gallery/screens-p18-overview-ar.23761ba8ae.jpg",
+     "status": 200,
+     "bytes": 129135,
+     "sha256": "23761ba8aebbf7561ef5043d918549c735e2cbecdf0a09112b8022f1d410d92a",
+     "cacheControl": "public, max-age=31536000, immutable",
+     "contentType": "image/jpeg"
+    },
+    {
+     "id": "screens-p18-overview-ar@2x",
+     "url": "/assets/brand/gallery/screens-p18-overview-ar@2x.fe752011b1.png",
+     "status": 200,
+     "bytes": 348782,
+     "sha256": "fe752011b13393b3c2806f2d03585986492a079625d1acb3f546f4b7f88cd891",
+     "cacheControl": "public, max-age=31536000, immutable",
+     "contentType": "image/png"
+    },
+    {
+     "id": "agent-avatar-system-v2@2x",
+     "url": "/assets/brand/gallery/agent-avatar-system-v2@2x.858ca22147.webp",
+     "status": 200,
+     "bytes": 110062,
+     "sha256": "858ca22147d6e073562dc797749881636bd43c038ec8b3a7b5f55207e9090099",
+     "cacheControl": "public, max-age=31536000, immutable",
+     "contentType": "image/webp"
+    },
+    {
+     "id": "agent-avatar-system-v2@1x",
+     "url": "/assets/brand/gallery/agent-avatar-system-v2@1x.fc6e8f8445.webp",
+     "status": 200,
+     "bytes": 43632,
+     "sha256": "fc6e8f84455265125f0faa5a6c2a4855ce976772d869ba20cc0cfa1d623a8ae2",
+     "cacheControl": "public, max-age=31536000, immutable",
+     "contentType": "image/webp"
+    },
+    {
+     "id": "agent-avatar-system-v2",
+     "url": "/assets/brand/gallery/agent-avatar-system-v2.d99f6bf802.jpg",
+     "status": 200,
+     "bytes": 183767,
+     "sha256": "d99f6bf8020bd9e7dff49c88f78b24ec09a802f01dc5946ba76e2aaa55d2f2dd",
+     "cacheControl": "public, max-age=31536000, immutable",
+     "contentType": "image/jpeg"
+    },
+    {
+     "id": "render-stationery-flat-lay@2x",
+     "url": "/assets/brand/gallery/render-stationery-flat-lay@2x.7b3702442a.webp",
+     "status": 200,
+     "bytes": 57518,
+     "sha256": "7b3702442a215fd14a53ba9fe57d1b84e1bc05f8d9b122d5a450a5561a982bb3",
+     "cacheControl": "public, max-age=31536000, immutable",
+     "contentType": "image/webp"
+    },
+    {
+     "id": "render-stationery-flat-lay@1x",
+     "url": "/assets/brand/gallery/render-stationery-flat-lay@1x.c0edce2134.webp",
+     "status": 200,
+     "bytes": 18376,
+     "sha256": "c0edce2134a803e3e25a5a2e29eee48c35af1e13afffd4ebfda4c824f805f8cc",
+     "cacheControl": "public, max-age=31536000, immutable",
+     "contentType": "image/webp"
+    },
+    {
+     "id": "render-stationery-flat-lay",
+     "url": "/assets/brand/gallery/render-stationery-flat-lay.7ecc6ef883.jpg",
+     "status": 200,
+     "bytes": 143003,
+     "sha256": "7ecc6ef8839a966138a6c5141f7f51bc80f00367f6a2f2af8bc3846a0deb1859",
+     "cacheControl": "public, max-age=31536000, immutable",
+     "contentType": "image/jpeg"
+    },
+    {
+     "id": "render-reception-kiosk@2x",
+     "url": "/assets/brand/gallery/render-reception-kiosk@2x.9670e7fcc8.webp",
+     "status": 200,
+     "bytes": 104266,
+     "sha256": "9670e7fcc8ce82b298dc3651b4fec24ed4a0f41ebd584d30c0307ff410cf9b78",
+     "cacheControl": "public, max-age=31536000, immutable",
+     "contentType": "image/webp"
+    },
+    {
+     "id": "render-reception-kiosk@1x",
+     "url": "/assets/brand/gallery/render-reception-kiosk@1x.c3f21cac22.webp",
+     "status": 200,
+     "bytes": 49486,
+     "sha256": "c3f21cac22da2060cd131beed103df46feea8c7a4ff2ba035a44919050cec668",
+     "cacheControl": "public, max-age=31536000, immutable",
+     "contentType": "image/webp"
+    },
+    {
+     "id": "render-reception-kiosk",
+     "url": "/assets/brand/gallery/render-reception-kiosk.ddf19d13dc.jpg",
+     "status": 200,
+     "bytes": 186220,
+     "sha256": "ddf19d13dc83d2a94a6d859fa7e5912d59cfa4a3451eb12872d3b8b897686379",
+     "cacheControl": "public, max-age=31536000, immutable",
+     "contentType": "image/jpeg"
+    },
+    {
+     "id": "render-laptop-phone-dashboard@2x",
+     "url": "/assets/brand/gallery/render-laptop-phone-dashboard@2x.51124ee7e9.webp",
+     "status": 200,
+     "bytes": 90566,
+     "sha256": "51124ee7e9246b4aaab1f22d8297f5fd3dad541e6d48812fe2b23e807484b228",
+     "cacheControl": "public, max-age=31536000, immutable",
+     "contentType": "image/webp"
+    },
+    {
+     "id": "render-laptop-phone-dashboard@1x",
+     "url": "/assets/brand/gallery/render-laptop-phone-dashboard@1x.296284b693.webp",
+     "status": 200,
+     "bytes": 39698,
+     "sha256": "296284b69397dc86adeae4c4cf7fdf91f5fa3d060ad5d15002541a4c469688fc",
+     "cacheControl": "public, max-age=31536000, immutable",
+     "contentType": "image/webp"
+    },
+    {
+     "id": "render-laptop-phone-dashboard",
+     "url": "/assets/brand/gallery/render-laptop-phone-dashboard.84b9679ee2.jpg",
+     "status": 200,
+     "bytes": 168260,
+     "sha256": "84b9679ee240c4f86289f282a9c9c6f394fe4b06c00d376bef70651a18badff7",
+     "cacheControl": "public, max-age=31536000, immutable",
+     "contentType": "image/jpeg"
+    },
+    {
+     "id": "render-brand-background-tile@2x",
+     "url": "/assets/brand/gallery/render-brand-background-tile@2x.809bc68748.webp",
+     "status": 200,
+     "bytes": 56036,
+     "sha256": "809bc687484777fa155a645e43599f59bd3c2a33c6301b16da4abff8b839fa80",
+     "cacheControl": "public, max-age=31536000, immutable",
+     "contentType": "image/webp"
+    },
+    {
+     "id": "render-brand-background-tile@1x",
+     "url": "/assets/brand/gallery/render-brand-background-tile@1x.ee209d46ad.webp",
+     "status": 200,
+     "bytes": 20730,
+     "sha256": "ee209d46ade0957341318a3e0a45afb7ffcc8cac411b7566c4321625dd563e65",
+     "cacheControl": "public, max-age=31536000, immutable",
+     "contentType": "image/webp"
+    },
+    {
+     "id": "render-brand-background-tile",
+     "url": "/assets/brand/gallery/render-brand-background-tile.8a8130beab.jpg",
+     "status": 200,
+     "bytes": 127732,
+     "sha256": "8a8130beabbb8945569450ba7425b58ddce880f0e04fe83aebd476035240cf02",
+     "cacheControl": "public, max-age=31536000, immutable",
+     "contentType": "image/jpeg"
+    },
+    {
+     "id": "IBMPlexSans-Medium",
+     "url": "/assets/brand/fonts/IBMPlexSans-Medium.f6a8a187ac.woff2",
+     "status": 200,
+     "bytes": 18940,
+     "sha256": "f6a8a187ac0ad6ed50f4001fe3d5dd779a1576706939f0d1cae3f9de0f3b0f55",
+     "cacheControl": "public, max-age=31536000, immutable",
+     "contentType": "font/woff2"
+    },
+    {
+     "id": "IBMPlexSansArabic-Medium",
+     "url": "/assets/brand/fonts/IBMPlexSansArabic-Medium.d10159458e.woff2",
+     "status": 200,
+     "bytes": 51904,
+     "sha256": "d10159458e8cfdb840f2b1463f90167a5be57393a7bdaa400fde553d30e52d2b",
+     "cacheControl": "public, max-age=31536000, immutable",
+     "contentType": "font/woff2"
+    },
+    {
+     "id": "CormorantGaramond-Light",
+     "url": "/assets/brand/fonts/CormorantGaramond-Light.ccc6cb322e.woff2",
+     "status": 200,
+     "bytes": 36276,
+     "sha256": "ccc6cb322e2e29625e7a3e87bdde6b9502fbb0b7a2f1f4db479863f6278a8470",
+     "cacheControl": "public, max-age=31536000, immutable",
+     "contentType": "font/woff2"
+    },
+    {
+     "id": "CormorantGaramond-Regular",
+     "url": "/assets/brand/fonts/CormorantGaramond-Regular.fe7c426643.woff2",
+     "status": 200,
+     "bytes": 38528,
+     "sha256": "fe7c426643cb6602baa415c0de2ae515c7d10fe311bc67608b3d558c25591013",
+     "cacheControl": "public, max-age=31536000, immutable",
+     "contentType": "font/woff2"
+    },
+    {
+     "id": "CormorantGaramond-LightItalic",
+     "url": "/assets/brand/fonts/CormorantGaramond-LightItalic.888380eaa5.woff2",
+     "status": 200,
+     "bytes": 27184,
+     "sha256": "888380eaa5a48ddde73ed4f249f9895d40158907851f2c96406f720e452b4a20",
+     "cacheControl": "public, max-age=31536000, immutable",
+     "contentType": "font/woff2"
+    },
+    {
+     "id": "IBMPlexMono-Regular",
+     "url": "/assets/brand/fonts/IBMPlexMono-Regular.3742991142.woff2",
+     "status": 200,
+     "bytes": 10348,
+     "sha256": "374299114218907012aec823f176dbc383b69489a4a44e1ae48b30feda04a93a",
+     "cacheControl": "public, max-age=31536000, immutable",
+     "contentType": "font/woff2"
+    },
+    {
+     "id": "IBMPlexSansArabic-Light",
+     "url": "/assets/brand/fonts/IBMPlexSansArabic-Light.3327209b93.woff2",
+     "status": 200,
+     "bytes": 51600,
+     "sha256": "3327209b937da0a575aeb5f649789272f95709d4b656535c4da29ff4f26fb6b7",
+     "cacheControl": "public, max-age=31536000, immutable",
+     "contentType": "font/woff2"
+    }
+   ],
+   "noStore": [
+    {
+     "url": "/js/brand-data.js",
+     "status": 200,
+     "cacheControl": "no-store"
+    },
+    {
+     "url": "/js/brand-section.js",
+     "status": 200,
+     "cacheControl": "no-store"
+    },
+    {
+     "url": "/assets/brand-fonts.css",
+     "status": 200,
+     "cacheControl": "no-store"
+    },
+    {
+     "url": "/assets/brand-section.css",
+     "status": 200,
+     "cacheControl": "no-store"
+    },
+    {
+     "url": "/build-info.json",
+     "status": 200,
+     "cacheControl": "no-store"
+    },
+    {
+     "url": "/narration/slide-narration.json",
+     "status": 200,
+     "cacheControl": "no-store"
+    },
+    {
+     "url": "/index.html",
+     "status": 200,
+     "cacheControl": "no-store"
+    }
+   ],
+   "forbidden": [
+    {
+     "url": "/Athar_Brand_Guidelines_FINAL.pdf",
+     "status": 404
+    },
+    {
+     "url": "/assets/brand/Athar_Brand_Guidelines_FINAL.pdf",
+     "status": 404
+    },
+    {
+     "url": "/assets/Athar_Brand_Guidelines_FINAL.pdf",
+     "status": 404
+    },
+    {
+     "url": "/features/brand/Athar_Brand_Guidelines_FINAL.pdf",
+     "status": 404
+    },
+    {
+     "url": "/brand/Athar_Brand_Guidelines_FINAL.pdf",
+     "status": 404
+    },
+    {
+     "url": "/Athar_Brand_Guidelines_FINAL_v3.pdf",
+     "status": 404
+    },
+    {
+     "url": "/assets/brand/Athar_Brand_Guidelines_FINAL_v3.pdf",
+     "status": 404
+    },
+    {
+     "url": "/assets/Athar_Brand_Guidelines_FINAL_v3.pdf",
+     "status": 404
+    },
+    {
+     "url": "/features/brand/Athar_Brand_Guidelines_FINAL_v3.pdf",
+     "status": 404
+    },
+    {
+     "url": "/brand/Athar_Brand_Guidelines_FINAL_v3.pdf",
+     "status": 404
+    },
+    {
+     "url": "/Athar_Brand_Guidelines_FINAL.docx",
+     "status": 404
+    },
+    {
+     "url": "/assets/brand/Athar_Brand_Guidelines_FINAL.docx",
+     "status": 404
+    },
+    {
+     "url": "/assets/Athar_Brand_Guidelines_FINAL.docx",
+     "status": 404
+    },
+    {
+     "url": "/features/brand/Athar_Brand_Guidelines_FINAL.docx",
+     "status": 404
+    },
+    {
+     "url": "/brand/Athar_Brand_Guidelines_FINAL.docx",
+     "status": 404
+    },
+    {
+     "url": "/Athar_Brand_Guidelines.pdf",
+     "status": 404
+    },
+    {
+     "url": "/assets/brand/Athar_Brand_Guidelines.pdf",
+     "status": 404
+    },
+    {
+     "url": "/assets/Athar_Brand_Guidelines.pdf",
+     "status": 404
+    },
+    {
+     "url": "/features/brand/Athar_Brand_Guidelines.pdf",
+     "status": 404
+    },
+    {
+     "url": "/brand/Athar_Brand_Guidelines.pdf",
+     "status": 404
+    }
+   ],
+   "clips": [
+    {
+     "file": "/audio/guide/slides/NAR-s50-s-brand-foundations.mp3",
+     "status": 200,
+     "bytes": 646208
+    },
+    {
+     "file": "/audio/guide/slides/NAR-s50-s-brand-foundations.ar.mp3",
+     "status": 200,
+     "bytes": 676302
+    },
+    {
+     "file": "/audio/guide/slides/NAR-s47-s-brand-typography.mp3",
+     "status": 200,
+     "bytes": 459381
+    },
+    {
+     "file": "/audio/guide/slides/NAR-s47-s-brand-typography.ar.mp3",
+     "status": 200,
+     "bytes": 499505
+    },
+    {
+     "file": "/audio/guide/slides/NAR-s51-s-brand-gallery.mp3",
+     "status": 200,
+     "bytes": 655822
+    },
+    {
+     "file": "/audio/guide/slides/NAR-s51-s-brand-gallery.ar.mp3",
+     "status": 200,
+     "bytes": 659583
+    }
+   ],
+   "servedCommit": "ef50223325247b1cef452ecf3365c5d163b1b164",
+   "servedVersion": "1.7.2",
+   "builtAt": "2026-10-04T12:07:41.348Z",
+   "stamps": 28
+  }
+ ]
+}

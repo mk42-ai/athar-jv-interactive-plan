@@ -1,7 +1,7 @@
 {
- "base": "http://127.0.0.1:4171",
- "version": "1.7.1",
- "written": "2026-10-04T10:14:27.934Z",
+ "base": "http://127.0.0.1:4172",
+ "version": "1.7.2",
+ "written": "2026-10-04T12:26:14.359Z",
  "rows": [
   {
    "meta": {
@@ -31,7 +31,7 @@
    "playing": {
     "state": "playing",
     "paused": false,
-    "ct": 1.219286,
+    "ct": 1.183544,
     "controls": true,
     "overlayHidden": true,
     "overlays": 0,

@@ -1,15 +1,15 @@
 {
- "base": "http://127.0.0.1:4171",
- "version": "1.7.1",
- "expectCommit": "4ea5cc03f7de0061996946e129a00d6c32a2500f",
- "written": "2026-10-04T10:05:22.870Z",
+ "base": "http://127.0.0.1:4172",
+ "version": "1.7.2",
+ "expectCommit": "ef50223325247b1cef452ecf3365c5d163b1b164",
+ "written": "2026-10-04T12:17:25.952Z",
  "rows": [
   {
    "idle": {
     "lang": "ar",
     "dir": "rtl",
-    "badge": "v1.7.1",
-    "html": "1.7.1",
+    "badge": "v1.7.2",
+    "html": "1.7.2",
     "ids": [
      "s-exec-intro",
      "s-exec-al-ameri",
@@ -22,7 +22,7 @@
     "total": 48,
     "active": true,
     "n": 44,
-    "currentSrc": "http://127.0.0.1:4171/assets/exec/films/unwalla/athar-origins-ep01-kayaan-unwalla-1080p.2c1c7f0f3b.mp4",
+    "currentSrc": "http://127.0.0.1:4172/assets/exec/films/unwalla/athar-origins-ep01-kayaan-unwalla-1080p.2c1c7f0f3b.mp4",
     "src": "athar-origins-ep01-kayaan-unwalla-1080p.2c1c7f0f3b.mp4",
     "poster": "athar-origins-ep01-kayaan-unwalla-poster-20s0.976a2a5387.jpg",
     "posterLoaded": true,
@@ -40,7 +40,7 @@
    },
    "playing": {
     "paused": false,
-    "currentTime": 2.84649,
+    "currentTime": 2.826648,
     "duration": 40,
     "src": "athar-origins-ep01-kayaan-unwalla-1080p.2c1c7f0f3b.mp4",
     "showing": [

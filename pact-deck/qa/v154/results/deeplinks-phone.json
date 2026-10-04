@@ -1,213 +1,213 @@
 {
- "base": "http://127.0.0.1:4171",
- "written": "2026-10-04T10:22:28.820Z",
+ "base": "http://127.0.0.1:4172",
+ "written": "2026-10-04T12:34:08.626Z",
  "rows": [
   {
    "n": 39,
    "hash": "#/28",
    "slideId": "s-closing",
    "audibleClip": "NAR-s39",
-   "syncMs": 168,
+   "syncMs": 155,
    "pass": true,
-   "t": "2026-10-04T10:22:19.281Z"
+   "t": "2026-10-04T12:33:59.533Z"
   },
   {
    "n": 20,
    "hash": "#/20",
    "slideId": "s-how-to-sign",
    "audibleClip": "NAR-s20",
-   "syncMs": 159,
+   "syncMs": 143,
    "pass": true,
-   "t": "2026-10-04T10:22:19.554Z"
+   "t": "2026-10-04T12:33:59.785Z"
   },
   {
    "n": 1,
    "hash": "#/1",
    "slideId": "s-cover",
    "audibleClip": "NAR-s01",
-   "syncMs": 155,
+   "syncMs": 151,
    "pass": true,
-   "t": "2026-10-04T10:22:19.856Z"
+   "t": "2026-10-04T12:34:00.059Z"
   },
   {
    "n": 21,
    "hash": "#/21",
    "slideId": "s-actors-wall",
    "audibleClip": "NAR-s21",
-   "syncMs": 164,
+   "syncMs": 146,
    "pass": true,
-   "t": "2026-10-04T10:22:20.130Z"
+   "t": "2026-10-04T12:34:00.307Z"
   },
   {
    "n": 2,
    "hash": "#/2",
    "slideId": "s-hero",
    "audibleClip": "NAR-s02",
-   "syncMs": 152,
+   "syncMs": 140,
    "pass": true,
-   "t": "2026-10-04T10:22:20.424Z"
+   "t": "2026-10-04T12:34:00.577Z"
   },
   {
    "n": 22,
    "hash": "#/22",
    "slideId": "s-who-signs",
    "audibleClip": "NAR-s22",
-   "syncMs": 173,
+   "syncMs": 133,
    "pass": true,
-   "t": "2026-10-04T10:22:20.707Z"
+   "t": "2026-10-04T12:34:00.818Z"
   },
   {
    "n": 3,
    "hash": "#/3",
    "slideId": "s-why-pact",
    "audibleClip": "NAR-s03",
-   "syncMs": 151,
+   "syncMs": 37,
    "pass": true,
-   "t": "2026-10-04T10:22:21.011Z"
+   "t": "2026-10-04T12:34:00.998Z"
   },
   {
    "n": 23,
    "hash": "#/23",
    "slideId": "s-who-governs",
    "audibleClip": "NAR-s23",
-   "syncMs": 171,
+   "syncMs": 166,
    "pass": true,
-   "t": "2026-10-04T10:22:21.290Z"
+   "t": "2026-10-04T12:34:01.282Z"
   },
   {
    "n": 4,
    "hash": "#/4",
    "slideId": "s-four-outcomes",
    "audibleClip": "NAR-s04",
-   "syncMs": 145,
+   "syncMs": 136,
    "pass": true,
-   "t": "2026-10-04T10:22:21.575Z"
+   "t": "2026-10-04T12:34:01.557Z"
   },
   {
    "n": 24,
    "hash": "#/24",
    "slideId": "s-who-builds",
    "audibleClip": "NAR-s24",
-   "syncMs": 157,
+   "syncMs": 151,
    "pass": true,
-   "t": "2026-10-04T10:22:21.835Z"
+   "t": "2026-10-04T12:34:01.797Z"
   },
   {
    "n": 5,
    "hash": "#/5",
    "slideId": "s-managed-programme",
    "audibleClip": "NAR-s05",
-   "syncMs": 48,
+   "syncMs": 148,
    "pass": true,
-   "t": "2026-10-04T10:22:22.028Z"
+   "t": "2026-10-04T12:34:02.070Z"
   },
   {
    "n": 25,
    "hash": "#/25",
    "slideId": "s-who-learns",
    "audibleClip": "NAR-s25",
-   "syncMs": 150,
+   "syncMs": 138,
    "pass": true,
-   "t": "2026-10-04T10:22:22.295Z"
+   "t": "2026-10-04T12:34:02.321Z"
   },
   {
    "n": 6,
    "hash": "#/6",
    "slideId": "s-discord-home",
    "audibleClip": "NAR-s06",
-   "syncMs": 41,
+   "syncMs": 141,
    "pass": true,
-   "t": "2026-10-04T10:22:22.493Z"
+   "t": "2026-10-04T12:34:02.592Z"
   },
   {
    "n": 26,
    "hash": "#/26",
    "slideId": "s-governance-licence",
    "audibleClip": "NAR-s26",
-   "syncMs": 157,
+   "syncMs": 148,
    "pass": true,
-   "t": "2026-10-04T10:22:22.772Z"
+   "t": "2026-10-04T12:34:02.860Z"
   },
   {
    "n": 7,
    "hash": "#/7",
    "slideId": "s-country-chapters",
    "audibleClip": "NAR-s07",
-   "syncMs": 154,
+   "syncMs": 147,
    "pass": true,
-   "t": "2026-10-04T10:22:23.080Z"
+   "t": "2026-10-04T12:34:03.128Z"
   },
   {
    "n": 27,
    "hash": "#/27",
    "slideId": "s-roadmap",
    "audibleClip": "NAR-s27",
-   "syncMs": 149,
+   "syncMs": 146,
    "pass": true,
-   "t": "2026-10-04T10:22:23.343Z"
+   "t": "2026-10-04T12:34:03.386Z"
   },
   {
    "n": 8,
    "hash": "#/8",
    "slideId": "s-learning-formats",
    "audibleClip": "NAR-s08",
-   "syncMs": 159,
+   "syncMs": 153,
    "pass": true,
-   "t": "2026-10-04T10:22:23.641Z"
+   "t": "2026-10-04T12:34:03.669Z"
   },
   {
    "n": 28,
    "hash": "#/27/new-1",
    "slideId": "s-it-outcomes",
    "audibleClip": "NAR-s28",
-   "syncMs": 145,
+   "syncMs": 29,
    "pass": true,
-   "t": "2026-10-04T10:22:23.926Z"
+   "t": "2026-10-04T12:34:03.855Z"
   },
   {
    "n": 9,
    "hash": "#/9",
    "slideId": "s-challenges-showcases",
    "audibleClip": "NAR-s09",
-   "syncMs": 37,
+   "syncMs": 138,
    "pass": true,
-   "t": "2026-10-04T10:22:24.116Z"
+   "t": "2026-10-04T12:34:04.113Z"
   },
   {
    "n": 29,
    "hash": "#/27/new-2",
    "slideId": "s-it-tiers",
    "audibleClip": "NAR-s29",
-   "syncMs": 37,
+   "syncMs": 144,
    "pass": true,
-   "t": "2026-10-04T10:22:24.329Z"
+   "t": "2026-10-04T12:34:04.409Z"
   },
   {
    "n": 10,
    "hash": "#/10",
    "slideId": "s-office-hours",
    "audibleClip": "NAR-s10",
-   "syncMs": 156,
+   "syncMs": 135,
    "pass": true,
-   "t": "2026-10-04T10:22:24.602Z"
+   "t": "2026-10-04T12:34:04.641Z"
   },
   {
    "n": 30,
    "hash": "#/27/new-3",
    "slideId": "s-it-metrics",
    "audibleClip": "NAR-s30",
-   "syncMs": 35,
+   "syncMs": 26,
    "pass": true,
-   "t": "2026-10-04T10:22:24.785Z"
+   "t": "2026-10-04T12:34:04.821Z"
   },
   {
    "n": 11,
    "hash": "#/11",
    "slideId": "s-agent-marketplace",
    "audibleClip": "NAR-s11",
-   "syncMs": 161,
+   "syncMs": 134,
    "pass": true,
-   "t": "2026-10-04T10:22:25.037Z"
+   "t": "2026-10-04T12:34:05.055Z"
   },
   {
    "n": 31,
@@ -216,70 +216,70 @@
    "audibleClip": "NAR-s31",
    "syncMs": 36,
    "pass": true,
-   "t": "2026-10-04T10:22:25.272Z"
+   "t": "2026-10-04T12:34:05.235Z"
   },
   {
    "n": 12,
    "hash": "#/12",
    "slideId": "s-decision-table",
    "audibleClip": "NAR-s12",
-   "syncMs": 159,
+   "syncMs": 143,
    "pass": true,
-   "t": "2026-10-04T10:22:25.544Z"
+   "t": "2026-10-04T12:34:05.497Z"
   },
   {
    "n": 32,
    "hash": "#/27/new-5",
    "slideId": "s-it-partners",
    "audibleClip": "NAR-s32",
-   "syncMs": 43,
+   "syncMs": 33,
    "pass": true,
-   "t": "2026-10-04T10:22:25.752Z"
+   "t": "2026-10-04T12:34:05.681Z"
   },
   {
    "n": 13,
    "hash": "#/13",
    "slideId": "s-pillar-plugins",
    "audibleClip": "NAR-s13",
-   "syncMs": 165,
+   "syncMs": 145,
    "pass": true,
-   "t": "2026-10-04T10:22:26.027Z"
+   "t": "2026-10-04T12:34:05.936Z"
   },
   {
    "n": 33,
    "hash": "#/27/new-6",
    "slideId": "s-it-join",
    "audibleClip": "NAR-s33",
-   "syncMs": 38,
+   "syncMs": 25,
    "pass": true,
-   "t": "2026-10-04T10:22:26.237Z"
+   "t": "2026-10-04T12:34:06.129Z"
   },
   {
    "n": 14,
    "hash": "#/14",
    "slideId": "s-pillar-skills",
    "audibleClip": "NAR-s14",
-   "syncMs": 142,
+   "syncMs": 145,
    "pass": true,
-   "t": "2026-10-04T10:22:26.481Z"
+   "t": "2026-10-04T12:34:06.362Z"
   },
   {
    "n": 34,
    "hash": "#/27/new-7",
    "slideId": "s-aos-overview",
    "audibleClip": "NAR-s34",
-   "syncMs": 37,
+   "syncMs": 28,
    "pass": true,
-   "t": "2026-10-04T10:22:26.687Z"
+   "t": "2026-10-04T12:34:06.558Z"
   },
   {
    "n": 15,
    "hash": "#/15",
    "slideId": "s-pillar-open-ecosystem",
    "audibleClip": "NAR-s15",
-   "syncMs": 149,
+   "syncMs": 138,
    "pass": true,
-   "t": "2026-10-04T10:22:26.945Z"
+   "t": "2026-10-04T12:34:06.786Z"
   },
   {
    "n": 35,
@@ -288,70 +288,70 @@
    "audibleClip": "NAR-s35",
    "syncMs": 32,
    "pass": true,
-   "t": "2026-10-04T10:22:27.172Z"
+   "t": "2026-10-04T12:34:07.013Z"
   },
   {
    "n": 16,
    "hash": "#/16",
    "slideId": "s-pillar-cross-model",
    "audibleClip": "NAR-s16",
-   "syncMs": 152,
+   "syncMs": 136,
    "pass": true,
-   "t": "2026-10-04T10:22:27.440Z"
+   "t": "2026-10-04T12:34:07.262Z"
   },
   {
    "n": 36,
    "hash": "#/27/new-9",
    "slideId": "s-aos-roadmap",
    "audibleClip": "NAR-s36",
-   "syncMs": 34,
+   "syncMs": 132,
    "pass": true,
-   "t": "2026-10-04T10:22:27.631Z"
+   "t": "2026-10-04T12:34:07.541Z"
   },
   {
    "n": 17,
    "hash": "#/17",
    "slideId": "s-pillar-universal-licence",
    "audibleClip": "NAR-s17",
-   "syncMs": 148,
+   "syncMs": 136,
    "pass": true,
-   "t": "2026-10-04T10:22:27.888Z"
+   "t": "2026-10-04T12:34:07.771Z"
   },
   {
    "n": 37,
    "hash": "#/27/new-10",
    "slideId": "s-aos-deploy",
    "audibleClip": "NAR-s37",
-   "syncMs": 34,
+   "syncMs": 33,
    "pass": true,
-   "t": "2026-10-04T10:22:28.092Z"
+   "t": "2026-10-04T12:34:07.970Z"
   },
   {
    "n": 18,
    "hash": "#/18",
    "slideId": "s-pillar-upskilling",
    "audibleClip": "NAR-s18",
-   "syncMs": 142,
+   "syncMs": 124,
    "pass": true,
-   "t": "2026-10-04T10:22:28.354Z"
+   "t": "2026-10-04T12:34:08.196Z"
   },
   {
    "n": 38,
    "hash": "#/27/new-11",
    "slideId": "s-aos-nations",
    "audibleClip": "NAR-s38",
-   "syncMs": 39,
+   "syncMs": 34,
    "pass": true,
-   "t": "2026-10-04T10:22:28.561Z"
+   "t": "2026-10-04T12:34:08.370Z"
   },
   {
    "n": 19,
    "hash": "#/19",
    "slideId": "s-pact-principles",
    "audibleClip": "NAR-s19",
-   "syncMs": 145,
+   "syncMs": 137,
    "pass": true,
-   "t": "2026-10-04T10:22:28.806Z"
+   "t": "2026-10-04T12:34:08.613Z"
   }
  ]
 }

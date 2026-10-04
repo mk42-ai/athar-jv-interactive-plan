@@ -1,7 +1,7 @@
 {
- "base": "http://127.0.0.1:4171",
- "version": "1.7.1",
- "written": "2026-10-04T10:14:29.737Z",
+ "base": "http://127.0.0.1:4172",
+ "version": "1.7.2",
+ "written": "2026-10-04T12:26:16.095Z",
  "rows": [
   {
    "url": "/audio/guide/guide-00-welcome-lhbIUXFwLO.mp3",
@@ -232,19 +232,19 @@
    "status": 200
   },
   {
-   "url": "/audio/guide/slides/NAR-s48-s-brand-assets.ar.mp3",
+   "url": "/audio/guide/slides/NAR-s50-s-brand-foundations.ar.mp3",
    "status": 200
   },
   {
-   "url": "/audio/guide/slides/NAR-s48-s-brand-assets.mp3",
+   "url": "/audio/guide/slides/NAR-s50-s-brand-foundations.mp3",
    "status": 200
   },
   {
-   "url": "/audio/guide/slides/NAR-s49-s-brand-product.ar.mp3",
+   "url": "/audio/guide/slides/NAR-s51-s-brand-gallery.ar.mp3",
    "status": 200
   },
   {
-   "url": "/audio/guide/slides/NAR-s49-s-brand-product.mp3",
+   "url": "/audio/guide/slides/NAR-s51-s-brand-gallery.mp3",
    "status": 200
   },
   {

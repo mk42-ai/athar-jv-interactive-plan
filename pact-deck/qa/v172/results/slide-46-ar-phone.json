@@ -1,0 +1,107 @@
+{
+ "base": "http://127.0.0.1:4172",
+ "version": "1.7.2",
+ "expectCommit": "ef50223325247b1cef452ecf3365c5d163b1b164",
+ "written": "2026-10-04T12:12:29.663Z",
+ "rows": [
+  {
+   "active": true,
+   "dataN": "46",
+   "slideId": "s-brand-foundations",
+   "visibleN": 46,
+   "dir": "rtl",
+   "lang": "ar",
+   "hash": "#/28/brand-1",
+   "counter": "الشريحة 46 من 48",
+   "badge": "v1.7.2",
+   "html": "1.7.2",
+   "kicker": "القسم ١٠ · الهوية · أسس الهوية",
+   "h2": "أسس الهوية",
+   "total": 48,
+   "execTotal": 48,
+   "itTotal": 48,
+   "current": 46,
+   "fontsAttr": "loaded",
+   "fontsPrimary": "loaded",
+   "fontsState": null,
+   "fonts": {
+    "sansMedium": true,
+    "arabicMedium": true,
+    "cormorant": true,
+    "mono": true,
+    "arabicLight": true
+   },
+   "stacks": null,
+   "specimenRows": 0,
+   "mediumRow": false,
+   "systemRows": 0,
+   "scaleRows": 0,
+   "dos": 0,
+   "donts": 0,
+   "swatches": [
+    "#0F1B2D",
+    "#F5F1EA",
+    "#B08D57",
+    "#2FB7C8",
+    "#1F2937"
+   ],
+   "swatchText": [
+    "#0F1B2D",
+    "#F5F1EA",
+    "#B08D57",
+    "#2FB7C8",
+    "#1F2937"
+   ],
+   "swatchBg": [
+    "rgb(15, 27, 45)",
+    "rgb(245, 241, 234)",
+    "rgb(176, 141, 87)",
+    "rgb(47, 183, 200)",
+    "rgb(31, 41, 55)"
+   ],
+   "swatchNames": [
+    "Sovereign Navy",
+    "Sand Off-White",
+    "Heritage Gold",
+    "Trace Cyan",
+    "Charcoal Ink"
+   ],
+   "accents": [
+    "#405A5B",
+    "#BEAA91"
+   ],
+   "tone": [
+    "ذكاء من أجل غدٍ أكثر إشراقًاIntelligence",
+    "الناس · الأماكن · التقدّمPeople · Places",
+    "أثرٌ أكثر دوامًاA more lasting impact"
+   ],
+   "lockups": [
+    true,
+    true,
+    true
+   ],
+   "clear": true,
+   "clearX": "8.290000000000001%",
+   "minRows": 5,
+   "tiles": null,
+   "concept": [],
+   "pictures": 0,
+   "jpgFallbacks": 0,
+   "personas": [],
+   "states": [],
+   "sizes": 0,
+   "backdrop": true,
+   "imgs": 5,
+   "broken": [],
+   "overflowX": false,
+   "clipId": "NAR-s50-ar",
+   "railOrder": "01,02,03,04,05,06,07,08,09,10",
+   "railCurrent": "10",
+   "railTxt": "10الهوية",
+   "nextDisabled": false,
+   "lightbox": null,
+   "errors": [],
+   "failedRequests": []
+  }
+ ]
+}

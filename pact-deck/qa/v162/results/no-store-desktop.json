@@ -1,7 +1,7 @@
 {
- "base": "http://127.0.0.1:4171",
- "version": "1.7.1",
- "written": "2026-10-04T10:26:23.181Z",
+ "base": "http://127.0.0.1:4172",
+ "version": "1.7.2",
+ "written": "2026-10-04T12:21:50.676Z",
  "rows": [
   {
    "path": "/",
@@ -11,7 +11,7 @@
    "xVercelCache": null,
    "xVercelId": null,
    "etag": null,
-   "lastModified": "Sun, 04 Oct 2026 10:01:52 GMT"
+   "lastModified": "Sun, 04 Oct 2026 12:07:40 GMT"
   },
   {
    "path": "/index.html",
@@ -21,7 +21,7 @@
    "xVercelCache": null,
    "xVercelId": null,
    "etag": null,
-   "lastModified": "Sun, 04 Oct 2026 10:01:52 GMT"
+   "lastModified": "Sun, 04 Oct 2026 12:07:40 GMT"
   },
   {
    "path": "/build-info.json",
@@ -31,7 +31,7 @@
    "xVercelCache": null,
    "xVercelId": null,
    "etag": null,
-   "lastModified": "Sun, 04 Oct 2026 10:01:53 GMT"
+   "lastModified": "Sun, 04 Oct 2026 12:07:41 GMT"
   },
   {
    "path": "/js/exec-films.js",
@@ -41,18 +41,18 @@
    "xVercelCache": null,
    "xVercelId": null,
    "etag": null,
-   "lastModified": "Sun, 04 Oct 2026 10:01:52 GMT"
+   "lastModified": "Sun, 04 Oct 2026 12:07:40 GMT"
   },
   {
-   "servedCommit": "4ea5cc03f7de0061996946e129a00d6c32a2500f",
-   "expectCommit": "4ea5cc03f7de0061996946e129a00d6c32a2500f",
-   "servedVersion": "1.7.1",
-   "builtAt": "2026-10-04T10:01:52.996Z",
-   "distFiles": 373,
+   "servedCommit": "ef50223325247b1cef452ecf3365c5d163b1b164",
+   "expectCommit": "ef50223325247b1cef452ecf3365c5d163b1b164",
+   "servedVersion": "1.7.2",
+   "builtAt": "2026-10-04T12:07:41.348Z",
+   "distFiles": 395,
    "sha256sums": {
     "file": "SHA256SUMS.txt",
-    "files": 372,
-    "sha256": "1c1f972e1324bea41269f6c952ddf2ecf0a67968d324875edabd8f5f09521784"
+    "files": 395,
+    "sha256": "44075d895763fbdca5874ec5749da283383251dd75ce385cad9157b05cbe8d08"
    }
   }
  ]
