@@ -1,13 +1,13 @@
 {
- "base": "http://127.0.0.1:4163",
- "written": "2026-10-04T05:07:47.572Z",
+ "base": "http://127.0.0.1:4164",
+ "written": "2026-10-04T06:05:21.966Z",
  "rows": [
   {
    "before": {
     "state": "blocked",
     "audible": null,
     "playCallsBeforeGesture": 0,
-    "tapLabel": "The browser blocked the narration. Tap to play the narration for slide 5 of 44"
+    "tapLabel": "The browser blocked the narration. Tap to play the narration for slide 5 of 45"
    },
    "after": {
     "state": "playing",

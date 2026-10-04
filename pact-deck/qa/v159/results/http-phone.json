@@ -1,6 +1,6 @@
 {
- "base": "http://127.0.0.1:4163",
- "written": "2026-10-04T05:05:39.105Z",
+ "base": "http://127.0.0.1:4164",
+ "written": "2026-10-04T06:03:02.269Z",
  "rows": [
   {
    "url": "/audio/guide/guide-00-welcome-lhbIUXFwLO.mp3",
@@ -273,6 +273,11 @@
    "type": "audio/mpeg"
   },
   {
+   "url": "/audio/guide/slides/NAR-s46-s-exec-lorenzo.mp3",
+   "status": 200,
+   "type": "audio/mpeg"
+  },
+  {
    "url": "/audio/intro-narration.mp3",
    "status": 200,
    "type": "audio/mpeg"
@@ -323,15 +328,15 @@
    "url": "/js/exec-films.js",
    "status": 200,
    "type": "text/javascript; charset=utf-8",
-   "bytes": 6855,
-   "sha256": "77f3660e732c6c1c6d3f779af4a864281282ed20880331623be1775177358192"
+   "bytes": 8742,
+   "sha256": "5539df994df7fefea1c36b2a205bb94eeafc08af2ad9518ddc4eeb8554ff85f3"
   },
   {
    "url": "/js/exec-film-player.js",
    "status": 200,
    "type": "text/javascript; charset=utf-8",
    "bytes": 11152,
-   "sha256": "e69c4e33c5d05171d8f71fa8ea86b669e624d946fc0d993d357bf1c58397161d"
+   "sha256": "3d6d89ce49a2fef2a7e9a0872ccbda4abb9151323dc5c0f7f169888d90ec740a"
   },
   {
    "url": "/assets/exec-film-player.css",
@@ -344,8 +349,8 @@
    "url": "/build-info.json",
    "status": 200,
    "type": "application/json; charset=utf-8",
-   "bytes": 6506,
-   "sha256": "aab67e07b305c5d90cf6cfd4e531716aa854cb4f021f923da0b6730737483272"
+   "bytes": 7737,
+   "sha256": "3fbb8787dd62f5803eb413a56be0caa19669ff4dee9f1bb939976b8aed14392c"
   },
   {
    "url": "/js/exec-film.js",

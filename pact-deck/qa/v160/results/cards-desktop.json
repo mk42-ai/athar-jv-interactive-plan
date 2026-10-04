@@ -1,7 +1,7 @@
 {
- "base": "http://127.0.0.1:4163",
- "version": "1.6.3",
- "written": "2026-10-04T05:02:09.927Z",
+ "base": "http://127.0.0.1:4164",
+ "version": "1.6.4",
+ "written": "2026-10-04T05:59:07.403Z",
  "rows": [
   {
    "lang": "en",
@@ -143,6 +143,42 @@
    "title": "Athar — Origins of Impact, Episode 01: Kayaan K. Unwalla"
   },
   {
+   "lang": "en",
+   "who": "lorenzo",
+   "dir": "ltr",
+   "cls": 0,
+   "docOverflowX": 0,
+   "secOverflowX": 0,
+   "video": {
+    "paused": true,
+    "autoplay": false,
+    "poster": "lorenzo-poster.dceede4679.jpg",
+    "defaultTrack": "en"
+   },
+   "figDir": "ltr",
+   "ratio": 1.7778125182519404,
+   "slot": null,
+   "letter": {
+    "x": 289,
+    "y": 141,
+    "w": 586,
+    "h": 525
+   },
+   "media": {
+    "x": 898,
+    "y": 141,
+    "w": 497,
+    "h": 353
+   },
+   "card": {
+    "x": 898,
+    "y": 507,
+    "w": 497,
+    "h": 331
+   },
+   "title": "Athar — Origins of Impact, Episode 01: Lorenzo Avitabile"
+  },
+  {
    "lang": "ar",
    "who": "al-ameri",
    "dir": "rtl",
@@ -280,6 +316,42 @@
     "h": 670
    },
    "title": "أثر — أصول الأثر، الحلقة 01: كايان ك. أونوالا"
+  },
+  {
+   "lang": "ar",
+   "who": "lorenzo",
+   "dir": "rtl",
+   "cls": 0,
+   "docOverflowX": 0,
+   "secOverflowX": 0,
+   "video": {
+    "paused": true,
+    "autoplay": false,
+    "poster": "lorenzo-poster.dceede4679.jpg",
+    "defaultTrack": "ar"
+   },
+   "figDir": "rtl",
+   "ratio": 1.7778129306776083,
+   "slot": null,
+   "letter": {
+    "x": 565,
+    "y": 145,
+    "w": 586,
+    "h": 528
+   },
+   "media": {
+    "x": 45,
+    "y": 145,
+    "w": 497,
+    "h": 355
+   },
+   "card": {
+    "x": 45,
+    "y": 513,
+    "w": 497,
+    "h": 331
+   },
+   "title": "أثر — أصول الأثر، الحلقة 01: لورينزو أفيتابيلي"
   }
  ]
 }

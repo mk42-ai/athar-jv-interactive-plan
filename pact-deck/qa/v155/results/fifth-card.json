@@ -1,0 +1,27 @@
+{
+ "base": "http://127.0.0.1:4164",
+ "total": 45,
+ "written": "2026-10-04T06:08:11.298Z",
+ "rows": [
+  {
+   "ids": [
+    "s-exec-intro",
+    "s-exec-al-ameri",
+    "s-exec-ferreira-da-cunha",
+    "s-exec-khalid",
+    "s-exec-unwalla",
+    "s-exec-lorenzo"
+   ],
+   "count": 6,
+   "total": 45,
+   "counter": "Slide 45 of 45",
+   "inTable": [
+    [
+     45,
+     "NAR-s46",
+     "/audio/guide/slides/NAR-s46-s-exec-lorenzo.mp3"
+    ]
+   ]
+  }
+ ]
+}

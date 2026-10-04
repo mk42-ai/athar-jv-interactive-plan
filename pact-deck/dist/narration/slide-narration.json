@@ -1,6 +1,6 @@
 {
  "schema": "athar.narration.slides/1",
- "version": "1.6.3",
+ "version": "1.6.4",
  "generated_utc": "2026-10-01T14:00:00Z",
  "keyedBy": "data-slide-id (stable section id) — never by slide index",
  "voice": "George - Warm, Captivating Storyteller",
@@ -2386,6 +2386,48 @@
      "start": 5.34,
      "end": 13.16,
      "anchor": "s44-c2"
+    }
+   ]
+  },
+  {
+   "n": 45,
+   "slideId": "s-exec-lorenzo",
+   "clipId": "NAR-s46",
+   "file": "/audio/guide/slides/NAR-s46-s-exec-lorenzo.mp3",
+   "bytes": 306408,
+   "sha256": "77f5e0717d67a5aee86f873c6b2884a8fe6948fbf9c68d1a0eba819449b22c80",
+   "durationSec": 19.12,
+   "section": "09 Executive Team",
+   "sectionAr": "09 الفريق التنفيذي",
+   "source": {
+    "type": "tts",
+    "provider": "ElevenLabs textToSpeech (On Demand 'Elevan Labs Agent' plugin)",
+    "voice": "George (JBFqnCBsd6RMkjVDRZzb)",
+    "modelRequested": "eleven_multilingual_v2",
+    "generationRef": "uA2tKcARtQ",
+    "generatedUtc": "2026-10-04T05:47:16Z",
+    "storedAs": "downloaded into the repo — no SAS hotlink",
+    "textSource": "card copy (role line from the public LinkedIn profile, the rest from the film's narration)",
+    "contentCheck": "On Demand speech-to-text of the rendered clip returns the script verbatim",
+    "factCheck": "role line: LinkedIn public profile (face-matched to the film's title-card portrait, SFace cosine 0.90); Milan / decade / Office of Development Affairs / mentoring: the film's own narration",
+    "pronunciation": "natural; 'Avitabile' rendered as four syllables",
+    "cueTiming": "sentence boundary at the 0.72 s pause detected by silencedetect (6.46–7.18 s)"
+   },
+   "text": "Lorenzo Avitabile, Senior Advisor at the Office of Development Affairs in the UAE Presidential Court. From his studies in Milan to more than a decade of professional experience, his work now sits within a wider development mission, and alongside his career he has dedicated time to mentoring the next generation.",
+   "cues": [
+    {
+     "i": 1,
+     "text": "Lorenzo Avitabile, Senior Advisor at the Office of Development Affairs in the UAE Presidential Court.",
+     "start": 0.0,
+     "end": 6.46,
+     "anchor": "s45-c1"
+    },
+    {
+     "i": 2,
+     "text": "From his studies in Milan to more than a decade of professional experience, his work now sits within a wider development mission, and alongside his career he has dedicated time to mentoring the next generation.",
+     "start": 7.18,
+     "end": 18.74,
+     "anchor": "s45-c2"
     }
    ]
   }

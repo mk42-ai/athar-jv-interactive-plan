@@ -1,7 +1,7 @@
 {
- "base": "http://127.0.0.1:4163",
- "total": 44,
- "written": "2026-10-04T05:06:58.854Z",
+ "base": "http://127.0.0.1:4164",
+ "total": 45,
+ "written": "2026-10-04T06:08:11.405Z",
  "rows": [
   {
    "names": [
@@ -12,17 +12,21 @@
     "Muhammed Khalid",
     "محمد خالد",
     "Kayaan K. Unwalla",
-    "كايان ك. أونوالا"
+    "كايان ك. أونوالا",
+    "Lorenzo Avitabile",
+    "لورينزو أفيتابيلي"
    ],
    "index": [
     "H.E. Fahad Mohamed Al Ameri",
     "Ary Ferreira da Cunha",
     "Muhammed Khalid",
     "Kayaan K. Unwalla",
+    "Lorenzo Avitabile",
     "سعادة فهد محمد العامري",
     "آري فيريرا دا كونيا",
     "محمد خالد",
-    "كايان ك. أونوالا"
+    "كايان ك. أونوالا",
+    "لورينزو أفيتابيلي"
    ],
    "fahadFactsEn": [
     "BoardsZayed Charitable and Humanitarian Foundation · Clean Rivers · Zoud Foundation for Financial Literacy",

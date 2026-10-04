@@ -1,6 +1,6 @@
 {
- "_comment": "v1.6.2 (v1.5.9 base) — Section 09 executive films (one slot per card). Source of truth for scripts/v1.4.7/build.mjs (copies assets/<person>/ → dist/assets/exec/films/<person>/), dist/build-info.json (films[]), features/exec-films/exec-films.js (window.AtharExecFilms) and the QA suite. status: 'shipped' = file verified and served · 'coming-soon' = labelled ready slot, no file served. To ship a film later: drop the files into assets/<person>/, fill the entry, set status to shipped, run the build. burnedInSubtitles: whether the film itself carries burned-in captions (the <track> VTTs are shipped either way). v1.6.1: all four cards ship a film; no ready slot remains. v1.6.2: Khalid replaced by the delivered 50 s cut, served under content-hashed filenames.",
- "version": "1.6.3",
+ "_comment": "v1.6.2 (v1.5.9 base) — Section 09 executive films (one slot per card). Source of truth for scripts/v1.4.7/build.mjs (copies assets/<person>/ → dist/assets/exec/films/<person>/), dist/build-info.json (films[]), features/exec-films/exec-films.js (window.AtharExecFilms) and the QA suite. status: 'shipped' = file verified and served · 'coming-soon' = labelled ready slot, no file served. To ship a film later: drop the files into assets/<person>/, fill the entry, set status to shipped, run the build. burnedInSubtitles: whether the film itself carries burned-in captions (the <track> VTTs are shipped either way). v1.6.1: all four cards ship a film; no ready slot remains. v1.6.2: Khalid replaced by the delivered 50 s cut, served under content-hashed filenames. v1.6.4: fifth card — Lorenzo Avitabile (slide 45).",
+ "version": "1.6.4",
  "distBase": "/assets/exec/films/",
  "films": {
   "khalid": {
@@ -274,6 +274,93 @@
    "videoCodec": "h264 High",
    "audioCodec": "aac LC 48 kHz stereo",
    "subtitleStreams": "none — soft EN/AR via <track>"
+  },
+  "lorenzo": {
+   "status": "shipped",
+   "person": {
+    "en": "Lorenzo Avitabile",
+    "ar": "لورينزو أفيتابيلي"
+   },
+   "title": {
+    "en": "Athar — Origins of Impact, Episode 01: Lorenzo Avitabile",
+    "ar": "أثر — أصول الأثر، الحلقة 01: لورينزو أفيتابيلي"
+   },
+   "aria": {
+    "en": "Impact story film: Athar — Origins of Impact, Episode 01, Lorenzo Avitabile — From Experience to Opportunity",
+    "ar": "فيلم قصة الأثر: أثر — أصول الأثر، الحلقة 01، لورينزو أفيتابيلي — من الخبرة إلى الفرصة"
+   },
+   "bodyExtra": null,
+   "requestedFile": "lorenzo-origins-of-impact_4K-master_v1.mp4",
+   "requestedFileFound": true,
+   "source": {
+    "file": "lorenzo-origins-of-impact_4K-master_v1.mp4",
+    "libraryId": "6ac1d81a1899bfd8cf0ffd97",
+    "libraryUploaded": "2026-10-04T04:37:45Z",
+    "sha256": "2040918ea4a042b4f89103454ecdbbaad45bcbc39de0469d0fa7716f3ac2aa07",
+    "bytes": 54390451,
+    "note": "4K master (3840x2160 24 fps H.264 High yuv420p 10.57 Mb/s + AAC-LC 48 kHz stereo 304 kb/s, 40.000 s, faststart); opens on the title card 'Lorenzo Avitabile — From Experience to Opportunity · portrait courtesy of Lorenzo Avitabile / LinkedIn'; probed 2026-10-04T05:46:22Z"
+   },
+   "mp4": "lorenzo/lorenzo-1080p.1566f3861a.mp4",
+   "mp4Sha256": "1566f3861a077c5a05df8065b46c66841137fa0720ba5c8b0930b3e3f59d6902",
+   "mp4Bytes": 13836470,
+   "mp4Note": "4K master downscaled to 1920x1080 (libx264 High@4.1 crf 20 preset medium lanczos, AAC-LC audio stream copied byte-exact from the master — streamhash identical, +faststart); a 4K source cannot be remuxed to 1080p, so the video is re-encoded and only the audio is byte-exact",
+   "mp4Mobile": "lorenzo/lorenzo-720p.1b56c492fc.mp4",
+   "mp4MobileSha256": "1b56c492fcdf87523ad50a6bf33a7a29eb877a8c1fa00d67b55eef9bd716fb20",
+   "mp4MobileBytes": 4828503,
+   "mp4MobileNote": "1280x720 transcode (libx264 High@4.0 crf 23, AAC 128k, +faststart) for viewports ≤ 720 px and Save-Data",
+   "poster": "lorenzo/lorenzo-poster.dceede4679.jpg",
+   "posterWebp": "lorenzo/lorenzo-poster.29aff048f8.webp",
+   "posterSha256": "dceede467987ee6eaee59c2c5e1428ce7f8b5963d154ac3187c2fa82c9fd7c95",
+   "posterWebpSha256": "29aff048f851dc9d01830b900e4a535e7ecdb6986478738936f9b2641b5bacfc",
+   "posterTimeSec": 14.708,
+   "posterNote": "frame at 00:14.708 (frame 353 @ 24 fps) — the sharpest single-face frame (YuNet face score 0.93, Laplacian variance 205 at 1280x720) of the caption-free 14.2–15.2 s shot, chosen by a 24 fps scan; excluded algorithmically: the opening title card 0–4.5 s (name, tagline and photo-credit text), the shots carrying lower-third captions or on-screen credentials (6.5–10 s, 19–23.5 s, 24.5–29.5 s, 33–38 s; PP-OCRv3 text detection) and the end card; the only 'text' boxes the detector reports on the chosen frame lie inside the face box (false positives on facial features)",
+   "w": 1920,
+   "h": 1080,
+   "fps": 24,
+   "durationSec": 40.0,
+   "durationLabel": "0:40",
+   "inPt": 0,
+   "outPt": 40.0,
+   "captions": {
+    "en": "lorenzo/lorenzo.en.b46e263deb.vtt",
+    "ar": "lorenzo/lorenzo.ar.ce6620edc0.vtt",
+    "note": "WebVTT, 10 cues each — EN from the On Demand speech-to-text transcript of the narration (verbatim, proper nouns checked), AR hand-translated with the same timing; sentence boundaries snapped to energy minima of the narration around the proportional-by-character estimate, anchored on the one clear pause after the opening sentence (3.04–3.35 s); speech 0.0–38.82 s; cues at line:6%"
+   },
+   "captionsSha256": {
+    "en": "b46e263debef0eef41c1a73ca299c439b432a35ef62ef70e42250b2f2b70e808",
+    "ar": "ce6620edc0cf29a74a7bc19d2412b55374193027e1bd08bee1ac5ba4e79398ff"
+   },
+   "burnedInSubtitles": false,
+   "burnedInSubtitlesNote": "no centred subtitle band at any sampled time (PP-OCRv3 text scan at 2 fps); on-screen text is limited to the title card, lower-third captions / on-screen credentials and the end card",
+   "videoCodec": "h264 High",
+   "audioCodec": "aac LC 48 kHz stereo (byte-exact copy of the master's audio in the 1080p file)",
+   "subtitleStreams": "none — soft EN/AR via <track>",
+   "cardNote": {
+    "en": "Poster frame at 00:14.7 (face-detected, caption-free frame) · 40 s film, installed full length · captions EN / AR · the narrated guide pauses while the film plays and resumes after it.",
+    "ar": "إطار الملصق عند 00:14.7 (إطار خالٍ من التعليقات المدمجة، مُختار بكشف الوجه) · فيلم مدته 40 ثانية مُثبَّت بطوله الكامل · ترجمة إنجليزية / عربية · يتوقف الدليل الصوتي أثناء عرض الفيلم ويستأنف بعده."
+   },
+   "hashedFilenames": {
+    "rule": "<name>.<first 10 hex of the file’s own sha256>.<ext> for every served file (v1.6.2 cache-bust policy)",
+    "map": {
+     "lorenzo-origins-of-impact-1080p.mp4": "lorenzo-1080p.1566f3861a.mp4",
+     "lorenzo-origins-of-impact-720p.mp4": "lorenzo-720p.1b56c492fc.mp4",
+     "lorenzo-origins-of-impact-poster-14s7.jpg": "lorenzo-poster.dceede4679.jpg",
+     "lorenzo-origins-of-impact-poster-14s7.webp": "lorenzo-poster.29aff048f8.webp",
+     "lorenzo-origins-of-impact.en.vtt": "lorenzo.en.b46e263deb.vtt",
+     "lorenzo-origins-of-impact.ar.vtt": "lorenzo.ar.ce6620edc0.vtt"
+    }
+   },
+   "identity": {
+    "roleLineOption": "A — 'Senior Advisor' + 'Office of Development Affairs, UAE Presidential Court'",
+    "confidence": "high",
+    "method": "the film's title-card portrait (credited 'portrait courtesy of Lorenzo Avitabile / LinkedIn') was compared with the og:image profile photo of the public LinkedIn profile ae.linkedin.com/in/lorenzo-avitabile using OpenCV YuNet face detection + SFace face recognition: cosine similarity 0.902 (same-identity threshold 0.363; normL2 0.443 ≤ 1.128); mid-film faces at 26 s and 37 s score 0.669 / 0.762 against the same photo; the film's own narration states 'his studies in Milan', 'more than a decade of professional experience' and 'his work at the UAE's Office of Development Affairs', matching the profile (MIP Politecnico di Milano · 'senior advisor with over a decade of experience' · Office of Development Affairs · Dubai)",
+    "checkedUtc": "2026-10-04T05:46:22Z",
+    "caveat": "'UAE Presidential Court' is the organisation line supplied with the task research (related posts); the film itself says 'the UAE's Office of Development Affairs'"
+   },
+   "installedAt": "2026-10-04T05:46:22Z",
+   "history": {
+    "v164": "v1.6.4 (2026-10-04): fifth Section 09 card (slide 45, after Kayaan Unwalla — end of section), film installed full length from the 4K master delivered 2026-10-04T04:37:45Z"
+   }
   }
  }
 }

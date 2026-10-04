@@ -1,6 +1,6 @@
 {
- "base": "http://127.0.0.1:4163",
- "written": "2026-10-04T05:04:14.394Z",
+ "base": "http://127.0.0.1:4164",
+ "written": "2026-10-04T06:01:26.820Z",
  "rows": [
   {
    "lang": "en",
@@ -28,7 +28,7 @@
    },
    "playing": {
     "paused": false,
-    "ct": 1.170421,
+    "ct": 1.178627,
     "muted": false,
     "cls": "intro-gate is-playing",
     "signOpacity": "0",
@@ -71,7 +71,7 @@
    },
    "playing": {
     "paused": false,
-    "ct": 1.149197,
+    "ct": 1.188002,
     "muted": false,
     "cls": "intro-gate is-playing",
     "signOpacity": "0",

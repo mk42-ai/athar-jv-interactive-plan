@@ -1,7 +1,7 @@
 {
- "base": "http://127.0.0.1:4163",
- "version": "1.6.3",
- "written": "2026-10-04T05:01:29.033Z",
+ "base": "http://127.0.0.1:4164",
+ "version": "1.6.4",
+ "written": "2026-10-04T05:58:25.263Z",
  "rows": [
   {
    "url": "/audio/guide/guide-00-welcome-lhbIUXFwLO.mp3",
@@ -220,6 +220,10 @@
    "status": 200
   },
   {
+   "url": "/audio/guide/slides/NAR-s46-s-exec-lorenzo.mp3",
+   "status": 200
+  },
+  {
    "url": "/audio/intro-narration.mp3",
    "status": 200
   },
@@ -361,6 +365,41 @@
    "status": 200,
    "bytes": 1970,
    "sha256": "b3b9a6e99879e606aaabe73ebd3e5d5f1e5f6a30cc59d9253933df39f5f43cbf",
+   "match": true
+  },
+  {
+   "url": "/assets/exec/films/lorenzo/lorenzo-1080p.1566f3861a.mp4",
+   "status": 200,
+   "bytes": 13836470,
+   "sha256": "1566f3861a077c5a05df8065b46c66841137fa0720ba5c8b0930b3e3f59d6902",
+   "match": true
+  },
+  {
+   "url": "/assets/exec/films/lorenzo/lorenzo-720p.1b56c492fc.mp4",
+   "status": 200,
+   "bytes": 4828503,
+   "sha256": "1b56c492fcdf87523ad50a6bf33a7a29eb877a8c1fa00d67b55eef9bd716fb20",
+   "match": true
+  },
+  {
+   "url": "/assets/exec/films/lorenzo/lorenzo-poster.dceede4679.jpg",
+   "status": 200,
+   "bytes": 35761,
+   "sha256": "dceede467987ee6eaee59c2c5e1428ce7f8b5963d154ac3187c2fa82c9fd7c95",
+   "match": true
+  },
+  {
+   "url": "/assets/exec/films/lorenzo/lorenzo.en.b46e263deb.vtt",
+   "status": 200,
+   "bytes": 1859,
+   "sha256": "b46e263debef0eef41c1a73ca299c439b432a35ef62ef70e42250b2f2b70e808",
+   "match": true
+  },
+  {
+   "url": "/assets/exec/films/lorenzo/lorenzo.ar.ce6620edc0.vtt",
+   "status": 200,
+   "bytes": 2121,
+   "sha256": "ce6620edc0cf29a74a7bc19d2412b55374193027e1bd08bee1ac5ba4e79398ff",
    "match": true
   }
  ]

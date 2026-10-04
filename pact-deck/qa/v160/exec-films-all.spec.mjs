@@ -17,7 +17,7 @@ const SHOTS = process.env.SHOTS_DIR || path.join(HERE, 'screenshots');
 const RESULTS = path.join(HERE, 'results'); fs.mkdirSync(RESULTS, { recursive: true }); fs.mkdirSync(SHOTS, { recursive: true });
 const PKG = JSON.parse(fs.readFileSync(path.join(HERE, '../../package.json'), 'utf8'));
 const FILMS = JSON.parse(fs.readFileSync(path.join(HERE, '../../features/exec-films/films.json'), 'utf8')); const F = (rel) => FILMS.distBase + rel;
-const CARDS = [['al-ameri', 2, 41], ['ferreira-da-cunha', 3, 42], ['khalid', 4, 43], ['unwalla', 5, 44]];
+const CARDS = [['al-ameri', 2, 41], ['ferreira-da-cunha', 3, 42], ['khalid', 4, 43], ['unwalla', 5, 44], ['lorenzo', 6, 45]]; /* v1.6.4: fifth card */
 const SHIPPED = CARDS.filter(([id]) => FILMS.films[id].status === 'shipped'); const SLOTS = CARDS.filter(([id]) => FILMS.films[id].status !== 'shipped');
 const write = (name, rows) => fs.writeFileSync(path.join(RESULTS, name + '.json'), JSON.stringify({ base: BASE, version: PKG.version, written: new Date().toISOString(), rows }, null, 1));
 const vp = (info) => (info.project.name === 'phone' ? '390x844' : '1440x900');
@@ -87,11 +87,11 @@ test.describe(`v${PKG.version} — three executive films + Kayaan slot`, () => {
     write('http-' + test.info().project.name, rows); expect(clips.length).toBeGreaterThanOrEqual(54);
   });
 
-  test('deep links 32, 38, 39–44 resolve (EN + AR) and every slide loads with 0 console / page errors', async ({ page }) => {
+  test('deep links 32, 38, 39–45 resolve (EN + AR) and every slide loads with 0 console / page errors', async ({ page }) => {
     test.setTimeout(300000); await setup(page); await open(page, 1); const rows = [];
     for (const lang of ['en', 'ar']) { if (lang === 'ar') { await page.click('[data-testid="lang-toggle"]'); await page.waitForFunction(() => document.documentElement.dir === 'rtl', null, { timeout: 8000 }); }
-      for (let n = 1; n <= 44; n++) { await page.evaluate((h) => { location.hash = h; }, hashFor(n)); await page.waitForFunction((n) => window.__qaVisible().n === n, n, { timeout: 9000 }); rows.push({ lang, n, errors: page.__errors.length }); } }
-    for (const lang of ['en', 'ar']) for (const n of [32, 38, 39, 40, 41, 42, 43, 44]) { const ctx = await page.context().browser().newContext({ viewport: page.viewportSize() }); const p2 = await ctx.newPage(); await setup(p2, { lang }); await p2.goto(BASE + '/?lang=' + lang + hashFor(n), { waitUntil: 'load' }); await p2.waitForFunction(() => !!window.AtharGuide, null, { timeout: 20000 }); await p2.waitForFunction((n) => window.__qaVisible().n === n, n, { timeout: 15000 }); rows.push({ lang, n, cold: true, ok: true, errors: p2.__errors.length }); expect(p2.__errors).toEqual([]); await ctx.close(); }
+      for (let n = 1; n <= 45; n++) { await page.evaluate((h) => { location.hash = h; }, hashFor(n)); await page.waitForFunction((n) => window.__qaVisible().n === n, n, { timeout: 9000 }); rows.push({ lang, n, errors: page.__errors.length }); } }
+    for (const lang of ['en', 'ar']) for (const n of [32, 38, 39, 40, 41, 42, 43, 44, 45]) { const ctx = await page.context().browser().newContext({ viewport: page.viewportSize() }); const p2 = await ctx.newPage(); await setup(p2, { lang }); await p2.goto(BASE + '/?lang=' + lang + hashFor(n), { waitUntil: 'load' }); await p2.waitForFunction(() => !!window.AtharGuide, null, { timeout: 20000 }); await p2.waitForFunction((n) => window.__qaVisible().n === n, n, { timeout: 15000 }); rows.push({ lang, n, cold: true, ok: true, errors: p2.__errors.length }); expect(p2.__errors).toEqual([]); await ctx.close(); }
     write('slides-deeplinks-' + test.info().project.name, rows); expect(page.__errors).toEqual([]);
   });
 });

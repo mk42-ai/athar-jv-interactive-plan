@@ -1,5 +1,5 @@
 // Athar deck v1.5.9 — executive films + press-to-play intro: headless-browser checks (Playwright Test, system Chromium), desktop 1728×872 + phone 390×844, EN + AR.
-// Covers: 0 console / page errors on every slide in EN and AR · EN→AR RTL toggle · deep links 32, 38, 39–44 · intro press-to-play (no autoplay after
+// Covers: 0 console / page errors on every slide in EN and AR · EN→AR RTL toggle · deep links 32, 38, 39–45 · intro press-to-play (no autoplay after
 // 5 s idle, Play → playing, sign + overlay gone) and the guide pausing on `play` / resuming on `pause` and `ended` around the intro film · the CEO card
 // player (poster, duration, EN/AR tracks, no autoplay after 5 s, press play → playing with the overlay removed and native controls, guide pause/resume,
 // out-point) · the three "Film coming soon / قريباً" ready slots (Fahad, Ary, Kayaan) · layout (no overflow, fixed 16:9 box, CLS ≈ 0, RTL mirroring) ·
@@ -19,7 +19,7 @@ const RESULTS = path.join(HERE, 'results'); fs.mkdirSync(RESULTS, { recursive: t
 const TABLE = JSON.parse(fs.readFileSync(path.join(DIST, 'narration/slide-narration.json'), 'utf8')); const TOTAL = TABLE.slides.length;
 const FILMS = JSON.parse(fs.readFileSync(path.join(HERE, '../../features/exec-films/films.json'), 'utf8'));
 const K = FILMS.films.khalid; const F = (rel) => FILMS.distBase + rel; const PKG = JSON.parse(fs.readFileSync(path.join(HERE, '../../package.json'), 'utf8')); const SHIPPED = (id) => FILMS.films[id] && FILMS.films[id].status === 'shipped'; /* v1.6.0: Fahad and Ary ship films too; Kayaan stays a slot */
-const CARDS = [['al-ameri', 2, 41], ['ferreira-da-cunha', 3, 42], ['khalid', 4, 43], ['unwalla', 5, 44]];
+const CARDS = [['al-ameri', 2, 41], ['ferreira-da-cunha', 3, 42], ['khalid', 4, 43], ['unwalla', 5, 44], ['lorenzo', 6, 45]]; /* v1.6.4: fifth card */
 const write = (name, rows) => fs.writeFileSync(path.join(RESULTS, name + '.json'), JSON.stringify({ base: BASE, written: new Date().toISOString(), rows }, null, 1));
 const vp = (info) => (info.project.name === 'phone' ? '390x844' : '1728x872');
 const shot = (page, info, name) => page.screenshot({ path: path.join(SHOTS, `${PREFIX}-${name}-${vp(info)}.png`), fullPage: false });
@@ -45,9 +45,9 @@ test.describe('v1.5.9 — executive films + press-to-play intro', () => {
     write('errors-all-slides-' + test.info().project.name, rows); expect(rows).toHaveLength(2 * TOTAL); expect(page.__errors).toEqual([]);
   });
 
-  test('deep links 32, 38, 39–44 (cold loads, EN + AR) land on the right slide', async ({ page }) => {
+  test('deep links 32, 38, 39–45 (cold loads, EN + AR) land on the right slide', async ({ page }) => {
     test.setTimeout(180000); const rows = [];
-    for (const lang of ['en', 'ar']) for (const n of [32, 38, 39, 40, 41, 42, 43, 44]) {
+    for (const lang of ['en', 'ar']) for (const n of [32, 38, 39, 40, 41, 42, 43, 44, 45]) {
       const ctx = await page.context().browser().newContext({ viewport: page.viewportSize(), isMobile: test.info().project.name === 'phone', hasTouch: test.info().project.name === 'phone' }); const p2 = await ctx.newPage(); await setup(p2, { lang });
       await p2.goto(BASE + '/?lang=' + lang + hashFor(n), { waitUntil: 'load' }); await p2.waitForFunction(() => !!window.AtharGuide, null, { timeout: 20000 });
       await p2.waitForFunction((n) => window.__qaVisible().n === n, n, { timeout: 15000 }); const v = await p2.evaluate(() => Object.assign(window.__qaVisible(), { lang: document.documentElement.lang, dir: document.documentElement.dir, hash: location.hash }));

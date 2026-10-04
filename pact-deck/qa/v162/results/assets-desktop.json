@@ -1,11 +1,11 @@
 {
- "base": "http://127.0.0.1:4163",
- "version": "1.6.3",
- "written": "2026-10-04T04:57:40.394Z",
+ "base": "http://127.0.0.1:4164",
+ "version": "1.6.4",
+ "written": "2026-10-04T05:53:25.568Z",
  "rows": [
   {
-   "clips": 55,
-   "clipsOk": 55
+   "clips": 56,
+   "clipsOk": 56
   },
   {
    "id": "khalid",
@@ -246,6 +246,66 @@
    "sha256": "b3b9a6e99879e606aaabe73ebd3e5d5f1e5f6a30cc59d9253933df39f5f43cbf",
    "filmsJson": "b3b9a6e99879e606aaabe73ebd3e5d5f1e5f6a30cc59d9253933df39f5f43cbf",
    "sums": "b3b9a6e99879e606aaabe73ebd3e5d5f1e5f6a30cc59d9253933df39f5f43cbf"
+  },
+  {
+   "id": "lorenzo",
+   "key": "mp4",
+   "url": "/assets/exec/films/lorenzo/lorenzo-1080p.1566f3861a.mp4",
+   "status": 200,
+   "bytes": 13836470,
+   "sha256": "1566f3861a077c5a05df8065b46c66841137fa0720ba5c8b0930b3e3f59d6902",
+   "filmsJson": "1566f3861a077c5a05df8065b46c66841137fa0720ba5c8b0930b3e3f59d6902",
+   "sums": "1566f3861a077c5a05df8065b46c66841137fa0720ba5c8b0930b3e3f59d6902"
+  },
+  {
+   "id": "lorenzo",
+   "key": "mp4Mobile",
+   "url": "/assets/exec/films/lorenzo/lorenzo-720p.1b56c492fc.mp4",
+   "status": 200,
+   "bytes": 4828503,
+   "sha256": "1b56c492fcdf87523ad50a6bf33a7a29eb877a8c1fa00d67b55eef9bd716fb20",
+   "filmsJson": "1b56c492fcdf87523ad50a6bf33a7a29eb877a8c1fa00d67b55eef9bd716fb20",
+   "sums": "1b56c492fcdf87523ad50a6bf33a7a29eb877a8c1fa00d67b55eef9bd716fb20"
+  },
+  {
+   "id": "lorenzo",
+   "key": "poster",
+   "url": "/assets/exec/films/lorenzo/lorenzo-poster.dceede4679.jpg",
+   "status": 200,
+   "bytes": 35761,
+   "sha256": "dceede467987ee6eaee59c2c5e1428ce7f8b5963d154ac3187c2fa82c9fd7c95",
+   "filmsJson": "dceede467987ee6eaee59c2c5e1428ce7f8b5963d154ac3187c2fa82c9fd7c95",
+   "sums": "dceede467987ee6eaee59c2c5e1428ce7f8b5963d154ac3187c2fa82c9fd7c95"
+  },
+  {
+   "id": "lorenzo",
+   "key": "posterWebp",
+   "url": "/assets/exec/films/lorenzo/lorenzo-poster.29aff048f8.webp",
+   "status": 200,
+   "bytes": 15946,
+   "sha256": "29aff048f851dc9d01830b900e4a535e7ecdb6986478738936f9b2641b5bacfc",
+   "filmsJson": "29aff048f851dc9d01830b900e4a535e7ecdb6986478738936f9b2641b5bacfc",
+   "sums": "29aff048f851dc9d01830b900e4a535e7ecdb6986478738936f9b2641b5bacfc"
+  },
+  {
+   "id": "lorenzo",
+   "key": "vttEn",
+   "url": "/assets/exec/films/lorenzo/lorenzo.en.b46e263deb.vtt",
+   "status": 200,
+   "bytes": 1859,
+   "sha256": "b46e263debef0eef41c1a73ca299c439b432a35ef62ef70e42250b2f2b70e808",
+   "filmsJson": "b46e263debef0eef41c1a73ca299c439b432a35ef62ef70e42250b2f2b70e808",
+   "sums": "b46e263debef0eef41c1a73ca299c439b432a35ef62ef70e42250b2f2b70e808"
+  },
+  {
+   "id": "lorenzo",
+   "key": "vttAr",
+   "url": "/assets/exec/films/lorenzo/lorenzo.ar.ce6620edc0.vtt",
+   "status": 200,
+   "bytes": 2121,
+   "sha256": "ce6620edc0cf29a74a7bc19d2412b55374193027e1bd08bee1ac5ba4e79398ff",
+   "filmsJson": "ce6620edc0cf29a74a7bc19d2412b55374193027e1bd08bee1ac5ba4e79398ff",
+   "sums": "ce6620edc0cf29a74a7bc19d2412b55374193027e1bd08bee1ac5ba4e79398ff"
   }
  ]
 }

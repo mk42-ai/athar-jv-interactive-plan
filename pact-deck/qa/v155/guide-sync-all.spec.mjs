@@ -115,20 +115,18 @@ test.describe(`guide narration ⇔ visible slide — all ${TOTAL} slides`, () =>
     expect(page.__errors).toEqual([]);
   });
 
-  test('hidden card (Lorenzo) is not rendered, not counted and not narrated', async ({ page }) => {
+  test('v1.6.4: the former hidden Lorenzo placeholder is now the real fifth card — rendered last, counted and narrated', async ({ page }) => {
     test.setTimeout(60000);
-    await setup(page); await open(page, 44);
+    await setup(page); await open(page, 45);
     const r = await page.evaluate(() => ({ ids: [...document.querySelectorAll('#root section.ex-slide')].map((x) => x.id), count: window.AtharExecTeam.count, total: window.AtharExecTeam.total,
-      counter: (document.querySelector('footer.pagefooter .counter') || {}).textContent, text: document.body.innerText }));
-    const hiddenInTable = TABLE.slides.filter((x) => /lorenzo/.test(x.slideId)).length;
-    write('hidden-cards', [{ ...r, text: undefined, hiddenInTable, mentionsHidden: /Lorenzo|لورينزو/.test(r.text) }]);
-    expect(r.ids).toEqual(['s-exec-intro', 's-exec-al-ameri', 's-exec-ferreira-da-cunha', 's-exec-khalid', 's-exec-unwalla']);
-    expect(r.count).toBe(5); expect(r.total).toBe(44); expect(TOTAL).toBe(44); expect(hiddenInTable).toBe(0);
-    expect(/Lorenzo|لورينزو/.test(r.text)).toBe(false);
-    expect(r.counter).toContain('44');
+      counter: (document.querySelector('footer.pagefooter .counter') || {}).textContent, text: document.getElementById('s-exec-lorenzo').innerText, role: (document.querySelector('#s-exec-lorenzo .ex-letterhead-role') || {}).textContent }));
+    const inTable = TABLE.slides.filter((x) => /lorenzo/.test(x.slideId));
+    write('fifth-card', [{ ...r, text: undefined, inTable: inTable.map((x) => [x.n, x.clipId, x.file]) }]);
+    expect(r.ids).toEqual(['s-exec-intro', 's-exec-al-ameri', 's-exec-ferreira-da-cunha', 's-exec-khalid', 's-exec-unwalla', 's-exec-lorenzo']);
+    expect(r.count).toBe(6); expect(r.total).toBe(45); expect(TOTAL).toBe(45); expect(inTable).toHaveLength(1); expect(inTable[0].n).toBe(45); expect(inTable[0].file).toBe('/audio/guide/slides/NAR-s46-s-exec-lorenzo.mp3');
+    expect(/Lorenzo Avitabile/.test(r.text)).toBe(true); expect(/Surname and role awaiting confirmation|بانتظار تأكيد/.test(r.text)).toBe(false);
+    expect(r.counter).toContain('45');
   });
-
-  // v1.5.6 (updated for v1.5.7 and v1.5.8) — name labels without honorific, completed Fahad / Kayaan cards (EN + AR)
   test('v1.5.6 / v1.5.8: name labels carry no honorific EXCEPT Fahad\'s (H.E. / سعادة), bodies keep it; Fahad and Kayaan cards are complete in EN and AR', async ({ page }, info) => {
     test.setTimeout(90000);
     await setup(page); await open(page, 44);
@@ -144,8 +142,8 @@ test.describe(`guide narration ⇔ visible slide — all ${TOTAL} slides`, () =>
     const HON = /H\.E\.|سعادة|معالي/;
     write('v156-cards-' + info.project.name, [{ ...r, kayaanEn: undefined, kayaanAr: undefined, fahadEn: undefined, fahadAr: undefined }]);
     const FAHAD_LABELS = ['H.E. Fahad Mohamed Al Ameri', 'سعادة فهد محمد العامري']; // v1.5.8: the honorific is back on Fahad's label only — letter header, intro index; nobody else
-    expect(r.names).toHaveLength(8); expect(r.names.filter((n) => HON.test(n))).toEqual(FAHAD_LABELS);
-    expect(r.index).toHaveLength(8); expect(r.index.filter((n) => HON.test(n))).toEqual(FAHAD_LABELS);
+    expect(r.names).toHaveLength(10) /* v1.6.4: 5 cards × EN+AR */; expect(r.names.filter((n) => HON.test(n))).toEqual(FAHAD_LABELS);
+    expect(r.index).toHaveLength(10) /* v1.6.4: 5 cards × EN+AR */; expect(r.index.filter((n) => HON.test(n))).toEqual(FAHAD_LABELS);
     expect(r.fahadEn).toContain('H.E. Fahad'); expect(r.fahadAr).toContain('سعادة');
     expect(r.fahadFactsEn).toHaveLength(3); expect(r.fahadFactsAr).toHaveLength(3);
     for (const k of ['University of Pennsylvania', 'CFA', 'Zoud', 'Abu Dhabi Executive Council 2011–14']) expect(r.fahadFactsEn.join(' | ')).toContain(k);
@@ -184,7 +182,7 @@ test.describe(`guide narration ⇔ visible slide — all ${TOTAL} slides`, () =>
     const r2 = await page.evaluate(() => ({ ids: [...document.querySelectorAll('#root section.ex-slide')].map((x) => x.id), count: window.AtharExecTeam.count, total: window.AtharExecTeam.total, counter: (document.querySelector('footer.pagefooter .counter') || {}).textContent,
       gone: !/Zeyoudi|الزيودي|ثاني بن أحمد/.test([...document.querySelectorAll('#root section.ex-slide')].map((x) => x.textContent).join(' ')), // Section 09 only — Dr Thani is still named on other slides (news captions), which this release deliberately leaves untouched
        index: [...document.querySelectorAll('.ex-index-name')].length }));
-    expect(r2.ids).toEqual(['s-exec-intro', 's-exec-al-ameri', 's-exec-ferreira-da-cunha', 's-exec-khalid', 's-exec-unwalla']); expect(r2.count).toBe(5); expect(r2.total).toBe(44); expect(TABLE.slides.length).toBe(44); expect(r2.counter).toContain('44'); expect(r2.gone).toBe(true); expect(r2.index).toBe(8);
+    expect(r2.ids).toEqual(['s-exec-intro', 's-exec-al-ameri', 's-exec-ferreira-da-cunha', 's-exec-khalid', 's-exec-unwalla', 's-exec-lorenzo']); expect(r2.count).toBe(6); expect(r2.total).toBe(45); expect(TABLE.slides.length).toBe(45); expect(r2.counter).toContain('45'); expect(r2.gone).toBe(true); expect(r2.index).toBe(10) /* v1.6.4 */;
     expect(TABLE.slides.some((x) => /zeyoudi/i.test(x.slideId + (x.file || '') + x.text))).toBe(false);
     expect((await page.request.get(BASE + '/audio/guide/slides/NAR-s41-s-exec-al-zeyoudi.mp3')).status()).toBe(404);
     expect([TABLE.slides.find((x) => x.slideId === 's-exec-al-ameri').n, TABLE.slides.find((x) => x.slideId === 's-exec-khalid').n, TABLE.slides.find((x) => x.slideId === 's-exec-unwalla').n]).toEqual([41, 43, 44]);
@@ -218,7 +216,7 @@ test.describe(`guide narration ⇔ visible slide — all ${TOTAL} slides`, () =>
       await page.waitForFunction((n) => window.__qaVisible().n === n, n, { timeout: 15000 }); };
     // ---- (1) Ary: table, clip, card, letter, sources, deep link, narration
     const ARY = TABLE.slides.find((x) => x.slideId === 's-exec-ferreira-da-cunha');
-    expect(ARY.n).toBe(42); expect(ARY.clipId).toBe('NAR-s45'); expect(hashFor(42)).toBe('#/28/exec-3'); expect(TABLE.slides.map((x) => x.n)).toEqual(Array.from({ length: 44 }, (_, i) => i + 1));
+    expect(ARY.n).toBe(42); expect(ARY.clipId).toBe('NAR-s45'); expect(hashFor(42)).toBe('#/28/exec-3'); expect(TABLE.slides.map((x) => x.n)).toEqual(Array.from({ length: 45 }, (_, i) => i + 1));
     expect(TABLE.slides.find((x) => x.slideId === 's-exec-al-ameri').n).toBe(41);
     const clip = await page.request.get(BASE + ARY.file); expect(clip.status(), 'Ary clip').toBe(200); expect(clip.headers()['content-type']).toMatch(/audio/); expect((await clip.body()).length).toBe(ARY.bytes);
     expect(ARY.cues).toHaveLength(3); expect(ARY.text).toContain('Principal at the Presidential Court'); expect(ARY.text).not.toMatch(/\b(2025|2026)\b/);
@@ -230,7 +228,7 @@ test.describe(`guide narration ⇔ visible slide — all ${TOTAL} slides`, () =>
         links: [...sec.querySelectorAll('.ex-sources a.ex-src')].map((x) => x.href), srcCount: sec.querySelectorAll('.ex-sources .ex-src').length, counter: (document.querySelector('footer.pagefooter .counter') || {}).textContent,
         total: window.AtharImpactTiers.total, current: window.AtharImpactTiers.current(), text: sec.textContent, label: sec.getAttribute('aria-label') }; });
     expect(a.names).toEqual(['Ary Ferreira da Cunha', 'آري فيريرا دا كونيا']); expect(a.names.filter((n) => /H\.E\.|سعادة|معالي|\bDr\b|دكتور/.test(n)), 'Ary has no honorific').toEqual([]);
-    expect(a.roles[0]).toBe('Principal, Presidential Court (UAE), Abu Dhabi'); expect(a.current).toBe(42); expect(a.total).toBe(44); expect(a.counter).toContain('42'); expect(a.counter).toContain('44'); expect(a.label).toBe('Executive Team — Ary Ferreira da Cunha');
+    expect(a.roles[0]).toBe('Principal, Presidential Court (UAE), Abu Dhabi'); expect(a.current).toBe(42); expect(a.total).toBe(45); expect(a.counter).toContain('42'); expect(a.counter).toContain('45'); expect(a.label).toBe('Executive Team — Ary Ferreira da Cunha');
     expect(a.factsEn).toHaveLength(6); expect(a.factsAr).toHaveLength(6);
     for (const k of ['McKinsey', 'Universidade do Porto', 'Oxford', 'Utrecht', 'Combate à corrupção, da teoria à prática', 'Portuguese', 'AI transformation', 'LinkedIn']) expect(a.factsEn.join(' | '), k).toContain(k);
     for (const k of ['McKinsey', 'جامعة بورتو', 'أكسفورد', 'أوترخت', 'Combate à corrupção', 'برتغالي', 'لينكدإن']) expect(a.factsAr.join(' | '), k).toContain(k);
@@ -244,7 +242,7 @@ test.describe(`guide narration ⇔ visible slide — all ${TOTAL} slides`, () =>
     await go('ar', 42);
     const ar = await page.evaluate(() => { const sec = document.getElementById('s-exec-ferreira-da-cunha'); return { dir: document.documentElement.dir, lang: document.documentElement.lang, names: [...sec.querySelectorAll('.ex-name')].map((e) => e.textContent.trim()), letterDir: sec.querySelector('.ex-letter').getAttribute('dir'),
       counter: (document.querySelector('footer.pagefooter .counter') || {}).textContent, label: sec.getAttribute('aria-label') }; });
-    expect(ar.dir).toBe('rtl'); expect(ar.lang).toBe('ar'); expect(ar.letterDir).toBe('rtl'); expect(ar.names).toEqual(['آري فيريرا دا كونيا', 'Ary Ferreira da Cunha']); expect(ar.counter).toContain('44'); expect(ar.label).toBe('الفريق التنفيذي — آري فيريرا دا كونيا');
+    expect(ar.dir).toBe('rtl'); expect(ar.lang).toBe('ar'); expect(ar.letterDir).toBe('rtl'); expect(ar.names).toEqual(['آري فيريرا دا كونيا', 'Ary Ferreira da Cunha']); expect(ar.counter).toContain('45'); expect(ar.label).toBe('الفريق التنفيذي — آري فيريرا دا كونيا');
     // ---- (2) Fahad — the honorific on his label only (card, letter, aria labels, title); the transcript already says 'His Excellency'
     await go('en', 41);
     const f = await page.evaluate(() => { const sec = document.getElementById('s-exec-al-ameri'); return { names: [...sec.querySelectorAll('.ex-name')].map((e) => e.textContent.trim()), letterAria: sec.querySelector('.ex-letter').getAttribute('aria-label'), cardAria: sec.querySelector('.ex-card').getAttribute('aria-label'),

@@ -90,7 +90,7 @@
       "specs": [],
       "suites": [
         {
-          "title": "v1.6.3 — three executive films + Kayaan slot",
+          "title": "v1.6.4 — three executive films + Kayaan slot",
           "file": "exec-films-all.spec.mjs",
           "line": 34,
           "column": 6,
@@ -111,12 +111,12 @@
                       "workerIndex": 0,
                       "parallelIndex": 0,
                       "status": "passed",
-                      "duration": 2305,
+                      "duration": 2321,
                       "errors": [],
                       "stdout": [],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2026-10-04T05:01:00.600Z",
+                      "startTime": "2026-10-04T05:57:45.520Z",
                       "annotations": [],
                       "attachments": []
                     }
@@ -132,14 +132,14 @@
                   "results": [
                     {
                       "workerIndex": 2,
-                      "parallelIndex": 1,
+                      "parallelIndex": 0,
                       "status": "passed",
-                      "duration": 1983,
+                      "duration": 2128,
                       "errors": [],
                       "stdout": [],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2026-10-04T05:02:11.435Z",
+                      "startTime": "2026-10-04T05:59:08.827Z",
                       "annotations": [],
                       "attachments": []
                     }
@@ -147,7 +147,7 @@
                   "status": "expected"
                 }
               ],
-              "id": "a79b88caaddd1872f117-b7e23c61dc70e14f7916",
+              "id": "a79b88caaddd1872f117-6a01ca17fd7d818f7a2f",
               "file": "exec-films-all.spec.mjs",
               "line": 35,
               "column": 3
@@ -168,12 +168,12 @@
                       "workerIndex": 1,
                       "parallelIndex": 1,
                       "status": "passed",
-                      "duration": 12591,
+                      "duration": 12609,
                       "errors": [],
                       "stdout": [],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2026-10-04T05:01:00.605Z",
+                      "startTime": "2026-10-04T05:57:45.505Z",
                       "annotations": [],
                       "attachments": []
                     }
@@ -189,14 +189,14 @@
                   "results": [
                     {
                       "workerIndex": 2,
-                      "parallelIndex": 1,
+                      "parallelIndex": 0,
                       "status": "passed",
-                      "duration": 11850,
+                      "duration": 12076,
                       "errors": [],
                       "stdout": [],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2026-10-04T05:02:13.973Z",
+                      "startTime": "2026-10-04T05:59:11.493Z",
                       "annotations": [],
                       "attachments": []
                     }
@@ -204,7 +204,7 @@
                   "status": "expected"
                 }
               ],
-              "id": "a79b88caaddd1872f117-0f1a061761012a350960",
+              "id": "a79b88caaddd1872f117-f4e38e7b86ed166a1889",
               "file": "exec-films-all.spec.mjs",
               "line": 44,
               "column": 38
@@ -225,12 +225,12 @@
                       "workerIndex": 0,
                       "parallelIndex": 0,
                       "status": "passed",
-                      "duration": 12147,
+                      "duration": 12162,
                       "errors": [],
                       "stdout": [],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2026-10-04T05:01:03.392Z",
+                      "startTime": "2026-10-04T05:57:48.306Z",
                       "annotations": [],
                       "attachments": []
                     }
@@ -246,14 +246,14 @@
                   "results": [
                     {
                       "workerIndex": 3,
-                      "parallelIndex": 0,
+                      "parallelIndex": 1,
                       "status": "passed",
-                      "duration": 11819,
+                      "duration": 11840,
                       "errors": [],
                       "stdout": [],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2026-10-04T05:02:17.946Z",
+                      "startTime": "2026-10-04T05:59:19.875Z",
                       "annotations": [],
                       "attachments": []
                     }
@@ -261,7 +261,7 @@
                   "status": "expected"
                 }
               ],
-              "id": "a79b88caaddd1872f117-d5b1b34145a68e8846be",
+              "id": "a79b88caaddd1872f117-5bf43b55e47dfd57c0b3",
               "file": "exec-films-all.spec.mjs",
               "line": 44,
               "column": 38
@@ -282,12 +282,12 @@
                       "workerIndex": 1,
                       "parallelIndex": 1,
                       "status": "passed",
-                      "duration": 12569,
+                      "duration": 12775,
                       "errors": [],
                       "stdout": [],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2026-10-04T05:01:13.677Z",
+                      "startTime": "2026-10-04T05:57:58.592Z",
                       "annotations": [],
                       "attachments": []
                     }
@@ -303,14 +303,14 @@
                   "results": [
                     {
                       "workerIndex": 2,
-                      "parallelIndex": 1,
+                      "parallelIndex": 0,
                       "status": "passed",
-                      "duration": 11712,
+                      "duration": 11749,
                       "errors": [],
                       "stdout": [],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2026-10-04T05:02:25.837Z",
+                      "startTime": "2026-10-04T05:59:23.585Z",
                       "annotations": [],
                       "attachments": []
                     }
@@ -318,7 +318,7 @@
                   "status": "expected"
                 }
               ],
-              "id": "a79b88caaddd1872f117-9632127aac4bc16456d4",
+              "id": "a79b88caaddd1872f117-be903d11ce3c6a374311",
               "file": "exec-films-all.spec.mjs",
               "line": 44,
               "column": 38
@@ -339,12 +339,12 @@
                       "workerIndex": 0,
                       "parallelIndex": 0,
                       "status": "passed",
-                      "duration": 12160,
+                      "duration": 12289,
                       "errors": [],
                       "stdout": [],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2026-10-04T05:01:15.553Z",
+                      "startTime": "2026-10-04T05:58:00.487Z",
                       "annotations": [],
                       "attachments": []
                     }
@@ -360,14 +360,14 @@
                   "results": [
                     {
                       "workerIndex": 3,
-                      "parallelIndex": 0,
+                      "parallelIndex": 1,
                       "status": "passed",
-                      "duration": 11592,
+                      "duration": 11575,
                       "errors": [],
                       "stdout": [],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2026-10-04T05:02:30.288Z",
+                      "startTime": "2026-10-04T05:59:32.272Z",
                       "annotations": [],
                       "attachments": []
                     }
@@ -375,7 +375,64 @@
                   "status": "expected"
                 }
               ],
-              "id": "a79b88caaddd1872f117-248b31c462d3b971da8d",
+              "id": "a79b88caaddd1872f117-950c512e017cf73a4c28",
+              "file": "exec-films-all.spec.mjs",
+              "line": 44,
+              "column": 38
+            },
+            {
+              "title": "lorenzo (slide 45): poster → press-to-play → native controls → guide pauses → resumes on pause and after the end",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 240000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "desktop",
+                  "projectName": "desktop",
+                  "results": [
+                    {
+                      "workerIndex": 1,
+                      "parallelIndex": 1,
+                      "status": "passed",
+                      "duration": 12313,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-10-04T05:58:11.382Z",
+                      "annotations": [],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "expected"
+                },
+                {
+                  "timeout": 240000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "phone",
+                  "projectName": "phone",
+                  "results": [
+                    {
+                      "workerIndex": 2,
+                      "parallelIndex": 0,
+                      "status": "passed",
+                      "duration": 11502,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-10-04T05:59:35.347Z",
+                      "annotations": [],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "a79b88caaddd1872f117-525872fe15ba8eb3c38a",
               "file": "exec-films-all.spec.mjs",
               "line": 44,
               "column": 38
@@ -393,15 +450,15 @@
                   "projectName": "desktop",
                   "results": [
                     {
-                      "workerIndex": 1,
-                      "parallelIndex": 1,
+                      "workerIndex": 0,
+                      "parallelIndex": 0,
                       "status": "passed",
-                      "duration": 44361,
+                      "duration": 55255,
                       "errors": [],
                       "stdout": [],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2026-10-04T05:01:26.263Z",
+                      "startTime": "2026-10-04T05:58:12.798Z",
                       "annotations": [],
                       "attachments": []
                     }
@@ -416,15 +473,15 @@
                   "projectName": "phone",
                   "results": [
                     {
-                      "workerIndex": 2,
+                      "workerIndex": 3,
                       "parallelIndex": 1,
                       "status": "passed",
-                      "duration": 40535,
+                      "duration": 51345,
                       "errors": [],
                       "stdout": [],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2026-10-04T05:02:37.563Z",
+                      "startTime": "2026-10-04T05:59:43.861Z",
                       "annotations": [],
                       "attachments": []
                     }
@@ -432,7 +489,7 @@
                   "status": "expected"
                 }
               ],
-              "id": "a79b88caaddd1872f117-1d54beb1ef10e97fb12f",
+              "id": "a79b88caaddd1872f117-636d137c7d07a7622b19",
               "file": "exec-films-all.spec.mjs",
               "line": 63,
               "column": 3
@@ -450,15 +507,15 @@
                   "projectName": "desktop",
                   "results": [
                     {
-                      "workerIndex": 0,
-                      "parallelIndex": 0,
+                      "workerIndex": 1,
+                      "parallelIndex": 1,
                       "status": "passed",
-                      "duration": 1342,
+                      "duration": 1604,
                       "errors": [],
                       "stdout": [],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2026-10-04T05:01:27.733Z",
+                      "startTime": "2026-10-04T05:58:23.711Z",
                       "annotations": [],
                       "attachments": []
                     }
@@ -473,15 +530,15 @@
                   "projectName": "phone",
                   "results": [
                     {
-                      "workerIndex": 3,
+                      "workerIndex": 2,
                       "parallelIndex": 0,
                       "status": "passed",
-                      "duration": 1361,
+                      "duration": 1227,
                       "errors": [],
                       "stdout": [],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2026-10-04T05:02:41.896Z",
+                      "startTime": "2026-10-04T05:59:46.862Z",
                       "annotations": [],
                       "attachments": []
                     }
@@ -489,13 +546,13 @@
                   "status": "expected"
                 }
               ],
-              "id": "a79b88caaddd1872f117-6418c2a2875f5d6d9ae5",
+              "id": "a79b88caaddd1872f117-c82ad24ef9c545bd0519",
               "file": "exec-films-all.spec.mjs",
               "line": 80,
               "column": 3
             },
             {
-              "title": "deep links 32, 38, 39–44 resolve (EN + AR) and every slide loads with 0 console / page errors",
+              "title": "deep links 32, 38, 39–45 resolve (EN + AR) and every slide loads with 0 console / page errors",
               "ok": true,
               "tags": [],
               "tests": [
@@ -507,15 +564,15 @@
                   "projectName": "desktop",
                   "results": [
                     {
-                      "workerIndex": 0,
-                      "parallelIndex": 0,
+                      "workerIndex": 1,
+                      "parallelIndex": 1,
                       "status": "passed",
-                      "duration": 48099,
+                      "duration": 53762,
                       "errors": [],
                       "stdout": [],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2026-10-04T05:01:29.092Z",
+                      "startTime": "2026-10-04T05:58:25.329Z",
                       "annotations": [],
                       "attachments": []
                     }
@@ -530,15 +587,15 @@
                   "projectName": "phone",
                   "results": [
                     {
-                      "workerIndex": 3,
+                      "workerIndex": 2,
                       "parallelIndex": 0,
                       "status": "passed",
-                      "duration": 42801,
+                      "duration": 48786,
                       "errors": [],
                       "stdout": [],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2026-10-04T05:02:43.273Z",
+                      "startTime": "2026-10-04T05:59:48.103Z",
                       "annotations": [],
                       "attachments": []
                     }
@@ -546,7 +603,7 @@
                   "status": "expected"
                 }
               ],
-              "id": "a79b88caaddd1872f117-2bd55a8a6db153edc871",
+              "id": "a79b88caaddd1872f117-b73776e93593af415584",
               "file": "exec-films-all.spec.mjs",
               "line": 90,
               "column": 3
@@ -558,9 +615,9 @@
   ],
   "errors": [],
   "stats": {
-    "startTime": "2026-10-04T05:00:59.828Z",
-    "duration": 146452.02000000002,
-    "expected": 16,
+    "startTime": "2026-10-04T05:57:44.701Z",
+    "duration": 172407.959,
+    "expected": 18,
     "skipped": 0,
     "unexpected": 0,
     "flaky": 0

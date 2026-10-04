@@ -1,6 +1,6 @@
 {
- "base": "http://127.0.0.1:4163",
- "written": "2026-10-04T05:04:07.988Z",
+ "base": "http://127.0.0.1:4164",
+ "written": "2026-10-04T06:01:24.463Z",
  "rows": [
   {
    "lang": "en",
@@ -75,6 +75,15 @@
    "errors": []
   },
   {
+   "lang": "en",
+   "n": 45,
+   "id": "s-exec-lorenzo",
+   "slideId": "s-exec-lorenzo",
+   "dir": "ltr",
+   "hash": "#/28/exec-6",
+   "errors": []
+  },
+  {
    "lang": "ar",
    "n": 32,
    "id": "s-it-partners",
@@ -144,6 +153,15 @@
    "slideId": "s-exec-unwalla",
    "dir": "rtl",
    "hash": "#/28/exec-5",
+   "errors": []
+  },
+  {
+   "lang": "ar",
+   "n": 45,
+   "id": "s-exec-lorenzo",
+   "slideId": "s-exec-lorenzo",
+   "dir": "rtl",
+   "hash": "#/28/exec-6",
    "errors": []
   }
  ]

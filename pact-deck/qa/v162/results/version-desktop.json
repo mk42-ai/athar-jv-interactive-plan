@@ -1,23 +1,24 @@
 {
- "base": "http://127.0.0.1:4163",
- "version": "1.6.3",
- "written": "2026-10-04T04:57:25.370Z",
+ "base": "http://127.0.0.1:4164",
+ "version": "1.6.4",
+ "written": "2026-10-04T05:53:09.643Z",
  "rows": [
   {
-   "badge": "v1.6.3",
-   "html": "1.6.3",
-   "exec": "v1.6.3",
+   "badge": "v1.6.4",
+   "html": "1.6.4",
+   "exec": "v1.6.4",
    "films": [
     "khalid:shipped:288c67b2",
     "al-ameri:shipped:66d9a6d6",
     "ferreira-da-cunha:shipped:b155cd83",
-    "unwalla:shipped:2c1c7f0f"
+    "unwalla:shipped:2c1c7f0f",
+    "lorenzo:shipped:1566f386"
    ],
-   "player": "v1.6.3",
-   "guide": "v1.6.3",
+   "player": "v1.6.4",
+   "guide": "v1.6.4",
    "note": "Poster frame at 00:18.8 (face-detected, caption-free frame) · 50 s cut delivered 4 Oct 2026, installed full length · captions EN / AR · the narrated guide pauses while the film plays and resumes after it.",
    "dur": "0:50",
-   "buildInfo": "1.6.3"
+   "buildInfo": "1.6.4"
   }
  ]
 }

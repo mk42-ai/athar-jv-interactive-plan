@@ -1,6 +1,6 @@
 {
- "base": "http://127.0.0.1:4163",
- "written": "2026-10-04T05:06:03.291Z",
+ "base": "http://127.0.0.1:4164",
+ "written": "2026-10-04T06:03:36.190Z",
  "rows": [
   {
    "lang": "en",
@@ -210,6 +210,59 @@
    }
   },
   {
+   "lang": "en",
+   "who": "lorenzo",
+   "dir": "ltr",
+   "hash": "#/28/exec-6",
+   "cls": 0,
+   "clsEntries": [],
+   "docOverflowX": 0,
+   "secOverflowX": 0,
+   "bodyScroll": 1295,
+   "bodyOverflowY": "visible",
+   "video": {
+    "paused": true,
+    "ct": 0,
+    "autoplay": false,
+    "poster": "lorenzo-poster.dceede4679.jpg",
+    "defaultTrack": "en"
+   },
+   "figDir": "ltr",
+   "ratio": 1.7777777777777777,
+   "stage": {
+    "x": 16,
+    "y": 1119,
+    "w": 358,
+    "h": 201
+   },
+   "stageInViewport": true,
+   "slot": null,
+   "letter": {
+    "x": 16,
+    "y": 132,
+    "w": 358,
+    "h": 963
+   },
+   "card": {
+    "x": 16,
+    "y": 1427,
+    "w": 358,
+    "h": 552
+   },
+   "media": {
+    "x": 16,
+    "y": 1119,
+    "w": 358,
+    "h": 293
+   },
+   "roundel": {
+    "x": 159,
+    "y": 1444,
+    "w": 72,
+    "h": 72
+   }
+  },
+  {
    "lang": "ar",
    "who": "al-ameri",
    "dir": "rtl",
@@ -412,6 +465,59 @@
    "roundel": {
     "x": 159,
     "y": 1557,
+    "w": 72,
+    "h": 72
+   }
+  },
+  {
+   "lang": "ar",
+   "who": "lorenzo",
+   "dir": "rtl",
+   "hash": "#/28/exec-6",
+   "cls": 0,
+   "clsEntries": [],
+   "docOverflowX": 0,
+   "secOverflowX": 0,
+   "bodyScroll": 1309,
+   "bodyOverflowY": "visible",
+   "video": {
+    "paused": true,
+    "ct": 0,
+    "autoplay": false,
+    "poster": "lorenzo-poster.dceede4679.jpg",
+    "defaultTrack": "ar"
+   },
+   "figDir": "rtl",
+   "ratio": 1.7777777777777777,
+   "stage": {
+    "x": 16,
+    "y": 1130,
+    "w": 358,
+    "h": 201
+   },
+   "stageInViewport": true,
+   "slot": null,
+   "letter": {
+    "x": 16,
+    "y": 137,
+    "w": 358,
+    "h": 969
+   },
+   "card": {
+    "x": 16,
+    "y": 1441,
+    "w": 358,
+    "h": 552
+   },
+   "media": {
+    "x": 16,
+    "y": 1130,
+    "w": 358,
+    "h": 297
+   },
+   "roundel": {
+    "x": 159,
+    "y": 1458,
     "w": 72,
     "h": 72
    }

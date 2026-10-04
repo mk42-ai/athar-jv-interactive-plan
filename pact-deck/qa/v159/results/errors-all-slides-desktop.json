@@ -1,6 +1,6 @@
 {
- "base": "http://127.0.0.1:4163",
- "written": "2026-10-04T05:03:51.418Z",
+ "base": "http://127.0.0.1:4164",
+ "written": "2026-10-04T06:01:03.598Z",
  "rows": [
   {
    "lang": "en",
@@ -267,6 +267,12 @@
    "errors": 0
   },
   {
+   "lang": "en",
+   "n": 45,
+   "id": "s-exec-lorenzo",
+   "errors": 0
+  },
+  {
    "lang": "ar",
    "n": 1,
    "id": "s-cover",
@@ -528,6 +534,12 @@
    "lang": "ar",
    "n": 44,
    "id": "s-exec-unwalla",
+   "errors": 0
+  },
+  {
+   "lang": "ar",
+   "n": 45,
+   "id": "s-exec-lorenzo",
    "errors": 0
   }
  ]

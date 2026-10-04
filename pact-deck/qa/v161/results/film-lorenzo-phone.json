@@ -1,0 +1,29 @@
+{
+ "base": "http://127.0.0.1:4164",
+ "version": "1.6.4",
+ "written": "2026-10-04T06:12:03.443Z",
+ "rows": [
+  {
+   "meta": {
+    "poster": "lorenzo-poster.dceede4679.jpg",
+    "tracks": [
+     "en:default",
+     "ar"
+    ],
+    "autoplay": false,
+    "paused": true,
+    "dur": "0:40",
+    "title": "Athar — Origins of Impact, Episode 01: Lorenzo Avitabile",
+    "slot": false
+   },
+   "playing": {
+    "controls": true,
+    "overlayHidden": true,
+    "showing": [
+     "en"
+    ]
+   },
+   "errors": []
+  }
+ ]
+}

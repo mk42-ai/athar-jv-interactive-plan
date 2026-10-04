@@ -1,5 +1,5 @@
 {
  "_comment": "Build-time feature flags (scripts/v1.4.7/build.mjs syncs dist/ to these). execFilms (v1.5.9, replaces v1.5.7's originsFilm): Section 09 executive films from features/exec-films/films.json — true = the verified films are shipped in dist/assets/exec/films/ and every card carries a player or a labelled 'Film coming soon' ready slot; false = no film file or film string is served.",
- "version": "1.6.3",
+ "version": "1.6.4",
  "execFilms": true
 }
