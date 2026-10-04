@@ -1,34 +1,34 @@
 {
- "base": "http://127.0.0.1:4159",
- "written": "2026-10-03T13:27:52.064Z",
+ "base": "http://127.0.0.1:4162",
+ "written": "2026-10-04T02:54:55.395Z",
  "rows": [
   {
    "burst": "2 ArrowRight×6",
    "attempt": 1,
    "keyEventsInPage": 6,
-   "burstMs": 262,
+   "burstMs": 254,
    "target": 8,
    "audibleClip": "NAR-s08",
    "strayClipsStarted": [],
-   "syncMs": 146,
+   "syncMs": 126,
    "pass": true
   },
   {
    "burst": "8 ArrowRight×5",
    "attempt": 1,
    "keyEventsInPage": 5,
-   "burstMs": 128,
+   "burstMs": 155,
    "target": 13,
    "audibleClip": "NAR-s13",
    "strayClipsStarted": [],
-   "syncMs": 167,
+   "syncMs": 137,
    "pass": true
   },
   {
    "burst": "15 ArrowLeft×5",
    "attempt": 1,
    "keyEventsInPage": 5,
-   "burstMs": 233,
+   "burstMs": 89,
    "target": 10,
    "audibleClip": "NAR-s10",
    "strayClipsStarted": [],
@@ -39,11 +39,11 @@
    "burst": "10 ArrowRight×6",
    "attempt": 1,
    "keyEventsInPage": 6,
-   "burstMs": 120,
+   "burstMs": 93,
    "target": 16,
    "audibleClip": "NAR-s16",
    "strayClipsStarted": [],
-   "syncMs": 33,
+   "syncMs": 35,
    "pass": true
   },
   {
@@ -51,8 +51,8 @@
    "target": 17,
    "audibleClip": "NAR-s17",
    "strayClipsStarted": [],
-   "syncMs": 36,
-   "samplesChecked": 8,
+   "syncMs": 123,
+   "samplesChecked": 7,
    "desyncedSamples": [],
    "pass": true
   }

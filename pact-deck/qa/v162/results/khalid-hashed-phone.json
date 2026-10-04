@@ -1,0 +1,87 @@
+{
+ "base": "http://127.0.0.1:4162",
+ "version": "1.6.2",
+ "written": "2026-10-04T02:45:56.522Z",
+ "rows": [
+  {
+   "key": "mp4",
+   "url": "/assets/exec/films/khalid/athar-origins-of-impact-ep01-muhammed-khalid-1080p.288c67b22b.mp4",
+   "status": 200,
+   "bytes": 56677908,
+   "sha256": "288c67b22bbe38ede92aa4db345c2b0cde7a18d9f3d056d543b4dc1d2e3ac5d1",
+   "cacheControl": "public, max-age=31536000, immutable"
+  },
+  {
+   "key": "mp4Mobile",
+   "url": "/assets/exec/films/khalid/athar-origins-of-impact-ep01-muhammed-khalid-720p.f824472ae0.mp4",
+   "status": 200,
+   "bytes": 7843290,
+   "sha256": "f824472ae0b4c1674210e24e9f339742a78c8fda7c5175de69ac8668e42e318d",
+   "cacheControl": "public, max-age=31536000, immutable"
+  },
+  {
+   "key": "poster",
+   "url": "/assets/exec/films/khalid/athar-origins-of-impact-ep01-muhammed-khalid-poster-18s8.32839348ca.jpg",
+   "status": 200,
+   "bytes": 98527,
+   "sha256": "32839348cadcde9cb2b90966b80a3c302ad71ede7e77dbd9d78f590308f24155",
+   "cacheControl": "public, max-age=31536000, immutable"
+  },
+  {
+   "key": "posterWebp",
+   "url": "/assets/exec/films/khalid/athar-origins-of-impact-ep01-muhammed-khalid-poster-18s8.aaa6152b71.webp",
+   "status": 200,
+   "bytes": 48116,
+   "sha256": "aaa6152b71051cc19e75626100b08a1ddbdbea7e7102f96bfe54a3d42d5a0fa5",
+   "cacheControl": "public, max-age=31536000, immutable"
+  },
+  {
+   "key": "vttEn",
+   "url": "/assets/exec/films/khalid/athar-origins-of-impact-ep01-muhammed-khalid.en.4242fc2dfe.vtt",
+   "status": 200,
+   "bytes": 2025,
+   "sha256": "4242fc2dfea4d6c5d2a2c1be1f1ca5c371cc7d71912554dd4fa2ce23e9af4d02",
+   "cacheControl": "public, max-age=31536000, immutable"
+  },
+  {
+   "key": "vttAr",
+   "url": "/assets/exec/films/khalid/athar-origins-of-impact-ep01-muhammed-khalid.ar.e11f32091d.vtt",
+   "status": 200,
+   "bytes": 2220,
+   "sha256": "e11f32091d26b21b5c0a1e874fc38412419b7b13d6ad72d2df9667fb415c1b0f",
+   "cacheControl": "public, max-age=31536000, immutable"
+  },
+  {
+   "retired": "athar-origins-of-impact-ep01-muhammed-khalid-1080p.mp4",
+   "status": 404
+  },
+  {
+   "retired": "athar-origins-of-impact-ep01-muhammed-khalid-720p.mp4",
+   "status": 404
+  },
+  {
+   "retired": "athar-origins-of-impact-ep01-muhammed-khalid-poster-18s8.jpg",
+   "status": 404
+  },
+  {
+   "retired": "athar-origins-of-impact-ep01-muhammed-khalid-poster-18s8.webp",
+   "status": 404
+  },
+  {
+   "retired": "athar-origins-of-impact-ep01-muhammed-khalid.en.vtt",
+   "status": 404
+  },
+  {
+   "retired": "athar-origins-of-impact-ep01-muhammed-khalid.ar.vtt",
+   "status": 404
+  },
+  {
+   "retired": "athar-origins-of-impact-ep01-poster-09s1.jpg",
+   "status": 404
+  },
+  {
+   "retired": "athar-origins-of-impact-ep01.en.vtt",
+   "status": 404
+  }
+ ]
+}

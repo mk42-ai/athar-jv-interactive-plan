@@ -1,7 +1,7 @@
 {
- "base": "http://127.0.0.1:4160",
- "version": "1.6.0",
- "written": "2026-10-03T16:24:16.940Z",
+ "base": "http://127.0.0.1:4162",
+ "version": "1.6.2",
+ "written": "2026-10-04T02:49:40.385Z",
  "rows": [
   {
    "lang": "en",
@@ -85,7 +85,7 @@
    "video": {
     "paused": true,
     "autoplay": false,
-    "poster": "athar-origins-of-impact-ep01-poster-09s1.jpg",
+    "poster": "athar-origins-of-impact-ep01-muhammed-khalid-poster-18s8.32839348ca.jpg",
     "defaultTrack": "en"
    },
    "figDir": "ltr",
@@ -101,7 +101,7 @@
     "x": 898,
     "y": 141,
     "w": 497,
-    "h": 338
+    "h": 353
    },
    "card": null,
    "title": "Athar — Origins of Impact, Episode 01: Muhammed Khalid"
@@ -113,14 +113,15 @@
    "cls": 0,
    "docOverflowX": 0,
    "secOverflowX": 0,
-   "video": null,
-   "figDir": null,
-   "ratio": null,
-   "slot": {
-    "state": "coming-soon",
-    "text": "Film coming soonA verified film for this card will appear here.",
-    "visible": true
+   "video": {
+    "paused": true,
+    "autoplay": false,
+    "poster": "athar-origins-ep01-kayaan-unwalla-poster-20s0.jpg",
+    "defaultTrack": "en"
    },
+   "figDir": "ltr",
+   "ratio": 1.7778125182519404,
+   "slot": null,
    "letter": {
     "x": 289,
     "y": 141,
@@ -128,18 +129,18 @@
     "h": 622
    },
    "media": {
-    "x": 1000,
-    "y": 157,
-    "w": 375,
-    "h": 67
-   },
-   "card": {
     "x": 898,
     "y": 141,
     "w": 497,
+    "h": 338
+   },
+   "card": {
+    "x": 898,
+    "y": 492,
+    "w": 497,
     "h": 670
    },
-   "title": null
+   "title": "Athar — Origins of Impact, Episode 01: Kayaan K. Unwalla"
   },
   {
    "lang": "ar",
@@ -223,7 +224,7 @@
    "video": {
     "paused": true,
     "autoplay": false,
-    "poster": "athar-origins-of-impact-ep01-poster-09s1.jpg",
+    "poster": "athar-origins-of-impact-ep01-muhammed-khalid-poster-18s8.32839348ca.jpg",
     "defaultTrack": "ar"
    },
    "figDir": "rtl",
@@ -239,7 +240,7 @@
     "x": 45,
     "y": 145,
     "w": 497,
-    "h": 340
+    "h": 355
    },
    "card": null,
    "title": "أثر — أصول الأثر، الحلقة 01: محمد خالد"
@@ -251,14 +252,15 @@
    "cls": 0,
    "docOverflowX": 0,
    "secOverflowX": 0,
-   "video": null,
-   "figDir": null,
-   "ratio": null,
-   "slot": {
-    "state": "coming-soon",
-    "text": "الفيلم قريباًسيظهر هنا الفيلم المعتمد لهذه البطاقة.",
-    "visible": true
+   "video": {
+    "paused": true,
+    "autoplay": false,
+    "poster": "athar-origins-ep01-kayaan-unwalla-poster-20s0.jpg",
+    "defaultTrack": "ar"
    },
+   "figDir": "rtl",
+   "ratio": 1.7778129306776083,
+   "slot": null,
    "letter": {
     "x": 565,
     "y": 145,
@@ -266,18 +268,18 @@
     "h": 626
    },
    "media": {
-    "x": 65,
-    "y": 161,
-    "w": 375,
-    "h": 70
-   },
-   "card": {
     "x": 45,
     "y": 145,
     "w": 497,
-    "h": 672
+    "h": 340
    },
-   "title": null
+   "card": {
+    "x": 45,
+    "y": 498,
+    "w": 497,
+    "h": 670
+   },
+   "title": "أثر — أصول الأثر، الحلقة 01: كايان ك. أونوالا"
   }
  ]
 }

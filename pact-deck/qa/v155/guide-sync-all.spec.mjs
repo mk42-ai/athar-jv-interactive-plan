@@ -11,6 +11,7 @@ import path from 'node:path';
 import { instrument, FILE2CLIP, hashFor, DIST } from '../v154/lib.mjs';
 
 const HERE = path.dirname(new URL(import.meta.url).pathname);
+const FILMS162 = JSON.parse(fs.readFileSync(path.join(HERE, '../../features/exec-films/films.json'), 'utf8')).films.khalid; /* v1.6.2: Khalid file names are content-hashed — read them from the manifest */
 const BASE = process.env.GUIDE_BASE || 'http://127.0.0.1:4405';
 const TABLE = JSON.parse(fs.readFileSync(path.join(DIST, 'narration/slide-narration.json'), 'utf8'));
 const TOTAL = TABLE.slides.length;
@@ -100,7 +101,7 @@ test.describe(`guide narration ⇔ visible slide — all ${TOTAL} slides`, () =>
     await page.keyboard.press('ArrowRight'); await page.waitForFunction(() => window.__qaVisible().n === 43, null, { timeout: 8000 });
     s = await narratedEqualsVisible(page, 43); expect(s.ok, 'slide 43 lead-in clip audible').toBe(true);
     const film = await page.evaluate(() => { const v = document.querySelector('#s-exec-khalid video[data-narration-pause]'); return v ? { poster: v.poster.split('/').pop(), posterTime: v.dataset.posterTime, tracks: [...v.querySelectorAll('track')].map((t) => t.srclang + ':' + t.getAttribute('src').split('/').pop()), in: v.dataset.in, out: v.dataset.out, src: v.querySelector('source').getAttribute('src').split('/').pop() } : null; });
-    expect(film).not.toBeNull(); expect(film.poster).toBe('athar-origins-of-impact-ep01-muhammed-khalid-poster-18s8.jpg'); /* v1.6.2: the 50 s cut — face-detected caption-free poster at 00:18.8, shared player */ expect(film.tracks).toEqual(['en:athar-origins-of-impact-ep01-muhammed-khalid.en.vtt', 'ar:athar-origins-of-impact-ep01-muhammed-khalid.ar.vtt']);
+    expect(film).not.toBeNull(); expect(film.poster).toBe(FILMS162.poster.split('/').pop()); /* v1.6.2: the 50 s cut — face-detected caption-free poster at 00:18.8, shared player; names read from films.json because every Khalid file now carries a content hash */ expect(film.poster).toMatch(/poster-18s8\.[0-9a-f]{10}\.jpg$/); expect(film.tracks).toEqual(['en:' + FILMS162.captions.en.split('/').pop(), 'ar:' + FILMS162.captions.ar.split('/').pop()]); expect([FILMS162.mp4.split('/').pop(), FILMS162.mp4Mobile.split('/').pop()]).toContain(film.src); /* desktop → 1080p, phone (≤ 720 px) → 720p; both content-hashed */
     await page.evaluate(async () => { const v = document.querySelector('#s-exec-khalid video'); await new Promise((r) => { if (v.readyState >= 1) r(); else v.addEventListener('loadedmetadata', r, { once: true }); }); v.currentTime = 46.5; await v.play(); }); /* v1.6.2: the film is 50.000 s — seek near its end */
     await page.waitForFunction(() => document.getElementById('athar-narration').getAttribute('data-reason') === 'video', null, { timeout: 6000 });
     const during = await snap(page); const filmPlaying = await page.evaluate(() => { const v = document.querySelector('#s-exec-khalid video'); return !v.paused && v.currentTime > 46.5; });

@@ -1,14 +1,15 @@
 {
  "base": "http://127.0.0.1:4162",
  "version": "1.6.2",
- "written": "2026-10-04T02:14:13.408Z",
+ "written": "2026-10-04T02:46:20.064Z",
  "rows": [
   {
    "dirs": {
     "en": "ltr",
     "ar": "rtl"
    },
-   "errors": []
+   "errors": [],
+   "failedRequests": []
   }
  ]
 }

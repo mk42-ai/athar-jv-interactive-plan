@@ -1,0 +1,35 @@
+{
+ "base": "http://127.0.0.1:4162",
+ "version": "1.6.2",
+ "written": "2026-10-04T02:46:01.390Z",
+ "rows": [
+  {
+   "lang": "en",
+   "dir": "ltr",
+   "src": "athar-origins-of-impact-ep01-muhammed-khalid-720p.f824472ae0.mp4",
+   "poster": "athar-origins-of-impact-ep01-muhammed-khalid-poster-18s8.32839348ca.jpg",
+   "duration": 50.005,
+   "tracks": [
+    "en:athar-origins-of-impact-ep01-muhammed-khalid.en.4242fc2dfe.vtt:default",
+    "ar:athar-origins-of-impact-ep01-muhammed-khalid.ar.e11f32091d.vtt"
+   ]
+  },
+  {
+   "lang": "ar",
+   "dir": "rtl",
+   "src": "athar-origins-of-impact-ep01-muhammed-khalid-720p.f824472ae0.mp4",
+   "poster": "athar-origins-of-impact-ep01-muhammed-khalid-poster-18s8.32839348ca.jpg",
+   "duration": 50.005,
+   "tracks": [
+    "en:athar-origins-of-impact-ep01-muhammed-khalid.en.4242fc2dfe.vtt",
+    "ar:athar-origins-of-impact-ep01-muhammed-khalid.ar.e11f32091d.vtt:default"
+   ]
+  },
+  {
+   "downloaded": "/assets/exec/films/khalid/athar-origins-of-impact-ep01-muhammed-khalid-720p.f824472ae0.mp4",
+   "bytes": 7843290,
+   "sha256": "f824472ae0b4c1674210e24e9f339742a78c8fda7c5175de69ac8668e42e318d",
+   "expected": "f824472ae0b4c1674210e24e9f339742a78c8fda7c5175de69ac8668e42e318d"
+  }
+ ]
+}

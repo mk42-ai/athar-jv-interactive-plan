@@ -1,11 +1,11 @@
 {
  "base": "http://127.0.0.1:4162",
  "version": "1.6.2",
- "written": "2026-10-04T02:13:44.079Z",
+ "written": "2026-10-04T02:45:41.651Z",
  "rows": [
   {
    "idle": {
-    "poster": "athar-origins-of-impact-ep01-muhammed-khalid-poster-18s8.jpg",
+    "poster": "athar-origins-of-impact-ep01-muhammed-khalid-poster-18s8.32839348ca.jpg",
     "posterLoaded": true,
     "posterVisible": true,
     "paused": true,
@@ -15,11 +15,11 @@
     "duration": 50.005,
     "controls": false,
     "overlay": true,
-    "src": "athar-origins-of-impact-ep01-muhammed-khalid-720p.mp4",
+    "src": "athar-origins-of-impact-ep01-muhammed-khalid-720p.f824472ae0.mp4",
     "variant": "720p",
     "tracks": [
-     "en:athar-origins-of-impact-ep01-muhammed-khalid.en.vtt:default",
-     "ar:athar-origins-of-impact-ep01-muhammed-khalid.ar.vtt"
+     "en:athar-origins-of-impact-ep01-muhammed-khalid.en.4242fc2dfe.vtt:default",
+     "ar:athar-origins-of-impact-ep01-muhammed-khalid.ar.e11f32091d.vtt"
     ]
    },
    "playing": {
@@ -30,7 +30,7 @@
     ],
     "readyState": 4,
     "duration": 50.005,
-    "currentTime": 1.206992,
+    "currentTime": 1.177,
     "guide": "paused"
    },
    "gPause": "playing",

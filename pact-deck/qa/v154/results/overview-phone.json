@@ -1,54 +1,54 @@
 {
- "base": "http://127.0.0.1:4159",
- "written": "2026-10-03T13:28:35.371Z",
+ "base": "http://127.0.0.1:4162",
+ "written": "2026-10-04T02:55:48.855Z",
  "rows": [
   {
    "tile": 21,
    "slideId": "s-actors-wall",
    "audibleClip": "NAR-s21",
-   "syncMs": 205,
+   "syncMs": 157,
    "pass": true
   },
   {
    "tile": 36,
    "slideId": "s-aos-roadmap",
    "audibleClip": "NAR-s36",
-   "syncMs": 147,
+   "syncMs": 146,
    "pass": true
   },
   {
    "tile": 12,
    "slideId": "s-decision-table",
    "audibleClip": "NAR-s12",
-   "syncMs": 134,
+   "syncMs": 240,
    "pass": true
   },
   {
    "tile": 30,
    "slideId": "s-it-metrics",
    "audibleClip": "NAR-s30",
-   "syncMs": 165,
+   "syncMs": 138,
    "pass": true
   },
   {
    "tile": 38,
    "slideId": "s-aos-nations",
    "audibleClip": "NAR-s38",
-   "syncMs": 162,
+   "syncMs": 160,
    "pass": true
   },
   {
    "tile": 39,
    "slideId": "s-closing",
    "audibleClip": "NAR-s39",
-   "syncMs": 186,
+   "syncMs": 128,
    "pass": true
   },
   {
    "tile": 1,
    "slideId": "s-cover",
    "audibleClip": "NAR-s01",
-   "syncMs": 156,
+   "syncMs": 133,
    "pass": true
   },
   {

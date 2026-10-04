@@ -19,8 +19,8 @@ ready slot (never a broken player). Swapping a slot for a film is a `films.json`
 features/exec-films/
 ├── films.json                 ← the manifest (source of truth for the build, dist/build-info.json and the QA suite)
 ├── assets/khalid/
-│   ├── athar-origins-of-impact-ep01-muhammed-khalid-1080p.mp4   1920×1080 24 fps H.264 High 8.87 Mb/s + AAC-LC 48 kHz st, faststart remux of the delivered 50 s cut, 50.000 s, 56,677,908 B, sha256 288c67b2…c5d1 (v1.6.2)
-│   ├── athar-origins-of-impact-ep01-muhammed-khalid-720p.mp4    1280×720 transcode (libx264 High@4.0 crf 23, AAC 128k, +faststart), 7,843,290 B, sha256 f824472a…318d — viewports ≤ 720 px / Save-Data (v1.6.2)
+│   ├── athar-origins-of-impact-ep01-muhammed-khalid-1080p.288c67b22b.mp4   1920×1080 24 fps H.264 High 8.87 Mb/s + AAC-LC 48 kHz st, faststart remux of the delivered 50 s cut, 50.000 s, 56,677,908 B, sha256 288c67b2…c5d1 (v1.6.2)
+│   ├── athar-origins-of-impact-ep01-muhammed-khalid-720p.f824472ae0.mp4    1280×720 transcode (libx264 High@4.0 crf 23, AAC 128k, +faststart), 7,843,290 B, sha256 f824472a…318d — viewports ≤ 720 px / Save-Data (v1.6.2)
 │   ├── athar-origins-of-impact-ep01-poster-09s1.jpg / .webp     poster frame at 00:09.100 (1280×720)
 │   └── athar-origins-of-impact-ep01.en.vtt / .ar.vtt            WebVTT captions, 12 cues each (EN from the burned-in subtitles, AR translation), cues at line:6%
 └── sources/khalid/SOURCE.md   ← provenance of the master (not committed: 89 MB) and of the trim
@@ -56,3 +56,7 @@ eye. It replaces the v1.5.6 poster at 00:15.5, which showed the name title card 
 2. In `films.json` fill the entry (sha256 of each file, `durationSec`, `durationLabel`, `posterTimeSec`, `w/h`, `outPt`) and set `"status": "shipped"`.
 3. `node pact-deck/scripts/vercel-build.mjs` — the gate verifies the hashes and the WebVTT headers; commit `dist/`, `SHA256SUMS.txt` and `films.json`.
 4. QA: `GUIDE_BASE=… npx playwright test -c qa/v159/playwright.config.mjs` (desktop + phone, EN + AR).
+
+## Content-hashed filenames (v1.6.2)
+
+Every served Khalid file is named `<name>.<first 10 hex of its own sha256>.<ext>` (`films.json` → `films.khalid.hashedFilenames.map`). The URL therefore changes whenever the bytes change, so neither a CDN nor a browser cache can keep serving an older Khalid film, poster or caption file under the same path; `serve.mjs` and `vercel.json` serve these hashed files with `Cache-Control: public, max-age=31536000, immutable`, while `/`, `/index.html`, `/build-info.json` and `/js/exec-films.js` (the generated manifest) are `no-store`. The other three films keep their v1.6.0/v1.6.1 names (unchanged bytes).

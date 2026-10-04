@@ -1,25 +1,25 @@
 {
- "base": "http://127.0.0.1:4159",
- "written": "2026-10-03T13:33:31.116Z",
+ "base": "http://127.0.0.1:4162",
+ "written": "2026-10-04T02:51:54.470Z",
  "rows": [
   {
    "meta": {
     "state": "idle",
-    "poster": "athar-origins-of-impact-ep01-poster-09s1.jpg",
-    "posterTime": "9.1",
+    "poster": "athar-origins-of-impact-ep01-muhammed-khalid-poster-18s8.32839348ca.jpg",
+    "posterTime": "18.8",
     "variant": "1080p",
-    "src": "/assets/exec/films/khalid/athar-origins-of-impact-ep01-muhammed-khalid-1080p.mp4",
+    "src": "/assets/exec/films/khalid/athar-origins-of-impact-ep01-muhammed-khalid-1080p.288c67b22b.mp4",
     "tracks": [
-     "subtitles:en:athar-origins-of-impact-ep01.en.vtt:default",
-     "subtitles:ar:athar-origins-of-impact-ep01.ar.vtt"
+     "subtitles:en:athar-origins-of-impact-ep01-muhammed-khalid.en.4242fc2dfe.vtt:default",
+     "subtitles:ar:athar-origins-of-impact-ep01-muhammed-khalid.ar.e11f32091d.vtt"
     ],
     "autoplay": false,
     "muted": false,
     "controls": false,
     "paused": true,
     "ct": 0,
-    "out": "37.3",
-    "dur": "0:37",
+    "out": "50",
+    "dur": "0:50",
     "title": "Athar — Origins of Impact, Episode 01: Muhammed Khalid",
     "play": true,
     "playLabel": "Play the film — Athar — Origins of Impact, Episode 01: Muhammed Khalid",
@@ -34,7 +34,7 @@
    "playing": {
     "state": "playing",
     "paused": false,
-    "ct": 1.283611,
+    "ct": 1.296865,
     "controls": true,
     "playHidden": true,
     "overlays": [],
@@ -71,8 +71,8 @@
    },
    "endUi": {
     "state": "ended",
-    "endedAtOut": "true",
-    "replay": "Replay film0:37"
+    "endedAtOut": null,
+    "replay": "Replay film0:50"
    },
    "errors": []
   }

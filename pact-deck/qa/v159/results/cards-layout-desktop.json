@@ -1,6 +1,6 @@
 {
- "base": "http://127.0.0.1:4159",
- "written": "2026-10-03T13:34:05.513Z",
+ "base": "http://127.0.0.1:4162",
+ "written": "2026-10-04T02:52:28.311Z",
  "rows": [
   {
    "lang": "en",
@@ -11,19 +11,25 @@
    "clsEntries": [],
    "docOverflowX": 0,
    "secOverflowX": 0,
-   "bodyScroll": 0,
-   "bodyOverflowY": "visible",
-   "video": null,
-   "figDir": null,
-   "ratio": null,
-   "stage": null,
-   "stageInViewport": null,
-   "slot": {
-    "state": "coming-soon",
-    "text": "Film coming soonA verified film for this card will appear here.",
-    "dir": "ltr",
-    "visible": true
+   "bodyScroll": 236,
+   "bodyOverflowY": "auto",
+   "video": {
+    "paused": true,
+    "ct": 0,
+    "autoplay": false,
+    "poster": "athar-origins-ep01-fahad-al-ameri-poster-07s0.jpg",
+    "defaultTrack": "en"
    },
+   "figDir": "ltr",
+   "ratio": 1.7777778544239968,
+   "stage": {
+    "x": 1054,
+    "y": 143,
+    "w": 629,
+    "h": 354
+   },
+   "stageInViewport": true,
+   "slot": null,
    "letter": {
     "x": 289,
     "y": 143,
@@ -32,19 +38,19 @@
    },
    "card": {
     "x": 1054,
-    "y": 143,
+    "y": 569,
     "w": 629,
     "h": 387
    },
    "media": {
-    "x": 1156,
-    "y": 160,
-    "w": 507,
-    "h": 66
+    "x": 1054,
+    "y": 143,
+    "w": 629,
+    "h": 412
    },
    "roundel": {
     "x": 1074,
-    "y": 159,
+    "y": 584,
     "w": 67,
     "h": 67
    }
@@ -58,19 +64,25 @@
    "clsEntries": [],
    "docOverflowX": 0,
    "secOverflowX": 0,
-   "bodyScroll": 15,
-   "bodyOverflowY": "visible",
-   "video": null,
-   "figDir": null,
-   "ratio": null,
-   "stage": null,
-   "stageInViewport": null,
-   "slot": {
-    "state": "coming-soon",
-    "text": "Film coming soonA verified film for this card will appear here.",
-    "dir": "ltr",
-    "visible": true
+   "bodyScroll": 278,
+   "bodyOverflowY": "auto",
+   "video": {
+    "paused": true,
+    "ct": 0,
+    "autoplay": false,
+    "poster": "athar-origins-ep01-ary-ferreira-da-cunha-poster-04s0.jpg",
+    "defaultTrack": "en"
    },
+   "figDir": "ltr",
+   "ratio": 1.7777778544239968,
+   "stage": {
+    "x": 1054,
+    "y": 143,
+    "w": 629,
+    "h": 354
+   },
+   "stageInViewport": true,
+   "slot": null,
    "letter": {
     "x": 289,
     "y": 143,
@@ -79,19 +91,19 @@
    },
    "card": {
     "x": 1054,
-    "y": 143,
+    "y": 569,
     "w": 629,
     "h": 426
    },
    "media": {
-    "x": 1156,
-    "y": 160,
-    "w": 507,
-    "h": 66
+    "x": 1054,
+    "y": 143,
+    "w": 629,
+    "h": 412
    },
    "roundel": {
     "x": 1074,
-    "y": 159,
+    "y": 584,
     "w": 67,
     "h": 67
    }
@@ -111,7 +123,7 @@
     "paused": true,
     "ct": 0,
     "autoplay": false,
-    "poster": "athar-origins-of-impact-ep01-poster-09s1.jpg",
+    "poster": "athar-origins-of-impact-ep01-muhammed-khalid-poster-18s8.32839348ca.jpg",
     "defaultTrack": "en"
    },
    "figDir": "ltr",
@@ -135,7 +147,7 @@
     "x": 1054,
     "y": 143,
     "w": 629,
-    "h": 412
+    "h": 427
    },
    "roundel": {
     "x": 312,
@@ -153,19 +165,25 @@
    "clsEntries": [],
    "docOverflowX": 0,
    "secOverflowX": 0,
-   "bodyScroll": 0,
-   "bodyOverflowY": "visible",
-   "video": null,
-   "figDir": null,
-   "ratio": null,
-   "stage": null,
-   "stageInViewport": null,
-   "slot": {
-    "state": "coming-soon",
-    "text": "Film coming soonA verified film for this card will appear here.",
-    "dir": "ltr",
-    "visible": true
+   "bodyScroll": 411,
+   "bodyOverflowY": "auto",
+   "video": {
+    "paused": true,
+    "ct": 0,
+    "autoplay": false,
+    "poster": "athar-origins-ep01-kayaan-unwalla-poster-20s0.jpg",
+    "defaultTrack": "en"
    },
+   "figDir": "ltr",
+   "ratio": 1.7777778544239968,
+   "stage": {
+    "x": 1054,
+    "y": 143,
+    "w": 629,
+    "h": 354
+   },
+   "stageInViewport": true,
+   "slot": null,
    "letter": {
     "x": 289,
     "y": 143,
@@ -174,19 +192,19 @@
    },
    "card": {
     "x": 1054,
-    "y": 143,
+    "y": 569,
     "w": 629,
     "h": 551
    },
    "media": {
-    "x": 1156,
-    "y": 160,
-    "w": 507,
-    "h": 66
+    "x": 1054,
+    "y": 143,
+    "w": 629,
+    "h": 412
    },
    "roundel": {
     "x": 1074,
-    "y": 159,
+    "y": 584,
     "w": 67,
     "h": 67
    }
@@ -200,19 +218,25 @@
    "clsEntries": [],
    "docOverflowX": 0,
    "secOverflowX": 0,
-   "bodyScroll": 0,
-   "bodyOverflowY": "visible",
-   "video": null,
-   "figDir": null,
-   "ratio": null,
-   "stage": null,
-   "stageInViewport": null,
-   "slot": {
-    "state": "coming-soon",
-    "text": "الفيلم قريباًسيظهر هنا الفيلم المعتمد لهذه البطاقة.",
-    "dir": "rtl",
-    "visible": true
+   "bodyScroll": 246,
+   "bodyOverflowY": "auto",
+   "video": {
+    "paused": true,
+    "ct": 0,
+    "autoplay": false,
+    "poster": "athar-origins-ep01-fahad-al-ameri-poster-07s0.jpg",
+    "defaultTrack": "ar"
    },
+   "figDir": "rtl",
+   "ratio": 1.7777778544239968,
+   "stage": {
+    "x": 45,
+    "y": 150,
+    "w": 629,
+    "h": 354
+   },
+   "stageInViewport": true,
+   "slot": null,
    "letter": {
     "x": 697,
     "y": 150,
@@ -221,19 +245,19 @@
    },
    "card": {
     "x": 45,
-    "y": 150,
+    "y": 577,
     "w": 629,
-    "h": 389
+    "h": 387
    },
    "media": {
-    "x": 65,
-    "y": 166,
-    "w": 507,
-    "h": 70
+    "x": 45,
+    "y": 150,
+    "w": 629,
+    "h": 414
    },
    "roundel": {
     "x": 587,
-    "y": 166,
+    "y": 593,
     "w": 67,
     "h": 67
    }
@@ -247,19 +271,25 @@
    "clsEntries": [],
    "docOverflowX": 0,
    "secOverflowX": 0,
-   "bodyScroll": 27,
-   "bodyOverflowY": "visible",
-   "video": null,
-   "figDir": null,
-   "ratio": null,
-   "stage": null,
-   "stageInViewport": null,
-   "slot": {
-    "state": "coming-soon",
-    "text": "الفيلم قريباًسيظهر هنا الفيلم المعتمد لهذه البطاقة.",
-    "dir": "rtl",
-    "visible": true
+   "bodyScroll": 288,
+   "bodyOverflowY": "auto",
+   "video": {
+    "paused": true,
+    "ct": 0,
+    "autoplay": false,
+    "poster": "athar-origins-ep01-ary-ferreira-da-cunha-poster-04s0.jpg",
+    "defaultTrack": "ar"
    },
+   "figDir": "rtl",
+   "ratio": 1.7777778544239968,
+   "stage": {
+    "x": 45,
+    "y": 150,
+    "w": 629,
+    "h": 354
+   },
+   "stageInViewport": true,
+   "slot": null,
    "letter": {
     "x": 697,
     "y": 150,
@@ -268,19 +298,19 @@
    },
    "card": {
     "x": 45,
-    "y": 150,
+    "y": 577,
     "w": 629,
-    "h": 428
+    "h": 426
    },
    "media": {
-    "x": 65,
-    "y": 166,
-    "w": 507,
-    "h": 70
+    "x": 45,
+    "y": 150,
+    "w": 629,
+    "h": 414
    },
    "roundel": {
     "x": 587,
-    "y": 166,
+    "y": 593,
     "w": 67,
     "h": 67
    }
@@ -300,7 +330,7 @@
     "paused": true,
     "ct": 0,
     "autoplay": false,
-    "poster": "athar-origins-of-impact-ep01-poster-09s1.jpg",
+    "poster": "athar-origins-of-impact-ep01-muhammed-khalid-poster-18s8.32839348ca.jpg",
     "defaultTrack": "ar"
    },
    "figDir": "rtl",
@@ -324,7 +354,7 @@
     "x": 45,
     "y": 150,
     "w": 629,
-    "h": 414
+    "h": 429
    },
    "roundel": {
     "x": 1348,
@@ -342,19 +372,25 @@
    "clsEntries": [],
    "docOverflowX": 0,
    "secOverflowX": 0,
-   "bodyScroll": 0,
-   "bodyOverflowY": "visible",
-   "video": null,
-   "figDir": null,
-   "ratio": null,
-   "stage": null,
-   "stageInViewport": null,
-   "slot": {
-    "state": "coming-soon",
-    "text": "الفيلم قريباًسيظهر هنا الفيلم المعتمد لهذه البطاقة.",
-    "dir": "rtl",
-    "visible": true
+   "bodyScroll": 421,
+   "bodyOverflowY": "auto",
+   "video": {
+    "paused": true,
+    "ct": 0,
+    "autoplay": false,
+    "poster": "athar-origins-ep01-kayaan-unwalla-poster-20s0.jpg",
+    "defaultTrack": "ar"
    },
+   "figDir": "rtl",
+   "ratio": 1.7777778544239968,
+   "stage": {
+    "x": 45,
+    "y": 150,
+    "w": 629,
+    "h": 354
+   },
+   "stageInViewport": true,
+   "slot": null,
    "letter": {
     "x": 697,
     "y": 150,
@@ -363,19 +399,19 @@
    },
    "card": {
     "x": 45,
-    "y": 150,
+    "y": 577,
     "w": 629,
-    "h": 553
+    "h": 551
    },
    "media": {
-    "x": 65,
-    "y": 166,
-    "w": 507,
-    "h": 70
+    "x": 45,
+    "y": 150,
+    "w": 629,
+    "h": 414
    },
    "roundel": {
     "x": 587,
-    "y": 166,
+    "y": 593,
     "w": 67,
     "h": 67
    }
