@@ -1,7 +1,7 @@
 {
- "base": "http://127.0.0.1:4159",
+ "base": "http://127.0.0.1:4162",
  "total": 44,
- "written": "2026-10-03T13:26:00.162Z",
+ "written": "2026-10-04T02:17:55.734Z",
  "rows": [
   {
    "ary": {
@@ -59,37 +59,37 @@
      },
      "in": {
       "country": "in",
-      "concept": "generic-v157",
+      "concept": "india-v161",
       "tab": "PRODUCT CONCEPT",
-      "cap": "CONCEPT RENDER",
-      "alt": "AI-generated concept render of an Athar service hall: a man in a wheelchair is helped at a reception desk beside a navy ATHAR self-service kiosk, a mother and her young son look at a tablet showing an Arabic medical-appointment screen, and two colleagues sit at a meeting table in the background",
+      "cap": "CONCEPT RENDER · illustrative",
+      "alt": "AI-generated concept render for India (Ownership tier): a classroom with learners at Athar-powered devices; the official ATHAR logo sits on the ivory wall section above the shelf. Illustrative, not a photograph.",
       "nat": [
        768,
-       480
+       512
       ],
       "shown": [
        356,
-       222
+       237
       ],
-      "cur": "plate5-concept-v157-1x.webp",
+      "cur": "plate5-india-v161-1x.webp",
       "imgs": 1,
       "stills": 0
      },
      "ke": {
       "country": "ke",
-      "concept": "generic-v157",
+      "concept": "kenya-v161",
       "tab": "PRODUCT CONCEPT",
-      "cap": "CONCEPT RENDER",
-      "alt": "AI-generated concept render of an Athar service hall: a man in a wheelchair is helped at a reception desk beside a navy ATHAR self-service kiosk, a mother and her young son look at a tablet showing an Arabic medical-appointment screen, and two colleagues sit at a meeting table in the background",
+      "cap": "CONCEPT RENDER · illustrative",
+      "alt": "AI-generated concept render for Kenya (Legacy tier): farmers in the foreground and a sovereign data centre behind them; the official ATHAR logo sits on the ivory facade panel. Illustrative, not a photograph.",
       "nat": [
        768,
-       480
+       512
       ],
       "shown": [
        356,
-       223
+       237
       ],
-      "cur": "plate5-concept-v157-1x.webp",
+      "cur": "plate5-kenya-v161-1x.webp",
       "imgs": 1,
       "stills": 0
      }
@@ -115,37 +115,37 @@
      },
      "in": {
       "country": "in",
-      "concept": "generic-v157",
+      "concept": "india-v161",
       "tab": "مفهوم المنتج",
-      "cap": "تصوّر مفاهيمي",
-      "alt": "تصوّر مفاهيمي مولَّد بالذكاء الاصطناعي لقاعة خدمات أثر: رجل على كرسي متحرك يتلقى المساعدة عند مكتب الاستقبال بجوار كشك أثر الأزرق الداكن للخدمة الذاتية، وأم مع ابنها الصغير تنظران إلى جهاز لوحي تظهر عليه شاشة موعد طبي بالعربية، وزميلان يجلسان إلى طاولة اجتماعات في الخلفية",
+      "cap": "تصوّر مفاهيمي · توضيحي",
+      "alt": "تصوّر مفاهيمي مولَّد بالذكاء الاصطناعي للهند (فئة الملكية): فصل دراسي ومتعلّمون على أجهزة تعمل بأثر، وشعار أثر الرسمي على الجزء العاجي من الجدار فوق الرف. توضيحي وليس صورة فوتوغرافية.",
       "nat": [
        768,
-       480
+       512
       ],
       "shown": [
        356,
-       223
+       237
       ],
-      "cur": "plate5-concept-v157-1x.webp",
+      "cur": "plate5-india-v161-1x.webp",
       "imgs": 1,
       "stills": 0
      },
      "ke": {
       "country": "ke",
-      "concept": "generic-v157",
+      "concept": "kenya-v161",
       "tab": "مفهوم المنتج",
-      "cap": "تصوّر مفاهيمي",
-      "alt": "تصوّر مفاهيمي مولَّد بالذكاء الاصطناعي لقاعة خدمات أثر: رجل على كرسي متحرك يتلقى المساعدة عند مكتب الاستقبال بجوار كشك أثر الأزرق الداكن للخدمة الذاتية، وأم مع ابنها الصغير تنظران إلى جهاز لوحي تظهر عليه شاشة موعد طبي بالعربية، وزميلان يجلسان إلى طاولة اجتماعات في الخلفية",
+      "cap": "تصوّر مفاهيمي · توضيحي",
+      "alt": "تصوّر مفاهيمي مولَّد بالذكاء الاصطناعي لكينيا (فئة الإرث): مزارعون في المقدمة ومركز بيانات سيادي خلفهم، وشعار أثر الرسمي على لوحة الواجهة العاجية. توضيحي وليس صورة فوتوغرافية.",
       "nat": [
        768,
-       480
+       512
       ],
       "shown": [
        356,
-       223
+       237
       ],
-      "cur": "plate5-concept-v157-1x.webp",
+      "cur": "plate5-kenya-v161-1x.webp",
       "imgs": 1,
       "stills": 0
      }

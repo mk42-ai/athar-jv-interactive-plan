@@ -11,7 +11,7 @@
    slot(): the labelled, non-broken "Film coming soon / قريباً" ready slot used while a card has no verified film. */
 (function () {
   'use strict';
-  var VERSION = 'v1.6.1';
+  var VERSION = 'v1.6.2';
   var UI = {
     en: { play: 'Play film', playAria: 'Play the film', replay: 'Replay film', pause: 'Pause', captions: 'captions EN / AR', soon: 'Film coming soon', soonSub: 'A verified film for this card will appear here.', film: 'Film', duration: 'Duration', note: 'The narrated guide pauses while the film plays and resumes after it.' },
     ar: { play: 'تشغيل الفيلم', playAria: 'تشغيل الفيلم', replay: 'إعادة تشغيل الفيلم', pause: 'إيقاف مؤقت', captions: 'ترجمة إنجليزية / عربية', soon: 'الفيلم قريباً', soonSub: 'سيظهر هنا الفيلم المعتمد لهذه البطاقة.', film: 'فيلم', duration: 'المدة', note: 'يتوقف الدليل الصوتي أثناء عرض الفيلم ويستأنف بعده.' }

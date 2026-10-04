@@ -1,13 +1,13 @@
 {
- "base": "http://127.0.0.1:4161",
- "version": "1.6.1",
- "written": "2026-10-04T00:57:52.158Z",
+ "base": "http://127.0.0.1:4162",
+ "version": "1.6.2",
+ "written": "2026-10-04T02:14:49.883Z",
  "rows": [
   {
-   "duration": 37.333333,
-   "label": "0:37",
-   "filmsJson": 37.333,
-   "note": "v1.6.1: a ~50 s '…_1080p_subtitled_v2.mp4' was requested but does NOT exist anywhere probed (ffprobe 2026-10-04: media-library master 6abe166ad64782b8259834dc 40.000 s; the shipped trim 37.333 s; the v1.5.6 zip's ORIGINAL-backup 40.000 s and trimmed 37.333 s; athar-origins-of-impact_4K-master_v2 (both library copies) 40.000 s and it is Kayaan's film; no 45–55 s mp4 on the host). The 37.333 s film is kept unchanged."
+   "duration": 50.005,
+   "label": "0:50",
+   "filmsJson": 50,
+   "note": "the ~50 s cut (…_1080p_60MB.mp4) arrived 2026-10-04T01:57Z and is installed here; all previous Khalid files are retired from assets/, dist/ and SHA256SUMS"
   }
  ]
 }

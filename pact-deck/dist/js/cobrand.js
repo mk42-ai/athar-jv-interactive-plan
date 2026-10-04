@@ -11,7 +11,7 @@
    Idempotent, re-runs on language / slide changes, never mirrors a logo. */
 (function () {
   'use strict';
-  var VERSION = 'v1.6.1';
+  var VERSION = 'v1.6.2';
   var AIREV = '/brand/partners-official/airev-logo-official.svg';           /* 137×43 official wordmark (dark-ground variant) */
   var ODA = '/partners/review/oda__athar_partner_oda_logo_bw_v1.png';        /* 3980×1222 ODA mark already in the deck */
   var TXT = {

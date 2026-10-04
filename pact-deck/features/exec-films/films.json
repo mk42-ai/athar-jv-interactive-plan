@@ -1,6 +1,6 @@
 {
  "_comment": "v1.6.1 (v1.5.9 base) — Section 09 executive films (one slot per card). Source of truth for scripts/v1.4.7/build.mjs (copies assets/<person>/ → dist/assets/exec/films/<person>/), dist/build-info.json (films[]), features/exec-films/exec-films.js (window.AtharExecFilms) and the QA suite. status: 'shipped' = file verified and served · 'coming-soon' = labelled ready slot, no file served. To ship a film later: drop the files into assets/<person>/, fill the entry, set status to shipped, run the build. burnedInSubtitles: whether the film itself carries burned-in captions (the <track> VTTs are shipped either way). v1.6.1: all four cards ship a film; no ready slot remains.",
- "version": "1.6.1",
+ "version": "1.6.2",
  "distBase": "/assets/exec/films/",
  "films": {
   "khalid": {
@@ -21,48 +21,68 @@
     "en": "His Athar impact story plays alongside this letter.",
     "ar": "وتُعرض قصة أثره إلى جانب هذه الرسالة."
    },
-   "requestedFile": "athar-origins-of-impact-ep01-muhammed-khalid_1080p_subtitled_v2.mp4",
-   "requestedFileFound": false,
-   "usedInsteadOf": "the _v2 file (~109.23 MB) was not found anywhere (media library, uploads, prior artefacts, deployment zips, repo history); the best verified file is the media-library master athar-origins-of-impact-ep01-muhammed-khalid_1080p_subtitled.mp4 (id 6abe166ad64782b8259834dc, 40.000 s, sha256 c7c20005…3ab2a) in its v1.5.6 trim (closing end card removed at frame 896 / 37.333 s) — the committed 1080p source below",
+   "requestedFile": "athar-origins-of-impact-ep01-muhammed-khalid_1080p_60MB.mp4",
+   "requestedFileFound": true,
    "source": {
-    "file": "assets/khalid/athar-origins-of-impact-ep01-muhammed-khalid-1080p.mp4",
-    "note": "1080p source kept in the repo (45,357,475 B; 1920×1080 24 fps H.264 High 9.45 Mb/s + AAC-LC 48 kHz stereo, faststart, burned-in English subtitles); master provenance in sources/khalid/SOURCE.md"
+    "file": "athar-origins-of-impact-ep01-muhammed-khalid_1080p_60MB.mp4",
+    "libraryIds": [
+     "6ac1b28a1899bfd8cf0ffd67 (…_60MB_d561.mp4, uploaded 2026-10-04T01:57:29Z)",
+     "6ac1b2771899bfd8cf0ffd66 (…_60MB_lf5f.mp4, uploaded 2026-10-04T01:57:09Z)"
+    ],
+    "byteIdentical": true,
+    "sha256": "d5c79e683be445b5e05d31987d8a1d5f2ca0737715c361d969c98c964dc8488a",
+    "bytes": 56677901,
+    "probe": "ffprobe 2026-10-04T02:04:01Z — both library copies byte-identical (cmp): 50.000 s video / 50.005 s container, 1920×1080, 24 fps, H.264 High 8.87 Mb/s, AAC-LC 48 kHz stereo 194 kb/s, container 9.07 Mb/s, 56,677,901 B; no subtitle streams (English subtitles are burned in)",
+    "note": "the ~50 s cut delivered 2026-10-04 (replaces the 1 Oct master 6abe166ad64782b8259834dc, 40.000 s, sha256 c7c20005…3ab2a, and its v1.5.6 37.333 s trim shipped v1.5.6–v1.6.1)"
    },
    "mp4": "khalid/athar-origins-of-impact-ep01-muhammed-khalid-1080p.mp4",
-   "mp4Sha256": "f71b761b455fd329eb96d66de2c9bbf48bb6e69ab90a904b8146397f33ad6048",
-   "mp4Bytes": 45357475,
+   "mp4Sha256": "288c67b22bbe38ede92aa4db345c2b0cde7a18d9f3d056d543b4dc1d2e3ac5d1",
+   "mp4Bytes": 56677908,
+   "mp4Note": "faststart remux of the delivered 1080p file (ffmpeg -c copy -movflags +faststart; moov before mdat; streams untouched)",
    "mp4Mobile": "khalid/athar-origins-of-impact-ep01-muhammed-khalid-720p.mp4",
-   "mp4MobileSha256": "e8638ddc6a84e681248ffad9162c65ebadd2b160c80a783bc3303069fb1cacf3",
-   "mp4MobileBytes": 6442036,
-   "mp4MobileNote": "1280×720 transcode of the 1080p source (libx264 High@4.0 crf 23, AAC 128k, +faststart) for viewports ≤ 720 px and Save-Data",
-   "poster": "khalid/athar-origins-of-impact-ep01-poster-09s1.jpg",
-   "posterWebp": "khalid/athar-origins-of-impact-ep01-poster-09s1.webp",
-   "posterSha256": "0c34da116fb1b1030abb3ce238eceec61ddd980ccf27adb719408ca0006115d9",
-   "posterTimeSec": 9.1,
-   "posterNote": "frame at 00:09.100 — the only caption-free window in the transcript (between cues c03 08.800 and c04 09.400; the film carries burned-in English subtitles everywhere else). The film has no frame that is guaranteed free of its own title typography; chosen by transcript timing + pixel heuristics, not by eye. Replaces the v1.5.6 poster at 00:15.5, which showed the name title card under a burned-in caption.",
+   "mp4MobileSha256": "f824472ae0b4c1674210e24e9f339742a78c8fda7c5175de69ac8668e42e318d",
+   "mp4MobileBytes": 7843290,
+   "mp4MobileNote": "1280×720 transcode (libx264 High@4.0 crf 23 preset medium, AAC 128k, +faststart) for viewports ≤ 720 px and Save-Data",
+   "poster": "khalid/athar-origins-of-impact-ep01-muhammed-khalid-poster-18s8.jpg",
+   "posterWebp": "khalid/athar-origins-of-impact-ep01-muhammed-khalid-poster-18s8.webp",
+   "posterSha256": "32839348cadcde9cb2b90966b80a3c302ad71ede7e77dbd9d78f590308f24155",
+   "posterWebpSha256": "aaa6152b71051cc19e75626100b08a1ddbdbea7e7102f96bfe54a3d42d5a0fa5",
+   "posterTimeSec": 18.8,
+   "posterNote": "frame at 00:18.800 — the sharpest single-face frame (YuNet face detection + Laplacian sharpness, 24 fps scan of 17.70–19.08 s) inside the 17.95–19.03 s window where the burned-in-subtitle band is empty (white-on-dark text score 0.00 in the bottom band); the earlier 1080p cut had no caption-free portrait frame, this cut does. Chosen algorithmically, not by eye.",
    "w": 1920,
    "h": 1080,
    "fps": 24,
-   "durationSec": 37.333,
-   "durationLabel": "0:37",
+   "durationSec": 50.0,
+   "durationLabel": "0:50",
+   "deliveredDurationSec": 50.0,
+   "installedDurationSec": 50.0,
+   "trim": "none — installed full length. The last 7 s (43.0–50.0 s) are a bright static closing card, but the narration continues over it until 49.1 s and it is not the dark end card removed in v1.5.6 (mean luma 238 vs 44), so nothing was cut.",
    "inPt": 0,
-   "outPt": 37.3,
+   "outPt": 50.0,
    "captions": {
-    "en": "khalid/athar-origins-of-impact-ep01.en.vtt",
-    "ar": "khalid/athar-origins-of-impact-ep01.ar.vtt",
-    "note": "WebVTT, 12 cues each, generated from the burned-in English subtitles (EN) and translated (AR); cues sit at line:6% so they never cover the burned-in text"
+    "en": "khalid/athar-origins-of-impact-ep01-muhammed-khalid.en.vtt",
+    "ar": "khalid/athar-origins-of-impact-ep01-muhammed-khalid.ar.vtt",
+    "note": "WebVTT, 11 cues each — EN transcribed from the narration of the new cut (On Demand speech-to-text 2026-10-04T02:06Z, proper nouns corrected: Muhammed Khalid, AIREV, G42's Core42, SchoolHack, Athar), AR hand-translated (the translation service returned HTTP 400 in v1.6.0 and is not used); proportional cue timing over the silencedetect speech spans 0.3–4.28 / 5.24–37.64 / 38.10–40.37 / 40.75–49.10 s; cues at line:6% so they never cover the burned-in subtitles"
    },
    "captionsSha256": {
-    "en": "eaf7bb4a3494325ba7b39b8904965890a52b375b817e6e64d34590a5f5410385",
-    "ar": "d4d4b9746be4f120edd56a3b1ef5221ad92f183dc5b07abf9f4ad162d7214562"
+    "en": "4242fc2dfea4d6c5d2a2c1be1f1ca5c371cc7d71912554dd4fa2ce23e9af4d02",
+    "ar": "e11f32091d26b21b5c0a1e874fc38412419b7b13d6ad72d2df9667fb415c1b0f"
+   },
+   "cardNote": {
+    "en": "Poster frame at 00:18.8 (face-detected, caption-free frame) · 50 s cut delivered 4 Oct 2026, installed full length · captions EN / AR · the narrated guide pauses while the film plays and resumes after it.",
+    "ar": "إطار الملصق عند 00:18.8 (إطار خالٍ من الترجمة المدمجة، مُختار بكشف الوجه) · نسخة 50 ثانية سُلِّمت في 4 أكتوبر 2026 ومُثبَّتة بطولها الكامل · ترجمة إنجليزية / عربية · يتوقف الدليل الصوتي أثناء عرض الفيلم ويستأنف بعده."
    },
    "videoCodec": "h264 High",
    "audioCodec": "aac LC 48 kHz stereo",
    "subtitleStreams": "none (burned-in EN) — soft EN/AR via <track>",
    "burnedInSubtitles": true,
-   "burnedInSubtitlesNote": "burned-in English subtitles (v1.5.6 transcription reference)",
-   "v160": "retained unchanged in v1.6.0: the library search found NO '_v2' 1080p subtitled Khalid film — the 1 Oct master (this file's source) is the only one; a separate 4K master (athar-origins-of-impact_4K-master_v2.mp4, 3840x2160, 40 s, 71,354,505 B, library id 6ac1289e28a9b41edb0c1866, 2026-10-03T16:09Z) exists but was not requested for the card and is not used; shipped file sha256 re-verified by the build gate",
-   "v161": "v1.6.1: a ~50 s '…_1080p_subtitled_v2.mp4' was requested but does NOT exist anywhere probed (ffprobe 2026-10-04: media-library master 6abe166ad64782b8259834dc 40.000 s; the shipped trim 37.333 s; the v1.5.6 zip's ORIGINAL-backup 40.000 s and trimmed 37.333 s; athar-origins-of-impact_4K-master_v2 (both library copies) 40.000 s and it is Kayaan's film; no 45–55 s mp4 on the host). The 37.333 s film is kept unchanged."
+   "burnedInSubtitlesNote": "burned-in English subtitles (bottom-band white-on-dark text score matches the previous cut throughout the narrated passages)",
+   "installedAt": "2026-10-04T02:08:00Z",
+   "history": {
+    "v159": "v1.5.9–v1.6.1 shipped the v1.5.6 37.333 s trim of the 1 Oct 40.000 s master (sha256 f71b761b…6048, poster 00:09.1, 12 cues)",
+    "v161": "the ~50 s _v2 did not exist when probed on 2026-10-04T00Z",
+    "v162": "the ~50 s cut (…_1080p_60MB.mp4) arrived 2026-10-04T01:57Z and is installed here; all previous Khalid files are retired from assets/, dist/ and SHA256SUMS"
+   }
   },
   "al-ameri": {
    "status": "shipped",

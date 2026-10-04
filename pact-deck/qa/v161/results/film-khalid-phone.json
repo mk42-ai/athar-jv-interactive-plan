@@ -1,18 +1,18 @@
 {
- "base": "http://127.0.0.1:4161",
- "version": "1.6.1",
- "written": "2026-10-04T00:59:06.289Z",
+ "base": "http://127.0.0.1:4162",
+ "version": "1.6.2",
+ "written": "2026-10-04T02:18:25.952Z",
  "rows": [
   {
    "meta": {
-    "poster": "athar-origins-of-impact-ep01-poster-09s1.jpg",
+    "poster": "athar-origins-of-impact-ep01-muhammed-khalid-poster-18s8.jpg",
     "tracks": [
      "en:default",
      "ar"
     ],
     "autoplay": false,
     "paused": true,
-    "dur": "0:37",
+    "dur": "0:50",
     "title": "Athar — Origins of Impact, Episode 01: Muhammed Khalid",
     "slot": false
    },

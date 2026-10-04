@@ -37,7 +37,7 @@
    and exposes the deep links #/27/new-1 … #/27/new-6. */
 (function () {
   'use strict';
-  var VERSION = 'v1.6.1';
+  var VERSION = 'v1.6.2';
   var EXT = (window.AtharOS && window.AtharOS.slides) || []; /* v1.4.0: slides registered by dist/js/athar-os.js (loaded first) */
   var REAL_TOTAL = 28, ANCHOR = 27, N_IT = 6, N = N_IT + EXT.length, CLOSING_N = REAL_TOTAL + N, XT = window.AtharExecTeam || null, TOTAL = CLOSING_N + (XT ? XT.count : 0); /* v1.5.5: + section 09 Executive Team (dist/js/exec-team.js, slides 40–46) after the closing slide */
   function execX() { try { return XT && XT.active() ? XT.index() : 0; } catch (e) { return 0; } }

@@ -10,7 +10,7 @@ ready slot (never a broken player). Swapping a slot for a film is a `films.json`
 |---|---|---|---|---|
 | H.E. Fahad Mohamed Al Ameri | 41 | `ATHAR_EP01_FahadAlAmeri_1080p_subtitled_v1 (1).mp4` | **yes** — supplied from the file library 2026-10-03 (v1.6.0) | **yes** — `assets/al-ameri/` (1080p remux, 720p, poster 00:07.0, EN/AR VTT; burned-in EN subtitles per the file name) |
 | Ary Ferreira da Cunha | 42 | `ary_origins_1080p_FINAL_v1.mp4` | **yes** — supplied from the file library 2026-10-03 (v1.6.0) | **yes** — `assets/ferreira-da-cunha/` (1080p byte-identical remux, 720p, poster 00:04.0, EN/AR VTT; burned-in subtitles unknown) |
-| Muhammed Khalid | 43 (v1.6.0: retained unchanged — still no `_v2`; a 4K master v2 exists in the library but is not used) | `athar-origins-of-impact-ep01-muhammed-khalid_1080p_subtitled_v2.mp4` (~109 MB) | **no** — the `_v2` does not exist anywhere searched; the media library holds the non-v2 master `…_1080p_subtitled.mp4` (id `6abe166ad64782b8259834dc`, 40.000 s, sha256 `c7c20005…3ab2a`) | **yes** — the master's v1.5.6 trim (end card removed at 37.333 s), see below |
+| Muhammed Khalid | 43 (v1.6.2: the ~50 s cut installed, full length) | `athar-origins-of-impact-ep01-muhammed-khalid_1080p_60MB.mp4` (library ids 6ac1b28a… / 6ac1b277…, byte-identical, uploaded 2026-10-04T01:57Z) | **yes** — supplied 2026-10-04 (v1.6.2) | **yes** — `assets/khalid/` (1080p faststart remux, 720p transcode, poster 00:18.8, EN/AR VTT; 50.000 s, sha256 288c67b2…c5d1) |
 | Kayaan K. Unwalla | 44 | `athar-origins-of-impact_4K-master_v2.mp4` (4K master, library id 6ac1289e…) | **yes** — supplied 2026-10-03 (v1.6.1) | **yes** — `assets/unwalla/` (1080p + 720p from the 4K master, poster 00:20.0, EN/AR VTT) |
 
 ## Files
@@ -19,8 +19,8 @@ ready slot (never a broken player). Swapping a slot for a film is a `films.json`
 features/exec-films/
 ├── films.json                 ← the manifest (source of truth for the build, dist/build-info.json and the QA suite)
 ├── assets/khalid/
-│   ├── athar-origins-of-impact-ep01-muhammed-khalid-1080p.mp4   1920×1080 24 fps H.264 High 9.45 Mb/s + AAC-LC 48 kHz st, faststart, 37.333 s, 45,357,475 B, sha256 f71b761b…6048 — the 1080p source (shipped as-is: already web-ready, no re-encode)
-│   ├── athar-origins-of-impact-ep01-muhammed-khalid-720p.mp4    1280×720 transcode (libx264 High@4.0 crf 23, AAC 128k, +faststart), 6,442,036 B, sha256 e8638ddc…acf3 — viewports ≤ 720 px / Save-Data
+│   ├── athar-origins-of-impact-ep01-muhammed-khalid-1080p.mp4   1920×1080 24 fps H.264 High 8.87 Mb/s + AAC-LC 48 kHz st, faststart remux of the delivered 50 s cut, 50.000 s, 56,677,908 B, sha256 288c67b2…c5d1 (v1.6.2)
+│   ├── athar-origins-of-impact-ep01-muhammed-khalid-720p.mp4    1280×720 transcode (libx264 High@4.0 crf 23, AAC 128k, +faststart), 7,843,290 B, sha256 f824472a…318d — viewports ≤ 720 px / Save-Data (v1.6.2)
 │   ├── athar-origins-of-impact-ep01-poster-09s1.jpg / .webp     poster frame at 00:09.100 (1280×720)
 │   └── athar-origins-of-impact-ep01.en.vtt / .ar.vtt            WebVTT captions, 12 cues each (EN from the burned-in subtitles, AR translation), cues at line:6%
 └── sources/khalid/SOURCE.md   ← provenance of the master (not committed: 89 MB) and of the trim
@@ -44,7 +44,9 @@ bytes, duration, poster timestamp, captions). Flag OFF → the generated file, t
 
 ## Poster frame — Khalid
 
-`00:09.100`: the only caption-free window in the transcript (between cues c03 08.800 → c04 09.400; the film carries burned-in English subtitles everywhere
+**v1.6.2 (50 s cut):** `00:18.800` — the sharpest single-face frame (YuNet face detection + Laplacian sharpness over a 24 fps scan of 17.70–19.08 s) inside the 17.95–19.03 s window where the burned-in-subtitle band is empty (bottom-band white-on-dark text score 0.00). Files `athar-origins-of-impact-ep01-muhammed-khalid-poster-18s8.{jpg,webp}`; captions `athar-origins-of-impact-ep01-muhammed-khalid.{en,ar}.vtt` (11 cues, EN from On Demand speech-to-text, AR hand-translated). The film is installed full length (50.000 s): its last 7 s are a bright closing card with the narration still running to 49.1 s — not the dark end card trimmed in v1.5.6 — so nothing was cut. The v1.5.9–v1.6.1 files below are retired (not in `assets/`, `dist/` or `SHA256SUMS.txt`).
+
+*v1.5.9–v1.6.1 (37.333 s trim, retired):* `00:09.100`: the only caption-free window in the transcript (between cues c03 08.800 → c04 09.400; the film carries burned-in English subtitles everywhere
 else). The film has **no frame that is guaranteed free of its own title typography** — the frame was chosen by transcript timing + pixel heuristics, not by
 eye. It replaces the v1.5.6 poster at 00:15.5, which showed the name title card under a burned-in caption (the "frozen title card" complaint).
 

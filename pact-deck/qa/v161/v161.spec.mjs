@@ -1,5 +1,5 @@
 // Athar deck v1.6.1 — Kayaan's film added (all four executive cards play), India/Kenya PRODUCT CONCEPT renders on slide 38, slide-30/38 links verified, version 1.6.1.
-// Khalid: the requested ~50 s '_v2' film does not exist in any probed source, so the shipped film is asserted at its films.json duration (37.333 s) and the probe list is recorded.
+// Khalid: v1.6.1 asserted the 37.333 s film because no ~50 s cut existed; v1.6.2 installed the delivered 50 s cut, so this test now asserts the films.json duration (50.000 s) and label — the suite stays data-driven.
 // Usage: GUIDE_BASE=http://127.0.0.1:4161 SHOT_PREFIX=after SHOTS_DIR=/path npx playwright test -c qa/v161/playwright.config.mjs
 import { test, expect } from '../../node_modules/@playwright/test/index.mjs';
 import fs from 'node:fs'; import path from 'node:path';
@@ -15,14 +15,14 @@ async function open(page, n, lang) { await page.goto(BASE + '/' + (lang ? '?lang
 const waitState = (page, src, ms = 10000) => page.waitForFunction((src) => { const r = document.getElementById('athar-narration'); const s = { state: r.getAttribute('data-state'), reason: r.getAttribute('data-reason') }; return new Function('s', 'return ' + src)(s); }, src, { timeout: ms });
 
 test.describe(`v${PKG.version}`, () => {
-  test('version 1.6.1 surfaced everywhere; every card ships a film (no ready slot left)', async ({ page }) => {
+  test('version (package.json) surfaced everywhere; every card ships a film (no ready slot left)', async ({ page }) => {
     await setup(page); await open(page, 43); const v = await page.evaluate(() => ({ badge: document.querySelector('[data-testid="deck-version"]').textContent, html: document.documentElement.getAttribute('data-deck-version'), exec: window.AtharExecTeam.version, films: window.AtharExecFilms.version, statuses: window.AtharExecTeam.profiles.map((p) => p.id + ':' + p.filmStatus) }));
     const info = await (await page.request.get(BASE + '/build-info.json')).json(); write('version-' + test.info().project.name, [{ ...v, buildInfo: info.version, films: info.films.map((f) => f.id + ':' + f.status) }]);
-    expect(PKG.version).toBe('1.6.1'); expect(v.badge).toBe('v1.6.1'); expect(v.html).toBe('1.6.1'); expect(v.exec).toBe('v1.6.1'); expect(v.films).toBe('1.6.1'); expect(info.version).toBe('1.6.1'); expect(info.features.version).toBe('1.6.1'); expect(v.statuses).toEqual(['s-exec-al-ameri:shipped', 's-exec-ferreira-da-cunha:shipped', 's-exec-khalid:shipped', 's-exec-unwalla:shipped']); expect(info.films.every((f) => f.status === 'shipped')).toBe(true); expect(page.__errors).toEqual([]);
+    const V = PKG.version; /* v1.6.2: data-driven (was the literal 1.6.1) */ expect(v.badge).toBe('v' + V); expect(v.html).toBe(V); expect(v.exec).toBe('v' + V); expect(v.films).toBe(V); expect(info.version).toBe(V); expect(info.features.version).toBe(V); expect(v.statuses).toEqual(['s-exec-al-ameri:shipped', 's-exec-ferreira-da-cunha:shipped', 's-exec-khalid:shipped', 's-exec-unwalla:shipped']); expect(info.films.every((f) => f.status === 'shipped')).toBe(true); expect(page.__errors).toEqual([]);
   });
-  test('Khalid film duration: the shipped file is the 37.333 s film (no ~50 s _v2 exists — recorded, not faked)', async ({ page }) => {
+  test('Khalid film duration matches films.json (v1.6.2: the delivered 50 s cut)', async ({ page }) => {
     await setup(page); await open(page, 43); const d = await page.evaluate(async () => { const v = document.querySelector('#s-exec-khalid video'); await new Promise((r) => { if (v.readyState >= 1) r(); else v.addEventListener('loadedmetadata', r, { once: true }); }); return { duration: v.duration, label: v.closest('.efp').querySelector('.efp-dur').textContent }; });
-    write('khalid-duration-' + test.info().project.name, [{ ...d, filmsJson: FILMS.films.khalid.durationSec, note: FILMS.films.khalid.v161 }]); expect(Math.abs(d.duration - FILMS.films.khalid.durationSec)).toBeLessThan(0.2); expect(d.label).toBe('0:37'); expect(Math.abs(d.duration - 50)).toBeGreaterThan(5);
+    write('khalid-duration-' + test.info().project.name, [{ ...d, filmsJson: FILMS.films.khalid.durationSec, note: (FILMS.films.khalid.history || {}).v162 || FILMS.films.khalid.v161 }]); expect(Math.abs(d.duration - FILMS.films.khalid.durationSec)).toBeLessThan(0.2); expect(d.label).toBe(FILMS.films.khalid.durationLabel); expect(Math.abs(d.duration - 50)).toBeLessThan(0.2);
   });
   for (const [who, k, n] of CARDS) test(`${who}: plays through the shared player with EN + AR tracks; guide pauses / resumes`, async ({ page }, info) => {
     test.setTimeout(180000); const mobile = info.project.name === 'phone'; const f = FILMS.films[who]; const sel = `#s-exec-${who} video[data-narration-pause]`;
