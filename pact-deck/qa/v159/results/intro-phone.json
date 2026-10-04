@@ -1,0 +1,92 @@
+{
+ "base": "http://127.0.0.1:4171",
+ "written": "2026-10-04T10:19:11.676Z",
+ "rows": [
+  {
+   "lang": "en",
+   "before": {
+    "autoplayAttr": false,
+    "autoplayProp": false,
+    "muted": false,
+    "mutedAttr": false,
+    "paused": true,
+    "ct": 0,
+    "narrationPause": "true",
+    "sign": true,
+    "signMotion": "animated",
+    "anim": "intro-sign-float",
+    "label": "IntroIntro film — Athar1:00",
+    "labelVisible": true,
+    "play": true,
+    "playText": "Play intro",
+    "lang": "en",
+    "dir": "ltr"
+   },
+   "idle": {
+    "paused": true,
+    "ct": 0
+   },
+   "playing": {
+    "paused": false,
+    "ct": 1.185895,
+    "muted": false,
+    "cls": "intro-gate is-playing",
+    "signOpacity": "0",
+    "playHidden": true,
+    "overlays": [
+     "intro-label",
+     "intro-top",
+     "intro-bottom"
+    ]
+   },
+   "pausedState": {
+    "paused": true,
+    "playText": "Resume intro"
+   },
+   "errors": []
+  },
+  {
+   "lang": "ar",
+   "before": {
+    "autoplayAttr": false,
+    "autoplayProp": false,
+    "muted": false,
+    "mutedAttr": false,
+    "paused": true,
+    "ct": 0,
+    "narrationPause": "true",
+    "sign": true,
+    "signMotion": "animated",
+    "anim": "intro-sign-float",
+    "label": "المقدمةفيلم المقدمة — أثر1:00",
+    "labelVisible": true,
+    "play": true,
+    "playText": "تشغيل المقدمة",
+    "lang": "ar",
+    "dir": "rtl"
+   },
+   "idle": {
+    "paused": true,
+    "ct": 0
+   },
+   "playing": {
+    "paused": false,
+    "ct": 1.178973,
+    "muted": false,
+    "cls": "intro-gate is-playing",
+    "signOpacity": "0",
+    "playHidden": true,
+    "overlays": [
+     "intro-label",
+     "intro-top",
+     "intro-bottom"
+    ]
+   },
+   "pausedState": {
+    "paused": true,
+    "playText": "متابعة المقدمة"
+   },
+   "errors": []
+  }
+ ]
+}

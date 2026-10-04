@@ -1,0 +1,69 @@
+{
+ "url": "https://sb-4koagr3m5c3y.vercel.run/#/12",
+ "ok": true,
+ "screenshots": [
+  "/tmp/terminal-work/work/6692b763e851d28a036ab30e/6abc5d318c19ce74d2a7dbc8/.ui-proof/v154-s12-phone-390x844.png"
+ ],
+ "assertions": [
+  {
+   "kind": "http-status",
+   "target": "https://sb-4koagr3m5c3y.vercel.run/#/12",
+   "ok": true,
+   "detail": "200"
+  },
+  {
+   "kind": "wait-selector",
+   "target": "#athar-narration",
+   "ok": true,
+   "detail": "appeared"
+  },
+  {
+   "kind": "click",
+   "target": "[data-testid=\"guide-toggle\"]",
+   "ok": true,
+   "detail": "clicked"
+  },
+  {
+   "kind": "eval",
+   "target": "(() => {\n  const vw = innerWidth, vh = innerHeight, bad = [];\n  const R = (el) => el.getBoundingClientRect();\n  const hit = (a, b) => a.left < b.right - 1 && b.left < a.right - 1 && a.top < b.bottom -",
+   "ok": true,
+   "detail": "true"
+  },
+  {
+   "kind": "eval",
+   "target": "window.AtharGuide && window.AtharGuide.slideId === 's-decision-table'",
+   "ok": true,
+   "detail": "true"
+  },
+  {
+   "kind": "eval",
+   "target": "document.documentElement.getAttribute('data-deck-version') === '1.5.4' && /v1\\.5\\.4/.test((document.querySelector('footer.pagefooter .deck-version') || {}).textContent || '')",
+   "ok": true,
+   "detail": "true"
+  },
+  {
+   "kind": "eval",
+   "target": "(['loading','playing'].includes(window.AtharGuide.state) || (window.AtharGuide.state === 'blocked' && !!document.querySelector('[data-testid=\"guide-tap-to-play\"]:not([hidden])') && document.querySelec",
+   "ok": true,
+   "detail": "true"
+  },
+  {
+   "kind": "page-rendered",
+   "target": "document.body",
+   "ok": true,
+   "detail": "innerText=1137 chars, bodyHeight=701px"
+  }
+ ],
+ "consoleErrors": [],
+ "pageErrors": [],
+ "failedRequests": [],
+ "browser": "/usr/bin/chromium",
+ "httpStatus": 200,
+ "title": "Athar Open Agentic Pact — Build once. Run everywhere. Lift everyone.",
+ "textLength": 1137,
+ "_exit": 0,
+ "_secs": 6.0,
+ "_n": 12,
+ "_slideId": "s-decision-table",
+ "_viewport": "390x844"
+}

@@ -1,0 +1,84 @@
+/* Athar deck v1.5.4 — docked Guide bar (v1.5.4 adds: Resync control, blocked/"tap to start" pulse, audio-unavailable state, phone row without mute) (Manuscript / Sand surface, Falaj-Teal progress, navy text; 8 px grid; 44 px targets).
+   Docked above the footer; layout space is reserved via html.has-guide-bar (see release-v153.css), so nothing is obscured.
+   Re-created 2026-10-01 from the v1.5.3 specification (the 2026-09-30 run's files were not persisted by the platform). */
+:root{--guide-h:52px}
+.gbar{position:fixed;inset-inline:0;inset-block-end:var(--footer-h,56px);block-size:var(--guide-h);z-index:94;background:var(--manuscript,#F7F3EA);border-block-start:1px solid var(--stone,#D9D4C7);color:var(--athar-navy,#062739);font-family:var(--font-sans);box-sizing:border-box;padding-inline:max(16px,env(safe-area-inset-left)) max(16px,env(safe-area-inset-right))}
+.gbar[dir=rtl]{font-family:var(--font-arabic,var(--font-sans))}
+.gbar-seek{position:absolute;inset-inline:0;inset-block-start:-1px;block-size:4px;background:var(--stone,#D9D4C7);cursor:default;pointer-events:none}
+.gbar-fill{position:absolute;inset-block:0;inset-inline-start:0;inline-size:0;background:var(--falaj-teal,#0E8A7D);transition:inline-size .15s linear}
+.gbar.is-reduced .gbar-fill{transition:none}
+.gbar-row{display:flex;align-items:center;gap:8px;block-size:100%;min-inline-size:0}
+.gbar-btn{appearance:none;border:1px solid var(--stone,#D9D4C7);background:var(--white,#fff);color:var(--athar-navy,#062739);border-radius:8px;min-inline-size:44px;min-block-size:44px;display:inline-flex;align-items:center;justify-content:center;gap:6px;cursor:pointer;padding:0 10px;font:inherit;font-size:.78rem;font-weight:600;letter-spacing:.02em;line-height:1;flex:0 0 auto;white-space:nowrap}
+.gbar-btn:hover{border-color:var(--legacy-gold,#B8975A)}
+.gbar-btn:focus-visible{outline:2px solid var(--falaj-teal,#0E8A7D);outline-offset:2px}
+.gbar-btn[disabled]{opacity:.45;cursor:not-allowed}
+.gbar-icon{padding:0;inline-size:44px}
+.gbar-guide{background:var(--athar-navy,#062739);color:var(--white,#fff);border-color:var(--athar-navy,#062739);border-radius:22px;padding:0 16px;text-transform:uppercase;font-size:.74rem}
+.gbar-guide[aria-pressed=true]{background:var(--falaj-teal-text,#0B6E64);border-color:var(--falaj-teal-text,#0B6E64)} /* 6.1:1 white on teal-text (Falaj Teal itself is 4.2:1) */
+.gbar-play[aria-label]{border-radius:22px}
+.gbar-toggle{color:var(--slate,#5B6470);border-color:var(--stone,#D9D4C7)}
+.gbar-dot{inline-size:8px;block-size:8px;border-radius:50%;background:var(--stone,#D9D4C7);border:1px solid var(--slate,#5B6470);flex:0 0 auto}
+.gbar-toggle[aria-pressed=true]{color:var(--athar-navy,#062739);border-color:var(--falaj-teal,#0E8A7D);background:#EAF4F1}
+.gbar-toggle[aria-pressed=true] .gbar-dot{background:var(--falaj-teal,#0E8A7D);border-color:var(--falaj-teal,#0E8A7D)}
+.gbar-status{display:flex;flex-direction:column;justify-content:center;min-inline-size:0;flex:1 1 auto;line-height:1.25;gap:2px}
+.gbar-title{font-size:.72rem;font-weight:600;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.gbar[data-narrating=true] .gbar-title{color:var(--falaj-teal-text,#0B6E64)} /* 5.5:1 on Manuscript (Falaj Teal itself is 3.8:1) */
+.gbar-caption{font-size:.72rem;color:var(--graphite,#2B3238);white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.gbar-caption[hidden]{display:none}
+.gbar-time{font-size:.7rem;color:var(--graphite,#2B3238);font-variant-numeric:tabular-nums;white-space:nowrap;flex:0 0 auto;padding:0 4px}
+.gbar-drawer{position:absolute;inset-inline:0;inset-block-end:100%;max-block-size:min(40vh,320px);overflow:auto;background:var(--manuscript,#F7F3EA);border-block-start:1px solid var(--stone,#D9D4C7);box-shadow:0 -8px 24px rgba(6,39,57,.10);padding:12px max(16px,env(safe-area-inset-left)) 8px max(16px,env(safe-area-inset-right));overscroll-behavior:contain}
+.gbar-drawer[hidden]{display:none}
+.gbar-text{margin:0 0 8px;font-size:.84rem;line-height:1.6;color:var(--athar-navy,#062739);max-inline-size:76ch}
+.gbar-text--ar{font-family:var(--font-arabic,var(--font-sans));font-size:.9rem;line-height:1.75;margin-inline-start:auto}
+.gbar-text[hidden]{display:none}
+.gbar-sent{border-radius:4px;padding:0 2px;transition:background-color .2s ease}
+.gbar-sent.is-active{background:#EAF4F1;box-shadow:inset 0 -2px 0 var(--falaj-teal,#0E8A7D)}
+.gbar.is-reduced .gbar-sent{transition:none}
+.gbar-meta{margin:0;font-size:.64rem;color:var(--slate,#5B6470);letter-spacing:.02em}
+/* v1.5.4 — blocked-by-autoplay-policy state: the Guide pill becomes "Start guide" and pulses until the first gesture */
+.gbar.is-blocked .gbar-guide{background:var(--legacy-gold-text,#7A6130);border-color:var(--legacy-gold-text,#7A6130);animation:gbar-pulse 1.6s ease-in-out infinite}
+.gbar.is-blocked .gbar-title{color:var(--legacy-gold-text,#7A6130)}
+@keyframes gbar-pulse{0%,100%{box-shadow:0 0 0 0 rgba(122,97,48,.55)}60%{box-shadow:0 0 0 10px rgba(122,97,48,0)}}
+.gbar.is-reduced .gbar-guide,.gbar.is-reduced.is-blocked .gbar-guide{animation:none}
+/* v1.5.4 — audio unavailable: transcript is forced open, status in slate */
+.gbar.is-unavailable .gbar-title{color:var(--slate,#5B6470)}
+.gbar-resync svg{transition:transform .3s ease}.gbar-resync:hover svg,.gbar-resync:focus-visible svg{transform:rotate(90deg)}
+.gbar.is-reduced .gbar-resync svg{transition:none}
+.gbar-title[role=status]{display:block}
+/* narrated element highlight (skipped under prefers-reduced-motion) */
+.gbar-cue-active{outline:2px solid var(--falaj-teal,#0E8A7D);outline-offset:4px;border-radius:6px;transition:outline-color .3s ease}
+/* title-slide button next to the CTA */
+.nar-listen{appearance:none;margin-inline-start:12px;padding:10px 16px;border-radius:999px;border:1px solid var(--athar-navy,#062739);background:transparent;color:var(--athar-navy,#062739);font:inherit;font-size:.9rem;font-weight:500;cursor:pointer;vertical-align:middle;min-block-size:44px}
+.nar-listen:hover{background:var(--athar-navy,#062739);color:var(--white,#fff)}
+.nar-listen:focus-visible{background:var(--athar-navy,#062739);color:var(--white,#fff);outline:2px solid var(--falaj-teal,#0E8A7D);outline-offset:3px}
+/* previous / next slide inside the bar (tablet + phone: the deck's own 8 px dot strip sat under the bar and the chevrons are hidden there) */
+.gbar-nav{display:none}
+[dir=rtl] .gbar-nav svg{transform:scaleX(-1)}
+/* bilingual intro-film transcript on the cover (the text the v1.5.2 card clipped) */
+.nar-intro{margin:0;padding:8px 12px 10px;border-inline-start:3px solid var(--falaj-teal,#0E8A7D);background:transparent;max-inline-size:100%;box-sizing:border-box}
+.nar-intro-head{display:flex;align-items:center;gap:10px;margin-block-end:6px}
+.nar-intro-lbl{font-size:.6rem;font-weight:600;letter-spacing:.08em;text-transform:uppercase;color:var(--gulf-blue,#1E3A5F);white-space:nowrap}
+[dir=rtl] .nar-intro-lbl,.nar-intro-lbl:lang(ar){letter-spacing:0;text-transform:none}
+.nar-intro-bar{flex:1 1 auto;block-size:3px;border-radius:2px;background:var(--stone,#D9D4C7);overflow:hidden;min-inline-size:60px}
+.nar-intro-fill{display:block;block-size:100%;inline-size:0;background:var(--falaj-teal,#0E8A7D);transition:inline-size .15s linear}
+.nar-intro-cols{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:6px 18px;align-items:start}
+.nar-intro p{margin:0;font-size:.68rem;line-height:1.45;color:var(--athar-navy,#062739);overflow-wrap:anywhere}
+.nar-intro-ar{font-family:var(--font-arabic,var(--font-sans));font-size:.74rem;line-height:1.6;text-align:start}
+#s-cover .cover-copy{gap:clamp(10px,1.7vh,16px)} /* the cover copy column also carries the transcript; rhythm tightened so it stays inside the 16:9 frame */
+@media (max-width:900px){.gbar-time{display:none}.gbar-caption{display:none}.gbar-nav{display:inline-flex}html.has-guide-bar .dots{display:none}.nar-intro-cols{grid-template-columns:1fr}}
+@media (max-width:600px){:root{--guide-h:56px}.gbar{padding-inline:8px}.gbar-row{gap:6px}.gbar-guide{padding:0 12px;font-size:.66rem}.gbar-btn{min-inline-size:44px;padding:0 8px;font-size:.7rem}.gbar-toggle{padding:0 8px}.gbar-status{display:none}.gbar-drawer{max-block-size:min(46vh,360px)}.gbar-play,.gbar-cc,.gbar-mute{display:none}.gbar-guide{margin-inline-end:auto}.nar-intro p{font-size:.78rem}.nar-intro-ar{font-size:.86rem}}
+@media (prefers-reduced-motion:reduce){.gbar-fill,.gbar-sent,.gbar-cue-active,.gbar-resync svg{transition:none}.gbar.is-blocked .gbar-guide{animation:none}}
+@media print{.gbar{display:none}}
+/* v1.5.4 — single-FSM guide: visible, accessible "Tap to play" control for the blocked state (autoplay policy / load error).
+   Shown only when #athar-narration[data-state=blocked]; Legacy-Gold-text ground (7.4:1 white on #7A6130), 44 px target, pulses unless reduced motion. */
+.gbar-tap{gap:6px;padding:0 14px;border-radius:22px;background:var(--legacy-gold-text,#7A6130);border-color:var(--legacy-gold-text,#7A6130);color:var(--white,#fff);font-weight:600;font-size:.74rem;white-space:nowrap;animation:gbar-pulse 1.6s ease-in-out infinite}
+.gbar-tap[hidden]{display:none}
+.gbar-tap svg{flex:0 0 auto}
+.gbar-tap:hover{background:#5f4b25;border-color:#5f4b25}
+.gbar.is-reduced .gbar-tap{animation:none}
+.gbar.is-blocked .gbar-guide{animation:none}
+@media (max-width:600px){.gbar.is-blocked .gbar-guide{display:none}.gbar-tap{padding:0 10px;font-size:.68rem;margin-inline-end:auto}}
+@media (prefers-reduced-motion:reduce){.gbar-tap{animation:none}}
+/* v1.5.4 — the chapter rail ends above the docked guide bar: at desktop sizes the bar (z 94) covered the rail's bottom 52 px,
+   hiding the "← → navigate · Esc overview · Home / End" hint (found by the v1.5.4 validator, element-at-point = bar play button) */
+html.has-guide-bar nav.rail{inset-block-end:calc(var(--footer-h,56px) + var(--guide-h,52px))}

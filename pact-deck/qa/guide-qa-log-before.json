@@ -1,0 +1,1308 @@
+{
+ "label": "before",
+ "started": "2026-10-01T02:59:52Z",
+ "finished": "2026-10-01T03:00:34Z",
+ "pass": 136,
+ "fail": 23,
+ "rows": [
+  {
+   "t": "2026-10-01T02:59:54Z",
+   "scenario": "S3 N shortcut",
+   "step": "N starts narration on slide 5 · slide on screen",
+   "ok": true,
+   "detail": "visible slide 5 (expected 5) hash=#/05"
+  },
+  {
+   "t": "2026-10-01T02:59:54Z",
+   "scenario": "S3 N shortcut",
+   "step": "N starts narration on slide 5 · clip == slide mapping",
+   "ok": true,
+   "detail": "bar clip NAR-02 vs expected NAR-02 for slide 5 (2 ms)"
+  },
+  {
+   "t": "2026-10-01T02:59:54Z",
+   "scenario": "S3 N shortcut",
+   "step": "N starts narration on slide 5 · audio playing ≤1 s",
+   "ok": true,
+   "detail": "paused=false src=guide-02-community-model-9gUnFBtxrM.mp3 ct=0.03 playingEvents=1 rejected=none (9 ms)"
+  },
+  {
+   "t": "2026-10-01T02:59:54Z",
+   "scenario": "S3 N shortcut",
+   "step": "N starts narration on slide 5 · audio progressing",
+   "ok": true,
+   "detail": "currentTime 0.04 → 1.14"
+  },
+  {
+   "t": "2026-10-01T02:59:54Z",
+   "scenario": "S3 N shortcut",
+   "step": "N starts narration on slide 5 · active cue narrates visible slide",
+   "ok": true,
+   "detail": "cue #1 (slide 4) vs visible 5; audio 1.14s; expected first cue #1"
+  },
+  {
+   "t": "2026-10-01T02:59:54Z",
+   "scenario": "S3 N shortcut",
+   "step": "N starts narration on slide 5 · CC caption == active cue text",
+   "ok": true,
+   "detail": "caption=\"Section two, the Community Model.\" cue=\"Section two, the Community Model.\""
+  },
+  {
+   "t": "2026-10-01T02:59:54Z",
+   "scenario": "S3 N shortcut",
+   "step": "N starts narration on slide 5 · transcript highlight == on-screen slide",
+   "ok": true,
+   "detail": "highlighted sentence slide=4 cue=#1 (slide 4) visible=5 transcript chars=409"
+  },
+  {
+   "t": "2026-10-01T02:59:54Z",
+   "scenario": "S3 N shortcut",
+   "step": "N pauses narration",
+   "ok": true,
+   "detail": "paused=true narrating=false"
+  },
+  {
+   "t": "2026-10-01T02:59:55Z",
+   "scenario": "S3 N shortcut",
+   "step": "paused + ArrowRight: caption/transcript follow the slide without audio",
+   "ok": false,
+   "detail": "n=6 clip=NAR-02 paused=false cue=#1 (slide 4) highlight slide=4"
+  },
+  {
+   "t": "2026-10-01T02:59:55Z",
+   "scenario": "S3 N shortcut",
+   "step": "N resumes at the sentence of the slide on screen (6) · slide on screen",
+   "ok": true,
+   "detail": "visible slide 6 (expected 6) hash=#/06"
+  },
+  {
+   "t": "2026-10-01T02:59:55Z",
+   "scenario": "S3 N shortcut",
+   "step": "N resumes at the sentence of the slide on screen (6) · clip == slide mapping",
+   "ok": true,
+   "detail": "bar clip NAR-02 vs expected NAR-02 for slide 6 (1 ms)"
+  },
+  {
+   "t": "2026-10-01T02:59:55Z",
+   "scenario": "S3 N shortcut",
+   "step": "N resumes at the sentence of the slide on screen (6) · audio playing ≤1 s",
+   "ok": true,
+   "detail": "paused=false src=guide-02-community-model-9gUnFBtxrM.mp3 ct=1.48 playingEvents=1 rejected=none (9 ms)"
+  },
+  {
+   "t": "2026-10-01T02:59:55Z",
+   "scenario": "S3 N shortcut",
+   "step": "N resumes at the sentence of the slide on screen (6) · audio progressing",
+   "ok": false,
+   "detail": "currentTime 1.48 → 0.09"
+  },
+  {
+   "t": "2026-10-01T02:59:55Z",
+   "scenario": "S3 N shortcut",
+   "step": "N resumes at the sentence of the slide on screen (6) · active cue narrates visible slide",
+   "ok": true,
+   "detail": "cue #1 (slide 4) vs visible 6; audio 0.09s; expected first cue #1"
+  },
+  {
+   "t": "2026-10-01T02:59:55Z",
+   "scenario": "S3 N shortcut",
+   "step": "N resumes at the sentence of the slide on screen (6) · CC caption == active cue text",
+   "ok": true,
+   "detail": "caption=\"Section two, the Community Model.\" cue=\"Section two, the Community Model.\""
+  },
+  {
+   "t": "2026-10-01T02:59:55Z",
+   "scenario": "S3 N shortcut",
+   "step": "N resumes at the sentence of the slide on screen (6) · transcript highlight == on-screen slide",
+   "ok": true,
+   "detail": "highlighted sentence slide=4 cue=#1 (slide 4) visible=6 transcript chars=409"
+  },
+  {
+   "t": "2026-10-01T02:59:57Z",
+   "scenario": "S4 Esc overview + deep links + ?intro=1",
+   "step": "guide on slide 2 · slide on screen",
+   "ok": true,
+   "detail": "visible slide 2 (expected 2) hash=#/02"
+  },
+  {
+   "t": "2026-10-01T02:59:57Z",
+   "scenario": "S4 Esc overview + deep links + ?intro=1",
+   "step": "guide on slide 2 · clip == slide mapping",
+   "ok": true,
+   "detail": "bar clip NAR-01 vs expected NAR-01 for slide 2 (1 ms)"
+  },
+  {
+   "t": "2026-10-01T02:59:57Z",
+   "scenario": "S4 Esc overview + deep links + ?intro=1",
+   "step": "guide on slide 2 · audio playing ≤1 s",
+   "ok": true,
+   "detail": "paused=false src=guide-01-the-pact-df1pHtGsVr.mp3 ct=0 playingEvents=0 rejected=none (5 ms)"
+  },
+  {
+   "t": "2026-10-01T02:59:57Z",
+   "scenario": "S4 Esc overview + deep links + ?intro=1",
+   "step": "guide on slide 2 · audio progressing",
+   "ok": true,
+   "detail": "currentTime 0 → 1.06"
+  },
+  {
+   "t": "2026-10-01T02:59:57Z",
+   "scenario": "S4 Esc overview + deep links + ?intro=1",
+   "step": "guide on slide 2 · active cue narrates visible slide",
+   "ok": true,
+   "detail": "cue #1 (slide 2) vs visible 2; audio 1.06s; expected first cue #1"
+  },
+  {
+   "t": "2026-10-01T02:59:57Z",
+   "scenario": "S4 Esc overview + deep links + ?intro=1",
+   "step": "guide on slide 2 · CC caption == active cue text",
+   "ok": true,
+   "detail": "caption=\"Section one, the Pact.\" cue=\"Section one, the Pact.\""
+  },
+  {
+   "t": "2026-10-01T02:59:57Z",
+   "scenario": "S4 Esc overview + deep links + ?intro=1",
+   "step": "guide on slide 2 · transcript highlight == on-screen slide",
+   "ok": true,
+   "detail": "highlighted sentence slide=2 cue=#1 (slide 2) visible=2 transcript chars=363"
+  },
+  {
+   "t": "2026-10-01T02:59:57Z",
+   "scenario": "S4 Esc overview + deep links + ?intro=1",
+   "step": "Esc opens the overview",
+   "ok": true,
+   "detail": "overview dialog visible"
+  },
+  {
+   "t": "2026-10-01T02:59:57Z",
+   "scenario": "S4 Esc overview + deep links + ?intro=1",
+   "step": "overview grid has tiles",
+   "ok": true,
+   "detail": "39 tiles"
+  },
+  {
+   "t": "2026-10-01T02:59:57Z",
+   "scenario": "S4 Esc overview + deep links + ?intro=1",
+   "step": "overview tile → slide 7 · slide on screen",
+   "ok": true,
+   "detail": "visible slide 7 (expected 7) hash=#/07"
+  },
+  {
+   "t": "2026-10-01T02:59:57Z",
+   "scenario": "S4 Esc overview + deep links + ?intro=1",
+   "step": "overview tile → slide 7 · clip == slide mapping",
+   "ok": true,
+   "detail": "bar clip NAR-02 vs expected NAR-02 for slide 7 (64 ms)"
+  },
+  {
+   "t": "2026-10-01T02:59:57Z",
+   "scenario": "S4 Esc overview + deep links + ?intro=1",
+   "step": "overview tile → slide 7 · audio playing ≤1 s",
+   "ok": true,
+   "detail": "paused=false src=guide-02-community-model-9gUnFBtxrM.mp3 ct=2.26 playingEvents=1 rejected=none (74 ms)"
+  },
+  {
+   "t": "2026-10-01T02:59:58Z",
+   "scenario": "S4 Esc overview + deep links + ?intro=1",
+   "step": "overview tile → slide 7 · audio progressing",
+   "ok": true,
+   "detail": "currentTime 2.26 → 3.5"
+  },
+  {
+   "t": "2026-10-01T02:59:58Z",
+   "scenario": "S4 Esc overview + deep links + ?intro=1",
+   "step": "overview tile → slide 7 · active cue narrates visible slide",
+   "ok": true,
+   "detail": "cue #2 (slide 7) vs visible 7; audio 3.5s; expected first cue #2"
+  },
+  {
+   "t": "2026-10-01T02:59:58Z",
+   "scenario": "S4 Esc overview + deep links + ?intro=1",
+   "step": "overview tile → slide 7 · CC caption == active cue text",
+   "ok": true,
+   "detail": "caption=\"Every webinar, chapter event and challenge should \" cue=\"Every webinar, chapter event and challenge should \""
+  },
+  {
+   "t": "2026-10-01T02:59:58Z",
+   "scenario": "S4 Esc overview + deep links + ?intro=1",
+   "step": "overview tile → slide 7 · transcript highlight == on-screen slide",
+   "ok": true,
+   "detail": "highlighted sentence slide=7 cue=#2 (slide 7) visible=7 transcript chars=409"
+  },
+  {
+   "t": "2026-10-01T02:59:58Z",
+   "scenario": "S4 Esc overview + deep links + ?intro=1",
+   "step": "in-page hash #/20 · slide on screen",
+   "ok": true,
+   "detail": "visible slide 20 (expected 20) hash=#/20"
+  },
+  {
+   "t": "2026-10-01T02:59:58Z",
+   "scenario": "S4 Esc overview + deep links + ?intro=1",
+   "step": "in-page hash #/20 · clip == slide mapping",
+   "ok": true,
+   "detail": "bar clip NAR-04 vs expected NAR-04 for slide 20 (64 ms)"
+  },
+  {
+   "t": "2026-10-01T02:59:58Z",
+   "scenario": "S4 Esc overview + deep links + ?intro=1",
+   "step": "in-page hash #/20 · audio playing ≤1 s",
+   "ok": true,
+   "detail": "paused=false src=guide-04-pledge-and-signing-PWeXZj1Rgc.mp3 ct=5.14 playingEvents=2 rejected=none (69 ms)"
+  },
+  {
+   "t": "2026-10-01T02:59:58Z",
+   "scenario": "S4 Esc overview + deep links + ?intro=1",
+   "step": "in-page hash #/20 · audio progressing",
+   "ok": true,
+   "detail": "currentTime 5.15 → 6.23"
+  },
+  {
+   "t": "2026-10-01T02:59:58Z",
+   "scenario": "S4 Esc overview + deep links + ?intro=1",
+   "step": "in-page hash #/20 · active cue narrates visible slide",
+   "ok": true,
+   "detail": "cue #3 (slide 20) vs visible 20; audio 6.27s; expected first cue #3"
+  },
+  {
+   "t": "2026-10-01T02:59:58Z",
+   "scenario": "S4 Esc overview + deep links + ?intro=1",
+   "step": "in-page hash #/20 · CC caption == active cue text",
+   "ok": true,
+   "detail": "caption=\"A signatory chooses its roles, sign, govern, build\" cue=\"A signatory chooses its roles, sign, govern, build\""
+  },
+  {
+   "t": "2026-10-01T02:59:58Z",
+   "scenario": "S4 Esc overview + deep links + ?intro=1",
+   "step": "in-page hash #/20 · transcript highlight == on-screen slide",
+   "ok": true,
+   "detail": "highlighted sentence slide=20 cue=#3 (slide 20) visible=20 transcript chars=391"
+  },
+  {
+   "t": "2026-10-01T02:59:58Z",
+   "scenario": "S4 Esc overview + deep links + ?intro=1",
+   "step": "in-page hash #/27/new-4 → 31 · slide on screen",
+   "ok": true,
+   "detail": "visible slide 31 (expected 31) hash=#/27/new-4"
+  },
+  {
+   "t": "2026-10-01T02:59:58Z",
+   "scenario": "S4 Esc overview + deep links + ?intro=1",
+   "step": "in-page hash #/27/new-4 → 31 · clip == slide mapping",
+   "ok": true,
+   "detail": "bar clip NAR-07 vs expected NAR-07 for slide 31 (64 ms)"
+  },
+  {
+   "t": "2026-10-01T02:59:58Z",
+   "scenario": "S4 Esc overview + deep links + ?intro=1",
+   "step": "in-page hash #/27/new-4 → 31 · audio playing ≤1 s",
+   "ok": true,
+   "detail": "paused=false src=guide-07-impact-and-funding-vWkiINp1IS.mp3 ct=21.39 playingEvents=1 rejected=none (69 ms)"
+  },
+  {
+   "t": "2026-10-01T02:59:59Z",
+   "scenario": "S4 Esc overview + deep links + ?intro=1",
+   "step": "in-page hash #/27/new-4 → 31 · audio progressing",
+   "ok": true,
+   "detail": "currentTime 21.4 → 22.54"
+  },
+  {
+   "t": "2026-10-01T02:59:59Z",
+   "scenario": "S4 Esc overview + deep links + ?intro=1",
+   "step": "in-page hash #/27/new-4 → 31 · active cue narrates visible slide",
+   "ok": true,
+   "detail": "cue #5 (slide 31) vs visible 31; audio 22.55s; expected first cue #5"
+  },
+  {
+   "t": "2026-10-01T02:59:59Z",
+   "scenario": "S4 Esc overview + deep links + ?intro=1",
+   "step": "in-page hash #/27/new-4 → 31 · CC caption == active cue text",
+   "ok": true,
+   "detail": "caption=\"Universal API licenses, marketplace revenue share \" cue=\"Universal API licenses, marketplace revenue share \""
+  },
+  {
+   "t": "2026-10-01T02:59:59Z",
+   "scenario": "S4 Esc overview + deep links + ?intro=1",
+   "step": "in-page hash #/27/new-4 → 31 · transcript highlight == on-screen slide",
+   "ok": true,
+   "detail": "highlighted sentence slide=31 cue=#5 (slide 31) visible=31 transcript chars=447"
+  },
+  {
+   "t": "2026-10-01T02:59:59Z",
+   "scenario": "S4 Esc overview + deep links + ?intro=1",
+   "step": "#slide-07 alias deep link → slide 7",
+   "ok": false,
+   "detail": "n=1 clip=NAR-00 hash=#/01"
+  },
+  {
+   "t": "2026-10-01T03:00:00Z",
+   "scenario": "S4 Esc overview + deep links + ?intro=1",
+   "step": "full reload on #/25 bypasses the intro and maps clip",
+   "ok": true,
+   "detail": "n=25 intro=false clip=NAR-05"
+  },
+  {
+   "t": "2026-10-01T03:00:01Z",
+   "scenario": "S4 Esc overview + deep links + ?intro=1",
+   "step": "?intro=1 forces the intro film",
+   "ok": true,
+   "detail": "intro=true"
+  },
+  {
+   "t": "2026-10-01T03:00:01Z",
+   "scenario": "S4 Esc overview + deep links + ?intro=1",
+   "step": "no guide narration plays during the intro film",
+   "ok": true,
+   "detail": "guide play() calls during intro: 0"
+  },
+  {
+   "t": "2026-10-01T03:00:02Z",
+   "scenario": "S4 Esc overview + deep links + ?intro=1",
+   "step": "after the intro the deck is on slide 1 with NAR-00 mapped",
+   "ok": true,
+   "detail": "n=1 clip=NAR-00"
+  },
+  {
+   "t": "2026-10-01T03:00:04Z",
+   "scenario": "S5 slide-38 country tabs",
+   "step": "guide on slide 38 · slide on screen",
+   "ok": true,
+   "detail": "visible slide 38 (expected 38) hash=#/27/new-11"
+  },
+  {
+   "t": "2026-10-01T03:00:04Z",
+   "scenario": "S5 slide-38 country tabs",
+   "step": "guide on slide 38 · clip == slide mapping",
+   "ok": true,
+   "detail": "bar clip NAR-08 vs expected NAR-08 for slide 38 (1 ms)"
+  },
+  {
+   "t": "2026-10-01T03:00:04Z",
+   "scenario": "S5 slide-38 country tabs",
+   "step": "guide on slide 38 · audio playing ≤1 s",
+   "ok": true,
+   "detail": "paused=false src=guide-08-athar-os-Ib4oKe91OD.mp3 ct=7.96 playingEvents=0 rejected=none (5 ms)"
+  },
+  {
+   "t": "2026-10-01T03:00:04Z",
+   "scenario": "S5 slide-38 country tabs",
+   "step": "guide on slide 38 · audio progressing",
+   "ok": true,
+   "detail": "currentTime 7.96 → 8.98"
+  },
+  {
+   "t": "2026-10-01T03:00:04Z",
+   "scenario": "S5 slide-38 country tabs",
+   "step": "guide on slide 38 · active cue narrates visible slide",
+   "ok": true,
+   "detail": "cue #3 (slide 38) vs visible 38; audio 8.98s; expected first cue #3"
+  },
+  {
+   "t": "2026-10-01T03:00:04Z",
+   "scenario": "S5 slide-38 country tabs",
+   "step": "guide on slide 38 · CC caption == active cue text",
+   "ok": true,
+   "detail": "caption=\"Nations empowered.\" cue=\"Nations empowered.\""
+  },
+  {
+   "t": "2026-10-01T03:00:04Z",
+   "scenario": "S5 slide-38 country tabs",
+   "step": "guide on slide 38 · transcript highlight == on-screen slide",
+   "ok": true,
+   "detail": "highlighted sentence slide=38 cue=#3 (slide 38) visible=38 transcript chars=375"
+  },
+  {
+   "t": "2026-10-01T03:00:04Z",
+   "scenario": "S5 slide-38 country tabs",
+   "step": "tab in → narration seeks to its sentence (cue #3)",
+   "ok": true,
+   "detail": "cue=#3 audio=9.19s tab aria-selected=true paused=false"
+  },
+  {
+   "t": "2026-10-01T03:00:04Z",
+   "scenario": "S5 slide-38 country tabs",
+   "step": "tab ke → narration seeks to its sentence (cue #4)",
+   "ok": true,
+   "detail": "cue=#4 audio=10.58s tab aria-selected=true paused=false"
+  },
+  {
+   "t": "2026-10-01T03:00:06Z",
+   "scenario": "S5 slide-38 country tabs",
+   "step": "tab lb → narration seeks to its sentence (cue #2)",
+   "ok": false,
+   "detail": "cue=#5 audio=17.89s tab aria-selected=false paused=false"
+  },
+  {
+   "t": "2026-10-01T03:00:08Z",
+   "scenario": "S6 Replay intro and return",
+   "step": "guide on slide 4 · slide on screen",
+   "ok": true,
+   "detail": "visible slide 4 (expected 4) hash=#/04"
+  },
+  {
+   "t": "2026-10-01T03:00:08Z",
+   "scenario": "S6 Replay intro and return",
+   "step": "guide on slide 4 · clip == slide mapping",
+   "ok": true,
+   "detail": "bar clip NAR-02 vs expected NAR-02 for slide 4 (2 ms)"
+  },
+  {
+   "t": "2026-10-01T03:00:08Z",
+   "scenario": "S6 Replay intro and return",
+   "step": "guide on slide 4 · audio playing ≤1 s",
+   "ok": true,
+   "detail": "paused=false src=guide-02-community-model-9gUnFBtxrM.mp3 ct=0 playingEvents=0 rejected=none (6 ms)"
+  },
+  {
+   "t": "2026-10-01T03:00:09Z",
+   "scenario": "S6 Replay intro and return",
+   "step": "guide on slide 4 · audio progressing",
+   "ok": true,
+   "detail": "currentTime 0 → 1.08"
+  },
+  {
+   "t": "2026-10-01T03:00:09Z",
+   "scenario": "S6 Replay intro and return",
+   "step": "guide on slide 4 · active cue narrates visible slide",
+   "ok": true,
+   "detail": "cue #1 (slide 4) vs visible 4; audio 1.09s; expected first cue #1"
+  },
+  {
+   "t": "2026-10-01T03:00:09Z",
+   "scenario": "S6 Replay intro and return",
+   "step": "guide on slide 4 · CC caption == active cue text",
+   "ok": true,
+   "detail": "caption=\"Section two, the Community Model.\" cue=\"Section two, the Community Model.\""
+  },
+  {
+   "t": "2026-10-01T03:00:09Z",
+   "scenario": "S6 Replay intro and return",
+   "step": "guide on slide 4 · transcript highlight == on-screen slide",
+   "ok": true,
+   "detail": "highlighted sentence slide=4 cue=#1 (slide 4) visible=4 transcript chars=409"
+  },
+  {
+   "t": "2026-10-01T03:00:09Z",
+   "scenario": "S6 Replay intro and return",
+   "step": "Replay intro opens the intro film",
+   "ok": true,
+   "detail": "intro-gate shown"
+  },
+  {
+   "t": "2026-10-01T03:00:10Z",
+   "scenario": "S6 Replay intro and return",
+   "step": "guide/narration is silent while the intro film plays",
+   "ok": false,
+   "detail": "audio=intro-narration.mp3 paused=false play() calls=,guide-02-community-model-9gUnFBtxrM.mp3"
+  },
+  {
+   "t": "2026-10-01T03:00:12Z",
+   "scenario": "S6 Replay intro and return",
+   "step": "after the replayed intro the guide narrates slide 1 · slide on screen",
+   "ok": false,
+   "detail": "visible slide 4 (expected 1) hash=#/04"
+  },
+  {
+   "t": "2026-10-01T03:00:12Z",
+   "scenario": "S6 Replay intro and return",
+   "step": "after the replayed intro the guide narrates slide 1 · clip == slide mapping",
+   "ok": false,
+   "detail": "bar clip  vs expected NAR-00 for slide 1 (1546 ms)"
+  },
+  {
+   "t": "2026-10-01T03:00:12Z",
+   "scenario": "S6 Replay intro and return",
+   "step": "after the replayed intro the guide narrates slide 1 · audio playing ≤1 s",
+   "ok": false,
+   "detail": "paused=false src=intro-narration.mp3 ct=13.18 playingEvents=0 rejected=none (1612 ms)"
+  },
+  {
+   "t": "2026-10-01T03:00:14Z",
+   "scenario": "S6 Replay intro and return",
+   "step": "after the replayed intro the guide narrates slide 1 · active cue narrates visible slide",
+   "ok": false,
+   "detail": "cue #null (slide null) vs visible 1; audio 18.16s; expected first cue #1"
+  },
+  {
+   "t": "2026-10-01T03:00:14Z",
+   "scenario": "S6 Replay intro and return",
+   "step": "after the replayed intro the guide narrates slide 1 · CC caption == active cue text",
+   "ok": true,
+   "detail": "caption=\"\" cue=\"\""
+  },
+  {
+   "t": "2026-10-01T03:00:14Z",
+   "scenario": "S6 Replay intro and return",
+   "step": "after the replayed intro the guide narrates slide 1 · transcript highlight == on-screen slide",
+   "ok": false,
+   "detail": "highlighted sentence slide=null cue=#null (slide undefined) visible=1 transcript chars=309"
+  },
+  {
+   "t": "2026-10-01T03:00:15Z",
+   "scenario": "S7 tab hidden/visible + audio-focus loss",
+   "step": "guide on slide 13 · slide on screen",
+   "ok": true,
+   "detail": "visible slide 13 (expected 13) hash=#/13"
+  },
+  {
+   "t": "2026-10-01T03:00:15Z",
+   "scenario": "S7 tab hidden/visible + audio-focus loss",
+   "step": "guide on slide 13 · clip == slide mapping",
+   "ok": true,
+   "detail": "bar clip NAR-03 vs expected NAR-03 for slide 13 (2 ms)"
+  },
+  {
+   "t": "2026-10-01T03:00:15Z",
+   "scenario": "S7 tab hidden/visible + audio-focus loss",
+   "step": "guide on slide 13 · audio playing ≤1 s",
+   "ok": true,
+   "detail": "paused=false src=guide-03-six-pillars-yxVqZJ2k1a.mp3 ct=0 playingEvents=0 rejected=none (5 ms)"
+  },
+  {
+   "t": "2026-10-01T03:00:16Z",
+   "scenario": "S7 tab hidden/visible + audio-focus loss",
+   "step": "guide on slide 13 · audio progressing",
+   "ok": true,
+   "detail": "currentTime 0 → 1.1"
+  },
+  {
+   "t": "2026-10-01T03:00:16Z",
+   "scenario": "S7 tab hidden/visible + audio-focus loss",
+   "step": "guide on slide 13 · active cue narrates visible slide",
+   "ok": true,
+   "detail": "cue #1 (slide 13) vs visible 13; audio 1.11s; expected first cue #1"
+  },
+  {
+   "t": "2026-10-01T03:00:16Z",
+   "scenario": "S7 tab hidden/visible + audio-focus loss",
+   "step": "guide on slide 13 · CC caption == active cue text",
+   "ok": true,
+   "detail": "caption=\"Section three, six pillars.\" cue=\"Section three, six pillars.\""
+  },
+  {
+   "t": "2026-10-01T03:00:16Z",
+   "scenario": "S7 tab hidden/visible + audio-focus loss",
+   "step": "guide on slide 13 · transcript highlight == on-screen slide",
+   "ok": true,
+   "detail": "highlighted sentence slide=13 cue=#1 (slide 13) visible=13 transcript chars=293"
+  },
+  {
+   "t": "2026-10-01T03:00:16Z",
+   "scenario": "S7 tab hidden/visible + audio-focus loss",
+   "step": "visible again after 2 hidden slide changes → narrates slide 15 · slide on screen",
+   "ok": true,
+   "detail": "visible slide 15 (expected 15) hash=#/15"
+  },
+  {
+   "t": "2026-10-01T03:00:16Z",
+   "scenario": "S7 tab hidden/visible + audio-focus loss",
+   "step": "visible again after 2 hidden slide changes → narrates slide 15 · clip == slide mapping",
+   "ok": true,
+   "detail": "bar clip NAR-03 vs expected NAR-03 for slide 15 (1 ms)"
+  },
+  {
+   "t": "2026-10-01T03:00:16Z",
+   "scenario": "S7 tab hidden/visible + audio-focus loss",
+   "step": "visible again after 2 hidden slide changes → narrates slide 15 · audio playing ≤1 s",
+   "ok": true,
+   "detail": "paused=false src=guide-03-six-pillars-yxVqZJ2k1a.mp3 ct=9.91 playingEvents=0 rejected=none (5 ms)"
+  },
+  {
+   "t": "2026-10-01T03:00:17Z",
+   "scenario": "S7 tab hidden/visible + audio-focus loss",
+   "step": "visible again after 2 hidden slide changes → narrates slide 15 · audio progressing",
+   "ok": true,
+   "detail": "currentTime 9.92 → 11.36"
+  },
+  {
+   "t": "2026-10-01T03:00:17Z",
+   "scenario": "S7 tab hidden/visible + audio-focus loss",
+   "step": "visible again after 2 hidden slide changes → narrates slide 15 · active cue narrates visible slide",
+   "ok": true,
+   "detail": "cue #3 (slide 14) vs visible 15; audio 11.37s; expected first cue #3"
+  },
+  {
+   "t": "2026-10-01T03:00:17Z",
+   "scenario": "S7 tab hidden/visible + audio-focus loss",
+   "step": "visible again after 2 hidden slide changes → narrates slide 15 · CC caption == active cue text",
+   "ok": true,
+   "detail": "caption=\"Reusable skills are built once and shared across t\" cue=\"Reusable skills are built once and shared across t\""
+  },
+  {
+   "t": "2026-10-01T03:00:17Z",
+   "scenario": "S7 tab hidden/visible + audio-focus loss",
+   "step": "visible again after 2 hidden slide changes → narrates slide 15 · transcript highlight == on-screen slide",
+   "ok": true,
+   "detail": "highlighted sentence slide=14 cue=#3 (slide 14) visible=15 transcript chars=293"
+  },
+  {
+   "t": "2026-10-01T03:00:17Z",
+   "scenario": "S7 tab hidden/visible + audio-focus loss",
+   "step": "external pause recorded",
+   "ok": false,
+   "detail": "paused=false"
+  },
+  {
+   "t": "2026-10-01T03:00:17Z",
+   "scenario": "S7 tab hidden/visible + audio-focus loss",
+   "step": "narration resumes after focus regain (audio-focus loss)",
+   "ok": true,
+   "detail": "paused=false after 1 ms"
+  },
+  {
+   "t": "2026-10-01T03:00:19Z",
+   "scenario": "S8 phone 390×844",
+   "step": "phone: guide on slide 2 · slide on screen",
+   "ok": true,
+   "detail": "visible slide 2 (expected 2) hash=#/02"
+  },
+  {
+   "t": "2026-10-01T03:00:19Z",
+   "scenario": "S8 phone 390×844",
+   "step": "phone: guide on slide 2 · clip == slide mapping",
+   "ok": true,
+   "detail": "bar clip NAR-01 vs expected NAR-01 for slide 2 (1 ms)"
+  },
+  {
+   "t": "2026-10-01T03:00:19Z",
+   "scenario": "S8 phone 390×844",
+   "step": "phone: guide on slide 2 · audio playing ≤1 s",
+   "ok": true,
+   "detail": "paused=false src=guide-01-the-pact-df1pHtGsVr.mp3 ct=0 playingEvents=0 rejected=none (5 ms)"
+  },
+  {
+   "t": "2026-10-01T03:00:19Z",
+   "scenario": "S8 phone 390×844",
+   "step": "phone: guide on slide 2 · audio progressing",
+   "ok": true,
+   "detail": "currentTime 0 → 1.06"
+  },
+  {
+   "t": "2026-10-01T03:00:19Z",
+   "scenario": "S8 phone 390×844",
+   "step": "phone: guide on slide 2 · active cue narrates visible slide",
+   "ok": true,
+   "detail": "cue #1 (slide 2) vs visible 2; audio 1.07s; expected first cue #1"
+  },
+  {
+   "t": "2026-10-01T03:00:19Z",
+   "scenario": "S8 phone 390×844",
+   "step": "phone: guide on slide 2 · CC caption == active cue text",
+   "ok": true,
+   "detail": "caption=\"Section one, the Pact.\" cue=\"Section one, the Pact.\""
+  },
+  {
+   "t": "2026-10-01T03:00:19Z",
+   "scenario": "S8 phone 390×844",
+   "step": "phone: guide on slide 2 · transcript highlight == on-screen slide",
+   "ok": true,
+   "detail": "highlighted sentence slide=2 cue=#1 (slide 2) visible=2 transcript chars=363"
+  },
+  {
+   "t": "2026-10-01T03:00:19Z",
+   "scenario": "S8 phone 390×844",
+   "step": "phone: bar next button visible and ≥44 px",
+   "ok": true,
+   "detail": "44×44"
+  },
+  {
+   "t": "2026-10-01T03:00:19Z",
+   "scenario": "S8 phone 390×844",
+   "step": "phone: bar next → 3 · slide on screen",
+   "ok": true,
+   "detail": "visible slide 3 (expected 3) hash=#/03"
+  },
+  {
+   "t": "2026-10-01T03:00:19Z",
+   "scenario": "S8 phone 390×844",
+   "step": "phone: bar next → 3 · clip == slide mapping",
+   "ok": true,
+   "detail": "bar clip NAR-01 vs expected NAR-01 for slide 3 (64 ms)"
+  },
+  {
+   "t": "2026-10-01T03:00:19Z",
+   "scenario": "S8 phone 390×844",
+   "step": "phone: bar next → 3 · audio playing ≤1 s",
+   "ok": true,
+   "detail": "paused=false src=guide-01-the-pact-df1pHtGsVr.mp3 ct=1.49 playingEvents=0 rejected=none (67 ms)"
+  },
+  {
+   "t": "2026-10-01T03:00:19Z",
+   "scenario": "S8 phone 390×844",
+   "step": "phone: bar next → 3 · audio progressing",
+   "ok": true,
+   "detail": "currentTime 1.5 → 2.87"
+  },
+  {
+   "t": "2026-10-01T03:00:21Z",
+   "scenario": "S8 phone 390×844",
+   "step": "phone: bar next → 3 · active cue narrates visible slide",
+   "ok": false,
+   "detail": "cue #2 (slide 2) vs visible 3; audio 7.6s; expected first cue #3"
+  },
+  {
+   "t": "2026-10-01T03:00:21Z",
+   "scenario": "S8 phone 390×844",
+   "step": "phone: bar next → 3 · CC caption == active cue text",
+   "ok": true,
+   "detail": "caption=\"The Athar Open Agentic Pact is an open commitment \" cue=\"The Athar Open Agentic Pact is an open commitment \""
+  },
+  {
+   "t": "2026-10-01T03:00:21Z",
+   "scenario": "S8 phone 390×844",
+   "step": "phone: bar next → 3 · transcript highlight == on-screen slide",
+   "ok": false,
+   "detail": "highlighted sentence slide=2 cue=#2 (slide 2) visible=3 transcript chars=363"
+  },
+  {
+   "t": "2026-10-01T03:00:22Z",
+   "scenario": "S8 phone 390×844",
+   "step": "phone: bar next → 4 (new clip) · slide on screen",
+   "ok": false,
+   "detail": "visible slide 3 (expected 4) hash=#/03"
+  },
+  {
+   "t": "2026-10-01T03:00:22Z",
+   "scenario": "S8 phone 390×844",
+   "step": "phone: bar next → 4 (new clip) · clip == slide mapping",
+   "ok": false,
+   "detail": "bar clip NAR-01 vs expected NAR-02 for slide 4 (1551 ms)"
+  },
+  {
+   "t": "2026-10-01T03:00:22Z",
+   "scenario": "S8 phone 390×844",
+   "step": "phone: bar next → 4 (new clip) · audio playing ≤1 s",
+   "ok": false,
+   "detail": "paused=false src=guide-01-the-pact-df1pHtGsVr.mp3 ct=14.22 playingEvents=0 rejected=none (1615 ms)"
+  },
+  {
+   "t": "2026-10-01T03:00:24Z",
+   "scenario": "S8 phone 390×844",
+   "step": "phone: bar next → 4 (new clip) · active cue narrates visible slide",
+   "ok": false,
+   "detail": "cue #4 (slide 3) vs visible 4; audio 19.19s; expected first cue #1"
+  },
+  {
+   "t": "2026-10-01T03:00:24Z",
+   "scenario": "S8 phone 390×844",
+   "step": "phone: bar next → 4 (new clip) · CC caption == active cue text",
+   "ok": true,
+   "detail": "caption=\"Signatories agree on shared standards, an open plu\" cue=\"Signatories agree on shared standards, an open plu\""
+  },
+  {
+   "t": "2026-10-01T03:00:24Z",
+   "scenario": "S8 phone 390×844",
+   "step": "phone: bar next → 4 (new clip) · transcript highlight == on-screen slide",
+   "ok": false,
+   "detail": "highlighted sentence slide=3 cue=#4 (slide undefined) visible=4 transcript chars=363"
+  },
+  {
+   "t": "2026-10-01T03:00:24Z",
+   "scenario": "S8 phone 390×844",
+   "step": "phone: bar prev → 3 · slide on screen",
+   "ok": true,
+   "detail": "visible slide 3 (expected 3) hash=#/2"
+  },
+  {
+   "t": "2026-10-01T03:00:24Z",
+   "scenario": "S8 phone 390×844",
+   "step": "phone: bar prev → 3 · clip == slide mapping",
+   "ok": true,
+   "detail": "bar clip NAR-01 vs expected NAR-01 for slide 3 (1 ms)"
+  },
+  {
+   "t": "2026-10-01T03:00:24Z",
+   "scenario": "S8 phone 390×844",
+   "step": "phone: bar prev → 3 · audio playing ≤1 s",
+   "ok": true,
+   "detail": "paused=false src=guide-01-the-pact-df1pHtGsVr.mp3 ct=19.55 playingEvents=0 rejected=none (4 ms)"
+  },
+  {
+   "t": "2026-10-01T03:00:24Z",
+   "scenario": "S8 phone 390×844",
+   "step": "phone: bar prev → 3 · audio progressing",
+   "ok": true,
+   "detail": "currentTime 19.55 → 20.97"
+  },
+  {
+   "t": "2026-10-01T03:00:24Z",
+   "scenario": "S8 phone 390×844",
+   "step": "phone: bar prev → 3 · active cue narrates visible slide",
+   "ok": true,
+   "detail": "cue #4 (slide 3) vs visible 3; audio 20.98s; expected first cue #3"
+  },
+  {
+   "t": "2026-10-01T03:00:24Z",
+   "scenario": "S8 phone 390×844",
+   "step": "phone: bar prev → 3 · CC caption == active cue text",
+   "ok": true,
+   "detail": "caption=\"Signatories agree on shared standards, an open plu\" cue=\"Signatories agree on shared standards, an open plu\""
+  },
+  {
+   "t": "2026-10-01T03:00:24Z",
+   "scenario": "S8 phone 390×844",
+   "step": "phone: bar prev → 3 · transcript highlight == on-screen slide",
+   "ok": true,
+   "detail": "highlighted sentence slide=3 cue=#4 (slide 3) visible=3 transcript chars=363"
+  },
+  {
+   "t": "2026-10-01T03:00:24Z",
+   "scenario": "S8 phone 390×844",
+   "step": "phone: bar fits the viewport (no horizontal overflow)",
+   "ok": true,
+   "detail": "{\"right\":390,\"w\":390,\"sw\":390}"
+  },
+  {
+   "t": "2026-10-01T03:00:27Z",
+   "scenario": "S9 Arabic / RTL",
+   "step": "lang toggle → ar/rtl",
+   "ok": true,
+   "detail": "lang=ar dir=rtl"
+  },
+  {
+   "t": "2026-10-01T03:00:27Z",
+   "scenario": "S9 Arabic / RTL",
+   "step": "RTL: guide on slide 2 · slide on screen",
+   "ok": true,
+   "detail": "visible slide 2 (expected 2) hash=#/02"
+  },
+  {
+   "t": "2026-10-01T03:00:27Z",
+   "scenario": "S9 Arabic / RTL",
+   "step": "RTL: guide on slide 2 · clip == slide mapping",
+   "ok": true,
+   "detail": "bar clip NAR-01 vs expected NAR-01 for slide 2 (2 ms)"
+  },
+  {
+   "t": "2026-10-01T03:00:27Z",
+   "scenario": "S9 Arabic / RTL",
+   "step": "RTL: guide on slide 2 · audio playing ≤1 s",
+   "ok": true,
+   "detail": "paused=false src=guide-01-the-pact-df1pHtGsVr.mp3 ct=0 playingEvents=0 rejected=none (6 ms)"
+  },
+  {
+   "t": "2026-10-01T03:00:27Z",
+   "scenario": "S9 Arabic / RTL",
+   "step": "RTL: guide on slide 2 · audio progressing",
+   "ok": true,
+   "detail": "currentTime 0 → 1.05"
+  },
+  {
+   "t": "2026-10-01T03:00:27Z",
+   "scenario": "S9 Arabic / RTL",
+   "step": "RTL: guide on slide 2 · active cue narrates visible slide",
+   "ok": true,
+   "detail": "cue #1 (slide 2) vs visible 2; audio 1.05s; expected first cue #1"
+  },
+  {
+   "t": "2026-10-01T03:00:27Z",
+   "scenario": "S9 Arabic / RTL",
+   "step": "RTL: guide on slide 2 · CC caption == active cue text",
+   "ok": true,
+   "detail": "caption=\"Section one, the Pact.\" cue=\"Section one, the Pact.\""
+  },
+  {
+   "t": "2026-10-01T03:00:27Z",
+   "scenario": "S9 Arabic / RTL",
+   "step": "RTL: guide on slide 2 · transcript highlight == on-screen slide",
+   "ok": true,
+   "detail": "highlighted sentence slide=2 cue=#1 (slide 2) visible=2 transcript chars=363"
+  },
+  {
+   "t": "2026-10-01T03:00:27Z",
+   "scenario": "S9 Arabic / RTL",
+   "step": "RTL: ArrowLeft = next → 3 · slide on screen",
+   "ok": true,
+   "detail": "visible slide 3 (expected 3) hash=#/03"
+  },
+  {
+   "t": "2026-10-01T03:00:27Z",
+   "scenario": "S9 Arabic / RTL",
+   "step": "RTL: ArrowLeft = next → 3 · clip == slide mapping",
+   "ok": true,
+   "detail": "bar clip NAR-01 vs expected NAR-01 for slide 3 (1 ms)"
+  },
+  {
+   "t": "2026-10-01T03:00:27Z",
+   "scenario": "S9 Arabic / RTL",
+   "step": "RTL: ArrowLeft = next → 3 · audio playing ≤1 s",
+   "ok": true,
+   "detail": "paused=false src=guide-01-the-pact-df1pHtGsVr.mp3 ct=1.1 playingEvents=0 rejected=none (4 ms)"
+  },
+  {
+   "t": "2026-10-01T03:00:28Z",
+   "scenario": "S9 Arabic / RTL",
+   "step": "RTL: ArrowLeft = next → 3 · audio progressing",
+   "ok": true,
+   "detail": "currentTime 1.1 → 13.15"
+  },
+  {
+   "t": "2026-10-01T03:00:28Z",
+   "scenario": "S9 Arabic / RTL",
+   "step": "RTL: ArrowLeft = next → 3 · active cue narrates visible slide",
+   "ok": true,
+   "detail": "cue #3 (slide 3) vs visible 3; audio 13.17s; expected first cue #3"
+  },
+  {
+   "t": "2026-10-01T03:00:28Z",
+   "scenario": "S9 Arabic / RTL",
+   "step": "RTL: ArrowLeft = next → 3 · CC caption == active cue text",
+   "ok": true,
+   "detail": "caption=\"It is a community proposal from ODA and AI Rev, de\" cue=\"It is a community proposal from ODA and AI Rev, de\""
+  },
+  {
+   "t": "2026-10-01T03:00:28Z",
+   "scenario": "S9 Arabic / RTL",
+   "step": "RTL: ArrowLeft = next → 3 · transcript highlight == on-screen slide",
+   "ok": true,
+   "detail": "highlighted sentence slide=3 cue=#3 (slide 3) visible=3 transcript chars=363"
+  },
+  {
+   "t": "2026-10-01T03:00:28Z",
+   "scenario": "S9 Arabic / RTL",
+   "step": "RTL: rapid ArrowLeft ×4 → 7 · slide on screen",
+   "ok": true,
+   "detail": "visible slide 7 (expected 7) hash=#/07"
+  },
+  {
+   "t": "2026-10-01T03:00:28Z",
+   "scenario": "S9 Arabic / RTL",
+   "step": "RTL: rapid ArrowLeft ×4 → 7 · clip == slide mapping",
+   "ok": true,
+   "detail": "bar clip NAR-02 vs expected NAR-02 for slide 7 (1 ms)"
+  },
+  {
+   "t": "2026-10-01T03:00:28Z",
+   "scenario": "S9 Arabic / RTL",
+   "step": "RTL: rapid ArrowLeft ×4 → 7 · audio playing ≤1 s",
+   "ok": true,
+   "detail": "paused=false src=guide-02-community-model-9gUnFBtxrM.mp3 ct=2.27 playingEvents=0 rejected=none (5 ms)"
+  },
+  {
+   "t": "2026-10-01T03:00:28Z",
+   "scenario": "S9 Arabic / RTL",
+   "step": "RTL: rapid ArrowLeft ×4 → 7 · audio progressing",
+   "ok": true,
+   "detail": "currentTime 2.27 → 3.47"
+  },
+  {
+   "t": "2026-10-01T03:00:28Z",
+   "scenario": "S9 Arabic / RTL",
+   "step": "RTL: rapid ArrowLeft ×4 → 7 · active cue narrates visible slide",
+   "ok": true,
+   "detail": "cue #2 (slide 7) vs visible 7; audio 3.47s; expected first cue #2"
+  },
+  {
+   "t": "2026-10-01T03:00:28Z",
+   "scenario": "S9 Arabic / RTL",
+   "step": "RTL: rapid ArrowLeft ×4 → 7 · CC caption == active cue text",
+   "ok": true,
+   "detail": "caption=\"Every webinar, chapter event and challenge should \" cue=\"Every webinar, chapter event and challenge should \""
+  },
+  {
+   "t": "2026-10-01T03:00:28Z",
+   "scenario": "S9 Arabic / RTL",
+   "step": "RTL: rapid ArrowLeft ×4 → 7 · transcript highlight == on-screen slide",
+   "ok": true,
+   "detail": "highlighted sentence slide=7 cue=#2 (slide 7) visible=7 transcript chars=409"
+  },
+  {
+   "t": "2026-10-01T03:00:28Z",
+   "scenario": "S9 Arabic / RTL",
+   "step": "RTL: ArrowRight = previous → 6 · slide on screen",
+   "ok": true,
+   "detail": "visible slide 6 (expected 6) hash=#/06"
+  },
+  {
+   "t": "2026-10-01T03:00:28Z",
+   "scenario": "S9 Arabic / RTL",
+   "step": "RTL: ArrowRight = previous → 6 · clip == slide mapping",
+   "ok": true,
+   "detail": "bar clip NAR-02 vs expected NAR-02 for slide 6 (2 ms)"
+  },
+  {
+   "t": "2026-10-01T03:00:28Z",
+   "scenario": "S9 Arabic / RTL",
+   "step": "RTL: ArrowRight = previous → 6 · audio playing ≤1 s",
+   "ok": true,
+   "detail": "paused=false src=guide-02-community-model-9gUnFBtxrM.mp3 ct=3.52 playingEvents=0 rejected=none (5 ms)"
+  },
+  {
+   "t": "2026-10-01T03:00:29Z",
+   "scenario": "S9 Arabic / RTL",
+   "step": "RTL: ArrowRight = previous → 6 · audio progressing",
+   "ok": false,
+   "detail": "currentTime 3.53 → 1"
+  },
+  {
+   "t": "2026-10-01T03:00:29Z",
+   "scenario": "S9 Arabic / RTL",
+   "step": "RTL: ArrowRight = previous → 6 · active cue narrates visible slide",
+   "ok": true,
+   "detail": "cue #1 (slide 4) vs visible 6; audio 1.01s; expected first cue #1"
+  },
+  {
+   "t": "2026-10-01T03:00:29Z",
+   "scenario": "S9 Arabic / RTL",
+   "step": "RTL: ArrowRight = previous → 6 · CC caption == active cue text",
+   "ok": true,
+   "detail": "caption=\"Section two, the Community Model.\" cue=\"Section two, the Community Model.\""
+  },
+  {
+   "t": "2026-10-01T03:00:29Z",
+   "scenario": "S9 Arabic / RTL",
+   "step": "RTL: ArrowRight = previous → 6 · transcript highlight == on-screen slide",
+   "ok": true,
+   "detail": "highlighted sentence slide=4 cue=#1 (slide 4) visible=6 transcript chars=409"
+  },
+  {
+   "t": "2026-10-01T03:00:29Z",
+   "scenario": "S9 Arabic / RTL",
+   "step": "RTL: bar is dir=rtl and shows the Arabic status text",
+   "ok": true,
+   "detail": "{\"dir\":\"rtl\",\"title\":\"جارٍ السرد · 02 نموذج المجتمع · الشريحة 6 من 39\",\"live\":true}"
+  },
+  {
+   "t": "2026-10-01T03:00:32Z",
+   "scenario": "S10 autoplay policy / persisted narration-on",
+   "step": "reload with narration-on persisted: no audio before a gesture (autoplay policy respected)",
+   "ok": true,
+   "detail": "paused=true play-rejected=none"
+  },
+  {
+   "t": "2026-10-01T03:00:32Z",
+   "scenario": "S10 autoplay policy / persisted narration-on",
+   "step": "blocked state is surfaced in the Guide bar (\"tap to start\")",
+   "ok": false,
+   "detail": "data-blocked=null title=\"Ready · 02 Community model · Slide 5 of 39\""
+  },
+  {
+   "t": "2026-10-01T03:00:32Z",
+   "scenario": "S10 autoplay policy / persisted narration-on",
+   "step": "first click unlocks and narration starts on the visible slide (5) · slide on screen",
+   "ok": true,
+   "detail": "visible slide 5 (expected 5) hash=#/05"
+  },
+  {
+   "t": "2026-10-01T03:00:32Z",
+   "scenario": "S10 autoplay policy / persisted narration-on",
+   "step": "first click unlocks and narration starts on the visible slide (5) · clip == slide mapping",
+   "ok": true,
+   "detail": "bar clip NAR-02 vs expected NAR-02 for slide 5 (1 ms)"
+  },
+  {
+   "t": "2026-10-01T03:00:33Z",
+   "scenario": "S10 autoplay policy / persisted narration-on",
+   "step": "first click unlocks and narration starts on the visible slide (5) · audio playing ≤1 s",
+   "ok": false,
+   "detail": "paused=true src=guide-03-six-pillars-yxVqZJ2k1a.mp3 ct=0 playingEvents=0 rejected=none (1055 ms)"
+  },
+  {
+   "t": "2026-10-01T03:00:34Z",
+   "scenario": "S10 autoplay policy / persisted narration-on",
+   "step": "first click unlocks and narration starts on the visible slide (5) · active cue narrates visible slide",
+   "ok": false,
+   "detail": "cue #null (slide null) vs visible 5; audio 0s; expected first cue #1"
+  },
+  {
+   "t": "2026-10-01T03:00:34Z",
+   "scenario": "S10 autoplay policy / persisted narration-on",
+   "step": "first click unlocks and narration starts on the visible slide (5) · CC caption == active cue text",
+   "ok": true,
+   "detail": "caption=\"\" cue=\"\""
+  },
+  {
+   "t": "2026-10-01T03:00:34Z",
+   "scenario": "S10 autoplay policy / persisted narration-on",
+   "step": "first click unlocks and narration starts on the visible slide (5) · transcript highlight == on-screen slide",
+   "ok": false,
+   "detail": "highlighted sentence slide=null cue=#null (slide undefined) visible=5 transcript chars=409"
+  }
+ ],
+ "defects": [
+  {
+   "t": "2026-10-01T02:59:55Z",
+   "scenario": "S3 N shortcut",
+   "step": "paused + ArrowRight: caption/transcript follow the slide without audio",
+   "ok": false,
+   "detail": "n=6 clip=NAR-02 paused=false cue=#1 (slide 4) highlight slide=4",
+   "repro": "press N (pause), then ArrowRight: the transcript highlight/CC must move to the new slide while paused"
+  },
+  {
+   "t": "2026-10-01T02:59:55Z",
+   "scenario": "S3 N shortcut",
+   "step": "N resumes at the sentence of the slide on screen (6) · audio progressing",
+   "ok": false,
+   "detail": "currentTime 1.48 → 0.09",
+   "repro": "press N again"
+  },
+  {
+   "t": "2026-10-01T02:59:59Z",
+   "scenario": "S4 Esc overview + deep links + ?intro=1",
+   "step": "#slide-07 alias deep link → slide 7",
+   "ok": false,
+   "detail": "n=1 clip=NAR-00 hash=#/01",
+   "repro": "set location.hash = \"#slide-07\""
+  },
+  {
+   "t": "2026-10-01T03:00:06Z",
+   "scenario": "S5 slide-38 country tabs",
+   "step": "tab lb → narration seeks to its sentence (cue #2)",
+   "ok": false,
+   "detail": "cue=#5 audio=17.89s tab aria-selected=false paused=false",
+   "repro": "on slide 38 while narrating, click the LB tab"
+  },
+  {
+   "t": "2026-10-01T03:00:10Z",
+   "scenario": "S6 Replay intro and return",
+   "step": "guide/narration is silent while the intro film plays",
+   "ok": false,
+   "detail": "audio=intro-narration.mp3 paused=false play() calls=,guide-02-community-model-9gUnFBtxrM.mp3",
+   "repro": "click Replay intro while narrating"
+  },
+  {
+   "t": "2026-10-01T03:00:12Z",
+   "scenario": "S6 Replay intro and return",
+   "step": "after the replayed intro the guide narrates slide 1 · slide on screen",
+   "ok": false,
+   "detail": "visible slide 4 (expected 1) hash=#/04",
+   "repro": "Replay intro → Esc"
+  },
+  {
+   "t": "2026-10-01T03:00:12Z",
+   "scenario": "S6 Replay intro and return",
+   "step": "after the replayed intro the guide narrates slide 1 · clip == slide mapping",
+   "ok": false,
+   "detail": "bar clip  vs expected NAR-00 for slide 1 (1546 ms)",
+   "repro": "Replay intro → Esc"
+  },
+  {
+   "t": "2026-10-01T03:00:12Z",
+   "scenario": "S6 Replay intro and return",
+   "step": "after the replayed intro the guide narrates slide 1 · audio playing ≤1 s",
+   "ok": false,
+   "detail": "paused=false src=intro-narration.mp3 ct=13.18 playingEvents=0 rejected=none (1612 ms)",
+   "repro": "Replay intro → Esc"
+  },
+  {
+   "t": "2026-10-01T03:00:14Z",
+   "scenario": "S6 Replay intro and return",
+   "step": "after the replayed intro the guide narrates slide 1 · active cue narrates visible slide",
+   "ok": false,
+   "detail": "cue #null (slide null) vs visible 1; audio 18.16s; expected first cue #1",
+   "repro": "Replay intro → Esc"
+  },
+  {
+   "t": "2026-10-01T03:00:14Z",
+   "scenario": "S6 Replay intro and return",
+   "step": "after the replayed intro the guide narrates slide 1 · transcript highlight == on-screen slide",
+   "ok": false,
+   "detail": "highlighted sentence slide=null cue=#null (slide undefined) visible=1 transcript chars=309",
+   "repro": "Replay intro → Esc"
+  },
+  {
+   "t": "2026-10-01T03:00:17Z",
+   "scenario": "S7 tab hidden/visible + audio-focus loss",
+   "step": "external pause recorded",
+   "ok": false,
+   "detail": "paused=false",
+   "repro": ""
+  },
+  {
+   "t": "2026-10-01T03:00:21Z",
+   "scenario": "S8 phone 390×844",
+   "step": "phone: bar next → 3 · active cue narrates visible slide",
+   "ok": false,
+   "detail": "cue #2 (slide 2) vs visible 3; audio 7.6s; expected first cue #3",
+   "repro": "phone viewport, tap the bar next button"
+  },
+  {
+   "t": "2026-10-01T03:00:21Z",
+   "scenario": "S8 phone 390×844",
+   "step": "phone: bar next → 3 · transcript highlight == on-screen slide",
+   "ok": false,
+   "detail": "highlighted sentence slide=2 cue=#2 (slide 2) visible=3 transcript chars=363",
+   "repro": "phone viewport, tap the bar next button"
+  },
+  {
+   "t": "2026-10-01T03:00:22Z",
+   "scenario": "S8 phone 390×844",
+   "step": "phone: bar next → 4 (new clip) · slide on screen",
+   "ok": false,
+   "detail": "visible slide 3 (expected 4) hash=#/03",
+   "repro": ""
+  },
+  {
+   "t": "2026-10-01T03:00:22Z",
+   "scenario": "S8 phone 390×844",
+   "step": "phone: bar next → 4 (new clip) · clip == slide mapping",
+   "ok": false,
+   "detail": "bar clip NAR-01 vs expected NAR-02 for slide 4 (1551 ms)",
+   "repro": ""
+  },
+  {
+   "t": "2026-10-01T03:00:22Z",
+   "scenario": "S8 phone 390×844",
+   "step": "phone: bar next → 4 (new clip) · audio playing ≤1 s",
+   "ok": false,
+   "detail": "paused=false src=guide-01-the-pact-df1pHtGsVr.mp3 ct=14.22 playingEvents=0 rejected=none (1615 ms)",
+   "repro": ""
+  },
+  {
+   "t": "2026-10-01T03:00:24Z",
+   "scenario": "S8 phone 390×844",
+   "step": "phone: bar next → 4 (new clip) · active cue narrates visible slide",
+   "ok": false,
+   "detail": "cue #4 (slide 3) vs visible 4; audio 19.19s; expected first cue #1",
+   "repro": ""
+  },
+  {
+   "t": "2026-10-01T03:00:24Z",
+   "scenario": "S8 phone 390×844",
+   "step": "phone: bar next → 4 (new clip) · transcript highlight == on-screen slide",
+   "ok": false,
+   "detail": "highlighted sentence slide=3 cue=#4 (slide undefined) visible=4 transcript chars=363",
+   "repro": ""
+  },
+  {
+   "t": "2026-10-01T03:00:29Z",
+   "scenario": "S9 Arabic / RTL",
+   "step": "RTL: ArrowRight = previous → 6 · audio progressing",
+   "ok": false,
+   "detail": "currentTime 3.53 → 1",
+   "repro": ""
+  },
+  {
+   "t": "2026-10-01T03:00:32Z",
+   "scenario": "S10 autoplay policy / persisted narration-on",
+   "step": "blocked state is surfaced in the Guide bar (\"tap to start\")",
+   "ok": false,
+   "detail": "data-blocked=null title=\"Ready · 02 Community model · Slide 5 of 39\"",
+   "repro": "persist narration-on, reload /#/5, look at the Guide bar before any click"
+  },
+  {
+   "t": "2026-10-01T03:00:33Z",
+   "scenario": "S10 autoplay policy / persisted narration-on",
+   "step": "first click unlocks and narration starts on the visible slide (5) · audio playing ≤1 s",
+   "ok": false,
+   "detail": "paused=true src=guide-03-six-pillars-yxVqZJ2k1a.mp3 ct=0 playingEvents=0 rejected=none (1055 ms)",
+   "repro": "click anywhere on the slide after the blocked state"
+  },
+  {
+   "t": "2026-10-01T03:00:34Z",
+   "scenario": "S10 autoplay policy / persisted narration-on",
+   "step": "first click unlocks and narration starts on the visible slide (5) · active cue narrates visible slide",
+   "ok": false,
+   "detail": "cue #null (slide null) vs visible 5; audio 0s; expected first cue #1",
+   "repro": "click anywhere on the slide after the blocked state"
+  },
+  {
+   "t": "2026-10-01T03:00:34Z",
+   "scenario": "S10 autoplay policy / persisted narration-on",
+   "step": "first click unlocks and narration starts on the visible slide (5) · transcript highlight == on-screen slide",
+   "ok": false,
+   "detail": "highlighted sentence slide=null cue=#null (slide undefined) visible=5 transcript chars=409",
+   "repro": "click anywhere on the slide after the blocked state"
+  }
+ ]
+}

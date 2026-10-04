@@ -1,0 +1,362 @@
+[
+ {
+  "segmentId": "intro",
+  "slideId": "intro",
+  "text": "Three years in the making, built by AIREV in the UAE. Introducing Athar OS, your mothership for agents. Create them. Connect them. Put them to work together. One powerful harness for the tools and workflows that matter. Built to power organizations, ready to help power a nation. Athar OS: Agentic AI for all.",
+  "voiceId": "tnSpp4vdxKPjI9w0GnoV",
+  "modelId": "eleven_multilingual_v2",
+  "status": "recovered",
+  "audio": "/audio/intro-narration.mp3"
+ },
+ {
+  "segmentId": "s01",
+  "slideId": "s-cover",
+  "text": "Welcome to the Athar Open Agentic Pact — a community proposal by the Office of Development Affairs and AIREV. Build once. Run everywhere. Lift everyone. Over the next thirty-nine slides we set out the agreement, the community, the six pillars, the actors, the roadmap, the impact tiers and Athar OS.",
+  "voiceId": "tnSpp4vdxKPjI9w0GnoV",
+  "modelId": "eleven_multilingual_v2",
+  "status": "to-generate",
+  "audio": null
+ },
+ {
+  "segmentId": "s02",
+  "slideId": "s-hero",
+  "text": "One open pact for agentic AI that serves people. Athar joins institutions, builders and learners around a single, published standard, so an agent built in one place can be trusted, reused and measured everywhere. The promise is simple: agentic AI that leaves a lasting, verifiable trace in people's lives.",
+  "voiceId": "tnSpp4vdxKPjI9w0GnoV",
+  "modelId": "eleven_multilingual_v2",
+  "status": "to-generate",
+  "audio": null
+ },
+ {
+  "segmentId": "s03",
+  "slideId": "s-why-pact",
+  "text": "Why a pact, and not just a product launch? Because tools alone do not change outcomes. A pact commits every signatory to shared rules, open interfaces and independent measurement. It turns scattered pilots into a coordinated programme with named owners, agreed baselines and results that can be audited.",
+  "voiceId": "tnSpp4vdxKPjI9w0GnoV",
+  "modelId": "eleven_multilingual_v2",
+  "status": "to-generate",
+  "audio": null
+ },
+ {
+  "segmentId": "s04",
+  "slideId": "s-four-outcomes",
+  "text": "Section two: the community model. Every webinar, chapter event and challenge should lead somewhere specific and real. So the model is built around four outcomes for every participant. One: learn agentic AI, building a practical understanding of agents, prompting, verification and responsible use. Two: build a useful agent, moving from an idea to a validated agent through the builder journey and the marketplace. Three: deploy through an institution, putting that agent to work inside a named, accountable deployment. And four: measure a real-world benefit, with baseline and outcome evidence of time saved, better service or wider reach.",
+  "voiceId": "tnSpp4vdxKPjI9w0GnoV",
+  "modelId": "eleven_multilingual_v2",
+  "status": "recovered-text",
+  "audio": null
+ },
+ {
+  "segmentId": "s05",
+  "slideId": "s-managed-programme",
+  "text": "This is a managed global programme, not a social channel. A Community Director, country chapter leads and a governance council run it against a published calendar. Every activity has an owner, a target and a report, so membership means participation in a working system rather than a mailing list.",
+  "voiceId": "tnSpp4vdxKPjI9w0GnoV",
+  "modelId": "eleven_multilingual_v2",
+  "status": "to-generate",
+  "audio": null
+ },
+ {
+  "segmentId": "s06",
+  "slideId": "s-discord-home",
+  "text": "Discord is the always-on home of the community. Chapters, cohorts and office hours live in structured channels with clear moderation and escalation. It is where builders ask questions, showcase agents and find collaborators between events — governed, searchable and open to every member.",
+  "voiceId": "tnSpp4vdxKPjI9w0GnoV",
+  "modelId": "eleven_multilingual_v2",
+  "status": "to-generate",
+  "audio": null
+ },
+ {
+  "segmentId": "s07",
+  "slideId": "s-country-chapters",
+  "text": "Country chapters bring the pact to life locally. Each chapter adapts the shared curriculum to its language and institutions, hosts events, and connects local builders with government and industry partners. Wave one starts with the UAE base plus two countries, then scales through the roadmap.",
+  "voiceId": "tnSpp4vdxKPjI9w0GnoV",
+  "modelId": "eleven_multilingual_v2",
+  "status": "to-generate",
+  "audio": null
+ },
+ {
+  "segmentId": "s08",
+  "slideId": "s-learning-formats",
+  "text": "Webinars, bootcamps and institutional academies form the learning ladder. Webinars introduce agentic AI, bootcamps build working agents in days, and academies embed the practice inside ministries, universities and companies. Every step issues evidence a learner can carry into the marketplace.",
+  "voiceId": "tnSpp4vdxKPjI9w0GnoV",
+  "modelId": "eleven_multilingual_v2",
+  "status": "to-generate",
+  "audio": null
+ },
+ {
+  "segmentId": "s09",
+  "slideId": "s-challenges-showcases",
+  "text": "Challenges, showcases and the annual summit turn learning into visible results. Time-boxed challenges solve real institutional problems, showcases publish validated agents, and the Global Summit reports the year's outcomes to funders and governments in one place.",
+  "voiceId": "tnSpp4vdxKPjI9w0GnoV",
+  "modelId": "eleven_multilingual_v2",
+  "status": "to-generate",
+  "audio": null
+ },
+ {
+  "segmentId": "s10",
+  "slideId": "s-office-hours",
+  "text": "Weekly office hours and tiered support keep builders unblocked. Level one answers common questions in the community, level two brings platform engineers, and level three escalates to AIREV specialists. Institutions on a licence receive committed response times.",
+  "voiceId": "tnSpp4vdxKPjI9w0GnoV",
+  "modelId": "eleven_multilingual_v2",
+  "status": "to-generate",
+  "audio": null
+ },
+ {
+  "segmentId": "s11",
+  "slideId": "s-agent-marketplace",
+  "text": "The builder journey runs from an idea to a validated agent. Prototype, evaluate, validate — then publish in the agent marketplace with a disclosed intended use, a named owner and supported languages. Specialist agents can earn revenue share, sustaining the builders who create them.",
+  "voiceId": "tnSpp4vdxKPjI9w0GnoV",
+  "modelId": "eleven_multilingual_v2",
+  "status": "to-generate",
+  "audio": null
+ },
+ {
+  "segmentId": "s12",
+  "slideId": "s-decision-table",
+  "text": "The decision in one page. Approve the two-engine model — institutions and community — appoint the Community Director, select the first anchor institutions, and fund the founding cohort. Everything else on the roadmap follows from these four decisions.",
+  "voiceId": "tnSpp4vdxKPjI9w0GnoV",
+  "modelId": "eleven_multilingual_v2",
+  "status": "to-generate",
+  "audio": null
+ },
+ {
+  "segmentId": "s13",
+  "slideId": "s-pillar-plugins",
+  "text": "Plugins are the connective tissue. Every agent reaches tools, data sources and services only through one shared plugin standard. Plugins are published, versioned and discoverable in the marketplace, each carrying a disclosed intended use, a named owner and supported languages — across institutions, countries and models.",
+  "voiceId": "tnSpp4vdxKPjI9w0GnoV",
+  "modelId": "eleven_multilingual_v2",
+  "status": "to-generate",
+  "audio": null
+ },
+ {
+  "segmentId": "s14",
+  "slideId": "s-pillar-skills",
+  "text": "Reusable skills, built once and shared. A skill packages a capability so any validated agent can load and reuse it. Skills pass through the same builder journey — prototype, evaluate, validate — with no-code pathways for practitioners and pro-code pathways for developers.",
+  "voiceId": "tnSpp4vdxKPjI9w0GnoV",
+  "modelId": "eleven_multilingual_v2",
+  "status": "to-generate",
+  "audio": null
+ },
+ {
+  "segmentId": "s15",
+  "slideId": "s-pillar-open-ecosystem",
+  "text": "Open where possible, governed where necessary. Interfaces, curricula and the plugin standard are open; identity, data residency and deployment approvals are governed. The balance lets institutions adopt with confidence while the community keeps building in the open.",
+  "voiceId": "tnSpp4vdxKPjI9w0GnoV",
+  "modelId": "eleven_multilingual_v2",
+  "status": "to-generate",
+  "audio": null
+ },
+ {
+  "segmentId": "s16",
+  "slideId": "s-pillar-cross-model",
+  "text": "Cross-model interoperability by design. The pact does not bind any nation or institution to a single model. Agents, skills and plugins run across leading models, so partners can switch providers, host sovereign models and stay in control of cost and residency.",
+  "voiceId": "tnSpp4vdxKPjI9w0GnoV",
+  "modelId": "eleven_multilingual_v2",
+  "status": "to-generate",
+  "audio": null
+ },
+ {
+  "segmentId": "s17",
+  "slideId": "s-pillar-universal-licence",
+  "text": "Universal API licences managed by Athar. Athar procures and manages the API licences and keys the community needs, on one reference ladder of seat tiers, with three ways to deploy: software-only on your own hardware, self-hosted in your cloud, or fully managed by AIREV. A thirty-day pilot proves value first.",
+  "voiceId": "tnSpp4vdxKPjI9w0GnoV",
+  "modelId": "eleven_multilingual_v2",
+  "status": "to-generate",
+  "audio": null
+ },
+ {
+  "segmentId": "s18",
+  "slideId": "s-pillar-upskilling",
+  "text": "Agentic AI for all, not for a few. The pact is bilingual by design, accessible by requirement, and priced so a school or clinic can start small. Reach is measured, not assumed — with learners, deployments and benefits reported by country and by institution.",
+  "voiceId": "tnSpp4vdxKPjI9w0GnoV",
+  "modelId": "eleven_multilingual_v2",
+  "status": "to-generate",
+  "audio": null
+ },
+ {
+  "segmentId": "s19",
+  "slideId": "s-pact-principles",
+  "text": "Six pledges stand behind the Athar Pact: openness, interoperability, accountability, inclusion, sovereignty and measured impact. Each pledge maps to a pillar, a governance body and a metric, so signing is a commitment that can be checked, not a statement of intent.",
+  "voiceId": "tnSpp4vdxKPjI9w0GnoV",
+  "modelId": "eleven_multilingual_v2",
+  "status": "to-generate",
+  "audio": null
+ },
+ {
+  "segmentId": "s20",
+  "slideId": "s-how-to-sign",
+  "text": "How a member signs the pact. Choose a role — signatory, governor, builder or learner — accept the pledges, name an accountable owner, and commit to one real outcome. The pledge is countersigned by the governance council and published in the registry within a quarter.",
+  "voiceId": "tnSpp4vdxKPjI9w0GnoV",
+  "modelId": "eleven_multilingual_v2",
+  "status": "to-generate",
+  "audio": null
+ },
+ {
+  "segmentId": "s21",
+  "slideId": "s-actors-wall",
+  "text": "The actors of the pact: ministries and public institutions, universities and academies, enterprises and small businesses, funders, technology partners and the builders and learners themselves. The next four slides describe who signs, who governs, who builds and who learns.",
+  "voiceId": "tnSpp4vdxKPjI9w0GnoV",
+  "modelId": "eleven_multilingual_v2",
+  "status": "to-generate",
+  "audio": null
+ },
+ {
+  "segmentId": "s22",
+  "slideId": "s-who-signs",
+  "text": "Who signs the pact. Institutions sign to deploy validated agents inside accountable workflows, backed by a licence, a named owner and quarterly reporting. Signing gives access to the marketplace, the academies and the shared plugin standard.",
+  "voiceId": "tnSpp4vdxKPjI9w0GnoV",
+  "modelId": "eleven_multilingual_v2",
+  "status": "to-generate",
+  "audio": null
+ },
+ {
+  "segmentId": "s23",
+  "slideId": "s-who-governs",
+  "text": "Who governs the pact. A governance council of signatories sets standards and resolves escalations, an independent evaluator verifies outcomes, and licence management sits with Athar. Decisions, minutes and metrics are published on a fixed calendar.",
+  "voiceId": "tnSpp4vdxKPjI9w0GnoV",
+  "modelId": "eleven_multilingual_v2",
+  "status": "to-generate",
+  "audio": null
+ },
+ {
+  "segmentId": "s24",
+  "slideId": "s-who-builds",
+  "text": "Who builds on the pact. Developers, practitioners and student teams build agents and skills through the marketplace, with office hours, review and revenue share for specialist work. Builders keep their intellectual property while publishing under the shared standard.",
+  "voiceId": "tnSpp4vdxKPjI9w0GnoV",
+  "modelId": "eleven_multilingual_v2",
+  "status": "to-generate",
+  "audio": null
+ },
+ {
+  "segmentId": "s25",
+  "slideId": "s-who-learns",
+  "text": "Who learns through the pact. Public servants, teachers, clinicians, farmers and young people move from foundations to certification. Year-one targets: ten thousand learners, two thousand five hundred certified and one hundred facilitators — each recorded against a baseline.",
+  "voiceId": "tnSpp4vdxKPjI9w0GnoV",
+  "modelId": "eleven_multilingual_v2",
+  "status": "to-generate",
+  "audio": null
+ },
+ {
+  "segmentId": "s26",
+  "slideId": "s-governance-licence",
+  "text": "Governance bodies and licence management. The council, the evaluator and the licence office each have a charter, a chair and a reporting line. Licence fees are open-book, unspent funds are returned, and every universal API key is traceable to a signatory and a purpose.",
+  "voiceId": "tnSpp4vdxKPjI9w0GnoV",
+  "modelId": "eleven_multilingual_v2",
+  "status": "to-generate",
+  "audio": null
+ },
+ {
+  "segmentId": "s27",
+  "slideId": "s-roadmap",
+  "text": "The twelve-month implementation roadmap: days one to thirty stand up governance and the founding cohort; months two to six open chapters, academies and the first deployments; months seven to twelve deliver ten chapters, the Global Summit and the first annual outcome report.",
+  "voiceId": "tnSpp4vdxKPjI9w0GnoV",
+  "modelId": "eleven_multilingual_v2",
+  "status": "to-generate",
+  "audio": null
+ },
+ {
+  "segmentId": "s28",
+  "slideId": "it-outcomes",
+  "text": "Section seven: impact and funding. Impact is measured in three tiers, from learning, to deployed agents, to real-world benefit. The pact proposal of the twenty-fourth of September and the impact-tiers paper set the baseline now, with gating items such as the licence field and open-book fees resolved first. From 2027, quarterly outcome reports track the first outcomes, and later we measure learning gains, farmer income and asset-level results. Funding follows the same logic: universal API licences are managed by Athar, marketplace review and revenue share sustain builders, and sovereign pilots are offered as Option A, B or C so each partner can fund the model that fits.",
+  "voiceId": "tnSpp4vdxKPjI9w0GnoV",
+  "modelId": "eleven_multilingual_v2",
+  "status": "recovered-text",
+  "audio": null
+ },
+ {
+  "segmentId": "s29",
+  "slideId": "it-tiers",
+  "text": "Three impact tiers, one delivery model. Access — Lebanon's One Million AI Experts. Ownership — India's one hundred government schools and ten thousand AI PCs. Legacy — a Kenyan-owned sovereign node that feeds farmers. Each tier has a baseline, an evaluator and a funding envelope.",
+  "voiceId": "tnSpp4vdxKPjI9w0GnoV",
+  "modelId": "eleven_multilingual_v2",
+  "status": "to-generate",
+  "audio": null
+ },
+ {
+  "segmentId": "s30",
+  "slideId": "it-metrics",
+  "text": "What we deliver, measurably. Access: one million citizens certified, eighteen thousand experts in daily use. Ownership: learning gains in one hundred schools. Legacy: farmers served and an asset transferred. Every agreement carries named cohorts, independent evaluation, quarterly reports and open-book costs — with verified news as evidence.",
+  "voiceId": "tnSpp4vdxKPjI9w0GnoV",
+  "modelId": "eleven_multilingual_v2",
+  "status": "to-generate",
+  "audio": null
+ },
+ {
+  "segmentId": "s31",
+  "slideId": "it-sustain",
+  "text": "How the community sustains itself. Universal API licences fund the platform, marketplace review and revenue share sustain builders, and sovereign pilots are offered as options A, B or C. Chapters and academies generate trained local operators, so each country grows its own capacity.",
+  "voiceId": "tnSpp4vdxKPjI9w0GnoV",
+  "modelId": "eleven_multilingual_v2",
+  "status": "to-generate",
+  "audio": null
+ },
+ {
+  "segmentId": "s32",
+  "slideId": "it-partners",
+  "text": "Delivered with candidate partners across the humanitarian, development and technology sectors, shown here for internal review only pending written authorisation. Funders receive the same open-book reporting as signatories, aligned to the three impact tiers.",
+  "voiceId": "tnSpp4vdxKPjI9w0GnoV",
+  "modelId": "eleven_multilingual_v2",
+  "status": "to-generate",
+  "audio": null
+ },
+ {
+  "segmentId": "s33",
+  "slideId": "it-join",
+  "text": "Join the pact. You have seen the agreement, the community model, the six pillars, the actors, the roadmap, the impact tiers and Athar OS. Now the invitation is yours. Choose your role: sign, govern, build or learn. Commit to one real outcome, a learner trained, an agent built, a deployment inside your institution, or a benefit measured. The founding cohort starts this quarter. Open the pledge, add your name, and help us build agentic AI that leaves a lasting trace. This is the Athar Open Agentic Pact. Join us.",
+  "voiceId": "tnSpp4vdxKPjI9w0GnoV",
+  "modelId": "eleven_multilingual_v2",
+  "status": "recovered-text",
+  "audio": null
+ },
+ {
+  "segmentId": "s34",
+  "slideId": "aos-overview",
+  "text": "Section eight: Athar OS — an agentic harness that empowers nations. One harness for nations, institutions, builders, agents, skills, plugins, licences and sovereign compute — governed by the pact and built to run anywhere.",
+  "voiceId": "tnSpp4vdxKPjI9w0GnoV",
+  "modelId": "eleven_multilingual_v2",
+  "status": "to-generate",
+  "audio": null
+ },
+ {
+  "segmentId": "s35",
+  "slideId": "aos-tour",
+  "text": "The product tour shows the real screens: the marketplace, the playground, the agent flow builder and the tools and deployment views, captured from the Athar OS wireframes and the launch film.",
+  "voiceId": "tnSpp4vdxKPjI9w0GnoV",
+  "modelId": "eleven_multilingual_v2",
+  "status": "to-generate",
+  "audio": null
+ },
+ {
+  "segmentId": "s36",
+  "slideId": "aos-roadmap",
+  "text": "Roadmap — now, next, later. Five tracks: platform, community and skills, plugins and universal APIs, sovereign deployment, and impact and evaluation. Items with a deck source are dated; items without one are marked as targets until the council confirms them.",
+  "voiceId": "tnSpp4vdxKPjI9w0GnoV",
+  "modelId": "eleven_multilingual_v2",
+  "status": "to-generate",
+  "audio": null
+ },
+ {
+  "segmentId": "s37",
+  "slideId": "aos-deploy",
+  "text": "Deploy anywhere, own it. Option A runs software-only on your own hardware, option B is self-hosted in your cloud, option C is fully managed by AIREV. Sovereign nodes transfer to national ownership after five to seven years, with local operators trained to run them.",
+  "voiceId": "tnSpp4vdxKPjI9w0GnoV",
+  "modelId": "eleven_multilingual_v2",
+  "status": "to-generate",
+  "audio": null
+ },
+ {
+  "segmentId": "s38",
+  "slideId": "aos-nations",
+  "text": "Nations empowered. Lebanon, Access tier, ten million dollars: One Million Lebanese AI Experts, now. India, Ownership, thirteen point seven million: one hundred government schools, next. Kenya, Legacy, around thirty-three million: a sovereign node that feeds farmers, later. Baselines come from the World Bank.",
+  "voiceId": "tnSpp4vdxKPjI9w0GnoV",
+  "modelId": "eleven_multilingual_v2",
+  "status": "to-generate",
+  "audio": null
+ },
+ {
+  "segmentId": "s39",
+  "slideId": "s-closing",
+  "text": "Sign the Athar Open Agentic Pact. Approve the two-engine model, select the first institutional anchor, appoint the Community Director, and open the founding cohort this quarter. Build once. Run everywhere. Lift everyone. Thank you.",
+  "voiceId": "tnSpp4vdxKPjI9w0GnoV",
+  "modelId": "eleven_multilingual_v2",
+  "status": "to-generate",
+  "audio": null
+ }
+]

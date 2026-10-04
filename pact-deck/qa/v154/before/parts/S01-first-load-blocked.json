@@ -1,0 +1,541 @@
+{
+ "marks": [
+  {
+   "t": "2026-10-01T06:13:06.653Z",
+   "scenario": "S01-first-load-blocked",
+   "step": "no gesture: 3 s after load",
+   "expect": 5,
+   "vis": {
+    "n": 5,
+    "id": "s-managed-programme",
+    "slideId": null
+   },
+   "audio": null,
+   "cc": "Section two, the Community Model.",
+   "guide": {
+    "state": "blocked",
+    "clip": "NAR-02",
+    "slideId": null,
+    "blocked": "true",
+    "status": "Blocked by the browser — tap or press a key to start the guide · slide 5 of 39 · 02 Community model",
+    "tap": false
+   }
+  },
+  {
+   "t": "2026-10-01T06:13:09.273Z",
+   "scenario": "S01-first-load-blocked",
+   "step": "first click on the slide",
+   "expect": 5,
+   "vis": {
+    "n": 7,
+    "id": "s-country-chapters",
+    "slideId": null
+   },
+   "audio": {
+    "src": "guide-02-community-model-9gUnFBtxrM.mp3",
+    "clip": "NAR-02",
+    "t": 2.4,
+    "muted": false
+   },
+   "cc": "Every webinar, chapter event and challenge should lead somewhere real, so the model is built around four outcomes for every participant.",
+   "guide": {
+    "state": "playing",
+    "clip": "NAR-02",
+    "slideId": null,
+    "blocked": "false",
+    "status": "Narrating slide 7 of 39 · 02 Community model",
+    "tap": false
+   }
+  }
+ ],
+ "events": [
+  {
+   "scenario": "S01-first-load-blocked",
+   "t": "2026-10-01T06:13:02.587Z",
+   "ms": 514,
+   "type": "sample",
+   "vis": {
+    "n": 5,
+    "id": "s-managed-programme",
+    "slideId": null
+   },
+   "audio": null,
+   "cc": null,
+   "guide": null,
+   "hash": "#/05"
+  },
+  {
+   "scenario": "S01-first-load-blocked",
+   "t": "2026-10-01T06:13:02.951Z",
+   "ms": 878,
+   "type": "sample",
+   "vis": {
+    "n": 5,
+    "id": "s-managed-programme",
+    "slideId": null
+   },
+   "audio": null,
+   "cc": "",
+   "guide": {
+    "state": "idle",
+    "clip": null,
+    "slideId": null,
+    "gen": null,
+    "status": "No narration for this slide"
+   },
+   "hash": "#/05"
+  },
+  {
+   "scenario": "S01-first-load-blocked",
+   "t": "2026-10-01T06:13:02.957Z",
+   "ms": 884,
+   "type": "media:emptied",
+   "vis": {
+    "n": 5,
+    "id": "s-managed-programme",
+    "slideId": null
+   },
+   "audio": null,
+   "cc": "Section two, the Community Model.",
+   "guide": {
+    "state": "blocked",
+    "clip": "NAR-02",
+    "slideId": null,
+    "gen": null,
+    "status": "Blocked by the browser — tap or press a key to start the guide · slide 5 of 39 · 02 Community model"
+   },
+   "hash": "#/05",
+   "el": "guide-02-community-model-9gUnFBtxrM.mp3",
+   "ct": 0
+  },
+  {
+   "scenario": "S01-first-load-blocked",
+   "t": "2026-10-01T06:13:02.959Z",
+   "ms": 886,
+   "type": "media:loadstart",
+   "vis": {
+    "n": 5,
+    "id": "s-managed-programme",
+    "slideId": null
+   },
+   "audio": null,
+   "cc": "Section two, the Community Model.",
+   "guide": {
+    "state": "blocked",
+    "clip": "NAR-02",
+    "slideId": null,
+    "gen": null,
+    "status": "Blocked by the browser — tap or press a key to start the guide · slide 5 of 39 · 02 Community model"
+   },
+   "hash": "#/05",
+   "el": "guide-02-community-model-9gUnFBtxrM.mp3",
+   "ct": 0
+  },
+  {
+   "scenario": "S01-first-load-blocked",
+   "t": "2026-10-01T06:13:02.959Z",
+   "ms": 886,
+   "type": "media:loadstart",
+   "vis": {
+    "n": 5,
+    "id": "s-managed-programme",
+    "slideId": null
+   },
+   "audio": null,
+   "cc": "Section two, the Community Model.",
+   "guide": {
+    "state": "blocked",
+    "clip": "NAR-02",
+    "slideId": null,
+    "gen": null,
+    "status": "Blocked by the browser — tap or press a key to start the guide · slide 5 of 39 · 02 Community model"
+   },
+   "hash": "#/05",
+   "el": "guide-03-six-pillars-yxVqZJ2k1a.mp3",
+   "ct": 0
+  },
+  {
+   "scenario": "S01-first-load-blocked",
+   "t": "2026-10-01T06:13:02.990Z",
+   "ms": 918,
+   "type": "sample",
+   "vis": {
+    "n": 5,
+    "id": "s-managed-programme",
+    "slideId": null
+   },
+   "audio": null,
+   "cc": "Section two, the Community Model.",
+   "guide": {
+    "state": "blocked",
+    "clip": "NAR-02",
+    "slideId": null,
+    "gen": null,
+    "status": "Blocked by the browser — tap or press a key to start the guide · slide 5 of 39 · 02 Community model"
+   },
+   "hash": "#/05"
+  },
+  {
+   "scenario": "S01-first-load-blocked",
+   "t": "2026-10-01T06:13:03.041Z",
+   "ms": 968,
+   "type": "media:canplay",
+   "vis": {
+    "n": 5,
+    "id": "s-managed-programme",
+    "slideId": null
+   },
+   "audio": null,
+   "cc": "Section two, the Community Model.",
+   "guide": {
+    "state": "blocked",
+    "clip": "NAR-02",
+    "slideId": null,
+    "gen": null,
+    "status": "Blocked by the browser — tap or press a key to start the guide · slide 5 of 39 · 02 Community model"
+   },
+   "hash": "#/05",
+   "el": "guide-02-community-model-9gUnFBtxrM.mp3",
+   "ct": 0
+  },
+  {
+   "scenario": "S01-first-load-blocked",
+   "t": "2026-10-01T06:13:03.041Z",
+   "ms": 968,
+   "type": "media:canplay",
+   "vis": {
+    "n": 5,
+    "id": "s-managed-programme",
+    "slideId": null
+   },
+   "audio": null,
+   "cc": "Section two, the Community Model.",
+   "guide": {
+    "state": "blocked",
+    "clip": "NAR-02",
+    "slideId": null,
+    "gen": null,
+    "status": "Blocked by the browser — tap or press a key to start the guide · slide 5 of 39 · 02 Community model"
+   },
+   "hash": "#/05",
+   "el": "guide-03-six-pillars-yxVqZJ2k1a.mp3",
+   "ct": 0
+  },
+  {
+   "scenario": "S01-first-load-blocked",
+   "t": "2026-10-01T06:13:06.654Z",
+   "ms": 4581,
+   "type": "check",
+   "vis": {
+    "n": 5,
+    "id": "s-managed-programme",
+    "slideId": null
+   },
+   "audio": null,
+   "cc": "Section two, the Community Model.",
+   "guide": {
+    "state": "blocked",
+    "clip": "NAR-02",
+    "slideId": null,
+    "gen": null,
+    "status": "Blocked by the browser — tap or press a key to start the guide · slide 5 of 39 · 02 Community model"
+   },
+   "hash": "#/05",
+   "step": "no gesture: 3 s after load",
+   "expect": 5
+  },
+  {
+   "scenario": "S01-first-load-blocked",
+   "t": "2026-10-01T06:13:06.769Z",
+   "ms": 4696,
+   "type": "click",
+   "vis": {
+    "n": 5,
+    "id": "s-managed-programme",
+    "slideId": null
+   },
+   "audio": null,
+   "cc": "Section two, the Community Model.",
+   "guide": {
+    "state": "blocked",
+    "clip": "NAR-02",
+    "slideId": null,
+    "gen": null,
+    "status": "Blocked by the browser — tap or press a key to start the guide · slide 5 of 39 · 02 Community model"
+   },
+   "hash": "#/05",
+   "target": null
+  },
+  {
+   "scenario": "S01-first-load-blocked",
+   "t": "2026-10-01T06:13:06.776Z",
+   "ms": 4704,
+   "type": "play()",
+   "vis": {
+    "n": 5,
+    "id": "s-managed-programme",
+    "slideId": null
+   },
+   "audio": {
+    "src": "guide-02-community-model-9gUnFBtxrM.mp3",
+    "clip": "NAR-02",
+    "t": 0,
+    "muted": false
+   },
+   "cc": "Section two, the Community Model.",
+   "guide": {
+    "state": "blocked",
+    "clip": "NAR-02",
+    "slideId": null,
+    "gen": null,
+    "status": "Blocked by the browser — tap or press a key to start the guide · slide 5 of 39 · 02 Community model"
+   },
+   "hash": "#/05",
+   "el": "guide-02-community-model-9gUnFBtxrM.mp3",
+   "ct": 0
+  },
+  {
+   "scenario": "S01-first-load-blocked",
+   "t": "2026-10-01T06:13:06.777Z",
+   "ms": 4704,
+   "type": "play()",
+   "vis": {
+    "n": 5,
+    "id": "s-managed-programme",
+    "slideId": null
+   },
+   "audio": {
+    "src": "guide-02-community-model-9gUnFBtxrM.mp3",
+    "clip": "NAR-02",
+    "t": 0,
+    "muted": false
+   },
+   "cc": "Section two, the Community Model.",
+   "guide": {
+    "state": "starting",
+    "clip": "NAR-02",
+    "slideId": null,
+    "gen": null,
+    "status": "Narrating slide 5 of 39 · 02 Community model"
+   },
+   "hash": "#/05",
+   "el": "guide-02-community-model-9gUnFBtxrM.mp3",
+   "ct": 0
+  },
+  {
+   "scenario": "S01-first-load-blocked",
+   "t": "2026-10-01T06:13:06.777Z",
+   "ms": 4704,
+   "type": "sample",
+   "vis": {
+    "n": 5,
+    "id": "s-managed-programme",
+    "slideId": null
+   },
+   "audio": {
+    "src": "guide-02-community-model-9gUnFBtxrM.mp3",
+    "clip": "NAR-02",
+    "t": 0,
+    "muted": false
+   },
+   "cc": "Section two, the Community Model.",
+   "guide": {
+    "state": "starting",
+    "clip": "NAR-02",
+    "slideId": null,
+    "gen": null,
+    "status": "Narrating slide 5 of 39 · 02 Community model"
+   },
+   "hash": "#/05"
+  },
+  {
+   "scenario": "S01-first-load-blocked",
+   "t": "2026-10-01T06:13:06.778Z",
+   "ms": 4705,
+   "type": "media:playing",
+   "vis": {
+    "n": 5,
+    "id": "s-managed-programme",
+    "slideId": null
+   },
+   "audio": {
+    "src": "guide-02-community-model-9gUnFBtxrM.mp3",
+    "clip": "NAR-02",
+    "t": 0,
+    "muted": false
+   },
+   "cc": "Section two, the Community Model.",
+   "guide": {
+    "state": "playing",
+    "clip": "NAR-02",
+    "slideId": null,
+    "gen": null,
+    "status": "Narrating slide 5 of 39 · 02 Community model"
+   },
+   "hash": "#/05",
+   "el": "guide-02-community-model-9gUnFBtxrM.mp3",
+   "ct": 0
+  },
+  {
+   "scenario": "S01-first-load-blocked",
+   "t": "2026-10-01T06:13:06.778Z",
+   "ms": 4705,
+   "type": "play():resolved",
+   "vis": {
+    "n": 5,
+    "id": "s-managed-programme",
+    "slideId": null
+   },
+   "audio": {
+    "src": "guide-02-community-model-9gUnFBtxrM.mp3",
+    "clip": "NAR-02",
+    "t": 0,
+    "muted": false
+   },
+   "cc": "Section two, the Community Model.",
+   "guide": {
+    "state": "playing",
+    "clip": "NAR-02",
+    "slideId": null,
+    "gen": null,
+    "status": "Narrating slide 5 of 39 · 02 Community model"
+   },
+   "hash": "#/05",
+   "el": "guide-02-community-model-9gUnFBtxrM.mp3"
+  },
+  {
+   "scenario": "S01-first-load-blocked",
+   "t": "2026-10-01T06:13:06.778Z",
+   "ms": 4705,
+   "type": "play():resolved",
+   "vis": {
+    "n": 5,
+    "id": "s-managed-programme",
+    "slideId": null
+   },
+   "audio": {
+    "src": "guide-02-community-model-9gUnFBtxrM.mp3",
+    "clip": "NAR-02",
+    "t": 0,
+    "muted": false
+   },
+   "cc": "Section two, the Community Model.",
+   "guide": {
+    "state": "playing",
+    "clip": "NAR-02",
+    "slideId": null,
+    "gen": null,
+    "status": "Narrating slide 5 of 39 · 02 Community model"
+   },
+   "hash": "#/05",
+   "el": "guide-02-community-model-9gUnFBtxrM.mp3"
+  },
+  {
+   "scenario": "S01-first-load-blocked",
+   "t": "2026-10-01T06:13:06.873Z",
+   "ms": 4801,
+   "type": "sample",
+   "vis": {
+    "n": 5,
+    "id": "s-managed-programme",
+    "slideId": null
+   },
+   "audio": {
+    "src": "guide-02-community-model-9gUnFBtxrM.mp3",
+    "clip": "NAR-02",
+    "t": 0.01,
+    "muted": false
+   },
+   "cc": "Section two, the Community Model.",
+   "guide": {
+    "state": "playing",
+    "clip": "NAR-02",
+    "slideId": null,
+    "gen": null,
+    "status": "Narrating slide 5 of 39 · 02 Community model"
+   },
+   "hash": "#/05"
+  },
+  {
+   "scenario": "S01-first-load-blocked",
+   "t": "2026-10-01T06:13:09.155Z",
+   "ms": 7082,
+   "type": "hashchange",
+   "vis": {
+    "n": 5,
+    "id": "s-managed-programme",
+    "slideId": null
+   },
+   "audio": {
+    "src": "guide-02-community-model-9gUnFBtxrM.mp3",
+    "clip": "NAR-02",
+    "t": 2.29,
+    "muted": false
+   },
+   "cc": "Every webinar, chapter event and challenge should lead somewhere real, so the model is built around four outcomes for every participant.",
+   "guide": {
+    "state": "playing",
+    "clip": "NAR-02",
+    "slideId": null,
+    "gen": null,
+    "status": "Narrating slide 5 of 39 · 02 Community model"
+   },
+   "hash": "#/7"
+  },
+  {
+   "scenario": "S01-first-load-blocked",
+   "t": "2026-10-01T06:13:09.178Z",
+   "ms": 7105,
+   "type": "sample",
+   "vis": {
+    "n": 7,
+    "id": "s-country-chapters",
+    "slideId": null
+   },
+   "audio": {
+    "src": "guide-02-community-model-9gUnFBtxrM.mp3",
+    "clip": "NAR-02",
+    "t": 2.31,
+    "muted": false
+   },
+   "cc": "Every webinar, chapter event and challenge should lead somewhere real, so the model is built around four outcomes for every participant.",
+   "guide": {
+    "state": "playing",
+    "clip": "NAR-02",
+    "slideId": null,
+    "gen": null,
+    "status": "Narrating slide 7 of 39 · 02 Community model"
+   },
+   "hash": "#/07"
+  },
+  {
+   "scenario": "S01-first-load-blocked",
+   "t": "2026-10-01T06:13:09.274Z",
+   "ms": 7201,
+   "type": "check",
+   "vis": {
+    "n": 7,
+    "id": "s-country-chapters",
+    "slideId": null
+   },
+   "audio": {
+    "src": "guide-02-community-model-9gUnFBtxrM.mp3",
+    "clip": "NAR-02",
+    "t": 2.41,
+    "muted": false
+   },
+   "cc": "Every webinar, chapter event and challenge should lead somewhere real, so the model is built around four outcomes for every participant.",
+   "guide": {
+    "state": "playing",
+    "clip": "NAR-02",
+    "slideId": null,
+    "gen": null,
+    "status": "Narrating slide 7 of 39 · 02 Community model"
+   },
+   "hash": "#/07",
+   "step": "first click on the slide",
+   "expect": 5
+  }
+ ],
+ "console": []
+}

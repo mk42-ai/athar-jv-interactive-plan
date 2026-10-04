@@ -1,0 +1,59 @@
+{
+ "base": "http://127.0.0.1:4171",
+ "version": "1.7.1",
+ "written": "2026-10-04T10:14:16.635Z",
+ "rows": [
+  {
+   "meta": {
+    "state": "idle",
+    "poster": "athar-origins-ep01-kayaan-unwalla-poster-20s0.976a2a5387.jpg",
+    "posterTime": "20",
+    "variant": "1080p",
+    "src": "/assets/exec/films/unwalla/athar-origins-ep01-kayaan-unwalla-1080p.2c1c7f0f3b.mp4",
+    "tracks": [
+     "subtitles:en:default",
+     "subtitles:ar"
+    ],
+    "autoplay": false,
+    "muted": false,
+    "controls": false,
+    "paused": true,
+    "ct": 0,
+    "dur": "0:40",
+    "title": "Athar — Origins of Impact, Episode 01: Kayaan K. Unwalla",
+    "play": true,
+    "ratio": 1.7778125182519404
+   },
+   "idle": {
+    "paused": true,
+    "ct": 0
+   },
+   "playing": {
+    "state": "playing",
+    "paused": false,
+    "ct": 1.194872,
+    "controls": true,
+    "overlayHidden": true,
+    "overlays": 0,
+    "showing": [
+     "en"
+    ]
+   },
+   "guide": {
+    "onPlay": {
+     "state": "paused",
+     "reason": "video"
+    },
+    "onPause": {
+     "state": "playing",
+     "reason": ""
+    },
+    "atEnd": {
+     "state": "playing",
+     "reason": ""
+    }
+   },
+   "errors": []
+  }
+ ]
+}

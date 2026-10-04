@@ -1,0 +1,526 @@
+{
+ "base": "http://127.0.0.1:4171",
+ "written": "2026-10-04T10:18:48.653Z",
+ "rows": [
+  {
+   "lang": "en",
+   "who": "al-ameri",
+   "dir": "ltr",
+   "hash": "#/28/exec-2",
+   "cls": 0,
+   "clsEntries": [],
+   "docOverflowX": 0,
+   "secOverflowX": 0,
+   "bodyScroll": 236,
+   "bodyOverflowY": "auto",
+   "video": {
+    "paused": true,
+    "ct": 0,
+    "autoplay": false,
+    "poster": "athar-origins-ep01-fahad-al-ameri-poster-07s0.6b79ef7542.jpg",
+    "defaultTrack": "en"
+   },
+   "figDir": "ltr",
+   "ratio": 1.7777778544239968,
+   "stage": {
+    "x": 1054,
+    "y": 143,
+    "w": 629,
+    "h": 354
+   },
+   "stageInViewport": true,
+   "slot": null,
+   "letter": {
+    "x": 289,
+    "y": 143,
+    "w": 742,
+    "h": 514
+   },
+   "card": {
+    "x": 1054,
+    "y": 569,
+    "w": 629,
+    "h": 387
+   },
+   "media": {
+    "x": 1054,
+    "y": 143,
+    "w": 629,
+    "h": 412
+   },
+   "roundel": {
+    "x": 1074,
+    "y": 584,
+    "w": 67,
+    "h": 67
+   }
+  },
+  {
+   "lang": "en",
+   "who": "ferreira-da-cunha",
+   "dir": "ltr",
+   "hash": "#/28/exec-3",
+   "cls": 0,
+   "clsEntries": [],
+   "docOverflowX": 0,
+   "secOverflowX": 0,
+   "bodyScroll": 278,
+   "bodyOverflowY": "auto",
+   "video": {
+    "paused": true,
+    "ct": 0,
+    "autoplay": false,
+    "poster": "athar-origins-ep01-ary-ferreira-da-cunha-poster-04s0.c7cb38c99b.jpg",
+    "defaultTrack": "en"
+   },
+   "figDir": "ltr",
+   "ratio": 1.7777778544239968,
+   "stage": {
+    "x": 1054,
+    "y": 143,
+    "w": 629,
+    "h": 354
+   },
+   "stageInViewport": true,
+   "slot": null,
+   "letter": {
+    "x": 289,
+    "y": 143,
+    "w": 742,
+    "h": 605
+   },
+   "card": {
+    "x": 1054,
+    "y": 569,
+    "w": 629,
+    "h": 426
+   },
+   "media": {
+    "x": 1054,
+    "y": 143,
+    "w": 629,
+    "h": 412
+   },
+   "roundel": {
+    "x": 1074,
+    "y": 584,
+    "w": 67,
+    "h": 67
+   }
+  },
+  {
+   "lang": "en",
+   "who": "khalid",
+   "dir": "ltr",
+   "hash": "#/28/exec-4",
+   "cls": 0,
+   "clsEntries": [],
+   "docOverflowX": 0,
+   "secOverflowX": 0,
+   "bodyScroll": 0,
+   "bodyOverflowY": "auto",
+   "video": {
+    "paused": true,
+    "ct": 0,
+    "autoplay": false,
+    "poster": "athar-origins-of-impact-ep01-muhammed-khalid-poster-18s8.32839348ca.jpg",
+    "defaultTrack": "en"
+   },
+   "figDir": "ltr",
+   "ratio": 1.7777778544239968,
+   "stage": {
+    "x": 1054,
+    "y": 143,
+    "w": 629,
+    "h": 354
+   },
+   "stageInViewport": true,
+   "slot": null,
+   "letter": {
+    "x": 289,
+    "y": 143,
+    "w": 742,
+    "h": 579
+   },
+   "card": null,
+   "media": {
+    "x": 1054,
+    "y": 143,
+    "w": 629,
+    "h": 427
+   },
+   "roundel": {
+    "x": 312,
+    "y": 193,
+    "w": 67,
+    "h": 67
+   }
+  },
+  {
+   "lang": "en",
+   "who": "unwalla",
+   "dir": "ltr",
+   "hash": "#/28/exec-5",
+   "cls": 0,
+   "clsEntries": [],
+   "docOverflowX": 0,
+   "secOverflowX": 0,
+   "bodyScroll": 411,
+   "bodyOverflowY": "auto",
+   "video": {
+    "paused": true,
+    "ct": 0,
+    "autoplay": false,
+    "poster": "athar-origins-ep01-kayaan-unwalla-poster-20s0.976a2a5387.jpg",
+    "defaultTrack": "en"
+   },
+   "figDir": "ltr",
+   "ratio": 1.7777778544239968,
+   "stage": {
+    "x": 1054,
+    "y": 143,
+    "w": 629,
+    "h": 354
+   },
+   "stageInViewport": true,
+   "slot": null,
+   "letter": {
+    "x": 289,
+    "y": 143,
+    "w": 742,
+    "h": 557
+   },
+   "card": {
+    "x": 1054,
+    "y": 569,
+    "w": 629,
+    "h": 551
+   },
+   "media": {
+    "x": 1054,
+    "y": 143,
+    "w": 629,
+    "h": 412
+   },
+   "roundel": {
+    "x": 1074,
+    "y": 584,
+    "w": 67,
+    "h": 67
+   }
+  },
+  {
+   "lang": "en",
+   "who": "lorenzo",
+   "dir": "ltr",
+   "hash": "#/28/exec-6",
+   "cls": 0,
+   "clsEntries": [],
+   "docOverflowX": 0,
+   "secOverflowX": 0,
+   "bodyScroll": 161,
+   "bodyOverflowY": "auto",
+   "video": {
+    "paused": true,
+    "ct": 0,
+    "autoplay": false,
+    "poster": "lorenzo-poster.dceede4679.jpg",
+    "defaultTrack": "en"
+   },
+   "figDir": "ltr",
+   "ratio": 1.7777778544239968,
+   "stage": {
+    "x": 1054,
+    "y": 143,
+    "w": 629,
+    "h": 354
+   },
+   "stageInViewport": true,
+   "slot": null,
+   "letter": {
+    "x": 289,
+    "y": 143,
+    "w": 742,
+    "h": 486
+   },
+   "card": {
+    "x": 1054,
+    "y": 584,
+    "w": 629,
+    "h": 301
+   },
+   "media": {
+    "x": 1054,
+    "y": 143,
+    "w": 629,
+    "h": 427
+   },
+   "roundel": {
+    "x": 1074,
+    "y": 599,
+    "w": 67,
+    "h": 67
+   }
+  },
+  {
+   "lang": "ar",
+   "who": "al-ameri",
+   "dir": "rtl",
+   "hash": "#/28/exec-2",
+   "cls": 0,
+   "clsEntries": [],
+   "docOverflowX": 0,
+   "secOverflowX": 0,
+   "bodyScroll": 246,
+   "bodyOverflowY": "auto",
+   "video": {
+    "paused": true,
+    "ct": 0,
+    "autoplay": false,
+    "poster": "athar-origins-ep01-fahad-al-ameri-poster-07s0.6b79ef7542.jpg",
+    "defaultTrack": "ar"
+   },
+   "figDir": "rtl",
+   "ratio": 1.7777778544239968,
+   "stage": {
+    "x": 45,
+    "y": 150,
+    "w": 629,
+    "h": 354
+   },
+   "stageInViewport": true,
+   "slot": null,
+   "letter": {
+    "x": 697,
+    "y": 150,
+    "w": 742,
+    "h": 516
+   },
+   "card": {
+    "x": 45,
+    "y": 577,
+    "w": 629,
+    "h": 387
+   },
+   "media": {
+    "x": 45,
+    "y": 150,
+    "w": 629,
+    "h": 414
+   },
+   "roundel": {
+    "x": 587,
+    "y": 593,
+    "w": 67,
+    "h": 67
+   }
+  },
+  {
+   "lang": "ar",
+   "who": "ferreira-da-cunha",
+   "dir": "rtl",
+   "hash": "#/28/exec-3",
+   "cls": 0,
+   "clsEntries": [],
+   "docOverflowX": 0,
+   "secOverflowX": 0,
+   "bodyScroll": 288,
+   "bodyOverflowY": "auto",
+   "video": {
+    "paused": true,
+    "ct": 0,
+    "autoplay": false,
+    "poster": "athar-origins-ep01-ary-ferreira-da-cunha-poster-04s0.c7cb38c99b.jpg",
+    "defaultTrack": "ar"
+   },
+   "figDir": "rtl",
+   "ratio": 1.7777778544239968,
+   "stage": {
+    "x": 45,
+    "y": 150,
+    "w": 629,
+    "h": 354
+   },
+   "stageInViewport": true,
+   "slot": null,
+   "letter": {
+    "x": 697,
+    "y": 150,
+    "w": 742,
+    "h": 609
+   },
+   "card": {
+    "x": 45,
+    "y": 577,
+    "w": 629,
+    "h": 426
+   },
+   "media": {
+    "x": 45,
+    "y": 150,
+    "w": 629,
+    "h": 414
+   },
+   "roundel": {
+    "x": 587,
+    "y": 593,
+    "w": 67,
+    "h": 67
+   }
+  },
+  {
+   "lang": "ar",
+   "who": "khalid",
+   "dir": "rtl",
+   "hash": "#/28/exec-4",
+   "cls": 0,
+   "clsEntries": [],
+   "docOverflowX": 0,
+   "secOverflowX": 0,
+   "bodyScroll": 0,
+   "bodyOverflowY": "auto",
+   "video": {
+    "paused": true,
+    "ct": 0,
+    "autoplay": false,
+    "poster": "athar-origins-of-impact-ep01-muhammed-khalid-poster-18s8.32839348ca.jpg",
+    "defaultTrack": "ar"
+   },
+   "figDir": "rtl",
+   "ratio": 1.7777778544239968,
+   "stage": {
+    "x": 45,
+    "y": 150,
+    "w": 629,
+    "h": 354
+   },
+   "stageInViewport": true,
+   "slot": null,
+   "letter": {
+    "x": 697,
+    "y": 150,
+    "w": 742,
+    "h": 581
+   },
+   "card": null,
+   "media": {
+    "x": 45,
+    "y": 150,
+    "w": 629,
+    "h": 429
+   },
+   "roundel": {
+    "x": 1348,
+    "y": 200,
+    "w": 67,
+    "h": 67
+   }
+  },
+  {
+   "lang": "ar",
+   "who": "unwalla",
+   "dir": "rtl",
+   "hash": "#/28/exec-5",
+   "cls": 0,
+   "clsEntries": [],
+   "docOverflowX": 0,
+   "secOverflowX": 0,
+   "bodyScroll": 421,
+   "bodyOverflowY": "auto",
+   "video": {
+    "paused": true,
+    "ct": 0,
+    "autoplay": false,
+    "poster": "athar-origins-ep01-kayaan-unwalla-poster-20s0.976a2a5387.jpg",
+    "defaultTrack": "ar"
+   },
+   "figDir": "rtl",
+   "ratio": 1.7777778544239968,
+   "stage": {
+    "x": 45,
+    "y": 150,
+    "w": 629,
+    "h": 354
+   },
+   "stageInViewport": true,
+   "slot": null,
+   "letter": {
+    "x": 697,
+    "y": 150,
+    "w": 742,
+    "h": 561
+   },
+   "card": {
+    "x": 45,
+    "y": 577,
+    "w": 629,
+    "h": 551
+   },
+   "media": {
+    "x": 45,
+    "y": 150,
+    "w": 629,
+    "h": 414
+   },
+   "roundel": {
+    "x": 587,
+    "y": 593,
+    "w": 67,
+    "h": 67
+   }
+  },
+  {
+   "lang": "ar",
+   "who": "lorenzo",
+   "dir": "rtl",
+   "hash": "#/28/exec-6",
+   "cls": 0,
+   "clsEntries": [],
+   "docOverflowX": 0,
+   "secOverflowX": 0,
+   "bodyScroll": 171,
+   "bodyOverflowY": "auto",
+   "video": {
+    "paused": true,
+    "ct": 0,
+    "autoplay": false,
+    "poster": "lorenzo-poster.dceede4679.jpg",
+    "defaultTrack": "ar"
+   },
+   "figDir": "rtl",
+   "ratio": 1.7777778544239968,
+   "stage": {
+    "x": 45,
+    "y": 150,
+    "w": 629,
+    "h": 354
+   },
+   "stageInViewport": true,
+   "slot": null,
+   "letter": {
+    "x": 697,
+    "y": 150,
+    "w": 742,
+    "h": 488
+   },
+   "card": {
+    "x": 45,
+    "y": 592,
+    "w": 629,
+    "h": 301
+   },
+   "media": {
+    "x": 45,
+    "y": 150,
+    "w": 629,
+    "h": 429
+   },
+   "roundel": {
+    "x": 587,
+    "y": 608,
+    "w": 67,
+    "h": 67
+   }
+  }
+ ]
+}

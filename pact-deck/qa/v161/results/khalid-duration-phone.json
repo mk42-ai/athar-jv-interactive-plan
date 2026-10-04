@@ -1,0 +1,13 @@
+{
+ "base": "http://127.0.0.1:4171",
+ "version": "1.7.1",
+ "written": "2026-10-04T10:11:34.791Z",
+ "rows": [
+  {
+   "duration": 50.005,
+   "label": "0:50",
+   "filmsJson": 50,
+   "note": "the ~50 s cut (…_1080p_60MB.mp4) arrived 2026-10-04T01:57Z and is installed here; all previous Khalid files are retired from assets/, dist/ and SHA256SUMS"
+  }
+ ]
+}

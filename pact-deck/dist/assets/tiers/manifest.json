@@ -1,0 +1,79 @@
+{
+ "generated_utc": "2026-09-27T15:16:29Z",
+ "version": "1.4.0",
+ "base_dir": "dist/assets/tiers/",
+ "method": {
+  "fetch": "curl -sSL with a desktop UA; HTTP status, bytes and sha256 recorded",
+  "optimise": "Pillow: map 900×600 PNG → JPEG q86; logos trimmed/resized only"
+ },
+ "images": [
+  {
+   "name": "map-uae-arcs",
+   "role": "header visual (UAE-as-origin arcs map, never mirrored)",
+   "source_url": "Azure blob concept render supplied in the v1.3.1 brief (SAS)",
+   "http_status": 200,
+   "orig_file": "brand/tiers-orig/map-uae-arcs.png",
+   "orig_bytes": 1538762,
+   "orig_sha256": "7f6a93e2c8886fb62e66a2c4f726d11f2fe55413b98e5ac36c739d27adbb9559",
+   "orig_width": 1536,
+   "orig_height": 1024,
+   "local_file": "dist/assets/tiers/map-uae-arcs.jpg",
+   "local_bytes": 88471,
+   "local_sha256": "7acc03109fe258a85d7802537a2f4fffd760f5c0f7037725f8f80a1840dd0edf",
+   "credit": "Athar / AIREV — UAE-as-origin arcs map (concept render)",
+   "illustrative": true,
+   "status_v1_4_0": "retained unchanged since v1.3.1 (sha verified against the v1.3.3 SHA256SUMS)"
+  },
+  {
+   "name": "logo-intel",
+   "role": "technology-partner mark (reference only)",
+   "source_url": "https://download.intel.com/newsroom/2021/corporate/2021-Intel-logos.zip",
+   "source_page": "https://www.intel.com/content/www/us/en/newsroom/press-hub.html",
+   "http_status": 200,
+   "orig_file": "brand/tiers-orig/logo-intel.png",
+   "orig_sha256": "8d63a0aafef1471d24abada144d92e8f654db1afb3d68ed8b9873df5b60716d2",
+   "local_file": "dist/assets/tiers/logo-intel.png",
+   "local_sha256": "a453d3f29430b2ec3e2afd32f80056fef8a7f3d7d5aa134ed2652acaba1130a4",
+   "credit": "Intel logo — Intel Newsroom press hub logo pack (2021-Intel-logos.zip → Intel-logo-nobox.png); reference only, no endorsement implied",
+   "retrieved_utc": "2026-09-27T09:27:00Z",
+   "licence_note": "Intel, the Intel logo, and Intel Core are trademarks of Intel Corporation or its subsidiaries; third-party use requires written permission",
+   "approval_status": "pending written permission"
+  },
+  {
+   "name": "logo-qualcomm",
+   "role": "technology-partner mark (official press-kit badge)",
+   "source_url": "https://www.qualcomm.com/content/dam/qcomm-martech/dm-assets/images/company/news-media/media-center/press-kits/snapdragon-summit-2026-press-kit/day-1/images---graphics/SnapdragonXEliteBadge.jpg",
+   "source_page": "https://www.qualcomm.com/news/press-kits/snapdragon-summit-2026-press-kit/snapdragon-summit-2026-day-1",
+   "host": "www.qualcomm.com",
+   "http_status": 200,
+   "content_type": "image/jpeg",
+   "orig_file": "brand/tiers-orig/qualcomm-snapdragon-x-elite-badge.jpg",
+   "orig_bytes": 216540,
+   "orig_sha256": "e6a1bd418237176171b30cc5852f480c552b912f1555338ac1e9bf2bf69e6b68",
+   "orig_width": 2900,
+   "orig_height": 2900,
+   "served": {
+    "jpg": {
+     "path": "dist/assets/tiers/logo-qualcomm.jpg",
+     "bytes": 62309,
+     "sha256": "9488d5c8914993b2503a321c31e65f5bdea4c4b0431bab3ab3cb863f0a3984f3",
+     "width": 900,
+     "height": 900
+    }
+   },
+   "served_note": "white margins trimmed (non-white bbox + 5% padding) and resized ≤900 px; no recolouring or redraw",
+   "credit": "© Qualcomm Technologies, Inc. — 'Snapdragon X Elite Platform - Badge' (Snapdragon Summit 2026 press kit, Day 1)",
+   "retrieved_utc": "2026-09-27T11:16:48Z",
+   "licence_note": "Qualcomm press-kit asset for editorial/reference use; Qualcomm, Dragonwing and Snapdragon are trademarks or registered trademarks of Qualcomm Incorporated.",
+   "approval_status": "pending written permission (brand-portal authorisation)"
+  },
+  {
+   "name": "logo-intel-scene7-alt",
+   "role": "technology-partner mark (alternate, archive only — not served)",
+   "source_url": "https://www.intel.com/content/dam/www/central-libraries/us/en/images/2022-11/intel-logo-1080x1080.png",
+   "note": "Intel Newsroom Scene7 asset — archive record only (the served mark is the logo-pack file)",
+   "approval_status": "pending written permission"
+  }
+ ],
+ "note_v1_4_0": "manifest reconstructed during the v1.4.0 in-place restore (the v1.3.3 copy was 0-byte after the platform restore; the four served files are sha-identical to the v1.3.3 SHA256SUMS)"
+}

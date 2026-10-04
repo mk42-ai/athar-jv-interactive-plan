@@ -1,0 +1,64 @@
+{
+ "base": "http://127.0.0.1:4171",
+ "version": "1.7.1",
+ "expectCommit": "4ea5cc03f7de0061996946e129a00d6c32a2500f",
+ "written": "2026-10-04T10:05:31.155Z",
+ "rows": [
+  {
+   "idle": {
+    "lang": "ar",
+    "dir": "rtl",
+    "badge": "v1.7.1",
+    "html": "1.7.1",
+    "ids": [
+     "s-exec-intro",
+     "s-exec-al-ameri",
+     "s-exec-ferreira-da-cunha",
+     "s-exec-khalid",
+     "s-exec-unwalla",
+     "s-exec-lorenzo"
+    ],
+    "count": 6,
+    "total": 48,
+    "active": true,
+    "n": 45,
+    "currentSrc": "http://127.0.0.1:4171/assets/exec/films/lorenzo/lorenzo-1080p.1566f3861a.mp4",
+    "src": "lorenzo-1080p.1566f3861a.mp4",
+    "poster": "lorenzo-poster.dceede4679.jpg",
+    "posterLoaded": true,
+    "duration": 40,
+    "dur": "0:40",
+    "title": "أثر — أصول الأثر، الحلقة 01: لورينزو أفيتابيلي",
+    "figDir": "rtl",
+    "tracks": [
+     "en:lorenzo.en.b46e263deb.vtt",
+     "ar:lorenzo.ar.ce6620edc0.vtt:default"
+    ],
+    "name": "لورينزو أفيتابيلي",
+    "role": "مستشار أول — مكتب شؤون التنمية، ديوان الرئاسة بدولة الإمارات",
+    "paused": true
+   },
+   "playing": {
+    "paused": false,
+    "currentTime": 2.833963,
+    "duration": 40,
+    "src": "lorenzo-1080p.1566f3861a.mp4",
+    "showing": [
+     "ar:10"
+    ],
+    "controls": true,
+    "guide": "idle"
+   },
+   "tiles": [
+    "40الفريق التنفيذي",
+    "41سعادة فهد محمد العامري",
+    "42آري فيريرا دا كونيا",
+    "43محمد خالد",
+    "44كايان ك. أونوالا",
+    "45لورينزو أفيتابيلي"
+   ],
+   "errors": [],
+   "failedRequests": []
+  }
+ ]
+}

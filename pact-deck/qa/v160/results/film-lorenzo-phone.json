@@ -1,0 +1,59 @@
+{
+ "base": "http://127.0.0.1:4171",
+ "version": "1.7.1",
+ "written": "2026-10-04T10:15:57.080Z",
+ "rows": [
+  {
+   "meta": {
+    "state": "idle",
+    "poster": "lorenzo-poster.dceede4679.jpg",
+    "posterTime": "14.708",
+    "variant": "720p",
+    "src": "/assets/exec/films/lorenzo/lorenzo-720p.1b56c492fc.mp4",
+    "tracks": [
+     "subtitles:en:default",
+     "subtitles:ar"
+    ],
+    "autoplay": false,
+    "muted": false,
+    "controls": false,
+    "paused": true,
+    "ct": 0,
+    "dur": "0:40",
+    "title": "Athar — Origins of Impact, Episode 01: Lorenzo Avitabile",
+    "play": true,
+    "ratio": 1.7777777777777777
+   },
+   "idle": {
+    "paused": true,
+    "ct": 0
+   },
+   "playing": {
+    "state": "playing",
+    "paused": false,
+    "ct": 1.190888,
+    "controls": true,
+    "overlayHidden": true,
+    "overlays": 0,
+    "showing": [
+     "en"
+    ]
+   },
+   "guide": {
+    "onPlay": {
+     "state": "paused",
+     "reason": "video"
+    },
+    "onPause": {
+     "state": "playing",
+     "reason": ""
+    },
+    "atEnd": {
+     "state": "playing",
+     "reason": ""
+    }
+   },
+   "errors": []
+  }
+ ]
+}

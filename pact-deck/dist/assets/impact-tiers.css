@@ -1,0 +1,253 @@
+/* Athar Open Agentic Pact deck — v1.4.0 (2026-09-27) "Outcomes are the product" section (slides 28–33).
+   Companion to /js/impact-tiers.js. Tokens only (brand/brand-tokens.json): navy, Gulf Blue, Falaj Teal, Legacy
+   Gold, Stone, Manuscript, off-white ground; IBM Plex via the bundle's --font-* variables; logical properties so
+   dir=rtl mirrors the layout — images and logos carry data-no-mirror and are never flipped. Every block scales with
+   the viewport (clamp/vh/vw) so 1920×1080 and 1366×768 both fit without overflow, scroll or hidden content.
+   v1.3.2: slide 29 product-led columns (product visual on top, impact band with World Bank tags, technology-partner
+   marks row, ownership call-out band); slide 30 agreement band + 4-column "In the news" strip (12 cards, hero
+   thumbnails, favicon, date, tag pill, tier chip); slide 32 four funder tiles in one treatment + review band. */
+body.it-virtual #root section.slide.is-active:not(.it-slide){opacity:0;visibility:hidden;pointer-events:none;transition:none}
+section.slide.it-slide .s-body{padding-block-end:10px;gap:clamp(7px,1.3vh,18px)}
+section.slide.it-slide img[data-no-mirror]{transform:none!important}
+.it-slide .grow{min-block-size:0}
+.it-slide .sub{margin:0}
+.it-slide .bullets{margin:0}
+.it-slide .s-kicker{margin:0}
+/* ---------- slide 29 · three product-led columns ---------- */
+.it-body--tiers{position:relative}
+.it-body--tiers > .s-head,.it-body--tiers > .sub{max-inline-size:64%}
+.it-hero-map{position:absolute;inset-block-start:var(--space-3);inset-inline-end:0;margin:0;block-size:clamp(48px,9.6vh,104px);inline-size:auto;pointer-events:none}
+.it-hero-map img{display:block;block-size:100%;inline-size:auto;max-inline-size:32vw;object-fit:contain}
+.it-tiers{display:grid;grid-template-columns:repeat(3,1fr);gap:clamp(10px,1vw,18px);align-items:stretch;min-block-size:0}
+.it-tier{display:flex;flex-direction:column;gap:clamp(4px,.7vh,8px);padding:clamp(7px,.9vh,12px) clamp(9px,.85vw,15px);background:var(--white);border:1px solid var(--stone);border-radius:var(--radius-md);border-block-start:2px solid var(--legacy-gold);min-inline-size:0;min-block-size:0;overflow:hidden}
+.it-product{margin:0;position:relative;flex:0 0 auto;block-size:clamp(64px,12.4vh,160px);border-radius:6px;overflow:hidden;background:var(--manuscript);border:1px solid var(--stone)}
+.it-product img,.it-own-vis img{display:block;inline-size:100%;block-size:100%;object-fit:cover}
+.it-vis-cap{position:absolute;inset-block-end:0;inset-inline-start:0;margin:0;font-size:8.5px;letter-spacing:.06em;text-transform:uppercase;background:var(--athar-navy);color:var(--white);padding:1px 6px;border-start-end-radius:6px;opacity:.92;max-inline-size:100%;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+html[lang=ar] .it-vis-cap{letter-spacing:0;text-transform:none}
+.it-tier-top{display:flex;flex-direction:column;gap:2px;flex:0 0 auto}
+.it-tier-kickrow{display:flex;justify-content:space-between;align-items:center;gap:8px}
+.it-tier-kicker{font-size:.64rem}
+.it-chip{font-size:.6rem;letter-spacing:.08em;text-transform:uppercase;color:var(--athar-navy);border:1px solid var(--legacy-gold);border-radius:999px;padding:1px 8px;white-space:nowrap;flex:0 0 auto}
+html[lang=ar] .it-chip,html[lang=ar] .it-tag,html[lang=ar] .it-tierchip,html[lang=ar] .it-wblabel,html[lang=ar] .it-partners-label,html[lang=ar] .it-review-badge{letter-spacing:0;text-transform:none}
+.it-tier-name{margin:0;font-family:var(--font-sans);font-weight:var(--fw-semibold);color:var(--athar-navy);font-size:clamp(13px,1.05vw,18px);line-height:1.2}
+.it-tier-flag{margin:0;display:flex;justify-content:space-between;gap:8px;align-items:baseline;font-size:clamp(10.5px,.78vw,13px);color:var(--athar-navy);font-weight:var(--fw-medium);line-height:1.3}
+.it-amount{color:var(--athar-navy);font-weight:var(--fw-bold);white-space:nowrap}
+.it-tier-flagship{margin:0;font-size:clamp(9.5px,.68vw,11px);color:var(--graphite);line-height:1.3}
+.it-delivered{margin:0;font-size:clamp(10.5px,.78vw,13px);line-height:1.35;color:var(--graphite);flex:0 0 auto}
+.it-delivered strong,.it-outcomes strong,.it-band strong,.it-ownband strong{color:var(--athar-navy);font-weight:var(--fw-semibold)}
+.it-partners{display:flex;flex-direction:column;gap:3px;padding:4px 8px 5px;border:1px dashed var(--stone);border-radius:6px;flex:0 0 auto}
+.it-partners-label{font-size:.56rem;letter-spacing:.07em;color:var(--graphite)}
+.it-partner-row{display:flex;align-items:center;gap:clamp(12px,1.2vw,22px);min-block-size:clamp(18px,2.8vh,30px)}
+.it-partner-logo{display:inline-flex;align-items:center}
+.it-partner-logo img{display:block;block-size:clamp(16px,2.6vh,28px);inline-size:auto;max-inline-size:clamp(70px,7vw,130px);object-fit:contain}
+.it-partner-word{font-family:var(--font-sans);font-weight:var(--fw-semibold);color:var(--athar-navy);font-size:clamp(12px,1vw,16px);letter-spacing:.01em;line-height:1}
+.it-impact{margin-block-start:auto;display:flex;flex-direction:column;gap:4px;background:var(--manuscript);border:1px solid var(--stone);border-radius:6px;padding:6px 8px;flex:0 0 auto}
+.it-outcomes{margin:0;font-size:clamp(10px,.74vw,12.5px);color:var(--athar-navy);line-height:1.3}
+.it-wbrow{display:flex;flex-wrap:wrap;gap:4px;align-items:center}
+.it-wblabel{font-size:.56rem;letter-spacing:.08em;text-transform:uppercase;color:var(--gulf-blue);font-weight:var(--fw-semibold);margin-inline-end:2px}
+.it-wbtag{font-size:clamp(9px,.64vw,10.5px);color:var(--athar-navy);background:var(--white);border:1px solid var(--stone);border-radius:999px;padding:1px 7px;white-space:nowrap;line-height:1.35}
+.it-ownband{display:flex;align-items:center;gap:clamp(10px,1vw,18px);padding:clamp(6px,.9vh,10px) 14px;background:var(--white);border:1.5px solid var(--legacy-gold);border-inline-start:6px solid var(--legacy-gold);border-radius:var(--radius-md);flex:0 0 auto}
+.it-ownband-text{flex:1;min-inline-size:0;margin:0;font-size:clamp(11px,.88vw,15px);color:var(--athar-navy);line-height:1.35;font-weight:var(--fw-medium)}
+.it-ownband-label{display:inline-block;font-size:.6rem;letter-spacing:.1em;text-transform:uppercase;color:var(--white);background:var(--athar-navy);border-radius:999px;padding:1px 8px;margin-inline-end:8px;vertical-align:middle}
+html[lang=ar] .it-ownband-label{letter-spacing:0;text-transform:none}
+.it-own-vis{display:flex;gap:6px;flex:0 0 auto}
+.it-own-vis figure{margin:0;position:relative;inline-size:clamp(64px,6.4vw,112px);aspect-ratio:16/9;border-radius:6px;overflow:hidden;border:1px solid var(--stone);background:var(--manuscript)}
+.it-own-vis figure.it-own-wide{inline-size:clamp(104px,10.4vw,184px)}
+.it-slide--it-tiers .bullets{font-size:clamp(11px,.84vw,14px);line-height:1.35;max-inline-size:none}
+.it-footnote{margin:0!important;font-size:clamp(9px,.62vw,10.5px)!important;line-height:1.35!important;padding-block-start:0!important}
+.it-footnotes{display:flex;flex-direction:column;gap:2px;padding-block-start:4px;border-block-start:1px solid var(--stone)}
+/* ---------- slide 30 · metric cards + agreement band + news strip ---------- */
+.it-cards{display:grid;grid-template-columns:repeat(3,1fr);gap:clamp(10px,1vw,20px);align-items:stretch;align-content:start}
+.it-card{position:relative;display:flex;flex-direction:column;gap:clamp(4px,.7vh,9px);padding:clamp(8px,1.1vh,15px) clamp(11px,1vw,18px);background:var(--white);border:1px solid var(--stone);border-radius:var(--radius-md);border-block-start:2px solid var(--legacy-gold)}
+.it-card-icon{display:inline-flex;align-items:center;justify-content:center;inline-size:clamp(30px,4.2vh,48px);block-size:clamp(30px,4.2vh,48px);border-radius:var(--radius-md);background:var(--manuscript);border:1px solid var(--stone)}
+.it-card-icon img{display:block;inline-size:70%;block-size:70%;object-fit:contain}
+.it-card h3{margin:0;font-family:var(--font-sans);font-weight:var(--fw-semibold);color:var(--athar-navy);font-size:clamp(13px,1.02vw,19px);letter-spacing:.01em}
+.it-card .bullets.it-card-list{margin:0;padding-inline-start:1.1em;display:flex;flex-direction:column;gap:clamp(2px,.45vh,6px);font-size:clamp(10.5px,.82vw,14.5px);line-height:1.38;color:var(--graphite);max-inline-size:none}
+.it-band{margin:0;padding:clamp(6px,.9vh,10px) 14px;background:var(--white);border:1px solid var(--stone);border-inline-start:3px solid var(--legacy-gold);border-radius:var(--radius-md);font-size:clamp(10.5px,.78vw,13px);color:var(--graphite);line-height:1.4;flex:0 0 auto}
+.it-newsstrip{display:flex;flex-direction:column;gap:5px;min-block-size:0;flex:0 0 auto}
+.it-news-cols{display:grid;grid-template-columns:repeat(4,1fr);gap:clamp(8px,.8vw,14px);min-block-size:0}
+.it-news-col{display:flex;flex-direction:column;gap:5px;min-inline-size:0}
+.it-news-coltitle{font-size:.66rem;font-weight:var(--fw-semibold);color:var(--gulf-blue);letter-spacing:.05em;text-transform:uppercase;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+html[lang=ar] .it-news-coltitle{letter-spacing:0;text-transform:none}
+.it-news{display:flex;gap:7px;align-items:stretch;text-decoration:none;color:inherit;background:var(--white);border:1px solid var(--stone);border-radius:6px;padding:4px;min-inline-size:0;transition:border-color .15s}
+.it-news:hover,.it-news:focus-visible{border-color:var(--legacy-gold);outline:none}
+.it-news-thumb{flex:0 0 clamp(72px,6.6vw,128px);aspect-ratio:16/9;align-self:center;border-radius:4px;overflow:hidden;background:var(--manuscript);border:1px solid var(--stone)}
+.it-news-thumb img{display:block;inline-size:100%;block-size:100%;object-fit:cover}
+.it-news-body{display:flex;flex-direction:column;gap:2px;min-inline-size:0;flex:1;justify-content:center}
+.it-news-pub{display:flex;align-items:center;gap:5px;font-size:clamp(8.5px,.6vw,9.8px);color:var(--graphite);min-inline-size:0}
+.it-news-fav{inline-size:12px;block-size:12px;border-radius:2px;flex:0 0 auto;object-fit:contain}
+.it-news-pubname{font-weight:var(--fw-semibold);color:var(--athar-navy);white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.it-news-date{white-space:nowrap;flex:0 0 auto;margin-inline-start:auto}
+.it-news-head{font-size:clamp(9.6px,.7vw,11.5px);line-height:1.25;color:var(--athar-navy);font-weight:var(--fw-medium);display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden}
+.it-news-foot{display:flex;align-items:center;gap:5px;flex-wrap:nowrap;min-inline-size:0}
+.it-tag{border:1px solid;border-radius:999px;padding:0 6px;letter-spacing:.05em;text-transform:uppercase;font-size:8.2px;white-space:nowrap;flex:0 0 auto;line-height:1.5}
+.it-tag--direct{color:var(--falaj-teal);border-color:var(--falaj-teal)}
+.it-tag--related{color:var(--gulf-blue);border-color:var(--stone)}
+.it-tierchip{font-size:8.2px;border-radius:999px;padding:0 6px;background:var(--manuscript);border:1px solid var(--stone);color:var(--athar-navy);white-space:nowrap;overflow:hidden;text-overflow:ellipsis;min-inline-size:0;line-height:1.5}
+/* ---------- slide 32 · partner wall + review band ---------- */
+.it-wall{display:flex;flex-direction:column;gap:clamp(8px,1.3vh,14px);min-block-size:0;flex:0 0 auto}
+.it-wall-label{margin:0}
+.it-wall-row{display:grid;grid-template-columns:repeat(8,1fr);gap:10px;align-items:stretch}
+.it-wall-row--funders{grid-template-columns:repeat(4,1fr)}
+.it-tile{margin:0;align-items:center;justify-content:flex-start;text-align:center;gap:5px;padding:8px 10px 7px;min-block-size:0}
+.it-wall .it-tile .pmark{block-size:clamp(44px,7vh,76px);min-block-size:0;padding:6px 10px;inline-size:100%}
+.it-wall .it-tile .pmark--img img{max-block-size:clamp(24px,4.2vh,44px);max-inline-size:90%;block-size:auto;inline-size:auto;object-fit:contain}
+/* the four funder tiles share ONE treatment: same tile box, same white panel, same padding, same logo box, colour as delivered, same caption */
+.it-wall .it-wall-row--funders .it-tile{padding:8px 12px 7px;gap:5px;background:var(--manuscript);border:1px solid var(--stone)}
+.it-wall .it-wall-row--funders .it-tile .pmark{block-size:clamp(56px,8.6vh,96px);padding:6px 14px;background:var(--white);border:1px solid var(--stone)}
+.it-wall .it-wall-row--funders .it-tile .pmark--img img{max-block-size:clamp(30px,5.6vh,62px);max-inline-size:78%;block-size:auto;inline-size:auto;object-fit:contain;filter:none}
+.it-wall .it-wall-row--funders .it-tile .it-tile-cap{font-size:.74rem;color:var(--graphite);line-height:1.25}
+.it-wall .it-wall-row--funders .it-tile .it-tile-sub{font-size:.6rem}
+.it-tile--dark{background:var(--athar-navy);border-color:var(--athar-navy)}
+.it-tile--dark .it-tile-cap,.it-tile--dark .it-tile-sub{color:var(--white)}
+.it-tile-cap{font-size:.72rem;color:var(--graphite);line-height:1.25;margin:0}
+.it-tile-sub{font-size:.6rem;letter-spacing:.06em;text-transform:uppercase;color:var(--gulf-blue);line-height:1.2;margin:0}
+html[lang=ar] .it-tile-sub{letter-spacing:0;text-transform:none}
+.it-wordmark{display:flex;flex-direction:column;align-items:center;gap:3px}
+.it-wordmark .pmark-name{font-family:var(--font-serif, var(--font-sans));font-weight:var(--fw-semibold);color:var(--athar-navy);font-size:clamp(13px,.95vw,16px);line-height:1.2}
+.it-pending{font-size:.6rem;color:var(--graphite);font-style:italic;letter-spacing:.02em}
+.it-reviewband{margin-block-start:auto;padding:clamp(6px,.9vh,10px) 14px;background:var(--white);border:1px solid var(--stone);border-inline-start:3px solid var(--legacy-gold);border-radius:var(--radius-md);flex:0 0 auto}
+.it-review{margin:0;font-size:clamp(9.5px,.7vw,12px);color:var(--graphite);line-height:1.45}
+.it-review-badge{display:inline-block;font-size:.62rem;letter-spacing:.08em;text-transform:uppercase;font-weight:var(--fw-semibold);color:var(--athar-navy);border:1px solid var(--athar-navy);border-radius:999px;padding:0 7px;margin-inline-end:6px;line-height:1.6;vertical-align:baseline}
+.it-srcnote{margin:0;font-size:clamp(9px,.64vw,11px);color:var(--graphite)}
+/* ---------- slide 33 endorsement ---------- */
+.it-endorse{margin:0;display:flex;align-items:baseline;gap:14px;flex-wrap:wrap;padding-block-start:6px}
+.it-endorse-ar{font-family:var(--font-arabic, var(--font-sans));font-size:clamp(22px,1.9vw,34px);font-weight:var(--fw-semibold);color:var(--athar-navy)}
+.it-endorse-en{font-family:var(--font-serif, var(--font-sans));font-size:clamp(16px,1.2vw,22px);color:var(--gulf-blue)}
+.it-endorse-sep{color:var(--legacy-gold)}
+/* ---------- short viewports (1366×768 and below): tighten, never hide ---------- */
+@media (max-height:820px){
+  section.slide.it-slide .s-body{gap:6px;padding-block-end:6px}
+  .it-tier{gap:3px;padding:6px 9px}
+  .it-product{block-size:clamp(60px,12vh,104px)}
+  .it-tier-name{font-size:12.5px}
+  .it-tier-flag,.it-delivered{font-size:10px;line-height:1.28}
+  .it-tier-flagship{font-size:9px}
+  .it-outcomes{font-size:9.6px}.it-wbtag{font-size:8.6px;padding:0 6px}.it-wblabel{font-size:.52rem}
+  .it-partners{padding:3px 7px 4px;gap:2px}.it-partner-row{min-block-size:16px;gap:12px}.it-partner-logo img{block-size:14px}.it-partner-word{font-size:11px}.it-partners-label{font-size:.5rem}
+  .it-impact{padding:4px 7px;gap:3px}
+  .it-ownband{padding:4px 12px;gap:10px}.it-ownband-text{font-size:10.5px;line-height:1.3}.it-own-vis figure{inline-size:78px}.it-own-vis figure.it-own-wide{inline-size:100px}.it-ownband-label{font-size:.52rem}
+  .it-slide--it-tiers .bullets{font-size:10.5px}
+  .it-footnote{font-size:8.6px!important;line-height:1.25!important}.it-footnotes{padding-block-start:3px;gap:1px}
+  .it-card{padding:6px 10px;gap:3px}.it-card-icon{display:none}.it-card h3{font-size:12px}.it-card .bullets.it-card-list{font-size:10px;gap:2px;line-height:1.25}
+  .it-band{font-size:9.5px;padding:4px 10px;line-height:1.3}
+  .it-news{padding:3px;gap:6px}.it-news-thumb{flex-basis:clamp(60px,6vw,84px)}.it-news-head{font-size:9.3px;line-height:1.2}.it-news-pub{font-size:8px}.it-tag,.it-tierchip{font-size:7.6px}.it-news-col{gap:3px}.it-newsstrip{gap:3px}.it-news-cols{gap:8px}.it-news-coltitle{font-size:.58rem}
+  .it-wall{gap:6px}.it-wall-row{gap:6px}
+  .it-tile{padding:4px 6px;gap:3px}.it-wall .it-tile .pmark{block-size:36px;padding:3px 6px}.it-wall .it-tile .pmark--img img{max-block-size:24px}.it-tile-cap{font-size:9px}.it-tile-sub{font-size:7.5px}
+  .it-wall .it-wall-row--funders .it-tile{padding:5px 8px 4px}.it-wall .it-wall-row--funders .it-tile .pmark{block-size:54px;padding:4px 10px}.it-wall .it-wall-row--funders .it-tile .pmark--img img{max-block-size:44px}.it-wall .it-wall-row--funders .it-tile .it-tile-cap{font-size:9.5px}.it-wall .it-wall-row--funders .it-tile .it-tile-sub{font-size:7.5px}
+  .it-review{font-size:8.8px;line-height:1.35}.it-review-badge{font-size:.52rem}.it-srcnote{font-size:8.6px}.it-reviewband{padding:4px 10px}
+  .it-slide .muted.small{font-size:9px;line-height:1.25}
+  html[lang=ar] .it-delivered,html[lang=ar] .it-tier-flag{font-size:9.4px}html[lang=ar] .it-outcomes{font-size:9.2px}html[lang=ar] .it-wbtag{font-size:8.2px}html[lang=ar] .it-tier-name{font-size:11.5px}html[lang=ar] .it-news-head{font-size:9px}html[lang=ar] .it-review{font-size:8.6px}
+}
+@media (max-width:1100px){.it-tiers,.it-cards{grid-template-columns:1fr}.it-news-cols{grid-template-columns:repeat(2,1fr)}.it-wall-row{grid-template-columns:repeat(4,1fr)}.it-wall-row--funders{grid-template-columns:repeat(2,1fr)}.it-body--tiers > .s-head,.it-body--tiers > .sub{max-inline-size:none}.it-hero-map{display:none}}
+@media (prefers-reduced-motion:reduce){body.it-virtual #root section.slide.is-active:not(.it-slide){transition:none}.it-news{transition:none}}
+
+/* ---------- v1.3.3 · slide 30 news cards: publisher / partner mark instead of the article photo ---------- */
+.it-news-mark{flex:0 0 clamp(64px,5.6vw,104px);block-size:var(--it-mark-h);align-self:center;display:flex;align-items:center;justify-content:center;border-radius:4px;overflow:hidden;background:var(--white);border:1px solid var(--stone);padding:4px 6px}
+.it-news-mark--dark{background:var(--athar-navy);border-color:var(--athar-navy)}
+.it-news-mark img{display:block;max-inline-size:100%;max-block-size:100%;inline-size:auto;block-size:auto;object-fit:contain}
+.it-news-mark--publisher img{max-block-size:88%}
+.it-news-markword{font-family:var(--font-serif, var(--font-sans));font-weight:var(--fw-semibold);color:var(--athar-navy);font-size:clamp(10px,.8vw,13px);line-height:1.1;text-align:center;letter-spacing:.01em}
+/* v1.5.4 · uniform mark token: one box height for every publisher / partner mark; the image is contained inside it with a 5px margin per side */
+:root{--it-mark-h:clamp(38px,3.8vw,58px)}
+.it-news-mark img,.it-news-mark svg{max-block-size:calc(var(--it-mark-h) - 10px);max-inline-size:calc(100% - 10px);inline-size:auto;block-size:auto;object-fit:contain}
+.it-news-pub{justify-content:space-between}
+.it-slide--it-metrics .it-footnotes{padding-block-start:3px}
+@media (max-height:820px){
+  .it-news-mark{--it-mark-h:32px;flex-basis:56px;padding:3px 5px}.it-news-markword{font-size:9px}
+  .it-slide--it-metrics .it-footnote{font-size:8.4px!important;line-height:1.22!important}
+}
+
+/* ================= v1.4.0 · WP1 slide 30 — whole-card news anchors ================= */
+.it-news.news-card{position:relative;cursor:pointer;transition:border-color .15s,transform .15s,box-shadow .15s;outline:none}
+.it-news.news-card:hover{border-color:var(--legacy-gold);transform:translateY(-2px);box-shadow:0 6px 16px rgba(var(--athar-navy-rgb),.12)}
+.it-news.news-card:focus-visible{border-color:var(--legacy-gold);outline:3px solid var(--falaj-teal);outline-offset:2px;box-shadow:0 0 0 6px rgba(var(--white-rgb),.92)}
+.it-news.news-card:active{transform:translateY(0)}
+.it-news-ext{position:absolute;inset-block-start:4px;inset-inline-end:5px;inline-size:16px;block-size:16px;display:inline-flex;align-items:center;justify-content:center;color:var(--gulf-blue);opacity:.7;border-radius:3px;transition:opacity .15s,color .15s}
+.it-news-ext svg{display:block}
+html[dir=rtl] .it-news-ext svg{transform:scaleX(-1)} /* ↗ mirrors to ↖ in RTL */
+.it-news.news-card:hover .it-news-ext,.it-news.news-card:focus-visible .it-news-ext{opacity:1;color:var(--athar-navy)}
+.it-news.news-card .it-news-pub{padding-inline-end:16px}
+.it-news.news-card[data-flagged=true] .it-news-ext{color:var(--legacy-gold);opacity:1}
+@media (prefers-reduced-motion:reduce){.it-news.news-card,.it-news-ext{transition:none}.it-news.news-card:hover{transform:none}}
+/* ================= v1.4.0 · WP2 slide 29 — OWNERSHIP band, progression row, backed footnote ================= */
+.it-body--tiers.s-body{gap:clamp(8px,1.5vh,16px)}
+.it-ownband--v140{display:grid;grid-template-columns:minmax(0,1fr) auto;align-items:center;gap:clamp(12px,1.25vw,24px);padding:clamp(8px,1.1vh,12px) clamp(12px,1.1vw,18px)}
+.it-ownband-copy{display:flex;flex-direction:column;gap:clamp(4px,.6vh,8px);min-inline-size:0}
+.it-ownband--v140 .it-ownband-label{align-self:flex-start;margin:0;font-size:clamp(9px,.62vw,11px);letter-spacing:.12em;padding:2px 10px}
+.it-ownband--v140 .it-ownband-text{flex:none;margin:0;font-size:clamp(11.5px,.95vw,16px);line-height:1.35;text-wrap:balance;max-inline-size:60ch}
+.it-own-banner{position:relative;margin:0;block-size:clamp(64px,7.4vh,92px);aspect-ratio:5/1;max-inline-size:min(44vw,560px);border-radius:6px;overflow:hidden;border:1px solid var(--stone);background:var(--manuscript);flex:0 0 auto}
+.it-own-banner picture,.it-own-banner img{display:block;inline-size:100%;block-size:100%}
+.it-own-banner img{object-fit:cover;object-position:50% 50%}
+.it-vis-cap--band{inset-inline-start:0;inset-block-end:0;background:rgba(var(--athar-navy-rgb),.78);padding:2px 8px;font-size:8.5px;letter-spacing:.08em;border-start-end-radius:6px;border-end-start-radius:0}
+.it-progress-row{display:flex;align-items:flex-start;gap:12px;margin:0;padding:0 2px;font-size:clamp(11px,.86vw,14.5px);line-height:1.35;color:var(--athar-navy);font-weight:var(--fw-medium)}
+.it-progress-row .it-dot{flex:0 0 auto;inline-size:9px;block-size:9px;border-radius:50%;background:var(--legacy-gold);margin-block-start:.42em}
+.it-progress-text{min-inline-size:0;text-wrap:pretty}
+.it-footnotes--backed{border-block-start:0;gap:2px;padding:clamp(5px,.7vh,8px) clamp(10px,.9vw,14px);border-radius:6px;background:rgba(var(--athar-offwhite-rgb),.96);border:1px solid rgba(var(--athar-navy-rgb),.08)}
+.it-footnotes--backed .it-footnote{color:rgba(var(--athar-navy-rgb),.65)!important;font-size:clamp(10px,.68vw,12px)!important;line-height:1.45!important;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+@media (max-height:820px){
+  .it-body--tiers.s-body{gap:8px}
+  .it-ownband--v140{padding:6px 12px;gap:12px}.it-ownband--v140 .it-ownband-text{font-size:11px;line-height:1.3}
+  .it-own-banner{block-size:60px}
+  .it-progress-row{font-size:10.5px;line-height:1.3;gap:10px}.it-progress-row .it-dot{inline-size:8px;block-size:8px;margin-block-start:.35em}
+  .it-footnotes--backed{padding:4px 10px;gap:1px}.it-footnotes--backed .it-footnote{font-size:9.6px!important;line-height:1.4!important}
+}
+
+/* v1.4.7 — Access · Lebanon card: whole-card link, canonical photo (compact strip with the attribution overlaid so the slide keeps its
+   vertical budget: card grid + agreement band + news strip + footnotes must all sit inside the 1024-px stage at 1920×1080), verified note */
+.it-card--link{display:block;color:inherit;text-decoration:none;cursor:pointer;transition:box-shadow .15s ease}
+.it-card--link:hover{box-shadow:0 0 0 2px #AD8D63 inset}
+.it-card--link:focus-visible{outline:3px solid #AD8D63;outline-offset:3px;box-shadow:0 0 0 2px #192E3C inset}
+.it-card-photo{position:relative;margin:4px 0 2px;overflow:hidden;border-radius:8px}
+.it-card-photo picture,.it-card-photo img{display:block;inline-size:100%}
+.it-card-photo img{block-size:76px;object-fit:cover;object-position:50% 30%;border-radius:8px;background:#F2EEE5}
+.it-card-photo-cap{position:absolute;inset-inline:0;inset-block-end:0;margin:0;padding:2px 8px;font-size:9.5px;line-height:1.25;color:#192E3C;background:rgba(242,238,229,.93);white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.it-card-note{font-size:10px;line-height:1.3;color:#192E3C;margin:4px 0 0;padding-block-start:4px;border-block-start:1px solid #E7E0D4}
+.it-hero-map--empty{display:none}
+@media (max-height:900px){.it-card-photo img{block-size:56px}.it-card-note{display:none}}
+@media (max-width:1024px){.it-card-photo img{block-size:64px}}
+
+/* ===== v1.5.2 (2026-09-30) — slide 30 photo uncropped, equal cards, 4×2 non-scrolling news grid; slide 29 top-aligned tiers ===== */
+.it-cards{align-items:stretch}
+.it-card{block-size:100%;justify-content:flex-start}
+.it-card-photo{overflow:visible;margin:4px 0 0}
+.it-card-photo picture{display:flex;justify-content:center}
+.it-card-photo img{display:block;inline-size:auto;max-inline-size:100%;block-size:clamp(96px,17vh,190px);aspect-ratio:1600/1067;object-fit:contain;object-position:50% 50%;margin-inline:auto;border-radius:8px;background:#F2EEE5}
+.it-card-photo-cap{position:static;inset:auto;white-space:normal;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden;background:transparent;padding:3px 0 0;font-size:clamp(9px,.62vw,10.5px);line-height:1.25;color:#2B3238}
+.it-newsstrip{overflow:visible;max-block-size:none;flex:0 0 auto}
+.it-news-cols.it-news-grid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));grid-auto-rows:minmax(0,1fr);gap:clamp(8px,.8vw,14px);overflow:visible}
+.it-news-grid .it-news{align-items:flex-start;min-block-size:0}
+.it-news-grid .it-news-head{-webkit-line-clamp:3;overflow:hidden}
+.it-news-grid .it-news-foot{flex-wrap:wrap;gap:4px}
+.it-news-grid .it-tag--related{display:none}
+@media (max-width:1366px){.it-news-grid .it-news-head{-webkit-line-clamp:2}}
+.it-tier{justify-content:flex-start;align-content:start;overflow:visible}
+.it-tier > .grow,.it-tier .it-tier-body{flex:0 0 auto}
+.it-tiers{align-items:stretch}
+
+/* v1.5.2 close-out (2026-09-30) — slide 32 executive photograph (Redington signing, Gulf News 22 Jul 2026): uncropped 4:3, one caption, one source line */
+.it-exec{display:grid;grid-template-columns:minmax(180px,292px) minmax(0,1fr);gap:clamp(12px,1.6vw,22px);align-items:center;margin-block:clamp(10px,1.8vh,20px) 0;padding:clamp(10px,1.4vh,14px) clamp(12px,1.4vw,16px);background:var(--white);border:1px solid var(--stone);border-radius:var(--radius-md);flex:0 0 auto;min-block-size:0}
+.it-exec-photo{min-inline-size:0}
+.it-exec-photo img{display:block;inline-size:100%;block-size:auto;max-block-size:clamp(110px,22vh,219px);aspect-ratio:4/3;object-fit:contain;background:var(--parchment);border-radius:calc(var(--radius-md) - 2px)}
+.it-exec-text{min-inline-size:0}
+.it-exec-kicker{margin-block-end:4px}
+.it-exec-headline{display:block;font-weight:600;font-size:clamp(13px,1.05vw,16px);line-height:1.3;color:var(--athar-navy);text-decoration:none;margin-block-end:6px}
+.it-exec-headline:hover,.it-exec-headline:focus-visible{text-decoration:underline}
+.it-exec-cap{margin:0 0 6px;font-size:clamp(11px,.9vw,13.5px);line-height:1.45;color:var(--graphite)}
+.it-exec-src{margin:0}
+.it-exec-src a{color:var(--gulf-blue);text-decoration:none}.it-exec-src a:hover{text-decoration:underline}
+@media (max-height:760px){.it-exec{gap:12px;padding:8px 12px}.it-exec-photo img{max-block-size:clamp(90px,19vh,150px)}.it-exec-cap{font-size:11px;line-height:1.35}}
+@media (max-width:760px){.it-exec{grid-template-columns:1fr}.it-exec-photo img{max-block-size:26vh}}
+/* v1.5.2 close-out — phone (≤760px): the tier-slide footnote wraps instead of clipping */
+@media (max-width:760px){.it-footnote,.it-footnotes--backed .it-footnote{white-space:normal!important;overflow:visible!important;text-overflow:clip!important;overflow-wrap:anywhere}}
+/* v1.5.5 — Mastercard Foundation official mark (unmodified master PNG, stacked — the only configuration). Height matched to the other funder
+   marks (Gates / Rockefeller / McGovern ≈ 44–46 px at 1440–1728 px wide), capped so the white frame keeps the Foundation's free space x
+   (x = height of the words "mastercard foundation" = 0.305 × mark height → mark ≤ frame ÷ 1.61), never narrower than 36 px. */
+.it-wall .it-wall-row--funders .it-tile .pmark--mastercard{padding:0}
+.it-wall .it-wall-row--funders .it-tile .pmark--mastercard img{max-inline-size:none;inline-size:auto;block-size:calc(100% / 1.61);min-block-size:34.2px;max-block-size:46px;object-fit:contain;filter:none}
+@media (max-width:600px){.it-wall .it-wall-row--funders .it-tile .pmark--mastercard img{block-size:34.2px;max-block-size:34.2px}}
+.it-tile-foot{display:block;margin:1px 0 0;font-size:.55rem;line-height:1.25;color:var(--slate);font-style:normal;letter-spacing:0}
+html[lang=ar] .it-tile-foot{font-size:.6rem}
+/* v1.5.5: viewports ≤ 820 px tall shrink the shared funder frame to 54 px (and the stage scales ~0.92): 40 px keeps the mark ≥ 36 px wide on
+   screen and within 10 % of the other funder marks; the Foundation's full free space x cannot fit inside that frame (documented in CHANGELOG). */
+@media (max-height:820px) and (min-width:601px){.it-wall .it-wall-row--funders .it-tile .pmark--mastercard img{block-size:40px;min-block-size:40px;max-block-size:40px}}

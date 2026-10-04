@@ -1,0 +1,14 @@
+{
+ "base": "http://127.0.0.1:4171",
+ "version": "1.7.1",
+ "written": "2026-10-04T10:26:18.834Z",
+ "rows": [
+  {
+   "duration": 50.005,
+   "controls": true,
+   "readyState": 4,
+   "t": 0.644501,
+   "filmsJson": 50
+  }
+ ]
+}

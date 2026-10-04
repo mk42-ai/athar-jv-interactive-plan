@@ -1,0 +1,40 @@
+{
+ "base": "http://127.0.0.1:4171",
+ "total": 48,
+ "written": "2026-10-04T10:21:10.103Z",
+ "rows": [
+  {
+   "during": {
+    "state": "paused",
+    "reason": "video",
+    "audible": null
+   },
+   "film": {
+    "poster": "athar-origins-of-impact-ep01-muhammed-khalid-poster-18s8.32839348ca.jpg",
+    "posterTime": "18.8",
+    "tracks": [
+     "en:athar-origins-of-impact-ep01-muhammed-khalid.en.4242fc2dfe.vtt",
+     "ar:athar-origins-of-impact-ep01-muhammed-khalid.ar.e11f32091d.vtt"
+    ],
+    "in": "0",
+    "out": "50",
+    "src": "athar-origins-of-impact-ep01-muhammed-khalid-720p.f824472ae0.mp4"
+   },
+   "after": {
+    "n": 43,
+    "how": "after film",
+    "visibleSlideId": "s-exec-khalid",
+    "narratedSlideId": "s-exec-khalid",
+    "expectedClip": "NAR-s43",
+    "audibleClip": "NAR-s43",
+    "audibleSlideId": "s-exec-khalid",
+    "state": "playing",
+    "reason": "",
+    "ccMatches": true,
+    "syncMs": 42,
+    "t": "2026-10-04T10:21:10.083Z",
+    "pass": true
+   }
+  }
+ ]
+}

@@ -1,0 +1,57 @@
+{
+ "base": "http://127.0.0.1:4171",
+ "version": "1.7.1",
+ "expectCommit": "4ea5cc03f7de0061996946e129a00d6c32a2500f",
+ "written": "2026-10-04T10:05:28.677Z",
+ "rows": [
+  {
+   "idle": {
+    "lang": "en",
+    "dir": "ltr",
+    "badge": "v1.7.1",
+    "html": "1.7.1",
+    "ids": [
+     "s-exec-intro",
+     "s-exec-al-ameri",
+     "s-exec-ferreira-da-cunha",
+     "s-exec-khalid",
+     "s-exec-unwalla",
+     "s-exec-lorenzo"
+    ],
+    "count": 6,
+    "total": 48,
+    "active": true,
+    "n": 44,
+    "currentSrc": "http://127.0.0.1:4171/assets/exec/films/unwalla/athar-origins-ep01-kayaan-unwalla-1080p.2c1c7f0f3b.mp4",
+    "src": "athar-origins-ep01-kayaan-unwalla-1080p.2c1c7f0f3b.mp4",
+    "poster": "athar-origins-ep01-kayaan-unwalla-poster-20s0.976a2a5387.jpg",
+    "posterLoaded": true,
+    "duration": 40,
+    "dur": "0:40",
+    "title": "Athar — Origins of Impact, Episode 01: Kayaan K. Unwalla",
+    "figDir": "ltr",
+    "tracks": [
+     "en:athar-origins-ep01-kayaan-unwalla.en.246c642fdf.vtt:default",
+     "ar:athar-origins-ep01-kayaan-unwalla.ar.b3b9a6e998.vtt"
+    ],
+    "name": "Kayaan K. Unwalla",
+    "role": "Co-founder & Chief Strategy Officer, AIREV",
+    "paused": true
+   },
+   "playing": {
+    "paused": false,
+    "currentTime": 2.817919,
+    "duration": 40,
+    "src": "athar-origins-ep01-kayaan-unwalla-1080p.2c1c7f0f3b.mp4",
+    "showing": [
+     "en:11"
+    ],
+    "controls": true,
+    "guide": "idle"
+   },
+   "tiles": null,
+   "errors": [],
+   "failedRequests": []
+  }
+ ]
+}

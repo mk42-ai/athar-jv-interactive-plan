@@ -1,0 +1,1736 @@
+{
+ "marks": [
+  {
+   "t": "2026-10-01T06:14:17.335Z",
+   "scenario": "S07-auto-on",
+   "step": "guide started on 26 (AUTO on, 4×)",
+   "expect": 26,
+   "vis": {
+    "n": 26,
+    "id": "s-governance-licence",
+    "slideId": null
+   },
+   "audio": {
+    "src": "guide-06-governance-and-roadmap-kyzmCSHcw8.mp3",
+    "clip": "NAR-06",
+    "t": 5.68,
+    "muted": false
+   },
+   "cc": "An open steering council sets the shared plugin standard and approves the roadmap.",
+   "guide": {
+    "state": "playing",
+    "clip": "NAR-06",
+    "slideId": null,
+    "blocked": "false",
+    "status": "Narrating slide 26 of 39 · 06 Governance & roadmap",
+    "tap": false
+   }
+  },
+  {
+   "t": "2026-10-01T06:14:19.339Z",
+   "scenario": "S07-auto-on",
+   "step": "AUTO +2 s",
+   "expect": null,
+   "vis": {
+    "n": 27,
+    "id": "s-roadmap",
+    "slideId": null
+   },
+   "audio": {
+    "src": "guide-06-governance-and-roadmap-kyzmCSHcw8.mp3",
+    "clip": "NAR-06",
+    "t": 13.71,
+    "muted": false
+   },
+   "cc": "Decisions, releases, and outcome reports are published, so every member can see how priorities are set and how the platform evolves over time.",
+   "guide": {
+    "state": "playing",
+    "clip": "NAR-06",
+    "slideId": null,
+    "blocked": "false",
+    "status": "Narrating slide 27 of 39 · 06 Governance & roadmap",
+    "tap": false
+   }
+  },
+  {
+   "t": "2026-10-01T06:14:21.343Z",
+   "scenario": "S07-auto-on",
+   "step": "AUTO +4 s",
+   "expect": null,
+   "vis": {
+    "n": 29,
+    "id": "s-it-tiers",
+    "slideId": null
+   },
+   "audio": {
+    "src": "guide-07-impact-and-funding-vWkiINp1IS.mp3",
+    "clip": "NAR-07",
+    "t": 5.57,
+    "muted": false
+   },
+   "cc": "Three impact tiers, one delivery model, access, ownership, legacy.",
+   "guide": {
+    "state": "playing",
+    "clip": "NAR-07",
+    "slideId": null,
+    "blocked": "false",
+    "status": "Narrating slide 29 of 39 · 07 Impact & funding",
+    "tap": false
+   }
+  },
+  {
+   "t": "2026-10-01T06:14:23.351Z",
+   "scenario": "S07-auto-on",
+   "step": "AUTO +6 s",
+   "expect": null,
+   "vis": {
+    "n": 30,
+    "id": "s-it-metrics",
+    "slideId": null
+   },
+   "audio": {
+    "src": "guide-07-impact-and-funding-vWkiINp1IS.mp3",
+    "clip": "NAR-07",
+    "t": 13.64,
+    "muted": false
+   },
+   "cc": "Every agreement includes named cohorts and activation targets, independent evaluator baselines, quarterly outcome reports, and open book costs with unspent funds returned.",
+   "guide": {
+    "state": "playing",
+    "clip": "NAR-07",
+    "slideId": null,
+    "blocked": "false",
+    "status": "Narrating slide 30 of 39 · 07 Impact & funding",
+    "tap": false
+   }
+  },
+  {
+   "t": "2026-10-01T06:14:25.358Z",
+   "scenario": "S07-auto-on",
+   "step": "AUTO +8 s",
+   "expect": null,
+   "vis": {
+    "n": 30,
+    "id": "s-it-metrics",
+    "slideId": null
+   },
+   "audio": {
+    "src": "guide-07-impact-and-funding-vWkiINp1IS.mp3",
+    "clip": "NAR-07",
+    "t": 21.64,
+    "muted": false
+   },
+   "cc": "Every agreement includes named cohorts and activation targets, independent evaluator baselines, quarterly outcome reports, and open book costs with unspent funds returned.",
+   "guide": {
+    "state": "playing",
+    "clip": "NAR-07",
+    "slideId": null,
+    "blocked": "false",
+    "status": "Narrating slide 30 of 39 · 07 Impact & funding",
+    "tap": false
+   }
+  },
+  {
+   "t": "2026-10-01T06:14:27.366Z",
+   "scenario": "S07-auto-on",
+   "step": "AUTO +10 s",
+   "expect": null,
+   "vis": {
+    "n": 31,
+    "id": "s-it-sustain",
+    "slideId": null
+   },
+   "audio": {
+    "src": "guide-07-impact-and-funding-vWkiINp1IS.mp3",
+    "clip": "NAR-07",
+    "t": 29.64,
+    "muted": false
+   },
+   "cc": "Universal API licenses, marketplace revenue share and sovereign pilot options fund the model so each partner can choose what fits.",
+   "guide": {
+    "state": "playing",
+    "clip": "NAR-07",
+    "slideId": null,
+    "blocked": "false",
+    "status": "Narrating slide 31 of 39 · 07 Impact & funding",
+    "tap": false
+   }
+  },
+  {
+   "t": "2026-10-01T06:14:29.372Z",
+   "scenario": "S07-auto-on",
+   "step": "AUTO +12 s",
+   "expect": null,
+   "vis": {
+    "n": 36,
+    "id": "s-aos-roadmap",
+    "slideId": null
+   },
+   "audio": {
+    "src": "guide-08-athar-os-Ib4oKe91OD.mp3",
+    "clip": "NAR-08",
+    "t": 6.92,
+    "muted": false
+   },
+   "cc": "The roadmap runs now in Q4, 2026, next in 2027 and later in 2028.",
+   "guide": {
+    "state": "playing",
+    "clip": "NAR-08",
+    "slideId": null,
+    "blocked": "false",
+    "status": "Narrating slide 36 of 39 · 08 Athar OS",
+    "tap": false
+   }
+  }
+ ],
+ "events": [
+  {
+   "scenario": "S07-auto-on",
+   "t": "2026-10-01T06:14:14.709Z",
+   "ms": 565,
+   "type": "sample",
+   "vis": {
+    "n": 26,
+    "id": "s-governance-licence",
+    "slideId": null
+   },
+   "audio": null,
+   "cc": null,
+   "guide": null,
+   "hash": "#/26"
+  },
+  {
+   "scenario": "S07-auto-on",
+   "t": "2026-10-01T06:14:15.052Z",
+   "ms": 908,
+   "type": "sample",
+   "vis": {
+    "n": 26,
+    "id": "s-governance-licence",
+    "slideId": null
+   },
+   "audio": null,
+   "cc": "",
+   "guide": {
+    "state": "idle",
+    "clip": null,
+    "slideId": null,
+    "gen": null,
+    "status": "No narration for this slide"
+   },
+   "hash": "#/26"
+  },
+  {
+   "scenario": "S07-auto-on",
+   "t": "2026-10-01T06:14:15.056Z",
+   "ms": 912,
+   "type": "media:emptied",
+   "vis": {
+    "n": 26,
+    "id": "s-governance-licence",
+    "slideId": null
+   },
+   "audio": null,
+   "cc": "Section six, governance and roadmap.",
+   "guide": {
+    "state": "loading",
+    "clip": "NAR-06",
+    "slideId": null,
+    "gen": null,
+    "status": "Guide ready · slide 26 of 39 · 06 Governance & roadmap"
+   },
+   "hash": "#/26",
+   "el": "guide-06-governance-and-roadmap-kyzmCSHcw8.mp3",
+   "ct": 0
+  },
+  {
+   "scenario": "S07-auto-on",
+   "t": "2026-10-01T06:14:15.058Z",
+   "ms": 913,
+   "type": "media:loadstart",
+   "vis": {
+    "n": 26,
+    "id": "s-governance-licence",
+    "slideId": null
+   },
+   "audio": null,
+   "cc": "Section six, governance and roadmap.",
+   "guide": {
+    "state": "loading",
+    "clip": "NAR-06",
+    "slideId": null,
+    "gen": null,
+    "status": "Guide ready · slide 26 of 39 · 06 Governance & roadmap"
+   },
+   "hash": "#/26",
+   "el": "guide-06-governance-and-roadmap-kyzmCSHcw8.mp3",
+   "ct": 0
+  },
+  {
+   "scenario": "S07-auto-on",
+   "t": "2026-10-01T06:14:15.058Z",
+   "ms": 914,
+   "type": "media:loadstart",
+   "vis": {
+    "n": 26,
+    "id": "s-governance-licence",
+    "slideId": null
+   },
+   "audio": null,
+   "cc": "Section six, governance and roadmap.",
+   "guide": {
+    "state": "loading",
+    "clip": "NAR-06",
+    "slideId": null,
+    "gen": null,
+    "status": "Guide ready · slide 26 of 39 · 06 Governance & roadmap"
+   },
+   "hash": "#/26",
+   "el": "guide-07-impact-and-funding-vWkiINp1IS.mp3",
+   "ct": 0
+  },
+  {
+   "scenario": "S07-auto-on",
+   "t": "2026-10-01T06:14:15.112Z",
+   "ms": 968,
+   "type": "media:canplay",
+   "vis": {
+    "n": 26,
+    "id": "s-governance-licence",
+    "slideId": null
+   },
+   "audio": null,
+   "cc": "Section six, governance and roadmap.",
+   "guide": {
+    "state": "loading",
+    "clip": "NAR-06",
+    "slideId": null,
+    "gen": null,
+    "status": "Guide ready · slide 26 of 39 · 06 Governance & roadmap"
+   },
+   "hash": "#/26",
+   "el": "guide-07-impact-and-funding-vWkiINp1IS.mp3",
+   "ct": 0
+  },
+  {
+   "scenario": "S07-auto-on",
+   "t": "2026-10-01T06:14:15.113Z",
+   "ms": 969,
+   "type": "media:canplay",
+   "vis": {
+    "n": 26,
+    "id": "s-governance-licence",
+    "slideId": null
+   },
+   "audio": null,
+   "cc": "Section six, governance and roadmap.",
+   "guide": {
+    "state": "paused",
+    "clip": "NAR-06",
+    "slideId": null,
+    "gen": null,
+    "status": "Guide ready · slide 26 of 39 · 06 Governance & roadmap"
+   },
+   "hash": "#/26",
+   "el": "guide-06-governance-and-roadmap-kyzmCSHcw8.mp3",
+   "ct": 0
+  },
+  {
+   "scenario": "S07-auto-on",
+   "t": "2026-10-01T06:14:15.147Z",
+   "ms": 1003,
+   "type": "sample",
+   "vis": {
+    "n": 26,
+    "id": "s-governance-licence",
+    "slideId": null
+   },
+   "audio": null,
+   "cc": "Section six, governance and roadmap.",
+   "guide": {
+    "state": "paused",
+    "clip": "NAR-06",
+    "slideId": null,
+    "gen": null,
+    "status": "Guide ready · slide 26 of 39 · 06 Governance & roadmap"
+   },
+   "hash": "#/26"
+  },
+  {
+   "scenario": "S07-auto-on",
+   "t": "2026-10-01T06:14:15.827Z",
+   "ms": 1683,
+   "type": "click",
+   "vis": {
+    "n": 26,
+    "id": "s-governance-licence",
+    "slideId": null
+   },
+   "audio": null,
+   "cc": "Section six, governance and roadmap.",
+   "guide": {
+    "state": "paused",
+    "clip": "NAR-06",
+    "slideId": null,
+    "gen": null,
+    "status": "Guide ready · slide 26 of 39 · 06 Governance & roadmap"
+   },
+   "hash": "#/26",
+   "target": "guide-toggle"
+  },
+  {
+   "scenario": "S07-auto-on",
+   "t": "2026-10-01T06:14:15.828Z",
+   "ms": 1683,
+   "type": "play()",
+   "vis": {
+    "n": 26,
+    "id": "s-governance-licence",
+    "slideId": null
+   },
+   "audio": {
+    "src": "guide-06-governance-and-roadmap-kyzmCSHcw8.mp3",
+    "clip": "NAR-06",
+    "t": 0,
+    "muted": false
+   },
+   "cc": "Section six, governance and roadmap.",
+   "guide": {
+    "state": "paused",
+    "clip": "NAR-06",
+    "slideId": null,
+    "gen": null,
+    "status": "Guide ready · slide 26 of 39 · 06 Governance & roadmap"
+   },
+   "hash": "#/26",
+   "el": "guide-06-governance-and-roadmap-kyzmCSHcw8.mp3",
+   "ct": 0
+  },
+  {
+   "scenario": "S07-auto-on",
+   "t": "2026-10-01T06:14:15.852Z",
+   "ms": 1707,
+   "type": "media:playing",
+   "vis": {
+    "n": 26,
+    "id": "s-governance-licence",
+    "slideId": null
+   },
+   "audio": {
+    "src": "guide-06-governance-and-roadmap-kyzmCSHcw8.mp3",
+    "clip": "NAR-06",
+    "t": 0.07,
+    "muted": false
+   },
+   "cc": "Section six, governance and roadmap.",
+   "guide": {
+    "state": "playing",
+    "clip": "NAR-06",
+    "slideId": null,
+    "gen": null,
+    "status": "Narrating slide 26 of 39 · 06 Governance & roadmap"
+   },
+   "hash": "#/26",
+   "el": "guide-06-governance-and-roadmap-kyzmCSHcw8.mp3",
+   "ct": 0.07
+  },
+  {
+   "scenario": "S07-auto-on",
+   "t": "2026-10-01T06:14:15.852Z",
+   "ms": 1707,
+   "type": "play():resolved",
+   "vis": {
+    "n": 26,
+    "id": "s-governance-licence",
+    "slideId": null
+   },
+   "audio": {
+    "src": "guide-06-governance-and-roadmap-kyzmCSHcw8.mp3",
+    "clip": "NAR-06",
+    "t": 0.07,
+    "muted": false
+   },
+   "cc": "Section six, governance and roadmap.",
+   "guide": {
+    "state": "playing",
+    "clip": "NAR-06",
+    "slideId": null,
+    "gen": null,
+    "status": "Narrating slide 26 of 39 · 06 Governance & roadmap"
+   },
+   "hash": "#/26",
+   "el": "guide-06-governance-and-roadmap-kyzmCSHcw8.mp3"
+  },
+  {
+   "scenario": "S07-auto-on",
+   "t": "2026-10-01T06:14:15.852Z",
+   "ms": 1708,
+   "type": "sample",
+   "vis": {
+    "n": 26,
+    "id": "s-governance-licence",
+    "slideId": null
+   },
+   "audio": {
+    "src": "guide-06-governance-and-roadmap-kyzmCSHcw8.mp3",
+    "clip": "NAR-06",
+    "t": 0.07,
+    "muted": false
+   },
+   "cc": "Section six, governance and roadmap.",
+   "guide": {
+    "state": "playing",
+    "clip": "NAR-06",
+    "slideId": null,
+    "gen": null,
+    "status": "Narrating slide 26 of 39 · 06 Governance & roadmap"
+   },
+   "hash": "#/26"
+  },
+  {
+   "scenario": "S07-auto-on",
+   "t": "2026-10-01T06:14:16.645Z",
+   "ms": 2501,
+   "type": "sample",
+   "vis": {
+    "n": 26,
+    "id": "s-governance-licence",
+    "slideId": null
+   },
+   "audio": {
+    "src": "guide-06-governance-and-roadmap-kyzmCSHcw8.mp3",
+    "clip": "NAR-06",
+    "t": 2.91,
+    "muted": false
+   },
+   "cc": "An open steering council sets the shared plugin standard and approves the roadmap.",
+   "guide": {
+    "state": "playing",
+    "clip": "NAR-06",
+    "slideId": null,
+    "gen": null,
+    "status": "Narrating slide 26 of 39 · 06 Governance & roadmap"
+   },
+   "hash": "#/26"
+  },
+  {
+   "scenario": "S07-auto-on",
+   "t": "2026-10-01T06:14:17.336Z",
+   "ms": 3191,
+   "type": "check",
+   "vis": {
+    "n": 26,
+    "id": "s-governance-licence",
+    "slideId": null
+   },
+   "audio": {
+    "src": "guide-06-governance-and-roadmap-kyzmCSHcw8.mp3",
+    "clip": "NAR-06",
+    "t": 5.69,
+    "muted": false
+   },
+   "cc": "An open steering council sets the shared plugin standard and approves the roadmap.",
+   "guide": {
+    "state": "playing",
+    "clip": "NAR-06",
+    "slideId": null,
+    "gen": null,
+    "status": "Narrating slide 26 of 39 · 06 Governance & roadmap"
+   },
+   "hash": "#/26",
+   "step": "guide started on 26 (AUTO on, 4×)",
+   "expect": 26
+  },
+  {
+   "scenario": "S07-auto-on",
+   "t": "2026-10-01T06:14:17.952Z",
+   "ms": 3807,
+   "type": "hashchange",
+   "vis": {
+    "n": 26,
+    "id": "s-governance-licence",
+    "slideId": null
+   },
+   "audio": {
+    "src": "guide-06-governance-and-roadmap-kyzmCSHcw8.mp3",
+    "clip": "NAR-06",
+    "t": 8.16,
+    "muted": false
+   },
+   "cc": "Decisions, releases, and outcome reports are published, so every member can see how priorities are set and how the platform evolves over time.",
+   "guide": {
+    "state": "playing",
+    "clip": "NAR-06",
+    "slideId": null,
+    "gen": null,
+    "status": "Narrating slide 26 of 39 · 06 Governance & roadmap"
+   },
+   "hash": "#/27"
+  },
+  {
+   "scenario": "S07-auto-on",
+   "t": "2026-10-01T06:14:18.045Z",
+   "ms": 3901,
+   "type": "sample",
+   "vis": {
+    "n": 27,
+    "id": "s-roadmap",
+    "slideId": null
+   },
+   "audio": {
+    "src": "guide-06-governance-and-roadmap-kyzmCSHcw8.mp3",
+    "clip": "NAR-06",
+    "t": 8.53,
+    "muted": false
+   },
+   "cc": "Decisions, releases, and outcome reports are published, so every member can see how priorities are set and how the platform evolves over time.",
+   "guide": {
+    "state": "playing",
+    "clip": "NAR-06",
+    "slideId": null,
+    "gen": null,
+    "status": "Narrating slide 27 of 39 · 06 Governance & roadmap"
+   },
+   "hash": "#/27"
+  },
+  {
+   "scenario": "S07-auto-on",
+   "t": "2026-10-01T06:14:19.340Z",
+   "ms": 5195,
+   "type": "check",
+   "vis": {
+    "n": 27,
+    "id": "s-roadmap",
+    "slideId": null
+   },
+   "audio": {
+    "src": "guide-06-governance-and-roadmap-kyzmCSHcw8.mp3",
+    "clip": "NAR-06",
+    "t": 13.72,
+    "muted": false
+   },
+   "cc": "Decisions, releases, and outcome reports are published, so every member can see how priorities are set and how the platform evolves over time.",
+   "guide": {
+    "state": "playing",
+    "clip": "NAR-06",
+    "slideId": null,
+    "gen": null,
+    "status": "Narrating slide 27 of 39 · 06 Governance & roadmap"
+   },
+   "hash": "#/27",
+   "step": "AUTO +2 s",
+   "expect": null
+  },
+  {
+   "scenario": "S07-auto-on",
+   "t": "2026-10-01T06:14:19.830Z",
+   "ms": 5686,
+   "type": "media:pause",
+   "vis": {
+    "n": 27,
+    "id": "s-roadmap",
+    "slideId": null
+   },
+   "audio": null,
+   "cc": "Decisions, releases, and outcome reports are published, so every member can see how priorities are set and how the platform evolves over time.",
+   "guide": {
+    "state": "playing",
+    "clip": "NAR-06",
+    "slideId": null,
+    "gen": null,
+    "status": "Narrating slide 27 of 39 · 06 Governance & roadmap"
+   },
+   "hash": "#/27",
+   "el": "guide-06-governance-and-roadmap-kyzmCSHcw8.mp3",
+   "ct": 15.7
+  },
+  {
+   "scenario": "S07-auto-on",
+   "t": "2026-10-01T06:14:19.832Z",
+   "ms": 5687,
+   "type": "media:ended",
+   "vis": {
+    "n": 27,
+    "id": "s-roadmap",
+    "slideId": null
+   },
+   "audio": null,
+   "cc": "Decisions, releases, and outcome reports are published, so every member can see how priorities are set and how the platform evolves over time.",
+   "guide": {
+    "state": "ended",
+    "clip": "NAR-06",
+    "slideId": null,
+    "gen": null,
+    "status": "Narration finished · slide 27 of 39 · 06 Governance & roadmap"
+   },
+   "hash": "#/27/new-1",
+   "el": "guide-06-governance-and-roadmap-kyzmCSHcw8.mp3",
+   "ct": 15.7
+  },
+  {
+   "scenario": "S07-auto-on",
+   "t": "2026-10-01T06:14:19.832Z",
+   "ms": 5688,
+   "type": "hashchange",
+   "vis": {
+    "n": 27,
+    "id": "s-roadmap",
+    "slideId": null
+   },
+   "audio": null,
+   "cc": "Decisions, releases, and outcome reports are published, so every member can see how priorities are set and how the platform evolves over time.",
+   "guide": {
+    "state": "ended",
+    "clip": "NAR-06",
+    "slideId": null,
+    "gen": null,
+    "status": "Narration finished · slide 27 of 39 · 06 Governance & roadmap"
+   },
+   "hash": "#/27/new-1"
+  },
+  {
+   "scenario": "S07-auto-on",
+   "t": "2026-10-01T06:14:19.851Z",
+   "ms": 5706,
+   "type": "play()",
+   "vis": {
+    "n": 28,
+    "id": "s-it-outcomes",
+    "slideId": null
+   },
+   "audio": {
+    "src": "guide-06-governance-and-roadmap-kyzmCSHcw8.mp3",
+    "clip": "NAR-06",
+    "t": 0,
+    "muted": false
+   },
+   "cc": "Decisions, releases, and outcome reports are published, so every member can see how priorities are set and how the platform evolves over time.",
+   "guide": {
+    "state": "ended",
+    "clip": "NAR-06",
+    "slideId": null,
+    "gen": null,
+    "status": "Narration finished · slide 27 of 39 · 06 Governance & roadmap"
+   },
+   "hash": "#/27/new-1",
+   "el": "guide-06-governance-and-roadmap-kyzmCSHcw8.mp3",
+   "ct": 0
+  },
+  {
+   "scenario": "S07-auto-on",
+   "t": "2026-10-01T06:14:19.858Z",
+   "ms": 5713,
+   "type": "sample",
+   "vis": {
+    "n": 28,
+    "id": "s-it-outcomes",
+    "slideId": null
+   },
+   "audio": {
+    "src": "guide-06-governance-and-roadmap-kyzmCSHcw8.mp3",
+    "clip": "NAR-06",
+    "t": 0,
+    "muted": false
+   },
+   "cc": "Decisions, releases, and outcome reports are published, so every member can see how priorities are set and how the platform evolves over time.",
+   "guide": {
+    "state": "starting",
+    "clip": "NAR-07",
+    "slideId": null,
+    "gen": null,
+    "status": "Narrating slide 28 of 39 · 07 Impact & funding"
+   },
+   "hash": "#/27/new-1"
+  },
+  {
+   "scenario": "S07-auto-on",
+   "t": "2026-10-01T06:14:19.858Z",
+   "ms": 5713,
+   "type": "media:emptied",
+   "vis": {
+    "n": 28,
+    "id": "s-it-outcomes",
+    "slideId": null
+   },
+   "audio": {
+    "src": "guide-06-governance-and-roadmap-kyzmCSHcw8.mp3",
+    "clip": "NAR-06",
+    "t": 0,
+    "muted": false
+   },
+   "cc": "Decisions, releases, and outcome reports are published, so every member can see how priorities are set and how the platform evolves over time.",
+   "guide": {
+    "state": "starting",
+    "clip": "NAR-07",
+    "slideId": null,
+    "gen": null,
+    "status": "Narrating slide 28 of 39 · 07 Impact & funding"
+   },
+   "hash": "#/27/new-1",
+   "el": "guide-06-governance-and-roadmap-kyzmCSHcw8.mp3",
+   "ct": 0
+  },
+  {
+   "scenario": "S07-auto-on",
+   "t": "2026-10-01T06:14:19.860Z",
+   "ms": 5715,
+   "type": "media:loadstart",
+   "vis": {
+    "n": 28,
+    "id": "s-it-outcomes",
+    "slideId": null
+   },
+   "audio": {
+    "src": "guide-07-impact-and-funding-vWkiINp1IS.mp3",
+    "clip": "NAR-07",
+    "t": 0,
+    "muted": false
+   },
+   "cc": "Decisions, releases, and outcome reports are published, so every member can see how priorities are set and how the platform evolves over time.",
+   "guide": {
+    "state": "buffering",
+    "clip": "NAR-07",
+    "slideId": null,
+    "gen": null,
+    "status": "Narrating slide 28 of 39 · 07 Impact & funding"
+   },
+   "hash": "#/27/new-1",
+   "el": "guide-07-impact-and-funding-vWkiINp1IS.mp3",
+   "ct": 0
+  },
+  {
+   "scenario": "S07-auto-on",
+   "t": "2026-10-01T06:14:19.860Z",
+   "ms": 5715,
+   "type": "media:loadstart",
+   "vis": {
+    "n": 28,
+    "id": "s-it-outcomes",
+    "slideId": null
+   },
+   "audio": {
+    "src": "guide-07-impact-and-funding-vWkiINp1IS.mp3",
+    "clip": "NAR-07",
+    "t": 0,
+    "muted": false
+   },
+   "cc": "Decisions, releases, and outcome reports are published, so every member can see how priorities are set and how the platform evolves over time.",
+   "guide": {
+    "state": "buffering",
+    "clip": "NAR-07",
+    "slideId": null,
+    "gen": null,
+    "status": "Narrating slide 28 of 39 · 07 Impact & funding"
+   },
+   "hash": "#/27/new-1",
+   "el": "guide-08-athar-os-Ib4oKe91OD.mp3",
+   "ct": 0
+  },
+  {
+   "scenario": "S07-auto-on",
+   "t": "2026-10-01T06:14:19.870Z",
+   "ms": 5725,
+   "type": "media:canplay",
+   "vis": {
+    "n": 28,
+    "id": "s-it-outcomes",
+    "slideId": null
+   },
+   "audio": {
+    "src": "guide-07-impact-and-funding-vWkiINp1IS.mp3",
+    "clip": "NAR-07",
+    "t": 0,
+    "muted": false
+   },
+   "cc": "Decisions, releases, and outcome reports are published, so every member can see how priorities are set and how the platform evolves over time.",
+   "guide": {
+    "state": "buffering",
+    "clip": "NAR-07",
+    "slideId": null,
+    "gen": null,
+    "status": "Narrating slide 28 of 39 · 07 Impact & funding"
+   },
+   "hash": "#/27/new-1",
+   "el": "guide-07-impact-and-funding-vWkiINp1IS.mp3",
+   "ct": 0
+  },
+  {
+   "scenario": "S07-auto-on",
+   "t": "2026-10-01T06:14:19.870Z",
+   "ms": 5726,
+   "type": "media:playing",
+   "vis": {
+    "n": 28,
+    "id": "s-it-outcomes",
+    "slideId": null
+   },
+   "audio": {
+    "src": "guide-07-impact-and-funding-vWkiINp1IS.mp3",
+    "clip": "NAR-07",
+    "t": 0,
+    "muted": false
+   },
+   "cc": "Decisions, releases, and outcome reports are published, so every member can see how priorities are set and how the platform evolves over time.",
+   "guide": {
+    "state": "playing",
+    "clip": "NAR-07",
+    "slideId": null,
+    "gen": null,
+    "status": "Narrating slide 28 of 39 · 07 Impact & funding"
+   },
+   "hash": "#/27/new-1",
+   "el": "guide-07-impact-and-funding-vWkiINp1IS.mp3",
+   "ct": 0
+  },
+  {
+   "scenario": "S07-auto-on",
+   "t": "2026-10-01T06:14:19.870Z",
+   "ms": 5726,
+   "type": "play():resolved",
+   "vis": {
+    "n": 28,
+    "id": "s-it-outcomes",
+    "slideId": null
+   },
+   "audio": {
+    "src": "guide-07-impact-and-funding-vWkiINp1IS.mp3",
+    "clip": "NAR-07",
+    "t": 0,
+    "muted": false
+   },
+   "cc": "Decisions, releases, and outcome reports are published, so every member can see how priorities are set and how the platform evolves over time.",
+   "guide": {
+    "state": "playing",
+    "clip": "NAR-07",
+    "slideId": null,
+    "gen": null,
+    "status": "Narrating slide 28 of 39 · 07 Impact & funding"
+   },
+   "hash": "#/27/new-1",
+   "el": "guide-06-governance-and-roadmap-kyzmCSHcw8.mp3"
+  },
+  {
+   "scenario": "S07-auto-on",
+   "t": "2026-10-01T06:14:19.871Z",
+   "ms": 5726,
+   "type": "media:canplay",
+   "vis": {
+    "n": 28,
+    "id": "s-it-outcomes",
+    "slideId": null
+   },
+   "audio": {
+    "src": "guide-07-impact-and-funding-vWkiINp1IS.mp3",
+    "clip": "NAR-07",
+    "t": 0,
+    "muted": false
+   },
+   "cc": "Decisions, releases, and outcome reports are published, so every member can see how priorities are set and how the platform evolves over time.",
+   "guide": {
+    "state": "playing",
+    "clip": "NAR-07",
+    "slideId": null,
+    "gen": null,
+    "status": "Narrating slide 28 of 39 · 07 Impact & funding"
+   },
+   "hash": "#/27/new-1",
+   "el": "guide-08-athar-os-Ib4oKe91OD.mp3",
+   "ct": 0
+  },
+  {
+   "scenario": "S07-auto-on",
+   "t": "2026-10-01T06:14:19.945Z",
+   "ms": 5801,
+   "type": "sample",
+   "vis": {
+    "n": 28,
+    "id": "s-it-outcomes",
+    "slideId": null
+   },
+   "audio": {
+    "src": "guide-07-impact-and-funding-vWkiINp1IS.mp3",
+    "clip": "NAR-07",
+    "t": 0.09,
+    "muted": false
+   },
+   "cc": "Decisions, releases, and outcome reports are published, so every member can see how priorities are set and how the platform evolves over time.",
+   "guide": {
+    "state": "playing",
+    "clip": "NAR-07",
+    "slideId": null,
+    "gen": null,
+    "status": "Narrating slide 28 of 39 · 07 Impact & funding"
+   },
+   "hash": "#/27/new-1"
+  },
+  {
+   "scenario": "S07-auto-on",
+   "t": "2026-10-01T06:14:20.145Z",
+   "ms": 6001,
+   "type": "sample",
+   "vis": {
+    "n": 28,
+    "id": "s-it-outcomes",
+    "slideId": null
+   },
+   "audio": {
+    "src": "guide-07-impact-and-funding-vWkiINp1IS.mp3",
+    "clip": "NAR-07",
+    "t": 0.77,
+    "muted": false
+   },
+   "cc": "Section seven, Impact and Funding.",
+   "guide": {
+    "state": "playing",
+    "clip": "NAR-07",
+    "slideId": null,
+    "gen": null,
+    "status": "Narrating slide 28 of 39 · 07 Impact & funding"
+   },
+   "hash": "#/27/new-1"
+  },
+  {
+   "scenario": "S07-auto-on",
+   "t": "2026-10-01T06:14:20.654Z",
+   "ms": 6509,
+   "type": "hashchange",
+   "vis": {
+    "n": 28,
+    "id": "s-it-outcomes",
+    "slideId": null
+   },
+   "audio": {
+    "src": "guide-07-impact-and-funding-vWkiINp1IS.mp3",
+    "clip": "NAR-07",
+    "t": 2.81,
+    "muted": false
+   },
+   "cc": "Three impact tiers, one delivery model, access, ownership, legacy.",
+   "guide": {
+    "state": "playing",
+    "clip": "NAR-07",
+    "slideId": null,
+    "gen": null,
+    "status": "Narrating slide 28 of 39 · 07 Impact & funding"
+   },
+   "hash": "#/27/new-2"
+  },
+  {
+   "scenario": "S07-auto-on",
+   "t": "2026-10-01T06:14:20.745Z",
+   "ms": 6601,
+   "type": "sample",
+   "vis": {
+    "n": 29,
+    "id": "s-it-tiers",
+    "slideId": null
+   },
+   "audio": {
+    "src": "guide-07-impact-and-funding-vWkiINp1IS.mp3",
+    "clip": "NAR-07",
+    "t": 3.16,
+    "muted": false
+   },
+   "cc": "Three impact tiers, one delivery model, access, ownership, legacy.",
+   "guide": {
+    "state": "playing",
+    "clip": "NAR-07",
+    "slideId": null,
+    "gen": null,
+    "status": "Narrating slide 29 of 39 · 07 Impact & funding"
+   },
+   "hash": "#/27/new-2"
+  },
+  {
+   "scenario": "S07-auto-on",
+   "t": "2026-10-01T06:14:21.349Z",
+   "ms": 7204,
+   "type": "check",
+   "vis": {
+    "n": 29,
+    "id": "s-it-tiers",
+    "slideId": null
+   },
+   "audio": {
+    "src": "guide-07-impact-and-funding-vWkiINp1IS.mp3",
+    "clip": "NAR-07",
+    "t": 5.6,
+    "muted": false
+   },
+   "cc": "Three impact tiers, one delivery model, access, ownership, legacy.",
+   "guide": {
+    "state": "playing",
+    "clip": "NAR-07",
+    "slideId": null,
+    "gen": null,
+    "status": "Narrating slide 29 of 39 · 07 Impact & funding"
+   },
+   "hash": "#/27/new-2",
+   "step": "AUTO +4 s",
+   "expect": null
+  },
+  {
+   "scenario": "S07-auto-on",
+   "t": "2026-10-01T06:14:21.747Z",
+   "ms": 7602,
+   "type": "sample",
+   "vis": {
+    "n": 29,
+    "id": "s-it-tiers",
+    "slideId": null
+   },
+   "audio": {
+    "src": "guide-07-impact-and-funding-vWkiINp1IS.mp3",
+    "clip": "NAR-07",
+    "t": 7.17,
+    "muted": false
+   },
+   "cc": "A funder can enter at any tier and climb.",
+   "guide": {
+    "state": "playing",
+    "clip": "NAR-07",
+    "slideId": null,
+    "gen": null,
+    "status": "Narrating slide 29 of 39 · 07 Impact & funding"
+   },
+   "hash": "#/27/new-2"
+  },
+  {
+   "scenario": "S07-auto-on",
+   "t": "2026-10-01T06:14:22.515Z",
+   "ms": 8371,
+   "type": "hashchange",
+   "vis": {
+    "n": 29,
+    "id": "s-it-tiers",
+    "slideId": null
+   },
+   "audio": {
+    "src": "guide-07-impact-and-funding-vWkiINp1IS.mp3",
+    "clip": "NAR-07",
+    "t": 10.26,
+    "muted": false
+   },
+   "cc": "Every agreement includes named cohorts and activation targets, independent evaluator baselines, quarterly outcome reports, and open book costs with unspent funds returned.",
+   "guide": {
+    "state": "playing",
+    "clip": "NAR-07",
+    "slideId": null,
+    "gen": null,
+    "status": "Narrating slide 29 of 39 · 07 Impact & funding"
+   },
+   "hash": "#/27/new-3"
+  },
+  {
+   "scenario": "S07-auto-on",
+   "t": "2026-10-01T06:14:22.545Z",
+   "ms": 8401,
+   "type": "sample",
+   "vis": {
+    "n": 30,
+    "id": "s-it-metrics",
+    "slideId": null
+   },
+   "audio": {
+    "src": "guide-07-impact-and-funding-vWkiINp1IS.mp3",
+    "clip": "NAR-07",
+    "t": 10.37,
+    "muted": false
+   },
+   "cc": "Every agreement includes named cohorts and activation targets, independent evaluator baselines, quarterly outcome reports, and open book costs with unspent funds returned.",
+   "guide": {
+    "state": "playing",
+    "clip": "NAR-07",
+    "slideId": null,
+    "gen": null,
+    "status": "Narrating slide 30 of 39 · 07 Impact & funding"
+   },
+   "hash": "#/27/new-3"
+  },
+  {
+   "scenario": "S07-auto-on",
+   "t": "2026-10-01T06:14:23.352Z",
+   "ms": 9208,
+   "type": "check",
+   "vis": {
+    "n": 30,
+    "id": "s-it-metrics",
+    "slideId": null
+   },
+   "audio": {
+    "src": "guide-07-impact-and-funding-vWkiINp1IS.mp3",
+    "clip": "NAR-07",
+    "t": 13.64,
+    "muted": false
+   },
+   "cc": "Every agreement includes named cohorts and activation targets, independent evaluator baselines, quarterly outcome reports, and open book costs with unspent funds returned.",
+   "guide": {
+    "state": "playing",
+    "clip": "NAR-07",
+    "slideId": null,
+    "gen": null,
+    "status": "Narrating slide 30 of 39 · 07 Impact & funding"
+   },
+   "hash": "#/27/new-3",
+   "step": "AUTO +6 s",
+   "expect": null
+  },
+  {
+   "scenario": "S07-auto-on",
+   "t": "2026-10-01T06:14:25.360Z",
+   "ms": 11215,
+   "type": "check",
+   "vis": {
+    "n": 30,
+    "id": "s-it-metrics",
+    "slideId": null
+   },
+   "audio": {
+    "src": "guide-07-impact-and-funding-vWkiINp1IS.mp3",
+    "clip": "NAR-07",
+    "t": 21.65,
+    "muted": false
+   },
+   "cc": "Every agreement includes named cohorts and activation targets, independent evaluator baselines, quarterly outcome reports, and open book costs with unspent funds returned.",
+   "guide": {
+    "state": "playing",
+    "clip": "NAR-07",
+    "slideId": null,
+    "gen": null,
+    "status": "Narrating slide 30 of 39 · 07 Impact & funding"
+   },
+   "hash": "#/27/new-3",
+   "step": "AUTO +8 s",
+   "expect": null
+  },
+  {
+   "scenario": "S07-auto-on",
+   "t": "2026-10-01T06:14:25.435Z",
+   "ms": 11291,
+   "type": "hashchange",
+   "vis": {
+    "n": 30,
+    "id": "s-it-metrics",
+    "slideId": null
+   },
+   "audio": {
+    "src": "guide-07-impact-and-funding-vWkiINp1IS.mp3",
+    "clip": "NAR-07",
+    "t": 21.94,
+    "muted": false
+   },
+   "cc": "Universal API licenses, marketplace revenue share and sovereign pilot options fund the model so each partner can choose what fits.",
+   "guide": {
+    "state": "playing",
+    "clip": "NAR-07",
+    "slideId": null,
+    "gen": null,
+    "status": "Narrating slide 30 of 39 · 07 Impact & funding"
+   },
+   "hash": "#/27/new-4"
+  },
+  {
+   "scenario": "S07-auto-on",
+   "t": "2026-10-01T06:14:25.455Z",
+   "ms": 11310,
+   "type": "sample",
+   "vis": {
+    "n": 31,
+    "id": "s-it-sustain",
+    "slideId": null
+   },
+   "audio": {
+    "src": "guide-07-impact-and-funding-vWkiINp1IS.mp3",
+    "clip": "NAR-07",
+    "t": 22.04,
+    "muted": false
+   },
+   "cc": "Universal API licenses, marketplace revenue share and sovereign pilot options fund the model so each partner can choose what fits.",
+   "guide": {
+    "state": "playing",
+    "clip": "NAR-07",
+    "slideId": null,
+    "gen": null,
+    "status": "Narrating slide 31 of 39 · 07 Impact & funding"
+   },
+   "hash": "#/27/new-4"
+  },
+  {
+   "scenario": "S07-auto-on",
+   "t": "2026-10-01T06:14:27.368Z",
+   "ms": 13223,
+   "type": "check",
+   "vis": {
+    "n": 31,
+    "id": "s-it-sustain",
+    "slideId": null
+   },
+   "audio": {
+    "src": "guide-07-impact-and-funding-vWkiINp1IS.mp3",
+    "clip": "NAR-07",
+    "t": 29.66,
+    "muted": false
+   },
+   "cc": "Universal API licenses, marketplace revenue share and sovereign pilot options fund the model so each partner can choose what fits.",
+   "guide": {
+    "state": "playing",
+    "clip": "NAR-07",
+    "slideId": null,
+    "gen": null,
+    "status": "Narrating slide 31 of 39 · 07 Impact & funding"
+   },
+   "hash": "#/27/new-4",
+   "step": "AUTO +10 s",
+   "expect": null
+  },
+  {
+   "scenario": "S07-auto-on",
+   "t": "2026-10-01T06:14:27.514Z",
+   "ms": 13370,
+   "type": "media:pause",
+   "vis": {
+    "n": 31,
+    "id": "s-it-sustain",
+    "slideId": null
+   },
+   "audio": null,
+   "cc": "Universal API licenses, marketplace revenue share and sovereign pilot options fund the model so each partner can choose what fits.",
+   "guide": {
+    "state": "playing",
+    "clip": "NAR-07",
+    "slideId": null,
+    "gen": null,
+    "status": "Narrating slide 31 of 39 · 07 Impact & funding"
+   },
+   "hash": "#/27/new-4",
+   "el": "guide-07-impact-and-funding-vWkiINp1IS.mp3",
+   "ct": 30.28
+  },
+  {
+   "scenario": "S07-auto-on",
+   "t": "2026-10-01T06:14:27.515Z",
+   "ms": 13371,
+   "type": "media:ended",
+   "vis": {
+    "n": 31,
+    "id": "s-it-sustain",
+    "slideId": null
+   },
+   "audio": null,
+   "cc": "Universal API licenses, marketplace revenue share and sovereign pilot options fund the model so each partner can choose what fits.",
+   "guide": {
+    "state": "ended",
+    "clip": "NAR-07",
+    "slideId": null,
+    "gen": null,
+    "status": "Narration finished · slide 31 of 39 · 07 Impact & funding"
+   },
+   "hash": "#/27/new-7",
+   "el": "guide-07-impact-and-funding-vWkiINp1IS.mp3",
+   "ct": 30.28
+  },
+  {
+   "scenario": "S07-auto-on",
+   "t": "2026-10-01T06:14:27.515Z",
+   "ms": 13371,
+   "type": "hashchange",
+   "vis": {
+    "n": 31,
+    "id": "s-it-sustain",
+    "slideId": null
+   },
+   "audio": null,
+   "cc": "Universal API licenses, marketplace revenue share and sovereign pilot options fund the model so each partner can choose what fits.",
+   "guide": {
+    "state": "ended",
+    "clip": "NAR-07",
+    "slideId": null,
+    "gen": null,
+    "status": "Narration finished · slide 31 of 39 · 07 Impact & funding"
+   },
+   "hash": "#/27/new-7"
+  },
+  {
+   "scenario": "S07-auto-on",
+   "t": "2026-10-01T06:14:27.535Z",
+   "ms": 13390,
+   "type": "play()",
+   "vis": {
+    "n": 34,
+    "id": "s-aos-overview",
+    "slideId": null
+   },
+   "audio": {
+    "src": "guide-07-impact-and-funding-vWkiINp1IS.mp3",
+    "clip": "NAR-07",
+    "t": 0,
+    "muted": false
+   },
+   "cc": "Universal API licenses, marketplace revenue share and sovereign pilot options fund the model so each partner can choose what fits.",
+   "guide": {
+    "state": "ended",
+    "clip": "NAR-07",
+    "slideId": null,
+    "gen": null,
+    "status": "Narration finished · slide 31 of 39 · 07 Impact & funding"
+   },
+   "hash": "#/27/new-7",
+   "el": "guide-07-impact-and-funding-vWkiINp1IS.mp3",
+   "ct": 0
+  },
+  {
+   "scenario": "S07-auto-on",
+   "t": "2026-10-01T06:14:27.548Z",
+   "ms": 13404,
+   "type": "media:emptied",
+   "vis": {
+    "n": 34,
+    "id": "s-aos-overview",
+    "slideId": null
+   },
+   "audio": {
+    "src": "guide-07-impact-and-funding-vWkiINp1IS.mp3",
+    "clip": "NAR-07",
+    "t": 0,
+    "muted": false
+   },
+   "cc": "Universal API licenses, marketplace revenue share and sovereign pilot options fund the model so each partner can choose what fits.",
+   "guide": {
+    "state": "starting",
+    "clip": "NAR-08",
+    "slideId": null,
+    "gen": null,
+    "status": "Narrating slide 34 of 39 · 08 Athar OS"
+   },
+   "hash": "#/27/new-7",
+   "el": "guide-07-impact-and-funding-vWkiINp1IS.mp3",
+   "ct": 0
+  },
+  {
+   "scenario": "S07-auto-on",
+   "t": "2026-10-01T06:14:27.552Z",
+   "ms": 13407,
+   "type": "sample",
+   "vis": {
+    "n": 34,
+    "id": "s-aos-overview",
+    "slideId": null
+   },
+   "audio": {
+    "src": "guide-08-athar-os-Ib4oKe91OD.mp3",
+    "clip": "NAR-08",
+    "t": 0,
+    "muted": false
+   },
+   "cc": "Universal API licenses, marketplace revenue share and sovereign pilot options fund the model so each partner can choose what fits.",
+   "guide": {
+    "state": "buffering",
+    "clip": "NAR-08",
+    "slideId": null,
+    "gen": null,
+    "status": "Narrating slide 34 of 39 · 08 Athar OS"
+   },
+   "hash": "#/27/new-7"
+  },
+  {
+   "scenario": "S07-auto-on",
+   "t": "2026-10-01T06:14:27.552Z",
+   "ms": 13408,
+   "type": "media:loadstart",
+   "vis": {
+    "n": 34,
+    "id": "s-aos-overview",
+    "slideId": null
+   },
+   "audio": {
+    "src": "guide-08-athar-os-Ib4oKe91OD.mp3",
+    "clip": "NAR-08",
+    "t": 0,
+    "muted": false
+   },
+   "cc": "Universal API licenses, marketplace revenue share and sovereign pilot options fund the model so each partner can choose what fits.",
+   "guide": {
+    "state": "buffering",
+    "clip": "NAR-08",
+    "slideId": null,
+    "gen": null,
+    "status": "Narrating slide 34 of 39 · 08 Athar OS"
+   },
+   "hash": "#/27/new-7",
+   "el": "guide-08-athar-os-Ib4oKe91OD.mp3",
+   "ct": 0
+  },
+  {
+   "scenario": "S07-auto-on",
+   "t": "2026-10-01T06:14:27.552Z",
+   "ms": 13408,
+   "type": "media:loadstart",
+   "vis": {
+    "n": 34,
+    "id": "s-aos-overview",
+    "slideId": null
+   },
+   "audio": {
+    "src": "guide-08-athar-os-Ib4oKe91OD.mp3",
+    "clip": "NAR-08",
+    "t": 0,
+    "muted": false
+   },
+   "cc": "Universal API licenses, marketplace revenue share and sovereign pilot options fund the model so each partner can choose what fits.",
+   "guide": {
+    "state": "buffering",
+    "clip": "NAR-08",
+    "slideId": null,
+    "gen": null,
+    "status": "Narrating slide 34 of 39 · 08 Athar OS"
+   },
+   "hash": "#/27/new-7",
+   "el": "guide-09-join-the-pact-Hx4Ywy843S.mp3",
+   "ct": 0
+  },
+  {
+   "scenario": "S07-auto-on",
+   "t": "2026-10-01T06:14:27.560Z",
+   "ms": 13415,
+   "type": "media:canplay",
+   "vis": {
+    "n": 34,
+    "id": "s-aos-overview",
+    "slideId": null
+   },
+   "audio": {
+    "src": "guide-08-athar-os-Ib4oKe91OD.mp3",
+    "clip": "NAR-08",
+    "t": 0,
+    "muted": false
+   },
+   "cc": "Universal API licenses, marketplace revenue share and sovereign pilot options fund the model so each partner can choose what fits.",
+   "guide": {
+    "state": "buffering",
+    "clip": "NAR-08",
+    "slideId": null,
+    "gen": null,
+    "status": "Narrating slide 34 of 39 · 08 Athar OS"
+   },
+   "hash": "#/27/new-7",
+   "el": "guide-08-athar-os-Ib4oKe91OD.mp3",
+   "ct": 0
+  },
+  {
+   "scenario": "S07-auto-on",
+   "t": "2026-10-01T06:14:27.560Z",
+   "ms": 13415,
+   "type": "media:playing",
+   "vis": {
+    "n": 34,
+    "id": "s-aos-overview",
+    "slideId": null
+   },
+   "audio": {
+    "src": "guide-08-athar-os-Ib4oKe91OD.mp3",
+    "clip": "NAR-08",
+    "t": 0,
+    "muted": false
+   },
+   "cc": "Universal API licenses, marketplace revenue share and sovereign pilot options fund the model so each partner can choose what fits.",
+   "guide": {
+    "state": "playing",
+    "clip": "NAR-08",
+    "slideId": null,
+    "gen": null,
+    "status": "Narrating slide 34 of 39 · 08 Athar OS"
+   },
+   "hash": "#/27/new-7",
+   "el": "guide-08-athar-os-Ib4oKe91OD.mp3",
+   "ct": 0
+  },
+  {
+   "scenario": "S07-auto-on",
+   "t": "2026-10-01T06:14:27.560Z",
+   "ms": 13416,
+   "type": "play():resolved",
+   "vis": {
+    "n": 34,
+    "id": "s-aos-overview",
+    "slideId": null
+   },
+   "audio": {
+    "src": "guide-08-athar-os-Ib4oKe91OD.mp3",
+    "clip": "NAR-08",
+    "t": 0,
+    "muted": false
+   },
+   "cc": "Universal API licenses, marketplace revenue share and sovereign pilot options fund the model so each partner can choose what fits.",
+   "guide": {
+    "state": "playing",
+    "clip": "NAR-08",
+    "slideId": null,
+    "gen": null,
+    "status": "Narrating slide 34 of 39 · 08 Athar OS"
+   },
+   "hash": "#/27/new-7",
+   "el": "guide-07-impact-and-funding-vWkiINp1IS.mp3"
+  },
+  {
+   "scenario": "S07-auto-on",
+   "t": "2026-10-01T06:14:27.591Z",
+   "ms": 13446,
+   "type": "media:canplay",
+   "vis": {
+    "n": 34,
+    "id": "s-aos-overview",
+    "slideId": null
+   },
+   "audio": {
+    "src": "guide-08-athar-os-Ib4oKe91OD.mp3",
+    "clip": "NAR-08",
+    "t": 0.03,
+    "muted": false
+   },
+   "cc": "Universal API licenses, marketplace revenue share and sovereign pilot options fund the model so each partner can choose what fits.",
+   "guide": {
+    "state": "playing",
+    "clip": "NAR-08",
+    "slideId": null,
+    "gen": null,
+    "status": "Narrating slide 34 of 39 · 08 Athar OS"
+   },
+   "hash": "#/27/new-7",
+   "el": "guide-09-join-the-pact-Hx4Ywy843S.mp3",
+   "ct": 0
+  },
+  {
+   "scenario": "S07-auto-on",
+   "t": "2026-10-01T06:14:27.645Z",
+   "ms": 13501,
+   "type": "sample",
+   "vis": {
+    "n": 34,
+    "id": "s-aos-overview",
+    "slideId": null
+   },
+   "audio": {
+    "src": "guide-08-athar-os-Ib4oKe91OD.mp3",
+    "clip": "NAR-08",
+    "t": 0.06,
+    "muted": false
+   },
+   "cc": "Universal API licenses, marketplace revenue share and sovereign pilot options fund the model so each partner can choose what fits.",
+   "guide": {
+    "state": "playing",
+    "clip": "NAR-08",
+    "slideId": null,
+    "gen": null,
+    "status": "Narrating slide 34 of 39 · 08 Athar OS"
+   },
+   "hash": "#/27/new-7"
+  },
+  {
+   "scenario": "S07-auto-on",
+   "t": "2026-10-01T06:14:27.845Z",
+   "ms": 13701,
+   "type": "sample",
+   "vis": {
+    "n": 34,
+    "id": "s-aos-overview",
+    "slideId": null
+   },
+   "audio": {
+    "src": "guide-08-athar-os-Ib4oKe91OD.mp3",
+    "clip": "NAR-08",
+    "t": 0.82,
+    "muted": false
+   },
+   "cc": "Section eight, Athar OS.",
+   "guide": {
+    "state": "playing",
+    "clip": "NAR-08",
+    "slideId": null,
+    "gen": null,
+    "status": "Narrating slide 34 of 39 · 08 Athar OS"
+   },
+   "hash": "#/27/new-7"
+  },
+  {
+   "scenario": "S07-auto-on",
+   "t": "2026-10-01T06:14:28.342Z",
+   "ms": 14198,
+   "type": "hashchange",
+   "vis": {
+    "n": 34,
+    "id": "s-aos-overview",
+    "slideId": null
+   },
+   "audio": {
+    "src": "guide-08-athar-os-Ib4oKe91OD.mp3",
+    "clip": "NAR-08",
+    "t": 2.81,
+    "muted": false
+   },
+   "cc": "The roadmap runs now in Q4, 2026, next in 2027 and later in 2028.",
+   "guide": {
+    "state": "playing",
+    "clip": "NAR-08",
+    "slideId": null,
+    "gen": null,
+    "status": "Narrating slide 34 of 39 · 08 Athar OS"
+   },
+   "hash": "#/27/new-9"
+  },
+  {
+   "scenario": "S07-auto-on",
+   "t": "2026-10-01T06:14:28.345Z",
+   "ms": 14201,
+   "type": "sample",
+   "vis": {
+    "n": 36,
+    "id": "s-aos-roadmap",
+    "slideId": null
+   },
+   "audio": {
+    "src": "guide-08-athar-os-Ib4oKe91OD.mp3",
+    "clip": "NAR-08",
+    "t": 2.82,
+    "muted": false
+   },
+   "cc": "The roadmap runs now in Q4, 2026, next in 2027 and later in 2028.",
+   "guide": {
+    "state": "playing",
+    "clip": "NAR-08",
+    "slideId": null,
+    "gen": null,
+    "status": "Narrating slide 34 of 39 · 08 Athar OS"
+   },
+   "hash": "#/27/new-9"
+  },
+  {
+   "scenario": "S07-auto-on",
+   "t": "2026-10-01T06:14:29.374Z",
+   "ms": 15229,
+   "type": "check",
+   "vis": {
+    "n": 36,
+    "id": "s-aos-roadmap",
+    "slideId": null
+   },
+   "audio": {
+    "src": "guide-08-athar-os-Ib4oKe91OD.mp3",
+    "clip": "NAR-08",
+    "t": 6.98,
+    "muted": false
+   },
+   "cc": "The roadmap runs now in Q4, 2026, next in 2027 and later in 2028.",
+   "guide": {
+    "state": "playing",
+    "clip": "NAR-08",
+    "slideId": null,
+    "gen": null,
+    "status": "Narrating slide 36 of 39 · 08 Athar OS"
+   },
+   "hash": "#/27/new-9",
+   "step": "AUTO +12 s",
+   "expect": null
+  }
+ ],
+ "console": []
+}

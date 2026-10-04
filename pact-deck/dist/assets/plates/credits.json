@@ -1,0 +1,1074 @@
+{
+ "generated_utc": "2026-09-27T15:27:23Z",
+ "version": "1.4.0 · v1.6.1: plate5-india-v161 + plate5-kenya-v161 added · v1.6.2: no plate change",
+ "caption_tag": {
+  "en": "Concept render",
+  "ar": "تصوّر مفاهيمي"
+ },
+ "source_plates": {
+  "plate1": {
+   "file": "plate1-ops-room.png",
+   "bytes": 2055073,
+   "sha256": "f2c0bab59734a1841462f3d10875a5b5784faed672818b8525c7becc4367d2b1",
+   "size": [
+    1536,
+    1024
+   ],
+   "source": "generated concept-render plate (step 4), text-free; SAS URL supplied in the v1.4.0 brief, HTTP 200 at 2026-09-27T14:57:04Z"
+  },
+  "plate2": {
+   "file": "plate2-ai-pc-container.png",
+   "bytes": 2129770,
+   "sha256": "cff42997bf09737abe7a2d4b2b0783ac7a6146ab3c909b32376eb5101dd5beb0",
+   "size": [
+    1536,
+    1024
+   ],
+   "source": "generated concept-render plate (step 4), text-free; SAS URL supplied in the v1.4.0 brief, HTTP 200 at 2026-09-27T14:57:04Z"
+  },
+  "plate3": {
+   "file": "plate3-builders-canvas.png",
+   "bytes": 2107725,
+   "sha256": "ed5171d8d0fd1d639e785d93957730fbe8c44c37875234e20e56906b3f89b5c3",
+   "size": [
+    1536,
+    1024
+   ],
+   "source": "generated concept-render plate (step 4), text-free; SAS URL supplied in the v1.4.0 brief, HTTP 200 at 2026-09-27T14:57:04Z"
+  },
+  "plate4": {
+   "file": "plate4-triptych.png",
+   "bytes": 2022021,
+   "sha256": "f7d0612e17efb3b319ff9e951473984fa0b797a94f19fde333c5e59ca0049d27",
+   "size": [
+    1536,
+    1024
+   ],
+   "source": "generated concept-render plate (step 4), text-free; SAS URL supplied in the v1.4.0 brief, HTTP 200 at 2026-09-27T14:57:04Z"
+  },
+  "plate5": {
+   "file": "plate5-ownership-banner.png",
+   "bytes": 2093215,
+   "sha256": "1fe92bac88f53a2b309565c8652dfac405870d40cb7c66d235040096384b2b7e",
+   "size": [
+    1536,
+    1024
+   ],
+   "source": "generated concept-render plate (step 4), text-free; SAS URL supplied in the v1.4.0 brief, HTTP 200 at 2026-09-27T14:57:04Z"
+  },
+  "plate6": {
+   "file": "plate6-kenya-maize.png",
+   "bytes": 2472422,
+   "sha256": "291c25159b7d5f3644723356830eeeb187f2dc9e5fed80d096f466b7d33c221a",
+   "size": [
+    1536,
+    1024
+   ],
+   "source": "generated concept-render plate (step 4), text-free; SAS URL supplied in the v1.4.0 brief, HTTP 200 at 2026-09-27T14:57:04Z"
+  }
+ },
+ "served": {
+  "plate1-composited": {
+   "role": "S1 hero (national digital-government ops room; official Athar monogram composited on the wall patch)",
+   "composited": true,
+   "webp": {
+    "path": "dist/assets/plates/plate1-composited.webp",
+    "bytes": 218030,
+    "sha256": "61f2246df038852c1d71b1987098e9e8a5e575b42e365c41546a76b8c7ec088d",
+    "size": [
+     1920,
+     1280
+    ],
+    "quality": 84
+   },
+   "png_fallback": {
+    "path": "dist/assets/plates/plate1-composited.png",
+    "bytes": 425825,
+    "sha256": "6b1633f6c5bfa606ef526115749922c2ac7dba1ac26d4131fc329e895c874cc4",
+    "size": [
+     1280,
+     853
+    ],
+    "note": "1280-px palette PNG (256 colours, Floyd–Steinberg) served only where WebP is unsupported"
+   },
+   "source_plate": "plate1-ops-room.png",
+   "source_sha256": "f2c0bab59734a1841462f3d10875a5b5784faed672818b8525c7becc4367d2b1",
+   "logo_file": "Athar_Logo_Monogram_transparent.png",
+   "logo_sha256": "3e9b22ef0f6b6e9d95f05f8a4b661abaea65a4a4379c8de2ee3af65d7748825c",
+   "panel_quad": [
+    [
+     1348.0,
+     701.0
+    ],
+    [
+     1462.0,
+     706.0
+    ],
+    [
+     1465.0,
+     823.0
+    ],
+    [
+     1344.0,
+     816.0
+    ]
+   ],
+   "panel_method": "approxPolyDP",
+   "panel_luminance": 0.6094,
+   "panel_std": 11.358,
+   "blend_mode": "multiply",
+   "verification": {
+    "outside_quad_max_abs_diff": 0,
+    "inside_quad_max_abs_diff": 135,
+    "clear_space_ratio_of_logo_height": 0.3286,
+    "clear_space_requirement": ">=0.28",
+    "pass": true
+   }
+  },
+  "plate2-ai-pc-container": {
+   "role": "S4 visual (appliance AI PC + modular sovereign compute container)",
+   "composited": false,
+   "webp": {
+    "path": "dist/assets/plates/plate2-ai-pc-container.webp",
+    "bytes": 190658,
+    "sha256": "783c212125dd72d965e01774273d60f1039460fa0ff665a1fd1d0c9bf90b82e2",
+    "size": [
+     1920,
+     1280
+    ],
+    "quality": 84
+   },
+   "png_fallback": {
+    "path": "dist/assets/plates/plate2-ai-pc-container.png",
+    "bytes": 441873,
+    "sha256": "f87b6979ecf1c0b05cfc06eca0fc12ce2852aa75ad52a562a9ad3bbf464f1ca9",
+    "size": [
+     1280,
+     853
+    ],
+    "note": "1280-px palette PNG (256 colours, Floyd–Steinberg) served only where WebP is unsupported"
+   },
+   "source_plate": "plate2-ai-pc-container.png",
+   "source_sha256": "cff42997bf09737abe7a2d4b2b0783ac7a6146ab3c909b32376eb5101dd5beb0"
+  },
+  "plate3-builders-canvas": {
+   "role": "S2 tab-strip hero thumbnail (community builders composing an agent flow on a touch canvas)",
+   "composited": false,
+   "webp": {
+    "path": "dist/assets/plates/plate3-builders-canvas.webp",
+    "bytes": 179908,
+    "sha256": "3019631d0ae3f7c24eaa3c9d44437062de470d910ded9132f19a82cefa6d408b",
+    "size": [
+     1920,
+     1280
+    ],
+    "quality": 84
+   },
+   "png_fallback": {
+    "path": "dist/assets/plates/plate3-builders-canvas.png",
+    "bytes": 486448,
+    "sha256": "13d0219d7eb489781761ecdd9acf7394d9995ef89a3d94e0c9d7ed9f66c484a4",
+    "size": [
+     1280,
+     853
+    ],
+    "note": "1280-px palette PNG (256 colours, Floyd–Steinberg) served only where WebP is unsupported"
+   },
+   "source_plate": "plate3-builders-canvas.png",
+   "source_sha256": "ed5171d8d0fd1d639e785d93957730fbe8c44c37875234e20e56906b3f89b5c3"
+  },
+  "plate5-composited": {
+   "role": "source of the slide-29 OWNERSHIP banner (ownership handover; official Athar horizontal logo composited into the wall nameplate)",
+   "composited": true,
+   "webp": {
+    "path": "dist/assets/plates/plate5-composited.webp",
+    "bytes": 146392,
+    "sha256": "f158b6327171046801f9f397c062bd95e74a868dc14e3dda8f74a3af31f02358",
+    "size": [
+     1920,
+     1280
+    ],
+    "quality": 84
+   },
+   "png_fallback": {
+    "path": "dist/assets/plates/plate5-composited.png",
+    "bytes": 494615,
+    "sha256": "5b085cdfe7459e37e13d321520e2849cdd07b2e9981522f4ee6ad26131bc1a5b",
+    "size": [
+     1280,
+     853
+    ],
+    "note": "1280-px palette PNG (256 colours, Floyd–Steinberg) served only where WebP is unsupported"
+   },
+   "source_plate": "plate5-ownership-banner.png",
+   "source_sha256": null,
+   "logo_file": "Athar_Logo_Horizontal_transparent_v1.png",
+   "logo_sha256": "862dc135e31fdd6299bd7cd989d2ce869fdf4803773791f67052548f26cbd1ab",
+   "panel_quad": [
+    [
+     898.0,
+     105.0
+    ],
+    [
+     1483.0,
+     53.0
+    ],
+    [
+     1482.0,
+     246.0
+    ],
+    [
+     894.0,
+     259.0
+    ]
+   ],
+   "panel_method": "approxPolyDP",
+   "panel_luminance": 0.8402,
+   "panel_std": 3.292,
+   "blend_mode": "multiply",
+   "verification": {
+    "outside_quad_max_abs_diff": 0,
+    "inside_quad_max_abs_diff": 186,
+    "clear_space_ratio_of_logo_height": 0.7254,
+    "pass": true
+   },
+   "note": "orchestrator pass: logo composited into the blank wall nameplate (largest uniform light panel, right third) as the brief specifies; the earlier left-two-thirds flat-overlay variant was superseded"
+  },
+  "plate6-kenya-maize": {
+   "role": "S5 Kenya visual / S4 (Kenyan maize field, edge mast, distant sovereign node)",
+   "composited": false,
+   "webp": {
+    "path": "dist/assets/plates/plate6-kenya-maize.webp",
+    "bytes": 261066,
+    "sha256": "b841ba79e6a4b4346daa8ecd4e773132fbbaff44622d44332079c2e7fdbf61d0",
+    "size": [
+     1920,
+     1280
+    ],
+    "quality": 84
+   },
+   "png_fallback": {
+    "path": "dist/assets/plates/plate6-kenya-maize.png",
+    "bytes": 478877,
+    "sha256": "9ad3bb7cab4c15ed63c762edbb224d8d23ce7676b73dcc65ee751399f835501f",
+    "size": [
+     1280,
+     853
+    ],
+    "note": "1280-px palette PNG (256 colours, Floyd–Steinberg) served only where WebP is unsupported"
+   },
+   "source_plate": "plate6-kenya-maize.png",
+   "source_sha256": "291c25159b7d5f3644723356830eeeb187f2dc9e5fed80d096f466b7d33c221a"
+  },
+  "plate4-lebanon": {
+   "role": "S5 country visual (Plate 4 triptych third — Lebanon ministry / India classroom / Kenya clinic)",
+   "composited": false,
+   "webp": {
+    "path": "dist/assets/plates/plate4-lebanon.webp",
+    "bytes": 45904,
+    "sha256": "f5bc94f7aac8f80f4f476686087f8208b27258ef436874c57b96348f084bc3f4",
+    "size": [
+     960,
+     720
+    ]
+   },
+   "png_fallback": {
+    "path": "dist/assets/plates/plate4-lebanon.png",
+    "bytes": 182192,
+    "sha256": "537859fa7de0f3dc11f3066250e98f845c962909a6fea3d53065700fb864b663"
+   },
+   "crop": {
+    "source_plate": "plate4-triptych.png",
+    "width": 960,
+    "height": 720
+   }
+  },
+  "plate4-india": {
+   "role": "S5 country visual (Plate 4 triptych third — Lebanon ministry / India classroom / Kenya clinic)",
+   "composited": false,
+   "webp": {
+    "path": "dist/assets/plates/plate4-india.webp",
+    "bytes": 63692,
+    "sha256": "3d64193243c638cc8eeed48dbb597a2f0d69f7ab6e20b46b8edc245c1e417085",
+    "size": [
+     960,
+     720
+    ]
+   },
+   "png_fallback": {
+    "path": "dist/assets/plates/plate4-india.png",
+    "bytes": 247783,
+    "sha256": "e7759f49f0d90fb788f0a9a5ebeb1792f960ed12af874f477e929d50ab9d0cc1"
+   },
+   "crop": {
+    "source_plate": "plate4-triptych.png",
+    "width": 960,
+    "height": 720
+   }
+  },
+  "plate4-kenya": {
+   "role": "S5 country visual (Plate 4 triptych third — Lebanon ministry / India classroom / Kenya clinic)",
+   "composited": false,
+   "webp": {
+    "path": "dist/assets/plates/plate4-kenya.webp",
+    "bytes": 47874,
+    "sha256": "94a07a77d3caf77a1216bcc6a83516ace62127703e2713124b52f97eb4c2e821",
+    "size": [
+     960,
+     720
+    ]
+   },
+   "png_fallback": {
+    "path": "dist/assets/plates/plate4-kenya.png",
+    "bytes": 208010,
+    "sha256": "ba27da0cf0b080dd0566d5cef6e1fb33ced94c4fb426a2159f120d705c5f2089"
+   },
+   "crop": {
+    "source_plate": "plate4-triptych.png",
+    "width": 960,
+    "height": 720
+   }
+  },
+  "plate1-composited-960": {
+   "role": "960-px thumbnail (lazy-loaded where a small rendition is enough)",
+   "webp": {
+    "path": "dist/assets/plates/plate1-composited-960.webp",
+    "bytes": 76264,
+    "sha256": "358280a3302641d7d7e18bab51c5bf56b5e36aedcebe54391b239c9ab4d31aed"
+   }
+  },
+  "plate2-ai-pc-container-960": {
+   "role": "960-px thumbnail (lazy-loaded where a small rendition is enough)",
+   "webp": {
+    "path": "dist/assets/plates/plate2-ai-pc-container-960.webp",
+    "bytes": 56358,
+    "sha256": "eae44564b6e16c825e85995fe205845b639aa21bd0546fc062d307c29a7edefe"
+   }
+  },
+  "plate3-builders-canvas-960": {
+   "role": "960-px thumbnail (lazy-loaded where a small rendition is enough)",
+   "webp": {
+    "path": "dist/assets/plates/plate3-builders-canvas-960.webp",
+    "bytes": 67506,
+    "sha256": "69b07c493fbf1b388172d51d9027a1d8e51b58da6834185f5eadd6eb771c5500"
+   }
+  },
+  "plate6-kenya-maize-960": {
+   "role": "960-px thumbnail (lazy-loaded where a small rendition is enough)",
+   "webp": {
+    "path": "dist/assets/plates/plate6-kenya-maize-960.webp",
+    "bytes": 88420,
+    "sha256": "0cb89961840f77b82cd4314f1c8de7979a8bcd2e4a6b0db366e577a74ffea980"
+   }
+  },
+  "plate5-banner": {
+   "role": "slide 29 OWNERSHIP band — ONE wide concept-render banner: 5:1 crop of plate5-composited (rows 9 %–39 % of the plate, keeping the composited wall nameplate and the handover scene in frame)",
+   "composited": true,
+   "crop_box_in_1920x1280": [
+    0,
+    115,
+    1920,
+    499
+   ],
+   "logo_file": "Athar_Logo_Horizontal_transparent_v1.png",
+   "panel_quad": [
+    [
+     898.0,
+     105.0
+    ],
+    [
+     1483.0,
+     53.0
+    ],
+    [
+     1482.0,
+     246.0
+    ],
+    [
+     894.0,
+     259.0
+    ]
+   ],
+   "webp": {
+    "path": "dist/assets/plates/plate5-banner.webp",
+    "bytes": 43386,
+    "sha256": "50f09cb825e06b45350156709c251756429284d04b65c8a90f9e6a8c9ceb54ae",
+    "size": [
+     1600,
+     320
+    ]
+   },
+   "png_fallback": {
+    "path": "dist/assets/plates/plate5-banner.png",
+    "bytes": 226900,
+    "sha256": "3122754221142f676aac786b80ed295290194f8f3258be746204eb327275baba"
+   }
+  },
+  "plate5-handover": {
+   "role": "slide 29 OWNERSHIP callout band (figure.it-own-banner) - NEW dedicated file pair (slide 38 keeps plate5-banner): GPT Image 2.5 photoreal handover scene in the Kenyan modular data-centre node; official Athar marks composited programmatically; 5:1 crop of the composited 1536x1024 frame",
+   "composited": true,
+   "added_utc": "2026-10-01T02:24:40Z",
+   "version": "1.5.4",
+   "package": "P5",
+   "generator": "GPT Image 2.5 (On Demand plugin agent-1789134730, tool generateImageUsing2.5), 1536x1024, quality high, slot handover",
+   "source_download": {
+    "file": "gen/batch1/handover.png",
+    "sha256": "7fbcba761ff10f15b1b370e914188d44ce51f8245151c8107f3607c50f468d2d",
+    "url_without_token": "https://airevdev.blob.core.windows.net/on-demand-dev/6692b763e851d28a036ab30e/agents/wCxE0xp3zR.png",
+    "generated_at_utc": "2026-10-01T02:12:31Z"
+   },
+   "composited_frame": {
+    "file": "gen/batch1/handover-composited-1536x1024.png",
+    "size": [
+     1536,
+     1024
+    ]
+   },
+   "crop_box_in_1536x1024": [
+    0,
+    224,
+    1536,
+    531
+   ],
+   "resize": "1536x307 -> 1600x320 (Lanczos)",
+   "logo_files": {
+    "athar-mark-light-1600.png": "9cd7d7fca389ee2c3e7e19b15302962867953d2744dfd097451131c6156e04c8",
+    "athar-mark-dark-1600.png": "501912ff7366812f10d418ad5fe5d6451842867cd1d8db1a74759537ae0eab25",
+    "athar-lockup-primary-en-navy-on-transparent-1600.png": "f9433b04fab2d3739d3aae7fbd8b7c3a919b1f41263482b78ee8cb4343a750f9"
+   },
+   "logo_method": "ImageMagick: trim -> fit inside the blank surface -> -distort Perspective to the 4 detected corners (viewport 1536x1024, transparent virtual pixels); numpy grain matched to the photo (RGB only) + 0.3 px blur + alpha 0.9; blend SoftLight (light mark on dark patch; extra SoftLight/Screen pass only if dL* < 18) or Multiply (dark mark / navy lockup on light surface); composite via magick -compose; pixels outside the quads verified unchanged",
+   "elements": [
+    {
+     "id": "patch1",
+     "corners_tl_tr_br_bl_px_in_1536x1024": [
+      [
+       429.0,
+       494.0
+      ],
+      [
+       462.0,
+       491.0
+      ],
+      [
+       467.0,
+       510.0
+      ],
+      [
+       436.0,
+       513.0
+      ]
+     ],
+     "asset": "athar-mark-light-1600.png",
+     "blend": "Multiply",
+     "passes": [
+      "Multiply",
+      "Multiply"
+     ],
+     "opacity": 0.9,
+     "deltaL_star": 0.0
+    },
+    {
+     "id": "patch2",
+     "corners_tl_tr_br_bl_px_in_1536x1024": [
+      [
+       1376.0,
+       450.0
+      ],
+      [
+       1444.0,
+       454.0
+      ],
+      [
+       1439.0,
+       485.0
+      ],
+      [
+       1369.0,
+       478.0
+      ]
+     ],
+     "asset": "athar-mark-light-1600.png",
+     "blend": "Multiply",
+     "passes": [
+      "Multiply",
+      "Multiply"
+     ],
+     "opacity": 0.9,
+     "deltaL_star": -43.8
+    },
+    {
+     "id": "patch3",
+     "corners_tl_tr_br_bl_px_in_1536x1024": [
+      [
+       1152.0,
+       499.0
+      ],
+      [
+       1197.0,
+       509.0
+      ],
+      [
+       1188.0,
+       531.0
+      ],
+      [
+       1141.0,
+       516.0
+      ]
+     ],
+     "asset": "athar-mark-light-1600.png",
+     "blend": "Multiply",
+     "passes": [
+      "Multiply",
+      "Multiply"
+     ],
+     "opacity": 0.9,
+     "deltaL_star": -39.7
+    },
+    {
+     "id": "patch4",
+     "corners_tl_tr_br_bl_px_in_1536x1024": [
+      [
+       196.0,
+       440.0
+      ],
+      [
+       222.0,
+       442.0
+      ],
+      [
+       225.0,
+       464.0
+      ],
+      [
+       201.0,
+       462.0
+      ]
+     ],
+     "asset": "athar-mark-light-1600.png",
+     "blend": "Multiply",
+     "passes": [
+      "Multiply",
+      "Multiply"
+     ],
+     "opacity": 0.9,
+     "deltaL_star": -39.2
+    },
+    {
+     "id": "certificate-header",
+     "corners_tl_tr_br_bl_px_in_1536x1024": [
+      [
+       703.0,
+       463.0
+      ],
+      [
+       846.0,
+       456.0
+      ],
+      [
+       859.0,
+       622.0
+      ],
+      [
+       720.0,
+       630.0
+      ]
+     ],
+     "asset": "athar-lockup-primary-en-navy-on-transparent-1600.png",
+     "blend": "Multiply",
+     "passes": [
+      "Multiply"
+     ],
+     "opacity": 0.9,
+     "deltaL_star": -47.9
+    }
+   ],
+   "webp": {
+    "path": "dist/assets/plates/plate5-handover.webp",
+    "bytes": 59162,
+    "sha256": "44ef922940399d0d79047e64e75dd141be729c67d5c43c55a432b15984ad8252",
+    "size": [
+     1600,
+     320
+    ],
+    "quality": 82
+   },
+   "png_fallback": {
+    "path": "dist/assets/plates/plate5-handover.png",
+    "bytes": 257558,
+    "sha256": "4642948cde85aba8149969cd44406d78304b6ff575c116a1742b0d3f7251709a",
+    "size": [
+     1600,
+     320
+    ],
+    "note": "palette PNG (256 colours, Floyd-Steinberg) served only where WebP is unsupported"
+   },
+   "verification": {
+    "outside_quad_max_abs_diff": 0,
+    "inside_quad_max_abs_diff": 174,
+    "quad_dilation_px": 6
+   },
+   "readability_at_600px": [
+    {
+     "id": "patch1",
+     "w": 0,
+     "h": 0,
+     "deltaL": -9.7,
+     "readable": false
+    },
+    {
+     "id": "patch2",
+     "w": 8,
+     "h": 7,
+     "deltaL": -19.4,
+     "readable": false
+    },
+    {
+     "id": "patch3",
+     "w": 1,
+     "h": 1,
+     "deltaL": -13.6,
+     "readable": false
+    },
+    {
+     "id": "patch4",
+     "w": 3,
+     "h": 5,
+     "deltaL": -10.1,
+     "readable": false
+    },
+    {
+     "id": "certificate-header",
+     "w": 45,
+     "h": 8,
+     "deltaL": -21.1,
+     "readable": true
+    }
+   ]
+  },
+  "plate5-concept-v157": {
+   "role": "slide 38 (Athar OS · nations) product concept image — ONE full 16:10 picture in the right column under the \"PRODUCT CONCEPT\" / «مفهوم المنتج» tab, caption CONCEPT RENDER / تصوّر مفاهيمي",
+   "ai_generated": true,
+   "disclosure": {
+    "en": "AI-generated concept render (GPT Image 2.5). Not a photograph and not a frame from the Athar product film; the people, kiosk and screens are illustrative.",
+    "ar": "تصوّر مفاهيمي مولَّد بالذكاء الاصطناعي (GPT Image 2.5). ليس صورة فوتوغرافية وليس لقطة من فيلم منتج أثر؛ الأشخاص والكشك والشاشات توضيحية."
+   },
+   "added_utc": "2026-10-02T23:59:00Z",
+   "version": "1.5.7",
+   "generator": "GPT Image 2.5 (On Demand plugin agent-1789134730, tool generateImageUsing2.5; model gpt-image-2.5-flare), 1536x1024, quality high, n=3, output png",
+   "selected_candidate": {
+    "id": "wKr19OqvTJ",
+    "rank": 1,
+    "sha256": "73a2e23f2236089ee5f50ebf47ff98774ccde52bba88594a0334fc033e0fdc67",
+    "url_without_token": "https://airevdev.blob.core.windows.net/on-demand-dev/6692b763e851d28a036ab30e/agents/wKr19OqvTJ.png",
+    "size": [
+     1536,
+     1024
+    ]
+   },
+   "alternates": [
+    {
+     "id": "lXwphbcUrC",
+     "rank": 2,
+     "sha256": "b00290b8ef03d8cac13d0b9bf271712fe1815068a06effd25cd33bcf36112a81",
+     "url_without_token": "https://airevdev.blob.core.windows.net/on-demand-dev/6692b763e851d28a036ab30e/agents/lXwphbcUrC.png"
+    },
+    {
+     "id": "nMfQMgPMyX",
+     "rank": 3,
+     "sha256": "dbd54705ac62ad36e455734de2cade8cbbfa55055356bbdd2ae8998e41eebded",
+     "url_without_token": "https://airevdev.blob.core.windows.net/on-demand-dev/6692b763e851d28a036ab30e/agents/nMfQMgPMyX.png"
+    }
+   ],
+   "selection": {
+    "rubric": "no cropped heads · no garbled text · correct anatomy · clear kiosk and tablet · on-brand palette (cream / navy / black / white / gold)",
+    "deterministic": {
+     "face_detector": "OpenCV YuNet: 6 faces found in the selected image, none within 58 px of an edge (all three candidates: 6-7 faces, none touching an edge)",
+     "kiosk_wordmark_ocr": "tesseract: exact \"ATHAR\" (conf >= 91) on the kiosk in all three candidates",
+     "tablet_arabic_ocr": "tesseract ara on 384x256 tiles: selected image reads موعدك + الطبي exactly (conf 92 / 91); candidate 3 first word malformed (موعرك / موعدرك), candidate 2 second word read as الطيي",
+     "palette_off_brand_pct": {
+      "wKr19OqvTJ": 3.98,
+      "lXwphbcUrC": 5.92,
+      "nMfQMgPMyX": 6.77
+     },
+     "saturated_cyan_pct": {
+      "wKr19OqvTJ": 0.4,
+      "lXwphbcUrC": 1.07,
+      "nMfQMgPMyX": 0.43
+     }
+    },
+    "vision_judge": "Gemini agentic-vision plugin, 3 passes per image — noisy (single passes ranged 0-8/10). Compact structured pass: garbled-text areas 1 / 2 / 5 and clearly malformed hands 1 / 1 / 2 for the selected / second / third image.",
+    "known_defects_not_retouched": "AI-typical softness on hands and wheelchair structure; pseudo-text on the background wall display and kiosk screen UI (illegible at slide size)."
+   },
+   "crop": {
+    "source": "wKr19OqvTJ.png",
+    "box_xyxy_in_1536x1024": [
+     0,
+     64,
+     1536,
+     1024
+    ],
+    "result": [
+     1536,
+     960
+    ],
+    "aspect": "16:10",
+    "note": "top 64 px (ceiling) removed; every face keeps >= 184 px headroom; nothing else cropped"
+   },
+   "resize": "2x = 1536x960 (the crop); 1x = 768x480 (Lanczos)",
+   "files": {
+    "webp_1x": {
+     "path": "dist/assets/plates/plate5-concept-v157-1x.webp",
+     "bytes": 50220,
+     "sha256": "94dbc32320d6cca22f1b4c2dd7121c8f164302986ba883e6585f80c94158f07c",
+     "size": [
+      768,
+      480
+     ]
+    },
+    "webp_2x": {
+     "path": "dist/assets/plates/plate5-concept-v157-2x.webp",
+     "bytes": 126860,
+     "sha256": "f739e4d951fc79fa3c7769186ca43caa851b75baa68168a051325930815ecede",
+     "size": [
+      1536,
+      960
+     ]
+    },
+    "jpg_1x": {
+     "path": "dist/assets/plates/plate5-concept-v157-1x.jpg",
+     "bytes": 77270,
+     "sha256": "ec3503854871057ee9ce0556ece93109cf8a3c9759b40f10dc9a898ebcda425b",
+     "size": [
+      768,
+      480
+     ]
+    },
+    "jpg_2x": {
+     "path": "dist/assets/plates/plate5-concept-v157-2x.jpg",
+     "bytes": 227799,
+     "sha256": "8cc7e99ee9246d3f2f330b1f7d43a8cb35965a092e1ebaaac93e21cbc433bdf7",
+     "size": [
+      1536,
+      960
+     ]
+    }
+   },
+   "alt": {
+    "en": "AI-generated concept render of an Athar service hall: a man in a wheelchair is helped at a reception desk beside a navy ATHAR self-service kiosk, a mother and her young son look at a tablet showing an Arabic medical-appointment screen, and two colleagues sit at a meeting table in the background",
+    "ar": "تصوّر مفاهيمي مولَّد بالذكاء الاصطناعي لقاعة خدمات أثر: رجل على كرسي متحرك يتلقى المساعدة عند مكتب الاستقبال بجوار كشك أثر الأزرق الداكن للخدمة الذاتية، وأم مع ابنها الصغير تنظران إلى جهاز لوحي تظهر عليه شاشة موعد طبي بالعربية، وزميلان يجلسان إلى طاولة اجتماعات في الخلفية"
+   },
+   "tab_label": {
+    "en": "PRODUCT CONCEPT",
+    "ar": "مفهوم المنتج"
+   },
+   "v1_5_8_note": "Since v1.5.8 this image is shown on the INDIA and KENYA panels only (generic Athar service-hall concept); the LEBANON panel shows plate5-lebanon-v158 (UAE × LEBANON · 1M ATHAR USERS)."
+  },
+  "plate5-lebanon-v158": {
+   "role": "slide 38 (Athar OS · nations), LEBANON panel only — the 'UAE × LEBANON · 1M ATHAR USERS' concept render, shown whole (3:2) in the right column under the \"PRODUCT CONCEPT\" / «مفهوم المنتج» tab, caption CONCEPT RENDER / تصوّر مفاهيمي. India and Kenya keep plate5-concept-v157",
+   "ai_generated": true,
+   "disclosure": {
+    "en": "AI-generated concept render (GPT Image 2.5). The ATHAR logo is the official brand asset composited over the render. Not a photograph — the people, flags, skylines and screens are illustrative. \"1M ATHAR USERS\" is an illustrative target in line with the deck's One Million Lebanese AI Experts programme (Access tier, illustrative targets p. 3), not an achieved figure.",
+    "ar": "تصوّر مفاهيمي مولَّد بالذكاء الاصطناعي (GPT Image 2.5). شعار أثر هو الأصل الرسمي للعلامة مركَّب فوق التصوّر. ليست صورة فوتوغرافية — الأشخاص والأعلام والمعالم والشاشات توضيحية. رقم «1M ATHAR USERS» هدف استرشادي يتّسق مع برنامج «مليون خبير لبناني في الذكاء الاصطناعي» في الورقة (فئة الوصول، أهداف استرشادية ص 3) وليس رقماً محقَّقاً."
+   },
+   "added_utc": "2026-10-03T02:41:56Z",
+   "version": "1.5.8",
+   "generator": "GPT Image 2.5 (On Demand plugin agent-1789134730, tools bulkGenerateImagesUsing2.5 + editImageUsing2.5), 1536x1024, quality high, n=3 text-to-image candidates + 1 reference-guided edit, output png",
+   "request_brief": "Generate a replacement 'product concept' hero still for the Athar JV pact deck with GPT Image 2.5 at high quality, landscape (widest supported, about 3:2), crop-safe with the key subject centered so it survives wide and phone crops. Theme: 'UAE × Lebanon · 1M Athar users'. Brand: ATHAR navy blue, warm cream and brushed-gold palette; the ATHAR logo shown clearly and exactly as the brand's stylized navy triangular 'A' mark above the uppercase wordmark ATHAR; accurate UAE flag (red, green, white, black) and Lebanese flag (red-white-red bands with a green cedar). The only legible text allowed is 'ATHAR', '1M', 'ATHAR USERS' and 'UAE × LEBANON', spelled exactly, with no gibberish or watermarks. Show dignified, inclusive users (families, a wheelchair user, a blind professional) with correct faces and hands in a premium photoreal visualisation style. (a) Batch three fresh candidates: A) golden-hour Dubai/Abu Dhabi skyline on the left and Beirut coastline with Raouche (Pigeon) Rocks on the right, joined by a luminous gold arc of light across the centre, large ATHAR logo and glowing '1M ATHAR USERS' beneath, small foreground vignette of diverse users on phones and tablets; B) bright premium Athar service hall with a giant wall display reading 'UAE × LEBANON · 1M ATHAR USERS' beside the ATHAR logo, an Emirati and a Lebanese team member handing a tablet to a family, a wheelchair user at a kiosk, both flags flanking the display; C) elegant 3D glass-and-gold map of the Gulf and Eastern Mediterranean with dense glowing user nodes over the UAE and Lebanon joined by a navy-and-gold arc, ATHAR logo top centre, hero numeral '1M', a row of diverse user portraits, both flags at the ends. (b) Reference-guided edit: use the current concept render uploaded in this chat (canvas-screenshot-567x435.png, URL <signed URL not stored>) as the logo and brand-style reference and reimagine it as a far more powerful hero with the same ATHAR logo, both flags and a large '1M ATHAR USERS · UAE × LEBANON' display, dropping the 'PRODUCT CONCEPT' tab, the 'CONCEPT RENDER' caption and any UI artefacts. Return every image URL.",
+   "prompt": "Premium photoreal hero visualisation, wide landscape 3:2, crop-safe with the key subject centered so it survives wide and phone crops. Golden-hour Dubai/Abu Dhabi skyline on the left and Beirut coastline with Raouche (Pigeon) Rocks on the right, joined by a luminous brushed-gold arc of light across the centre. Large ATHAR logo centered: a stylized navy triangular 'A' mark above the uppercase wordmark ATHAR, clearly and exactly rendered. Beneath it, glowing text '1M ATHAR USERS'. Small foreground vignette of diverse dignified users on phones and tablets: families, a wheelchair user, a blind professional with white cane and dark glasses, with correct faces and hands. Palette: ATHAR navy blue, warm cream, brushed gold. Accurate UAE flag (red, green, white, black) and Lebanese flag (red-white-red bands with a green cedar). The only legible text allowed: 'ATHAR', '1M', 'ATHAR USERS', 'UAE × LEBANON', spelled exactly. No gibberish text, no watermarks, no UI artefacts.",
+   "selected_candidate": {
+    "id": "xITKlbA5Bo",
+    "rank": 1,
+    "candidate": "A",
+    "sha256": "d9f4e54bfe033f0d6715e16983c27eb5cae5ad15a9551ffe25b3917212c050b9",
+    "url_without_token": "https://airevdev.blob.core.windows.net/on-demand-dev/6692b763e851d28a036ab30e/agents/xITKlbA5Bo.png",
+    "size": [
+     1536,
+     1024
+    ],
+    "prompt_index": 0
+   },
+   "alternates": [
+    {
+     "id": "t3VIJiIi7M",
+     "rank": 2,
+     "sha256": "8ce83a65fc12652cc9506dc9e4b6bf21b335f78276e4893ec8eb4cbf79721bd3",
+     "url_without_token": "https://airevdev.blob.core.windows.net/on-demand-dev/6692b763e851d28a036ab30e/agents/t3VIJiIi7M.png",
+     "size": [
+      1536,
+      1024
+     ],
+     "prompt": "Premium photoreal visualisation, wide landscape 3:2, crop-safe with the key subject centered so it survives wide and phone crops. Elegant 3D glass-and-gold map of the Gulf and Eastern Mediterranean with dense glowing user nodes over the UAE and Lebanon joined by a navy-and-gold arc. ATHAR logo top centre (stylized navy triangular 'A' mark above uppercase wordmark ATHAR, exact and clear). Hero numeral '1M' large and centered. A row of diverse dignified user portraits along the bottom including a family, a wheelchair user and a blind professional with dark glasses, with correct faces and hands. Accurate UAE flag (red, green, white, black) and Lebanese flag (red-white-red bands with a green cedar) at the two ends. Palette: ATHAR navy blue, warm cream, brushed gold. The only legible text allowed: 'ATHAR', '1M', 'ATHAR USERS', 'UAE × LEBANON', spelled exactly. No gibberish text, no watermarks, no UI artefacts.",
+     "verdict": "C: flags geometrically correct (UAE stripes 46:60:52, Lebanon red:white:red 40:80:43 + cedar); the hero numeral \"1M\" is stylised and OCR reads it as \"lM\" (not exact); bottom row of people 51 px from the frame edge"
+    },
+    {
+     "id": "IgzFJMsBrz",
+     "rank": 3,
+     "sha256": "1170f6132c47b77855b390280017b0dce56200250ada511b7198a45da616fbb0",
+     "url_without_token": "https://airevdev.blob.core.windows.net/on-demand-dev/6692b763e851d28a036ab30e/agents/IgzFJMsBrz.png",
+     "size": [
+      1536,
+      1024
+     ],
+     "prompt": "Premium photoreal hero visualisation, wide landscape 3:2, crop-safe with the key subject centered so it survives wide and phone crops. Bright premium Athar service hall, cream marble and brushed-gold accents, navy details. Centered giant wall display reading 'UAE × LEBANON · 1M ATHAR USERS' beside the ATHAR logo (stylized navy triangular 'A' mark above uppercase wordmark ATHAR, exact and clear). An Emirati team member in white kandura and a Lebanese team member in business attire hand a tablet to a family; a wheelchair user at a self-service kiosk. The UAE flag (red, green, white, black) and the Lebanese flag (red-white-red bands with a green cedar) flank the display. Dignified, inclusive people with correct faces and hands. The only legible text allowed: 'ATHAR', '1M', 'ATHAR USERS', 'UAE × LEBANON', spelled exactly. No gibberish text, no watermarks, no UI artefacts.",
+     "verdict": "B: all four strings read exactly, but no valid UAE / Lebanese stripe geometry was found for the flags"
+    },
+    {
+     "id": "4qjmUgjN2E",
+     "rank": "4 (not in the brief's candidate list)",
+     "sha256": "0e5b04f47f7bc9a114adfb4b12ae3d5720c46e2477e75c89f4ebe4ab62b64fd2",
+     "url_without_token": "https://airevdev.blob.core.windows.net/on-demand-dev/6692b763e851d28a036ab30e/agents/4qjmUgjN2E.png",
+     "size": [
+      1536,
+      1024
+     ],
+     "prompt": "(reference-guided edit of the v1.5.7 concept render, canvas-screenshot-567x435.png — editImageUsing2.5)",
+     "verdict": "E: strings read, but smaller text, only 4 faces, and no valid flag geometry"
+    }
+   ],
+   "selection": {
+    "rubric": "exact text ATHAR / 1M / ATHAR USERS / UAE × LEBANON · correct UAE and Lebanese flags · logo matches the official ATHAR asset · no garbled text or anatomy artefacts",
+    "ocr_tesseract": {
+     "A_xITKlbA5Bo": "ATHAR 92 · 1M 95 · ATHAR+USERS 93/96 · UAE 95 × LEBANON 96 — exact, no extra words",
+     "B_IgzFJMsBrz": "ATHAR · 1M 94 · ATHAR+USERS · UAE × LEBANON — exact, no extra words",
+     "C_t3VIJiIi7M": "ATHAR · ATHAR+USERS · UAE × LEBANON exact; \"1M\" not read (numeral reads \"lM\")",
+     "E_4qjmUgjN2E": "all four strings; extra token only a split of ATHAR"
+    },
+    "flag_geometry": {
+     "A_xITKlbA5Bo": "UAE: red hoist band + green:white:black = 45:46:48 and 42:44:34 px; Lebanon: red:white:red = 31:75:35 and 35:87:41 px (white ≈ 2.2–2.4x red) with a green cedar centred — both correct",
+     "C_t3VIJiIi7M": "UAE 46:60:52, Lebanon 40:80:43 with cedar — both correct",
+     "B_IgzFJMsBrz": "no stripe pattern found",
+     "E_4qjmUgjN2E": "no stripe pattern found"
+    },
+    "faces_yunet_score_0.6": {
+     "A": "10 faces, nearest 125 px from an edge",
+     "B": "7 faces, 179 px",
+     "C": "10 faces, 51 px",
+     "E": "4 faces, 224 px"
+    },
+    "logo_template_match_official_lockup": {
+     "A_original": 0.224,
+     "B_original": 0.263,
+     "C_original": 0.222,
+     "E_original": 0.236,
+     "A_composited": 0.91,
+     "note": "normalised correlation of the official lockup silhouette vs local-contrast ink map, multi-scale; the AI-drawn logos (a stylised triangular \"A\" mark) are off-brand — the official mark is the Arabic calligraphic أثر mark above the ATHAR wordmark"
+    },
+    "vision_judge": "Gemini agentic-vision plugin, strict JSON passes — noisy (scores A 8, B 8, C 9, E 9; flags \"correct\" for all four, contradicting the geometry for B and E). A zoomed pass over the 8 people of A found 0 malformed hands, 0 distorted faces (13 hand regions \"cannot tell\"). Decision rests on the deterministic checks.",
+    "known_defects_not_retouched": "AI-typical softness on hands and small devices; the small \"UAE × LEBANON\" line is only ~7 px tall at the 556 px column width (legible in the 2x asset)"
+   },
+   "post_processing": {
+    "logo": "the AI-drawn mark and wordmark (bbox [605,38,930,292]) were erased (Telea inpaint at half resolution, +9 px mask dilation) and the OFFICIAL lockup brand/athar-logo@3x.png (primary, navy, Arabic mark above ATHAR wordmark, sha256 2fdb40e7c9752197c7251213e9b752c2b69e9b503174858e34fc0a62e3374c8d) was composited at [648,36,887,251] (239x215 px; clear space below it to the \"1M\" ≥ 0.33 x logo height); edge softness matched to the render (≈3.4 px edge rise vs 3.2–3.9 px in the render), no halo",
+    "pixels_changed_outside_edit_zone": 0,
+    "crop": "none — the full 1536x1024 frame is shown (aspect 3:2, no object-fit crop)"
+   },
+   "files": {
+    "plate5-lebanon-v158-2x.webp": {
+     "path": "dist/assets/plates/plate5-lebanon-v158-2x.webp",
+     "bytes": 232964,
+     "sha256": "c15e51a7bc8345689f6e5b8376253416959955f1cbb3ccac83ebf0f01c8241e8",
+     "size": [
+      1536,
+      1024
+     ],
+     "quality": 82,
+     "psnr_logo_text_zone_db": 38.2
+    },
+    "plate5-lebanon-v158-2x.jpg": {
+     "path": "dist/assets/plates/plate5-lebanon-v158-2x.jpg",
+     "bytes": 325605,
+     "sha256": "ece33ea7c96ed2ae8f7793ce4a7a459421b3048db7d36c876b86e19361371965",
+     "size": [
+      1536,
+      1024
+     ],
+     "quality": 84,
+     "psnr_logo_text_zone_db": 36.9
+    },
+    "plate5-lebanon-v158-1x.webp": {
+     "path": "dist/assets/plates/plate5-lebanon-v158-1x.webp",
+     "bytes": 82528,
+     "sha256": "ae4399e0ba496aca5fa6ae791d33ce02da0527d42aa5d83a170192558ac6cb32",
+     "size": [
+      768,
+      512
+     ],
+     "quality": 82,
+     "psnr_logo_text_zone_db": 35.4
+    },
+    "plate5-lebanon-v158-1x.jpg": {
+     "path": "dist/assets/plates/plate5-lebanon-v158-1x.jpg",
+     "bytes": 103512,
+     "sha256": "9f3209ca7b991e7757c6ad9a25387e9b35e358cf070a54364fb3bd717429505e",
+     "size": [
+      768,
+      512
+     ],
+     "quality": 84,
+     "psnr_logo_text_zone_db": 34.0
+    }
+   },
+   "resize": "2x = 1536x1024 (the composited frame); 1x = 768x512 (Lanczos); webp q82 + jpg q84 (progressive, 4:2:0)",
+   "alt": {
+    "en": "AI-generated concept render for the UAE–Lebanon partnership: a dusk Gulf skyline with the UAE flag on the left and the Lebanese coast with offshore rocks and the Lebanese flag on the right, joined by a luminous arc behind the ATHAR logo. The text reads “1M ATHAR USERS” and “UAE × LEBANON” — an illustrative target, not an achieved figure. Eight people of different ages, including a wheelchair user and a man with a white cane, gather along the bottom.",
+    "ar": "تصوّر مفاهيمي مولَّد بالذكاء الاصطناعي للشراكة بين الإمارات ولبنان: أفق مدينة خليجية عند الغروب يتقدّمه علم الإمارات على اليسار، وساحل لبناني تظهر قبالته صخور بحرية يتقدّمه العلم اللبناني على اليمين، يربط بينهما قوس مضيء خلف شعار أثر. يظهر النص «1M ATHAR USERS» و«UAE × LEBANON» — وهو هدف استرشادي وليس رقماً محقَّقاً. وفي الأسفل يتجمّع ثمانية أشخاص من أعمار مختلفة، بينهم مستخدم كرسي متحرك ورجل يحمل عصا بيضاء."
+   },
+   "tab_label": {
+    "en": "PRODUCT CONCEPT",
+    "ar": "مفهوم المنتج"
+   },
+   "caption": {
+    "en": "CONCEPT RENDER",
+    "ar": "تصوّر مفاهيمي"
+   },
+   "one_m_wording": "The deck frames 1M as a TARGET: Lebanon Access tier flagship \"One Million Lebanese AI Experts\" (launched 25 Sep 2026, WAM), \"1M citizens certified in generative AI\", the slide footer says \"illustrative targets (p. 3)\". The render's \"1M ATHAR USERS\" is a different noun (users vs certified citizens) and is therefore disclosed here and in the alt text as an illustrative target."
+  },
+  "plate5-india-v161": {
+   "slide": 38,
+   "panel": "india",
+   "ai_generated": true,
+   "generator": "GPT Image 2.5 (On Demand image generation), candidate 8oaVQKG47s, 1536x1024, received 2026-10-04",
+   "source_png_sha256": "0f789786b8db14f976c0175eb640bb86bf7337c0725eae24ea4ca886b570779f",
+   "brief": "INDIA · Ownership tier — classroom, learners on Athar-powered devices",
+   "post_processing": "official ATHAR logo (Athar_Logo_Horizontal_transparent_v1.png — navy Arabic calligraphy mark + 'A T H A R' wordmark, transparent) composited onto the blank ivory wall section above the shelf: flat placement with a multiply blend at 90 % opacity so the wall/panel texture and lighting show through; placement box (x, y, w, h px in the 1536x1024 frame) = [899, 98, 442, 88], located by searching the frame for the largest flat ivory region (no perspective warp was applied — the vanishing geometry could not be read without vision; flagged for a manual check)",
+   "files": {
+    "plate5-india-v161-1x.webp": {
+     "bytes": 50456,
+     "sha256": "eff8b74247d9bf1352554d8c6817faba45468a00381a1870a58e585b465c8a57",
+     "px": [
+      768,
+      512
+     ]
+    },
+    "plate5-india-v161-1x.jpg": {
+     "bytes": 76016,
+     "sha256": "b2a58c0426e2ae28c82dff3100064edc24a8aa927752a9430fd434744e0580a3",
+     "px": [
+      768,
+      512
+     ]
+    },
+    "plate5-india-v161-2x.webp": {
+     "bytes": 123352,
+     "sha256": "0229e73fb94a062d74ea0983545fcb819d807fba8d9bcdfcffede095dfcdc791",
+     "px": [
+      1536,
+      1024
+     ]
+    },
+    "plate5-india-v161-2x.jpg": {
+     "bytes": 218773,
+     "sha256": "6ca76d8d9bae2aa2d547f80e0589b83969cbde1bda0cb2116ec4046fb983770f",
+     "px": [
+      1536,
+      1024
+     ]
+    }
+   },
+   "caption": {
+    "en": "CONCEPT RENDER · illustrative",
+    "ar": "تصوّر مفاهيمي · توضيحي"
+   },
+   "disclosure": {
+    "en": "AI-generated concept render (GPT Image 2.5) for the Ownership tier; the ATHAR logo is the official brand asset composited over the render. Illustrative, not a photograph.",
+    "ar": "تصوّر مفاهيمي مولَّد بالذكاء الاصطناعي (GPT Image 2.5)؛ شعار أثر هو الأصل الرسمي للعلامة مركَّباً فوق الصورة. توضيحي وليس صورة فوتوغرافية."
+   },
+   "replaces": "plate5-concept-v157 on this panel (v1.5.7–v1.6.0)"
+  },
+  "plate5-kenya-v161": {
+   "slide": 38,
+   "panel": "kenya",
+   "ai_generated": true,
+   "generator": "GPT Image 2.5 (On Demand image generation), candidate ETcf0SR53f, 1536x1024, received 2026-10-04",
+   "source_png_sha256": "339ec4d52a6f03a25ff2cd596cdc5272c50740ca873977f22d6616b1290fdf8c",
+   "brief": "KENYA · Legacy tier — farmers + sovereign data centre",
+   "post_processing": "official ATHAR logo (Athar_Logo_Horizontal_transparent_v1.png — navy Arabic calligraphy mark + 'A T H A R' wordmark, transparent) composited onto the blank ivory facade panel: flat placement with a multiply blend at 90 % opacity so the wall/panel texture and lighting show through; placement box (x, y, w, h px in the 1536x1024 frame) = [864, 282, 184, 36], located by searching the frame for the largest flat ivory region (no perspective warp was applied — the vanishing geometry could not be read without vision; flagged for a manual check)",
+   "files": {
+    "plate5-kenya-v161-1x.webp": {
+     "bytes": 94752,
+     "sha256": "1c2abd2327a0a760e95accc07a1f20b4124cda6c6e3ccb70d490840a0c0450bc",
+     "px": [
+      768,
+      512
+     ]
+    },
+    "plate5-kenya-v161-1x.jpg": {
+     "bytes": 113138,
+     "sha256": "c134cc1e598ce8c4a182d8349fe1930b175eb704a25e7a55e37a7616151c373b",
+     "px": [
+      768,
+      512
+     ]
+    },
+    "plate5-kenya-v161-2x.webp": {
+     "bytes": 235344,
+     "sha256": "07c2cd5a593d0a05ce1fd96f2cec68041d05a63c01c8b29700f76316bc953095",
+     "px": [
+      1536,
+      1024
+     ]
+    },
+    "plate5-kenya-v161-2x.jpg": {
+     "bytes": 326882,
+     "sha256": "63880450311dad8c7ca88a05f3aff423cd16ac19275355abe21c12aa27d1e04e",
+     "px": [
+      1536,
+      1024
+     ]
+    }
+   },
+   "caption": {
+    "en": "CONCEPT RENDER · illustrative",
+    "ar": "تصوّر مفاهيمي · توضيحي"
+   },
+   "disclosure": {
+    "en": "AI-generated concept render (GPT Image 2.5) for the Legacy tier; the ATHAR logo is the official brand asset composited over the render. Illustrative, not a photograph.",
+    "ar": "تصوّر مفاهيمي مولَّد بالذكاء الاصطناعي (GPT Image 2.5)؛ شعار أثر هو الأصل الرسمي للعلامة مركَّباً فوق الصورة. توضيحي وليس صورة فوتوغرافية."
+   },
+   "replaces": "plate5-concept-v157 on this panel (v1.5.7–v1.6.0)"
+  }
+ },
+ "logo_files": {
+  "reversed": {
+   "path": "/tmp/scratch/dl/brand-pack/02_Logo/Athar_Logo_Reversed_transparent.png",
+   "sha256": "3c1af01b1f961f86f4bfc28505e8a37a19b304a5f005573f8caf065f88a3220f"
+  },
+  "primary": {
+   "path": "/tmp/scratch/dl/brand-pack/02_Logo/Athar_Logo_Primary_transparent.png",
+   "sha256": "42c5acbee397ae91b7f366933f3cf01442a6e441b9f2d8c3dd475c56c26cd677"
+  },
+  "monogram": {
+   "path": "/tmp/scratch/dl/brand-pack/02_Logo/Athar_Logo_Monogram_transparent.png",
+   "sha256": "3e9b22ef0f6b6e9d95f05f8a4b661abaea65a4a4379c8de2ee3af65d7748825c"
+  },
+  "horizontal": {
+   "path": "/tmp/scratch/dl/brand/Athar_Logo_Horizontal_transparent_v1.png",
+   "sha256": "862dc135e31fdd6299bd7cd989d2ce869fdf4803773791f67052548f26cbd1ab"
+  }
+ },
+ "method": "Plates 1 and 5 carry the OFFICIAL Athar logo composited programmatically (OpenCV: blank-panel detection → convex quad → perspective warp; multiply on light panels; plate-matched blur/grain/shadow; pixels outside the quad verified unchanged; never redrawn). Plate 1: monogram on the wall patch; Plate 5: horizontal logo in the wall nameplate. WebP q84/method 6 (≤ 420 KB at 1920 px), 960-px thumbnails, palette-PNG fallbacks; every use tagged 'Concept render' / «تصوّر مفاهيمي».",
+ "removed_v157": [
+  {
+   "file": "dist/assets/plates/plate5-strip-v155.png",
+   "sha256": "eb00077e5fe2ccdb6506a171bd144360abbeb84121af5025139e44a36f965167",
+   "bytes": 760689,
+   "why": "3-panel strip (1550x320) that cut off faces; replaced by plate5-concept-v157"
+  },
+  {
+   "file": "dist/assets/plates/plate5-strip-v155.webp",
+   "why": "webp of the same strip"
+  },
+  {
+   "file": "dist/assets/tour/stills/p20.png (+ p20-960.webp)",
+   "why": "product-film still at 16.7 s, tagged \"PRODUCT FILM STILL · AT 16.7 S\"; retired with its tag"
+  },
+  {
+   "file": "dist/assets/tour/stills/p50.png (+ p50-960.webp)",
+   "why": "product-film still at 41.75 s; retired"
+  },
+  {
+   "file": "dist/assets/tour/stills/p80.png (+ p80-960.webp)",
+   "why": "product-film still at 66.8 s; retired"
+  }
+ ]
+}

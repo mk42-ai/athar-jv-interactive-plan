@@ -1,0 +1,27 @@
+{
+ "base": "http://127.0.0.1:4171",
+ "version": "1.7.1",
+ "written": "2026-10-04T10:11:14.126Z",
+ "rows": [
+  {
+   "badge": "v1.7.1",
+   "html": "1.7.1",
+   "exec": "v1.7.1",
+   "films": [
+    "khalid:shipped",
+    "al-ameri:shipped",
+    "ferreira-da-cunha:shipped",
+    "unwalla:shipped",
+    "lorenzo:shipped"
+   ],
+   "statuses": [
+    "s-exec-al-ameri:shipped",
+    "s-exec-ferreira-da-cunha:shipped",
+    "s-exec-khalid:shipped",
+    "s-exec-unwalla:shipped",
+    "s-exec-lorenzo:shipped"
+   ],
+   "buildInfo": "1.7.1"
+  }
+ ]
+}

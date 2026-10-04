@@ -1,0 +1,135 @@
+/* Athar deck v1.6.0 (v1.5.5 base) — section 09 Executive Team / الفريق التنفيذي (dist/js/exec-team.js) — hand-written-letter style (Athar Brand Guidelines).
+   Athar Ink #0F1E2C on Manuscript #F7F3EA with the ink-on-manuscript texture at 8 % opacity; names IBM Plex Serif 600; body IBM Plex Sans
+   16/24, sentence case; Arabic IBM Plex Sans Arabic at 107 % of the Latin size, letter-spacing 0, on the right of a hairline divider;
+   ONE short Legacy Gold #B8975A hairline closes each letter (never full width). No script fonts. Logical properties → the AR deck mirrors. */
+.ex-slide{--ex-ink:#0F1E2C;--ex-paper:#F7F3EA;--ex-gold:#B8975A;--ex-hair:rgba(15,30,44,.28);--ex-mute:#4A5561}
+.ex-slide .ex-body{display:flex;flex-direction:column;gap:clamp(8px,1.3vh,14px);min-block-size:0}
+.ex-grid{display:grid;grid-template-columns:minmax(0,1fr);gap:24px;align-items:start;min-block-size:0}
+.ex-grid--film{grid-template-columns:minmax(0,1.18fr) minmax(0,1fr)}
+.ex-letter{position:relative;isolation:isolate;box-sizing:border-box;inline-size:100%;max-inline-size:1240px;margin-inline:auto;background:var(--ex-paper);color:var(--ex-ink);border:1px solid #E3DCCB;border-radius:2px;box-shadow:0 1px 0 rgba(15,30,44,.05),0 22px 44px -32px rgba(15,30,44,.45);padding:20px 32px 16px;display:flex;flex-direction:column;gap:12px}
+.ex-letter::before{content:"";position:absolute;inset:0;z-index:-1;background:url(/assets/exec/letter-texture-ksV8ASq6b2.webp) center/cover no-repeat;opacity:.08;pointer-events:none}
+.ex-grid--film .ex-letter{max-inline-size:none}
+.ex-letterhead{display:flex;align-items:center;justify-content:space-between;gap:16px}
+.ex-letterhead-logo{display:block;block-size:22px;inline-size:auto}
+.ex-letterhead-meta{display:flex;align-items:center;gap:10px;flex-wrap:wrap;justify-content:flex-end}
+.ex-letter-n{font:500 12px/16px var(--font-sans);color:var(--ex-mute);letter-spacing:.04em}
+.ex-clearance{font:600 11px/16px var(--font-sans);color:var(--ex-ink);border:1px solid rgba(15,30,44,.45);border-radius:999px;padding:2px 9px;letter-spacing:.02em}
+html[lang=ar] .ex-letter-n,html[lang=ar] .ex-clearance{font-family:var(--font-arabic);letter-spacing:0}
+.ex-top{display:grid;grid-template-columns:auto minmax(0,1fr);gap:24px;align-items:start}
+.ex-cols{display:grid;grid-template-columns:minmax(0,1fr) 1px minmax(0,1fr);column-gap:24px;align-items:start}
+.ex-divider{display:block;align-self:stretch;inline-size:1px;background:var(--ex-hair)}
+.ex-col{min-inline-size:0;display:flex;flex-direction:column;gap:8px}
+.ex-col p{margin:0}
+.ex-col--en{font-family:var(--font-sans);font-size:16px;line-height:24px;font-weight:400}
+.ex-col--ar{font-family:var(--font-arabic);font-size:17.12px;line-height:27px;letter-spacing:0;font-weight:400}
+.ex-name{margin:0;font-family:var(--font-serif);font-weight:600;font-size:24px;line-height:30px;color:var(--ex-ink)}
+.ex-col--ar .ex-name{font-family:var(--font-arabic);font-size:25.68px;line-height:34px}
+.ex-role{font-size:14px;line-height:20px;font-weight:500;color:#2C3742}
+.ex-col--ar .ex-role{font-size:14.98px;line-height:22px}
+.ex-salute{margin-block-start:4px!important}
+.ex-quote{margin:2px 0 0;padding-inline-start:14px;border-inline-start:1px solid rgba(15,30,44,.55)}
+.ex-quote p{margin:0}
+.ex-quote cite{display:block;margin-block-start:4px;font-style:normal;font-size:12px;line-height:16px;color:var(--ex-mute)}
+.ex-col--ar .ex-quote cite{font-size:12.84px;line-height:18px}
+.ex-signoff{display:flex;flex-direction:column;margin-block-start:4px!important}
+.ex-signoff-name{font-family:var(--font-serif);font-weight:600}
+.ex-col--ar .ex-signoff-name{font-family:var(--font-arabic)}
+.ex-rule{border:0;block-size:1px;inline-size:64px;background:var(--ex-gold);margin:4px auto 0;opacity:1}
+.ex-sources{font:400 11px/16px var(--font-sans);color:var(--ex-mute)}
+html[lang=ar] .ex-sources{font-family:var(--font-arabic);font-size:11.77px;line-height:18px}
+.ex-sources-lbl{font-weight:600;color:#2C3742}
+.ex-sources a{color:#1F4A63;text-decoration:underline;text-decoration-color:rgba(15,30,44,.35);text-underline-offset:2px}
+.ex-sources a:hover,.ex-sources a:focus-visible{color:var(--ex-ink)}
+.ex-portrait{margin:0;display:flex;flex-direction:column;align-items:center;gap:6px;inline-size:min(150px,24vw)}
+.ex-portrait img{display:block;inline-size:100%;block-size:auto;object-fit:contain;background:#fff;padding:5px;border:1px solid #E3DCCB;box-shadow:0 12px 24px -18px rgba(15,30,44,.6)}
+.ex-portrait-cap{font:400 10.5px/14px var(--font-sans);color:var(--ex-mute);text-align:center}
+html[lang=ar] .ex-portrait-cap{font-family:var(--font-arabic)}
+.ex-roundel{margin:0;inline-size:96px}
+.ex-roundel-svg{display:block;inline-size:100%;block-size:auto}
+.ex-roundel-ring{fill:none;stroke:rgba(15,30,44,.75);stroke-width:1.1}
+.ex-roundel-ring--in{fill:rgba(232,217,181,.4);stroke:rgba(15,30,44,.4);stroke-width:.8}
+.ex-roundel-lat{font-family:var(--font-serif);font-weight:600;font-size:30px;fill:var(--ex-ink)}
+.ex-roundel-ar{font-family:var(--font-arabic);font-weight:600;font-size:17px;fill:var(--ex-ink)}
+/* v1.5.6: profile card beside the letter (Fahad, Kayaan) — same Manuscript paper, hairline and ink as the letter; facts run in at 13/18 with the label inline */
+.ex-grid--card{grid-template-columns:minmax(0,1.18fr) minmax(0,1fr)}
+.ex-grid--card .ex-letter{max-inline-size:none;padding:18px 24px 14px}
+.ex-grid--card .ex-top{grid-template-columns:minmax(0,1fr)}
+.ex-card>.ex-roundel,.ex-card>.ex-portrait,.ex-card-head>.ex-roundel,.ex-card-head>.ex-portrait{margin:0 0 12px}
+.ex-card>.ex-roundel,.ex-card-head>.ex-roundel{inline-size:72px;flex:0 0 72px}
+.ex-card{position:relative;isolation:isolate;box-sizing:border-box;min-inline-size:0;background:var(--ex-paper);color:var(--ex-ink);border:1px solid #E3DCCB;border-radius:2px;box-shadow:0 1px 0 rgba(15,30,44,.05),0 22px 44px -32px rgba(15,30,44,.45);padding:16px 20px 14px}
+.ex-card::before{content:"";position:absolute;inset:0;z-index:-1;background:url(/assets/exec/letter-texture-ksV8ASq6b2.webp) center/cover no-repeat;opacity:.08;pointer-events:none}
+.ex-card-cols{display:grid;grid-template-columns:minmax(0,1fr) 1px minmax(0,1fr);column-gap:16px;align-items:start}
+.ex-card-col{min-inline-size:0;display:flex;flex-direction:column;gap:6px}
+.ex-card-col--en{font-family:var(--font-sans)}
+.ex-card-col--ar{font-family:var(--font-arabic);letter-spacing:0}
+.ex-card-title{margin:0;font:600 13px/18px var(--font-serif);color:var(--ex-ink);padding-block-end:4px;border-block-end:1px solid var(--ex-hair)}
+.ex-card-col--ar .ex-card-title{font:600 14px/20px var(--font-arabic)}
+.ex-facts{margin:0;display:flex;flex-direction:column;gap:7px}
+.ex-fact{display:block;font-size:13px;line-height:18px}
+.ex-card-col--ar .ex-fact{font-size:13.91px;line-height:21px}
+.ex-fact dt{display:inline;font-weight:600;color:var(--ex-mute)}
+.ex-fact dt::after{content:": "}
+.ex-fact dd{display:inline;margin:0;color:var(--ex-ink)}
+/* intro */
+.ex-section-title{font-family:var(--font-serif);font-weight:600;font-size:30px!important;line-height:36px!important;color:var(--ex-ink)}
+.ex-col--ar .ex-section-title{font-family:var(--font-arabic);font-size:32.1px!important;line-height:42px!important}
+.ex-index{list-style:none;margin:6px 0 0;padding:0;display:flex;flex-direction:column;gap:2px}
+.ex-index-btn{appearance:none;border:0;background:transparent;font:inherit;color:inherit;text-align:start;cursor:pointer;box-sizing:border-box;inline-size:100%;display:grid;grid-template-columns:auto minmax(0,1fr);column-gap:12px;padding:6px 8px;border-radius:4px;min-block-size:44px}
+.ex-index-btn:hover{background:rgba(232,217,181,.5)}
+.ex-index-btn:focus-visible{outline:2px solid var(--ex-ink);outline-offset:1px}
+.ex-index-n{grid-row:1 / span 2;font-family:var(--font-serif);font-weight:600;color:#5B6570}
+.ex-index-name{font-weight:600}
+.ex-index-role{font-size:14px;line-height:20px;color:#3A4652}
+.ex-col--ar .ex-index-role{font-size:14.98px;line-height:22px}
+/* film */
+.ex-film{margin:0;display:flex;flex-direction:column;gap:6px;min-inline-size:0}
+.ex-film-video{display:block;inline-size:100%;block-size:auto;aspect-ratio:16/9;background:var(--ex-ink);border:1px solid #E3DCCB;border-radius:2px}
+.ex-film-cap{display:flex;flex-direction:column;gap:2px}
+.ex-film-title{font:600 14px/20px var(--font-serif);color:var(--ex-ink)}
+.ex-film-note{font:400 11px/16px var(--font-sans);color:var(--ex-mute)}
+html[lang=ar] .ex-film-title,html[lang=ar] .ex-film-note{font-family:var(--font-arabic)}
+/* film slide: narrower letter → tighter gaps */
+.ex-grid--film .ex-letter{padding:18px 24px 14px}
+.ex-grid--film .ex-top{grid-template-columns:minmax(0,1fr)}
+.ex-grid--film .ex-roundel{inline-size:72px}
+/* short desktop heights: the slide body scrolls rather than shrinking the 16/24 body */
+@media (max-height:780px) and (min-width:701px){.ex-slide .s-body.ex-body{overflow-y:auto}}
+/* v1.5.9 — executive films: the shared player (.efp, dist/assets/exec-film-player.css) or the ready slot (.efp-slot) sits BESIDE the profile:
+   on a card profile (Fahad · Ary · Kayaan) in the card head next to the monogram roundel; on the letter-only CEO profile in its own column next to the letter.
+   Desktop: side by side · phone: stacked under the roundel / letter. 16:9 box with aspect-ratio → no layout shift; logical properties → the AR deck mirrors. */
+.ex-card-head{display:flex;align-items:flex-start;gap:16px;margin-block-end:12px;min-inline-size:0}
+.ex-card-head>.ex-roundel,.ex-card-head>.ex-portrait{margin:0}
+.ex-card-media{flex:1 1 auto;min-inline-size:0}
+.ex-card-head--film .ex-card-media{max-inline-size:480px}
+.ex-card-head .efp-slot{align-self:center}
+.ex-media-col{display:flex;flex-direction:column;gap:12px;min-inline-size:0;position:sticky;inset-block-start:0}
+.ex-media-col--card{position:static;gap:14px} /* v1.6.0: film above the profile card (Fahad · Ary) */
+.ex-media-col--card .ex-card{inline-size:100%}
+.ex-grid--film .ex-media-col .efp{inline-size:100%}
+.ex-grid--slot.ex-grid--film{grid-template-columns:minmax(0,1.18fr) minmax(0,.82fr)}
+.ex-grid--slot .ex-media-col .efp-slot{padding:16px 18px}
+/* desktop: a film slide's body scrolls instead of clipping at any height (phone keeps the section as its scroll container, like every other slide) */
+@media (min-width:701px){.ex-slide .s-body.ex-body:has(.efp){overflow-y:auto;overscroll-behavior:contain}}
+@media (max-width:700px){
+  .ex-card-head{flex-direction:column;align-items:stretch;gap:12px}
+  .ex-card-head>.ex-roundel{margin-inline:auto}
+  .ex-card-head--film .ex-card-media{max-inline-size:none}
+  .ex-media-col{position:static}
+  .ex-grid--slot.ex-grid--film{grid-template-columns:minmax(0,1fr)}
+}
+/* phone: one column — Latin, horizontal hairline, Arabic (RTL), then the film */
+@media (max-width:700px){
+  .ex-grid--card{grid-template-columns:minmax(0,1fr)}
+  .ex-card-cols{grid-template-columns:minmax(0,1fr);row-gap:14px}
+  .ex-letter{padding:16px 16px 12px}
+  .ex-top,.ex-grid--film{grid-template-columns:minmax(0,1fr)}
+  .ex-cols{grid-template-columns:minmax(0,1fr);row-gap:14px}
+  .ex-divider{inline-size:100%;block-size:1px}
+  .ex-portrait{inline-size:120px}
+  .ex-roundel{inline-size:72px}
+  .ex-letterhead{flex-wrap:wrap}
+}
+@media (prefers-reduced-motion:reduce){.ex-slide{transition:none}}
+/* the deck's html[lang=ar] h1–h3 rule would put the Latin name in the Arabic face in the AR deck — pin each column's name face */
+html .ex-col--en .ex-name,html[lang=ar] .ex-col--en .ex-name{font-family:var(--font-serif);letter-spacing:0}
+html .ex-col--ar .ex-name,html[lang=ar] .ex-col--ar .ex-name{font-family:var(--font-arabic);letter-spacing:0}

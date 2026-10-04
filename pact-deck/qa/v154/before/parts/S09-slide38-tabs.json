@@ -1,0 +1,1412 @@
+{
+ "marks": [
+  {
+   "t": "2026-10-01T06:33:16.909Z",
+   "scenario": "S09-slide38-tabs",
+   "step": "guide started on 38",
+   "expect": 38,
+   "vis": {
+    "n": 38,
+    "id": "s-aos-nations",
+    "slideId": null
+   },
+   "audio": {
+    "src": "guide-08-athar-os-Ib4oKe91OD.mp3",
+    "clip": "NAR-08",
+    "t": 9.38,
+    "muted": false
+   },
+   "cc": "Nations empowered.",
+   "guide": {
+    "state": "playing",
+    "clip": "NAR-08",
+    "slideId": null,
+    "blocked": "false",
+    "status": "Narrating slide 38 of 39 · 08 Athar OS",
+    "tap": false
+   }
+  },
+  {
+   "t": "2026-10-01T06:33:18.167Z",
+   "scenario": "S09-slide38-tabs",
+   "step": "tab India",
+   "expect": 38,
+   "vis": {
+    "n": 38,
+    "id": "s-aos-nations",
+    "slideId": null
+   },
+   "audio": {
+    "src": "guide-08-athar-os-Ib4oKe91OD.mp3",
+    "clip": "NAR-08",
+    "t": 16.25,
+    "muted": false
+   },
+   "cc": "India, ownership, 100 government schools and 10,000 AI PCs at 13.7 million.",
+   "guide": {
+    "state": "playing",
+    "clip": "NAR-08",
+    "slideId": null,
+    "blocked": "false",
+    "status": "Narrating slide 38 of 39 · 08 Athar OS",
+    "tap": false
+   }
+  },
+  {
+   "t": "2026-10-01T06:33:21.918Z",
+   "scenario": "S09-slide38-tabs",
+   "step": "tabs Kenya→Lebanon→India (300 ms)",
+   "expect": 38,
+   "vis": {
+    "n": 38,
+    "id": "s-aos-nations",
+    "slideId": null
+   },
+   "audio": {
+    "src": "guide-08-athar-os-Ib4oKe91OD.mp3",
+    "clip": "NAR-08",
+    "t": 18.05,
+    "muted": false
+   },
+   "cc": "India, ownership, 100 government schools and 10,000 AI PCs at 13.7 million.",
+   "guide": {
+    "state": "playing",
+    "clip": "NAR-08",
+    "slideId": null,
+    "blocked": "false",
+    "status": "Narrating slide 38 of 39 · 08 Athar OS",
+    "tap": false
+   }
+  },
+  {
+   "t": "2026-10-01T06:33:24.604Z",
+   "scenario": "S09-slide38-tabs",
+   "step": "blur tab, ArrowRight → 39",
+   "expect": 39,
+   "vis": {
+    "n": 39,
+    "id": "s-closing",
+    "slideId": null
+   },
+   "audio": {
+    "src": "guide-09-join-the-pact-Hx4Ywy843S.mp3",
+    "clip": "NAR-09",
+    "t": 2.35,
+    "muted": false
+   },
+   "cc": "You have seen the agreement, the community model, the six pillars, the actors, the roadmap, the impact tiers and Athar OS.",
+   "guide": {
+    "state": "playing",
+    "clip": "NAR-09",
+    "slideId": null,
+    "blocked": "false",
+    "status": "Narrating slide 39 of 39 · Join the pact",
+    "tap": false
+   }
+  }
+ ],
+ "events": [
+  {
+   "scenario": "S09-slide38-tabs",
+   "t": "2026-10-01T06:33:14.462Z",
+   "ms": 784,
+   "type": "sample",
+   "vis": {
+    "n": 38,
+    "id": "s-aos-nations",
+    "slideId": null
+   },
+   "audio": null,
+   "cc": null,
+   "guide": null,
+   "hash": "#/27"
+  },
+  {
+   "scenario": "S09-slide38-tabs",
+   "t": "2026-10-01T06:33:14.582Z",
+   "ms": 904,
+   "type": "sample",
+   "vis": {
+    "n": 38,
+    "id": "s-aos-nations",
+    "slideId": null
+   },
+   "audio": null,
+   "cc": "",
+   "guide": {
+    "state": "idle",
+    "clip": null,
+    "slideId": null,
+    "gen": null,
+    "status": "No narration for this slide"
+   },
+   "hash": "#/27/new-11"
+  },
+  {
+   "scenario": "S09-slide38-tabs",
+   "t": "2026-10-01T06:33:14.675Z",
+   "ms": 997,
+   "type": "media:emptied",
+   "vis": {
+    "n": 38,
+    "id": "s-aos-nations",
+    "slideId": null
+   },
+   "audio": null,
+   "cc": "Nations empowered.",
+   "guide": {
+    "state": "loading",
+    "clip": "NAR-08",
+    "slideId": null,
+    "gen": null,
+    "status": "Guide ready · slide 38 of 39 · 08 Athar OS"
+   },
+   "hash": "#/27/new-11",
+   "el": "guide-08-athar-os-Ib4oKe91OD.mp3",
+   "ct": 0
+  },
+  {
+   "scenario": "S09-slide38-tabs",
+   "t": "2026-10-01T06:33:14.676Z",
+   "ms": 999,
+   "type": "media:loadstart",
+   "vis": {
+    "n": 38,
+    "id": "s-aos-nations",
+    "slideId": null
+   },
+   "audio": null,
+   "cc": "Nations empowered.",
+   "guide": {
+    "state": "loading",
+    "clip": "NAR-08",
+    "slideId": null,
+    "gen": null,
+    "status": "Guide ready · slide 38 of 39 · 08 Athar OS"
+   },
+   "hash": "#/27/new-11",
+   "el": "guide-08-athar-os-Ib4oKe91OD.mp3",
+   "ct": 0
+  },
+  {
+   "scenario": "S09-slide38-tabs",
+   "t": "2026-10-01T06:33:14.686Z",
+   "ms": 1009,
+   "type": "media:loadstart",
+   "vis": {
+    "n": 38,
+    "id": "s-aos-nations",
+    "slideId": null
+   },
+   "audio": null,
+   "cc": "Nations empowered.",
+   "guide": {
+    "state": "loading",
+    "clip": "NAR-08",
+    "slideId": null,
+    "gen": null,
+    "status": "Guide ready · slide 38 of 39 · 08 Athar OS"
+   },
+   "hash": "#/27/new-11",
+   "el": "guide-09-join-the-pact-Hx4Ywy843S.mp3",
+   "ct": 0
+  },
+  {
+   "scenario": "S09-slide38-tabs",
+   "t": "2026-10-01T06:33:14.690Z",
+   "ms": 1013,
+   "type": "sample",
+   "vis": {
+    "n": 38,
+    "id": "s-aos-nations",
+    "slideId": null
+   },
+   "audio": null,
+   "cc": "Nations empowered.",
+   "guide": {
+    "state": "loading",
+    "clip": "NAR-08",
+    "slideId": null,
+    "gen": null,
+    "status": "Guide ready · slide 38 of 39 · 08 Athar OS"
+   },
+   "hash": "#/27/new-11"
+  },
+  {
+   "scenario": "S09-slide38-tabs",
+   "t": "2026-10-01T06:33:14.747Z",
+   "ms": 1070,
+   "type": "media:canplay",
+   "vis": {
+    "n": 38,
+    "id": "s-aos-nations",
+    "slideId": null
+   },
+   "audio": null,
+   "cc": "Nations empowered.",
+   "guide": {
+    "state": "loading",
+    "clip": "NAR-08",
+    "slideId": null,
+    "gen": null,
+    "status": "Guide ready · slide 38 of 39 · 08 Athar OS"
+   },
+   "hash": "#/27/new-11",
+   "el": "guide-09-join-the-pact-Hx4Ywy843S.mp3",
+   "ct": 0
+  },
+  {
+   "scenario": "S09-slide38-tabs",
+   "t": "2026-10-01T06:33:14.748Z",
+   "ms": 1070,
+   "type": "media:seeked",
+   "vis": {
+    "n": 38,
+    "id": "s-aos-nations",
+    "slideId": null
+   },
+   "audio": null,
+   "cc": "Nations empowered.",
+   "guide": {
+    "state": "loading",
+    "clip": "NAR-08",
+    "slideId": null,
+    "gen": null,
+    "status": "Guide ready · slide 38 of 39 · 08 Athar OS"
+   },
+   "hash": "#/27/new-11",
+   "el": "guide-08-athar-os-Ib4oKe91OD.mp3",
+   "ct": 7.96
+  },
+  {
+   "scenario": "S09-slide38-tabs",
+   "t": "2026-10-01T06:33:14.749Z",
+   "ms": 1071,
+   "type": "media:canplay",
+   "vis": {
+    "n": 38,
+    "id": "s-aos-nations",
+    "slideId": null
+   },
+   "audio": null,
+   "cc": "Nations empowered.",
+   "guide": {
+    "state": "paused",
+    "clip": "NAR-08",
+    "slideId": null,
+    "gen": null,
+    "status": "Guide ready · slide 38 of 39 · 08 Athar OS"
+   },
+   "hash": "#/27/new-11",
+   "el": "guide-08-athar-os-Ib4oKe91OD.mp3",
+   "ct": 7.96
+  },
+  {
+   "scenario": "S09-slide38-tabs",
+   "t": "2026-10-01T06:33:14.778Z",
+   "ms": 1101,
+   "type": "sample",
+   "vis": {
+    "n": 38,
+    "id": "s-aos-nations",
+    "slideId": null
+   },
+   "audio": null,
+   "cc": "Nations empowered.",
+   "guide": {
+    "state": "paused",
+    "clip": "NAR-08",
+    "slideId": null,
+    "gen": null,
+    "status": "Guide ready · slide 38 of 39 · 08 Athar OS"
+   },
+   "hash": "#/27/new-11"
+  },
+  {
+   "scenario": "S09-slide38-tabs",
+   "t": "2026-10-01T06:33:15.359Z",
+   "ms": 1681,
+   "type": "click",
+   "vis": {
+    "n": 38,
+    "id": "s-aos-nations",
+    "slideId": null
+   },
+   "audio": null,
+   "cc": "Nations empowered.",
+   "guide": {
+    "state": "paused",
+    "clip": "NAR-08",
+    "slideId": null,
+    "gen": null,
+    "status": "Guide ready · slide 38 of 39 · 08 Athar OS"
+   },
+   "hash": "#/27/new-11",
+   "target": "nar-autoplay"
+  },
+  {
+   "scenario": "S09-slide38-tabs",
+   "t": "2026-10-01T06:33:15.403Z",
+   "ms": 1725,
+   "type": "click",
+   "vis": {
+    "n": 38,
+    "id": "s-aos-nations",
+    "slideId": null
+   },
+   "audio": null,
+   "cc": "Nations empowered.",
+   "guide": {
+    "state": "paused",
+    "clip": "NAR-08",
+    "slideId": null,
+    "gen": null,
+    "status": "Guide ready · slide 38 of 39 · 08 Athar OS"
+   },
+   "hash": "#/27/new-11",
+   "target": "guide-toggle"
+  },
+  {
+   "scenario": "S09-slide38-tabs",
+   "t": "2026-10-01T06:33:15.403Z",
+   "ms": 1726,
+   "type": "play()",
+   "vis": {
+    "n": 38,
+    "id": "s-aos-nations",
+    "slideId": null
+   },
+   "audio": {
+    "src": "guide-08-athar-os-Ib4oKe91OD.mp3",
+    "clip": "NAR-08",
+    "t": 7.96,
+    "muted": false
+   },
+   "cc": "Nations empowered.",
+   "guide": {
+    "state": "paused",
+    "clip": "NAR-08",
+    "slideId": null,
+    "gen": null,
+    "status": "Guide ready · slide 38 of 39 · 08 Athar OS"
+   },
+   "hash": "#/27/new-11",
+   "el": "guide-08-athar-os-Ib4oKe91OD.mp3",
+   "ct": 7.96
+  },
+  {
+   "scenario": "S09-slide38-tabs",
+   "t": "2026-10-01T06:33:15.415Z",
+   "ms": 1737,
+   "type": "media:playing",
+   "vis": {
+    "n": 38,
+    "id": "s-aos-nations",
+    "slideId": null
+   },
+   "audio": {
+    "src": "guide-08-athar-os-Ib4oKe91OD.mp3",
+    "clip": "NAR-08",
+    "t": 7.96,
+    "muted": false
+   },
+   "cc": "Nations empowered.",
+   "guide": {
+    "state": "playing",
+    "clip": "NAR-08",
+    "slideId": null,
+    "gen": null,
+    "status": "Narrating slide 38 of 39 · 08 Athar OS"
+   },
+   "hash": "#/27/new-11",
+   "el": "guide-08-athar-os-Ib4oKe91OD.mp3",
+   "ct": 7.96
+  },
+  {
+   "scenario": "S09-slide38-tabs",
+   "t": "2026-10-01T06:33:15.415Z",
+   "ms": 1737,
+   "type": "play():resolved",
+   "vis": {
+    "n": 38,
+    "id": "s-aos-nations",
+    "slideId": null
+   },
+   "audio": {
+    "src": "guide-08-athar-os-Ib4oKe91OD.mp3",
+    "clip": "NAR-08",
+    "t": 7.96,
+    "muted": false
+   },
+   "cc": "Nations empowered.",
+   "guide": {
+    "state": "playing",
+    "clip": "NAR-08",
+    "slideId": null,
+    "gen": null,
+    "status": "Narrating slide 38 of 39 · 08 Athar OS"
+   },
+   "hash": "#/27/new-11",
+   "el": "guide-08-athar-os-Ib4oKe91OD.mp3"
+  },
+  {
+   "scenario": "S09-slide38-tabs",
+   "t": "2026-10-01T06:33:15.478Z",
+   "ms": 1801,
+   "type": "sample",
+   "vis": {
+    "n": 38,
+    "id": "s-aos-nations",
+    "slideId": null
+   },
+   "audio": {
+    "src": "guide-08-athar-os-Ib4oKe91OD.mp3",
+    "clip": "NAR-08",
+    "t": 7.98,
+    "muted": false
+   },
+   "cc": "Nations empowered.",
+   "guide": {
+    "state": "playing",
+    "clip": "NAR-08",
+    "slideId": null,
+    "gen": null,
+    "status": "Narrating slide 38 of 39 · 08 Athar OS"
+   },
+   "hash": "#/27/new-11"
+  },
+  {
+   "scenario": "S09-slide38-tabs",
+   "t": "2026-10-01T06:33:16.911Z",
+   "ms": 3233,
+   "type": "check",
+   "vis": {
+    "n": 38,
+    "id": "s-aos-nations",
+    "slideId": null
+   },
+   "audio": {
+    "src": "guide-08-athar-os-Ib4oKe91OD.mp3",
+    "clip": "NAR-08",
+    "t": 9.38,
+    "muted": false
+   },
+   "cc": "Nations empowered.",
+   "guide": {
+    "state": "playing",
+    "clip": "NAR-08",
+    "slideId": null,
+    "gen": null,
+    "status": "Narrating slide 38 of 39 · 08 Athar OS"
+   },
+   "hash": "#/27/new-11",
+   "step": "guide started on 38",
+   "expect": 38
+  },
+  {
+   "scenario": "S09-slide38-tabs",
+   "t": "2026-10-01T06:33:16.957Z",
+   "ms": 3280,
+   "type": "click",
+   "vis": {
+    "n": 38,
+    "id": "s-aos-nations",
+    "slideId": null
+   },
+   "audio": {
+    "src": "guide-08-athar-os-Ib4oKe91OD.mp3",
+    "clip": "NAR-08",
+    "t": 9.42,
+    "muted": false
+   },
+   "cc": "Nations empowered.",
+   "guide": {
+    "state": "playing",
+    "clip": "NAR-08",
+    "slideId": null,
+    "gen": null,
+    "status": "Narrating slide 38 of 39 · 08 Athar OS"
+   },
+   "hash": "#/27/new-11",
+   "target": "IndiaOwnership"
+  },
+  {
+   "scenario": "S09-slide38-tabs",
+   "t": "2026-10-01T06:33:16.976Z",
+   "ms": 3299,
+   "type": "media:seeked",
+   "vis": {
+    "n": 38,
+    "id": "s-aos-nations",
+    "slideId": null
+   },
+   "audio": {
+    "src": "guide-08-athar-os-Ib4oKe91OD.mp3",
+    "clip": "NAR-08",
+    "t": 15.13,
+    "muted": false
+   },
+   "cc": "India, ownership, 100 government schools and 10,000 AI PCs at 13.7 million.",
+   "guide": {
+    "state": "buffering",
+    "clip": "NAR-08",
+    "slideId": null,
+    "gen": null,
+    "status": "Narrating slide 38 of 39 · 08 Athar OS"
+   },
+   "hash": "#/27/new-11",
+   "el": "guide-08-athar-os-Ib4oKe91OD.mp3",
+   "ct": 15.13
+  },
+  {
+   "scenario": "S09-slide38-tabs",
+   "t": "2026-10-01T06:33:16.977Z",
+   "ms": 3299,
+   "type": "media:canplay",
+   "vis": {
+    "n": 38,
+    "id": "s-aos-nations",
+    "slideId": null
+   },
+   "audio": {
+    "src": "guide-08-athar-os-Ib4oKe91OD.mp3",
+    "clip": "NAR-08",
+    "t": 15.13,
+    "muted": false
+   },
+   "cc": "India, ownership, 100 government schools and 10,000 AI PCs at 13.7 million.",
+   "guide": {
+    "state": "buffering",
+    "clip": "NAR-08",
+    "slideId": null,
+    "gen": null,
+    "status": "Narrating slide 38 of 39 · 08 Athar OS"
+   },
+   "hash": "#/27/new-11",
+   "el": "guide-08-athar-os-Ib4oKe91OD.mp3",
+   "ct": 15.13
+  },
+  {
+   "scenario": "S09-slide38-tabs",
+   "t": "2026-10-01T06:33:16.977Z",
+   "ms": 3299,
+   "type": "media:playing",
+   "vis": {
+    "n": 38,
+    "id": "s-aos-nations",
+    "slideId": null
+   },
+   "audio": {
+    "src": "guide-08-athar-os-Ib4oKe91OD.mp3",
+    "clip": "NAR-08",
+    "t": 15.13,
+    "muted": false
+   },
+   "cc": "India, ownership, 100 government schools and 10,000 AI PCs at 13.7 million.",
+   "guide": {
+    "state": "playing",
+    "clip": "NAR-08",
+    "slideId": null,
+    "gen": null,
+    "status": "Narrating slide 38 of 39 · 08 Athar OS"
+   },
+   "hash": "#/27/new-11",
+   "el": "guide-08-athar-os-Ib4oKe91OD.mp3",
+   "ct": 15.13
+  },
+  {
+   "scenario": "S09-slide38-tabs",
+   "t": "2026-10-01T06:33:16.979Z",
+   "ms": 3301,
+   "type": "sample",
+   "vis": {
+    "n": 38,
+    "id": "s-aos-nations",
+    "slideId": null
+   },
+   "audio": {
+    "src": "guide-08-athar-os-Ib4oKe91OD.mp3",
+    "clip": "NAR-08",
+    "t": 15.13,
+    "muted": false
+   },
+   "cc": "India, ownership, 100 government schools and 10,000 AI PCs at 13.7 million.",
+   "guide": {
+    "state": "playing",
+    "clip": "NAR-08",
+    "slideId": null,
+    "gen": null,
+    "status": "Narrating slide 38 of 39 · 08 Athar OS"
+   },
+   "hash": "#/27/new-11"
+  },
+  {
+   "scenario": "S09-slide38-tabs",
+   "t": "2026-10-01T06:33:18.168Z",
+   "ms": 4490,
+   "type": "check",
+   "vis": {
+    "n": 38,
+    "id": "s-aos-nations",
+    "slideId": null
+   },
+   "audio": {
+    "src": "guide-08-athar-os-Ib4oKe91OD.mp3",
+    "clip": "NAR-08",
+    "t": 16.25,
+    "muted": false
+   },
+   "cc": "India, ownership, 100 government schools and 10,000 AI PCs at 13.7 million.",
+   "guide": {
+    "state": "playing",
+    "clip": "NAR-08",
+    "slideId": null,
+    "gen": null,
+    "status": "Narrating slide 38 of 39 · 08 Athar OS"
+   },
+   "hash": "#/27/new-11",
+   "step": "tab India",
+   "expect": 38
+  },
+  {
+   "scenario": "S09-slide38-tabs",
+   "t": "2026-10-01T06:33:18.219Z",
+   "ms": 4541,
+   "type": "click",
+   "vis": {
+    "n": 38,
+    "id": "s-aos-nations",
+    "slideId": null
+   },
+   "audio": {
+    "src": "guide-08-athar-os-Ib4oKe91OD.mp3",
+    "clip": "NAR-08",
+    "t": 16.3,
+    "muted": false
+   },
+   "cc": "India, ownership, 100 government schools and 10,000 AI PCs at 13.7 million.",
+   "guide": {
+    "state": "playing",
+    "clip": "NAR-08",
+    "slideId": null,
+    "gen": null,
+    "status": "Narrating slide 38 of 39 · 08 Athar OS"
+   },
+   "hash": "#/27/new-11",
+   "target": "KenyaLegacy"
+  },
+  {
+   "scenario": "S09-slide38-tabs",
+   "t": "2026-10-01T06:33:18.235Z",
+   "ms": 4557,
+   "type": "media:seeked",
+   "vis": {
+    "n": 38,
+    "id": "s-aos-nations",
+    "slideId": null
+   },
+   "audio": {
+    "src": "guide-08-athar-os-Ib4oKe91OD.mp3",
+    "clip": "NAR-08",
+    "t": 21.84,
+    "muted": false
+   },
+   "cc": "Kenya, Legacy, a Kenyan-owned sovereign node at around 33 million transferred to a national entity after five to seven years.",
+   "guide": {
+    "state": "buffering",
+    "clip": "NAR-08",
+    "slideId": null,
+    "gen": null,
+    "status": "Narrating slide 38 of 39 · 08 Athar OS"
+   },
+   "hash": "#/27/new-11",
+   "el": "guide-08-athar-os-Ib4oKe91OD.mp3",
+   "ct": 21.84
+  },
+  {
+   "scenario": "S09-slide38-tabs",
+   "t": "2026-10-01T06:33:18.235Z",
+   "ms": 4558,
+   "type": "media:canplay",
+   "vis": {
+    "n": 38,
+    "id": "s-aos-nations",
+    "slideId": null
+   },
+   "audio": {
+    "src": "guide-08-athar-os-Ib4oKe91OD.mp3",
+    "clip": "NAR-08",
+    "t": 21.84,
+    "muted": false
+   },
+   "cc": "Kenya, Legacy, a Kenyan-owned sovereign node at around 33 million transferred to a national entity after five to seven years.",
+   "guide": {
+    "state": "buffering",
+    "clip": "NAR-08",
+    "slideId": null,
+    "gen": null,
+    "status": "Narrating slide 38 of 39 · 08 Athar OS"
+   },
+   "hash": "#/27/new-11",
+   "el": "guide-08-athar-os-Ib4oKe91OD.mp3",
+   "ct": 21.84
+  },
+  {
+   "scenario": "S09-slide38-tabs",
+   "t": "2026-10-01T06:33:18.236Z",
+   "ms": 4558,
+   "type": "media:playing",
+   "vis": {
+    "n": 38,
+    "id": "s-aos-nations",
+    "slideId": null
+   },
+   "audio": {
+    "src": "guide-08-athar-os-Ib4oKe91OD.mp3",
+    "clip": "NAR-08",
+    "t": 21.84,
+    "muted": false
+   },
+   "cc": "Kenya, Legacy, a Kenyan-owned sovereign node at around 33 million transferred to a national entity after five to seven years.",
+   "guide": {
+    "state": "playing",
+    "clip": "NAR-08",
+    "slideId": null,
+    "gen": null,
+    "status": "Narrating slide 38 of 39 · 08 Athar OS"
+   },
+   "hash": "#/27/new-11",
+   "el": "guide-08-athar-os-Ib4oKe91OD.mp3",
+   "ct": 21.84
+  },
+  {
+   "scenario": "S09-slide38-tabs",
+   "t": "2026-10-01T06:33:18.278Z",
+   "ms": 4601,
+   "type": "sample",
+   "vis": {
+    "n": 38,
+    "id": "s-aos-nations",
+    "slideId": null
+   },
+   "audio": {
+    "src": "guide-08-athar-os-Ib4oKe91OD.mp3",
+    "clip": "NAR-08",
+    "t": 21.86,
+    "muted": false
+   },
+   "cc": "Kenya, Legacy, a Kenyan-owned sovereign node at around 33 million transferred to a national entity after five to seven years.",
+   "guide": {
+    "state": "playing",
+    "clip": "NAR-08",
+    "slideId": null,
+    "gen": null,
+    "status": "Narrating slide 38 of 39 · 08 Athar OS"
+   },
+   "hash": "#/27/new-11"
+  },
+  {
+   "scenario": "S09-slide38-tabs",
+   "t": "2026-10-01T06:33:18.560Z",
+   "ms": 4882,
+   "type": "click",
+   "vis": {
+    "n": 38,
+    "id": "s-aos-nations",
+    "slideId": null
+   },
+   "audio": {
+    "src": "guide-08-athar-os-Ib4oKe91OD.mp3",
+    "clip": "NAR-08",
+    "t": 22.1,
+    "muted": false
+   },
+   "cc": "Kenya, Legacy, a Kenyan-owned sovereign node at around 33 million transferred to a national entity after five to seven years.",
+   "guide": {
+    "state": "playing",
+    "clip": "NAR-08",
+    "slideId": null,
+    "gen": null,
+    "status": "Narrating slide 38 of 39 · 08 Athar OS"
+   },
+   "hash": "#/27/new-11",
+   "target": "LebanonAccess"
+  },
+  {
+   "scenario": "S09-slide38-tabs",
+   "t": "2026-10-01T06:33:18.578Z",
+   "ms": 4901,
+   "type": "media:seeked",
+   "vis": {
+    "n": 38,
+    "id": "s-aos-nations",
+    "slideId": null
+   },
+   "audio": {
+    "src": "guide-08-athar-os-Ib4oKe91OD.mp3",
+    "clip": "NAR-08",
+    "t": 9.58,
+    "muted": false
+   },
+   "cc": "Lebanon, Access, 1 million Lebanese AI experts at $10 million.",
+   "guide": {
+    "state": "buffering",
+    "clip": "NAR-08",
+    "slideId": null,
+    "gen": null,
+    "status": "Narrating slide 38 of 39 · 08 Athar OS"
+   },
+   "hash": "#/27/new-11",
+   "el": "guide-08-athar-os-Ib4oKe91OD.mp3",
+   "ct": 9.58
+  },
+  {
+   "scenario": "S09-slide38-tabs",
+   "t": "2026-10-01T06:33:18.578Z",
+   "ms": 4901,
+   "type": "media:canplay",
+   "vis": {
+    "n": 38,
+    "id": "s-aos-nations",
+    "slideId": null
+   },
+   "audio": {
+    "src": "guide-08-athar-os-Ib4oKe91OD.mp3",
+    "clip": "NAR-08",
+    "t": 9.58,
+    "muted": false
+   },
+   "cc": "Lebanon, Access, 1 million Lebanese AI experts at $10 million.",
+   "guide": {
+    "state": "buffering",
+    "clip": "NAR-08",
+    "slideId": null,
+    "gen": null,
+    "status": "Narrating slide 38 of 39 · 08 Athar OS"
+   },
+   "hash": "#/27/new-11",
+   "el": "guide-08-athar-os-Ib4oKe91OD.mp3",
+   "ct": 9.58
+  },
+  {
+   "scenario": "S09-slide38-tabs",
+   "t": "2026-10-01T06:33:18.579Z",
+   "ms": 4901,
+   "type": "media:playing",
+   "vis": {
+    "n": 38,
+    "id": "s-aos-nations",
+    "slideId": null
+   },
+   "audio": {
+    "src": "guide-08-athar-os-Ib4oKe91OD.mp3",
+    "clip": "NAR-08",
+    "t": 9.58,
+    "muted": false
+   },
+   "cc": "Lebanon, Access, 1 million Lebanese AI experts at $10 million.",
+   "guide": {
+    "state": "playing",
+    "clip": "NAR-08",
+    "slideId": null,
+    "gen": null,
+    "status": "Narrating slide 38 of 39 · 08 Athar OS"
+   },
+   "hash": "#/27/new-11",
+   "el": "guide-08-athar-os-Ib4oKe91OD.mp3",
+   "ct": 9.58
+  },
+  {
+   "scenario": "S09-slide38-tabs",
+   "t": "2026-10-01T06:33:18.579Z",
+   "ms": 4901,
+   "type": "sample",
+   "vis": {
+    "n": 38,
+    "id": "s-aos-nations",
+    "slideId": null
+   },
+   "audio": {
+    "src": "guide-08-athar-os-Ib4oKe91OD.mp3",
+    "clip": "NAR-08",
+    "t": 9.58,
+    "muted": false
+   },
+   "cc": "Lebanon, Access, 1 million Lebanese AI experts at $10 million.",
+   "guide": {
+    "state": "playing",
+    "clip": "NAR-08",
+    "slideId": null,
+    "gen": null,
+    "status": "Narrating slide 38 of 39 · 08 Athar OS"
+   },
+   "hash": "#/27/new-11"
+  },
+  {
+   "scenario": "S09-slide38-tabs",
+   "t": "2026-10-01T06:33:18.909Z",
+   "ms": 5231,
+   "type": "click",
+   "vis": {
+    "n": 38,
+    "id": "s-aos-nations",
+    "slideId": null
+   },
+   "audio": {
+    "src": "guide-08-athar-os-Ib4oKe91OD.mp3",
+    "clip": "NAR-08",
+    "t": 9.84,
+    "muted": false
+   },
+   "cc": "Lebanon, Access, 1 million Lebanese AI experts at $10 million.",
+   "guide": {
+    "state": "playing",
+    "clip": "NAR-08",
+    "slideId": null,
+    "gen": null,
+    "status": "Narrating slide 38 of 39 · 08 Athar OS"
+   },
+   "hash": "#/27/new-11",
+   "target": "IndiaOwnership"
+  },
+  {
+   "scenario": "S09-slide38-tabs",
+   "t": "2026-10-01T06:33:18.926Z",
+   "ms": 5248,
+   "type": "media:seeked",
+   "vis": {
+    "n": 38,
+    "id": "s-aos-nations",
+    "slideId": null
+   },
+   "audio": {
+    "src": "guide-08-athar-os-Ib4oKe91OD.mp3",
+    "clip": "NAR-08",
+    "t": 15.13,
+    "muted": false
+   },
+   "cc": "India, ownership, 100 government schools and 10,000 AI PCs at 13.7 million.",
+   "guide": {
+    "state": "buffering",
+    "clip": "NAR-08",
+    "slideId": null,
+    "gen": null,
+    "status": "Narrating slide 38 of 39 · 08 Athar OS"
+   },
+   "hash": "#/27/new-11",
+   "el": "guide-08-athar-os-Ib4oKe91OD.mp3",
+   "ct": 15.13
+  },
+  {
+   "scenario": "S09-slide38-tabs",
+   "t": "2026-10-01T06:33:18.926Z",
+   "ms": 5248,
+   "type": "media:canplay",
+   "vis": {
+    "n": 38,
+    "id": "s-aos-nations",
+    "slideId": null
+   },
+   "audio": {
+    "src": "guide-08-athar-os-Ib4oKe91OD.mp3",
+    "clip": "NAR-08",
+    "t": 15.13,
+    "muted": false
+   },
+   "cc": "India, ownership, 100 government schools and 10,000 AI PCs at 13.7 million.",
+   "guide": {
+    "state": "buffering",
+    "clip": "NAR-08",
+    "slideId": null,
+    "gen": null,
+    "status": "Narrating slide 38 of 39 · 08 Athar OS"
+   },
+   "hash": "#/27/new-11",
+   "el": "guide-08-athar-os-Ib4oKe91OD.mp3",
+   "ct": 15.13
+  },
+  {
+   "scenario": "S09-slide38-tabs",
+   "t": "2026-10-01T06:33:18.926Z",
+   "ms": 5249,
+   "type": "media:playing",
+   "vis": {
+    "n": 38,
+    "id": "s-aos-nations",
+    "slideId": null
+   },
+   "audio": {
+    "src": "guide-08-athar-os-Ib4oKe91OD.mp3",
+    "clip": "NAR-08",
+    "t": 15.13,
+    "muted": false
+   },
+   "cc": "India, ownership, 100 government schools and 10,000 AI PCs at 13.7 million.",
+   "guide": {
+    "state": "playing",
+    "clip": "NAR-08",
+    "slideId": null,
+    "gen": null,
+    "status": "Narrating slide 38 of 39 · 08 Athar OS"
+   },
+   "hash": "#/27/new-11",
+   "el": "guide-08-athar-os-Ib4oKe91OD.mp3",
+   "ct": 15.13
+  },
+  {
+   "scenario": "S09-slide38-tabs",
+   "t": "2026-10-01T06:33:18.978Z",
+   "ms": 5301,
+   "type": "sample",
+   "vis": {
+    "n": 38,
+    "id": "s-aos-nations",
+    "slideId": null
+   },
+   "audio": {
+    "src": "guide-08-athar-os-Ib4oKe91OD.mp3",
+    "clip": "NAR-08",
+    "t": 15.15,
+    "muted": false
+   },
+   "cc": "India, ownership, 100 government schools and 10,000 AI PCs at 13.7 million.",
+   "guide": {
+    "state": "playing",
+    "clip": "NAR-08",
+    "slideId": null,
+    "gen": null,
+    "status": "Narrating slide 38 of 39 · 08 Athar OS"
+   },
+   "hash": "#/27/new-11"
+  },
+  {
+   "scenario": "S09-slide38-tabs",
+   "t": "2026-10-01T06:33:21.920Z",
+   "ms": 8242,
+   "type": "check",
+   "vis": {
+    "n": 38,
+    "id": "s-aos-nations",
+    "slideId": null
+   },
+   "audio": {
+    "src": "guide-08-athar-os-Ib4oKe91OD.mp3",
+    "clip": "NAR-08",
+    "t": 18.05,
+    "muted": false
+   },
+   "cc": "India, ownership, 100 government schools and 10,000 AI PCs at 13.7 million.",
+   "guide": {
+    "state": "playing",
+    "clip": "NAR-08",
+    "slideId": null,
+    "gen": null,
+    "status": "Narrating slide 38 of 39 · 08 Athar OS"
+   },
+   "hash": "#/27/new-11",
+   "step": "tabs Kenya→Lebanon→India (300 ms)",
+   "expect": 38
+  },
+  {
+   "scenario": "S09-slide38-tabs",
+   "t": "2026-10-01T06:33:22.065Z",
+   "ms": 8387,
+   "type": "key",
+   "vis": {
+    "n": 38,
+    "id": "s-aos-nations",
+    "slideId": null
+   },
+   "audio": {
+    "src": "guide-08-athar-os-Ib4oKe91OD.mp3",
+    "clip": "NAR-08",
+    "t": 18.2,
+    "muted": false
+   },
+   "cc": "India, ownership, 100 government schools and 10,000 AI PCs at 13.7 million.",
+   "guide": {
+    "state": "playing",
+    "clip": "NAR-08",
+    "slideId": null,
+    "gen": null,
+    "status": "Narrating slide 38 of 39 · 08 Athar OS"
+   },
+   "hash": "#/27/new-11",
+   "key": "ArrowRight"
+  },
+  {
+   "scenario": "S09-slide38-tabs",
+   "t": "2026-10-01T06:33:22.095Z",
+   "ms": 8417,
+   "type": "sample",
+   "vis": {
+    "n": 39,
+    "id": "s-closing",
+    "slideId": null
+   },
+   "audio": {
+    "src": "guide-08-athar-os-Ib4oKe91OD.mp3",
+    "clip": "NAR-08",
+    "t": 18.23,
+    "muted": false
+   },
+   "cc": "India, ownership, 100 government schools and 10,000 AI PCs at 13.7 million.",
+   "guide": {
+    "state": "playing",
+    "clip": "NAR-08",
+    "slideId": null,
+    "gen": null,
+    "status": "Narrating slide 38 of 39 · 08 Athar OS"
+   },
+   "hash": "#/28"
+  },
+  {
+   "scenario": "S09-slide38-tabs",
+   "t": "2026-10-01T06:33:22.142Z",
+   "ms": 8464,
+   "type": "play()",
+   "vis": {
+    "n": 39,
+    "id": "s-closing",
+    "slideId": null
+   },
+   "audio": {
+    "src": "guide-08-athar-os-Ib4oKe91OD.mp3",
+    "clip": "NAR-08",
+    "t": 0,
+    "muted": false
+   },
+   "cc": "India, ownership, 100 government schools and 10,000 AI PCs at 13.7 million.",
+   "guide": {
+    "state": "playing",
+    "clip": "NAR-08",
+    "slideId": null,
+    "gen": null,
+    "status": "Narrating slide 38 of 39 · 08 Athar OS"
+   },
+   "hash": "#/28",
+   "el": "guide-08-athar-os-Ib4oKe91OD.mp3",
+   "ct": 0
+  },
+  {
+   "scenario": "S09-slide38-tabs",
+   "t": "2026-10-01T06:33:22.143Z",
+   "ms": 8465,
+   "type": "media:emptied",
+   "vis": {
+    "n": 39,
+    "id": "s-closing",
+    "slideId": null
+   },
+   "audio": {
+    "src": "guide-08-athar-os-Ib4oKe91OD.mp3",
+    "clip": "NAR-08",
+    "t": 0,
+    "muted": false
+   },
+   "cc": "Join the Pact.",
+   "guide": {
+    "state": "starting",
+    "clip": "NAR-09",
+    "slideId": null,
+    "gen": null,
+    "status": "Narrating slide 39 of 39 · Join the pact"
+   },
+   "hash": "#/28",
+   "el": "guide-08-athar-os-Ib4oKe91OD.mp3",
+   "ct": 0
+  },
+  {
+   "scenario": "S09-slide38-tabs",
+   "t": "2026-10-01T06:33:22.144Z",
+   "ms": 8466,
+   "type": "media:loadstart",
+   "vis": {
+    "n": 39,
+    "id": "s-closing",
+    "slideId": null
+   },
+   "audio": {
+    "src": "guide-09-join-the-pact-Hx4Ywy843S.mp3",
+    "clip": "NAR-09",
+    "t": 0,
+    "muted": false
+   },
+   "cc": "Join the Pact.",
+   "guide": {
+    "state": "buffering",
+    "clip": "NAR-09",
+    "slideId": null,
+    "gen": null,
+    "status": "Narrating slide 39 of 39 · Join the pact"
+   },
+   "hash": "#/28",
+   "el": "guide-09-join-the-pact-Hx4Ywy843S.mp3",
+   "ct": 0
+  },
+  {
+   "scenario": "S09-slide38-tabs",
+   "t": "2026-10-01T06:33:22.159Z",
+   "ms": 8481,
+   "type": "media:canplay",
+   "vis": {
+    "n": 39,
+    "id": "s-closing",
+    "slideId": null
+   },
+   "audio": {
+    "src": "guide-09-join-the-pact-Hx4Ywy843S.mp3",
+    "clip": "NAR-09",
+    "t": 0,
+    "muted": false
+   },
+   "cc": "Join the Pact.",
+   "guide": {
+    "state": "buffering",
+    "clip": "NAR-09",
+    "slideId": null,
+    "gen": null,
+    "status": "Narrating slide 39 of 39 · Join the pact"
+   },
+   "hash": "#/28",
+   "el": "guide-09-join-the-pact-Hx4Ywy843S.mp3",
+   "ct": 0
+  },
+  {
+   "scenario": "S09-slide38-tabs",
+   "t": "2026-10-01T06:33:22.160Z",
+   "ms": 8483,
+   "type": "media:playing",
+   "vis": {
+    "n": 39,
+    "id": "s-closing",
+    "slideId": null
+   },
+   "audio": {
+    "src": "guide-09-join-the-pact-Hx4Ywy843S.mp3",
+    "clip": "NAR-09",
+    "t": 0,
+    "muted": false
+   },
+   "cc": "Join the Pact.",
+   "guide": {
+    "state": "playing",
+    "clip": "NAR-09",
+    "slideId": null,
+    "gen": null,
+    "status": "Narrating slide 39 of 39 · Join the pact"
+   },
+   "hash": "#/28",
+   "el": "guide-09-join-the-pact-Hx4Ywy843S.mp3",
+   "ct": 0
+  },
+  {
+   "scenario": "S09-slide38-tabs",
+   "t": "2026-10-01T06:33:22.161Z",
+   "ms": 8483,
+   "type": "play():resolved",
+   "vis": {
+    "n": 39,
+    "id": "s-closing",
+    "slideId": null
+   },
+   "audio": {
+    "src": "guide-09-join-the-pact-Hx4Ywy843S.mp3",
+    "clip": "NAR-09",
+    "t": 0,
+    "muted": false
+   },
+   "cc": "Join the Pact.",
+   "guide": {
+    "state": "playing",
+    "clip": "NAR-09",
+    "slideId": null,
+    "gen": null,
+    "status": "Narrating slide 39 of 39 · Join the pact"
+   },
+   "hash": "#/28",
+   "el": "guide-08-athar-os-Ib4oKe91OD.mp3"
+  },
+  {
+   "scenario": "S09-slide38-tabs",
+   "t": "2026-10-01T06:33:22.179Z",
+   "ms": 8501,
+   "type": "sample",
+   "vis": {
+    "n": 39,
+    "id": "s-closing",
+    "slideId": null
+   },
+   "audio": {
+    "src": "guide-09-join-the-pact-Hx4Ywy843S.mp3",
+    "clip": "NAR-09",
+    "t": 0,
+    "muted": false
+   },
+   "cc": "Join the Pact.",
+   "guide": {
+    "state": "playing",
+    "clip": "NAR-09",
+    "slideId": null,
+    "gen": null,
+    "status": "Narrating slide 39 of 39 · Join the pact"
+   },
+   "hash": "#/28"
+  },
+  {
+   "scenario": "S09-slide38-tabs",
+   "t": "2026-10-01T06:33:23.479Z",
+   "ms": 9802,
+   "type": "sample",
+   "vis": {
+    "n": 39,
+    "id": "s-closing",
+    "slideId": null
+   },
+   "audio": {
+    "src": "guide-09-join-the-pact-Hx4Ywy843S.mp3",
+    "clip": "NAR-09",
+    "t": 1.23,
+    "muted": false
+   },
+   "cc": "You have seen the agreement, the community model, the six pillars, the actors, the roadmap, the impact tiers and Athar OS.",
+   "guide": {
+    "state": "playing",
+    "clip": "NAR-09",
+    "slideId": null,
+    "gen": null,
+    "status": "Narrating slide 39 of 39 · Join the pact"
+   },
+   "hash": "#/28"
+  },
+  {
+   "scenario": "S09-slide38-tabs",
+   "t": "2026-10-01T06:33:24.605Z",
+   "ms": 10927,
+   "type": "check",
+   "vis": {
+    "n": 39,
+    "id": "s-closing",
+    "slideId": null
+   },
+   "audio": {
+    "src": "guide-09-join-the-pact-Hx4Ywy843S.mp3",
+    "clip": "NAR-09",
+    "t": 2.36,
+    "muted": false
+   },
+   "cc": "You have seen the agreement, the community model, the six pillars, the actors, the roadmap, the impact tiers and Athar OS.",
+   "guide": {
+    "state": "playing",
+    "clip": "NAR-09",
+    "slideId": null,
+    "gen": null,
+    "status": "Narrating slide 39 of 39 · Join the pact"
+   },
+   "hash": "#/28",
+   "step": "blur tab, ArrowRight → 39",
+   "expect": 39
+  }
+ ],
+ "console": []
+}

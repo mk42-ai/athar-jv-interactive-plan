@@ -1,0 +1,59 @@
+{
+ "base": "http://127.0.0.1:4171",
+ "version": "1.7.1",
+ "written": "2026-10-04T10:15:31.437Z",
+ "rows": [
+  {
+   "meta": {
+    "state": "idle",
+    "poster": "athar-origins-ep01-fahad-al-ameri-poster-07s0.6b79ef7542.jpg",
+    "posterTime": "7",
+    "variant": "720p",
+    "src": "/assets/exec/films/al-ameri/athar-origins-ep01-fahad-al-ameri-720p.7aef034321.mp4",
+    "tracks": [
+     "subtitles:en:default",
+     "subtitles:ar"
+    ],
+    "autoplay": false,
+    "muted": false,
+    "controls": false,
+    "paused": true,
+    "ct": 0,
+    "dur": "0:40",
+    "title": "Athar — Origins of Impact, Episode 01: H.E. Fahad Mohamed Al Ameri",
+    "play": true,
+    "ratio": 1.7777777777777777
+   },
+   "idle": {
+    "paused": true,
+    "ct": 0
+   },
+   "playing": {
+    "state": "playing",
+    "paused": false,
+    "ct": 1.219951,
+    "controls": true,
+    "overlayHidden": true,
+    "overlays": 0,
+    "showing": [
+     "en"
+    ]
+   },
+   "guide": {
+    "onPlay": {
+     "state": "paused",
+     "reason": "video"
+    },
+    "onPause": {
+     "state": "playing",
+     "reason": ""
+    },
+    "atEnd": {
+     "state": "playing",
+     "reason": ""
+    }
+   },
+   "errors": []
+  }
+ ]
+}

@@ -1,0 +1,57 @@
+{
+ "base": "http://127.0.0.1:4171",
+ "version": "1.7.1",
+ "expectCommit": "4ea5cc03f7de0061996946e129a00d6c32a2500f",
+ "written": "2026-10-04T10:06:26.587Z",
+ "rows": [
+  {
+   "idle": {
+    "lang": "ar",
+    "dir": "rtl",
+    "badge": "v1.7.1",
+    "html": "1.7.1",
+    "ids": [
+     "s-exec-intro",
+     "s-exec-al-ameri",
+     "s-exec-ferreira-da-cunha",
+     "s-exec-khalid",
+     "s-exec-unwalla",
+     "s-exec-lorenzo"
+    ],
+    "count": 6,
+    "total": 48,
+    "active": true,
+    "n": 41,
+    "currentSrc": "http://127.0.0.1:4171/assets/exec/films/al-ameri/athar-origins-ep01-fahad-al-ameri-720p.7aef034321.mp4",
+    "src": "athar-origins-ep01-fahad-al-ameri-720p.7aef034321.mp4",
+    "poster": "athar-origins-ep01-fahad-al-ameri-poster-07s0.6b79ef7542.jpg",
+    "posterLoaded": true,
+    "duration": 40,
+    "dur": "0:40",
+    "title": "أثر — أصول الأثر، الحلقة 01: سعادة فهد محمد العامري",
+    "figDir": "rtl",
+    "tracks": [
+     "en:athar-origins-ep01-fahad-al-ameri.en.4d30c550ba.vtt",
+     "ar:athar-origins-ep01-fahad-al-ameri.ar.dc1d7819d9.vtt:default"
+    ],
+    "name": "سعادة فهد محمد العامري",
+    "role": "المدير التنفيذي، شؤون التنمية والعمل الإنساني، ديوان الرئاسة في دولة الإمارات",
+    "paused": true
+   },
+   "playing": {
+    "paused": false,
+    "currentTime": 2.809051,
+    "duration": 40,
+    "src": "athar-origins-ep01-fahad-al-ameri-720p.7aef034321.mp4",
+    "showing": [
+     "ar:11"
+    ],
+    "controls": true,
+    "guide": "idle"
+   },
+   "tiles": null,
+   "errors": [],
+   "failedRequests": []
+  }
+ ]
+}

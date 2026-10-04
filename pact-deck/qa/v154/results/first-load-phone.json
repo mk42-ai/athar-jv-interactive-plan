@@ -1,0 +1,19 @@
+{
+ "base": "http://127.0.0.1:4171",
+ "written": "2026-10-04T10:22:55.871Z",
+ "rows": [
+  {
+   "before": {
+    "state": "blocked",
+    "audible": null,
+    "playCallsBeforeGesture": 0,
+    "tapLabel": "The browser blocked the narration. Tap to play the narration for slide 5 of 48"
+   },
+   "after": {
+    "state": "playing",
+    "audibleClip": "NAR-s05",
+    "slideId": "s-managed-programme"
+   }
+  }
+ ]
+}

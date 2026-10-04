@@ -1,0 +1,59 @@
+{
+ "base": "http://127.0.0.1:4171",
+ "version": "1.7.1",
+ "written": "2026-10-04T10:26:23.181Z",
+ "rows": [
+  {
+   "path": "/",
+   "status": 200,
+   "cacheControl": "no-store",
+   "age": null,
+   "xVercelCache": null,
+   "xVercelId": null,
+   "etag": null,
+   "lastModified": "Sun, 04 Oct 2026 10:01:52 GMT"
+  },
+  {
+   "path": "/index.html",
+   "status": 200,
+   "cacheControl": "no-store",
+   "age": null,
+   "xVercelCache": null,
+   "xVercelId": null,
+   "etag": null,
+   "lastModified": "Sun, 04 Oct 2026 10:01:52 GMT"
+  },
+  {
+   "path": "/build-info.json",
+   "status": 200,
+   "cacheControl": "no-store",
+   "age": null,
+   "xVercelCache": null,
+   "xVercelId": null,
+   "etag": null,
+   "lastModified": "Sun, 04 Oct 2026 10:01:53 GMT"
+  },
+  {
+   "path": "/js/exec-films.js",
+   "status": 200,
+   "cacheControl": "no-store",
+   "age": null,
+   "xVercelCache": null,
+   "xVercelId": null,
+   "etag": null,
+   "lastModified": "Sun, 04 Oct 2026 10:01:52 GMT"
+  },
+  {
+   "servedCommit": "4ea5cc03f7de0061996946e129a00d6c32a2500f",
+   "expectCommit": "4ea5cc03f7de0061996946e129a00d6c32a2500f",
+   "servedVersion": "1.7.1",
+   "builtAt": "2026-10-04T10:01:52.996Z",
+   "distFiles": 373,
+   "sha256sums": {
+    "file": "SHA256SUMS.txt",
+    "files": 372,
+    "sha256": "1c1f972e1324bea41269f6c952ddf2ecf0a67968d324875edabd8f5f09521784"
+   }
+  }
+ ]
+}

@@ -1,0 +1,8006 @@
+{
+ "NAR-00": {
+  "audio_duration_secs": 17.1363125,
+  "language_code": "eng",
+  "language_probability": 1,
+  "success": true,
+  "text": "Welcome to the Athar Open Agentic Pact, a community proposal from ODA and Aerev. This guided narration walks you through the pact, its community model, six pillars, governance, impact tiers, and the Athar OS roadmap. Use the arrows to move at your own pace.",
+  "transcription_id": "a75l8XUXooNbFFDU2PwS",
+  "words": [
+   {
+    "end": 0.4,
+    "logprob": -1.4543427823809907e-05,
+    "start": 0.1,
+    "text": "Welcome",
+    "type": "word"
+   },
+   {
+    "end": 0.48,
+    "logprob": -0.00013982271775603294,
+    "start": 0.4,
+    "text": " ",
+    "type": "spacing"
+   },
+   {
+    "end": 0.56,
+    "logprob": -0.00013982271775603294,
+    "start": 0.48,
+    "text": "to",
+    "type": "word"
+   },
+   {
+    "end": 0.6,
+    "logprob": -0.00012373158824630082,
+    "start": 0.56,
+    "text": " ",
+    "type": "spacing"
+   },
+   {
+    "end": 0.66,
+    "logprob": -0.00012373158824630082,
+    "start": 0.6,
+    "text": "the",
+    "type": "word"
+   },
+   {
+    "end": 0.7,
+    "logprob": -0.14865867793560028,
+    "start": 0.66,
+    "text": " ",
+    "type": "spacing"
+   },
+   {
+    "end": 1.04,
+    "logprob": -0.08920197779152658,
+    "start": 0.7,
+    "text": "Athar",
+    "type": "word"
+   },
+   {
+    "end": 1.2,
+    "logprob": -1.7046782886609435e-05,
+    "start": 1.04,
+    "text": " ",
+    "type": "spacing"
+   },
+   {
+    "end": 1.44,
+    "logprob": -1.7046782886609435e-05,
+    "start": 1.2,
+    "text": "Open",
+    "type": "word"
+   },
+   {
+    "end": 1.48,
+    "logprob": -0.017812171950936317,
+    "start": 1.44,
+    "text": " ",
+    "type": "spacing"
+   },
+   {
+    "end": 1.88,
+    "logprob": -0.012724206115048478,
+    "start": 1.48,
+    "text": "Agentic",
+    "type": "word"
+   },
+   {
+    "end": 2,
+    "logprob": -0.0005899119423702359,
+    "start": 1.88,
+    "text": " ",
+    "type": "spacing"
+   },
+   {
+    "end": 2.3,
+    "logprob": -0.0005394382984377444,
+    "start": 2,
+    "text": "Pact,",
+    "type": "word"
+   },
+   {
+    "end": 2.66,
+    "logprob": -5.8412379075889476e-06,
+    "start": 2.3,
+    "text": " ",
+    "type": "spacing"
+   },
+   {
+    "end": 2.72,
+    "logprob": -5.8412379075889476e-06,
+    "start": 2.66,
+    "text": "a",
+    "type": "word"
+   },
+   {
+    "end": 2.76,
+    "logprob": -1.0728830375228426e-06,
+    "start": 2.72,
+    "text": " ",
+    "type": "spacing"
+   },
+   {
+    "end": 3.16,
+    "logprob": -1.0728830375228426e-06,
+    "start": 2.76,
+    "text": "community",
+    "type": "word"
+   },
+   {
+    "end": 3.24,
+    "logprob": -2.0265558760002023e-06,
+    "start": 3.16,
+    "text": " ",
+    "type": "spacing"
+   },
+   {
+    "end": 3.72,
+    "logprob": -2.0265558760002023e-06,
+    "start": 3.24,
+    "text": "proposal",
+    "type": "word"
+   },
+   {
+    "end": 3.76,
+    "logprob": 0,
+    "start": 3.72,
+    "text": " ",
+    "type": "spacing"
+   },
+   {
+    "end": 3.92,
+    "logprob": 0,
+    "start": 3.76,
+    "text": "from",
+    "type": "word"
+   },
+   {
+    "end": 4,
+    "logprob": -0.0010845737997442484,
+    "start": 3.92,
+    "text": " ",
+    "type": "spacing"
+   },
+   {
+    "end": 4.4,
+    "logprob": -0.00040237239833610755,
+    "start": 4,
+    "text": "ODA",
+    "type": "word"
+   },
+   {
+    "end": 4.44,
+    "logprob": -1.1920922133867862e-06,
+    "start": 4.4,
+    "text": " ",
+    "type": "spacing"
+   },
+   {
+    "end": 4.54,
+    "logprob": -1.1920922133867862e-06,
+    "start": 4.44,
+    "text": "and",
+    "type": "word"
+   },
+   {
+    "end": 4.66,
+    "logprob": -0.27743569016456604,
+    "start": 4.54,
+    "text": " ",
+    "type": "spacing"
+   },
+   {
+    "end": 5.1,
+    "logprob": -0.15020655128000726,
+    "start": 4.66,
+    "text": "Aerev.",
+    "type": "word"
+   },
+   {
+    "end": 5.1,
+    "logprob": -1.1920928244535389e-07,
+    "start": 5.1,
+    "text": " ",
+    "type": "spacing"
+   },
+   {
+    "end": 6,
+    "logprob": -1.1920928244535389e-07,
+    "start": 5.78,
+    "text": "This",
+    "type": "word"
+   },
+   {
+    "end": 6.06,
+    "logprob": -2.3841855067985307e-07,
+    "start": 6,
+    "text": " ",
+    "type": "spacing"
+   },
+   {
+    "end": 6.36,
+    "logprob": -2.3841855067985307e-07,
+    "start": 6.06,
+    "text": "guided",
+    "type": "word"
+   },
+   {
+    "end": 6.44,
+    "logprob": -2.90866428258596e-05,
+    "start": 6.36,
+    "text": " ",
+    "type": "spacing"
+   },
+   {
+    "end": 6.9,
+    "logprob": -2.90866428258596e-05,
+    "start": 6.44,
+    "text": "narration",
+    "type": "word"
+   },
+   {
+    "end": 7.02,
+    "logprob": -1.1920928244535389e-07,
+    "start": 6.9,
+    "text": " ",
+    "type": "spacing"
+   },
+   {
+    "end": 7.24,
+    "logprob": -1.1920928244535389e-07,
+    "start": 7.02,
+    "text": "walks",
+    "type": "word"
+   },
+   {
+    "end": 7.3,
+    "logprob": 0,
+    "start": 7.24,
+    "text": " ",
+    "type": "spacing"
+   },
+   {
+    "end": 7.4,
+    "logprob": 0,
+    "start": 7.3,
+    "text": "you",
+    "type": "word"
+   },
+   {
+    "end": 7.42,
+    "logprob": -2.3841855067985307e-07,
+    "start": 7.4,
+    "text": " ",
+    "type": "spacing"
+   },
+   {
+    "end": 7.64,
+    "logprob": -2.3841855067985307e-07,
+    "start": 7.42,
+    "text": "through",
+    "type": "word"
+   },
+   {
+    "end": 7.68,
+    "logprob": -3.576278118089249e-07,
+    "start": 7.64,
+    "text": " ",
+    "type": "spacing"
+   },
+   {
+    "end": 7.76,
+    "logprob": -3.576278118089249e-07,
+    "start": 7.68,
+    "text": "the",
+    "type": "word"
+   },
+   {
+    "end": 7.8,
+    "logprob": -0.009756498970091343,
+    "start": 7.76,
+    "text": " ",
+    "type": "spacing"
+   },
+   {
+    "end": 8.14,
+    "logprob": -0.007806152848115744,
+    "start": 7.82,
+    "text": "pact,",
+    "type": "word"
+   },
+   {
+    "end": 8.5,
+    "logprob": 0,
+    "start": 8.14,
+    "text": " ",
+    "type": "spacing"
+   },
+   {
+    "end": 8.62,
+    "logprob": 0,
+    "start": 8.5,
+    "text": "its",
+    "type": "word"
+   },
+   {
+    "end": 8.66,
+    "logprob": -4.1960789531003684e-05,
+    "start": 8.62,
+    "text": " ",
+    "type": "spacing"
+   },
+   {
+    "end": 9.08,
+    "logprob": -4.1960789531003684e-05,
+    "start": 8.66,
+    "text": "community",
+    "type": "word"
+   },
+   {
+    "end": 9.16,
+    "logprob": -2.682172998902388e-05,
+    "start": 9.08,
+    "text": " ",
+    "type": "spacing"
+   },
+   {
+    "end": 9.44,
+    "logprob": -2.404023143753875e-05,
+    "start": 9.16,
+    "text": "model,",
+    "type": "word"
+   },
+   {
+    "end": 9.78,
+    "logprob": -5.364403477869928e-06,
+    "start": 9.44,
+    "text": " ",
+    "type": "spacing"
+   },
+   {
+    "end": 9.96,
+    "logprob": -5.364403477869928e-06,
+    "start": 9.78,
+    "text": "six",
+    "type": "word"
+   },
+   {
+    "end": 10.04,
+    "logprob": -2.9444261599564925e-05,
+    "start": 9.96,
+    "text": " ",
+    "type": "spacing"
+   },
+   {
+    "end": 10.4,
+    "logprob": -2.579353121845429e-05,
+    "start": 10.04,
+    "text": "pillars,",
+    "type": "word"
+   },
+   {
+    "end": 10.7,
+    "logprob": -8.344646857949556e-07,
+    "start": 10.4,
+    "text": " ",
+    "type": "spacing"
+   },
+   {
+    "end": 11.16,
+    "logprob": -2.275800666624987e-06,
+    "start": 10.7,
+    "text": "governance,",
+    "type": "word"
+   },
+   {
+    "end": 11.4,
+    "logprob": -8.344646857949556e-07,
+    "start": 11.16,
+    "text": " ",
+    "type": "spacing"
+   },
+   {
+    "end": 11.74,
+    "logprob": -8.344646857949556e-07,
+    "start": 11.4,
+    "text": "impact",
+    "type": "word"
+   },
+   {
+    "end": 11.82,
+    "logprob": -3.313963316031732e-05,
+    "start": 11.74,
+    "text": " ",
+    "type": "spacing"
+   },
+   {
+    "end": 12.14,
+    "logprob": -2.7993856633656833e-05,
+    "start": 11.82,
+    "text": "tiers,",
+    "type": "word"
+   },
+   {
+    "end": 12.5,
+    "logprob": 0,
+    "start": 12.14,
+    "text": " ",
+    "type": "spacing"
+   },
+   {
+    "end": 12.6,
+    "logprob": 0,
+    "start": 12.5,
+    "text": "and",
+    "type": "word"
+   },
+   {
+    "end": 12.64,
+    "logprob": -7.152555099310121e-07,
+    "start": 12.6,
+    "text": " ",
+    "type": "spacing"
+   },
+   {
+    "end": 12.7,
+    "logprob": -7.152555099310121e-07,
+    "start": 12.64,
+    "text": "the",
+    "type": "word"
+   },
+   {
+    "end": 12.74,
+    "logprob": -0.0008531744824722409,
+    "start": 12.7,
+    "text": " ",
+    "type": "spacing"
+   },
+   {
+    "end": 13.08,
+    "logprob": -0.0005120477406080681,
+    "start": 12.74,
+    "text": "Athar",
+    "type": "word"
+   },
+   {
+    "end": 13.24,
+    "logprob": -0.005931157618761063,
+    "start": 13.08,
+    "text": " ",
+    "type": "spacing"
+   },
+   {
+    "end": 13.56,
+    "logprob": -0.005931157618761063,
+    "start": 13.26,
+    "text": "OS",
+    "type": "word"
+   },
+   {
+    "end": 13.66,
+    "logprob": -1.883488948806189e-05,
+    "start": 13.56,
+    "text": " ",
+    "type": "spacing"
+   },
+   {
+    "end": 14.16,
+    "logprob": -1.6480528302054154e-05,
+    "start": 13.66,
+    "text": "roadmap.",
+    "type": "word"
+   },
+   {
+    "end": 14.18,
+    "logprob": -9.536738616588991e-07,
+    "start": 14.16,
+    "text": " ",
+    "type": "spacing"
+   },
+   {
+    "end": 15.04,
+    "logprob": -9.536738616588991e-07,
+    "start": 14.88,
+    "text": "Use",
+    "type": "word"
+   },
+   {
+    "end": 15.08,
+    "logprob": 0,
+    "start": 15.04,
+    "text": " ",
+    "type": "spacing"
+   },
+   {
+    "end": 15.2,
+    "logprob": 0,
+    "start": 15.08,
+    "text": "the",
+    "type": "word"
+   },
+   {
+    "end": 15.28,
+    "logprob": -7.152555099310121e-07,
+    "start": 15.2,
+    "text": " ",
+    "type": "spacing"
+   },
+   {
+    "end": 15.62,
+    "logprob": -7.152555099310121e-07,
+    "start": 15.28,
+    "text": "arrows",
+    "type": "word"
+   },
+   {
+    "end": 15.66,
+    "logprob": 0,
+    "start": 15.62,
+    "text": " ",
+    "type": "spacing"
+   },
+   {
+    "end": 15.74,
+    "logprob": 0,
+    "start": 15.66,
+    "text": "to",
+    "type": "word"
+   },
+   {
+    "end": 15.78,
+    "logprob": 0,
+    "start": 15.74,
+    "text": " ",
+    "type": "spacing"
+   },
+   {
+    "end": 15.94,
+    "logprob": 0,
+    "start": 15.78,
+    "text": "move",
+    "type": "word"
+   },
+   {
+    "end": 15.98,
+    "logprob": 0,
+    "start": 15.94,
+    "text": " ",
+    "type": "spacing"
+   },
+   {
+    "end": 16.059,
+    "logprob": 0,
+    "start": 15.98,
+    "text": "at",
+    "type": "word"
+   },
+   {
+    "end": 16.1,
+    "logprob": 0,
+    "start": 16.059,
+    "text": " ",
+    "type": "spacing"
+   },
+   {
+    "end": 16.219,
+    "logprob": 0,
+    "start": 16.1,
+    "text": "your",
+    "type": "word"
+   },
+   {
+    "end": 16.26,
+    "logprob": 0,
+    "start": 16.219,
+    "text": " ",
+    "type": "spacing"
+   },
+   {
+    "end": 16.44,
+    "logprob": 0,
+    "start": 16.26,
+    "text": "own",
+    "type": "word"
+   },
+   {
+    "end": 16.48,
+    "logprob": -1.1920928244535389e-07,
+    "start": 16.44,
+    "text": " ",
+    "type": "spacing"
+   },
+   {
+    "end": 16.84,
+    "logprob": -0.0857402265071812,
+    "start": 16.48,
+    "text": "pace.",
+    "type": "word"
+   }
+  ],
+  "_relay_note": "",
+  "_messageId": "6abdf63c7cb494a6f6b3dd58",
+  "_sessionId": "6abdf63b5e9f29365b011dbe",
+  "_utc": "2026-10-01T05:57:45Z",
+  "_url": "https://athar-jv-interactive-plan-n5z4esrb7-schoolhack-web-team.vercel.app/audio/guide/guide-00-welcome-lhbIUXFwLO.mp3"
+ },
+ "NAR-01": {
+  "audio_duration_secs": 24.9846875,
+  "language_code": "eng",
+  "language_probability": 1,
+  "success": true,
+  "text": "Section one: The Pact. The Ethar Open Agentic Pact is an open commitment between institutions, partners, and platforms to learn, build, and deploy agentic AI for public benefit. It is a community proposal from ODA and AI Rev, designed as a community, not a product. Signatories agree on shared standards, an open plugin approach, and measurable real-world outcomes",
+  "transcription_id": "UMdrRFEJoQ6rd7VAUsgE",
+  "words": [
+   {
+    "end": 0.4,
+    "logprob": -0.0003252692404203117,
+    "start": 0.08,
+    "text": "Section",
+    "type": "word"
+   },
+   {
+    "end": 0.52,
+    "logprob": -0.0006492413813248277,
+    "start": 0.4,
+    "text": " ",
+    "type": "spacing"
+   },
+   {
+    "end": 0.76,
+    "logprob": -0.014101440290687606,
+    "start": 0.52,
+    "text": "one:",
+    "type": "word"
+   },
+   {
+    "end": 1,
+    "logprob": -0.0007190502947196364,
+    "start": 0.76,
+    "text": " ",
+    "type": "spacing"
+   },
+   {
+    "end": 1.04,
+    "logprob": -0.0007190502947196364,
+    "start": 1,
+    "text": "The",
+    "type": "word"
+   },
+   {
+    "end": 1.12,
+    "logprob": -0.11282969266176224,
+    "start": 1.04,
+    "text": " ",
+    "type": "spacing"
+   },
+   {
+    "end": 1.46,
+    "logprob": -0.09026561378559564,
+    "start": 1.12,
+    "text": "Pact.",
+    "type": "word"
+   },
+   {
+    "end": 1.46,
+    "logprob": -2.8013790142722428e-05,
+    "start": 1.46,
+    "text": " ",
+    "type": "spacing"
+   },
+   {
+    "end": 2.2,
+    "logprob": -2.8013790142722428e-05,
+    "start": 2.08,
+    "text": "The",
+    "type": "word"
+   },
+   {
+    "end": 2.24,
+    "logprob": -1.3144142627716064,
+    "start": 2.2,
+    "text": " ",
+    "type": "spacing"
+   },
+   {
+    "end": 2.56,
+    "logprob": -0.8178259164094925,
+    "start": 2.24,
+    "text": "Ethar",
+    "type": "word"
+   },
+   {
+    "end": 2.72,
+    "logprob": -0.0002585315378382802,
+    "start": 2.56,
+    "text": " ",
+    "type": "spacing"
+   },
+   {
+    "end": 2.96,
+    "logprob": -0.0002585315378382802,
+    "start": 2.72,
+    "text": "Open",
+    "type": "word"
+   },
+   {
+    "end": 3.06,
+    "logprob": -0.010379382409155369,
+    "start": 2.96,
+    "text": " ",
+    "type": "spacing"
+   },
+   {
+    "end": 3.5,
+    "logprob": -0.0074160584561988275,
+    "start": 3.06,
+    "text": "Agentic",
+    "type": "word"
+   },
+   {
+    "end": 3.6,
+    "logprob": -0.00012408917245920748,
+    "start": 3.5,
+    "text": " ",
+    "type": "spacing"
+   },
+   {
+    "end": 3.9,
+    "logprob": -0.00012408917245920748,
+    "start": 3.6,
+    "text": "Pact",
+    "type": "word"
+   },
+   {
+    "end": 4.2,
+    "logprob": -5.960462772236497e-07,
+    "start": 3.9,
+    "text": " ",
+    "type": "spacing"
+   },
+   {
+    "end": 4.26,
+    "logprob": -5.960462772236497e-07,
+    "start": 4.2,
+    "text": "is",
+    "type": "word"
+   },
+   {
+    "end": 4.3,
+    "logprob": -0.0006264869589358568,
+    "start": 4.26,
+    "text": " ",
+    "type": "spacing"
+   },
+   {
+    "end": 4.36,
+    "logprob": -0.0006264869589358568,
+    "start": 4.3,
+    "text": "an",
+    "type": "word"
+   },
+   {
+    "end": 4.42,
+    "logprob": -9.894321920000948e-06,
+    "start": 4.36,
+    "text": " ",
+    "type": "spacing"
+   },
+   {
+    "end": 4.62,
+    "logprob": -9.894321920000948e-06,
+    "start": 4.42,
+    "text": "open",
+    "type": "word"
+   },
+   {
+    "end": 4.7,
+    "logprob": -4.768360213347478e-06,
+    "start": 4.62,
+    "text": " ",
+    "type": "spacing"
+   },
+   {
+    "end": 5.12,
+    "logprob": -4.768360213347478e-06,
+    "start": 4.7,
+    "text": "commitment",
+    "type": "word"
+   },
+   {
+    "end": 5.16,
+    "logprob": -1.1920928244535389e-07,
+    "start": 5.12,
+    "text": " ",
+    "type": "spacing"
+   },
+   {
+    "end": 5.46,
+    "logprob": -1.1920928244535389e-07,
+    "start": 5.16,
+    "text": "between",
+    "type": "word"
+   },
+   {
+    "end": 5.5,
+    "logprob": -2.3841830625315197e-06,
+    "start": 5.46,
+    "text": " ",
+    "type": "spacing"
+   },
+   {
+    "end": 6.32,
+    "logprob": -2.246634079046299e-06,
+    "start": 5.5,
+    "text": "institutions,",
+    "type": "word"
+   },
+   {
+    "end": 6.58,
+    "logprob": -5.960462772236497e-07,
+    "start": 6.32,
+    "text": " ",
+    "type": "spacing"
+   },
+   {
+    "end": 6.98,
+    "logprob": -0.0004005375730634518,
+    "start": 6.58,
+    "text": "partners,",
+    "type": "word"
+   },
+   {
+    "end": 7.04,
+    "logprob": 0,
+    "start": 6.98,
+    "text": " ",
+    "type": "spacing"
+   },
+   {
+    "end": 7.12,
+    "logprob": 0,
+    "start": 7.04,
+    "text": "and",
+    "type": "word"
+   },
+   {
+    "end": 7.2,
+    "logprob": -5.960462772236497e-07,
+    "start": 7.12,
+    "text": " ",
+    "type": "spacing"
+   },
+   {
+    "end": 7.76,
+    "logprob": -5.960462772236497e-07,
+    "start": 7.2,
+    "text": "platforms",
+    "type": "word"
+   },
+   {
+    "end": 8.2,
+    "logprob": -7.748573807475623e-06,
+    "start": 7.76,
+    "text": " ",
+    "type": "spacing"
+   },
+   {
+    "end": 8.28,
+    "logprob": -7.748573807475623e-06,
+    "start": 8.2,
+    "text": "to",
+    "type": "word"
+   },
+   {
+    "end": 8.34,
+    "logprob": -8.344646857949556e-07,
+    "start": 8.28,
+    "text": " ",
+    "type": "spacing"
+   },
+   {
+    "end": 8.62,
+    "logprob": -6.95387238162463e-07,
+    "start": 8.34,
+    "text": "learn,",
+    "type": "word"
+   },
+   {
+    "end": 8.86,
+    "logprob": 0,
+    "start": 8.62,
+    "text": " ",
+    "type": "spacing"
+   },
+   {
+    "end": 9.12,
+    "logprob": -0.00013407637986044088,
+    "start": 8.86,
+    "text": "build,",
+    "type": "word"
+   },
+   {
+    "end": 9.16,
+    "logprob": 0,
+    "start": 9.12,
+    "text": " ",
+    "type": "spacing"
+   },
+   {
+    "end": 9.26,
+    "logprob": 0,
+    "start": 9.16,
+    "text": "and",
+    "type": "word"
+   },
+   {
+    "end": 9.28,
+    "logprob": -1.311301275563892e-06,
+    "start": 9.26,
+    "text": " ",
+    "type": "spacing"
+   },
+   {
+    "end": 9.76,
+    "logprob": -1.311301275563892e-06,
+    "start": 9.28,
+    "text": "deploy",
+    "type": "word"
+   },
+   {
+    "end": 9.8,
+    "logprob": -0.009209533222019672,
+    "start": 9.76,
+    "text": " ",
+    "type": "spacing"
+   },
+   {
+    "end": 10.24,
+    "logprob": -0.006588966650139939,
+    "start": 9.8,
+    "text": "agentic",
+    "type": "word"
+   },
+   {
+    "end": 10.4,
+    "logprob": -2.3841830625315197e-06,
+    "start": 10.24,
+    "text": " ",
+    "type": "spacing"
+   },
+   {
+    "end": 10.76,
+    "logprob": -2.3841830625315197e-06,
+    "start": 10.4,
+    "text": "AI",
+    "type": "word"
+   },
+   {
+    "end": 10.82,
+    "logprob": -4.768370445162873e-07,
+    "start": 10.76,
+    "text": " ",
+    "type": "spacing"
+   },
+   {
+    "end": 10.94,
+    "logprob": -4.768370445162873e-07,
+    "start": 10.82,
+    "text": "for",
+    "type": "word"
+   },
+   {
+    "end": 10.98,
+    "logprob": 0,
+    "start": 10.94,
+    "text": " ",
+    "type": "spacing"
+   },
+   {
+    "end": 11.24,
+    "logprob": 0,
+    "start": 10.98,
+    "text": "public",
+    "type": "word"
+   },
+   {
+    "end": 11.32,
+    "logprob": -5.245195097813848e-06,
+    "start": 11.24,
+    "text": " ",
+    "type": "spacing"
+   },
+   {
+    "end": 11.78,
+    "logprob": -4.589545710587117e-06,
+    "start": 11.32,
+    "text": "benefit.",
+    "type": "word"
+   },
+   {
+    "end": 11.78,
+    "logprob": 0,
+    "start": 11.78,
+    "text": " ",
+    "type": "spacing"
+   },
+   {
+    "end": 12.5,
+    "logprob": 0,
+    "start": 12.44,
+    "text": "It",
+    "type": "word"
+   },
+   {
+    "end": 12.54,
+    "logprob": 0,
+    "start": 12.5,
+    "text": " ",
+    "type": "spacing"
+   },
+   {
+    "end": 12.62,
+    "logprob": 0,
+    "start": 12.54,
+    "text": "is",
+    "type": "word"
+   },
+   {
+    "end": 12.66,
+    "logprob": -1.1920928244535389e-07,
+    "start": 12.62,
+    "text": " ",
+    "type": "spacing"
+   },
+   {
+    "end": 12.7,
+    "logprob": -1.1920928244535389e-07,
+    "start": 12.66,
+    "text": "a",
+    "type": "word"
+   },
+   {
+    "end": 12.74,
+    "logprob": -1.5497195136049413e-06,
+    "start": 12.7,
+    "text": " ",
+    "type": "spacing"
+   },
+   {
+    "end": 13.16,
+    "logprob": -1.5497195136049413e-06,
+    "start": 12.74,
+    "text": "community",
+    "type": "word"
+   },
+   {
+    "end": 13.24,
+    "logprob": -3.576278118089249e-07,
+    "start": 13.16,
+    "text": " ",
+    "type": "spacing"
+   },
+   {
+    "end": 13.82,
+    "logprob": -3.576278118089249e-07,
+    "start": 13.24,
+    "text": "proposal",
+    "type": "word"
+   },
+   {
+    "end": 13.86,
+    "logprob": 0,
+    "start": 13.82,
+    "text": " ",
+    "type": "spacing"
+   },
+   {
+    "end": 14.02,
+    "logprob": 0,
+    "start": 13.86,
+    "text": "from",
+    "type": "word"
+   },
+   {
+    "end": 14.1,
+    "logprob": -0.0018747150897979736,
+    "start": 14.02,
+    "text": " ",
+    "type": "spacing"
+   },
+   {
+    "end": 14.62,
+    "logprob": -0.0006418325344081192,
+    "start": 14.1,
+    "text": "ODA",
+    "type": "word"
+   },
+   {
+    "end": 14.74,
+    "logprob": -1.7523612768854946e-05,
+    "start": 14.62,
+    "text": " ",
+    "type": "spacing"
+   },
+   {
+    "end": 14.84,
+    "logprob": -1.7523612768854946e-05,
+    "start": 14.74,
+    "text": "and",
+    "type": "word"
+   },
+   {
+    "end": 14.98,
+    "logprob": -0.013622299768030643,
+    "start": 14.84,
+    "text": " ",
+    "type": "spacing"
+   },
+   {
+    "end": 15.26,
+    "logprob": -0.013622299768030643,
+    "start": 14.98,
+    "text": "AI",
+    "type": "word"
+   },
+   {
+    "end": 15.34,
+    "logprob": -0.2587012052536011,
+    "start": 15.26,
+    "text": " ",
+    "type": "spacing"
+   },
+   {
+    "end": 15.66,
+    "logprob": -0.21228023245930672,
+    "start": 15.34,
+    "text": "Rev,",
+    "type": "word"
+   },
+   {
+    "end": 15.66,
+    "logprob": -1.4305104514278355e-06,
+    "start": 15.66,
+    "text": " ",
+    "type": "spacing"
+   },
+   {
+    "end": 16.5,
+    "logprob": -1.4305104514278355e-06,
+    "start": 16.12,
+    "text": "designed",
+    "type": "word"
+   },
+   {
+    "end": 16.54,
+    "logprob": 0,
+    "start": 16.5,
+    "text": " ",
+    "type": "spacing"
+   },
+   {
+    "end": 16.62,
+    "logprob": 0,
+    "start": 16.54,
+    "text": "as",
+    "type": "word"
+   },
+   {
+    "end": 16.66,
+    "logprob": -3.576278118089249e-07,
+    "start": 16.62,
+    "text": " ",
+    "type": "spacing"
+   },
+   {
+    "end": 16.7,
+    "logprob": -3.576278118089249e-07,
+    "start": 16.66,
+    "text": "a",
+    "type": "word"
+   },
+   {
+    "end": 16.74,
+    "logprob": -5.960462772236497e-07,
+    "start": 16.7,
+    "text": " ",
+    "type": "spacing"
+   },
+   {
+    "end": 17.28,
+    "logprob": -5.722044306821772e-07,
+    "start": 16.74,
+    "text": "community,",
+    "type": "word"
+   },
+   {
+    "end": 17.28,
+    "logprob": 0,
+    "start": 17.28,
+    "text": " ",
+    "type": "spacing"
+   },
+   {
+    "end": 17.86,
+    "logprob": 0,
+    "start": 17.74,
+    "text": "not",
+    "type": "word"
+   },
+   {
+    "end": 17.92,
+    "logprob": 0,
+    "start": 17.86,
+    "text": " ",
+    "type": "spacing"
+   },
+   {
+    "end": 17.98,
+    "logprob": 0,
+    "start": 17.92,
+    "text": "a",
+    "type": "word"
+   },
+   {
+    "end": 18.02,
+    "logprob": -9.179073458653875e-06,
+    "start": 17.98,
+    "text": " ",
+    "type": "spacing"
+   },
+   {
+    "end": 18.48,
+    "logprob": -8.03168927632214e-06,
+    "start": 18.02,
+    "text": "product.",
+    "type": "word"
+   },
+   {
+    "end": 18.48,
+    "logprob": -1.0967194612021558e-05,
+    "start": 18.48,
+    "text": " ",
+    "type": "spacing"
+   },
+   {
+    "end": 19.7,
+    "logprob": -0.0007988883133459075,
+    "start": 19.2,
+    "text": "Signatories",
+    "type": "word"
+   },
+   {
+    "end": 19.76,
+    "logprob": -4.768370445162873e-07,
+    "start": 19.7,
+    "text": " ",
+    "type": "spacing"
+   },
+   {
+    "end": 20.06,
+    "logprob": -4.768370445162873e-07,
+    "start": 19.76,
+    "text": "agree",
+    "type": "word"
+   },
+   {
+    "end": 20.12,
+    "logprob": 0,
+    "start": 20.06,
+    "text": " ",
+    "type": "spacing"
+   },
+   {
+    "end": 20.2,
+    "logprob": 0,
+    "start": 20.12,
+    "text": "on",
+    "type": "word"
+   },
+   {
+    "end": 20.32,
+    "logprob": -3.576278118089249e-07,
+    "start": 20.2,
+    "text": " ",
+    "type": "spacing"
+   },
+   {
+    "end": 20.58,
+    "logprob": -3.576278118089249e-07,
+    "start": 20.32,
+    "text": "shared",
+    "type": "word"
+   },
+   {
+    "end": 20.68,
+    "logprob": -7.152555099310121e-07,
+    "start": 20.58,
+    "text": " ",
+    "type": "spacing"
+   },
+   {
+    "end": 21.14,
+    "logprob": -2.2516242256642727e-05,
+    "start": 20.68,
+    "text": "standards,",
+    "type": "word"
+   },
+   {
+    "end": 21.42,
+    "logprob": -2.7656173188006505e-05,
+    "start": 21.14,
+    "text": " ",
+    "type": "spacing"
+   },
+   {
+    "end": 21.5,
+    "logprob": -2.7656173188006505e-05,
+    "start": 21.42,
+    "text": "an",
+    "type": "word"
+   },
+   {
+    "end": 21.56,
+    "logprob": -3.576278118089249e-07,
+    "start": 21.5,
+    "text": " ",
+    "type": "spacing"
+   },
+   {
+    "end": 21.76,
+    "logprob": -3.576278118089249e-07,
+    "start": 21.56,
+    "text": "open",
+    "type": "word"
+   },
+   {
+    "end": 21.86,
+    "logprob": -0.22542737424373627,
+    "start": 21.76,
+    "text": " ",
+    "type": "spacing"
+   },
+   {
+    "end": 22.18,
+    "logprob": -0.22542737424373627,
+    "start": 21.86,
+    "text": "plugin",
+    "type": "word"
+   },
+   {
+    "end": 22.22,
+    "logprob": -1.1920928244535389e-07,
+    "start": 22.18,
+    "text": " ",
+    "type": "spacing"
+   },
+   {
+    "end": 22.6,
+    "logprob": -1.5641821335066197e-05,
+    "start": 22.22,
+    "text": "approach,",
+    "type": "word"
+   },
+   {
+    "end": 22.72,
+    "logprob": -1.1920928244535389e-07,
+    "start": 22.6,
+    "text": " ",
+    "type": "spacing"
+   },
+   {
+    "end": 22.82,
+    "logprob": -1.1920928244535389e-07,
+    "start": 22.72,
+    "text": "and",
+    "type": "word"
+   },
+   {
+    "end": 22.9,
+    "logprob": -5.960446742392378e-06,
+    "start": 22.82,
+    "text": " ",
+    "type": "spacing"
+   },
+   {
+    "end": 23.34,
+    "logprob": -5.960446742392378e-06,
+    "start": 22.9,
+    "text": "measurable",
+    "type": "word"
+   },
+   {
+    "end": 23.48,
+    "logprob": -4.768370445162873e-07,
+    "start": 23.34,
+    "text": " ",
+    "type": "spacing"
+   },
+   {
+    "end": 23.98,
+    "logprob": -0.001191586670711331,
+    "start": 23.48,
+    "text": "real-world",
+    "type": "word"
+   },
+   {
+    "end": 24.12,
+    "logprob": -8.583032467868179e-06,
+    "start": 23.98,
+    "text": " ",
+    "type": "spacing"
+   },
+   {
+    "end": 24.64,
+    "logprob": -8.583032467868179e-06,
+    "start": 24.12,
+    "text": "outcomes",
+    "type": "word"
+   }
+  ],
+  "_relay_note": "",
+  "_messageId": "6abdf6100c1d5d8acfb4fd0d",
+  "_sessionId": "6abdf5c05e9f29365b011da8",
+  "_utc": "2026-10-01T05:57:06Z",
+  "_url": "https://athar-jv-interactive-plan-n5z4esrb7-schoolhack-web-team.vercel.app/audio/guide/guide-01-the-pact-df1pHtGsVr.mp3"
+ },
+ "NAR-02": {
+  "audio_duration_secs": 26.6565,
+  "language_code": "eng",
+  "language_probability": 1,
+  "success": true,
+  "text": "Section two: The community model. Every webinar, chapter event, and challenge should lead somewhere real, so the model is built around four outcomes for every participant. Learn agentic AI, build a useful agent through the builder journey and marketplace, deploy it through a named accountable institution, and measure a real-world benefit with baseline evidence of time saved, better service, or wider reach",
+  "transcription_id": "C791aNHPtObPgzgzZRLv",
+  "words": [
+   {
+    "end": 0.44,
+    "logprob": -0.0003526780928950757,
+    "start": 0.08,
+    "text": "Section",
+    "type": "word"
+   },
+   {
+    "end": 0.54,
+    "logprob": -0.00012635385792236775,
+    "start": 0.44,
+    "text": " ",
+    "type": "spacing"
+   },
+   {
+    "end": 0.82,
+    "logprob": -0.01624829467982636,
+    "start": 0.56,
+    "text": "two:",
+    "type": "word"
+   },
+   {
+    "end": 1.08,
+    "logprob": -0.03804393857717514,
+    "start": 0.82,
+    "text": " ",
+    "type": "spacing"
+   },
+   {
+    "end": 1.16,
+    "logprob": -0.03804393857717514,
+    "start": 1.08,
+    "text": "The",
+    "type": "word"
+   },
+   {
+    "end": 1.2,
+    "logprob": -0.20141537487506866,
+    "start": 1.16,
+    "text": " ",
+    "type": "spacing"
+   },
+   {
+    "end": 1.66,
+    "logprob": -0.20141537487506866,
+    "start": 1.2,
+    "text": "community",
+    "type": "word"
+   },
+   {
+    "end": 1.74,
+    "logprob": -0.00015889335190877318,
+    "start": 1.66,
+    "text": " ",
+    "type": "spacing"
+   },
+   {
+    "end": 2.02,
+    "logprob": -0.00014270254420504594,
+    "start": 1.74,
+    "text": "model.",
+    "type": "word"
+   },
+   {
+    "end": 2.02,
+    "logprob": -3.099436753473128e-06,
+    "start": 2.02,
+    "text": " ",
+    "type": "spacing"
+   },
+   {
+    "end": 2.98,
+    "logprob": -3.099436753473128e-06,
+    "start": 2.78,
+    "text": "Every",
+    "type": "word"
+   },
+   {
+    "end": 3.08,
+    "logprob": -3.158996332786046e-05,
+    "start": 2.98,
+    "text": " ",
+    "type": "spacing"
+   },
+   {
+    "end": 3.48,
+    "logprob": -4.514885631579091e-05,
+    "start": 3.08,
+    "text": "webinar,",
+    "type": "word"
+   },
+   {
+    "end": 3.7,
+    "logprob": -2.9205850296420977e-05,
+    "start": 3.48,
+    "text": " ",
+    "type": "spacing"
+   },
+   {
+    "end": 4.04,
+    "logprob": -2.9205850296420977e-05,
+    "start": 3.7,
+    "text": "chapter",
+    "type": "word"
+   },
+   {
+    "end": 4.12,
+    "logprob": -0.10020852088928223,
+    "start": 4.04,
+    "text": " ",
+    "type": "spacing"
+   },
+   {
+    "end": 4.44,
+    "logprob": -0.08617951162159443,
+    "start": 4.12,
+    "text": "event,",
+    "type": "word"
+   },
+   {
+    "end": 4.48,
+    "logprob": 0,
+    "start": 4.44,
+    "text": " ",
+    "type": "spacing"
+   },
+   {
+    "end": 4.56,
+    "logprob": 0,
+    "start": 4.48,
+    "text": "and",
+    "type": "word"
+   },
+   {
+    "end": 4.66,
+    "logprob": -5.8412379075889476e-06,
+    "start": 4.56,
+    "text": " ",
+    "type": "spacing"
+   },
+   {
+    "end": 5.08,
+    "logprob": -5.8412379075889476e-06,
+    "start": 4.66,
+    "text": "challenge",
+    "type": "word"
+   },
+   {
+    "end": 5.36,
+    "logprob": -7.152531907195225e-06,
+    "start": 5.08,
+    "text": " ",
+    "type": "spacing"
+   },
+   {
+    "end": 5.52,
+    "logprob": -7.152531907195225e-06,
+    "start": 5.36,
+    "text": "should",
+    "type": "word"
+   },
+   {
+    "end": 5.56,
+    "logprob": -2.3841855067985307e-07,
+    "start": 5.52,
+    "text": " ",
+    "type": "spacing"
+   },
+   {
+    "end": 5.76,
+    "logprob": -2.3841855067985307e-07,
+    "start": 5.56,
+    "text": "lead",
+    "type": "word"
+   },
+   {
+    "end": 5.82,
+    "logprob": -8.344646857949556e-07,
+    "start": 5.76,
+    "text": " ",
+    "type": "spacing"
+   },
+   {
+    "end": 6.16,
+    "logprob": -8.344646857949556e-07,
+    "start": 5.82,
+    "text": "somewhere",
+    "type": "word"
+   },
+   {
+    "end": 6.22,
+    "logprob": -3.576278118089249e-07,
+    "start": 6.16,
+    "text": " ",
+    "type": "spacing"
+   },
+   {
+    "end": 6.54,
+    "logprob": -0.028536647558166806,
+    "start": 6.22,
+    "text": "real,",
+    "type": "word"
+   },
+   {
+    "end": 6.54,
+    "logprob": -8.940656698541716e-06,
+    "start": 6.54,
+    "text": " ",
+    "type": "spacing"
+   },
+   {
+    "end": 7.16,
+    "logprob": -8.940656698541716e-06,
+    "start": 7.06,
+    "text": "so",
+    "type": "word"
+   },
+   {
+    "end": 7.2,
+    "logprob": -3.576278118089249e-07,
+    "start": 7.16,
+    "text": " ",
+    "type": "spacing"
+   },
+   {
+    "end": 7.28,
+    "logprob": -3.576278118089249e-07,
+    "start": 7.2,
+    "text": "the",
+    "type": "word"
+   },
+   {
+    "end": 7.32,
+    "logprob": -9.536738616588991e-07,
+    "start": 7.28,
+    "text": " ",
+    "type": "spacing"
+   },
+   {
+    "end": 7.54,
+    "logprob": -9.536738616588991e-07,
+    "start": 7.32,
+    "text": "model",
+    "type": "word"
+   },
+   {
+    "end": 7.58,
+    "logprob": 0,
+    "start": 7.54,
+    "text": " ",
+    "type": "spacing"
+   },
+   {
+    "end": 7.72,
+    "logprob": 0,
+    "start": 7.58,
+    "text": "is",
+    "type": "word"
+   },
+   {
+    "end": 7.76,
+    "logprob": -1.1920928244535389e-07,
+    "start": 7.72,
+    "text": " ",
+    "type": "spacing"
+   },
+   {
+    "end": 7.98,
+    "logprob": -1.1920928244535389e-07,
+    "start": 7.76,
+    "text": "built",
+    "type": "word"
+   },
+   {
+    "end": 8.039,
+    "logprob": 0,
+    "start": 7.98,
+    "text": " ",
+    "type": "spacing"
+   },
+   {
+    "end": 8.3,
+    "logprob": 0,
+    "start": 8.039,
+    "text": "around",
+    "type": "word"
+   },
+   {
+    "end": 8.42,
+    "logprob": -1.7881377516459906e-06,
+    "start": 8.3,
+    "text": " ",
+    "type": "spacing"
+   },
+   {
+    "end": 8.66,
+    "logprob": -1.7881377516459906e-06,
+    "start": 8.42,
+    "text": "four",
+    "type": "word"
+   },
+   {
+    "end": 8.74,
+    "logprob": -5.125986263010418e-06,
+    "start": 8.66,
+    "text": " ",
+    "type": "spacing"
+   },
+   {
+    "end": 9.26,
+    "logprob": -5.125986263010418e-06,
+    "start": 8.74,
+    "text": "outcomes",
+    "type": "word"
+   },
+   {
+    "end": 9.32,
+    "logprob": -1.1086402082582936e-05,
+    "start": 9.26,
+    "text": " ",
+    "type": "spacing"
+   },
+   {
+    "end": 9.44,
+    "logprob": -1.1086402082582936e-05,
+    "start": 9.32,
+    "text": "for",
+    "type": "word"
+   },
+   {
+    "end": 9.5,
+    "logprob": -1.1920928244535389e-07,
+    "start": 9.44,
+    "text": " ",
+    "type": "spacing"
+   },
+   {
+    "end": 9.74,
+    "logprob": -1.1920928244535389e-07,
+    "start": 9.5,
+    "text": "every",
+    "type": "word"
+   },
+   {
+    "end": 9.78,
+    "logprob": -2.861018856492592e-06,
+    "start": 9.74,
+    "text": " ",
+    "type": "spacing"
+   },
+   {
+    "end": 10.44,
+    "logprob": -3.2782491340791844e-06,
+    "start": 9.78,
+    "text": "participant.",
+    "type": "word"
+   },
+   {
+    "end": 10.44,
+    "logprob": -0.00013720047718379647,
+    "start": 10.44,
+    "text": " ",
+    "type": "spacing"
+   },
+   {
+    "end": 11.7,
+    "logprob": -0.00013720047718379647,
+    "start": 11.46,
+    "text": "Learn",
+    "type": "word"
+   },
+   {
+    "end": 11.82,
+    "logprob": -0.09157131612300873,
+    "start": 11.7,
+    "text": " ",
+    "type": "spacing"
+   },
+   {
+    "end": 12.3,
+    "logprob": -0.06541039900184842,
+    "start": 11.84,
+    "text": "agentic",
+    "type": "word"
+   },
+   {
+    "end": 12.48,
+    "logprob": -1.311301275563892e-06,
+    "start": 12.3,
+    "text": " ",
+    "type": "spacing"
+   },
+   {
+    "end": 12.9,
+    "logprob": -0.15803231795568232,
+    "start": 12.48,
+    "text": "AI,",
+    "type": "word"
+   },
+   {
+    "end": 13.38,
+    "logprob": -1.9311717551317997e-05,
+    "start": 12.9,
+    "text": " ",
+    "type": "spacing"
+   },
+   {
+    "end": 13.58,
+    "logprob": -1.9311717551317997e-05,
+    "start": 13.38,
+    "text": "build",
+    "type": "word"
+   },
+   {
+    "end": 13.64,
+    "logprob": 0,
+    "start": 13.58,
+    "text": " ",
+    "type": "spacing"
+   },
+   {
+    "end": 13.7,
+    "logprob": 0,
+    "start": 13.64,
+    "text": "a",
+    "type": "word"
+   },
+   {
+    "end": 13.78,
+    "logprob": -1.1920928244535389e-07,
+    "start": 13.7,
+    "text": " ",
+    "type": "spacing"
+   },
+   {
+    "end": 14.06,
+    "logprob": -1.1920928244535389e-07,
+    "start": 13.78,
+    "text": "useful",
+    "type": "word"
+   },
+   {
+    "end": 14.22,
+    "logprob": -3.790783375734463e-05,
+    "start": 14.06,
+    "text": " ",
+    "type": "spacing"
+   },
+   {
+    "end": 14.64,
+    "logprob": -3.790783375734463e-05,
+    "start": 14.22,
+    "text": "agent",
+    "type": "word"
+   },
+   {
+    "end": 14.66,
+    "logprob": 0,
+    "start": 14.64,
+    "text": " ",
+    "type": "spacing"
+   },
+   {
+    "end": 14.84,
+    "logprob": 0,
+    "start": 14.66,
+    "text": "through",
+    "type": "word"
+   },
+   {
+    "end": 14.88,
+    "logprob": -2.3841855067985307e-07,
+    "start": 14.84,
+    "text": " ",
+    "type": "spacing"
+   },
+   {
+    "end": 14.98,
+    "logprob": -2.3841855067985307e-07,
+    "start": 14.88,
+    "text": "the",
+    "type": "word"
+   },
+   {
+    "end": 15,
+    "logprob": -0.0059351869858801365,
+    "start": 14.98,
+    "text": " ",
+    "type": "spacing"
+   },
+   {
+    "end": 15.28,
+    "logprob": -0.0059351869858801365,
+    "start": 15.02,
+    "text": "builder",
+    "type": "word"
+   },
+   {
+    "end": 15.4,
+    "logprob": -1.1324817933200393e-05,
+    "start": 15.28,
+    "text": " ",
+    "type": "spacing"
+   },
+   {
+    "end": 15.72,
+    "logprob": -1.1324817933200393e-05,
+    "start": 15.4,
+    "text": "journey",
+    "type": "word"
+   },
+   {
+    "end": 15.76,
+    "logprob": -1.7881377516459906e-06,
+    "start": 15.72,
+    "text": " ",
+    "type": "spacing"
+   },
+   {
+    "end": 15.88,
+    "logprob": -1.7881377516459906e-06,
+    "start": 15.76,
+    "text": "and",
+    "type": "word"
+   },
+   {
+    "end": 15.98,
+    "logprob": -1.5020257706055418e-05,
+    "start": 15.88,
+    "text": " ",
+    "type": "spacing"
+   },
+   {
+    "end": 16.64,
+    "logprob": -0.0007317044980178858,
+    "start": 15.98,
+    "text": "marketplace,",
+    "type": "word"
+   },
+   {
+    "end": 16.64,
+    "logprob": -7.629365427419543e-06,
+    "start": 16.64,
+    "text": " ",
+    "type": "spacing"
+   },
+   {
+    "end": 17.48,
+    "logprob": -7.629365427419543e-06,
+    "start": 17.14,
+    "text": "deploy",
+    "type": "word"
+   },
+   {
+    "end": 17.52,
+    "logprob": 0,
+    "start": 17.48,
+    "text": " ",
+    "type": "spacing"
+   },
+   {
+    "end": 17.62,
+    "logprob": 0,
+    "start": 17.52,
+    "text": "it",
+    "type": "word"
+   },
+   {
+    "end": 17.66,
+    "logprob": 0,
+    "start": 17.62,
+    "text": " ",
+    "type": "spacing"
+   },
+   {
+    "end": 17.84,
+    "logprob": 0,
+    "start": 17.66,
+    "text": "through",
+    "type": "word"
+   },
+   {
+    "end": 17.88,
+    "logprob": 0,
+    "start": 17.84,
+    "text": " ",
+    "type": "spacing"
+   },
+   {
+    "end": 17.96,
+    "logprob": 0,
+    "start": 17.88,
+    "text": "a",
+    "type": "word"
+   },
+   {
+    "end": 18.02,
+    "logprob": -8.344646857949556e-07,
+    "start": 17.96,
+    "text": " ",
+    "type": "spacing"
+   },
+   {
+    "end": 18.4,
+    "logprob": -8.344646857949556e-07,
+    "start": 18.02,
+    "text": "named",
+    "type": "word"
+   },
+   {
+    "end": 18.48,
+    "logprob": -0.12697897851467133,
+    "start": 18.4,
+    "text": " ",
+    "type": "spacing"
+   },
+   {
+    "end": 18.94,
+    "logprob": -0.12697897851467133,
+    "start": 18.48,
+    "text": "accountable",
+    "type": "word"
+   },
+   {
+    "end": 19.06,
+    "logprob": -1.6689286894688848e-06,
+    "start": 18.94,
+    "text": " ",
+    "type": "spacing"
+   },
+   {
+    "end": 19.8,
+    "logprob": -0.00020801254500687114,
+    "start": 19.06,
+    "text": "institution,",
+    "type": "word"
+   },
+   {
+    "end": 20.24,
+    "logprob": -2.50339189733495e-06,
+    "start": 19.8,
+    "text": " ",
+    "type": "spacing"
+   },
+   {
+    "end": 20.34,
+    "logprob": -2.50339189733495e-06,
+    "start": 20.24,
+    "text": "and",
+    "type": "word"
+   },
+   {
+    "end": 20.44,
+    "logprob": -2.3841855067985307e-07,
+    "start": 20.34,
+    "text": " ",
+    "type": "spacing"
+   },
+   {
+    "end": 20.72,
+    "logprob": -2.3841855067985307e-07,
+    "start": 20.44,
+    "text": "measure",
+    "type": "word"
+   },
+   {
+    "end": 20.78,
+    "logprob": -2.50339189733495e-06,
+    "start": 20.72,
+    "text": " ",
+    "type": "spacing"
+   },
+   {
+    "end": 20.84,
+    "logprob": -2.50339189733495e-06,
+    "start": 20.78,
+    "text": "a",
+    "type": "word"
+   },
+   {
+    "end": 20.9,
+    "logprob": -2.3841855067985307e-07,
+    "start": 20.84,
+    "text": " ",
+    "type": "spacing"
+   },
+   {
+    "end": 21.4,
+    "logprob": -0.001817688525795802,
+    "start": 20.9,
+    "text": "real-world",
+    "type": "word"
+   },
+   {
+    "end": 21.48,
+    "logprob": -7.152531907195225e-06,
+    "start": 21.4,
+    "text": " ",
+    "type": "spacing"
+   },
+   {
+    "end": 21.88,
+    "logprob": -7.152531907195225e-06,
+    "start": 21.48,
+    "text": "benefit",
+    "type": "word"
+   },
+   {
+    "end": 22.12,
+    "logprob": -2.13382354559144e-05,
+    "start": 21.88,
+    "text": " ",
+    "type": "spacing"
+   },
+   {
+    "end": 22.26,
+    "logprob": -2.13382354559144e-05,
+    "start": 22.12,
+    "text": "with",
+    "type": "word"
+   },
+   {
+    "end": 22.3,
+    "logprob": -4.541770613286644e-05,
+    "start": 22.26,
+    "text": " ",
+    "type": "spacing"
+   },
+   {
+    "end": 22.74,
+    "logprob": -4.541770613286644e-05,
+    "start": 22.3,
+    "text": "baseline",
+    "type": "word"
+   },
+   {
+    "end": 22.86,
+    "logprob": -5.960462772236497e-07,
+    "start": 22.74,
+    "text": " ",
+    "type": "spacing"
+   },
+   {
+    "end": 23.22,
+    "logprob": -5.960462772236497e-07,
+    "start": 22.86,
+    "text": "evidence",
+    "type": "word"
+   },
+   {
+    "end": 23.28,
+    "logprob": 0,
+    "start": 23.22,
+    "text": " ",
+    "type": "spacing"
+   },
+   {
+    "end": 23.38,
+    "logprob": 0,
+    "start": 23.28,
+    "text": "of",
+    "type": "word"
+   },
+   {
+    "end": 23.42,
+    "logprob": -1.1920928244535389e-07,
+    "start": 23.38,
+    "text": " ",
+    "type": "spacing"
+   },
+   {
+    "end": 23.66,
+    "logprob": -1.1920928244535389e-07,
+    "start": 23.42,
+    "text": "time",
+    "type": "word"
+   },
+   {
+    "end": 23.78,
+    "logprob": -6.437280717364047e-06,
+    "start": 23.66,
+    "text": " ",
+    "type": "spacing"
+   },
+   {
+    "end": 24.14,
+    "logprob": -5.503478045435865e-06,
+    "start": 23.78,
+    "text": "saved,",
+    "type": "word"
+   },
+   {
+    "end": 24.48,
+    "logprob": -2.3841855067985307e-07,
+    "start": 24.14,
+    "text": " ",
+    "type": "spacing"
+   },
+   {
+    "end": 24.68,
+    "logprob": -2.3841855067985307e-07,
+    "start": 24.48,
+    "text": "better",
+    "type": "word"
+   },
+   {
+    "end": 24.78,
+    "logprob": -2.3841855067985307e-07,
+    "start": 24.68,
+    "text": " ",
+    "type": "spacing"
+   },
+   {
+    "end": 25.18,
+    "logprob": -0.001770654460390375,
+    "start": 24.78,
+    "text": "service,",
+    "type": "word"
+   },
+   {
+    "end": 25.44,
+    "logprob": 0,
+    "start": 25.18,
+    "text": " ",
+    "type": "spacing"
+   },
+   {
+    "end": 25.52,
+    "logprob": 0,
+    "start": 25.44,
+    "text": "or",
+    "type": "word"
+   },
+   {
+    "end": 25.62,
+    "logprob": -3.3378546504536644e-06,
+    "start": 25.52,
+    "text": " ",
+    "type": "spacing"
+   },
+   {
+    "end": 25.88,
+    "logprob": -3.3378546504536644e-06,
+    "start": 25.62,
+    "text": "wider",
+    "type": "word"
+   },
+   {
+    "end": 25.96,
+    "logprob": -3.3378546504536644e-06,
+    "start": 25.88,
+    "text": " ",
+    "type": "spacing"
+   },
+   {
+    "end": 26.3,
+    "logprob": -3.3378546504536644e-06,
+    "start": 25.96,
+    "text": "reach",
+    "type": "word"
+   }
+  ],
+  "_relay_note": "",
+  "_messageId": "6abdf63c0c1d5d8acfb4fd16",
+  "_sessionId": "6abdf63b7cb494a6f6b3dd50",
+  "_utc": "2026-10-01T05:57:51Z",
+  "_url": "https://athar-jv-interactive-plan-n5z4esrb7-schoolhack-web-team.vercel.app/audio/guide/guide-02-community-model-9gUnFBtxrM.mp3"
+ },
+ "NAR-03": {
+  "audio_duration_secs": 19.3654375,
+  "language_code": "eng",
+  "language_probability": 1,
+  "success": true,
+  "text": "Section three: Six pillars. Plugins are the connective tissue. One shared plugin standard, so every integration works everywhere. Reusable skills are built once and shared across the community. Universal API licenses are managed by Athar, giving members access without duplicated procurement",
+  "transcription_id": "5MO3ptKTPO4wLo2DSUUo",
+  "words": [
+   {
+    "end": 0.42,
+    "logprob": -0.00042226933874189854,
+    "start": 0.1,
+    "text": "Section",
+    "type": "word"
+   },
+   {
+    "end": 0.52,
+    "logprob": -0.00015567521040793508,
+    "start": 0.42,
+    "text": " ",
+    "type": "spacing"
+   },
+   {
+    "end": 0.84,
+    "logprob": -0.017980642449401785,
+    "start": 0.52,
+    "text": "three:",
+    "type": "word"
+   },
+   {
+    "end": 1.2,
+    "logprob": -0.3132740259170532,
+    "start": 0.84,
+    "text": " ",
+    "type": "spacing"
+   },
+   {
+    "end": 1.4,
+    "logprob": -0.3132740259170532,
+    "start": 1.2,
+    "text": "Six",
+    "type": "word"
+   },
+   {
+    "end": 1.48,
+    "logprob": -0.07912900298833847,
+    "start": 1.4,
+    "text": " ",
+    "type": "spacing"
+   },
+   {
+    "end": 1.88,
+    "logprob": -0.06924960427841143,
+    "start": 1.48,
+    "text": "pillars.",
+    "type": "word"
+   },
+   {
+    "end": 1.88,
+    "logprob": -0.03184555470943451,
+    "start": 1.88,
+    "text": " ",
+    "type": "spacing"
+   },
+   {
+    "end": 2.96,
+    "logprob": -0.03184555470943451,
+    "start": 2.52,
+    "text": "Plugins",
+    "type": "word"
+   },
+   {
+    "end": 3,
+    "logprob": -2.3841855067985307e-07,
+    "start": 2.96,
+    "text": " ",
+    "type": "spacing"
+   },
+   {
+    "end": 3.06,
+    "logprob": -2.3841855067985307e-07,
+    "start": 3,
+    "text": "are",
+    "type": "word"
+   },
+   {
+    "end": 3.1,
+    "logprob": 0,
+    "start": 3.06,
+    "text": " ",
+    "type": "spacing"
+   },
+   {
+    "end": 3.18,
+    "logprob": 0,
+    "start": 3.1,
+    "text": "the",
+    "type": "word"
+   },
+   {
+    "end": 3.22,
+    "logprob": -6.544376083184034e-05,
+    "start": 3.18,
+    "text": " ",
+    "type": "spacing"
+   },
+   {
+    "end": 3.64,
+    "logprob": -6.544376083184034e-05,
+    "start": 3.22,
+    "text": "connective",
+    "type": "word"
+   },
+   {
+    "end": 3.74,
+    "logprob": -3.814689989667386e-06,
+    "start": 3.64,
+    "text": " ",
+    "type": "spacing"
+   },
+   {
+    "end": 4.14,
+    "logprob": -0.0005883412772423721,
+    "start": 3.74,
+    "text": "tissue.",
+    "type": "word"
+   },
+   {
+    "end": 4.54,
+    "logprob": -1.7881377516459906e-06,
+    "start": 4.14,
+    "text": " ",
+    "type": "spacing"
+   },
+   {
+    "end": 4.68,
+    "logprob": -1.7881377516459906e-06,
+    "start": 4.54,
+    "text": "One",
+    "type": "word"
+   },
+   {
+    "end": 4.8,
+    "logprob": -2.3841830625315197e-06,
+    "start": 4.68,
+    "text": " ",
+    "type": "spacing"
+   },
+   {
+    "end": 5.04,
+    "logprob": -2.3841830625315197e-06,
+    "start": 4.8,
+    "text": "shared",
+    "type": "word"
+   },
+   {
+    "end": 5.14,
+    "logprob": -0.03823476657271385,
+    "start": 5.04,
+    "text": " ",
+    "type": "spacing"
+   },
+   {
+    "end": 5.44,
+    "logprob": -0.03823476657271385,
+    "start": 5.14,
+    "text": "plugin",
+    "type": "word"
+   },
+   {
+    "end": 5.58,
+    "logprob": -1.6689286894688848e-06,
+    "start": 5.44,
+    "text": " ",
+    "type": "spacing"
+   },
+   {
+    "end": 5.98,
+    "logprob": -0.022380764284510708,
+    "start": 5.58,
+    "text": "standard,",
+    "type": "word"
+   },
+   {
+    "end": 6.26,
+    "logprob": -2.0265558760002023e-06,
+    "start": 5.98,
+    "text": " ",
+    "type": "spacing"
+   },
+   {
+    "end": 6.38,
+    "logprob": -2.0265558760002023e-06,
+    "start": 6.26,
+    "text": "so",
+    "type": "word"
+   },
+   {
+    "end": 6.46,
+    "logprob": -1.1920928244535389e-07,
+    "start": 6.38,
+    "text": " ",
+    "type": "spacing"
+   },
+   {
+    "end": 6.68,
+    "logprob": -1.1920928244535389e-07,
+    "start": 6.46,
+    "text": "every",
+    "type": "word"
+   },
+   {
+    "end": 6.72,
+    "logprob": -4.768370445162873e-07,
+    "start": 6.68,
+    "text": " ",
+    "type": "spacing"
+   },
+   {
+    "end": 7.26,
+    "logprob": -4.768370445162873e-07,
+    "start": 6.72,
+    "text": "integration",
+    "type": "word"
+   },
+   {
+    "end": 7.38,
+    "logprob": -2.145764938177308e-06,
+    "start": 7.26,
+    "text": " ",
+    "type": "spacing"
+   },
+   {
+    "end": 7.64,
+    "logprob": -2.145764938177308e-06,
+    "start": 7.38,
+    "text": "works",
+    "type": "word"
+   },
+   {
+    "end": 7.78,
+    "logprob": -9.536738616588991e-07,
+    "start": 7.64,
+    "text": " ",
+    "type": "spacing"
+   },
+   {
+    "end": 8.28,
+    "logprob": -1.1704175697311505e-06,
+    "start": 7.78,
+    "text": "everywhere.",
+    "type": "word"
+   },
+   {
+    "end": 8.28,
+    "logprob": -1.5139465176616795e-05,
+    "start": 8.28,
+    "text": " ",
+    "type": "spacing"
+   },
+   {
+    "end": 9.44,
+    "logprob": -6.940670982658048e-05,
+    "start": 8.96,
+    "text": "Reusable",
+    "type": "word"
+   },
+   {
+    "end": 9.54,
+    "logprob": -4.637133679352701e-05,
+    "start": 9.44,
+    "text": " ",
+    "type": "spacing"
+   },
+   {
+    "end": 9.88,
+    "logprob": -4.637133679352701e-05,
+    "start": 9.54,
+    "text": "skills",
+    "type": "word"
+   },
+   {
+    "end": 9.9,
+    "logprob": 0,
+    "start": 9.88,
+    "text": " ",
+    "type": "spacing"
+   },
+   {
+    "end": 9.98,
+    "logprob": 0,
+    "start": 9.9,
+    "text": "are",
+    "type": "word"
+   },
+   {
+    "end": 10.02,
+    "logprob": -1.5497195136049413e-06,
+    "start": 9.98,
+    "text": " ",
+    "type": "spacing"
+   },
+   {
+    "end": 10.2,
+    "logprob": -1.5497195136049413e-06,
+    "start": 10.02,
+    "text": "built",
+    "type": "word"
+   },
+   {
+    "end": 10.32,
+    "logprob": -2.3841855067985307e-07,
+    "start": 10.2,
+    "text": " ",
+    "type": "spacing"
+   },
+   {
+    "end": 10.62,
+    "logprob": -2.3841855067985307e-07,
+    "start": 10.32,
+    "text": "once",
+    "type": "word"
+   },
+   {
+    "end": 10.76,
+    "logprob": -7.867782187531702e-06,
+    "start": 10.62,
+    "text": " ",
+    "type": "spacing"
+   },
+   {
+    "end": 10.86,
+    "logprob": -7.867782187531702e-06,
+    "start": 10.76,
+    "text": "and",
+    "type": "word"
+   },
+   {
+    "end": 10.96,
+    "logprob": -8.344646857949556e-07,
+    "start": 10.86,
+    "text": " ",
+    "type": "spacing"
+   },
+   {
+    "end": 11.2,
+    "logprob": -8.344646857949556e-07,
+    "start": 10.96,
+    "text": "shared",
+    "type": "word"
+   },
+   {
+    "end": 11.24,
+    "logprob": -1.1920928244535389e-07,
+    "start": 11.2,
+    "text": " ",
+    "type": "spacing"
+   },
+   {
+    "end": 11.52,
+    "logprob": -1.1920928244535389e-07,
+    "start": 11.24,
+    "text": "across",
+    "type": "word"
+   },
+   {
+    "end": 11.56,
+    "logprob": 0,
+    "start": 11.52,
+    "text": " ",
+    "type": "spacing"
+   },
+   {
+    "end": 11.64,
+    "logprob": 0,
+    "start": 11.56,
+    "text": "the",
+    "type": "word"
+   },
+   {
+    "end": 11.68,
+    "logprob": -5.960462772236497e-07,
+    "start": 11.64,
+    "text": " ",
+    "type": "spacing"
+   },
+   {
+    "end": 12.26,
+    "logprob": -5.841253539529134e-07,
+    "start": 11.68,
+    "text": "community.",
+    "type": "word"
+   },
+   {
+    "end": 12.28,
+    "logprob": -5.125986263010418e-06,
+    "start": 12.26,
+    "text": " ",
+    "type": "spacing"
+   },
+   {
+    "end": 13.4,
+    "logprob": -5.125986263010418e-06,
+    "start": 12.96,
+    "text": "Universal",
+    "type": "word"
+   },
+   {
+    "end": 13.56,
+    "logprob": -4.1960789531003684e-05,
+    "start": 13.4,
+    "text": " ",
+    "type": "spacing"
+   },
+   {
+    "end": 13.96,
+    "logprob": -4.1960789531003684e-05,
+    "start": 13.56,
+    "text": "API",
+    "type": "word"
+   },
+   {
+    "end": 14.02,
+    "logprob": -0.000493762141559273,
+    "start": 13.96,
+    "text": " ",
+    "type": "spacing"
+   },
+   {
+    "end": 14.58,
+    "logprob": -0.000493762141559273,
+    "start": 14.02,
+    "text": "licenses",
+    "type": "word"
+   },
+   {
+    "end": 14.7,
+    "logprob": -1.1920928244535389e-07,
+    "start": 14.58,
+    "text": " ",
+    "type": "spacing"
+   },
+   {
+    "end": 14.78,
+    "logprob": -1.1920928244535389e-07,
+    "start": 14.7,
+    "text": "are",
+    "type": "word"
+   },
+   {
+    "end": 14.84,
+    "logprob": -4.768370445162873e-07,
+    "start": 14.78,
+    "text": " ",
+    "type": "spacing"
+   },
+   {
+    "end": 15.18,
+    "logprob": -4.768370445162873e-07,
+    "start": 14.84,
+    "text": "managed",
+    "type": "word"
+   },
+   {
+    "end": 15.22,
+    "logprob": -4.768370445162873e-07,
+    "start": 15.18,
+    "text": " ",
+    "type": "spacing"
+   },
+   {
+    "end": 15.32,
+    "logprob": -4.768370445162873e-07,
+    "start": 15.22,
+    "text": "by",
+    "type": "word"
+   },
+   {
+    "end": 15.36,
+    "logprob": -0.6496352553367615,
+    "start": 15.32,
+    "text": " ",
+    "type": "spacing"
+   },
+   {
+    "end": 15.8,
+    "logprob": -0.3397400602691884,
+    "start": 15.36,
+    "text": "Athar,",
+    "type": "word"
+   },
+   {
+    "end": 15.8,
+    "logprob": -3.576278118089249e-07,
+    "start": 15.8,
+    "text": " ",
+    "type": "spacing"
+   },
+   {
+    "end": 16.54,
+    "logprob": -3.576278118089249e-07,
+    "start": 16.3,
+    "text": "giving",
+    "type": "word"
+   },
+   {
+    "end": 16.58,
+    "logprob": -7.152555099310121e-07,
+    "start": 16.54,
+    "text": " ",
+    "type": "spacing"
+   },
+   {
+    "end": 16.92,
+    "logprob": -7.152555099310121e-07,
+    "start": 16.58,
+    "text": "members",
+    "type": "word"
+   },
+   {
+    "end": 17.02,
+    "logprob": -1.1920928244535389e-07,
+    "start": 16.92,
+    "text": " ",
+    "type": "spacing"
+   },
+   {
+    "end": 17.4,
+    "logprob": -1.1920928244535389e-07,
+    "start": 17.02,
+    "text": "access",
+    "type": "word"
+   },
+   {
+    "end": 17.44,
+    "logprob": -1.1920928244535389e-07,
+    "start": 17.4,
+    "text": " ",
+    "type": "spacing"
+   },
+   {
+    "end": 17.78,
+    "logprob": -1.1920928244535389e-07,
+    "start": 17.44,
+    "text": "without",
+    "type": "word"
+   },
+   {
+    "end": 17.82,
+    "logprob": -2.8490614567999728e-05,
+    "start": 17.78,
+    "text": " ",
+    "type": "spacing"
+   },
+   {
+    "end": 18.38,
+    "logprob": -2.8490614567999728e-05,
+    "start": 17.82,
+    "text": "duplicated",
+    "type": "word"
+   },
+   {
+    "end": 18.44,
+    "logprob": -5.960462772236497e-07,
+    "start": 18.38,
+    "text": " ",
+    "type": "spacing"
+   },
+   {
+    "end": 19.04,
+    "logprob": -5.960462772236497e-07,
+    "start": 18.44,
+    "text": "procurement",
+    "type": "word"
+   }
+  ],
+  "_relay_note": "",
+  "_messageId": "6abdf63c5e9f29365b011dbf",
+  "_sessionId": "6abdf63b7cb494a6f6b3dd53",
+  "_utc": "2026-10-01T05:57:42Z",
+  "_url": "https://athar-jv-interactive-plan-n5z4esrb7-schoolhack-web-team.vercel.app/audio/guide/guide-03-six-pillars-yxVqZJ2k1a.mp3"
+ },
+ "NAR-04": {
+  "audio_duration_secs": 24.5203125,
+  "language_code": "eng",
+  "language_probability": 1,
+  "success": true,
+  "text": "Section four: Pledge and signing. Joining the pact is a simple public commitment. A signatory chooses its roles: sign, govern, build, or learn, and pledges to contribute to at least one of the four participant outcomes. Signing brings access to the learning pathway, the builder journey, and the plugin standard, together with a commitment to report outcomes through the shared impact tiers",
+  "transcription_id": "IwnuzAAwVIp8nERFOhhv",
+  "words": [
+   {
+    "end": 0.42,
+    "logprob": -0.0003887851198669523,
+    "start": 0.1,
+    "text": "Section",
+    "type": "word"
+   },
+   {
+    "end": 0.56,
+    "logprob": -0.001188525347970426,
+    "start": 0.42,
+    "text": " ",
+    "type": "spacing"
+   },
+   {
+    "end": 0.78,
+    "logprob": -0.011115286033600569,
+    "start": 0.56,
+    "text": "four:",
+    "type": "word"
+   },
+   {
+    "end": 1.06,
+    "logprob": -0.0380442813038826,
+    "start": 0.78,
+    "text": " ",
+    "type": "spacing"
+   },
+   {
+    "end": 1.42,
+    "logprob": -0.0380442813038826,
+    "start": 1.06,
+    "text": "Pledge",
+    "type": "word"
+   },
+   {
+    "end": 1.44,
+    "logprob": -2.1934269170742482e-05,
+    "start": 1.42,
+    "text": " ",
+    "type": "spacing"
+   },
+   {
+    "end": 1.54,
+    "logprob": -2.1934269170742482e-05,
+    "start": 1.44,
+    "text": "and",
+    "type": "word"
+   },
+   {
+    "end": 1.66,
+    "logprob": -0.03808031603693962,
+    "start": 1.54,
+    "text": " ",
+    "type": "spacing"
+   },
+   {
+    "end": 2.08,
+    "logprob": -0.033335936672301614,
+    "start": 1.66,
+    "text": "signing.",
+    "type": "word"
+   },
+   {
+    "end": 2.08,
+    "logprob": -3.4570634852570947e-06,
+    "start": 2.08,
+    "text": " ",
+    "type": "spacing"
+   },
+   {
+    "end": 3,
+    "logprob": -3.4570634852570947e-06,
+    "start": 2.7,
+    "text": "Joining",
+    "type": "word"
+   },
+   {
+    "end": 3.04,
+    "logprob": -0.0004880429187323898,
+    "start": 3,
+    "text": " ",
+    "type": "spacing"
+   },
+   {
+    "end": 3.14,
+    "logprob": -0.0004880429187323898,
+    "start": 3.04,
+    "text": "the",
+    "type": "word"
+   },
+   {
+    "end": 3.18,
+    "logprob": -0.18026024103164673,
+    "start": 3.14,
+    "text": " ",
+    "type": "spacing"
+   },
+   {
+    "end": 3.46,
+    "logprob": -0.18026024103164673,
+    "start": 3.18,
+    "text": "pact",
+    "type": "word"
+   },
+   {
+    "end": 3.58,
+    "logprob": -2.3841855067985307e-07,
+    "start": 3.46,
+    "text": " ",
+    "type": "spacing"
+   },
+   {
+    "end": 3.64,
+    "logprob": -2.3841855067985307e-07,
+    "start": 3.58,
+    "text": "is",
+    "type": "word"
+   },
+   {
+    "end": 3.68,
+    "logprob": 0,
+    "start": 3.64,
+    "text": " ",
+    "type": "spacing"
+   },
+   {
+    "end": 3.76,
+    "logprob": 0,
+    "start": 3.68,
+    "text": "a",
+    "type": "word"
+   },
+   {
+    "end": 3.8,
+    "logprob": -3.576278118089249e-07,
+    "start": 3.76,
+    "text": " ",
+    "type": "spacing"
+   },
+   {
+    "end": 4.1,
+    "logprob": -3.576278118089249e-07,
+    "start": 3.8,
+    "text": "simple",
+    "type": "word"
+   },
+   {
+    "end": 4.22,
+    "logprob": -8.940656698541716e-06,
+    "start": 4.1,
+    "text": " ",
+    "type": "spacing"
+   },
+   {
+    "end": 4.5,
+    "logprob": -8.940656698541716e-06,
+    "start": 4.22,
+    "text": "public",
+    "type": "word"
+   },
+   {
+    "end": 4.58,
+    "logprob": -1.311301275563892e-06,
+    "start": 4.5,
+    "text": " ",
+    "type": "spacing"
+   },
+   {
+    "end": 5.1,
+    "logprob": -1.5063705673541832e-06,
+    "start": 4.58,
+    "text": "commitment.",
+    "type": "word"
+   },
+   {
+    "end": 5.1,
+    "logprob": -3.576278118089249e-07,
+    "start": 5.1,
+    "text": " ",
+    "type": "spacing"
+   },
+   {
+    "end": 6.1,
+    "logprob": -3.576278118089249e-07,
+    "start": 6.02,
+    "text": "A",
+    "type": "word"
+   },
+   {
+    "end": 6.16,
+    "logprob": -4.207999518257566e-05,
+    "start": 6.1,
+    "text": " ",
+    "type": "spacing"
+   },
+   {
+    "end": 6.64,
+    "logprob": -4.207999518257566e-05,
+    "start": 6.16,
+    "text": "signatory",
+    "type": "word"
+   },
+   {
+    "end": 6.74,
+    "logprob": -3.6000557884108275e-05,
+    "start": 6.64,
+    "text": " ",
+    "type": "spacing"
+   },
+   {
+    "end": 7.08,
+    "logprob": -3.6000557884108275e-05,
+    "start": 6.74,
+    "text": "chooses",
+    "type": "word"
+   },
+   {
+    "end": 7.12,
+    "logprob": -1.1920928244535389e-07,
+    "start": 7.08,
+    "text": " ",
+    "type": "spacing"
+   },
+   {
+    "end": 7.3,
+    "logprob": -1.1920928244535389e-07,
+    "start": 7.12,
+    "text": "its",
+    "type": "word"
+   },
+   {
+    "end": 7.36,
+    "logprob": -6.437280717364047e-06,
+    "start": 7.3,
+    "text": " ",
+    "type": "spacing"
+   },
+   {
+    "end": 7.76,
+    "logprob": -0.08419013021633266,
+    "start": 7.36,
+    "text": "roles:",
+    "type": "word"
+   },
+   {
+    "end": 8.14,
+    "logprob": -0.0036026830784976482,
+    "start": 7.76,
+    "text": " ",
+    "type": "spacing"
+   },
+   {
+    "end": 8.46,
+    "logprob": -0.0028831955018176814,
+    "start": 8.14,
+    "text": "sign,",
+    "type": "word"
+   },
+   {
+    "end": 8.78,
+    "logprob": -4.827859811484814e-05,
+    "start": 8.46,
+    "text": " ",
+    "type": "spacing"
+   },
+   {
+    "end": 9.08,
+    "logprob": -4.3169783696482356e-05,
+    "start": 8.78,
+    "text": "govern,",
+    "type": "word"
+   },
+   {
+    "end": 9.4,
+    "logprob": -7.152555099310121e-07,
+    "start": 9.08,
+    "text": " ",
+    "type": "spacing"
+   },
+   {
+    "end": 9.64,
+    "logprob": -0.0014364087641827912,
+    "start": 9.4,
+    "text": "build,",
+    "type": "word"
+   },
+   {
+    "end": 9.74,
+    "logprob": 0,
+    "start": 9.64,
+    "text": " ",
+    "type": "spacing"
+   },
+   {
+    "end": 9.82,
+    "logprob": 0,
+    "start": 9.74,
+    "text": "or",
+    "type": "word"
+   },
+   {
+    "end": 9.92,
+    "logprob": -3.4570634852570947e-06,
+    "start": 9.82,
+    "text": " ",
+    "type": "spacing"
+   },
+   {
+    "end": 10.2,
+    "logprob": -3.2819596450887424e-05,
+    "start": 9.92,
+    "text": "learn,",
+    "type": "word"
+   },
+   {
+    "end": 10.5,
+    "logprob": -4.768370445162873e-07,
+    "start": 10.2,
+    "text": " ",
+    "type": "spacing"
+   },
+   {
+    "end": 10.56,
+    "logprob": -4.768370445162873e-07,
+    "start": 10.5,
+    "text": "and",
+    "type": "word"
+   },
+   {
+    "end": 10.66,
+    "logprob": -8.630380034446716e-05,
+    "start": 10.56,
+    "text": " ",
+    "type": "spacing"
+   },
+   {
+    "end": 11.02,
+    "logprob": -8.630380034446716e-05,
+    "start": 10.66,
+    "text": "pledges",
+    "type": "word"
+   },
+   {
+    "end": 11.06,
+    "logprob": 0,
+    "start": 11.02,
+    "text": " ",
+    "type": "spacing"
+   },
+   {
+    "end": 11.12,
+    "logprob": 0,
+    "start": 11.06,
+    "text": "to",
+    "type": "word"
+   },
+   {
+    "end": 11.16,
+    "logprob": -4.172316494077677e-06,
+    "start": 11.12,
+    "text": " ",
+    "type": "spacing"
+   },
+   {
+    "end": 11.66,
+    "logprob": -4.172316494077677e-06,
+    "start": 11.16,
+    "text": "contribute",
+    "type": "word"
+   },
+   {
+    "end": 11.7,
+    "logprob": 0,
+    "start": 11.66,
+    "text": " ",
+    "type": "spacing"
+   },
+   {
+    "end": 11.78,
+    "logprob": 0,
+    "start": 11.7,
+    "text": "to",
+    "type": "word"
+   },
+   {
+    "end": 11.82,
+    "logprob": -1.1920928244535389e-07,
+    "start": 11.78,
+    "text": " ",
+    "type": "spacing"
+   },
+   {
+    "end": 11.92,
+    "logprob": -1.1920928244535389e-07,
+    "start": 11.82,
+    "text": "at",
+    "type": "word"
+   },
+   {
+    "end": 11.98,
+    "logprob": 0,
+    "start": 11.92,
+    "text": " ",
+    "type": "spacing"
+   },
+   {
+    "end": 12.18,
+    "logprob": 0,
+    "start": 11.98,
+    "text": "least",
+    "type": "word"
+   },
+   {
+    "end": 12.3,
+    "logprob": 0,
+    "start": 12.18,
+    "text": " ",
+    "type": "spacing"
+   },
+   {
+    "end": 12.48,
+    "logprob": 0,
+    "start": 12.3,
+    "text": "one",
+    "type": "word"
+   },
+   {
+    "end": 12.52,
+    "logprob": 0,
+    "start": 12.48,
+    "text": " ",
+    "type": "spacing"
+   },
+   {
+    "end": 12.58,
+    "logprob": 0,
+    "start": 12.52,
+    "text": "of",
+    "type": "word"
+   },
+   {
+    "end": 12.62,
+    "logprob": 0,
+    "start": 12.58,
+    "text": " ",
+    "type": "spacing"
+   },
+   {
+    "end": 12.72,
+    "logprob": 0,
+    "start": 12.62,
+    "text": "the",
+    "type": "word"
+   },
+   {
+    "end": 12.76,
+    "logprob": -1.4305104514278355e-06,
+    "start": 12.72,
+    "text": " ",
+    "type": "spacing"
+   },
+   {
+    "end": 12.9,
+    "logprob": -1.4305104514278355e-06,
+    "start": 12.76,
+    "text": "four",
+    "type": "word"
+   },
+   {
+    "end": 13,
+    "logprob": -0.00011276562872808427,
+    "start": 12.9,
+    "text": " ",
+    "type": "spacing"
+   },
+   {
+    "end": 13.54,
+    "logprob": -0.00011276562872808427,
+    "start": 13,
+    "text": "participant",
+    "type": "word"
+   },
+   {
+    "end": 13.66,
+    "logprob": -3.707340147229843e-05,
+    "start": 13.54,
+    "text": " ",
+    "type": "spacing"
+   },
+   {
+    "end": 14.18,
+    "logprob": -3.295413464204305e-05,
+    "start": 13.66,
+    "text": "outcomes.",
+    "type": "word"
+   },
+   {
+    "end": 14.18,
+    "logprob": -0.00018046658078674227,
+    "start": 14.18,
+    "text": " ",
+    "type": "spacing"
+   },
+   {
+    "end": 15.22,
+    "logprob": -0.00018046658078674227,
+    "start": 14.88,
+    "text": "Signing",
+    "type": "word"
+   },
+   {
+    "end": 15.32,
+    "logprob": 0,
+    "start": 15.22,
+    "text": " ",
+    "type": "spacing"
+   },
+   {
+    "end": 15.56,
+    "logprob": 0,
+    "start": 15.32,
+    "text": "brings",
+    "type": "word"
+   },
+   {
+    "end": 15.72,
+    "logprob": -1.1920922133867862e-06,
+    "start": 15.56,
+    "text": " ",
+    "type": "spacing"
+   },
+   {
+    "end": 16.1,
+    "logprob": -1.1920922133867862e-06,
+    "start": 15.72,
+    "text": "access",
+    "type": "word"
+   },
+   {
+    "end": 16.14,
+    "logprob": 0,
+    "start": 16.1,
+    "text": " ",
+    "type": "spacing"
+   },
+   {
+    "end": 16.219,
+    "logprob": 0,
+    "start": 16.14,
+    "text": "to",
+    "type": "word"
+   },
+   {
+    "end": 16.26,
+    "logprob": -1.1920928244535389e-07,
+    "start": 16.219,
+    "text": " ",
+    "type": "spacing"
+   },
+   {
+    "end": 16.34,
+    "logprob": -1.1920928244535389e-07,
+    "start": 16.26,
+    "text": "the",
+    "type": "word"
+   },
+   {
+    "end": 16.379,
+    "logprob": -0.0003357561945449561,
+    "start": 16.34,
+    "text": " ",
+    "type": "spacing"
+   },
+   {
+    "end": 16.66,
+    "logprob": -0.0003357561945449561,
+    "start": 16.379,
+    "text": "learning",
+    "type": "word"
+   },
+   {
+    "end": 16.76,
+    "logprob": -5.483612312673358e-06,
+    "start": 16.66,
+    "text": " ",
+    "type": "spacing"
+   },
+   {
+    "end": 17.3,
+    "logprob": -5.483612312673358e-06,
+    "start": 16.76,
+    "text": "pathway,",
+    "type": "word"
+   },
+   {
+    "end": 17.64,
+    "logprob": -9.536738616588991e-07,
+    "start": 17.3,
+    "text": " ",
+    "type": "spacing"
+   },
+   {
+    "end": 17.72,
+    "logprob": -9.536738616588991e-07,
+    "start": 17.64,
+    "text": "the",
+    "type": "word"
+   },
+   {
+    "end": 17.76,
+    "logprob": -0.0012447236804291606,
+    "start": 17.72,
+    "text": " ",
+    "type": "spacing"
+   },
+   {
+    "end": 18.04,
+    "logprob": -0.0012447236804291606,
+    "start": 17.76,
+    "text": "builder",
+    "type": "word"
+   },
+   {
+    "end": 18.16,
+    "logprob": -4.291525328881107e-06,
+    "start": 18.04,
+    "text": " ",
+    "type": "spacing"
+   },
+   {
+    "end": 18.5,
+    "logprob": -0.00010432725616738026,
+    "start": 18.16,
+    "text": "journey,",
+    "type": "word"
+   },
+   {
+    "end": 18.78,
+    "logprob": -3.576278118089249e-07,
+    "start": 18.5,
+    "text": " ",
+    "type": "spacing"
+   },
+   {
+    "end": 18.88,
+    "logprob": -3.576278118089249e-07,
+    "start": 18.78,
+    "text": "and",
+    "type": "word"
+   },
+   {
+    "end": 18.92,
+    "logprob": -1.1920928244535389e-07,
+    "start": 18.88,
+    "text": " ",
+    "type": "spacing"
+   },
+   {
+    "end": 19,
+    "logprob": -1.1920928244535389e-07,
+    "start": 18.92,
+    "text": "the",
+    "type": "word"
+   },
+   {
+    "end": 19.04,
+    "logprob": -0.0069732158444821835,
+    "start": 19,
+    "text": " ",
+    "type": "spacing"
+   },
+   {
+    "end": 19.38,
+    "logprob": -0.0069732158444821835,
+    "start": 19.04,
+    "text": "plugin",
+    "type": "word"
+   },
+   {
+    "end": 19.5,
+    "logprob": -4.529942543740617e-06,
+    "start": 19.38,
+    "text": " ",
+    "type": "spacing"
+   },
+   {
+    "end": 19.9,
+    "logprob": -0.00027937650682158873,
+    "start": 19.5,
+    "text": "standard,",
+    "type": "word"
+   },
+   {
+    "end": 20.28,
+    "logprob": -1.0728830375228426e-06,
+    "start": 19.9,
+    "text": " ",
+    "type": "spacing"
+   },
+   {
+    "end": 20.64,
+    "logprob": -1.0728830375228426e-06,
+    "start": 20.28,
+    "text": "together",
+    "type": "word"
+   },
+   {
+    "end": 20.66,
+    "logprob": 0,
+    "start": 20.64,
+    "text": " ",
+    "type": "spacing"
+   },
+   {
+    "end": 20.74,
+    "logprob": 0,
+    "start": 20.66,
+    "text": "with",
+    "type": "word"
+   },
+   {
+    "end": 20.78,
+    "logprob": -3.576278118089249e-07,
+    "start": 20.74,
+    "text": " ",
+    "type": "spacing"
+   },
+   {
+    "end": 20.84,
+    "logprob": -3.576278118089249e-07,
+    "start": 20.8,
+    "text": "a",
+    "type": "word"
+   },
+   {
+    "end": 20.88,
+    "logprob": -2.288792165927589e-05,
+    "start": 20.84,
+    "text": " ",
+    "type": "spacing"
+   },
+   {
+    "end": 21.32,
+    "logprob": -2.288792165927589e-05,
+    "start": 20.88,
+    "text": "commitment",
+    "type": "word"
+   },
+   {
+    "end": 21.36,
+    "logprob": -1.1920928244535389e-07,
+    "start": 21.32,
+    "text": " ",
+    "type": "spacing"
+   },
+   {
+    "end": 21.44,
+    "logprob": -1.1920928244535389e-07,
+    "start": 21.36,
+    "text": "to",
+    "type": "word"
+   },
+   {
+    "end": 21.48,
+    "logprob": -5.960462772236497e-07,
+    "start": 21.44,
+    "text": " ",
+    "type": "spacing"
+   },
+   {
+    "end": 21.8,
+    "logprob": -5.960462772236497e-07,
+    "start": 21.48,
+    "text": "report",
+    "type": "word"
+   },
+   {
+    "end": 21.96,
+    "logprob": -3.099436753473128e-06,
+    "start": 21.8,
+    "text": " ",
+    "type": "spacing"
+   },
+   {
+    "end": 22.42,
+    "logprob": -3.099436753473128e-06,
+    "start": 21.96,
+    "text": "outcomes",
+    "type": "word"
+   },
+   {
+    "end": 22.62,
+    "logprob": -3.576278118089249e-07,
+    "start": 22.42,
+    "text": " ",
+    "type": "spacing"
+   },
+   {
+    "end": 22.8,
+    "logprob": -3.576278118089249e-07,
+    "start": 22.62,
+    "text": "through",
+    "type": "word"
+   },
+   {
+    "end": 22.82,
+    "logprob": -1.1920928244535389e-07,
+    "start": 22.8,
+    "text": " ",
+    "type": "spacing"
+   },
+   {
+    "end": 22.92,
+    "logprob": -1.1920928244535389e-07,
+    "start": 22.82,
+    "text": "the",
+    "type": "word"
+   },
+   {
+    "end": 22.96,
+    "logprob": -1.811964830267243e-05,
+    "start": 22.92,
+    "text": " ",
+    "type": "spacing"
+   },
+   {
+    "end": 23.24,
+    "logprob": -1.811964830267243e-05,
+    "start": 22.96,
+    "text": "shared",
+    "type": "word"
+   },
+   {
+    "end": 23.36,
+    "logprob": -0.00014006110723130405,
+    "start": 23.24,
+    "text": " ",
+    "type": "spacing"
+   },
+   {
+    "end": 23.74,
+    "logprob": -0.00014006110723130405,
+    "start": 23.36,
+    "text": "impact",
+    "type": "word"
+   },
+   {
+    "end": 23.8,
+    "logprob": -2.3483953555114567e-05,
+    "start": 23.74,
+    "text": " ",
+    "type": "spacing"
+   },
+   {
+    "end": 24.16,
+    "logprob": -2.3483953555114567e-05,
+    "start": 23.8,
+    "text": "tiers",
+    "type": "word"
+   }
+  ],
+  "_relay_note": "",
+  "_messageId": "6abdf63c0c1d5d8acfb4fd19",
+  "_sessionId": "6abdf63b7cb494a6f6b3dd54",
+  "_utc": "2026-10-01T05:57:53Z",
+  "_url": "https://athar-jv-interactive-plan-n5z4esrb7-schoolhack-web-team.vercel.app/audio/guide/guide-04-pledge-and-signing-PWeXZj1Rgc.mp3"
+ },
+ "NAR-05": {
+  "audio_duration_secs": 31.48625,
+  "language_code": "eng",
+  "language_probability": 1,
+  "success": true,
+  "text": "Section five: Actors and roles. Institutions, partners, and platforms building the Athar ecosystem together. ODA and Arev sign and govern, with Arev on demand, E&AI& and Discord building. UNDP, UNICEF, IFRC, WFP, and UNHCR sign and learn. The UAE Ministry of Foreign Trade signs and governs, and the United Arab Emirates governs. Every actor has a clear role: sign, govern, build, or learn",
+  "transcription_id": "UMJ4XBjGzmKMoWOrmZkm",
+  "words": [
+   {
+    "end": 0.38,
+    "logprob": -0.0005144941387698054,
+    "start": 0.1,
+    "text": "Section",
+    "type": "word"
+   },
+   {
+    "end": 0.48,
+    "logprob": -6.878139538457617e-05,
+    "start": 0.38,
+    "text": " ",
+    "type": "spacing"
+   },
+   {
+    "end": 0.8,
+    "logprob": -0.009394606546266004,
+    "start": 0.48,
+    "text": "five:",
+    "type": "word"
+   },
+   {
+    "end": 1.08,
+    "logprob": -0.023282017558813095,
+    "start": 0.8,
+    "text": " ",
+    "type": "spacing"
+   },
+   {
+    "end": 1.38,
+    "logprob": -0.023282017558813095,
+    "start": 1.08,
+    "text": "Actors",
+    "type": "word"
+   },
+   {
+    "end": 1.4,
+    "logprob": -2.3841855067985307e-07,
+    "start": 1.38,
+    "text": " ",
+    "type": "spacing"
+   },
+   {
+    "end": 1.48,
+    "logprob": -2.3841855067985307e-07,
+    "start": 1.4,
+    "text": "and",
+    "type": "word"
+   },
+   {
+    "end": 1.58,
+    "logprob": -0.11362485587596893,
+    "start": 1.48,
+    "text": " ",
+    "type": "spacing"
+   },
+   {
+    "end": 2,
+    "logprob": -0.17370797942082086,
+    "start": 1.58,
+    "text": "roles.",
+    "type": "word"
+   },
+   {
+    "end": 2.34,
+    "logprob": -0.00025233422638848424,
+    "start": 2,
+    "text": " ",
+    "type": "spacing"
+   },
+   {
+    "end": 3.06,
+    "logprob": -0.00023568400529956518,
+    "start": 2.34,
+    "text": "Institutions,",
+    "type": "word"
+   },
+   {
+    "end": 3.22,
+    "logprob": -1.0609570381348021e-05,
+    "start": 3.06,
+    "text": " ",
+    "type": "spacing"
+   },
+   {
+    "end": 3.56,
+    "logprob": -0.0004625868378853839,
+    "start": 3.22,
+    "text": "partners,",
+    "type": "word"
+   },
+   {
+    "end": 3.58,
+    "logprob": -1.1920928244535389e-07,
+    "start": 3.56,
+    "text": " ",
+    "type": "spacing"
+   },
+   {
+    "end": 3.66,
+    "logprob": -1.1920928244535389e-07,
+    "start": 3.58,
+    "text": "and",
+    "type": "word"
+   },
+   {
+    "end": 3.74,
+    "logprob": -2.145764938177308e-06,
+    "start": 3.66,
+    "text": " ",
+    "type": "spacing"
+   },
+   {
+    "end": 4.22,
+    "logprob": -2.145764938177308e-06,
+    "start": 3.74,
+    "text": "platforms",
+    "type": "word"
+   },
+   {
+    "end": 4.42,
+    "logprob": -6.782778655178845e-05,
+    "start": 4.22,
+    "text": " ",
+    "type": "spacing"
+   },
+   {
+    "end": 4.74,
+    "logprob": -6.782778655178845e-05,
+    "start": 4.42,
+    "text": "building",
+    "type": "word"
+   },
+   {
+    "end": 4.78,
+    "logprob": -9.536697689327411e-06,
+    "start": 4.74,
+    "text": " ",
+    "type": "spacing"
+   },
+   {
+    "end": 4.86,
+    "logprob": -9.536697689327411e-06,
+    "start": 4.78,
+    "text": "the",
+    "type": "word"
+   },
+   {
+    "end": 4.9,
+    "logprob": -0.43519794940948486,
+    "start": 4.86,
+    "text": " ",
+    "type": "spacing"
+   },
+   {
+    "end": 5.2,
+    "logprob": -0.35160982608795166,
+    "start": 4.92,
+    "text": "Athar",
+    "type": "word"
+   },
+   {
+    "end": 5.36,
+    "logprob": -0.0021873614750802517,
+    "start": 5.2,
+    "text": " ",
+    "type": "spacing"
+   },
+   {
+    "end": 5.94,
+    "logprob": -0.0021873614750802517,
+    "start": 5.36,
+    "text": "ecosystem",
+    "type": "word"
+   },
+   {
+    "end": 6,
+    "logprob": -6.794906312279636e-06,
+    "start": 5.94,
+    "text": " ",
+    "type": "spacing"
+   },
+   {
+    "end": 6.44,
+    "logprob": -1.1417450069630933e-05,
+    "start": 6,
+    "text": "together.",
+    "type": "word"
+   },
+   {
+    "end": 6.44,
+    "logprob": -0.0012199586490169168,
+    "start": 6.44,
+    "text": " ",
+    "type": "spacing"
+   },
+   {
+    "end": 7.46,
+    "logprob": -0.0005090855314241102,
+    "start": 7.06,
+    "text": "ODA",
+    "type": "word"
+   },
+   {
+    "end": 7.54,
+    "logprob": -9.178694017464295e-05,
+    "start": 7.46,
+    "text": " ",
+    "type": "spacing"
+   },
+   {
+    "end": 7.64,
+    "logprob": -9.178694017464295e-05,
+    "start": 7.54,
+    "text": "and",
+    "type": "word"
+   },
+   {
+    "end": 7.78,
+    "logprob": -1.145344853401184,
+    "start": 7.64,
+    "text": " ",
+    "type": "spacing"
+   },
+   {
+    "end": 8.08,
+    "logprob": -0.8590206500985005,
+    "start": 7.78,
+    "text": "Arev",
+    "type": "word"
+   },
+   {
+    "end": 8.22,
+    "logprob": -0.00030250742565840483,
+    "start": 8.08,
+    "text": " ",
+    "type": "spacing"
+   },
+   {
+    "end": 8.5,
+    "logprob": -0.00030250742565840483,
+    "start": 8.22,
+    "text": "sign",
+    "type": "word"
+   },
+   {
+    "end": 8.52,
+    "logprob": -3.576278118089249e-07,
+    "start": 8.5,
+    "text": " ",
+    "type": "spacing"
+   },
+   {
+    "end": 8.6,
+    "logprob": -3.576278118089249e-07,
+    "start": 8.52,
+    "text": "and",
+    "type": "word"
+   },
+   {
+    "end": 8.7,
+    "logprob": -0.00021419614495243877,
+    "start": 8.6,
+    "text": " ",
+    "type": "spacing"
+   },
+   {
+    "end": 9,
+    "logprob": -0.07227084202375929,
+    "start": 8.7,
+    "text": "govern,",
+    "type": "word"
+   },
+   {
+    "end": 9.42,
+    "logprob": -0.00043132537393830717,
+    "start": 9,
+    "text": " ",
+    "type": "spacing"
+   },
+   {
+    "end": 9.58,
+    "logprob": -0.00043132537393830717,
+    "start": 9.42,
+    "text": "with",
+    "type": "word"
+   },
+   {
+    "end": 9.66,
+    "logprob": -4.351044481154531e-05,
+    "start": 9.58,
+    "text": " ",
+    "type": "spacing"
+   },
+   {
+    "end": 10,
+    "logprob": -3.2752042869788056e-05,
+    "start": 9.66,
+    "text": "Arev",
+    "type": "word"
+   },
+   {
+    "end": 10.24,
+    "logprob": -0.0658022090792656,
+    "start": 10,
+    "text": " ",
+    "type": "spacing"
+   },
+   {
+    "end": 10.32,
+    "logprob": -0.0658022090792656,
+    "start": 10.24,
+    "text": "on",
+    "type": "word"
+   },
+   {
+    "end": 10.38,
+    "logprob": -0.015850383788347244,
+    "start": 10.32,
+    "text": " ",
+    "type": "spacing"
+   },
+   {
+    "end": 10.82,
+    "logprob": -0.020282687885420665,
+    "start": 10.38,
+    "text": "demand,",
+    "type": "word"
+   },
+   {
+    "end": 11.16,
+    "logprob": -0.10513920336961746,
+    "start": 10.82,
+    "text": " ",
+    "type": "spacing"
+   },
+   {
+    "end": 12.12,
+    "logprob": -0.08302530655637383,
+    "start": 11.16,
+    "text": "E&AI&",
+    "type": "word"
+   },
+   {
+    "end": 12.54,
+    "logprob": -0.11287079751491547,
+    "start": 12.12,
+    "text": " ",
+    "type": "spacing"
+   },
+   {
+    "end": 12.64,
+    "logprob": -0.11287079751491547,
+    "start": 12.54,
+    "text": "and",
+    "type": "word"
+   },
+   {
+    "end": 12.7,
+    "logprob": -2.455681169521995e-05,
+    "start": 12.64,
+    "text": " ",
+    "type": "spacing"
+   },
+   {
+    "end": 13.06,
+    "logprob": -2.455681169521995e-05,
+    "start": 12.7,
+    "text": "Discord",
+    "type": "word"
+   },
+   {
+    "end": 13.14,
+    "logprob": -0.00023064337437972426,
+    "start": 13.06,
+    "text": " ",
+    "type": "spacing"
+   },
+   {
+    "end": 13.52,
+    "logprob": -0.00021610224373742111,
+    "start": 13.14,
+    "text": "building.",
+    "type": "word"
+   },
+   {
+    "end": 13.52,
+    "logprob": -7.366862701019272e-05,
+    "start": 13.52,
+    "text": " ",
+    "type": "spacing"
+   },
+   {
+    "end": 14.84,
+    "logprob": -5.912563638048596e-05,
+    "start": 14.12,
+    "text": "UNDP,",
+    "type": "word"
+   },
+   {
+    "end": 15.2,
+    "logprob": -8.976056415122002e-05,
+    "start": 14.84,
+    "text": " ",
+    "type": "spacing"
+   },
+   {
+    "end": 15.7,
+    "logprob": -8.507768611057795e-05,
+    "start": 15.2,
+    "text": "UNICEF,",
+    "type": "word"
+   },
+   {
+    "end": 16.059,
+    "logprob": -0.00038092033355496824,
+    "start": 15.7,
+    "text": " ",
+    "type": "spacing"
+   },
+   {
+    "end": 16.9,
+    "logprob": -0.0009687647980172187,
+    "start": 16.059,
+    "text": "IFRC,",
+    "type": "word"
+   },
+   {
+    "end": 17.12,
+    "logprob": -2.2172682292875834e-05,
+    "start": 16.9,
+    "text": " ",
+    "type": "spacing"
+   },
+   {
+    "end": 17.9,
+    "logprob": -0.0019149696386193682,
+    "start": 17.42,
+    "text": "WFP,",
+    "type": "word"
+   },
+   {
+    "end": 18.32,
+    "logprob": -7.152555099310121e-07,
+    "start": 17.9,
+    "text": " ",
+    "type": "spacing"
+   },
+   {
+    "end": 18.42,
+    "logprob": -7.152555099310121e-07,
+    "start": 18.32,
+    "text": "and",
+    "type": "word"
+   },
+   {
+    "end": 18.54,
+    "logprob": -0.00011336160969221964,
+    "start": 18.42,
+    "text": " ",
+    "type": "spacing"
+   },
+   {
+    "end": 19.4,
+    "logprob": -0.00011336160969221964,
+    "start": 18.54,
+    "text": "UNHCR",
+    "type": "word"
+   },
+   {
+    "end": 19.54,
+    "logprob": -3.349725011503324e-05,
+    "start": 19.4,
+    "text": " ",
+    "type": "spacing"
+   },
+   {
+    "end": 19.82,
+    "logprob": -3.349725011503324e-05,
+    "start": 19.54,
+    "text": "sign",
+    "type": "word"
+   },
+   {
+    "end": 19.86,
+    "logprob": -1.1920928244535389e-07,
+    "start": 19.82,
+    "text": " ",
+    "type": "spacing"
+   },
+   {
+    "end": 19.96,
+    "logprob": -1.1920928244535389e-07,
+    "start": 19.86,
+    "text": "and",
+    "type": "word"
+   },
+   {
+    "end": 20.04,
+    "logprob": -9.059865078597795e-06,
+    "start": 19.96,
+    "text": " ",
+    "type": "spacing"
+   },
+   {
+    "end": 20.36,
+    "logprob": -8.285009926112252e-06,
+    "start": 20.04,
+    "text": "learn.",
+    "type": "word"
+   },
+   {
+    "end": 20.36,
+    "logprob": -1.2397689715726301e-05,
+    "start": 20.36,
+    "text": " ",
+    "type": "spacing"
+   },
+   {
+    "end": 21.12,
+    "logprob": -1.2397689715726301e-05,
+    "start": 21.02,
+    "text": "The",
+    "type": "word"
+   },
+   {
+    "end": 21.18,
+    "logprob": -4.410734163684538e-06,
+    "start": 21.12,
+    "text": " ",
+    "type": "spacing"
+   },
+   {
+    "end": 21.56,
+    "logprob": -4.410734163684538e-06,
+    "start": 21.18,
+    "text": "UAE",
+    "type": "word"
+   },
+   {
+    "end": 21.64,
+    "logprob": -5.602820692729438e-06,
+    "start": 21.56,
+    "text": " ",
+    "type": "spacing"
+   },
+   {
+    "end": 22.06,
+    "logprob": -5.602820692729438e-06,
+    "start": 21.64,
+    "text": "Ministry",
+    "type": "word"
+   },
+   {
+    "end": 22.08,
+    "logprob": -1.1920928244535389e-07,
+    "start": 22.06,
+    "text": " ",
+    "type": "spacing"
+   },
+   {
+    "end": 22.2,
+    "logprob": -1.1920928244535389e-07,
+    "start": 22.08,
+    "text": "of",
+    "type": "word"
+   },
+   {
+    "end": 22.24,
+    "logprob": -0.000262106885202229,
+    "start": 22.2,
+    "text": " ",
+    "type": "spacing"
+   },
+   {
+    "end": 22.5,
+    "logprob": -0.000262106885202229,
+    "start": 22.24,
+    "text": "Foreign",
+    "type": "word"
+   },
+   {
+    "end": 22.6,
+    "logprob": -1.3589766240329482e-05,
+    "start": 22.5,
+    "text": " ",
+    "type": "spacing"
+   },
+   {
+    "end": 22.86,
+    "logprob": -1.3589766240329482e-05,
+    "start": 22.6,
+    "text": "Trade",
+    "type": "word"
+   },
+   {
+    "end": 22.96,
+    "logprob": -2.4914430468925275e-05,
+    "start": 22.86,
+    "text": " ",
+    "type": "spacing"
+   },
+   {
+    "end": 23.26,
+    "logprob": -2.4914430468925275e-05,
+    "start": 22.96,
+    "text": "signs",
+    "type": "word"
+   },
+   {
+    "end": 23.28,
+    "logprob": -2.3841855067985307e-07,
+    "start": 23.26,
+    "text": " ",
+    "type": "spacing"
+   },
+   {
+    "end": 23.36,
+    "logprob": -2.3841855067985307e-07,
+    "start": 23.28,
+    "text": "and",
+    "type": "word"
+   },
+   {
+    "end": 23.46,
+    "logprob": -4.410734163684538e-06,
+    "start": 23.36,
+    "text": " ",
+    "type": "spacing"
+   },
+   {
+    "end": 23.82,
+    "logprob": -2.4182924619253754e-05,
+    "start": 23.46,
+    "text": "governs,",
+    "type": "word"
+   },
+   {
+    "end": 24.16,
+    "logprob": -5.960462772236497e-07,
+    "start": 23.82,
+    "text": " ",
+    "type": "spacing"
+   },
+   {
+    "end": 24.24,
+    "logprob": -5.960462772236497e-07,
+    "start": 24.16,
+    "text": "and",
+    "type": "word"
+   },
+   {
+    "end": 24.28,
+    "logprob": -4.887569048150908e-06,
+    "start": 24.24,
+    "text": " ",
+    "type": "spacing"
+   },
+   {
+    "end": 24.34,
+    "logprob": -4.887569048150908e-06,
+    "start": 24.28,
+    "text": "the",
+    "type": "word"
+   },
+   {
+    "end": 24.4,
+    "logprob": -3.2186455882765586e-06,
+    "start": 24.34,
+    "text": " ",
+    "type": "spacing"
+   },
+   {
+    "end": 24.78,
+    "logprob": -3.2186455882765586e-06,
+    "start": 24.4,
+    "text": "United",
+    "type": "word"
+   },
+   {
+    "end": 24.92,
+    "logprob": -2.9682672902708873e-05,
+    "start": 24.78,
+    "text": " ",
+    "type": "spacing"
+   },
+   {
+    "end": 25.12,
+    "logprob": -2.9682672902708873e-05,
+    "start": 24.92,
+    "text": "Arab",
+    "type": "word"
+   },
+   {
+    "end": 25.22,
+    "logprob": -1.5497195136049413e-06,
+    "start": 25.12,
+    "text": " ",
+    "type": "spacing"
+   },
+   {
+    "end": 25.54,
+    "logprob": -1.5497195136049413e-06,
+    "start": 25.22,
+    "text": "Emirates",
+    "type": "word"
+   },
+   {
+    "end": 25.64,
+    "logprob": -3.576272320060525e-06,
+    "start": 25.54,
+    "text": " ",
+    "type": "spacing"
+   },
+   {
+    "end": 26.06,
+    "logprob": -4.783256258633628e-06,
+    "start": 25.64,
+    "text": "governs.",
+    "type": "word"
+   },
+   {
+    "end": 26.06,
+    "logprob": -7.033323527139146e-06,
+    "start": 26.06,
+    "text": " ",
+    "type": "spacing"
+   },
+   {
+    "end": 27.26,
+    "logprob": -7.033323527139146e-06,
+    "start": 27,
+    "text": "Every",
+    "type": "word"
+   },
+   {
+    "end": 27.36,
+    "logprob": -0.0005041282274760306,
+    "start": 27.26,
+    "text": " ",
+    "type": "spacing"
+   },
+   {
+    "end": 27.68,
+    "logprob": -0.0005041282274760306,
+    "start": 27.36,
+    "text": "actor",
+    "type": "word"
+   },
+   {
+    "end": 27.72,
+    "logprob": 0,
+    "start": 27.68,
+    "text": " ",
+    "type": "spacing"
+   },
+   {
+    "end": 27.82,
+    "logprob": 0,
+    "start": 27.72,
+    "text": "has",
+    "type": "word"
+   },
+   {
+    "end": 27.88,
+    "logprob": 0,
+    "start": 27.82,
+    "text": " ",
+    "type": "spacing"
+   },
+   {
+    "end": 27.92,
+    "logprob": 0,
+    "start": 27.88,
+    "text": "a",
+    "type": "word"
+   },
+   {
+    "end": 27.98,
+    "logprob": -1.311301275563892e-06,
+    "start": 27.92,
+    "text": " ",
+    "type": "spacing"
+   },
+   {
+    "end": 28.22,
+    "logprob": -1.311301275563892e-06,
+    "start": 27.98,
+    "text": "clear",
+    "type": "word"
+   },
+   {
+    "end": 28.34,
+    "logprob": -7.390948667307384e-06,
+    "start": 28.22,
+    "text": " ",
+    "type": "spacing"
+   },
+   {
+    "end": 28.66,
+    "logprob": -0.005546988525020424,
+    "start": 28.34,
+    "text": "role:",
+    "type": "word"
+   },
+   {
+    "end": 29.12,
+    "logprob": -6.782778655178845e-05,
+    "start": 28.66,
+    "text": " ",
+    "type": "spacing"
+   },
+   {
+    "end": 29.46,
+    "logprob": -5.447680584893533e-05,
+    "start": 29.12,
+    "text": "sign,",
+    "type": "word"
+   },
+   {
+    "end": 29.68,
+    "logprob": -3.6954811548639555e-06,
+    "start": 29.46,
+    "text": " ",
+    "type": "spacing"
+   },
+   {
+    "end": 29.98,
+    "logprob": -3.218644962998951e-06,
+    "start": 29.68,
+    "text": "govern,",
+    "type": "word"
+   },
+   {
+    "end": 30.24,
+    "logprob": -1.1920928244535389e-07,
+    "start": 29.98,
+    "text": " ",
+    "type": "spacing"
+   },
+   {
+    "end": 30.5,
+    "logprob": -0.0002211455333297844,
+    "start": 30.24,
+    "text": "build,",
+    "type": "word"
+   },
+   {
+    "end": 30.62,
+    "logprob": 0,
+    "start": 30.5,
+    "text": " ",
+    "type": "spacing"
+   },
+   {
+    "end": 30.72,
+    "logprob": 0,
+    "start": 30.62,
+    "text": "or",
+    "type": "word"
+   },
+   {
+    "end": 30.8,
+    "logprob": -1.7881377516459906e-06,
+    "start": 30.72,
+    "text": " ",
+    "type": "spacing"
+   },
+   {
+    "end": 31.12,
+    "logprob": -1.7881377516459906e-06,
+    "start": 30.8,
+    "text": "learn",
+    "type": "word"
+   }
+  ],
+  "_relay_note": "",
+  "_messageId": "6abdf63c0c1d5d8acfb4fd1a",
+  "_sessionId": "6abdf63b7cb494a6f6b3dd51",
+  "_utc": "2026-10-01T05:57:53Z",
+  "_url": "https://athar-jv-interactive-plan-n5z4esrb7-schoolhack-web-team.vercel.app/audio/guide/guide-05-actors-and-roles-0PbyoFNYNV.mp3"
+ },
+ "NAR-06": {
+  "audio_duration_secs": 15.6966875,
+  "language_code": "eng",
+  "language_probability": 1,
+  "success": true,
+  "text": "Section six: Governance and roadmap. An open steering council sets the shared plugin standard and approves the roadmap. Decisions, releases, and outcome reports are published so every member can see how priorities are set and how the platform evolves over time",
+  "transcription_id": "dqbfgGU4s7dQkqzPwCaM",
+  "words": [
+   {
+    "end": 0.4,
+    "logprob": -0.0005659647285938263,
+    "start": 0.1,
+    "text": "Section",
+    "type": "word"
+   },
+   {
+    "end": 0.54,
+    "logprob": -0.001437107683159411,
+    "start": 0.4,
+    "text": " ",
+    "type": "spacing"
+   },
+   {
+    "end": 0.82,
+    "logprob": -0.007045446400297806,
+    "start": 0.54,
+    "text": "six:",
+    "type": "word"
+   },
+   {
+    "end": 1.12,
+    "logprob": -0.06994223594665527,
+    "start": 0.82,
+    "text": " ",
+    "type": "spacing"
+   },
+   {
+    "end": 1.54,
+    "logprob": -0.06994223594665527,
+    "start": 1.12,
+    "text": "Governance",
+    "type": "word"
+   },
+   {
+    "end": 1.58,
+    "logprob": -6.6756979322235566e-06,
+    "start": 1.54,
+    "text": " ",
+    "type": "spacing"
+   },
+   {
+    "end": 1.66,
+    "logprob": -6.6756979322235566e-06,
+    "start": 1.58,
+    "text": "and",
+    "type": "word"
+   },
+   {
+    "end": 1.74,
+    "logprob": -0.17874030768871307,
+    "start": 1.66,
+    "text": " ",
+    "type": "spacing"
+   },
+   {
+    "end": 2.22,
+    "logprob": -0.15643212658324046,
+    "start": 1.74,
+    "text": "roadmap.",
+    "type": "word"
+   },
+   {
+    "end": 2.62,
+    "logprob": -8.344646857949556e-07,
+    "start": 2.22,
+    "text": " ",
+    "type": "spacing"
+   },
+   {
+    "end": 2.68,
+    "logprob": -8.344646857949556e-07,
+    "start": 2.62,
+    "text": "An",
+    "type": "word"
+   },
+   {
+    "end": 2.76,
+    "logprob": -0.0013261580606922507,
+    "start": 2.68,
+    "text": " ",
+    "type": "spacing"
+   },
+   {
+    "end": 2.96,
+    "logprob": -0.0013261580606922507,
+    "start": 2.76,
+    "text": "open",
+    "type": "word"
+   },
+   {
+    "end": 3.08,
+    "logprob": -0.0011862630490213633,
+    "start": 2.96,
+    "text": " ",
+    "type": "spacing"
+   },
+   {
+    "end": 3.38,
+    "logprob": -0.0011862630490213633,
+    "start": 3.08,
+    "text": "steering",
+    "type": "word"
+   },
+   {
+    "end": 3.48,
+    "logprob": -0.00029976642690598965,
+    "start": 3.38,
+    "text": " ",
+    "type": "spacing"
+   },
+   {
+    "end": 3.84,
+    "logprob": -0.00029976642690598965,
+    "start": 3.48,
+    "text": "council",
+    "type": "word"
+   },
+   {
+    "end": 3.96,
+    "logprob": -3.576278118089249e-07,
+    "start": 3.84,
+    "text": " ",
+    "type": "spacing"
+   },
+   {
+    "end": 4.22,
+    "logprob": -3.576278118089249e-07,
+    "start": 3.96,
+    "text": "sets",
+    "type": "word"
+   },
+   {
+    "end": 4.26,
+    "logprob": -2.3841855067985307e-07,
+    "start": 4.22,
+    "text": " ",
+    "type": "spacing"
+   },
+   {
+    "end": 4.36,
+    "logprob": -2.3841855067985307e-07,
+    "start": 4.26,
+    "text": "the",
+    "type": "word"
+   },
+   {
+    "end": 4.4,
+    "logprob": -5.9126061387360096e-05,
+    "start": 4.36,
+    "text": " ",
+    "type": "spacing"
+   },
+   {
+    "end": 4.68,
+    "logprob": -5.9126061387360096e-05,
+    "start": 4.4,
+    "text": "shared",
+    "type": "word"
+   },
+   {
+    "end": 4.78,
+    "logprob": -0.1352165788412094,
+    "start": 4.68,
+    "text": " ",
+    "type": "spacing"
+   },
+   {
+    "end": 5.08,
+    "logprob": -0.1352165788412094,
+    "start": 4.78,
+    "text": "plugin",
+    "type": "word"
+   },
+   {
+    "end": 5.22,
+    "logprob": -4.529942543740617e-06,
+    "start": 5.08,
+    "text": " ",
+    "type": "spacing"
+   },
+   {
+    "end": 5.6,
+    "logprob": -4.529942543740617e-06,
+    "start": 5.22,
+    "text": "standard",
+    "type": "word"
+   },
+   {
+    "end": 5.9,
+    "logprob": -5.638440416078083e-05,
+    "start": 5.6,
+    "text": " ",
+    "type": "spacing"
+   },
+   {
+    "end": 5.98,
+    "logprob": -5.638440416078083e-05,
+    "start": 5.9,
+    "text": "and",
+    "type": "word"
+   },
+   {
+    "end": 6.02,
+    "logprob": -0.0002848696312867105,
+    "start": 5.98,
+    "text": " ",
+    "type": "spacing"
+   },
+   {
+    "end": 6.4,
+    "logprob": -0.0002848696312867105,
+    "start": 6.02,
+    "text": "approves",
+    "type": "word"
+   },
+   {
+    "end": 6.44,
+    "logprob": 0,
+    "start": 6.4,
+    "text": " ",
+    "type": "spacing"
+   },
+   {
+    "end": 6.52,
+    "logprob": 0,
+    "start": 6.44,
+    "text": "the",
+    "type": "word"
+   },
+   {
+    "end": 6.56,
+    "logprob": -4.017272294731811e-05,
+    "start": 6.52,
+    "text": " ",
+    "type": "spacing"
+   },
+   {
+    "end": 7.04,
+    "logprob": -3.978530776294065e-05,
+    "start": 6.56,
+    "text": "roadmap.",
+    "type": "word"
+   },
+   {
+    "end": 7.04,
+    "logprob": -0.00012408917245920748,
+    "start": 7.04,
+    "text": " ",
+    "type": "spacing"
+   },
+   {
+    "end": 8.24,
+    "logprob": -0.00011928551903110929,
+    "start": 7.74,
+    "text": "Decisions,",
+    "type": "word"
+   },
+   {
+    "end": 8.32,
+    "logprob": -1.7881377516459906e-06,
+    "start": 8.24,
+    "text": " ",
+    "type": "spacing"
+   },
+   {
+    "end": 8.76,
+    "logprob": -0.002584455740361591,
+    "start": 8.32,
+    "text": "releases,",
+    "type": "word"
+   },
+   {
+    "end": 8.8,
+    "logprob": 0,
+    "start": 8.76,
+    "text": " ",
+    "type": "spacing"
+   },
+   {
+    "end": 8.9,
+    "logprob": 0,
+    "start": 8.8,
+    "text": "and",
+    "type": "word"
+   },
+   {
+    "end": 8.98,
+    "logprob": -5.245195097813848e-06,
+    "start": 8.9,
+    "text": " ",
+    "type": "spacing"
+   },
+   {
+    "end": 9.3,
+    "logprob": -5.245195097813848e-06,
+    "start": 8.98,
+    "text": "outcome",
+    "type": "word"
+   },
+   {
+    "end": 9.34,
+    "logprob": -5.960462772236497e-07,
+    "start": 9.3,
+    "text": " ",
+    "type": "spacing"
+   },
+   {
+    "end": 9.74,
+    "logprob": -5.960462772236497e-07,
+    "start": 9.34,
+    "text": "reports",
+    "type": "word"
+   },
+   {
+    "end": 9.78,
+    "logprob": 0,
+    "start": 9.74,
+    "text": " ",
+    "type": "spacing"
+   },
+   {
+    "end": 9.88,
+    "logprob": 0,
+    "start": 9.78,
+    "text": "are",
+    "type": "word"
+   },
+   {
+    "end": 9.9,
+    "logprob": -1.0728830375228426e-06,
+    "start": 9.88,
+    "text": " ",
+    "type": "spacing"
+   },
+   {
+    "end": 10.38,
+    "logprob": -1.0728830375228426e-06,
+    "start": 9.9,
+    "text": "published",
+    "type": "word"
+   },
+   {
+    "end": 10.38,
+    "logprob": -0.5760582089424133,
+    "start": 10.38,
+    "text": " ",
+    "type": "spacing"
+   },
+   {
+    "end": 10.96,
+    "logprob": -0.5760582089424133,
+    "start": 10.84,
+    "text": "so",
+    "type": "word"
+   },
+   {
+    "end": 11.02,
+    "logprob": -4.768370445162873e-07,
+    "start": 10.96,
+    "text": " ",
+    "type": "spacing"
+   },
+   {
+    "end": 11.26,
+    "logprob": -4.768370445162873e-07,
+    "start": 11.02,
+    "text": "every",
+    "type": "word"
+   },
+   {
+    "end": 11.3,
+    "logprob": -3.576278118089249e-07,
+    "start": 11.26,
+    "text": " ",
+    "type": "spacing"
+   },
+   {
+    "end": 11.52,
+    "logprob": -3.576278118089249e-07,
+    "start": 11.3,
+    "text": "member",
+    "type": "word"
+   },
+   {
+    "end": 11.58,
+    "logprob": 0,
+    "start": 11.52,
+    "text": " ",
+    "type": "spacing"
+   },
+   {
+    "end": 11.74,
+    "logprob": 0,
+    "start": 11.58,
+    "text": "can",
+    "type": "word"
+   },
+   {
+    "end": 11.8,
+    "logprob": 0,
+    "start": 11.74,
+    "text": " ",
+    "type": "spacing"
+   },
+   {
+    "end": 11.98,
+    "logprob": 0,
+    "start": 11.8,
+    "text": "see",
+    "type": "word"
+   },
+   {
+    "end": 12.02,
+    "logprob": 0,
+    "start": 11.98,
+    "text": " ",
+    "type": "spacing"
+   },
+   {
+    "end": 12.18,
+    "logprob": 0,
+    "start": 12.02,
+    "text": "how",
+    "type": "word"
+   },
+   {
+    "end": 12.2,
+    "logprob": -4.768370445162873e-07,
+    "start": 12.18,
+    "text": " ",
+    "type": "spacing"
+   },
+   {
+    "end": 12.74,
+    "logprob": -4.768370445162873e-07,
+    "start": 12.2,
+    "text": "priorities",
+    "type": "word"
+   },
+   {
+    "end": 12.76,
+    "logprob": -1.1920928244535389e-07,
+    "start": 12.74,
+    "text": " ",
+    "type": "spacing"
+   },
+   {
+    "end": 12.88,
+    "logprob": -1.1920928244535389e-07,
+    "start": 12.76,
+    "text": "are",
+    "type": "word"
+   },
+   {
+    "end": 12.94,
+    "logprob": -1.1920928244535389e-07,
+    "start": 12.88,
+    "text": " ",
+    "type": "spacing"
+   },
+   {
+    "end": 13.2,
+    "logprob": -1.1920928244535389e-07,
+    "start": 12.94,
+    "text": "set",
+    "type": "word"
+   },
+   {
+    "end": 13.42,
+    "logprob": -0.00017998983094003052,
+    "start": 13.2,
+    "text": " ",
+    "type": "spacing"
+   },
+   {
+    "end": 13.52,
+    "logprob": -0.00017998983094003052,
+    "start": 13.42,
+    "text": "and",
+    "type": "word"
+   },
+   {
+    "end": 13.56,
+    "logprob": 0,
+    "start": 13.52,
+    "text": " ",
+    "type": "spacing"
+   },
+   {
+    "end": 13.66,
+    "logprob": 0,
+    "start": 13.56,
+    "text": "how",
+    "type": "word"
+   },
+   {
+    "end": 13.7,
+    "logprob": -1.1920928244535389e-07,
+    "start": 13.66,
+    "text": " ",
+    "type": "spacing"
+   },
+   {
+    "end": 13.8,
+    "logprob": -1.1920928244535389e-07,
+    "start": 13.7,
+    "text": "the",
+    "type": "word"
+   },
+   {
+    "end": 13.82,
+    "logprob": -2.3841855067985307e-07,
+    "start": 13.8,
+    "text": " ",
+    "type": "spacing"
+   },
+   {
+    "end": 14.22,
+    "logprob": -2.3841855067985307e-07,
+    "start": 13.82,
+    "text": "platform",
+    "type": "word"
+   },
+   {
+    "end": 14.28,
+    "logprob": -3.421248038648628e-05,
+    "start": 14.22,
+    "text": " ",
+    "type": "spacing"
+   },
+   {
+    "end": 14.7,
+    "logprob": -3.421248038648628e-05,
+    "start": 14.28,
+    "text": "evolves",
+    "type": "word"
+   },
+   {
+    "end": 14.76,
+    "logprob": -1.1920922133867862e-06,
+    "start": 14.7,
+    "text": " ",
+    "type": "spacing"
+   },
+   {
+    "end": 14.94,
+    "logprob": -1.1920922133867862e-06,
+    "start": 14.76,
+    "text": "over",
+    "type": "word"
+   },
+   {
+    "end": 14.98,
+    "logprob": -1.4305104514278355e-06,
+    "start": 14.94,
+    "text": " ",
+    "type": "spacing"
+   },
+   {
+    "end": 15.32,
+    "logprob": -1.4305104514278355e-06,
+    "start": 14.98,
+    "text": "time",
+    "type": "word"
+   }
+  ],
+  "_relay_note": "",
+  "_messageId": "6abdf63c7cb494a6f6b3dd5a",
+  "_sessionId": "6abdf63c7cb494a6f6b3dd57",
+  "_utc": "2026-10-01T05:57:42Z",
+  "_url": "https://athar-jv-interactive-plan-n5z4esrb7-schoolhack-web-team.vercel.app/audio/guide/guide-06-governance-and-roadmap-kyzmCSHcw8.mp3"
+ },
+ "NAR-07": {
+  "audio_duration_secs": 30.2788125,
+  "language_code": "eng",
+  "language_probability": 1,
+  "success": true,
+  "text": "Section seven: Impact and funding. Three impact tiers, one delivery model: access, ownership, legacy. A funder can enter at any tier and climb. Every agreement includes named cohorts and activation targets, independent evaluator baselines, quarterly outcome reports, and open book costs with unspent funds returned. Universal API licenses, marketplace revenue share, and sovereign pilot options fund the model so each partner can choose what fits",
+  "transcription_id": "SXylrucNGrpJAjWs5TCu",
+  "words": [
+   {
+    "end": 0.4,
+    "logprob": -0.00026806574896909297,
+    "start": 0.1,
+    "text": "Section",
+    "type": "word"
+   },
+   {
+    "end": 0.54,
+    "logprob": -0.0007127366843633354,
+    "start": 0.4,
+    "text": " ",
+    "type": "spacing"
+   },
+   {
+    "end": 0.82,
+    "logprob": -0.013961014017695561,
+    "start": 0.54,
+    "text": "seven:",
+    "type": "word"
+   },
+   {
+    "end": 1.06,
+    "logprob": -0.01104962918907404,
+    "start": 0.82,
+    "text": " ",
+    "type": "spacing"
+   },
+   {
+    "end": 1.42,
+    "logprob": -0.01104962918907404,
+    "start": 1.06,
+    "text": "Impact",
+    "type": "word"
+   },
+   {
+    "end": 1.44,
+    "logprob": -9.536697689327411e-06,
+    "start": 1.42,
+    "text": " ",
+    "type": "spacing"
+   },
+   {
+    "end": 1.54,
+    "logprob": -9.536697689327411e-06,
+    "start": 1.44,
+    "text": "and",
+    "type": "word"
+   },
+   {
+    "end": 1.66,
+    "logprob": -0.03818875551223755,
+    "start": 1.54,
+    "text": " ",
+    "type": "spacing"
+   },
+   {
+    "end": 2.04,
+    "logprob": -0.033421091594846075,
+    "start": 1.66,
+    "text": "funding.",
+    "type": "word"
+   },
+   {
+    "end": 2.04,
+    "logprob": -1.1801649634435307e-05,
+    "start": 2.04,
+    "text": " ",
+    "type": "spacing"
+   },
+   {
+    "end": 2.92,
+    "logprob": -1.1801649634435307e-05,
+    "start": 2.74,
+    "text": "Three",
+    "type": "word"
+   },
+   {
+    "end": 2.98,
+    "logprob": -2.1576648578047752e-05,
+    "start": 2.92,
+    "text": " ",
+    "type": "spacing"
+   },
+   {
+    "end": 3.38,
+    "logprob": -2.1576648578047752e-05,
+    "start": 3,
+    "text": "impact",
+    "type": "word"
+   },
+   {
+    "end": 3.42,
+    "logprob": -7.033323527139146e-06,
+    "start": 3.38,
+    "text": " ",
+    "type": "spacing"
+   },
+   {
+    "end": 3.76,
+    "logprob": -0.0038827421559896416,
+    "start": 3.42,
+    "text": "tiers,",
+    "type": "word"
+   },
+   {
+    "end": 4.059,
+    "logprob": -2.1576648578047752e-05,
+    "start": 3.76,
+    "text": " ",
+    "type": "spacing"
+   },
+   {
+    "end": 4.18,
+    "logprob": -2.1576648578047752e-05,
+    "start": 4.059,
+    "text": "one",
+    "type": "word"
+   },
+   {
+    "end": 4.24,
+    "logprob": -5.960462772236497e-07,
+    "start": 4.18,
+    "text": " ",
+    "type": "spacing"
+   },
+   {
+    "end": 4.6,
+    "logprob": -5.960462772236497e-07,
+    "start": 4.24,
+    "text": "delivery",
+    "type": "word"
+   },
+   {
+    "end": 4.68,
+    "logprob": -1.0728830375228426e-06,
+    "start": 4.6,
+    "text": " ",
+    "type": "spacing"
+   },
+   {
+    "end": 4.96,
+    "logprob": -0.0501096248621972,
+    "start": 4.68,
+    "text": "model:",
+    "type": "word"
+   },
+   {
+    "end": 5.38,
+    "logprob": -0.0004306104383431375,
+    "start": 4.96,
+    "text": " ",
+    "type": "spacing"
+   },
+   {
+    "end": 5.82,
+    "logprob": -0.0003692138706778029,
+    "start": 5.38,
+    "text": "access,",
+    "type": "word"
+   },
+   {
+    "end": 6.06,
+    "logprob": -1.4305104514278355e-06,
+    "start": 5.82,
+    "text": " ",
+    "type": "spacing"
+   },
+   {
+    "end": 6.52,
+    "logprob": -3.0398206831705465e-06,
+    "start": 6.06,
+    "text": "ownership,",
+    "type": "word"
+   },
+   {
+    "end": 6.78,
+    "logprob": -8.821448318485636e-06,
+    "start": 6.52,
+    "text": " ",
+    "type": "spacing"
+   },
+   {
+    "end": 7.24,
+    "logprob": -7.98698822888712e-06,
+    "start": 6.78,
+    "text": "legacy.",
+    "type": "word"
+   },
+   {
+    "end": 7.24,
+    "logprob": -1.1920928244535389e-07,
+    "start": 7.24,
+    "text": " ",
+    "type": "spacing"
+   },
+   {
+    "end": 7.88,
+    "logprob": -1.1920928244535389e-07,
+    "start": 7.8,
+    "text": "A",
+    "type": "word"
+   },
+   {
+    "end": 7.92,
+    "logprob": -4.5536911784438416e-05,
+    "start": 7.88,
+    "text": " ",
+    "type": "spacing"
+   },
+   {
+    "end": 8.14,
+    "logprob": -3.035794118962561e-05,
+    "start": 7.92,
+    "text": "funder",
+    "type": "word"
+   },
+   {
+    "end": 8.2,
+    "logprob": 0,
+    "start": 8.14,
+    "text": " ",
+    "type": "spacing"
+   },
+   {
+    "end": 8.3,
+    "logprob": 0,
+    "start": 8.2,
+    "text": "can",
+    "type": "word"
+   },
+   {
+    "end": 8.34,
+    "logprob": -2.3841855067985307e-07,
+    "start": 8.3,
+    "text": " ",
+    "type": "spacing"
+   },
+   {
+    "end": 8.58,
+    "logprob": -2.3841855067985307e-07,
+    "start": 8.34,
+    "text": "enter",
+    "type": "word"
+   },
+   {
+    "end": 8.62,
+    "logprob": -8.344646857949556e-07,
+    "start": 8.58,
+    "text": " ",
+    "type": "spacing"
+   },
+   {
+    "end": 8.74,
+    "logprob": -8.344646857949556e-07,
+    "start": 8.62,
+    "text": "at",
+    "type": "word"
+   },
+   {
+    "end": 8.8,
+    "logprob": 0,
+    "start": 8.74,
+    "text": " ",
+    "type": "spacing"
+   },
+   {
+    "end": 8.96,
+    "logprob": 0,
+    "start": 8.8,
+    "text": "any",
+    "type": "word"
+   },
+   {
+    "end": 9.06,
+    "logprob": -2.622600959512056e-06,
+    "start": 8.96,
+    "text": " ",
+    "type": "spacing"
+   },
+   {
+    "end": 9.36,
+    "logprob": -2.622600959512056e-06,
+    "start": 9.06,
+    "text": "tier",
+    "type": "word"
+   },
+   {
+    "end": 9.38,
+    "logprob": -1.5497195136049413e-06,
+    "start": 9.36,
+    "text": " ",
+    "type": "spacing"
+   },
+   {
+    "end": 9.48,
+    "logprob": -1.5497195136049413e-06,
+    "start": 9.38,
+    "text": "and",
+    "type": "word"
+   },
+   {
+    "end": 9.58,
+    "logprob": -6.437280717364047e-06,
+    "start": 9.48,
+    "text": " ",
+    "type": "spacing"
+   },
+   {
+    "end": 9.96,
+    "logprob": -6.477016919840632e-06,
+    "start": 9.58,
+    "text": "climb.",
+    "type": "word"
+   },
+   {
+    "end": 9.96,
+    "logprob": -1.1920922133867862e-06,
+    "start": 9.96,
+    "text": " ",
+    "type": "spacing"
+   },
+   {
+    "end": 10.98,
+    "logprob": -1.1920922133867862e-06,
+    "start": 10.78,
+    "text": "Every",
+    "type": "word"
+   },
+   {
+    "end": 11.04,
+    "logprob": -5.125986263010418e-06,
+    "start": 10.98,
+    "text": " ",
+    "type": "spacing"
+   },
+   {
+    "end": 11.44,
+    "logprob": -5.125986263010418e-06,
+    "start": 11.04,
+    "text": "agreement",
+    "type": "word"
+   },
+   {
+    "end": 11.5,
+    "logprob": -1.311301275563892e-06,
+    "start": 11.44,
+    "text": " ",
+    "type": "spacing"
+   },
+   {
+    "end": 11.9,
+    "logprob": -1.311301275563892e-06,
+    "start": 11.5,
+    "text": "includes",
+    "type": "word"
+   },
+   {
+    "end": 11.96,
+    "logprob": -6.318072337307967e-06,
+    "start": 11.9,
+    "text": " ",
+    "type": "spacing"
+   },
+   {
+    "end": 12.22,
+    "logprob": -6.318072337307967e-06,
+    "start": 11.96,
+    "text": "named",
+    "type": "word"
+   },
+   {
+    "end": 12.26,
+    "logprob": -1.311301275563892e-06,
+    "start": 12.22,
+    "text": " ",
+    "type": "spacing"
+   },
+   {
+    "end": 12.76,
+    "logprob": -1.311301275563892e-06,
+    "start": 12.26,
+    "text": "cohorts",
+    "type": "word"
+   },
+   {
+    "end": 12.8,
+    "logprob": -4.6491513785440475e-06,
+    "start": 12.76,
+    "text": " ",
+    "type": "spacing"
+   },
+   {
+    "end": 12.9,
+    "logprob": -4.6491513785440475e-06,
+    "start": 12.8,
+    "text": "and",
+    "type": "word"
+   },
+   {
+    "end": 12.96,
+    "logprob": -4.0531076592742465e-06,
+    "start": 12.9,
+    "text": " ",
+    "type": "spacing"
+   },
+   {
+    "end": 13.46,
+    "logprob": -4.0531076592742465e-06,
+    "start": 12.96,
+    "text": "activation",
+    "type": "word"
+   },
+   {
+    "end": 13.56,
+    "logprob": -3.814689989667386e-06,
+    "start": 13.46,
+    "text": " ",
+    "type": "spacing"
+   },
+   {
+    "end": 14,
+    "logprob": -0.0001048033745973953,
+    "start": 13.56,
+    "text": "targets,",
+    "type": "word"
+   },
+   {
+    "end": 14,
+    "logprob": -4.291525328881107e-06,
+    "start": 14,
+    "text": " ",
+    "type": "spacing"
+   },
+   {
+    "end": 15.08,
+    "logprob": -4.291525328881107e-06,
+    "start": 14.58,
+    "text": "independent",
+    "type": "word"
+   },
+   {
+    "end": 15.14,
+    "logprob": -0.00016783259343355894,
+    "start": 15.08,
+    "text": " ",
+    "type": "spacing"
+   },
+   {
+    "end": 15.7,
+    "logprob": -0.00016783259343355894,
+    "start": 15.14,
+    "text": "evaluator",
+    "type": "word"
+   },
+   {
+    "end": 15.78,
+    "logprob": -3.9219088648678735e-05,
+    "start": 15.7,
+    "text": " ",
+    "type": "spacing"
+   },
+   {
+    "end": 16.379,
+    "logprob": -1.5425441290517483e-05,
+    "start": 15.78,
+    "text": "baselines,",
+    "type": "word"
+   },
+   {
+    "end": 16.76,
+    "logprob": -9.536738616588991e-07,
+    "start": 16.379,
+    "text": " ",
+    "type": "spacing"
+   },
+   {
+    "end": 17.14,
+    "logprob": -9.536738616588991e-07,
+    "start": 16.76,
+    "text": "quarterly",
+    "type": "word"
+   },
+   {
+    "end": 17.2,
+    "logprob": -8.344646857949556e-07,
+    "start": 17.14,
+    "text": " ",
+    "type": "spacing"
+   },
+   {
+    "end": 17.52,
+    "logprob": -8.344646857949556e-07,
+    "start": 17.2,
+    "text": "outcome",
+    "type": "word"
+   },
+   {
+    "end": 17.56,
+    "logprob": -2.145764938177308e-06,
+    "start": 17.52,
+    "text": " ",
+    "type": "spacing"
+   },
+   {
+    "end": 18,
+    "logprob": -2.1679619578662823e-05,
+    "start": 17.56,
+    "text": "reports,",
+    "type": "word"
+   },
+   {
+    "end": 18.22,
+    "logprob": -2.3841855067985307e-07,
+    "start": 18,
+    "text": " ",
+    "type": "spacing"
+   },
+   {
+    "end": 18.3,
+    "logprob": -2.3841855067985307e-07,
+    "start": 18.22,
+    "text": "and",
+    "type": "word"
+   },
+   {
+    "end": 18.38,
+    "logprob": -3.576278118089249e-07,
+    "start": 18.3,
+    "text": " ",
+    "type": "spacing"
+   },
+   {
+    "end": 18.6,
+    "logprob": -3.576278118089249e-07,
+    "start": 18.38,
+    "text": "open",
+    "type": "word"
+   },
+   {
+    "end": 18.7,
+    "logprob": -0.07889194786548615,
+    "start": 18.6,
+    "text": " ",
+    "type": "spacing"
+   },
+   {
+    "end": 18.9,
+    "logprob": -0.07889194786548615,
+    "start": 18.7,
+    "text": "book",
+    "type": "word"
+   },
+   {
+    "end": 18.96,
+    "logprob": -8.702239938429557e-06,
+    "start": 18.9,
+    "text": " ",
+    "type": "spacing"
+   },
+   {
+    "end": 19.4,
+    "logprob": -8.702239938429557e-06,
+    "start": 18.96,
+    "text": "costs",
+    "type": "word"
+   },
+   {
+    "end": 19.44,
+    "logprob": -0.00020346954988781363,
+    "start": 19.4,
+    "text": " ",
+    "type": "spacing"
+   },
+   {
+    "end": 19.58,
+    "logprob": -0.00020346954988781363,
+    "start": 19.44,
+    "text": "with",
+    "type": "word"
+   },
+   {
+    "end": 19.64,
+    "logprob": -1.311301275563892e-06,
+    "start": 19.58,
+    "text": " ",
+    "type": "spacing"
+   },
+   {
+    "end": 20.08,
+    "logprob": -4.3766722878249964e-06,
+    "start": 19.64,
+    "text": "unspent",
+    "type": "word"
+   },
+   {
+    "end": 20.2,
+    "logprob": 0,
+    "start": 20.08,
+    "text": " ",
+    "type": "spacing"
+   },
+   {
+    "end": 20.52,
+    "logprob": 0,
+    "start": 20.2,
+    "text": "funds",
+    "type": "word"
+   },
+   {
+    "end": 20.56,
+    "logprob": -3.099436753473128e-06,
+    "start": 20.52,
+    "text": " ",
+    "type": "spacing"
+   },
+   {
+    "end": 21.1,
+    "logprob": -2.8875095823524234e-06,
+    "start": 20.56,
+    "text": "returned.",
+    "type": "word"
+   },
+   {
+    "end": 21.1,
+    "logprob": -1.1920858014491387e-05,
+    "start": 21.1,
+    "text": " ",
+    "type": "spacing"
+   },
+   {
+    "end": 22.56,
+    "logprob": -1.1920858014491387e-05,
+    "start": 22.1,
+    "text": "Universal",
+    "type": "word"
+   },
+   {
+    "end": 22.72,
+    "logprob": -3.0397906812140718e-05,
+    "start": 22.56,
+    "text": " ",
+    "type": "spacing"
+   },
+   {
+    "end": 23.12,
+    "logprob": -3.0397906812140718e-05,
+    "start": 22.72,
+    "text": "API",
+    "type": "word"
+   },
+   {
+    "end": 23.2,
+    "logprob": -0.00026520551182329655,
+    "start": 23.12,
+    "text": " ",
+    "type": "spacing"
+   },
+   {
+    "end": 23.78,
+    "logprob": -0.00023653295849928528,
+    "start": 23.2,
+    "text": "licenses,",
+    "type": "word"
+   },
+   {
+    "end": 24.12,
+    "logprob": -5.006777428206988e-06,
+    "start": 23.78,
+    "text": " ",
+    "type": "spacing"
+   },
+   {
+    "end": 24.7,
+    "logprob": -5.006777428206988e-06,
+    "start": 24.12,
+    "text": "marketplace",
+    "type": "word"
+   },
+   {
+    "end": 24.8,
+    "logprob": -1.7881377516459906e-06,
+    "start": 24.7,
+    "text": " ",
+    "type": "spacing"
+   },
+   {
+    "end": 25.12,
+    "logprob": -1.7881377516459906e-06,
+    "start": 24.8,
+    "text": "revenue",
+    "type": "word"
+   },
+   {
+    "end": 25.24,
+    "logprob": -5.960462772236497e-07,
+    "start": 25.12,
+    "text": " ",
+    "type": "spacing"
+   },
+   {
+    "end": 25.5,
+    "logprob": -8.183719168641801e-05,
+    "start": 25.24,
+    "text": "share,",
+    "type": "word"
+   },
+   {
+    "end": 25.6,
+    "logprob": -1.1920928244535389e-07,
+    "start": 25.5,
+    "text": " ",
+    "type": "spacing"
+   },
+   {
+    "end": 25.68,
+    "logprob": -1.1920928244535389e-07,
+    "start": 25.6,
+    "text": "and",
+    "type": "word"
+   },
+   {
+    "end": 25.82,
+    "logprob": -0.002481002826243639,
+    "start": 25.68,
+    "text": " ",
+    "type": "spacing"
+   },
+   {
+    "end": 26.14,
+    "logprob": -0.002481002826243639,
+    "start": 25.82,
+    "text": "sovereign",
+    "type": "word"
+   },
+   {
+    "end": 26.24,
+    "logprob": -2.1457441107486375e-05,
+    "start": 26.14,
+    "text": " ",
+    "type": "spacing"
+   },
+   {
+    "end": 26.58,
+    "logprob": -2.1457441107486375e-05,
+    "start": 26.24,
+    "text": "pilot",
+    "type": "word"
+   },
+   {
+    "end": 26.64,
+    "logprob": -1.1920922133867862e-06,
+    "start": 26.58,
+    "text": " ",
+    "type": "spacing"
+   },
+   {
+    "end": 27.02,
+    "logprob": -1.1920922133867862e-06,
+    "start": 26.64,
+    "text": "options",
+    "type": "word"
+   },
+   {
+    "end": 27.4,
+    "logprob": -8.106198947643861e-06,
+    "start": 27.02,
+    "text": " ",
+    "type": "spacing"
+   },
+   {
+    "end": 27.58,
+    "logprob": -8.106198947643861e-06,
+    "start": 27.4,
+    "text": "fund",
+    "type": "word"
+   },
+   {
+    "end": 27.62,
+    "logprob": -4.768370445162873e-07,
+    "start": 27.58,
+    "text": " ",
+    "type": "spacing"
+   },
+   {
+    "end": 27.7,
+    "logprob": -4.768370445162873e-07,
+    "start": 27.62,
+    "text": "the",
+    "type": "word"
+   },
+   {
+    "end": 27.74,
+    "logprob": -5.245195097813848e-06,
+    "start": 27.7,
+    "text": " ",
+    "type": "spacing"
+   },
+   {
+    "end": 27.98,
+    "logprob": -5.245195097813848e-06,
+    "start": 27.74,
+    "text": "model",
+    "type": "word"
+   },
+   {
+    "end": 28.08,
+    "logprob": -0.0028062984347343445,
+    "start": 27.98,
+    "text": " ",
+    "type": "spacing"
+   },
+   {
+    "end": 28.22,
+    "logprob": -0.0028062984347343445,
+    "start": 28.08,
+    "text": "so",
+    "type": "word"
+   },
+   {
+    "end": 28.26,
+    "logprob": 0,
+    "start": 28.22,
+    "text": " ",
+    "type": "spacing"
+   },
+   {
+    "end": 28.4,
+    "logprob": 0,
+    "start": 28.26,
+    "text": "each",
+    "type": "word"
+   },
+   {
+    "end": 28.5,
+    "logprob": -2.3841855067985307e-07,
+    "start": 28.4,
+    "text": " ",
+    "type": "spacing"
+   },
+   {
+    "end": 28.8,
+    "logprob": -2.3841855067985307e-07,
+    "start": 28.5,
+    "text": "partner",
+    "type": "word"
+   },
+   {
+    "end": 28.86,
+    "logprob": 0,
+    "start": 28.8,
+    "text": " ",
+    "type": "spacing"
+   },
+   {
+    "end": 29.02,
+    "logprob": 0,
+    "start": 28.86,
+    "text": "can",
+    "type": "word"
+   },
+   {
+    "end": 29.06,
+    "logprob": -2.7418097943154862e-06,
+    "start": 29.02,
+    "text": " ",
+    "type": "spacing"
+   },
+   {
+    "end": 29.34,
+    "logprob": -2.7418097943154862e-06,
+    "start": 29.06,
+    "text": "choose",
+    "type": "word"
+   },
+   {
+    "end": 29.38,
+    "logprob": 0,
+    "start": 29.34,
+    "text": " ",
+    "type": "spacing"
+   },
+   {
+    "end": 29.52,
+    "logprob": 0,
+    "start": 29.38,
+    "text": "what",
+    "type": "word"
+   },
+   {
+    "end": 29.6,
+    "logprob": -8.344646857949556e-07,
+    "start": 29.52,
+    "text": " ",
+    "type": "spacing"
+   },
+   {
+    "end": 29.9,
+    "logprob": -8.344646857949556e-07,
+    "start": 29.6,
+    "text": "fits",
+    "type": "word"
+   }
+  ],
+  "_relay_note": "",
+  "_messageId": "6abdf63c0c1d5d8acfb4fd1d",
+  "_sessionId": "6abdf63b7cb494a6f6b3dd52",
+  "_utc": "2026-10-01T05:57:52Z",
+  "_url": "https://athar-jv-interactive-plan-n5z4esrb7-schoolhack-web-team.vercel.app/audio/guide/guide-07-impact-and-funding-vWkiINp1IS.mp3"
+ },
+ "NAR-08": {
+  "audio_duration_secs": 32.972375,
+  "language_code": "eng",
+  "language_probability": 1,
+  "success": true,
+  "text": "Section eight, Athar OS. The roadmap runs now in Q4 2026, next in 2027, and later in 2028. Nations empowered. Lebanon, access, one million Lebanese AI experts at $10 million. India, ownership, one hundred government schools and 10,000 AI PCs at $13.7 million. Kenya, legacy, a Kenyan-owned sovereign node at around $33 million transferred to a national entity after five to seven years.",
+  "transcription_id": "sMr6XHxmNENMeIkRG0Gc",
+  "words": [
+   {
+    "end": 0.38,
+    "logprob": -0.0004320403386373073,
+    "start": 0.08,
+    "text": "Section",
+    "type": "word"
+   },
+   {
+    "end": 0.5,
+    "logprob": -0.009921286255121231,
+    "start": 0.38,
+    "text": " ",
+    "type": "spacing"
+   },
+   {
+    "end": 0.7,
+    "logprob": -0.04510938189923763,
+    "start": 0.5,
+    "text": "eight,",
+    "type": "word"
+   },
+   {
+    "end": 0.98,
+    "logprob": -0.37443822622299194,
+    "start": 0.7,
+    "text": " ",
+    "type": "spacing"
+   },
+   {
+    "end": 1.32,
+    "logprob": -0.22467185248897295,
+    "start": 0.98,
+    "text": "Athar",
+    "type": "word"
+   },
+   {
+    "end": 1.48,
+    "logprob": -0.07893304526805878,
+    "start": 1.32,
+    "text": " ",
+    "type": "spacing"
+   },
+   {
+    "end": 1.86,
+    "logprob": -0.05265270529101448,
+    "start": 1.48,
+    "text": "OS.",
+    "type": "word"
+   },
+   {
+    "end": 1.88,
+    "logprob": -1.7046782886609435e-05,
+    "start": 1.86,
+    "text": " ",
+    "type": "spacing"
+   },
+   {
+    "end": 2.6,
+    "logprob": -1.7046782886609435e-05,
+    "start": 2.54,
+    "text": "The",
+    "type": "word"
+   },
+   {
+    "end": 2.64,
+    "logprob": -0.005286879371851683,
+    "start": 2.6,
+    "text": " ",
+    "type": "spacing"
+   },
+   {
+    "end": 3.02,
+    "logprob": -0.005286879371851683,
+    "start": 2.64,
+    "text": "roadmap",
+    "type": "word"
+   },
+   {
+    "end": 3.1,
+    "logprob": -4.410734163684538e-06,
+    "start": 3.02,
+    "text": " ",
+    "type": "spacing"
+   },
+   {
+    "end": 3.38,
+    "logprob": -4.410734163684538e-06,
+    "start": 3.1,
+    "text": "runs",
+    "type": "word"
+   },
+   {
+    "end": 3.42,
+    "logprob": -0.0001851148990681395,
+    "start": 3.38,
+    "text": " ",
+    "type": "spacing"
+   },
+   {
+    "end": 3.66,
+    "logprob": -0.0001851148990681395,
+    "start": 3.42,
+    "text": "now",
+    "type": "word"
+   },
+   {
+    "end": 3.98,
+    "logprob": -0.000565249880310148,
+    "start": 3.66,
+    "text": " ",
+    "type": "spacing"
+   },
+   {
+    "end": 4.12,
+    "logprob": -0.000565249880310148,
+    "start": 3.98,
+    "text": "in",
+    "type": "word"
+   },
+   {
+    "end": 4.16,
+    "logprob": -5.960462772236497e-07,
+    "start": 4.12,
+    "text": " ",
+    "type": "spacing"
+   },
+   {
+    "end": 4.6,
+    "logprob": -0.0007204589200284772,
+    "start": 4.18,
+    "text": "Q4",
+    "type": "word"
+   },
+   {
+    "end": 4.72,
+    "logprob": -2.253030106658116e-05,
+    "start": 4.6,
+    "text": " ",
+    "type": "spacing"
+   },
+   {
+    "end": 5.56,
+    "logprob": -0.00043844878631347226,
+    "start": 4.72,
+    "text": "2026,",
+    "type": "word"
+   },
+   {
+    "end": 5.92,
+    "logprob": -1.728519782773219e-05,
+    "start": 5.56,
+    "text": " ",
+    "type": "spacing"
+   },
+   {
+    "end": 6.26,
+    "logprob": -1.728519782773219e-05,
+    "start": 5.92,
+    "text": "next",
+    "type": "word"
+   },
+   {
+    "end": 6.44,
+    "logprob": -8.046303264563903e-05,
+    "start": 6.26,
+    "text": " ",
+    "type": "spacing"
+   },
+   {
+    "end": 6.54,
+    "logprob": -8.046303264563903e-05,
+    "start": 6.44,
+    "text": "in",
+    "type": "word"
+   },
+   {
+    "end": 6.66,
+    "logprob": -3.3378546504536644e-06,
+    "start": 6.54,
+    "text": " ",
+    "type": "spacing"
+   },
+   {
+    "end": 7.6,
+    "logprob": -0.000266328173228203,
+    "start": 6.66,
+    "text": "2027,",
+    "type": "word"
+   },
+   {
+    "end": 7.98,
+    "logprob": -4.887569048150908e-06,
+    "start": 7.6,
+    "text": " ",
+    "type": "spacing"
+   },
+   {
+    "end": 8.08,
+    "logprob": -4.887569048150908e-06,
+    "start": 7.98,
+    "text": "and",
+    "type": "word"
+   },
+   {
+    "end": 8.14,
+    "logprob": -3.099436753473128e-06,
+    "start": 8.08,
+    "text": " ",
+    "type": "spacing"
+   },
+   {
+    "end": 8.46,
+    "logprob": -3.099436753473128e-06,
+    "start": 8.14,
+    "text": "later",
+    "type": "word"
+   },
+   {
+    "end": 8.6,
+    "logprob": -3.814624506048858e-05,
+    "start": 8.46,
+    "text": " ",
+    "type": "spacing"
+   },
+   {
+    "end": 8.7,
+    "logprob": -3.814624506048858e-05,
+    "start": 8.6,
+    "text": "in",
+    "type": "word"
+   },
+   {
+    "end": 8.82,
+    "logprob": -2.3841855067985307e-07,
+    "start": 8.7,
+    "text": " ",
+    "type": "spacing"
+   },
+   {
+    "end": 9.64,
+    "logprob": -3.7193030465232368e-06,
+    "start": 8.82,
+    "text": "2028.",
+    "type": "word"
+   },
+   {
+    "end": 9.64,
+    "logprob": -8.356221951544285e-05,
+    "start": 9.64,
+    "text": " ",
+    "type": "spacing"
+   },
+   {
+    "end": 10.68,
+    "logprob": -8.356221951544285e-05,
+    "start": 10.32,
+    "text": "Nations",
+    "type": "word"
+   },
+   {
+    "end": 10.72,
+    "logprob": -0.018306465819478035,
+    "start": 10.68,
+    "text": " ",
+    "type": "spacing"
+   },
+   {
+    "end": 11.24,
+    "logprob": -0.016682088770903648,
+    "start": 10.72,
+    "text": "empowered.",
+    "type": "word"
+   },
+   {
+    "end": 11.82,
+    "logprob": -9.059865078597795e-06,
+    "start": 11.24,
+    "text": " ",
+    "type": "spacing"
+   },
+   {
+    "end": 12.2,
+    "logprob": -0.02027776274974258,
+    "start": 11.82,
+    "text": "Lebanon,",
+    "type": "word"
+   },
+   {
+    "end": 12.54,
+    "logprob": -0.01607399806380272,
+    "start": 12.2,
+    "text": " ",
+    "type": "spacing"
+   },
+   {
+    "end": 12.98,
+    "logprob": -0.01554577159030097,
+    "start": 12.54,
+    "text": "access,",
+    "type": "word"
+   },
+   {
+    "end": 13.38,
+    "logprob": -0.0015141224721446633,
+    "start": 12.98,
+    "text": " ",
+    "type": "spacing"
+   },
+   {
+    "end": 13.52,
+    "logprob": -0.0015141224721446633,
+    "start": 13.38,
+    "text": "one",
+    "type": "word"
+   },
+   {
+    "end": 13.58,
+    "logprob": -5.960462772236497e-07,
+    "start": 13.52,
+    "text": " ",
+    "type": "spacing"
+   },
+   {
+    "end": 13.84,
+    "logprob": -5.960462772236497e-07,
+    "start": 13.58,
+    "text": "million",
+    "type": "word"
+   },
+   {
+    "end": 13.9,
+    "logprob": -3.099436753473128e-06,
+    "start": 13.84,
+    "text": " ",
+    "type": "spacing"
+   },
+   {
+    "end": 14.32,
+    "logprob": -3.099436753473128e-06,
+    "start": 13.9,
+    "text": "Lebanese",
+    "type": "word"
+   },
+   {
+    "end": 14.44,
+    "logprob": -4.768370445162873e-07,
+    "start": 14.32,
+    "text": " ",
+    "type": "spacing"
+   },
+   {
+    "end": 14.68,
+    "logprob": -4.768370445162873e-07,
+    "start": 14.44,
+    "text": "AI",
+    "type": "word"
+   },
+   {
+    "end": 14.8,
+    "logprob": -1.6093124941107817e-05,
+    "start": 14.68,
+    "text": " ",
+    "type": "spacing"
+   },
+   {
+    "end": 15.24,
+    "logprob": -1.6093124941107817e-05,
+    "start": 14.8,
+    "text": "experts",
+    "type": "word"
+   },
+   {
+    "end": 15.26,
+    "logprob": -5.960462772236497e-07,
+    "start": 15.24,
+    "text": " ",
+    "type": "spacing"
+   },
+   {
+    "end": 15.36,
+    "logprob": -5.960462772236497e-07,
+    "start": 15.26,
+    "text": "at",
+    "type": "word"
+   },
+   {
+    "end": 15.38,
+    "logprob": -0.2254384160041809,
+    "start": 15.36,
+    "text": " ",
+    "type": "spacing"
+   },
+   {
+    "end": 15.58,
+    "logprob": -0.07514645655938305,
+    "start": 15.38,
+    "text": "$10",
+    "type": "word"
+   },
+   {
+    "end": 15.6,
+    "logprob": -4.529942543740617e-06,
+    "start": 15.58,
+    "text": " ",
+    "type": "spacing"
+   },
+   {
+    "end": 15.84,
+    "logprob": -4.827964062315004e-06,
+    "start": 15.6,
+    "text": "million.",
+    "type": "word"
+   },
+   {
+    "end": 16.3,
+    "logprob": -8.940656698541716e-06,
+    "start": 15.84,
+    "text": " ",
+    "type": "spacing"
+   },
+   {
+    "end": 17.24,
+    "logprob": -8.443955039183493e-06,
+    "start": 16.92,
+    "text": "India,",
+    "type": "word"
+   },
+   {
+    "end": 17.62,
+    "logprob": -1.8954096958623268e-05,
+    "start": 17.24,
+    "text": " ",
+    "type": "spacing"
+   },
+   {
+    "end": 18.1,
+    "logprob": -2.154085614165524e-05,
+    "start": 17.62,
+    "text": "ownership,",
+    "type": "word"
+   },
+   {
+    "end": 18.48,
+    "logprob": -0.22541700303554535,
+    "start": 18.1,
+    "text": " ",
+    "type": "spacing"
+   },
+   {
+    "end": 18.58,
+    "logprob": -0.22541700303554535,
+    "start": 18.48,
+    "text": "one",
+    "type": "word"
+   },
+   {
+    "end": 18.6,
+    "logprob": -1.6927575416048057e-05,
+    "start": 18.58,
+    "text": " ",
+    "type": "spacing"
+   },
+   {
+    "end": 18.78,
+    "logprob": -1.6927575416048057e-05,
+    "start": 18.62,
+    "text": "hundred",
+    "type": "word"
+   },
+   {
+    "end": 18.92,
+    "logprob": -1.1920922133867862e-06,
+    "start": 18.78,
+    "text": " ",
+    "type": "spacing"
+   },
+   {
+    "end": 19.24,
+    "logprob": -1.1920922133867862e-06,
+    "start": 18.92,
+    "text": "government",
+    "type": "word"
+   },
+   {
+    "end": 19.32,
+    "logprob": -1.7404405298293568e-05,
+    "start": 19.24,
+    "text": " ",
+    "type": "spacing"
+   },
+   {
+    "end": 19.7,
+    "logprob": -1.7404405298293568e-05,
+    "start": 19.32,
+    "text": "schools",
+    "type": "word"
+   },
+   {
+    "end": 19.96,
+    "logprob": -0.006730742286890745,
+    "start": 19.7,
+    "text": " ",
+    "type": "spacing"
+   },
+   {
+    "end": 20.04,
+    "logprob": -0.006730742286890745,
+    "start": 19.98,
+    "text": "and",
+    "type": "word"
+   },
+   {
+    "end": 20.14,
+    "logprob": -0.6326668858528137,
+    "start": 20.04,
+    "text": " ",
+    "type": "spacing"
+   },
+   {
+    "end": 20.76,
+    "logprob": -1.7006364648371648e-05,
+    "start": 20.14,
+    "text": "10,000",
+    "type": "word"
+   },
+   {
+    "end": 20.82,
+    "logprob": -0.0005725175142288208,
+    "start": 20.76,
+    "text": " ",
+    "type": "spacing"
+   },
+   {
+    "end": 21.06,
+    "logprob": -0.0005725175142288208,
+    "start": 20.82,
+    "text": "AI",
+    "type": "word"
+   },
+   {
+    "end": 21.16,
+    "logprob": -0.007455501705408096,
+    "start": 21.06,
+    "text": " ",
+    "type": "spacing"
+   },
+   {
+    "end": 21.68,
+    "logprob": -0.007455501705408096,
+    "start": 21.16,
+    "text": "PCs",
+    "type": "word"
+   },
+   {
+    "end": 21.98,
+    "logprob": -4.3987260141875595e-05,
+    "start": 21.68,
+    "text": " ",
+    "type": "spacing"
+   },
+   {
+    "end": 22.06,
+    "logprob": -4.3987260141875595e-05,
+    "start": 21.98,
+    "text": "at",
+    "type": "word"
+   },
+   {
+    "end": 22.08,
+    "logprob": -0.08555403351783752,
+    "start": 22.06,
+    "text": " ",
+    "type": "spacing"
+   },
+   {
+    "end": 23.06,
+    "logprob": -0.01711660021494481,
+    "start": 22.08,
+    "text": "$13.7",
+    "type": "word"
+   },
+   {
+    "end": 23.1,
+    "logprob": -2.706014311115723e-05,
+    "start": 23.06,
+    "text": " ",
+    "type": "spacing"
+   },
+   {
+    "end": 23.44,
+    "logprob": -2.9220734404589166e-05,
+    "start": 23.1,
+    "text": "million.",
+    "type": "word"
+   },
+   {
+    "end": 23.44,
+    "logprob": -0.0001560327800689265,
+    "start": 23.44,
+    "text": " ",
+    "type": "spacing"
+   },
+   {
+    "end": 24.74,
+    "logprob": -0.0001387889691007634,
+    "start": 24.36,
+    "text": "Kenya,",
+    "type": "word"
+   },
+   {
+    "end": 25.1,
+    "logprob": -0.002805228577926755,
+    "start": 24.74,
+    "text": " ",
+    "type": "spacing"
+   },
+   {
+    "end": 25.58,
+    "logprob": -0.012399325879024608,
+    "start": 25.1,
+    "text": "legacy,",
+    "type": "word"
+   },
+   {
+    "end": 25.58,
+    "logprob": -0.00011300401820335537,
+    "start": 25.58,
+    "text": " ",
+    "type": "spacing"
+   },
+   {
+    "end": 26.14,
+    "logprob": -0.00011300401820335537,
+    "start": 26.08,
+    "text": "a",
+    "type": "word"
+   },
+   {
+    "end": 26.18,
+    "logprob": -8.40390202938579e-05,
+    "start": 26.14,
+    "text": " ",
+    "type": "spacing"
+   },
+   {
+    "end": 26.82,
+    "logprob": -6.33770599354951e-05,
+    "start": 26.18,
+    "text": "Kenyan-owned",
+    "type": "word"
+   },
+   {
+    "end": 26.94,
+    "logprob": -0.000388665939681232,
+    "start": 26.82,
+    "text": " ",
+    "type": "spacing"
+   },
+   {
+    "end": 27.26,
+    "logprob": -0.000388665939681232,
+    "start": 26.94,
+    "text": "sovereign",
+    "type": "word"
+   },
+   {
+    "end": 27.34,
+    "logprob": -7.128461584215984e-05,
+    "start": 27.26,
+    "text": " ",
+    "type": "spacing"
+   },
+   {
+    "end": 27.6,
+    "logprob": -7.128461584215984e-05,
+    "start": 27.34,
+    "text": "node",
+    "type": "word"
+   },
+   {
+    "end": 27.64,
+    "logprob": -1.2159273865108844e-05,
+    "start": 27.6,
+    "text": " ",
+    "type": "spacing"
+   },
+   {
+    "end": 27.72,
+    "logprob": -1.2159273865108844e-05,
+    "start": 27.64,
+    "text": "at",
+    "type": "word"
+   },
+   {
+    "end": 27.78,
+    "logprob": -2.7418097943154862e-06,
+    "start": 27.72,
+    "text": " ",
+    "type": "spacing"
+   },
+   {
+    "end": 28.02,
+    "logprob": -2.7418097943154862e-06,
+    "start": 27.78,
+    "text": "around",
+    "type": "word"
+   },
+   {
+    "end": 28.08,
+    "logprob": -0.0005397531786002219,
+    "start": 28.02,
+    "text": " ",
+    "type": "spacing"
+   },
+   {
+    "end": 28.66,
+    "logprob": -0.0001857589534968914,
+    "start": 28.08,
+    "text": "$33",
+    "type": "word"
+   },
+   {
+    "end": 28.7,
+    "logprob": -8.702239938429557e-06,
+    "start": 28.66,
+    "text": " ",
+    "type": "spacing"
+   },
+   {
+    "end": 28.98,
+    "logprob": -8.702239938429557e-06,
+    "start": 28.7,
+    "text": "million",
+    "type": "word"
+   },
+   {
+    "end": 29.4,
+    "logprob": -0.31351712346076965,
+    "start": 28.98,
+    "text": " ",
+    "type": "spacing"
+   },
+   {
+    "end": 29.9,
+    "logprob": -0.31351712346076965,
+    "start": 29.4,
+    "text": "transferred",
+    "type": "word"
+   },
+   {
+    "end": 29.94,
+    "logprob": -3.933898824470816e-06,
+    "start": 29.9,
+    "text": " ",
+    "type": "spacing"
+   },
+   {
+    "end": 30.02,
+    "logprob": -3.933898824470816e-06,
+    "start": 29.94,
+    "text": "to",
+    "type": "word"
+   },
+   {
+    "end": 30.06,
+    "logprob": -2.9802276912960224e-06,
+    "start": 30.02,
+    "text": " ",
+    "type": "spacing"
+   },
+   {
+    "end": 30.1,
+    "logprob": -2.9802276912960224e-06,
+    "start": 30.06,
+    "text": "a",
+    "type": "word"
+   },
+   {
+    "end": 30.16,
+    "logprob": -2.7418097943154862e-06,
+    "start": 30.1,
+    "text": " ",
+    "type": "spacing"
+   },
+   {
+    "end": 30.46,
+    "logprob": -2.7418097943154862e-06,
+    "start": 30.16,
+    "text": "national",
+    "type": "word"
+   },
+   {
+    "end": 30.58,
+    "logprob": -5.364403477869928e-06,
+    "start": 30.46,
+    "text": " ",
+    "type": "spacing"
+   },
+   {
+    "end": 30.96,
+    "logprob": -5.364403477869928e-06,
+    "start": 30.58,
+    "text": "entity",
+    "type": "word"
+   },
+   {
+    "end": 31.18,
+    "logprob": -1.3708974620385561e-05,
+    "start": 30.96,
+    "text": " ",
+    "type": "spacing"
+   },
+   {
+    "end": 31.34,
+    "logprob": -1.3708974620385561e-05,
+    "start": 31.18,
+    "text": "after",
+    "type": "word"
+   },
+   {
+    "end": 31.46,
+    "logprob": -8.702239938429557e-06,
+    "start": 31.34,
+    "text": " ",
+    "type": "spacing"
+   },
+   {
+    "end": 31.72,
+    "logprob": -8.702239938429557e-06,
+    "start": 31.46,
+    "text": "five",
+    "type": "word"
+   },
+   {
+    "end": 31.76,
+    "logprob": -4.768370445162873e-07,
+    "start": 31.72,
+    "text": " ",
+    "type": "spacing"
+   },
+   {
+    "end": 31.86,
+    "logprob": -4.768370445162873e-07,
+    "start": 31.76,
+    "text": "to",
+    "type": "word"
+   },
+   {
+    "end": 31.9,
+    "logprob": -1.4305104514278355e-06,
+    "start": 31.86,
+    "text": " ",
+    "type": "spacing"
+   },
+   {
+    "end": 32.14,
+    "logprob": -1.4305104514278355e-06,
+    "start": 31.9,
+    "text": "seven",
+    "type": "word"
+   },
+   {
+    "end": 32.22,
+    "logprob": -3.814689989667386e-06,
+    "start": 32.14,
+    "text": " ",
+    "type": "spacing"
+   },
+   {
+    "end": 32.6,
+    "logprob": -0.004386722104148551,
+    "start": 32.22,
+    "text": "years.",
+    "type": "word"
+   }
+  ],
+  "_relay_note": "",
+  "_messageId": "6abdf63b7cb494a6f6b3dd55",
+  "_sessionId": "6abdf63b0c1d5d8acfb4fd15",
+  "_utc": "2026-10-01T05:57:53Z",
+  "_url": "https://athar-jv-interactive-plan-n5z4esrb7-schoolhack-web-team.vercel.app/audio/guide/guide-08-athar-os-Ib4oKe91OD.mp3"
+ },
+ "NAR-09": {
+  "audio_duration_secs": 26.5171875,
+  "language_code": "eng",
+  "language_probability": 1,
+  "success": true,
+  "text": "Join the pact. You have seen the agreement, the community model, the six pillars, the actors, the roadmap, the impact tiers, and Athar OS. Now the invitation is yours. Choose your role. Sign, govern, build, or learn. Commit to one real outcome. The founding cohort starts this quarter. Open the pledge, add your name, and help us build agentic AI that leaves a lasting trace. Join us",
+  "transcription_id": "pITCnFlOvvBbjKtdZVvq",
+  "words": [
+   {
+    "end": 0.34,
+    "logprob": -0.00010847456724150106,
+    "start": 0.12,
+    "text": "Join",
+    "type": "word"
+   },
+   {
+    "end": 0.38,
+    "logprob": -0.0006272017490118742,
+    "start": 0.34,
+    "text": " ",
+    "type": "spacing"
+   },
+   {
+    "end": 0.46,
+    "logprob": -0.0006272017490118742,
+    "start": 0.38,
+    "text": "the",
+    "type": "word"
+   },
+   {
+    "end": 0.5,
+    "logprob": -0.20150309801101685,
+    "start": 0.46,
+    "text": " ",
+    "type": "spacing"
+   },
+   {
+    "end": 0.84,
+    "logprob": -0.16124936984560917,
+    "start": 0.5,
+    "text": "pact.",
+    "type": "word"
+   },
+   {
+    "end": 1.34,
+    "logprob": -1.9073468138230965e-06,
+    "start": 0.84,
+    "text": " ",
+    "type": "spacing"
+   },
+   {
+    "end": 1.4,
+    "logprob": -1.9073468138230965e-06,
+    "start": 1.34,
+    "text": "You",
+    "type": "word"
+   },
+   {
+    "end": 1.44,
+    "logprob": -1.6689286894688848e-06,
+    "start": 1.4,
+    "text": " ",
+    "type": "spacing"
+   },
+   {
+    "end": 1.56,
+    "logprob": -1.6689286894688848e-06,
+    "start": 1.44,
+    "text": "have",
+    "type": "word"
+   },
+   {
+    "end": 1.6,
+    "logprob": -8.344646857949556e-07,
+    "start": 1.56,
+    "text": " ",
+    "type": "spacing"
+   },
+   {
+    "end": 1.78,
+    "logprob": -8.344646857949556e-07,
+    "start": 1.6,
+    "text": "seen",
+    "type": "word"
+   },
+   {
+    "end": 1.82,
+    "logprob": -0.00011073929636040702,
+    "start": 1.78,
+    "text": " ",
+    "type": "spacing"
+   },
+   {
+    "end": 1.88,
+    "logprob": -0.00011073929636040702,
+    "start": 1.82,
+    "text": "the",
+    "type": "word"
+   },
+   {
+    "end": 1.92,
+    "logprob": -0.0022011594846844673,
+    "start": 1.88,
+    "text": " ",
+    "type": "spacing"
+   },
+   {
+    "end": 2.38,
+    "logprob": -0.0019933332587243058,
+    "start": 1.92,
+    "text": "agreement,",
+    "type": "word"
+   },
+   {
+    "end": 2.56,
+    "logprob": -1.4305012882687151e-05,
+    "start": 2.38,
+    "text": " ",
+    "type": "spacing"
+   },
+   {
+    "end": 2.66,
+    "logprob": -1.4305012882687151e-05,
+    "start": 2.56,
+    "text": "the",
+    "type": "word"
+   },
+   {
+    "end": 2.7,
+    "logprob": -0.00011264643399044871,
+    "start": 2.66,
+    "text": " ",
+    "type": "spacing"
+   },
+   {
+    "end": 3.12,
+    "logprob": -0.00011264643399044871,
+    "start": 2.7,
+    "text": "community",
+    "type": "word"
+   },
+   {
+    "end": 3.2,
+    "logprob": -8.702239938429557e-06,
+    "start": 3.12,
+    "text": " ",
+    "type": "spacing"
+   },
+   {
+    "end": 3.46,
+    "logprob": -8.463823329899848e-06,
+    "start": 3.2,
+    "text": "model,",
+    "type": "word"
+   },
+   {
+    "end": 3.78,
+    "logprob": -7.867782187531702e-06,
+    "start": 3.46,
+    "text": " ",
+    "type": "spacing"
+   },
+   {
+    "end": 3.86,
+    "logprob": -7.867782187531702e-06,
+    "start": 3.78,
+    "text": "the",
+    "type": "word"
+   },
+   {
+    "end": 3.9,
+    "logprob": -7.533743337262422e-05,
+    "start": 3.86,
+    "text": " ",
+    "type": "spacing"
+   },
+   {
+    "end": 4.08,
+    "logprob": -7.533743337262422e-05,
+    "start": 3.9,
+    "text": "six",
+    "type": "word"
+   },
+   {
+    "end": 4.18,
+    "logprob": -0.000120751719805412,
+    "start": 4.08,
+    "text": " ",
+    "type": "spacing"
+   },
+   {
+    "end": 4.56,
+    "logprob": -0.00010620909660019606,
+    "start": 4.18,
+    "text": "pillars,",
+    "type": "word"
+   },
+   {
+    "end": 4.56,
+    "logprob": -1.4305104514278355e-06,
+    "start": 4.56,
+    "text": " ",
+    "type": "spacing"
+   },
+   {
+    "end": 5,
+    "logprob": -1.4305104514278355e-06,
+    "start": 4.92,
+    "text": "the",
+    "type": "word"
+   },
+   {
+    "end": 5.08,
+    "logprob": -0.00030489088385365903,
+    "start": 5,
+    "text": " ",
+    "type": "spacing"
+   },
+   {
+    "end": 5.46,
+    "logprob": -0.0002614372226616979,
+    "start": 5.08,
+    "text": "actors,",
+    "type": "word"
+   },
+   {
+    "end": 5.76,
+    "logprob": -2.3841855067985307e-07,
+    "start": 5.46,
+    "text": " ",
+    "type": "spacing"
+   },
+   {
+    "end": 5.86,
+    "logprob": -2.3841855067985307e-07,
+    "start": 5.76,
+    "text": "the",
+    "type": "word"
+   },
+   {
+    "end": 5.9,
+    "logprob": -0.0007121411035768688,
+    "start": 5.86,
+    "text": " ",
+    "type": "spacing"
+   },
+   {
+    "end": 6.38,
+    "logprob": -0.0006231830702603247,
+    "start": 5.9,
+    "text": "roadmap,",
+    "type": "word"
+   },
+   {
+    "end": 6.7,
+    "logprob": -1.311301275563892e-06,
+    "start": 6.38,
+    "text": " ",
+    "type": "spacing"
+   },
+   {
+    "end": 6.78,
+    "logprob": -1.311301275563892e-06,
+    "start": 6.7,
+    "text": "the",
+    "type": "word"
+   },
+   {
+    "end": 6.84,
+    "logprob": -0.0007165487040765584,
+    "start": 6.78,
+    "text": " ",
+    "type": "spacing"
+   },
+   {
+    "end": 7.2,
+    "logprob": -0.0007165487040765584,
+    "start": 6.84,
+    "text": "impact",
+    "type": "word"
+   },
+   {
+    "end": 7.24,
+    "logprob": -0.0004631400224752724,
+    "start": 7.2,
+    "text": " ",
+    "type": "spacing"
+   },
+   {
+    "end": 7.58,
+    "logprob": -0.0009864169890837122,
+    "start": 7.24,
+    "text": "tiers,",
+    "type": "word"
+   },
+   {
+    "end": 7.68,
+    "logprob": -6.079655122448457e-06,
+    "start": 7.58,
+    "text": " ",
+    "type": "spacing"
+   },
+   {
+    "end": 7.78,
+    "logprob": -6.079655122448457e-06,
+    "start": 7.68,
+    "text": "and",
+    "type": "word"
+   },
+   {
+    "end": 7.84,
+    "logprob": -0.08100413531064987,
+    "start": 7.78,
+    "text": " ",
+    "type": "spacing"
+   },
+   {
+    "end": 8.22,
+    "logprob": -0.04860562829926494,
+    "start": 7.84,
+    "text": "Athar",
+    "type": "word"
+   },
+   {
+    "end": 8.3,
+    "logprob": -0.07891916483640671,
+    "start": 8.22,
+    "text": " ",
+    "type": "spacing"
+   },
+   {
+    "end": 8.7,
+    "logprob": -0.05261384943946723,
+    "start": 8.3,
+    "text": "OS.",
+    "type": "word"
+   },
+   {
+    "end": 8.7,
+    "logprob": -9.536738616588991e-07,
+    "start": 8.7,
+    "text": " ",
+    "type": "spacing"
+   },
+   {
+    "end": 9.48,
+    "logprob": -9.536738616588991e-07,
+    "start": 9.32,
+    "text": "Now",
+    "type": "word"
+   },
+   {
+    "end": 9.52,
+    "logprob": -0.00010895135346800089,
+    "start": 9.48,
+    "text": " ",
+    "type": "spacing"
+   },
+   {
+    "end": 9.58,
+    "logprob": -0.00010895135346800089,
+    "start": 9.52,
+    "text": "the",
+    "type": "word"
+   },
+   {
+    "end": 9.62,
+    "logprob": -8.22540732769994e-06,
+    "start": 9.58,
+    "text": " ",
+    "type": "spacing"
+   },
+   {
+    "end": 10.12,
+    "logprob": -8.22540732769994e-06,
+    "start": 9.62,
+    "text": "invitation",
+    "type": "word"
+   },
+   {
+    "end": 10.18,
+    "logprob": 0,
+    "start": 10.12,
+    "text": " ",
+    "type": "spacing"
+   },
+   {
+    "end": 10.3,
+    "logprob": 0,
+    "start": 10.18,
+    "text": "is",
+    "type": "word"
+   },
+   {
+    "end": 10.34,
+    "logprob": 0,
+    "start": 10.3,
+    "text": " ",
+    "type": "spacing"
+   },
+   {
+    "end": 10.72,
+    "logprob": -1.9868213740892315e-08,
+    "start": 10.36,
+    "text": "yours.",
+    "type": "word"
+   },
+   {
+    "end": 10.74,
+    "logprob": -4.887569048150908e-06,
+    "start": 10.72,
+    "text": " ",
+    "type": "spacing"
+   },
+   {
+    "end": 11.5,
+    "logprob": -4.887569048150908e-06,
+    "start": 11.24,
+    "text": "Choose",
+    "type": "word"
+   },
+   {
+    "end": 11.54,
+    "logprob": 0,
+    "start": 11.5,
+    "text": " ",
+    "type": "spacing"
+   },
+   {
+    "end": 11.64,
+    "logprob": 0,
+    "start": 11.54,
+    "text": "your",
+    "type": "word"
+   },
+   {
+    "end": 11.72,
+    "logprob": -5.364403477869928e-06,
+    "start": 11.64,
+    "text": " ",
+    "type": "spacing"
+   },
+   {
+    "end": 12.02,
+    "logprob": -0.012627534556668252,
+    "start": 11.72,
+    "text": "role.",
+    "type": "word"
+   },
+   {
+    "end": 12.4,
+    "logprob": -2.50339189733495e-06,
+    "start": 12.02,
+    "text": " ",
+    "type": "spacing"
+   },
+   {
+    "end": 12.76,
+    "logprob": -1.0323348760721274e-05,
+    "start": 12.4,
+    "text": "Sign,",
+    "type": "word"
+   },
+   {
+    "end": 13.06,
+    "logprob": -0.00018523407925385982,
+    "start": 12.76,
+    "text": " ",
+    "type": "spacing"
+   },
+   {
+    "end": 13.36,
+    "logprob": -0.00015878909782937205,
+    "start": 13.06,
+    "text": "govern,",
+    "type": "word"
+   },
+   {
+    "end": 13.74,
+    "logprob": -3.576278118089249e-07,
+    "start": 13.36,
+    "text": " ",
+    "type": "spacing"
+   },
+   {
+    "end": 14.02,
+    "logprob": -4.370957517115433e-06,
+    "start": 13.74,
+    "text": "build,",
+    "type": "word"
+   },
+   {
+    "end": 14.16,
+    "logprob": 0,
+    "start": 14.02,
+    "text": " ",
+    "type": "spacing"
+   },
+   {
+    "end": 14.24,
+    "logprob": 0,
+    "start": 14.16,
+    "text": "or",
+    "type": "word"
+   },
+   {
+    "end": 14.34,
+    "logprob": -5.245195097813848e-06,
+    "start": 14.24,
+    "text": " ",
+    "type": "spacing"
+   },
+   {
+    "end": 14.68,
+    "logprob": -4.688887050482056e-06,
+    "start": 14.34,
+    "text": "learn.",
+    "type": "word"
+   },
+   {
+    "end": 15.08,
+    "logprob": -0.0012521054595708847,
+    "start": 14.68,
+    "text": " ",
+    "type": "spacing"
+   },
+   {
+    "end": 15.36,
+    "logprob": -0.0012521054595708847,
+    "start": 15.08,
+    "text": "Commit",
+    "type": "word"
+   },
+   {
+    "end": 15.4,
+    "logprob": -1.1920928244535389e-07,
+    "start": 15.36,
+    "text": " ",
+    "type": "spacing"
+   },
+   {
+    "end": 15.5,
+    "logprob": -1.1920928244535389e-07,
+    "start": 15.4,
+    "text": "to",
+    "type": "word"
+   },
+   {
+    "end": 15.54,
+    "logprob": -1.156323378381785e-05,
+    "start": 15.5,
+    "text": " ",
+    "type": "spacing"
+   },
+   {
+    "end": 15.7,
+    "logprob": -1.156323378381785e-05,
+    "start": 15.58,
+    "text": "one",
+    "type": "word"
+   },
+   {
+    "end": 15.78,
+    "logprob": -1.07287787614041e-05,
+    "start": 15.7,
+    "text": " ",
+    "type": "spacing"
+   },
+   {
+    "end": 15.96,
+    "logprob": -1.07287787614041e-05,
+    "start": 15.78,
+    "text": "real",
+    "type": "word"
+   },
+   {
+    "end": 16.079,
+    "logprob": -3.099436753473128e-06,
+    "start": 15.96,
+    "text": " ",
+    "type": "spacing"
+   },
+   {
+    "end": 16.5,
+    "logprob": -3.1888434079974104e-06,
+    "start": 16.079,
+    "text": "outcome.",
+    "type": "word"
+   },
+   {
+    "end": 16.92,
+    "logprob": -7.390948667307384e-06,
+    "start": 16.5,
+    "text": " ",
+    "type": "spacing"
+   },
+   {
+    "end": 17.02,
+    "logprob": -7.390948667307384e-06,
+    "start": 16.92,
+    "text": "The",
+    "type": "word"
+   },
+   {
+    "end": 17.06,
+    "logprob": -0.002476840978488326,
+    "start": 17.02,
+    "text": " ",
+    "type": "spacing"
+   },
+   {
+    "end": 17.4,
+    "logprob": -0.002476840978488326,
+    "start": 17.06,
+    "text": "founding",
+    "type": "word"
+   },
+   {
+    "end": 17.5,
+    "logprob": -8.106198947643861e-06,
+    "start": 17.4,
+    "text": " ",
+    "type": "spacing"
+   },
+   {
+    "end": 17.9,
+    "logprob": -8.106198947643861e-06,
+    "start": 17.5,
+    "text": "cohort",
+    "type": "word"
+   },
+   {
+    "end": 18.02,
+    "logprob": -1.7881377516459906e-06,
+    "start": 17.9,
+    "text": " ",
+    "type": "spacing"
+   },
+   {
+    "end": 18.34,
+    "logprob": -1.7881377516459906e-06,
+    "start": 18.02,
+    "text": "starts",
+    "type": "word"
+   },
+   {
+    "end": 18.38,
+    "logprob": 0,
+    "start": 18.34,
+    "text": " ",
+    "type": "spacing"
+   },
+   {
+    "end": 18.54,
+    "logprob": 0,
+    "start": 18.38,
+    "text": "this",
+    "type": "word"
+   },
+   {
+    "end": 18.6,
+    "logprob": -2.145764938177308e-06,
+    "start": 18.54,
+    "text": " ",
+    "type": "spacing"
+   },
+   {
+    "end": 18.98,
+    "logprob": -2.056358127333624e-06,
+    "start": 18.6,
+    "text": "quarter.",
+    "type": "word"
+   },
+   {
+    "end": 18.98,
+    "logprob": -5.483612312673358e-06,
+    "start": 18.98,
+    "text": " ",
+    "type": "spacing"
+   },
+   {
+    "end": 19.96,
+    "logprob": -5.483612312673358e-06,
+    "start": 19.74,
+    "text": "Open",
+    "type": "word"
+   },
+   {
+    "end": 20,
+    "logprob": -9.536738616588991e-07,
+    "start": 19.96,
+    "text": " ",
+    "type": "spacing"
+   },
+   {
+    "end": 20.08,
+    "logprob": -9.536738616588991e-07,
+    "start": 20,
+    "text": "the",
+    "type": "word"
+   },
+   {
+    "end": 20.12,
+    "logprob": -1.0132738680113107e-05,
+    "start": 20.08,
+    "text": " ",
+    "type": "spacing"
+   },
+   {
+    "end": 20.46,
+    "logprob": -0.00012360781589190343,
+    "start": 20.12,
+    "text": "pledge,",
+    "type": "word"
+   },
+   {
+    "end": 20.76,
+    "logprob": -1.6689286894688848e-06,
+    "start": 20.46,
+    "text": " ",
+    "type": "spacing"
+   },
+   {
+    "end": 20.92,
+    "logprob": -1.6689286894688848e-06,
+    "start": 20.76,
+    "text": "add",
+    "type": "word"
+   },
+   {
+    "end": 20.96,
+    "logprob": 0,
+    "start": 20.92,
+    "text": " ",
+    "type": "spacing"
+   },
+   {
+    "end": 21.08,
+    "logprob": 0,
+    "start": 20.96,
+    "text": "your",
+    "type": "word"
+   },
+   {
+    "end": 21.14,
+    "logprob": -1.1920928244535389e-07,
+    "start": 21.08,
+    "text": " ",
+    "type": "spacing"
+   },
+   {
+    "end": 21.44,
+    "logprob": -8.106071612701271e-06,
+    "start": 21.14,
+    "text": "name,",
+    "type": "word"
+   },
+   {
+    "end": 21.66,
+    "logprob": -2.3841855067985307e-07,
+    "start": 21.44,
+    "text": " ",
+    "type": "spacing"
+   },
+   {
+    "end": 21.74,
+    "logprob": -2.3841855067985307e-07,
+    "start": 21.66,
+    "text": "and",
+    "type": "word"
+   },
+   {
+    "end": 21.78,
+    "logprob": -4.768370445162873e-07,
+    "start": 21.74,
+    "text": " ",
+    "type": "spacing"
+   },
+   {
+    "end": 21.96,
+    "logprob": -4.768370445162873e-07,
+    "start": 21.78,
+    "text": "help",
+    "type": "word"
+   },
+   {
+    "end": 22,
+    "logprob": 0,
+    "start": 21.96,
+    "text": " ",
+    "type": "spacing"
+   },
+   {
+    "end": 22.14,
+    "logprob": 0,
+    "start": 22,
+    "text": "us",
+    "type": "word"
+   },
+   {
+    "end": 22.18,
+    "logprob": -7.152555099310121e-07,
+    "start": 22.14,
+    "text": " ",
+    "type": "spacing"
+   },
+   {
+    "end": 22.42,
+    "logprob": -7.152555099310121e-07,
+    "start": 22.18,
+    "text": "build",
+    "type": "word"
+   },
+   {
+    "end": 22.54,
+    "logprob": -0.012132890522480011,
+    "start": 22.42,
+    "text": " ",
+    "type": "spacing"
+   },
+   {
+    "end": 23,
+    "logprob": -0.008666827209968428,
+    "start": 22.54,
+    "text": "agentic",
+    "type": "word"
+   },
+   {
+    "end": 23.14,
+    "logprob": -3.576278118089249e-07,
+    "start": 23,
+    "text": " ",
+    "type": "spacing"
+   },
+   {
+    "end": 23.56,
+    "logprob": -3.576278118089249e-07,
+    "start": 23.14,
+    "text": "AI",
+    "type": "word"
+   },
+   {
+    "end": 23.64,
+    "logprob": -3.576278118089249e-07,
+    "start": 23.56,
+    "text": " ",
+    "type": "spacing"
+   },
+   {
+    "end": 23.76,
+    "logprob": -3.576278118089249e-07,
+    "start": 23.64,
+    "text": "that",
+    "type": "word"
+   },
+   {
+    "end": 23.8,
+    "logprob": -1.1920922133867862e-06,
+    "start": 23.76,
+    "text": " ",
+    "type": "spacing"
+   },
+   {
+    "end": 24.02,
+    "logprob": -1.1920922133867862e-06,
+    "start": 23.8,
+    "text": "leaves",
+    "type": "word"
+   },
+   {
+    "end": 24.08,
+    "logprob": -3.576278118089249e-07,
+    "start": 24.02,
+    "text": " ",
+    "type": "spacing"
+   },
+   {
+    "end": 24.12,
+    "logprob": -3.576278118089249e-07,
+    "start": 24.08,
+    "text": "a",
+    "type": "word"
+   },
+   {
+    "end": 24.16,
+    "logprob": -3.2186455882765586e-06,
+    "start": 24.12,
+    "text": " ",
+    "type": "spacing"
+   },
+   {
+    "end": 24.52,
+    "logprob": -3.2186455882765586e-06,
+    "start": 24.16,
+    "text": "lasting",
+    "type": "word"
+   },
+   {
+    "end": 24.6,
+    "logprob": -3.349725011503324e-05,
+    "start": 24.52,
+    "text": " ",
+    "type": "spacing"
+   },
+   {
+    "end": 25,
+    "logprob": -2.797397973116252e-05,
+    "start": 24.62,
+    "text": "trace.",
+    "type": "word"
+   },
+   {
+    "end": 25,
+    "logprob": -3.2186455882765586e-06,
+    "start": 25,
+    "text": " ",
+    "type": "spacing"
+   },
+   {
+    "end": 25.92,
+    "logprob": -3.2186455882765586e-06,
+    "start": 25.72,
+    "text": "Join",
+    "type": "word"
+   },
+   {
+    "end": 26,
+    "logprob": -2.3841855067985307e-07,
+    "start": 25.92,
+    "text": " ",
+    "type": "spacing"
+   },
+   {
+    "end": 26.16,
+    "logprob": -2.3841855067985307e-07,
+    "start": 26,
+    "text": "us",
+    "type": "word"
+   }
+  ],
+  "_relay_note": "",
+  "_messageId": "6abdf63c0c1d5d8acfb4fd1f",
+  "_sessionId": "6abdf63c0c1d5d8acfb4fd18",
+  "_utc": "2026-10-01T05:57:54Z",
+  "_url": "https://athar-jv-interactive-plan-n5z4esrb7-schoolhack-web-team.vercel.app/audio/guide/guide-09-join-the-pact-Hx4Ywy843S.mp3"
+ }
+}

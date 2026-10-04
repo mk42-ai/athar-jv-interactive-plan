@@ -1,0 +1,42 @@
+{
+ "base": "http://127.0.0.1:4171",
+ "version": "1.7.1",
+ "expectCommit": "4ea5cc03f7de0061996946e129a00d6c32a2500f",
+ "written": "2026-10-04T10:09:25.653Z",
+ "rows": [
+  {
+   "idle": {
+    "lang": "en",
+    "dir": "ltr",
+    "badge": "v1.7.1",
+    "htmlVersion": "1.7.1",
+    "src": "athar-origins-of-impact-ep01-muhammed-khalid-720p.f824472ae0.mp4",
+    "poster": "athar-origins-of-impact-ep01-muhammed-khalid-poster-18s8.32839348ca.jpg",
+    "posterTime": "18.8",
+    "duration": 50.005,
+    "dur": "0:50",
+    "note": "Poster frame at 00:18.8 (face-detected, caption-free frame) · 50 s cut delivered 4 Oct 2026, installed full length · captions EN / AR · the narrated guide pauses while the film plays and resumes after it.",
+    "title": "Athar — Origins of Impact, Episode 01: Muhammed Khalid",
+    "cardText": "09\n09 · EXECUTIVE TEAM · LETTER 3 OF 5\nExecutive Team\nLetter 3 of 5\nMK\nم خ\nMuhammed Khalid\n\nFounder & CEO, AIREV\n\nDear partners,\n\nMuhammed Khalid is the founder and CEO of AIREV, the Abu Dhabi company behind School Hack and OnDemand.\n\nSchool Hack, launched in early 2023, has grown to over 4 million users across 140+ countries. OnDemand, AIREV’s agentic AI operating system, is backed by Core42, a G42 company.\n\nHis Athar impact story plays alongside this letter.\n\nWith respect,\nThe Athar team\n\nمحمد خالد\n\nالمؤسس والرئيس التنفيذي لشركة AIREV\n\nشركاءنا الأعزاء،\n\nمحمد خالد هو المؤسس والرئيس التنفيذي لشركة AIREV، الشركة التي تتخذ من أبوظبي مقراً والتي تقف وراء منصتي School Hack وOnDemand.\n\nنمت منصة School Hack، التي أُطلقت مطلع عام 2023، إلى أكثر من 4 ملايين مستخدم في أكثر من 140 دولة. أما OnDemand، نظام التشغيل الوكيلي للذكاء الاصطناعي من AIREV، فتدعمه Core42 التابعة لمجموعة G42.\n\nوتُعرض قصة أثره إلى جانب هذه الرسالة.\n\nمع خالص التقدير،\nفريق أثر\n\nSources: 42 Network · The National, 30 Sep 2024\nPlay film\n0:50\nAthar — Origins of Impact, Episode 01: Muhammed Khalid\n0:50\n·\ncaptions EN / AR\nPoster frame at 00:18.8 (face-detected, caption-free frame) · 50 s cut delivered 4 Oct 2026, installed full length · captions EN / AR · the narrated guide pauses while the film plays and resumes after it.",
+    "tracks": [
+     "en:athar-origins-of-impact-ep01-muhammed-khalid.en.4242fc2dfe.vtt:default",
+     "ar:athar-origins-of-impact-ep01-muhammed-khalid.ar.e11f32091d.vtt"
+    ],
+    "serviceWorkers": 0,
+    "cacheKeys": []
+   },
+   "playing": {
+    "paused": false,
+    "currentTime": 1.363651,
+    "duration": 50.005,
+    "src": "athar-origins-of-impact-ep01-muhammed-khalid-720p.f824472ae0.mp4",
+    "showing": [
+     "en:11"
+    ],
+    "controls": true
+   },
+   "errors": [],
+   "failedRequests": []
+  }
+ ]
+}

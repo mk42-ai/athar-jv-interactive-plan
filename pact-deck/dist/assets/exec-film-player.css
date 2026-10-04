@@ -1,0 +1,39 @@
+/* Athar deck v1.5.9 — shared executive-film player (dist/js/exec-film-player.js) + the "Film coming soon" ready slot.
+   Athar design system: Sovereign Navy #0F1B2D · Heritage Gold #B08D57 · Trace Cyan #2FB7C8 · Sand Off-White #F5F1EA · IBM Plex Sans / IBM Plex Sans Arabic.
+   Logical properties only → the AR deck mirrors the layout; the <video> itself is never mirrored (data-no-mirror). Fixed 16:9 box → zero layout shift. */
+.efp{--efp-navy:#0F1B2D;--efp-gold:#B08D57;--efp-cyan:#2FB7C8;--efp-sand:#F5F1EA;--efp-mute:#4A5561;margin:0;display:flex;flex-direction:column;gap:6px;min-inline-size:0;inline-size:100%;font-family:var(--font-sans,"IBM Plex Sans",sans-serif)}
+.efp[lang=ar]{font-family:var(--font-arabic,"IBM Plex Sans Arabic",sans-serif)}
+.efp-stage{position:relative;inline-size:100%;aspect-ratio:16/9;background:var(--efp-navy);border:1px solid #E3DCCB;border-radius:4px;overflow:hidden;isolation:isolate}
+.efp-video{position:absolute;inset:0;display:block;inline-size:100%;block-size:100%;object-fit:contain;background:var(--efp-navy);border:0;cursor:pointer}
+.efp[data-state=playing] .efp-video,.efp[data-state=paused] .efp-video,.efp[data-state=ended] .efp-video{cursor:default}
+/* centred Play affordance — hidden the moment the film plays, back on pause / ended (as Replay) */
+.efp-play{position:absolute;inset-inline-start:50%;inset-block-start:50%;transform:translate(-50%,-50%);z-index:2;display:inline-flex;align-items:center;gap:10px;padding:8px 18px 8px 8px;border-radius:999px;border:1px solid rgba(245,241,234,.55);background:rgba(15,27,45,.82);color:var(--efp-sand);font:600 15px/1.2 var(--font-sans,"IBM Plex Sans",sans-serif);letter-spacing:.01em;cursor:pointer;box-shadow:0 6px 24px rgba(15,27,45,.45);backdrop-filter:blur(2px);transition:background .18s ease,transform .18s ease}
+.efp[dir=rtl] .efp-play{transform:translate(50%,-50%);padding:8px 8px 8px 18px;font-family:var(--font-arabic,"IBM Plex Sans Arabic",sans-serif)}
+.efp-play-ring{display:inline-flex;align-items:center;justify-content:center;inline-size:44px;block-size:44px;border-radius:50%;background:var(--efp-gold);color:var(--efp-navy);flex:0 0 auto}
+.efp[dir=rtl] .efp-play-ring svg{transform:scaleX(-1)}
+.efp-play-dur{font-weight:500;opacity:.85;padding-inline-start:10px;border-inline-start:1px solid rgba(245,241,234,.35)}
+.efp-play:hover{background:rgba(15,27,45,.95)}
+.efp-play:hover .efp-play-ring{background:var(--efp-cyan)}
+.efp-play:focus-visible{outline:3px solid var(--efp-cyan);outline-offset:3px}
+.efp[data-state=playing] .efp-play{display:none}
+.efp.has-error .efp-play{display:none}
+.efp-cap{display:flex;flex-direction:column;gap:2px;min-inline-size:0}
+.efp-title{font:600 14px/20px var(--font-serif,"IBM Plex Serif",serif);color:var(--efp-navy)}
+.efp[lang=ar] .efp-title{font:600 15px/22px var(--font-arabic,"IBM Plex Sans Arabic",sans-serif)}
+.efp-meta{display:flex;align-items:center;gap:6px;flex-wrap:wrap;font:500 11px/16px var(--font-sans,"IBM Plex Sans",sans-serif);color:var(--efp-mute);letter-spacing:.03em}
+.efp[lang=ar] .efp-meta{font-family:var(--font-arabic,"IBM Plex Sans Arabic",sans-serif);letter-spacing:0}
+.efp-dur{color:var(--efp-navy);font-weight:600}
+.efp-note{font:400 11px/16px var(--font-sans,"IBM Plex Sans",sans-serif);color:var(--efp-mute)}
+.efp[lang=ar] .efp-note{font-family:var(--font-arabic,"IBM Plex Sans Arabic",sans-serif)}
+.efp-video::cue{background:rgba(15,27,45,.82);color:var(--efp-sand);font-family:var(--font-sans,"IBM Plex Sans",sans-serif);font-size:1.05em;line-height:1.4}
+.efp[lang=ar] .efp-video::cue{font-family:var(--font-arabic,"IBM Plex Sans Arabic",sans-serif)}
+/* ready slot — labelled, calm, never looks broken */
+.efp-slot{--efp-navy:#0F1B2D;--efp-gold:#B08D57;--efp-sand:#F5F1EA;--efp-mute:#4A5561;display:flex;align-items:center;gap:12px;min-inline-size:0;inline-size:100%;box-sizing:border-box;padding:10px 14px;border:1px dashed rgba(176,141,87,.75);border-radius:4px;background:rgba(245,241,234,.6);color:var(--efp-navy);font-family:var(--font-sans,"IBM Plex Sans",sans-serif)}
+.efp-slot[lang=ar]{font-family:var(--font-arabic,"IBM Plex Sans Arabic",sans-serif)}
+.efp-slot-ico{display:inline-flex;align-items:center;justify-content:center;inline-size:36px;block-size:36px;border-radius:50%;background:var(--efp-navy);color:var(--efp-gold);flex:0 0 auto}
+.efp-slot-text{display:flex;flex-direction:column;gap:1px;min-inline-size:0}
+.efp-slot-title{font:600 13px/18px inherit;letter-spacing:.02em}
+.efp-slot[lang=ar] .efp-slot-title{letter-spacing:0;font-size:14px}
+.efp-slot-sub{font:400 11px/15px inherit;color:var(--efp-mute)}
+@media (prefers-reduced-motion:reduce){.efp-play{transition:none}}
+@media (max-width:700px){.efp-play{font-size:14px;padding:6px 14px 6px 6px}.efp[dir=rtl] .efp-play{padding:6px 6px 6px 14px}.efp-play-ring{inline-size:40px;block-size:40px}.efp-title{font-size:13px;line-height:18px}}

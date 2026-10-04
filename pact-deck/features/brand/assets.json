@@ -1,0 +1,544 @@
+{
+ "schema": "athar.brand.assets/1",
+ "version": "1.7.1",
+ "generated_utc": "2026-10-04T09:23:13Z",
+ "distBase": "/assets/brand/",
+ "items": [
+  {
+   "id": "athar-logo-horizontal-official",
+   "group": "logo",
+   "file": "logo/athar-logo-horizontal-official.862dc135e3.png",
+   "bytes": 266005,
+   "sha256": "862dc135e31fdd6299bd7cd989d2ce869fdf4803773791f67052548f26cbd1ab",
+   "w": 4330,
+   "h": 923,
+   "label": "OFFICIAL",
+   "variant": "primary (Deep Ocean ink, transparent) — the pack file, bytes unchanged",
+   "source": "Athar_Logo_Horizontal_transparent_v1.png (Athar_Brand_Asset_Pack_v3, Google Drive / SharePoint)",
+   "sourceSha256": "862dc135e31fdd6299bd7cd989d2ce869fdf4803773791f67052548f26cbd1ab"
+  },
+  {
+   "id": "athar-logo-horizontal-primary-1600",
+   "group": "logo",
+   "file": "logo/athar-logo-horizontal-primary-1600.f7fc85d259.png",
+   "bytes": 75188,
+   "sha256": "f7fc85d25964293848d27b0d3189318873c7c20236e45d5be8f7df76f6e4922c",
+   "w": 1600,
+   "h": 341,
+   "label": "OFFICIAL (display copy)",
+   "variant": "primary — Deep Ocean on light grounds (Ivory 12.11:1 · Sand 6.24:1), downscaled to 1600 px",
+   "source": "Athar_Logo_Horizontal_transparent_v1.png (Athar_Brand_Asset_Pack_v3, Google Drive / SharePoint)",
+   "sourceSha256": "862dc135e31fdd6299bd7cd989d2ce869fdf4803773791f67052548f26cbd1ab"
+  },
+  {
+   "id": "athar-logo-horizontal-reversed",
+   "group": "logo",
+   "file": "logo/athar-logo-horizontal-reversed.6ddd8ba877.png",
+   "bytes": 84183,
+   "sha256": "6ddd8ba87780f55641ec2c4da2687b786d09d99e91f279fe4b37695b59cf0745",
+   "w": 1600,
+   "h": 341,
+   "label": "DERIVED FROM OFFICIAL LOGO",
+   "variant": "reversed — Ivory mark + Champagne Gold wordmark on Deep Ocean (mark 12.11:1 · wordmark 4.52:1; guidelines 2.4 / 2.12)",
+   "source": "Athar_Logo_Horizontal_transparent_v1.png (Athar_Brand_Asset_Pack_v3, Google Drive / SharePoint)",
+   "sourceSha256": "862dc135e31fdd6299bd7cd989d2ce869fdf4803773791f67052548f26cbd1ab"
+  },
+  {
+   "id": "athar-logo-horizontal-ivory",
+   "group": "logo",
+   "file": "logo/athar-logo-horizontal-ivory.5247ca2805.png",
+   "bytes": 81671,
+   "sha256": "5247ca280599e867535a07ef6eb46b2bba0c7b3357e39c6575f59a4e98333488",
+   "w": 1600,
+   "h": 341,
+   "label": "DERIVED FROM OFFICIAL LOGO",
+   "variant": "all-Ivory lockup — on Emerald (6.41:1; guidelines 2.12)",
+   "source": "Athar_Logo_Horizontal_transparent_v1.png (Athar_Brand_Asset_Pack_v3, Google Drive / SharePoint)",
+   "sourceSha256": "862dc135e31fdd6299bd7cd989d2ce869fdf4803773791f67052548f26cbd1ab"
+  },
+  {
+   "id": "athar-logo-horizontal-mono-black",
+   "group": "logo",
+   "file": "logo/athar-logo-horizontal-mono-black.13604b8c87.png",
+   "bytes": 46863,
+   "sha256": "13604b8c87e37e867a43d1c1357ad2a92ef8e76eda0fd4fc78f8171aaac27750",
+   "w": 1600,
+   "h": 341,
+   "label": "DERIVED FROM OFFICIAL LOGO",
+   "variant": "monochrome black — single-colour print, black on white (21.00:1; guidelines 2.5)",
+   "source": "Athar_Logo_Horizontal_transparent_v1.png (Athar_Brand_Asset_Pack_v3, Google Drive / SharePoint)",
+   "sourceSha256": "862dc135e31fdd6299bd7cd989d2ce869fdf4803773791f67052548f26cbd1ab"
+  },
+  {
+   "id": "athar-logo-horizontal-mono-white",
+   "group": "logo",
+   "file": "logo/athar-logo-horizontal-mono-white.e84c3a1574.png",
+   "bytes": 50345,
+   "sha256": "e84c3a1574a8a6cf63b9e29eb49dc54c1e76a1519f6d6043c3dc3f560f9b1a36",
+   "w": 1600,
+   "h": 341,
+   "label": "DERIVED FROM OFFICIAL LOGO",
+   "variant": "monochrome white — single-colour reversed (guidelines 2.5)",
+   "source": "Athar_Logo_Horizontal_transparent_v1.png (Athar_Brand_Asset_Pack_v3, Google Drive / SharePoint)",
+   "sourceSha256": "862dc135e31fdd6299bd7cd989d2ce869fdf4803773791f67052548f26cbd1ab"
+  },
+  {
+   "id": "athar-monogram-deep-ocean",
+   "group": "logo",
+   "file": "logo/athar-monogram-deep-ocean.8a68c3db50.png",
+   "bytes": 74529,
+   "sha256": "8a68c3db50d6fd06159453ac9860c29c00fc734ab241cd0ff511c61898803d1d",
+   "w": 600,
+   "h": 677,
+   "label": "DERIVED FROM OFFICIAL LOGO",
+   "variant": "monogram — the Arabic mark alone, Deep Ocean (guidelines 2.6; x = 1/6 of the mark height)",
+   "source": "Athar_Logo_Horizontal_transparent_v1.png (Athar_Brand_Asset_Pack_v3, Google Drive / SharePoint)",
+   "sourceSha256": "862dc135e31fdd6299bd7cd989d2ce869fdf4803773791f67052548f26cbd1ab"
+  },
+  {
+   "id": "athar-monogram-champagne-gold",
+   "group": "logo",
+   "file": "logo/athar-monogram-champagne-gold.7d2a6c89b6.png",
+   "bytes": 84434,
+   "sha256": "7d2a6c89b607c40aa6191ef040f1b94c91b2373060740779176d19b0048b01f8",
+   "w": 600,
+   "h": 677,
+   "label": "DERIVED FROM OFFICIAL LOGO",
+   "variant": "monogram — Champagne Gold, reversed on Deep Ocean / limestone signage (guidelines 2.6, 2.12)",
+   "source": "Athar_Logo_Horizontal_transparent_v1.png (Athar_Brand_Asset_Pack_v3, Google Drive / SharePoint)",
+   "sourceSha256": "862dc135e31fdd6299bd7cd989d2ce869fdf4803773791f67052548f26cbd1ab"
+  },
+  {
+   "id": "athar-mood-board-key-visual",
+   "group": "mood",
+   "file": "mood/athar-mood-board-key-visual.022b7bc5aa.jpg",
+   "bytes": 275278,
+   "sha256": "022b7bc5aaac70c9b58531fd1c376b4fa5bfe74481afcabbc805482e0a9e6caa",
+   "w": 1100,
+   "h": 1628,
+   "label": "PACK ASSET",
+   "caption": {
+    "en": "Mood board — the approved key visual (guidelines 5.1); its five right-edge swatches are the palette",
+    "ar": "لوحة المزاج — المرئي الرئيسي المعتمد (الدليل 5.1)؛ عيّناتها الخمس على الحافة اليمنى هي لوحة الألوان"
+   },
+   "source": "image_picker_2FEAA08B-…1A58.jpg (media library) — identified as the 1290 × 1909 mood board of the guidelines (swatch columns 1006–1084 sample to the palette HEX)",
+   "sourceSha256": "65c12612fee242ea110ff27fb5145e8bfb4b1fd134ba674ea29318c36bf4f356",
+   "swatchCheck": {
+    "Deep Ocean": {
+     "board": "#192E3C",
+     "token": "#192E3C",
+     "absDiff": 0
+    },
+    "Emerald": {
+     "board": "#405A5B",
+     "token": "#405A5B",
+     "absDiff": 0
+    },
+    "Sand": {
+     "board": "#BEAA91",
+     "token": "#BEAA91",
+     "absDiff": 0
+    },
+    "Ivory": {
+     "board": "#F2EEE5",
+     "token": "#F2EEE5",
+     "absDiff": 0
+    },
+    "Champagne Gold": {
+     "board": "#AD8D64",
+     "token": "#AD8D63",
+     "absDiff": 1
+    }
+   }
+  },
+  {
+   "id": "athar-web-agent-avatar-system-v2",
+   "group": "mood",
+   "file": "mood/athar-web-agent-avatar-system-v2.a299f157be.webp",
+   "bytes": 79790,
+   "sha256": "a299f157be5de127e6a3fcdf19316501892e6e9ed024d3376128c5f632f32c2e",
+   "w": 1200,
+   "h": 800,
+   "label": "PACK ASSET",
+   "caption": {
+    "en": "Agent avatar / persona system board (athar_web_agent_avatar_system_v2; guidelines 6.7)",
+    "ar": "لوحة نظام الصور الرمزية للوكلاء (athar_web_agent_avatar_system_v2؛ الدليل 6.7)"
+   },
+   "source": "athar_web_agent_avatar_system_v2.jpg (Athar_Brand_Asset_Pack_v3)",
+   "sourceSha256": "ab86c0149cf28b24f779859dddcb778c096c7e0437e722ddac8f28af4b0e198a"
+  },
+  {
+   "id": "athar-brand-background-tile",
+   "group": "mood",
+   "file": "mood/athar-brand-background-tile.8c0b8ed576.webp",
+   "bytes": 33646,
+   "sha256": "8c0b8ed5761f5302fef2e6f39148c9db46f2ad0ff799ca5dcba70359a8cea251",
+   "w": 1200,
+   "h": 800,
+   "label": "CONCEPT RENDER · ILLUSTRATIVE",
+   "caption": {
+    "en": "Abstract brand background tile — supplementary render (step 4), used as the panel ground",
+    "ar": "بلاطة خلفية تجريدية — تصيير تكميلي (الخطوة 4) يُستخدم أرضيةً للوحة"
+   },
+   "source": "DFrA2lssVy.png (supplementary render, agents library)",
+   "sourceSha256": "0d7141f2913befade393a3b1064f920ed1836d58dc73c88b324a09fe118cf4a0"
+  },
+  {
+   "id": "wireframes-p04-overview",
+   "group": "product",
+   "file": "product/wireframes-p04-overview.80a57d9335.webp",
+   "bytes": 62702,
+   "sha256": "80a57d9335505c0fb1a246bdf8e7b70f8386f3cc6fad9682cffaf4196e492c92",
+   "w": 1754,
+   "h": 1240,
+   "label": "PACK ASSET",
+   "kind": "wireframe",
+   "caption": {
+    "en": "Wireframe · Overview — credits, six live metrics, activity, grants, plugins, storage, models (p. 4)",
+    "ar": "إطار سلكي · النظرة العامة — الرصيد وستة مؤشرات حيّة والنشاط والمنح والإضافات والتخزين والنماذج (ص 4)"
+   },
+   "page": 4,
+   "source": "Athar_Wireframes_and_Screens_v1.pdf (26 pp., Web app OD_v1.25, 27 Sep 2026) — page rasterised at 150 dpi",
+   "sourceSha256": "e3a0e12b870c3a44e26524790d1b7e66ca816e5d6fabc5e1cea9071bcaabd2ba"
+  },
+  {
+   "id": "screens-p09-p18-overview-en-ar",
+   "group": "product",
+   "file": "product/screens-p09-p18-overview-en-ar.154fe45a71.webp",
+   "bytes": 104354,
+   "sha256": "154fe45a71f2b28134f969e1c9406ee4d533c6da320bfe11c9109bf5700e2ba9",
+   "w": 1400,
+   "h": 1989,
+   "label": "PACK ASSET",
+   "kind": "screens",
+   "caption": {
+    "en": "Screens · Overview — English LTR (p. 9) over Arabic RTL (p. 18), light beside dark",
+    "ar": "الشاشات · النظرة العامة — الإنجليزية (ص 9) فوق العربية من اليمين إلى اليسار (ص 18)، الفاتح بجانب الداكن"
+   },
+   "page": "9+18",
+   "source": "Athar_Wireframes_and_Screens_v1.pdf (26 pp., Web app OD_v1.25, 27 Sep 2026) — page rasterised at 150 dpi",
+   "sourceSha256": "e3a0e12b870c3a44e26524790d1b7e66ca816e5d6fabc5e1cea9071bcaabd2ba"
+  },
+  {
+   "id": "screens-p16-agent-flow-builder",
+   "group": "product",
+   "file": "product/screens-p16-agent-flow-builder.4f46190bab.webp",
+   "bytes": 40754,
+   "sha256": "4f46190bab2feb204beb76a04408cee6d8791677413c2e440f882316ca9f873a",
+   "w": 1754,
+   "h": 1240,
+   "label": "PACK ASSET",
+   "kind": "screens",
+   "caption": {
+    "en": "Screens · Agent Flow Builder — multi-agent flows on a canvas (p. 16)",
+    "ar": "الشاشات · منشئ تدفّق الوكلاء — تدفّقات متعددة الوكلاء على لوحة (ص 16)"
+   },
+   "page": 16,
+   "source": "Athar_Wireframes_and_Screens_v1.pdf (26 pp., Web app OD_v1.25, 27 Sep 2026) — page rasterised at 150 dpi",
+   "sourceSha256": "e3a0e12b870c3a44e26524790d1b7e66ca816e5d6fabc5e1cea9071bcaabd2ba"
+  },
+  {
+   "id": "deck-slide-38-nations-empowered",
+   "group": "product",
+   "file": "product/deck-slide-38-nations-empowered.b007df3584.webp",
+   "bytes": 63896,
+   "sha256": "b007df3584ebf4e3aa19eb5fc1586c1e6c775e74774d49386f69b3fb192f0227",
+   "w": 1400,
+   "h": 702,
+   "label": "PACK ASSET",
+   "kind": "deck",
+   "caption": {
+    "en": "Deck screenshot · slide 38 “Nations empowered” (canvas 1473 × 738)",
+    "ar": "لقطة من العرض · الشريحة 38 «دول متمكّنة» (1473 × 738)"
+   },
+   "source": "canvas-screenshot-1473x738.png (pack screenshot)",
+   "sourceSha256": "e35e674ab0459295d6797f5453e00338ba4b537b4a5c5e162ee5bcbbe55212cd"
+  },
+  {
+   "id": "deck-slide-30-impact-funding",
+   "group": "product",
+   "file": "product/deck-slide-30-impact-funding.161d318005.webp",
+   "bytes": 99856,
+   "sha256": "161d318005d0805c0b5667f0b142684aa91afc8362b2d9476f9ea0de4c6edc3f",
+   "w": 1400,
+   "h": 685,
+   "label": "PACK ASSET",
+   "kind": "deck",
+   "caption": {
+    "en": "Deck screenshot · slide 30 “Impact & funding” (canvas 1728 × 871)",
+    "ar": "لقطة من العرض · الشريحة 30 «الأثر والتمويل» (1728 × 871)"
+   },
+   "source": "canvas-screenshot-1728x871.png (pack screenshot)",
+   "sourceSha256": "cdba997c5dcfa92d7205d5a243be784e7fda288cd0e8c50eb4a77da53280b1ed"
+  },
+  {
+   "id": "product-film-still-16s7-collage",
+   "group": "product",
+   "file": "product/product-film-still-16s7-collage.a758e98d28.webp",
+   "bytes": 19846,
+   "sha256": "a758e98d28a6f031dabf1c5fa06e96ba263a6664650a5b8fe7b3ca9b54509a93",
+   "w": 714,
+   "h": 171,
+   "label": "FILM STILL",
+   "kind": "film",
+   "caption": {
+    "en": "Product-film still · at 16.7 s — concept collage (tablet · team · reception kiosk), as shown on slide 38 before v1.5.7",
+    "ar": "لقطة من فيلم المنتج · عند 16.7 ث — كولاج مفاهيمي (لوح · فريق · كشك استقبال) كما عُرض في الشريحة 38 قبل v1.5.7"
+   },
+   "source": "canvas-screenshot-432x169.png (pack) — collage cropped from the slide capture",
+   "sourceSha256": "1b03fe01781d6e359b169e8ac69173711c38eb1f78a623fd34de796b519d8446",
+   "cropBox": [
+    0,
+    73,
+    714,
+    244
+   ]
+  },
+  {
+   "id": "render-stationery-flat-lay",
+   "group": "product",
+   "file": "product/render-stationery-flat-lay.1f8a5ef1ff.webp",
+   "bytes": 45544,
+   "sha256": "1f8a5ef1ff322862780d458707004aab454e1ce3c2749bcf8a500720f8186236",
+   "w": 1400,
+   "h": 933,
+   "label": "CONCEPT RENDER · ILLUSTRATIVE",
+   "kind": "render",
+   "caption": {
+    "en": "Stationery flat-lay — official logo composited onto the blank logo areas",
+    "ar": "مجموعة قرطاسية — الشعار الرسمي مركّب على مساحات الشعار الفارغة"
+   },
+   "source": "render-flatlay.png (supplementary render, step 4; agents library)",
+   "sourceSha256": "d45fdc062676e4549318481104f3a723c084a51ad7b5bf4b1b3eecb8c9836aa0",
+   "logoComposite": {
+    "method": "official horizontal lockup composited onto flat (blank) regions detected programmatically (local std < 3 over 16-px blocks); Deep Ocean on light regions, Ivory/Gold reversed on dark regions",
+    "placements": [
+     {
+      "x": 423,
+      "y": 318,
+      "w": 179,
+      "h": 38,
+      "variant": "primary",
+      "region": {
+       "x": 392,
+       "y": 287,
+       "w": 448,
+       "h": 527,
+       "area": 127431,
+       "lum": 216.0198516845703
+      }
+     },
+     {
+      "x": 100,
+      "y": 276,
+      "w": 116,
+      "h": 25,
+      "variant": "reversed",
+      "region": {
+       "x": 84,
+       "y": 260,
+       "w": 232,
+       "h": 113,
+       "area": 12262,
+       "lum": 43.25126266479492
+      }
+     },
+     {
+      "x": 161,
+      "y": 483,
+      "w": 84,
+      "h": 18,
+      "variant": "primary",
+      "region": {
+       "x": 150,
+       "y": 472,
+       "w": 162,
+       "h": 51,
+       "area": 8080,
+       "lum": 225.2772216796875
+      }
+     }
+    ]
+   }
+  },
+  {
+   "id": "render-reception-kiosk",
+   "group": "product",
+   "file": "product/render-reception-kiosk.1d3c748624.webp",
+   "bytes": 94006,
+   "sha256": "1d3c748624f9543f2e2fb804855759b9ab09cf64ab77594bb027a25595303b46",
+   "w": 1400,
+   "h": 933,
+   "label": "CONCEPT RENDER · ILLUSTRATIVE",
+   "kind": "render",
+   "caption": {
+    "en": "Reception-lobby kiosk — official logo composited onto the kiosk header panel",
+    "ar": "كشك في بهو الاستقبال — الشعار الرسمي مركّب على لوحة رأس الكشك"
+   },
+   "source": "render-kiosk.png (supplementary render, step 4; agents library)",
+   "sourceSha256": "ffb3c5c2425dc7a6c1a44c18dd82aeb11593730a6243d406b44bc9f1da53abb6",
+   "logoComposite": {
+    "method": "official horizontal lockup composited onto flat (blank) regions detected programmatically (local std < 3 over 16-px blocks); Deep Ocean on light regions, Ivory/Gold reversed on dark regions",
+    "placements": [
+     {
+      "x": 486,
+      "y": 505,
+      "w": 109,
+      "h": 23,
+      "variant": "primary",
+      "region": {
+       "x": 421,
+       "y": 489,
+       "w": 239,
+       "h": 535,
+       "area": 83073,
+       "lum": 197.65469360351562
+      }
+     }
+    ]
+   }
+  },
+  {
+   "id": "render-laptop-phone-dashboard",
+   "group": "product",
+   "file": "product/render-laptop-phone-dashboard.7bbdfc6108.webp",
+   "bytes": 80834,
+   "sha256": "7bbdfc610850e9ce04e831899a579b627a2e4cfcd75d392a76e2871b138de3a7",
+   "w": 1400,
+   "h": 933,
+   "label": "CONCEPT RENDER · ILLUSTRATIVE",
+   "kind": "render",
+   "caption": {
+    "en": "Laptop + phone dashboard — official logo composited onto the dark UI header area",
+    "ar": "لوحة تحكم على حاسوب محمول وهاتف — الشعار الرسمي مركّب على رأس الواجهة"
+   },
+   "source": "render-laptop-phone.png (supplementary render, step 4; agents library)",
+   "sourceSha256": "70442001d3fb20b2374bf961230b121d9375148fc6e7a2080d8792a1982a6507",
+   "logoComposite": {
+    "method": "official horizontal lockup composited onto flat (blank) regions detected programmatically (local std < 3 over 16-px blocks); Deep Ocean on light regions, Ivory/Gold reversed on dark regions",
+    "placements": [
+     {
+      "x": 402,
+      "y": 505,
+      "w": 74,
+      "h": 16,
+      "variant": "reversed",
+      "region": {
+       "x": 387,
+       "y": 498,
+       "w": 104,
+       "h": 160,
+       "area": 12619,
+       "lum": 14.565258979797363
+      }
+     }
+    ]
+   }
+  },
+  {
+   "id": "CormorantGaramond-Light",
+   "group": "fonts",
+   "file": "fonts/CormorantGaramond-Light.ccc6cb322e.woff2",
+   "bytes": 36276,
+   "sha256": "ccc6cb322e2e29625e7a3e87bdde6b9502fbb0b7a2f1f4db479863f6278a8470",
+   "family": "Cormorant Garamond",
+   "weight": 300,
+   "style": "normal",
+   "glyphs": 831,
+   "subset": "latin",
+   "licence": "SIL Open Font License 1.1",
+   "source": "github.com/google/fonts (main) ofl/cormorantgaramond/CormorantGaramond[wght].ttf"
+  },
+  {
+   "id": "CormorantGaramond-Regular",
+   "group": "fonts",
+   "file": "fonts/CormorantGaramond-Regular.fe7c426643.woff2",
+   "bytes": 38528,
+   "sha256": "fe7c426643cb6602baa415c0de2ae515c7d10fe311bc67608b3d558c25591013",
+   "family": "Cormorant Garamond",
+   "weight": 400,
+   "style": "normal",
+   "glyphs": 831,
+   "subset": "latin",
+   "licence": "SIL Open Font License 1.1",
+   "source": "github.com/google/fonts (main) ofl/cormorantgaramond/CormorantGaramond[wght].ttf"
+  },
+  {
+   "id": "CormorantGaramond-LightItalic",
+   "group": "fonts",
+   "file": "fonts/CormorantGaramond-LightItalic.888380eaa5.woff2",
+   "bytes": 27184,
+   "sha256": "888380eaa5a48ddde73ed4f249f9895d40158907851f2c96406f720e452b4a20",
+   "family": "Cormorant Garamond",
+   "weight": 300,
+   "style": "italic",
+   "glyphs": 545,
+   "subset": "latin",
+   "licence": "SIL Open Font License 1.1",
+   "source": "github.com/google/fonts (main) ofl/cormorantgaramond/CormorantGaramond-Italic[wght].ttf"
+  },
+  {
+   "id": "IBMPlexMono-Regular",
+   "group": "fonts",
+   "file": "fonts/IBMPlexMono-Regular.3742991142.woff2",
+   "bytes": 10348,
+   "sha256": "374299114218907012aec823f176dbc383b69489a4a44e1ae48b30feda04a93a",
+   "family": "IBM Plex Mono",
+   "weight": 400,
+   "style": "normal",
+   "glyphs": 299,
+   "subset": "latin",
+   "licence": "SIL Open Font License 1.1",
+   "source": "github.com/google/fonts (main) ofl/ibmplexmono/IBMPlexMono-Regular.ttf"
+  },
+  {
+   "id": "IBMPlexSansArabic-Light",
+   "group": "fonts",
+   "file": "fonts/IBMPlexSansArabic-Light.3327209b93.woff2",
+   "bytes": 51600,
+   "sha256": "3327209b937da0a575aeb5f649789272f95709d4b656535c4da29ff4f26fb6b7",
+   "family": "IBM Plex Sans Arabic Light",
+   "weight": 300,
+   "style": "normal",
+   "glyphs": 1690,
+   "subset": "full (Arabic + Latin)",
+   "licence": "SIL Open Font License 1.1",
+   "source": "github.com/google/fonts (main) ofl/ibmplexsansarabic/IBMPlexSansArabic-Light.ttf"
+  }
+ ],
+ "logoGeometry": {
+  "px": {
+   "w": 4330,
+   "h": 923
+  },
+  "inkBbox": [
+   34,
+   34,
+   4295,
+   887
+  ],
+  "markBbox": [
+   34,
+   34,
+   784,
+   887
+  ],
+  "wordmarkBbox": [
+   1214,
+   282,
+   4295,
+   640
+  ],
+  "letters": 5,
+  "capHeightPx": 359,
+  "clearSpaceX_overWidth": 0.0829,
+  "clearSpaceX_overHeight": 0.3889,
+  "inkMedianRgb": [
+   25,
+   46,
+   60
+  ],
+  "inkHex": "#192E3C",
+  "inkMatchesDeepOcean": true
+ }
+}

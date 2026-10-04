@@ -1,0 +1,357 @@
+{
+ "base": "http://127.0.0.1:4171",
+ "version": "1.7.1",
+ "written": "2026-10-04T10:16:49.693Z",
+ "rows": [
+  {
+   "lang": "en",
+   "who": "al-ameri",
+   "dir": "ltr",
+   "cls": 0,
+   "docOverflowX": 0,
+   "secOverflowX": 0,
+   "video": {
+    "paused": true,
+    "autoplay": false,
+    "poster": "athar-origins-ep01-fahad-al-ameri-poster-07s0.6b79ef7542.jpg",
+    "defaultTrack": "en"
+   },
+   "figDir": "ltr",
+   "ratio": 1.7777777777777777,
+   "slot": null,
+   "letter": {
+    "x": 16,
+    "y": 132,
+    "w": 358,
+    "h": 966
+   },
+   "media": {
+    "x": 16,
+    "y": 1122,
+    "w": 358,
+    "h": 279
+   },
+   "card": {
+    "x": 16,
+    "y": 1416,
+    "w": 358,
+    "h": 683
+   },
+   "title": "Athar — Origins of Impact, Episode 01: H.E. Fahad Mohamed Al Ameri"
+  },
+  {
+   "lang": "en",
+   "who": "ferreira-da-cunha",
+   "dir": "ltr",
+   "cls": 0,
+   "docOverflowX": 0,
+   "secOverflowX": 0,
+   "video": {
+    "paused": true,
+    "autoplay": false,
+    "poster": "athar-origins-ep01-ary-ferreira-da-cunha-poster-04s0.c7cb38c99b.jpg",
+    "defaultTrack": "en"
+   },
+   "figDir": "ltr",
+   "ratio": 1.7777777777777777,
+   "slot": null,
+   "letter": {
+    "x": 16,
+    "y": 132,
+    "w": 358,
+    "h": 1251
+   },
+   "media": {
+    "x": 16,
+    "y": 1407,
+    "w": 358,
+    "h": 279
+   },
+   "card": {
+    "x": 16,
+    "y": 1701,
+    "w": 358,
+    "h": 764
+   },
+   "title": "Athar — Origins of Impact, Episode 01: Ary Ferreira da Cunha"
+  },
+  {
+   "lang": "en",
+   "who": "khalid",
+   "dir": "ltr",
+   "cls": 0,
+   "docOverflowX": 0,
+   "secOverflowX": 0,
+   "video": {
+    "paused": true,
+    "autoplay": false,
+    "poster": "athar-origins-of-impact-ep01-muhammed-khalid-poster-18s8.32839348ca.jpg",
+    "defaultTrack": "en"
+   },
+   "figDir": "ltr",
+   "ratio": 1.7777777777777777,
+   "slot": null,
+   "letter": {
+    "x": 16,
+    "y": 132,
+    "w": 358,
+    "h": 1017
+   },
+   "media": {
+    "x": 16,
+    "y": 1173,
+    "w": 358,
+    "h": 311
+   },
+   "card": null,
+   "title": "Athar — Origins of Impact, Episode 01: Muhammed Khalid"
+  },
+  {
+   "lang": "en",
+   "who": "unwalla",
+   "dir": "ltr",
+   "cls": 0,
+   "docOverflowX": 0,
+   "secOverflowX": 0,
+   "video": {
+    "paused": true,
+    "autoplay": false,
+    "poster": "athar-origins-ep01-kayaan-unwalla-poster-20s0.976a2a5387.jpg",
+    "defaultTrack": "en"
+   },
+   "figDir": "ltr",
+   "ratio": 1.7777777777777777,
+   "slot": null,
+   "letter": {
+    "x": 16,
+    "y": 132,
+    "w": 358,
+    "h": 1092
+   },
+   "media": {
+    "x": 16,
+    "y": 1248,
+    "w": 358,
+    "h": 279
+   },
+   "card": {
+    "x": 16,
+    "y": 1542,
+    "w": 358,
+    "h": 1048
+   },
+   "title": "Athar — Origins of Impact, Episode 01: Kayaan K. Unwalla"
+  },
+  {
+   "lang": "en",
+   "who": "lorenzo",
+   "dir": "ltr",
+   "cls": 0,
+   "docOverflowX": 0,
+   "secOverflowX": 0,
+   "video": {
+    "paused": true,
+    "autoplay": false,
+    "poster": "lorenzo-poster.dceede4679.jpg",
+    "defaultTrack": "en"
+   },
+   "figDir": "ltr",
+   "ratio": 1.7777777777777777,
+   "slot": null,
+   "letter": {
+    "x": 16,
+    "y": 132,
+    "w": 358,
+    "h": 963
+   },
+   "media": {
+    "x": 16,
+    "y": 1119,
+    "w": 358,
+    "h": 293
+   },
+   "card": {
+    "x": 16,
+    "y": 1427,
+    "w": 358,
+    "h": 552
+   },
+   "title": "Athar — Origins of Impact, Episode 01: Lorenzo Avitabile"
+  },
+  {
+   "lang": "ar",
+   "who": "al-ameri",
+   "dir": "rtl",
+   "cls": 0,
+   "docOverflowX": 0,
+   "secOverflowX": 0,
+   "video": {
+    "paused": true,
+    "autoplay": false,
+    "poster": "athar-origins-ep01-fahad-al-ameri-poster-07s0.6b79ef7542.jpg",
+    "defaultTrack": "ar"
+   },
+   "figDir": "rtl",
+   "ratio": 1.7777777777777777,
+   "slot": null,
+   "letter": {
+    "x": 16,
+    "y": 137,
+    "w": 358,
+    "h": 972
+   },
+   "media": {
+    "x": 16,
+    "y": 1133,
+    "w": 358,
+    "h": 265
+   },
+   "card": {
+    "x": 16,
+    "y": 1412,
+    "w": 358,
+    "h": 683
+   },
+   "title": "أثر — أصول الأثر، الحلقة 01: سعادة فهد محمد العامري"
+  },
+  {
+   "lang": "ar",
+   "who": "ferreira-da-cunha",
+   "dir": "rtl",
+   "cls": 0,
+   "docOverflowX": 0,
+   "secOverflowX": 0,
+   "video": {
+    "paused": true,
+    "autoplay": false,
+    "poster": "athar-origins-ep01-ary-ferreira-da-cunha-poster-04s0.c7cb38c99b.jpg",
+    "defaultTrack": "ar"
+   },
+   "figDir": "rtl",
+   "ratio": 1.7777777777777777,
+   "slot": null,
+   "letter": {
+    "x": 16,
+    "y": 137,
+    "w": 358,
+    "h": 1261
+   },
+   "media": {
+    "x": 16,
+    "y": 1422,
+    "w": 358,
+    "h": 265
+   },
+   "card": {
+    "x": 16,
+    "y": 1701,
+    "w": 358,
+    "h": 764
+   },
+   "title": "أثر — أصول الأثر، الحلقة 01: آري فيريرا دا كونيا"
+  },
+  {
+   "lang": "ar",
+   "who": "khalid",
+   "dir": "rtl",
+   "cls": 0,
+   "docOverflowX": 0,
+   "secOverflowX": 0,
+   "video": {
+    "paused": true,
+    "autoplay": false,
+    "poster": "athar-origins-of-impact-ep01-muhammed-khalid-poster-18s8.32839348ca.jpg",
+    "defaultTrack": "ar"
+   },
+   "figDir": "rtl",
+   "ratio": 1.7777777777777777,
+   "slot": null,
+   "letter": {
+    "x": 16,
+    "y": 137,
+    "w": 358,
+    "h": 1019
+   },
+   "media": {
+    "x": 16,
+    "y": 1180,
+    "w": 358,
+    "h": 297
+   },
+   "card": null,
+   "title": "أثر — أصول الأثر، الحلقة 01: محمد خالد"
+  },
+  {
+   "lang": "ar",
+   "who": "unwalla",
+   "dir": "rtl",
+   "cls": 0,
+   "docOverflowX": 0,
+   "secOverflowX": 0,
+   "video": {
+    "paused": true,
+    "autoplay": false,
+    "poster": "athar-origins-ep01-kayaan-unwalla-poster-20s0.976a2a5387.jpg",
+    "defaultTrack": "ar"
+   },
+   "figDir": "rtl",
+   "ratio": 1.7777777777777777,
+   "slot": null,
+   "letter": {
+    "x": 16,
+    "y": 137,
+    "w": 358,
+    "h": 1100
+   },
+   "media": {
+    "x": 16,
+    "y": 1261,
+    "w": 358,
+    "h": 265
+   },
+   "card": {
+    "x": 16,
+    "y": 1540,
+    "w": 358,
+    "h": 1048
+   },
+   "title": "أثر — أصول الأثر، الحلقة 01: كايان ك. أونوالا"
+  },
+  {
+   "lang": "ar",
+   "who": "lorenzo",
+   "dir": "rtl",
+   "cls": 0,
+   "docOverflowX": 0,
+   "secOverflowX": 0,
+   "video": {
+    "paused": true,
+    "autoplay": false,
+    "poster": "lorenzo-poster.dceede4679.jpg",
+    "defaultTrack": "ar"
+   },
+   "figDir": "rtl",
+   "ratio": 1.7777777777777777,
+   "slot": null,
+   "letter": {
+    "x": 16,
+    "y": 137,
+    "w": 358,
+    "h": 969
+   },
+   "media": {
+    "x": 16,
+    "y": 1130,
+    "w": 358,
+    "h": 297
+   },
+   "card": {
+    "x": 16,
+    "y": 1441,
+    "w": 358,
+    "h": 552
+   },
+   "title": "أثر — أصول الأثر، الحلقة 01: لورينزو أفيتابيلي"
+  }
+ ]
+}

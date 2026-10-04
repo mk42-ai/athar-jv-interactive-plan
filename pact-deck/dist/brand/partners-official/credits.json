@@ -1,0 +1,47 @@
+{
+ "generated_utc": "2026-09-30T05:47:08Z",
+ "airev": {
+  "file": "airev-logo-official.svg",
+  "source_url": "https://www.airev.ae/assets/AIREV-logo-ca9cd9ef.svg",
+  "source_page": "https://www.airev.ae/ (site header, referenced from /assets/index-63886aec.js)",
+  "retrieved_utc": "2026-09-30T05:35Z",
+  "http_status": 200,
+  "bytes": 1506,
+  "sha256": "ca9cd9ef38b7f9b98b9033a5d2e2383ae35ace699269d694e2f14429e209a718",
+  "note": "Unaltered official file (light-grey #DBDBDB wordmark + purple #8537D0 accent, drawn for dark grounds). On light grounds the deck renders the same file through a CSS luminance filter; nothing redrawn or retyped. Companion black lockup darkLogo-4c945542.svg kept in assets/refs/. Use pending AIREV written brand approval — INTERNAL REVIEW ONLY."
+ },
+ "ondemand": {
+  "file": "/partners/ondemand-by-airev-mark.png (existing deck slot)",
+  "official_source": "ondemand_logo_v2.png (assets/refs/) and https://www.airev.ae/assets/ondemand-logo-d7e09353.svg"
+ },
+ "variants": [
+  {
+   "file": "brand/partners-official/airev-logo-official-dark.svg",
+   "derivedFrom": "airev-logo-official.svg (airev.ae bundle asset AIREV-logo-ca9cd9ef.svg)",
+   "change": "letter fill #DBDBDB -> Athar navy #062739 for light tiles; purple accent unchanged",
+   "rasters": [
+    "partners/airev-mark.png 236x80 (slides 21/22/24 tiles; swapped to the SVG at runtime by cobrand.js swapAllAirev)"
+   ],
+   "date": "2026-10-01"
+  }
+ ],
+ "lockup_v154": {
+  "date": "2026-10-01",
+  "change": "OnDemand by AIREV product mark removed from the cover/closing lock-up rows; lock-up = Athar mark + ATHAR wordmark; parent tier ODA × AIREV uses airev-logo-official.svg",
+  "reference": "Athar Brand Guidelines v2 Fig. 8.8"
+ },
+ "mastercardFoundation": {
+  "file": "/partners/review/mastercard-foundation__full-colour.png",
+  "official_package_url": "https://cdn.buttercms.com/MPuSQak9T7WMs107u9iV",
+  "official_package_file": "Mastercard-Foundation-Logos.zip",
+  "official_package_sha256": "996dcb02956c4dc190b87f522b1c2a8af4b0f33313a73924604880a70fbbd7a9",
+  "member": "Mastercard Foundation Logos/Logos/Full Colour .png",
+  "source_page": "https://mastercardfdn.org/en/mastercard-foundation-brand-guidelines/ (\"Mastercard Foundation Logos\" link, opened in the browser)",
+  "retrieved_utc": "2026-10-01T13:43:53Z",
+  "http_status": 200,
+  "bytes": 298185,
+  "sha256": "32afeb9eb97e8cc7164a508db975a20442cfe28b58fde4592699ddde28cdbe40",
+  "dimensions": "3681x3489",
+  "note": "Unmodified official master artwork (full-colour preferred version for light grounds; byte-identical to the package member). Reverse (white wordmark) artwork not used — every deck surface showing the mark is light. Partner use requires the Foundation's written approval — shown with the footnote \"pending written authorisation\", INTERNAL REVIEW ONLY."
+ }
+}

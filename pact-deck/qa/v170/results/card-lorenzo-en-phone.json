@@ -1,0 +1,64 @@
+{
+ "base": "http://127.0.0.1:4171",
+ "version": "1.7.1",
+ "expectCommit": "4ea5cc03f7de0061996946e129a00d6c32a2500f",
+ "written": "2026-10-04T10:06:19.654Z",
+ "rows": [
+  {
+   "idle": {
+    "lang": "en",
+    "dir": "ltr",
+    "badge": "v1.7.1",
+    "html": "1.7.1",
+    "ids": [
+     "s-exec-intro",
+     "s-exec-al-ameri",
+     "s-exec-ferreira-da-cunha",
+     "s-exec-khalid",
+     "s-exec-unwalla",
+     "s-exec-lorenzo"
+    ],
+    "count": 6,
+    "total": 48,
+    "active": true,
+    "n": 45,
+    "currentSrc": "http://127.0.0.1:4171/assets/exec/films/lorenzo/lorenzo-720p.1b56c492fc.mp4",
+    "src": "lorenzo-720p.1b56c492fc.mp4",
+    "poster": "lorenzo-poster.dceede4679.jpg",
+    "posterLoaded": true,
+    "duration": 40,
+    "dur": "0:40",
+    "title": "Athar — Origins of Impact, Episode 01: Lorenzo Avitabile",
+    "figDir": "ltr",
+    "tracks": [
+     "en:lorenzo.en.b46e263deb.vtt:default",
+     "ar:lorenzo.ar.ce6620edc0.vtt"
+    ],
+    "name": "Lorenzo Avitabile",
+    "role": "Senior Advisor — Office of Development Affairs, UAE Presidential Court",
+    "paused": true
+   },
+   "playing": {
+    "paused": false,
+    "currentTime": 2.848186,
+    "duration": 40,
+    "src": "lorenzo-720p.1b56c492fc.mp4",
+    "showing": [
+     "en:10"
+    ],
+    "controls": true,
+    "guide": "idle"
+   },
+   "tiles": [
+    "40Executive Team",
+    "41H.E. Fahad Mohamed Al Ameri",
+    "42Ary Ferreira da Cunha",
+    "43Muhammed Khalid",
+    "44Kayaan K. Unwalla",
+    "45Lorenzo Avitabile"
+   ],
+   "errors": [],
+   "failedRequests": []
+  }
+ ]
+}
