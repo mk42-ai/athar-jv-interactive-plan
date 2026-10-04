@@ -1,0 +1,57 @@
+{
+ "base": "http://127.0.0.1:4170",
+ "version": "1.7.0",
+ "expectCommit": "131e1b5b1389289ef2139f37454a95e350128512",
+ "written": "2026-10-04T08:20:55.977Z",
+ "rows": [
+  {
+   "idle": {
+    "lang": "ar",
+    "dir": "rtl",
+    "badge": "v1.7.0",
+    "html": "1.7.0",
+    "ids": [
+     "s-exec-intro",
+     "s-exec-al-ameri",
+     "s-exec-ferreira-da-cunha",
+     "s-exec-khalid",
+     "s-exec-unwalla",
+     "s-exec-lorenzo"
+    ],
+    "count": 6,
+    "total": 45,
+    "active": true,
+    "n": 43,
+    "currentSrc": "http://127.0.0.1:4170/assets/exec/films/khalid/athar-origins-of-impact-ep01-muhammed-khalid-720p.f824472ae0.mp4",
+    "src": "athar-origins-of-impact-ep01-muhammed-khalid-720p.f824472ae0.mp4",
+    "poster": "athar-origins-of-impact-ep01-muhammed-khalid-poster-18s8.32839348ca.jpg",
+    "posterLoaded": true,
+    "duration": 50.005,
+    "dur": "0:50",
+    "title": "أثر — أصول الأثر، الحلقة 01: محمد خالد",
+    "figDir": "rtl",
+    "tracks": [
+     "en:athar-origins-of-impact-ep01-muhammed-khalid.en.4242fc2dfe.vtt",
+     "ar:athar-origins-of-impact-ep01-muhammed-khalid.ar.e11f32091d.vtt:default"
+    ],
+    "name": "محمد خالد",
+    "role": "المؤسس والرئيس التنفيذي لشركة AIREV",
+    "paused": true
+   },
+   "playing": {
+    "paused": false,
+    "currentTime": 2.796677,
+    "duration": 50.005,
+    "src": "athar-origins-of-impact-ep01-muhammed-khalid-720p.f824472ae0.mp4",
+    "showing": [
+     "ar:11"
+    ],
+    "controls": true,
+    "guide": "idle"
+   },
+   "tiles": null,
+   "errors": [],
+   "failedRequests": []
+  }
+ ]
+}

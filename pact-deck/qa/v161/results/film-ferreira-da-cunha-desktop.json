@@ -1,11 +1,11 @@
 {
- "base": "http://127.0.0.1:4164",
- "version": "1.6.4",
- "written": "2026-10-04T06:11:36.719Z",
+ "base": "http://127.0.0.1:4170",
+ "version": "1.7.0",
+ "written": "2026-10-04T08:17:06.208Z",
  "rows": [
   {
    "meta": {
-    "poster": "athar-origins-ep01-ary-ferreira-da-cunha-poster-04s0.jpg",
+    "poster": "athar-origins-ep01-ary-ferreira-da-cunha-poster-04s0.c7cb38c99b.jpg",
     "tracks": [
      "en:default",
      "ar"

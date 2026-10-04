@@ -1,9 +1,13 @@
 // Athar deck v1.6.1 — Kayaan's film added (all four executive cards play), India/Kenya PRODUCT CONCEPT renders on slide 38, slide-30/38 links verified, version 1.6.1.
 // Khalid: v1.6.1 asserted the 37.333 s film because no ~50 s cut existed; v1.6.2 installed the delivered 50 s cut, so this test now asserts the films.json duration (50.000 s) and label — the suite stays data-driven.
+// v1.7.0: cold-start stabilisation — (1) a per-worker warm-up (lib.warmUp) requests build-info, the films bundle, every poster / 1080p / 720p head / caption and every
+//   Section 09 guide clip once BEFORE the first page opens, so a freshly provisioned sandbox or a freshly started serve.mjs no longer pays its cold path inside a test's
+//   wait budget; (2) the card test lets the guide SETTLE to 'playing' (not merely 'loading') before the film's Play is pressed, which removes the clip-loader vs. film-play
+//   race; (3) the cold-path waits were widened (film start 15 s → 30 s, guide pause 8 s → 20 s) and the guide journal is written next to each card's result for diagnosis.
 // Usage: GUIDE_BASE=http://127.0.0.1:4161 SHOT_PREFIX=after SHOTS_DIR=/path npx playwright test -c qa/v161/playwright.config.mjs
 import { test, expect } from '../../node_modules/@playwright/test/index.mjs';
 import fs from 'node:fs'; import path from 'node:path';
-import { instrument, FILE2CLIP, hashFor } from '../v154/lib.mjs';
+import { instrument, FILE2CLIP, hashFor, warmUp } from '../v154/lib.mjs';
 const HERE = path.dirname(new URL(import.meta.url).pathname); const BASE = process.env.GUIDE_BASE || 'http://127.0.0.1:4161'; const PREFIX = process.env.SHOT_PREFIX || 'after'; const SHOTS = process.env.SHOTS_DIR || path.join(HERE, 'screenshots');
 const RESULTS = path.join(HERE, 'results'); fs.mkdirSync(RESULTS, { recursive: true }); fs.mkdirSync(SHOTS, { recursive: true });
 const PKG = JSON.parse(fs.readFileSync(path.join(HERE, '../../package.json'), 'utf8')); const FILMS = JSON.parse(fs.readFileSync(path.join(HERE, '../../features/exec-films/films.json'), 'utf8')); const F = (r) => FILMS.distBase + r;
@@ -15,6 +19,7 @@ async function open(page, n, lang) { await page.goto(BASE + '/' + (lang ? '?lang
 const waitState = (page, src, ms = 10000) => page.waitForFunction((src) => { const r = document.getElementById('athar-narration'); const s = { state: r.getAttribute('data-state'), reason: r.getAttribute('data-reason') }; return new Function('s', 'return ' + src)(s); }, src, { timeout: ms });
 
 test.describe(`v${PKG.version}`, () => {
+  test.beforeAll(async () => { /* v1.7.0: cold-start warm-up (per worker) — recorded, never fatal */ const w = await warmUp(BASE, { films: FILMS }); write('warmup-' + test.info().project.name + '-w' + test.info().workerIndex, [w]); });
   test('version (package.json) surfaced everywhere; every card ships a film (no ready slot left)', async ({ page }) => {
     await setup(page); await open(page, 43); const v = await page.evaluate(() => ({ badge: document.querySelector('[data-testid="deck-version"]').textContent, html: document.documentElement.getAttribute('data-deck-version'), exec: window.AtharExecTeam.version, films: window.AtharExecFilms.version, statuses: window.AtharExecTeam.profiles.map((p) => p.id + ':' + p.filmStatus) }));
     const info = await (await page.request.get(BASE + '/build-info.json')).json(); write('version-' + test.info().project.name, [{ ...v, buildInfo: info.version, films: info.films.map((f) => f.id + ':' + f.status) }]);
@@ -26,10 +31,11 @@ test.describe(`v${PKG.version}`, () => {
   });
   for (const [who, k, n] of CARDS) test(`${who}: plays through the shared player with EN + AR tracks; guide pauses / resumes`, async ({ page }, info) => {
     test.setTimeout(180000); const mobile = info.project.name === 'phone'; const f = FILMS.films[who]; const sel = `#s-exec-${who} video[data-narration-pause]`;
-    await setup(page); await open(page, n); if (mobile) await page.tap('[data-testid="guide-toggle"]'); else await page.click('[data-testid="guide-toggle"]'); await waitState(page, "s.state === 'playing' || s.state === 'loading' || s.state === 'ended'", 15000);
+    await setup(page); await open(page, n); if (mobile) await page.tap('[data-testid="guide-toggle"]'); else await page.click('[data-testid="guide-toggle"]'); await waitState(page, "s.state === 'playing' || s.state === 'ended'", 30000); /* v1.7.0: settle to playing (the clip is loaded and audible) before the film starts — 'loading' left a loader/film-play race on cold starts */
     const meta = await page.evaluate((sel) => { const v = document.querySelector(sel), fig = v.closest('.efp'); return { poster: v.poster.split('/').pop(), tracks: [...v.querySelectorAll('track')].map((t) => t.srclang + (t.default ? ':default' : '')), autoplay: v.hasAttribute('autoplay'), paused: v.paused, dur: fig.querySelector('.efp-dur').textContent, title: fig.querySelector('.efp-title').textContent, slot: !!document.querySelector(`#s-exec-${fig.getAttribute('data-efp')} .efp-slot`) }; }, sel);
     expect(meta.poster).toBe(f.poster.split('/').pop()); expect(meta.tracks).toEqual(['en:default', 'ar']); expect(meta.autoplay).toBe(false); expect(meta.paused).toBe(true); expect(meta.dur).toBe(f.durationLabel); expect(meta.title).toBe(f.title.en); expect(meta.slot).toBe(false);
-    if (mobile) await page.tap(`#s-exec-${who} .efp-play`); else await page.click(`#s-exec-${who} .efp-play`); await page.waitForFunction((sel) => { const v = document.querySelector(sel); return !v.paused && v.currentTime > 0.6; }, sel, { timeout: 15000 }); await waitState(page, "s.state === 'paused' && s.reason === 'video'", 8000); await page.waitForTimeout(400);
+    if (mobile) await page.tap(`#s-exec-${who} .efp-play`); else await page.click(`#s-exec-${who} .efp-play`); await page.waitForFunction((sel) => { const v = document.querySelector(sel); return !v.paused && v.currentTime > 0.6; }, sel, { timeout: 30000 }); /* v1.7.0: 15 s → 30 s (cold 1080p fetch) */
+    try { await waitState(page, "s.state === 'paused' && s.reason === 'video'", 20000); /* v1.7.0: 8 s → 20 s */ } catch (e) { const g = await page.evaluate(() => ({ state: window.__guideState, journal: (window.AtharGuide && window.AtharGuide.journal) ? window.AtharGuide.journal().slice(-40) : null, events: window.__qaEvents.slice(-40) })); write(`film-${who}-${info.project.name}-guide-timeout`, [g]); throw e; } await page.waitForTimeout(400);
     const playing = await page.evaluate((sel) => { const v = document.querySelector(sel), fig = v.closest('.efp'); return { controls: v.controls, overlayHidden: getComputedStyle(fig.querySelector('.efp-play')).display === 'none', showing: [...v.textTracks].filter((t) => t.mode === 'showing').map((t) => t.language) }; }, sel); await shot(page, info, `card-${who}-playing-en`);
     await page.evaluate((sel) => document.querySelector(sel).pause(), sel); await waitState(page, "s.state === 'playing' || s.state === 'loading'", 10000);
     write(`film-${who}-` + info.project.name, [{ meta, playing, errors: page.__errors.slice() }]); expect(playing.controls).toBe(true); expect(playing.overlayHidden).toBe(true); expect(playing.showing).toEqual(['en']); expect(page.__errors).toEqual([]);

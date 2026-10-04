@@ -1,14 +1,14 @@
 {
- "base": "http://127.0.0.1:4164",
- "version": "1.6.4",
- "expectCommit": "87faef373849ac87a5266b9ba29e76bc8c14a2e0",
- "written": "2026-10-04T05:51:24.402Z",
+ "base": "http://127.0.0.1:4170",
+ "version": "1.7.0",
+ "expectCommit": "131e1b5b1389289ef2139f37454a95e350128512",
+ "written": "2026-10-04T08:22:02.570Z",
  "rows": [
   {
    "idle": {
     "lang": "ar",
     "dir": "rtl",
-    "badge": "v1.6.4",
+    "badge": "v1.7.0",
     "ids": [
      "s-exec-intro",
      "s-exec-al-ameri",
@@ -40,7 +40,7 @@
    },
    "playing": {
     "paused": false,
-    "currentTime": 1.350897,
+    "currentTime": 1.359316,
     "duration": 40,
     "src": "lorenzo-1080p.1566f3861a.mp4",
     "showing": [

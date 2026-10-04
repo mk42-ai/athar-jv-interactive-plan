@@ -1,15 +1,15 @@
 {
- "base": "http://127.0.0.1:4164",
- "version": "1.6.4",
- "written": "2026-10-04T05:59:32.178Z",
+ "base": "http://127.0.0.1:4170",
+ "version": "1.7.0",
+ "written": "2026-10-04T08:26:36.075Z",
  "rows": [
   {
    "meta": {
     "state": "idle",
-    "poster": "athar-origins-ep01-ary-ferreira-da-cunha-poster-04s0.jpg",
+    "poster": "athar-origins-ep01-ary-ferreira-da-cunha-poster-04s0.c7cb38c99b.jpg",
     "posterTime": "4",
     "variant": "720p",
-    "src": "/assets/exec/films/ferreira-da-cunha/athar-origins-ep01-ary-ferreira-da-cunha-720p.mp4",
+    "src": "/assets/exec/films/ferreira-da-cunha/athar-origins-ep01-ary-ferreira-da-cunha-720p.281f18ef25.mp4",
     "tracks": [
      "subtitles:en:default",
      "subtitles:ar"
@@ -31,7 +31,7 @@
    "playing": {
     "state": "playing",
     "paused": false,
-    "ct": 1.184976,
+    "ct": 1.18445,
     "controls": true,
     "overlayHidden": true,
     "overlays": 0,

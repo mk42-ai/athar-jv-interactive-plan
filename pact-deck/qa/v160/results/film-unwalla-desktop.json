@@ -1,15 +1,15 @@
 {
- "base": "http://127.0.0.1:4164",
- "version": "1.6.4",
- "written": "2026-10-04T05:58:12.514Z",
+ "base": "http://127.0.0.1:4170",
+ "version": "1.7.0",
+ "written": "2026-10-04T08:25:16.804Z",
  "rows": [
   {
    "meta": {
     "state": "idle",
-    "poster": "athar-origins-ep01-kayaan-unwalla-poster-20s0.jpg",
+    "poster": "athar-origins-ep01-kayaan-unwalla-poster-20s0.976a2a5387.jpg",
     "posterTime": "20",
     "variant": "1080p",
-    "src": "/assets/exec/films/unwalla/athar-origins-ep01-kayaan-unwalla-1080p.mp4",
+    "src": "/assets/exec/films/unwalla/athar-origins-ep01-kayaan-unwalla-1080p.2c1c7f0f3b.mp4",
     "tracks": [
      "subtitles:en:default",
      "subtitles:ar"
@@ -31,7 +31,7 @@
    "playing": {
     "state": "playing",
     "paused": false,
-    "ct": 1.184975,
+    "ct": 1.176412,
     "controls": true,
     "overlayHidden": true,
     "overlays": 0,

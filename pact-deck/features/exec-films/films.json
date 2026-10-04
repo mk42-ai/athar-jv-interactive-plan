@@ -1,6 +1,6 @@
 {
  "_comment": "v1.6.2 (v1.5.9 base) — Section 09 executive films (one slot per card). Source of truth for scripts/v1.4.7/build.mjs (copies assets/<person>/ → dist/assets/exec/films/<person>/), dist/build-info.json (films[]), features/exec-films/exec-films.js (window.AtharExecFilms) and the QA suite. status: 'shipped' = file verified and served · 'coming-soon' = labelled ready slot, no file served. To ship a film later: drop the files into assets/<person>/, fill the entry, set status to shipped, run the build. burnedInSubtitles: whether the film itself carries burned-in captions (the <track> VTTs are shipped either way). v1.6.1: all four cards ship a film; no ready slot remains. v1.6.2: Khalid replaced by the delivered 50 s cut, served under content-hashed filenames. v1.6.4: fifth card — Lorenzo Avitabile (slide 45).",
- "version": "1.6.4",
+ "version": "1.7.0",
  "distBase": "/assets/exec/films/",
  "films": {
   "khalid": {
@@ -121,16 +121,16 @@
     "bytes": 27343878,
     "note": "downloaded from the user's file library (signed blob URL; the library 'url' field is an .mp3 audio extract, which was used only for the speech-to-text transcript)"
    },
-   "mp4": "al-ameri/athar-origins-ep01-fahad-al-ameri-1080p.mp4",
+   "mp4": "al-ameri/athar-origins-ep01-fahad-al-ameri-1080p.66d9a6d6e0.mp4",
    "mp4Sha256": "66d9a6d6e0369037b18287178f998e7aa364958d53d31a79a85182f34a424f6b",
    "mp4Bytes": 27343878,
    "mp4Note": "source remuxed with ffmpeg -c copy -movflags +faststart (moov before mdat; H.264 High 1920x1080 24 fps + AAC-LC 48 kHz stereo — no re-encode)",
-   "mp4Mobile": "al-ameri/athar-origins-ep01-fahad-al-ameri-720p.mp4",
+   "mp4Mobile": "al-ameri/athar-origins-ep01-fahad-al-ameri-720p.7aef034321.mp4",
    "mp4MobileSha256": "7aef034321e7d0e0af4ff116c758cbc520dd9d4a3b79c067e5e9d64f8452bd97",
    "mp4MobileBytes": 6524587,
    "mp4MobileNote": "1280x720 transcode (libx264 High@4.0 crf 23, AAC 128k, +faststart) for viewports ≤ 720 px and Save-Data",
-   "poster": "al-ameri/athar-origins-ep01-fahad-al-ameri-poster-07s0.jpg",
-   "posterWebp": "al-ameri/athar-origins-ep01-fahad-al-ameri-poster-07s0.webp",
+   "poster": "al-ameri/athar-origins-ep01-fahad-al-ameri-poster-07s0.6b79ef7542.jpg",
+   "posterWebp": "al-ameri/athar-origins-ep01-fahad-al-ameri-poster-07s0.e1e464da7f.webp",
    "posterSha256": "6b79ef75424518fe5f57eb499d4caf771e25981b64adc2048fe2351ad10e7c59",
    "posterTimeSec": 7.0,
    "posterNote": "frame at 00:07.000 — the largest, sharpest frontal talking-head frame (face ≈ 20 % of the frame, centred, lowest inter-frame motion of the 5.0–7.0 s shot; YuNet face detection + Laplacian sharpness), away from the opening and the end card; a burned-in caption may be visible since the narration is continuous",
@@ -142,8 +142,8 @@
    "inPt": 0,
    "outPt": 40.0,
    "captions": {
-    "en": "al-ameri/athar-origins-ep01-fahad-al-ameri.en.vtt",
-    "ar": "al-ameri/athar-origins-ep01-fahad-al-ameri.ar.vtt",
+    "en": "al-ameri/athar-origins-ep01-fahad-al-ameri.en.4d30c550ba.vtt",
+    "ar": "al-ameri/athar-origins-ep01-fahad-al-ameri.ar.dc1d7819d9.vtt",
     "note": "WebVTT, 11 cues each — EN transcribed from the narration (On Demand speech-to-text, proper nouns corrected), AR translated with Arabic punctuation; cue timing is a proportional estimate over the detected speech span (no word-level timestamps); cues at line:6%"
    },
    "captionsSha256": {
@@ -154,7 +154,23 @@
    "burnedInSubtitlesNote": "burned-in English subtitles per the source file name ('_subtitled') and the library's scene description; not re-verified by eye (no OCR run)",
    "videoCodec": "h264 High",
    "audioCodec": "aac LC 48 kHz stereo",
-   "subtitleStreams": "none — soft EN/AR via <track>"
+   "subtitleStreams": "none — soft EN/AR via <track>",
+   "posterWebpSha256": "e1e464da7fd2bb791b75e695d3a8e3abe1603205798a579243e585e515fd2b7f",
+   "hashedFilenames": {
+    "rule": "<name>.<first 10 hex of the file’s own sha256>.<ext> for every served file (the v1.6.2 cache-bust policy, applied to Khalid in v1.6.2 and Lorenzo in v1.6.4) — v1.7.0 completes it for the three remaining films so no served film asset is cacheable under a mutable path",
+    "appliedAt": "2026-10-04T08:05:43Z",
+    "map": {
+     "athar-origins-ep01-fahad-al-ameri-1080p.mp4": "athar-origins-ep01-fahad-al-ameri-1080p.66d9a6d6e0.mp4",
+     "athar-origins-ep01-fahad-al-ameri-720p.mp4": "athar-origins-ep01-fahad-al-ameri-720p.7aef034321.mp4",
+     "athar-origins-ep01-fahad-al-ameri-poster-07s0.jpg": "athar-origins-ep01-fahad-al-ameri-poster-07s0.6b79ef7542.jpg",
+     "athar-origins-ep01-fahad-al-ameri-poster-07s0.webp": "athar-origins-ep01-fahad-al-ameri-poster-07s0.e1e464da7f.webp",
+     "athar-origins-ep01-fahad-al-ameri.en.vtt": "athar-origins-ep01-fahad-al-ameri.en.4d30c550ba.vtt",
+     "athar-origins-ep01-fahad-al-ameri.ar.vtt": "athar-origins-ep01-fahad-al-ameri.ar.dc1d7819d9.vtt"
+    }
+   },
+   "history": {
+    "v170": "v1.7.0 (2026-10-04): content-hashed filenames applied (bytes unchanged — same sha256 as v1.6.0/v1.6.1); the un-hashed paths are retired (404)"
+   }
   },
   "ferreira-da-cunha": {
    "status": "shipped",
@@ -180,16 +196,16 @@
     "bytes": 37870048,
     "note": "downloaded from the user's file library (signed blob URL; the library 'url' field is an .mp3 audio extract, which was used only for the speech-to-text transcript)"
    },
-   "mp4": "ferreira-da-cunha/athar-origins-ep01-ary-ferreira-da-cunha-1080p.mp4",
+   "mp4": "ferreira-da-cunha/athar-origins-ep01-ary-ferreira-da-cunha-1080p.b155cd834b.mp4",
    "mp4Sha256": "b155cd834b8ccd9e23f233ede21b1eddc4b8726d2f67327d037553383d6f705f",
    "mp4Bytes": 37870048,
    "mp4Note": "source already had moov before mdat; ffmpeg -c copy -movflags +faststart produced a byte-identical file (sha256 equals the source)",
-   "mp4Mobile": "ferreira-da-cunha/athar-origins-ep01-ary-ferreira-da-cunha-720p.mp4",
+   "mp4Mobile": "ferreira-da-cunha/athar-origins-ep01-ary-ferreira-da-cunha-720p.281f18ef25.mp4",
    "mp4MobileSha256": "281f18ef2582657b95c70bb923b0984d62b060ba8d3af6a31f5ad5a9f1922989",
    "mp4MobileBytes": 9531379,
    "mp4MobileNote": "1280x720 transcode (libx264 High@4.0 crf 23, AAC 128k, +faststart) for viewports ≤ 720 px and Save-Data",
-   "poster": "ferreira-da-cunha/athar-origins-ep01-ary-ferreira-da-cunha-poster-04s0.jpg",
-   "posterWebp": "ferreira-da-cunha/athar-origins-ep01-ary-ferreira-da-cunha-poster-04s0.webp",
+   "poster": "ferreira-da-cunha/athar-origins-ep01-ary-ferreira-da-cunha-poster-04s0.c7cb38c99b.jpg",
+   "posterWebp": "ferreira-da-cunha/athar-origins-ep01-ary-ferreira-da-cunha-poster-04s0.fa2245466a.webp",
    "posterSha256": "c7cb38c99b6de2b5e1e2f8a410da34ffc5601a37949f2ec42ed5354567f6afea",
    "posterTimeSec": 4.0,
    "posterNote": "frame at 00:04.000 — the sharpest frontal talking-head frame of the opening 2.5–5.0 s shot (face ≈ 14 % of the frame, YuNet detection + Laplacian sharpness 554); the 13.5–21.5 s world-map / blurred orange-band segment and the end card were excluded",
@@ -201,8 +217,8 @@
    "inPt": 0,
    "outPt": 40.0,
    "captions": {
-    "en": "ferreira-da-cunha/athar-origins-ep01-ary-ferreira-da-cunha.en.vtt",
-    "ar": "ferreira-da-cunha/athar-origins-ep01-ary-ferreira-da-cunha.ar.vtt",
+    "en": "ferreira-da-cunha/athar-origins-ep01-ary-ferreira-da-cunha.en.0d385859f2.vtt",
+    "ar": "ferreira-da-cunha/athar-origins-ep01-ary-ferreira-da-cunha.ar.cacf66b10a.vtt",
     "note": "WebVTT, 11 cues each — EN transcribed from the narration (On Demand speech-to-text, proper nouns corrected), AR translated with Arabic punctuation; cue timing is a proportional estimate over the detected speech span (no word-level timestamps); cues at line:6%"
    },
    "captionsSha256": {
@@ -213,7 +229,23 @@
    "burnedInSubtitlesNote": "unknown — the file name does not say 'subtitled' and the frames could not be read by eye (no OCR run); the EN/AR <track> captions ship regardless, at the top of the frame",
    "videoCodec": "h264 High",
    "audioCodec": "aac LC 48 kHz stereo",
-   "subtitleStreams": "none — soft EN/AR via <track>"
+   "subtitleStreams": "none — soft EN/AR via <track>",
+   "posterWebpSha256": "fa2245466aa30c90bf0b19127b846272454013d5d4947523cd701e55ca2d8392",
+   "hashedFilenames": {
+    "rule": "<name>.<first 10 hex of the file’s own sha256>.<ext> for every served file (the v1.6.2 cache-bust policy, applied to Khalid in v1.6.2 and Lorenzo in v1.6.4) — v1.7.0 completes it for the three remaining films so no served film asset is cacheable under a mutable path",
+    "appliedAt": "2026-10-04T08:05:43Z",
+    "map": {
+     "athar-origins-ep01-ary-ferreira-da-cunha-1080p.mp4": "athar-origins-ep01-ary-ferreira-da-cunha-1080p.b155cd834b.mp4",
+     "athar-origins-ep01-ary-ferreira-da-cunha-720p.mp4": "athar-origins-ep01-ary-ferreira-da-cunha-720p.281f18ef25.mp4",
+     "athar-origins-ep01-ary-ferreira-da-cunha-poster-04s0.jpg": "athar-origins-ep01-ary-ferreira-da-cunha-poster-04s0.c7cb38c99b.jpg",
+     "athar-origins-ep01-ary-ferreira-da-cunha-poster-04s0.webp": "athar-origins-ep01-ary-ferreira-da-cunha-poster-04s0.fa2245466a.webp",
+     "athar-origins-ep01-ary-ferreira-da-cunha.en.vtt": "athar-origins-ep01-ary-ferreira-da-cunha.en.0d385859f2.vtt",
+     "athar-origins-ep01-ary-ferreira-da-cunha.ar.vtt": "athar-origins-ep01-ary-ferreira-da-cunha.ar.cacf66b10a.vtt"
+    }
+   },
+   "history": {
+    "v170": "v1.7.0 (2026-10-04): content-hashed filenames applied (bytes unchanged — same sha256 as v1.6.0/v1.6.1); the un-hashed paths are retired (404)"
+   }
   },
   "unwalla": {
    "status": "shipped",
@@ -240,16 +272,16 @@
     "bytes": 71354505,
     "note": "4K master (3840x2160 24 fps H.264 High 14.3 Mb/s + AAC-LC 48 kHz stereo, 40.000 s); the opening title card reads 'Kayaan Unwalla · photo courtesy of Kayaan Unwalla' — this is Kayaan's film (v1.6.1 replaces the v1.5.9/v1.6.0 'Film coming soon' slot)"
    },
-   "mp4": "unwalla/athar-origins-ep01-kayaan-unwalla-1080p.mp4",
+   "mp4": "unwalla/athar-origins-ep01-kayaan-unwalla-1080p.2c1c7f0f3b.mp4",
    "mp4Sha256": "2c1c7f0f3ba3191c7c6ba7342187b7294bd092d4f384a617d62eaa68cfcb2cf6",
    "mp4Bytes": 17386620,
    "mp4Note": "4K master downscaled to 1920x1080 (libx264 High@4.1 crf 20 preset medium, AAC 160k, +faststart)",
-   "mp4Mobile": "unwalla/athar-origins-ep01-kayaan-unwalla-720p.mp4",
+   "mp4Mobile": "unwalla/athar-origins-ep01-kayaan-unwalla-720p.1818dc83fb.mp4",
    "mp4MobileSha256": "1818dc83fb49c01fb4f8e631035374bb1b7d747044235362b4aad942bfb9872c",
    "mp4MobileBytes": 6513275,
    "mp4MobileNote": "1280x720 transcode (libx264 High@4.0 crf 23, AAC 128k, +faststart) for viewports ≤ 720 px and Save-Data",
-   "poster": "unwalla/athar-origins-ep01-kayaan-unwalla-poster-20s0.jpg",
-   "posterWebp": "unwalla/athar-origins-ep01-kayaan-unwalla-poster-20s0.webp",
+   "poster": "unwalla/athar-origins-ep01-kayaan-unwalla-poster-20s0.976a2a5387.jpg",
+   "posterWebp": "unwalla/athar-origins-ep01-kayaan-unwalla-poster-20s0.6cc70df51c.webp",
    "posterSha256": "976a2a53879e62290dffa719b5fc365b22a6b77b3019c0baaa0831df38dff238",
    "posterTimeSec": 20.0,
    "posterNote": "frame at 00:20.000 — the sharpest, steadiest portrait frame of the 18–21 s shot (YuNet face detection + Laplacian sharpness), away from the opening title card (0–3 s, name + photo-credit overlay) and the end card; chosen algorithmically, not by eye",
@@ -261,8 +293,8 @@
    "inPt": 0,
    "outPt": 40.0,
    "captions": {
-    "en": "unwalla/athar-origins-ep01-kayaan-unwalla.en.vtt",
-    "ar": "unwalla/athar-origins-ep01-kayaan-unwalla.ar.vtt",
+    "en": "unwalla/athar-origins-ep01-kayaan-unwalla.en.246c642fdf.vtt",
+    "ar": "unwalla/athar-origins-ep01-kayaan-unwalla.ar.b3b9a6e998.vtt",
     "note": "WebVTT, 11 cues each — EN transcribed from the narration (On Demand speech-to-text, proper nouns corrected), AR translated with Arabic punctuation; proportional cue timing over the detected speech span (0.7–37.6 s); cues at line:6%"
    },
    "captionsSha256": {
@@ -273,7 +305,23 @@
    "burnedInSubtitlesNote": "unknown — not verifiable by eye here (no OCR run); the EN/AR <track> captions ship regardless",
    "videoCodec": "h264 High",
    "audioCodec": "aac LC 48 kHz stereo",
-   "subtitleStreams": "none — soft EN/AR via <track>"
+   "subtitleStreams": "none — soft EN/AR via <track>",
+   "posterWebpSha256": "6cc70df51c975190f2dde4e83d8a56297dd555383c5901d85878ad805a492a61",
+   "hashedFilenames": {
+    "rule": "<name>.<first 10 hex of the file’s own sha256>.<ext> for every served file (the v1.6.2 cache-bust policy, applied to Khalid in v1.6.2 and Lorenzo in v1.6.4) — v1.7.0 completes it for the three remaining films so no served film asset is cacheable under a mutable path",
+    "appliedAt": "2026-10-04T08:05:43Z",
+    "map": {
+     "athar-origins-ep01-kayaan-unwalla-1080p.mp4": "athar-origins-ep01-kayaan-unwalla-1080p.2c1c7f0f3b.mp4",
+     "athar-origins-ep01-kayaan-unwalla-720p.mp4": "athar-origins-ep01-kayaan-unwalla-720p.1818dc83fb.mp4",
+     "athar-origins-ep01-kayaan-unwalla-poster-20s0.jpg": "athar-origins-ep01-kayaan-unwalla-poster-20s0.976a2a5387.jpg",
+     "athar-origins-ep01-kayaan-unwalla-poster-20s0.webp": "athar-origins-ep01-kayaan-unwalla-poster-20s0.6cc70df51c.webp",
+     "athar-origins-ep01-kayaan-unwalla.en.vtt": "athar-origins-ep01-kayaan-unwalla.en.246c642fdf.vtt",
+     "athar-origins-ep01-kayaan-unwalla.ar.vtt": "athar-origins-ep01-kayaan-unwalla.ar.b3b9a6e998.vtt"
+    }
+   },
+   "history": {
+    "v170": "v1.7.0 (2026-10-04): content-hashed filenames applied (bytes unchanged — same sha256 as v1.6.0/v1.6.1); the un-hashed paths are retired (404)"
+   }
   },
   "lorenzo": {
    "status": "shipped",
@@ -362,5 +410,28 @@
     "v164": "v1.6.4 (2026-10-04): fifth Section 09 card (slide 45, after Kayaan Unwalla — end of section), film installed full length from the 4K master delivered 2026-10-04T04:37:45Z"
    }
   }
+ },
+ "_v170": {
+  "note": "v1.7.0 final release — five Section 09 films, all served under content-hashed names; see CHANGELOG.md / RELEASE_NOTES.md",
+  "retiredPaths": [
+   "/assets/exec/films/al-ameri/athar-origins-ep01-fahad-al-ameri-1080p.mp4",
+   "/assets/exec/films/al-ameri/athar-origins-ep01-fahad-al-ameri-720p.mp4",
+   "/assets/exec/films/al-ameri/athar-origins-ep01-fahad-al-ameri-poster-07s0.jpg",
+   "/assets/exec/films/al-ameri/athar-origins-ep01-fahad-al-ameri-poster-07s0.webp",
+   "/assets/exec/films/al-ameri/athar-origins-ep01-fahad-al-ameri.en.vtt",
+   "/assets/exec/films/al-ameri/athar-origins-ep01-fahad-al-ameri.ar.vtt",
+   "/assets/exec/films/ferreira-da-cunha/athar-origins-ep01-ary-ferreira-da-cunha-1080p.mp4",
+   "/assets/exec/films/ferreira-da-cunha/athar-origins-ep01-ary-ferreira-da-cunha-720p.mp4",
+   "/assets/exec/films/ferreira-da-cunha/athar-origins-ep01-ary-ferreira-da-cunha-poster-04s0.jpg",
+   "/assets/exec/films/ferreira-da-cunha/athar-origins-ep01-ary-ferreira-da-cunha-poster-04s0.webp",
+   "/assets/exec/films/ferreira-da-cunha/athar-origins-ep01-ary-ferreira-da-cunha.en.vtt",
+   "/assets/exec/films/ferreira-da-cunha/athar-origins-ep01-ary-ferreira-da-cunha.ar.vtt",
+   "/assets/exec/films/unwalla/athar-origins-ep01-kayaan-unwalla-1080p.mp4",
+   "/assets/exec/films/unwalla/athar-origins-ep01-kayaan-unwalla-720p.mp4",
+   "/assets/exec/films/unwalla/athar-origins-ep01-kayaan-unwalla-poster-20s0.jpg",
+   "/assets/exec/films/unwalla/athar-origins-ep01-kayaan-unwalla-poster-20s0.webp",
+   "/assets/exec/films/unwalla/athar-origins-ep01-kayaan-unwalla.en.vtt",
+   "/assets/exec/films/unwalla/athar-origins-ep01-kayaan-unwalla.ar.vtt"
+  ]
  }
 }

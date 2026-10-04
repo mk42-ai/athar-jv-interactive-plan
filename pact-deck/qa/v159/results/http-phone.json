@@ -1,6 +1,6 @@
 {
- "base": "http://127.0.0.1:4164",
- "written": "2026-10-04T06:03:02.269Z",
+ "base": "http://127.0.0.1:4170",
+ "written": "2026-10-04T08:30:05.902Z",
  "rows": [
   {
    "url": "/audio/guide/guide-00-welcome-lhbIUXFwLO.mp3",
@@ -328,15 +328,15 @@
    "url": "/js/exec-films.js",
    "status": 200,
    "type": "text/javascript; charset=utf-8",
-   "bytes": 8742,
-   "sha256": "5539df994df7fefea1c36b2a205bb94eeafc08af2ad9518ddc4eeb8554ff85f3"
+   "bytes": 8940,
+   "sha256": "ebf38f2ccf2e258556fdcab7bf70d24b473500ca55bc53c4687e254af1d3eb8a"
   },
   {
    "url": "/js/exec-film-player.js",
    "status": 200,
    "type": "text/javascript; charset=utf-8",
    "bytes": 11152,
-   "sha256": "3d6d89ce49a2fef2a7e9a0872ccbda4abb9151323dc5c0f7f169888d90ec740a"
+   "sha256": "41ed61e79d157f433ce5df0f848301febc2684f2709398efa2a77e30a050c616"
   },
   {
    "url": "/assets/exec-film-player.css",
@@ -349,8 +349,8 @@
    "url": "/build-info.json",
    "status": 200,
    "type": "application/json; charset=utf-8",
-   "bytes": 7737,
-   "sha256": "3fbb8787dd62f5803eb413a56be0caa19669ff4dee9f1bb939976b8aed14392c"
+   "bytes": 7902,
+   "sha256": "2a293559752bc57605494d9d465a116cac53d32a640906094ac70f750a986b53"
   },
   {
    "url": "/js/exec-film.js",

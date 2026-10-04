@@ -102,3 +102,35 @@ export async function overviewJump(page, n) {
   await page.evaluate((n) => { const b = [...document.querySelectorAll('.overview button.ov-card')].find((x) => (x.querySelector('.ov-n') || {}).textContent === String(n)); if (b) b.click(); else throw new Error('no tile ' + n); }, n);
 }
 export function writeJSON(p, o) { fs.mkdirSync(path.dirname(p), { recursive: true }); fs.writeFileSync(p, JSON.stringify(o, null, 1)); }
+
+// v1.7.0 — cold-start warm-up. Before a suite's first page is opened, every asset the executive cards need is requested once over the
+// network (Node fetch, no browser): build-info, the generated films bundle, index.html, each film's poster / 1080p / 720p (first 2 MiB,
+// Range) / EN + AR captions, and the George guide clip of every Section 09 slide. The first request to a freshly provisioned sandbox
+// (or a freshly started serve.mjs) paid the cold path inside a test's wait budget and made the guide-pause assertion of qa/v161 time
+// out once (v1.6.4 close-out); the warm-up moves that cost in front of the first test. It never throws — failures are RECORDED
+// ({ url, status, ms, bytes, error }) so a suite can decide; the budget (default 90 s) bounds the whole pass.
+export async function warmUp(base, { films = null, narration = null, budgetMs = 90000, rangeBytes = 2 * 1024 * 1024 } = {}) {
+  const t0 = Date.now(); const rows = []; const urls = [];
+  const F = films || JSON.parse(fs.readFileSync(path.join(DIST, '../features/exec-films/films.json'), 'utf8'));
+  const N = narration || JSON.parse(fs.readFileSync(path.join(DIST, 'narration/slide-narration.json'), 'utf8'));
+  for (const p of ['/build-info.json', '/js/exec-films.js', '/index.html', '/narration/slide-narration.json']) urls.push([p, null]);
+  for (const f of Object.values(F.films)) {
+    for (const k of ['poster', 'posterWebp']) if (f[k]) urls.push([F.distBase + f[k], null]);
+    for (const k of ['mp4', 'mp4Mobile']) if (f[k]) urls.push([F.distBase + f[k], `bytes=0-${rangeBytes - 1}`]);
+    for (const lg of ['en', 'ar']) if (f.captions && typeof f.captions[lg] === 'string') urls.push([F.distBase + f.captions[lg], null]);
+  }
+  for (const s of N.slides || []) if (s.file && /^s-exec-/.test(s.slideId || '')) urls.push([s.file, null]);
+  const seen = new Set();
+  for (const [p, range] of urls) {
+    if (seen.has(p)) continue; seen.add(p);
+    if (Date.now() - t0 > budgetMs) { rows.push({ url: p, status: 0, ms: 0, bytes: 0, error: 'budget exhausted' }); continue; }
+    const t = Date.now(); const ac = new AbortController(); const timer = setTimeout(() => ac.abort(), Math.max(1000, budgetMs - (Date.now() - t0)));
+    try {
+      const r = await fetch(base + p + (p.endsWith('.json') || p.endsWith('.js') || p.endsWith('.html') ? `?warm=${t}` : ''), { signal: ac.signal, headers: Object.assign({ 'Cache-Control': 'no-cache', 'User-Agent': 'athar-qa-warmup/1.7.0' }, range ? { Range: range } : {}) });
+      const buf = new Uint8Array(await r.arrayBuffer());
+      rows.push({ url: p, status: r.status, ms: Date.now() - t, bytes: buf.length, cacheControl: r.headers.get('cache-control'), range: range || null });
+    } catch (e) { rows.push({ url: p, status: -1, ms: Date.now() - t, bytes: 0, error: String(e && e.message || e), range: range || null }); }
+    finally { clearTimeout(timer); }
+  }
+  return { base, startedAt: new Date(t0).toISOString(), totalMs: Date.now() - t0, requests: rows.length, ok: rows.filter((r) => r.status === 200 || r.status === 206).length, rows };
+}

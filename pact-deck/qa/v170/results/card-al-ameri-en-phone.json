@@ -1,0 +1,57 @@
+{
+ "base": "http://127.0.0.1:4170",
+ "version": "1.7.0",
+ "expectCommit": "131e1b5b1389289ef2139f37454a95e350128512",
+ "written": "2026-10-04T08:20:11.886Z",
+ "rows": [
+  {
+   "idle": {
+    "lang": "en",
+    "dir": "ltr",
+    "badge": "v1.7.0",
+    "html": "1.7.0",
+    "ids": [
+     "s-exec-intro",
+     "s-exec-al-ameri",
+     "s-exec-ferreira-da-cunha",
+     "s-exec-khalid",
+     "s-exec-unwalla",
+     "s-exec-lorenzo"
+    ],
+    "count": 6,
+    "total": 45,
+    "active": true,
+    "n": 41,
+    "currentSrc": "http://127.0.0.1:4170/assets/exec/films/al-ameri/athar-origins-ep01-fahad-al-ameri-720p.7aef034321.mp4",
+    "src": "athar-origins-ep01-fahad-al-ameri-720p.7aef034321.mp4",
+    "poster": "athar-origins-ep01-fahad-al-ameri-poster-07s0.6b79ef7542.jpg",
+    "posterLoaded": true,
+    "duration": 40,
+    "dur": "0:40",
+    "title": "Athar — Origins of Impact, Episode 01: H.E. Fahad Mohamed Al Ameri",
+    "figDir": "ltr",
+    "tracks": [
+     "en:athar-origins-ep01-fahad-al-ameri.en.4d30c550ba.vtt:default",
+     "ar:athar-origins-ep01-fahad-al-ameri.ar.dc1d7819d9.vtt"
+    ],
+    "name": "H.E. Fahad Mohamed Al Ameri",
+    "role": "Executive Director, Development and Humanitarian Affairs, UAE Presidential Court",
+    "paused": true
+   },
+   "playing": {
+    "paused": false,
+    "currentTime": 2.830767,
+    "duration": 40,
+    "src": "athar-origins-ep01-fahad-al-ameri-720p.7aef034321.mp4",
+    "showing": [
+     "en:11"
+    ],
+    "controls": true,
+    "guide": "idle"
+   },
+   "tiles": null,
+   "errors": [],
+   "failedRequests": []
+  }
+ ]
+}

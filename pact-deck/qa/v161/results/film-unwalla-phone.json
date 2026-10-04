@@ -1,11 +1,11 @@
 {
- "base": "http://127.0.0.1:4164",
- "version": "1.6.4",
- "written": "2026-10-04T06:12:00.462Z",
+ "base": "http://127.0.0.1:4170",
+ "version": "1.7.0",
+ "written": "2026-10-04T08:17:29.439Z",
  "rows": [
   {
    "meta": {
-    "poster": "athar-origins-ep01-kayaan-unwalla-poster-20s0.jpg",
+    "poster": "athar-origins-ep01-kayaan-unwalla-poster-20s0.976a2a5387.jpg",
     "tracks": [
      "en:default",
      "ar"

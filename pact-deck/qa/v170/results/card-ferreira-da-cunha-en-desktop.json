@@ -1,0 +1,57 @@
+{
+ "base": "http://127.0.0.1:4170",
+ "version": "1.7.0",
+ "expectCommit": "131e1b5b1389289ef2139f37454a95e350128512",
+ "written": "2026-10-04T08:19:35.184Z",
+ "rows": [
+  {
+   "idle": {
+    "lang": "en",
+    "dir": "ltr",
+    "badge": "v1.7.0",
+    "html": "1.7.0",
+    "ids": [
+     "s-exec-intro",
+     "s-exec-al-ameri",
+     "s-exec-ferreira-da-cunha",
+     "s-exec-khalid",
+     "s-exec-unwalla",
+     "s-exec-lorenzo"
+    ],
+    "count": 6,
+    "total": 45,
+    "active": true,
+    "n": 42,
+    "currentSrc": "http://127.0.0.1:4170/assets/exec/films/ferreira-da-cunha/athar-origins-ep01-ary-ferreira-da-cunha-1080p.b155cd834b.mp4",
+    "src": "athar-origins-ep01-ary-ferreira-da-cunha-1080p.b155cd834b.mp4",
+    "poster": "athar-origins-ep01-ary-ferreira-da-cunha-poster-04s0.c7cb38c99b.jpg",
+    "posterLoaded": true,
+    "duration": 40,
+    "dur": "0:40",
+    "title": "Athar — Origins of Impact, Episode 01: Ary Ferreira da Cunha",
+    "figDir": "ltr",
+    "tracks": [
+     "en:athar-origins-ep01-ary-ferreira-da-cunha.en.0d385859f2.vtt:default",
+     "ar:athar-origins-ep01-ary-ferreira-da-cunha.ar.cacf66b10a.vtt"
+    ],
+    "name": "Ary Ferreira da Cunha",
+    "role": "Principal, Presidential Court (UAE), Abu Dhabi",
+    "paused": true
+   },
+   "playing": {
+    "paused": false,
+    "currentTime": 2.800974,
+    "duration": 40,
+    "src": "athar-origins-ep01-ary-ferreira-da-cunha-1080p.b155cd834b.mp4",
+    "showing": [
+     "en:11"
+    ],
+    "controls": true,
+    "guide": "idle"
+   },
+   "tiles": null,
+   "errors": [],
+   "failedRequests": []
+  }
+ ]
+}

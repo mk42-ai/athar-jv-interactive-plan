@@ -1,7 +1,7 @@
 {
- "base": "http://127.0.0.1:4164",
- "version": "1.6.4",
- "written": "2026-10-04T06:00:34.643Z",
+ "base": "http://127.0.0.1:4170",
+ "version": "1.7.0",
+ "written": "2026-10-04T08:27:38.099Z",
  "rows": [
   {
    "lang": "en",
@@ -13,7 +13,7 @@
    "video": {
     "paused": true,
     "autoplay": false,
-    "poster": "athar-origins-ep01-fahad-al-ameri-poster-07s0.jpg",
+    "poster": "athar-origins-ep01-fahad-al-ameri-poster-07s0.6b79ef7542.jpg",
     "defaultTrack": "en"
    },
    "figDir": "ltr",
@@ -49,7 +49,7 @@
    "video": {
     "paused": true,
     "autoplay": false,
-    "poster": "athar-origins-ep01-ary-ferreira-da-cunha-poster-04s0.jpg",
+    "poster": "athar-origins-ep01-ary-ferreira-da-cunha-poster-04s0.c7cb38c99b.jpg",
     "defaultTrack": "en"
    },
    "figDir": "ltr",
@@ -116,7 +116,7 @@
    "video": {
     "paused": true,
     "autoplay": false,
-    "poster": "athar-origins-ep01-kayaan-unwalla-poster-20s0.jpg",
+    "poster": "athar-origins-ep01-kayaan-unwalla-poster-20s0.976a2a5387.jpg",
     "defaultTrack": "en"
    },
    "figDir": "ltr",
@@ -188,7 +188,7 @@
    "video": {
     "paused": true,
     "autoplay": false,
-    "poster": "athar-origins-ep01-fahad-al-ameri-poster-07s0.jpg",
+    "poster": "athar-origins-ep01-fahad-al-ameri-poster-07s0.6b79ef7542.jpg",
     "defaultTrack": "ar"
    },
    "figDir": "rtl",
@@ -224,7 +224,7 @@
    "video": {
     "paused": true,
     "autoplay": false,
-    "poster": "athar-origins-ep01-ary-ferreira-da-cunha-poster-04s0.jpg",
+    "poster": "athar-origins-ep01-ary-ferreira-da-cunha-poster-04s0.c7cb38c99b.jpg",
     "defaultTrack": "ar"
    },
    "figDir": "rtl",
@@ -291,7 +291,7 @@
    "video": {
     "paused": true,
     "autoplay": false,
-    "poster": "athar-origins-ep01-kayaan-unwalla-poster-20s0.jpg",
+    "poster": "athar-origins-ep01-kayaan-unwalla-poster-20s0.976a2a5387.jpg",
     "defaultTrack": "ar"
    },
    "figDir": "rtl",

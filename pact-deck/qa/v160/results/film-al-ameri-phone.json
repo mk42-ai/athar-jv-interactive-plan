@@ -1,15 +1,15 @@
 {
- "base": "http://127.0.0.1:4164",
- "version": "1.6.4",
- "written": "2026-10-04T05:59:23.487Z",
+ "base": "http://127.0.0.1:4170",
+ "version": "1.7.0",
+ "written": "2026-10-04T08:26:28.198Z",
  "rows": [
   {
    "meta": {
     "state": "idle",
-    "poster": "athar-origins-ep01-fahad-al-ameri-poster-07s0.jpg",
+    "poster": "athar-origins-ep01-fahad-al-ameri-poster-07s0.6b79ef7542.jpg",
     "posterTime": "7",
     "variant": "720p",
-    "src": "/assets/exec/films/al-ameri/athar-origins-ep01-fahad-al-ameri-720p.mp4",
+    "src": "/assets/exec/films/al-ameri/athar-origins-ep01-fahad-al-ameri-720p.7aef034321.mp4",
     "tracks": [
      "subtitles:en:default",
      "subtitles:ar"
@@ -31,7 +31,7 @@
    "playing": {
     "state": "playing",
     "paused": false,
-    "ct": 1.196697,
+    "ct": 1.187047,
     "controls": true,
     "overlayHidden": true,
     "overlays": 0,

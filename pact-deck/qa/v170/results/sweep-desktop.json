@@ -1,0 +1,198 @@
+{
+ "base": "http://127.0.0.1:4170",
+ "version": "1.7.0",
+ "expectCommit": "131e1b5b1389289ef2139f37454a95e350128512",
+ "written": "2026-10-04T08:20:47.297Z",
+ "rows": [
+  {
+   "dirs": {
+    "en": "ltr",
+    "ar": "rtl"
+   },
+   "errors": [],
+   "failedRequests": [],
+   "deep": [
+    {
+     "lang": "en",
+     "n": 32,
+     "hash": "#/27/new-5",
+     "id": "s-it-partners",
+     "dir": "ltr",
+     "badge": "v1.7.0",
+     "errors": 0,
+     "failed": 0
+    },
+    {
+     "lang": "en",
+     "n": 38,
+     "hash": "#/27/new-11",
+     "id": "s-aos-nations",
+     "dir": "ltr",
+     "badge": "v1.7.0",
+     "errors": 0,
+     "failed": 0
+    },
+    {
+     "lang": "en",
+     "n": 39,
+     "hash": "#/28",
+     "id": "s-closing",
+     "dir": "ltr",
+     "badge": "v1.7.0",
+     "errors": 0,
+     "failed": 0
+    },
+    {
+     "lang": "en",
+     "n": 40,
+     "hash": "#/28/exec-1",
+     "id": "s-exec-intro",
+     "dir": "ltr",
+     "badge": "v1.7.0",
+     "errors": 0,
+     "failed": 0
+    },
+    {
+     "lang": "en",
+     "n": 41,
+     "hash": "#/28/exec-2",
+     "id": "s-exec-al-ameri",
+     "dir": "ltr",
+     "badge": "v1.7.0",
+     "errors": 0,
+     "failed": 0
+    },
+    {
+     "lang": "en",
+     "n": 42,
+     "hash": "#/28/exec-3",
+     "id": "s-exec-ferreira-da-cunha",
+     "dir": "ltr",
+     "badge": "v1.7.0",
+     "errors": 0,
+     "failed": 0
+    },
+    {
+     "lang": "en",
+     "n": 43,
+     "hash": "#/28/exec-4",
+     "id": "s-exec-khalid",
+     "dir": "ltr",
+     "badge": "v1.7.0",
+     "errors": 0,
+     "failed": 0
+    },
+    {
+     "lang": "en",
+     "n": 44,
+     "hash": "#/28/exec-5",
+     "id": "s-exec-unwalla",
+     "dir": "ltr",
+     "badge": "v1.7.0",
+     "errors": 0,
+     "failed": 0
+    },
+    {
+     "lang": "en",
+     "n": 45,
+     "hash": "#/28/exec-6",
+     "id": "s-exec-lorenzo",
+     "dir": "ltr",
+     "badge": "v1.7.0",
+     "errors": 0,
+     "failed": 0
+    },
+    {
+     "lang": "ar",
+     "n": 32,
+     "hash": "#/27/new-5",
+     "id": "s-it-partners",
+     "dir": "rtl",
+     "badge": "v1.7.0",
+     "errors": 0,
+     "failed": 0
+    },
+    {
+     "lang": "ar",
+     "n": 38,
+     "hash": "#/27/new-11",
+     "id": "s-aos-nations",
+     "dir": "rtl",
+     "badge": "v1.7.0",
+     "errors": 0,
+     "failed": 0
+    },
+    {
+     "lang": "ar",
+     "n": 39,
+     "hash": "#/28",
+     "id": "s-closing",
+     "dir": "rtl",
+     "badge": "v1.7.0",
+     "errors": 0,
+     "failed": 0
+    },
+    {
+     "lang": "ar",
+     "n": 40,
+     "hash": "#/28/exec-1",
+     "id": "s-exec-intro",
+     "dir": "rtl",
+     "badge": "v1.7.0",
+     "errors": 0,
+     "failed": 0
+    },
+    {
+     "lang": "ar",
+     "n": 41,
+     "hash": "#/28/exec-2",
+     "id": "s-exec-al-ameri",
+     "dir": "rtl",
+     "badge": "v1.7.0",
+     "errors": 0,
+     "failed": 0
+    },
+    {
+     "lang": "ar",
+     "n": 42,
+     "hash": "#/28/exec-3",
+     "id": "s-exec-ferreira-da-cunha",
+     "dir": "rtl",
+     "badge": "v1.7.0",
+     "errors": 0,
+     "failed": 0
+    },
+    {
+     "lang": "ar",
+     "n": 43,
+     "hash": "#/28/exec-4",
+     "id": "s-exec-khalid",
+     "dir": "rtl",
+     "badge": "v1.7.0",
+     "errors": 0,
+     "failed": 0
+    },
+    {
+     "lang": "ar",
+     "n": 44,
+     "hash": "#/28/exec-5",
+     "id": "s-exec-unwalla",
+     "dir": "rtl",
+     "badge": "v1.7.0",
+     "errors": 0,
+     "failed": 0
+    },
+    {
+     "lang": "ar",
+     "n": 45,
+     "hash": "#/28/exec-6",
+     "id": "s-exec-lorenzo",
+     "dir": "rtl",
+     "badge": "v1.7.0",
+     "errors": 0,
+     "failed": 0
+    }
+   ]
+  }
+ ]
+}
