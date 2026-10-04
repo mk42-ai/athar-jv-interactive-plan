@@ -1,0 +1,62 @@
+// Athar deck v1.6.1 — Kayaan's film added (all four executive cards play), India/Kenya PRODUCT CONCEPT renders on slide 38, slide-30/38 links verified, version 1.6.1.
+// Khalid: the requested ~50 s '_v2' film does not exist in any probed source, so the shipped film is asserted at its films.json duration (37.333 s) and the probe list is recorded.
+// Usage: GUIDE_BASE=http://127.0.0.1:4161 SHOT_PREFIX=after SHOTS_DIR=/path npx playwright test -c qa/v161/playwright.config.mjs
+import { test, expect } from '../../node_modules/@playwright/test/index.mjs';
+import fs from 'node:fs'; import path from 'node:path';
+import { instrument, FILE2CLIP, hashFor } from '../v154/lib.mjs';
+const HERE = path.dirname(new URL(import.meta.url).pathname); const BASE = process.env.GUIDE_BASE || 'http://127.0.0.1:4161'; const PREFIX = process.env.SHOT_PREFIX || 'after'; const SHOTS = process.env.SHOTS_DIR || path.join(HERE, 'screenshots');
+const RESULTS = path.join(HERE, 'results'); fs.mkdirSync(RESULTS, { recursive: true }); fs.mkdirSync(SHOTS, { recursive: true });
+const PKG = JSON.parse(fs.readFileSync(path.join(HERE, '../../package.json'), 'utf8')); const FILMS = JSON.parse(fs.readFileSync(path.join(HERE, '../../features/exec-films/films.json'), 'utf8')); const F = (r) => FILMS.distBase + r;
+const CARDS = [['al-ameri', 2, 41], ['ferreira-da-cunha', 3, 42], ['khalid', 4, 43], ['unwalla', 5, 44]];
+const write = (n, rows) => fs.writeFileSync(path.join(RESULTS, n + '.json'), JSON.stringify({ base: BASE, version: PKG.version, written: new Date().toISOString(), rows }, null, 1));
+const vp = (info) => (info.project.name === 'phone' ? '390x844' : '1440x900'); const shot = (page, info, name) => page.screenshot({ path: path.join(SHOTS, `${PREFIX}-${name}-${vp(info)}.png`) });
+async function setup(page, lang = 'en') { await page.addInitScript(instrument(FILE2CLIP, 1)); await page.addInitScript(({ lang }) => { try { sessionStorage.setItem('athar-intro-v1.4.2', 'done'); localStorage.setItem('athar-pact-lang', lang); } catch (e) {} }, { lang }); page.__errors = []; page.on('pageerror', (e) => page.__errors.push(String(e))); page.on('console', (m) => { if (m.type() === 'error') page.__errors.push(m.text()); }); }
+async function open(page, n, lang) { await page.goto(BASE + '/' + (lang ? '?lang=' + lang : '') + hashFor(n), { waitUntil: 'load' }); await page.waitForFunction(() => !!window.AtharGuide, null, { timeout: 20000 }); await page.waitForFunction((n) => window.__qaVisible().n === n, n, { timeout: 15000 }); }
+const waitState = (page, src, ms = 10000) => page.waitForFunction((src) => { const r = document.getElementById('athar-narration'); const s = { state: r.getAttribute('data-state'), reason: r.getAttribute('data-reason') }; return new Function('s', 'return ' + src)(s); }, src, { timeout: ms });
+
+test.describe(`v${PKG.version}`, () => {
+  test('version 1.6.1 surfaced everywhere; every card ships a film (no ready slot left)', async ({ page }) => {
+    await setup(page); await open(page, 43); const v = await page.evaluate(() => ({ badge: document.querySelector('[data-testid="deck-version"]').textContent, html: document.documentElement.getAttribute('data-deck-version'), exec: window.AtharExecTeam.version, films: window.AtharExecFilms.version, statuses: window.AtharExecTeam.profiles.map((p) => p.id + ':' + p.filmStatus) }));
+    const info = await (await page.request.get(BASE + '/build-info.json')).json(); write('version-' + test.info().project.name, [{ ...v, buildInfo: info.version, films: info.films.map((f) => f.id + ':' + f.status) }]);
+    expect(PKG.version).toBe('1.6.1'); expect(v.badge).toBe('v1.6.1'); expect(v.html).toBe('1.6.1'); expect(v.exec).toBe('v1.6.1'); expect(v.films).toBe('1.6.1'); expect(info.version).toBe('1.6.1'); expect(info.features.version).toBe('1.6.1'); expect(v.statuses).toEqual(['s-exec-al-ameri:shipped', 's-exec-ferreira-da-cunha:shipped', 's-exec-khalid:shipped', 's-exec-unwalla:shipped']); expect(info.films.every((f) => f.status === 'shipped')).toBe(true); expect(page.__errors).toEqual([]);
+  });
+  test('Khalid film duration: the shipped file is the 37.333 s film (no ~50 s _v2 exists — recorded, not faked)', async ({ page }) => {
+    await setup(page); await open(page, 43); const d = await page.evaluate(async () => { const v = document.querySelector('#s-exec-khalid video'); await new Promise((r) => { if (v.readyState >= 1) r(); else v.addEventListener('loadedmetadata', r, { once: true }); }); return { duration: v.duration, label: v.closest('.efp').querySelector('.efp-dur').textContent }; });
+    write('khalid-duration-' + test.info().project.name, [{ ...d, filmsJson: FILMS.films.khalid.durationSec, note: FILMS.films.khalid.v161 }]); expect(Math.abs(d.duration - FILMS.films.khalid.durationSec)).toBeLessThan(0.2); expect(d.label).toBe('0:37'); expect(Math.abs(d.duration - 50)).toBeGreaterThan(5);
+  });
+  for (const [who, k, n] of CARDS) test(`${who}: plays through the shared player with EN + AR tracks; guide pauses / resumes`, async ({ page }, info) => {
+    test.setTimeout(180000); const mobile = info.project.name === 'phone'; const f = FILMS.films[who]; const sel = `#s-exec-${who} video[data-narration-pause]`;
+    await setup(page); await open(page, n); if (mobile) await page.tap('[data-testid="guide-toggle"]'); else await page.click('[data-testid="guide-toggle"]'); await waitState(page, "s.state === 'playing' || s.state === 'loading' || s.state === 'ended'", 15000);
+    const meta = await page.evaluate((sel) => { const v = document.querySelector(sel), fig = v.closest('.efp'); return { poster: v.poster.split('/').pop(), tracks: [...v.querySelectorAll('track')].map((t) => t.srclang + (t.default ? ':default' : '')), autoplay: v.hasAttribute('autoplay'), paused: v.paused, dur: fig.querySelector('.efp-dur').textContent, title: fig.querySelector('.efp-title').textContent, slot: !!document.querySelector(`#s-exec-${fig.getAttribute('data-efp')} .efp-slot`) }; }, sel);
+    expect(meta.poster).toBe(f.poster.split('/').pop()); expect(meta.tracks).toEqual(['en:default', 'ar']); expect(meta.autoplay).toBe(false); expect(meta.paused).toBe(true); expect(meta.dur).toBe(f.durationLabel); expect(meta.title).toBe(f.title.en); expect(meta.slot).toBe(false);
+    if (mobile) await page.tap(`#s-exec-${who} .efp-play`); else await page.click(`#s-exec-${who} .efp-play`); await page.waitForFunction((sel) => { const v = document.querySelector(sel); return !v.paused && v.currentTime > 0.6; }, sel, { timeout: 15000 }); await waitState(page, "s.state === 'paused' && s.reason === 'video'", 8000); await page.waitForTimeout(400);
+    const playing = await page.evaluate((sel) => { const v = document.querySelector(sel), fig = v.closest('.efp'); return { controls: v.controls, overlayHidden: getComputedStyle(fig.querySelector('.efp-play')).display === 'none', showing: [...v.textTracks].filter((t) => t.mode === 'showing').map((t) => t.language) }; }, sel); await shot(page, info, `card-${who}-playing-en`);
+    await page.evaluate((sel) => document.querySelector(sel).pause(), sel); await waitState(page, "s.state === 'playing' || s.state === 'loading'", 10000);
+    write(`film-${who}-` + info.project.name, [{ meta, playing, errors: page.__errors.slice() }]); expect(playing.controls).toBe(true); expect(playing.overlayHidden).toBe(true); expect(playing.showing).toEqual(['en']); expect(page.__errors).toEqual([]);
+  });
+  test('slide 38: India and Kenya PRODUCT CONCEPT renders load (plate5-india-v161 / plate5-kenya-v161, logo asset present), Lebanon unchanged, captions EN/AR (+ screenshots of all four cards and both panels)', async ({ page }, info) => {
+    test.setTimeout(300000); const rows = [];
+    for (const lang of ['en', 'ar']) {
+      for (const [who, k] of CARDS) { const ctx = await page.context().browser().newContext({ viewport: page.viewportSize(), isMobile: info.project.name === 'phone', hasTouch: info.project.name === 'phone' }); const p2 = await ctx.newPage(); await setup(p2, lang); await p2.goto(BASE + '/?lang=' + lang + '#/28/exec-' + k, { waitUntil: 'load' }); await p2.waitForSelector('#s-exec-' + who + '.is-active', { timeout: 20000 }); await p2.waitForTimeout(2000); await shot(p2, info, `card-${who}-${lang}`); expect(p2.__errors).toEqual([]); await ctx.close(); }
+      for (const [c, plate] of [['in', 'plate5-india-v161'], ['ke', 'plate5-kenya-v161'], ['lb', 'plate5-lebanon-v158']]) {
+        const ctx = await page.context().browser().newContext({ viewport: page.viewportSize(), isMobile: info.project.name === 'phone', hasTouch: info.project.name === 'phone' }); const p2 = await ctx.newPage(); await setup(p2, lang); await p2.goto(BASE + '/?lang=' + lang + hashFor(38), { waitUntil: 'load' }); await p2.waitForSelector(`button.aos-country[data-country="${c}"]`, { timeout: 20000 }); await p2.click(`button.aos-country[data-country="${c}"]`); await p2.waitForTimeout(1500);
+        const r = await p2.evaluate(() => { const fig = document.querySelector('[data-testid="nation-concept"]'), im = fig.querySelector('img'); return { concept: fig.getAttribute('data-concept'), src: im.currentSrc || im.src, loaded: im.complete && im.naturalWidth > 0, nw: im.naturalWidth, cap: fig.querySelector('figcaption').textContent, alt: im.alt.slice(0, 60), ar: fig.style.getPropertyValue('--aos-ar') }; });
+        if (c !== 'lb') await shot(p2, info, `slide38-${c}-${lang}`); rows.push({ lang, c, ...r }); expect(r.src).toContain(plate); expect(r.loaded).toBe(true); if (c !== 'lb') { expect(r.cap).toBe(lang === 'ar' ? 'تصوّر مفاهيمي · توضيحي' : 'CONCEPT RENDER · illustrative'); expect(r.ar.trim()).toBe('3 / 2'); } expect(p2.__errors).toEqual([]); await ctx.close();
+      }
+    }
+    for (const f of ['plate5-india-v161-1x.webp', 'plate5-india-v161-2x.jpg', 'plate5-kenya-v161-1x.webp', 'plate5-kenya-v161-2x.jpg']) expect((await page.request.get(BASE + '/assets/plates/' + f)).status(), f).toBe(200);
+    expect((await page.request.get(BASE + '/brand/athar-logo@3x.png')).status(), 'official logo asset').toBe(200); const cred = await (await page.request.get(BASE + '/assets/plates/credits.json')).json(); expect(cred.served['plate5-india-v161'].ai_generated).toBe(true); expect(cred.served['plate5-kenya-v161'].generator).toContain('GPT Image 2.5');
+    write('slide38-' + info.project.name, rows);
+  });
+  test('every IN THE NEWS (slide 30) and EVIDENCE (slide 38) link answers HTTP 200', async ({ page }) => {
+    test.setTimeout(300000); const loc = JSON.parse(fs.readFileSync(path.join(HERE, '../../dist/locales/impact-tiers.en.json'), 'utf8')); const os = fs.readFileSync(path.join(HERE, '../../dist/js/athar-os.js'), 'utf8');
+    const urls = [...new Set([...loc.news.flatMap((n) => [n.url, n.alternate].filter(Boolean)), ...[...os.matchAll(/u: '(https?:[^']+)'/g)].map((m) => m[1])])]; const rows = [];
+    for (const u of urls) { let status = 0, final = u; try { const r = await page.request.get(u, { timeout: 45000, headers: { 'User-Agent': 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 Chrome/128 Safari/537.36' } }); status = r.status(); final = r.url(); } catch (e) { status = -1; } rows.push({ url: u, status, final, ts: new Date().toISOString() }); expect.soft(status, u).toBe(200); }
+    write('links-' + test.info().project.name, rows); expect(rows.filter((r) => r.status !== 200).map((r) => r.url)).toEqual([]);
+  });
+  test('deep links 32, 38, 39–44 and all 44 slides EN + AR with 0 errors', async ({ page }) => {
+    test.setTimeout(300000); await setup(page); await open(page, 1); for (const lang of ['en', 'ar']) { if (lang === 'ar') { await page.click('[data-testid="lang-toggle"]'); await page.waitForFunction(() => document.documentElement.dir === 'rtl', null, { timeout: 8000 }); } for (let n = 1; n <= 44; n++) { await page.evaluate((h) => { location.hash = h; }, hashFor(n)); await page.waitForFunction((n) => window.__qaVisible().n === n, n, { timeout: 9000 }); } }
+    for (const n of [32, 38, 39, 40, 41, 42, 43, 44]) { const ctx = await page.context().browser().newContext({ viewport: page.viewportSize() }); const p2 = await ctx.newPage(); await setup(p2); await p2.goto(BASE + '/' + hashFor(n), { waitUntil: 'load' }); await p2.waitForFunction(() => !!window.AtharGuide, null, { timeout: 20000 }); await p2.waitForFunction((n) => window.__qaVisible().n === n, n, { timeout: 15000 }); expect(p2.__errors).toEqual([]); await ctx.close(); }
+    expect(page.__errors).toEqual([]);
+  });
+});

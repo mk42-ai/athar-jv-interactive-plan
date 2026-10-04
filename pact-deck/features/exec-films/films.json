@@ -1,6 +1,6 @@
 {
- "_comment": "v1.6.0 (v1.5.9 base) — Section 09 executive films (one slot per card). Source of truth for scripts/v1.4.7/build.mjs (copies assets/<person>/ → dist/assets/exec/films/<person>/), dist/build-info.json (films[]), features/exec-films/exec-films.js (window.AtharExecFilms) and the QA suite. status: 'shipped' = file verified and served · 'coming-soon' = labelled ready slot, no file served. To ship a film later: drop the files into assets/<person>/, fill the entry, set status to shipped, run the build. burnedInSubtitles: whether the film itself carries burned-in captions (the <track> VTTs are shipped either way).",
- "version": "1.6.0",
+ "_comment": "v1.6.1 (v1.5.9 base) — Section 09 executive films (one slot per card). Source of truth for scripts/v1.4.7/build.mjs (copies assets/<person>/ → dist/assets/exec/films/<person>/), dist/build-info.json (films[]), features/exec-films/exec-films.js (window.AtharExecFilms) and the QA suite. status: 'shipped' = file verified and served · 'coming-soon' = labelled ready slot, no file served. To ship a film later: drop the files into assets/<person>/, fill the entry, set status to shipped, run the build. burnedInSubtitles: whether the film itself carries burned-in captions (the <track> VTTs are shipped either way). v1.6.1: all four cards ship a film; no ready slot remains.",
+ "version": "1.6.1",
  "distBase": "/assets/exec/films/",
  "films": {
   "khalid": {
@@ -61,7 +61,8 @@
    "subtitleStreams": "none (burned-in EN) — soft EN/AR via <track>",
    "burnedInSubtitles": true,
    "burnedInSubtitlesNote": "burned-in English subtitles (v1.5.6 transcription reference)",
-   "v160": "retained unchanged in v1.6.0: the library search found NO '_v2' 1080p subtitled Khalid film — the 1 Oct master (this file's source) is the only one; a separate 4K master (athar-origins-of-impact_4K-master_v2.mp4, 3840x2160, 40 s, 71,354,505 B, library id 6ac1289e28a9b41edb0c1866, 2026-10-03T16:09Z) exists but was not requested for the card and is not used; shipped file sha256 re-verified by the build gate"
+   "v160": "retained unchanged in v1.6.0: the library search found NO '_v2' 1080p subtitled Khalid film — the 1 Oct master (this file's source) is the only one; a separate 4K master (athar-origins-of-impact_4K-master_v2.mp4, 3840x2160, 40 s, 71,354,505 B, library id 6ac1289e28a9b41edb0c1866, 2026-10-03T16:09Z) exists but was not requested for the card and is not used; shipped file sha256 re-verified by the build gate",
+   "v161": "v1.6.1: a ~50 s '…_1080p_subtitled_v2.mp4' was requested but does NOT exist anywhere probed (ffprobe 2026-10-04: media-library master 6abe166ad64782b8259834dc 40.000 s; the shipped trim 37.333 s; the v1.5.6 zip's ORIGINAL-backup 40.000 s and trimmed 37.333 s; athar-origins-of-impact_4K-master_v2 (both library copies) 40.000 s and it is Kayaan's film; no 45–55 s mp4 on the host). The 37.333 s film is kept unchanged."
   },
   "al-ameri": {
    "status": "shipped",
@@ -182,16 +183,64 @@
    "subtitleStreams": "none — soft EN/AR via <track>"
   },
   "unwalla": {
-   "status": "coming-soon",
+   "status": "shipped",
    "person": {
     "en": "Kayaan K. Unwalla",
     "ar": "كايان ك. أونوالا"
    },
-   "requestedFile": null,
-   "note": "no film requested or supplied — labelled ready slot (Film coming soon / قريباً)",
-   "mp4": null,
-   "poster": null,
-   "captions": null
+   "title": {
+    "en": "Athar — Origins of Impact, Episode 01: Kayaan K. Unwalla",
+    "ar": "أثر — أصول الأثر، الحلقة 01: كايان ك. أونوالا"
+   },
+   "aria": {
+    "en": "Impact story film: Athar — Origins of Impact, Episode 01, Kayaan K. Unwalla",
+    "ar": "فيلم قصة الأثر: أثر — أصول الأثر، الحلقة 01، كايان ك. أونوالا"
+   },
+   "bodyExtra": null,
+   "requestedFile": "athar-origins-of-impact_4K-master_v2.mp4",
+   "requestedFileFound": true,
+   "source": {
+    "file": "athar-origins-of-impact_4K-master_v2.mp4",
+    "libraryId": "6ac1289e28a9b41edb0c1866",
+    "libraryUploaded": "2026-10-03T16:09:00Z",
+    "sha256": "51c22a0e966bd639654cd4113499f6c1295c324572ee413cca3c978601e51cd6",
+    "bytes": 71354505,
+    "note": "4K master (3840x2160 24 fps H.264 High 14.3 Mb/s + AAC-LC 48 kHz stereo, 40.000 s); the opening title card reads 'Kayaan Unwalla · photo courtesy of Kayaan Unwalla' — this is Kayaan's film (v1.6.1 replaces the v1.5.9/v1.6.0 'Film coming soon' slot)"
+   },
+   "mp4": "unwalla/athar-origins-ep01-kayaan-unwalla-1080p.mp4",
+   "mp4Sha256": "2c1c7f0f3ba3191c7c6ba7342187b7294bd092d4f384a617d62eaa68cfcb2cf6",
+   "mp4Bytes": 17386620,
+   "mp4Note": "4K master downscaled to 1920x1080 (libx264 High@4.1 crf 20 preset medium, AAC 160k, +faststart)",
+   "mp4Mobile": "unwalla/athar-origins-ep01-kayaan-unwalla-720p.mp4",
+   "mp4MobileSha256": "1818dc83fb49c01fb4f8e631035374bb1b7d747044235362b4aad942bfb9872c",
+   "mp4MobileBytes": 6513275,
+   "mp4MobileNote": "1280x720 transcode (libx264 High@4.0 crf 23, AAC 128k, +faststart) for viewports ≤ 720 px and Save-Data",
+   "poster": "unwalla/athar-origins-ep01-kayaan-unwalla-poster-20s0.jpg",
+   "posterWebp": "unwalla/athar-origins-ep01-kayaan-unwalla-poster-20s0.webp",
+   "posterSha256": "976a2a53879e62290dffa719b5fc365b22a6b77b3019c0baaa0831df38dff238",
+   "posterTimeSec": 20.0,
+   "posterNote": "frame at 00:20.000 — the sharpest, steadiest portrait frame of the 18–21 s shot (YuNet face detection + Laplacian sharpness), away from the opening title card (0–3 s, name + photo-credit overlay) and the end card; chosen algorithmically, not by eye",
+   "w": 1920,
+   "h": 1080,
+   "fps": 24,
+   "durationSec": 40.0,
+   "durationLabel": "0:40",
+   "inPt": 0,
+   "outPt": 40.0,
+   "captions": {
+    "en": "unwalla/athar-origins-ep01-kayaan-unwalla.en.vtt",
+    "ar": "unwalla/athar-origins-ep01-kayaan-unwalla.ar.vtt",
+    "note": "WebVTT, 11 cues each — EN transcribed from the narration (On Demand speech-to-text, proper nouns corrected), AR translated with Arabic punctuation; proportional cue timing over the detected speech span (0.7–37.6 s); cues at line:6%"
+   },
+   "captionsSha256": {
+    "en": "246c642fdfab87db32f1745193514331841c99a8e123f71c4cedf091146bcbf4",
+    "ar": "b3b9a6e99879e606aaabe73ebd3e5d5f1e5f6a30cc59d9253933df39f5f43cbf"
+   },
+   "burnedInSubtitles": null,
+   "burnedInSubtitlesNote": "unknown — not verifiable by eye here (no OCR run); the EN/AR <track> captions ship regardless",
+   "videoCodec": "h264 High",
+   "audioCodec": "aac LC 48 kHz stereo",
+   "subtitleStreams": "none — soft EN/AR via <track>"
   }
  }
 }

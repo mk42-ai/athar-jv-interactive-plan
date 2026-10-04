@@ -1,6 +1,6 @@
 {
   "name": "athar-community-deck",
-  "version": "1.6.0",
+  "version": "1.6.1",
   "private": true,
   "description": "Athar Open Agentic Pact — bilingual (EN/AR) community-pact deck by ODA × AIREV. dist/ is the shipped artefact (v1.2.1 build + runtime modules dist/js/*.js + appended CSS). v1.4.7 = image-integrity release: every image slot restored or replaced from official sources (slides 29/30/32), canonical Lebanon evidence card on slide 30, img-guard runtime fallback (no broken-image glyph can appear), branded fallback SVG, check-assets build gate (prebuild/postbuild), MIME/Range-complete serve.mjs; build = check-assets gate + validate dist/ + regenerate SHA256SUMS.",
   "type": "module",

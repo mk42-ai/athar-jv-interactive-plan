@@ -1,0 +1,25 @@
+{
+ "base": "http://127.0.0.1:4161",
+ "version": "1.6.1",
+ "written": "2026-10-04T00:58:58.022Z",
+ "rows": [
+  {
+   "badge": "v1.6.1",
+   "html": "1.6.1",
+   "exec": "v1.6.1",
+   "films": [
+    "khalid:shipped",
+    "al-ameri:shipped",
+    "ferreira-da-cunha:shipped",
+    "unwalla:shipped"
+   ],
+   "statuses": [
+    "s-exec-al-ameri:shipped",
+    "s-exec-ferreira-da-cunha:shipped",
+    "s-exec-khalid:shipped",
+    "s-exec-unwalla:shipped"
+   ],
+   "buildInfo": "1.6.1"
+  }
+ ]
+}

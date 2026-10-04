@@ -1,0 +1,73 @@
+{
+ "base": "http://127.0.0.1:4161",
+ "version": "1.6.1",
+ "written": "2026-10-04T01:00:06.632Z",
+ "rows": [
+  {
+   "lang": "en",
+   "c": "in",
+   "concept": "india-v161",
+   "src": "http://127.0.0.1:4161/assets/plates/plate5-india-v161-1x.webp",
+   "loaded": true,
+   "nw": 768,
+   "cap": "CONCEPT RENDER · illustrative",
+   "alt": "AI-generated concept render for India (Ownership tier): a cl",
+   "ar": "3 / 2"
+  },
+  {
+   "lang": "en",
+   "c": "ke",
+   "concept": "kenya-v161",
+   "src": "http://127.0.0.1:4161/assets/plates/plate5-kenya-v161-1x.webp",
+   "loaded": true,
+   "nw": 768,
+   "cap": "CONCEPT RENDER · illustrative",
+   "alt": "AI-generated concept render for Kenya (Legacy tier): farmers",
+   "ar": "3 / 2"
+  },
+  {
+   "lang": "en",
+   "c": "lb",
+   "concept": "lebanon-v158",
+   "src": "http://127.0.0.1:4161/assets/plates/plate5-lebanon-v158-1x.webp",
+   "loaded": true,
+   "nw": 768,
+   "cap": "CONCEPT RENDER",
+   "alt": "AI-generated concept render for the UAE–Lebanon partnership:",
+   "ar": "3 / 2"
+  },
+  {
+   "lang": "ar",
+   "c": "in",
+   "concept": "india-v161",
+   "src": "http://127.0.0.1:4161/assets/plates/plate5-india-v161-1x.webp",
+   "loaded": true,
+   "nw": 768,
+   "cap": "تصوّر مفاهيمي · توضيحي",
+   "alt": "تصوّر مفاهيمي مولَّد بالذكاء الاصطناعي للهند (فئة الملكية): ",
+   "ar": "3 / 2"
+  },
+  {
+   "lang": "ar",
+   "c": "ke",
+   "concept": "kenya-v161",
+   "src": "http://127.0.0.1:4161/assets/plates/plate5-kenya-v161-1x.webp",
+   "loaded": true,
+   "nw": 768,
+   "cap": "تصوّر مفاهيمي · توضيحي",
+   "alt": "تصوّر مفاهيمي مولَّد بالذكاء الاصطناعي لكينيا (فئة الإرث): م",
+   "ar": "3 / 2"
+  },
+  {
+   "lang": "ar",
+   "c": "lb",
+   "concept": "lebanon-v158",
+   "src": "http://127.0.0.1:4161/assets/plates/plate5-lebanon-v158-1x.webp",
+   "loaded": true,
+   "nw": 768,
+   "cap": "تصوّر مفاهيمي",
+   "alt": "تصوّر مفاهيمي مولَّد بالذكاء الاصطناعي للشراكة بين الإمارات ",
+   "ar": "3 / 2"
+  }
+ ]
+}

@@ -16,7 +16,7 @@
    overlay and one footer button. */
 (function () {
   'use strict';
-  var VERSION = 'v1.6.0'; /* sessionStorage key deliberately unchanged */
+  var VERSION = 'v1.6.1'; /* sessionStorage key deliberately unchanged */
   var KEY = 'athar-intro-v1.4.2';
   var BASE = '/assets/intro/v1.4.2/';
   var MEDIA = {

@@ -32,13 +32,13 @@ const guide = (page) => page.evaluate(() => { const r = document.getElementById(
 const waitState = (page, src, ms = 10000) => page.waitForFunction((src) => { const r = document.getElementById('athar-narration'); const s = { state: r.getAttribute('data-state'), reason: r.getAttribute('data-reason') }; return new Function('s', 'return ' + src)(s); }, src, { timeout: ms });
 
 test.describe(`v${PKG.version} — three executive films + Kayaan slot`, () => {
-  test('version 1.6.0 everywhere the deck surfaces it (footer badge, html data-deck-version, build-info, modules)', async ({ page }) => {
+  test('version everywhere the deck surfaces it (footer badge, html data-deck-version, build-info, modules)', async ({ page }) => {
     await setup(page); await open(page, 43);
     const v = await page.evaluate(() => ({ badge: (document.querySelector('[data-testid="deck-version"]') || {}).textContent, html: document.documentElement.getAttribute('data-deck-version'), exec: window.AtharExecTeam.version, player: window.AtharExecFilmPlayer.version, guide: window.AtharGuide.version, intro: window.AtharIntro.VERSION, films: window.AtharExecFilms.version }));
     const info = await (await page.request.get(BASE + '/build-info.json')).json();
     write('version-' + test.info().project.name, [{ ...v, buildInfo: info.version, features: info.features }]);
-    expect(PKG.version).toBe('1.6.0'); expect(v.badge).toBe('v1.6.0'); expect(v.html).toBe('1.6.0'); expect(v.exec).toBe('v1.6.0'); expect(v.player).toBe('v1.6.0'); expect(v.guide).toBe('v1.6.0'); expect(v.intro).toBe('v1.6.0'); expect(v.films).toBe('1.6.0'); expect(info.version).toBe('1.6.0'); expect(info.features.version).toBe('1.6.0');
-    expect(info.films.filter((f) => f.status === 'shipped').map((f) => f.id).sort()).toEqual(SHIPPED.map(([id]) => id).sort()); expect(info.films.filter((f) => f.status === 'coming-soon').map((f) => f.id)).toEqual(['unwalla']); expect(page.__errors).toEqual([]);
+    const V = PKG.version; /* v1.6.1: data-driven */ expect(v.badge).toBe('v' + V); expect(v.html).toBe(V); expect(v.exec).toBe('v' + V); expect(v.player).toBe('v' + V); expect(v.guide).toBe('v' + V); expect(v.intro).toBe('v' + V); expect(v.films).toBe(V); expect(info.version).toBe(V); expect(info.features.version).toBe(V);
+    expect(info.films.filter((f) => f.status === 'shipped').map((f) => f.id).sort()).toEqual(SHIPPED.map(([id]) => id).sort()); expect(info.films.filter((f) => f.status === 'coming-soon').map((f) => f.id)).toEqual(SLOTS.map(([id]) => id)); expect(page.__errors).toEqual([]);
   });
 
   for (const [who, k, n] of SHIPPED) test(`${who} (slide ${n}): poster → press-to-play → native controls → guide pauses → resumes on pause and after the end`, async ({ page }, info) => {

@@ -301,7 +301,7 @@
   }
  ],
  "counter": "Slide {n} of {total}",
- "version": "1.6.0",
+ "version": "1.6.1",
  "source": "Athar — Agentic AI for All: Three Impact Tiers for Foundation Funding (27 Sep 2026)",
  "news": [
   {
@@ -431,13 +431,14 @@
    "date": "2025-09-12",
    "publisher": "Kenya Ministry of ICT & Digital Economy",
    "headline": "Kenya’s Digital Future Brightens as Construction of East Africa’s Largest Data Centre Starts",
-   "url": "https://ict.go.ke/kenyas-digital-future-brightens-construction-east-africas-largest-data-centre-starts",
-   "alternate": "https://ict.go.ke/node/797",
+   "url": "https://www.ict.go.ke/kenyas-digital-future-brightens-construction-east-africas-largest-data-centre-starts",
+   "alternate": "https://www.ict.go.ke/node/797",
    "flagged": true,
    "secondary": null,
    "mark": "/assets/news/marks/publisher-kenya-ict.png",
    "markKind": "publisher",
-   "markName": "Kenya Ministry of ICT & Digital Economy"
+   "markName": "Kenya Ministry of ICT & Digital Economy",
+   "linkNote": "v1.6.1: canonical www.ict.go.ke URL (the bare ict.go.ke host fails TLS validation — wildcard *.ict.go.ke certificate; the publisher also serves an incomplete chain, so strict clients may warn)"
   },
   {
    "id": "ke-adex",

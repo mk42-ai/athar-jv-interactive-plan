@@ -1,4 +1,4 @@
-# Feature `execFilms` — Section 09 executive films (v1.6.0; v1.5.9 base)
+# Feature `execFilms` — Section 09 executive films (v1.6.1; v1.5.9 base)
 
 **State in v1.5.9: ON** (`pact-deck/features.json` → `"execFilms": true`; replaces v1.5.7's `originsFilm`, which was OFF in v1.5.7 and v1.5.8).
 
@@ -11,7 +11,7 @@ ready slot (never a broken player). Swapping a slot for a film is a `films.json`
 | H.E. Fahad Mohamed Al Ameri | 41 | `ATHAR_EP01_FahadAlAmeri_1080p_subtitled_v1 (1).mp4` | **yes** — supplied from the file library 2026-10-03 (v1.6.0) | **yes** — `assets/al-ameri/` (1080p remux, 720p, poster 00:07.0, EN/AR VTT; burned-in EN subtitles per the file name) |
 | Ary Ferreira da Cunha | 42 | `ary_origins_1080p_FINAL_v1.mp4` | **yes** — supplied from the file library 2026-10-03 (v1.6.0) | **yes** — `assets/ferreira-da-cunha/` (1080p byte-identical remux, 720p, poster 00:04.0, EN/AR VTT; burned-in subtitles unknown) |
 | Muhammed Khalid | 43 (v1.6.0: retained unchanged — still no `_v2`; a 4K master v2 exists in the library but is not used) | `athar-origins-of-impact-ep01-muhammed-khalid_1080p_subtitled_v2.mp4` (~109 MB) | **no** — the `_v2` does not exist anywhere searched; the media library holds the non-v2 master `…_1080p_subtitled.mp4` (id `6abe166ad64782b8259834dc`, 40.000 s, sha256 `c7c20005…3ab2a`) | **yes** — the master's v1.5.6 trim (end card removed at 37.333 s), see below |
-| Kayaan K. Unwalla | 44 | — (none requested) | — | ready slot |
+| Kayaan K. Unwalla | 44 | `athar-origins-of-impact_4K-master_v2.mp4` (4K master, library id 6ac1289e…) | **yes** — supplied 2026-10-03 (v1.6.1) | **yes** — `assets/unwalla/` (1080p + 720p from the 4K master, poster 00:20.0, EN/AR VTT) |
 
 ## Files
 

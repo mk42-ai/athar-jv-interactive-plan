@@ -1,6 +1,6 @@
 {
  "generated_utc": "2026-09-27T15:27:23Z",
- "version": "1.4.0",
+ "version": "1.4.0 · v1.6.1: plate5-india-v161 + plate5-kenya-v161 added",
  "caption_tag": {
   "en": "Concept render",
   "ar": "تصوّر مفاهيمي"
@@ -922,6 +922,110 @@
     "ar": "تصوّر مفاهيمي"
    },
    "one_m_wording": "The deck frames 1M as a TARGET: Lebanon Access tier flagship \"One Million Lebanese AI Experts\" (launched 25 Sep 2026, WAM), \"1M citizens certified in generative AI\", the slide footer says \"illustrative targets (p. 3)\". The render's \"1M ATHAR USERS\" is a different noun (users vs certified citizens) and is therefore disclosed here and in the alt text as an illustrative target."
+  },
+  "plate5-india-v161": {
+   "slide": 38,
+   "panel": "india",
+   "ai_generated": true,
+   "generator": "GPT Image 2.5 (On Demand image generation), candidate 8oaVQKG47s, 1536x1024, received 2026-10-04",
+   "source_png_sha256": "0f789786b8db14f976c0175eb640bb86bf7337c0725eae24ea4ca886b570779f",
+   "brief": "INDIA · Ownership tier — classroom, learners on Athar-powered devices",
+   "post_processing": "official ATHAR logo (Athar_Logo_Horizontal_transparent_v1.png — navy Arabic calligraphy mark + 'A T H A R' wordmark, transparent) composited onto the blank ivory wall section above the shelf: flat placement with a multiply blend at 90 % opacity so the wall/panel texture and lighting show through; placement box (x, y, w, h px in the 1536x1024 frame) = [899, 98, 442, 88], located by searching the frame for the largest flat ivory region (no perspective warp was applied — the vanishing geometry could not be read without vision; flagged for a manual check)",
+   "files": {
+    "plate5-india-v161-1x.webp": {
+     "bytes": 50456,
+     "sha256": "eff8b74247d9bf1352554d8c6817faba45468a00381a1870a58e585b465c8a57",
+     "px": [
+      768,
+      512
+     ]
+    },
+    "plate5-india-v161-1x.jpg": {
+     "bytes": 76016,
+     "sha256": "b2a58c0426e2ae28c82dff3100064edc24a8aa927752a9430fd434744e0580a3",
+     "px": [
+      768,
+      512
+     ]
+    },
+    "plate5-india-v161-2x.webp": {
+     "bytes": 123352,
+     "sha256": "0229e73fb94a062d74ea0983545fcb819d807fba8d9bcdfcffede095dfcdc791",
+     "px": [
+      1536,
+      1024
+     ]
+    },
+    "plate5-india-v161-2x.jpg": {
+     "bytes": 218773,
+     "sha256": "6ca76d8d9bae2aa2d547f80e0589b83969cbde1bda0cb2116ec4046fb983770f",
+     "px": [
+      1536,
+      1024
+     ]
+    }
+   },
+   "caption": {
+    "en": "CONCEPT RENDER · illustrative",
+    "ar": "تصوّر مفاهيمي · توضيحي"
+   },
+   "disclosure": {
+    "en": "AI-generated concept render (GPT Image 2.5) for the Ownership tier; the ATHAR logo is the official brand asset composited over the render. Illustrative, not a photograph.",
+    "ar": "تصوّر مفاهيمي مولَّد بالذكاء الاصطناعي (GPT Image 2.5)؛ شعار أثر هو الأصل الرسمي للعلامة مركَّباً فوق الصورة. توضيحي وليس صورة فوتوغرافية."
+   },
+   "replaces": "plate5-concept-v157 on this panel (v1.5.7–v1.6.0)"
+  },
+  "plate5-kenya-v161": {
+   "slide": 38,
+   "panel": "kenya",
+   "ai_generated": true,
+   "generator": "GPT Image 2.5 (On Demand image generation), candidate ETcf0SR53f, 1536x1024, received 2026-10-04",
+   "source_png_sha256": "339ec4d52a6f03a25ff2cd596cdc5272c50740ca873977f22d6616b1290fdf8c",
+   "brief": "KENYA · Legacy tier — farmers + sovereign data centre",
+   "post_processing": "official ATHAR logo (Athar_Logo_Horizontal_transparent_v1.png — navy Arabic calligraphy mark + 'A T H A R' wordmark, transparent) composited onto the blank ivory facade panel: flat placement with a multiply blend at 90 % opacity so the wall/panel texture and lighting show through; placement box (x, y, w, h px in the 1536x1024 frame) = [864, 282, 184, 36], located by searching the frame for the largest flat ivory region (no perspective warp was applied — the vanishing geometry could not be read without vision; flagged for a manual check)",
+   "files": {
+    "plate5-kenya-v161-1x.webp": {
+     "bytes": 94752,
+     "sha256": "1c2abd2327a0a760e95accc07a1f20b4124cda6c6e3ccb70d490840a0c0450bc",
+     "px": [
+      768,
+      512
+     ]
+    },
+    "plate5-kenya-v161-1x.jpg": {
+     "bytes": 113138,
+     "sha256": "c134cc1e598ce8c4a182d8349fe1930b175eb704a25e7a55e37a7616151c373b",
+     "px": [
+      768,
+      512
+     ]
+    },
+    "plate5-kenya-v161-2x.webp": {
+     "bytes": 235344,
+     "sha256": "07c2cd5a593d0a05ce1fd96f2cec68041d05a63c01c8b29700f76316bc953095",
+     "px": [
+      1536,
+      1024
+     ]
+    },
+    "plate5-kenya-v161-2x.jpg": {
+     "bytes": 326882,
+     "sha256": "63880450311dad8c7ca88a05f3aff423cd16ac19275355abe21c12aa27d1e04e",
+     "px": [
+      1536,
+      1024
+     ]
+    }
+   },
+   "caption": {
+    "en": "CONCEPT RENDER · illustrative",
+    "ar": "تصوّر مفاهيمي · توضيحي"
+   },
+   "disclosure": {
+    "en": "AI-generated concept render (GPT Image 2.5) for the Legacy tier; the ATHAR logo is the official brand asset composited over the render. Illustrative, not a photograph.",
+    "ar": "تصوّر مفاهيمي مولَّد بالذكاء الاصطناعي (GPT Image 2.5)؛ شعار أثر هو الأصل الرسمي للعلامة مركَّباً فوق الصورة. توضيحي وليس صورة فوتوغرافية."
+   },
+   "replaces": "plate5-concept-v157 on this panel (v1.5.7–v1.6.0)"
   }
  },
  "logo_files": {
