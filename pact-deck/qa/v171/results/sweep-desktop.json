@@ -1,8 +1,8 @@
 {
- "base": "http://127.0.0.1:4172",
- "version": "1.7.2",
- "expectCommit": "ef50223325247b1cef452ecf3365c5d163b1b164",
- "written": "2026-10-04T12:16:38.384Z",
+ "base": "http://127.0.0.1:4173",
+ "version": "1.7.3",
+ "expectCommit": "4c2a45bd3086f60c2da2fd212eda0178fd5d8099",
+ "written": "2026-10-04T14:28:11.246Z",
  "rows": [
   {
    "dirs": {
@@ -114,44 +114,11 @@
     {
      "lang": "en",
      "n": 46,
-     "requested": "#/28/brand-1",
-     "id": "s-brand-foundations",
-     "slideId": "s-brand-foundations",
-     "dir": "ltr",
-     "hash": "#/28/brand-1",
-     "errors": [],
-     "failed": []
-    },
-    {
-     "lang": "en",
-     "n": 47,
-     "requested": "#/28/brand-2",
-     "id": "s-brand-typography",
-     "slideId": "s-brand-typography",
-     "dir": "ltr",
-     "hash": "#/28/brand-2",
-     "errors": [],
-     "failed": []
-    },
-    {
-     "lang": "en",
-     "n": 48,
-     "requested": "#/28/brand-3",
-     "id": "s-brand-gallery",
-     "slideId": "s-brand-gallery",
-     "dir": "ltr",
-     "hash": "#/28/brand-3",
-     "errors": [],
-     "failed": []
-    },
-    {
-     "lang": "en",
-     "n": 46,
      "requested": "#/29/brand-1",
      "id": "s-brand-foundations",
      "slideId": "s-brand-foundations",
      "dir": "ltr",
-     "hash": "#/28/brand-1",
+     "hash": "#/29/brand-1",
      "errors": [],
      "failed": []
     },
@@ -162,7 +129,7 @@
      "id": "s-brand-typography",
      "slideId": "s-brand-typography",
      "dir": "ltr",
-     "hash": "#/28/brand-2",
+     "hash": "#/29/brand-2",
      "errors": [],
      "failed": []
     },
@@ -173,7 +140,40 @@
      "id": "s-brand-gallery",
      "slideId": "s-brand-gallery",
      "dir": "ltr",
-     "hash": "#/28/brand-3",
+     "hash": "#/29/brand-3",
+     "errors": [],
+     "failed": []
+    },
+    {
+     "lang": "en",
+     "n": 46,
+     "requested": "#/29/brand-1",
+     "id": "s-brand-foundations",
+     "slideId": "s-brand-foundations",
+     "dir": "ltr",
+     "hash": "#/29/brand-1",
+     "errors": [],
+     "failed": []
+    },
+    {
+     "lang": "en",
+     "n": 47,
+     "requested": "#/29/brand-2",
+     "id": "s-brand-typography",
+     "slideId": "s-brand-typography",
+     "dir": "ltr",
+     "hash": "#/29/brand-2",
+     "errors": [],
+     "failed": []
+    },
+    {
+     "lang": "en",
+     "n": 48,
+     "requested": "#/29/brand-3",
+     "id": "s-brand-gallery",
+     "slideId": "s-brand-gallery",
+     "dir": "ltr",
+     "hash": "#/29/brand-3",
      "errors": [],
      "failed": []
     },
@@ -184,7 +184,7 @@
      "id": "s-brand-foundations",
      "slideId": "s-brand-foundations",
      "dir": "ltr",
-     "hash": "#/28/brand-1",
+     "hash": "#/29/brand-1",
      "errors": [],
      "failed": []
     },
@@ -195,7 +195,7 @@
      "id": "s-brand-gallery",
      "slideId": "s-brand-gallery",
      "dir": "ltr",
-     "hash": "#/28/brand-3",
+     "hash": "#/29/brand-3",
      "errors": [],
      "failed": []
     },
@@ -301,44 +301,11 @@
     {
      "lang": "ar",
      "n": 46,
-     "requested": "#/28/brand-1",
-     "id": "s-brand-foundations",
-     "slideId": "s-brand-foundations",
-     "dir": "rtl",
-     "hash": "#/28/brand-1",
-     "errors": [],
-     "failed": []
-    },
-    {
-     "lang": "ar",
-     "n": 47,
-     "requested": "#/28/brand-2",
-     "id": "s-brand-typography",
-     "slideId": "s-brand-typography",
-     "dir": "rtl",
-     "hash": "#/28/brand-2",
-     "errors": [],
-     "failed": []
-    },
-    {
-     "lang": "ar",
-     "n": 48,
-     "requested": "#/28/brand-3",
-     "id": "s-brand-gallery",
-     "slideId": "s-brand-gallery",
-     "dir": "rtl",
-     "hash": "#/28/brand-3",
-     "errors": [],
-     "failed": []
-    },
-    {
-     "lang": "ar",
-     "n": 46,
      "requested": "#/29/brand-1",
      "id": "s-brand-foundations",
      "slideId": "s-brand-foundations",
      "dir": "rtl",
-     "hash": "#/28/brand-1",
+     "hash": "#/29/brand-1",
      "errors": [],
      "failed": []
     },
@@ -349,7 +316,7 @@
      "id": "s-brand-typography",
      "slideId": "s-brand-typography",
      "dir": "rtl",
-     "hash": "#/28/brand-2",
+     "hash": "#/29/brand-2",
      "errors": [],
      "failed": []
     },
@@ -360,7 +327,40 @@
      "id": "s-brand-gallery",
      "slideId": "s-brand-gallery",
      "dir": "rtl",
-     "hash": "#/28/brand-3",
+     "hash": "#/29/brand-3",
+     "errors": [],
+     "failed": []
+    },
+    {
+     "lang": "ar",
+     "n": 46,
+     "requested": "#/29/brand-1",
+     "id": "s-brand-foundations",
+     "slideId": "s-brand-foundations",
+     "dir": "rtl",
+     "hash": "#/29/brand-1",
+     "errors": [],
+     "failed": []
+    },
+    {
+     "lang": "ar",
+     "n": 47,
+     "requested": "#/29/brand-2",
+     "id": "s-brand-typography",
+     "slideId": "s-brand-typography",
+     "dir": "rtl",
+     "hash": "#/29/brand-2",
+     "errors": [],
+     "failed": []
+    },
+    {
+     "lang": "ar",
+     "n": 48,
+     "requested": "#/29/brand-3",
+     "id": "s-brand-gallery",
+     "slideId": "s-brand-gallery",
+     "dir": "rtl",
+     "hash": "#/29/brand-3",
      "errors": [],
      "failed": []
     },
@@ -371,7 +371,7 @@
      "id": "s-brand-foundations",
      "slideId": "s-brand-foundations",
      "dir": "rtl",
-     "hash": "#/28/brand-1",
+     "hash": "#/29/brand-1",
      "errors": [],
      "failed": []
     },
@@ -382,7 +382,7 @@
      "id": "s-brand-gallery",
      "slideId": "s-brand-gallery",
      "dir": "rtl",
-     "hash": "#/28/brand-3",
+     "hash": "#/29/brand-3",
      "errors": [],
      "failed": []
     }
@@ -392,7 +392,7 @@
      "n": 46,
      "id": "s-brand-foundations",
      "slideId": "s-brand-foundations",
-     "hash": "#/28/brand-1",
+     "hash": "#/29/brand-1",
      "counter": "Slide 46 of 48"
     },
     "k2": {

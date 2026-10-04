@@ -1,6 +1,6 @@
 {
  "schema": "athar.narration.slides/1",
- "version": "1.7.2",
+ "version": "1.7.3",
  "generated_utc": "2026-10-01T14:00:00Z",
  "keyedBy": "data-slide-id (stable section id) — never by slide index",
  "voice": "George - Warm, Captivating Storyteller",
@@ -2543,121 +2543,165 @@
   {
    "n": 47,
    "slideId": "s-brand-typography",
-   "clipId": "NAR-s47",
+   "clipId": "NAR-s52",
    "section": "10 Brand",
    "sectionAr": "10 الهوية",
-   "file": "/audio/guide/slides/NAR-s47-s-brand-typography.mp3",
-   "bytes": 459381,
-   "sha256": "b596a741d845e6eae24c3d0cedccbdb3f281cc34b3e189ac1e65122ca0e24a66",
-   "durationSec": 28.682,
+   "file": "/audio/guide/slides/NAR-s52-s-brand-typography.mp3",
+   "bytes": 555511,
+   "sha256": "c10c3b08cef605a8c31074cae6e79896dafe686f3eaa27b933362d49b9527abb",
+   "durationSec": 34.691,
    "source": {
     "type": "tts",
     "provider": "ElevenLabs textToSpeech (On Demand 'Elevan Labs Agent' plugin)",
     "voice": "George (JBFqnCBsd6RMkjVDRZzb)",
     "modelRequested": "eleven_multilingual_v2",
     "languageCode": "en",
-    "generationRef": "S3Kp8wLWpp",
-    "generatedUtc": "2026-10-04T09:25Z",
+    "generationRef": "xaEoowESL4",
+    "generatedUtc": "2026-10-04T13:42Z",
     "storedAs": "downloaded into the repo — no SAS hotlink",
-    "textSource": "section 10 slide copy (brand guidelines ch. 2–4 specs; pack README; asset manifest)",
-    "contentCheck": "ElevenLabs Scribe (speechToText, scribe_v1, language en) on the rendered clip — normalised word error rate 0.000 (65 script words / 63 transcribed)",
-    "sttTranscript": "Typography. Athar's typographic voice is quiet, tracked and generous. Display lines are set in Cormorant Garamond Light, thin and widely tracked capitals. Headlines in the same serif in sentence case and body copy in IBM Plex Sans. Arabic leads on Arabic first surfaces in IBM Plex Sans Arabic, seven percent larger, never tracked and never stretched. All faces are open licensed and self-hosted",
-    "cueTiming": "sentence boundaries from Scribe word timestamps (first/last word of each script sentence)"
+    "textSource": "section 10 slide 47 copy (v1.7.2 typography spec: primary Plex Medium pairing, brand.json fonts.primary / typography.system)",
+    "contentCheck": "ElevenLabs Scribe (speechToText, scribe_v1, language en) on the rendered clip — normalised word error rate 0.000 (79 script words / 79 transcribed)",
+    "sttTranscript": "Typography. Athar's typographic voice is quiet, tracked, and generous. The primary pairing is IBM Plex Sans Medium for Latin and IBM Plex Sans Arabic Medium for Arabic, matched by optical weight on a shared baseline. Display lines are set in Cormorant Garamond Light, thin and widely tracked capitals. Headlines in the same serif in sentence case. Code and data in IBM Plex Mono. Arabic runs seven percent larger, never tracked and never stretched. All faces are open licensed and self-hosted.",
+    "cueTiming": "sentence boundaries from Scribe word timestamps (first/last word of each script sentence)",
+    "supersedes": "NAR-s47 (v1.7.1 typography clip, re-homed in v1.7.2; retired in v1.7.3 — audit A-07)"
    },
-   "text": "Typography. Athar's typographic voice is quiet, tracked and generous. Display lines are set in Cormorant Garamond Light, thin and widely tracked capitals; headlines in the same serif in sentence case; and body copy in IBM Plex Sans. Arabic leads on Arabic-first surfaces in IBM Plex Sans Arabic, seven per cent larger, never tracked and never stretched. All faces are open-licensed and self-hosted.",
+   "text": "Typography. Athar's typographic voice is quiet, tracked and generous. The primary pairing is IBM Plex Sans Medium for Latin and IBM Plex Sans Arabic Medium for Arabic, matched by optical weight on a shared baseline. Display lines are set in Cormorant Garamond Light, thin and widely tracked capitals; headlines in the same serif in sentence case; code and data in IBM Plex Mono. Arabic runs seven per cent larger, never tracked and never stretched. All faces are open-licensed and self-hosted.",
    "cues": [
     {
      "i": 1,
      "text": "Typography.",
-     "start": 0.0,
-     "end": 0.8,
-     "anchor": "s46-c1"
+     "start": 0.1,
+     "end": 0.78,
+     "anchor": "s47-c1"
     },
     {
      "i": 2,
      "text": "Athar's typographic voice is quiet, tracked and generous.",
-     "start": 1.28,
-     "end": 5.6,
-     "anchor": "s46-c2"
+     "start": 1.24,
+     "end": 4.42,
+     "anchor": "s47-c2"
     },
     {
      "i": 3,
-     "text": "Display lines are set in Cormorant Garamond Light, thin and widely tracked capitals; headlines in the same serif in sentence case; and body copy in IBM Plex Sans.",
-     "start": 5.7,
-     "end": 16.54,
-     "anchor": "s46-c3"
+     "text": "The primary pairing is IBM Plex Sans Medium for Latin and IBM Plex Sans Arabic Medium for Arabic, matched by optical weight on a shared baseline.",
+     "start": 5.1,
+     "end": 14.74,
+     "anchor": "s47-c3"
     },
     {
      "i": 4,
-     "text": "Arabic leads on Arabic-first surfaces in IBM Plex Sans Arabic, seven per cent larger, never tracked and never stretched.",
-     "start": 17.24,
-     "end": 24.6,
-     "anchor": "s46-c4"
+     "text": "Display lines are set in Cormorant Garamond Light, thin and widely tracked capitals;",
+     "start": 15.34,
+     "end": 21.18,
+     "anchor": "s47-c4"
     },
     {
      "i": 5,
+     "text": "headlines in the same serif in sentence case;",
+     "start": 21.22,
+     "end": 23.96,
+     "anchor": "s47-c5"
+    },
+    {
+     "i": 6,
+     "text": "code and data in IBM Plex Mono.",
+     "start": 24.0,
+     "end": 27.32,
+     "anchor": "s47-c6"
+    },
+    {
+     "i": 7,
+     "text": "Arabic runs seven per cent larger, never tracked and never stretched.",
+     "start": 27.4,
+     "end": 31.9,
+     "anchor": "s47-c7"
+    },
+    {
+     "i": 8,
      "text": "All faces are open-licensed and self-hosted.",
-     "start": 24.74,
-     "end": 28.34,
-     "anchor": "s46-c5"
+     "start": 31.98,
+     "end": 34.26,
+     "anchor": "s47-c8"
     }
    ],
    "ar": {
-    "clipId": "NAR-s47-ar",
-    "file": "/audio/guide/slides/NAR-s47-s-brand-typography.ar.mp3",
-    "bytes": 499505,
-    "sha256": "b6bb7d2c02927479b9fc581f8fff5661ecd8ffc7891dd0f2b4e4a6c14c71836e",
-    "durationSec": 31.19,
+    "clipId": "NAR-s52-ar",
+    "file": "/audio/guide/slides/NAR-s52-s-brand-typography.ar.mp3",
+    "bytes": 602741,
+    "sha256": "e7daae5472fdb52629bc2752f6fdbd4b8f530cf2d04988dbce4cb153c15370c8",
+    "durationSec": 37.642,
     "source": {
      "type": "tts",
      "provider": "ElevenLabs textToSpeech (On Demand 'Elevan Labs Agent' plugin)",
      "voice": "George (JBFqnCBsd6RMkjVDRZzb)",
      "modelRequested": "eleven_multilingual_v2",
      "languageCode": "ar",
-     "generationRef": "I3Dgu9z0tn",
-     "generatedUtc": "2026-10-04T09:27Z",
+     "generationRef": "aJGif8hEBS",
+     "generatedUtc": "2026-10-04T13:42Z",
      "storedAs": "downloaded into the repo — no SAS hotlink",
-     "textSource": "section 10 slide copy (brand guidelines ch. 2–4 specs; pack README; asset manifest)",
-     "contentCheck": "ElevenLabs Scribe (speechToText, scribe_v1, language ar) on the rendered clip — normalised word error rate 0.283 (60 script words / 55 transcribed) — the Arabic transliterations of the font names are transcribed as their Latin brand names (Cormorant Garamond, IBM Plex Sans) and 'سبعة في المئة' as '7%'; the audio reads the script",
-     "sttTranscript": "الطباعة: صوت أثر الطباعة هادئ ومتباعد الحروف وسخي. تكتب سطور العرض بخط Cormorant Garamond الخفيف، حروف كبيرة رفيعة واسعة التباعد، والعناوين بالخط نفسه بحالة الجملة، ونص المتن بخط IBM Plex Sans، وتتقدم العربية على الواجهات العربية أولًا بخط IBM Plex Sans Arabic أكبر بـ 7% دون تباعد ودون تمديد. جميع الخطوط مفتوحة الترخيص ومستضافة ذاتيًا.",
-     "cueTiming": "sentence boundaries from Scribe word timestamps (first/last word of each script sentence)"
+     "textSource": "section 10 slide 47 copy (v1.7.2 typography spec: primary Plex Medium pairing, brand.json fonts.primary / typography.system)",
+     "contentCheck": "ElevenLabs Scribe (speechToText, scribe_v1, language ar) on the rendered clip — raw word error rate 0.324 (74 script words / 66 transcribed): Scribe writes the Arabic transliterations of the font names as their Latin brand names (IBM Plex Sans Medium, Cormorant Garamond, IBM Plex Mono) and \"بسبعة في المئة\" as \"بـ7%\"; with brand names normalised the rate is 0.015 (67/67 words) — the audio reads the script",
+     "sttTranscript": "الطباعة. صوت أثر الطباعي هادئ ومتباعد الحروف وسخي. الاقتران الأساسي هو IBM Plex Sans Medium لللاتينية وIBM Plex Sans عربي Medium للعربية. بزن بصري متطابق على خط أساس مشترك. تكتب سطور العرض بخط Cormorant Garamond الخفيف. حروف كبيرة رفيعة واسعة التباعد. والعناوين بالخط نفسه بحالة الجملة. والرموز والبيانات بخط IBM Plex Mono. تأتي العربية أكبر بـ7% دون تباعد ودون تمديد. جميع الخطوط مفتوحة الترخيص ومستضافة ذاتيًا.",
+     "cueTiming": "sentence boundaries from Scribe word timestamps (first/last word of each script sentence)",
+     "supersedes": "NAR-s47-ar (v1.7.1 typography clip, re-homed in v1.7.2; retired in v1.7.3 — audit A-07)"
     },
-    "text": "الطباعة. صوت أثر الطباعي هادئ ومتباعد الحروف وسخيّ. تُكتب سطور العرض بخط كورمورانت غارامون الخفيف، حروف كبيرة رفيعة واسعة التباعد؛ والعناوين بالخط نفسه بحالة الجملة؛ ونص المتن بخط آي بي إم بلكس سانس. وتتقدّم العربية على الواجهات العربية أولًا بخط آي بي إم بلكس سانس عربي، أكبر بسبعة في المئة، دون تباعد ودون تمديد. جميع الخطوط مفتوحة الترخيص ومستضافة ذاتيًا.",
+    "text": "الطباعة. صوت أثر الطباعي هادئ ومتباعد الحروف وسخيّ. الاقتران الأساسي هو آي بي إم بلكس سانس ميديوم للاتينية، وآي بي إم بلكس سانس عربي ميديوم للعربية، بوزن بصري متطابق على خط أساس مشترك. تُكتب سطور العرض بخط كورمورانت غارامون الخفيف، حروف كبيرة رفيعة واسعة التباعد؛ والعناوين بالخط نفسه بحالة الجملة؛ والرموز والبيانات بخط آي بي إم بلكس مونو. تأتي العربية أكبر بسبعة في المئة، دون تباعد ودون تمديد. جميع الخطوط مفتوحة الترخيص ومستضافة ذاتيًا.",
     "cues": [
      {
       "i": 1,
       "text": "الطباعة.",
-      "start": 0.0,
+      "start": 0.08,
       "end": 0.6,
-      "anchor": "s46-c1-ar"
+      "anchor": "s47-c1"
      },
      {
       "i": 2,
       "text": "صوت أثر الطباعي هادئ ومتباعد الحروف وسخيّ.",
       "start": 0.98,
-      "end": 3.48,
-      "anchor": "s46-c2-ar"
+      "end": 3.52,
+      "anchor": "s47-c2"
      },
      {
       "i": 3,
-      "text": "تُكتب سطور العرض بخط كورمورانت غارامون الخفيف، حروف كبيرة رفيعة واسعة التباعد؛ والعناوين بالخط نفسه بحالة الجملة؛ ونص المتن بخط آي بي إم بلكس سانس.",
-      "start": 3.56,
-      "end": 15.54,
-      "anchor": "s46-c3-ar"
+      "text": "الاقتران الأساسي هو آي بي إم بلكس سانس ميديوم للاتينية، وآي بي إم بلكس سانس عربي ميديوم للعربية، بوزن بصري متطابق على خط أساس مشترك.",
+      "start": 3.58,
+      "end": 15.0,
+      "anchor": "s47-c3"
      },
      {
       "i": 4,
-      "text": "وتتقدّم العربية على الواجهات العربية أولًا بخط آي بي إم بلكس سانس عربي، أكبر بسبعة في المئة، دون تباعد ودون تمديد.",
-      "start": 15.6,
-      "end": 27.32,
-      "anchor": "s46-c4-ar"
+      "text": "تُكتب سطور العرض بخط كورمورانت غارامون الخفيف، حروف كبيرة رفيعة واسعة التباعد؛",
+      "start": 15.36,
+      "end": 20.62,
+      "anchor": "s47-c4"
      },
      {
       "i": 5,
+      "text": "والعناوين بالخط نفسه بحالة الجملة؛",
+      "start": 20.66,
+      "end": 23.84,
+      "anchor": "s47-c5"
+     },
+     {
+      "i": 6,
+      "text": "والرموز والبيانات بخط آي بي إم بلكس مونو.",
+      "start": 23.86,
+      "end": 28.2,
+      "anchor": "s47-c6"
+     },
+     {
+      "i": 7,
+      "text": "تأتي العربية أكبر بسبعة في المئة، دون تباعد ودون تمديد.",
+      "start": 28.78,
+      "end": 34.12,
+      "anchor": "s47-c7"
+     },
+     {
+      "i": 8,
       "text": "جميع الخطوط مفتوحة الترخيص ومستضافة ذاتيًا.",
-      "start": 27.32,
-      "end": 30.84,
-      "anchor": "s46-c5-ar"
+      "start": 34.14,
+      "end": 37.32,
+      "anchor": "s47-c8"
      }
     ],
     "note": "the AR deck plays this Arabic clip on this slide"

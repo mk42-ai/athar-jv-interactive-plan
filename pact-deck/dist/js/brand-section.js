@@ -1,4 +1,4 @@
-/* Athar Open Agentic Pact deck — v1.7.2 (2026-10-04) — section 10 "Brand" / «الهوية».
+/* Athar Open Agentic Pact deck — v1.7.3 (2026-10-04; v1.7.2 audit fixes) — section 10 "Brand" / «الهوية».
    Three slides appended AFTER section 09 (Executive Team, slides 40–45): 46 Brand foundations · 47 Typography · 48 Product & asset gallery.
    Deep links: canonical #/28/brand-1 … #/28/brand-3 (the deck's runtime-section scheme: sections hang off the last real slide, like #/27/new-k
    and #/28/exec-k); first-class aliases #/29/brand-1 … brand-3 and #slide-46 … #slide-48 are rewritten by the index.html alias script before the
@@ -13,7 +13,7 @@
    the gallery lightbox reuses the video-player lightbox pattern (same node expanded into the Popover top layer, aria-modal, focus trap, Esc, focus return). */
 (function () {
   'use strict';
-  var VERSION = 'v1.7.2';
+  var VERSION = 'v1.7.3';
   var D = window.AtharBrandData || null;
   var REAL_LAST = 28, CLOSING_N = 39;
   function execCount() { try { return (window.AtharExecTeam && window.AtharExecTeam.count) || 6; } catch (e) { return 6; } }
@@ -28,23 +28,23 @@
   var T = {
     en: { chapter: '10', kicker: 'Section 10 · Brand', title: 'Brand', railTitle: 'Brand', counter: function (n, t) { return 'Slide ' + n + ' of ' + t; },
       slides: ['Brand foundations', 'Typography', 'Product & asset gallery'], internal: 'INTERNAL REVIEW ONLY', packAsset: 'PACK ASSET', concept: 'CONCEPT RENDER', existing: 'SLIDE 38 RENDER',
-      found: { lockups: 'Logo lockups', en: 'EN horizontal lockup', mark: 'أثر mark', reversed: 'Reversed — Ivory / Heritage Gold on Sovereign Navy', official: 'OFFICIAL', derived: 'DERIVED FROM OFFICIAL LOGO', clear: 'Clear space', clearNote: 'x = cap height of the ATHAR wordmark · 1x free on all four sides', minSizes: 'Minimum size', print: 'Print', digital: 'Digital',
-        colours: 'Colour system', coloursNote: 'HEX read from brand-tokens.json at build time — token values win on any conflict', token: 'token', moodboard: 'moodboard', accents: 'Moodboard accents', tone: 'Tone of voice', toneNote: 'Three lines from the moodboard', pairings: 'Approved pairings' },
+      found: { lockups: 'Logo lockups', en: 'EN horizontal lockup', mark: 'أثر mark', reversed: 'Reversed — Ivory / Heritage Gold on Sovereign Navy', official: 'OFFICIAL', derived: 'DERIVED FROM OFFICIAL LOGO', clear: 'Clear space', clearNote: 'x = cap height of the ATHAR wordmark · 1x free on all four sides', minSizes: 'Minimum size', version: 'Version', print: 'Print', digital: 'Digital',
+        colours: 'Colour system', coloursNote: 'HEX read from brand-tokens.json at build time — token values win on any conflict', token: 'token', moodboard: 'moodboard', core: 'Core tokens — tokens_v1 (guidelines p. 32)', accents: 'Secondary colours — guidelines Table 3.1 (p. 30)', accentsNote: 'Emerald and Sand are listed as the secondary colours of palette V2.2; Champagne Gold stays an accent', tone: 'Tone of voice', toneNote: 'Three lines from the moodboard', pairings: 'Approved pairings' },
       typo: { specimen: 'Live specimen — real brand fonts, rendered in HTML', display: 'Display', displayLine: 'Intelligence for a brighter tomorrow', h1: 'Headline', h1Line: 'Delegate the routine. Keep the decision.', body: 'Body', bodyLine: 'Athar is the sovereign, human-centred, Arabic-first agentic-AI platform of a Presidential Court joint venture — delegate the routine, keep the decision.',
         medium: 'Medium 500 pairing', mediumLine: 'IBM Plex Sans Medium — eyebrows, emphasis, UI labels', caption: 'Caption / eyebrow', captionLine: 'Caption · figure label · +80', numerals: 'Numerals & data', numLine: '0123456789 · 1,250,000 · 24 Sep 2026 · 50/50', mono: 'IBM Plex Mono — tokens',
         system: 'Typeface system', role: 'Role', family: 'Family', weights: 'Weights', setting: 'Setting', scale: 'Bilingual type scale', style: 'Style', latin: 'Latin px / lh', arabic: 'Arabic (×1.07 / ×1.1)', use: 'Use',
         dos: 'Do', donts: 'Don’t', fonts: 'Self-hosted brand fonts', fontsOk: 'Brand fonts loaded', fontsFallback: 'Fallback stack in use — brand font files PENDING BRAND PACK', fontsChecking: 'Checking fonts…', licence: 'SIL Open Font License 1.1 · woff2 · font-display: swap', stacks: 'Fallback stacks', pairing: 'EN / AR pairing — shared baseline, matched optical weight' },
-      gal: { lede: 'Agent avatar system, the four concept renders with the composited official logo, the India and Kenya renders from slide 38, and the wireframes and screens of the web app. Every tile carries its source label; click a tile to enlarge.', personas: 'Agent avatar system', personasNote: 'Six personas · 96 / 48 / 24 px · four states', sizes: 'Sizes', states: 'States', open: 'Enlarge', close: 'Close', source: 'Source', india: 'India — product-concept render (slide 38)', kenya: 'Kenya — product-concept render (slide 38)', existingCap: 'GPT Image 2.5 render with the official ATHAR logo composited — reused from slide 38, file unchanged', composited: 'logo composited' }
+      gal: { lede: 'Agent avatar system, the four concept renders with the composited official logo, the India and Kenya renders from slide 38, and the wireframes and screens of the web app. Every tile carries its source label; click a tile to enlarge.', personas: 'Agent avatar system', personasNote: 'Six personas · 96 / 48 / 24 px · four states', sizes: 'Sizes', states: 'States', open: 'Enlarge', openWhat: 'Enlarge: ', close: 'Close', closeHint: 'Close the enlarged view', region: 'Slide content — scrolls', source: 'Source', india: 'India — product-concept render (slide 38)', kenya: 'Kenya — product-concept render (slide 38)', existingCap: 'GPT Image 2.5 render with the official ATHAR logo composited — reused from slide 38, file unchanged', composited: 'logo composited' }
     },
     ar: { chapter: '10', kicker: 'القسم ١٠ · الهوية', title: 'الهوية', railTitle: 'الهوية', counter: function (n, t) { return 'الشريحة ' + n + ' من ' + t; },
       slides: ['أسس الهوية', 'الطباعة', 'معرض المنتج والأصول'], internal: 'للمراجعة الداخلية فقط · INTERNAL REVIEW ONLY', packAsset: 'أصل من الحزمة · PACK ASSET', concept: 'تصوّر مفاهيمي', existing: 'تصيير الشريحة 38',
-      found: { lockups: 'أشكال الشعار', en: 'الشعار الأفقي الإنجليزي', mark: 'علامة أثر', reversed: 'المعكوس — عاجي / ذهبي تراثي على الأزرق السيادي', official: 'رسمي · OFFICIAL', derived: 'مشتق من الشعار الرسمي · DERIVED', clear: 'المساحة الخالية', clearNote: 'x = ارتفاع الحرف الكبير في اسم ATHAR · 1x حرّة من الجهات الأربع', minSizes: 'الحجم الأدنى', print: 'طباعة', digital: 'رقمي',
-        colours: 'نظام الألوان', coloursNote: 'قيم HEX تُقرأ من brand-tokens.json عند البناء — قيمة الرمز هي الفيصل عند أي تعارض', token: 'رمز', moodboard: 'لوحة المزاج', accents: 'لمسات لوحة المزاج', tone: 'نبرة الصوت', toneNote: 'ثلاثة أسطر من لوحة المزاج', pairings: 'الاقترانات المعتمدة' },
+      found: { lockups: 'أشكال الشعار', en: 'الشعار الأفقي الإنجليزي', mark: 'علامة أثر', reversed: 'المعكوس — عاجي / ذهبي تراثي على الأزرق السيادي', official: 'رسمي · OFFICIAL', derived: 'مشتق من الشعار الرسمي · DERIVED', clear: 'المساحة الخالية', clearNote: 'x = ارتفاع الحرف الكبير في اسم ATHAR · 1x حرّة من الجهات الأربع', minSizes: 'الحجم الأدنى', version: 'النسخة', print: 'طباعة', digital: 'رقمي',
+        colours: 'نظام الألوان', coloursNote: 'قيم HEX تُقرأ من brand-tokens.json عند البناء — قيمة الرمز هي الفيصل عند أي تعارض', token: 'رمز', moodboard: 'لوحة المزاج', core: 'الرموز الأساسية — tokens_v1 (الدليل ص 32)', accents: 'الألوان الثانوية — جدول 3.1 في الدليل (ص 30)', accentsNote: 'الزمردي والرملي مدرجان بوصفهما اللونين الثانويين في لوحة الألوان V2.2؛ ويبقى الذهبي الشمباني لمسةً مميِّزة', tone: 'نبرة الصوت', toneNote: 'ثلاثة أسطر من لوحة المزاج', pairings: 'الاقترانات المعتمدة' },
       typo: { specimen: 'عيّنة حيّة — خطوط الهوية الحقيقية مرسومة في HTML', display: 'العرض', displayLine: 'ذكاء من أجل غدٍ أكثر إشراقًا', h1: 'العنوان', h1Line: 'فوّض الروتين. واحتفظ بالقرار.', body: 'المتن', bodyLine: 'أثر هي منصة الذكاء الاصطناعي الوكيل السيادية، المتمحورة حول الإنسان والناطقة بالعربية أولًا، التابعة لمشروع مشترك مع ديوان الرئاسة — فوّض الروتين واحتفظ بالقرار.',
         medium: 'اقتران المتوسط 500', mediumLine: 'آي بي إم بلكس سانس عربي متوسط — العناوين الصغيرة والتأكيد وتسميات الواجهة', caption: 'التعليق / العنوان الصغير', captionLine: 'تعليق · تسمية شكل · بلا تباعد', numerals: 'الأرقام والبيانات', numLine: '0123456789 · 1,250,000 · 24 سبتمبر 2026 · 50/50', mono: 'IBM Plex Mono — الرموز',
         system: 'نظام الخطوط', role: 'الدور', family: 'العائلة', weights: 'الأوزان', setting: 'الضبط', scale: 'سلّم الأحجام ثنائي اللغة', style: 'النمط', latin: 'اللاتيني بكسل / ارتفاع', arabic: 'العربي (×1.07 / ×1.1)', use: 'الاستخدام',
         dos: 'افعل', donts: 'لا تفعل', fonts: 'خطوط الهوية المستضافة ذاتيًا', fontsOk: 'خطوط الهوية محمّلة', fontsFallback: 'الخطوط الاحتياطية قيد الاستخدام — ملفات خطوط الهوية بانتظار حزمة الهوية (PENDING BRAND PACK)', fontsChecking: 'جارٍ فحص الخطوط…', licence: 'رخصة SIL Open Font License 1.1 · woff2 · font-display: swap', stacks: 'الخطوط الاحتياطية', pairing: 'الاقتران EN / AR — خط أساس مشترك ووزن بصري متطابق' },
-      gal: { lede: 'نظام الصور الرمزية للوكلاء، والتصييرات المفاهيمية الأربعة مع الشعار الرسمي المركّب، وتصييرا الهند وكينيا من الشريحة 38، وإطارات وشاشات تطبيق الويب. كل بلاطة تحمل تسمية مصدرها؛ انقر بلاطة لتكبيرها.', personas: 'نظام الصور الرمزية للوكلاء', personasNote: 'ست شخصيات · 96 / 48 / 24 بكسل · أربع حالات', sizes: 'الأحجام', states: 'الحالات', open: 'تكبير', close: 'إغلاق', source: 'المصدر', india: 'الهند — تصيير مفاهيمي للمنتج (الشريحة 38)', kenya: 'كينيا — تصيير مفاهيمي للمنتج (الشريحة 38)', existingCap: 'تصيير GPT Image 2.5 مع الشعار الرسمي مركّبًا — مُعاد استخدامه من الشريحة 38 دون تغيير', composited: 'شعار مركّب' }
+      gal: { lede: 'نظام الصور الرمزية للوكلاء، والتصييرات المفاهيمية الأربعة مع الشعار الرسمي المركّب، وتصييرا الهند وكينيا من الشريحة 38، وإطارات وشاشات تطبيق الويب. كل بلاطة تحمل تسمية مصدرها؛ انقر بلاطة لتكبيرها.', personas: 'نظام الصور الرمزية للوكلاء', personasNote: 'ست شخصيات · 96 / 48 / 24 بكسل · أربع حالات', sizes: 'الأحجام', states: 'الحالات', open: 'تكبير', openWhat: 'تكبير: ', close: 'إغلاق', closeHint: 'إغلاق العرض المكبّر', region: 'محتوى الشريحة — قابل للتمرير', source: 'المصدر', india: 'الهند — تصيير مفاهيمي للمنتج (الشريحة 38)', kenya: 'كينيا — تصيير مفاهيمي للمنتج (الشريحة 38)', existingCap: 'تصيير GPT Image 2.5 مع الشعار الرسمي مركّبًا — مُعاد استخدامه من الشريحة 38 دون تغيير', composited: 'شعار مركّب' }
     }
   };
   var LBL = { 'PACK ASSET': { en: 'PACK ASSET', ar: 'أصل من الحزمة · PACK ASSET' }, 'CONCEPT RENDER': { en: 'CONCEPT RENDER', ar: 'تصوّر مفاهيمي' }, 'OFFICIAL': { en: 'OFFICIAL', ar: 'رسمي · OFFICIAL' }, 'OFFICIAL (display copy)': { en: 'OFFICIAL', ar: 'رسمي · OFFICIAL' }, 'DERIVED FROM OFFICIAL LOGO': { en: 'DERIVED FROM OFFICIAL LOGO', ar: 'مشتق من الشعار الرسمي · DERIVED' }, 'SLIDE 38 RENDER': { en: 'CONCEPT RENDER', ar: 'تصوّر مفاهيمي' } };
@@ -64,8 +64,11 @@
   function set(id) { return D && D.sets && D.sets[id] ? D.sets[id] : null; }
   function picture(setId, alt, cls, sizes) { /* 1x / 2x WebP + JPEG fallback, content-hashed, never mirrored */
     var g = set(setId); var pic = el('picture', cls ? cls + '-pic' : null); if (!g) { var im0 = el('img', cls); im0.alt = alt || ''; pic.appendChild(im0); return pic; }
-    var src = el('source'); src.type = 'image/webp'; src.srcset = g.files.webp1x.src + ' 1x, ' + g.files.webp2x.src + ' 2x'; pic.appendChild(src);
-    var im = el('img', cls); im.src = g.files.jpg.src; im.srcset = g.files.jpg.src; im.width = g.files.webp2x.w; im.height = g.files.webp2x.h; im.alt = alt || ''; im.decoding = 'async'; im.loading = 'lazy'; im.setAttribute('data-no-mirror', 'true'); im.setAttribute('data-brand-set', setId); if (sizes) im.sizes = sizes; pic.appendChild(im); return pic;
+    /* v1.7.3 (audit A-09): the 1x/2x candidates are 800 px and 1536/1600 px wide — not an exact 2:1 density pair — so they are declared with WIDTH descriptors
+       and a sizes list derived from the gallery grid (one column ≤700 px · three columns ≤1100 px · five columns above); the JPEG stays the <img src> fallback */
+    var sz = sizes || '(max-width: 700px) 92vw, (max-width: 1100px) 30vw, 11vw';
+    var src = el('source'); src.type = 'image/webp'; src.srcset = g.files.webp1x.src + ' ' + g.files.webp1x.w + 'w, ' + g.files.webp2x.src + ' ' + g.files.webp2x.w + 'w'; src.sizes = sz; pic.appendChild(src);
+    var im = el('img', cls); im.src = g.files.jpg.src; im.width = g.files.webp2x.w; im.height = g.files.webp2x.h; im.alt = alt || ''; im.decoding = 'async'; im.loading = 'lazy'; im.setAttribute('data-no-mirror', 'true'); im.setAttribute('data-brand-set', setId); im.sizes = sz; pic.appendChild(im); return pic;
   }
   function cs(name) { if (!D || !D.colourSystem) return null; var all = D.colourSystem.tokens.concat(D.colourSystem.accents); for (var i = 0; i < all.length; i++) if ((all[i].token || all[i].name) === name) return all[i]; return null; }
   function csHex(name) { var c = cs(name); return c ? c.hex : ''; }
@@ -89,7 +92,9 @@
     var hd = el('div'); hd.appendChild(el('div', 's-kicker', T[l].kicker + ' · ' + T[l].slides[k - 1])); hd.appendChild(el('h2', null, T[l].slides[k - 1])); h.appendChild(hd);
     return h;
   }
-  function body(l, k, extraCls) { var b = el('div', 's-body br-body br-body--' + k + (extraCls ? ' ' + extraCls : '')); var rule = el('span', 'trace-rule'); rule.setAttribute('aria-hidden', 'true'); b.appendChild(rule); b.appendChild(header(l, k)); return b; }
+  function body(l, k, extraCls) { var b = el('div', 's-body br-body br-body--' + k + (extraCls ? ' ' + extraCls : '')); var rule = el('span', 'trace-rule'); rule.setAttribute('aria-hidden', 'true'); b.appendChild(rule); b.appendChild(header(l, k));
+    /* v1.7.3 (audit A-01, axe scrollable-region-focusable): the dense reference body may scroll, so it is a named, keyboard-focusable region */
+    b.tabIndex = 0; b.setAttribute('role', 'region'); b.setAttribute('aria-label', T[l].slides[k - 1] + ' — ' + T[l].gal.region); b.setAttribute('data-testid', 'brand-scroll-region'); return b; }
   function card(title, cls) { var c = el('section', 'br-card' + (cls ? ' ' + cls : '')); if (title) c.appendChild(el('h3', 'br-card-t', title)); return c; }
   function goldRule() { var r = el('span', 'br-rule'); r.setAttribute('aria-hidden', 'true'); return r; }
 
@@ -119,9 +124,10 @@
     grid.appendChild(left);
     /* colour system + tone */
     var right = el('div', 'br-col');
-    var col = card(S.colours, 'br-palette br-colours'); col.setAttribute('data-testid', 'brand-colour-system'); col.appendChild(el('p', 'br-note', S.coloursNote + ' · ' + (D ? D.colourSystem.note[l] : '')));
-    var sws = el('div', 'br-swatches br-swatches--5'); (D ? D.colourSystem.tokens : []).forEach(function (c) { sws.appendChild(swatch(c, l, true)); }); col.appendChild(sws);
-    var acc = el('div', 'br-accents'); acc.appendChild(el('h4', 'br-tokens-h', S.accents)); var accRow = el('div', 'br-swatches br-swatches--2'); (D ? D.colourSystem.accents : []).forEach(function (c) { accRow.appendChild(swatch(c, l, false)); }); acc.appendChild(accRow); col.appendChild(acc);
+    var col = card(S.colours, 'br-palette br-colours'); col.setAttribute('data-testid', 'brand-colour-system'); var coreNote = el('p', 'br-note'); var coreH = el('strong', 'br-tokens-h--core', S.core); coreH.setAttribute('data-testid', 'brand-core-heading'); coreNote.appendChild(coreH); coreNote.appendChild(document.createTextNode(' · ' + S.coloursNote)); coreNote.title = D ? D.colourSystem.note[l] : ''; col.appendChild(coreNote);
+    var sws = el('div', 'br-swatches br-swatches--5'); sws.setAttribute('data-row', 'core'); (D ? D.colourSystem.tokens : []).forEach(function (c) { sws.appendChild(swatch(c, l, true)); }); col.appendChild(sws);
+    /* v1.7.3 (audit A-12): Emerald and Sand ARE listed in the guidelines (Table 3.1 p. 30; tokens pp. 33–34 brand.emerald / brand.sand) → kept as a labelled SECONDARY row, never mixed into the five core tokens; their HEX comes from brand-tokens.json by name */
+    var acc = el('div', 'br-accents'); acc.setAttribute('data-testid', 'brand-secondary-row'); var accH = el('h4', 'br-tokens-h', S.accents); accH.setAttribute('data-testid', 'brand-secondary-heading'); accH.title = S.accentsNote; acc.appendChild(accH); var accRow = el('div', 'br-swatches br-swatches--2'); accRow.setAttribute('data-row', 'secondary'); (D ? D.colourSystem.accents : []).forEach(function (c) { accRow.appendChild(swatch(c, l, false)); }); acc.appendChild(accRow); col.appendChild(acc);
     right.appendChild(col);
     var tone = card(S.tone, 'br-tone'); tone.setAttribute('data-testid', 'brand-tone'); tone.appendChild(el('p', 'br-note', S.toneNote));
     (D ? D.colourSystem.toneLines : []).forEach(function (t, i) { var line = el('div', 'br-tone-line'); var en = langEl('p', 'br-tone-en', t.en, 'en'), ar = langEl('p', 'br-tone-ar', t.ar, 'ar'); if (l === 'ar') { line.appendChild(ar); line.appendChild(en); } else { line.appendChild(en); line.appendChild(ar); } tone.appendChild(line); if (i < 2) tone.appendChild(goldRule()); });
@@ -180,8 +186,8 @@
   }
   function minSizes(l) {
     var S = T[l].found, c = card(S.minSizes, 'br-min'); var tb = el('table', 'br-table br-table--min'); tb.setAttribute('data-testid', 'brand-min-sizes');
-    var th = el('tr'); ['', S.print, S.digital].forEach(function (t) { th.appendChild(el('th', null, t)); }); tb.appendChild(th);
-    (D ? D.logo.minSizes : []).forEach(function (r) { var tr = el('tr'); var td = el('td', 'br-td-role', r.version[l]); if (r.note) td.appendChild(el('small', null, ' ' + r.note[l])); tr.appendChild(td); tr.appendChild(el('td', 'br-td-num', r.print)); tr.appendChild(el('td', 'br-td-num', r.digital)); tb.appendChild(tr); });
+    var th = el('tr'); [S.version, S.print, S.digital].forEach(function (t, i) { var h = el('th', i === 0 ? 'br-th-version' : null, t); h.setAttribute('scope', 'col'); th.appendChild(h); }); tb.appendChild(th); /* v1.7.3 (audit A-10): no empty header cell */
+    (D ? D.logo.minSizes : []).forEach(function (r) { var tr = el('tr'); var td = el('th', 'br-td-role', r.version[l]); td.setAttribute('scope', 'row'); if (r.note) td.appendChild(el('small', null, ' ' + r.note[l])); tr.appendChild(td); tr.appendChild(el('td', 'br-td-num', r.print)); tr.appendChild(el('td', 'br-td-num', r.digital)); tb.appendChild(tr); });
     c.appendChild(tb); return c;
   }
   /* ---------- slide 48 · Product & asset gallery ---------- */
@@ -190,9 +196,11 @@
   function personasPanel(l) {
     var S = T[l].gal, P = D ? D.personas : null, c = card(S.personas, 'br-personas'); c.setAttribute('data-testid', 'brand-personas'); if (!P) return c;
     c.appendChild(el('p', 'br-note', S.personasNote + ' · ' + P.typography));
-    var fig = el('figure', 'br-tile br-tile--board'); fig.setAttribute('data-testid', 'brand-product-tile'); fig.setAttribute('data-asset', 'agent-avatar-system-v2'); fig.setAttribute('data-label', 'PACK ASSET'); fig.tabIndex = 0; fig.setAttribute('role', 'button'); fig.setAttribute('aria-label', S.open);
-    var fr = el('div', 'br-tile-frame br-tile-frame--board'); fr.appendChild(picture('agent-avatar-system-v2', (set('agent-avatar-system-v2') || { caption: { en: '', ar: '' } }).caption[l], 'br-tile-img')); fig.appendChild(fr);
-    var cap = el('figcaption', 'br-tile-cap'); cap.appendChild(pill('PACK ASSET', l)); cap.appendChild(el('span', 'br-tile-txt', (set('agent-avatar-system-v2') || { caption: { en: '', ar: '' } }).caption[l])); fig.appendChild(cap); wireLightbox(fig, l); c.appendChild(fig);
+    var boardCap = (set('agent-avatar-system-v2') || { caption: { en: '', ar: '' } }).caption[l];
+    var fig = el('div', 'br-tile br-tile--board'); fig.setAttribute('data-testid', 'brand-product-tile'); fig.setAttribute('data-asset', 'agent-avatar-system-v2'); fig.setAttribute('data-label', 'PACK ASSET'); fig.setAttribute('role', 'group'); fig.setAttribute('aria-labelledby', 'br-cap-board-txt');
+    var bbtn = el('button', 'br-tile-open'); bbtn.type = 'button'; bbtn.setAttribute('data-testid', 'brand-tile-open'); bbtn.setAttribute('aria-label', S.openWhat + boardCap);
+    var fr = el('div', 'br-tile-frame br-tile-frame--board'); fr.appendChild(picture('agent-avatar-system-v2', boardCap, 'br-tile-img')); bbtn.appendChild(fr); fig.appendChild(bbtn);
+    var cap = el('div', 'br-tile-cap'); cap.appendChild(pill('PACK ASSET', l)); var bt = el('span', 'br-tile-txt', boardCap); bt.id = 'br-cap-board-txt'; cap.appendChild(bt); fig.appendChild(cap); wireLightbox(fig, bbtn, l); c.appendChild(fig);
     var legend = el('div', 'br-personas-legend');
     var ul = el('ul', 'br-persona-list'); ul.setAttribute('data-testid', 'brand-persona-list'); P.list.forEach(function (p) { var li = el('li', 'br-persona'); li.appendChild(langEl('span', 'br-persona-en', p.en, 'en')); li.appendChild(langEl('span', 'br-persona-ar', p.ar, 'ar')); ul.appendChild(li); }); legend.appendChild(ul);
     var meta = el('div', 'br-persona-meta');
@@ -200,19 +208,26 @@
     var stt = el('p', 'br-persona-states'); stt.appendChild(el('strong', null, S.states + ': ')); P.states.forEach(function (s, i) { var chip = el('span', 'br-state br-state--' + i, s[l]); chip.setAttribute('data-state', s.en); stt.appendChild(chip); }); meta.appendChild(stt);
     legend.appendChild(meta); c.appendChild(legend); return c;
   }
+  var tileSeq = 0;
   function galleryTile(id, l) {
-    var S = T[l].gal, f = el('figure', 'br-tile'); f.setAttribute('data-testid', 'brand-product-tile'); f.setAttribute('data-asset', id); f.tabIndex = 0; f.setAttribute('role', 'button'); f.setAttribute('aria-label', S.open);
-    var fr = el('div', 'br-tile-frame'); var cap = el('figcaption', 'br-tile-cap');
+    /* v1.7.3 (audit A-04 / A-02 / A-05): the tile is a group (div, so role=dialog is allowed when it expands); the picture sits in a real <button> (keyboard + 2.5.3 label-in-name);
+       the caption carries an id so the expanded dialog is named by it (aria-labelledby); the source line keeps its full text in a title attribute */
+    var S = T[l].gal, f = el('div', 'br-tile'); f.setAttribute('data-testid', 'brand-product-tile'); f.setAttribute('data-asset', id); f.setAttribute('role', 'group');
+    var capId = 'br-cap-' + (++tileSeq) + '-' + id.replace(/[^a-z0-9-]/gi, ''); f.setAttribute('aria-labelledby', capId + '-txt'); f.setAttribute('aria-describedby', capId + '-src');
+    var btn = el('button', 'br-tile-open'); btn.type = 'button'; btn.setAttribute('data-testid', 'brand-tile-open'); var fr = el('div', 'br-tile-frame'); btn.appendChild(fr); var cap = el('div', 'br-tile-cap'); cap.id = capId;
     if (PLATES[id]) {
       var pl = PLATES[id][0]; f.setAttribute('data-label', 'CONCEPT RENDER'); var pic = el('picture'); var s = el('source'); s.type = 'image/webp'; s.srcset = '/assets/plates/' + pl + '-1x.webp 1x, /assets/plates/' + pl + '-2x.webp 2x'; pic.appendChild(s);
-      var im = el('img', 'br-tile-img'); im.src = '/assets/plates/' + pl + '-1x.jpg'; im.srcset = '/assets/plates/' + pl + '-1x.jpg 1x, /assets/plates/' + pl + '-2x.jpg 2x'; im.width = 1536; im.height = 1024; im.alt = S[PLATES[id][1]]; im.loading = 'lazy'; im.decoding = 'async'; im.setAttribute('data-no-mirror', 'true'); pic.appendChild(im); fr.appendChild(pic); f.appendChild(fr);
-      cap.appendChild(pill('CONCEPT RENDER', l)); cap.appendChild(el('span', 'br-tile-txt', S[PLATES[id][1]])); cap.appendChild(el('span', 'br-tile-src', S.existingCap)); f.appendChild(cap);
+      var im = el('img', 'br-tile-img'); im.src = '/assets/plates/' + pl + '-1x.jpg'; im.srcset = '/assets/plates/' + pl + '-1x.jpg 1x, /assets/plates/' + pl + '-2x.jpg 2x'; im.width = 1536; im.height = 1024; im.alt = S[PLATES[id][1]]; im.loading = 'lazy'; im.decoding = 'async'; im.setAttribute('data-no-mirror', 'true'); pic.appendChild(im); fr.appendChild(pic); f.appendChild(btn);
+      btn.setAttribute('aria-label', S.openWhat + S[PLATES[id][1]]);
+      cap.appendChild(pill('CONCEPT RENDER', l)); var tx = el('span', 'br-tile-txt', S[PLATES[id][1]]); tx.id = capId + '-txt'; cap.appendChild(tx); var sx = el('span', 'br-tile-src', S.existingCap); sx.id = capId + '-src'; sx.title = S.existingCap; cap.appendChild(sx); f.appendChild(cap);
     } else {
       var g = set(id); if (!g) return null; f.setAttribute('data-label', g.label); if (g.logoComposite) f.setAttribute('data-logo-composite', String(g.logoComposite.placements));
-      fr.appendChild(picture(id, g.caption ? g.caption[l] : id, 'br-tile-img')); f.appendChild(fr);
-      cap.appendChild(pill(g.label, l)); cap.appendChild(el('span', 'br-tile-txt', g.caption ? g.caption[l] : '')); cap.appendChild(el('span', 'br-tile-src', S.source + ': ' + (g.source || '') + (g.logoComposite ? ' · ' + g.logoComposite.placements + '× ' + S.composited : ''))); f.appendChild(cap);
+      fr.appendChild(picture(id, g.caption ? g.caption[l] : id, 'br-tile-img')); f.appendChild(btn);
+      var capTxt = g.caption ? g.caption[l] : ''; btn.setAttribute('aria-label', S.openWhat + capTxt);
+      var srcTxt = S.source + ': ' + (g.source || '') + (g.logoComposite ? ' · ' + g.logoComposite.placements + '× ' + S.composited : '');
+      cap.appendChild(pill(g.label, l)); var tx2 = el('span', 'br-tile-txt', capTxt); tx2.id = capId + '-txt'; cap.appendChild(tx2); var sx2 = el('span', 'br-tile-src', srcTxt); sx2.id = capId + '-src'; sx2.title = srcTxt; cap.appendChild(sx2); f.appendChild(cap);
     }
-    wireLightbox(f, l); return f;
+    wireLightbox(f, btn, l); return f;
   }
   function renderGallery(l) {
     var S = T[l].gal, b = body(l, 3); b.appendChild(el('p', 'sub br-lede', S.lede));
@@ -221,22 +236,31 @@
   }
   /* ---------- lightbox: the video-player pattern — the SAME figure is expanded into the Popover top layer (CSS fixed fallback), aria-modal, focus trap, Esc / Close, focus return ---------- */
   var openFig = null, lbTrigger = null;
-  function wireLightbox(fig, l) { fig.addEventListener('click', function (ev) { if (ev.target.closest && ev.target.closest('.br-lb-close')) return; if (openFig === fig) return; expandFig(fig, l); }); fig.addEventListener('keydown', function (ev) { if ((ev.key === 'Enter' || ev.key === ' ') && openFig !== fig) { ev.preventDefault(); ev.stopPropagation(); expandFig(fig, l); } }); }
-  function expandFig(fig, l) {
+  function wireLightbox(fig, openBtn, l) {
+    /* the whole tile (picture button + caption) opens the dialog with the pointer; the keyboard path is the real <button> (Enter / Space are native) */
+    fig.addEventListener('click', function (ev) { if (ev.target.closest && ev.target.closest('.br-lb-close')) return; if (openFig === fig) { if (ev.target.closest && ev.target.closest('.br-tile-open')) collapseFig(); return; } expandFig(fig, openBtn, l); });
+  }
+  function expandFig(fig, openBtn, l) {
     if (openFig && openFig !== fig) collapseFig();
-    lbTrigger = document.activeElement; var S = T[l].gal;
+    lbTrigger = (document.activeElement && fig.contains(document.activeElement)) ? document.activeElement : openBtn; var S = T[l].gal;
     if (typeof fig.showPopover === 'function') { try { fig.setAttribute('popover', 'manual'); fig.showPopover(); fig.__popover = true; } catch (e) { fig.removeAttribute('popover'); fig.__popover = false; } }
+    /* v1.7.3 (audit A-02): the dialog is NAMED BY ITS CAPTION (aria-labelledby, already set on the tile) — no stale "Enlarge" label while open */
     fig.classList.add('is-lightbox'); fig.setAttribute('role', 'dialog'); fig.setAttribute('aria-modal', 'true'); fig.setAttribute('data-keys', 'own'); fig.setAttribute('data-testid', 'brand-lightbox');
-    var btn = el('button', 'br-lb-close', '✕'); btn.type = 'button'; btn.setAttribute('aria-label', S.close); btn.addEventListener('click', function (ev) { ev.stopPropagation(); collapseFig(); }); fig.appendChild(btn);
+    openBtn.setAttribute('data-open-label', openBtn.getAttribute('aria-label') || ''); openBtn.setAttribute('aria-label', S.closeHint); openBtn.setAttribute('data-testid', 'brand-lightbox-image');
+    var btn = el('button', 'br-lb-close', '✕'); btn.type = 'button'; btn.setAttribute('aria-label', S.close); btn.setAttribute('data-testid', 'brand-lightbox-close'); btn.addEventListener('click', function (ev) { ev.stopPropagation(); collapseFig(); }); fig.appendChild(btn);
     openFig = fig; document.body.classList.add('br-lightbox-open'); document.addEventListener('focusin', onDocFocus, true); try { btn.focus({ preventScroll: true }); } catch (e) {}
   }
   function collapseFig() {
-    var fig = openFig; if (!fig) return; fig.classList.remove('is-lightbox'); fig.setAttribute('role', 'button'); fig.removeAttribute('aria-modal'); fig.removeAttribute('data-keys'); fig.setAttribute('data-testid', 'brand-product-tile');
+    var fig = openFig; if (!fig) return; fig.classList.remove('is-lightbox'); fig.setAttribute('role', 'group'); fig.removeAttribute('aria-modal'); fig.removeAttribute('data-keys'); fig.setAttribute('data-testid', 'brand-product-tile');
+    var ob = fig.querySelector('.br-tile-open'); if (ob) { ob.setAttribute('aria-label', ob.getAttribute('data-open-label') || ''); ob.removeAttribute('data-open-label'); ob.setAttribute('data-testid', 'brand-tile-open'); }
     if (fig.__popover) { try { fig.hidePopover(); } catch (e) {} fig.removeAttribute('popover'); }
     var btn = fig.querySelector('.br-lb-close'); if (btn) btn.remove(); openFig = null; document.body.classList.remove('br-lightbox-open'); document.removeEventListener('focusin', onDocFocus, true);
-    var t = lbTrigger || fig; try { (document.contains(t) ? t : fig).focus({ preventScroll: true }); } catch (e) {}
+    /* focus returns to the triggering tile button (WAI-ARIA dialog pattern) */
+    var t = lbTrigger || ob || fig; try { (document.contains(t) ? t : (ob || fig)).focus({ preventScroll: true }); } catch (e) {}
   }
   function onDocFocus(e) { if (openFig && !openFig.contains(e.target)) { var b = openFig.querySelector('.br-lb-close'); if (b) b.focus(); } }
+  /* focus trap: Tab / Shift+Tab cycle between the picture button and the Close button (capture-phase, so the deck never sees it) */
+  document.addEventListener('keydown', function (ev) { if (!openFig || ev.key !== 'Tab') return; var items = Array.prototype.filter.call(openFig.querySelectorAll('button'), function (b) { return !b.disabled; }); if (!items.length) return; var i = items.indexOf(document.activeElement); var next = ev.shiftKey ? (i <= 0 ? items.length - 1 : i - 1) : (i < 0 || i === items.length - 1 ? 0 : i + 1); items[next].focus(); stop(ev); }, true);
   function closeLightbox() { collapseFig(); }
 
   function renderSlide(k, l) { return k === 1 ? renderFoundations(l) : k === 2 ? renderTypography(l) : renderGallery(l); }
@@ -267,9 +291,16 @@
     document.body.classList.toggle('br-virtual', k > 0);
     if (k > 0) document.body.classList.add('it-virtual'); else if (!itActive() && !execActive()) document.body.classList.remove('it-virtual');
     sections.forEach(function (sec, i) { var idx = i + 1, cls = idx === k ? 'is-active' : idx < k ? 'is-before' : 'is-after'; sec.classList.remove('is-active', 'is-before', 'is-after'); sec.classList.add(cls); sec.setAttribute('aria-hidden', idx === k ? 'false' : 'true'); });
-    if (k > 0) setHash('#/' + REAL_LAST + '/brand-' + k);
+    if (k > 0) { setHash('#/' + REAL_LAST + '/brand-' + k); scheduleAlias(); }
     sync();
   }
+  /* v1.7.3 (audit A-16): Section 10 routes are REGISTERED under the public alias #/29/brand-k. The compiled router only knows #/1…#/28 (an unknown #/29 would send it to the cover),
+     so the canonical #/28/brand-k is kept for the synchronous hashchange dispatch and the address bar is rewritten to #/29/brand-k with replaceState AFTER the dispatch — no event,
+     nothing for the router to see. Reloads and shared links work through the pre-boot alias in index.html; #/28/brand-k and #slide-46…48 keep working. */
+  var aliasTimer = 0;
+  function aliasHash(k) { return '#/' + (REAL_LAST + 1) + '/brand-' + k; }
+  function applyAlias() { aliasTimer = 0; if (!(x > 0) || realN() !== REAL_LAST) return; var h = window.location.hash; if (h === '#/' + REAL_LAST + '/brand-' + x || h === '#/' + REAL_LAST) setHash(aliasHash(x)); }
+  function scheduleAlias() { if (aliasTimer) return; aliasTimer = window.setTimeout(applyAlias, 0); }
   function enter(k) { if (!ensure()) return; if (realN() !== REAL_LAST) { goto(k); return; } if (execActive()) { try { window.AtharExecTeam.exit(); } catch (e) {} } show(Math.max(1, Math.min(N, k))); }
   function exit(keepHash) { if (!x) return; show(0); if (!keepHash) setHash('#/' + REAL_LAST); }
   function goto(k) {
@@ -292,7 +323,7 @@
     var li = ol.querySelector('li[data-brand-chapter]');
     if (!li || li.getAttribute('data-lang') !== l || li.previousElementSibling !== exLi) {
       if (li) li.remove(); li = el('li'); li.setAttribute('data-brand-chapter', '10'); li.setAttribute('data-lang', l);
-      var a = el('a'); a.href = '#/' + REAL_LAST + '/brand-1'; a.setAttribute('data-chapter', 'branding');
+      var a = el('a'); a.href = aliasHash(1); a.setAttribute('data-chapter', 'branding');
       a.addEventListener('click', function (ev) { ev.preventDefault(); goto(1); });
       a.appendChild(el('span', 'rail-n', '10')); a.appendChild(el('span', null, T[l].railTitle)); li.appendChild(a); exLi.insertAdjacentElement('afterend', li);
     }
@@ -342,9 +373,9 @@
     else if (t.classList.contains('prev')) { if (x > 0) { if (x > 1) enter(x - 1); else toExecLast(); stop(ev); } }
   }, true);
   window.addEventListener('hashchange', function () {
-    normaliseAlias();
+    normaliseAlias(); /* #/29/brand-k → #/28/brand-k before the compiled router (later in this same dispatch) reads the hash */
     var m = /^#\/28\/brand-(\d+)$/.exec(window.location.hash);
-    if (m) { var k = parseInt(m[1], 10); if (k !== x) goto(k); }
+    if (m) { var k = parseInt(m[1], 10); if (k !== x) goto(k); else scheduleAlias(); }
     else if (x > 0) exit(true);
   });
 
@@ -367,7 +398,7 @@
   var m0 = /^#\/28\/brand-(\d+)$/.exec(initialHash), pendingDeep = m0 ? parseInt(m0[1], 10) : 0, deepStable = 0;
   function tryDeep() {
     if (!pendingDeep) return; var h = window.location.hash;
-    if (h !== initialHash && h !== '#/' + REAL_LAST) { pendingDeep = 0; return; }
+    if (h !== initialHash && h !== '#/' + REAL_LAST && h !== aliasHash(pendingDeep)) { pendingDeep = 0; return; }
     if (x === pendingDeep) { if (++deepStable > 4) pendingDeep = 0; return; }
     deepStable = 0; if (ensure() && realN() === REAL_LAST) { if (execActive()) { try { window.AtharExecTeam.exit(); } catch (e) {} } show(Math.max(1, Math.min(N, pendingDeep))); }
   }

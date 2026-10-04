@@ -1,8 +1,8 @@
 {
- "base": "http://127.0.0.1:4172",
- "version": "1.7.2",
- "expectCommit": "ef50223325247b1cef452ecf3365c5d163b1b164",
- "written": "2026-10-04T12:12:40.746Z",
+ "base": "http://127.0.0.1:4173",
+ "version": "1.7.3",
+ "expectCommit": "4c2a45bd3086f60c2da2fd212eda0178fd5d8099",
+ "written": "2026-10-04T14:23:54.171Z",
  "rows": [
   {
    "files": [
@@ -314,28 +314,28 @@
     },
     {
      "id": "render-laptop-phone-dashboard@2x",
-     "url": "/assets/brand/gallery/render-laptop-phone-dashboard@2x.51124ee7e9.webp",
+     "url": "/assets/brand/gallery/render-laptop-phone-dashboard@2x.76dd14ac83.webp",
      "status": 200,
-     "bytes": 90566,
-     "sha256": "51124ee7e9246b4aaab1f22d8297f5fd3dad541e6d48812fe2b23e807484b228",
+     "bytes": 94904,
+     "sha256": "76dd14ac8329e03f908ccc29f8aef8225a8db766c452fe7620aa94e4c9db5b73",
      "cacheControl": "public, max-age=31536000, immutable",
      "contentType": "image/webp"
     },
     {
      "id": "render-laptop-phone-dashboard@1x",
-     "url": "/assets/brand/gallery/render-laptop-phone-dashboard@1x.296284b693.webp",
+     "url": "/assets/brand/gallery/render-laptop-phone-dashboard@1x.74893cb52a.webp",
      "status": 200,
-     "bytes": 39698,
-     "sha256": "296284b69397dc86adeae4c4cf7fdf91f5fa3d060ad5d15002541a4c469688fc",
+     "bytes": 40894,
+     "sha256": "74893cb52a18ca26a6484da21a25243b73119c2da9d95277ef937c387019eafd",
      "cacheControl": "public, max-age=31536000, immutable",
      "contentType": "image/webp"
     },
     {
      "id": "render-laptop-phone-dashboard",
-     "url": "/assets/brand/gallery/render-laptop-phone-dashboard.84b9679ee2.jpg",
+     "url": "/assets/brand/gallery/render-laptop-phone-dashboard.9840e43bdd.jpg",
      "status": 200,
-     "bytes": 168260,
-     "sha256": "84b9679ee240c4f86289f282a9c9c6f394fe4b06c00d376bef70651a18badff7",
+     "bytes": 173838,
+     "sha256": "9840e43bdd584ca29620ea18a5baa04f99fa3f5322858639196350df6872b768",
      "cacheControl": "public, max-age=31536000, immutable",
      "contentType": "image/jpeg"
     },
@@ -561,14 +561,14 @@
      "bytes": 676302
     },
     {
-     "file": "/audio/guide/slides/NAR-s47-s-brand-typography.mp3",
+     "file": "/audio/guide/slides/NAR-s52-s-brand-typography.mp3",
      "status": 200,
-     "bytes": 459381
+     "bytes": 555511
     },
     {
-     "file": "/audio/guide/slides/NAR-s47-s-brand-typography.ar.mp3",
+     "file": "/audio/guide/slides/NAR-s52-s-brand-typography.ar.mp3",
      "status": 200,
-     "bytes": 499505
+     "bytes": 602741
     },
     {
      "file": "/audio/guide/slides/NAR-s51-s-brand-gallery.mp3",
@@ -581,9 +581,9 @@
      "bytes": 659583
     }
    ],
-   "servedCommit": "ef50223325247b1cef452ecf3365c5d163b1b164",
-   "servedVersion": "1.7.2",
-   "builtAt": "2026-10-04T12:07:41.348Z",
+   "servedCommit": "4c2a45bd3086f60c2da2fd212eda0178fd5d8099",
+   "servedVersion": "1.7.3",
+   "builtAt": "2026-10-04T14:20:11.270Z",
    "stamps": 28
   }
  ]

@@ -1,0 +1,106 @@
+{
+ "base": "http://127.0.0.1:4173",
+ "version": "1.7.3",
+ "expectCommit": "4c2a45bd3086f60c2da2fd212eda0178fd5d8099",
+ "written": "2026-10-04T14:20:18.390Z",
+ "rows": [
+  {
+   "active": true,
+   "hash": "#/29/brand-1",
+   "dir": "ltr",
+   "counter": "Slide 46 of 48",
+   "badge": "v1.7.3",
+   "visibleN": 46,
+   "region": {
+    "tabindex": "0",
+    "role": "region",
+    "label": "Brand foundations — Slide content — scrolls",
+    "scrolls": false,
+    "sh": 744,
+    "ch": 744
+   },
+   "contrastTotal": 79,
+   "contrastFails": [],
+   "contrastMin": 6.92,
+   "kickerLS": "1.4976px",
+   "fonts": {
+    "sansMedium": true,
+    "arabicMedium": true
+   },
+   "ths": [
+    {
+     "text": "Version",
+     "scope": "col"
+    },
+    {
+     "text": "Print",
+     "scope": "col"
+    },
+    {
+     "text": "Digital",
+     "scope": "col"
+    }
+   ],
+   "rowHeaders": 4,
+   "core": [
+    {
+     "hex": "#0F1B2D",
+     "left": 869,
+     "top": 202
+    },
+    {
+     "hex": "#F5F1EA",
+     "left": 973,
+     "top": 202
+    },
+    {
+     "hex": "#B08D57",
+     "left": 1077,
+     "top": 202
+    },
+    {
+     "hex": "#2FB7C8",
+     "left": 1181,
+     "top": 202
+    },
+    {
+     "hex": "#1F2937",
+     "left": 1285,
+     "top": 202
+    }
+   ],
+   "secondary": [
+    {
+     "hex": "#405A5B",
+     "left": 869,
+     "top": 388
+    },
+    {
+     "hex": "#BEAA91",
+     "left": 1027,
+     "top": 388
+    }
+   ],
+   "secondaryHeading": "Secondary colours — guidelines Table 3.1 (p. 30)",
+   "coreHeading": "Core tokens — tokens_v1 (guidelines p. 32)",
+   "clipId": "NAR-s50",
+   "tiles": [],
+   "overflowX": false,
+   "ring": {
+    "fv": true,
+    "style": "solid",
+    "width": "3px",
+    "color": "rgb(25, 46, 60)",
+    "active": true
+   },
+   "axe": {
+    "version": "4.13.0",
+    "violations": []
+   },
+   "narration": null,
+   "lightbox": null,
+   "errors": [],
+   "failedRequests": []
+  }
+ ]
+}

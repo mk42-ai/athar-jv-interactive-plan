@@ -1,6 +1,6 @@
 {
  "schema": "athar.brand.section/1",
- "version": "1.7.2",
+ "version": "1.7.3",
  "section": {
   "number": "10",
   "id": "brand",
@@ -107,6 +107,12 @@
   "pdfV3": {
    "file": "Athar_Brand_Guidelines_FINAL_v3.pdf (cross-check copy)",
    "sha256": "cd826c2d752505db3e0d608093ab2c06973621b2653e9805dc1fb1d92b556c46"
+  },
+  "pdfRecheck": {
+   "file": "Athar_Brand_Guidelines_FINAL.pdf (media library copy re-fetched 2026-10-04, 310 pp., same V2.2 FINAL document — different PDF serialisation)",
+   "sha256": "8883b4c5086c7dc5265b76b2de38c128db216cd109b23b4887f447d8f26697a7",
+   "checked": "v1.7.3 audit A-12: #405A5B (Emerald) and #BEAA91 (Sand) listed on pp. 7, 30 (Table 3.1), 33–34 (tokens), 141; v3 cross-check copy cd826c2d… pp. 6, 30, 33–34, 142",
+   "checkedUtc": "2026-10-04T13:59Z"
   }
  },
  "pack": {
@@ -595,7 +601,11 @@
      "ar": "منطقة هادئة أو طبقة محيط عميق بشفافية 55–65 %"
     }
    }
-  ]
+  ],
+  "compositeNote": {
+   "en": "Composited marks obey the minimum sizes: horizontal lockup ≥ 160 px, monogram ≥ 32 px. v1.7.3: the laptop + phone render carries the أثر monogram at 56 px (its flat zone cannot hold a 160 px lockup); the v1.7.2 81 px lockup there was below minimum.",
+   "ar": "تلتزم العلامات المركّبة بالأحجام الدنيا: الشعار الأفقي ≥ 160 بكسل، والمونوغرام ≥ 32 بكسل. v1.7.3: يحمل تصيير الحاسوب والهاتف مونوغرام أثر بارتفاع 56 بكسل (لا تتسع مساحته المسطّحة لشعار أفقي بعرض 160 بكسل)؛ وكان شعار v1.7.2 بعرض 81 بكسل دون الحد الأدنى."
+  }
  },
  "narration": {
   "voice": "George (JBFqnCBsd6RMkjVDRZzb)",
@@ -606,20 +616,20 @@
     "ar": "NAR-s50-ar"
    },
    "s-brand-typography": {
-    "en": "NAR-s47",
-    "ar": "NAR-s47-ar"
+    "en": "NAR-s52",
+    "ar": "NAR-s52-ar"
    },
    "s-brand-gallery": {
     "en": "NAR-s51",
     "ar": "NAR-s51-ar"
    }
   },
-  "note": "v1.7.2: slide 46/48 clips regenerated for the new content (NAR-s50 / NAR-s51); NAR-s47 (typography) re-homed from slide 46 to 47; NAR-s48 / NAR-s49 (v1.7.1) retired"
+  "note": "v1.7.2: slide 46/48 clips regenerated for the new content (NAR-s50 / NAR-s51); NAR-s47 (typography) re-homed from slide 46 to 47; NAR-s48 / NAR-s49 (v1.7.1) retired · v1.7.3 (audit A-07): slide 47 clip regenerated for the v1.7.2 typography content (primary IBM Plex Sans Medium / IBM Plex Sans Arabic Medium pairing) as NAR-s52 EN + AR via the same George / eleven_multilingual_v2 pipeline, Scribe-verified (EN WER 0.000; AR 0.015 with the Latin font names normalised); NAR-s47 retired"
  },
  "colourSystem": {
   "note": {
-   "en": "Brand tokens (v1.0 set) reconciled to the moodboard names; token HEX wins on any conflict. Emerald and Sand are moodboard accents.",
-   "ar": "رموز الهوية (مجموعة v1.0) موفَّقة مع أسماء لوحة المزاج؛ وقيمة HEX في الرمز هي الفيصل عند أي تعارض. الزمرّدي والرملي لمستان من لوحة المزاج."
+   "en": "Brand tokens (v1.0 set) reconciled to the moodboard names; token HEX wins on any conflict. Emerald #405A5B and Sand #BEAA91 are the SECONDARY colours of palette V2.2 (guidelines Table 3.1, p. 30; tokens brand.emerald / brand.sand, pp. 33–34) and sit in their own labelled row below the five core tokens.",
+   "ar": "رموز الهوية (مجموعة v1.0) موفَّقة مع أسماء لوحة المزاج؛ وقيمة HEX في الرمز هي الفيصل عند أي تعارض. الزمرّدي #405A5B والرملي #BEAA91 هما اللونان الثانويان في لوحة الألوان V2.2 (الدليل، الجدول 3.1 ص 30؛ الرمزان brand.emerald / brand.sand ص 33–34) ويظهران في صف مستقل موسوم أسفل الرموز الخمسة الأساسية."
   },
   "tokens": [
    {
@@ -696,8 +706,8 @@
      "ar": "النمو · الأثر · الاستدامة"
     },
     "role": {
-     "en": "Moodboard accent — alternate ground, links",
-     "ar": "لمسة من لوحة المزاج — أرضية بديلة وروابط"
+     "en": "Secondary colour — alternate ground, links (guidelines Table 3.1)",
+     "ar": "لون ثانوي — أرضية بديلة وروابط (الدليل، الجدول 3.1)"
     }
    },
    {
@@ -707,8 +717,8 @@
      "ar": "التراث · التوازن · الإنسانية"
     },
     "role": {
-     "en": "Moodboard accent — warm ground, borders",
-     "ar": "لمسة من لوحة المزاج — أرضية دافئة وحدود"
+     "en": "Secondary colour — warm ground, borders (guidelines Table 3.1)",
+     "ar": "لون ثانوي — أرضية دافئة وحدود (الدليل، الجدول 3.1)"
     }
    }
   ],
@@ -725,7 +735,16 @@
     "en": "A more lasting impact",
     "ar": "أثرٌ أكثر دوامًا"
    }
-  ]
+  ],
+  "secondaryRow": {
+   "label": {
+    "en": "Secondary colours — guidelines Table 3.1 (p. 30)",
+    "ar": "الألوان الثانوية — جدول 3.1 في الدليل (ص 30)"
+   },
+   "citation": "Athar Brand Guidelines V2.2 FINAL (24 Sep 2026) — Table 3.1 \"The five colours\", p. 30: \"Deep Ocean and Ivory lead; Emerald and Sand are secondary; Champagne Gold is the accent\"; token tables pp. 33–34: brand.emerald #405A5B, brand.sand #BEAA91, text.secondary, action.secondary.*",
+   "decision": "KEEP as a labelled secondary row (audit A-12); hex values still read from brand-tokens.json palette by name",
+   "checkedUtc": "2026-10-04T13:59Z"
+  }
  },
  "personas": {
   "source": "athar_web_agent_avatar_system_v2.jpg (pack)",

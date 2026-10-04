@@ -1,7 +1,7 @@
 {
  "schema": "athar.brand.assets/2",
- "version": "1.7.2",
- "generated_utc": "2026-10-04T11:51:45Z",
+ "version": "1.7.3",
+ "generated_utc": "2026-10-04T13:58:22Z",
  "distBase": "/assets/brand/",
  "items": [
   {
@@ -1101,9 +1101,9 @@
   {
    "id": "render-laptop-phone-dashboard@2x",
    "group": "gallery",
-   "file": "gallery/render-laptop-phone-dashboard@2x.51124ee7e9.webp",
-   "bytes": 90566,
-   "sha256": "51124ee7e9246b4aaab1f22d8297f5fd3dad541e6d48812fe2b23e807484b228",
+   "file": "gallery/render-laptop-phone-dashboard@2x.76dd14ac83.webp",
+   "bytes": 94904,
+   "sha256": "76dd14ac8329e03f908ccc29f8aef8225a8db766c452fe7620aa94e4c9db5b73",
    "w": 1536,
    "h": 1024,
    "role": "webp2x",
@@ -1111,44 +1111,81 @@
    "label": "CONCEPT RENDER",
    "kind": "render",
    "caption": {
-    "en": "Laptop + phone dashboard — official logo composited onto the dark UI header area",
-    "ar": "لوحة تحكم على حاسوب محمول وهاتف — الشعار الرسمي مركّب على رأس الواجهة الداكن"
+    "en": "Laptop + phone dashboard — official أثر monogram composited onto the phone dashboard (v1.7.3 render: neutral UAE waterfront skyline)",
+    "ar": "لوحة تحكم على حاسوب محمول وهاتف — مونوغرام أثر الرسمي مركّب على لوحة تحكم الهاتف (تصيير v1.7.3: أفق واجهة بحرية إماراتية محايد)"
    },
-   "source": "render-laptop-phone.png (generated render, agents library)",
-   "sourceSha256": "70442001d3fb20b2374bf961230b121d9375148fc6e7a2080d8792a1982a6507",
+   "source": "ohVo7cVcwn.png (editImageUsing2.5 of render-laptop-phone.png — neutral UAE-style waterfront skyline; generated render, agents library)",
+   "sourceSha256": "46a9f70191cade82ebb48d37cdc057a118b883379b3509a9eec8b673dc79e9f6",
    "logoComposite": {
-    "method": "Pillow alpha_composite of the official horizontal lockup (recoloured from the alpha layer, colours from brand-tokens.json) onto flat blank zones detected deterministically (local std < 3 over 12-px blocks); zone luminance picks the variant: light zones → Deep Ocean lockup, dark/navy zones → Ivory mark + Champagne Gold wordmark",
-    "zones": "dark flat UI zone (phone screen header)",
+    "method": "PINNED placement (v1.7.3): Pillow alpha_composite of the official logo (the أثر mark cropped from the official horizontal lockup by its measured bbox, recoloured from the alpha layer with brand-tokens.json Ivory) at a fixed position / scale / opacity recorded here — no zone detection at build time",
+    "zones": "phone screen — flat dark UI area (monogram; the 160 px horizontal-lockup minimum has no flat zone on this render)",
     "placements": [
      {
-      "x": 398,
-      "y": 374,
-      "w": 81,
-      "h": 17,
-      "variant": "Ivory / Champagne Gold (reversed)",
+      "kind": "monogram",
+      "x": 414,
+      "y": 540,
+      "w": 49,
+      "h": 56,
+      "variant": "Ivory monogram (أثر mark alone — reversed on the dark UI; lockup minimum 160 px cannot be met on this surface)",
+      "opacity": 1.0,
       "zone": {
        "x": 382,
-       "y": 367,
+       "y": 527,
        "w": 113,
-       "h": 295,
-       "lum": 14.60507583618164,
-       "rgb": [
-        0,
-        17,
-        37
-       ],
-       "fill": 0.49
+       "h": 139,
+       "note": "phone screen — flat dark UI area below the dashboard cards (local std < 4 over 8-px blocks, lum ≈ 16)"
+      },
+      "minSize": {
+       "rule": "Monogram 8 mm / 32 px (guidelines minimum-size table)",
+       "renderedPx": 56
       }
      }
-    ]
+    ],
+    "encoder": {
+     "pillow": "12.3.0",
+     "settings": {
+      "webp2x": {
+       "width": 1536,
+       "quality": 84,
+       "method": 6
+      },
+      "webp1x": {
+       "width": 800,
+       "quality": 84,
+       "method": 6
+      },
+      "jpg": {
+       "width": 1536,
+       "quality": 84,
+       "optimize": true,
+       "progressive": true
+      }
+     }
+    },
+    "inputs": {
+     "render": {
+      "file": "ohVo7cVcwn.png (editImageUsing2.5 → neutral UAE waterfront skyline; derived from GqSmsmQEOF.png)",
+      "sha256": "46a9f70191cade82ebb48d37cdc057a118b883379b3509a9eec8b673dc79e9f6",
+      "px": [
+       1536,
+       1024
+      ]
+     },
+     "logo": {
+      "file": "Athar_Logo_Horizontal_transparent_v1.png",
+      "sha256": "862dc135e31fdd6299bd7cd989d2ce869fdf4803773791f67052548f26cbd1ab"
+     }
+    },
+    "reproduce": "python3 scripts/v1.7.3/recomposite_laptop_render.py <render> <logo> --verify",
+    "generatedUtc": "2026-10-04T13:58:22Z"
    }
   },
   {
    "id": "render-laptop-phone-dashboard@1x",
    "group": "gallery",
-   "file": "gallery/render-laptop-phone-dashboard@1x.296284b693.webp",
-   "bytes": 39698,
-   "sha256": "296284b69397dc86adeae4c4cf7fdf91f5fa3d060ad5d15002541a4c469688fc",
+   "file": "gallery/render-laptop-phone-dashboard@1x.74893cb52a.webp",
+   "bytes": 40894,
+   "sha256": "74893cb52a18ca26a6484da21a25243b73119c2da9d95277ef937c387019eafd",
    "w": 800,
    "h": 533,
    "role": "webp1x",
@@ -1156,44 +1193,81 @@
    "label": "CONCEPT RENDER",
    "kind": "render",
    "caption": {
-    "en": "Laptop + phone dashboard — official logo composited onto the dark UI header area",
-    "ar": "لوحة تحكم على حاسوب محمول وهاتف — الشعار الرسمي مركّب على رأس الواجهة الداكن"
+    "en": "Laptop + phone dashboard — official أثر monogram composited onto the phone dashboard (v1.7.3 render: neutral UAE waterfront skyline)",
+    "ar": "لوحة تحكم على حاسوب محمول وهاتف — مونوغرام أثر الرسمي مركّب على لوحة تحكم الهاتف (تصيير v1.7.3: أفق واجهة بحرية إماراتية محايد)"
    },
-   "source": "render-laptop-phone.png (generated render, agents library)",
-   "sourceSha256": "70442001d3fb20b2374bf961230b121d9375148fc6e7a2080d8792a1982a6507",
+   "source": "ohVo7cVcwn.png (editImageUsing2.5 of render-laptop-phone.png — neutral UAE-style waterfront skyline; generated render, agents library)",
+   "sourceSha256": "46a9f70191cade82ebb48d37cdc057a118b883379b3509a9eec8b673dc79e9f6",
    "logoComposite": {
-    "method": "Pillow alpha_composite of the official horizontal lockup (recoloured from the alpha layer, colours from brand-tokens.json) onto flat blank zones detected deterministically (local std < 3 over 12-px blocks); zone luminance picks the variant: light zones → Deep Ocean lockup, dark/navy zones → Ivory mark + Champagne Gold wordmark",
-    "zones": "dark flat UI zone (phone screen header)",
+    "method": "PINNED placement (v1.7.3): Pillow alpha_composite of the official logo (the أثر mark cropped from the official horizontal lockup by its measured bbox, recoloured from the alpha layer with brand-tokens.json Ivory) at a fixed position / scale / opacity recorded here — no zone detection at build time",
+    "zones": "phone screen — flat dark UI area (monogram; the 160 px horizontal-lockup minimum has no flat zone on this render)",
     "placements": [
      {
-      "x": 398,
-      "y": 374,
-      "w": 81,
-      "h": 17,
-      "variant": "Ivory / Champagne Gold (reversed)",
+      "kind": "monogram",
+      "x": 414,
+      "y": 540,
+      "w": 49,
+      "h": 56,
+      "variant": "Ivory monogram (أثر mark alone — reversed on the dark UI; lockup minimum 160 px cannot be met on this surface)",
+      "opacity": 1.0,
       "zone": {
        "x": 382,
-       "y": 367,
+       "y": 527,
        "w": 113,
-       "h": 295,
-       "lum": 14.60507583618164,
-       "rgb": [
-        0,
-        17,
-        37
-       ],
-       "fill": 0.49
+       "h": 139,
+       "note": "phone screen — flat dark UI area below the dashboard cards (local std < 4 over 8-px blocks, lum ≈ 16)"
+      },
+      "minSize": {
+       "rule": "Monogram 8 mm / 32 px (guidelines minimum-size table)",
+       "renderedPx": 56
       }
      }
-    ]
+    ],
+    "encoder": {
+     "pillow": "12.3.0",
+     "settings": {
+      "webp2x": {
+       "width": 1536,
+       "quality": 84,
+       "method": 6
+      },
+      "webp1x": {
+       "width": 800,
+       "quality": 84,
+       "method": 6
+      },
+      "jpg": {
+       "width": 1536,
+       "quality": 84,
+       "optimize": true,
+       "progressive": true
+      }
+     }
+    },
+    "inputs": {
+     "render": {
+      "file": "ohVo7cVcwn.png (editImageUsing2.5 → neutral UAE waterfront skyline; derived from GqSmsmQEOF.png)",
+      "sha256": "46a9f70191cade82ebb48d37cdc057a118b883379b3509a9eec8b673dc79e9f6",
+      "px": [
+       1536,
+       1024
+      ]
+     },
+     "logo": {
+      "file": "Athar_Logo_Horizontal_transparent_v1.png",
+      "sha256": "862dc135e31fdd6299bd7cd989d2ce869fdf4803773791f67052548f26cbd1ab"
+     }
+    },
+    "reproduce": "python3 scripts/v1.7.3/recomposite_laptop_render.py <render> <logo> --verify",
+    "generatedUtc": "2026-10-04T13:58:22Z"
    }
   },
   {
    "id": "render-laptop-phone-dashboard",
    "group": "gallery",
-   "file": "gallery/render-laptop-phone-dashboard.84b9679ee2.jpg",
-   "bytes": 168260,
-   "sha256": "84b9679ee240c4f86289f282a9c9c6f394fe4b06c00d376bef70651a18badff7",
+   "file": "gallery/render-laptop-phone-dashboard.9840e43bdd.jpg",
+   "bytes": 173838,
+   "sha256": "9840e43bdd584ca29620ea18a5baa04f99fa3f5322858639196350df6872b768",
    "w": 1536,
    "h": 1024,
    "role": "jpg",
@@ -1201,36 +1275,73 @@
    "label": "CONCEPT RENDER",
    "kind": "render",
    "caption": {
-    "en": "Laptop + phone dashboard — official logo composited onto the dark UI header area",
-    "ar": "لوحة تحكم على حاسوب محمول وهاتف — الشعار الرسمي مركّب على رأس الواجهة الداكن"
+    "en": "Laptop + phone dashboard — official أثر monogram composited onto the phone dashboard (v1.7.3 render: neutral UAE waterfront skyline)",
+    "ar": "لوحة تحكم على حاسوب محمول وهاتف — مونوغرام أثر الرسمي مركّب على لوحة تحكم الهاتف (تصيير v1.7.3: أفق واجهة بحرية إماراتية محايد)"
    },
-   "source": "render-laptop-phone.png (generated render, agents library)",
-   "sourceSha256": "70442001d3fb20b2374bf961230b121d9375148fc6e7a2080d8792a1982a6507",
+   "source": "ohVo7cVcwn.png (editImageUsing2.5 of render-laptop-phone.png — neutral UAE-style waterfront skyline; generated render, agents library)",
+   "sourceSha256": "46a9f70191cade82ebb48d37cdc057a118b883379b3509a9eec8b673dc79e9f6",
    "logoComposite": {
-    "method": "Pillow alpha_composite of the official horizontal lockup (recoloured from the alpha layer, colours from brand-tokens.json) onto flat blank zones detected deterministically (local std < 3 over 12-px blocks); zone luminance picks the variant: light zones → Deep Ocean lockup, dark/navy zones → Ivory mark + Champagne Gold wordmark",
-    "zones": "dark flat UI zone (phone screen header)",
+    "method": "PINNED placement (v1.7.3): Pillow alpha_composite of the official logo (the أثر mark cropped from the official horizontal lockup by its measured bbox, recoloured from the alpha layer with brand-tokens.json Ivory) at a fixed position / scale / opacity recorded here — no zone detection at build time",
+    "zones": "phone screen — flat dark UI area (monogram; the 160 px horizontal-lockup minimum has no flat zone on this render)",
     "placements": [
      {
-      "x": 398,
-      "y": 374,
-      "w": 81,
-      "h": 17,
-      "variant": "Ivory / Champagne Gold (reversed)",
+      "kind": "monogram",
+      "x": 414,
+      "y": 540,
+      "w": 49,
+      "h": 56,
+      "variant": "Ivory monogram (أثر mark alone — reversed on the dark UI; lockup minimum 160 px cannot be met on this surface)",
+      "opacity": 1.0,
       "zone": {
        "x": 382,
-       "y": 367,
+       "y": 527,
        "w": 113,
-       "h": 295,
-       "lum": 14.60507583618164,
-       "rgb": [
-        0,
-        17,
-        37
-       ],
-       "fill": 0.49
+       "h": 139,
+       "note": "phone screen — flat dark UI area below the dashboard cards (local std < 4 over 8-px blocks, lum ≈ 16)"
+      },
+      "minSize": {
+       "rule": "Monogram 8 mm / 32 px (guidelines minimum-size table)",
+       "renderedPx": 56
       }
      }
-    ]
+    ],
+    "encoder": {
+     "pillow": "12.3.0",
+     "settings": {
+      "webp2x": {
+       "width": 1536,
+       "quality": 84,
+       "method": 6
+      },
+      "webp1x": {
+       "width": 800,
+       "quality": 84,
+       "method": 6
+      },
+      "jpg": {
+       "width": 1536,
+       "quality": 84,
+       "optimize": true,
+       "progressive": true
+      }
+     }
+    },
+    "inputs": {
+     "render": {
+      "file": "ohVo7cVcwn.png (editImageUsing2.5 → neutral UAE waterfront skyline; derived from GqSmsmQEOF.png)",
+      "sha256": "46a9f70191cade82ebb48d37cdc057a118b883379b3509a9eec8b673dc79e9f6",
+      "px": [
+       1536,
+       1024
+      ]
+     },
+     "logo": {
+      "file": "Athar_Logo_Horizontal_transparent_v1.png",
+      "sha256": "862dc135e31fdd6299bd7cd989d2ce869fdf4803773791f67052548f26cbd1ab"
+     }
+    },
+    "reproduce": "python3 scripts/v1.7.3/recomposite_laptop_render.py <render> <logo> --verify",
+    "generatedUtc": "2026-10-04T13:58:22Z"
    }
   },
   {
@@ -1423,5 +1534,12 @@
   ],
   "inkHex": "#192E3C",
   "inkMatchesDeepOcean": true
- }
+ },
+ "history": [
+  {
+   "version": "1.7.3",
+   "utc": "2026-10-04T13:58:22Z",
+   "change": "render-laptop-phone-dashboard: edited render swapped in (sha 46a9f70191ca), pinned logo composite; removed gallery/render-laptop-phone-dashboard@2x.51124ee7e9.webp, gallery/render-laptop-phone-dashboard@1x.296284b693.webp, gallery/render-laptop-phone-dashboard.84b9679ee2.jpg"
+  }
+ ]
 }

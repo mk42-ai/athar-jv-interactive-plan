@@ -1,0 +1,36 @@
+{
+ "base": "http://127.0.0.1:4173",
+ "version": "1.7.3",
+ "expectCommit": "4c2a45bd3086f60c2da2fd212eda0178fd5d8099",
+ "written": "2026-10-04T14:20:37.597Z",
+ "rows": [
+  {
+   "version": "1.7.3",
+   "laptop": [
+    {
+     "file": "gallery/render-laptop-phone-dashboard@2x.76dd14ac83.webp",
+     "sha256": "76dd14ac8329e03f908ccc29f8aef8225a8db766c452fe7620aa94e4c9db5b73",
+     "bytes": 94904
+    },
+    {
+     "file": "gallery/render-laptop-phone-dashboard@1x.74893cb52a.webp",
+     "sha256": "74893cb52a18ca26a6484da21a25243b73119c2da9d95277ef937c387019eafd",
+     "bytes": 40894
+    },
+    {
+     "file": "gallery/render-laptop-phone-dashboard.9840e43bdd.jpg",
+     "sha256": "9840e43bdd584ca29620ea18a5baa04f99fa3f5322858639196350df6872b768",
+     "bytes": 173838
+    }
+   ],
+   "clip47": {
+    "en": "NAR-s52",
+    "ar": "NAR-s52-ar",
+    "enSec": 34.691,
+    "arSec": 37.642
+   },
+   "verify": "webp2x: manifest 76dd14ac8329 recomputed 76dd14ac8329 OK\nwebp1x: manifest 74893cb52a18 recomputed 74893cb52a18 OK\njpg: manifest 9840e43bdd58 recomputed 9840e43bdd58 OK\nreproducible\n",
+   "stamps": 28
+  }
+ ]
+}

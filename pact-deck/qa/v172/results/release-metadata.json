@@ -1,11 +1,11 @@
 {
- "base": "http://127.0.0.1:4172",
- "version": "1.7.2",
- "expectCommit": "ef50223325247b1cef452ecf3365c5d163b1b164",
- "written": "2026-10-04T12:12:12.239Z",
+ "base": "http://127.0.0.1:4173",
+ "version": "1.7.3",
+ "expectCommit": "4c2a45bd3086f60c2da2fd212eda0178fd5d8099",
+ "written": "2026-10-04T14:23:23.753Z",
  "rows": [
   {
-   "version": "1.7.2",
+   "version": "1.7.3",
    "stamps": 28,
    "assets": [
     {
@@ -282,24 +282,24 @@
     },
     {
      "id": "render-laptop-phone-dashboard@2x",
-     "file": "gallery/render-laptop-phone-dashboard@2x.51124ee7e9.webp",
-     "bytes": 90566,
+     "file": "gallery/render-laptop-phone-dashboard@2x.76dd14ac83.webp",
+     "bytes": 94904,
      "label": "CONCEPT RENDER",
      "setId": "render-laptop-phone-dashboard",
      "role": "webp2x"
     },
     {
      "id": "render-laptop-phone-dashboard@1x",
-     "file": "gallery/render-laptop-phone-dashboard@1x.296284b693.webp",
-     "bytes": 39698,
+     "file": "gallery/render-laptop-phone-dashboard@1x.74893cb52a.webp",
+     "bytes": 40894,
      "label": "CONCEPT RENDER",
      "setId": "render-laptop-phone-dashboard",
      "role": "webp1x"
     },
     {
      "id": "render-laptop-phone-dashboard",
-     "file": "gallery/render-laptop-phone-dashboard.84b9679ee2.jpg",
-     "bytes": 168260,
+     "file": "gallery/render-laptop-phone-dashboard.9840e43bdd.jpg",
+     "bytes": 173838,
      "label": "CONCEPT RENDER",
      "setId": "render-laptop-phone-dashboard",
      "role": "jpg"
@@ -397,10 +397,10 @@
     {
      "n": 47,
      "id": "s-brand-typography",
-     "en": "NAR-s47",
-     "ar": "NAR-s47-ar",
-     "enSec": 28.682,
-     "arSec": 31.19
+     "en": "NAR-s52",
+     "ar": "NAR-s52-ar",
+     "enSec": 34.691,
+     "arSec": 37.642
     },
     {
      "n": 48,

@@ -1,0 +1,106 @@
+{
+ "base": "http://127.0.0.1:4173",
+ "version": "1.7.3",
+ "expectCommit": "4c2a45bd3086f60c2da2fd212eda0178fd5d8099",
+ "written": "2026-10-04T14:21:02.696Z",
+ "rows": [
+  {
+   "active": true,
+   "hash": "#/29/brand-1",
+   "dir": "rtl",
+   "counter": "الشريحة 46 من 48",
+   "badge": "v1.7.3",
+   "visibleN": 46,
+   "region": {
+    "tabindex": "0",
+    "role": "region",
+    "label": "أسس الهوية — محتوى الشريحة — قابل للتمرير",
+    "scrolls": true,
+    "sh": 2236,
+    "ch": 622
+   },
+   "contrastTotal": 79,
+   "contrastFails": [],
+   "contrastMin": 6.92,
+   "kickerLS": "normal",
+   "fonts": {
+    "sansMedium": true,
+    "arabicMedium": true
+   },
+   "ths": [
+    {
+     "text": "النسخة",
+     "scope": "col"
+    },
+    {
+     "text": "طباعة",
+     "scope": "col"
+    },
+    {
+     "text": "رقمي",
+     "scope": "col"
+    }
+   ],
+   "rowHeaders": 4,
+   "core": [
+    {
+     "hex": "#0F1B2D",
+     "left": 202,
+     "top": 1493
+    },
+    {
+     "hex": "#F5F1EA",
+     "left": 33,
+     "top": 1493
+    },
+    {
+     "hex": "#B08D57",
+     "left": 202,
+     "top": 1652
+    },
+    {
+     "hex": "#2FB7C8",
+     "left": 33,
+     "top": 1652
+    },
+    {
+     "hex": "#1F2937",
+     "left": 202,
+     "top": 1796
+    }
+   ],
+   "secondary": [
+    {
+     "hex": "#405A5B",
+     "left": 202,
+     "top": 1937
+    },
+    {
+     "hex": "#BEAA91",
+     "left": 33,
+     "top": 1937
+    }
+   ],
+   "secondaryHeading": "الألوان الثانوية — جدول 3.1 في الدليل (ص 30)",
+   "coreHeading": "الرموز الأساسية — tokens_v1 (الدليل ص 32)",
+   "clipId": "NAR-s50-ar",
+   "tiles": [],
+   "overflowX": false,
+   "ring": {
+    "fv": true,
+    "style": "solid",
+    "width": "3px",
+    "color": "rgb(25, 46, 60)",
+    "active": true
+   },
+   "axe": {
+    "version": "4.13.0",
+    "violations": []
+   },
+   "narration": null,
+   "lightbox": null,
+   "errors": [],
+   "failedRequests": []
+  }
+ ]
+}

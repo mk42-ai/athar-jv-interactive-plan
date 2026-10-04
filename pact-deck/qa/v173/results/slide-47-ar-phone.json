@@ -1,0 +1,65 @@
+{
+ "base": "http://127.0.0.1:4173",
+ "version": "1.7.3",
+ "expectCommit": "4c2a45bd3086f60c2da2fd212eda0178fd5d8099",
+ "written": "2026-10-04T14:21:11.764Z",
+ "rows": [
+  {
+   "active": true,
+   "hash": "#/29/brand-2",
+   "dir": "rtl",
+   "counter": "الشريحة 47 من 48",
+   "badge": "v1.7.3",
+   "visibleN": 47,
+   "region": {
+    "tabindex": "0",
+    "role": "region",
+    "label": "الطباعة — محتوى الشريحة — قابل للتمرير",
+    "scrolls": true,
+    "sh": 1739,
+    "ch": 622
+   },
+   "contrastTotal": 79,
+   "contrastFails": [],
+   "contrastMin": 5.61,
+   "kickerLS": "normal",
+   "fonts": {
+    "sansMedium": true,
+    "arabicMedium": true
+   },
+   "ths": [],
+   "rowHeaders": 0,
+   "core": [],
+   "secondary": [],
+   "secondaryHeading": null,
+   "coreHeading": null,
+   "clipId": "NAR-s52-ar",
+   "tiles": [],
+   "overflowX": false,
+   "ring": {
+    "fv": true,
+    "style": "solid",
+    "width": "3px",
+    "color": "rgb(25, 46, 60)",
+    "active": true
+   },
+   "axe": {
+    "version": "4.13.0",
+    "violations": []
+   },
+   "narration": {
+    "audible": {
+     "src": "NAR-s52-s-brand-typography.ar.mp3",
+     "clip": "NAR-s52-s-brand-typography.ar.mp3",
+     "t": 3.3,
+     "muted": false
+    },
+    "state": "playing",
+    "clip": "NAR-s52-ar"
+   },
+   "lightbox": null,
+   "errors": [],
+   "failedRequests": []
+  }
+ ]
+}

@@ -1,6 +1,6 @@
 {
  "_comment": "v1.6.2 (v1.5.9 base) — Section 09 executive films (one slot per card). Source of truth for scripts/v1.4.7/build.mjs (copies assets/<person>/ → dist/assets/exec/films/<person>/), dist/build-info.json (films[]), features/exec-films/exec-films.js (window.AtharExecFilms) and the QA suite. status: 'shipped' = file verified and served · 'coming-soon' = labelled ready slot, no file served. To ship a film later: drop the files into assets/<person>/, fill the entry, set status to shipped, run the build. burnedInSubtitles: whether the film itself carries burned-in captions (the <track> VTTs are shipped either way). v1.6.1: all four cards ship a film; no ready slot remains. v1.6.2: Khalid replaced by the delivered 50 s cut, served under content-hashed filenames. v1.6.4: fifth card — Lorenzo Avitabile (slide 45).",
- "version": "1.7.2",
+ "version": "1.7.3",
  "distBase": "/assets/exec/films/",
  "films": {
   "khalid": {

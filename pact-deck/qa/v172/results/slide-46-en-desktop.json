@@ -1,8 +1,8 @@
 {
- "base": "http://127.0.0.1:4172",
- "version": "1.7.2",
- "expectCommit": "ef50223325247b1cef452ecf3365c5d163b1b164",
- "written": "2026-10-04T12:11:58.378Z",
+ "base": "http://127.0.0.1:4173",
+ "version": "1.7.3",
+ "expectCommit": "4c2a45bd3086f60c2da2fd212eda0178fd5d8099",
+ "written": "2026-10-04T14:23:09.549Z",
  "rows": [
   {
    "active": true,
@@ -11,10 +11,10 @@
    "visibleN": 46,
    "dir": "ltr",
    "lang": "en",
-   "hash": "#/28/brand-1",
+   "hash": "#/29/brand-1",
    "counter": "Slide 46 of 48",
-   "badge": "v1.7.2",
-   "html": "1.7.2",
+   "badge": "v1.7.3",
+   "html": "1.7.3",
    "kicker": "Section 10 · Brand · Brand foundations",
    "h2": "Brand foundations",
    "total": 48,

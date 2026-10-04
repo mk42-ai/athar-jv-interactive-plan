@@ -1,0 +1,65 @@
+{
+ "base": "http://127.0.0.1:4173",
+ "version": "1.7.3",
+ "expectCommit": "4c2a45bd3086f60c2da2fd212eda0178fd5d8099",
+ "written": "2026-10-04T14:20:51.259Z",
+ "rows": [
+  {
+   "active": true,
+   "hash": "#/29/brand-2",
+   "dir": "ltr",
+   "counter": "Slide 47 of 48",
+   "badge": "v1.7.3",
+   "visibleN": 47,
+   "region": {
+    "tabindex": "0",
+    "role": "region",
+    "label": "Typography — Slide content — scrolls",
+    "scrolls": true,
+    "sh": 1650,
+    "ch": 622
+   },
+   "contrastTotal": 79,
+   "contrastFails": [],
+   "contrastMin": 5.61,
+   "kickerLS": "1.4976px",
+   "fonts": {
+    "sansMedium": true,
+    "arabicMedium": true
+   },
+   "ths": [],
+   "rowHeaders": 0,
+   "core": [],
+   "secondary": [],
+   "secondaryHeading": null,
+   "coreHeading": null,
+   "clipId": "NAR-s52",
+   "tiles": [],
+   "overflowX": false,
+   "ring": {
+    "fv": true,
+    "style": "solid",
+    "width": "3px",
+    "color": "rgb(25, 46, 60)",
+    "active": true
+   },
+   "axe": {
+    "version": "4.13.0",
+    "violations": []
+   },
+   "narration": {
+    "audible": {
+     "src": "NAR-s52-s-brand-typography.mp3",
+     "clip": "NAR-s52",
+     "t": 3.32,
+     "muted": false
+    },
+    "state": "playing",
+    "clip": "NAR-s52"
+   },
+   "lightbox": null,
+   "errors": [],
+   "failedRequests": []
+  }
+ ]
+}
